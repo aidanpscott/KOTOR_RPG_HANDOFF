@@ -139,6 +139,18 @@
 
 **Vitality per level** — **`PORT-01 v2` makes vitality accumulative from class, level, and Constitution modifier.** **The hit die is here; the formula that uses it should be checked against `RULES-01 v2`.**
 
+**⚠ Engineer saving throws — authored. `PT-96`.**
+
+    Fort weak, Reflex strong, Will strong — 6 / 12 / 12 at level 20, total 30.
+
+**`PLAYTEST-RULINGS-01 B2` gave *"Engineer — Reflex"* and nothing else.** **`cls_st_ex_drd.2da` is not in holdings.**
+
+**The Engineer is the Smuggler's structural twin on the other side of the mental stats** — **both are support classes with strong Reflex; the Smuggler's case is nerve and the Engineer's is a mind that does not stop working under pressure.**
+
+**⚠ Strong Will is also the only defensive thing distinguishing it from the Machinist**, which is otherwise the same character with hands.
+
+**⚠ It contradicts `PREGENS-01`, which builds T4-K9 at weak/weak.** **That sheet moves from 24 to 30.** **If the owner prefers the sheet, `6 / 12 / 6` is the alternative and the Engineer joins the Soldier and Smuggler at 24.** **What is not defensible is leaving two of three columns unstated in a shipped class.**
+
 **⚠ Bounty Hunter saving throws — authored. `PT-93`.**
 
     Fort strong, Reflex strong, Will weak — 12 / 12 / 6 at level 20.

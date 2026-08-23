@@ -101,11 +101,23 @@
 
 **Owner ruling. The pick totals above buy a *range* of chains, and each class sits somewhere in its band.**
 
-| Rate | Picks at 30 | **Chains entered** | Capstones at the floor | at the top |
+| Rate | `T` | **Chains entered** | Capstones at the floor | at the top |
 |---|---|---|---|---|
-| **Combat** | 36 | **13–16** | 12 | 10 |
-| **Middle** | 27 | **10–13** | 9 | 7–8 |
-| **Specialist** | 18 | **7–10** | 6 | 4 |
+| **Combat** | **40** | **14–20** | **13** | **10** |
+| **Middle** | **31** | **11–17** | **10** | **7** |
+| **Specialist** | **22** | **8–14** | **7** | **4** |
+
+**⚠ Raised twice. 11–13 → 13–16 → 14–20. `PT-88`, then `PT-95`.**
+
+**Floors are `⌈T ⁄ 3⌉` — the deepest legal build, nothing stranded. Widths are 6.**
+
+> **⚠ Why 6, and it is the finding that forced the second raise.** **`caps = ⌊(T − N) ⁄ 2⌋`, so the slope is exactly `−½`. Two extra trees always cost one capstone, at every rate, under every `T`.**
+
+**A band of width `W` spans `W ⁄ 2` capstones.** **The width-3 bands could never span more than one and a half, whatever their floor.** **The dial was not mispositioned — it was too narrow to register.**
+
+**Width 6 spans three capstones, which is the smallest spread that reads as a difference at a table.**
+
+**⚠ Tops checked against roster access.** **An organic reaches 22 chains — 11 ranged, 11 melee — and a Jedi 24. Combat's top of 20 fits.**
 
 **⚠ Raised from 11–13 / 8–10 / 5–7 by `PT-88`.** **The old bands stranded picks at every value except the top.**
 
@@ -127,11 +139,24 @@
 
 **Assigned so far:**
 
-| Class | Rate | Chains | Feats@30 |
-|---|---|---|---|
-| **Soldier** | Combat | **13** | 23 |
-| **Jedi Guardian** | Combat | **15** | 20 |
-| **Marksman** | Combat | **14** | **18** |
+| Class | Rate | Chains | Feats@30 | Capstones |
+|---|---|---|---|---|
+| **Soldier** | Combat | **14** | 23 | 13 |
+| **Jedi Guardian** | Combat | **18** | 20 | 11 |
+| **Marksman** | Combat | **14** | 18 | 13 |
+| **Bounty Hunter** | Middle | **11** | 16 | 10 |
+| **Scout** | Middle | **17** | 16 | 7 |
+| **Jedi Sentinel** | Middle | **13** | 15 | 9 |
+| **Engineer** | Middle | **11** | 16 | 10 |
+| **Smuggler** | Specialist | **8** | 11 | 7 |
+| **Jedi Consular** | Specialist | **13** | 11 | 4 |
+| **Machinist** | Specialist | **10** | 11 | 6 |
+
+**⚠ All ten assigned. `PT-95`.** **Three floors — Soldier, Bounty Hunter, Smuggler — three near-tops, and the rest between.**
+
+> **The Bounty Hunter and the Scout share `T` = 31 and land three capstones and six trees apart. That is a test that can fail in play.**
+
+**⚠ An earlier version of this note said four capstones apart. It was one.** **Corrected — the width-3 band could not have produced four.**
 
 **⚠ All three moved when the band was raised — `PT-88`.** **The old values were assigned against 11–13 and two of them stranded picks under 13–16.**
 

@@ -2595,3 +2595,76 @@
 **`PT-55` rules K2 the source for class data. `PREGENS-01 §8` called 4 *"the real `skillpointbase`"* — true of K1, false of K2.**
 
 **The number stands; the warrant changes from ported to authored.** **Same shape as `SKILLS-01 §9.3`, smaller stakes.**
+
+---
+
+## PT-95 — The chain bands raised again, and the reason is a slope
+
+**Second raise. `11–13` → `13–16` → **`14–20`**.**
+
+| Rate | `T` | Band | Capstones floor → top |
+|---|---|---|---|
+| **Combat** | 40 | **14–20** | 13 → 10 |
+| **Middle** | 31 | **11–17** | 10 → 7 |
+| **Specialist** | 22 | **8–14** | 7 → 4 |
+
+### ⚠ The finding that forced it, and it corrects a claim this document put on record
+
+**`caps = ⌊(T − N) ⁄ 2⌋`. The slope is exactly `−½`.** **Two extra trees always cost one capstone, at every rate, under every `T`.**
+
+> **A band of width `W` spans `W ⁄ 2` capstones.** **The width-3 bands could never span more than one and a half, wherever their floor sat.**
+
+**⚠ The dial was not mispositioned. It was too narrow to register.**
+
+**And `PT-88`'s falsification test was wrong.** **It said the Bounty Hunter and the Scout landed *four capstones apart* on an identical budget.**
+
+    Bounty Hunter   N=10   (29-10)//2 = 9
+    Scout           N=13   (29-13)//2 = 8
+
+**One apart.** **A width-3 band could not have produced four, which is the tell that the claim was never derived.** **Corrected in `CLASS-ATTACKS-01`.**
+
+**Under the new bands the same pair sits three capstones and six trees apart — a test that can actually fail.**
+
+### And `PT-89` deleted the grants' role in `T`
+
+**Four credits for everyone means `T` is now a function of rate alone.** **The Machinist's second grant, the Bounty Hunter's second, the Scout's second — all worth nothing.**
+
+> **⚠ Not necessarily wrong. It makes `N` the only lever on attack shape, which is cleaner than two half-levers.** **But `N` has to carry all of it, and at half-slope across a band of three it could not.**
+
+### All ten chain counts assigned
+
+**Soldier 14 · Guardian 18 · Marksman 14 · Bounty Hunter 11 · Scout 17 · Sentinel 13 · Engineer 11 · Smuggler 8 · Consular 13 · Machinist 10.**
+
+---
+
+## PT-96 — Engineer saves, `Field Override`, `Quickdraw` filed, initiative closed
+
+### Engineer saves — `6 / 12 / 12`, authored
+
+**Two of three columns did not exist. `cls_st_ex_drd.2da` is not in holdings.**
+
+**⚠ Contradicts `PREGENS-01`, which builds T4-K9 weak/weak.** **The alternative is `6 / 12 / 6`.** **What is not defensible is shipping a class with two save columns unstated.**
+
+### `Field Override` — the Engineer's feature
+
+**⚠ The corpus granted the interface, the skill, and the ruling that it works, and never gave anyone a way to do it.**
+
+**`SKILL-RESOLUTION-01 §221` already permits *"a slicer takes control of an enemy droid mid-fight"* and forbids it against a player-controlled character** — **a complete permission structure for an ability that did not exist.**
+
+**⚠ Capstone ceilinged at one droid at a time.** **Without it an Engineer accumulates a second party.**
+
+**⚠ OPEN: whether a controlled character's declaration is separate from its controller's.** **Same question `Battle Meditation` and the domination powers raise.**
+
+### `Quickdraw` — filed at last
+
+**⚠ Ruled at `PT-74` and present in no document but this one.** **Grepped: it appeared in `PLAYTEST-RULINGS-01` and nowhere else.**
+
+**Same family as Force Focus — the decision was made, the reasoning written, and the document a reader consults did not have it.**
+
+**And `Smuggler's Luck` had three source tiers where `FEATS-LIBRARY-01` carried one.**
+
+### Initiative — closed
+
+> **No class modifies initiative.** **`PT-74` answered it by refusing: *"a flat initiative bonus is a different feat and every class wants it."***
+
+**⚠ The Scout had the better claim on a flat bonus, which is the argument for giving it to nobody.**

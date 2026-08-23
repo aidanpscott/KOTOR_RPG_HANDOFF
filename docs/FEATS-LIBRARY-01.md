@@ -242,7 +242,27 @@
 | **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the three classes that carried Sneak Attack in the source.** | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct |  | **+2d6 against an unaware target.** |
 | ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *A character with this and `Master Sneak Attack` deals 6d6 + 3d6 on the first attack of a declaration — roughly 31 average, before weapon and ability. Wound points equal Constitution, so that is lethal to most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
-| **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. | **Defence +2 + (2 × [(level+1)/6])** in combat. |
+| **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st — `scd_granted`.** | **Defence +2 + (2 × [(level+1)/6])** in combat |
+| › **Improved Smuggler's Luck** | **⚠ Tier restored.** `IMPROVED_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** — the source row exists and its string is not in holdings |
+| ›› **Master Smuggler's Luck** | **⚠ Tier restored.** `MASTER_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** |
+
+> **⚠ The source has three tiers and this document carried one.** **Same family as Force Focus: the ladder exists in `feat.2da` and only its first rung was catalogued.**
+
+### Quickdraw — Smuggler only
+
+**⚠ Ruled at `PT-74` and never written into this document.** **Grepped: `Quickdraw` appeared in `PLAYTEST-RULINGS-01` and nowhere else.**
+
+> **When someone you can see turns hostile, you may attack them immediately, before anyone else acts.**
+
+**One attack. Once per encounter.**
+
+**⚠ *Turns* hostile is the whole condition.** **Someone already fighting you does not qualify; someone drawing a weapon mid-conversation does.**
+
+**The cost is social, not mechanical.** **You attacked someone who had not yet attacked you, and witnesses saw it.**
+
+**⚠ Perception needs no rule of its own.** **`ACTION-ECONOMY-01 §9`: a surprised character takes no action in round 1. Quickdraw is an action.** **A surprised character cannot use it, by a rule that already exists.**
+
+**In the 1977 film Han shoots Greedo while Greedo is still talking.** **The point is not that Han is fast — it is that he did not wait.**
 
 
 ## Bounty Hunter
@@ -498,6 +518,36 @@
 > **The grenade lands, the Scout shouts, and the party does not die.** **Two or three times a campaign, not every round.**
 
 **⚠ The reconnaissance half of the class — going first, not being surprised — is initiative.** **`ACTION-ECONOMY-01 §17` lists class initiative modifiers as open and notes the Smuggler was to own one.** **The Scout has the better claim and the two should be settled together.**
+
+
+---
+
+
+### Field Override — Engineer only. Authored.
+
+**⚠ The corpus granted the Engineer the interface, the skill, and the ruling that it works. It never gave anyone a way to do it.**
+
+**Three derived facts, all pointing one way:**
+
+**`DROID_INTERFACE` is granted at 1st level to `drx` and to no other class column.**
+**`Slicing`, `Security` and `Science` are the Engineer's own three under `PT-83`, and `Slicing` is its alone among non-Jedi.**
+**⚠ `SKILL-RESOLUTION-01` already rules the case:** *"a slicer takes control of an enemy droid mid-fight. All of it runs."* **Permitted between NPCs, forbidden against a player-controlled character** — **a complete permission structure for an ability that did not exist.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Field Override** | **1** | **Declare in place of an attack.** Opposed `Slicing` against an enemy droid's **Will save**, within 20 m and in line of sight. **On a success it loses its next turn.** You make no attack this round |
+| › **Subverted** | **4** | On a success it instead **takes one action of your choosing on your initiative**, that turn only |
+| ›› **Turned** | **8** | As above, and it **remains under your control** until it takes damage from your party, you use the chain again, or the encounter ends. **⚠ One droid at a time** |
+
+**Uses only machinery that exists.** **The declaration economy — `ATTACKS-01 §2`. Opposed rolls against a save — `SKILL-RESOLUTION-01 §6`, which already pairs `Intimidate` with Will. Player protection — the same section.**
+
+**⚠ Priced.** **The Engineer gives up the least of any class when it gives up its attack.** **The class that cannot fight gets something to do instead of fighting badly.**
+
+**Not dominant: it does nothing against organics, which is most of the game.**
+
+> **⚠ The capstone needs a ceiling and has one.** **Without *one droid at a time*, an Engineer in a droid-heavy encounter accumulates a second party.** **With it, the strongest case is turning the single most dangerous machine on the field — which is the moment, and it is HK-47 on Tatooine.**
+
+**⚠ OPEN.** **A turned droid acting on the Engineer's initiative gets a declaration of its own, and `ATTACKS-01 §2` gives each character one per round.** **Nothing states whether a controlled character's declaration is separate from the controller's.** **The same question `Battle Meditation` and the domination powers will raise — settle it once.**
 
 
 ---

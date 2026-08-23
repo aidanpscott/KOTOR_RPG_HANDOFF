@@ -355,7 +355,13 @@
 
 **d20 + Dexterity modifier, rolled once per encounter. No re-rolls.**
 
-**⚠ Whether a class modifies it belongs to the class workstream.** *The Smuggler was to own an initiative feat.*
+**⚠ CLOSED. No class modifies initiative. `PT-96`.**
+
+> **`PT-74` answered it by refusing.** ***"A flat initiative bonus is a different feat and every class wants it."***
+
+**The Smuggler's slot is filled by `Quickdraw`, which was written specifically to be the conditional version** — **useless in an ambush, useless at range, useless against something that was always going to attack you.**
+
+**⚠ And the Scout had the better claim on a flat bonus, which is the argument for giving it to nobody.** **Its feature is `Read the Ground`, built on the saves that actually distinguish it.**
 
 ## Surprise
 

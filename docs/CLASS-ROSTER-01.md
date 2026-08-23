@@ -68,6 +68,46 @@
 
 ---
 
+---
+
+## 5a. Species restrictions on class access
+
+**Owner ruling. `PT-92`. The first restriction of its kind in the class layer.**
+
+> **A droid chassis and a Rakata may not take any Force class, base or prestige.**
+
+**Which is: Jedi Guardian, Jedi Sentinel, Jedi Consular, Sith Warrior, Sith Inquisitor, Sith Assassin, and all eight Force prestige classes.**
+
+### Why each
+
+**Rakata.** **⚠ Already ruled and already written, per species.** **`SPECIES-CHAPTER-v2`, `Force Blind`: *"A Rakata cannot take `Force-Sensitive`."*** **Both subraces carry it.**
+
+**And the chapter's front matter states it as a general rule:** *"Any species can be Force-sensitive. One species — the Miraluka — receives Force-Sensitive as a species trait. One — the Rakata — is barred from it entirely."*
+
+**⚠ Droids.** **Nothing said so anywhere.** **The `Droid` record carries `Constructed` and says nothing about the Force.**
+
+> **A droid is built, not born. It has no midi-chlorians and nothing to awaken.**
+
+**This is authored, not ported — but it is the setting's own position and no KOTOR droid is Force-sensitive.**
+
+### ⚠ How the restriction actually bites
+
+**`FORCE-TRAINING-01` gates the Force classes behind *finding a teacher*, and `FORCE-AWAKENING-01` gates awakening behind *being sensitive*.**
+
+**So the restriction is already enforced upstream for the Rakata** — **`Force Blind` means they never pass Stage 2 and the question never reaches a class.**
+
+**⚠ For droids it is not.** **Nothing in `FORCE-AWAKENING-01` excludes a droid from an Echo.** **Either `Constructed` gains a clause, or the class restriction is the only thing stopping it.**
+
+**Recommended: put it in `Constructed`, where `Force Blind` already lives for the Rakata.** **One shape for one rule.**
+
+### What this opens
+
+**⚠ This is the first species-to-class restriction and it will not be the last.**
+
+**Candidates the roster already implies and nothing states:** **whether a droid may take Doctor** *(it can repair, but `Medicine` is a living-things skill)*, **whether Brawler is available to a chassis with no hands, and whether the `Marksman` chassis restriction in `ATTACKS-01` is a class rule or a species rule** — *which is `FINDINGS-02 §4`'s open blocker.*
+
+**A general table is wanted eventually. This ruling is one row of it.**
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

@@ -2475,6 +2475,123 @@
 
 **⚠ The only species in the game granted an attack chain.**
 
-**And it is self-consistent with the roster:** **`ATTACKS-05` line 108 requires Strength 13 for `Power Attack`.** **A Gamorrean's `+4 Strength` means they meet it at any point buy** — *the species could always take it, and this makes what was inevitable into what is given.*
+**And it is self-consistent with the roster:** **`ATTACKS-05` line 108 requires Strength 12 for `Power Attack` — `PT-91`.** **A Gamorrean's `+4 Strength` means they meet it at any point buy** — *the species could always take it, and this makes what was inevitable into what is given.*
 
 **⚠ It also means a Gamorrean's four credits are entirely free for anything else**, which is a real advantage on top of `+4 Strength` and `Brute Force`. **Worth watching in play.**
+
+
+---
+
+## PT-91 — `Power Attack` requires Strength 12, not 13
+
+**Owner ruling. Eleven occurrences in `ATTACKS-05`, plus the cross-reference in `ATTACKS-06 §222`.**
+
+**⚠ The gate moved by one point and by one point of budget:**
+
+    Strength 12   costs 4 of 30
+    Strength 13   costs 5 of 30
+
+**At 13 the chain was priced out of any character not already buying Strength.** **At 12 a `Smuggler` or an `Engineer` can reach it with a single point of a dumped stat.**
+
+> **The Power axis stops being Soldier-and-Gamorrean-only and becomes something any character may commit to.**
+
+**⚠ `PT-90` is unaffected in substance.** **A Gamorrean's `+4 Strength` clears 12 as easily as it cleared 13, and `Bred to the Axe` still grants tier 1 outright.**
+
+---
+
+## PT-92 — Droids and Rakata cannot take Force classes
+
+**Owner ruling. The first species-to-class restriction in the system.**
+
+> **A droid chassis and a Rakata may not take any Force class, base or prestige.**
+
+**Six base classes and eight prestige classes.**
+
+### Rakata — already ruled, already written
+
+**`SPECIES-CHAPTER-v2`, `Force Blind`, on both subraces: *"A Rakata cannot take `Force-Sensitive`."*** **And the chapter's front matter states it generally.**
+
+**⚠ So the restriction was already enforced upstream.** **`FORCE-AWAKENING-01` gates everything behind being sensitive; a Rakata never passes Stage 2 and the question never reaches a class.**
+
+### Droids — nothing said so anywhere
+
+**The `Droid` record carried `Constructed` and was silent on the Force.**
+
+> **A droid is built, not born. There is nothing to awaken.**
+
+**⚠ Authored, not ported.** **But it is the setting's own position and no KOTOR droid is Force-sensitive.**
+
+**Written into `Constructed`'s record as `Force Blind`** — **the same shape the Rakata already used, so one rule has one form.**
+
+### ⚠ Why the placement matters
+
+**Had it gone only in the class layer, `FORCE-AWAKENING-01` would still have let a droid accrue Echoes, roll for sensitivity, and pass** — **then hit a wall at class selection with no explanation.**
+
+**In `Constructed` it fails at the first gate, which is where the fiction fails.**
+
+### What this opens
+
+**⚠ The first restriction of its kind, and the roster implies more that nothing states.**
+
+**Whether a droid may take `Doctor` — it can repair, but `Medicine` is a living-things skill.**
+**Whether `Brawler` is available to a chassis with no hands.**
+**Whether `ATTACKS-01`'s melee chassis-block is a class rule or a species rule** — **which is the open blocker in `FINDINGS-02 §4`.**
+
+**A general species-to-class table is wanted. This is one row of it.**
+
+---
+
+## PT-93 — Bounty Hunter saving throws, and `Quarry`
+
+**Both authored. The class had no save progression in any document.**
+
+### Saves — Fort strong, Reflex strong, Will weak
+
+    Scout           12 / 12 / 12  = 36
+    Guardian        12 / 12 /  9  = 33
+    Bounty Hunter   12 / 12 /  6  = 30
+    Soldier         12 /  6 /  6  = 24
+    Smuggler         6 / 12 /  6  = 24
+
+**⚠ The source row points at `CLS_ST_SOLDIER`, which `PT-68` rejected as a placeholder.** **It could not be ported without reversing that ruling.**
+
+**Fort and Reflex is `PT-68`'s own description made mechanical** — *"hits as often and as hard as a Soldier, carries a Scout's bag of tricks."* **The Soldier's body and the Scout's feet.**
+
+**⚠ It sits above the Soldier, 30 to 24, and that is the price of the Soldier's twelve capstones.**
+
+### `Quarry` — the class does what it was named for
+
+**⚠ `CLASS-ATTACKS-01 §4` said the Bounty Hunter *"takes targets alive and moving."* Nothing implemented it.**
+
+> **Grepped the corpus: no rule for non-lethal damage, subdual or capture exists anywhere.** **`ATTACKS-01 §12.4` gives the window and nothing lets a player aim for it.**
+
+**Every bounty in KOTOR is *alive if possible*.** **Three tiers at 1 / 4 / 8, priced strictly below `Squad Tactics` on the attack axis, because the attack bonus is not what the chain is for.**
+
+---
+
+## PT-94 — The Scout's grants, and a warrant in the wrong game
+
+### The Scout is the most heavily granted class in either source
+
+**`sct_granted`, nineteen rows above proficiencies. Eight distinct grants and two long ladders.** **We carried `Targeting` and `Uncanny Dodge` and nothing else.**
+
+**`Evasion` at 6th is now recorded.** **⚠ `SKILLS-01 §12.4` called it *"the Scout's damage-avoidance feat"* while `FEATS-LIBRARY-01` neither granted nor restricted it.** **A grant is not a lock: the source grants it and leaves it purchasable, and so do we.**
+
+**⚠ `Close Combat` and `Flurry` at 1st are recorded and deliberately NOT granted** — both are attack chains in our system, and two more would put the Scout at four granted chains and `T` = 31, breaking the band its chain count was assigned under.
+
+### `Read the Ground`
+
+**Built from the one number that makes the class: 36 save points, the only all-strong progression in either game.**
+
+> **The Soldier absorbs. The Scout avoids.**
+
+**⚠ Priced against grenades, the only area effects on the pregen sheets. Under 3 expected damage a round, and only when someone throws something.** **It does nothing against weapons, which is almost every attack in the game.**
+
+### ⚠ The Engineer's skill base cites the wrong game
+
+    K1 ExpertDroid   skillpointbase 4
+    K2 ExpertDroid   skillpointbase 1
+
+**`PT-55` rules K2 the source for class data. `PREGENS-01 §8` called 4 *"the real `skillpointbase`"* — true of K1, false of K2.**
+
+**The number stands; the warrant changes from ported to authored.** **Same shape as `SKILLS-01 §9.3`, smaller stakes.**

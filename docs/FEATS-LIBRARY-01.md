@@ -82,7 +82,7 @@
 | **Elusive** | Never quite where the blow lands. | **+1 Defence.** Always active. |
 | › Improved Elusive |  | **+2 Defence.** |
 | ›› Master Elusive |  | **+3 Defence.** |
-| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. | On a successful Reflex save, take **no** damage instead of half. |
+| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. **⚠ Granted to the Scout at 6th level — `sct_granted`, `feat.2da`. Purchasable by anyone else.** | On a successful Reflex save, take **no** damage instead of half. |
 | **Freetrader** | Life between worlds — flying, trading, and knowing who to ask. | +1 Appraise and Pilot. |
 | › Improved Freetrader |  | +2 Appraise and Pilot. |
 | ›› Master Freetrader |  | +3 Appraise and Pilot. |
@@ -428,6 +428,77 @@
 **⚠ Effect pending.** **The string table rows — `1257`, `1259`, `1260` — are not in holdings.** **The reinstated cut siblings describe the family as increasing the effectiveness of Force Armour, Valor, Speed and similar; that is a secondary source and is marked as one.**
 
 **Owner ruling wanted: adopt Force Focus as the Consular's restricted chain and retire the two Force Channel reinstatements, or keep both.**
+
+---
+
+
+### Quarry — Bounty Hunter only. Authored.
+
+**⚠ `CLASS-ATTACKS-01 §4` states the Bounty Hunter *"takes targets alive and moving."* Nothing implemented it.**
+
+**Grepped the corpus: no rule for non-lethal damage, subdual or capture exists anywhere.** **`ATTACKS-01 §12.4` gives the window — 0 wounds is Disabled and a legal target, −1 to −9 dying, −10 dead — and nothing lets a player aim for it.**
+
+> **Every bounty in KOTOR is *alive if possible*. The class named after it should own the mechanic.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Quarry** | **1** | **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 wounds is **Disabled and stable** rather than dying |
+| › **Run to Ground** | **4** | As above, and **+2 attack against your quarry**, which gains no benefit from cover against you |
+| ›› **No Escape** | **8** | As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you |
+
+**⚠ Priced against `Squad Tactics`, the only comparand in the corpus.** **`Squad Tactics` is Soldier-only and reaches `+6` against any target an ally is also attacking.** **Quarry reaches `+4` against one named target and costs a naming action.**
+
+**Strictly weaker on the attack axis, deliberately. The attack bonus is not what the chain is for.**
+
+
+---
+
+
+### ⚠ The Scout is the most heavily granted class in the source and we carry a third of it
+
+**Derived, `sct_granted` in `feat.2da`, everything above proficiencies — nineteen rows:**
+
+    FLURRY             1       UNCANNY_DODGE_1    4      EVASION    6
+    RAPID_SHOT         1       UNCANNY_DODGE_2    7
+    CLOSE_COMBAT       1       TARGETING_1..8     1, 5, 9, 13, 17, 21, 25, 29
+                               PRECISE_SHOT_I..V  4, 8, 12, 16, 20
+
+**Eight distinct grants and two long ladders.** **No other class in either game is close — the Soldier has three proficiency groups and two attack chains.**
+
+**This document held `Targeting` and `Uncanny Dodge` and recorded none of the rest.**
+
+**`Evasion` at 6th is now stated above.** **⚠ It matters because `SKILLS-01 §12.4` calls it *"the Scout's damage-avoidance feat"* while this document neither granted nor restricted it.** **A grant is not a lock — the source grants it and leaves it purchasable, and so do we.**
+
+**⚠ `Close Combat` and `Flurry` at 1st are recorded and NOT granted.** **Both are attack chains rather than feats in our system, and granting two more would put the Scout at four granted chains and `T` = 31 — breaking the band arithmetic its chain count was assigned under.**
+
+**Recorded so it is not rediscovered as an omission.**
+
+
+---
+
+
+### Read the Ground — Scout only. Authored.
+
+**Derived from the one number that makes the class:** **12 / 12 / 12 at level 20 is 36 save points against the Soldier's 24 and the Jedi's 33.** **The only all-strong progression in either game.**
+
+**Add `Uncanny Dodge` at 4 and 7 and `Evasion` at 6 and the class the source built is not a ranged specialist.** **It is the one who walks into the room first and comes back out.**
+
+> **The Soldier absorbs. The Scout avoids.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Read the Ground** | **1** | **When you succeed on a Reflex save against an effect with an area, one ally in that area may use your result in place of their own.** Declared after your roll, before theirs |
+| › **Called It** | **4** | **Two allies** |
+| ›› **Nobody Steps On It** | **8** | **Two allies**, and **when `Evasion` reduces your damage to none, each of them takes half instead of full** |
+
+**⚠ Priced.** **The only area effects on the pregen sheets are grenades.** **A trooper's frag against `KORR` at Reflex `+5` lands about 8 on a failure.** **At tier 1 the Scout converts one ally's failure roughly a third of the time — under 3 expected damage a round, and only when someone throws something.**
+
+**Not dominant: it does nothing against weapons, which is almost every attack in the game.** **A hard counter to one narrow category, which is what a save specialist should be.**
+
+> **The grenade lands, the Scout shouts, and the party does not die.** **Two or three times a campaign, not every round.**
+
+**⚠ The reconnaissance half of the class — going first, not being surprised — is initiative.** **`ACTION-ECONOMY-01 §17` lists class initiative modifiers as open and notes the Smuggler was to own one.** **The Scout has the better claim and the two should be settled together.**
+
 
 ---
 

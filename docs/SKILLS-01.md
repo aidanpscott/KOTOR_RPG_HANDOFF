@@ -227,6 +227,17 @@
 
 **A Soldier ends with 132 career points at level 30 and a Smuggler with 264, both at Intelligence 12. **⚠ Every figure in this section assumes Int 12 unless it says otherwise.**** The gap opens at 1st level and never closes.
 
+**⚠ The `Engineer`'s base of 4 is authored, not derived, and the warrant was the wrong game.**
+
+    K1 ExpertDroid   skillpointbase 4
+    K2 ExpertDroid   skillpointbase 1
+
+**`PT-55` rules K2 the source for class data.** **`PREGENS-01 §8` called 4 *"the real `skillpointbase`"* — true of K1 and false of K2.** **`PT-94`.**
+
+**The number stands.** **Every class was raised from source — Soldier 1→3, Smuggler 4→7, Guardian 1→3 — and 4 is where a raise from K2's 1 lands anyway.** **What changes is the warrant: authored, not ported.**
+
+> **⚠ Same shape as `SKILLS-01 §9.3`, smaller stakes.** **A K1 read standing in for a K2 fact.**
+
 **⚠ `Smuggler` inherits the Scoundrel entirely.** **`PT-73`: `Scoundrel` becomes a prestige class and the base class is `Smuggler`.** **Base 7, eleven class skills, `Sneak Attack`, and the Specialist rate — all of it the Scoundrel's.**
 
 **⚠ `Bounty Hunter` is base 4 rather than the source's 1, and no longer mirrors the Soldier.** **`k2_classes.2da` row 10 gives `skillpointbase` 1 on a row labelled `BountyHunter(CUT!!!)` — a placeholder pointing at the Soldier's tables, not a design.** > **At base 2 it had nine class skills and 2.9 points per class skill, the second-worst on the roster.** **Base 4 gives 5.8, and 52 points at 10th level against the Soldier's 26.** **`PT-68`.**

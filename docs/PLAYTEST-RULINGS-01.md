@@ -2431,3 +2431,50 @@
 > **⚠ The document was right and the derivation was wrong.** **Two derivations disagreed, and the answer was to find which — not to split the difference.** **`PT-65`.**
 
 **Corrected counts, derived with the fixed filter: 87 distinct trait names across 98 instances.**
+
+---
+
+## PT-89 — Four attack credits at 1st level, split freely
+
+**Owner ruling.**
+
+> **Every class receives four attack credits at 1st level. The player splits them between ranged and melee in any combination.**
+
+**`CLASS-ATTACKS-01 §3a`.** **The named grants in `§4` are retained as *recommended openings* — what a class looks like if the player does not want to choose.**
+
+### ⚠ It raises `T` unevenly
+
+    class        picks   old T   new T   gain
+    Soldier         36      38      40     +2
+    Guardian        36      37      40     +3
+    Marksman        36      37      40     +3
+    Scout           27      29      31     +2
+    Smuggler        18      19      22     +3
+
+**Classes that were granted fewer chains gain more.** **⚠ That flattens a distinction the grants were carrying, and every chain count assigned before this ruling was assigned against the old `T`.**
+
+### ⚠ And it collides with the chassis block
+
+**`ATTACKS-01` line 124: *"Melee is chassis-blocked; ranged is role-blocked. No droid frame swings a blade."***
+
+**This ruling says every class gets four credits split any way.** **A droid `Marksman` spending one on melee has entered a melee tree.**
+
+**Two readings, escalated to the owner because they resolve an open blocker in opposite directions:**
+
+**Credits carry access.** **The chassis block yields.** **The `Marksman`/`Engineer` stranding problem — where a Combat-rate class has an accessible roster of 11 against a band floor of 13 — is solved.**
+
+**Credits are tiers only.** **⚠ A droid's four are ranged-only, `T` rises to 40 against an access ceiling of 33, and the Marksman strands seven instead of five.** **The ruling deepens the blocker.**
+
+---
+
+## PT-90 — Gamorreans receive `Power Attack` free
+
+**Owner ruling. `Bred to the Axe`.**
+
+> **A Gamorrean receives the `Power Attack` chain's tier 1 free at 1st level, in addition to the four credits every class receives.**
+
+**⚠ The only species in the game granted an attack chain.**
+
+**And it is self-consistent with the roster:** **`ATTACKS-05` line 108 requires Strength 13 for `Power Attack`.** **A Gamorrean's `+4 Strength` means they meet it at any point buy** — *the species could always take it, and this makes what was inevitable into what is given.*
+
+**⚠ It also means a Gamorrean's four credits are entirely free for anything else**, which is a real advantage on top of `+4 Strength` and `Brute Force`. **Worth watching in play.**

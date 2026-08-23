@@ -153,6 +153,47 @@
 
 ---
 
+## 3a. Four attack credits at 1st level — owner ruling
+
+> **Every class receives four attack credits at 1st level. The player splits them between ranged and melee in any combination.**
+
+**Four ranged, four melee, two and two — any split. `PT-89`.**
+
+### What this replaces
+
+**Named grants per class.** **The previous rule handed each class three or four specific tier-1 chains and gave the player no choice.**
+
+**⚠ The grants in `§4` are not deleted. They become the class's *recommended* opening** — *what a Soldier looks like if you do not want to choose.* **The four credits are what a player who does want to choose spends instead.**
+
+### ⚠ It raises `T` for every class, and by different amounts
+
+    class        picks   old T   new T
+    Soldier         36      38      40
+    Guardian        36      37      40
+    Marksman        36      37      40
+    Scout           27      29      31
+    Smuggler        18      19      22
+
+**Classes that were granted fewer chains gain more.** **The Guardian and the Smuggler gain three; the Soldier gains two.**
+
+> **⚠ That flattens a distinction the grants were carrying.** **Re-check the chain counts against the new `T` before treating them as settled.**
+
+### ⚠ And it overrides the chassis block, which was not obvious
+
+**`ATTACKS-01` line 124: *"Melee is chassis-blocked; ranged is role-blocked. No droid frame swings a blade."***
+
+**But this rule says *every class* gets four credits split *any* way.** **A droid `Marksman` spending one on melee has entered a melee tree.**
+
+**Two readings, and they cannot both hold:**
+
+**The credits carry access.** **Then the chassis block yields to the class rule, and the `Marksman` and `Engineer` stranding problem is solved** — *a droid with a vibroblade is not absurd, and `PT-75` already said droids and organics draw from one class list.*
+
+**The credits are tiers only, spendable within existing access.** **⚠ Then a droid's four credits are ranged-only, `T` rises to 40 against an access ceiling of 33, and the Marksman strands seven instead of five.** **The ruling makes the blocker worse.**
+
+**⚠ Owner ruling wanted. The first reading resolves an open blocker; the second deepens it.**
+
+---
+
 ## 4. Grants
 
 **Two or three per class, at 1st level, costing no pick.** **These are the class.**
@@ -173,7 +214,11 @@
 
 **⚠ `Strike` and `Shoot` are the free baseline** — `ATTACKS-01`. **Listing them is a statement that no class is denied them, not a grant of anything scarce.**
 
-### 4.1 A chassis may be closed out of a grant; a class is not
+### 4.1 The recommended openings
+
+**⚠ Superseded as *grants* by `§3a`. Retained as what each class looks like if the player does not want to choose.**
+
+### 4.1a A chassis may be closed out of a grant; a class is not
 
 **Every class gets three grants.** **⚠ Was *"both droid classes get two"* — `PT-75` ruled they are not droid classes.** **A chassis may still be closed out of a grant; the class is not.**
 

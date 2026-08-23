@@ -1,0 +1,184 @@
+# CLASS-ATTACKS-01 — grants and schedules
+
+**The document `ATTACKS-01 §7` and `§11.6` have both been deferring to.**
+
+> **Two separate things.** **What a class is *given*, and how fast it *picks*.** **The first is identity; the second is budget.**
+
+---
+
+## 1. The principle, from the source
+
+**`ATTACKS-01 §7` recorded it and this document acts on it:**
+
+> ***"In KOTOR, class identity came from what you were given.*** **Scouts were granted Rapid Shot and Targeting, Smugglers got Sniper Shot and Sneak Attack, Soldiers got Power Attack.** ***Selectable lists ran 50 to 69 feats for nearly every class and were almost identical."***
+
+**So grants are few and load-bearing. The selectable roster is wide and shared.**
+
+**⚠ This is the third time the project has landed on the same rule.** **`Killer's Instinct` and `Squad Tactics` set the precedent: class identity belongs in grants, not in roster-level locks.**
+
+---
+
+## 2. Rate assignment
+
+**Three rates. `ATTACKS-01 §11.3` defines them; this assigns them.**
+
+| Rate | Classes | Source signal |
+|---|---|---|
+| **Combat** | **Soldier · Jedi Guardian · Marksman** | **Feats 18–23 at level 30.** **The Soldier's 23 is the ceiling; the Marksman's 18 is the floor** |
+| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Weaponmaster · Marauder · Watchman · Engineer** | **16 or 15 at level 30. `featgain.2da` treats these as one kind of character** |
+| **Specialist** | **Smuggler · Jedi Consular · Machinist · Jedi Master · Sith Lord · Assassin** | **11 or 10 at level 30** |
+
+**Derived from `FEAT-SCHEDULE-01`'s level-30 totals**, because that is the only signal the source gives about how fast a class acquires anything.
+
+### 2.1 Scout and Guardian share a rate — `PT-54.2`
+
+> **K2's feat schedules for Scout, Guardian, Weaponmaster and Marauder are byte-identical, rows 1 through 30.**
+
+**They differ on BAB and hit die, and that is where the Guardian's advantage is paid.** **Charging it a second time through attack picks would double-count.**
+
+### 2.2 Two surprises worth stating
+
+**The Soldier is alone at the top and that is honest.** **23 against 16 is not a rounding difference.** **Combat is a thin tier because the source made it one.**
+
+### 2.2a The Bounty Hunter is Middle, and it is the third class built this way
+
+**Full BAB and d10, `Middle` picks.** **`PT-68`.**
+
+> **It hits as often and as hard as a Soldier, carries a Scout's bag of tricks, and knows twice what a Soldier knows.**
+
+**⚠ The only class in the game with full BAB, d10, and a `Middle` pick rate.**
+
+**⚠ The Marksman is Specialist, not Combat.** **`featgain.2da` gives it 11 at level 30 — the Smuggler's number, not the Soldier's.** **Its d12 and full BAB carry its combat identity instead.** *The name is the source's and it misleads.*
+
+---
+
+## 3. The schedule, extended to thirty
+
+**`ATTACKS-01 §11.3` ran to level 20. `PT-55` set the ceiling at 30.**
+
+| Level | Combat | Middle | Specialist |
+|---|---|---|---|
+| **1** | **+2** (2) | +1 (1) | +1 (1) |
+| **2** | +1 (3) | +1 (2) | **—** (1) |
+| **3** | +1 (4) | +1 (3) | +1 (2) |
+| **4** | +1 (5) | +1 (4) | **—** (2) |
+| **5** | +1 (6) | +1 (5) | +1 (3) |
+| **6** | **+2** (8) | +1 (6) | **—** (3) |
+| **7** | +1 (9) | **—** (6) | +1 (4) |
+| **8** | +1 (10) | +1 (7) | **—** (4) |
+| **9** | +1 (11) | +1 (8) | +1 (5) |
+| **10** | +1 (12) | +1 (9) | +1 (6) |
+| **11** | **+2** (14) | +1 (10) | +1 (7) |
+| **12** | +1 (15) | +1 (11) | **—** (7) |
+| **13** | +1 (16) | +1 (12) | +1 (8) |
+| **14** | +1 (17) | **—** (12) | **—** (8) |
+| **15** | +1 (18) | +1 (13) | +1 (9) |
+| **16** | **+2** (20) | +1 (14) | **—** (9) |
+| **17** | +1 (21) | +1 (15) | +1 (10) |
+| **18** | +1 (22) | +1 (16) | **—** (10) |
+| **19** | +1 (23) | +1 (17) | +1 (11) |
+| **20** | +1 (24) | +1 (18) | +1 (12) |
+| **21** | **+2** (26) | **—** (18) | +1 (13) |
+| **22** | +1 (27) | +1 (19) | **—** (13) |
+| **23** | +1 (28) | +1 (20) | +1 (14) |
+| **24** | +1 (29) | +1 (21) | **—** (14) |
+| **25** | +1 (30) | +1 (22) | +1 (15) |
+| **26** | **+2** (32) | +1 (23) | **—** (15) |
+| **27** | +1 (33) | +1 (24) | +1 (16) |
+| **28** | +1 (34) | **—** (24) | **—** (16) |
+| **29** | +1 (35) | +1 (25) | +1 (17) |
+| **30** | +1 (36) | **+2** (27) | +1 (18) |
+
+**All three land on a whole number of trees at both twenty and thirty.**
+
+| | L20 | trees | **L30** | **trees** |
+|---|---|---|---|---|
+| **Combat** | 24 | 8 | **36** | **12** |
+| **Middle** | 18 | 6 | **27** | **9** |
+| **Specialist** | 12 | 4 | **18** | **6** |
+
+### 2.3 Chains are a band, not a number
+
+**Owner ruling. The pick totals above buy a *range* of chains, and each class sits somewhere in its band.**
+
+| Rate | Picks at 30 | **Chains learnable** |
+|---|---|---|
+| **Combat** | 36 | **11–13** |
+| **Middle** | 27 | **8–10** |
+| **Specialist** | 18 | **5–7** |
+
+> **⚠ The rate sets the band. The class sets the number within it.**
+
+**Assigned so far:**
+
+| Class | Rate | Chains | Feats@30 |
+|---|---|---|---|
+| **Soldier** | Combat | **12–13** | 23 |
+| **Jedi Guardian** | Combat | **13** | 20 |
+| **Marksman** | Combat | **11** | **18** |
+
+**⚠ `Marksman` sits at the floor of the `Combat` band on both axes and takes the most skill points in the tier.** **A d12 that endures, acquires slowly for its tier, and knows more than the Soldier.**
+
+**A `Middle` class with 8 chains buys deeper into each; one with 10 buys wider.** **Same picks, different shape.**
+
+**⚠ Not assigned yet.** **Each class gets its number as it is designed** — agenda `§1.2`. **Until then, treat the midpoint as the working figure.**
+
+---
+
+**Combat's `+2` lands every fifth level from 1.** **Middle skips every seventh, and takes `+2` at 30 to land whole.** **Specialist runs on odd levels, plus 10, 11, 20 and 30.**
+
+> **⚠ A pick is not a feat.** **`ATTACKS-01 §11.1`: three currencies, three tracks, no crossover.** **An attack pick cannot buy a feat and a feat cannot buy an attack.**
+
+---
+
+## 4. Grants
+
+**Two or three per class, at 1st level, costing no pick.** **These are the class.**
+
+| Class | Granted at 1st level | Why |
+|---|---|---|
+| **Soldier** | `Power Attack` · `Strike` · `Shoot` | **The source grants Power Attack by name.** The other two are the free baseline everyone owns |
+| **Bounty Hunter** | `Rapid Fire` · `Snap Shot` · `Shoot` | Takes targets alive and moving. Volume and reaction, not weight |
+| **Scout** | `Rapid Fire` · `Precise Shot` · `Shoot` | **The source grants Rapid Shot and Targeting.** These are their equivalents |
+| **Smuggler** | `Precise Shot` · `Sneak Attack`* · `Shoot` | **The source grants Sniper Shot and Sneak Attack.** *`Sneak Attack` is a feat rider, not an attack — `PT-29` |
+| **Smuggler** | `Snap Shot` · `Point Blank Shot` · `Shoot` | Close, fast, and gone. Ours to define and this is the definition |
+| **Machinist** | `Charged Shot` · `Covering Fire` · `Shoot` | Fights by preparation and by denying ground |
+| **Jedi Guardian** | `Sarlacc Sweep` · `Strike` · `Shoot` | The blade first. A crowd answer at 1st level |
+| **Jedi Sentinel** | `Deflecting Slash` · `Strike` · `Shoot` | Defence that answers back |
+| **Jedi Consular** | `Saber Pierce` · `Strike` · `Shoot` | One precise blade, because the Force is the weapon |
+| **Marksman** | `Power Attack` · `Shoot` | **No melee** — `ATTACKS-05` closes it to every droid. `Strike` is unavailable |
+| **Engineer** | `Covering Fire` · `Shoot` | Support, and the only attack it reliably contributes |
+
+**⚠ `Strike` and `Shoot` are the free baseline** — `ATTACKS-01`. **Listing them is a statement that no class is denied them, not a grant of anything scarce.**
+
+### 4.1 Droids are short by one
+
+**Every organic class gets three grants. Both droid classes get two.**
+
+> **`Strike` is closed to droids and nothing replaces it.** **`ATTACKS-05` bars melee to every chassis, which `PT-26` extended to opportunity attacks.**
+
+**This is a real deficit and it is the droid upgrade system's job to answer** — `DROID-SKILLS-01 §3`, unbuilt.
+
+---
+
+## 5. Prestige classes
+
+**Grants nothing. Picks continue from the character's rate.**
+
+**⚠ And no entry credit anywhere** — `MULTICLASS-01 §5` removed the system entirely. **The rate a class pays at is the whole mechanism.**
+
+> **`FEAT-SCHEDULE-01` established that prestige feat columns read from *their own* class level.** **Attack picks do not.** **A Guardian who enters Weaponmaster at 15 keeps counting attack picks from character level 15, because both classes are Middle and the rate does not change.**
+
+**⚠ Where entry crosses a rate boundary, the new rate applies from the level of entry and picks already spent are not recalculated.** **A Consular entering Jedi Master stays Specialist and nothing happens. A Smuggler entering Assassin likewise.**
+
+**No prestige entry in the current list crosses a boundary.** **If one ever does, this is the rule.**
+
+---
+
+## 6. What this does not settle
+
+**Which attacks are *restricted* rather than merely ungranted.** **`Killer's Instinct` and `Squad Tactics` are class-locked and nothing defines the mechanism.**
+
+**⚠ The multiclass pick question is closed** — `MULTICLASS-01 §3.1`. **Neither summing nor the higher rate: picks accrue at the rate of the class you take that level in, read at your current character level.**
+
+**The Smuggler's full identity.** **Three grants are not a class.**

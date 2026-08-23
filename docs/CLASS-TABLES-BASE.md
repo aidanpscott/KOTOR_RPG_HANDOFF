@@ -139,6 +139,26 @@
 
 **Vitality per level** — **`PORT-01 v2` makes vitality accumulative from class, level, and Constitution modifier.** **The hit die is here; the formula that uses it should be checked against `RULES-01 v2`.**
 
+**⚠ Marksman saving throws — authored. `PT-98`.**
+
+    Fort strong, Reflex weak, Will weak — 12 / 6 / 6 at level 20, total 24.
+
+**`PLAYTEST-RULINGS-01 B2` gives *"Marksman — Fortitude"* and nothing else. `cls_st_cm_drd.2da` is not in holdings.**
+
+**It is the Soldier's profile, and the Marksman is the Soldier's shape pushed further** — **d12 against d10, Constitution primary, slower acquisition, more skills.** **A body that endures and a mind that does not.**
+
+**⚠ Constitution primary with a weak Will is the sharpest expression of what the class is, and the one stated column already points at the Soldier's table.**
+
+**⚠ Machinist saving throws — authored. `PT-98`.**
+
+    Fort weak, Reflex strong, Will weak — 6 / 12 / 6 at level 20, total 24.
+
+**`k2_classes.2da` points at `CLS_ST_TECHSPEC`, which is not in holdings.**
+
+**⚠ This is the one place the duplicated row is evidence rather than an accident.** **BioWare wrote a separate save file for this class instead of pointing at `CLS_ST_SCNDRL`** — **so the table exists and would settle it. `cls_st_techspec.2da` and `cls_st_cm_drd.2da` are the two files wanted.**
+
+**Until then: the Smuggler's profile, because the source made the two classes literally the same on every other design column.**
+
 **⚠ Engineer saving throws — authored. `PT-96`.**
 
     Fort weak, Reflex strong, Will strong — 6 / 12 / 12 at level 20, total 30.

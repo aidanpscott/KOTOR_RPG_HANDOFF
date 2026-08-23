@@ -2668,3 +2668,112 @@
 > **No class modifies initiative.** **`PT-74` answered it by refusing: *"a flat initiative bonus is a different feat and every class wants it."***
 
 **⚠ The Scout had the better claim on a flat bonus, which is the argument for giving it to nobody.**
+
+---
+
+## PT-97 — Post-run sweep: five stale passages, and one I created while fixing them
+
+**Swept after `PT-88` through `PT-96`. Documents get written forward and never re-derived backward — the pattern this project keeps rediscovering.**
+
+### Stale band values
+
+**`BRIEF-CLASS-DESIGNER` still printed `11–13 / 8–10 / 5–7`.** **⚠ The worst of the five: it is the document a new agent reads first, and it would have handed them superseded numbers as settled fact.**
+
+**`AGENDA-CURRENT §1.2` still called chain counts unassigned for every class.** **All ten are assigned.**
+
+### `PT-89` residue — two table headers
+
+**`CLASS-ATTACKS-01 §4` and `ACTION-ECONOMY-01 §18` both headed their columns *"Granted at 1st level."*** **`PT-89` made that false — those are a *recommended opening* now.**
+
+**And `ACTION-ECONOMY-01` carried *"a class-granted attack is free"* in its free-things list. Classes no longer grant attacks.**
+
+### Every pregen is short by four
+
+**`PREGENS-01 §44` said *"class grants are deferred; none are given below."*** **True when written.**
+
+    Combat sheets      built on 10 picks   now 14 tiers
+    Middle sheets      built on  7 picks   now 11 tiers
+    Specialist sheets  built on  4 picks   now  8 tiers
+
+**⚠ Not regenerated.** **The sheets are a playtest artefact and re-running them is `AGENDA-CURRENT §7`'s job.** **Flagged so nobody reads one as current.**
+
+### ⚠ And the fix broke a check
+
+**Writing *"`KORR` was built on 10 picks and `VESS` on 7"* into the section header put both names in prose *above* their sheets.**
+
+**`audit_skills.py` finds the first occurrence of a sheet name. It parsed my explanatory note as `VESS`'s stat block and reported `33/77, cap 11, not a class skill: Athletics, Intimidate`** — **which is `KORR`'s line, read under `VESS`'s class.**
+
+> **⚠ A sheet name in prose is indistinguishable from a sheet name in a sheet.** **The check is right to be positional; the document has to not lie to it.**
+
+**Reworded to *"a Combat sheet"* and *"a Middle sheet."*** **Caught on the run immediately after, which is the only reason it is not still there.**
+
+---
+
+## PT-98 — Machinist and Marksman, and a duplicate is not a clone
+
+### Saves, both authored
+
+    Machinist   6 / 12 /  6  = 24    the Smuggler's profile
+    Marksman   12 /  6 /  6  = 24    the Soldier's profile
+
+**⚠ Neither file is in holdings.** **`cls_st_techspec.2da` and `cls_st_cm_drd.2da` would convert both from authored to derived.**
+
+### ⚠ The Machinist is a *duplicate* of the Smuggler, not a *clone*
+
+**`k2_classes.2da` row 2 against row 9. Every design column identical except five, and those five differ only in name:**
+
+    featstable         SCD  vs  TEC
+    savingthrowtable   CLS_ST_SCNDRL  vs  CLS_ST_TECHSPEC
+    skillstable        SCD  vs  TEC
+    armorclasscolumn   SCD  vs  TEC
+    featgain           SCD  vs  TEC
+
+**Same die, same BAB, same skill base, same recommended spread, same primary ability.** **And `tec_reg` is byte-identical to `scd_reg` across all fifty rows.**
+
+> **BioWare made separate tables and filled them with the same numbers.**
+
+**⚠ Contrast the Bounty Hunter, which *points at* `SOL`.** **That is a clone — an unfinished row borrowing another class's tables, rejected as evidence by `PT-68`.**
+
+**A duplicate is weaker evidence than an original and stronger than a placeholder.** **`FEAT-SCHEDULE-01` had read the match as *"two classes sharing a cadence."* They do not share it; one was filled from the other.**
+
+**The numbers stand on `PT-83`. The warrant changes from ported to authored.**
+
+**⚠ And the separate save file is the one place the duplication is evidence rather than accident** — **BioWare wrote `CLS_ST_TECHSPEC` instead of pointing at `CLS_ST_SCNDRL`.**
+
+---
+
+## PT-99 — The Marksman's chain count is conditional and I adopted it as settled
+
+**⚠ My error, caught by the designer.**
+
+**`REPLY-08` adopted Marksman 14. `REPLY-06` records the chassis reading as still with the owner.**
+
+    Combat band          14–20
+    droid ranged access  11
+    intersection         empty
+
+> **14 is legal only under *credits carry access*.** **Under *credits are tiers only* no legal number exists at that rate — the band and the access ceiling do not overlap at all.**
+
+**⚠ If the restrictive branch is chosen, 14 is void and the Marksman needs its *rate* revisited, not its chain count.**
+
+**Flagged in `CLASS-ATTACKS-01` rather than left.** **Adopting a number in one document while another calls the question open is the divergence pattern this project has named, and it is cheaper to reconcile before the prestige classes read from it.**
+
+---
+
+## PT-100 — Seven class features, and four are narrow
+
+**Recorded by the designer as a self-check rather than found in review.**
+
+| | broad | narrow |
+|---|---|---|
+| **Combat** | Soldier, Marksman | — |
+| **Middle** | Bounty Hunter | Scout, Engineer |
+| **Specialist** | — | Smuggler, Machinist |
+
+**⚠ Derived: the split tracks rate exactly.** **Both Combat classes are broad; every Specialist is narrow.**
+
+> **Which is arguably what a Specialist *is* — decisive in one place rather than useful everywhere.**
+
+**⚠ The real risk is narrower than the pattern.** **Two of the four narrow features are both about droids.** **An Engineer and a Machinist in a droid-free campaign both hold a class feature that never fires.**
+
+**Recorded, not resolved.**

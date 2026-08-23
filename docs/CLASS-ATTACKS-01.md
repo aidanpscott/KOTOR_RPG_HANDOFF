@@ -143,7 +143,7 @@
 |---|---|---|---|---|
 | **Soldier** | Combat | **14** | 23 | 13 |
 | **Jedi Guardian** | Combat | **18** | 20 | 11 |
-| **Marksman** | Combat | **14** | 18 | 13 |
+| **Marksman** | Combat | **14 ⚠** | 18 | 13 |
 | **Bounty Hunter** | Middle | **11** | 16 | 10 |
 | **Scout** | Middle | **17** | 16 | 7 |
 | **Jedi Sentinel** | Middle | **13** | 15 | 9 |
@@ -151,6 +151,14 @@
 | **Smuggler** | Specialist | **8** | 11 | 7 |
 | **Jedi Consular** | Specialist | **13** | 11 | 4 |
 | **Machinist** | Specialist | **10** | 11 | 6 |
+
+**⚠ The Marksman's 14 is CONDITIONAL and the condition is unruled. `PT-99`.**
+
+> **Under *credits carry access* it is legal and strands nothing.** **Under *credits are tiers only* a droid Marksman reaches 11 ranged chains, and the Combat band is 14–20.** **Empty intersection — no legal number exists at that rate.**
+
+**⚠ If the restrictive branch is chosen, 14 is void and the Marksman needs its *rate* revisited rather than its chain count.**
+
+**Recorded because adopting the number in one document while another calls the question open is the divergence pattern this project has named.** **Cheaper to reconcile now than after the prestige classes read from it.**
 
 **⚠ All ten assigned. `PT-95`.** **Three floors — Soldier, Bounty Hunter, Smuggler — three near-tops, and the rest between.**
 
@@ -223,7 +231,7 @@
 
 **Two or three per class, at 1st level, costing no pick.** **These are the class.**
 
-| Class | Granted at 1st level | Why |
+| Class | **Recommended opening** — `PT-89` | Why |
 |---|---|---|
 | **Soldier** | `Power Attack` · `Charged Shot` · `Strike` · `Shoot` | **The source grants `POWER_ATTACK` *and* `POWER_BLAST` at 1st — `feat.2da`, `sol_granted`.** **`POWER_BLAST` is `usetype` 1, ranged active, tiers at 4 and 8 — which is `Charged Shot`'s ladder exactly.** **⚠ Four grants, not three. He is the only class the source gives weight in both hands** |
 | **Bounty Hunter** | `Rapid Fire` · `Snap Shot` · `Shoot` | Takes targets alive and moving. Volume and reaction, not weight |

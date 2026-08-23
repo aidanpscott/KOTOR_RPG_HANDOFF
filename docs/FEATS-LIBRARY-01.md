@@ -552,3 +552,77 @@
 
 ---
 
+
+### Jury Rig — Machinist only. Authored.
+
+**⚠ `SKILL-RESOLUTION-01 §5.3` defines a droid-repair mode and gives nobody a way to use it on anyone else:** *"more vitality restored when a droid uses a repair kit **on itself**."*
+
+> **No character in the game could repair a droid other than themselves.**
+
+**A **Gear** action, one per round — `ACTION-ECONOMY-01 §3` — so it costs no declaration. The same price `Medicine` pays.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Jury Rig** | **1** | **Spend one repair part to restore `2d8 + half your Repair total` vitality to an adjacent droid.** Any droid, not only yourself |
+| › **Percussive Maintenance** | **4** | As above, **or instead clear one ion effect, stun, or disabled state** on an adjacent droid |
+| ›› **Back in the Fight** | **8** | As above, and **once per encounter restore a droid at 0 wounds to a quarter of its vitality.** It acts on your initiative that round |
+
+**⚠ Parity, derived.** **`Medicine` on a medpac is `2d8 + Medicine ÷ 2`.** **This is the same expression on the same action for the other half of the party.**
+
+**Not a new power level — the missing operator for a mode the corpus already defined.**
+
+**Not dominant: it does nothing in a party without droids.**
+
+**⚠ The capstone overlaps `Emergency Reboot`, a chassis feat firing once per day at 0 wounds.** **Alternatives, not a stack: Reboot is automatic and self-only; this is someone else spending their action on you, and it works after Reboot is spent.**
+
+
+---
+
+
+### Still Standing — Marksman only. Authored.
+
+**Derived from three ported numbers that say one thing.** **`d12`, the only one in either game. `primaryabil CON`, the only Constitution-primary class. And the spread `14 / 14 / 16 / 8 / 8 / 8` — three mental stats at the floor.**
+
+> **A machine built to keep working after it should have stopped.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Still Standing** | **1** | **The first time each encounter you are reduced to 0 wounds or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you |
+| › **Not Finished** | **4** | **Two turns**, taken on your own initiative |
+| ›› **Last Word** | **8** | Two turns, and **during them damage cannot take you below −9.** You cannot die until they are spent |
+
+**⚠ Priced.** **One extra turn for a Combat-rate character is one extra declaration — about 27 damage at level 8.** **Once per encounter, across a three-feat investment, on the Combat class with the fewest feats at 18.**
+
+**Not dominant: it does not prevent death and it does not heal.** **You arrive at 0 wounds either way; the chain buys the order of events, not the outcome.**
+
+**⚠ Interaction with `Emergency Reboot`, stated:** **a droid Marksman holding both takes the extra turns first and Reboot fires afterwards** — **Reboot triggers on being destroyed and this postpones that.**
+
+> **The shot that should have ended him lands, and he fires back before he goes down.** **That is Canderous on the Leviathan.**
+
+---
+
+### ⚠ The seven class features, and a pattern worth watching
+
+| Feature | Class | Fires on | |
+|---|---|---|---|
+| **Hold the Line** | Soldier | any round an ally is adjacent | **broad** |
+| **Quarry** | Bounty Hunter | any encounter with a named target | **broad** |
+| **Still Standing** | Marksman | any encounter you are dropped in | **broad** |
+| **Quickdraw** | Smuggler | a conversation becoming a fight | narrow |
+| **Read the Ground** | Scout | area effects only | narrow |
+| **Field Override** | Engineer | enemy droids only | narrow |
+| **Jury Rig** | Machinist | allied droids only | narrow |
+
+**Four of seven are hard counters to a narrow category.**
+
+**⚠ Derived: the split tracks rate exactly.** **Both Combat classes are broad. Every Specialist is narrow. Middle is split.**
+
+> **Which is arguably what a Specialist *is* — decisive in one place rather than useful everywhere.**
+
+**⚠ The real risk is narrower than the pattern.** **Two of the four narrow features are both about droids, and a party may contain none.** **An Engineer and a Machinist in a droid-free campaign both hold a class feature that never fires.**
+
+**Recorded, not resolved.** **The fix if it is one: a second mode on each that applies to machinery rather than to droids — doors, turrets, security systems.** **Not proposed.**
+
+
+---
+

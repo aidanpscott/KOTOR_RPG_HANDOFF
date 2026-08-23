@@ -101,11 +101,27 @@
 
 **Owner ruling. The pick totals above buy a *range* of chains, and each class sits somewhere in its band.**
 
-| Rate | Picks at 30 | **Chains learnable** |
-|---|---|---|
-| **Combat** | 36 | **11–13** |
-| **Middle** | 27 | **8–10** |
-| **Specialist** | 18 | **5–7** |
+| Rate | Picks at 30 | **Chains entered** | Capstones at the floor | at the top |
+|---|---|---|---|---|
+| **Combat** | 36 | **13–16** | 12 | 10 |
+| **Middle** | 27 | **10–13** | 9 | 7–8 |
+| **Specialist** | 18 | **7–10** | 6 | 4 |
+
+**⚠ Raised from 11–13 / 8–10 / 5–7 by `PT-88`.** **The old bands stranded picks at every value except the top.**
+
+> **A tree absorbs 1 to 3 tiers. `N` trees absorb between `N` and `3N`. A class spends its whole budget only if `3N ≥ T`, where `T` is picks plus granted tier-1 chains.**
+
+    Combat, T=37:   N=11 -> 4 stranded   N=12 -> 1   N=13 -> 0
+    Middle,  T=29:  N=8  -> 5 stranded   N=9  -> 2   N=10 -> 0
+    Specialist, 19: N=5  -> 4 stranded   N=6  -> 1   N=7  -> 0
+
+**⚠ A stranded pick is worse than a wasted one.** **Three currencies, no crossover — `ATTACKS-01 §11.1` — so it cannot become a feat or a skill point.** **It is a number on the sheet that buys nothing, and a player who finds it will assume they misread the rules.**
+
+**Chain count is a *depth* dial.** **Capstones reachable = `⌊(T − N) ⁄ 2⌋`** — *each tree costs 1 tier to enter, each capstone 2 more.*
+
+    Combat, T=37:  N=13 -> 12 capstones   N=16 -> 10 capstones
+
+> **Low `N`: few trees, all finished. High `N`: more answers, fewer capstones.** **That is the trade, and it works two above where the band was printed.**
 
 > **⚠ The rate sets the band. The class sets the number within it.**
 

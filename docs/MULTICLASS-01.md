@@ -174,14 +174,14 @@
 
 **Picks accrue at the rate of the class you take that level in — `§3.1`.** **Split your career and half of it pays at a slower rate.**
 
-| Build at level 30 | Picks | Feats | Chains finished |
+| Build at level 30 | Picks | Feats | **Capstones** |
 |---|---|---|---|
 | **Pure Soldier** | **36** | **23** | **12** |
 | Soldier 20 / Smuggler 10 | 30 | 19 | 10 |
 | Soldier 15 / Smuggler 15 | 27 | 18 | 9 |
 | Three-way even split | 27 | 17 | 9 |
 
-**A tier-3 capstone needs its tier-1 and tier-2 first, so picks-divided-by-three is roughly how many chains a character finishes.**
+**⚠ These are *capstones*, not chains.** **A chain entered costs one pick; a capstone costs two more on top.** **`PT-88`.** **A character enters more trees than it finishes, and the number below is the finishing count.**
 
 **⚠ Nobody has to write *"multiclassing costs you."*** **It costs you because half your career was paid at a slower rate, and that is arithmetic rather than a penalty.**
 
@@ -237,14 +237,14 @@
 
 **Here is a character who committed, against three who did not.**
 
-| At character level 30 | Attack chains finished |
+| At character level 30 | **Attack capstones reached** |
 |---|---|
 | **Soldier the whole way** | **12** |
 | Soldier 20 / Smuggler 10 | 10 |
 | Soldier 15 / Smuggler 15 | 9 |
 | An even three-way split | 9 |
 
-**The specialist finishes twelve chains. The others finish nine or ten.**
+**The specialist finishes twelve trees. The others finish nine or ten.**
 
 **Those missing chains are the capstones — the top of each attack tree, which you only reach by buying the two below it first.**
 
@@ -252,7 +252,7 @@
 
 | | Specialist | Multiclass |
 |---|---|---|
-| **Attack chains finished** | **More** | Fewer |
+| **Attack capstones** | **More** | Fewer |
 | **Class-skill lists** | One | **Two, permanently** |
 | **Saving throws** | One progression | **Two, stacked** |
 | **What you can do** | **Deeper** | **Wider** |

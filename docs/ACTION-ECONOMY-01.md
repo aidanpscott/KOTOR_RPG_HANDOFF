@@ -646,8 +646,8 @@
 | **Smuggler** | Blasters, melee weapons · Light armour |
 | **Machinist** | Blasters, melee weapons · Light armour |
 | **Jedi Guardian · Consular · Sentinel** | Lightsabers, blasters, melee weapons · **no armour** |
-| **Marksman** | Blasters, blaster rifles · droid plating |
-| **Engineer** | Blasters · droid plating |
+| **Marksman** | Blasters, blaster rifles · light and medium armour |
+| **Engineer** | Blasters · light armour |
 
 **A character may still buy proficiency in anything their class does not grant** — that is what the ladders in `FEATS-LIBRARY-01` are for.
 

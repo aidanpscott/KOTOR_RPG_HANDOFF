@@ -408,3 +408,26 @@
 | **Weapon Proficiency: Lightsaber** | **Force classes only.** Droids can never take it. | Allows lightsabers to be equipped. |
 | › Weapon Focus: Lightsaber |  | +1 attack. |
 | ›› Weapon Specialization: Lightsaber |  | +2 damage. |
+
+### ⚠ Force Focus — the live chain, and it was never catalogued
+
+**`feat.2da`, read directly:**
+
+    FORCE_FOCUS            jcn_granted  1    successor 89
+    FORCE_FOCUS_ADVANCED   jcn_granted  6    mincharlevel 4   successor 90
+    FORCE_FOCUS_MASTERY    jcn_granted 12    mincharlevel 8
+
+**Three tiers, Consular-only, granted at 1 / 6 / 12 — `ATTACKS-01 §3.4`'s base ladder.** **`usetype` blank, so passive: a feat, not an attack.**
+
+> **⚠ This document held `Force Channel (Alter)` and `Force Channel (Control)` instead — `XXXX_FORCE_FOCUS_ALTER` and `XXXX_FORCE_FOCUS_CONTROL`, which carry the cut-content prefix.**
+
+**The two cut rows were reinstated. The live shipped chain they were cut in favour of was not.**
+
+**And it is not bookkeeping.** **`§5` gives the Guardian `Force Jump` at 1 / 6 / 12 and the Sentinel `Force Immunity` at 1 / 6 / 12, both verified against their grant columns.** **The source assigns all three Jedi a chain on the identical schedule. We held two of three.**
+
+**⚠ Effect pending.** **The string table rows — `1257`, `1259`, `1260` — are not in holdings.** **The reinstated cut siblings describe the family as increasing the effectiveness of Force Armour, Valor, Speed and similar; that is a secondary source and is marked as one.**
+
+**Owner ruling wanted: adopt Force Focus as the Consular's restricted chain and retire the two Force Channel reinstatements, or keep both.**
+
+---
+

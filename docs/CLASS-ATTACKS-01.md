@@ -162,14 +162,14 @@
 | **Jedi Guardian** | `Sarlacc Sweep` · `Strike` · `Shoot` | The blade first. A crowd answer at 1st level |
 | **Jedi Sentinel** | `Deflecting Slash` · `Strike` · `Shoot` | Defence that answers back |
 | **Jedi Consular** | `Saber Pierce` · `Strike` · `Shoot` | One precise blade, because the Force is the weapon |
-| **Marksman** | `Power Attack` · `Shoot` | **No melee** — `ATTACKS-05` closes it to every droid. `Strike` is unavailable |
+| **Marksman** | `Power Attack` · `Strike` · `Shoot` | **⚠ Melee restored.** `PT-75` dropped the droid/organic class split; an organic may take this class and `ATTACKS-05`'s closure is a *chassis* restriction, not a class one |
 | **Engineer** | `Covering Fire` · `Shoot` | Support, and the only attack it reliably contributes |
 
 **⚠ `Strike` and `Shoot` are the free baseline** — `ATTACKS-01`. **Listing them is a statement that no class is denied them, not a grant of anything scarce.**
 
-### 4.1 Droids are short by one
+### 4.1 A chassis may be closed out of a grant; a class is not
 
-**Every organic class gets three grants. Both droid classes get two.**
+**Every class gets three grants.** **⚠ Was *"both droid classes get two"* — `PT-75` ruled they are not droid classes.** **A chassis may still be closed out of a grant; the class is not.**
 
 > **`Strike` is closed to droids and nothing replaces it.** **`ATTACKS-05` bars melee to every chassis, which `PT-26` extended to opportunity attacks.**
 

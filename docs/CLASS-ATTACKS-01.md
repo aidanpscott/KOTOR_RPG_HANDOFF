@@ -129,9 +129,15 @@
 
 | Class | Rate | Chains | Feats@30 |
 |---|---|---|---|
-| **Soldier** | Combat | **12–13** | 23 |
-| **Jedi Guardian** | Combat | **13** | 20 |
-| **Marksman** | Combat | **11** | **18** |
+| **Soldier** | Combat | **13** | 23 |
+| **Jedi Guardian** | Combat | **15** | 20 |
+| **Marksman** | Combat | **14** | **18** |
+
+**⚠ All three moved when the band was raised — `PT-88`.** **The old values were assigned against 11–13 and two of them stranded picks under 13–16.**
+
+> **⚠ The Guardian's 13 is the one to watch.** **It was the *top* of the old band — the widest Combat build. Under the new band 13 is the *floor* — the deepest.** **The number did not change and its meaning inverted.** **Moved to 15, which is what 13 used to mean.**
+
+**Soldier 13 is deliberate and it is the only class at the floor.** **`§4.4`: he has the fewest skills, no Force, and the worst non-weapon saves in the game. Twelve capstones is the compensation.** **⚠ If the Soldier ever moves to 16, the Guardian drops to 13 and they swap identities — they must not both sit at 13.**
 
 **⚠ `Marksman` sits at the floor of the `Combat` band on both axes and takes the most skill points in the tier.** **A d12 that endures, acquires slowly for its tier, and knows more than the Soldier.**
 
@@ -153,7 +159,7 @@
 
 | Class | Granted at 1st level | Why |
 |---|---|---|
-| **Soldier** | `Power Attack` · `Strike` · `Shoot` | **The source grants Power Attack by name.** The other two are the free baseline everyone owns |
+| **Soldier** | `Power Attack` · `Charged Shot` · `Strike` · `Shoot` | **The source grants `POWER_ATTACK` *and* `POWER_BLAST` at 1st — `feat.2da`, `sol_granted`.** **`POWER_BLAST` is `usetype` 1, ranged active, tiers at 4 and 8 — which is `Charged Shot`'s ladder exactly.** **⚠ Four grants, not three. He is the only class the source gives weight in both hands** |
 | **Bounty Hunter** | `Rapid Fire` · `Snap Shot` · `Shoot` | Takes targets alive and moving. Volume and reaction, not weight |
 | **Scout** | `Rapid Fire` · `Precise Shot` · `Shoot` | **The source grants Rapid Shot and Targeting.** These are their equivalents |
 | **Smuggler** | `Precise Shot` · `Sneak Attack`* · `Shoot` | **The source grants Sniper Shot and Sneak Attack.** *`Sneak Attack` is a feat rider, not an attack — `PT-29` |

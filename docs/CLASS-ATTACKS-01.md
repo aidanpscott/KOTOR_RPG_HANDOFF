@@ -141,7 +141,7 @@
 | **Bounty Hunter** | `Rapid Fire` · `Snap Shot` · `Shoot` | Takes targets alive and moving. Volume and reaction, not weight |
 | **Scout** | `Rapid Fire` · `Precise Shot` · `Shoot` | **The source grants Rapid Shot and Targeting.** These are their equivalents |
 | **Smuggler** | `Precise Shot` · `Sneak Attack`* · `Shoot` | **The source grants Sniper Shot and Sneak Attack.** *`Sneak Attack` is a feat rider, not an attack — `PT-29` |
-| **Smuggler** | `Snap Shot` · `Point Blank Shot` · `Shoot` | Close, fast, and gone. Ours to define and this is the definition |
+| **Scoundrel** *(prestige)* | `Snap Shot` · `Point Blank Shot` · `Shoot` | **⚠ Held.** Close, fast, and gone. **This was the pre-merge Smuggler's row and survived `PT-73` as an orphan** — reassigned to the prestige class rather than deleted, because it is a real identity and the Scoundrel needs one |
 | **Machinist** | `Charged Shot` · `Covering Fire` · `Shoot` | Fights by preparation and by denying ground |
 | **Jedi Guardian** | `Sarlacc Sweep` · `Strike` · `Shoot` | The blade first. A crowd answer at 1st level |
 | **Jedi Sentinel** | `Deflecting Slash` · `Strike` · `Shoot` | Defence that answers back |

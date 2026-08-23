@@ -211,7 +211,7 @@
 | Class | Base | L1 | L5 | L10 | L20 | L30 | Class skills |
 |---|---|---|---|---|---|---|---|
 | **Soldier** | 3 | 16 | 32 | 52 | 92 | 132 | 7 |
-| **Bounty Hunter** | 4 | 16 | 52 | 92 | 132 | 165 | 9 |
+| **Bounty Hunter** | 4 | 20 | 40 | 65 | 115 | 165 | 9 |
 | **Jedi Guardian** | 3 | 16 | 32 | 52 | 92 | 132 | 6 |
 | **Jedi Consular** | 4 | 20 | 40 | 65 | 115 | 165 | 8 |
 | **Marksman** | 4 | 20 | 40 | 65 | 115 | 165 | 8 |
@@ -225,7 +225,7 @@
 
 > **KOTOR's values do not port and were never going to.** They were balanced against **eight** skills — a Smuggler's 8 points covered the entire list every level. **Against twenty-four the same number means something completely different**, so these are authored against what each class should be able to master rather than scaled from the source.
 
-**A Soldier ends with 99 career points at level 30 and a Smuggler with 264.** The gap opens at 1st level and never closes.
+**A Soldier ends with 132 career points at level 30 and a Smuggler with 264, both at Intelligence 12. **⚠ Every figure in this section assumes Int 12 unless it says otherwise.**** The gap opens at 1st level and never closes.
 
 **⚠ `Smuggler` inherits the Scoundrel entirely.** **`PT-73`: `Scoundrel` becomes a prestige class and the base class is `Smuggler`.** **Base 7, eleven class skills, `Sneak Attack`, and the Specialist rate — all of it the Scoundrel's.**
 
@@ -286,7 +286,21 @@ Slicing · Security · Science · Appraise · Awareness · Alertness · Pilot
 
 ### 9.3 A correction to `CLASS-TABLES-JEDI` and `D-AJ`
 
-> **The Jedi Sentinel has three class skills in the source, not six — Awareness, Persuade, and Treat Injury. Identical to the Guardian's.**
+> **⚠ WITHDRAWN. This was a K1 read used to overturn a K2 fact, and `PT-55` rules K2 the source for class data.**
+
+**What each game actually gives, derived from both tables:**
+
+| | K1 | K2 |
+|---|---|---|
+| **Guardian** | Awareness · Persuade · Treat Injury — **3** | plus Demolitions — **4** |
+| **Sentinel** | the identical 3 | **6** — Slicing · Stealth · Awareness · Persuade · Security · Treat Injury |
+| **Consular** | **6** | **4** — Awareness · Persuade · Repair · Treat Injury |
+
+**In K2 the Sentinel and Guardian were never identical.** **`PT-79` did this read and got exactly this; the section was never withdrawn.**
+
+**⚠ And it is load-bearing.** **`PT-54.1` — the ruling that keeps the Sentinel in the game — cites it: *"the class skill list was the Guardian's, exactly."*** **That warrant is void.**
+
+**The Sentinel survives on a different and better warrant: K2 gave it `Slicing`, `Stealth` and `Security`, which is the infiltrator the class is for.** **`SKILLS-01 §9.4` re-authored those three as a judgement call — *"what the source never expressed mechanically."* The source expressed it, in the other game.**
 
 **Both documents record six** and describe the Sentinel as having *"the broadest list."* **Verified against `skills.2da`: `jsn_class` marks exactly the same three rows as `jgd_class`.** The six-skill list belongs to the Consular.
 

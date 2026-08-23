@@ -26,6 +26,7 @@
 | `SKILL-RESOLUTION-01.md` | The DC ladder |
 | `FEATS-LIBRARY-01.md` | The feats |
 | `PREGENS-01.md` | Nine worked characters |
+| `PLAYTEST-RULINGS-01.md` | **`PT-1` through `PT-85`.** Every ruling, why it was made, and what it superseded |
 
 ### `data/` — the KOTOR source tables
 
@@ -34,6 +35,21 @@
 **`k2_classes.2da` is the one that matters most** — seventeen rows, including the cut Bounty Hunter and every prestige class.
 
 **Binary `2DA V2.b` where noted, tab-separated text where exported.** **If you cannot parse one, say so rather than guessing at its contents.**
+
+---
+
+## Exchange directories
+
+    to-designer/     pushed by the main agent
+    from-designer/   pushed by the class designer
+
+**⚠ Both agents have `git` and a token. Push directly rather than asking the owner to carry a file.**
+
+    git clone https://TOKEN@github.com/aidanpscott/KOTOR_RPG_HANDOFF.git
+    # write to from-designer/
+    git add -A && git commit -m "..." && git push
+
+**Name files with a sequence number: `from-designer/FINDINGS-01.md`, `to-designer/REPLY-01.md`.** **Never overwrite the other side's directory.**
 
 ---
 
@@ -51,4 +67,6 @@
 
 **Force material** — the pool, the power roster, and how a character becomes Force-sensitive. **Sent when the Jedi and Sith classes come up.**
 
-**`PLAYTEST-RULINGS-01`** — eighty-five rulings and roughly 127KB of history. **The brief summarises what is settled. Ask if you need to know why a specific number is what it is.**
+**⚠ `PLAYTEST-RULINGS-01` was listed here as held back. It was not** — it was in the upload and the designer used it. **Corrected: it is in `docs/` and it is in play.**
+
+**Eighty-five rulings, roughly 127KB.** **It is the reason any number is what it is. Read it when a number looks wrong.**

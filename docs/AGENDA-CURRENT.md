@@ -226,6 +226,46 @@
 
 ---
 
+## 2.9b Every combat rule needs a one-line player statement
+
+**⚠ Owner instruction. A test, and a layout task.**
+
+> **If a rule cannot be stated in one line a player would understand, it is too complex.**
+
+**Not a style preference — a design test applied before the rule is adopted, not after.**
+
+### Why it exists
+
+**The range work added five rules to the ranged attack in one session, doubling the count.** **Examined, three of the five are *reference* rules a player never consults:**
+
+    −2 per range increment      fires almost never indoors — PT-170
+    48 m hard ceiling           never binds on any map we have written
+    threat non-compounding      only a Commando with Deathstroke ever has two
+
+**⚠ They exist so the answer is written down when someone reaches the edge, not because anyone checks them each round.**
+
+**The two that cost real attention are a matched pair with one idea behind them:**
+
+> **Guns are bad up close.** *`−4` firing while adjacent, `+2` attacking an adjacent shooter.*
+
+**One new concept, not five — and one a player already expects.**
+
+### ⚠ The real risk is presentation, not rules
+
+**`ACTION-ECONOMY-01` now has two sections about range — `§6.2a` and `§13` — and a reader has to consult both.**
+
+**The fix is a player-facing box at layout: *"Shooting at range"*, six lines and one table, everything in one place.**
+
+**⚠ Not written now. Recorded so it is not discovered at layout.**
+
+### The test, going forward
+
+**Every combat rule carries a one-line statement of what a player does.** **Rules that cannot are either split, merged, or cut.**
+
+**⚠ It also sorts the two kinds apart automatically.** **A rule with a one-line statement is a table rule. A rule that needs a paragraph of conditions is a reference rule, and reference rules belong in an appendix rather than in the flow.**
+
+---
+
 ## 2.9a A gamemaster chapter — does not exist
 
 **⚠ Named by `PT-170`. Two rules have now had nowhere correct to live.**

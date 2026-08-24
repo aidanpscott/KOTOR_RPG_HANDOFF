@@ -4862,3 +4862,47 @@
 **`5–20` threat with critical damage multipliers behind it changes every round of every fight.** **This changes some rounds of some fights and ends none.**
 
 **⚠ Recorded rather than left open so the next reader who derives the 8% figure does not re-raise it.**
+
+---
+
+## PT-178 — Every combat rule needs a one-line player statement
+
+**Owner instruction, prompted by a challenge worth recording: *"we want to make this as easy as possible for gamemasters and players to read and understand."***
+
+> **If a rule cannot be stated in one line a player would understand, it is too complex.**
+
+**A design test applied before adoption, not a style note applied after.**
+
+### What prompted it
+
+**The range work added five rules to the ranged attack in one session, doubling the count.**
+
+**⚠ And a proposed fix — a new `METHOD-RECORD-01` severity rule — was the wrong answer to the right question.** **`METHOD-RECORD-01` is agent methodology and never ships; it does not touch player complexity at all.**
+
+**The owner was pointed at something real and the proposal was aimed at the wrong layer.**
+
+### Examined, three of the five never reach a player
+
+    −2 per range increment      fires almost never indoors — PT-170
+    48 m hard ceiling           never binds on any map written
+    threat non-compounding      only a Commando with Deathstroke has two
+
+**⚠ Reference rules, not table rules.** **They exist so the answer is written when someone reaches the edge.**
+
+**The two that cost attention are a matched pair with one idea:**
+
+> **Guns are bad up close.**
+
+**One new concept, not five.**
+
+### ⚠ The real risk was presentation
+
+**`ACTION-ECONOMY-01` has two sections about range and a reader must consult both — a consequence of `PT-171`'s merge.**
+
+**Fix at layout: a *"Shooting at range"* box, six lines and one table.** **`AGENDA-CURRENT §2.9b`.**
+
+### And the test sorts the two kinds apart automatically
+
+**A rule with a one-line statement is a table rule.** **A rule needing a paragraph of conditions is a reference rule, and belongs in an appendix rather than the flow.**
+
+**⚠ A better test than the one it replaced, because it is applied to the *rule* rather than to the agent's judgement about the rule.**

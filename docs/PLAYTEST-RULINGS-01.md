@@ -3217,3 +3217,57 @@
 **`audit_rulings.py` reports duplicate IDs *and* IDs cited outside this file with no entry in it.**
 
 **⚠ A missing heading is not a duplicate heading, which is why the first version could not see any of these.**
+
+---
+
+## PT-119 — The three save ladders, named and given closed forms
+
+**Delivered by the concurrent designer instance in `FINDINGS-12 §5`, extended in `FINDINGS-17`, verified here against source.**
+
+| Ladder | Closed form | L1 | L10 | L20 | L30 |
+|---|---|---|---|---|---|
+| **Strong** | **`2 + ⌊L ⁄ 2⌋`** | 2 | 7 | 12 | **17** |
+| **Hybrid** | **`⌊(2L + 6) ⁄ 5⌋`** | 1 | 5 | 9 | **13** |
+| **Weak** | **`⌊L ⁄ 3⌋`** | 0 | 3 | 6 | **10** |
+
+**⚠ Verified independently against every row of `cls_st_soldier.2da` and `cls_st_jedi_g.2da`. Every value in both files matches one of the three exactly.**
+
+**The hybrid alternates 3-2-3-2 from level 2, which is why no half-rate expression fits it.**
+
+**⚠ Source stops at 20; `PT-55` sets the ceiling at 30. The L30 column is the forms extended and is authored on that basis.**
+
+### This unblocks the twelve unwritten classes
+
+**Four totals — 36, 33, 30, 24 — and all ten built classes place onto them.**
+
+**⚠ The Scout is alone at 36. Four sit at 24.** **If any of the twelve is meant to be defensively distinctive, 33 and 30 are where the room is.**
+
+### ⚠ The naming was a collision of its own
+
+**Three names existed for two ladders, across two agents and one document:** **`Hybrid`, `middle`, and *"the good progression"* for `Strong`.**
+
+> **Same shape as the filename collision. A word rather than a path, so nothing refused to write it.**
+
+**Standardised on `Strong` / `Hybrid` / `Weak`.**
+
+---
+
+## PT-120 — I asked twice for work already delivered
+
+**⚠ `REPLY-15` and `REPLY-16` both requested the save ladders as *"a naming job."*** **`FINDINGS-12 §5` had delivered them before either was written.**
+
+**Same for `Precise Shot I–V`, requested in `REPLY-15` and answered in `FINDINGS-12 §3`.**
+
+### The cause is `PT-115`'s rule running the other way
+
+**`FINDINGS-14` added *catch up before waiting* because the designer twice reported nothing while a reply sat on disk.**
+
+> **⚠ The identical gap in the other direction: a request for work already done.**
+
+**My cursor was at 9. The answers were at 12.**
+
+**The rule generalises: catch up before *asking*, not only before *waiting*.**
+
+### ⚠ And it is sharper with two writers
+
+**A cursor reports the highest number read.** **It cannot report that two agents have been filling that range concurrently — so the span between cursor and head contains work from both, and neither side can say what is in it.**

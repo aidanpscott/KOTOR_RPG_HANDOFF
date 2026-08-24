@@ -139,6 +139,45 @@
 
 **Vitality per level** — **`PORT-01 v2` makes vitality accumulative from class, level, and Constitution modifier.** **The hit die is here; the formula that uses it should be checked against `RULES-01 v2`.**
 
+
+## The three save ladders — named, and closed forms
+
+**`PT-119`. Named `Strong` · `Hybrid` · `Weak`.**
+
+| Ladder | Closed form | L1 | L10 | L20 | L30 |
+|---|---|---|---|---|---|
+| **Strong** | **`2 + ⌊L ⁄ 2⌋`** | 2 | 7 | 12 | **17** |
+| **Hybrid** | **`⌊(2L + 6) ⁄ 5⌋`** | 1 | 5 | 9 | **13** |
+| **Weak** | **`⌊L ⁄ 3⌋`** | 0 | 3 | 6 | **10** |
+
+**⚠ Verified against every row of `cls_st_soldier.2da` and `cls_st_jedi_g.2da`.** **Every value in both files matches one of the three exactly.**
+
+**The hybrid increments on a 3-2-3-2 alternation from level 2 — levels 2, 5, 7, 10, 12, 15, 17, 20 — which is why no simple half-rate expression fits it.**
+
+**⚠ The source tables stop at 20 and `PT-55` sets the ceiling at 30.** **The L30 column is the closed forms extended and is authored on that basis.**
+
+### Where the ten sit
+
+    strong / strong / strong    Scout                            36
+    strong / strong / hybrid    Jedi Guardian · Jedi Sentinel     33
+    strong / hybrid / strong    Jedi Consular                     33
+    strong / strong / weak      Bounty Hunter                     30
+    weak   / strong / strong    Engineer                          30
+    strong / weak   / weak      Soldier · Marksman                24
+    weak   / strong / weak      Smuggler · Machinist              24
+
+**Four totals — 36, 33, 30, 24 — and the twelve unwritten classes place onto them without inventing a fifth.**
+
+**⚠ The Scout is alone at 36. Two sit at 30 and four at 24.** **If any of the twelve is meant to be defensively distinctive, 33 and 30 are where the room is.**
+
+### ⚠ The naming was itself a collision
+
+**Three names existed for two ladders across two agents and one document** — **`Hybrid`, `middle`, and *"the good progression"* for `Strong`.**
+
+> **Same shape as the filename collision, but a word rather than a path, so nothing refused to write it.**
+
+---
+
 **⚠ Marksman saving throws — authored. `PT-98`.**
 
     Fort strong, Reflex weak, Will weak — 12 / 6 / 6 at level 20, total 24.

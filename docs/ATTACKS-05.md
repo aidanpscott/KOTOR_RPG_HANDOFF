@@ -60,6 +60,20 @@
 | › Forceful Slash |  | **Level 4.** **+12 damage on the first attack that hits. Attack −2.** **Knockback as above.** |
 | ›› Crushing Blow |  | **Level 8.** **+20 damage on the first attack that hits. Attack −1**, and **your critical multiplier is increased by 1** on that attack. **Knockback as above.** |
 
+## Stealth — the blade they never saw
+
+**Gating `2 / 4 / 10` — `ATTACKS-01 §223`.** **⚠ Restored by `PT-193`: the melee stealth chain was moved to `FEATS-LIBRARY-01` and the move was reversed without being written back.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Sneak Attack** | **2** | **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
+| › **Improved Sneak Attack** | **4** | **`+4d6`**, and you may attempt to re-hide as part of the same declaration — opposed `Stealth` |
+| ›› **Master Sneak Attack** | **10** | **`+6d6`**, and **your critical threat multiplier against an unaware target is `+1`** |
+
+**⚠ The ranged equivalent is `Stealthy Shot`, `ATTACKS-04`.** **Same gating, same dice, different roster — `ATTACKS-01 §4`'s parity holding.**
+
+**⚠ And it is not `Killer's Instinct`.** **That is a feat rider granted to three classes; this competes for the declaration.** **A character may hold both and they stack — the rider attaches to this chain as it attaches to any other.**
+
 ## Position — Who moved first
 
 | Attack | Description | Effects |
@@ -75,7 +89,7 @@
 | **Sweep Attack** | A low, wide cut that takes the legs rather than the head. | **Level 1. Requires Strength 12.** **Opposed attack roll. On a win the target is knocked prone and cannot stand until the start of your next turn.** **Prone targets take +2 damage from your attacks.** Half damage on a loss. |
 | › Legsweep |  | **Level 4.** **Opposed roll at +3.** **Prone targets take +4 damage** from your attacks. |
 | ›› Knockdown | They go down and they stay down. | **Level 8.** **Opposed roll at +6.** **Prone targets take +6 damage** from your attacks. |
-| **Disarming Strike** | Take the weapon rather than the hand. | **Level 5. Requires Strength 12 and Dexterity 13.** **Opposed attack roll. On a win the target's weapon is knocked from its grip and lands within 3 metres. No damage.** |
+| **Disarming Strike** | Take the weapon rather than the hand. | **Level 5. Requires Strength 12 and Dexterity 13.** **Opposed attack roll. On a win the target's weapon is knocked from its grip and lands within 4 metres. No damage.** |
 | › Stealing Strike |  | **Level 8.** **On a win you may take the weapon** rather than let it fall, **or force the target to drop a shield or held item.** **The disarm option remains available.** |
 | ›› Sever | The weapon does not fall. It breaks. | **Level 14.** **On a win you may destroy the weapon outright.** Against an unarmed or natural-weapon target, **its attacks deal half damage for the encounter.** **Both lower options remain available.** |
 
@@ -83,9 +97,9 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Guarding Stance** | You stand where the blow was going to land. | **Level 1.** **Choose one ally within 3 metres.** **Attacks against them take −2 on the attack roll**, and **you may redirect 1 hit per round to yourself — the attack re-resolves against your Defence, not theirs.** **They cannot be flanked while you hold this.** **The stance persists** until you declare a different attack, are reduced to 0 vitality, or they leave range. **While it holds, your own attack rolls take −2.** |
-| › Interpose |  | **Level 6.** **Any ally within 3 metres. −3 on attacks against them, and redirect 2 hits per round.** |
-| ›› Bulwark | Nothing gets past you. | **Level 12.** **Any ally within 5 metres. −4 on attacks against them, and redirect 3 hits per round.** |
+| **Guarding Stance** | You stand where the blow was going to land. | **Level 1.** **Choose one ally within 4 metres.** **Attacks against them take −2 on the attack roll**, and **you may redirect 1 hit per round to yourself — the attack re-resolves against your Defence, not theirs.** **They cannot be flanked while you hold this.** **The stance persists** until you declare a different attack, are reduced to 0 vitality, or they leave range. **While it holds, your own attack rolls take −2.** |
+| › Interpose |  | **Level 6.** **Any ally within 4 metres. −3 on attacks against them, and redirect 2 hits per round.** |
+| ›› Bulwark | Nothing gets past you. | **Level 12.** **Any ally within 4 metres. −4 on attacks against them, and redirect 3 hits per round.** |
 
 ## Reaction — Parry and riposte
 

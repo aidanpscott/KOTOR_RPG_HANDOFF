@@ -305,10 +305,18 @@
 
 > **That is the mechanism.** **A class-locked chain is a granted chain, and *restricted* means *granted to exactly one class*.**
 
-**So `Killer's Instinct` and `Squad Tactics` are Soldier grants, on the ladder their entries state.**
+**⚠ `Squad Tactics` is a Soldier grant. `Killer's Instinct` is NOT — `PT-194`.**
+
+**`FEATS-LIBRARY-01` grants it to *three* classes: Smuggler, Sith Assassin, Jedi Watchman.** **`PT-101`'s *restricted means granted to exactly one class* does not apply to it, and this line applied it anyway.**
+
+**⚠ The inference was drawn from a rule about `Targeting` and extended to a chain that does not fit it.**
 
 **⚠ Recorded because the closure was invisible.** **`PT-101` answered a question about `Targeting` and settled a different open item three hundred lines away.** **The designer noticed; nobody else would have.**
 
-**⚠ The multiclass pick question is closed** — `MULTICLASS-01 §3.1`. **Neither summing nor the higher rate: picks accrue at the rate of the class you take that level in, read at your current character level.**
+**⚠ REVERSED by `PT-159`.** **A multiclass character takes the *highest* rate held and the *highest* chain count held.**
+
+**This paragraph states the rule `PT-159` overturned and cites the section that was amended in place.**
+
+**⚠ The multiclass pick question was closed** — `MULTICLASS-01 §3.1`. **Neither summing nor the higher rate: picks accrue at the rate of the class you take that level in, read at your current character level.**
 
 **The Smuggler's full identity.** **Three grants are not a class.**

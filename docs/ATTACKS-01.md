@@ -507,7 +507,11 @@
 
 ## 13. Stealth damage is a rider, not a declaration
 
-**`Sneak Attack` moved out of both attack rosters and into `FEATS-LIBRARY-01`.**
+**⚠ SUPERSEDED — `PT-193`.** **This move was reversed and the reversal was never written back.**
+
+**`Sneak Attack` is a melee attack chain in `ATTACKS-05` and `Stealthy Shot` is its ranged equivalent in `ATTACKS-04`, both gated `2 / 4 / 10` by `§223` above.**
+
+**⚠ The feat chain that replaced them was itself replaced by `Killer's Instinct` and never deleted.** **Both sat in `FEATS-LIBRARY-01` 120 lines apart for the whole class workstream.**
 
 > **The dice attach to the first attack of whatever you declare.** **They are not a declaration you choose instead of attacking.**
 

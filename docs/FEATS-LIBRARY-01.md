@@ -121,9 +121,12 @@
 | › Improved Perceptive |  | +2 Alertness and Awareness. |
 | ›› Master Perceptive |  | +3 Alertness and Awareness. |
 | **Regenerate Vitality Points** | Accelerated natural healing. | **0.5 vitality every 6 seconds**, in and out of combat. Doubled under Battle Meditation. |
-| **Sneak Attack** | Striking someone who cannot see you coming. **A rider, not a declaration** — the dice attach to whatever attack you declare. | **Requires Stealth 5.** **When you attack a target unaware of you, add 2d6 to the first attack of your declaration.** **Bonus dice are 2d6 or your Stealth ranks ÷ 3, whichever is lower.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5`.* |
-| › Improved Sneak Attack |  | **Requires Stealth 10.** **+4d6**, capped at **Stealth ÷ 3.** |
-| ›› Master Sneak Attack | The blade or the bolt goes in where they were not watching. | **Requires Stealth 15.** **+6d6**, capped at **Stealth ÷ 3**, and **your critical multiplier is increased by 1** on that attack. |
+> **⚠ The `Sneak Attack` FEAT chain was here and is DELETED — `PT-193`.**
+>
+> **Owner: *"the `Sneak Attack` feat chain was replaced with `Killer's Instinct`, since `Sneak Attack` is now an attack tree. Same for `Stealthy Shot`, the ranged equivalent."***
+>
+> **⚠ The replacement happened and the replaced chain was never removed.** **Both sat in this file 120 lines apart for the whole class workstream, and four rulings were built on the one that should not exist.**
+
 | **Spotter** | You make the opening; someone else takes it. | **One ally adjacent to your target counts as flanking with you, regardless of position.** |
 | › Improved Spotter |  | **All allies adjacent to your target.** |
 | ›› Master Spotter |  | **Allies attacking your target at range also count**, within **half one range increment** — 12 m with a pistol, 14 m with a rifle. **⚠ Resolved by `PT-163`; it previously read *"half their weapon's maximum range"* against no range system** |
@@ -244,7 +247,7 @@
 |---|---|---|
 | **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the three classes that carried Sneak Attack in the source.** | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct |  | **+2d6 against an unaware target.** |
-| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *A character with this and `Master Sneak Attack` deals 6d6 + 3d6 on the first attack of a declaration — roughly 31 average, before weapon and ability. Wound points equal Constitution, so that is lethal to most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
+| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *⚠ The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. Wound points equal Constitution, so that is lethal to most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
 | **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st — `scd_granted`.** | **Defence +2 + (2 × [(level+1)/6])** in combat |
 | › **Improved Smuggler's Luck** | **⚠ Tier restored.** `IMPROVED_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** — the source row exists and its string is not in holdings |
 | ›› **Master Smuggler's Luck** | **⚠ Tier restored.** `MASTER_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** |

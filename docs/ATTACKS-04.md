@@ -131,7 +131,23 @@
 
 ### Stealth damage is no longer here
 
-***Stealthy Shot* and the melee stealth chain were attack declarations and are now the **`Sneak Attack`** feat chain in `FEATS-LIBRARY-01`.**
+**⚠ SUPERSEDED — `PT-193`. This move was reversed and the reversal was never written here.**
+
+**Owner: *"the `Sneak Attack` feat chain was replaced with `Killer's Instinct`, since `Sneak Attack` is now an attack tree. Same for `Stealthy Shot`, the ranged equivalent."***
+
+**Both are attack chains again. `Stealthy Shot` is below; `Sneak Attack` is `ATTACKS-05`'s melee equivalent.**
+
+## Stealth — the shot they never saw
+
+**Gating `2 / 4 / 10` — `ATTACKS-01 §223`. ⚠ `Stealth 5` is unreachable at level 1, and the capstone sits at 10 because it is a once-per-encounter alpha strike.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Stealthy Shot** | **2** | **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
+| › **Marked Shot** | **4** | **`+4d6`**, and the shot does not reveal you if it drops the target |
+| ›› **No Warning At All** | **10** | **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
+
+**⚠ It competes for the declaration, which is what makes it an attack chain rather than a feat.** **`Killer's Instinct` is the rider that attaches to whatever you declared; this *is* the declaration.**
 
 > **A stealth opener was one attack competing against Velocity's three, and lost to `Shoot`.** **As a rider it attaches to whatever you declare.** **`PLAYTEST-RULINGS-01 §C29`.**
 

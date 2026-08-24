@@ -5350,3 +5350,55 @@
 **⚠ That found this in one pass, and it is the check that should have run before `PT-122`.**
 
 **Five contradictions found by it so far: `ATTACKS-06` vs `FORMS-01` on forms, `PT-160`'s range claim, the `Dueling` wield clause, `Master Spotter`'s half-range, and this.**
+
+---
+
+## PT-193 — ⚠ `Sneak Attack` and `Stealthy Shot` are attack trees. Four rulings were built on a chain that should not exist.
+
+**Owner:** > ***"The `Sneak Attack` feat chain was replaced with `Killer's Instinct`, since `Sneak Attack` is now an attack tree. Same for `Stealthy Shot`, the ranged equivalent."***
+
+**⚠ That replacement happened before the class workstream began. Neither agent knew, and the corpus held every piece of the evidence.**
+
+### What the corpus actually held
+
+    FEATS-LIBRARY-01 §124   the Sneak Attack FEAT chain      ⚠ should have been deleted
+    FEATS-LIBRARY-01 §245   Killer's Instinct                the replacement, correct
+    FEATS-LIBRARY-01 §247   "with Master Sneak Attack…"      ⚠ treats both as coexisting
+    ATTACKS-05              no Sneak Attack tree             ⚠ missing
+    ATTACKS-04              no Stealthy Shot tree            ⚠ missing
+    ATTACKS-01 §223         gating table lists BOTH at 2/4/10  ✓ the live spec
+    ATTACKS-01 §510         "moved out of both rosters"      ⚠ stale
+    ATTACKS-04 §134         "now the Sneak Attack feat chain" ⚠ stale
+
+> **⚠ The gating table never stopped listing them.** **`2 / 4 / 10`, with the alpha-strike reasoning intact, sitting three hundred lines above a note saying they had been moved out.**
+
+### What was built on the wrong half
+
+    PT-122   three Sneak Attack speeds        built on the feat chain
+    PT-190   the Scoundrel's ladder           built on the feat chain
+    PT-191   one Sneak Attack tree per char   built on the feat chain
+    PT-192   §124's three-tier chain governs  ⚠ ruled the deleted chain authoritative
+
+**⚠ `PT-192` is the worst of the four.** **It found two systems in one file and resolved in favour of the one the owner had already replaced.**
+
+### Restored
+
+**`Sneak Attack` — melee, `ATTACKS-05`, gated `2 / 4 / 10`, `+2d6 / +4d6 / +6d6`.**
+**`Stealthy Shot` — ranged, `ATTACKS-04`, same gating, same dice.**
+**The feat chain — deleted. `Killer's Instinct` is the rider and always was.**
+
+**⚠ The distinction that makes them different objects:** **`Killer's Instinct` attaches to whatever you declared; these *are* the declaration.** **A character may hold both and they stack.**
+
+---
+
+## PT-194 — `Killer's Instinct` is not a Soldier grant
+
+**`CLASS-ATTACKS-01 §308`:** *"So `Killer's Instinct` and `Squad Tactics` are Soldier grants."*
+
+**⚠ `FEATS-LIBRARY-01` grants it to three classes — Smuggler, Sith Assassin, Jedi Watchman.**
+
+**`PT-101` ruled that *restricted means granted to exactly one class*.** **That is true of `Squad Tactics` and false of `Killer's Instinct`, and the line applied it to both.**
+
+> **⚠ An inference drawn from a rule about `Targeting` and extended to a chain that does not fit it.**
+
+**`Squad Tactics` stands. `Killer's Instinct` corrected.**

@@ -245,7 +245,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the three classes that carried Sneak Attack in the source.** | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
+| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** *⚠ Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.* | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct |  | **+2d6 against an unaware target.** |
 | ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *⚠ The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. Wound points equal Constitution, so that is lethal to most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
 | **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st — `scd_granted`.** | **Defence +2 + (2 × [(level+1)/6])** in combat |
@@ -837,7 +837,9 @@
 
 ### What this closes
 
-**`Field Override`'s capstone — the turned droid becomes a henchman for the duration.**
+**`Field Override`'s capstone — the turned droid becomes a henchman for the duration.** **⚠ Control is capped at one droid at a time — `PT-203`.**
+
+**⚠ And an Engineer may *build* droids. Construction is downtime work, not a class-chain tier.** **The mechanism is deferred to after the classes; it depends on `EQUIPMENT-01`'s unwritten item extraction and touches the Astromech's `Portable Workbench`, which already removes the facility requirement.**
 **The Droid Master — its whole premise, and it now has a mechanism before it is written.**
 **The Beast Master — same.**
 
@@ -849,26 +851,53 @@
 
 ---
 
-### Command Protocol — Droid Master only. Authored, on 5e's shape.
+### Command Protocol — Droid Master only. Authored.
 
-**⚠ `PT-145` makes a controlled droid a henchman with its own turn.** **This is the class that holds several, and the bound on it is the reason it is playable.**
+**⚠ Rebuilt. `PT-201`.** **The first version bounded *decision* cost and the expensive thing was *turns*.**
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Command Protocol** | **1** | **You hold two droids.** Each is a henchman with its own turn. **One order to all of them, as a Bonus action, persisting until its task is complete.** A droid with no order **takes cover and moves only to avoid harm** |
-| › **Squad Doctrine** | **4** | **Three droids**, and an order may name two tasks split among them |
-| ›› **Master and Servants** | **8** | **Four droids**, and once per encounter an order is a free action |
+| **Command Protocol** | **1** | **You hold two droids. They act on your turn, immediately after you, and all follow one order** |
+| › **Squad Doctrine** | **4** | **Three droids**, and the order may name two tasks split among them |
+| ›› **Master and Servants** | **8** | **Four droids** |
 
-> **⚠ The decision cost is one order, not one per droid — and silence resolves instantly.**
+> **Your droids act when you do, and all of them follow one order.**
 
-**That is the bound `REPLY-31` demanded before numbers.** **The problem was never the turns; it was the choices.**
+#### ⚠ Why the first version failed both tests
 
-**⚠ Cap is four, stated here rather than left to a GM.**
+    Droid Master at tier 3        1 character + 4 henchmen = 5 turns
+    in a four-player party        8 turns a round for 4 people
 
-**And `PT-153` makes the droids rebuildable materiel, so the class scales by *upgrading* them rather than adding more** — **which is what D&D's necromancer never got and why its minions become straw figures.**
+> **⚠ One player took 62% of the round.**
 
-**Chassis are `SPECIES-CHAPTER-v2`'s four: `Astromech`, `Assassin`, `Battle`, `Remote`** — **carrying `PT-114`'s access limits and `PT-92`'s Force restriction with them.**
+**`FINDINGS-38` answered *"the problem was never the turns, it was the decisions"* and built three clauses to hold decision cost at one per round.** **Decision cost was one. Table time was five turns.**
 
+**Each droid still rolled attacks, took damage, got targeted and moved.** **Collapsing the decisions did nothing to the turns, and turns were what `PT-151` named.**
+
+    turns at the table    5 → 1
+    clauses at tier 1     4 → 1
+    PT-178                fails → passes
+
+**⚠ Persistence and the silent-default are gone.** **They existed only because droids acted independently; on your turn there is nothing to persist through.**
+
+**⚠ Two tests pointing at one class was a design signal and the design was wrong, not the wording.**
+
+#### The droids themselves need no authoring
+
+**Owner: familiars rather than fighters — specialists that reach, fly, slice and hack. Weaker is fine.**
+
+**⚠ `SPECIES-CHAPTER-v2` already carries all four chassis as full species records:**
+
+| Chassis | Already written |
+|---|---|
+| **Astromech** | **`Portable Workbench`** — item construction or upgrade work anywhere, no facility. **+2 Slicing, +2 Repair** |
+| **Remote** | **`Repulsorlift Frame`** — hovers, ignores difficult terrain, no footfalls, **+4 Stealth**, 12 m speed. Tiny or Medium |
+| **Assassin** | **The entire ranged suite** — `ATTACKS-01 §242` |
+| **Battle** | **`Mass-Produced`** — repair at half time and cost |
+
+> **⚠ *Flies* is the Remote. *Slices and hacks* is the Astromech. *Reaches hard places* is the Remote at Tiny. *Upgrades* is `Portable Workbench`, verbatim.**
+
+**`AGENDA-CURRENT §215` had already said so.**
 
 ---
 
@@ -1001,6 +1030,34 @@
 > **⚠ A player's governing tree can change mid-career.** **When the newer tree overtakes the frozen one, the old is subsumed from then on.**
 
 **That is the ruling working as intended — one tree, and which one resolves to whichever is higher when you check.** **⚠ It needs stating because *"the higher"* reads as a fixed answer and is not one.**
+
+
+---
+
+
+### ⚠ The stealth trees are open to every class — `PT-200`
+
+**Owner ruling.** **`Sneak Attack` and `Stealthy Shot` may be taken by anyone who meets the `Stealth` requirement.**
+
+> **`Killer's Instinct` is what makes them worth taking, and that is granted to four classes.**
+
+**Priced, and it is why the openness costs nothing:**
+
+    Barrage, 3 strikes, unconditional            27.3 a round
+    Sneak Attack, 1 strike + 6d6                 23.8
+    Sneak Attack + Killer's Instinct (+3d6)      31.1
+
+**⚠ On its own the declaration loses to a Barrage.** **A class without the rider can buy the tree and will rarely declare it.**
+
+**Which is the cleanest kind of class distinction: the mechanic is universal and the reason to use it is not.**
+
+### ⚠ And two things the trees do NOT do
+
+**They do not stun.** **The stun belongs to `Critical Strike` and `Precise Shot` — *"a first-attack hit stuns the target for one round unless it saves."***
+
+**⚠ And *surprise* is not a bonus of the chain — it is the *condition* that lets it fire.** **`ACTION-ECONOMY-01 §19.5`: unaware means Hidden from, Stunned, or unable to see.**
+
+> **You need surprise to use `Sneak Attack`. You do not get surprise from it.**
 
 
 ---

@@ -5402,3 +5402,245 @@
 > **⚠ An inference drawn from a rule about `Targeting` and extended to a chain that does not fit it.**
 
 **`Squad Tactics` stands. `Killer's Instinct` corrected.**
+
+---
+
+## PT-195 — The stealth chains are riders, not declarations. My line was wrong.
+
+**`ATTACKS-01 §516` governs:**
+
+> *"The dice attach to the first attack of whatever you declare. **They are not a declaration you choose instead of attacking.**"*
+
+**⚠ `ATTACKS-05` said the opposite — *"this competes for the declaration"* — and I wrote that line six exchanges ago while restoring the chain.**
+
+### It is not a wording quibble
+
+    as a rider          declare Barrage, dice land on the first strike
+                        3 strikes AND +6d6. Costs a tree and nothing else.
+
+    as a declaration    declare Sneak Attack instead of Barrage
+                        1 strike at +6d6, or 3 without. A real trade.
+
+**⚠ Roughly a 21-damage swing per round at the top tier.**
+
+**And the corpus supports the rider reading elsewhere:** **`ACTION-ECONOMY-01 §19.5` — *"attacking reveals you, so it fires once per approach"*** — **describes something that happens *when* you attack, not something you attack *with*.**
+
+**⚠ Sixth instance this session of a mechanic stated twice with different content in documents that cite each other.**
+
+**So `Sneak Attack` and `Killer's Instinct` are both riders, both attach to whatever you declared, and a character holding both adds both.**
+
+---
+
+## PT-196 — Stealth trees gate at `1 / 5 / 10`
+
+**Owner ruling. Was `2 / 4 / 10`.**
+
+**⚠ One observation recorded rather than contested: `1 / 5 / 10` matches nothing else in either roster.**
+
+**Derived — every tier level used in the melee roster:**
+
+    Level 1  ×4    Level 4  ×7    Level 8  ×8
+    Level 6  ×2    Level 12 ×2    Level 14 ×1
+
+**The house pattern is `1 / 4 / 8`.** **The stealth trees were already off it at `2 / 4 / 10` and are off it differently now.**
+
+**⚠ Applied to `ATTACKS-01 §223`, `ATTACKS-04` and `ATTACKS-05`.**
+
+---
+
+## PT-197 — Two clauses on the stealth chains, both owner-ruled
+
+**The designer found that every tier was gated below the ranks its own dice needed.**
+
+> **⚠ At every tier, a character who exactly met the prerequisite received one die less than the tier said it granted.**
+
+### The requirements are raised to `6 / 12 / 18`
+
+| Tier | Requires | Grants | `Stealth ÷ 3` | |
+|---|---|---|---|---|
+| **Sneak Attack** | Stealth 6 | 2d6 | **2d6** | exact |
+| › **Improved** | Stealth 12 | 4d6 | **4d6** | exact |
+| ›› **Master** | Stealth 18 | 6d6 | **6d6** | exact |
+
+> **The cap never binds again. A tier delivers what it prints, always.**
+
+**⚠ And the cost is nothing.** **A class skill is one point per rank — `SKILLS-01 §11.1` — so a `Stealth` specialist holds `L + 3` ranks and the tiers arrive later than the ranks do.**
+
+### A granted tier is held but inactive until the ranks arrive
+
+**Owner: the requirement wins.**
+
+> **The grant gives you the tier; the ranks make it work.**
+
+**⚠ Which is the only reading consistent with `PT-101`** — a grant removes the feat cost, not the prerequisite.
+
+**Applied to `Sneak Attack` and `Stealthy Shot` alike, since `ATTACKS-01 §4`'s parity holds.**
+
+---
+
+## PT-198 — ⚠ The stealth chains ARE declarations. `PT-195` reversed.
+
+**Owner:** ***"Sneak attack is an action."***
+
+**⚠ `PT-195` ruled the opposite two exchanges ago, on the argument that `ATTACKS-01` governs because it is the framework document.**
+
+> **The right principle applied to the wrong instance.** **The framework document can be the one that is stale, and here it was.**
+
+**`ATTACKS-01 §516`'s sentence — *"they are not a declaration you choose instead of attacking"* — is struck.**
+
+**⚠ The designer withdrew its own `FINDINGS-64 §1.2` recommendation, which had made the same argument I did.** **Both of us reasoned from document precedence rather than from the rule.**
+
+---
+
+## PT-199 — `Killer's Instinct` is granted to four classes
+
+    Smuggler · Sith Assassin · Jedi Watchman · Scoundrel
+
+**⚠ And the entry's own wording could not stand.** **It read *"granted to the three classes that carried `Sneak Attack` in the source."***
+
+> **False twice: the count is four, and the fourth did not exist in the source.**
+
+**Replaced with *"the four classes built on striking an unaware target"* — a design statement rather than a provenance one, which is what the list has become.**
+
+**⚠ Supersedes `PT-194`, which corrected the count from one to three. It is four.**
+
+---
+
+## PT-200 — The stealth trees are open to every class
+
+**Owner ruling. Anyone meeting the `Stealth` requirement may take them.**
+
+    Barrage, 3 strikes, unconditional            27.3 a round
+    Sneak Attack, 1 strike + 6d6                 23.8
+    Sneak Attack + Killer's Instinct (+3d6)      31.1
+
+**⚠ On its own the declaration loses to a Barrage.** **A class without the rider can buy the tree and will rarely declare it.**
+
+> **The cleanest kind of class distinction: the mechanic is universal and the reason to use it is not.**
+
+### ⚠ And two things the trees do not do
+
+**They do not stun.** **The stun belongs to `Critical Strike` and `Precise Shot`.**
+
+**And *surprise* is not a bonus of the chain — it is the *condition* that lets it fire.**
+
+> **You need surprise to use `Sneak Attack`. You do not get surprise from it.**
+
+---
+
+## PT-201 — `Command Protocol` rebuilt: the droids act on your turn
+
+**⚠ The first version bounded *decision* cost. The expensive thing was *turns*, and `PT-151` had named it correctly.**
+
+    Droid Master at tier 3        1 character + 4 henchmen = 5 turns
+    in a four-player party        8 turns a round for 4 people
+
+> **⚠ One player took 62% of the round.**
+
+**`FINDINGS-38` answered *"the problem was never the turns, it was the decisions"* and built three clauses to hold decision cost at one per round.**
+
+**Decision cost was one. Table time was five turns.** **Each droid still rolled attacks, took damage, got targeted and moved.**
+
+### The fix
+
+> **Your droids act on your turn, immediately after you, and all follow one order.**
+
+    turns at the table    5 → 1
+    clauses at tier 1     4 → 1
+    PT-178                fails → passes
+
+**⚠ Persistence and the silent-default are gone.** **They existed only because droids acted independently; on your turn there is nothing to persist through.**
+
+**⚠ Two tests pointing at one class was a design signal, and the design was wrong rather than the wording.**
+
+### And the droids needed no authoring
+
+**Owner: familiars rather than fighters — specialists that reach, fly, slice and hack.**
+
+**⚠ `SPECIES-CHAPTER-v2` already carries all four chassis as full species records.** **`Portable Workbench` is *upgrades*, verbatim. The Remote is *flies* and *reaches hard places*. The Astromech is *slices and hacks*.**
+
+**`AGENDA-CURRENT §215` had already said so.**
+
+---
+
+## PT-202 — `Vanguard` is the `Juggernaut`, and the roster closes at 38
+
+**Owner: renamed, and *"basically a tank."***
+
+**⚠ `Vanguard` had no purpose in any document from the moment it was reinstated — `PT-157`.**
+
+### The obvious tank feature was taken
+
+**`Hold the Line` is the Soldier's.** **A Juggernaut that absorbs damage for allies is the Soldier with a bigger die.**
+
+> **So the Juggernaut is not the class that takes hits. It is the class you cannot get past.**
+
+**`Immovable Object` — zone control rather than damage absorption, which `ACTION-ECONOMY-01 §105–111` states as a gap.**
+
+**Entry: character level 10, `Soldier 6`, `Heavy Armour Proficiency`.**
+
+**⚠ 38 of 38 classes drafted.**
+
+---
+
+## PT-203 — An Engineer may build droids; construction is downtime
+
+**Owner ruling. Not a class-chain tier.**
+
+**Control is capped at one droid at a time. `Field Override` is unchanged.**
+
+**⚠ The mechanism is deferred to after the classes.** **It depends on `EQUIPMENT-01`'s unwritten item extraction and touches the Astromech's `Portable Workbench`, which already removes the facility requirement.**
+
+---
+
+## PT-204 — Rename audit across every source class, and the test that sorts it
+
+**Owner instruction after `PT-193`: check every class that existed in the games for renames.**
+
+### The test is `usetype`, and it is decisive
+
+**Ninety distinct granted feats across all source class columns. Five collide with attack-chain names.**
+
+    ACTIVATED (usetype 0/1)  ->  correctly an ATTACK CHAIN, not a rename
+      Power Attack · Flurry · Critical Strike · Rapid Shot
+
+    PASSIVE (no usetype)     ->  is a FEAT and needs a distinct name
+      Sneak Attack   -> Killer's Instinct   ✓ PT-193
+      Targeting      -> Targeting           ✓ no collision
+      Precise Shot   -> ⚠ see below
+
+> **⚠ An activated feat in KOTOR *is* an attack. Converting it to a chain is a port, not a rename.** **A passive one is a rider and needs a name of its own.**
+
+**Exactly one true collision, and it is the one the owner named.**
+
+### ⚠ `Precise Shot` was renamed to `Marksman`, and the rename collided again
+
+**The rename is in `FEATS-LIBRARY-01 §110` — *"the passive half of KOTOR's Precise Shot."*** **Correctly done.**
+
+**⚠ But `Marksman` is also a class — `PT-75`, the Combat Droid rename.**
+
+    Marksman       a class          CLASS-ROSTER-01
+    Marksman       a feat chain     FEATS-LIBRARY-01 §110
+    Precise Shot   an attack chain  ATTACKS-04
+
+> **Three objects, two names, one name doing double duty.**
+
+**⚠ Owner ruling wanted on which moves.** **The class name is load-bearing across thirty documents; the feat name is not.**
+
+---
+
+## PT-205 — Check 21: one name, one object
+
+**Built after `PT-204`. A class, an attack chain, a feat chain and a form may not share a name.**
+
+### ⚠ It took three passes and each failure is instructive
+
+**First pass reported `Jedi Watchman` and `Smuggler` as feat chains.** **They are rows in a `Sneak Attack` ladder table that uses the same row shape as a feat entry.**
+
+**Second pass, tightened, reported clean** — **and the `Marksman` collision is real.**
+
+**⚠ The class pattern read only rows stating a rate, and the roster states classes in several table shapes.** **`Marksman` appears as *"| **Marksman** | Built."***
+
+> **⚠ A pattern that catches most of a list is worse than none. It reports clean.**
+
+**Third pass catches it. `Marksman` is the only live collision.**

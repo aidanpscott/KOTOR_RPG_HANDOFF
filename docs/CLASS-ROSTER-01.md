@@ -83,7 +83,7 @@
 
 ## 3. Standard prestige — 11
 
-**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Vanguard · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative**
+**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Juggernaut · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative**
 
 **⚠ Scoundrel and Tech Specialist are demoted base classes** — `PT-73` and this ruling. **Their numbers exist and their prestige requirements do not.**
 
@@ -608,6 +608,31 @@
 > **⚠ The thing to watch is the incentive, not the damage.** **A capstone that pays for being hurt rewards a player for not disengaging, and `DEATH-AND-DIFFICULTY-01` governs what happens when that goes wrong.**
 
 **Adopted knowing it encourages the Warrior to stay in — which is what `FINDINGS-22` built it to do, as the inversion of `Ignore Pain`.**
+
+
+### `Juggernaut` — renamed from `Vanguard`, and the roster closes at 38. `PT-202`.
+
+**Owner: renamed, and *"basically a tank."***
+
+**⚠ `Vanguard` had no purpose in any document from the moment it was reinstated — `PT-157`. It has one now.**
+
+**Entry: character level 10, `Soldier 6`, and `Heavy Armour Proficiency`.**
+
+#### ⚠ The obvious tank feature was already taken
+
+**`Hold the Line` is the Soldier's — *take the hit meant for the ally beside you*.** **A Juggernaut that absorbs damage for allies is the Soldier with a bigger die.**
+
+> **So the Juggernaut is not the class that takes hits. It is the class you cannot get past.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Immovable Object** | **1** | **You cannot be knocked back, knocked prone, or `Slowed`** |
+| › **No Way Through** | **4** | **An enemy that begins its turn in your melee reach cannot leave it** except by `Disengage`, and `Disengage` against you costs its whole movement |
+| ›› **The Line Holds** | **8** | As above, and **an enemy that closes into your reach provokes an opportunity attack** |
+
+**⚠ Zone control rather than damage absorption, which is a gap `ACTION-ECONOMY-01 §105–111` states directly.**
+
+**38 of 38 classes drafted.**
 
 
 ## 6. ⚠ What this roster now needs

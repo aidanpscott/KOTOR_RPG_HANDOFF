@@ -797,7 +797,7 @@
 |---|---|---|
 | **Officer** | **Soldier 6 or Agent 6** | `Alertness` 8 |
 | **Operative** | **Agent 6** | `Stealth` 8 + `Slicing` 8 |
-| **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 |
+| **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 **or** `Slicing` 8 — `PT-225` |
 | **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
 | **Beast Master** | **Scout 6** | `Beast Handling` 8 |
 

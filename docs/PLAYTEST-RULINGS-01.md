@@ -6113,3 +6113,113 @@
 ### Checked rather than assumed
 
 **`Force Breach` and `Force Suppression` name the chain and are NOT broken.** **Both gate on character level and only list `Inspire Followers` among the powers they cancel.**
+
+---
+
+## PT-221 — `Inspire Followers` becomes `Give the Order`, an Officer class feature
+
+**The repair for `PT-215`. Five ported Force powers gated on a class that was cut.**
+
+    Give the Order      1   spend your declaration; every ally who can hear
+                            you gains +1 attack, +1 damage, +1 Will
+    › On My Mark        4   +2, and one ally may immediately attack
+    ›› Command Presence 8   +3, and the immediate attack applies to two allies
+
+> **It lasts while you are conscious and able to speak. It ends the moment you are not.**
+
+**⚠ It is no longer a Force power at all.** **`Force Suppression` and `Force Breach` have lost their `Inspire Followers` clause — both strip *Force* effects, and an order is not one.**
+
+### ⚠ Why that counter is better than a dispel
+
+    a dispel      costs an enemy caster one power, at range, from safety
+    an order      costs the enemy an attack that must reach and drop the Officer
+
+**The counter exists, it is expensive, and it is physical.**
+
+**⚠ And it costs the declaration, which is what prices it.** **`ATTACKS-01 §2` is doing the balancing, as it does for `Field Override` and `Cover Identity`.**
+
+**The only leadership mechanic in the roster.** **`Squad Tactics` and `Logic Upgrade: Tactician` are *fight better beside someone*, which is not leading.**
+
+---
+
+## PT-222 — ⚠ *"Not droids"* does not survive. `REPLY-59` was wrong.
+
+**I wrote that the clause carried over and *"cuts harder now — a Droid Master's four henchmen gain nothing from their own party's Officer."***
+
+**⚠ The designer's `PT-210` warrant settles it against me:**
+
+> **Share what is *training*. Withhold what is *instinct* or *anatomy*.** **An order is training. A droid follows orders better than anyone.**
+
+**And the source clause is a *Force-morale* artefact.** **`Inspire Followers` was a Light-side power raising **morale**, and a droid has none.** **An Officer's version is not morale; it is instruction.**
+
+> **⚠ The consequence I named was the argument against my own reading.** **A Droid Master fielding four henchmen would gain nothing from the one class whose entire feature is making allies better.**
+
+**Droids are included.**
+
+---
+
+## PT-223 — ⚠ Three of seven holdings fail their own test
+
+**The designer ran `PT-217`'s test against every locked entry.**
+
+    Officer        Persuade 8         Soldier, Agent               ⚠ fails for both
+    Beast Master   Beast Handling 8   Scout, Explorer              ⚠ fails for Explorer
+    Droid Master   Repair 8           Engineer, Machinist          ⚠ fails for Engineer
+    Operative      Stealth 8          Agent                        ok
+    Shadow Hunter  Stealth 8          Agent, Smuggler              ok
+    Scoundrel      Stealth 8          Smuggler, Agent              ok
+    Sharpshooter   Awareness 8        Scout, Marksman, BH          ok
+
+**⚠ `Persuade` and `Beast Handling` were already caught — `PT-217` and `PT-218`.**
+
+### The third is stranger than a bad holding
+
+    Engineer class skills: Slicing · Security · Science · Appraise · Awareness · Alertness · Pilot
+    Repair holders:        Agent · Scout · Machinist · Marksman
+
+> **⚠ The Engineer does not have `Repair`.**
+
+**That is not a gating problem. It is a class-list problem** — **the class whose whole premise is droids and machinery cannot cheaply repair anything.**
+
+**⚠ Owner ruling wanted: give the Engineer `Repair`, or change the Droid Master's holding.**
+
+**The first looks right. `PT-83` split Engineer and Machinist as *the mind* and *the hands*, and `Repair` is plausibly both.**
+
+---
+
+## PT-224 — `Give the Order` is renamed `Rally`
+
+**Owner ruling. One word.**
+
+**⚠ Checked against check 21 before proposing.** **`Command` appears in 9 documents, `Orders` in 18, `Authority` in 15, `Bearing` in 29, `Cadence` in 4, `Signal` in 12.**
+
+**`Rally`, `Marshal`, `Directive`, `Warcry` and `Callout` were free. `Rally` chosen.**
+
+---
+
+## PT-225 — ⚠ Droid *construction* is the Machinist's, not the Engineer's. And `PT-223` is withdrawn.
+
+**Owner correction.**
+
+### The class lists were right and three rulings were wrong
+
+    Machinist   Repair · Scavenging · Sleight of Hand · Demolitions · Appraise · Awareness · Alertness · Pilot
+    Engineer    Slicing · Security · Science · Appraise · Awareness · Alertness · Pilot
+
+**⚠ `PT-83` split them as *the mind* and *the hands*. The Machinist has `Repair`; the Engineer does not. That is the split working.**
+
+    PT-203   "an Engineer may build droids"        ⚠ should be the Machinist
+    PT-213   agenda note names the Engineer         ⚠ same fix
+    PT-223   "give the Engineer Repair"             ⚠ WITHDRAWN
+
+> **⚠ `PT-223` was about to break a deliberate class split to fix a symptom of a mis-assigned ruling.**
+
+### And the Droid Master holding gets the real fix
+
+**`Repair` 8 admits the Machinist route and not the Engineer route.**
+
+> **Now: `Repair` 8 **or** `Slicing` 8.**
+
+**⚠ Which is `PT-83`'s split expressed at the gate.** **The Engineer commands droids by talking to them; the Machinist by building them.**
+
+**⚠ And it reverses `PT-213`'s open gap:** **a Tech Specialist entering via `Engineer 6` has no build route — not `Machinist 6`.**

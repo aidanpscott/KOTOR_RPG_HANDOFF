@@ -295,9 +295,9 @@
 
 **⚠ `PT-213` raises its priority: the build mechanism matters to three classes, not one.**
 
-**`Field Override`, `Jury Rig` and `Both Sides At Once` are all keyed to droids being present.** **Building your own answers the *allied droid* half for the Engineer and the Droid Master.**
+**`Field Override`, `Jury Rig` and `Both Sides At Once` are all keyed to droids being present.** **Building your own answers the *allied droid* half for the **Machinist** and the Droid Master — `PT-225`.**
 
-**⚠ Two gaps it does not close:** **a Tech Specialist entering via `Machinist 6` has no build route, and every enemy-droid clause still depends on encounter design — `PT-170`.**
+**⚠ Two gaps it does not close:** **a Tech Specialist entering via `Engineer 6` has no build route, and every enemy-droid clause still depends on encounter design — `PT-170`.**
 
 **⚠ And the concern is smaller than first raised.** **The classes' *skills* — Slicing, Security, Science, Repair — work on computers, doors and terminals with no droid anywhere.** **Only the *features* need one, and both campaign packages are droid-heavy.**
 

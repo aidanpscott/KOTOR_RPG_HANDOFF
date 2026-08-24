@@ -860,7 +860,7 @@
 
 **`Field Override`'s capstone — the turned droid becomes a henchman for the duration.** **⚠ Control is capped at one droid at a time — `PT-203`.**
 
-**⚠ And an Engineer may *build* droids. Construction is downtime work, not a class-chain tier.** **The mechanism is deferred to after the classes; it depends on `EQUIPMENT-01`'s unwritten item extraction and touches the Astromech's `Portable Workbench`, which already removes the facility requirement.**
+**⚠ And a **Machinist** may *build* droids — `PT-225`. Construction is downtime work, not a class-chain tier.** *`PT-203` said Engineer; the owner has corrected it.* **The mechanism is deferred to after the classes; it depends on `EQUIPMENT-01`'s unwritten item extraction and touches the Astromech's `Portable Workbench`, which already removes the facility requirement.**
 **The Droid Master — its whole premise, and it now has a mechanism before it is written.**
 **The Beast Master — same.**
 
@@ -1229,6 +1229,51 @@
 > **The Sentinel becomes immune to the conditions. The Watchman becomes immune to their consequence.**
 
 **⚠ Named `Vigil` by the owner, checked against check 21 before proposing — clear in all seven documents, where `The Watch` collided in four.**
+
+
+---
+
+
+### Rally — Officer only. `PT-221`, renamed by `PT-224`.
+
+**⚠ The repair for `PT-215`.** **`Inspire Followers I–V` were five ported Force powers gated on `Jedi Master`, which `PT-215` cut.**
+
+**They are now an Officer class feature and no longer Force powers at all.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Rally** | **1** | **Spend your declaration.** Every ally who can hear you gains **`+1` attack, `+1` damage and `+1` Will** |
+| › **On My Mark** | **4** | **`+2`**, and **one ally may immediately make one attack** |
+| ›› **Command Presence** | **8** | **`+3`**, and the immediate attack applies to **two** allies |
+
+> **It lasts while you are conscious and able to speak. It ends the moment you are not.**
+
+**⚠ No Force power can cancel it.** **`Force Suppression` and `Force Breach` strip *Force* effects, and an order is not one.** **Both have lost their `Inspire Followers` clause.**
+
+#### ⚠ Why that counter is better than a dispel
+
+    a dispel      costs an enemy caster one power, at range, from safety
+    an order      costs the enemy an attack that must reach and drop the Officer
+
+**The counter exists, it is expensive, and it is physical.**
+
+#### ⚠ And it costs the declaration, which is what prices it
+
+**An Officer who gives the order does not attack that round.** **`ATTACKS-01 §2` — one declaration — is doing the balancing, exactly as it does for `Field Override` and `Cover Identity`.**
+
+**⚠ Named `Rally` by the owner — `PT-224`.** **Checked against check 21 first: `Command`, `Orders`, `Authority`, `Bearing`, `Cadence` and `Signal` all already appear in the corpus. `Rally` is free.**
+
+**⚠ *"Not droids"* does NOT survive. `PT-222`.**
+
+**`REPLY-59` said it did. The designer's `PT-210` warrant settles it the other way:**
+
+> **Share what is *training*. Withhold what is *instinct* or *anatomy*.** **An order is training. A droid follows orders better than anyone.**
+
+**⚠ The source clause is a *Force-morale* artefact.** **`Inspire Followers` was a Light-side power raising **morale**, and a droid has none.** **An Officer's version is not morale; it is instruction.**
+
+**And the consequence I named was the argument against my own reading:** **a Droid Master fielding four henchmen would gain nothing from the one class in the roster whose entire feature is making allies better.**
+
+**And it is the only leadership mechanic in the roster** — **`Squad Tactics` and `Logic Upgrade: Tactician` are *fight better beside someone*, which is not leading.**
 
 
 ---

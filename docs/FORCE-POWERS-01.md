@@ -35,7 +35,7 @@
 | **Force Aura** | Light | 1 | 6 | −1 | — | When this power is activated, the Jedi is temporarily granted a +2 bonus to Defense and all saving throws. The effect lasts for 20 seconds. |
 | **Force Barrier** | Light | 1 | 6 | −1 | Character Level 6 | This power shields the Jedi in the Force, absorbing the first 4 points of damage **from any source**. Damage over and above the first 4 points is suffered as normal. This effect lasts for 30 seconds. |
 | **Force Body** | Universal | 1 | 15 | −2 | — | This power enables the character to use their own health to fuel Force powers. All Force powers take 50% of their cost from vitality points and 50% from force points. This effect lasts for 30 seconds. |
-| **Force Breach** | Universal | 2 | 15 | −3 | Character Level 15, Force Suppression | This ability will cancel normal, improved, and master versions of the following Force powers active on the target: Force Aura, Force Valor, Burst of Speed, Energy Resistance, Force Resistance, Battle Meditation, Force Barrier, Force Body, and Force Dark Fury. All six tiers of Force Inspire Followers are also cancelled with this power. These powers are instantly cancelled, but the target can reactivate them if Force Points are available. |
+| **Force Breach** | Universal | 2 | 15 | −3 | Character Level 15, Force Suppression | This ability will cancel normal, improved, and master versions of the following Force powers active on the target: Force Aura, Force Valor, Burst of Speed, Energy Resistance, Force Resistance, Battle Meditation, Force Barrier, Force Body, and Force Dark Fury. All six tiers of Force, but the target can reactivate them if Force Points are available. |
 | **Force Camouflage** | Universal | 1 | 8 | −1 | Kreia or Jedi Watchman or Sith Assassin | This power enables the Jedi character to use their Stealth skill without a Stealth Field Generator. The power lasts until the character deactivates it. |
 | **Force Choke** | Dark | 2 | 14 | −3 | Character Level 9, Force Strangle | This power constricts the throat of a target at range, stunning and inflicting 2/3rds of the attacking character's level in damage every 2 seconds for the duration (6 seconds). The target also suffers a temporary (24 second) -4 penalty to Constitution, Dexterity and Strength. A successful Fortitude save at DC 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers results in no effect. This power does not affect droids. |
 | **Force Confusion** | Universal | 2 | 20 | −4 | Any Prestige Class, Force Distraction | Force Confusion is a more powerful version of Force Distraction that can actually cause an opponent to fight for you. If the target fails a Will save of DC 5 + the attacking character's level and Wisdom and Charisma modifiers, then they will fight your opponents for 30 seconds. Only one opponent can be affected by Force Confusion at a time. This power only works on sentients; beasts and droids are immune. |
@@ -58,7 +58,7 @@
 | **Force Stasis Field** | Light | — | — | — | Character Level 15, Force Stun, Force Stasis | This power can lull the senses of a group, placing all hostile creatures within a 10-meter radius of a target enemy in a catatonic stasis. The victims remain in this state for 12 seconds, but a successful Fortitude save versus a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers means the targets are slowed instead of stunned. This power does not affect droids. |
 | **Force Storm** | Dark | 3 | 24 | −8 | Character Level 18, Force Shock, Force Lightning | This power unleashes a direct energy attack on all hostile creatures within 10 meters of a target enemy. Victims suffer 1-6 points of damage to both Vitality and Force Point totals per each of the attacking character's levels. A successful Will save by the target at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers reduces damage by half. |
 | **Force Stun** | Light | 1 | 6 | −1 | — | This power allows the Jedi to assault the mind of an opponent, effectively stunning them for 9 seconds. A successful Fortitude save by the target at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers means the target is slowed for the duration instead of stunned. This power does not affect droids. |
-| **Force Suppression** | Universal | 1 | 8 | −1 | Character Level 9 | This ability will cancel normal and improved versions of the following Force powers active on the target: Force Aura, Force Valor, Burst of Speed, Energy Resistance, Force Resistance, Battle Meditation, Force Barrier, Force Body, and Force Dark Fury. The first three tiers of Force Inspire Followers are also cancelled with this power. These powers are instantly cancelled, but the target can reactivate them if Force Points are available. |
+| **Force Suppression** | Universal | 1 | 8 | −1 | Character Level 9 | This ability will cancel normal and improved versions of the following Force powers active on the target: Force Aura, Force Valor, Burst of Speed, Energy Resistance, Force Resistance, Battle Meditation, Force Barrier, Force Body, and Force Dark Fury. The first three tiers of Force, but the target can reactivate them if Force Points are available. |
 | **Force Valor** | Light | 1 | 8 | −1 | — | This power increases the physical attributes and saving throws of the Jedi and all party members by 2 points. The effect lasts for 20 seconds. |
 | **Force Wave** | Universal | 3 | 22 | −7 | Character Level 15, Force Push, Force Whirlwind | This power creates a telekinetic explosion around the Jedi. All enemies within 15 meters are thrown 5 meters, fall to the ground and are incapacitated for 6 seconds, and take damage equal to one and a half times the attacking character's level. A successful Reflex save at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers means an enemy is not stunned, but still suffers half damage. |
 | **Force Whirlwind** | Universal | 2 | 14 | −3 | Character Level 9, Force Push | This power encircles the target victim in a small maelstrom of air and dust, inflicting one third of the attacking character's level in damage every 2 seconds, and rendering them unable to take any action (12 seconds total). A successful Reflex save at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers negates the damage and the immobilizing effects altogether. This power does not affect droids equipped with energy shield hardware. |
@@ -76,7 +76,27 @@
 | **Improved Revitalize** | Light | 2 | 20 | −4 | Character Level 15, Revitalize | This power allows the Jedi to rekindle the life energies of any of their non-droid fallen allies. This brings all allies back to consciousness with **15%** of their total Vitality Points. |
 | **Insanity** | Dark | 3 | 20 | −6 | Character Level 12, Fear, Horror | This power can greatly confuse an enemy force, inflaming paranoia and doubt. All enemies within a 10-meter radius of the target must make a Will save at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers or cower in catatonic terror for 18 seconds. This power does not affect droids. |
 
-### ⚠ `Inspire Followers` moved to the Officer — `PT-220`
+### ⚠ `Inspire Followers` becomes `Give the Order` — `PT-220`, `PT-221`
+
+**⚠ It is no longer a Force power at all.** **The chain is an Officer class feature, and `Force Suppression` and `Force Breach` have lost their `Inspire Followers` clause — `PT-221`.**
+
+> **No Force power can cancel it. Those two strip Force effects, and an order is not one.**
+
+**And the counter is better than a dispel:**
+
+    a dispel      costs an enemy caster one power, at range, from safety
+    an order      costs the enemy an attack that must reach and drop the Officer
+
+**⚠ It lasts while you are conscious and able to speak. It ends the moment you are not.**
+
+#### The chain as adopted
+
+    Give the Order      1   spend your declaration; every ally who can hear
+                            you gains +1 attack, +1 damage, +1 Will
+    › On My Mark        4   +2, and one ally may immediately attack
+    ›› Command Presence 8   +3, and the immediate attack applies to two allies
+
+#### The original, retained for provenance
 
 **`PT-215` cut `Jedi Master` as a class. Five ported Force powers required it.**
 

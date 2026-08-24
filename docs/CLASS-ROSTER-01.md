@@ -342,12 +342,12 @@
 | Class | Stat line | Entry |
 |---|---|---|
 | **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Jedi base class 6** + `Weapon Focus: Lightsaber` |
-| **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
+| **Sith Battlemaster** | d10 · Force 6 · STR · **18 feats** · **Combat** · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
 | **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **any Jedi base class 6** + `Stealth` 8 |
 | **Jedi Sage** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Jedi base class 6** + `Mysticism` 8 |
-| **Sith Battlemaster** | d8 · Force 8 · DEX · 16 feats · Combat · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
+| **Sith Marauder** | d8 · Force 8 · DEX · 15 feats · **Middle** · 12/12/9 | **any Sith base class 6** + `Stealth` 8 |
 | **Sith Sorcerer** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Sith base class 6** + `Mysticism` 8 |
-| **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
+| **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 6 *or* Machinist 6** — **⚠ raised from 5 by `PT-217`; every other prestige entry is 6** |
 
 **⚠ Every feat total sits inside its rate's band. Verified.**
 
@@ -401,7 +401,7 @@
 
 **⚠ `SithAssassin` prints `d8/8/DEX` — the Watchman's line exactly.** **Its own prestige row became the base class, so the Watchman has no Sith mirror.**
 
-> **`Sith Battlemaster` fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin.** **The name was already on the roster and had no definition.**
+> **⚠ SUPERSEDED by `PT-216`. The class that fills the Assassin mirror is the **Marauder**; the Battlemaster continues the Warrior at d10 / Force 6 / STR.** **The name was already on the roster and had no definition.**
 
 
 ### `Operative` and `Shadow Hunter` — the split is real, and not for the reason first given. `PT-149`.
@@ -695,8 +695,8 @@
     Jedi Watchman       <- Sentinel      d8 / Force 8 / DEX
     Jedi Sage           <- Consular      d6 / Force 10 / WIS    (jma's line)
 
-    Sith Marauder       <- Warrior      d10 / Force 6 / STR
-    Sith Battlemaster   <- Assassin      d8 / Force 8 / DEX
+    Sith Battlemaster   <- Warrior      d10 / Force 6 / STR
+    Sith Marauder       <- Assassin      d8 / Force 8 / DEX
     Sith Sorcerer       <- Inquisitor    d6 / Force 10 / WIS    (sld's line)
 
 **Three per side, one per base class, and `PT-214`'s open entry stands — any Jedi may enter any of the three.**
@@ -722,6 +722,105 @@
 **If Master and Lord are ranks, something should say how a character earns one.** **`FORCE-TRAINING-01` handles finding a teacher; this is the other end of the same ladder.**
 
 **Roster: 38 → 36.**
+
+
+### ⚠ The Sith prestige stat lines were never swapped with the rates — `PT-216`
+
+**`PT-154` ruled the *rates*: Marauder `Middle`, Battlemaster `Combat`.** **It did not mention stat lines and none moved.**
+
+**The lines came from `PT-148`, which created the Battlemaster to fill the mirror hole the promoted Sith Assassin left** — **so it took the Assassin's `d8 / Force 8 / DEX`.**
+
+    PT-148   Battlemaster <- Assassin's line, d8 / DEX
+    PT-154   Battlemaster -> Combat rate
+             ⚠ a d8 DEX class at Combat rate is the tell
+
+> **⚠ The switch was half-made for six rulings and nobody re-checked the line underneath the rate.**
+
+**Corrected:**
+
+    Sith Battlemaster   d10 / Force 6 / STR / Combat   <- Warrior
+    Sith Marauder        d8 / Force 8 / DEX / Middle    <- Assassin
+
+**⚠ Now the rate, the die and the ability agree.** **`Combat` on a `d8` never did.**
+
+**And the entry holding follows: the Marauder takes `Stealth` 8 rather than `Weapon Focus: Lightsaber`, because it continues the Assassin.**
+
+#### ⚠ And check 19 caught a third thing `PT-154` left behind
+
+**The Battlemaster kept **16 feats** — a `Middle` number — while sitting at `Combat`, whose band is 18–23.**
+
+**⚠ And `PT-154` itself derived why that is hard:**
+
+> **No Force column in either game reaches 18. The highest is 16.**
+
+**So a `Combat`-rate Force class needs an *authored* feat total, exactly as the Jedi Guardian and Sith Warrior did at 20.**
+
+**Set to **18** — the band floor, and the smallest authored departure that makes the rate legal.**
+
+**⚠ Three axes moved by one rate change, and the ruling named one of them.**
+
+#### ⚠ It is the `PT-84` shape, sixth instance
+
+**A correction applied to the axis the ruling named, and not to the axes that depend on it.**
+
+**`PT-215` was written reading the stat lines rather than the rates, which is how it survived a second pass.**
+
+
+### Standard prestige entry — the whole tier settled. `PT-217`.
+
+**Owner ruling. Seven classes had no entry requirement; all eleven now do.**
+
+#### The line
+
+> **⚠ Open when the prestige is a *technique*. Locked when it is a *background*.**
+
+**A technique is something anyone could learn with the work. A background is somewhere you had to have been.**
+
+#### Open — sorted by holdings, not by roster
+
+| | From | Holdings |
+|---|---|---|
+| **Commando** | any base class 6 | `Weapon Focus` + `Weapon Specialization`, same family |
+| **Gunslinger** | any base class 6 | a pistol chain at tier 2 + Dexterity primary |
+| **Sharpshooter** | any base class 6 | a rifle chain at tier 2 + `Awareness` 8 |
+| **Shadow Hunter** | any base class 6 | `Stealth` 8 + a melee chain at tier 2 |
+| **Scoundrel** | any base class 6 | `Stealth` 8 + `Sneak Attack` tier 2 |
+| **Juggernaut** | any base class 6 | `Heavy Armour Proficiency` |
+
+**⚠ `Juggernaut` opens safely because the holding locks it anyway** — **the Soldier is the only class granted heavy armour.** **Better to let the holding do it than to say it twice.**
+
+**⚠ And the three covert classes separate on their *second* holding** — **a melee chain, `Slicing`, `Sneak Attack`.** **`PT-149` ruled them distinct on what the covert work is *for*; this is that made mechanical.**
+
+#### Locked — you had to have been there
+
+| | From | Holdings |
+|---|---|---|
+| **Officer** | **Soldier 6 or Agent 6** | `Alertness` 8 |
+| **Operative** | **Agent 6** | `Stealth` 8 + `Slicing` 8 |
+| **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 |
+| **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
+| **Beast Master** | **Scout 6** | `Beast Handling` 8 |
+
+#### ⚠ A holding only sorts if the intended parents can reach it
+
+**`Persuade` was the obvious `Officer` holding and it is wrong.**
+
+    Persuade is a class skill for   Doctor · Duelist · Jedi Guardian · Jedi Consular · Smuggler
+    ⚠ NOT for                       Soldier · Agent
+
+> **Gating the Officer on `Persuade` 8 would have excluded both of its own parents.**
+
+**Non-class skills cost 2 points a rank rather than 1 — `SKILLS-01 §11.1` — so it is reachable and taxes the intended entrant and nobody else.**
+
+**`Alertness` 8 instead. Both parents hold it.**
+
+**⚠ Recorded as a general test: before setting a holding, check that the classes it is meant to admit have it as a class skill.**
+
+#### ⚠ And one lock is accidental
+
+**`Beast Master` is `Scout 6` because the Scout is the *only* class with `Beast Handling` as a class skill.**
+
+**The lock is real but nobody chose it.** **Worth asking whether another class should hold that skill.**
 
 
 ## 6. ⚠ What this roster now needs

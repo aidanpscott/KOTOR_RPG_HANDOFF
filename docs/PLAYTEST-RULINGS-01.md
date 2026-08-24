@@ -5932,3 +5932,97 @@
 **Something should say how a character earns the rank of Master or Lord.** **`FORCE-TRAINING-01` handles finding a teacher; this is the other end of the same ladder.**
 
 **Roster: 38 → 36.**
+
+---
+
+## PT-216 — The Sith prestige stat lines were never swapped with the rates
+
+**Owner: *"Battlemaster is to Warrior where Marauder is to Assassin."*** **And: *"I thought we had already made this switch."***
+
+**⚠ Half of it had been. `PT-154` ruled the *rates* and nothing else moved.**
+
+    PT-148   Battlemaster created to fill the mirror hole the promoted
+             Sith Assassin left -> took the Assassin's d8 / Force 8 / DEX
+    PT-154   Battlemaster -> Combat rate
+             ⚠ a d8 DEX class at Combat rate is the tell
+
+**Corrected:**
+
+    Sith Battlemaster   d10 / Force 6 / STR / Combat   <- Warrior
+    Sith Marauder        d8 / Force 8 / DEX / Middle    <- Assassin
+
+**⚠ Now the rate, the die and the ability agree. `Combat` on a `d8` never did.**
+
+**The entry holding follows: the Marauder takes `Stealth` 8, because it continues the Assassin.**
+
+### ⚠ And check 19 caught a third axis
+
+**The Battlemaster kept **16 feats** — a `Middle` number — at `Combat` rate, whose band is 18–23.**
+
+**And `PT-154` itself derived why that is hard:** > **no Force column in either game reaches 18. The highest is 16.**
+
+**So a `Combat`-rate Force class needs an authored total, as the Jedi Guardian and Sith Warrior did at 20.** **Set to 18 — the band floor, the smallest authored departure that makes the rate legal.**
+
+### ⚠ Sixth instance of the `PT-84` shape
+
+**A correction applied to the axis the ruling named, and not to the axes that depend on it.**
+
+**One rate change moved three axes and the ruling named one.**
+
+**⚠ And `PT-215` was written reading the stat lines rather than the rates, which is how it survived a second pass.**
+
+---
+
+## PT-217 — Standard prestige entry, the whole tier
+
+**Owner ruling. Seven of eleven had no entry requirement; all eleven now do.**
+
+### The line
+
+> **⚠ Open when the prestige is a *technique*. Locked when it is a *background*.**
+
+**A technique is something anyone could learn with the work. A background is somewhere you had to have been.**
+
+### Open — sorted by holdings
+
+    Commando        any base 6 + Weapon Focus + Specialization, same family
+    Gunslinger      any base 6 + a pistol chain tier 2 + Dexterity primary
+    Sharpshooter    any base 6 + a rifle chain tier 2 + Awareness 8
+    Shadow Hunter   any base 6 + Stealth 8 + a melee chain tier 2
+    Scoundrel       any base 6 + Stealth 8 + Sneak Attack tier 2
+    Juggernaut      any base 6 + Heavy Armour Proficiency
+
+**⚠ `Juggernaut` opens safely because the holding locks it anyway** — **the Soldier is the only class granted heavy armour.**
+
+**⚠ The three covert classes separate on their *second* holding.** **`PT-149` ruled them distinct on what the covert work is *for*; this is that made mechanical.**
+
+### Locked
+
+    Officer          Soldier 6 or Agent 6      + Alertness 8
+    Operative        Agent 6                   + Stealth 8 + Slicing 8
+    Droid Master     Engineer 6 or Machinist 6 + Repair 8
+    Tech Specialist  Engineer 6 or Machinist 6
+    Beast Master     Scout 6                   + Beast Handling 8
+
+### ⚠ A holding only sorts if the intended parents can reach it
+
+**`Persuade` was the obvious `Officer` holding and it is wrong.**
+
+    Persuade is a class skill for   Doctor · Duelist · Guardian · Consular · Smuggler
+    ⚠ NOT for                       Soldier · Agent
+
+> **Gating the Officer on `Persuade` 8 would have excluded both of its own parents.**
+
+**Non-class skills cost 2 points a rank — `SKILLS-01 §11.1` — so it is reachable, and taxes the intended entrant and nobody else.**
+
+**`Alertness` 8 instead. Both parents hold it.**
+
+**⚠ Recorded as a general test: before setting a holding, check that the classes it is meant to admit hold it as a class skill.**
+
+### ⚠ And one lock is accidental
+
+**`Beast Master` is `Scout 6` because the Scout is the *only* class with `Beast Handling`.** **The lock is real and nobody chose it.**
+
+### Also raised
+
+**`Tech Specialist` entry from 5 to 6.** **⚠ Every other prestige entry is 6 and the 5 was never justified.**

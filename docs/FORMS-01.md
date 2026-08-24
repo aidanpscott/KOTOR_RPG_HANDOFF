@@ -117,6 +117,24 @@
 **⚠ Force forms deferred by the owner. This section governs lightsaber forms only.**
 
 
+### 2.3 ⚠ The stance survives. `PT-187`.
+
+**`FINDINGS-54 §1` read `PT-185` as deleting `§6.1`'s modifier lines — *"a form is now a feat that unlocks two attack trees and does nothing else."***
+
+> **⚠ That is not what `PT-185` says.** **It says a form is *both*: the feat unlocks the attacks, the stance gives the bonuses.**
+
+**`§6.1`'s seven modifier lines survive intact and are the *stance* half.**
+
+**⚠ And they are ported, not authored.** **`§6` records the provenance: `Lightsaber_Forms_Table.docx` and `Force_Forms_Table.docx`, with only Niman restored.** **Deleting twenty-eight ported effects to satisfy a ruling that did not ask for it would be the largest unforced loss in the project.**
+
+    hold the feat     permanent, cumulative, unlocks that form's attack chains
+    stand in a form   exclusive, switchable, gives that form's modifier line
+
+**A Jedi holding four form feats may declare any of those forms' attacks and receives one form's bonuses — the one they are standing in.**
+
+**⚠ Which means forms *can* still distinguish a class**, and `FINDINGS-54 §2`'s premise — *"form effects do not exist"* — does not hold.
+
+
 ## 3. `exclusion: 0x02` — the 178-row question, answered
 
 **The agenda asks what else shares the group, on the grounds that 178 rows is too many for forms alone.**

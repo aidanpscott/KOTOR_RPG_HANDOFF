@@ -759,7 +759,17 @@
 |---|---|---|
 | **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence** |
 | › **Through The Plate** | **4** | **4 points** |
-| ›› **Armour Is A Comfort** | **8** | **The target's armour bonus does not apply against your unarmed attacks at all** |
+| ›› **Armour Is A Comfort** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely** |
+
+> **⚠ *The first each round* — `PT-188`.** **Without it the capstone triples the moment an unarmed Velocity chain exists.**
+
+    on all strikes, with Combination     57.0   capstone worth +15.0
+    first strike only                    47.0   capstone worth  +5.0
+    today, single strike                 19.0   capstone worth  +5.0
+
+**⚠ Worth the same whether or not an unarmed Velocity chain exists.** **`FINDINGS-23` priced this class against a world with no such chain; this makes that pricing stay true.**
+
+**And repricing the tier does not work — `ACTION-ECONOMY-01`'s 95% hit ceiling means `−6` and *all* both reach it.** **The multiplication is in the strike count, not the tier value.**
 
 **⚠ Priced.** **`KORR` carries 7 of his 19 Defence in medium battle armour, so the capstone is worth about `+7` to hit against him.**
 
@@ -892,6 +902,48 @@
 **⚠ And it does not overlap the `Operative`.** **`No Firing Position` is concealment — nobody knows where the shot came from. This is terrain — they know exactly where you are and cannot reach you.**
 
 **⚠ It also makes `PT-170`'s map-size dial matter a second time.** **A GM who builds bare rooms cuts this class the way they cut the Sharpshooter.**
+
+
+---
+
+
+### Combination — unarmed Velocity, `ATTACKS-07`. Authored.
+
+**Gated on `Unarmed Specialist IV`, which in practice means the Brawler and the Force classes.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Combination** | **1** | **Strike twice unarmed.** The second gains `+2` if the first hit. **Attack −3, Defence −2** |
+| › **Chain Punch** | **4** | **Three strikes**, each `+2` if the previous hit. **Attack −2, Defence −1** |
+| ›› **Rain of Blows** | **8** | **Three strikes**, each `+2` if the previous hit, and **if all three hit the target is `Slowed`** until the end of its next turn |
+
+**⚠ Deliberately not `Flurry` renamed.** **`Flurry` buys back accuracy across its tiers and keeps volume flat.** **This starts at two strikes and escalates *within the round* — a hit makes the next easier.**
+
+> **Which is what a boxer does and what a swordsman does not.**
+
+**⚠ It closes `PT-180`'s luck.** **`ATTACKS-07` had no Velocity chain, so `Nothing In My Hands` could not multiply. It can now, and the capstone is reworded rather than repriced to keep that from mattering.**
+
+
+---
+
+
+### Never the Same Twice — Sith Battlemaster only. Authored.
+
+**Owner-approved. Granted at class levels 1, 4 and 8.**
+
+| Tier | | Effect |
+|---|---|---|
+| **Never the Same Twice** | **1** | **If the attack you declare comes from a different chain than the one you declared last round, `+2` attack** |
+| › **Unreadable** | **4** | **`+4`**, same condition |
+| ›› **No Pattern At All** | **8** | **`+4`**, and the target gains **no Defence bonus from any Defensive chain it has declared** against you |
+
+> **He never attacks the same way twice, and you cannot get set for it.**
+
+**⚠ Built on the one stat that is already his.** **The Battlemaster has the widest chain count in the game — 18, against the Weaponmaster's 15 and the Commando's 14.** **The feature rewards breadth directly.**
+
+**⚠ It is conditional, which is the Jedi shape under `PT-129` rather than the Sith one.** **That is correct here: `PT-129` describes *base* classes, and the prestige tier already departs — `Regenerate Force Points` and both alignment chains are unconditional on Jedi prestige classes.**
+
+**Priced against `Deflect`, which is a whole defensive system.** **⚠ It costs him nothing to satisfy — a class with 18 trees always has something else to declare.**
 
 
 ---

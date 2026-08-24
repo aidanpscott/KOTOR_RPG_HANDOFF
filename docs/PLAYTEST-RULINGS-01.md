@@ -5164,3 +5164,52 @@
 **Corrected: the form is Force Focus. The feat chain keeps its name and is unaffected.**
 
 **⚠ A document that states a governing rule and breaks it one line later is worse than one that never stated it. The rule looks applied.**
+
+---
+
+## PT-187 — ⚠ The stance survives `PT-185`; the designer read it as deleting `§6.1`
+
+**`FINDINGS-54 §1`:** *"A form is now a feat that unlocks two attack trees and does nothing else."*
+
+> **⚠ That is not what `PT-185` says.** **It says a form is *both*: the feat unlocks the attacks, the stance gives the bonuses.**
+
+**`FORMS-01 §6.1`'s seven modifier lines survive intact and are the *stance* half.**
+
+**⚠ And they are ported, not authored.** **`§6` records the provenance — `Lightsaber_Forms_Table.docx` and `Force_Forms_Table.docx`, with only Niman restored.**
+
+**Deleting twenty-eight ported effects to satisfy a ruling that did not ask for it would be the largest unforced loss in the project.**
+
+**⚠ Which means `FINDINGS-54 §2`'s premise — *"form effects do not exist"* — does not hold, and forms can still distinguish a class.**
+
+**The Battlemaster feature is adopted anyway on its own merits.**
+
+---
+
+## PT-188 — `Nothing In My Hands` fires on the first strike each round
+
+**`PT-180` recorded that the Brawler capstone could not multiply because `ATTACKS-07` had no Velocity chain, and called it luck.** **`Combination` ends the luck.**
+
+**Priced against Korr — Defence 19, 7 of it armour, attacked at `+12` with unarmed `8d4`:**
+
+    no Velocity chain, one strike     14.0 → 19.0    capstone worth +5.0
+    with Combination, three strikes   42.0 → 57.0    capstone worth +15.0
+
+> **⚠ Three times the value, from a chain in a different document, with no line of either rule mentioning the other.**
+
+### Repricing the tier does not fix it
+
+**`−6` points instead of *all* changes nothing against Korr — `ACTION-ECONOMY-01`'s 95% hit ceiling means both readings reach it.**
+
+**⚠ The multiplication is in the strike count, not the tier value.**
+
+### The fix is one word
+
+> **The **first** unarmed attack you make each round ignores the target's armour bonus.**
+
+    capstone on all strikes         57.0   (+15.0)
+    capstone on one strike a round  47.0    (+5.0)
+    today, single strike            19.0    (+5.0)
+
+**⚠ Worth the same whether or not an unarmed Velocity chain exists.** **`FINDINGS-23` priced the Brawler against a world with no such chain and this makes that pricing stay true.**
+
+**And the moment survives: the plate still does not help, it just does not stop helping three times.**

@@ -122,6 +122,45 @@
 
 ---
 
+## 4c. Wield classes — `PT-169`
+
+**⚠ `ACTION-ECONOMY-01 §697` already stated the pairing rule from this column. `PT-169` re-derived it without checking.**
+
+**What was missing was here rather than there: `EQUIPMENT-01` stated a wield class for the three lightsabers and for none of the other sixteen weapons.**
+
+**The table below is that gap filled. `§697` remains the authority on what may be paired.**
+
+| | Class | Weapons | May be paired? |
+|---|---|---|---|
+| **1** | **One-handed light** | Stun Baton | **yes** |
+| **2** | **One-handed** | Long Sword · Vibro Sword · Short Sword · Vibro Blade · Lightsaber · Short Lightsaber | **yes** |
+| **3** | **Two-handed staff** | Quarterstaff · Gaffi Stick · Wookiee Warblade · Double-Bladed Sword · Vibro Double Blade · Double-Bladed Lightsaber | **no — it *is* the pair** |
+| **4** | **Pistol** | Blaster · Heavy Blaster · Hold-Out · Ion Blaster · Disruptor Pistol · Sonic Pistol | **yes** |
+| **5** | **Rifle** | Ion · Bowcaster · Carbine · Disruptor · Sonic · Blaster Rifle | **no** |
+| **6** | **Heavy** | Repeating Blaster · Heavy Repeating Blaster | **no** |
+
+**Verified identical in K1 and K2.**
+
+### ⚠ What it settles that was open
+
+**`Two-Weapon Fighting` never said what may be paired.** > **Classes 1, 2 and 4 may be dual-wielded. Classes 3, 5 and 6 may not.**
+
+**⚠ You cannot pair a rifle with anything.** **That was never stated and it is the difference between the `Gunslinger` and the `Sharpshooter` in mechanics rather than flavour** — **`PT-148` gave the Gunslinger *"two guns, fast draw"* and the Sharpshooter one shot. The source has been saying so all along.**
+
+**And `Dueling` reads *"a single blaster pistol, melee weapon, or lightsaber"* — an enumeration where a class name would do.** **It is: any weapon of class 1, 2 or 4, wielded alone.**
+
+**⚠ A class-3 staff wielded alone does not qualify for `Dueling`.** **It is already two weapons; that is what `weaponwield` 3 means and why every one of them is marked Balanced with 2 attacks.**
+
+### The size column travels with it
+
+    class 1   size 1        class 3   size 4
+    class 2   size 2 or 3   class 5   size 4
+    class 4   size 2        class 6   size 4
+
+**⚠ Size 4 is exactly the set that cannot be paired.** **Two-handedness in this source is a size fact, not a separate flag** — **which is why the Short Lightsaber at size 2 is the natural off-hand and `§111` reached that conclusion without the column.**
+
+---
+
 ## 5. Armour
 
 **Defence = 10 + armour bonus + Dexterity modifier, and the Dexterity contribution is capped by the armour.**

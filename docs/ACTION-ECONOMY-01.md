@@ -178,7 +178,9 @@
 
 ## 6.2a Range — `PT-163`
 
-**⚠ `PT-160` recorded that no range rules existed and that two written feats already depended on them.** **This is the system, ported from the games and expanded where a straight port would do nothing.**
+**⚠ `PT-160` recorded that no range rules existed. That was wrong: `§13` had the bands, the flanking reach and the wield taxonomy.**
+
+**What did not exist was everything below — a penalty for distance, a point-blank rule, a grenade range and an outer ceiling.** **`§13` answers *how far can this weapon reach*; this section answers *what happens at each distance*.**
 
 ### The source model
 
@@ -252,26 +254,17 @@
 **⚠ 11 and 14 squares against a map that `§551` says is ten to fifteen across.** **One increment covers a typical encounter, which is why the penalty tiers only fire outdoors or across a hangar — and that is correct.**
 
 
-### ⚠ Three of the four source ranges do not land on our grid
+### ⚠ The bands are `§13.1`'s and always were — `PT-171`
 
-**Found by check 20 immediately after `PT-165` claimed every distance did.**
+**`PT-166` derived 16 / 24 / 28 from `baseitems.2da` and recorded it as a finding.**
 
-    source   squares   snapped   
-    16 m      8.5       16 m      ion blaster, sonic pistol
-    24 m     11.5       24 m      blaster pistol, hold-out, disruptor pistol
-    24 m     12.5       24 m      blaster carbine
-    28 m     14.0       28 m      all rifles, bowcaster — already clean
+> **⚠ `§13.1` already had those three bands, already snapped, from a previous session.**
 
-**⚠ Snapped to the grid. `PT-166`.**
+**What `PT-166` actually did was bring `EQUIPMENT-01` into line with `§13`** — **worth doing, because `EQUIPMENT-01` carried the raw source values while `§13` carried the snapped ones and neither referenced the other.**
 
-**23 and 25 both land on 24 — twelve squares.** **That is not a loss: the carbine's 2-metre edge over a pistol was one square in a game that has no squares, and it did nothing.**
+**⚠ `§13.1` is the authority on bands. This section does not restate them.**
 
-> **⚠ The alternative was changing the square, and `§9` records that 2 metres is RCR's own unit — a 5-foot square converted — and that every species speed is 10 metres because of it.**
-
-**Moving the square to make four weapon ranges tidy would move every speed, every reach and every area effect in the corpus.**
-
-**Four ranges move by at most 2 metre. That is the cheaper end.**
-
+**⚠ And check 20 rewrote the *source* column of the table that used to be here**, turning `17 → 16` into `16 → 16`. **A grid-alignment pass cannot tell a live distance from a historical one. Noted in `PT-171`.**
 
 ### ⚠ Amended against `baseitems.2da` — `PT-168`
 
@@ -314,6 +307,45 @@
 **A thrown object has an arm behind it rather than a barrel, and the source gives every grenade one value instead of a ladder.**
 
 **⚠ And this is why `PT-166`'s collapse of 25 into 24 was more consequential than it looked.** **25 is the most common `maxattackrange` in the file — thirteen items — and twelve of them are grenades.** **The Blaster Carbine shares a number with the grenades by coincidence, not by design.**
+
+
+### ⚠ Map size is now a balance lever, and nothing says so — `PT-170`
+
+**Derived. Speed is 10 m — five squares a round. A pistol increment is twelve squares and a rifle's fourteen.**
+
+**`SCENARIOS-01`'s maps are a 5-wide corridor twelve long, and encounters open six squares apart.**
+
+> **⚠ On a map that size the increment ladder never fires. Nothing is ever far enough away.**
+
+**What fires indoors is the point-blank half:**
+
+    −4 firing while adjacent      constantly
+    +2 attacking an adjacent
+       enemy holding a ranged     constantly
+    point blank, 4 m              often
+    increment ladder              almost never
+    grenade range, 24 m           never limits
+
+**⚠ That is not a defect but it changes what range *is*.** **It is a property of the encounter rather than of the round.**
+
+#### What it means for a GM
+
+**A corridor makes rifles and pistols identical and rewards closing.** **A hangar, a canyon or a landing platform makes the ladder fire and rewards staying back.**
+
+> **⚠ Encounter size is the dial that decides whether a ranged specialist is a specialist.**
+
+**The `Sharpshooter` was built on *one shot, lined up* because outranging was not a thing that happened — `PT-160`.** **It happens on a map fifteen squares across and does not happen on one eight across.**
+
+**⚠ A GM who never builds a room bigger than twelve squares has quietly cut a class.** **Stated here because no gamemaster document exists to state it in.**
+
+**Rough shape, authored:**
+
+    ≤ 8 squares      a corridor. Melee and point blank decide it.
+    9–14 squares     a room. Everyone is inside one increment.
+    15–24 squares    a hall or a hangar. The −2 tier fires for pistols.
+    25+ squares      outdoors. The full ladder fires and the 48 m ceiling matters.
+
+**⚠ Not a rule. A dial with its positions labelled, so a GM turning it knows what they are turning.**
 
 ### What this unblocks
 

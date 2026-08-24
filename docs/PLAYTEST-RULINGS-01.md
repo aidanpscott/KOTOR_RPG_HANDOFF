@@ -4559,3 +4559,122 @@
 > **⚠ A consistent ten-weapon offset that looks like error and is a decision with its reasoning on file.**
 
 **Stated in `ACTION-ECONOMY-01` because the next reader with `k2_baseitems.2da` open will find the same ten and reach for a fix.**
+
+---
+
+## PT-169 — Wield classes: `weaponwield` is a six-way taxonomy and we carried it for lightsabers only
+
+**Verified identical in K1 and K2. Sixteen weapons had no stated wield class.**
+
+| | Class | May be paired? |
+|---|---|---|
+| **1** | One-handed light — Stun Baton | **yes** |
+| **2** | One-handed — swords, blades, both lightsabers | **yes** |
+| **3** | Two-handed staff — quarterstaff, gaffi, warblade, all double-blades | **no — it *is* the pair** |
+| **4** | Pistol — all six | **yes** |
+| **5** | Rifle — all six | **no** |
+| **6** | Heavy — both repeating blasters | **no** |
+
+### ⚠ What it settles that was open
+
+**`Two-Weapon Fighting` never said what may be paired.** **Classes 1, 2 and 4 may. Classes 3, 5 and 6 may not.**
+
+> **⚠ You cannot pair a rifle with anything.**
+
+**That was never stated, and it is the `Gunslinger`/`Sharpshooter` distinction in mechanics rather than flavour.** **`PT-148` gave the Gunslinger *"two guns, fast draw"* and the Sharpshooter one shot** — **the source has been saying so all along.**
+
+**And `Dueling` read *"a single blaster pistol, melee weapon, or lightsaber"* — an enumeration where a class name would do.** **It is: any weapon of class 1, 2 or 4, wielded alone.**
+
+**⚠ A class-3 staff wielded alone does not qualify.** **It is already two weapons — which is what `weaponwield` 3 means and why every one is marked Balanced with 2 attacks.**
+
+### Size travels with it
+
+    class 1   size 1        class 3   size 4
+    class 2   size 2 or 3   class 5   size 4
+    class 4   size 2        class 6   size 4
+
+**⚠ Size 4 is exactly the set that cannot be paired.** **Two-handedness in this source is a size fact rather than a separate flag** — **which is why `EQUIPMENT-01 §111` reached the Short-Lightsaber-as-off-hand conclusion without ever reading the column.**
+
+---
+
+## PT-170 — Map size is a balance lever and nothing said so
+
+**Derived. Speed is 10 m — five squares a round. A pistol increment is twelve squares, a rifle's fourteen.**
+
+**`SCENARIOS-01`'s maps are a 5-wide corridor twelve long, and encounters open six squares apart.**
+
+> **⚠ On a map that size the increment ladder never fires. Nothing is ever far enough away.**
+
+    −4 firing while adjacent      constantly
+    +2 against an adjacent
+       enemy holding a ranged     constantly
+    point blank, 4 m              often
+    increment ladder              almost never
+    grenade range, 24 m           never limits
+
+**⚠ Not a defect, but it changes what range *is*.** **A property of the encounter rather than of the round.**
+
+### What it means
+
+**A corridor makes rifles and pistols identical and rewards closing. A hangar or a canyon makes the ladder fire and rewards staying back.**
+
+> **⚠ Encounter size decides whether a ranged specialist is a specialist.**
+
+**The `Sharpshooter` was built on *one shot, lined up* because outranging was not a thing that happened — `PT-160`.** **It happens on a map fifteen squares across and does not on one eight across.**
+
+**⚠ A GM who never builds a room bigger than twelve squares has quietly cut a class.**
+
+    ≤ 8 squares      a corridor. Melee and point blank decide it.
+    9–14 squares     a room. Everyone is inside one increment.
+    15–24 squares    a hall or hangar. The −2 tier fires for pistols.
+    25+ squares      outdoors. The full ladder fires and the 48 m ceiling matters.
+
+**A dial with its positions labelled, so a GM turning it knows what they are turning.**
+
+### ⚠ And it names a document that does not exist
+
+**This belongs in a gamemaster chapter and there is none.** **`AGENDA-CURRENT` has no entry for one.**
+
+**Second time a rule has had nowhere correct to live** — **`DEATH-AND-DIFFICULTY-01` was the first, and it became its own document because it was a campaign setting rather than a class rule.**
+
+---
+
+## PT-171 — ⚠ I wrote a second range system into a document that already had one
+
+**My defect, found when the designer independently derived `weaponwield` and cited `ACTION-ECONOMY-01 §697` for the answer.**
+
+**`§13` — *Ranged flanking and weapon range* — existed from a previous session and held:**
+
+    §13.1   the bands, 16 / 24 / 28, already snapped to the grid
+    §13.2   flanking within half a weapon's range, which resolves Master Spotter
+    §13.4   the weaponwield taxonomy and the pairing rule
+
+> **⚠ `PT-160` recorded that *"no range rules existed."* That was false and I did not check.**
+
+### What was genuinely new, and what was not
+
+**Not new:** **the bands, the wield taxonomy, the half-range flanking rule.** **`PT-166` re-derived 16 / 24 / 28 from source and recorded it as a finding.** **`PT-169` re-derived the wield classes; `§697` already had them.**
+
+**Genuinely new:** **the increment ladder, the `−4` adjacent penalty, the `+2` melee-against-ranged, the grenade throw range, the 48 m ceiling, and `PT-170`'s map-size dial.**
+
+> **`§13` answers *how far can this weapon reach*. `§6.2a` answers *what happens at each distance*.** **Both are needed and only one existed.**
+
+### ⚠ What `PT-166` actually accomplished
+
+**It brought `EQUIPMENT-01` into line with `§13`.** **`EQUIPMENT-01` carried the raw source values — 17, 23, 25 — while `§13` carried the snapped ones, and neither document referenced the other.**
+
+**That was worth doing. It was recorded as a discovery when it was a reconciliation.**
+
+### ⚠ And check 20 damaged a historical record
+
+**The grid pass rewrote the *source* column of `PT-166`'s own table, turning `17 → 16` into `16 → 16`.**
+
+> **A grid-alignment pass cannot tell a live distance from a historical one.**
+
+**The rulings log is already excluded from check 20 for this reason. `ACTION-ECONOMY-01` is not, and cannot be.**
+
+### The lesson, which this project has now recorded five times
+
+**Two lists of the same facts drift.** **`PT-84`, `PT-97`, `PT-140`, `PT-162`, and this.**
+
+**⚠ The difference here is that I created the second list, in a document I had open, three sections above the first.**

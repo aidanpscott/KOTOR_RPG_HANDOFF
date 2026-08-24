@@ -10,7 +10,7 @@
 
 ## How forms are acquired — deferred to the class workstream
 
-**Forms are feats.** `FORMS-01` holds them: **seven lightsaber forms in one exclusion group, so only one is active at a time.**
+**Forms are feats *and* stances — `PT-185`, `FORMS-01 §2.2`.** **The feat unlocks the form's attacks permanently; the stance gives its bonuses and you are in one at a time.** **⚠ This sentence previously read *"Forms are feats"* and contradicted `FORMS-01 §2` in the act of citing it.**
 
 > **A Jedi acquires a form two ways — by levelling, and by being taught.** A master, a holocron, an enemy who teaches by defeating you. **Which classes grant which forms, on what schedule, and what training in play looks like, belongs to the class workstream.**
 
@@ -85,7 +85,7 @@
 | ›› Unbreakable Circle | They run out before you do. | **Level 8.** **No penalty, Defence +8, damage reduction 8**, and **the cumulative penalty is −2 per round**, to −8. |
 | **Deflecting Slash** | **Form III, Resilience.** *"An extrapolation of Shii-Cho blast-deflect training."* **Soresu was built when blasters were.** | **Level 1. Requires the Resilience form.** **Blaster Bolt Deflection +5 until the start of your next turn, and you may still attack** at −2. **The first bolt aimed at you each round is deflected without a roll.** |
 | › Mynock's Guard |  | **Level 4.** **Deflection +10, attack −1.** |
-| ›› Impenetrable Guard | The bolts simply stop. | **Level 8.** **Deflection +15, no attack penalty**, and **you may deflect bolts aimed at an ally within 3 metres.** |
+| ›› Impenetrable Guard | The bolts simply stop. | **Level 8.** **Deflection +15, no attack penalty**, and **you may deflect bolts aimed at an ally within 4 metres.** |
 
 ## Form IV — Aggression *(Ataru, the Way of the Hawk-Bat)*
 
@@ -95,7 +95,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Hawk-Bat Swoop** | **Form IV, Aggression.** *"The most acrobatic and fastest form — spectacular jumps and pirouettes."* | **Level 1. Requires the Aggression form. Costs 1 Force point.** **Move up to your speed and attack as one declaration, and the movement provokes nothing.** **+2 damage** if you moved at least 5 metres. **Unusable where you cannot move 5 metres.** |
+| **Hawk-Bat Swoop** | **Form IV, Aggression.** *"The most acrobatic and fastest form — spectacular jumps and pirouettes."* | **Level 1. Requires the Aggression form. Costs 1 Force point.** **Move up to your speed and attack as one declaration, and the movement provokes nothing.** **+2 damage** if you moved at least 4 metres. **Unusable where you cannot move 4 metres.** |
 | › Vaulting Strike |  | **Level 4. Costs 1 Force point.** **+5 damage.** |
 | ›› Ataru Leap | You do not touch the ground between them. | **Level 8. Costs 1 Force point.** **+8 damage**, and **you may move again after the attack.** |
 | **Saber Swarm** | **Form IV, Aggression.** *"Intensive use of the Force to maximise speed and agility."* **Ataru is fast before it is anything else.** | **Level 1. Requires the Aggression form. Costs 2 Force points.** **Strike four times this round instead of once. Attack −5, Defence −3.** |
@@ -112,7 +112,7 @@
 |---|---|---|
 | **Shien Deflection** | **Form V, Perseverance.** *"Shien's focus on returning blaster bolts to their origin."* **Form V uses an opponent's attack against them.** | **Level 1. Requires the Perseverance form.** **Every bolt you deflect this round is returned at its shooter** rather than turned aside. **Attack −2** on your own strike. |
 | › Bolt Return |  | **Level 4.** **Attack −1**, and **returned bolts deal +50% damage.** |
-| ›› Barrier of Blades | Everything they send comes back. | **Level 8.** **No penalty**, returned bolts deal **double damage**, and **you may return a bolt aimed at an ally within 3 metres.** |
+| ›› Barrier of Blades | Everything they send comes back. | **Level 8.** **No penalty**, returned bolts deal **double damage**, and **you may return a bolt aimed at an ally within 4 metres.** |
 | **Falling Avalanche** | **Form V, Perseverance.** *"Designed to use an opponent's attack against them — an emphasis on immediate counterattacks."* **Defend, then answer.** | **Level 1. Requires the Perseverance form.** **If you were struck since your last turn, +3 attack and +3 damage** on this declaration. **Stacks once per attacker who struck you**, to two. |
 | › Answering Strike |  | **Level 4.** **+5 attack and +5 damage**, stacking to **three** attackers. |
 | ›› Krayt's Answer | The more they hit you, the worse it goes for them. | **Level 8.** **+7 attack and +7 damage**, stacking to **five** attackers. |
@@ -128,7 +128,7 @@
 | **Guided Strike** | **Form VI, Moderation.** *"Extensive integration of Force powers."* **The only form that joins the blade to the Force.** | **Level 1. Requires the Moderation form.** **Declare a Tier-1 Force power *and* a saber attack in the same round.** The saber attack takes **−4.** |
 | › Woven Strike |  | **Level 6.** **Tier-1 or Tier-2 power. Saber attack at −2.** |
 | ›› Unity of Form | Niman is not one form. It is the others, held together. | **Level 12.** **Any power, and no penalty.** **You may also declare any Form I–V attack you know without holding that form.** |
-| **Draw Closer** | **Form VI, Moderation.** *"Niman practitioners supplement saber strikes with telekinetic pushes, pulls, and lifts."* | **Level 1. Requires the Moderation form.** **Pull an enemy within 10 metres to you, or push it 5 metres, and strike** — one declaration. **Attack −2.** **A pushed target is knocked prone on a failed Reflex save.** |
+| **Draw Closer** | **Form VI, Moderation.** *"Niman practitioners supplement saber strikes with telekinetic pushes, pulls, and lifts."* | **Level 1. Requires the Moderation form.** **Pull an enemy within 10 metres to you, or push it 4 metres, and strike** — one declaration. **Attack −2.** **A pushed target is knocked prone on a failed Reflex save.** |
 | › Pushing Slash |  | **Level 4.** **Attack −1.** |
 | ›› Rancor's Reach | The blade reaches further than the arm. | **Level 8.** **No penalty. Up to three enemies within 10 metres**, pulled or pushed, striking each. |
 

@@ -5113,3 +5113,54 @@
 **⚠ Re-test when the upgrade system exists.** **Lightsabers, blasters and melee weapons all gain ceilings that do not exist today, and the gap may invert.**
 
 **Recorded rather than left silent, because the 2.2× figure is real and the next reader who derives it will reach for a fix.**
+
+---
+
+## PT-185 — Forms are feats *and* stances, and the two documents were both right
+
+**Owner ruling: lightsaber forms become feats that *"mostly serve as unlocks for attacks."***
+
+**⚠ `FORMS-01 §2` is titled *"Forms are conditions, not feats"* and lists it under **Settled**.** **`ATTACKS-06 §13` says *"Forms are feats"* — and cites `FORMS-01` in the same sentence.**
+
+**Both are true, of different objects:**
+
+> **The **feat** unlocks the form's attack chains, permanently.**
+> **The **stance** is which form's bonuses you are currently in, and you are in one at a time.**
+
+**⚠ A Jedi holding four form feats may declare any of those forms' attacks and receives only the bonuses of the form they stand in.**
+
+**`ATTACKS-06`'s access arithmetic holds for *bonuses* and relaxes for *attacks* — which is what *"unlocks for attacks"* says.**
+
+**⚠ `ATTACKS-06 §13` corrected. It contradicted `FORMS-01` in the act of citing it.**
+
+### Acquisition is 1 / 6 / 12, from the source
+
+**Not authored. Every granted class chain in `feat.2da` uses the same three levels:**
+
+    jgd   FORCE_JUMP · ADVANCED · MASTERY           1 / 6 / 12
+    jsn   FORCE_IMMUNITY_FEAR · STUN · PARALYSIS    1 / 6 / 12
+    jcn   FORCE_FOCUS · ADVANCED · MASTERY          1 / 6 / 12
+
+**Three by levelling, the rest taught. The third is chosen rather than granted.**
+
+**⚠ The designer numbered this ruling `PT-184`. That ID was already taken by the unarmed defer, written the same hour.** **The acquisition rule lives here under `PT-185` and any `FINDINGS` citing `PT-184` for forms means this section.**
+
+**⚠ Force forms deferred by the owner.**
+
+---
+
+## PT-186 — Force Focus is the form; Force Channel is the feat chain
+
+**Owner ruling. They are two different objects and the corpus was treating one name as a rename of the other.**
+
+**⚠ And `FORMS-01 §6.2` states the governing rule and breaks it one line later.**
+
+    line 222   FORM_FORCE_I_FOCUS → "Force Channel — the docx renames it;
+               THE 2DA LABEL GOVERNS HERE"
+    line 229   "Force Channel | FP regeneration +50% out of combat…"
+
+> **⚠ It declares that the 2DA label governs, then prints the docx name in the naming table and again in the effects table.**
+
+**Corrected: the form is Force Focus. The feat chain keeps its name and is unaffected.**
+
+**⚠ A document that states a governing rule and breaks it one line later is worse than one that never stated it. The rule looks applied.**

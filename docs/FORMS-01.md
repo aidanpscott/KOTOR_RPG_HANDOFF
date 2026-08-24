@@ -84,6 +84,39 @@
 
 ---
 
+### 2.2 ⚠ Feat and stance are two different things — `PT-185`
+
+**Owner ruling: lightsaber forms become **feats** that *"mostly serve as unlocks for attacks."***
+
+**`§2` says forms are *conditions*, not feats. Both are true, of different objects.**
+
+> **The **feat** unlocks the form's attack chains, permanently.**
+> **The **stance** is which form's bonuses you are currently in, and you are in one at a time.**
+
+    hold the feat        permanent, cumulative, unlocks attacks
+    be in the stance     exclusive, switchable, gives the bonuses
+
+**⚠ A Jedi who holds four form feats may declare any of those forms' attacks.** **They receive only the bonuses of the form they are standing in.**
+
+**Which is what *"unlocks for attacks"* says, and it reconciles `ATTACKS-06` with this document rather than overruling either.**
+
+**`ATTACKS-06`'s access arithmetic holds for *bonuses* and relaxes for *attacks*.**
+
+### ⚠ And acquisition is at 1 / 6 / 12, from the source
+
+**Not authored. Every granted class chain in `feat.2da` uses the same three levels:**
+
+    jgd   FORCE_JUMP · ADVANCED · MASTERY           1 / 6 / 12
+    jsn   FORCE_IMMUNITY_FEAR · STUN · PARALYSIS    1 / 6 / 12
+    jcn   FORCE_FOCUS · ADVANCED · MASTERY          1 / 6 / 12
+
+> **Three grants at 1, 6 and 12 is what this game does when a class gives something three times.**
+
+**Three by levelling, the rest taught.** **⚠ The third is chosen rather than granted — by 12 a player knows which attacks they want.**
+
+**⚠ Force forms deferred by the owner. This section governs lightsaber forms only.**
+
+
 ## 3. `exclusion: 0x02` — the 178-row question, answered
 
 **The agenda asks what else shares the group, on the grounds that 178 rows is too many for forms alone.**
@@ -186,14 +219,14 @@
 
 | 2DA label | Name |
 |---|---|
-| `FORM_FORCE_I_FOCUS` | **Force Channel** — the docx renames it *Force Channel*; **the 2DA label governs here** |
+| `FORM_FORCE_I_FOCUS` | **Force Focus** — the 2DA label, which this document says governs. **⚠ Printed *Force Channel* here and in the effects table, breaking its own rule twice. `PT-186`** |
 | `FORM_FORCE_II_POTENCY` | Force Potency |
 | `FORM_FORCE_III_AFFINITY` | Force Affinity |
 | `FORM_FORCE_IV_MASTERY` | Force Mastery |
 
 | Form | What it does |
 |---|---|
-| **Force Channel** | FP regeneration **+50% out of combat**; Force power damage +3; Saves vs. Force +2 |
+| **Force Focus** | FP regeneration **+50% out of combat**; Force power damage +3; Saves vs. Force +2 |
 | **Force Potency** | Force power damage **+30%**; **FP cost +20%.** *Favoured by Dark Jedi.* |
 | **Force Affinity** | **FP regenerate during combat**, at a reduced rate against the non-combat rate |
 | **Force Mastery** | Force power duration +50%; opponents' saves vs. Force −2; **your** saves vs. Force −4; **FP cost +20%** |
@@ -205,6 +238,22 @@
 > **That is the interaction, and it is far cheaper than the cross-product F-3 imagined.** Four forms carrying four modifier sets, against 106 powers carrying nothing.
 
 ---
+
+### 6.4 ⚠ Force Focus and Force Channel are two different things — `PT-186`
+
+**Owner ruling:**
+
+    Force Focus     the FORM   — form.force group, this document
+    Force Channel   the FEAT CHAIN — the Consular's granted chain, FEATS-LIBRARY-01
+
+**⚠ They are not the same object and the corpus has been treating one name as a rename of the other.**
+
+**`§6.2` declared that the 2DA label governs and then printed *Force Channel* in both the naming table and the effects table.** **Corrected: the form is Force Focus, as its own rule requires.**
+
+> **⚠ A document that states a governing rule and breaks it one line later is worse than one that never stated it.** **The rule looks applied.**
+
+**The feat chain keeps the name *Force Channel* and is unaffected.**
+
 
 ## 7. In-combat regeneration — resolved, and Force Affinity keeps its job
 

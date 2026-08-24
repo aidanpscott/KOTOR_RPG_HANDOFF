@@ -51,7 +51,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** | **+1 attack within one range increment** — `PT-163`. **⚠ And an adjacent enemy's `+2` against you drops to `+1`.** Level 4 |
+| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** **⚠ Universal — granted to the Scout at 1, purchasable by anyone. `PT-208`.** | **+1 attack within one range increment** — `PT-163`. **⚠ And an adjacent enemy's `+2` against you drops to `+1`.** Level 4 |
 | › Improved Close Combat |  | **+2**, and the adjacent enemy's bonus drops to **0**. Level 8 |
 | ›› Master Close Combat | **Authored — the source chain stops at Improved.** | **+3**, and **your own `−4` for firing while adjacent drops to `−1`** |
 
@@ -107,9 +107,17 @@
 | **Loremaster** | Deep knowledge of the dead, the living, and the Force. | +1 Archaeology, Mysticism, and Xenology. |
 | › Advanced Loremaster |  | +2 Archaeology, Mysticism, and Xenology. |
 | ›› Grand Loremaster | **The name already contains *master*, so the chain uses Advanced and Grand.** | +3 Archaeology, Mysticism, and Xenology. |
-| **Marksman** | Shots placed where they are hardest to turn aside. | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(The passive half of KOTOR's Precise Shot. The damage half is an attack — see `ATTACKS-01`.)* |
-| › Improved Marksman |  | **Enemy BBD −4.** |
-| ›› Master Marksman |  | **Enemy BBD −6.** |
+| **Boresight** | Shots placed where they are hardest to turn aside. **⚠ Universal — granted to the Scout at 4 / 8 / 12, purchasable by anyone. `PT-208`.** **⚠ Renamed from `Marksman`, which collided with the class of that name — `PT-206`.** | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(The passive half of KOTOR's Precise Shot. The damage half is an attack — see `ATTACKS-01`.)* |
+| › Improved Boresight |  | **Enemy BBD −4.** Level 6 |
+| ›› Master Boresight |  | **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round.** Level 12 |
+
+> **⚠ Repriced from five tiers to three at `1 / 6 / 12` — `PT-209`.** **The source ran `PRECISE_SHOT_I–V` at 4 / 8 / 12 / 16 / 20 and `PT-101` cut `Targeting` from eight tiers to three for the same reason.**
+
+**⚠ And the capstone went categorical because the arithmetic demanded it.** **`Deflecting Slash` reaches `+15` deflection; a `−6` against that is noise.**
+
+> **This is the one thing that makes a blaster user relevant against a lightsaber** — **and it is the KOTOR moment: watching your bolts come back until they stop coming back.**
+
+**⚠ *First attack each round* is `PT-188`'s pricing.** **Without it the capstone triples on a `Barrage`.**
 | **Mobility** | **Reinstated from cut content.** Restored and verified functional by TSLRCM. | **+10% movement rate.** *Source: TSLRCM changelog. Whether 10% is BioWare's value or the modders' is unstated.* |
 | **Naturalist** | The study of living things in the field rather than the archive. | +1 Beast Handling, Botany, and Science. |
 | › Improved Naturalist |  | +2 Beast Handling, Botany, and Science. |
@@ -168,8 +176,16 @@
 | › Improved Kill Box |  | **+4.** |
 | ›› Master Kill Box |  | **+5.** |
 | **Logic Upgrade: Combat** | Having witnessed combat first-hand, the droid self-upgrades its defensive algorithms. | Defence +2, rising +2 every six levels. **+2 at 1, +4 at 5, +6 at 11, +8 at 17.** |
-| › Logic Upgrade: Tactician | Advanced combat processing. | **In KOTOR 2 this grants no defence bonus despite its description.** A known defect. |
-| ›› Logic Upgrade: Battle Droid | Full military combat processing. | See above. |
+| › Logic Upgrade: Tactician | Advanced combat processing — the chassis begins reading the fight rather than only surviving it. | **+2 attack against a target an ally or allied droid is also attacking**, and Defence as tier 1. Level 5 |
+| ›› Logic Upgrade: Battle Droid | Full military combat processing. | **+4 attack** under the same condition, and Defence as tier 1. Level 11 |
+
+> **⚠ Tiers 2 and 3 were empty and we ported the emptiness — `PT-210`.** **`FEATS-LIBRARY-01` recorded it as *"in KOTOR 2 this grants no defence bonus despite its description. A known defect."***
+
+**Filled with what their own names promise.** **This is the droid `Squad Tactics`, and the source named the tiers for us.**
+
+> **A Soldier coordinates by training. A droid coordinates by being on the same network.**
+
+**⚠ Which is why `Squad Tactics` is NOT shared with droids.** **They have their own, it was already in the corpus, and two of its three tiers were doing nothing.**
 | **Networked** | A live link to any droid within range. | **Share sensor data with one allied droid within 20 metres** — you each use the higher of your two Awareness and Alertness scores. |
 | › Improved Networked |  | **Two allied droids, 40 metres**, and **+1 attack against any target another linked droid is attacking.** |
 | ›› Master Networked |  | **Any number of allied droids on the same field**, and **+2 attack.** *G0-T0's droid army is the precedent.* |
@@ -232,11 +248,11 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Targeting 1** | Scouts are very effective with blaster pistols and rifles. | **+1 attack** with blasters. Granted at level 1. |
+| **Targeting 1** | Effective with any weapon fired rather than swung. **⚠ Universal — granted to the Scout at 1, purchasable by anyone. `PT-208`.** | **+1 attack with any ranged weapon — wield classes 4, 5 and 6. `PT-209`.** *Previously read "with blasters", which excluded the bowcaster.* Granted at level 1. |
 | › **Targeting 2** |  | **+2 attack**, granted at level 6. **⚠ Repriced — `PT-101`** |
 | ›› **Targeting 3** |  | **+3 attack**, granted at level 12. **⚠ The ladder ends here.** The source ran to eight |
-| **Uncanny Dodge 1** | The character keeps their footing even when taken by surprise. | **Retains Dexterity bonus to defence when surprised.** Grenade DC −2. Level 4 Scout. |
-| › Uncanny Dodge 2 |  | **Grenade DC −4.** Level 7 Scout. |
+| **Uncanny Dodge 1** | The character keeps their footing even when taken by surprise. **⚠ Scout only — `PT-208`. Granted at 4.** | **Retains Dexterity bonus to defence when surprised.** Grenade DC −2. Level 4 Scout. |
+| › Uncanny Dodge 2 |  | **Grenade DC −4.** **Granted at 7.** |
 
 
 ## Smuggler
@@ -518,28 +534,33 @@
 ---
 
 
-### Read the Ground — Scout only. Authored.
+### Terrain Sense — Scout only. Authored.
 
-**Derived from the one number that makes the class:** **12 / 12 / 12 at level 20 is 36 save points against the Soldier's 24 and the Jedi's 33.** **The only all-strong progression in either game.**
+**⚠ Replaces `Read the Ground` — `PT-207`.** **That feature shared an ally's Reflex save against area effects, and once the Scout is granted `Evasion` at 6 and `Uncanny Dodge` at 4 and 7, it was the *third* thing on one axis.**
 
-**Add `Uncanny Dodge` at 4 and 7 and `Evasion` at 6 and the class the source built is not a ranged specialist.** **It is the one who walks into the room first and comes back out.**
+> **All three were *do not get hit by the thing*.**
 
-> **The Soldier absorbs. The Scout avoids.**
+**The class is called Scout and nothing in it was about going in first.**
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Read the Ground** | **1** | **When you succeed on a Reflex save against an effect with an area, one ally in that area may use your result in place of their own.** Declared after your roll, before theirs |
-| › **Called It** | **4** | **Two allies** |
-| ›› **Nobody Steps On It** | **8** | **Two allies**, and **when `Evasion` reduces your damage to none, each of them takes half instead of full** |
+| **Terrain Sense** | **1** | **On entering an area, name one feature of it before anyone acts** — a cover position, a chokepoint, a hazard, a second exit. **The GM answers truthfully.** Once per encounter |
+| › **Ground Read** | **4** | **Two features**, and one ally who acts before you may use one of them — moving to a cover square you named as part of their own move |
+| ›› **Nothing Here Surprises Me** | **8** | **Two features**, and **the party is never surprised in an area you entered first** |
 
-**⚠ Priced.** **The only area effects on the pregen sheets are grenades.** **A trooper's frag against `KORR` at Reflex `+5` lands about 8 on a failure.** **At tier 1 the Scout converts one ally's failure roughly a third of the time — under 3 expected damage a round, and only when someone throws something.**
+**⚠ It does not touch initiative.** **`PT-96` closed that deliberately — *"a flat initiative bonus is a different feat and every class wants it."*** **This changes what the party *knows*, not the order they act in.**
 
-**Not dominant: it does nothing against weapons, which is almost every attack in the game.** **A hard counter to one narrow category, which is what a save specialist should be.**
+**And the capstone is a hard counter rather than a bonus:** **surprise is `ACTION-ECONOMY-01 §9` — a surprised character takes no action in round one.** **Negating it for the party is decisive when it fires and worth nothing when nobody was ambushing you.**
 
-> **The grenade lands, the Scout shouts, and the party does not die.** **Two or three times a campaign, not every round.**
+**⚠ Its whole value is a property of the encounter, like `Field Position`.** **A GM who never ambushes and never varies terrain cuts this class, which is `PT-170`'s dial reaching a third class.**
 
-**⚠ The reconnaissance half of the class — going first, not being surprised — is initiative.** **`ACTION-ECONOMY-01 §17` lists class initiative modifiers as open and notes the Smuggler was to own one.** **The Scout has the better claim and the two should be settled together.**
+#### The Scout's defensive identity now comes from grants, not the feature
 
+    Uncanny Dodge 1     level 4    Scout only — PT-208
+    Evasion             level 6    granted to the Scout, purchasable by anyone
+    Uncanny Dodge 2     level 7    Scout only
+
+**⚠ Which is what the source does.** **24 grants, the most of any class in either game, and `PT-94` found we carried two.**
 
 ---
 
@@ -1062,3 +1083,42 @@
 
 ---
 
+
+## 5c. What droids and organics share — `PT-210`
+
+**Derived from `feat.2da`. Every granted feat, organic columns against droid columns:**
+
+    organic-granted   84
+    droid-granted     11
+    BOTH               5   ⚠ and all five are proficiencies
+
+**Shared in the source:** **Armour Light · Armour Medium · Weapon Blaster · Blaster Rifle · Melee Weapons.**
+
+**Droid-only:** **Blaster Integration · Droid Interface · Droid Upgrade 1–3 · Logic Upgrade: Combat.**
+
+> **⚠ The games share nothing but what you can hold and what you can wear.**
+
+### That is too restrictive and `PT-75` already said so
+
+**`PT-75` dropped the droid/organic class split: they draw from one class list.** **Keeping the feat split at five would undo it.**
+
+**Shared, because nothing in them is biological:**
+
+| | |
+|---|---|
+| **`Targeting`** | pointing a gun — a droid does this better than anyone |
+| **`Boresight`** | the same, against deflection |
+| **`Close Combat`** | a chassis caught at knife distance has the same problem. **⚠ Astromechs excepted, as stated** |
+| **`Weapon Focus` · `Weapon Specialization`** | practice with a weapon family |
+
+**⚠ NOT shared: `Squad Tactics`.** **Droids have their own — `Logic Upgrade`, above — and two of its three tiers were empty until now.**
+
+**⚠ NOT shared: `Evasion` and `Uncanny Dodge`.** **Both are *keeps their footing when surprised*, and a repulsorlift frame has no footing.**
+
+### The line, stated so a reader can apply it without a table
+
+> **Share what is *training*. Withhold what is *instinct* or *anatomy*.**
+
+**⚠ And where a droid should have the effect, give it its own chain rather than access to the organic one.** **`Logic Upgrade` is that done; `Droid Upgrade 1–3` is the same opportunity unused.**
+
+---

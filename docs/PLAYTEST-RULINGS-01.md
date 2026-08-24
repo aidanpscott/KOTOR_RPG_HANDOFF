@@ -5644,3 +5644,120 @@
 > **⚠ A pattern that catches most of a list is worse than none. It reports clean.**
 
 **Third pass catches it. `Marksman` is the only live collision.**
+
+---
+
+## PT-206 — `Marksman` the feat is renamed `Boresight`
+
+**Owner ruling. Closes the collision `PT-204` found and check 21 flagged.**
+
+    was    Marksman   a feat chain AND a class
+    now    Boresight  the feat · Marksman the class · Precise Shot the attack chain
+
+**⚠ The feat is the passive half of KOTOR's `Precise Shot` — enemy blaster deflection `−2 / −4 / −6`, always on.**
+
+**`Boresight` was chosen over `Undeflectable`, `Trueshot`, `Deadeye` and `Bullseye`.** **It is technical, blaster-era, and says what the feat does rather than what the shooter is.**
+
+**⚠ Every candidate was checked against the corpus before being offered.** **`Unerring` and `Piercing` were struck for already appearing.**
+
+**Check 21 now passes.**
+
+---
+
+## PT-207 — `Read the Ground` replaced by `Terrain Sense`
+
+**⚠ Once the Scout is granted `Evasion` at 6 and `Uncanny Dodge` at 4 and 7, `Read the Ground` was the *third* thing on one axis.**
+
+> **All three were *do not get hit by the thing*.**
+
+**And the class is called Scout, with nothing in it about going in first.**
+
+    tier 1   name one feature of an area before anyone acts
+    tier 2   two features, and an ally may use one
+    tier 3   the party is never surprised in an area you entered first
+
+**⚠ It does not touch initiative.** **`PT-96` closed that deliberately.** **This changes what the party *knows*, not the order they act in.**
+
+**The capstone is a hard counter: surprise is `ACTION-ECONOMY-01 §9`, and a surprised character takes no action in round one.**
+
+**⚠ Its value is a property of the encounter, like `Field Position`.** **Third class whose viability depends on encounter design — `PT-170`'s dial.**
+
+---
+
+## PT-208 — The Scout's grants, stated
+
+**Owner rulings on each.**
+
+    Uncanny Dodge 1 / 2    Scout only, granted at 4 and 7
+    Evasion                granted to the Scout at 6, purchasable by anyone
+    Targeting              universal — granted to the Scout at 1
+    Boresight              universal — granted to the Scout at 4 / 8 / 12
+    Close Combat           universal — granted to the Scout at 1
+
+**⚠ Two of the five carried a grant statement before this.** **`Uncanny Dodge 2` said *"Level 7 Scout"* inside its effect text — a grant hiding in a description — and `Boresight` and `Close Combat` said nothing at all.**
+
+> **The Scout's defensive identity now comes from grants rather than from its feature, which is what the source does.**
+
+**24 grants, the most of any class in either game, and `PT-94` found we carried two.**
+
+**⚠ `Boresight` still needs the reprice `PT-101` flagged.** **It is a five-tier granted ladder and `PT-101` cut `Targeting` from eight tiers to three for exactly that reason. Outstanding.**
+
+---
+
+## PT-209 — `Targeting` covers all ranged weapons; `Boresight` repriced and its capstone goes categorical
+
+**`Targeting` read *"+1 attack with blasters"* — which excluded the bowcaster, the one ranged weapon that is not a blaster.**
+
+**Now: any ranged weapon, wield classes 4, 5 and 6.**
+
+### `Boresight` — five tiers to three, at `1 / 6 / 12`
+
+**Source `PRECISE_SHOT_I–V` ran 4 / 8 / 12 / 16 / 20.** **`PT-101` cut `Targeting` from eight tiers to three for the same reason and flagged this one, and it was never done.**
+
+**⚠ But the argument is the opposite of `Targeting`'s.** **`Targeting` was cut for magnitude — `+8` free was worth eight feats. `Boresight` does *nothing* against most of the game.**
+
+> **No deflection, no effect. Every non-Jedi organic, every droid, every beast.** **It is an anti-Jedi feat and nothing else.**
+
+### And the capstone went categorical because the arithmetic demanded it
+
+**`Deflecting Slash` reaches `+15` deflection. A `−6` against that is noise.**
+
+> **Tier 3: the target's Blaster Bolt Deflection does not apply to your first ranged attack each round.**
+
+**⚠ This is the one thing that makes a blaster user relevant against a lightsaber — and it is the KOTOR moment: watching your bolts come back until they stop coming back.**
+
+**⚠ *First attack each round* is `PT-188`'s pricing. Without it the capstone triples on a `Barrage`.**
+
+---
+
+## PT-210 — What droids and organics share, and the droid `Squad Tactics`
+
+**Derived: organic columns grant 84 feats, droid columns 11, and exactly 5 overlap.**
+
+> **⚠ All five are proficiencies. The games share nothing but what you can hold and what you can wear.**
+
+**Too restrictive — `PT-75` gave droids and organics one class list.**
+
+**Shared now: `Targeting`, `Boresight`, `Close Combat`, `Weapon Focus`, `Weapon Specialization`.**
+
+**⚠ Not shared: `Squad Tactics`, `Evasion`, `Uncanny Dodge`.**
+
+### The line
+
+> **Share what is *training*. Withhold what is *instinct* or *anatomy*.**
+
+### And the droid equivalent existed, empty
+
+**`Logic Upgrade: Tactician` and `Logic Upgrade: Battle Droid` granted nothing.** **`FEATS-LIBRARY-01` recorded why: *"in KOTOR 2 this grants no defence bonus despite its description. A known defect."***
+
+**⚠ We ported the defect.**
+
+**Filled with what their own names promise:**
+
+    Logic Upgrade: Combat        Defence +2 rising, as ported
+    Logic Upgrade: Tactician     +2 attack vs a target an ally is also attacking
+    Logic Upgrade: Battle Droid  +4
+
+> **A Soldier coordinates by training. A droid coordinates by being on the same network.**
+
+**⚠ `Droid Upgrade 1–3` is the same opportunity, still unused.**

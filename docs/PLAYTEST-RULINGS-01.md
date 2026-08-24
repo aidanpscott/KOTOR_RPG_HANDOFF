@@ -4005,3 +4005,44 @@
 
     Middle · d8 · Dexterity · skill base 4 · 8 class skills · 15 feats
     Saves 12 / 12 / 6 — ⚠ Will weak is the class. A pirate has no discipline.
+
+---
+
+## PT-148 — Three structural findings on the thirteen, before any was drafted
+
+**The designer checked the roster instead of drafting into it, and cited `FINDINGS-20` as the reason: drafting against a wrong premise costs three exchanges.**
+
+### Covert space held seven classes
+
+    Agent · Smuggler · Jedi Sentinel     all four covert skills each — verified
+    Sith Assassin · Jedi Watchman        Sneak Attack
+    Operative · Shadow Hunter            "ranged covert" and "melee covert"
+
+**⚠ `PT-135` is the precedent and the designer applied it to itself.** **The Agent was proposed as *the covert base class*, measured, found to be in a filled slot, and rebuilt on Charisma.**
+
+**And ranged-versus-melee is not a class distinction** — **`ATTACKS-01 §4` gives every organic both rosters.** **A covert character who wants range buys ranged chains. A spend, not a class.**
+
+> **Both survive, on what the covert work is *for*.** **`Operative` — the one who was never there. `Shadow Hunter` — the one who was there and left nothing.**
+
+### `Scoundrel` and `Gunslinger` held one identity between them
+
+**`CLASS-ATTACKS-01 §4` gave the Scoundrel the orphan grant row at `PT-73` — *"close, fast, and gone."*** **`CLASS-ROSTER-01` says `Gunslinger` is *"pistols."***
+
+**⚠ The Pirate made it three deep.**
+
+> **`Gunslinger` keeps pistols: rate and reaction, two guns, fast draw.** **`Scoundrel` becomes the `Sneak Attack` specialist — the character who does nothing else.**
+
+**⚠ Which makes it a fourth entry on `PT-122`'s three-speed ladder and needs its own ruling.**
+
+### Promoting the Sith Assassin broke the Force prestige mirror
+
+**Verified against `k2_classes.2da`. Every prestige row continues a base row at `+2` Force die:**
+
+    Jedi Sentinel   d8/6/DEX  ->  Watchman   d8/8/DEX
+    Sith Assassin   d8/8/DEX  ->  ⚠ nothing
+
+**`SithAssassin` prints the Watchman's line exactly.** **`PT-125` promoted it to base, so its own prestige row became the base class and the Watchman lost its Sith mirror.**
+
+> **`Sith Battlemaster` fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin.**
+
+**⚠ The name was already on the roster with no definition. Three of the thirteen — `Vanguard`, `Commando`, `Droid Master` — and three more appear in no document but the roster.**

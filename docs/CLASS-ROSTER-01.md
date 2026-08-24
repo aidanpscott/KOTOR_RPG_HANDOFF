@@ -341,6 +341,52 @@
 **And `Tech Specialist` is the only one whose entry is a disjunction, because it is the *completion* prestige** — its skills are whichever of `Engineer` and `Machinist` the entrant is missing.
 
 
+### ⚠ Three structural findings on the thirteen, before any was drafted — `PT-148`
+
+**The designer checked the roster instead of drafting into it.**
+
+#### Covert space holds seven classes
+
+    Agent · Smuggler · Jedi Sentinel     all four covert skills each
+    Sith Assassin · Jedi Watchman        Sneak Attack
+    Operative · Shadow Hunter            defined only as "ranged covert" and "melee covert"
+
+**⚠ `PT-135` is the precedent.** **The Agent was proposed as *the covert base class*, measured, found to be occupying a filled slot, and rebuilt on Charisma.** **`Operative` and `Shadow Hunter` had not had that test and would fail it.**
+
+**And ranged-versus-melee is not a class distinction here** — **`ATTACKS-01 §4` gives every organic both rosters.** **A covert character who wants range buys ranged chains. That is a spend, not a class.**
+
+> **Ruled: both survive, on *what the covert work is for*.**
+
+**`Operative`** — **the one who was never there.** *Intelligence work: the target does not know they were robbed, read or followed.* **Continues the Agent.**
+**`Shadow Hunter`** — **the one who was there and left nothing.** *Elimination: the target is dead and nobody knows who did it.* **Continues the Smuggler or the Agent.**
+
+#### `Scoundrel` and `Gunslinger` held the same identity
+
+**`CLASS-ATTACKS-01 §4` gave the Scoundrel the orphan grant row — *"`Snap Shot` · `Point Blank Shot`, close, fast, and gone."*** **A close-range pistol fighter.**
+
+**`Gunslinger` is *"pistols."*** **⚠ The same thing, and the Pirate made the space three deep.**
+
+> **Ruled: `Gunslinger` keeps pistols and becomes rate and reaction — two guns, fast draw, close range.** **`Scoundrel` gives up the pistol identity and becomes the `Sneak Attack` specialist — the character who does nothing else.**
+
+**⚠ Which makes it a fourth entry on `PT-122`'s three-speed ladder and needs its own ruling.**
+
+#### Promoting the Sith Assassin broke the Force prestige mirror
+
+**Every prestige row in `k2_classes.2da` continues a base row at `+2` Force die. Verified:**
+
+    Jedi Guardian  d10/4/STR  ->  Weaponmaster  d10/6/STR
+    Jedi Sentinel   d8/6/DEX  ->  Watchman       d8/8/DEX
+    Jedi Consular   d6/8/WIS  ->  Jedi Master    d6/10/WIS
+
+    Sith Warrior   d10/4/STR  ->  Marauder      d10/6/STR
+    Sith Inquisitor d6/8/WIS  ->  Sith Lord      d6/10/WIS
+    Sith Assassin   d8/6/DEX  ->  ⚠ nothing
+
+**⚠ `SithAssassin` prints `d8/8/DEX` — the Watchman's line exactly.** **Its own prestige row became the base class, so the Watchman has no Sith mirror.**
+
+> **`Sith Battlemaster` fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin.** **The name was already on the roster and had no definition.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

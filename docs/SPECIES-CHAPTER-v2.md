@@ -265,7 +265,7 @@ Droids are built rather than generated. **They do not use the 30-point buy** —
 
 - **Constructed:** **A droid is built, not born.** **Immune to poison, disease, suffocation, radiation, and anything requiring a living metabolism.** **It does not eat, sleep, or breathe.** **It has no Force points, cannot take `Force-Sensitive`, and Force powers that target the mind do not affect it.**
 - **Force Blind:** **A droid cannot take `Force-Sensitive` and cannot take any Force class.** **`PT-92`.** *Built, not born. There is nothing to awaken.*
-- **Fixed Armature:** **A droid cannot take a `Combat`-rate class.** **`PT-103`.** *A chassis reaches eleven ranged attack chains and no melee at all — thirty-three tiers against a Combat class's forty. The frame cannot absorb the training.*
+- **Fixed Armature:** **A droid cannot take a `Combat`-rate class.** **`PT-109`.** *A chassis reaches eleven ranged attack chains and no melee at all — thirty-three tiers against a Combat class's forty. The frame cannot absorb the training.*
 - **Ion Vulnerability:** **Ion damage drains 1 Constitution per hit, 2 on a critical**, recovered at 1 per day. *`PLAYTEST-RULINGS-01 B4`.*
 - **Languages:** **Every droid understands five languages at creation.** **Basic and Binary are two of them; the other three are chosen freely.** *A droid's language bank is storage, and storage is cheap.*
 

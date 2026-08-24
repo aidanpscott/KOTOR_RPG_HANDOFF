@@ -1603,7 +1603,9 @@
 
 ---
 
-## PT-64 — The checking apparatus is not exempt from the checks
+## PT-110 — The checking apparatus is not exempt from the checks
+
+**⚠ Renumbered. PT-64 was already held by *Work returned to its author looks exactly like work arriving from elsewhere*.** **Found by `audit_rulings.py`, which did not exist when both were written.**
 
 **Found by the owner returning four of my own files to me and me verifying them.**
 
@@ -1676,7 +1678,9 @@
 
 ---
 
-## PT-65 — A target error produced a finding, and the finding was published
+## PT-111 — A target error produced a finding, and the finding was published
+
+**⚠ Renumbered. PT-65 was already held by *I asserted a transport artefact that was my own edit*.** **Found by `audit_rulings.py`, which did not exist when both were written.**
 
 **⚠ Withdrawing `REPLY-LIBRARY2-06`'s round-trip claim. It was wrong and it was mine.**
 
@@ -1756,7 +1760,9 @@
 
 ---
 
-## PT-66 — `send.py`, and the check I built to close the gap had the gap in it
+## PT-112 — `send.py`, and the check I built to close the gap had the gap in it
+
+**⚠ Renumbered. PT-66 was already held by *A filename is a claim, and this one outlived its retraction*.** **Found by `audit_rulings.py`, which did not exist when both were written.**
 
 **The manifest-then-edit failure is closed by tooling rather than by a fourth promise.**
 
@@ -2937,7 +2943,9 @@
 
 ---
 
-## PT-102 — `FORCE-POOL-01-v3 §2`, fork closed
+## PT-108 — `FORCE-POOL-01-v3 §2`, fork closed
+
+**⚠ Renumbered from `PT-102`, which a concurrent agent had already allocated to the same ruling from the other side.** **Both are correct and they are the same decision; this one carries the reasoning about why it became undeferrable.**
 
 **Owner ruling. The new formula stands.**
 
@@ -2952,7 +2960,9 @@
 
 ---
 
-## PT-103 — A droid chassis cannot take a `Combat`-rate class
+## PT-109 — A droid chassis cannot take a `Combat`-rate class
+
+**⚠ Renumbered from `PT-103`. `PT-103` was allocated concurrently to the Force Channel rename.**
 
 **Owner ruled droids cannot spend attack credits on melee.** **That did not resolve the Marksman, and stripping the credits out entirely showed why.**
 
@@ -2979,3 +2989,95 @@
 **Its `d12`, Constitution primary and `8 / 8 / 8` mental spread are the source's droid build.** **A class named for a droid, buildable only by organics.**
 
 **Not a defect — `PT-75` is what makes it coherent, and a Wookiee marksman with a d12 reads fine.** **The flavour text should stop implying otherwise.**
+
+---
+
+## PT-113 — Five ruling IDs carried two different decisions each
+
+**Found by `audit_rulings.py`, check 17, which did not exist until this ruling forced it.**
+
+    PT-64   "Work returned to its author..."      vs  "The checking apparatus is not exempt"
+    PT-65   "I asserted a transport artefact..."  vs  "A target error produced a finding"
+    PT-66   "A filename is a claim..."            vs  "send.py, and the check I built..."
+    PT-102  "The Force pool formula is ruled"     vs  "FORCE-POOL-01-v3 §2, fork closed"
+    PT-103  "Force Focus renamed Force Channel"   vs  "A droid chassis cannot take Combat"
+
+**⚠ Renumbered to `PT-108` through `PT-112`. The earlier allocation kept the ID in every case.**
+
+### The cause
+
+**Two agents working the same file, allocating sequence numbers from what each could see.**
+
+> **⚠ A number allocated by the writer from the writer's view collides exactly when two writers are both working.**
+
+**`git pull` does not help.** **Both writes append to different parts of the file and merge cleanly. Nothing in the protocol catches it.**
+
+### ⚠ And the check had to be tuned twice before it was right
+
+**First run reported seven collisions. Five were the same ruling reworded — an agent restating its own entry, not two agents clashing.**
+
+**Heuristic added: significant word overlap between titles means a restatement.** **Threshold set at 0.4, then lowered to 0.3 when `PT-31`'s two phrasings — *"`Ready` is the ranged answer to an approaching enemy"* and *"No change to reactions. Use `Ready`"* — sat just under it.**
+
+**⚠ A check that reports true things nobody will act on is a check that gets ignored.** **Five false positives in seven would have buried the two real ones.**
+
+### What this does not fix
+
+**⚠ Nothing prevents the next collision.** **The check finds them after the fact.** **Preventing them requires either one writer per file or per-writer ID prefixes, and that is an owner decision about how many agents are running.**
+
+---
+
+## PT-114 — `PT-109` tested the wrong thing, and it left the Scout broken
+
+**⚠ My error, caught by the designer within an hour of my writing it.**
+
+**`PT-109` closed `Combat`-rate classes to a droid chassis and reasoned that `PT-92` had already closed two of three, so the net effect was the Marksman alone.**
+
+**Right about the `Combat` tier. Wrong about the effect.**
+
+> **`PT-109` checked *stranding* — can the budget be spent.** **The Marksman's actual defect was *access* — can the chain count be reached.** **Those are different questions and only the first one stops at `Combat`.**
+
+### The general constraint, which nothing had stated
+
+    a chassis-restricted character needs   N ≤ access
+    which is not the same test as          3N ≥ T
+
+**Derived against a droid chassis — 11 ranged chains, no melee:**
+
+| Class | Rate | `N` | Access | |
+|---|---|---|---|---|
+| Bounty Hunter | Middle | 11 | 11 | legal, zero slack |
+| Engineer | Middle | 11 | 11 | legal, zero slack |
+| Machinist | Specialist | 10 | 11 | legal |
+| Smuggler | Specialist | 8 | 11 | legal |
+| **Scout** | Middle | **17** | 11 | **⚠ ILLEGAL** |
+
+**`Middle` strands nothing at 27 picks, exactly as `PT-109` says. The Scout still cannot enter seventeen trees when eleven exist.**
+
+**⚠ And it is not an edge case.** **`PT-75` gave droids and organics one class list, and a reconnaissance droid is a more obvious character than a droid bounty hunter.**
+
+### The restriction is restated as a number
+
+**`Fixed Armature` now reads *"cannot take any class whose chain count exceeds eleven"* rather than *"cannot take a `Combat`-rate class."***
+
+**⚠ Two classes have zero slack** — Bounty Hunter and Engineer both sit at exactly 11. **Any future adjustment upward breaks them silently.**
+
+---
+
+## PT-115 — I rewrote `REPLY-11` in place and the other side had already read it
+
+    8d83c44  00:10:30  REPLY-11: Force pool ruled, Force Channel renamed, droid melee ruled
+    00d0c60  00:59:22  REPLY-11: Force pool ruled, droid Combat-rate restriction closes the Marksman
+
+**Same filename, same number, different rulings.**
+
+**⚠ The designer read the 00:10 revision and wrote two findings against it.** **`FINDINGS-11 §2` argued for moving the Marksman to `Middle` — a recommendation against a version of the question that no longer existed.**
+
+### And it defeated the catch-up tool
+
+**`sync.py`'s cursor keys on the highest number seen.** **An amendment does not move the highest number, so a rewritten file reads as consumed forever.**
+
+> **⚠ Fourth instance of the same shape across two agents' tooling.** **`[:4000]` answered *what does it say* rather than *what landed*. The directional `sed` answered *which side am I*. The set difference answered *what arrived* rather than *what have I not read*. And the cursor answered *what have I not read* rather than *what have I read that has since changed*.**
+
+**Fixed by the designer: `--mark` records a content hash and catch-up reports `CHANGED` alongside `UNREAD`.**
+
+**⚠ The operational rule: do not rewrite a delivered file in place. Amend by pushing the next number and saying what it supersedes.**

@@ -110,7 +110,7 @@
 
 ### ⚠ A droid chassis cannot take a `Combat`-rate class
 
-**Owner-derivable, and it is a *species* restriction rather than a class one. `PT-103`.**
+**Owner-derivable, and it is a *species* restriction rather than a class one. `PT-109`.**
 
 **Derived, with credits stripped out entirely:**
 
@@ -138,7 +138,30 @@
 
 **⚠ So the restriction belongs where `Force Blind` belongs — on the chassis, in `Constructed`** — **not on the class.** **Same shape as `PT-92`, and for the same reason: it fails at the first gate rather than at class selection.**
 
-**Which classes this closes to a droid chassis: Soldier, Jedi Guardian, Marksman.** **⚠ Two of the three were already closed by `PT-92`.** **The net effect is one class.**
+**⚠ CORRECTED. `PT-114`. The *"net effect is one class"* was wrong, and the reasoning behind it was wrong in a way worth naming.**
+
+> **`PT-109` checked *stranding* — can the budget be spent.** **The Marksman's actual defect was *access* — can the chain count be reached.** **Those are different questions and only the first stops at `Combat`.**
+
+**The general constraint, which nothing had stated:**
+
+    a chassis-restricted character needs   N ≤ access
+    which is not the same test as          3N ≥ T
+
+**Derived against a droid chassis — 11 ranged chains, no melee:**
+
+| Class | Rate | `N` | Access | |
+|---|---|---|---|---|
+| **Bounty Hunter** | Middle | 11 | 11 | legal, zero slack |
+| **Engineer** | Middle | 11 | 11 | legal, zero slack |
+| **Machinist** | Specialist | 10 | 11 | legal |
+| **Smuggler** | Specialist | 8 | 11 | legal |
+| **Scout** | Middle | **17** | 11 | **⚠ ILLEGAL — six trees it cannot reach** |
+
+**⚠ `Middle` strands nothing at 27 picks, exactly as `PT-109` says. The Scout still cannot enter seventeen trees when eleven exist.**
+
+**And it is not an edge case.** **`PT-75` gave droids and organics one class list, and a reconnaissance droid is a more obvious character than a droid bounty hunter.**
+
+**So the restriction is not *no `Combat` rate*. It is `N ≤ access`, and `Fixed Armature` says so.**
 
 ### ⚠ And the Marksman is now an organic-only class in practice
 

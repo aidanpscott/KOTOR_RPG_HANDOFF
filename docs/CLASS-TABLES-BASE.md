@@ -150,9 +150,17 @@
 
 **Which save follows the primary ability:**
 
-    Strength or Constitution primary  ->  Fortitude
-    Dexterity primary                 ->  Reflex
-    Wisdom or Charisma primary        ->  Will
+    Strength or Constitution primary            ->  Fortitude
+    Dexterity primary                           ->  Reflex
+    Wisdom, Charisma or Intelligence primary    ->  Will
+
+**⚠ Intelligence added by `PT-133`.** **The rule as first written mapped four abilities of six.**
+
+**It did not surface on the thirteen because none is Intelligence-primary — `k2_classes.2da` gives `INT` as primary to no class in either game.** **The `Explorer` is the first, and any future scholar or slicer will be.**
+
+**Will is the mental save, and the split between the three mental abilities is *what you know* against *what you sense* against *who you are* — none of which is a different kind of resilience.**
+
+**⚠ The alternative — `Intelligence → Reflex` on a *thinking fast* argument — would make the only Intelligence class defensively identical to the Dexterity classes and lose the distinction entirely.**
 
 ### ⚠ It reproduces nine of the ten placements exactly
 

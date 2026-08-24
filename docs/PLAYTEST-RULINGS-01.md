@@ -3567,3 +3567,69 @@
 **⚠ That is `PT-126`'s doing rather than the designer's.** **The owner ruled the Assassin off the mirror onto `Specialist` with the highest Specialist feat total, which makes it the one Sith built around a tool rather than a number.**
 
 **Recorded as a departure, not precedent.** **If `PT-129` is tested, the Assassin is what tests it.**
+
+---
+
+## PT-132 — Check 19: band membership, and a third zero-slack class
+
+**Built after all thirteen classes passed a hand sweep, because the hand sweep is what kept being needed.**
+
+**Three bands exist per rate — chains, feats at 30, skill base — and each has moved at least once:**
+
+    chains          raised twice     PT-88, PT-95
+    Specialist feats opened for the Sith Assassin   PT-126
+    Specialist skill opened for the Smuggler        PT-116
+
+**⚠ Each time, values already assigned had to be rechecked by hand.** **Nothing did it automatically, and `PT-99` is what happens when nobody does — a chain count adopted in one document while another called the question open.**
+
+**Check 19 also verifies `3N ≥ T`, so a class cannot be given a chain count that strands picks.**
+
+### ⚠ And it named a zero-slack class nobody had
+
+**`PT-114` caps a droid at 11 chains. `REPLY-14` recorded the Bounty Hunter and Engineer as sitting at exactly 11.**
+
+> **The Sith Inquisitor is the third, and it was written after that note.**
+
+**⚠ Raising any of the three by one silently closes it to droids.** **The check now says so on every run.**
+
+**All thirteen classes pass: every band, every stranding test.**
+
+---
+
+## PT-133 — `PT-123` mapped four abilities of six
+
+**⚠ Intelligence was not mapped, and neither was a class with no clear primary.**
+
+    Wisdom, Charisma or Intelligence primary  ->  Will
+
+**It did not surface on the thirteen because none is Intelligence-primary.** **`k2_classes.2da` gives `INT` as primary to no class in either game — verified: `CON` 2, `DEX` 7, `STR` 5, `WIS` 3, `INT` 0.**
+
+**The `Explorer` is the first, and any future scholar or slicer will be.**
+
+**Will is the mental save, and the split between the three mental abilities is *what you know* against *what you sense* against *who you are* — none of which is a different kind of resilience.**
+
+**⚠ The alternative — `Intelligence → Reflex` on a *thinking fast* argument — would make the only Intelligence class defensively identical to the Dexterity classes.**
+
+---
+
+## PT-134 — Four authored standard classes
+
+| | Rate | Die | Skill base | Feats@30 | Chains | Capstones |
+|---|---|---|---|---|---|---|
+| **Brawler** | Combat | d10 | 3 | 18 | — | — |
+| **Explorer** | Middle | d8 | 5 | 16 | 15 | 8 |
+| **Duelist** | Middle | d8 | 4 | 15 | 12 | 9 |
+| **Doctor** | Specialist | d6 | 6 | 11 | 12 | 5 |
+
+**⚠ Verified independently: every one inside its rate's three bands, every one strands zero picks, and every stated capstone count matches `⌊(T − N) ⁄ 2⌋`.**
+
+### Every feat total reuses a published cadence
+
+    Brawler   18    the Marksman's rebuilt curve
+    Explorer  16    Scout · Guardian
+    Duelist   15    Sentinel · Watchman
+    Doctor    11    Smuggler · Machinist
+
+> **⚠ `FINDINGS-01 §1` found two authored totals with no schedule behind them — the Guardian's 20 and the Marksman's 18, neither of which reached the grid.**
+
+**Reusing a published column means the thirty rows already exist and cannot drift.** **That is the discipline these four were built under and it is the right one.**

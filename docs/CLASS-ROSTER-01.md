@@ -272,6 +272,31 @@
 
 ---
 
+### The four authored standard classes — `PT-134`
+
+**Every number from a published band or rule. No source column exists for any of them.**
+
+| | Rate | Die | Skill base | Class skills | Feats@30 | Chains | Capstones | Saves |
+|---|---|---|---|---|---|---|---|---|
+| **Brawler** | Combat | d10 | 3 | — | **18** | — | — | — |
+| **Explorer** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
+| **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
+| **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
+
+**⚠ Verified independently: every one inside its rate's chain, feat and skill bands, and every one strands zero picks.** **Their stated capstone counts match `⌊(T − N) ⁄ 2⌋` exactly.**
+
+### ⚠ And every feat total reuses a published cadence
+
+    Brawler   18    the Marksman's rebuilt curve
+    Explorer  16    Scout · Guardian
+    Duelist   15    Sentinel · Watchman
+    Doctor    11    Smuggler · Machinist
+
+> **`FINDINGS-01 §1` found two authored totals with no schedule behind them.** **Reusing a published column means the thirty rows already exist and cannot drift.**
+
+**⚠ The `Explorer`'s first four class skills are owner-set** — `Archaeology`, `Xenology`, `Appraise`, `Science` — **which is why it exists.** **They were a Jedi monopoly before it.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

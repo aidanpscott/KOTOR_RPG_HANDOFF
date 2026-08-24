@@ -3888,3 +3888,63 @@
 **`Weapon Focus: Lightsaber` is a real purchase — the base Jedi are granted the proficiency and not the Focus.**
 
 **And `Tech Specialist` is the only disjunctive entry, because it is the completion prestige.**
+
+---
+
+## PT-144 — Force classes are granted armour
+
+**Owner ruling, and it reverses a stated rule rather than filling a gap.**
+
+    Jedi Guardian · Sith Warrior                     light and medium
+    Jedi Sentinel · Consular · Sith Assassin
+    Sith Inquisitor                                  light
+
+**⚠ `ACTION-ECONOMY-01 §18.2` previously granted Jedi *no armour*, citing `EQUIPMENT-01 §5.2`: armour blocks Force powers, and robes have no Dexterity cap.**
+
+**That rule is unchanged.** **What changes is that a Force character is now *proficient* and may make the trade knowingly.**
+
+> **Proficiency is permission, not obligation.** **A Guardian in medium plate still cannot use Force powers while wearing it; the difference is that they no longer spend a feat to find that out.**
+
+**⚠ And the two `Combat`-rate Force classes get medium, which is the axis that already separates them.** **`PT-125` mirrored the Jedi and Sith on hit die, Force die and rate; armour follows the rate rather than the Order.**
+
+### It also closes `PT-128`'s unresolved grant
+
+**`sas`, `sma` and `jwa` carried `Armour Proficiency: Light`; `sld`, `jma` and `jwm` did not.** **A split that stratified by nothing and could not be read as a marker.**
+
+**Every Force class now has it. Moot.**
+
+---
+
+## PT-145 — Controlled characters are henchmen
+
+**Owner ruling. It resolves in one line a question three class features were raising separately.**
+
+> **A droid an Engineer or Droid Master controls becomes a henchman. A beast a Beast Master controls becomes a henchman.**
+
+**A henchman is a character, not an effect.**
+
+| | |
+|---|---|
+| **Its own turn** | Rolled into initiative, acting on its own count |
+| **Two modes** | **Autonomous** — run by the GM or AI on standing orders. **Directed** — run by the player as a second character |
+| **Declarations** | **Its own.** A henchman's declaration is not its controller's |
+
+**⚠ The question had been framed as *"whose declaration is it"* since `REPLY-08`.** **The answer is that a controlled character is not a puppet sharing your action — it is a character with an action.**
+
+### ⚠ And `Battle Meditation` was never part of it
+
+**Checked against the source rather than assumed.** **In KOTOR 2 it is `+2` attack, damage and Will saves to the party, `−2` to enemies within 10 metres, plus faster regeneration.**
+
+> **A buff and a debuff. Nothing acts on anyone's turn.**
+
+**`Dominate Mind` is the source's only mind-control power and in both games it opens dialogue options and nothing else.**
+
+**⚠ Three exchanges treated `Battle Meditation` as a third instance of a control problem it has nothing to do with.** **Neither agent checked what it did.**
+
+### What is still open
+
+**`Cover Identity`'s capstone lets an Agent control a *person* for one round.**
+
+**⚠ Authored with no precedent in either game — no combat mind control exists in the source at all.** **Owner has questioned it and it is flagged for revision.**
+
+**The tier below — a wounded enemy leaves the encounter — is the version that fits.**

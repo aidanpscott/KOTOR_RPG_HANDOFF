@@ -635,6 +635,8 @@
 
 **`ATTACKS-01 §11.6` says class grants sit on top of attack picks. The same holds for feats.**
 
+> **⚠ A class no longer grants attacks — `PT-89` replaced them with four credits the player spends.** **What remains free: a racial feat, a class-granted feat, and the four credits themselves.**
+
 > **A racial feat, a class-granted feat, and a class-granted attack are all free. None spends a pick.**
 
 **So `Blaster Integration` and `Environmental Sealing` on an Astromech cost nothing. Neither does `Killer's Instinct` on a Smuggler.**
@@ -645,19 +647,27 @@
 
 > **Nothing in the corpus said so, and the consequence was absurd: no pregen carried a proficiency, so Korr could not legally draw his own vibrosword.**
 
-| Class | Granted at 1st level |
+| Class | **Recommended opening** — `PT-89` |
 |---|---|
 | **Soldier** | All weapons · Light, Medium, and Heavy armour |
 | **Scout** | Blasters, blaster rifles, melee weapons · Light and Medium armour |
 | **Smuggler** | Blasters, melee weapons · Light armour |
 | **Machinist** | Blasters, melee weapons · Light armour |
-| **Jedi Guardian · Consular · Sentinel** | Lightsabers, blasters, melee weapons · **no armour** |
+| **Jedi Guardian · Sith Warrior** | Lightsabers, blasters, melee weapons · **light and medium armour** |
+| **Jedi Sentinel · Jedi Consular · Sith Assassin · Sith Inquisitor** | Lightsabers, blasters, melee weapons · **light armour** |
+| **Bounty Hunter** | **All weapons · light and medium armour** — **⚠ Row added; the table had nine rows for ten classes. `PT-107`** |
 | **Marksman** | Blasters, blaster rifles · light and medium armour |
 | **Engineer** | Blasters · light armour |
 
 **A character may still buy proficiency in anything their class does not grant** — that is what the ladders in `FEATS-LIBRARY-01` are for.
 
-> **⚠ Jedi are granted no armour proficiency deliberately.** **`EQUIPMENT-01 §5.2` records that armour blocks Force powers and that robes have no Dexterity cap.** **A Jedi who wants plate buys the feat and gives up the Force.**
+> **⚠ REVERSED by owner ruling. `PT-144`.** **Force classes are granted armour: the two `Combat`-rate ones — Jedi Guardian and Sith Warrior — take light and medium; the other four take light.**
+
+**⚠ This touches a stated rule rather than a gap.** **`EQUIPMENT-01 §5.2` records that armour blocks Force powers and that robes have no Dexterity cap.** **That rule is unchanged — what changes is that a Force character is now *proficient* with armour and may make the trade knowingly.**
+
+**Proficiency is permission, not obligation.** **A Guardian in medium plate still cannot use Force powers while wearing it; the difference is that they no longer have to spend a feat to find that out.**
+
+**⚠ And it makes `PT-128`'s unresolved grant moot.** **`sas`, `sma` and `jwa` carried `Armour Proficiency: Light` and `sld`, `jma` and `jwm` did not — a split that stratified by nothing.** **Every Force class now has it.**
 
 ---
 

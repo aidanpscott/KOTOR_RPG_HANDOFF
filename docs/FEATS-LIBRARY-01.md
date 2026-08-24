@@ -763,3 +763,37 @@
 
 ---
 
+
+## 5b. Controlled characters are henchmen — `PT-145`
+
+**Owner ruling. It resolves the question `Field Override`, `Cover Identity` and the Droid Master were all raising separately.**
+
+> **A droid an Engineer or Droid Master controls becomes a **henchman**.** **A beast a Beast Master controls becomes a henchman.**
+
+**A henchman is a character, not an effect.**
+
+| | |
+|---|---|
+| **It has its own turn** | Rolled into initiative, acting on its own count |
+| **Two modes, chosen by the controller** | **Autonomous** — the GM or AI runs it on stated standing orders. **Directed** — the player runs it as a second character |
+| **Declarations** | **Its own.** A henchman's declaration is not its controller's |
+
+> **⚠ That is the answer to the open question.** **It was framed as *"whose declaration is it"* and the answer is that a controlled character is not a puppet sharing your action — it is a character with an action.**
+
+**⚠ And `Battle Meditation` was never part of this question.** **Checked: in KOTOR 2 it is `+2` attack, damage and Will saves to the party and `−2` to enemies in a 10m radius, plus faster regeneration.** **A buff and a debuff. Nothing acts on anyone's turn.**
+
+**`Dominate Mind` is the source's only mind-control power and in both games it opens dialogue options and nothing else.**
+
+### What this closes
+
+**`Field Override`'s capstone — the turned droid becomes a henchman for the duration.**
+**The Droid Master — its whole premise, and it now has a mechanism before it is written.**
+**The Beast Master — same.**
+
+### ⚠ What it does not cover
+
+**`Cover Identity`'s capstone lets an Agent control a *person* for one round.**
+
+**That was authored with no precedent in either game, and the owner has questioned it.** **⚠ Flagged for revision rather than left.** **The tier below it — a wounded enemy leaves the encounter — is the version that fits.**
+
+---

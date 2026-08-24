@@ -719,3 +719,25 @@
 
 ---
 
+
+### Cover Identity — Agent only. Authored.
+
+**⚠ `SKILL-RESOLUTION-01 §207–211` already rules the whole permission structure and nothing used it:** *"a mundane skill may not override the decision of a character under player control… Between NPCs, every skill works in every direction."*
+
+> **Talking an enemy out of a fight is explicitly legal, explicitly bounded away from player characters, and no class could do it.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Cover Identity** | **1** | **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round |
+| › **Deep Cover** | **4** | On a success it **leaves the encounter** if already below half vitality |
+| ›› **Handler** | **8** | On a success it **acts on your initiative under your control for one round.** One NPC at a time |
+
+**⚠ The capstone mirrors Field Override's deliberately.** **The Engineer turns machines with `Slicing`; the Agent turns people with `Persuade`.** **Neither works on the other's target and both cost a declaration.**
+
+**Not dominant: nothing to droids, nothing to a player-controlled character by the rule above, nothing to anything without a mind.** **Against the pregen suite it works on the Sith Trooper and the Dark Jedi and fails on T4-K9 and HK-24.**
+
+**⚠ OPEN, third instance:** **a controlled NPC acting on your initiative gets a declaration and nothing states whether it is its own or its controller's.** **Field Override, Battle Meditation and now this.**
+
+
+---
+

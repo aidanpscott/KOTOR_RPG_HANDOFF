@@ -3633,3 +3633,42 @@
 > **⚠ `FINDINGS-01 §1` found two authored totals with no schedule behind them — the Guardian's 20 and the Marksman's 18, neither of which reached the grid.**
 
 **Reusing a published column means the thirty rows already exist and cannot drift.** **That is the discipline these four were built under and it is the right one.**
+
+---
+
+## PT-135 — The Agent, and a premise that failed measurement
+
+**`FINDINGS-23 §7` proposed the Agent as *the covert base class the two covert prestige classes feed from*.** **The designer measured it before building on it.**
+
+    Stealth      Bounty Hunter · Jedi Sentinel · Smuggler
+    Security     Jedi Sentinel · Smuggler · Engineer
+    Slicing      Jedi Sentinel · Scout · Smuggler · Engineer
+    Streetwise   Bounty Hunter · Jedi Sentinel · Smuggler
+
+> **⚠ The Smuggler holds all four. So does the Jedi Sentinel. No other class holds more than two.**
+
+**Verified independently. *Covert base class* was already occupied twice, and an Agent built as *the stealthy one* would have been the `Smuggler`/`Scoundrel` problem a third time.**
+
+### The split is on primary ability, not skills
+
+| | Smuggler | **Agent** |
+|---|---|---|
+| **Primary** | Dexterity | **Charisma** |
+| **Method** | not seen | **seen, and taken for someone else** |
+
+**⚠ The first Charisma-primary class in the game.**
+
+    Rate Middle · d8 · skill base 5 · 9 class skills · 15 feats · 11 chains · 10 capstones
+    Saves 6 / 12 / 12 — Will from Charisma, Reflex as the second job
+
+### `Cover Identity`
+
+**⚠ `SKILL-RESOLUTION-01 §207–211` already ruled the permission structure and nothing used it.** **Talking an enemy out of a fight is explicitly legal, explicitly bounded away from player characters, and no class could do it.**
+
+**Fourth class feature in a row that implements a stated-but-absent rule** — after `Quarry`, `Field Override` and `Jury Rig`.
+
+### ⚠ Two things it flags
+
+**Three classes now sit at the `Middle` floor with 10 capstones** — Bounty Hunter, Engineer, Agent. **Worth knowing before a fourth.**
+
+**And the capstone question has a third instance.** **A controlled NPC acting on your initiative gets a declaration; nothing states whether it is its own or its controller's.** **`Field Override`, `Battle Meditation`, `Cover Identity`.**

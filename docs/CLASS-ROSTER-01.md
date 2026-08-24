@@ -282,6 +282,15 @@
 | **Explorer** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
+| **Agent** | Middle | d8 | **5** | **9** | **15** | **11** | **10** | 6 / 12 / 12 |
+
+**⚠ The Agent is the first Charisma-primary class in the game. `PT-135`.**
+
+**And the premise it was nearly built on failed a measurement:** **`Smuggler` and `Jedi Sentinel` each hold all four covert skills — `Stealth`, `Security`, `Slicing`, `Streetwise` — and no other class holds more than two.**
+
+> **So *covert base class* was already occupied twice.** **An Agent built as *the stealthy one* would have been the `Smuggler`/`Scoundrel` problem a third time.**
+
+**The split is on primary ability, not skills: the Smuggler is not supposed to be there; the Agent is supposed to be someone else.**
 
 **⚠ Verified independently: every one inside its rate's chain, feat and skill bands, and every one strands zero picks.** **Their stated capstone counts match `⌊(T − N) ⁄ 2⌋` exactly.**
 

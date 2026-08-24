@@ -195,9 +195,46 @@
 
 ---
 
+
+### Prestige entry — the grammar, before any class requires anything. `PT-138`.
+
+**Nineteen sets of requirements is a design job. What they are *expressed in* is one ruling that shapes all nineteen.**
+
+> **A prestige class requires: a minimum character level, and between one and three *specific* holdings.**
+
+**A holding is one of exactly four things:**
+
+    a class level        "Soldier 5"
+    a skill at a rank    "Stealth 8"
+    a named feat         "Precise Shot"
+    a named attack chain "Power Attack, tier 2"
+
+**⚠ Nothing else.** **No ability minimums, no alignment thresholds, no total-level-in-a-category.**
+
+**Three reasons:**
+
+**Ability minimums are already paid for.** **`PT-82` caps attributes at 18 and `PT-80` gives 30 points; a class that also demands Strength 15 is charging twice for one purchase.**
+
+**⚠ Alignment thresholds would make `ALIGNMENT-01`'s hysteresis load-bearing on class access.** **A character who drifts out of a band would lose entry to a class they already hold, and nothing in the alignment document contemplates that.**
+
+**And four kinds of holding is enough to express every distinction the roster makes.** **`Gunslinger` wants a pistol chain; `Shadow Hunter` wants `Stealth` and a melee chain; `Jedi Weaponmaster` wants Guardian levels.**
+
+### ⚠ The six with source columns go first, in one pass
+
+    with feat.2da columns    Jedi Weaponmaster · Jedi Master · Jedi Watchman
+                             Sith Marauder · Sith Lord · Tech Specialist
+
+    authored from nothing    the other thirteen
+
+**Verified: `jwm` 23 grants, `jma` 17, `jwa` 25, `sma` 24, `sld` 17, `tec` 5.**
+
+**⚠ Mixing ported and authored in one pass is how a ported number ends up beside an authored one with nothing marking the difference.** **That is `PT-68`'s Bounty Hunter finding and `PT-98`'s Machinist finding, both warrant errors rather than number errors.**
+
+---
+
 ## 6. Open
 
-**Prestige class entry requirements.** **Nothing states what a Weaponmaster needs.**
+**⚠ Prestige entry requirements — the *grammar* is ruled at `PT-138`. The nineteen individual sets are not written.**
 
 **Whether a character may return to a class they have left.** **3.5 says yes. Nothing here says otherwise, and nothing says so explicitly.**
 

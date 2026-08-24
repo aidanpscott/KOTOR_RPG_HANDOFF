@@ -3672,3 +3672,83 @@
 **Three classes now sit at the `Middle` floor with 10 capstones** — Bounty Hunter, Engineer, Agent. **Worth knowing before a fourth.**
 
 **And the capstone question has a third instance.** **A controlled NPC acting on your initiative gets a declaration; nothing states whether it is its own or its controller's.** **`Field Override`, `Battle Meditation`, `Cover Identity`.**
+
+---
+
+## PT-136 — The Brawler, and a number adopted by transcription
+
+**⚠ `REPLY-22` said the Brawler record *"gave rate, die, skill base and feat total and stopped."*** **It did not. `FINDINGS-23 §3.2` is an eight-row table carrying saves, class skills, chain count and grants, and `§3.3` carries the class feature.**
+
+**The record was complete and I reported it incomplete.**
+
+### And the skill base was transcribed wrong
+
+**Adopted as 3. The record says 2.**
+
+**⚠ Both are legal — the `Combat` band is 1–4 — so no check caught it.** **It changes 30 career skill points at Intelligence 12.**
+
+> **2 was deliberate. The Brawler is the narrowest class in the game: six class skills against the Soldier's seven and the Scout's eleven.**
+
+**`PT-78` noted that nothing sat at 1 or 2 in the `Combat` band and that *"the band has room for classes that do not exist yet."*** **This is one of them.** **At 3 it ties the Soldier and Guardian and the room stays empty.**
+
+### The record
+
+    Combat · d10 · Strength · skill base 2 · 6 class skills · 18 feats
+    14 chains -> 13 capstones, the Combat floor
+    Saves 12 / 6 / 6
+    Grants: Unarmed Specialist I-VIII at 2, 6, 10 ... 30; Complex Unarmed Anims at 1
+
+**`Nothing In My Hands`** — **the first class built on `ATTACKS-07`'s unarmed roster.**
+
+**⚠ Check 19 now covers eighteen classes. All pass every band.**
+
+---
+
+## PT-137 — Third time in four exchanges that I asked for delivered work
+
+**`PT-120` named this and `sync.py` exists for it.**
+
+    REPLY-15, REPLY-16   asked for the save ladders    delivered in FINDINGS-12
+    REPLY-22             asked for the Agent           delivered in FINDINGS-24
+    REPLY-22             said the Brawler stopped      it did not
+
+> **⚠ The rule is *catch up before asking, not only before waiting*, and I have now broken it three times while the tool that prevents it sits in the repo.**
+
+**The failure is not the cursor.** **It is that I write the reply's *next steps* section from what I remember wanting rather than from what the directory contains.**
+
+**Operational: the *what I want next* section is written last, after a catch-up run, and names only items the catch-up did not answer.**
+
+---
+
+## PT-138 — Prestige entry: the grammar, ruled before any class requires anything
+
+**Nineteen sets of requirements is a design job. What they are *expressed in* is one ruling that shapes all nineteen, and the designer was right to ask for it first.**
+
+> **A prestige class requires a minimum character level, and between one and three *specific* holdings.**
+
+**A holding is one of exactly four things:**
+
+    a class level          "Soldier 5"
+    a skill at a rank      "Stealth 8"
+    a named feat           "Precise Shot"
+    a named attack chain   "Power Attack, tier 2"
+
+**⚠ Nothing else. No ability minimums, no alignment thresholds, no total-level-in-a-category.**
+
+### Why each exclusion
+
+**Ability minimums are already paid for.** **`PT-82` caps attributes at 18 and `PT-80` gives 30 points.** **A class that also demands Strength 15 is charging twice for one purchase.**
+
+**⚠ Alignment thresholds would make `ALIGNMENT-01`'s hysteresis load-bearing on class access.** **A character who drifts out of a band would lose entry to a class they already hold, and nothing in that document contemplates it.**
+
+**Four kinds of holding expresses every distinction the roster makes.** **`Gunslinger` wants a pistol chain; `Shadow Hunter` wants `Stealth` and a melee chain; `Jedi Weaponmaster` wants Guardian levels.**
+
+### ⚠ The six with source columns go first, in one pass
+
+    ported     Jedi Weaponmaster · Jedi Master · Jedi Watchman
+               Sith Marauder · Sith Lord · Tech Specialist
+    authored   the other thirteen
+
+**Verified in `feat.2da`: `jwm` 23 grants, `jwa` 25, `sma` 24, `jma` 17, `sld` 17, `tec` 5.**
+
+**⚠ Mixing ported and authored in one pass is how a ported number ends up beside an authored one with nothing marking the difference.** **`PT-68`'s Bounty Hunter and `PT-98`'s Machinist were both that error, and both were warrant errors rather than number errors.**

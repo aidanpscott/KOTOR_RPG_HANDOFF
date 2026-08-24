@@ -278,11 +278,19 @@
 
 | | Rate | Die | Skill base | Class skills | Feats@30 | Chains | Capstones | Saves |
 |---|---|---|---|---|---|---|---|---|
-| **Brawler** | Combat | d10 | 3 | — | **18** | — | — | — |
+| **Brawler** | Combat | d10 | **2** | **6** | **18** | **14** | **13** | 12 / 6 / 6 |
 | **Explorer** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
 | **Agent** | Middle | d8 | **5** | **9** | **15** | **11** | **10** | 6 / 12 / 12 |
+
+**⚠ The Brawler's skill base is 2, not 3. `PT-136`.**
+
+**It was adopted as 3 by transcription.** **Both are legal — the `Combat` band is 1–4 — so no check caught it.** **It changes 30 career skill points at Intelligence 12.**
+
+> **2 was deliberate. The Brawler is the narrowest class in the game: six class skills against the Soldier's seven and the Scout's eleven.**
+
+**`PT-78` noted that nothing sat at 1 or 2 in the `Combat` band and that *"the band has room for classes that do not exist yet."*** **This is one of them. At 3 it ties the Soldier and Guardian and the room stays empty.**
 
 **⚠ The Agent is the first Charisma-primary class in the game. `PT-135`.**
 

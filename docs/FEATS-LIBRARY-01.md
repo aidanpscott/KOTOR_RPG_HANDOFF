@@ -741,3 +741,25 @@
 
 ---
 
+
+### Nothing In My Hands — Brawler only. Authored.
+
+**⚠ `ATTACKS-07`'s unarmed roster has never had a class built on it.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence** |
+| › **Through The Plate** | **4** | **4 points** |
+| ›› **Armour Is A Comfort** | **8** | **The target's armour bonus does not apply against your unarmed attacks at all** |
+
+**⚠ Priced.** **`KORR` carries 7 of his 19 Defence in medium battle armour, so the capstone is worth about `+7` to hit against him.**
+
+**That is large and it is bought with the game's worst weapon** — **`8d4` at level 30, no `Weapon Specialization`, no critical range, no reach.**
+
+**Not dominant: worth nothing against an unarmoured target, nothing against a Jedi in robes — `ACTION-ECONOMY-01 §18.2` gives Jedi no armour at all — and nothing at range.**
+
+> **A hard counter to exactly one thing: the heavily armoured soldier.** **Which is the fight a brawler is supposed to win.**
+
+
+---
+

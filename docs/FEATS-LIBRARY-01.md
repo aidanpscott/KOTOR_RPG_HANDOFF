@@ -647,7 +647,7 @@
 
 | Feature | Class | Fires on | |
 |---|---|---|---|
-| **Hold the Line** | Soldier | any round an ally is adjacent | **broad** |
+| **Hold the Line** | **Juggernaut** — `PT-211` | any round an ally is adjacent | **broad** |
 | **Quarry** | Bounty Hunter | any encounter with a named target | **broad** |
 | **Still Standing** | Marksman | any encounter you are dropped in | **broad** |
 | **Quickdraw** | Smuggler | a conversation becoming a fight | narrow |
@@ -1122,3 +1122,84 @@
 **⚠ And where a droid should have the effect, give it its own chain rather than access to the organic one.** **`Logic Upgrade` is that done; `Droid Upgrade 1–3` is the same opportunity unused.**
 
 ---
+
+### Hold the Line — Juggernaut only. Authored.
+
+**⚠ Moved from the Soldier — `PT-211`.** **The KOTOR Soldier has eight grants — three armour, three weapon, `Power Attack` and its ranged twin — and no ally-protection mechanic of any kind.**
+
+> **We invented it and gave it to the class the games made simplest.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Hold the Line** | **1** | **When an enemy in your reach attacks an ally other than you, you may take the hit instead.** Once per round, no action |
+| › **Shield Wall** | **4** | **Twice per round**, and an ally adjacent to you **gains your armour bonus against ranged attacks** while they stay adjacent |
+| ›› **None Get Past** | **8** | As above, and **once per encounter, when you take a hit for an ally you may immediately make one attack against the enemy that dealt it** |
+
+**⚠ It pairs with `Immovable Object` rather than duplicating it.** **That chain is *you cannot get past me*; this is *and it costs you to try*.**
+
+**Tier 2 is what makes the class a tank rather than a wall** — **standing next to a Juggernaut is safer than not, which no other class offers.**
+
+#### ⚠ Why the absorb is per round and the counterattack is per encounter
+
+**Absorbing is a *transfer*, not a gain. You spend your own vitality to save an ally's.**
+
+    Juggernaut, d10, CON 16, level 10        ~85 vitality
+    absorbing 2 hits a round for 5 rounds    ~120 damage — he dies
+
+> **⚠ The hit points are already the cap.** **A frequency cap on top does nothing except stop it in the case where it was already stopping.**
+
+**The tier-3 counterattack *is* a gain, so it carries a per-encounter cap.**
+
+> **Cap the thing that gives you something. Do not cap the thing that costs you something.**
+
+---
+
+### Both Hands — Soldier only. Authored.
+
+**⚠ Replaces `Hold the Line`, which was never written as a chain and has moved. `PT-211`.**
+
+**Derived from the one thing the source gives this class and no other:** **POWER_ATTACK *and* POWER_BLAST — the `Charged Shot` ladder — both granted at 1st.**
+
+> **The only class in either game given weight in both hands.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Both Hands** | **1** | **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other |
+| › **Whatever Is To Hand** | **4** | **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing |
+| ›› **No Wrong Weapon** | **8** | As above, and **you take no penalty for firing a ranged weapon while adjacent** — `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply to you |
+
+**⚠ Tier 3 is the one that makes the class:** **the `−4` for firing while adjacent is the point-blank rule, and the Soldier is the one character it never touches.**
+
+**Not dominant: it grants no attack, no damage and no defence.** **It removes the reasons to have chosen wrong.**
+
+
+---
+
+
+### Both Sides At Once — Tech Specialist only. Authored.
+
+**⚠ The class had no feature at all, on a faithfulness argument that does not survive.** **`PT-174` justified it as *"the only class in either game with no granted class feature — a way for it to be something without inventing a chain the source never gave it."***
+
+> **⚠ The source's Tech Specialist was widely considered the worst class in the game.** **Faithfulness to a class that did not work is the `Logic Upgrade` mistake — `PT-210` — in the same file, two chains apart.**
+
+**Owner's vision:** ***"What a Machinist or Engineer picks to fill the other's gap without going into that class — and to deal with both sides at once rather than splitting their time."***
+
+**The skill list already does the first half.** **This is the second. `PT-212`.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Both Sides At Once** | **1** | **Use `Jury Rig` on an allied droid and `Field Override` on an enemy droid in the same round** — one is a Gear action, the other your declaration |
+| › **Nothing Is Scrap** | **4** | **Your `Field Override` target counts as an allied droid for `Jury Rig` while you hold it.** You can repair what you stole |
+| ›› **Salvage And Command** | **8** | **Once per encounter, repair and seize in one action** — an enemy droid at or below half vitality is restored to half and turned |
+
+**⚠ Not a bundle.** **Holding both features is what multiclassing already buys.**
+
+> **The point is not having both tools. It is using them on the same object, which neither parent can do and neither could reach by multiclassing.**
+
+**⚠ It requires holding both parents' features, which the entry already guarantees** — **`Engineer 6` or `Machinist 6`, plus the skill list of whichever you are missing.**
+
+**Not dominant: it does nothing in a fight without droids on both sides.** **⚠ Third feature keyed to droids, after `Field Override` and `Jury Rig` — `PT-100`'s narrow-counter pattern reaching a third class.**
+
+
+---
+

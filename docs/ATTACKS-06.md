@@ -76,6 +76,15 @@
 
 | Attack | Description | Effects |
 |---|---|---|
+| **Wide Parry** | **Form I, Determination.** *"Broad parries — the form assumes more than one opponent."* **Shii-Cho's defence is a wide guard rather than a tight one.** | **Level 1. Requires the Determination form.** **A reaction.** **`+5` Defence against every melee attack made by one enemy this round.** You may not attack that enemy on your next declaration — you gave ground rather than countering |
+| › Give Ground |  | **Level 4.** **Two enemies**, and you may **move one square** as part of the reaction |
+| ›› Sweeping Guard |  | **Level 8.** **Every enemy**, and the movement no longer provokes |
+| **Feint** | **Form I, Determination.** *"Wild and raw."* **Shii-Cho is the first form taught and the least predictable — a student has no habits to read.** | **Level 1. Requires the Determination form.** **One attack that ignores `+4` of the target's Defence** |
+| › Wrong Foot |  | **Level 4.** **Ignores `+6`**, and the target may not take a reaction against you this round |
+| ›› Read the Blade |  | **Level 8.** **Ignores `+8`**, no reaction, and **you learn one Defensive chain the target holds** |
+| **Opening Guard** | **Form I, Determination.** *"The form every student learns first."* **What Shii-Cho gives is not mastery — it is never being caught without an answer.** | **Level 1. Requires the Determination form.** **Once per encounter, when combat begins, take one attack or one move before initiative is rolled** |
+| › Set the Line |  | **Level 4.** As above, and **one ally may do the same** |
+| ›› Answer Back |  | **Level 8.** As above, and **the enemy who acts first in that combat takes `−2` attack on its first declaration** |
 | **Saber Pierce** | **Form II, Contention. The Penetration axis.** *"Precision swordplay to counter the sweeping movements of Shii-Cho, and a heavy focus on protecting one's weapon to avoid being disarmed."* A thrust rather than a cut. | **Level 1. Requires the Contention form.** **Ignore 5 points of damage reduction and armour bonus. Attack −2.** **Against a blast door, bulkhead, or barrier the strike cuts through** — three rounds per obstacle. **Once per encounter, a critical hit against a living target deals its damage directly to wounds.** **While in this form you cannot be disarmed.** |
 | › Stabbing Strike |  | **Level 4.** **Ignore 10 points. Attack −1.** **Barriers take two rounds.** |
 | ›› Impale | The blade goes through and the duel is over. | **Level 8.** **Ignore all damage reduction and armour. No penalty. Barriers take one round.** |

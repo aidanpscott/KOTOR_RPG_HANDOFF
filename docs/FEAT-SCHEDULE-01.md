@@ -117,10 +117,10 @@
 | **Engineer** | 10 | **16** |
 | **Tech Spec** | 8 | **11** |
 | **Weaponmstr** | 11 | **16** |
-| **Jedi Master** | 7 | **11** |
+| **Jedi Sage** | 7 | **11** | **⚠ was `Jedi Master`; the class was cut and the line moved — `PT-215`** |
 | **Watchman** | 10 | **15** |
 | **Marauder** | 11 | **16** |
-| **Sith Lord** | 7 | **11** |
+| **Sith Sorcerer** | 7 | **11** | **⚠ was `Sith Lord` — `PT-215`** |
 | **Assassin** | 7 | **10** |
 
 > **The Soldier gets more than twice the Consular at every level** — **23 against 11 by level 30.** **No Force powers, fewest skill points, feats instead.**

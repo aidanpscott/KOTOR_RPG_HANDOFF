@@ -6244,3 +6244,380 @@
 > **⚠ Worth running this sweep after every batch of renames rather than after every batch of rulings.**
 
 **Corpus clean on all four.**
+
+---
+
+## PT-227 — Starting attacks and recommended abilities for the thirteen standard base classes
+
+**Owner rulings across several exchanges. Three deterministic unlocks, two chosen.**
+
+| Class | Three deterministic | Abilities |
+|---|---|---|
+| Soldier | `Charged Shot` · `Rapid Fire` · `Spray` | STR / CON |
+| Bounty Hunter | `Critical Strike` · `Rapid Fire` · `Charged Shot` | DEX / CON |
+| Scout | `Rapid Fire` · `Precise Shot` · `Quick Attack` | DEX / WIS |
+| Marksman | `Charged Shot` · `Precise Shot` · `Staggering Shot` | CON / DEX |
+| Smuggler | `Precise Shot` · `Point Blank Shot` · `Snap Shot` | DEX / CHA |
+| Agent | `Point Blank Shot` · `Snap Shot` · `Covering Fire` | INT / DEX |
+| Pirate | `Spray` · `Point Blank Shot` · `Dual Strike` | DEX / CHA |
+| Brawler | **`Combination` · `Body Blow`** · `Dual Strike` | STR / CON |
+| Duelist | `Critical Strike` · `Parry` · `Dual Strike` | DEX / INT |
+| Machinist | `Spray` · `Covering Fire` · `Staggering Shot` | INT / DEX |
+| Engineer | `Covering Fire` · `Staggering Shot` · `Snap Shot` | INT / WIS |
+| Doctor | `Covering Fire` · `Guarding Stance` · `Snap Shot` | WIS / INT |
+| Explorer | **`Inside Reach`** · `Quick Attack` · `Precise Shot` | INT / CON |
+
+### ⚠ Four rules that came out of building it
+
+**Every starting attack must be tier 1 and reachable at level 1.** **Five recommendations failed this and were replaced** — `Overwatch` at 6, `Disarming Strike` and `Disarming Shot` at 5, and both stealth chains at `Stealth` 6 when the level-1 rank cap is 4.
+
+**Gated attacks are not starting attacks.** **They may be a *chosen* unlock if the character built for them** — **which is where `Power Attack` now lives for the Soldier.**
+
+**⚠ Three deterministic, not four.** **The owner asked for a maximum of three uses per attack; `13 × 4 = 52` slots against 14 ungated tier-1 attacks is 42 capacity.** **Impossible. Three deterministic and two chosen fits.**
+
+**⚠ The cap was then loosened, and three attacks exceed it** — `Snap Shot` 5, `Precise Shot` 4, `Covering Fire` 4.
+
+### ⚠ What the table exposes
+
+    ranged 28 · melee 11
+
+> **`Snap Shot` is in five of thirteen because it is the only ungated ranged reaction in the game.**
+
+**That is the roster's thinness, not a preference.** **`AGENDA-CURRENT §2.4c` — six of nine melee tier-1 entries are gated at level 1, and the unarmed roster is one chain deep.**
+
+### Two defects found while building it
+
+**`Field Surgery` was adopted and never written into `FEATS-LIBRARY-01`.**
+**`Read the Ruin` still carries three tiers; `REPLY-45` ruled two of them cut and the cut was never applied.**
+
+**⚠ Both are the `Quickdraw` shape.**
+
+---
+
+## PT-228 — The unarmed roster: five chains
+
+**Owner ruling. `ATTACKS-07` held one chain and it was restricted and gated at 5.**
+
+> **⚠ The class built on fists could not take a single unarmed chain as a starting attack.**
+
+**Five axes, mirrored from melee and ranged where a fist can carry them:**
+
+    Velocity    Combination · Chain Punch · Rain of Blows
+    Power       Body Blow · Hammer Blow · Haymaker
+    Precision   Uppercut · Nerve Strike · Blackout
+    Position    Inside Reach · Boxed In · Smother
+    Control     Clinch · Off Balance · Throw Down
+
+**⚠ Four axes deliberately absent.** **`Spread` — one fist, one target. `Stealth` — `Sneak Attack` is already universal and does not care what you hit with. `Support` and `Reaction` are marginal, and `Parry` and `Guarding Stance` cover them for anyone with hands.**
+
+### ⚠ Why this fixes more than the Brawler
+
+**`PT-227` came out **28 ranged to 11 melee**, and `Snap Shot` landed in five of thirteen lists.**
+
+**The cause: six of nine *melee* tier-1 entries are gated at level 1, three of them behind Strength 12.**
+
+> **⚠ `Body Blow` and `Clinch` are the Power and Control axes with no Strength requirement.** **They are the first melee-side entries a character with no Strength investment can take at level 1.**
+
+**`Combination` was adopted at `PT-188` and never written into the roster** — **third instance of the `Quickdraw` shape, after `Field Surgery` and `Read the Ruin`'s uncut tiers.**
+
+### Two starting lists updated
+
+    Brawler    Combination · Body Blow · Dual Strike     two unarmed, one melee
+    Explorer   Inside Reach · Quick Attack · Precise Shot   replaces Snap Shot
+
+**⚠ Which drops `Snap Shot` to four lists and lifts melee-side representation.**
+
+### One overlap recorded rather than avoided
+
+**`Smother` reaches `Immovable Object` tier 2 by a different route.** **One is a Juggernaut class feature; this is a chain anyone may buy.**
+
+---
+
+## PT-229 — The unarmed roster, names locked and mechanics written
+
+**Owner ruling on four renames and one reorder.**
+
+    Everything Behind It      -> Haymaker
+    The Sixth Sister's Answer -> Blackout
+    Take the Ground           -> Boxed In
+    Nowhere To Go             -> Smother
+
+**⚠ And the Precision chain reordered: `Uppercut` at tier 1, `Nerve Strike` at tier 2, `Blackout` at tier 3.** **`Pressure Point` falls out — three tiers, three names.**
+
+> **The tiers now escalate one idea: a blow that rattles → a blow that finds a nerve → a blow that ends it.** **`PT-182`'s test.**
+
+**⚠ Every candidate was checked against check 21 before being offered.** **`Crush`, `Paralysis`, `Collapse`, `Stagger`, `Pin`, `Cornered`, `Trapped`, `Anchor` and `Cutoff` all already appear in the corpus and were struck.**
+
+### Six mechanics sections written
+
+**Gating.** **All fifteen at `1 / 4 / 8` — the house pattern `PT-196` derived.**
+
+**⚠ No ability prerequisites, and that is the point.** **`Power Attack`, `Cleave` and `Sweep Attack` require Strength 12; `Body Blow` and `Clinch` require nothing.** **They are the first Power and Control entries a character with no Strength investment can take at level 1.**
+
+**Damage is `Unarmed Specialist`, not the chain.** **`Body Blow`'s `+4` sits on top of the `1d4`→`8d4` ladder rather than replacing it.**
+
+**Universal.** **`PT-210`: a fist is training.** **⚠ One chassis exception, already handled — a frame with no hands cannot `Clinch`.**
+
+**⚠ `Nothing In My Hands` holds without change.** **`PT-188` priced it at *first unarmed attack each round* precisely so it would not triple when an unarmed Velocity chain existed. That chain now exists; the capstone is worth `+5`, not `+15`, exactly as computed.**
+
+**Four axes absent by design** — `Spread`, `Stealth`, `Support`, `Reaction`.
+
+### ⚠ And `PT-176` reaches it
+
+**`Uppercut`'s threat multiplier does not compound with `Deathstroke` or the `Commando` capstone.** **Where more than one applies, use the largest.**
+
+---
+
+## PT-230 — Every Force class starts with two forms; the second is a recommendation
+
+**Owner ruling.**
+
+> **Form I, Determination, is granted to every Force class. The second is recommended by class and the player may swap it for any other.**
+
+**⚠ It solves a problem `PT-185`'s schedule created.** **One form at level 1 opens two lightsaber chains, and `PT-227` gives every class three starting attacks.** **Two forms open four.**
+
+| Class | Second form | Opens |
+|---|---|---|
+| Jedi Guardian | **Form V — Perseverance** | `Shien Deflection` · `Falling Avalanche` |
+| Jedi Sentinel | **Form III — Resilience** | `Circle of Shelter` · `Deflecting Slash` |
+| Jedi Consular | **Form VI — Moderation** | `Guided Strike` · `Draw Closer` |
+| Sith Warrior | **Form IV — Aggression** | `Hawk-Bat Swoop` · `Saber Swarm` |
+| Sith Assassin | **Form II — Contention** | `Saber Pierce` · `Contentious Opportunity` |
+| Sith Inquisitor | **Form VII — Ferocity** | `Vornskr's Ferocity` · `Staccato Assault` |
+
+### ⚠ Recommended, not granted
+
+**A player may swap the second for any of the six. Form I is fixed.**
+
+> **⚠ `PT-227`'s shape at the form layer.** **Three deterministic attacks and two chosen; one fixed form and one chosen.** **The sheet arrives filled in and the player may edit it.**
+
+### What the assignment produces
+
+**All seven forms covered — Form I universal, the other six one each. Nothing orphaned.**
+
+**⚠ The Jedi take the defensive half and the Sith the aggressive half — III, V, VI against II, IV, VII.**
+
+**That falls out of `PT-129` rather than being imposed.**
+
+### ⚠ The acquisition schedule shifts by one
+
+    was    one at 1, second at 6, third at 12
+    now    two at 1, third at 6, fourth at 12
+
+**A Force class holds four forms by 12 rather than three.**
+
+**⚠ It costs nothing.** **`PT-189` cut the stat effects, so a form is access rather than power** — **a second form is two more chains a player may buy into, not a bonus they receive.**
+
+
+---
+
+## PT-231 — Check 21 read class names in a form table
+
+**`PT-230` put every Force class name into a `FORMS-01` table listing second-form recommendations.**
+
+**⚠ Check 21 read those first cells as *form* names and blocked on *Jedi Consular* and *Jedi Guardian* being both a class and a form.**
+
+**The document is correct. The pattern was wrong.**
+
+> **⚠ Second time a checker has read a table it was not built for.** **`PT-205` read a `Sneak Attack` ladder as feat entries; this read a recommendation table as form entries.**
+
+**Both have the same cause: a markdown row shape carries no type information, so a checker must key on the *second* cell to know what the first one is.**
+
+**Tightened: a form is named in a row whose second cell is an effect rather than a form label.** **Form count 26 → 12, which is the real number — seven lightsaber, four Force, and one restored.**
+
+---
+
+## PT-232 — Only Form I is granted. Every other form is a choice.
+
+**Owner ruling. It withdraws the class-determined second form from `PT-230`.**
+
+    level 1    Form I, granted    + one chosen
+    level 6    one chosen
+    level 12   one chosen
+    beyond     taught
+
+**⚠ The class tables become *recommendations* — a default filled in on the sheet and freely changed.**
+
+> **`PT-227`'s shape at the form layer, and now consistently: what is granted is granted, and everything else is the player's.**
+
+### The recommended thirds, level 6
+
+    Jedi Guardian     III Resilience      blaster deflection; Form V gives him nothing against bolts
+    Jedi Sentinel     II Contention       precision against lightsaber wielders
+    Jedi Consular     III Resilience      d6 and Force die 8; survival is the gap
+    Sith Warrior      V Perseverance      attack +2, critical multiplier +1
+    Sith Assassin     IV Aggression       Hawk-Bat Swoop — move and strike as one declaration
+    Sith Inquisitor   VI Moderation       casting does not provoke
+
+**⚠ `Resilience` is the most-taken third and that is honest.** **Blaster deflection is the gap every Force class has.**
+
+### ⚠ And the Force-form option named two classes that no longer exist
+
+**`CLASS-ROSTER-01 §603`:** *"a lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two."*
+
+**`PT-215` cut both classes and this line survived.**
+
+**Corrected:**
+
+    Jedi Sage · Sith Sorcerer      may take a Force form in place of a lightsaber form
+    Jedi Watchman · Sith Marauder  choose between the two
+    Weaponmaster · Battlemaster    lightsaber forms only
+
+**⚠ Base classes take lightsaber forms.** **A Force form is a prestige-tier option, which is what made it a Jedi Master and Sith Lord thing before those were cut.**
+
+**⚠ Third instance of `PT-215` leaving a broken reference** — after `Inspire Followers` and the `PT-226` sweep.
+
+---
+
+## PT-233 — Sweep: four live references to cut classes, and two features never written
+
+### Four live references to `Jedi Master` and `Sith Lord`
+
+**24 documents mention them. Filtering live from historical found six, of which four were real:**
+
+    CLASS-ROSTER-01  §547-548   both still listed as classes in a rate table
+    FEAT-SCHEDULE-01 §120,123   both still carrying feat totals
+
+**⚠ The other two are the source-column comparison in `PT-124`'s derivation and are correct as history.**
+
+**Renamed to `Jedi Sage` and `Sith Sorcerer`, which is where those lines went.**
+
+**⚠ Fourth and fifth instance of `PT-215` leaving a broken reference.**
+
+### `Read the Ruin` — tiers 2 and 3 cut
+
+**`REPLY-45` ruled the cut and it was never applied.**
+
+**`PT-182` found the chain carried three ideas:** *"the first is the class; the other two are competence in general."*
+
+**⚠ The Explorer now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs. Open.**
+
+### `Field Surgery` — written at last
+
+**Adopted with the Doctor and never entered in `FEATS-LIBRARY-01`.**
+
+    1   spend a medpac, restore 1 wound to an adjacent dying character
+    4   2 wounds, and they are no longer Disabled
+    8   3 wounds, and once per encounter at 4 metres
+
+> **You can heal wounds, which nothing else in the game can.**
+
+**⚠ Priced against `DEATH-AND-DIFFICULTY-01`.** **On `Easy` a downed character recovers anyway and this is convenience; on `Hard` it is the difference between a character and a memory.**
+
+> **⚠ The one class feature whose value is set by the campaign mode rather than by the table.**
+
+**A Gear action, so it costs no declaration — the price `Jury Rig` pays.**
+
+### ⚠ The standing count on this failure mode
+
+    PT-88     the chain bands ruling, cited 3x, never written
+    PT-118    five C-series IDs lost in a rename
+    PT-139    five class skill lists never in SKILLS-01
+    PT-140    eight classes missing from three governing documents
+    PT-190    the Scoundrel's Sneak Attack ladder
+    PT-228    Combination, adopted at PT-188
+    PT-233    Field Surgery, and Read the Ruin's uncut tiers
+
+**Seven instances. Every one is a decision that lived in a reply or a findings document and not in the rules.**
+
+---
+
+## PT-234 — Three more Determination chains, priced against the two that existed
+
+**Owner ruling. Form I is granted to every Force class, so it is the one form every player sees — and it held two chains.**
+
+    Wide Parry     +5 Defence vs every melee attack by one enemy this round.
+                   You may not attack that enemy on your next declaration
+    Feint          One attack that ignores +4 of the target's Defence
+    Opening Guard  Once per encounter, one attack or move before initiative
+
+### ⚠ The band, derived from the two that existed
+
+    Sarlacc Sweep     two targets at −3 each — roughly +57% damage in a crowd
+    Disarming Slash   no damage at all; removes a weapon entirely
+
+> **Both are *conditional*. Sarlacc needs a crowd; Disarming needs an armed target you would rather stop than kill.**
+
+### ⚠ All three drafts were underpriced and two were rewritten
+
+**`Wide Parry` was `+3` on one attack — about `1.8` damage prevented a round.** **Raised to `+5` against every melee attack from one enemy: about `9` in a crowd.**
+
+**⚠ And it gained a cost:** *you may not attack that enemy on your next declaration.* **Which is the fiction — Shii-Cho gives ground rather than countering. Soresu tightens; Shii-Cho spreads.**
+
+**`Feint` was a *setup*:** *declare it, then your next attack ignores `+2`.*
+
+> **⚠ Two declarations for one hit — strictly worse than just attacking.**
+
+**Rewritten as an attack that ignores `+4`.** **A tier-1 chain costing a declaration must beat a plain attack, and the setup version did not.**
+
+**`Opening Guard` unchanged.** **About `1.7` damage a round averaged, which is the low end — but acting first is worth more than its damage, and once per encounter is the right shape for a free action.**
+
+### ⚠ And it does not touch initiative
+
+**`PT-96` closed initiative modifiers.** **`Opening Guard` acts *outside* the order rather than changing it.**
+
+### What it changes for the six Force classes
+
+**Five Form I chains plus two from a second form is seven available for three deterministic picks.**
+
+**⚠ Which means the six can differentiate on Form I as well as on their second form** — **a Guardian taking `Sarlacc Sweep` and a Sentinel taking `Wide Parry` read differently before the second form matters.**
+
+---
+
+## PT-235 — Starting attacks for the six Force base classes
+
+**Owner ruling. Three deterministic, two chosen, from the seven available at level 1 — five Form I chains plus two from the class's second form.**
+
+| Class | Three deterministic |
+|---|---|
+| **Jedi Guardian** | `Sarlacc Sweep` · `Shien Deflection` · `Falling Avalanche` |
+| **Jedi Sentinel** | `Wide Parry` · `Circle of Shelter` · `Deflecting Slash` |
+| **Jedi Consular** | `Opening Guard` · `Guided Strike` · `Draw Closer` |
+| **Sith Warrior** | `Feint` · `Hawk-Bat Swoop` · `Saber Swarm` |
+| **Sith Assassin** | `Feint` · `Saber Pierce` · `Contentious Opportunity` |
+| **Sith Inquisitor** | `Disarming Slash` · `Vornskr's Ferocity` · `Staccato Assault` |
+
+**⚠ All five Form I chains used. No chain appears more than twice.**
+
+### Why each Form I pick
+
+**Guardian → `Sarlacc Sweep`.** **He stands in front of a squad; the crowd answer is his.**
+
+**Sentinel → `Wide Parry`.** **`d8` and stealth — he cannot trade blows, so he gives ground.**
+
+**Consular → `Opening Guard`.** **⚠ `d6` and Force die 8. Acting before initiative is how a fragile caster survives round one.**
+
+**Warrior and Assassin → `Feint`.** **The only doubled pick, and it is the two Sith melee classes.**
+
+**Inquisitor → `Disarming Slash`.** > **⚠ The Sith who takes your weapon rather than your life, because he wants something from you.**
+
+### ⚠ One observation
+
+**The Guardian is the only Force class whose three picks are all damage.**
+
+**Every other opens with something conditional or non-damaging** — **which reads right for five classes that fight with the Force and one that fights with a blade.**
+
+---
+
+## PT-236 — Starting attacks: the workstream closes
+
+**All nineteen base classes now have three deterministic starting attacks and two chosen.**
+
+    13 standard   PT-227, amended by PT-228
+     6 Force      PT-235
+
+**⚠ And the rules that came out of building it:**
+
+**Every starting attack is tier 1 and reachable at level 1.** **Five recommendations failed this and were replaced.**
+
+**Gated attacks are not starting attacks** — **they may be a *chosen* unlock if the character built for them.**
+
+**Three deterministic, not four.** **`19 × 4` against 14 ungated tier-1 attacks was arithmetically impossible.**
+
+**⚠ Form I is granted to every Force class and every other form is chosen** — **`PT-232`.**
+
+### What is still open in the class workstream
+
+**The Explorer's `Read the Ruin` tiers 2 and 3** — **`PT-233` cut the old ones and the replacements are specified but not written.**
+
+**First-level multiclass benefits** — **⚠ never started. `PT-159` rules the highest rate and chain count held; nothing says what you *get* on the level you enter a second class.**

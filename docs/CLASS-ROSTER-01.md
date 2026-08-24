@@ -544,8 +544,8 @@
 |---|---|---|---|
 | **Jedi Watchman** | Middle | 12 | 9 |
 | **Sith Marauder** | Middle | 11 | 10 |
-| **Jedi Master** | Specialist | 11 | 5 |
-| **Sith Lord** | Specialist | 11 | 5 |
+| **Jedi Sage** | Specialist | 11 | 5 | **⚠ was `Jedi Master` — `PT-215`** |
+| **Sith Sorcerer** | Specialist | 11 | 5 | **⚠ was `Sith Lord` — `PT-215`** |
 | **Tech Specialist** | Specialist | **8 — the floor** | **7** |
 
 **⚠ Verified: all five inside their bands, all strand zero picks.** **They were the only classes with a rate and no count, and `PT-159` makes that number matter — a multiclass character takes the highest chain count they hold.**
@@ -600,7 +600,11 @@
 
 **Which reads: the Order's scholars do not tinker, and the one who has been at it longest does.**
 
-**Prestige entry grants a form.** **A lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two.**
+**Prestige entry grants a form.** **⚠ Corrected by `PT-232` — the original named `Jedi Master` and `Sith Lord`, which `PT-215` cut.**
+
+    Jedi Sage · Sith Sorcerer      may take a Force form in place of a lightsaber form
+    Jedi Watchman · Sith Marauder  choose between the two
+    Weaponmaster · Battlemaster    lightsaber forms only
 
 **⚠ Applies as given — `FORMS-01 §6.2` has all four Force forms with effects. `PT-181`.**
 

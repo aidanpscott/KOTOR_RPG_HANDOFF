@@ -927,13 +927,15 @@
 
 **⚠ Adopted at `PT-147` and never written here. Same defect as `Quickdraw` at `PT-96`.**
 
+> **⚠ Tiers 2 and 3 CUT — `REPLY-45`, applied at `PT-233`.** **`PT-182` found the chain carried three ideas: the first is the class; the other two are competence in general and belong in the skill rules if anywhere.**
+
+**⚠ The Explorer now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs.** **Open.**
+
 **Replaced `Prior Study`, which was declared in advance and spent once per adventure** — **a resource, not a competence, and the class is a competence.**
 
 | Tier | Level | Effect |
 |---|---|---|
 | **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why*** — one concrete fact about what would work. **You may retry once that condition is met** |
-| › **Methodical** | **4** | As above, and **you may take 10 on those checks even under pressure**, where taking 10 is otherwise unavailable |
-| ›› **Nothing Is Sealed Forever** | **8** | As above, and **once per scene one such obstacle drops one difficulty tier** for the whole party |
 
 **⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
 
@@ -1274,6 +1276,30 @@
 **And the consequence I named was the argument against my own reading:** **a Droid Master fielding four henchmen would gain nothing from the one class in the roster whose entire feature is making allies better.**
 
 **And it is the only leadership mechanic in the roster** — **`Squad Tactics` and `Logic Upgrade: Tactician` are *fight better beside someone*, which is not leading.**
+
+
+---
+
+
+### Field Surgery — Doctor only. Authored.
+
+**⚠ Adopted with the class and never written here — `PT-233`.** **Third instance of the `Quickdraw` shape, after `Combination` and `Read the Ruin`'s uncut tiers.**
+
+**`SKILL-RESOLUTION-01` gives `Medicine` a medpac mode restoring vitality. Nothing in the game restores *wounds*.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Field Surgery** | **1** | **A Gear action.** Spend a medpac to restore **`1` wound** to an adjacent character at or below 0. They stop dying |
+| › **Stabilise** | **4** | **`2` wounds**, and the character is no longer `Disabled` |
+| ›› **Back On Their Feet** | **8** | **`3` wounds**, and **once per encounter you may do this at range 4 metres** without touching them |
+
+> **You can heal wounds, which nothing else in the game can.**
+
+**⚠ Priced against `DEATH-AND-DIFFICULTY-01`.** **On `Easy` a downed character recovers anyway and this is convenience. On `Hard` it is the difference between a character and a memory.**
+
+**⚠ Which makes it the one class feature whose value is set by the campaign mode rather than by the table** — **worth stating, and it is the right kind of dependency.**
+
+**A Gear action, so it costs no declaration — the same price `Jury Rig` pays.**
 
 
 ---

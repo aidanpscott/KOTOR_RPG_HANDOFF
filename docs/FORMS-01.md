@@ -112,9 +112,19 @@
 
 > **Three grants at 1, 6 and 12 is what this game does when a class gives something three times.**
 
-**Three by levelling, the rest taught.** **⚠ The third is chosen rather than granted — by 12 a player knows which attacks they want.**
+**⚠ SUPERSEDED by `PT-230` and `PT-232`.** **Two forms at 1, a third at 6, a fourth at 12 — and only Form I is granted.**
 
-**⚠ Force forms deferred by the owner. This section governs lightsaber forms only.**
+**⚠ Force forms are deferred as a *system*. But some classes may take one in place of a lightsaber form — `PT-232`.**
+
+**`CLASS-ROSTER-01 §603` states it and names two classes `PT-215` cut:** *"a lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two."*
+
+**⚠ Corrected, since neither class exists:**
+
+    Jedi Sage · Sith Sorcerer     may take a Force form in place of any chosen form
+    Jedi Watchman · Sith Marauder choose between the two
+    Weaponmaster · Battlemaster   lightsaber forms only
+
+**⚠ The base classes take lightsaber forms.** **A Force form is a prestige-tier option, which is what made it a Jedi Master and Sith Lord thing before those were cut.**
 
 
 ### 2.3 ⚠ SUPERSEDED — the stance does not survive. `PT-189`.
@@ -172,6 +182,86 @@
 **A Jedi holding four form feats may declare any of those forms' attacks and receives one form's bonuses — the one they are standing in.**
 
 **⚠ Which means forms *can* still distinguish a class**, and `FINDINGS-54 §2`'s premise — *"form effects do not exist"* — does not hold.
+
+
+### 2.4 Every Force class starts with two forms — `PT-230`
+
+**Owner ruling.**
+
+> **Form I, Determination, is granted to every Force class. The second is recommended by class and the player may swap it for any other.**
+
+**⚠ Which solves a problem `PT-185`'s acquisition schedule created.** **One form at level 1 opens two lightsaber chains, and `PT-227` gives every class three starting attacks.** **Two forms open four; three picks then fit freely.**
+
+| Class | Second form | Chains it opens |
+|---|---|---|
+| **Jedi Guardian** | **Form V — Perseverance** *(Shien)* | `Shien Deflection` · `Falling Avalanche` |
+| **Jedi Sentinel** | **Form III — Resilience** *(Soresu)* | `Circle of Shelter` · `Deflecting Slash` |
+| **Jedi Consular** | **Form VI — Moderation** *(Niman)* | `Guided Strike` · `Draw Closer` |
+| **Sith Warrior** | **Form IV — Aggression** *(Ataru)* | `Hawk-Bat Swoop` · `Saber Swarm` |
+| **Sith Assassin** | **Form II — Contention** *(Makashi)* | `Saber Pierce` · `Contentious Opportunity` |
+| **Sith Inquisitor** | **Form VII — Ferocity** *(Juyo)* | `Vornskr's Ferocity` · `Staccato Assault` |
+
+#### ⚠ Only Form I is granted. Every other form is a choice. `PT-232`.
+
+**The owner's earlier ruling made the second class-determined; that is withdrawn.**
+
+> **Form I is granted to every Force class. The second, third and fourth are all chosen by the player.**
+
+**The table above and the third-form table below are *recommendations* — a default filled in on the sheet and freely changed.**
+
+    level 1    Form I, granted    + one chosen
+    level 6    one chosen
+    level 12   one chosen
+    beyond     taught
+
+**⚠ Which is `PT-227`'s shape at the form layer, and now consistently:** **what is granted is granted, and everything else is the player's.**
+
+#### What the assignment produces
+
+**All seven forms are covered — Form I universal, the other six one each.** **Nothing is orphaned.**
+
+**⚠ And the Jedi take the defensive half while the Sith take the aggressive half** — **III, V, VI against II, IV, VII.**
+
+**That falls out of `PT-129` rather than being imposed:** *a Jedi chain is conditional and answers a situation; a Sith chain is unconditional and raises a number.*
+
+#### ⚠ And the acquisition schedule shifts by one
+
+**`PT-185` gave three forms at 1 / 6 / 12 — superseded here.**
+
+    was    one at 1, second at 6, third at 12
+    now    two at 1, third at 6, fourth at 12
+
+**⚠ A Force class holds four forms by level 12 rather than three, and the rest are taught.**
+
+**It costs nothing.** **`PT-189` cut the stat effects, so a form is access rather than power** — **a second form at level 1 is two more chains a player may buy into, not a bonus they receive.**
+
+
+### 2.5 The third form — recommendations, level 6
+
+| Class | Recommended third | Why |
+|---|---|---|
+| **Jedi Guardian** | **III — Resilience** | Blaster deflection `+4`. A Guardian stands in front of troopers and Form V gives him nothing against bolts |
+| **Jedi Sentinel** | **II — Contention** | Precision against lightsaber wielders. The Sentinel hunts Dark Jedi |
+| **Jedi Consular** | **III — Resilience** | `d6` and Force die 8. Survival is the gap |
+| **Sith Warrior** | **V — Perseverance** | Attack `+2`, critical multiplier `+1`. More forward |
+| **Sith Assassin** | **IV — Aggression** | `Hawk-Bat Swoop` — move your full speed and strike as one declaration |
+| **Sith Inquisitor** | **VI — Moderation** | Casting does not provoke. The only form built for someone who fights with the Force |
+
+**⚠ A recommendation, like the second. Any form may be taken.**
+
+#### What the spread produces
+
+    Determination  6   universal, granted
+    Resilience     3   Guardian, Sentinel, Consular
+    Contention     2   Sentinel, Assassin
+    Aggression     2   Warrior, Assassin
+    Perseverance   2   Guardian, Warrior
+    Moderation     2   Consular, Inquisitor
+    Ferocity       1   Inquisitor only
+
+**⚠ `Resilience` is the most-taken third and that is honest** — **blaster deflection is the gap every Force class has, and the setting is full of blasters.**
+
+**⚠ `Ferocity` stays Inquisitor-only.** **Defence `−4` and saves `−4` for `+1` attack a round is a real cost; nobody takes it as a third unless they built for it.**
 
 
 ## 3. `exclusion: 0x02` — the 178-row question, answered

@@ -301,6 +301,48 @@
 
 **⚠ And the concern is smaller than first raised.** **The classes' *skills* — Slicing, Security, Science, Repair — work on computers, doors and terminals with no droid anywhere.** **Only the *features* need one, and both campaign packages are droid-heavy.**
 
+## 2.4c ⚠ The unarmed roster is one chain deep
+
+**`ATTACKS-07` against the others:**
+
+    roster        axes   tier-1 chains
+    ranged           9              11
+    melee            9              11
+    lightsaber       7              14
+    unarmed          2               1
+
+**⚠ `Jab`, `Punch` and `Kick` are the same attack under three names — the document says so.** **`Echani Strike` is the only chain, it is restricted, and it gates at level 5.**
+
+> **So the `Brawler` cannot take a single unarmed chain as a starting attack.** **The class built on fists opens with `Flurry`, `Quick Attack` and `Dual Strike` — all weapon chains.**
+
+### ⚠ And `Combination` was adopted and never written
+
+**`PT-188` adopted the unarmed Velocity chain — `Combination` / `Chain Punch` / `Rain of Blows` — and it is not in `ATTACKS-07`.**
+
+**Same defect as `Quickdraw` at `PT-96` and `Field Surgery`: a decision made, its reasoning written, and the document a reader consults not having it.**
+
+### What this needs
+
+**⚠ An unarmed roster with axes, the way the other three have.** **Not all nine — a fist has no Spread and no Reaction worth the name — but Velocity, Power, Precision, Position and Control are all reachable.**
+
+**And it is the fix for `PT-226`'s other finding: six of nine *melee* tier-1 entries are gated at level 1, which forced the starting-attack table 28 ranged to 11 melee.**
+
+> **⚠ Unarmed chains are the cheapest way to widen the melee pool, because nothing gates them behind Strength.**
+
+---
+
+## 2.4d Two recommended abilities per class — the 5e model
+
+**Owner instruction: adopt the D&D 5e shape where a class names two abilities that matter, not one.**
+
+**The recommendations exist and are agreed** — **`PT-227`'s table, nineteen classes, a first and a second.**
+
+**⚠ What does not exist is what the *second* one does.** **`primaryabil` is a single column in `classes.2da`, so the source has no second and nothing in the corpus reads one.**
+
+**⚠ Scheduled for the class session. It touches chargen, the point-buy, and possibly saves.**
+
+---
+
 ## 2.9 Difficulty modes — the last thing before engine work
 
 **⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**

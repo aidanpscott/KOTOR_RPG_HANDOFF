@@ -73,10 +73,16 @@ if bad:
 else:
     w("- all pass")
 
-w(f"\n**⚠ Zero slack against `PT-114`'s droid cap of {DROID_CAP} chains** — raising any by one closes it to droids:\n")
+# ⚠ PT-92 closes every Force class to droids, so a Force class cannot be
+# zero-slack against a cap that never applies to it. Filtering on that
+# turned an 8-name list into 4.
+w(f"\n**⚠ Zero slack against `PT-114`'s droid cap of {DROID_CAP} chains** — raising any by one closes it to droids.")
+w(f"*Force classes excluded: `PT-92` bars droids from all of them.*\n")
 for c in C:
-    if c.get('N') == DROID_CAP:
+    if c.get('N') == DROID_CAP and 'Force' not in c['g']:
         w(f"- {c['n']}")
+w("\n*Force classes also at %d, listed only so nobody re-adds them: %s*" % (
+    DROID_CAP, ', '.join(c['n'] for c in C if c.get('N')==DROID_CAP and 'Force' in c['g']) or 'none'))
 
 w("\n**⚠ Authored feat totals — the source has no Force class above 16:**\n")
 src = {'Jedi Guardian': 16, 'Sith Warrior': 16, 'Sith Assassin': 10,

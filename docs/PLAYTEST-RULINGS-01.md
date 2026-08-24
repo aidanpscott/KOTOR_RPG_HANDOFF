@@ -4906,3 +4906,114 @@
 **A rule with a one-line statement is a table rule.** **A rule needing a paragraph of conditions is a reference rule, and belongs in an appendix rather than the flow.**
 
 **⚠ A better test than the one it replaced, because it is applied to the *rule* rather than to the agent's judgement about the rule.**
+
+---
+
+## PT-179 — The Agent rebuilt as the spy, on an axis the corpus already had
+
+**`REPLY-29` reversed `PT-135` on owner instruction: take the spy, drop the impersonation.**
+
+    Middle · d8 · Intelligence · 15 feats · saves 6/12/12 · skill base 5
+    11 chains, 10 capstones
+    Skills 8   Slicing · Security · Awareness · Alertness · Science · Stealth · Xenology · Repair
+
+### ⚠ The rebuild created a problem and the designer solved it before drafting
+
+**`PT-135` put the class on Charisma *because* `Smuggler` and `Jedi Sentinel` each hold all four covert skills, and Charisma was the only thing separating it.**
+
+> **Moving to Intelligence removed that separation and put nothing back.**
+
+**The class needed a third axis that is neither stealth nor charisma. The corpus had one and nothing was using it.**
+
+    Smuggler        not seen                   stealth
+    Jedi Sentinel   not seen, plus the Force    stealth
+    Agent           seen, and behind something  cover
+
+### `Field Position`
+
+**⚠ Cover is fully specified — `PT-3`, `EQUIPMENT-01`'s three-quarters and total cover — and exactly one thing in the game references it: `Run to Ground`, which lets a Bounty Hunter *ignore* it.**
+
+**Verified. Nothing *uses* cover.**
+
+**Fifth class feature in a row that operates a rule the corpus already had** — after `Quarry`, `Field Override`, `Jury Rig` and `Read the Ruin`.
+
+**⚠ And the constraint is unusually hard: the feature does nothing in the open.** **Cover is terrain, so the class's whole feature is a property of the encounter rather than of the character.**
+
+> **The sharpest *would a player choose it* test in the set, and the answer is that they choose their position instead.**
+
+### ⚠ And `REPLY-29`'s SWTOR reference was already in the corpus
+
+**That reply cited SWTOR's *"cover as a positional resource with abilities that only work from it."***
+
+**`PT-3` says almost the same words and predates it.**
+
+**⚠ A reference to excluded canon turned out to describe a rule we had already written.**
+
+### It also makes `PT-170` matter twice
+
+**A GM who builds bare rooms cuts this class the way they cut the `Sharpshooter`.** **Second class whose viability depends on encounter design.**
+
+
+---
+
+## PT-180 — Flat riders multiply by the strikes in a declaration
+
+**`ACTION-ECONOMY-01 §421` states it and every class feature was priced against one attack anyway:**
+
+> *"Both apply their bonus to every attack, and one enhanced swing cannot compete with five ordinary ones."*
+
+**⚠ `Flurry`, `Whirlwind` and `Barrage` are three strikes. A `+6` damage rider is `+18` on a Barrage.**
+
+    Sith Warrior Unrelenting, +6 below half vitality
+
+    as priced        +6 once per round        27.3 → 33.3    +22%
+    as it works      +6 on each of 3 strikes  27.3 → 39.9    ⚠ +46%
+
+**Twice what was reported — a per-attack rider divided by a per-round total.** **Found by the designer auditing its own features.**
+
+### Five features multiply
+
+**`Unrelenting` `+6` damage · `Chosen Weapon` `+2`/`+3` · `Single Combat` `+4` attack · `Field Position` `+2` attack · `Nothing In My Hands`.**
+
+**⚠ Four are `+2` to `+4` — the range `Weapon Focus` and `Weapon Specialization` already occupy and were priced against.** **`Unrelenting` at `+6` is the outlier.**
+
+### ⚠ And the Brawler resolves itself, by luck
+
+**`ATTACKS-07` has no Velocity chain.** **The unarmed roster is `Jab`, `Punch`, `Kick` — *"one unarmed attack"* each — and one restricted chain.**
+
+> **A Brawler cannot multi-strike unarmed, so `Nothing In My Hands` cannot multiply.**
+
+**⚠ If a Velocity chain is ever added to `ATTACKS-07`, ignoring armour on three strikes becomes the largest rider in the game.**
+
+**One Shot's *"your next **single** rifle attack"* is the same luck. The word is load-bearing and was not chosen to be.**
+
+---
+
+## PT-181 — ⚠ `FORMS-01` exists and has all four Force forms
+
+**`FINDINGS-47 §3` reported that *"Force forms do not exist in this project — not a document, not a feat row, not a mention."***
+
+**That is wrong. `FORMS-01 — Lightsaber and Force Forms` is in the tree and `§6.2` carries all four with effects:**
+
+    Force Channel   FP regen +50% out of combat; Force power damage +3; saves vs Force +2
+    Force Potency   Force power damage +30%; FP cost +20%
+    Force Affinity  FP regenerate during combat at a reduced rate
+    Force Mastery   duration +50%; opponents' saves −2; your saves −4; FP cost +20%
+
+**⚠ And `FORCE-POOL-01-v3` cites `FORMS-01 §7.1` three times as a live warrant.** **The document is load-bearing already.**
+
+### Why the search missed it
+
+**The designer grepped `feat.2da` for `FORM` and found zero rows, then concluded the system was absent.**
+
+> **⚠ `FORMS-01 §1` is titled *"`formmask` is not a form pointer, and F-3 was wrong."*** **The document exists *because* the feat table does not carry forms.**
+
+**The absence in `feat.2da` is the document's own finding, and it was read as evidence the document did not exist.**
+
+**⚠ A grep of the source is not a grep of the corpus.** **`ATTACKS-06` was checked and `FORMS-01` was not, and `ATTACKS-06` covers the lightsaber side alone — which is exactly what made the partial answer look complete.**
+
+### The owner's ruling applies as given
+
+**Entering a prestige class grants a lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two.**
+
+**Nothing needs building first.**

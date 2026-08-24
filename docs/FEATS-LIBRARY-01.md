@@ -38,7 +38,7 @@
 | **Toughness** | Raw physical resilience — the ability to keep standing. | +1 vitality per level. **Retroactive** for levels already gained. |
 | › Improved Toughness |  | +2 vitality per level, and **−2 damage** from any hit under 20. |
 | ›› Master Toughness |  | +2 vitality per level *(overrides, not cumulative)*, −2 damage under 20, and **−10% damage on hits of 20 or more.** |
-| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. | Dual-wield penalty reduced from −6/−10 to **−6 main / −6 off.** |
+| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. **⚠ Pairable weapons are wield classes 1, 2 and 4 — `PT-169`. A rifle or a heavy weapon cannot be paired with anything.** | Dual-wield penalty reduced from −6/−10 to **−6 main / −6 off** |
 | › Advanced Two-Weapon Fighting |  | **−4 main / −4 off.** |
 | ›› Master Two-Weapon Fighting |  | **−2 main / −2 off.** A balanced off-hand weapon reduces this further to 0 / −2. |
 | **Weapon Proficiency: Blaster** | Basic training with blaster pistols and hold-outs. | Allows the weapon to be equipped. **Without proficiency it cannot be used at all.** |
@@ -56,7 +56,7 @@
 | ›› Master Close Combat | **Authored — the source chain stops at Improved.** | **+3**, and **your own `−4` for firing while adjacent drops to `−1`** |
 
 > **⚠ Repriced by `PT-164`.** **The chain reduced *"the usual +6"* and that `+6` was written nowhere.** **A feat that reduced a bonus nobody had stated.**
-| **Dueling** | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+1 attack and defence** when unarmed or wielding a single blaster pistol, melee weapon, or lightsaber. |
+| **Dueling** | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** | **+1 attack and defence** when unarmed or wielding a single weapon of **wield class 1, 2 or 4** — `PT-169`. **⚠ A class-3 staff does not qualify: it is already two weapons** |
 | › Advanced Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+2 attack and defence.** Level 4. |
 | ›› Master Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+3 attack and defence.** Level 8. |
 | **Weapon Proficiency: Blaster Rifle** | Rifles, carbines, and repeaters. | Allows the weapon to be equipped. |
@@ -825,6 +825,72 @@
 **And `PT-153` makes the droids rebuildable materiel, so the class scales by *upgrading* them rather than adding more** — **which is what D&D's necromancer never got and why its minions become straw figures.**
 
 **Chassis are `SPECIES-CHAPTER-v2`'s four: `Astromech`, `Assassin`, `Battle`, `Remote`** — **carrying `PT-114`'s access limits and `PT-92`'s Force restriction with them.**
+
+
+---
+
+
+### Read the Ruin — Explorer only. Authored.
+
+**⚠ Adopted at `PT-147` and never written here. Same defect as `Quickdraw` at `PT-96`.**
+
+**Replaced `Prior Study`, which was declared in advance and spent once per adventure** — **a resource, not a competence, and the class is a competence.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why*** — one concrete fact about what would work. **You may retry once that condition is met** |
+| › **Methodical** | **4** | As above, and **you may take 10 on those checks even under pressure**, where taking 10 is otherwise unavailable |
+| ›› **Nothing Is Sealed Forever** | **8** | As above, and **once per scene one such obstacle drops one difficulty tier** for the whole party |
+
+**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
+
+**Not dominant: it does nothing in combat, and it cannot make an impossible check succeed — it tells you what would.**
+
+**⚠ Tier 3 needs `SKILL-RESOLUTION-01 §7`'s knowledge-skill DC ladder, which is listed as unset.** **The class works at tiers 1 and 2 without it.**
+
+---
+
+### Single Combat — Duelist only. Authored.
+
+**⚠ Adopted at `PT-134`/`FINDINGS-27` and never written here.**
+
+**Wielding condition, on owner instruction: a single weapon of wield class 1, 2 or 4 and an empty off hand — `PT-169`.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Single Combat** | **1** | **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else** |
+| › **Measured** | **4** | **+2 / +2**, and **−1 against everyone else** |
+| ›› **Nothing Else Matters** | **8** | **+3 / +3**, and **−2 against everyone else** |
+
+> **⚠ It gets sharply better against exactly one enemy and no better at all in a crowd.**
+
+**And the cost is real and derived:** **a class-3 double-blade is barred, so the Duelist gives up the largest melee damage multiplier** — **and `ACTION-ECONOMY-01 §7.4`'s `1.5×` Strength needs a two-handed weapon, which is also barred.**
+
+
+---
+
+
+### Field Position — Agent only. Authored.
+
+**⚠ Cover is a fully specified positional system and exactly one thing in the game references it — `Run to Ground`, which lets a Bounty Hunter *ignore* it.** **Nothing uses it.**
+
+**Fifth class feature in a row that operates a rule the corpus already had.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Field Position** | **1** | **While you are in cover, your attacks gain `+2`** — the same bonus the cover gives your Defence |
+| › **Shift** | **4** | **Once per round, move from one cover square to another within your speed as a free action.** Provokes nothing |
+| ›› **Never In The Open** | **8** | **Once per encounter, when targeted by an attack you can see, move to any cover square within your speed before it resolves** |
+
+**Cover as offence, then mobility, then escape. All three read `PT-3`'s existing rule and add no geometry.**
+
+**⚠ The constraint is unusually hard: it does nothing in the open.** **Cover is terrain, so the class's whole feature is a property of the encounter rather than of the character.**
+
+> **Which is the sharpest *would a player actually choose it* test in the set, and the answer is that they choose their position instead.**
+
+**⚠ And it does not overlap the `Operative`.** **`No Firing Position` is concealment — nobody knows where the shot came from. This is terrain — they know exactly where you are and cannot reach you.**
+
+**⚠ It also makes `PT-170`'s map-size dial matter a second time.** **A GM who builds bare rooms cuts this class the way they cut the Sharpshooter.**
 
 
 ---

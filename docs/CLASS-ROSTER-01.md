@@ -282,7 +282,21 @@
 | **Explorer** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
-| **Agent** | Middle | d8 | **5** | **9** | **15** | **11** | **10** | 6 / 12 / 12 |
+| **Agent** | Middle | d8 | **5** | **8** | **15** | **11** | **10** | 6 / 12 / 12 |
+
+**⚠ Rebuilt as the spy — `PT-179`. `Intelligence` primary, not Charisma.**
+
+    Skills 8   Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology · Repair
+
+**`PT-135` put the class on Charisma because `Smuggler` and `Jedi Sentinel` each hold all four covert skills and Charisma was the only thing separating it.** **Moving to Intelligence removed that and put nothing back.**
+
+> **⚠ So the class needed a third axis that is neither stealth nor charisma, and the corpus had one nothing was using.**
+
+    Smuggler        not seen                   stealth
+    Jedi Sentinel   not seen, plus the Force    stealth
+    Agent           seen, and behind something  cover
+
+**⚠ And `REPLY-29`'s own SWTOR reference — *"cover as a positional resource with abilities that only work from it"* — is `PT-3` almost word for word, and `PT-3` predates it.**
 | **Pirate** | Middle | d8 | **4** | **8** | **15** | — | — | 12 / 12 / 6 |
 
 **⚠ The Pirate's archetype was checked against our own canon rules before it was written.** **`Hondo Ohnaka` is *The Clone Wars*, ruled Disney canon and excluded. `Andronikos Revel` is SWTOR, excluded.** **What survives is Legends — `Nym`, a Feeorin pirate captain and exceptional pilot who raided the wealthy and the corrupt.**

@@ -145,6 +145,46 @@
 **`Increase Melee Damage` and `Increase Combat Damage` are flat adders and do not multiply. Checked.**
 
 
+### 2.3b ⚠ Flat riders multiply by the strikes in a declaration — `PT-180`
+
+**`ACTION-ECONOMY-01 §421` states it, and every class feature was priced against one attack anyway:**
+
+> *"An earlier draft had the tiers grant three, four, and five attacks. That made Power and Precision unplayable: **both apply their bonus to every attack**, and one enhanced swing cannot compete with five ordinary ones."*
+
+**⚠ `Flurry`, `Whirlwind` and `Barrage` are three strikes.** **A `+6` damage rider is `+18` on a Barrage, not `+6`.**
+
+    Sith Warrior Unrelenting, +6 while below half vitality
+
+    as priced        +6 once per round        27.3 → 33.3    +22%
+    as it works      +6 on each of 3 strikes  27.3 → 39.9    ⚠ +46%
+
+**Twice what was reported — a per-attack rider divided by a per-round total.**
+
+#### Which features multiply
+
+| Feature | Class | Multiplies? |
+|---|---|---|
+| **`Unrelenting`** | Sith Warrior | **yes — `+6` damage each** |
+| **`Chosen Weapon`** | Commando | yes — `+2` damage, `+3` attack |
+| **`Single Combat`** | Duelist | yes — `+4` attack |
+| **`Field Position`** | Agent | yes — `+2` attack |
+| **`Nothing In My Hands`** | Brawler | **⚠ see below** |
+| `Dominion` · One Shot · `Both Barrels` · `Vanish` · `Plunder` · `Field Surgery` · `Read the Ruin` · `Command Protocol` | seven classes | no |
+
+**⚠ Four of the five are `+2` to `+4` — the range `Weapon Focus` and `Weapon Specialization` already occupy and were priced against.** **`Unrelenting` at `+6` is the outlier because it is the largest flat number written.**
+
+#### ⚠ And the Brawler resolves itself
+
+**`ATTACKS-07` has no Velocity chain.** **The unarmed roster is `Jab`, `Punch`, `Kick` — *"one unarmed attack"* each, explicitly identical — and one restricted chain, `Echani Strike`.**
+
+> **A Brawler cannot multi-strike unarmed at all, so `Nothing In My Hands` cannot multiply.**
+
+**⚠ That is luck rather than design and it should be stated.** **If a Velocity chain is ever added to `ATTACKS-07`, ignoring armour on three strikes becomes the largest rider in the game.**
+
+**One Shot's wording — *"your next **single** rifle attack"* — is the same luck. The word is load-bearing and was not chosen to be.**
+
+---
+
 ## 3. A tier replaces the tier below it
 
 > **Same attack, better numbers. Nothing new is introduced mid-chain.**

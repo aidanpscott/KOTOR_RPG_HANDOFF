@@ -263,8 +263,11 @@ Acrobatics · Alertness · Awareness · Athletics · Persuade · Intimidate · S
 **Explorer — 9**
 Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism
 
-**Agent — 9**
-Alertness · Awareness · Persuade · Intimidate · Stealth · Streetwise · Slicing · Security · Appraise
+**Agent — 8**
+Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology · Repair
+
+**Pirate — 8**
+Pilot · Appraise · Athletics · Alertness · Awareness · Intimidate · Streetwise · Scavenging
 
 **Soldier — 7**
 Alertness · Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim

@@ -6223,3 +6223,24 @@
 **⚠ Which is `PT-83`'s split expressed at the gate.** **The Engineer commands droids by talking to them; the Machinist by building them.**
 
 **⚠ And it reverses `PT-213`'s open gap:** **a Tech Specialist entering via `Engineer 6` has no build route — not `Machinist 6`.**
+
+---
+
+## PT-226 — Post-ruling sweep, `PT-206` through `PT-225`
+
+**Four stale references, all from renames and moves in the last twenty rulings.**
+
+    Give the Order      FORCE-POWERS-01        -> Rally, PT-224
+    Read the Ground     ACTION-ECONOMY-01,     -> Terrain Sense, PT-207
+                        FEATS-LIBRARY-01
+    eight Force prestige CLASS-ROSTER-01       -> six, PT-215
+    "Hold the Line is    CLASS-ROSTER-01       -> the Juggernaut's, PT-211
+     the Soldier's"
+
+**⚠ Every one is the `PT-84` shape: a ruling applied where the rule is *stated* and not where it is *used*.**
+
+**And three of the four are renames, which is the cheapest kind to sweep and the easiest to forget** — **a rename leaves the old name grammatical everywhere it appears.**
+
+> **⚠ Worth running this sweep after every batch of renames rather than after every batch of rulings.**
+
+**Corpus clean on all four.**

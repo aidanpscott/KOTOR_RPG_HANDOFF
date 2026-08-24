@@ -76,7 +76,7 @@
 | **Improved Revitalize** | Light | 2 | 20 | −4 | Character Level 15, Revitalize | This power allows the Jedi to rekindle the life energies of any of their non-droid fallen allies. This brings all allies back to consciousness with **15%** of their total Vitality Points. |
 | **Insanity** | Dark | 3 | 20 | −6 | Character Level 12, Fear, Horror | This power can greatly confuse an enemy force, inflaming paranoia and doubt. All enemies within a 10-meter radius of the target must make a Will save at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers or cower in catatonic terror for 18 seconds. This power does not affect droids. |
 
-### ⚠ `Inspire Followers` becomes `Give the Order` — `PT-220`, `PT-221`
+### ⚠ `Inspire Followers` becomes `Rally` — `PT-220`, `PT-221`, `PT-224`
 
 **⚠ It is no longer a Force power at all.** **The chain is an Officer class feature, and `Force Suppression` and `Force Breach` have lost their `Inspire Followers` clause — `PT-221`.**
 
@@ -91,7 +91,7 @@
 
 #### The chain as adopted
 
-    Give the Order      1   spend your declaration; every ally who can hear
+    Rally               1   spend your declaration; every ally who can hear
                             you gains +1 attack, +1 damage, +1 Will
     › On My Mark        4   +2, and one ally may immediately attack
     ›› Command Presence 8   +3, and the immediate attack applies to two allies

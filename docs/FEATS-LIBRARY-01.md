@@ -536,7 +536,7 @@
 
 ### Terrain Sense — Scout only. Authored.
 
-**⚠ Replaces `Read the Ground` — `PT-207`.** **That feature shared an ally's Reflex save against area effects, and once the Scout is granted `Evasion` at 6 and `Uncanny Dodge` at 4 and 7, it was the *third* thing on one axis.**
+**⚠ Replaces `Terrain Sense` — `PT-207`.** **That feature shared an ally's Reflex save against area effects, and once the Scout is granted `Evasion` at 6 and `Uncanny Dodge` at 4 and 7, it was the *third* thing on one axis.**
 
 > **All three were *do not get hit by the thing*.**
 
@@ -651,7 +651,7 @@
 | **Quarry** | Bounty Hunter | any encounter with a named target | **broad** |
 | **Still Standing** | Marksman | any encounter you are dropped in | **broad** |
 | **Quickdraw** | Smuggler | a conversation becoming a fight | narrow |
-| **Read the Ground** | Scout | area effects only | narrow |
+| **Terrain Sense** | Scout | area effects only | narrow |
 | **Field Override** | Engineer | enemy droids only | narrow |
 | **Jury Rig** | Machinist | allied droids only | narrow |
 

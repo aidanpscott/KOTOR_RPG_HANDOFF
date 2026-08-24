@@ -123,7 +123,7 @@
 
 > **A droid chassis and a Rakata may not take any Force class, base or prestige.**
 
-**Which is: Jedi Guardian, Jedi Sentinel, Jedi Consular, Sith Warrior, Sith Inquisitor, Sith Assassin, and all eight Force prestige classes.**
+**Which is: Jedi Guardian, Jedi Sentinel, Jedi Consular, Sith Warrior, Sith Inquisitor, Sith Assassin, and all six Force prestige classes.**
 
 ### Why each
 
@@ -623,7 +623,7 @@
 
 #### ⚠ The obvious tank feature was already taken
 
-**`Hold the Line` is the Soldier's — *take the hit meant for the ally beside you*.** **A Juggernaut that absorbs damage for allies is the Soldier with a bigger die.**
+**⚠ `Hold the Line` was the Soldier's and is now the Juggernaut's — `PT-211`.** **The KOTOR Soldier has no ally-protection mechanic of any kind; we invented it and gave it to the class the games made simplest.**
 
 > **So the Juggernaut is not the class that takes hits. It is the class you cannot get past.**
 

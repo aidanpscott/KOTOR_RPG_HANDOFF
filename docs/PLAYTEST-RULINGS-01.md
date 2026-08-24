@@ -4206,3 +4206,64 @@
 **Battlemaster at `Middle` with 16 feats made two Warrior continuations identical on rate, feats, hit die, Force die, saves and skill base** — **separated by their class chain alone.**
 
 **⚠ At `Combat` they separate on acquisition as well, which is the axis `PT-125` used to separate everything else.**
+
+---
+
+## PT-155 — Any Sith may take any Sith prestige class
+
+**Owner:** ***"Any Sith can be any Sith prestige class. Just one is best for one."***
+
+**A relaxation of `PT-138`'s grammar as first applied. Four parent-locked entries replaced:**
+
+    Sith Marauder       any Sith base class 6 + Weapon Focus: Lightsaber
+    Sith Lord           any Sith base class 6 + Mysticism 8
+    Sith Sorcerer       any Sith base class 6 + Mysticism 8
+    Sith Battlemaster   any Sith base class 6 + Weapon Focus: Lightsaber
+
+**⚠ The skill and feat holdings stay, and they are what *"one is best for one"* means.** **An Inquisitor may become a Marauder — but will not be holding the lightsaber feat that gets them in.**
+
+> **The gate does the sorting without the roster having to.**
+
+**⚠ Not extended to the Jedi.** **The owner ruled on the Sith; Jedi entries stay parent-locked until he says otherwise.**
+
+---
+
+## PT-156 — The rate floor
+
+> **A prestige class never lowers your attack-pick rate.** **From entry you accrue at the higher of your current rate and the prestige class's own.**
+
+**⚠ Scoped to prestige entry only.** **`MULTICLASS-01 §3.1` governs ordinary multiclassing and rejects take-higher by name — *"neither summing nor taking the higher rate."*** **That stands.**
+
+**`PT-58` is the warrant:** *"A Weaponmaster was never something else — prestige entry continues a path rather than starting one."* **Credit is for the leap. A prestige class is not a leap.**
+
+**⚠ One case the wording did not cover.** **A Soldier 5 / Smuggler 5 holds `Combat` and `Specialist` at once.** **Ruled: the highest rate among the classes you hold** — **it is a floor rule, so the highest is the only reading consistent with its purpose.**
+
+---
+
+## PT-157 — Roster is 38, and the count was quoted at 37 in three documents
+
+**`Vanguard` was cut and reinstated; the `Pirate` was added.**
+
+    13 standard base + 6 Force base + 11 standard prestige + 8 Force prestige = 38
+
+**⚠ `FINDINGS-30 §1` said the Pirate and Vanguard cancelled at 37. With the Vanguard reinstated they do not — the roster is one larger than it has ever been.**
+
+**`CLASS-ROSTER-01 §7`'s open question — *whether 37 is too many for a core book* — is a question about 38 and is restated.**
+
+**⚠ And `Vanguard` still has no stated purpose.** **`FINDINGS-28 §4` found nothing for it anywhere, and reinstating it did not change that.** **Scheduled last.**
+
+---
+
+## PT-158 — Retraction: `Superior Two-Weapon Fighting` is a penalty reduction
+
+**The designer's retraction, recorded because the reasoning is the useful part.**
+
+**⚠ It argued the feat was an *attack bonus* on the grounds that its row name sits in the `SUPER_WEAPON_FOCUS_*` family alongside the lightsaber version.**
+
+> **⚠ That was an inference from a row label, and it was wrong.**
+
+**StrategyWiki on KOTOR 2 combat, secondary source and marked as such:** *the Weapon Master and Sith Marauder can select Superior Two-Weapon Fighting to reduce the attack penalty further.*
+
+**`FEATS-LIBRARY-01`'s presentation was correct in kind and was called invented.**
+
+**⚠ This is `PT-146` working.** **The owner asked whether we were using KOTOR 2's version or an invented one; looking it up found that ours was faithful and the *reading* was not.**

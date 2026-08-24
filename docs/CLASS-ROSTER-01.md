@@ -326,10 +326,10 @@
 | Class | Stat line | Entry |
 |---|---|---|
 | **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **Jedi Guardian 6** + `Weapon Focus: Lightsaber` |
-| **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **Sith Warrior 6** + `Weapon Focus: Lightsaber` |
+| **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
 | **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **Jedi Sentinel 6** + `Stealth` 8 |
 | **Jedi Master** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **Jedi Consular 6** + `Mysticism` 8 |
-| **Sith Lord** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **Sith Inquisitor 6** + `Mysticism` 8 |
+| **Sith Lord** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Sith base class 6** + `Mysticism` 8 |
 | **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
 
 **⚠ Every feat total sits inside its rate's band. Verified.**
@@ -453,6 +453,23 @@
 **`PT-100` asked whether four narrow counters out of seven was a pattern. This is the opposite risk: a feature that is never narrow and always costs the table.**
 
 
+### ⚠ Any Sith may take any Sith prestige class — `PT-155`
+
+**Owner:** ***"Any Sith can be any Sith prestige class. Just one is best for one."***
+
+**A relaxation of `PT-138`'s grammar as first applied. Parent-locked entries are replaced:**
+
+    Sith Marauder       any Sith base class 6 + Weapon Focus: Lightsaber
+    Sith Lord           any Sith base class 6 + Mysticism 8
+    Sith Sorcerer       any Sith base class 6 + Mysticism 8
+    Sith Battlemaster   any Sith base class 6 + Weapon Focus: Lightsaber
+
+**⚠ The skill and feat holdings stay, and they are what *"one is best for one"* means in practice.** **An Inquisitor may become a Marauder — but will not be holding the lightsaber feat that gets them in.**
+
+> **The gate does the sorting without the roster having to.**
+
+**⚠ Not extended to the Jedi.** **The owner ruled on the Sith and the Jedi entries remain parent-locked until he says otherwise.**
+
 ### The three Sith prestige rates — `PT-154`
 
 **Owner ruling:** ***"Sith Marauder is the middle one, Sith Battlemaster is combat, Sith Lord is specialist."***
@@ -480,7 +497,7 @@
 
 ## 6. ⚠ What this roster now needs
 
-**37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**
+**38 classes. Nothing is written for 12 of them and 2 more have names but no identity.**
 
 **Per new class:** **rate · hit die · skill base · class-skill list · feat total at 30 · chain count · attack grants.**
 

@@ -196,6 +196,22 @@
 ---
 
 
+### The rate floor — `PT-156`
+
+> **A prestige class never lowers your attack-pick rate.** **From the level of entry you accrue at the higher of your current rate and the prestige class's own.**
+
+**⚠ Scoped to prestige entry only.** **`§3.1` governs ordinary multiclassing and rejects take-higher by name.** **That stands. This is an exception, and `PT-58` is the warrant:**
+
+> *"A Weaponmaster was never something else — prestige entry continues a path rather than starting one."* **Credit is for the leap. A prestige class is not a leap.**
+
+**And the flavour agrees: you do not get worse at fighting by learning something new.**
+
+**⚠ One case the wording does not cover.** ***"Your current rate"* is unambiguous for a single-class character and undefined for a multi-base one** — **a Soldier 5 / Smuggler 5 holds `Combat` and `Specialist` at once.**
+
+**Ruled: the highest rate among the classes you hold.** **It is a floor rule, so the highest is the only reading consistent with what the rule is for.**
+
+---
+
 ### ⚠ Prestige entry level is 10, and it is set below the optimum deliberately. `PT-142`.
 
 **Derived, cumulated over `k2_featgain.2da`:**

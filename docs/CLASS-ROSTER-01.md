@@ -780,9 +780,9 @@
 
 | | From | Holdings |
 |---|---|---|
-| **Commando** | any base class 6 | `Weapon Focus` + `Weapon Specialization`, same family |
-| **Gunslinger** | any base class 6 | a pistol chain at tier 2 + Dexterity primary |
-| **Sharpshooter** | any base class 6 | a rifle chain at tier 2 + `Awareness` 8 |
+| **Commando** | any base class 6 | `Weapon Specialization` in the chosen family |
+| **Gunslinger** | any base class 6 | `Master Two-Weapon Fighting` |
+| **Sharpshooter** | any base class 6 | `Weapon Specialization: Blaster Rifle` |
 | **Shadow Hunter** | any base class 6 | `Stealth` 8 + a melee chain at tier 2 |
 | **Scoundrel** | any base class 6 | `Stealth` 8 + `Sneak Attack` tier 2 |
 | **Juggernaut** | any base class 6 | `Heavy Armour Proficiency` |
@@ -821,6 +821,45 @@
 **`Beast Master` is `Scout 6` because the Scout is the *only* class with `Beast Handling` as a class skill.**
 
 **The lock is real but nobody chose it.** **Worth asking whether another class should hold that skill.**
+
+
+### ⚠ `PT-217` was ruled against a tree that was missing seven entries — `PT-218`
+
+**`REPLY-56` and `REPLY-57` both said seven standard prestige classes had no entry requirement.**
+
+> **⚠ All eleven had one. Seven never left `from-designer/` and were never copied into `docs/` or the tree.**
+
+**My defect: I ruled a whole tier as unwritten because I had not read the findings that wrote it.**
+
+#### Where the two versions disagree, and which survives
+
+| | `PT-217` | the designer's draft |
+|---|---|---|
+| **Commando** | any base 6 | **Soldier 6** |
+| **Gunslinger** | any base 6 + pistol chain | **Smuggler 6 or Pirate 6** + `Master Two-Weapon Fighting` |
+| **Sharpshooter** | any base 6 + rifle chain | **Scout / Marksman / Bounty Hunter 6** + `Weapon Specialization: Blaster Rifle` |
+| **Shadow Hunter** | any base 6 | **Agent 6 or Smuggler 6** |
+| **Scoundrel** | any base 6 + `Sneak Attack` tier 2 | **Smuggler 6 or Agent 6** |
+| **Beast Master** | **Scout 6** | Scout 6 **or Explorer 6** |
+| **Officer** | Soldier 6 **or Agent 6** + `Alertness` 8 | Soldier 6 + **`Persuade` 8** |
+
+**⚠ `PT-217`'s *open* model survives.** **It is the owner's ruling and it matches what `PT-214` did on the Force side.** **The designer's drafts predate both.**
+
+**⚠ But three of the designer's holdings are sharper and are adopted:**
+
+**`Master Two-Weapon Fighting` for the `Gunslinger`** — **it names the exact thing rather than *"a pistol chain at tier 2"*.**
+**`Weapon Specialization: Blaster Rifle` for the `Sharpshooter`** — **same.**
+**`Weapon Specialization` in the chosen family for the `Commando`** — **`PT-217` asked for `Weapon Focus` *and* `Specialization`, and Specialization already requires Focus. The second was redundant.**
+
+#### ⚠ And one of theirs is wrong
+
+**`Beast Master` at *"Scout 6 or Explorer 6"*.**
+
+    Beast Handling class-skill holders: Scout
+
+**The Explorer holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`. Not `Beast Handling`.**
+
+**⚠ Same defect `PT-217` caught on the Officer's `Persuade`: a holding offered to a class that cannot cheaply reach it.**
 
 
 ## 6. ⚠ What this roster now needs

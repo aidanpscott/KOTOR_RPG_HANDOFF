@@ -6026,3 +6026,90 @@
 ### Also raised
 
 **`Tech Specialist` entry from 5 to 6.** **⚠ Every other prestige entry is 6 and the 5 was never justified.**
+
+---
+
+## PT-218 — ⚠ `PT-217` was ruled against a tree missing seven entries
+
+**`REPLY-56` and `REPLY-57` both said seven standard prestige classes had no entry requirement.**
+
+> **⚠ All eleven had one. Seven never left `from-designer/` and were never copied into `docs/` or the tree.**
+
+**My defect. I ruled a whole tier as unwritten because I had not read the findings that wrote it.**
+
+**⚠ Same shape as `PT-120` and `PT-137` — asking for work already delivered — but larger, because this time I did not ask. I ruled.**
+
+### Which version survives
+
+**`PT-217`'s *open* model stands.** **It is the owner's ruling and it matches `PT-214` on the Force side. The designer's drafts predate both.**
+
+### ⚠ But three of their holdings are sharper and are adopted
+
+    Gunslinger     Master Two-Weapon Fighting        names the thing exactly
+    Sharpshooter   Weapon Specialization: Rifle      names the thing exactly
+    Commando       Weapon Specialization only        Focus was redundant —
+                                                     Specialization requires it
+
+**⚠ `PT-217` asked for `Weapon Focus` *and* `Weapon Specialization` on the Commando.** **Specialization already requires Focus, so the second condition did nothing.**
+
+### ⚠ And one of theirs is wrong, by the test `PT-217` itself set
+
+**`Beast Master` at *"Scout 6 or Explorer 6"*.**
+
+    Beast Handling class-skill holders: Scout
+
+**The Explorer holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`.**
+
+> **⚠ A holding offered to a class that cannot cheaply reach it — exactly the defect `PT-217` caught on the Officer's `Persuade`.**
+
+**The test found one error on each side within an hour of being written.**
+
+---
+
+## PT-219 — The `Jedi Watchman` had nothing, and `Vigil` is what it gets
+
+**⚠ The one class `PT-193` left empty.**
+
+**Grepped: its entire record was a rate, a feat total, a cadence and one granted chain — `Sneak Attack` 1d6–7d6.**
+
+**And it was never *stripped*. `feat.2da`, distinctive grants with proficiencies and the universal Force package removed:**
+
+    jwa   (nothing)
+    sma   Ignore Pain I–III · Increase Combat Damage I–III
+    jsn   Force Immunity: Fear · Stun · Paralysis
+
+> **⚠ Zero. Its entire distinctive content in KOTOR 2 *was* `Sneak Attack`, and when that became an attack tree anyone could buy, the class became an empty column.**
+
+**`Vigil` — `Scan` free once per round → the party sees what you find → nothing hides from you and you cannot be made unaware.**
+
+**⚠ The capstone is the class's own parent chain finished.** **`Force Immunity` runs Fear → Stun → Paralysis, and two of those three are ways to be made *unaware*.**
+
+> **The Sentinel becomes immune to the conditions. The Watchman becomes immune to their consequence.**
+
+**Named by the owner, checked against check 21 first — clear in all seven documents, where `The Watch` collided in four.**
+
+---
+
+## PT-220 — `PT-215` broke five Force powers
+
+**`Inspire Followers I–V` are gated on `Jedi Master`, which `PT-215` cut.**
+
+> **⚠ Five ported entries left requiring a class that does not exist, and neither agent caught it.**
+
+**Owner: remake it as an `Officer` ability.**
+
+**⚠ The instinct is better founded than the reason given for it.** **This is not a flavour choice — it is the repair for a break `PT-215` made.**
+
+**And it fits: the Officer is the only class in the roster doing leadership, and `Inspire Followers` is leadership expressed as a mechanic.**
+
+### ⚠ One consequence, stated
+
+**It stops being a *Force power*.** **An Officer has no Force pool, so the cost column does not apply.**
+
+**Whether it becomes a feat chain, a class feature, or a Force power an Officer may somehow cast is open and belongs with the Officer's build.**
+
+**⚠ And *"not droids"* survives the move and now cuts harder** — **the Droid Master's four henchmen gain nothing from their own party's Officer.**
+
+### Checked rather than assumed
+
+**`Force Breach` and `Force Suppression` name the chain and are NOT broken.** **Both gate on character level and only list `Inspire Followers` among the powers they cancel.**

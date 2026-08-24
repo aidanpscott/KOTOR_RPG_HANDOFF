@@ -1203,3 +1203,33 @@
 
 ---
 
+
+### Vigil — Jedi Watchman only. Authored.
+
+**⚠ The Watchman was the one class `PT-193` left with nothing. `PT-219`.**
+
+**Grepped: its entire record was a rate, a feat total, a cadence and one granted chain — *`Sneak Attack` 1d6–7d6*.** **That grant was its only distinguishing content, and `PT-193` deleted the ladder it was written in.**
+
+**And it was never *stripped*. `feat.2da`, distinctive grants with proficiencies and the universal Force package removed:**
+
+    jwa   (nothing)
+    sma   Ignore Pain I–III · Increase Combat Damage I–III
+    jsn   Force Immunity: Fear · Stun · Paralysis
+
+> **⚠ Zero. Its entire distinctive content in KOTOR 2 *was* `Sneak Attack`, and when that became an attack tree anyone could buy, the class became an empty column.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Vigil** | **1** | **You may `Scan` as a free action once per round**, and you use the better of `Awareness` or `Alertness` for it |
+| › **Nothing Hides From Me** | **4** | **Anything you find with a `Scan` is found by your whole party** until the end of your next turn |
+| ›› **The Watch Is Kept** | **8** | **An enemy Hidden from you when combat begins is not**, and **you may not be made unaware by anything short of losing consciousness** |
+
+**⚠ The capstone is the class's own parent chain finished.** **`Force Immunity` runs Fear → Stun → Paralysis, and two of those three are ways to be made *unaware* under `ACTION-ECONOMY-01 §19.5`.**
+
+> **The Sentinel becomes immune to the conditions. The Watchman becomes immune to their consequence.**
+
+**⚠ Named `Vigil` by the owner, checked against check 21 before proposing — clear in all seven documents, where `The Watch` collided in four.**
+
+
+---
+

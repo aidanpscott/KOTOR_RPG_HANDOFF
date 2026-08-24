@@ -75,11 +75,35 @@
 | **Improved Heal** | Light | 2 | 16 | −4 | Character Level 12, Heal | This power heals all party members in a 15 meter radius. Each party member gains 15 vitality points + 1 point for every Charisma modifier, Wisdom modifier, and level of the Force user. Poisons are neutralized by this effect. This power does not affect droids. |
 | **Improved Revitalize** | Light | 2 | 20 | −4 | Character Level 15, Revitalize | This power allows the Jedi to rekindle the life energies of any of their non-droid fallen allies. This brings all allies back to consciousness with **15%** of their total Vitality Points. |
 | **Insanity** | Dark | 3 | 20 | −6 | Character Level 12, Fear, Horror | This power can greatly confuse an enemy force, inflaming paranoia and doubt. All enemies within a 10-meter radius of the target must make a Will save at a DC of 5 + the attacking character's level + the attacking character's Wisdom and Charisma modifiers or cower in catatonic terror for 18 seconds. This power does not affect droids. |
-| **Inspire Followers I** | Light | 1 | 8 | −1 | Jedi Master | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +1 to hit, +1 to damage, and +1 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
-| **Inspire Followers II** | Light | — | — | — | Level 5 Jedi Master, Inspire Followers I | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +2 to hit, +2 to damage, and +2 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
-| **Inspire Followers III** | Light | — | — | — | Level 9 Jedi Master, Inspire Followers I, Inspire Followers II | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +3 to hit, +3 to damage, and +3 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
-| **Inspire Followers IV** | Light | — | — | — | Level 13 Jedi Master, Inspire Followers I, Inspire Followers II, Inspire Followers III | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +4 to hit, +4 to damage, and +4 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
-| **Inspire Followers V** | Light | 3 | 24 | −8 | Level 17 Jedi Master, Inspire Followers I, Inspire Followers II, Inspire Followers III, Inspire Followers IV | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +5 to hit, +5 to damage, and +5 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
+
+### ⚠ `Inspire Followers` moved to the Officer — `PT-220`
+
+**`PT-215` cut `Jedi Master` as a class. Five ported Force powers required it.**
+
+> **⚠ Five entries broken by one ruling, and neither agent caught it.**
+
+**⚠ `Force Breach` and `Force Suppression` name the chain and are NOT broken.** **Both gate on character level and only list `Inspire Followers` among the powers they cancel.** **Checked rather than assumed.**
+
+**Owner: remake it as an `Officer` ability.**
+
+**⚠ The instinct is better founded than the reason given for it.** **This is not a flavour choice — it is the repair for a break `PT-215` made.**
+
+**And it fits: the Officer is now the only class in the roster doing leadership, and `Inspire Followers` is leadership expressed as a mechanic.**
+
+    every party member +1 / +2 / +3 hit, damage and Will
+    45 seconds. Not droids.
+
+**⚠ One consequence to state: it stops being a *Force power*.** **An Officer has no Force pool, so the cost column does not apply.** **Whether it becomes a feat chain, a class feature, or a Force power an Officer may somehow cast is open and belongs with the Officer's build.**
+
+**⚠ *"Not droids"* survives the move and now cuts harder** — **the Droid Master's four henchmen gain nothing from their own party's Officer.**
+
+---
+
+| **Inspire Followers I** | Light | 1 | 8 | −1 | **Officer 1** — `PT-220` | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +1 to hit, +1 to damage, and +1 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
+| **Inspire Followers II** | Light | — | — | — | **Officer 5** — `PT-220`, Inspire Followers I | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +2 to hit, +2 to damage, and +2 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
+| **Inspire Followers III** | Light | — | — | — | **Officer 9** — `PT-220`, Inspire Followers I, Inspire Followers II | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +3 to hit, +3 to damage, and +3 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
+| **Inspire Followers IV** | Light | — | — | — | **Officer 13** — `PT-220`, Inspire Followers I, Inspire Followers II, Inspire Followers III | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +4 to hit, +4 to damage, and +4 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
+| **Inspire Followers V** | Light | 3 | 24 | −8 | **Officer 17** — `PT-220`, Inspire Followers I, Inspire Followers II, Inspire Followers III, Inspire Followers IV | This power increases the morale and effectiveness of the Jedi Master's allies in battle. Every party member gets +5 to hit, +5 to damage, and +5 to their Will save. This effect lasts for 45 seconds and does not affect droids. |
 | **Knight Speed** | Universal | 2 | 12 | −3 | Character Level 9, Burst of Speed | This power allows a Jedi to move more swiftly than the physical limitations of his or her body should allow. For the duration of this effect (36 seconds) movement speed is doubled, Defense is increased by 4, and 1 attack per round is gained. |
 | **Knight Valor** | Light | 2 | 15 | −3 | Character Level 9, Force Valor | This power increases the physical attributes and saving throws of the Jedi and all party members by 3 points, and also grants immunity to poison. The effect lasts for 20 seconds. Knight Valor replaces the bonus granted by Force Valor. |
 | **Master Battle Meditation** | Universal | 3 | 28 | −9 | Character Level 18, Battle Meditation, Improved Battle Meditation | This power grants +4 to attack rolls, +4 to damage, and +4 to Will saves to all party members. It also increases the vitality point regeneration rate of the party. Additionally, any enemies within 15 meters that fail a Will save against a DC of 5 + the attacking character's level + attacking character's Wisdom and Charisma modifiers suffer -4 to attack rolls, -4 to damage, and -4 to Will saves. This effect lasts for 20 seconds and will not affect any droids in the party. |

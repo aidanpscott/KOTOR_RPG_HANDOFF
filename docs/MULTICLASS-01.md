@@ -114,7 +114,15 @@
 **A Scout 8 taking Guardian at level 9 gains Middle's level-9 entry.** **Both classes are Middle, so nothing changes.**
 **A Soldier 8 taking Consular at level 9 gains Specialist's level-9 entry, not Combat's.**
 
-> **This closes `CLASS-ATTACKS-01 §6`'s open question.** **Neither summing nor taking the higher rate — you gain what the class you are actually training in gives you.**
+> **⚠ SUPERSEDED by `PT-159`. Read the rule below before the paragraph above.**
+
+**This section rejected take-higher by name — *"neither summing nor taking the higher rate — you gain what the class you are actually training in gives you."*** **The owner has reversed it.**
+
+> **A character holding more than one class uses the highest attack-pick rate among them, and the highest chain count among them.**
+
+**⚠ The examples above are wrong under the new rule.** **A Soldier 8 taking Consular at level 9 keeps `Combat`, not `Specialist`.**
+
+**And the reason is arithmetic rather than preference:** **taking the lower chain count can leave picks with nothing legal to buy — up to 16 stranded tiers for a `Combat`-rate character holding a `Specialist`'s floor.** **`§3.1a` has the derivation.**
 
 ### 3.2 Grants
 
@@ -196,11 +204,28 @@
 ---
 
 
-### The rate floor — `PT-156`
+### The multiclass rule — `PT-159`
 
-> **A prestige class never lowers your attack-pick rate.** **From the level of entry you accrue at the higher of your current rate and the prestige class's own.**
+> **A character holding more than one class uses the highest attack-pick rate among them, and the highest chain count among them.**
 
-**⚠ Scoped to prestige entry only.** **`§3.1` governs ordinary multiclassing and rejects take-higher by name.** **That stands. This is an exception, and `PT-58` is the warrant:**
+**Both apply from the level of entry forward. Picks already spent are not recalculated — `CLASS-ATTACKS-01 §5`, unchanged.**
+
+**⚠ This supersedes `PT-156`'s prestige-only floor.** **That rule was scoped to prestige because prestige was the case in front of us; the owner extended it to any multiclass character and the wording is simpler for it.**
+
+#### Why highest, and it is arithmetic rather than preference
+
+**Your rate sets `T`. A chain absorbs 1 to 3 tiers, so `N` trees absorb between `N` and `3N`.**
+
+> **⚠ Taking the *lower* chain count can leave picks with nothing legal to buy.**
+
+    Consular 10 / Weaponmaster 20   ->   rate Combat, T = 40
+
+    Consular's       N=13   3N=39   strands 1 pick
+    Weaponmaster's   N=15   3N=45   strands nothing
+
+**⚠ Verified across every band pairing.** **The higher count never strands, at any rate, in any combination.** **The lower one sometimes does — **16 tiers** in the extreme case, a `Combat`-rate character holding a `Specialist`'s floor of 8.**
+
+**⚠ And it is an exception to `§3.1`, which rejected take-higher by name — *"neither summing nor taking the higher rate."*** **`PT-58` is the warrant:**
 
 > *"A Weaponmaster was never something else — prestige entry continues a path rather than starting one."* **Credit is for the leap. A prestige class is not a leap.**
 

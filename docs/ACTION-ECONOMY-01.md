@@ -176,6 +176,30 @@
 
 **⚠ Two things cover interacts with and neither is settled.** **Whether `Covering Fire` should let an ally move without losing cover**, and **whether a lightsaber's Form II barrier-cutting removes cover** — *`Stabbing Strike` cuts through a bulkhead, and a bulkhead is cover.*
 
+## 6.2a ⚠ Range is unwritten, and two rules already depend on it
+
+**`PT-160`. Grepped `ACTION-ECONOMY-01`, `ATTACKS-01` and `ATTACKS-04` for maximum range, range penalties, short and long range. Nothing.**
+
+**The only ranges in the corpus are two numbers on equipment lines — blaster rifle 28 m, blaster pistol 23 m — and nothing consumes them.**
+
+> **⚠ There is no penalty for shooting at distance, no maximum beyond which you cannot, and no benefit to being far away.** **A rifle's 28 metres is a fact about the weapon that changes nothing.**
+
+**Two written rules assume a system that does not exist:**
+
+**`FEATS-LIBRARY-01`'s `Master Spotter`** — *"within half their weapon's maximum range."*
+**`Close Combat`** — *"+1 attack at short range"*, with short range undefined.
+
+### ⚠ It has now blocked two classes
+
+**The `Pirate`'s dogfighting has no ship rules — `FINDINGS-27 §3.5`.**
+**The `Sharpshooter` cannot be built on *outranging people* because outranging is not a thing that happens.**
+
+**⚠ Both were built on what the archetype has *instead*, and both should be revisited when range exists.**
+
+**Recorded here rather than in a class document, because it is a combat-system gap and the next class to want it will be the third.**
+
+---
+
 ## 6.3 What a dying character can do
 
 **`E-2` gives the thresholds — disabled at 0 wounds, dying from −1 to −9, dead at −10.** **Nothing says what a dying character may do on their turn.**

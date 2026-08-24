@@ -803,3 +803,27 @@
 **That was authored with no precedent in either game, and the owner has questioned it.** **⚠ Flagged for revision rather than left.** **The tier below it — a wounded enemy leaves the encounter — is the version that fits.**
 
 ---
+
+### Command Protocol — Droid Master only. Authored, on 5e's shape.
+
+**⚠ `PT-145` makes a controlled droid a henchman with its own turn.** **This is the class that holds several, and the bound on it is the reason it is playable.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Command Protocol** | **1** | **You hold two droids.** Each is a henchman with its own turn. **One order to all of them, as a Bonus action, persisting until its task is complete.** A droid with no order **takes cover and moves only to avoid harm** |
+| › **Squad Doctrine** | **4** | **Three droids**, and an order may name two tasks split among them |
+| ›› **Master and Servants** | **8** | **Four droids**, and once per encounter an order is a free action |
+
+> **⚠ The decision cost is one order, not one per droid — and silence resolves instantly.**
+
+**That is the bound `REPLY-31` demanded before numbers.** **The problem was never the turns; it was the choices.**
+
+**⚠ Cap is four, stated here rather than left to a GM.**
+
+**And `PT-153` makes the droids rebuildable materiel, so the class scales by *upgrading* them rather than adding more** — **which is what D&D's necromancer never got and why its minions become straw figures.**
+
+**Chassis are `SPECIES-CHAPTER-v2`'s four: `Astromech`, `Assassin`, `Battle`, `Remote`** — **carrying `PT-114`'s access limits and `PT-92`'s Force restriction with them.**
+
+
+---
+

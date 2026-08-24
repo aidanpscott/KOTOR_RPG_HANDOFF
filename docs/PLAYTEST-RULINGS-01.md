@@ -4267,3 +4267,85 @@
 **`FEATS-LIBRARY-01`'s presentation was correct in kind and was called invented.**
 
 **⚠ This is `PT-146` working.** **The owner asked whether we were using KOTOR 2's version or an invented one; looking it up found that ours was faithful and the *reading* was not.**
+
+---
+
+## PT-159 — The multiclass rule: highest rate, highest chain count
+
+**Owner ruling. ⚠ Supersedes `PT-156`, written one exchange earlier.**
+
+> **A character holding more than one class uses the highest attack-pick rate among them, and the highest chain count among them.**
+
+**Both apply from entry forward. Picks already spent are not recalculated.**
+
+**⚠ `PT-156` scoped the same idea to prestige entry only, because prestige was the case in front of us.** **The owner extended it to any multiclass character and the wording is simpler for it.**
+
+### Why highest, and it is arithmetic
+
+**Rate sets `T`. A chain absorbs 1 to 3 tiers, so `N` trees absorb between `N` and `3N`.**
+
+> **⚠ Taking the *lower* chain count can leave picks with nothing legal to buy.**
+
+    Consular 10 / Weaponmaster 20   ->   rate Combat, T = 40
+
+    Consular's       N=13   3N=39   strands 1
+    Weaponmaster's   N=15   3N=45   strands 0
+
+**⚠ Verified across every band pairing.** **The higher count never strands, in any rate, in any combination.** **The lower one sometimes does — 16 tiers in the extreme case, a `Combat` character holding a `Specialist`'s floor of 8.**
+
+### It reverses `MULTICLASS-01 §3.1` by name
+
+**That section read:** *"Neither summing nor taking the higher rate — you gain what the class you are actually training in gives you."*
+
+**⚠ Amended in place rather than referenced around.** **Its worked examples were wrong under the new rule — a Soldier 8 taking Consular at 9 now keeps `Combat`.**
+
+> **A superseded rule left standing next to its replacement is the `PT-84` shape.** **The section that *stated* the rule has to move when the rule does.**
+
+---
+
+## PT-160 — Range is unwritten, and two rules already depend on it
+
+**Grepped `ACTION-ECONOMY-01`, `ATTACKS-01` and `ATTACKS-04`. No maximum range, no range penalty, no short or long range.**
+
+**The only ranges in the corpus are two equipment-line numbers — rifle 28 m, pistol 23 m — and nothing consumes them.**
+
+> **⚠ No penalty for shooting at distance, no maximum beyond which you cannot, no benefit to being far away.**
+
+**Two written rules assume a system that does not exist:** **`Master Spotter` — *"within half their weapon's maximum range"*** — **and `Close Combat` — *"+1 attack at short range"*, undefined.**
+
+### ⚠ It has blocked two classes
+
+**The `Pirate`'s dogfighting has no ship rules. The `Sharpshooter` cannot be built on outranging people because outranging is not a thing that happens.**
+
+**Both were built on what the archetype has instead, and both should be revisited when range exists.**
+
+**Recorded in `ACTION-ECONOMY-01 §6.2a` rather than a class document — it is a combat-system gap and the next class to want it will be the third.**
+
+---
+
+## PT-161 — `Sharpshooter` and `Droid Master`
+
+| | Rate | Die | Primary | Skill | Feats | Chains | Caps | Entry |
+|---|---|---|---|---|---|---|---|---|
+| **Sharpshooter** | Middle | d8 | DEX | 4 | 16 | 13 | 9 | — |
+| **Droid Master** | Middle | d8 | **INT** | 5 | 15 | 11 | 10 | Engineer 6 or Machinist 6 + `Repair` 8 |
+
+**⚠ Both verified inside every band; both strand zero picks.**
+
+### `Command Protocol` — 5e's answer, applied
+
+**Two droids at tier 1, three at 4, four at 8.** **Each a henchman under `PT-145` with its own turn.**
+
+> **⚠ One order to all of them as a Bonus action, persisting until complete.** **A droid with no order takes cover and moves only to avoid harm.**
+
+**The turn-order cost is bounded the way `REPLY-31` demanded: decision cost is one order, not one per droid, and silence resolves instantly.**
+
+**⚠ Cap is four, stated in the class rather than left to a GM.**
+
+### ⚠ And check 19 found a fifth zero-slack class
+
+**`PT-114` caps a droid at 11 chains.** **The note in `PT-132` named three; `REPLY-14` named two.**
+
+> **There are five: Bounty Hunter, Engineer, Sith Inquisitor, Agent, Droid Master.**
+
+**The Agent was never in any note.** **Raising any of the five by one silently closes it to droids.**

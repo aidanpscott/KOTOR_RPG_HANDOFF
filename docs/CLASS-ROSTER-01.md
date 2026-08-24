@@ -495,6 +495,32 @@
 **⚠ It also fixes a collision the designer's own draft created:** **Battlemaster at `Middle` with 16 feats made two Warrior continuations identical on rate, feats, hit die, Force die, saves and skill base** — **separated by their class chain alone.**
 
 
+### `Sharpshooter` and `Droid Master` — `PT-161`
+
+| | Rate | Die | Primary | Skill base | Skills | Feats | Chains | Caps | Entry |
+|---|---|---|---|---|---|---|---|---|---|
+| **Sharpshooter** | Middle | d8 | DEX | 4 | 6 | 16 | 13 | 9 | — |
+| **Droid Master** | Middle | d8 | **INT** | 5 | 8 | 15 | 11 | 10 | **Engineer 6 or Machinist 6** + `Repair` 8 |
+
+**⚠ Both verified inside every band, both strand zero picks.**
+
+#### `Command Protocol` — the Droid Master, on 5e's answer
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Command Protocol** | **1** | **Two droids**, each a henchman under `PT-145`. **⚠ One order to all of them as a Bonus action, persisting until its task is complete.** A droid with no order **takes cover and moves only to avoid harm** |
+| › **Squad Doctrine** | **4** | **Three droids**, and an order may name two tasks split among them |
+| ›› **Master and Servants** | **8** | **Four droids**, and once per encounter an order is a free action |
+
+> **⚠ Cap is four, stated in the class rather than left to a GM.**
+
+**The turn-order cost is bounded the way `REPLY-31` asked:** **decision cost is one order, not one per droid, and silence resolves instantly.**
+
+**⚠ `Intelligence` primary makes `PT-133` load-bearing.** **The Explorer was the first Intelligence class; this is the second, and the rule covering it is four exchanges old.**
+
+**⚠ And the Droid Master is the fifth class to sit at exactly 11 chains** — **`PT-114`'s droid access ceiling.** **Bounty Hunter, Engineer, Sith Inquisitor, Agent, Droid Master — five, and the check found the Agent which no note had.** **Raising any by one silently closes it to droids.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **38 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

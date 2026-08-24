@@ -413,6 +413,46 @@
 **⚠ The pair is deliberately identical on every number.** **`Security` and `Slicing` swapped for `Acrobatics` and `Athletics` is the whole difference, and it is the right difference — one opens doors, the other crosses rooms.**
 
 
+### `Droid Master` and `Beast Master` — premises, and the constraint they share. `PT-151`.
+
+**Owner definitions. Both are henchman classes; `PT-145` gave them their mechanism before either had a premise.**
+
+**`Droid Master`** — ***"like the Engineer, except they specialise in controlling an army of droids. Think the necromancer."***
+
+**`Beast Master`** — ***"a personal beast companion at all times, from a list of acceptable options, serving as a second, lesser playable character."***
+
+**⚠ *"Except better"* is the instruction on the Beast Master.** **D&D 3.5's animal companion is famously weak and 5e's Beast Master was the least-played subclass of its edition for the same reason: the companion falls off and the class has nothing else.**
+
+#### The axis that separates the three
+
+    class          how many    whose          how long
+    Engineer       one         the enemy's    one encounter
+    Droid Master   several     yours          permanent
+    Beast Master   one         yours          permanent
+
+**⚠ The `Droid Master` is the only class in the game with more than one henchman, and a henchman has its own turn under `PT-145`.**
+
+> **An army of henchmen is an army of turns.** **Combat length is a real cost and the class charges it to the whole table.**
+
+#### ⚠ Four constraints, recorded before either is drafted
+
+**Cap the count on level, not on a resource.** **`PT-147` withdrew the Explorer's `Prior Study` for being *"a resource, not a competence."***
+
+**Decide what happens when a permanent companion dies.** **⚠ Either a devastating loss or a shrug, and both are bad.** **D&D answers with a ritual and downtime; this system has no downtime.**
+
+**The Beast Master's list is a deliverable and we have no bestiary.** **⚠ Non-playable species is unstarted on the agenda.**
+
+**The Droid Master's droids are *species*.** **`SPECIES-CHAPTER-v2` has `Astromech`, `Assassin`, `Battle`, `Remote` — the list exists, and it carries `PT-114`'s access limits and `PT-92`'s Force restriction with it.**
+
+#### ⚠ And the test the arithmetic cannot run
+
+> **Both classes make the player stronger by making the turn order longer.**
+
+**A class whose power is measured in other people's time is the one balance question this project's derivations cannot answer.**
+
+**`PT-100` asked whether four narrow counters out of seven was a pattern. This is the opposite risk: a feature that is never narrow and always costs the table.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

@@ -4088,3 +4088,93 @@
 **Opened to all six. Chosen once at entry and locked.**
 
 **⚠ The `Commando` is the class built on it** — one weapon family, taken further than anyone — **and the mechanism was already written. It only needed to stop being lightsaber-only.**
+
+---
+
+## PT-151 — `Droid Master` and `Beast Master` premises
+
+**Owner definitions. Both are henchman classes; `PT-145` gave them their mechanism before either had a premise.**
+
+    class          how many    whose          how long
+    Engineer       one         the enemy's    one encounter
+    Droid Master   several     yours          permanent
+    Beast Master   one         yours          permanent
+
+**⚠ The `Droid Master` is the only class with more than one henchman, and a henchman has its own turn.**
+
+> **An army of henchmen is an army of turns.**
+
+### Four constraints, recorded before drafting
+
+**Cap the count on level, not on a resource** — `PT-147`'s test.
+**Decide what happens when a permanent companion dies.** **⚠ Devastating loss or a shrug, and both are bad. D&D answers with downtime; this system has none.**
+**The Beast Master's list is a deliverable and there is no bestiary.**
+**The Droid Master's droids are species** — four chassis exist, carrying `PT-114` and `PT-92` with them.
+
+### ⚠ The test the arithmetic cannot run
+
+> **Both classes make the player stronger by making the turn order longer.**
+
+**A class whose power is measured in other people's time is the one balance question this project's derivations cannot answer.**
+
+**`PT-100` asked whether four narrow counters of seven was a pattern.** **This is the opposite risk: a feature that is never narrow and always costs the table.**
+
+---
+
+## PT-152 — Three difficulty modes, and what dying means in each
+
+**Owner ruling. Written as `DEATH-AND-DIFFICULTY-01`.**
+
+**⚠ This began as a Beast Master question — *what happens when a permanent companion dies* — and the answer is not a class rule.** **It is a campaign setting that touches every character at the table.**
+
+### The three modes
+
+**Easy — the KOTOR rule.** > **Nobody dies permanently unless the whole party dies.** **A character at −10 is out for the encounter and gets up afterwards at 1 wound.**
+
+**⚠ That is what the games actually do.** **A downed party member in KOTOR stands up when the fight ends; the only true loss is a total party defeat.**
+
+**Normal.** **Companions get up at 1 wound. Players can die, with GM exceptions.** **The default, and the one that makes a companion class safe to play without making the player safe.**
+
+**Hard.** **Anyone can die permanently, with GM exceptions. No distinction between player, companion and henchman.**
+
+### ⚠ Exceptions are structural, not rerolls
+
+**The owner's worked example, for a KOTOR 1 package:**
+
+> **Revan cannot truly die unless the whole party dies — and the encounter is rigged so he is always the last one standing.**
+
+**⚠ It is not that Revan survives a killing blow. It is that the order of events is arranged so the killing blow reaches him last.**
+
+**The right shape for a story character in a package built on a known story, and it costs no new mechanic.**
+
+### What it settles
+
+**`PT-151` raised *"either a devastating loss or a shrug, and both are bad."*** **The answer is that it is whatever the table chose when it picked a mode — which is where that decision belongs.**
+
+---
+
+## PT-153 — Droid Master droids are the necromancer's undead; a Machinist may build one
+
+**Owner rulings, and together they separate two classes that shared a mechanism.**
+
+> **A Droid Master's droids are built, commanded, permanent until destroyed, and replaceable.**
+
+**⚠ A destroyed droid is not a loss. It is a rebuild.** **Which is why `PT-152`'s modes do not apply to them.**
+
+**The Beast Master has one companion and it matters. The Droid Master has several and they are materiel.**
+
+### And the Machinist gets a route to one
+
+**⚠ Precedent: Bao-Dur and his remote — a technician who *made* himself a companion rather than being given one.**
+
+    Machinist       may build one, if the player chooses to
+    Droid Master    gets one automatically and chooses its chassis
+
+> **The Machinist *can*. The Droid Master *is*.**
+
+**⚠ That is a new capability on an already-written class.** **`PT-83` built the Machinist as hands-on repair and salvage; a droid of its own is the same competence pointed at a bigger object.**
+
+### Open
+
+**What a rebuild costs — time, parts, or a level.** **`§5` says replaceable and not what replacing costs.**
+**⚠ What a companion's death threshold is.** **`E-2`'s −10 assumes a character sheet at player scale.**

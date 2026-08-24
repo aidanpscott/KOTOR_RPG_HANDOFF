@@ -4519,3 +4519,43 @@
 > **⚠ Third time a stated invariant turned out to be false on first mechanical check.** **`PT-88`'s missing ruling, `PT-140`'s eight missing classes, and this.**
 
 **A claim in a document is a claim. Deriving it is the only thing that makes it a fact.**
+
+---
+
+## PT-168 — Range amended against `baseitems.2da`, which is now in holdings
+
+**`PT-163` through `PT-166` were built from `EQUIPMENT-01`'s eight weapon rows because the source file was absent. It is here now.**
+
+**⚠ `EQUIPMENT-01` was faithful.** **`maxattackrange` carries exactly four values across both games — 17, 23, 25, 28 — and K1 and K2 agree on every weapon.**
+
+### The hard ceiling is 50 metres
+
+    maxrange = 50   on every ranged weapon
+
+**⚠ The source's own outer limit, and not the same number as `maxattackrange`.** **A weapon engages at 23 and cannot reach past 50.**
+
+**This validates the increment reading rather than replacing it.** **50 is about two increments for a pistol and just under two for a rifle** — **our three-increment ceiling is more generous than the source, and the `−2` steps are the price.**
+
+**Snapped to 48 m — 24 squares — and stated as the absolute maximum for any ranged attack.**
+
+### Grenades have a throw range and we never had one
+
+    maxattackrange 25   on twelve grenades and the rocket
+
+**`§53` rules that throwing a grenade is an Attack rather than Gear, and no rule said how far.**
+
+> **Grenade throw range is 24 metres and it does not take increments.** **You can throw it that far or you cannot.**
+
+**⚠ Which is why `PT-166`'s collapse of 25 into 24 mattered more than it looked.** **25 is the most common `maxattackrange` in the file — thirteen items — and twelve are grenades.** **The Blaster Carbine shares the number by coincidence.**
+
+### ⚠ And the damage verification passed, against the right game
+
+**Diffed all 24 `EQUIPMENT-01` weapons against both files.**
+
+**Against K2: ten disagreed, every one exactly one die step low.** **Against K1: every weapon matches exactly.**
+
+**`EQUIPMENT-01 §105` records the choice and the reason** — *"K1's numbers make a cleaner system… K2's 2d10 widens the gap between a Jedi and everyone else for no reason our port needs."*
+
+> **⚠ A consistent ten-weapon offset that looks like error and is a decision with its reasoning on file.**
+
+**Stated in `ACTION-ECONOMY-01` because the next reader with `k2_baseitems.2da` open will find the same ten and reach for a fix.**

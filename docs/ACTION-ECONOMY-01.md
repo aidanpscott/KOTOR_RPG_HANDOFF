@@ -272,6 +272,49 @@
 
 **Four ranges move by at most 2 metre. That is the cheaper end.**
 
+
+### ⚠ Amended against `baseitems.2da` — `PT-168`
+
+**`PT-163` through `PT-166` were built from `EQUIPMENT-01`'s eight weapon rows because `baseitems.2da` was not in holdings. It is now.**
+
+**`EQUIPMENT-01` was faithful.** **`maxattackrange` carries exactly four values across both games — **17, 23, 25, 28** — and K1 and K2 agree on every weapon.**
+
+**Two things the file has that we did not:**
+
+#### The hard ceiling is 50 metres
+
+    maxrange = 50   on every ranged weapon in the file
+
+**⚠ That is the source's own outer limit and it is not the same number as `maxattackrange`.** **A weapon engages at 23 and cannot reach past 50.**
+
+**Which validates the increment reading rather than replacing it:** **50 is roughly two increments for a pistol and just under two for a rifle.** **Our three-increment ceiling is more generous than the source and the `−2` steps are the price.**
+
+**⚠ Snapped to 48 metres — 24 squares — and stated as the absolute maximum for any ranged attack regardless of increments.**
+
+#### ⚠ And the damage verification passed, against the right game
+
+**Diffed all 24 `EQUIPMENT-01` weapons against both files.** **Against K2, ten disagreed — every one exactly one die step low.**
+
+**Against K1, every weapon matches exactly.**
+
+> **⚠ `EQUIPMENT-01 §105` records the choice and the reason:** *"K1's numbers make a cleaner system. A vibrosword is 2d6, so a K1 lightsaber sits exactly one die step above it. K2's 2d10 is two steps, which widens the gap between a Jedi and everyone else for no reason our port needs."*
+
+**A consistent ten-weapon offset that looks like error and is a decision with its reasoning on file.**
+
+**⚠ Worth stating because the next reader with `k2_baseitems.2da` open will find the same ten and reach for a fix.**
+
+#### Grenades have a throw range and we never had one
+
+    maxattackrange 25   on twelve grenades and the rocket
+
+**⚠ `§53` rules that throwing a grenade is an Attack rather than Gear, and no rule said how far.**
+
+> **Grenade throw range is **24 metres** — twelve squares — and it does not take range increments.** **You can throw it that far or you cannot.**
+
+**A thrown object has an arm behind it rather than a barrel, and the source gives every grenade one value instead of a ladder.**
+
+**⚠ And this is why `PT-166`'s collapse of 25 into 24 was more consequential than it looked.** **25 is the most common `maxattackrange` in the file — thirteen items — and twelve of them are grenades.** **The Blaster Carbine shares a number with the grenades by coincidence, not by design.**
+
 ### What this unblocks
 
 **`Master Spotter` — *"within half their weapon's maximum range"* — now resolves: half of one increment.**

@@ -3334,3 +3334,85 @@
 **⚠ `Killer's Instinct` said *"granted to the three classes that carried `Sneak Attack` in the source"* without naming them.** **Smuggler, Sith Assassin, Jedi Watchman. Now named.**
 
 **⚠ Decided before the Assassin is drafted rather than after, which is what the designer asked for.**
+
+---
+
+## PT-123 — The save assignment rule
+
+**Proposed by the designer, adopted. `CLASS-TABLES-BASE`.**
+
+> **A class takes one strong save, determined by its primary ability.**
+> **It takes a second strong if it has a second job.**
+> **If the second job is the Force, the third save is `Hybrid` rather than `Weak`.**
+> **A third strong is reserved to a class whose whole identity is breadth.**
+
+    Strength or Constitution primary  ->  Fortitude
+    Dexterity primary                 ->  Reflex
+    Wisdom or Charisma primary        ->  Will
+
+**⚠ It reproduces nine of the ten existing placements exactly, and names its own exception.**
+
+**The Engineer is the departure — `PT-96` gave it a strong Will over a strong Fortitude, authored on the argument that a mind which keeps working under pressure is what separates it from the Machinist.**
+
+> **A rule that reproduces nine of ten and names its own exception is a rule.** **One that reproduces ten of ten was fitted to the data.**
+
+**This unblocks the twelve unwritten classes on saves.**
+
+---
+
+## PT-124 — ⚠ Every Sith column in the source is a Jedi *prestige* column
+
+**Found by the designer after I twice told them the Sith base three were ported.** **They were not, and I had not checked.**
+
+    base            hit  force  primary      prestige         hit  force  primary
+    Jedi Guardian    10    4     STR          Weaponmaster     10    6     STR
+    Jedi Sentinel     8    6     DEX          Watchman          8    8     DEX
+    Jedi Consular     6    8     WIS          Jedi Master       6   10     WIS
+
+    Sith Marauder    10    6     STR   identical to Weaponmaster
+    Sith Assassin     8    8     DEX   identical to Watchman
+    Sith Lord         6   10     WIS   identical to Jedi Master
+
+> **Not one Sith column is a base column.** **The Force die rises by 2 from base to prestige on all three Jedi lines, and all three Sith columns sit at the prestige value.**
+
+### What I got wrong
+
+**`REPLY-17` and `REPLY-18` both said the Sith base three were `sma`, `sld` and `sas`, *"ported rather than authored."***
+
+**⚠ `sma` is Sith Marauder and `sld` is Sith Lord. Both are *prestige* classes in `CLASS-ROSTER-01 §4`.** **`Sith Warrior` and `Sith Inquisitor` — the actual base classes — have no column in either game.**
+
+**So the Sith base three are authored from nothing, on the same footing as Agent, Explorer, Doctor, Brawler and Duelist — which I explicitly put *after* the Sith on the grounds that the Sith had source data.**
+
+**⚠ The one exception is `Sith Assassin`, which does have a column — and that column is a prestige column at a prestige Force die.** **Porting it as a base class would import a prestige-tier Force die into the base tier.**
+
+### The designer stopped before drafting rather than after
+
+**Recorded because that is the behaviour that made the finding cheap.** **Three exchanges of drafting against a wrong premise would have been the alternative.**
+
+---
+
+## PT-125 — The Sith base three mirror the Jedi base tier
+
+**The designer asked whether a base `Sith Assassin` keeps `sas`'s printed Force die 8 and 10 feats, or mirrors the Sentinel at 6 and 15.**
+
+> **Mirror the base tier. All three Sith base classes are authored.**
+
+    Jedi Sentinel  base      force die 6    15 feats
+    Jedi Watchman  prestige  force die 8    15 feats
+    sas printed              force die 8    10 feats
+
+**⚠ Porting `sas` would give a *base* class the *prestige* Force die.** **The die rises by 2 from base to prestige on every Jedi line, and `sas` sits at the risen value because it was written as a prestige class — `PT-124`.**
+
+**⚠ And 10 feats is the floor of the entire schedule, below `Specialist`'s 11.** **A base class at the floor of a range that exists to describe prestige classes is a base class built from the wrong row.**
+
+**Third: `PT-122` already authored the Assassin's `Sneak Attack` ladder as slower than the Smuggler's.** **Porting the rest of a column whose defining mechanic has been overridden is half a port.**
+
+### The three, authored
+
+    Sith Warrior      d10, force die 4, STR, 20 feats   mirrors Jedi Guardian
+    Sith Assassin      d8, force die 6, DEX, 15 feats   mirrors Jedi Sentinel
+    Sith Inquisitor    d6, force die 8, WIS, 11 feats   mirrors Jedi Consular
+
+**Feat totals place them at `Combat` / `Middle` / `Specialist` — the same spread as the Jedi.**
+
+**Saves on `PT-123`, all three at 33, identical to their Jedi mirrors.** **⚠ The Sith are not more fragile than the Jedi and nothing in the source says they are.**

@@ -140,6 +140,43 @@
 **Vitality per level** — **`PORT-01 v2` makes vitality accumulative from class, level, and Constitution modifier.** **The hit die is here; the formula that uses it should be checked against `RULES-01 v2`.**
 
 
+
+## The save assignment rule — `PT-123`
+
+> **A class takes one strong save, determined by its primary ability.**
+> **It takes a second strong if it has a second job.**
+> **If the second job is the Force, the third save is `Hybrid` rather than `Weak`.**
+> **A third strong is reserved to a class whose whole identity is breadth.**
+
+**Which save follows the primary ability:**
+
+    Strength or Constitution primary  ->  Fortitude
+    Dexterity primary                 ->  Reflex
+    Wisdom or Charisma primary        ->  Will
+
+### ⚠ It reproduces nine of the ten placements exactly
+
+| Class | Primary | Jobs | Derived | |
+|---|---|---|---|---|
+| Soldier | STR | 1 | S / W / W = 24 | ✓ |
+| Marksman | CON | 1 | S / W / W = 24 | ✓ |
+| Smuggler | DEX | 1 | W / S / W = 24 | ✓ |
+| Machinist | DEX | 1 | W / S / W = 24 | ✓ |
+| Bounty Hunter | — | 2 | S / S / W = 30 | ✓ |
+| Jedi Guardian | STR | Force | S / S / **H** = 33 | ✓ |
+| Jedi Sentinel | DEX | Force | S / S / **H** = 33 | ✓ |
+| Jedi Consular | WIS | Force | S / **H** / S = 33 | ✓ |
+| Scout | DEX | breadth | S / S / S = 36 | ✓ |
+| **Engineer** | DEX | 2 | W / S / S = 30 | **⚠ DEPARTURE** |
+
+**⚠ The Engineer is the one exception and it is authored, not derived.** **`PT-96` gave it a strong Will over a strong Fortitude on the argument that a mind which keeps working under pressure is what separates it from the Machinist.**
+
+**Marked a departure so it is not read as precedent.**
+
+> **A rule that reproduces nine of ten and names its own exception is a rule. One that reproduces ten of ten was fitted to the data.**
+
+---
+
 ## The three save ladders — named, and closed forms
 
 **`PT-119`. Named `Strong` · `Hybrid` · `Weak`.**

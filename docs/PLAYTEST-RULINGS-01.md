@@ -3110,3 +3110,110 @@
 **It inherited the Scoundrel's kit entire — `PT-73` — and the Scoundrel was the most skill-dense class in the source at `skillpointbase` 4 against everyone else's 1 to 3.** **⚠ Dropping it to 6 would make the band tidy by making the class wrong.**
 
 **A band exists to describe the classes, not to discipline them.**
+
+
+---
+
+## PT-88 — The chain bands raised the first time
+
+**⚠ WRITTEN RETROSPECTIVELY. This ruling was made, applied to three documents, and cited by `PT-95` and by `CLASS-ATTACKS-01` twice — and never given an entry.**
+
+**Found by the designer auditing its own citations. `audit_rulings.py` cannot catch this: a missing heading is not a duplicate heading.**
+
+### The ruling
+
+    Combat       11–13  ->  13–16
+    Middle        8–10  ->  10–13
+    Specialist     5–7  ->   7–10
+
+**The original bands stranded picks at every value except the top.**
+
+> **A tree absorbs 1 to 3 tiers. `N` trees absorb between `N` and `3N`. A class spends its whole budget only if `3N ≥ T`.**
+
+    Combat, T=37:   N=11 -> 4 stranded   N=12 -> 1   N=13 -> 0
+    Middle,  T=29:  N=8  -> 5 stranded   N=9  -> 2   N=10 -> 0
+    Specialist, 19: N=5  -> 4 stranded   N=6  -> 1   N=7  -> 0
+
+**⚠ And the argument that settled it:** > **a stranded pick is worse than a wasted one.** **Three currencies, no crossover — `ATTACKS-01 §11.1` — so it converts to nothing. A number on the sheet that buys nothing, and a player who finds one assumes they misread the rules.**
+
+**⚠ Superseded within the hour by `PT-95`**, which found the slope argument and showed both raises were treating a symptom.
+
+**Kept because three documents cite it and because the stranding derivation is the reason the bands moved at all.**
+
+---
+
+## PT-117 — `REPLY-13` was lost in a merge and nobody noticed for two exchanges
+
+**`to-designer/` runs `01`–`12` then `14`. The designer found the gap by listing the directory.**
+
+**⚠ The push reported success.** **What happened: a concurrent edit to `sync.py` caused a non-fast-forward rejection, the `git stash` discarded my working copy of the reply, and the subsequent merge carried the commit message without the file.**
+
+> **A commit whose message names a file that is not in it looks exactly like a commit that delivered the file.**
+
+**Its content is not lost — `REPLY-14` and `REPLY-15` carry every ruling it announced.** **What was lost was the record of the five ID collisions being found, which is now here as `PT-113`.**
+
+**⚠ Operational: after a merge, verify the file exists rather than trusting the push.** **`send.py` does this for the main repo and the handoff repo has no equivalent.**
+
+
+---
+
+## PT-24 — Force power durations convert at printed seconds ÷ 3
+
+**⚠ Cited and applied; entry lost in the `C`-series rename. Content recoverable from `FORCE-POWERS-01`'s own citation. See `PT-118`.**
+
+---
+
+## PT-41 — The balance pass
+
+**⚠ Cited and applied; entry lost. Content NOT recoverable from the citations.** **The S8 re-run found it *"lands or inverts depending on which half of `ACTION-ECONOMY-01 §7` is read."*** **See `PT-118`.**
+
+---
+
+## PT-42 — Lost with the block
+
+**⚠ Cited five times and stated nowhere. Content not recoverable. See `PT-118`.**
+
+---
+
+## PT-43 — Knockback raised from 2 squares to 3
+
+**⚠ Cited and applied; entry lost.** **Content recoverable from `ATTACKS-05`'s citation: *"raised from 2 by `PT-43` — at 2 it denied nothing."*** **See `PT-118`.**
+
+---
+
+## PT-86 — The level-20 verification line struck from `FEAT-SCHEDULE-01`
+
+**⚠ Cited once, applied.** **It asserted Guardian 11 four lines below a table saying 14, and predated `PT-77` and `PT-84`.** **See `PT-118`.**
+
+---
+
+## PT-118 — Five ruling IDs are cited, applied, and have no entry
+
+**⚠ Four more ghosts, found by extending `audit_rulings.py` after `PT-88`.**
+
+**Each is a live rule that documents cite and act on, with no entry in this file.**
+
+| ID | What it rules | Cited by |
+|---|---|---|
+| **`PT-24`** | **Force power durations convert at printed seconds ÷ 3** | `FORCE-POWERS-01`, 2× |
+| **`PT-41`** | **The balance pass** — applied, and the S8 re-run found it *"lands or inverts depending on which half of `ACTION-ECONOMY-01 §7` is read"* | 3× |
+| **`PT-43`** | **Knockback raised from 2 squares to 3** — *"at 2 it denied nothing"* | 2× |
+| **`PT-86`** | **The level-20 verification line struck from `FEAT-SCHEDULE-01`** — it asserted Guardian 11 four lines below a table saying 14 | 1× |
+
+### ⚠ Why they are missing, derived
+
+**`PT-1` through `PT-66` were renamed from a `C`-series to end a three-way namespace collision — the Library's `C-nn`, the category files `C01`–`C18`, and the playtest series.**
+
+**The gap in this file runs `PT-24`, then `PT-41` through `PT-51`.** **Twelve consecutive missing entries in one block is not twelve separate omissions.**
+
+> **The rename carried the citations and dropped the entries.**
+
+**⚠ Recorded rather than reconstructed.** **Writing an entry from a citation is exactly the warrant error this project names — the rule is real, the reasoning is not recoverable from the pointer, and inventing it would be worse than the gap.**
+
+**What can be recovered: `PT-43` and `PT-24` state their own content in the citing text and are safe to treat as live.** **`PT-41` and `PT-86` are named but not stated anywhere.**
+
+### The check now catches both directions
+
+**`audit_rulings.py` reports duplicate IDs *and* IDs cited outside this file with no entry in it.**
+
+**⚠ A missing heading is not a duplicate heading, which is why the first version could not see any of these.**

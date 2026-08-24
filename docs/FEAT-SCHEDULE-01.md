@@ -22,7 +22,7 @@
 | **Sith Assassin** | 8 | **12** | | | | |
 | **Sith Inquisitor** | 7 | **11** | | | | |
 | **Agent** | 10 | **15** | | | | |
-| **Explorer** | 11 | **16** | | | | |
+| **Treasure Hunter** | 11 | **16** | | | | |
 | **Doctor** | 7 | **11** | | | | |
 | **Brawler** | 12 | **18** | | | | |
 | **Duelist** | 10 | **15** | | **Tech Specialist** *(prestige)* | 7 | **11** |

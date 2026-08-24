@@ -18,7 +18,7 @@
 | **Marksman** | Built. **`PT-75`, `PT-77`** |
 | **Machinist** | Built. **⚠ Was `Tech Specialist`. `PT-83`** |
 | **Agent** | **NEW — nothing written** |
-| **Explorer** | **NEW — nothing written** |
+| **Treasure Hunter** | **NEW — nothing written** |
 | **Doctor** | **NEW — nothing written** |
 | **Brawler** | **NEW — nothing written** |
 | **Duelist** | **NEW — nothing written** |
@@ -99,7 +99,7 @@
 
 ## 5. What the additions were for
 
-**`Explorer` closes the largest structural hole in the skill table.**
+**`Treasure Hunter` closes the largest structural hole in the skill table.**
 
     Archaeology    was Jedi Consular only
     Xenology       was Jedi Consular only
@@ -107,7 +107,7 @@
 
 > **⚠ Knowledge was a Jedi monopoly.** **A non-Force character could not be the party's scholar, in a game whose plot is finding Rakatan Star Maps.**
 
-**`Explorer` class skills, owner-set: `Archaeology` · `Xenology` · `Appraise` · `Science`, plus more to be assigned.**
+**`Treasure Hunter` class skills, owner-set: `Archaeology` · `Xenology` · `Appraise` · `Science`, plus more to be assigned.**
 
 **`Doctor` gives `Medicine` an owner.** *It sat on five classes and was central to none.*
 
@@ -281,7 +281,7 @@
 | | Rate | Die | Skill base | Class skills | Feats@30 | Chains | Capstones | Saves |
 |---|---|---|---|---|---|---|---|---|
 | **Brawler** | Combat | d10 | **2** | **6** | **18** | **14** | **13** | 12 / 6 / 6 |
-| **Explorer** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
+| **Treasure Hunter** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
 | **Agent** | Middle | d8 | **5** | **8** | **15** | **11** | **10** | 6 / 12 / 12 |
@@ -326,13 +326,13 @@
 ### ⚠ And every feat total reuses a published cadence
 
     Brawler   18    the Marksman's rebuilt curve
-    Explorer  16    Scout · Guardian
+    Treasure Hunter  16    Scout · Guardian
     Duelist   15    Sentinel · Watchman
     Doctor    11    Smuggler · Machinist
 
 > **`FINDINGS-01 §1` found two authored totals with no schedule behind them.** **Reusing a published column means the thirty rows already exist and cannot drift.**
 
-**⚠ The `Explorer`'s first four class skills are owner-set** — `Archaeology`, `Xenology`, `Appraise`, `Science` — **which is why it exists.** **They were a Jedi monopoly before it.**
+**⚠ The `Treasure Hunter`'s first four class skills are owner-set** — `Archaeology`, `Xenology`, `Appraise`, `Science` — **which is why it exists.** **They were a Jedi monopoly before it.**
 
 
 ### The six ported prestige classes — `PT-143`
@@ -453,7 +453,7 @@
 
 #### ⚠ Four constraints, recorded before either is drafted
 
-**Cap the count on level, not on a resource.** **`PT-147` withdrew the Explorer's `Prior Study` for being *"a resource, not a competence."***
+**Cap the count on level, not on a resource.** **`PT-147` withdrew the Treasure Hunter's `Prior Study` for being *"a resource, not a competence."***
 
 **Decide what happens when a permanent companion dies.** **⚠ Either a devastating loss or a shrug, and both are bad.** **D&D answers with a ritual and downtime; this system has no downtime.**
 
@@ -533,7 +533,7 @@
 
 **The turn-order cost is bounded the way `REPLY-31` asked:** **decision cost is one order, not one per droid, and silence resolves instantly.**
 
-**⚠ `Intelligence` primary makes `PT-133` load-bearing.** **The Explorer was the first Intelligence class; this is the second, and the rule covering it is four exchanges old.**
+**⚠ `Intelligence` primary makes `PT-133` load-bearing.** **The Treasure Hunter was the first Intelligence class; this is the second, and the rule covering it is four exchanges old.**
 
 **⚠ And the Droid Master is the fifth class to sit at exactly 11 chains** — **`PT-114`'s droid access ceiling.** **Bounty Hunter, Engineer, Sith Inquisitor, Agent, Droid Master — five, and the check found the Agent which no note had.** **Raising any by one silently closes it to droids.**
 
@@ -803,7 +803,7 @@
 | **Operative** | **Agent 6** | `Stealth` 8 + `Slicing` 8 |
 | **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 **or** `Slicing` 8 — `PT-225` |
 | **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
-| **Beast Master** | **Scout 6** | `Beast Handling` 8 |
+| **Beast Master** | **Scout 6 or Treasure Hunter 6** | `Beast Handling` 8 — `PT-237` |
 
 #### ⚠ A holding only sorts if the intended parents can reach it
 
@@ -844,7 +844,7 @@
 | **Sharpshooter** | any base 6 + rifle chain | **Scout / Marksman / Bounty Hunter 6** + `Weapon Specialization: Blaster Rifle` |
 | **Shadow Hunter** | any base 6 | **Agent 6 or Smuggler 6** |
 | **Scoundrel** | any base 6 + `Sneak Attack` tier 2 | **Smuggler 6 or Agent 6** |
-| **Beast Master** | **Scout 6** | Scout 6 **or Explorer 6** |
+| **Beast Master** | **Scout 6** | Scout 6 **or Treasure Hunter 6** |
 | **Officer** | Soldier 6 **or Agent 6** + `Alertness` 8 | Soldier 6 + **`Persuade` 8** |
 
 **⚠ `PT-217`'s *open* model survives.** **It is the owner's ruling and it matches what `PT-214` did on the Force side.** **The designer's drafts predate both.**
@@ -857,11 +857,11 @@
 
 #### ⚠ And one of theirs is wrong
 
-**`Beast Master` at *"Scout 6 or Explorer 6"*.**
+**`Beast Master` at *"Scout 6 or Treasure Hunter 6"*.**
 
     Beast Handling class-skill holders: Scout
 
-**The Explorer holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`. Not `Beast Handling`.**
+**The Treasure Hunter holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`. Not `Beast Handling`.**
 
 **⚠ Same defect `PT-217` caught on the Officer's `Persuade`: a holding offered to a class that cannot cheaply reach it.**
 

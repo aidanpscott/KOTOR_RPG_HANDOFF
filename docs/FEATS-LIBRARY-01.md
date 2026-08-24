@@ -923,13 +923,13 @@
 ---
 
 
-### Read the Ruin — Explorer only. Authored.
+### Read the Ruin — Treasure Hunter only. Authored.
 
 **⚠ Adopted at `PT-147` and never written here. Same defect as `Quickdraw` at `PT-96`.**
 
 > **⚠ Tiers 2 and 3 CUT — `REPLY-45`, applied at `PT-233`.** **`PT-182` found the chain carried three ideas: the first is the class; the other two are competence in general and belong in the skill rules if anywhere.**
 
-**⚠ The Explorer now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs.** **Open.**
+**⚠ The Treasure Hunter now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs.** **Open.**
 
 **Replaced `Prior Study`, which was declared in advance and spent once per adventure** — **a resource, not a competence, and the class is a competence.**
 
@@ -937,7 +937,7 @@
 |---|---|---|
 | **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why*** — one concrete fact about what would work. **You may retry once that condition is met** |
 
-**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
+**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Treasure Hunter is never not taking 10.**
 
 **Not dominant: it does nothing in combat, and it cannot make an impossible check succeed — it tells you what would.**
 

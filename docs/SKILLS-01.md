@@ -260,8 +260,8 @@ Athletics · Acrobatics · Alertness · Awareness · Intimidate · Streetwise
 **Duelist — 7**
 Acrobatics · Alertness · Awareness · Athletics · Persuade · Intimidate · Streetwise
 
-**Explorer — 9**
-Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism
+**Treasure Hunter — 11**
+Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism · Beast Handling · Demolitions
 
 **Agent — 8**
 Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology · Repair

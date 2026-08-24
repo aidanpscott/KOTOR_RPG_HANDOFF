@@ -3381,7 +3381,7 @@
 
 **⚠ `sma` is Sith Marauder and `sld` is Sith Lord. Both are *prestige* classes in `CLASS-ROSTER-01 §4`.** **`Sith Warrior` and `Sith Inquisitor` — the actual base classes — have no column in either game.**
 
-**So the Sith base three are authored from nothing, on the same footing as Agent, Explorer, Doctor, Brawler and Duelist — which I explicitly put *after* the Sith on the grounds that the Sith had source data.**
+**So the Sith base three are authored from nothing, on the same footing as Agent, Treasure Hunter, Doctor, Brawler and Duelist — which I explicitly put *after* the Sith on the grounds that the Sith had source data.**
 
 **⚠ The one exception is `Sith Assassin`, which does have a column — and that column is a prestige column at a prestige Force die.** **Porting it as a base class would import a prestige-tier Force die into the base tier.**
 
@@ -3604,7 +3604,7 @@
 
 **It did not surface on the thirteen because none is Intelligence-primary.** **`k2_classes.2da` gives `INT` as primary to no class in either game — verified: `CON` 2, `DEX` 7, `STR` 5, `WIS` 3, `INT` 0.**
 
-**The `Explorer` is the first, and any future scholar or slicer will be.**
+**The `Treasure Hunter` is the first, and any future scholar or slicer will be.**
 
 **Will is the mental save, and the split between the three mental abilities is *what you know* against *what you sense* against *who you are* — none of which is a different kind of resilience.**
 
@@ -3617,7 +3617,7 @@
 | | Rate | Die | Skill base | Feats@30 | Chains | Capstones |
 |---|---|---|---|---|---|---|
 | **Brawler** | Combat | d10 | 3 | 18 | — | — |
-| **Explorer** | Middle | d8 | 5 | 16 | 15 | 8 |
+| **Treasure Hunter** | Middle | d8 | 5 | 16 | 15 | 8 |
 | **Duelist** | Middle | d8 | 4 | 15 | 12 | 9 |
 | **Doctor** | Specialist | d6 | 6 | 11 | 12 | 5 |
 
@@ -3626,7 +3626,7 @@
 ### Every feat total reuses a published cadence
 
     Brawler   18    the Marksman's rebuilt curve
-    Explorer  16    Scout · Guardian
+    Treasure Hunter  16    Scout · Guardian
     Duelist   15    Sentinel · Watchman
     Doctor    11    Smuggler · Machinist
 
@@ -3759,7 +3759,7 @@
 
 **`CLASS-IDENTITIES-01` says the Soldier has *"the fewest skills."* Checking it found that five classes had no list in `SKILLS-01` at all.**
 
-    Brawler · Duelist · Explorer · Agent    never written
+    Brawler · Duelist · Treasure Hunter · Agent    never written
     Doctor                                  a one-skill stub
 
 **All five now written from their findings records. Fifteen lists, and `audit_classskills` passes.**
@@ -3789,7 +3789,7 @@
 
 **Found by extending check 16's roster to eighteen base classes.**
 
-    FEAT-SCHEDULE-01    missing 8: Agent · Explorer · Doctor · Brawler · Duelist
+    FEAT-SCHEDULE-01    missing 8: Agent · Treasure Hunter · Doctor · Brawler · Duelist
                                    Sith Warrior · Sith Inquisitor · Tech Specialist
     CLASS-ATTACKS-01    missing 9: the above plus Sith Assassin
     SKILLS-01           missing 3: the three Sith
@@ -3985,7 +3985,7 @@
 
 ---
 
-## PT-147 — Explorer's feature replaced; Pirate added
+## PT-147 — Treasure Hunter's feature replaced; Pirate added
 
 **`Prior Study` withdrawn by the designer before adoption.** **It was declared in advance and spent once per adventure.**
 
@@ -3993,7 +3993,7 @@
 
 **`Read the Ruin` replaces it: on a failed knowledge, `Security` or `Awareness` check you learn *why*, and may retry once that condition is met.**
 
-**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
+**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Treasure Hunter is never not taking 10.**
 
 ### Pirate — and the archetype was checked against our canon rules first
 
@@ -6054,11 +6054,11 @@
 
 ### ⚠ And one of theirs is wrong, by the test `PT-217` itself set
 
-**`Beast Master` at *"Scout 6 or Explorer 6"*.**
+**`Beast Master` at *"Scout 6 or Treasure Hunter 6"*.**
 
     Beast Handling class-skill holders: Scout
 
-**The Explorer holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`.**
+**The Treasure Hunter holds `Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism`.**
 
 > **⚠ A holding offered to a class that cannot cheaply reach it — exactly the defect `PT-217` caught on the Officer's `Persuade`.**
 
@@ -6163,7 +6163,7 @@
 **The designer ran `PT-217`'s test against every locked entry.**
 
     Officer        Persuade 8         Soldier, Agent               ⚠ fails for both
-    Beast Master   Beast Handling 8   Scout, Explorer              ⚠ fails for Explorer
+    Beast Master   Beast Handling 8   Scout, Treasure Hunter              ⚠ fails for Treasure Hunter
     Droid Master   Repair 8           Engineer, Machinist          ⚠ fails for Engineer
     Operative      Stealth 8          Agent                        ok
     Shadow Hunter  Stealth 8          Agent, Smuggler              ok
@@ -6265,7 +6265,7 @@
 | Machinist | `Spray` · `Covering Fire` · `Staggering Shot` | INT / DEX |
 | Engineer | `Covering Fire` · `Staggering Shot` · `Snap Shot` | INT / WIS |
 | Doctor | `Covering Fire` · `Guarding Stance` · `Snap Shot` | WIS / INT |
-| Explorer | **`Inside Reach`** · `Quick Attack` · `Precise Shot` | INT / CON |
+| Treasure Hunter | **`Inside Reach`** · `Quick Attack` · `Precise Shot` | INT / CON |
 
 ### ⚠ Four rules that came out of building it
 
@@ -6323,7 +6323,7 @@
 ### Two starting lists updated
 
     Brawler    Combination · Body Blow · Dual Strike     two unarmed, one melee
-    Explorer   Inside Reach · Quick Attack · Precise Shot   replaces Snap Shot
+    Treasure Hunter   Inside Reach · Quick Attack · Precise Shot   replaces Snap Shot
 
 **⚠ Which drops `Snap Shot` to four lists and lifts melee-side representation.**
 
@@ -6490,7 +6490,7 @@
 
 **`PT-182` found the chain carried three ideas:** *"the first is the class; the other two are competence in general."*
 
-**⚠ The Explorer now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs. Open.**
+**⚠ The Treasure Hunter now has a one-tier feature and needs tiers 2 and 3 that scale *knowing why you failed* rather than adding new verbs. Open.**
 
 ### `Field Surgery` — written at last
 
@@ -6618,6 +6618,71 @@
 
 ### What is still open in the class workstream
 
-**The Explorer's `Read the Ruin` tiers 2 and 3** — **`PT-233` cut the old ones and the replacements are specified but not written.**
+**The Treasure Hunter's `Read the Ruin` tiers 2 and 3** — **`PT-233` cut the old ones and the replacements are specified but not written.**
 
 **First-level multiclass benefits** — **⚠ never started. `PT-159` rules the highest rate and chain count held; nothing says what you *get* on the level you enter a second class.**
+
+---
+
+## PT-237 — `Beast Handling` goes to the Treasure Hunter
+
+**Owner delegated the call; the designer decided it on data.**
+
+**⚠ Derived across all sixteen class lists:**
+
+    Beast Handling      1    Scout
+    Archaeology         2    Treasure Hunter · Jedi Consular
+    Swim                2    Soldier · Scout
+    Botany              3    Doctor · Treasure Hunter · Scout
+    Sleight of Hand     3    Machinist · Smuggler · Marksman
+
+> **⚠ Every other skill in the game is held by at least two classes. `Beast Handling` was held by one.**
+
+**Verified independently. Not a tight design choice — an outlier of one, and the only one.**
+
+### Why the Treasure Hunter
+
+**`SKILLS-01 §3` created the skill so *"non-Force characters get parity with a Force option"* — `Beast Trick`, `Beast Confusion` and `Dominate Beast` do that job for Jedi.**
+
+> **⚠ One class in thirty-six is not parity.**
+
+**The Treasure Hunter already holds `Botany`.** **He is the other naturalist, and `Botany` without `Beast Handling` is a strange half of that — he knows the plants and not the animals.**
+
+**⚠ And it opens `Beast Master` to two parents, which `PT-217`'s model wants and could not have while the skill was locked to one class.**
+
+**This is the correction to `PT-218`'s finding: the designer's original *"Scout 6 or Treasure Hunter 6"* was right, and the holding was the thing that needed fixing rather than the entry.**
+
+**Treasure Hunter: 9 skills → 10.**
+
+---
+
+## PT-238 — `Explorer` is renamed `Treasure Hunter`, and gains `Demolitions`
+
+**Owner ruling. The name comes from Bastila Shan's father.**
+
+**⚠ Verified against Wookieepedia: Bastila was born on Talravin to Helena Shan and a *treasure hunter*, who died on Tatooine hunting krayt dragon pearls.** **Legends, KOTOR 1, source rank 1.**
+
+**Renamed across twelve files. Check 21 clear — `Treasure Hunter` collided with nothing.**
+
+### `Demolitions` added
+
+    Demolitions holders before   Soldier · Bounty Hunter · Scout · Machinist · Smuggler · Marksman
+    Treasure Hunter              did not have it
+
+**⚠ Which was an omission rather than a choice.** **A class whose whole premise is ruins, vaults and things sealed a long time ago should be able to open them by force.**
+
+**Treasure Hunter: 10 skills → 11.**
+
+### ⚠ It now ties the widest lists in the game
+
+    Treasure Hunter  11
+    Scout            11
+    Smuggler         11
+
+**Legal — skill base 5 sits inside `Middle`'s 2–5 band — and worth watching.** **⚠ Three classes at 11 with a 24-skill list means a third of every skill is on one of them.**
+
+### And the name is better than the one it replaces
+
+**`Explorer` said what the class does. `Treasure Hunter` says why.**
+
+> **⚠ And it puts a named KOTOR character behind a class that was authored from nothing** — **the only standard base class with a canon exemplar we can point to.**

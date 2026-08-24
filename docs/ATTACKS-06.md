@@ -2,7 +2,18 @@
 
 **Seven forms, two chains each. 14 chains, 42 entries.**
 
-> **Every lightsaber attack requires the matching form, and you hold one form at a time.** **A Jedi in Resilience has six of these entries available, not forty-two.**
+> **Every lightsaber attack requires the matching form's feat.** **A Jedi holding one form has six of these entries available, not forty-two.**
+
+**⚠ CORRECTED by `PT-189`.** **This read *"you hold one form at a time"* and that stopped being true when the stance was cut.**
+
+    forms held    entries available
+    1              6
+    3             18     every Force base class by level 12
+    6             36     a form-master at 30
+
+**⚠ The gate still exists — you cannot use a form's entries without its feat — it is no longer *one*.**
+
+**Which is what the ruling intends: a form is an unlock, so holding more unlocks more.** **The roster's size is justified by the acquisition schedule rather than by exclusivity** — **three forms by level 12, `PT-185`, and the rest taught.**
 
 **Lore from Wookieepedia, Legends continuity.** `source_rank: 3`. **Mechanics authored.** **Every tier replaces the one below it** — see `ATTACKS-01 §3`.
 

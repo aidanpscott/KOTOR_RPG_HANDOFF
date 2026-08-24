@@ -117,7 +117,46 @@
 **⚠ Force forms deferred by the owner. This section governs lightsaber forms only.**
 
 
-### 2.3 ⚠ The stance survives. `PT-187`.
+### 2.3 ⚠ SUPERSEDED — the stance does not survive. `PT-189`.
+
+**Owner ruling, delivered through the designer:** > ***"Lightsaber forms should not keep their stat effects. They are simply feats that unlock attack trees, with attacks that have benefits already."***
+
+**⚠ Reading A. `PT-187` below is wrong and is kept only for the argument it lost.**
+
+#### The second half is the argument, and `ATTACKS-06` bears it out
+
+**`§6.1` gives each form a modifier line. `ATTACKS-06` gives each form two attack chains. Side by side, Resilience:**
+
+    §6.1              Defence vs target +2 · Deflection +4 · Threat Range −1
+
+    ATTACKS-06        Circle of Shelter   Defence +4 / +6 / +8
+                      Deflecting Slash    Deflection +5 / +10 / +15
+
+> **⚠ The form grants `+2` Defence and `+4` deflection. Its own two chains grant `+4` to `+8` and `+5` to `+15`.**
+
+**Same form, same two stats, overlapping magnitudes — and they stack.**
+
+**A Jedi declaring `Impenetrable Guard` holds `+15` from the chain and `+4` from the form.** **`+19` deflection, four of it invisible on the entry he declared.**
+
+**⚠ So the twenty-eight effects were not twenty-eight distinct things being lost. They were a second, quieter copy of what the chains already grant.**
+
+**`§6.1`'s modifier lines are retained as *lore* — what each form is for — and grant nothing.**
+
+#### ⚠ Three things go with the cut and all three are gains
+
+**`Ferocity`'s *attacks per round +1* is gone.** **As a permanent feat it would have been the largest single grant in the game, and `ACTION-ECONOMY-01 §421` cut Velocity from five strikes to three to prevent exactly that shape.**
+
+**`Moderation`'s Force-integration clause is gone.** **`FORMS-01` had already flagged it as depending on rules not yet written.**
+
+**⚠ And `Moderation` was the one authored form** — restored because it is in the 2DA and documented nowhere, with `+1` across five stats invented to mean *"no strengths, no weaknesses."* **The authored content goes with the cut, and Moderation becomes what the other six are: a name and two chains.**
+
+#### ⚠ `§6.2` is untouched
+
+**The four Force forms are a separate exclusion group, have no attack chains behind them, and the owner has deferred what they become.** **Nothing here reaches them.**
+
+---
+
+### 2.3-old ⚠ The stance survives. `PT-187`. — SUPERSEDED
 
 **`FINDINGS-54 §1` read `PT-185` as deleting `§6.1`'s modifier lines — *"a form is now a feat that unlocks two attack trees and does nothing else."***
 

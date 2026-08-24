@@ -5213,3 +5213,55 @@
 **⚠ Worth the same whether or not an unarmed Velocity chain exists.** **`FINDINGS-23` priced the Brawler against a world with no such chain and this makes that pricing stay true.**
 
 **And the moment survives: the plate still does not help, it just does not stop helping three times.**
+
+---
+
+## PT-189 — Lightsaber forms keep no stat effects. Supersedes `PT-187`.
+
+**Owner ruling, delivered through the designer:**
+
+> ***"Lightsaber forms should not keep their stat effects. They are simply feats that unlock attack trees, with attacks that have benefits already."***
+
+**⚠ `PT-187` is wrong. I argued the stance survived and that deleting twenty-eight ported effects was the largest unforced loss in the project.**
+
+### The second half of the ruling is the argument, and it defeats mine
+
+**`§6.1` gives each form a modifier line. `ATTACKS-06` gives each form two attack chains. Resilience:**
+
+    §6.1              Defence vs target +2 · Deflection +4 · Threat Range −1
+
+    ATTACKS-06        Circle of Shelter   Defence +4 / +6 / +8
+                      Deflecting Slash    Deflection +5 / +10 / +15
+
+> **⚠ The form grants `+2` Defence and `+4` deflection. Its own two chains grant `+4` to `+8` and `+5` to `+15`. And they stack.**
+
+**A Jedi declaring `Impenetrable Guard` holds `+15` from the chain and `+4` from the form — `+19` deflection, four of it invisible on the entry he declared.**
+
+**⚠ So the twenty-eight effects were not twenty-eight distinct things being lost.** **They were a second, quieter copy of what the chains already grant.**
+
+**My *"largest unforced loss"* was measuring the count and not the content.**
+
+### Three things go with the cut and all three are gains
+
+**`Ferocity`'s *attacks per round +1*** — **⚠ as a permanent feat the largest single grant in the game, and `ACTION-ECONOMY-01 §421` cut Velocity from five strikes to three to prevent that shape.**
+
+**`Moderation`'s Force-integration clause** — already flagged as depending on rules not yet written.
+
+**⚠ And `Moderation` was the one *authored* form.** **The authored content goes with the cut.**
+
+### ⚠ What it broke, and the correction
+
+**`ATTACKS-06 §5`:** *"you hold one form at a time… a Jedi in Resilience has six of these entries available, not forty-two."*
+
+**False the moment the stance was cut.**
+
+    forms held    entries
+    1              6
+    3             18     every Force base class by level 12
+    6             36     a form-master at 30
+
+**The gate survives — no feat, no entries — it is no longer *one*.**
+
+**⚠ The roster's size is now justified by the acquisition schedule rather than by exclusivity.**
+
+**`§6.2`'s four Force forms are untouched: separate exclusion group, no attack chains, owner-deferred.**

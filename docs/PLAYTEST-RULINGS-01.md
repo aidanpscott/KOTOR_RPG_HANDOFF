@@ -5017,3 +5017,42 @@
 **Entering a prestige class grants a lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two.**
 
 **Nothing needs building first.**
+
+---
+
+## PT-182 — `PT-178` applied to all 27 class features. Four fail, and the failure has one shape
+
+**The designer ran the one-line test retroactively and flagged rather than fixed, as asked.**
+
+**23 pass.** **The ones that pass read like this:**
+
+> *"When something attacks the ally beside you, take the hit instead."* — `Hold the Line`
+> *"When a hit would drop you, you get one more turn first."* — `Still Standing`
+> *"Armour does not protect anyone from your fists."* — `Nothing In My Hands`
+
+### ⚠ The four that fail, and the shape they share
+
+| | Ideas | Problem |
+|---|---|---|
+| **`Quarry`** | 3 | information, capture, **and combat bonuses** — the third does not serve *bring them back alive* |
+| **`Command Protocol`** | 4 | **three of the four are the *fix* for the decision cost** |
+| **`Dominion`** | 2 | the second converts a failure into a partial success — a different mechanic |
+| **`Read the Ruin`** | 3 | the first is the class; the other two are competence in general |
+
+> **⚠ Every failure is a second mechanic bolted onto the first, not a long one.**
+
+### The diagnostic that came out of it
+
+**⚠ The designer's own note is the finding:**
+
+> **A chain is one line if its tiers scale one idea, and more than one if a tier introduces a second.**
+
+**And it caught what judgement would not have.** **`Command Protocol` and `Quarry` were guessable on length. `Dominion` and `Read the Ruin` read as tight in draft and fail because a *tier* adds a kind of thing rather than more of the same thing.**
+
+### ⚠ And one failure is diagnostic of something else
+
+**`Command Protocol` needs three clauses to bound the turn-order cost `PT-151` raised.**
+
+> **A fix that needs three clauses is a sign the thing being fixed is expensive.**
+
+**Not resolved here. Recorded because it is the second signal on that class** — `PT-151` said the arithmetic could not run the balance test, and now the presentation test flags the same class for the same underlying reason.

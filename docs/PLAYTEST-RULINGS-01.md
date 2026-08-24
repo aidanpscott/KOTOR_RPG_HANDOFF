@@ -5056,3 +5056,60 @@
 > **A fix that needs three clauses is a sign the thing being fixed is expensive.**
 
 **Not resolved here. Recorded because it is the second signal on that class** — `PT-151` said the arithmetic could not run the balance test, and now the presentation test flags the same class for the same underlying reason.
+
+---
+
+## PT-183 — Four owner rulings applied
+
+### `Superior Two-Weapon Fighting` extends to the `Gunslinger`
+
+**Holders: `Jedi Weaponmaster`, `Sith Marauder`, `Gunslinger`.**
+
+**⚠ The designer proposed `Shadow Hunter` as a fourth. The owner named only the Gunslinger and it is not added.**
+
+**⚠ `ACTION-ECONOMY-01 §7.2`'s *never zero* now needs its exception clause for three classes rather than two.**
+
+### `Repair` cut from the `Sith Lord`, kept on the `Jedi Master`
+
+    Jedi Master   Awareness · Persuade · Repair · Medicine
+    Sith Lord     Awareness · Persuade · Mysticism · Intimidate
+
+**⚠ Reverses the direction of `PT-79`, deliberately.** **That ruling cut `Repair` from the `Jedi Consular` — *"K2's Consular is a tinkerer; ours is a scholar."*** **The `Jedi Master` continues the Consular and keeps the skill the parent lost.**
+
+> **The Order's scholars do not tinker, and the one who has been at it longest does.**
+
+**`Mysticism` on the Sith Lord is his own entry requirement at 8 ranks, and the only Force class that would not otherwise hold it as a class skill.**
+
+### Prestige entry grants a form
+
+**A lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose.**
+
+**⚠ Applies as given — `PT-181` established that `FORMS-01 §6.2` carries all four Force forms with effects.**
+
+### `Unrelenting` keeps `+2 / +4 / +6`
+
+**⚠ The `+46%` that `PT-180` corrected is a peak, not an average.** **It fires only below half vitality, so a realised fight is nearer `+20%`.**
+
+> **⚠ The thing to watch is the incentive, not the damage.** **A capstone that pays for being hurt rewards a player for not disengaging, and `DEATH-AND-DIFFICULTY-01` governs what happens when that goes wrong.**
+
+**Adopted knowing it encourages the Warrior to stay in — which is what it was built to do, as the inversion of `Ignore Pain`.**
+
+---
+
+## PT-184 — The unarmed damage comparison is deferred, and the reason matters
+
+**`FINDINGS-47 §5.2` derived that unarmed outdamages every weapon at level 30:**
+
+    Unarmed Specialist VIII   8d4    20.0 average
+    Lightsaber                2d8     9.0
+    Vibrosword                2d6     7.0
+
+**⚠ Owner ruling: leave it, and the reason is that the comparison is not yet meaningful.**
+
+> **Weapon upgrades do not exist in this project.** **KOTOR weapons take crystals and upgrade components; `EQUIPMENT-01` carries base damage only.**
+
+**So the derivation compares a fully-scaled unarmed ladder against an un-upgraded weapon** — **`Unarmed Specialist VIII` is the top of its curve and `2d8` is the bottom of the lightsaber's.**
+
+**⚠ Re-test when the upgrade system exists.** **Lightsabers, blasters and melee weapons all gain ceilings that do not exist today, and the gap may invert.**
+
+**Recorded rather than left silent, because the 2.2× figure is real and the next reader who derives it will reach for a fix.**

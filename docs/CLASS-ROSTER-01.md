@@ -582,6 +582,34 @@
 **Any feature that widens threat says `×N` and never *"by one."***
 
 
+### Four owner rulings applied — `PT-183`
+
+**`Superior Two-Weapon Fighting` extends to the `Gunslinger`.** **Holders: `Jedi Weaponmaster`, `Sith Marauder`, `Gunslinger`.** **⚠ The designer proposed `Shadow Hunter` as a fourth; the owner named only the Gunslinger and it is not added.**
+
+**⚠ `ACTION-ECONOMY-01 §7.2`'s *never zero* now needs its exception clause for three classes rather than two.**
+
+**`Repair` cut from the `Sith Lord`, kept on the `Jedi Master`. `Mysticism` replaces it.**
+
+    Jedi Master   Awareness · Persuade · Repair · Medicine
+    Sith Lord     Awareness · Persuade · Mysticism · Intimidate
+
+> **⚠ This reverses the direction of `PT-79`, deliberately.** **`PT-79` cut `Repair` from the `Jedi Consular` — *"K2's Consular is a tinkerer; ours is a scholar."*** **The `Jedi Master` continues the Consular and keeps the skill the parent lost.**
+
+**Which reads: the Order's scholars do not tinker, and the one who has been at it longest does.**
+
+**Prestige entry grants a form.** **A lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two.**
+
+**⚠ Applies as given — `FORMS-01 §6.2` has all four Force forms with effects. `PT-181`.**
+
+**The Sith Warrior's `Unrelenting` keeps `+2 / +4 / +6`.**
+
+**⚠ The `+46%` is a peak rather than an average — it fires only below half vitality, so a realised fight is nearer `+20%`.**
+
+> **⚠ The thing to watch is the incentive, not the damage.** **A capstone that pays for being hurt rewards a player for not disengaging, and `DEATH-AND-DIFFICULTY-01` governs what happens when that goes wrong.**
+
+**Adopted knowing it encourages the Warrior to stay in — which is what `FINDINGS-22` built it to do, as the inversion of `Ignore Pain`.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **38 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

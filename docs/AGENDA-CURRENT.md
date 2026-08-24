@@ -278,6 +278,18 @@
 
 ---
 
+## 2.4b Weapon upgrades — crystals and components
+
+**⚠ Named by `PT-184`. Does not exist and blocks a real balance question.**
+
+**KOTOR weapons take crystals and upgrade components. `EQUIPMENT-01` carries base damage only.**
+
+**Until it exists, unarmed at `8d4` outdamages a lightsaber at `2d8` by 2.2× and the comparison is not meaningful** — **a fully-scaled ladder against an un-upgraded weapon.**
+
+**⚠ Re-test the unarmed curve when this ships.**
+
+---
+
 ## 2.9 Difficulty modes — the last thing before engine work
 
 **⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**

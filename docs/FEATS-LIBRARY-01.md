@@ -346,6 +346,7 @@
 | **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **−2 main / −2 off.** |
 | › Advanced Superior Two-Weapon Fighting |  | **0 main / −2 off.** |
 | ›› Master Superior Two-Weapon Fighting |  | **0 main / −1 off.** With a balanced off-hand weapon: **+2 main / −1 off.** |
+| **Superior Two-Weapon Fighting** | **⚠ Holders: `Jedi Weaponmaster`, `Sith Marauder`, `Gunslinger` — `PT-183`.** A penalty reduction, not an attack bonus — `PT-158` | **Reduces the two-weapon penalty further, to zero at the top.** ⚠ Three classes now reach zero, so `ACTION-ECONOMY-01 §7.2`'s *never zero* needs its exception clause |
 | **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. **⚠ Opened from lightsaber-only by `PT-150`.** | **+1 attack**, above the Specialization tier |
 | › Advanced Superior Weapon Focus |  | **+2 attack** |
 | ›› Master Superior Weapon Focus |  | **+3 attack** |

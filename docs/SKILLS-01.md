@@ -251,7 +251,7 @@
 
 **Eleven classes.**
 
-**Doctor — 9**
+**Medic — 9**
 Medicine · Science · Botany · Xenology · Alertness · Awareness · Persuade · Appraise · Slicing
 
 **Brawler — 6**

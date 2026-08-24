@@ -2539,7 +2539,7 @@
 
 **⚠ The first restriction of its kind, and the roster implies more that nothing states.**
 
-**Whether a droid may take `Doctor` — it can repair, but `Medicine` is a living-things skill.**
+**Whether a droid may take `Medic` — it can repair, but `Medicine` is a living-things skill.**
 **Whether `Brawler` is available to a chassis with no hands.**
 **Whether `ATTACKS-01`'s melee chassis-block is a class rule or a species rule** — **which is the open blocker in `FINDINGS-02 §4`.**
 
@@ -2939,7 +2939,7 @@
 
 **Added: all weapons, light and medium armour** — **consistent with `PT-68`'s full BAB and d10, and short of the Soldier's heavy.**
 
-**⚠ The Doctor is also absent, correctly — it is a stub with one class skill and no other numbers.**
+**⚠ The Medic is also absent, correctly — it is a stub with one class skill and no other numbers.**
 
 ---
 
@@ -3381,7 +3381,7 @@
 
 **⚠ `sma` is Sith Marauder and `sld` is Sith Lord. Both are *prestige* classes in `CLASS-ROSTER-01 §4`.** **`Sith Warrior` and `Sith Inquisitor` — the actual base classes — have no column in either game.**
 
-**So the Sith base three are authored from nothing, on the same footing as Agent, Treasure Hunter, Doctor, Brawler and Duelist — which I explicitly put *after* the Sith on the grounds that the Sith had source data.**
+**So the Sith base three are authored from nothing, on the same footing as Agent, Treasure Hunter, Medic, Brawler and Duelist — which I explicitly put *after* the Sith on the grounds that the Sith had source data.**
 
 **⚠ The one exception is `Sith Assassin`, which does have a column — and that column is a prestige column at a prestige Force die.** **Porting it as a base class would import a prestige-tier Force die into the base tier.**
 
@@ -3619,7 +3619,7 @@
 | **Brawler** | Combat | d10 | 3 | 18 | — | — |
 | **Treasure Hunter** | Middle | d8 | 5 | 16 | 15 | 8 |
 | **Duelist** | Middle | d8 | 4 | 15 | 12 | 9 |
-| **Doctor** | Specialist | d6 | 6 | 11 | 12 | 5 |
+| **Medic** | Specialist | d6 | 6 | 11 | 12 | 5 |
 
 **⚠ Verified independently: every one inside its rate's three bands, every one strands zero picks, and every stated capstone count matches `⌊(T − N) ⁄ 2⌋`.**
 
@@ -3628,7 +3628,7 @@
     Brawler   18    the Marksman's rebuilt curve
     Treasure Hunter  16    Scout · Guardian
     Duelist   15    Sentinel · Watchman
-    Doctor    11    Smuggler · Machinist
+    Medic    11    Smuggler · Machinist
 
 > **⚠ `FINDINGS-01 §1` found two authored totals with no schedule behind them — the Guardian's 20 and the Marksman's 18, neither of which reached the grid.**
 
@@ -3760,7 +3760,7 @@
 **`CLASS-IDENTITIES-01` says the Soldier has *"the fewest skills."* Checking it found that five classes had no list in `SKILLS-01` at all.**
 
     Brawler · Duelist · Treasure Hunter · Agent    never written
-    Doctor                                  a one-skill stub
+    Medic                                  a one-skill stub
 
 **All five now written from their findings records. Fifteen lists, and `audit_classskills` passes.**
 
@@ -3789,7 +3789,7 @@
 
 **Found by extending check 16's roster to eighteen base classes.**
 
-    FEAT-SCHEDULE-01    missing 8: Agent · Treasure Hunter · Doctor · Brawler · Duelist
+    FEAT-SCHEDULE-01    missing 8: Agent · Treasure Hunter · Medic · Brawler · Duelist
                                    Sith Warrior · Sith Inquisitor · Tech Specialist
     CLASS-ATTACKS-01    missing 9: the above plus Sith Assassin
     SKILLS-01           missing 3: the three Sith
@@ -6008,7 +6008,7 @@
 
 **`Persuade` was the obvious `Officer` holding and it is wrong.**
 
-    Persuade is a class skill for   Doctor · Duelist · Guardian · Consular · Smuggler
+    Persuade is a class skill for   Medic · Duelist · Guardian · Consular · Smuggler
     ⚠ NOT for                       Soldier · Agent
 
 > **Gating the Officer on `Persuade` 8 would have excluded both of its own parents.**
@@ -6264,7 +6264,7 @@
 | Duelist | `Critical Strike` · `Parry` · `Dual Strike` | DEX / INT |
 | Machinist | `Spray` · `Covering Fire` · `Staggering Shot` | INT / DEX |
 | Engineer | `Covering Fire` · `Staggering Shot` · `Snap Shot` | INT / WIS |
-| Doctor | `Covering Fire` · `Guarding Stance` · `Snap Shot` | WIS / INT |
+| Medic | `Covering Fire` · `Guarding Stance` · `Snap Shot` | WIS / INT |
 | Treasure Hunter | **`Inside Reach`** · `Quick Attack` · `Precise Shot` | INT / CON |
 
 ### ⚠ Four rules that came out of building it
@@ -6494,7 +6494,7 @@
 
 ### `Field Surgery` — written at last
 
-**Adopted with the Doctor and never entered in `FEATS-LIBRARY-01`.**
+**Adopted with the Medic and never entered in `FEATS-LIBRARY-01`.**
 
     1   spend a medpac, restore 1 wound to an adjacent dying character
     4   2 wounds, and they are no longer Disabled
@@ -6633,7 +6633,7 @@
     Beast Handling      1    Scout
     Archaeology         2    Treasure Hunter · Jedi Consular
     Swim                2    Soldier · Scout
-    Botany              3    Doctor · Treasure Hunter · Scout
+    Botany              3    Medic · Treasure Hunter · Scout
     Sleight of Hand     3    Machinist · Smuggler · Marksman
 
 > **⚠ Every other skill in the game is held by at least two classes. `Beast Handling` was held by one.**
@@ -6703,7 +6703,7 @@
     Scout             Terrain Sense        owner call — the most-granted class in the games
     Machinist         Jury Rig             nothing in a party without droids
     Engineer          Field Override       same
-    Doctor            Field Surgery        one wound; value set by campaign mode
+    Medic            Field Surgery        one wound; value set by campaign mode
     Brawler           Nothing In My Hands  nothing against an unarmoured target
     Pirate            Plunder              requires dropping someone first
     Treasure Hunter   Read the Ruin        information on a failed check
@@ -6797,3 +6797,113 @@
 **⚠ Their prestige observation is also right and `PT-239` uses it:** **six levels of a named parent plus a holding is already a gate; the base half had none.**
 
 **`PT-239` prices each feature rather than applying one number, which is the only difference from their recommendation.**
+
+---
+
+## PT-242 — Four base-class features were never written into the library
+
+**Found by auditing before closing the workstream rather than after.**
+
+    Plunder       Pirate            written in findings, never in FEATS-LIBRARY-01
+    Unrelenting   Sith Warrior      same
+    Vanish        Sith Assassin     same
+    Dominion      Sith Inquisitor   same
+
+**⚠ Four of sixteen base-class features existed only in findings documents.**
+
+**All four written. And two carried unapplied rulings:**
+
+### `Dominion`'s capstone
+
+**`PT-182` flagged it: converting a failure into a partial success is a different mechanic, borrowed from an existing stun clause.** **`REPLY-45` ruled it cut.**
+
+**⚠ The cut was never applied. Tier 3 is now `+3` and nothing else** — ***harder to resist* is already the class.**
+
+### `Unrelenting` and `Vanish` carry their history now
+
+**`Unrelenting` multiplies on multi-strike declarations — `PT-180` — and `PT-183` kept the numbers knowing the realised figure is nearer `+20%` than `+46%`.**
+
+**`Vanish` is conditional, which is the Jedi shape under `PT-129`.** **`PT-131` records it as a departure caused by `PT-126`.** **⚠ And `PT-193` narrowed it: the trigger still fires but the distinction it rested on is gone.**
+
+### ⚠ The standing count on this failure mode
+
+**Eight instances now.** **`PT-88` · `PT-118` · `PT-139` · `PT-140` · `PT-190` · `PT-228` · `PT-233` · `PT-242`.**
+
+> **Every one is a decision that lived in a reply or a findings document and not in the rules.**
+
+**⚠ And this one was found by auditing *before* declaring the workstream closed.** **`REPLY-63` had already asked the designer whether anything was open; the audit answered before they did.**
+
+---
+
+## PT-243 — `Doctor` is renamed `Medic`
+
+**Owner ruling. Renamed across eleven files. Check 21 clear — `Medic` collided with nothing.**
+
+**⚠ And it is the better name for the class as built.**
+
+    Medic     Medicine · Science · Botany · Xenology · Alertness ·
+              Awareness · Persuade · Appraise · Slicing
+
+**The class suppresses, guards and reacts — `Covering Fire`, `Guarding Stance`, `Snap Shot`.** **⚠ Those are battlefield behaviours, not clinic ones.**
+
+> **A doctor has a practice. A medic has a squad.**
+
+### The feature is `Field Surgery` and always was
+
+**⚠ Checked: `Field Medic` appears nowhere in the corpus.**
+
+    Field Surgery      1   spend a medpac, restore 1 wound to an adjacent dying character
+    Stabilise          4   2 wounds, and they are no longer Disabled
+    Back On Their Feet 8   3 wounds, and once per encounter at 4 metres
+
+**⚠ And the name now reads better against the class than it did.** **`Field Surgery` on a *Doctor* is redundant — a doctor does surgery. On a *Medic* the word *field* is doing work.**
+
+**Also corrected: the roster still listed the class as *"NEW — nothing written."*** **It has been built since `PT-134`.**
+
+---
+
+## PT-244 — Three stale Scoundrel paragraphs, and two false reports checked
+
+**The designer answered `REPLY-63`'s *"say what you think is still open"* with four items. Two were real, two were not, and checking each was the point.**
+
+### ⚠ Real — three lines of Scoundrel prose
+
+    §738   "the Smuggler's ladder, continued past its cap"
+    §764   "what a Smuggler becomes when Sneak Attack is the only thing left"
+    §766   "it does not get a fourth speed"
+
+**`PT-193` made `Sneak Attack` an attack chain anyone may buy, capped at `6d6`.**
+
+> **⚠ `§764` is not merely stale — it is false about the current class.** **The Scoundrel has no dice advantage at all. Its case is `Nowhere To Stand`, which buys openings rather than dice.**
+
+**And `§766` argued about a fourth *speed* on a ladder that no longer exists.**
+
+**⚠ Same shape as `PT-240`.** **The table row carried a supersession note; three paragraphs beneath it did not.**
+
+> **The correction reached the structure and stopped at the text. Twice now.**
+
+### Not real — the gating
+
+**They report `Sneak Attack` and `Stealthy Shot` at `2 / 4 / 10`, for the third time.**
+
+**⚠ Derived: both read `1 / 5 / 10`, and `2 / 4 / 10` appears zero times in either roster.** **`PT-196` landed and `PT-193`'s restore used the corrected figures.**
+
+### Not real — `PT-198` and `PT-238`
+
+**They report both as reversals that reached no document.**
+
+**⚠ `PT-198` is in `ATTACKS-01`, `-04` and `-05`. `PT-238`'s rename is in `CLASS-ATTACKS-01` and `FEAT-SCHEDULE-01`.**
+
+**Their `check_landed` tool is reporting false positives, which is worth more than the two it got right.**
+
+### ⚠ And their overlap claim, checked
+
+**They report the Smuggler and Sith Assassin as separated by one axis.**
+
+    hit die     d6 vs d8        feats     11 vs 12
+    chains       8 vs 9         skill      7 vs 5
+    Force     none vs die 6     feature   Quickdraw vs Vanish
+
+**Six axes, not one.** **⚠ `PT-83` split a pair at 89% overlap; this pair is nowhere near that.**
+
+**The `Sneak Attack` ladder they shared is gone for *both* of them and buyable by everyone, which removes the overlap rather than creating it.**

@@ -19,7 +19,7 @@
 | **Machinist** | Built. **⚠ Was `Tech Specialist`. `PT-83`** |
 | **Agent** | **NEW — nothing written** |
 | **Treasure Hunter** | **NEW — nothing written** |
-| **Doctor** | **NEW — nothing written** |
+| **Medic** | Built. **`PT-134`, `PT-243`** — *was `Doctor`* |
 | **Brawler** | **NEW — nothing written** |
 | **Duelist** | **NEW — nothing written** |
 
@@ -109,7 +109,7 @@
 
 **`Treasure Hunter` class skills, owner-set: `Archaeology` · `Xenology` · `Appraise` · `Science`, plus more to be assigned.**
 
-**`Doctor` gives `Medicine` an owner.** *It sat on five classes and was central to none.*
+**`Medic` gives `Medicine` an owner.** *It sat on five classes and was central to none.*
 
 **`Brawler` and `Duelist` give melee an owner.** *Every combat class was ranged-first; `ATTACKS-07`'s unarmed roster had no class built around it.*
 
@@ -151,7 +151,7 @@
 
 **⚠ This is the first species-to-class restriction and it will not be the last.**
 
-**Candidates the roster already implies and nothing states:** **whether a droid may take Doctor** *(it can repair, but `Medicine` is a living-things skill)*, **whether Brawler is available to a chassis with no hands, and whether the `Marksman` chassis restriction in `ATTACKS-01` is a class rule or a species rule** — *which is `FINDINGS-02 §4`'s open blocker.*
+**Candidates the roster already implies and nothing states:** **whether a droid may take Medic** *(it can repair, but `Medicine` is a living-things skill)*, **whether Brawler is available to a chassis with no hands, and whether the `Marksman` chassis restriction in `ATTACKS-01` is a class rule or a species rule** — *which is `FINDINGS-02 §4`'s open blocker.*
 
 **A general table is wanted eventually. This ruling is one row of it.**
 
@@ -283,7 +283,7 @@
 | **Brawler** | Combat | d10 | **2** | **6** | **18** | **14** | **13** | 12 / 6 / 6 |
 | **Treasure Hunter** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
-| **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
+| **Medic** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
 | **Agent** | Middle | d8 | **5** | **8** | **15** | **11** | **10** | 6 / 12 / 12 |
 
 **⚠ Rebuilt as the spy — `PT-179`. `Intelligence` primary, not Charisma.**
@@ -328,7 +328,7 @@
     Brawler   18    the Marksman's rebuilt curve
     Treasure Hunter  16    Scout · Guardian
     Duelist   15    Sentinel · Watchman
-    Doctor    11    Smuggler · Machinist
+    Medic    11    Smuggler · Machinist
 
 > **`FINDINGS-01 §1` found two authored totals with no schedule behind them.** **Reusing a published column means the thirty rows already exist and cannot drift.**
 
@@ -809,7 +809,7 @@
 
 **`Persuade` was the obvious `Officer` holding and it is wrong.**
 
-    Persuade is a class skill for   Doctor · Duelist · Jedi Guardian · Jedi Consular · Smuggler
+    Persuade is a class skill for   Medic · Duelist · Jedi Guardian · Jedi Consular · Smuggler
     ⚠ NOT for                       Soldier · Agent
 
 > **Gating the Officer on `Persuade` 8 would have excluded both of its own parents.**

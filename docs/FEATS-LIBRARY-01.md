@@ -735,7 +735,7 @@
 | **Smuggler** | every odd level from 1 | **10d6 at 19** |
 | **Jedi Watchman** | 1, then every third | **7d6 at 19** |
 | **Sith Assassin** | **1, then every second from 5** | **9d6 at 20** |
-| **Scoundrel** *(prestige)* | **the Smuggler's ladder, continued past its cap** | **⚠ see below** |
+| **Scoundrel** *(prestige)* | **⚠ VOID — `PT-244`.** `PT-193` deleted the ladder | — |
 
 > **⚠ SUPERSEDED by `PT-192`. This ten-step ladder and the three-tier chain at `§124` are the same mechanic with different numbers, 568 lines apart, and neither referenced the other.**
 
@@ -761,9 +761,15 @@
 
 > **⚠ The Scoundrel's ladder was ruled in `REPLY-28` and never written here. `PT-190`.**
 
-**A prestige class that continues a base class continues its progression rather than restarting it.** **The Scoundrel is what a Smuggler becomes when `Sneak Attack` is the only thing left.**
+**⚠ VOID — `PT-244`.** **This read *"a prestige class that continues a base class continues its progression"* and *"the Scoundrel is what a Smuggler becomes when `Sneak Attack` is the only thing left."***
 
-**It does not get a fourth speed — three is the source's shape and a fourth would flatten the distinction between the other three.**
+**`PT-193` made `Sneak Attack` an attack chain anyone may buy, capped at `6d6`.**
+
+> **⚠ The Scoundrel has no dice advantage at all. Its case is `Nowhere To Stand`, which buys openings rather than dice.**
+
+**⚠ VOID.** **This argued about a fourth *speed* on a ladder that no longer exists.**
+
+**⚠ Same shape as `PT-240`: the correction reached the table and stopped at the prose beneath it.** **The row above carried a supersession note; three paragraphs under it did not.**
 
 **⚠ The Assassin's is authored.** **It sits between the other two: faster than the Watchman, one tier short of the Smuggler at the ceiling.**
 
@@ -1293,7 +1299,7 @@
 ---
 
 
-### Field Surgery — Doctor only. Authored.
+### Field Surgery — Medic only. Authored.
 
 **⚠ Adopted with the class and never written here — `PT-233`.** **Third instance of the `Quickdraw` shape, after `Combination` and `Read the Ruin`'s uncut tiers.**
 
@@ -1312,6 +1318,64 @@
 **⚠ Which makes it the one class feature whose value is set by the campaign mode rather than by the table** — **worth stating, and it is the right kind of dependency.**
 
 **A Gear action, so it costs no declaration — the same price `Jury Rig` pays.**
+
+
+---
+
+
+### Plunder — Pirate only. Authored.
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Plunder** | **1** | **When you reduce an enemy to 0 wounds or below, take one carried item as a free action** — a weapon, medpac, grenade, spike or mine. **It is immediately usable** |
+| › **Quick Hands** | **4** | **Also on a critical hit, without dropping them** |
+| ›› **Everything Is Cargo** | **8** | As above, and **once per encounter the item you took costs no Gear action to use** |
+
+**⚠ Requires dropping someone first, which is why it unlocks at class level 1 — `PT-239`.**
+
+---
+
+### Unrelenting — Sith Warrior only. Authored.
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Unrelenting** | **1** | **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter |
+| › **Past Caring** | **4** | **`+4` below half** |
+| ›› **Nothing Left To Lose** | **8** | **`+6` below half**, and **`+2` attack while below a quarter** |
+
+**⚠ It multiplies — `PT-180`.** **`+6` on a three-strike `Barrage` is `+18`, which took the realised increase from a reported `+22%` to `+46%`.**
+
+**`PT-183` kept the numbers.** **The `+46%` is a peak rather than an average — it fires only below half, so a realised fight is nearer `+20%`.**
+
+> **⚠ The thing to watch is the incentive, not the damage.** **A capstone that pays for being hurt rewards a player for not disengaging, and `DEATH-AND-DIFFICULTY-01` governs what happens when that goes wrong.**
+
+---
+
+### Vanish — Sith Assassin only. Authored.
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Vanish** | **1** | **Once per encounter, immediately after an attack of yours deals `Sneak Attack` damage, make a `Stealth` check as a free action** against the better of each enemy's `Awareness` or `Alertness` |
+| › **Not Where You Struck** | **4** | **Twice per encounter** |
+| ›› **Never There At All** | **8** | Twice, and **you may move up to half your speed as part of it**, before the check resolves |
+
+**⚠ It is conditional, which is the Jedi shape under `PT-129` rather than the Sith one.** **`PT-131` records that as a departure caused by `PT-126` — the owner ruled the Assassin off the mirror onto `Specialist`, which made it the one Sith built around a tool rather than a number.**
+
+**⚠ And `PT-193` narrowed it.** **`Sneak Attack` is now an attack chain anyone may buy, capped at `6d6`, so the trigger still fires but the distinction it rested on is gone.**
+
+---
+
+### Dominion — Sith Inquisitor only. Authored.
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Dominion** | **1** | **`+1` to the saving throw DC of every Force power you cast** |
+| › **Advanced Dominion** | **4** | **`+2`** |
+| ›› **Master Dominion** | **8** | **`+3`** |
+
+**⚠ `PT-182` flagged the capstone: converting a failure into a partial success is a different mechanic, borrowed from an existing stun clause.** **`REPLY-45` ruled it cut and the cut was never applied.**
+
+**⚠ Applied here — `PT-242`.** **Tier 3 is `+3` and nothing else. *Harder to resist* is already the class.**
 
 
 ---

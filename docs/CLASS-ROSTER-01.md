@@ -453,6 +453,31 @@
 **`PT-100` asked whether four narrow counters out of seven was a pattern. This is the opposite risk: a feature that is never narrow and always costs the table.**
 
 
+### The three Sith prestige rates — `PT-154`
+
+**Owner ruling:** ***"Sith Marauder is the middle one, Sith Battlemaster is combat, Sith Lord is specialist."***
+
+    Sith Battlemaster   Combat
+    Sith Marauder       Middle
+    Sith Lord           Specialist
+
+**⚠ And the derivation the designer ran supports it against its own draft.**
+
+**`k2_featgain.2da`, cumulated to 30. `Combat` requires 18:**
+
+    Guardian    16     Weaponmaster  16     Marauder    16
+    Sentinel    15     Watchman      15     Sith Lord   11
+    Consular    11     Jedi Master   11     sas row     10
+
+> **⚠ The highest Force column in either game is 16. No Force class the source describes reaches `Combat`.**
+
+**The Jedi Guardian and Sith Warrior sit at `Combat` only because we put them there — 20 feats, authored at `PT-84` and mirrored by `PT-125`.** **The source gives `jgd` 16.**
+
+**So `Combat` is not a rate the Force side has. It is a rate we granted twice, and the owner has granted it a third time deliberately.**
+
+**⚠ It also fixes a collision the designer's own draft created:** **Battlemaster at `Middle` with 16 feats made two Warrior continuations identical on rate, feats, hit die, Force die, saves and skill base** — **separated by their class chain alone.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

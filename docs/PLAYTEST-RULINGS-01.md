@@ -4178,3 +4178,31 @@
 
 **What a rebuild costs — time, parts, or a level.** **`§5` says replaceable and not what replacing costs.**
 **⚠ What a companion's death threshold is.** **`E-2`'s −10 assumes a character sheet at player scale.**
+
+---
+
+## PT-154 — The three Sith prestige rates, and no Force class is `Combat` in the source
+
+**Owner ruling:** ***"Sith Marauder is the middle one, Sith Battlemaster is combat, Sith Lord is specialist."***
+
+**⚠ The designer had drafted the Battlemaster at `Middle` and ran a derivation that supports the owner against its own draft.**
+
+**`k2_featgain.2da`, cumulated to 30. `Combat` requires 18:**
+
+    Guardian    16     Weaponmaster  16     Marauder    16
+    Sentinel    15     Watchman      15     Sith Lord   11
+    Consular    11     Jedi Master   11     sas row     10
+
+> **⚠ The highest Force column in either game is 16. Not one Force class the source describes reaches `Combat`.**
+
+**Verified independently.**
+
+**The Jedi Guardian and Sith Warrior sit at `Combat` only because we put them there — 20 feats, authored at `PT-84`, mirrored by `PT-125`.** **The source gives `jgd` 16.**
+
+> **`Combat` is not a rate the Force side has. It is a rate we granted twice, and the owner has now granted it a third time deliberately.**
+
+### And it fixes a collision the draft created
+
+**Battlemaster at `Middle` with 16 feats made two Warrior continuations identical on rate, feats, hit die, Force die, saves and skill base** — **separated by their class chain alone.**
+
+**⚠ At `Combat` they separate on acquisition as well, which is the axis `PT-125` used to separate everything else.**

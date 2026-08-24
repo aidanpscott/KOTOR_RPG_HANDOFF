@@ -4771,3 +4771,56 @@
 **⚠ A `+1` reading has the same defect one step smaller** — **the same absolute widening regardless of what the weapon started with, which is what the multiplier exists to avoid.**
 
 **Any feature that widens threat says `×N` and never *"by one."***
+
+---
+
+## PT-176 — Threat multipliers do not compound
+
+**Found by the designer against its own `Commando`, and the diagnosis is better than the number.**
+
+    vibrosword, printed width 2
+
+    Deathstroke ×4  alone         13–20    40%
+    Commando ×2     alone         17–20    20%
+    both, compounded ×8            5–20    80%
+
+**⚠ Verified. A Commando with a vibrosword would threaten on four rolls in five** — nineteen of twenty hit at all, and sixteen of those threaten.
+
+### Why it slipped through
+
+**`§2.3` closes chain-on-chain stacking:** *"one declaration per round means there is no sum to price."*
+
+> **⚠ That protection is the declaration, and a feat does not compete for one.** **It applies to whatever you declared.**
+
+**And `§2.3` is exact about the underlying problem:** *"Each chain was priced as though its capstone discount were the reward for eight levels. Nothing priced the sum."* **The Commando's capstone is not a chain, so the sentence that closes the hole does not reach it.**
+
+**⚠ It only became live when `PT-175` ruled *"widens by one"* to mean `×2`.** **At `+1` the compound was `13–20`; at `×2` it is `5–20`.**
+
+### The rule
+
+> **Threat multipliers do not compound. Where more than one applies, use the largest.**
+
+**General rather than a Commando patch — any future feat that multiplies threat hits the same wall.**
+
+**⚠ The cost is real: a Commando who declares `Deathstroke` gets nothing from three feats they spent.** **The capstone still fires every round they do not declare a Precision chain.**
+
+**The alternative turns `Deathstroke` into a platform rather than the ceiling it was priced as.**
+
+### ⚠ And a related multiplication, recorded not ruled
+
+**Swept the library for anything else that stacks with a chain rather than competing with one.**
+
+**`Assassin Protocols` fires *on a critical hit*, so anything widening threat raises how often it fires.**
+
+    plain vibrosword   10% threat →  2.0% execute per attack
+    Deathstroke ×4     40% threat →  8.0% execute per attack
+
+**⚠ `PT-176` does not reach it — one multiplies threat, the other reads it.** **Recorded because it is the same shape.**
+
+**`Increase Melee Damage` and `Increase Combat Damage` are flat adders. Checked.**
+
+### And the same capstone gives different ranges by weapon
+
+**A weapon family spans printed widths, so the Commando's `×2` gives `19–20` with a long sword and `17–20` with a vibrosword.**
+
+**⚠ Correct rather than broken** — **the multiplier reads the weapon's own column, so a better weapon benefits more, which is what `§303` says it is for.** **Recorded because it will look like an inconsistency to the next checker.**

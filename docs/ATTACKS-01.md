@@ -67,6 +67,68 @@
 
 ---
 
+### 2.3a ⚠ The declaration does not protect against feats — `PT-176`
+
+**`§2.3` closes chain-on-chain stacking:** *"one declaration per round means there is no sum to price."*
+
+> **⚠ That protection is the declaration, and a feat does not compete for one.** **It applies to whatever you declared.**
+
+**The live case, derived:**
+
+    vibrosword, printed width 2
+
+    Deathstroke ×4  alone         13–20    40%
+    Commando ×2     alone         17–20    20%
+    both, compounded ×8            5–20    80%
+
+**⚠ A Commando with a vibrosword would threaten a critical on four rolls in five.** **Nineteen of twenty rolls hit at all, and sixteen of those threaten.**
+
+**And `§2.3` is exact about why nothing caught it:** *"Each chain was priced as though its capstone discount were the reward for eight levels. Nothing priced the sum."* **The Commando's capstone is not a chain, so the sentence that closes the hole does not reach it.**
+
+**⚠ It only became live when `PT-175` ruled *"widens by one"* to mean `×2`.** **At `+1` the compound was `13–20`; at `×2` it is `5–20`.**
+
+### The rule
+
+> **Threat multipliers do not compound. Where more than one applies, use the largest.**
+
+**⚠ General rather than a Commando patch, because any future feat that multiplies threat hits the same wall.**
+
+**And the cost is real and worth stating.** **A Commando who declares `Deathstroke` gets nothing from three feats they spent.**
+
+**The capstone still fires on `Power Attack`, `Barrage`, `Flurry`, an aimed shot or a plain strike — every round they do not declare a Precision chain.**
+
+> **⚠ The alternative turns `Deathstroke` into a platform rather than the ceiling it was priced as.**
+
+### ⚠ And the same capstone gives different ranges by weapon
+
+**A weapon family spans printed widths.** **The Commando's `×2` gives `19–20` with a long sword and `17–20` with a vibrosword.**
+
+**That is correct rather than broken** — **the multiplier reads the weapon's own column, so a better weapon benefits more, which is what `§303` says the multiplier is for.**
+
+**Recorded because it will look like an inconsistency to the next reader who checks.**
+
+---
+
+### ⚠ And one more thing multiplies with threat — recorded, not ruled
+
+**Swept `FEATS-LIBRARY-01` for anything else that stacks with a chain rather than competing with one. Three touch threat, critical or attack count, and one is a genuine multiplication.**
+
+**`Assassin Protocols` fires *on a critical hit*.** **So anything that widens threat raises how often it fires.**
+
+    threat width        execute chance per attack
+    plain vibrosword     10%      2.0%
+    Commando ×2          20%      4.0%
+    Deathstroke ×4       40%      8.0%
+
+**⚠ At `Deathstroke` and `Master Assassin Protocols`, 8% of attacks halve the target's remaining life.** **Over three attacks a round that is roughly 22% per round.**
+
+**Not obviously broken and not ruled here.** **`PT-176` does not reach it — the two do not both multiply *threat*; one multiplies threat and the other reads it.**
+
+> **⚠ Recorded because it is the same shape: a feat that does not compete for the declaration, multiplying with a chain that does.**
+
+**`Increase Melee Damage` and `Increase Combat Damage` are flat adders and do not multiply. Checked.**
+
+
 ## 3. A tier replaces the tier below it
 
 > **Same attack, better numbers. Nothing new is introduced mid-chain.**

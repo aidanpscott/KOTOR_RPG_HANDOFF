@@ -4046,3 +4046,45 @@
 > **`Sith Battlemaster` fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin.**
 
 **⚠ The name was already on the roster with no definition. Three of the thirteen — `Vanguard`, `Commando`, `Droid Master` — and three more appear in no document but the roster.**
+
+---
+
+## PT-149 — `Operative` and `Shadow Hunter`, and the designer withdrew its own objection with a better mechanism
+
+**`FINDINGS-28 §1` argued that ranged-versus-melee is not a class distinction, because `ATTACKS-01 §4` gives every organic both rosters.**
+
+**⚠ True of the *weapons*, and it stopped there. It is not true of the *stealth*.**
+
+**`ACTION-ECONOMY-01 §19.5`, verified:** *"Attacking reveals you, so it fires once per approach unless you hide again."*
+
+> **At range, revealing yourself costs nothing immediately — the enemy knows someone shot, not from where, and you are not adjacent to anything.**
+> **In melee, revealing yourself puts you next to what you just stabbed.**
+
+    ranged covert   the shot gives away a position you can leave
+    melee covert    the kill leaves you standing in the open, in reach
+
+**⚠ The split is about what concealment costs once it breaks, and that differs by range in a way no amount of buying chains equalises.**
+
+**Both classes: `Middle`, d8, skill base 4, six class skills, 16 feats, 12 chains, 9 capstones, saves 6/12/12.**
+
+**⚠ Identical on every number.** **`Security` and `Slicing` swapped for `Acrobatics` and `Athletics` is the whole difference — one opens doors, the other crosses rooms.**
+
+**⚠ The citation given was `ATTACKS-01 §13` and the rule is in `ACTION-ECONOMY-01 §19.5`.** **Text exact, pointer wrong. Corrected here.**
+
+---
+
+## PT-150 — The superior weapon tier is opened to all six families
+
+**Derived. Six weapon families carry the full `Proficiency → Focus → Specialization` ladder:** **Blaster · Blaster Rifle · Melee Weapons · Lightsaber · Assault Cannons · Wrist-Mounted.**
+
+**⚠ A *superior* tier existed above Specialization for exactly one of the six, and it was the Jedi weapon.**
+
+    Superior Weapon Focus: Lightsaber   +1 above Specialization
+    › Advanced                          +2
+    ›› Master                           +3
+
+> **A prestige Jedi could reach `+3` beyond Specialization. A prestige Soldier could reach it with nothing.**
+
+**Opened to all six. Chosen once at entry and locked.**
+
+**⚠ The `Commando` is the class built on it** — one weapon family, taken further than anyone — **and the mechanism was already written. It only needed to stop being lightsaber-only.**

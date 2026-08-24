@@ -344,9 +344,15 @@
 | **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **−1 main / −2 off.** |
 | › Advanced Superior Two-Weapon Fighting |  | **0 main / −2 off.** |
 | ›› Master Superior Two-Weapon Fighting |  | **0 main / −1 off.** With a balanced off-hand weapon: **+2 main / −1 off.** |
-| **Superior Weapon Focus: Lightsaber** | The character's skill with lightsabers is almost unmatched. | **+1 attack**, above the Specialization tier. |
-| › Advanced Superior Weapon Focus: Lightsaber |  | **+2 attack.** |
-| ›› Master Superior Weapon Focus: Lightsaber |  | **+3 attack.** |
+| **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. **⚠ Opened from lightsaber-only by `PT-150`.** | **+1 attack**, above the Specialization tier |
+| › Advanced Superior Weapon Focus |  | **+2 attack** |
+| ›› Master Superior Weapon Focus |  | **+3 attack** |
+
+> **⚠ The superior tier existed for one of six weapon families, and it was the Jedi weapon.** **A prestige Jedi could reach `+3` beyond Specialization; a prestige Soldier could reach it with nothing.**
+
+**Six families carry the full `Proficiency → Focus → Specialization` ladder:** **Blaster · Blaster Rifle · Melee Weapons · Lightsaber · Assault Cannons · Wrist-Mounted.** **All six now carry the superior tier above it.**
+
+**⚠ Chosen once, at entry, and locked.** **The `Commando` is the class built on it — one weapon family, taken further than anyone.**
 
 
 ## Jedi Weaponmaster

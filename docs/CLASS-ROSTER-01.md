@@ -387,6 +387,32 @@
 > **`Sith Battlemaster` fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin.** **The name was already on the roster and had no definition.**
 
 
+### `Operative` and `Shadow Hunter` — the split is real, and not for the reason first given. `PT-149`.
+
+**`PT-148` ruled them distinct on *what the covert work is for*.** **The designer then withdrew its own objection with a better mechanism.**
+
+**⚠ `FINDINGS-28 §1` argued that ranged-versus-melee is not a class distinction because `ATTACKS-01 §4` gives every organic both rosters.** **True of the *weapons*, and it stopped there.**
+
+**It is not true of the *stealth*.**
+
+**`ACTION-ECONOMY-01 §19.5`, verified:** *"Attacking reveals you, so it fires once per approach unless you hide again."*
+
+> **At range, revealing yourself costs nothing immediately — the enemy knows someone shot, not from where, and you are not adjacent to anything.**
+> **In melee, revealing yourself puts you next to what you just stabbed.**
+
+    ranged covert   the shot gives away a position you can leave
+    melee covert    the kill leaves you standing in the open, in reach
+
+**⚠ So the split is about what concealment costs once it breaks, and that differs by range in a way no amount of buying chains equalises.**
+
+| | Rate | Die | Skill base | Class skills | Feats | Chains | Caps | Saves |
+|---|---|---|---|---|---|---|---|---|
+| **Operative** | Middle | d8 | 4 | **6** — Stealth · Security · Slicing · Streetwise · Alertness · Awareness | 16 | 12 | 9 | 6/12/12 |
+| **Shadow Hunter** | Middle | d8 | 4 | **6** — Stealth · Acrobatics · Athletics · Streetwise · Alertness · Awareness | 16 | 12 | 9 | 6/12/12 |
+
+**⚠ The pair is deliberately identical on every number.** **`Security` and `Slicing` swapped for `Acrobatics` and `Athletics` is the whole difference, and it is the right difference — one opens doors, the other crosses rooms.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

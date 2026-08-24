@@ -29,8 +29,8 @@ the same lesson as watch.py's [:4000] truncation.
 """
 import subprocess, sys, os, re, time, json
 
-D = '/home/claude/handoff'
-STATE = '/home/claude/.sync_cursor.json'
+D = os.path.dirname(os.path.abspath(__file__))
+STATE = os.path.join(os.path.expanduser("~"), ".sync_cursor.json")
 
 
 def load():

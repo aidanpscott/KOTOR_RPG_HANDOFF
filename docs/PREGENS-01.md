@@ -65,6 +65,7 @@
 
 | | |
 |---|---|
+| **Class** | **Soldier** |
 | **Abilities** | STR **18** · DEX 14 · CON 14 · WIS 12 · INT 10 · CHA 10 |
 | **Modifiers** | +4 / +2 / +2 / +1 / +0 / +0 |
 | **Vitality** | **84** *(Improved Toughness replaces Toughness at +2/level, retroactive)* · **Wounds 14** |
@@ -93,6 +94,7 @@
 
 | | |
 |---|---|
+| **Class** | **Scout** |
 | **Abilities** | STR 12 · DEX **18** · CON 12 · WIS 12 · INT 14 · CHA 10 |
 | **Modifiers** | +1 / +4 / +1 / +1 / +2 / +0 |
 | **Vitality** | **51** · **Wounds 12** |
@@ -124,6 +126,7 @@
 
 | | |
 |---|---|
+| **Class** | **Smuggler** |
 | **Abilities** | STR 10 · DEX **18** · CON 10 · WIS 12 · INT 14 · CHA 14 |
 | **Modifiers** | +0 / +4 / +0 / +1 / +2 / +2 |
 | **Vitality** | **34** · **Wounds 10** |
@@ -154,6 +157,7 @@
 
 | | |
 |---|---|
+| **Class** | **Jedi Guardian** |
 | **Abilities** | STR **16** · DEX 14 · CON 14 · WIS 14 · INT 12 · CHA 10 |
 | **Modifiers** | +3 / +2 / +2 / +2 / +1 / +0 |
 | **Vitality** | **68** · **Wounds 14** |
@@ -201,6 +205,7 @@
 
 | | |
 |---|---|
+| **Class** | **Jedi Consular** |
 | **Abilities** | STR 10 · DEX 16 · CON 10 · **WIS 16** · INT 14 · CHA 12 |
 | **Modifiers** | +0 / +3 / +0 / +3 / +2 / +1 |
 | **Vitality** | **34** · **Wounds 10** |
@@ -253,6 +258,7 @@
 
 | | |
 |---|---|
+| **Class** | **Engineer** |
 | **Abilities** | STR 10 · DEX 14 · CON 10 · **WIS 18** · INT 16 · CHA 8 |
 | **Modifiers** | +0 / +2 / +0 / +4 / +3 / −1 |
 | **Vitality** | **43** *(Engineer d8, Con +0)* · **Wounds 10** |
@@ -286,6 +292,7 @@
 
 | | |
 |---|---|
+| **Class** | **Soldier** |
 | **Abilities** | 16 / 14 / 14 / 12 / 10 / 10 |
 | **Vitality** | **31** *(Toughness +1/level, retroactive)* · **Wounds 14** |
 | **BAB** | **+3** · **Saves** Fort **+6** · Ref **+4** · Will **+3** *(+ Conditioning)* |
@@ -309,6 +316,7 @@
 
 | | |
 |---|---|
+| **Class** | **Jedi Guardian** |
 | **Abilities** | 15 / 14 / 14 / 14 / 12 / 10 |
 | **Vitality** | **58** *(Toughness +1/level, retroactive)* · **Wounds 14** |
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+8** · Will **+6** *(+ Conditioning)* |
@@ -346,8 +354,15 @@
 
 ### HK-24 — Assassin Droid 6
 
+> **⚠ Re-homed from `Marksman` to `Bounty Hunter`. `PT-121`.**
+>
+> **`Marksman` is a `Combat`-rate class entering 14 chains. `PT-109` bars a droid chassis from `Combat`; `PT-114` caps a droid at 11.** **The sheet violated both from the moment they were ruled.**
+>
+> **`Bounty Hunter` is `Middle`, enters exactly 11 — a droid's full access — and grants `Rapid Fire` and `Snap Shot`, both of which he already held.**
+
 | | |
 |---|---|
+| **Class** | **Bounty Hunter** |
 | **Abilities** | STR 14 · DEX 14 · **CON 17** · WIS 8 · INT 8 · CHA 8 |
 | **Vitality** | **59** · **Wounds 17** |
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+4** · Will **+1** |

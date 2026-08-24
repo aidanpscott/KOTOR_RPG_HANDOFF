@@ -3271,3 +3271,66 @@
 ### ⚠ And it is sharper with two writers
 
 **A cursor reports the highest number read.** **It cannot report that two agents have been filling that range concurrently — so the span between cursor and head contains work from both, and neither side can say what is in it.**
+
+---
+
+## PT-121 — Nothing checked whether a chassis permits a class, and `HK-24` was illegal
+
+**Found by the designer. Check 18, `audit_chassis.py`, now blocking.**
+
+### Three gates existed and no script checked any of them
+
+    PT-92    a droid or Rakata may not take a Force class
+    PT-109   a droid chassis may not take a Combat-rate class
+    PT-114   a droid may not take a class whose chain count exceeds 11
+
+**`audit_skills`, `audit_classskills` and `audit_classfeats` check skills and feats.** **None asked whether the chassis permits the class, because until `PT-92` no gate existed.**
+
+> **⚠ Four pregens were invalidated by rules changes this run. The first three were caught by script on the following pass. The fourth was found by hand, because no script covered the axis.**
+
+### `HK-24` violated two gates at once
+
+**Assassin-chassis `Marksman` at level 6.** **`Marksman` is `Combat` and enters 14 chains against a droid's access of 11.**
+
+**Re-homed to `Bounty Hunter`:** **`Middle`, enters exactly 11 — a droid's full access — and grants `Rapid Fire` and `Snap Shot`, both of which the sheet already held.**
+
+### ⚠ Three things the check exposed while being built
+
+**The class was never on the sheet.** **All nine pregens carried it only in the heading. A `Class` row has been added to each** — **a machine-readable field the documents assumed and never stated.**
+
+**⚠ The first version read the whole block and found `Marksman` in the note explaining the re-home.** **Same trap as `PT-97`'s: a class name in prose is indistinguishable from a class name in a stat line.** **Fixed by reading the `Class` row and never prose.**
+
+**⚠ `Bounty Hunter` was absent from `audit_skills.py`'s base table entirely.** **It threw a `KeyError` the moment a sheet used it — so no pregen had ever been a Bounty Hunter, and the gap was invisible until one was.**
+
+---
+
+## PT-122 — Three classes carry `Sneak Attack`, at three speeds
+
+**Derived from `feat.2da`. Granted levels:**
+
+    tier          1d6  2d6  3d6  4d6  5d6  6d6  7d6  8d6  9d6  10d6
+    Smuggler        1    3    5    7    9   11   13   15   17    19
+    Sith Assassin   1    3    5    7    9   11   13   15   17    19
+    Jedi Watchman   1    4    7   10   13   16   19    —    —     —
+
+> **⚠ The Smuggler and the Sith Assassin are granted the same mechanic on the same schedule, byte for byte.**
+
+**And `CLASS-ROSTER-01` moved the Sith Assassin from prestige to base — so two *base* classes would share their defining mechanic identically.**
+
+### The source's own answer is three speeds
+
+**The Watchman's slower seven-tier ladder shows the pattern generalises.**
+
+| Class | Ladder | Caps at |
+|---|---|---|
+| **Smuggler** | every odd level from 1 | **10d6 at 19** |
+| **Jedi Watchman** | 1, then every third | **7d6 at 19** |
+| **Sith Assassin** | **1, then every second from 4** | **9d6 at 20** — authored |
+
+**⚠ The Assassin's is authored and sits between the other two.**
+
+**The reasoning is the classes' own cases.** **`PT-73` gave the Smuggler the Scoundrel's kit entire, and the Scoundrel was *"`Sneak Attack` and one good opening."*** **The Assassin has a Force pool and a lightsaber as well, so it should not also hold the fastest stealth ladder in the game.**
+
+**⚠ `Killer's Instinct` said *"granted to the three classes that carried `Sneak Attack` in the source"* without naming them.** **Smuggler, Sith Assassin, Jedi Watchman. Now named.**
+
+**⚠ Decided before the Assassin is drafted rather than after, which is what the designer asked for.**

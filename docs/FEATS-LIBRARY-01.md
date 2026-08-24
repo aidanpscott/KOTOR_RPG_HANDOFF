@@ -679,3 +679,36 @@
 
 ---
 
+
+### ⚠ `Sneak Attack` — three classes, and the source gives them three speeds
+
+**Derived from `feat.2da`, granted levels:**
+
+    tier          1d6  2d6  3d6  4d6  5d6  6d6  7d6  8d6  9d6  10d6
+    Smuggler        1    3    5    7    9   11   13   15   17    19
+    Sith Assassin   1    3    5    7    9   11   13   15   17    19    ⚠ identical
+    Jedi Watchman   1    4    7   10   13   16   19    —    —     —
+
+> **⚠ The Smuggler and the Sith Assassin are granted the same mechanic on the same schedule, byte for byte.**
+
+**And the Sith Assassin is a *base* class now — `CLASS-ROSTER-01` moved it from prestige — so two base classes would share their defining mechanic identically.**
+
+### Ruled: three classes, three speeds. `PT-122`.
+
+**The Watchman's ladder is the source's own answer and it generalises.**
+
+| Class | Ladder | Caps at |
+|---|---|---|
+| **Smuggler** | every odd level from 1 | **10d6 at 19** |
+| **Jedi Watchman** | 1, then every third | **7d6 at 19** |
+| **Sith Assassin** | **1, then every second from 4** | **⚠ 9d6 at 20** |
+
+**⚠ The Assassin's is authored.** **It sits between the other two: faster than the Watchman, one tier short of the Smuggler at the ceiling, and it reaches each tier a level later than the Smuggler from 4d6 on.**
+
+**The reasoning is the classes' own cases.** **The Smuggler's whole identity is the opening — `PT-73` gave it the Scoundrel's kit and the Scoundrel was *"`Sneak Attack` and one good opening."*** **The Assassin has a Force pool and a lightsaber as well, so it should not also hold the fastest stealth ladder in the game.**
+
+**⚠ `Killer's Instinct` says *"granted to the three classes that carried `Sneak Attack` in the source"* without naming them.** **They are the Smuggler, the Sith Assassin and the Jedi Watchman. Now named.**
+
+
+---
+

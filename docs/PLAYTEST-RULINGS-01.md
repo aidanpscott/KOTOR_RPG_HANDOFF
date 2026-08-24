@@ -2659,7 +2659,7 @@
 
 **⚠ Ruled at `PT-74` and present in no document but this one.** **Grepped: it appeared in `PLAYTEST-RULINGS-01` and nowhere else.**
 
-**Same family as Force Focus — the decision was made, the reasoning written, and the document a reader consults did not have it.**
+**Same family as Force Channel — the decision was made, the reasoning written, and the document a reader consults did not have it.**
 
 **And `Smuggler's Luck` had three source tiers where `FEATS-LIBRARY-01` carried one.**
 
@@ -2801,7 +2801,7 @@
 
 **Repriced to three tiers: `+1 / +2 / +3` at 1 / 6 / 12.**
 
-> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Focus and `Uncanny Dodge` are all three-tier chains on the same ladder, and granting those free is what makes a class feel like itself from 1st level.**
+> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Channel and `Uncanny Dodge` are all three-tier chains on the same ladder, and granting those free is what makes a class feel like itself from 1st level.**
 
 **An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three.**
 
@@ -2820,3 +2820,66 @@
 **⚠ `§5.1`'s melee-versus-ranged finding is reported at 3.4× across three scenarios.** **Under the repriced ladder it is roughly 3.1×.**
 
 **The finding stands. The number it is stated in moves.**
+
+---
+
+## PT-102 — The Force pool formula is ruled
+
+**Owner decision. The fork is closed.**
+
+> **Force points = `(Force die × Force-class levels)` + `((Wis mod + Cha mod) × character level)`.**
+
+**The die is training. The modifiers are capacity.** **A character has a level-12 person's reserves whether or not they spent those levels in a temple.**
+
+**⚠ A character with no Force-class level has no pool at all.** **The ability half switches on with the first Force level and then reads current character level; it does not accrue beforehand.**
+
+**⚠ Why it came up now rather than earlier.** **It had been open since before this session, and the Consular's class feature is a Force-power-effectiveness multiplier.** **A multiplier cannot be priced without the thing it multiplies.**
+
+---
+
+## PT-103 — Force Focus renamed Force Channel, and the collision it caused
+
+**Owner ruling on the rename. The consequence was mine to resolve.**
+
+### The rename collided immediately
+
+**`FEATS-LIBRARY-01` already carried `Force Channel (Alter)` and `Force Channel (Control)`** — **the two `XXXX_FORCE_FOCUS_*` cut-content rows, reinstated while the live shipped chain was never catalogued.**
+
+> **⚠ The rename would have put three entries called Force Channel in one document, two of them cut content and one of them real.**
+
+**And one line read *"retire the two Force Channel reinstatements"* against a chain of that name.**
+
+### Resolved: the two cut rows are retired
+
+**The owner gave the live chain their name, which settles which one the corpus means.**
+
+**⚠ Their described effect survives in the live chain, which is what they were cut in favour of.** **The Alter/Control split does not — `PARTITION-01` governs discipline, and a feat is not the place for it.**
+
+**⚠ This closes the ruling `REPLY-04` flagged as owner-wanted.**
+
+---
+
+## PT-104 — Droids may not spend attack credits on melee, and it does not resolve the Marksman
+
+**Owner ruling on the credits. The consequence is that the blocker survives.**
+
+> **A droid's four credits are ranged-only. Its accessible roster stays at 11 chains.**
+
+### ⚠ Reducing a droid's credits does not help
+
+    credits   T    stranded   legal N in band 14-20
+       4      40       7          none
+       2      38       5          none
+       0      36       3          none
+
+**The gap is band-against-access, not budget.** **Combat's floor is 14; droid ranged access ceilings at 11.** **Empty intersection at every credit count.**
+
+### Three fixes, two real
+
+**A droid-specific band — ⚠ does not work.** **`⌈T⁄3⌉` is 12 against a ceiling of 11.**
+
+**Drop the Marksman to `Middle`.** **Works: `T` = 31, `3N` = 33, nothing stranded at N=11.** **⚠ Feats fall 18 → 16, and it reverses `PT-77`, which moved the class *to* `Combat` by owner ruling.**
+
+**Widen droid ranged access.** **Needs 14 accessible chains against the roster's 11.** **⚠ Leaves `PT-77` intact and gives droids something rather than taking something away.**
+
+**⚠ Narrower question than before: reverse `PT-77`, or author three ranged chains.**

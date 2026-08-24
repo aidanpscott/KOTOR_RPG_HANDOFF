@@ -247,7 +247,7 @@
 | › **Improved Smuggler's Luck** | **⚠ Tier restored.** `IMPROVED_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** — the source row exists and its string is not in holdings |
 | ›› **Master Smuggler's Luck** | **⚠ Tier restored.** `MASTER_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** |
 
-> **⚠ The source has three tiers and this document carried one.** **Same family as Force Focus: the ladder exists in `feat.2da` and only its first rung was catalogued.**
+> **⚠ The source has three tiers and this document carried one.** **Same family as the Consular's chain: the ladder exists in `feat.2da` and only its first rung was catalogued.**
 
 ### Quickdraw — Smuggler only
 
@@ -407,8 +407,14 @@
 | ›› Master Empathy |  | +3 Persuade and Medicine. |
 | **Finesse: Lightsabers** | As above, for lightsabers specifically. | Use Dexterity or Strength for lightsaber attack rolls. **Redundant if Finesse: Melee Weapons is held.** |
 | **Finesse: Melee Weapons** | Grace and speed in place of raw power. | Use Dexterity **or** Strength for melee attack rolls, whichever is higher. Affects melee weapons and lightsabers. Does not affect unarmed. |
-| **Force Channel (Alter)** | **Reinstated from cut content.** Focused channelling through the Alter discipline. | Reported to increase the effectiveness of Force Armour, Force Valor, Force Speed and similar. *Secondary source.* |
-| **Force Channel (Control)** | **Reinstated from cut content.** Focused channelling through the Control discipline. | Reported to govern Force Kill, Force Heal, Force Wave and similar. *Secondary source.* |
+> **⚠ Force Channel (Alter) and Force Channel (Control) are RETIRED. `PT-103`.**
+
+**They were `XXXX_FORCE_FOCUS_ALTER` and `XXXX_FORCE_FOCUS_CONTROL` — the two cut-content rows, reinstated while the live shipped chain they were cut in favour of was never catalogued.**
+
+**The owner renamed the live chain to Force Channel, which is their name.** **Keeping both would put three entries called Force Channel in one document, two of them cut content and one of them real.**
+
+**⚠ Their described effect survives in the live chain, which is what it was cut in favour of.** **The Alter/Control split does not — `PARTITION-01` governs discipline, not a feat.**
+
 | **Force Rapport** | The pool runs deeper than the training accounts for. **Some Force users simply hold more.** | **Requires `Force-Sensitive`.** **+1 Force point per character level.** |
 | › Knight Force Rapport |  | **Level 8.** **+2 Force points per character level**, replacing the tier below. |
 | ›› Master Force Rapport |  | **Level 14.** **+3 Force points per character level**, and **your working maximum degrades at half the normal rate** — `FORCE-POOL-01-v3 §4.2`. |
@@ -422,7 +428,7 @@
 | **Jedi Sense** | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/6]).** Always active. |
 | › Knight Sense |  | **Defence +2 + (2 × [level/8])** for Jedi Master and Sith Lord. |
 | ›› Master Sense |  | **Defence +2 + (2 × [level/5])** for other prestige classes — the fastest progression of the three. |
-| **Regenerate Force Points** | The body renews its connection to the Force faster than training alone allows. | Force regeneration **+25% out of combat, +250% in combat.** Stacks additively with Force Channel. |
+| **Regenerate Force Points** | The body renews its connection to the Force faster than training alone allows. | Force regeneration **+25% out of combat, +250% in combat.** Stacks additively with the Consular's Force Channel chain. |
 | **Stealth Run** | Training in stealth so extensive that speed no longer costs concealment. | **Run instead of walk while in Stealth mode.** Requires level 4. |
 | **Unarmed Specialist I** | Extra experience in hand-to-hand combat. | **Unarmed damage 1–4.** Granted at level 2. |
 | › Unarmed Specialist II–VIII |  | **2–8 through 8–32 damage**, granted at levels 6, 10, 14, 18, 22, 26, and 30. |
@@ -430,17 +436,17 @@
 | › Weapon Focus: Lightsaber |  | +1 attack. |
 | ›› Weapon Specialization: Lightsaber |  | +2 damage. |
 
-### ⚠ Force Focus — the live chain, and it was never catalogued
+### ⚠ Force Channel — the live chain, and it was never catalogued
 
 **`feat.2da`, read directly:**
 
     FORCE_FOCUS            jcn_granted  1    successor 89
-    FORCE_FOCUS_ADVANCED   jcn_granted  6    mincharlevel 4   successor 90
-    FORCE_FOCUS_MASTERY    jcn_granted 12    mincharlevel 8
+    FORCE_CHANNEL_ADVANCED   jcn_granted  6    mincharlevel 4   successor 90
+    FORCE_CHANNEL_MASTERY    jcn_granted 12    mincharlevel 8
 
 **Three tiers, Consular-only, granted at 1 / 6 / 12 — `ATTACKS-01 §3.4`'s base ladder.** **`usetype` blank, so passive: a feat, not an attack.**
 
-> **⚠ This document held `Force Channel (Alter)` and `Force Channel (Control)` instead — `XXXX_FORCE_FOCUS_ALTER` and `XXXX_FORCE_FOCUS_CONTROL`, which carry the cut-content prefix.**
+> **⚠ This document held Force Channel (Alter) and Force Channel (Control) instead — `XXXX_FORCE_FOCUS_ALTER` and `XXXX_FORCE_FOCUS_CONTROL`, which carry the cut-content prefix.**
 
 **The two cut rows were reinstated. The live shipped chain they were cut in favour of was not.**
 
@@ -448,7 +454,9 @@
 
 **⚠ Effect pending.** **The string table rows — `1257`, `1259`, `1260` — are not in holdings.** **The reinstated cut siblings describe the family as increasing the effectiveness of Force Armour, Valor, Speed and similar; that is a secondary source and is marked as one.**
 
-**Owner ruling wanted: adopt Force Focus as the Consular's restricted chain and retire the two Force Channel reinstatements, or keep both.**
+**⚠ RULED. `PT-103`. Force Channel is the Consular's restricted chain and the two cut-content reinstatements are retired.**
+
+**The rename settled it: three entries of one name, two of them cut content, was not a state the document could hold.**
 
 ---
 
@@ -649,7 +657,7 @@
 
 **Three tiers, not eight. `+1 / +2 / +3` at levels 1 / 6 / 12.**
 
-> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Focus and `Uncanny Dodge` are all three-tier chains on the 1 / 6 / 12 ladder, and giving those free is what makes a class feel like itself from 1st level.**
+> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Channel and `Uncanny Dodge` are all three-tier chains on the 1 / 6 / 12 ladder, and giving those free is what makes a class feel like itself from 1st level.**
 
 **An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three.**
 

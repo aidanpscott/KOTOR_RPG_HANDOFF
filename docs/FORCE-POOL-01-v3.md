@@ -28,7 +28,9 @@
 
 **Force points = `(Force die × Force-class levels)` + `((Wisdom modifier + Charisma modifier) × character level)`. Maximum Force die on the first Force-class level.**
 
-> **⚠ Changed. This section previously read *"Force die + Wisdom modifier + Charisma modifier, per level"* — everything hanging off Jedi level.**
+> **⚠ RULED. Owner decision, `PT-102`. The fork is closed and this is the formula.**
+
+**It previously read *"Force die + Wisdom modifier + Charisma modifier, per level"* — everything hanging off Jedi level.**
 
 **`MULTICLASS-01 §2.1` is the reason.** **Under the old formula a banked level was worth a whole Force die *plus both modifiers*, which made delaying your first Jedi level worth roughly three times the pool.** **Splitting it drops the banking advantage by 71% and leaves an honest multiclass route within 20% of a pure Jedi.**
 

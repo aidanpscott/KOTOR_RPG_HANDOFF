@@ -152,7 +152,29 @@
 | **Jedi Consular** | Specialist | **13** | 11 | 4 |
 | **Machinist** | Specialist | **10** | 11 | 6 |
 
-**⚠ The Marksman's 14 is CONDITIONAL and the condition is unruled. `PT-99`.**
+**⚠ RULED, and it does not resolve. `PT-104`. Owner: droids may not spend attack credits on melee.**
+
+**So a droid Marksman's four credits are ranged-only and its accessible roster stays at 11 chains.**
+
+    credits   T    stranded   legal N in band 14-20
+       4      40       7          none
+       3      39       6          none
+       2      38       5          none
+       0      36       3          none
+
+> **⚠ Reducing a droid's credits does not help.** **The gap is band-against-access, not budget.** **Combat's floor is 14 and droid ranged access ceilings at 11 — an empty intersection at every credit count.**
+
+**Three fixes and only two are real:**
+
+**A droid-specific band.** **⚠ Does not work.** `⌈T⁄3⌉` is 12 against an access ceiling of 11 — still empty.
+
+**Drop the Marksman to `Middle`.** **Works: `T` = 31, access 11, `3N` = 33, nothing stranded at N=11.** **⚠ But feats fall from 18 to 16, and it reverses `PT-77`, which moved the class *to* `Combat` by owner ruling.**
+
+**Widen droid ranged access.** **Needs at least 14 accessible chains against the roster's 11 — three more to author.** **⚠ Leaves `PT-77` intact and gives droids something they lack rather than taking something away.**
+
+**⚠ Owner ruling wanted, and it is now a narrower question than before: reverse `PT-77`, or author three ranged chains.**
+
+**⚠ The Marksman's 14 remains unbuildable until then. `PT-99`.**
 
 > **Under *credits carry access* it is legal and strands nothing.** **Under *credits are tiers only* a droid Marksman reaches 11 ranged chains, and the Combat band is 14–20.** **Empty intersection — no legal number exists at that rate.**
 

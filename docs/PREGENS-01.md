@@ -133,7 +133,7 @@
 | **BAB** | **+6** |
 | **Saves** | Fort **+2** · Ref **+10** · Will **+3** *(base + ability)* |
 | **Defence** | **10 + 4 (light armour) + 4 (Dex)** = **18** |
-| **Skills** | **99** — **Stealth 11 · Security 11 · Slicing 11 · Sleight of Hand 11 · Persuade 11 · Streetwise 11 · Awareness 11 · Alertness 11 · Appraise 11** |
+| **Skills** | **99** — **Stealth 11 · Security 11 · Slicing 11 · Sleight of Hand 11 · Persuade 11 · Streetwise 11 · Alertness 11 · Appraise 11 · Demolitions 11** |
 
 **Equipment.** **Two Blaster Pistols** *(1d6 each, 24 m, Balanced)* · **Light Combat Suit** *(armour 4, max Dex +5)* · 4 medpacs
 
@@ -167,7 +167,7 @@
 | **Force points** | **37** *(`CLASS-TABLES-JEDI`)* · **regen 1 per round in combat, 1 per second out** |
 | **Blaster Deflection** | **+4** *(Resilience)* · **Threat Range −1** |
 | **Alignment** | **Leaning Light** *(65)* |
-| **Skills** | **44** — **Awareness 11 · Alertness 11 · Mysticism 11 · Athletics 6 · Persuade 5** |
+| **Skills** | **44** — **Awareness 11 · Mysticism 11 · Athletics 6 · Persuade 5 · Medicine 11** |
 
 **Equipment.** **Lightsaber** *(2d8 energy, threat 19–20)* · **Jedi Knight Robe** *(Defence 2, no Dex cap)* · 2 medpacs
 
@@ -214,7 +214,7 @@
 | **Defence** | **10 + 1 (Jedi Robe) + 3 (Dex, uncapped) + 1 (Moderation)** = **15** · **16 against her current target** |
 | **Force points** | **71** *(`CLASS-TABLES-JEDI`)* · **regen 2 per round in combat, 2 per second out** |
 | **Alignment** | **Committed Light** *(78)* |
-| **Skills** | **66** — **Mysticism 11 · Persuade 11 · Medicine 11 · Awareness 11 · Alertness 11 · Xenology 6 · Archaeology 5** |
+| **Skills** | **66** — **Mysticism 11 · Persuade 11 · Medicine 11 · Alertness 11 · Xenology 6 · Archaeology 5 · Science 11** |
 
 **Equipment.** **Lightsaber** *(2d8 energy, threat 19–20)* · **Jedi Robe** *(Defence 1)* · 2 medpacs
 
@@ -266,7 +266,7 @@
 | **Saves** | Fort **+2** · Ref **+8** · Will **+6** *(Engineer: Reflex strong, plus ability)* |
 | **Defence** | **10 + 4 (Light Droid Plating) + 2 (Dex, uncapped)** = **16** ⚠ |
 | **Reactions** | **2** *(BAB +6)* |
-| **Skills** | **77** — **Slicing 11 · Security 11 · Science 11 · Awareness 11 · Alertness 11 · Pilot 11 · Appraise 11** |
+| **Skills** | **77** — **Slicing 11 · Security 11 · Science 11 · Awareness 11 · Pilot 11 · Appraise 11 · Repair 11** |
 
 > **⚠ `Repair` and `Scavenging` moved to the `Machinist` when the two tech classes were differentiated — `PT-83`.** **T4-K9 is an `Engineer`: systems, not hands.**
 
@@ -298,7 +298,7 @@
 | **BAB** | **+3** · **Saves** Fort **+6** · Ref **+4** · Will **+3** *(+ Conditioning)* |
 | **Defence** | 10 + 6 (medium) + 2 = **18** |
 | **Reactions** | **1** |
-| **Skills** | **18** — **Awareness 6 · Alertness 6 · Intimidate 6** |
+| **Skills** | **18** — **Awareness 6 · Intimidate 6 · Athletics 6** |
 
 > **⚠ `PT-78`, `Soldier` base 2 → 3.**
 
@@ -324,7 +324,7 @@
 | **Force points** | **28** *(Guardian 6, Wis +2, Cha +0)* · **regen 1 per round in combat, 1 per second out** |
 | **Alignment** | **Committed Dark** *(20)* — **pays no Ferocity drift** |
 | **Reactions** | **2** *(BAB +6)* |
-| **Skills** | **36** — **Awareness 9 · Alertness 9 · Mysticism 9 · Persuade 9** |
+| **Skills** | **36** — **Awareness 9 · Mysticism 9 · Persuade 9 · Athletics 9** |
 
 > **⚠ `Intimidate` → `Persuade`.** **`PT-81` cut `Intimidate` from the Jedi Guardian; it now sits on Soldier, Bounty Hunter and Marksman only.**
 
@@ -368,7 +368,7 @@
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+4** · Will **+1** |
 | **Defence** | **10 + 6 (Medium Droid Plating) + 2 (Dex, uncapped)** = **18** ⚠ |
 | **Reactions** | **2** *(BAB +6)* — **and he now holds `Snap Shot → Reflex Fire`, so they are spendable** |
-| **Skills** | **27** — **Awareness 9 · Alertness 9 · Scavenging 9** |
+| **Skills** | **27** — **Awareness 9 · Scavenging 9 · Athletics 9** |
 
 > **⚠ Budget was 9 and is now 27.** **`PT-77` raised the `Marksman` skill base from 2 to 4** — *most in the `Combat` tier, per the owner ruling.* **The sheet was built against base 2.**
 
@@ -588,3 +588,68 @@
 > **That last row is the one S7 could not test.** **Medpacs ran at a flat 2d8 all gauntlet because nobody had Medicine.** **Meris now adds +5, which is a third again on a 9-point average.**
 
 **And one deliberate absence.** **Korr has no Medicine and carries three medpacs.** **A Soldier is not a medic — he gets the dice and nothing else, which is the comparison that makes the Effect mode visible.**
+
+## 10. Five more pregens — `PT-254`
+
+**⚠ The original five predate everything the class workstream ruled.** **None of them holds a form, a starting-attack package, an unarmed chain, or a prestige class.**
+
+**These five exist to make those rules fire.**
+
+---
+
+### Kesh Varo — Brawler 8. Tests the unarmed roster.
+
+    d10 · STR 16 CON 15 DEX 12 · Specialist rate · 10 feats at 8
+    saves  Fort strong, Ref weak, Will weak     ⚠ PT-246: STR+CON both -> Fortitude
+    Attacks   Combination · Body Blow · Dual Strike        starting three, PT-228
+              + Clinch · Uppercut                          two chosen
+    Feature   Nothing In My Hands, tier 2 at level 8
+    Damage    Unarmed Specialist III — 3d4 + 3 Strength
+
+**⚠ Tests: whether `PT-228`'s chains are usable, and whether `PT-188`'s *first strike each round* clause holds when `Combination` gives three.**
+
+---
+
+### Ilna Serrid — Jedi Guardian 10. Tests forms.
+
+    d10 · Force die 4 · STR 15 WIS 14 · Combat rate
+    Forms     Determination (granted) · Perseverance (chosen)  ⚠ PT-230
+              third form at level 6: Resilience
+    Attacks   Sarlacc Sweep · Shien Deflection · Falling Avalanche   PT-235
+    Force     Force levels 10 — every level-scaling power reads TEN, not ten. PT-253
+
+**⚠ Tests: that a Guardian can reach three lightsaber chains at level 1, and that three forms at level 10 is not overwhelming to hold.**
+
+---
+
+### Tobek Dax — Soldier 6 / Jedi Consular 4. ⚠ Tests the dipper.
+
+    Force levels 4, character level 10
+    ⚠ Force Push deals 4, not 10 — PT-253 rule 1
+    ⚠ Holds Both Hands? NO. Soldier feature unlocks at class level 3 — PT-239. He has 6, so yes.
+    ⚠ Holds the Consular feature? Consular unlocks at 2. He has 4, so yes.
+    Multiclass  highest rate held = Combat. Highest chain count = Soldier's. PT-159
+
+**⚠ Tests the two rules that price multiclassing, and whether a 6/4 split is stronger than either pure build.**
+
+---
+
+### Sergeant Vaun — Soldier 6 / Officer 4. Tests prestige and `Rally`.
+
+    Entry met   Soldier 6 + Alertness 8      PT-217
+    Rally       tier 1 at Officer class level 1  PT-239
+    ⚠ +1 attack, damage and Will to EVERY ally who can hear him, for his declaration
+
+**⚠ Tests the only leadership mechanic in the roster, and whether spending a declaration to buff four allies beats attacking.**
+
+**⚠ And `PT-222`: droids ARE affected. Run him alongside the Droid Master.**
+
+---
+
+### T3-K9 — Astromech chassis, Machinist 5 / Droid Master 5.
+
+    ⚠ Force Blind and Fixed Armature apply — PT-92, PT-114
+    Command Protocol  tier 2 — three droids, acting on his turn   PT-201
+    ⚠ Tests the fix: turns collapse from 4 to 1
+
+**⚠ Tests whether a Droid Master still takes a disproportionate share of the round after `PT-201`.**

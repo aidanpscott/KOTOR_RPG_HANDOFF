@@ -251,53 +251,53 @@
 
 **Eleven classes.**
 
-**Medic — 9**
-Medicine · Science · Botany · Xenology · Alertness · Awareness · Persuade · Appraise · Slicing
+**Medic — 8**
+Medicine · Science · Botany · Xenology · Alertness · Persuade · Appraise · Slicing
 
-**Brawler — 6**
-Athletics · Acrobatics · Alertness · Awareness · Intimidate · Streetwise
+**Brawler — 5**
+Athletics · Acrobatics · Alertness · Intimidate · Streetwise
 
-**Duelist — 7**
-Acrobatics · Alertness · Awareness · Athletics · Persuade · Intimidate · Streetwise
+**Duelist — 6**
+Acrobatics · Alertness · Athletics · Persuade · Intimidate · Streetwise
 
-**Treasure Hunter — 11**
-Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism · Beast Handling · Demolitions
+**Treasure Hunter — 10**
+Archaeology · Xenology · Appraise · Science · Botany · Awareness · Pilot · Mysticism · Beast Handling · Demolitions
 
 **Agent — 8**
 Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology · Repair
 
-**Pirate — 8**
-Pilot · Appraise · Athletics · Alertness · Awareness · Intimidate · Streetwise · Scavenging
+**Pirate — 7**
+Pilot · Appraise · Athletics · Alertness · Intimidate · Streetwise · Scavenging
 
-**Soldier — 7**
-Alertness · Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim
+**Soldier — 6**
+Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim
 
-**Bounty Hunter — 9**
-Alertness · Athletics · Awareness · Demolitions · Intimidate · Pilot · Scavenging · Stealth · Streetwise
+**Bounty Hunter — 8**
+Athletics · Awareness · Demolitions · Intimidate · Pilot · Scavenging · Stealth · Streetwise
 
-**Jedi Guardian — 6**
-Alertness · Athletics · Awareness · Mysticism · Persuade · Medicine
+**Jedi Guardian — 5**
+Athletics · Awareness · Mysticism · Persuade · Medicine
 
-**Jedi Consular — 8**
-Alertness · Archaeology · Awareness · Mysticism · Persuade · Medicine · Science · Xenology
+**Jedi Consular — 7**
+Alertness · Archaeology · Mysticism · Persuade · Medicine · Science · Xenology
 
-**Jedi Sentinel — 9**
-Acrobatics · Alertness · Awareness · Slicing · Mysticism · Security · Stealth · Streetwise · Medicine
+**Jedi Sentinel — 8**
+Acrobatics · Alertness · Slicing · Mysticism · Security · Stealth · Streetwise · Medicine
 
 **Scout — 11**
 Alertness · Acrobatics · Awareness · Beast Handling · Botany · Slicing · Demolitions · Pilot · Repair · Scavenging · Swim
 
-**Machinist — 8**
-Repair · Scavenging · Sleight of Hand · Demolitions · Appraise · Awareness · Alertness · Pilot
+**Machinist — 7**
+Repair · Scavenging · Sleight of Hand · Demolitions · Appraise · Awareness · Pilot
 
-**Smuggler — 11**
-Alertness · Appraise · Awareness · Slicing · Demolitions · Persuade · Pilot · Security · Sleight of Hand · Stealth · Streetwise
+**Smuggler — 10**
+Alertness · Appraise · Slicing · Demolitions · Persuade · Pilot · Security · Sleight of Hand · Stealth · Streetwise
 
-**Marksman — 8**
-Repair · Demolitions · Awareness · Alertness · Sleight of Hand · Intimidate · Acrobatics · Scavenging
+**Marksman — 7**
+Repair · Demolitions · Awareness · Sleight of Hand · Intimidate · Acrobatics · Scavenging
 
 **Engineer — 7**
-Slicing · Security · Science · Appraise · Awareness · Alertness · Pilot
+Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 **⚠ The two droid lists were already written and lived only in `scripts/audit_skills.py`.** **They had never reached this document.** **They are reproduced above unchanged.**
 

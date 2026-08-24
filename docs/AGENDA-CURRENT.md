@@ -180,6 +180,23 @@
 
 *Affected: Gand, Kaleesh, Sullustan, Trandoshan, Kel Dor, Mon Calamari, Bith, Miraluka.*
 
+## 2.1c ⚠ `dialog.tlk` — item names and descriptions
+
+**Blocked on the file. `PT-279` built eight item documents identified only by resref, which is unreadable to a human.**
+
+    LocalizedName    strref -> dialog.tlk    994 of 994 items carry one
+    DescIdentified   strref -> dialog.tlk    865 of 994
+
+> **⚠ Every name and description is already IN the blueprints. They are pointers into one string table.**
+
+**Needed: `dialog.tlk` from the KOTOR 2 root folder, pushed to `data/dialog_k2.tlk`.** **⚠ Around 10 MB — repo, not chat.**
+
+**⚠ Why not the wiki:** **994 lookups, many items have no page, and `PT-252` established the wiki text can diverge from what the code does.** **`dialog.tlk` is what the game displays and cannot disagree with itself.**
+
+**On arrival: write a TLK reader, re-run `build_inventory.py`, and all eight documents gain real names and descriptions in one pass.**
+
+---
+
 ## 2.2 Crafting
 
 **Not started. Nothing exists.**
@@ -360,6 +377,83 @@
 
 ---
 
+## 2.4f ⚠ Droid permanent upgrades — the compensation for every droid restriction
+
+**Owner ruling. Replaces the `hkpart` category, which was KOTOR's parts list for rebuilding HK-47 and is not a crafting recipe at all.**
+
+> **⚠ Single-use, permanent installations. Unlock a feat, raise an ability by one, improve a skill.**
+
+**What they are for:**
+
+**A droid cannot be a Jedi, cannot spend attack credits on melee, cannot take a Force class, cannot take a Combat-rate class, and cannot take any class whose chain count exceeds eleven** — **`PT-92`, `PT-89`, `PT-109`, `PT-114`.**
+
+> **⚠ That is five hard restrictions and nothing has ever paid for them.**
+
+**These do.** **A droid climbs past the ceiling every other class sits under, by installing what an organic has to be born with or train for.**
+
+> **⚠ It is how a droid becomes the equivalent of a Jedi — more powerful than the average class, with the restrictions still in place.**
+
+### What the source gives us to build on
+
+**`d_tool`, `d_interface`, `d_device`, `d_armor` — four families, fifteen tiers each, all in `data/items/k2/`.**
+
+**⚠ Every blueprint carries `Use_Limitation_Feat` 78, 79 or 80 — `DROID_UPGRADE_1`, `2` and `3`.**
+
+**Which closes `PT-210`'s open question.** **That ruling said *"allows level 1/2/3 droid upgrades"* and nobody knew what a droid upgrade was.**
+
+    d_tool_15        Dexterity +5, two bonus feats     ⚠ the shape the owner wants
+    d_interface_15   Constitution +2, Dexterity +4
+    d_armor_15       damage resistance across three types
+    d_device_15      casts a power
+
+**⚠ Tier 15 already grants bonus feats and ability scores. The source built the mechanism and used it for four slots.**
+
+### What needs deciding
+
+**⚠ Whether these are slotted or permanent.** **The source slots them — four slots, swap freely. The owner wants permanent single-use.** **That is a real departure and it changes the cost curve.**
+
+**Where they come from** — **crafted, bought, or found.** **⚠ `CRAFTING-01` makes them craftable if they go on a recipe list.**
+
+**And how many a droid may install.** **⚠ Unbounded permanent ability bonuses is the only thing here that could break.**
+
+### ⚠ And it needs the HK parts recorded as what they are
+
+    hkpart01   HK Droid Processor      ⚠ a whole droid, in parts
+    hkpart02   HK Chassis
+    hkpart03   HK Control Cluster
+    hkpart04   HK Vocabulator
+    hkpart05   HK Protocol Pacifist Package    a joke item
+
+**`PT-225` deferred droid *construction* and said the mechanism was unwritten.** **⚠ This is the mechanism, and it belongs there rather than in the crafting skill split.**
+
+---
+
+## 2.4g ⚠ RCR's creature rules — needed before a beast stat block is authored
+
+**`PT-282`. Stopped mid-design because the book that governs mechanical questions already has this.**
+
+**RCR's *Allies and Opponents* chapter is a mini Monster Manual — creature rules, pregenerated stats, and rules for creating your own.** **The revised edition specifically added *expanded creature design rules*.**
+
+> **⚠ The stat block format I was about to author already exists, in the book `CANON-01` says governs every mechanical question.**
+
+### What is needed
+
+**The RCR scan, or the *Allies and Opponents* pages.** **⚠ The project record says we hold a scan; it is not in uploads and not in the repo, so this session cannot read it.**
+
+### ⚠ And one thing already ruled needs checking against it
+
+**`PT-281` gave beasts familiar-style derivation — no hit dice of their own, vitality and attack from the master.**
+
+**If RCR's creature rules already carry a companion-scaling mechanism, `PT-281` may conflict with it.** **⚠ Check before building further.**
+
+### Why this was nearly a warrant error
+
+**`METHOD-RECORD-01 §1.5`: a claim requires a primary read at the point of assertion.**
+
+> **⚠ Authoring a creature format without opening the book that has one is exactly the failure that rule names — and it is the most frequently violated rule in this project.**
+
+---
+
 ## 2.9 Difficulty modes — the last thing before engine work
 
 **⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**
@@ -531,3 +625,55 @@
 **Two real failures remain — attachments not arriving, and an uploads directory returning its own residue.** **Neither is solvable from inside the work.**
 
 > **⚠ And the ten unconfirmed deliveries are unexplained again.** **A later two-thread explanation was also withdrawn.** **Not re-diagnosing from here.**
+
+---
+
+## 2.2-scope Crafting — scoped. `PT-273`.
+
+**⚠ K2's system is an expansion, not more crystals. Three of the five source tables are K2-only.**
+
+    upgrade.2da          which slots a weapon has        both games
+    upcrystals.2da       lightsaber crystal effects      both games
+    itemcreate.2da       ⚠ WORKBENCH recipes             K2 only
+    chemicalcreate.2da   ⚠ LAB STATION recipes           K2 only
+    itemcreatemira.2da   ⚠ character-specific recipes    K2 only
+
+### What K2 added over K1
+
+**K1 had crystals and nothing else — you found them and slotted them.**
+
+**⚠ K2 added an economy:** **two station types with separate recipe lists · components and chemicals as currency · skill gates on every recipe · character-specific lists.**
+
+> **⚠ The skill gate is the part that matters to us.** **`Repair` and `Treat Injury` decide what you can build, which makes crafting a reason to raise a skill rather than a loot filter.**
+
+### ⚠ Three things in the corpus already assume it
+
+**`Gear Head` · the droid upgrade slots · the `Machinist` class, whose whole premise is building.**
+
+**And `PT-203`/`PT-225` deferred droid *construction* to downtime work explicitly depending on this.**
+
+### The four phases
+
+**1 — Structure.** **Which slots each weapon and armour type has, and how many.** **Needs `upgrade.2da`.** **⚠ Nothing else can be built without this.**
+
+**2 — Effects.** **Crystal and component effects as data.** **⚠ `PT-272` has the lightsaber half from the wiki; this replaces prose with source.**
+
+**3 — Recipes and gates.** **What each station makes, and the skill DC.** **⚠ This is where it stops being extraction and becomes design — KOTOR DCs assume a video-game skill curve.**
+
+**4 — Economy.** **Components and chemicals: where they come from, what they are worth.** **⚠ Touches `EQUIPMENT-01`'s unwritten cost column and the campaign packages.**
+
+### ⚠ Files needed, priority order
+
+    [1] k2_upgrade.2da          the slot structure — blocks everything
+    [1] k2_upcrystals.2da       crystal effects as data
+    [2] k1_upgrade.2da          ⚠ to DIFF against K2 and see exactly what expanded
+    [2] k1_upcrystals.2da       same
+    [2] k2_itemcreate.2da       workbench recipes and DCs
+    [2] k2_chemicalcreate.2da   lab station recipes and DCs
+    [3] k2_itemcreatemira.2da   character-specific
+    [3] itempropdef.2da         what an item property IS — the vocabulary
+    [3] iprp_*.2da              the property value tables
+
+**⚠ Phase 1 and 2 are extraction and can start the moment the priority-1 files land.** **Phase 3 and 4 are design and want `§2.1` items finished first.**
+
+**⚠ And `PT-249`'s lesson applies: check the file carries what we assume before scoping on it.** **`spells.2da` did not carry Force power numbers; `upgrade.2da` may not carry slot counts.**

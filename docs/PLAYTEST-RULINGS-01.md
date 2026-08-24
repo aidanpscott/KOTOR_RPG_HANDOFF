@@ -7129,3 +7129,1175 @@
 **⚠ And the file should be renamed `k1_spells.2da` on arrival of its pair, so this cannot recur.**
 
 **`force_namemap.json` holds the 38 confirmed mappings.**
+
+---
+
+## PT-251 — ⚠ The K2 data was already in holdings. `PT-250`'s request was unnecessary.
+
+**`force_power_extract.tsv` has been in `/mnt/user-data/uploads/` unread.**
+
+    247 rows    K1 67 · K2 179
+    sections    castable 147 · cut_or_internal 56 · special_ability 32 · form 11
+
+**⚠ It carries both games in one file, with a `game` column and a `section` column that separates castable powers from cut content.**
+
+### What it does to the mapping
+
+    against K1's spells.2da alone    38 of 88
+    against the TSV                  ⚠ 78 of 88
+
+**Eight of the nine K2 powers `PT-250` reported missing are present.** **Only `Battle Meditation` needed a variant match — the source label is `BATTLE_MEDITATION_PC`.**
+
+### ⚠ And it is better than the file I asked for
+
+**`k2_spells.2da` would have given K2 alone.** **This is both games, pre-joined, with cut content already flagged.**
+
+> **⚠ `PT-250` asked the owner for a file whose contents were already in holdings in a better form.**
+
+**Ninth instance of the shape this session, and the first where the missing thing was *data* rather than a ruling.**
+
+### What is still not there
+
+**⚠ The TSV carries the same columns the 2DA does — `forcepoints`, `range`, `exclusion`, `prerequisites`, class access.**
+
+**It does *not* carry damage, duration, save DC or magnitude.** **`PT-249`'s hard negative stands: the wiki is still the only route to the numbers.**
+
+**And `k_inc_generic.nss` is the AI script — it decides *which* power to cast, not what a power does.** **Checked: 30 power references, one `EffectDamage`.**
+
+### Standing
+
+    78 of 88 mapped, both games
+    10 unmapped — next task
+    numbers   wiki, still
+
+---
+
+## PT-252 — The last four mapped, and the wiki sweep found a trap
+
+### Two of the four resolve
+
+**`Force Deflection`** — **K2, requires level 6. Deflects blaster bolts *without* a lightsaber, cannot return them, always in effect.**
+**`Force Redirection`** — **level 12. As above, and bolts go back at the enemy.**
+
+**⚠ Which is a chain, and our roster has them as two separate powers.**
+
+**`Force Suppression`** — **cancels Force powers active on the target.** **Our entry gates it at Character Level 9 and that is consistent.**
+
+### ⚠ Two are ours, not the games'
+
+**`Force Distraction` and `Force Strangle` return nothing on either wiki.**
+
+**They are either our own names for a source power or authored entries.** **Marked for resolution before the numbers pass.**
+
+### ⚠ THE FINDING — the wiki text and the game's behaviour diverge
+
+**Obsidian's own forums and StrategyWiki both record that `Affliction` and `Plague` were *improperly coded*: the attribute penalties delivered are far smaller than the menu text describes.**
+
+> **⚠ So the in-game description is not evidence of the in-game effect.**
+
+**This is the `Logic Upgrade` shape a second time** — **`PT-210` found two tiers described as granting a defence bonus and granting nothing.**
+
+**⚠ It means the wiki sweep cannot be a transcription job.** **Every number needs its provenance marked:**
+
+    source_system: kotor_game         the 2DA or TSV carried it
+    source: wiki_description          the menu text says so
+    ⚠ source: wiki_observed           someone measured it in play
+    authored                          neither had it
+
+**A description and a measurement are different claims and the corpus must not flatten them.**
+
+### Numbers recovered on the way, all wiki_description
+
+    Force Push        5 m knockback, prone, stunned, damage = attacker level.
+                      Reflex save: no push, no stun, half damage
+    Force Whirlwind   1/3 attacker level damage every 2 s, cannot act, 12 s total
+    Force Wave        15 m radius, 5 m push, stunned 6 s, damage 1.5x attacker level
+    Burst of Speed    36 s, movement doubled, +2 Defence
+    Energy Resistance absorbs first 15 points of sonic/fire/cold/electrical, 120 s
+
+**⚠ StrategyWiki's KOTOR 2 Force powers page is the best single source found** — **it carries save types, durations and the cost-adjustment order.**
+
+**Standing: 86 of 88 mapped. Two unresolved and possibly ours.**
+
+---
+
+## PT-253 — Force power conversion: four rules, and the ported numbers do not balance without them
+
+**Tested the recovered wiki numbers against our own attack baseline — `Barrage`, three strikes at 70%, `27.3` damage a round.**
+
+    Force Push @30      30 dmg   1.10x Barrage   ⚠ exceeds it
+    Force Wave @30      45 dmg   1.65x Barrage   ⚠ and it is an AREA
+    Whirlwind @30       30 dmg   1.10x Barrage   ⚠ and the target cannot act
+
+> **⚠ At level 30 a single Force power beats three lightsaber strikes, hits an area, and disables.**
+
+### The cause is structural, not numeric
+
+**KOTOR's level cap is 20. Ours is 30 — `PT-119` authored the ladders that far.** **Every power scaling on level gets 50% more than the source ever delivered.**
+
+**⚠ And in KOTOR a Jedi could cast *and* swing. Here, `ATTACKS-01 §2` gives one declaration.**
+
+### Rule 1 — level-scaling powers scale on FORCE levels, not character levels
+
+> **⚠ Which is `PT-102`'s own rule for the pool, applied to the powers.**
+
+    pure Jedi 30            30 dmg   1.10x    fair for a declaration plus points
+    Jedi 20 / other 10      20 dmg   0.73x
+    Soldier 24 / Jedi 6      6 dmg   0.22x
+
+**⚠ It fixes the dip problem at the Force layer with a rule that already exists** — **the same job `PT-239` did for class features.**
+
+### Rule 2 — seconds convert at 6 per round, rounding down
+
+    36 s  Burst of Speed   ->  6 rounds
+    12 s  Whirlwind        ->  2 rounds
+    120 s Energy Resistance -> 20 rounds   ⚠ longer than most fights; treat as "the encounter"
+
+### Rule 3 — per-tick damage becomes per-round
+
+**KOTOR ticks every 2 seconds; we resolve once a round.**
+
+**`Whirlwind`'s *1/3 level every 2 s* is three ticks a round** — **so it is *Force levels* damage per round, not per tick.**
+
+### Rule 4 — every distance snaps to the 2-metre grid
+
+    5 m push     -> 2 squares    (was 2.5, off grid)
+    15 m radius  -> 14 m, 7 squares
+
+**⚠ `PT-166` and check 20 already require this. The ported numbers violate it and would have failed the gate.**
+
+### ⚠ And an area power needs a further cut
+
+**`Force Wave` at 1.5x Force levels is `45` on a pure Jedi — `1.65x` a Barrage, across an area.**
+
+> **Reduced to 1.0x Force levels for area powers.** **Single-target keeps `1.0x`; the area version buys breadth with the same total rather than more.**
+
+**Which is `ATTACKS-01 §3`'s own logic: `Spread` chains trade damage for targets.**
+
+---
+
+## PT-254 — Five pregens and four scenarios, because S1–S8 test nothing ruled since
+
+**⚠ Eight scenarios exist and none of them exercises the class workstream.**
+
+    S1-S8 do not test   the starting-attack model · forms · the unarmed roster ·
+                        Force levels vs character levels · area powers on a grid ·
+                        a multiclass dipper · prestige entry · Rally
+
+### Five pregens
+
+    Kesh Varo      Brawler 8                    the unarmed roster
+    Ilna Serrid    Jedi Guardian 10             forms, three at level 10
+    Tobek Dax      Soldier 6 / Consular 4       ⚠ the dipper
+    Sergeant Vaun  Soldier 6 / Officer 4        prestige entry and Rally
+    T3-K9          Machinist 5 / Droid Master 5 the turn collapse
+
+### Four scenarios
+
+    S9   The Hangar        20x14 — ⚠ the first map where the range ladder can fire
+    S10  The Cantina Floor 10x10 — where point blank dominates
+    S11  The Escort        turn economy and the only leadership mechanic
+    S12  The Reversal      the multiclass price, made visible
+
+### ⚠ Why S9 matters most
+
+**`PT-170` derived that S1–S8's 5-wide corridor meant the increment ladder never fired once.**
+
+> **A whole subsystem was written and never tested, because no map was large enough.**
+
+**S9 is 20 by 14. A pistol increment is 12 squares. Combat opens at 18.**
+
+### ⚠ And check 20 caught me writing an off-grid figure
+
+**S9's text quoted `Force Wave`'s source radius in metres.** **The gate blocked on it, which is check 20 doing exactly its job — on the document describing the rule rather than the rule.**
+
+---
+
+## PT-255 — The numbers, extracted. StrategyWiki's K2 page carries the whole system.
+
+**⚠ Every power, every tier, with damage, duration, save type and DC.** **`source: wiki_description`.**
+
+### The universal DC formula — the biggest single find
+
+> **⚠ `5 + attacker level + attacker Wisdom and Charisma modifiers`, on almost every power in the game.**
+
+**`Force Scream` uses `10 +` and is the only exception. `Affliction` and `Plague` use flat `20` and `100`.**
+
+**Converted per `PT-253` rule 1:** **`5 + Force levels + WIS + CHA`.**
+
+**⚠ This closes a hole nobody had named.** **48 powers had no DC and there was one formula behind all of them.**
+
+### Durations, converted at 6 seconds a round
+
+    Fear          6 s   -> 1 round      Stun            9 s   -> 2 rounds
+    Horror       12 s   -> 2 rounds     Stasis         12 s   -> 2 rounds
+    Insanity     18 s   -> 3 rounds     Force Aura     20 s   -> 3 rounds
+    Force Barrier 30/45/60 s -> 5/7/10  Burst of Speed 36 s   -> 6 rounds
+    Mind Trick   30 s   -> 5 rounds     Energy Resist 120 s   -> 20 rounds
+    Breath Control 240 s -> 40 rounds
+
+**⚠ `Energy Resistance` at 20 rounds and `Breath Control` at 40 both outlast any encounter.** **Treat as *"the encounter"* rather than counting.**
+
+### Distances, snapped to the grid
+
+    5 m -> 2 squares  ⚠ snapped     10 m -> 5 squares
+    6 m -> 3 squares                15 m -> 7 squares  ⚠ snapped
+                                    16 m -> 8 squares
+
+### Damage, on Force levels
+
+    Force Push       Force levels             Force Wave    1.5x, cut to 1.0x — PT-253
+    Shock line       1-6 per Force level      Drain Life    1-4 per Force level, cap 10
+    Throw Lightsaber 1-6 per TWO Force levels Force Crush   1-10 per Force level
+    Force Scream     3-18 / 5-30 / 7-42       ⚠ flat, does not scale — port as written
+    Wound/Choke      2/3 Force levels per 2 s -> 2x Force levels a round
+
+### ⚠ And the wiki confirms the trap
+
+> ***"The effects in the descriptions for `Affliction` and `Plague` are inaccurate: both inflict −1 attributes every 6 seconds after use."***
+
+**StrategyWiki states the divergence itself.** **⚠ Which makes it `source: wiki_observed` rather than `wiki_description` — the page distinguishes what the menu claims from what the code does.**
+
+**Ported as observed: `−1 attribute per round`, not the menu's figure.**
+
+### Two structural finds
+
+**⚠ `Force Deflection` grants `+3` Blaster Bolt Deflection and is *always in effect*.** **A passive, not a declaration** — **which means it does not compete for the round and `PT-198`'s declaration rule does not reach it.**
+
+**⚠ `Fury`'s extra attacks do not stack with `Knight Speed` or `Master Speed`.** **The source states the exclusion; ours has no rule for it.** **`PT-176`'s *use the largest* generalises to it.**
+
+---
+
+## PT-256 — ⚠ `PT-253` rule 2 was wrong and contradicted a ruling that already existed
+
+**`ACTION-ECONOMY-01 §6.1`:** *"Durations convert by rounds, not seconds. KOTOR runs 3-second rounds; divide printed seconds by 3."*
+
+**`PT-253` rule 2 said six seconds a round. ⚠ Directly contrary, and I wrote it without reading `§6.1`.**
+
+    Burst of Speed, 36 s
+      divide by 3 -> 12 rounds   ⚠ preserves the ROUND COUNT
+      divide by 6 ->  6 rounds   preserves the seconds
+
+> **⚠ The existing ruling is right. A buff that lasted twelve rounds in KOTOR should last twelve rounds here.** **Seconds are an artefact of real-time and carry no design intent.**
+
+**Corrected:**
+
+    Fear      2 rounds    Stun            3 rounds    Force Valor    6 rounds
+    Horror    4 rounds    Stasis          4 rounds    Force Aura     6 rounds
+    Insanity  6 rounds    Mind Trick     10 rounds    Burst of Speed 12 rounds
+    Force Barrier 10/15/20            Energy Resistance 40    Breath Control 80
+
+**⚠ Nineteenth-odd instance of a rule being written against a document I had not opened.** **`§6.1` states the conversion in its own heading.**
+
+---
+
+## PT-257 — `PT-253` rule 3 was also already ruled
+
+**`ACTION-ECONOMY-01 §6.1`: every Force power costs your Action, self-buffs included.**
+
+**⚠ And it records that an earlier ruling made buffs a Bonus action and was reversed:** *"none was ever cast in sixty rounds of testing — but the cause was a bad duration conversion, not the cost."*
+
+> **⚠ My recommendation was to make buffs a Gear action. That is the reversed ruling, proposed again, for the reason the reversal already rejected.**
+
+**`§6.1`'s exception is narrower and better:** **a self-buff costs your Action but does not end your turn — you may still move.**
+
+**Withdrawn. `§6.1` stands.**
+
+---
+
+## PT-258 — `Force Kill` is ours already, ported verbatim
+
+**Owner asked how ours differs from KOTOR 2's. It does not.**
+
+**`FORCE-POWERS-01 §47` carries the source text word for word** — **choke for 6 seconds, damage close to half the target's *maximum* vitality, Fortitude save for damage equal to attacker level instead.**
+
+**⚠ So the `PT-255` concern stands against our own entry, not against a hypothetical port.**
+
+    a level-20 target at ~200 vitality   -> 100 damage in one declaration
+    3.6x a Barrage, and it is half MAXIMUM rather than half REMAINING
+
+> **⚠ Which is the opposite of `PT-177`'s asymptote — the property that made `Assassin Protocols` acceptable.** **Used twice it kills anything.**
+
+**Open for owner ruling. Three paths recorded:**
+
+**half *remaining*** — matches `PT-177`, can never finish anyone. **⚠ But a power called Kill that cannot kill needs a rename.**
+**a flat damage cap** — keeps the name and the drama. **⚠ Becomes an ordinary damage power.**
+**leave it** — faithful. **⚠ And it is the single strongest attack in the game by a wide margin.**
+
+---
+
+## PT-259 — `Force Resistance` capped at 75%
+
+**Owner ruling.**
+
+**StrategyWiki states the source's own defect:** *"Immunity can normally never be breached from level 21 onward."*
+
+**⚠ And our cap is 30 rather than 20 — ten further levels of unbreakable.**
+
+> **Capped at 75%. A Force user always has a one-in-four chance.**
+
+**Which keeps `Force Suppression` meaningful as the counter the source intended, and keeps enemy Jedi a threat in a campaign that is made of them.**
+
+---
+
+## PT-260 — The Strangle chain rebuilt on dice, and our divergences stand
+
+**Owner ruling, two parts.**
+
+### 1 — Where our powers diverge from the games, ours stand
+
+**Four real divergences found by comparing every entry against StrategyWiki:**
+
+    Force Barrier    ours absorbs from ANY source; KOTOR only slashing/bludgeoning/piercing
+    Force Valor      ours boosts PHYSICAL attributes; KOTOR boosts all six
+    Burst of Speed   ours grants +2 Defence at base; KOTOR holds it to Knight Speed
+    Force Strangle   ours stuns; KOTOR's Wound does not
+
+**⚠ Three made a power stronger, one weaker, and none was marked as authored.** **They read as ports.**
+
+> **Owner: ours are good. Kept — and now marked.**
+
+**Everything else checked out.** **`Force Push`, `Force Whirlwind`, `Force Wave`, `Force Aura`, `Force Shield`, `Heal`, `Energy Resistance`, `Force Scream` match the source on damage, duration, radius and save.**
+
+### 2 — `Force Kill` rebuilt
+
+**⚠ It was the only member of its chain not built on damage over time.**
+
+    was    choke, and damage close to half the target's MAXIMUM vitality
+    ⚠      100 against a full Soldier and 100 against one with 30 left
+
+| Tier | Each round | Rounds | FL10 | FL20 | FL30 |
+|---|---|---|---|---|---|
+| Force Strangle | `1d6` per 5 Force levels | 2 | 14 | 28 | 42 |
+| Force Choke | `1d6` per 4, and `Stunned` | 2 | 14 | 35 | 49 |
+| Force Kill | `1d6` per 3, and `Stunned` | **3** | 32 | 63 | 105 |
+
+**Fortitude, DC `5 + Force levels + WIS + CHA`. A successful save deals `2 ×` Force levels once.**
+
+#### Derived, not invented
+
+**KOTOR's `2/3 level every 2 s for 6 s` is three ticks across two KOTOR rounds — `1 ×` level a round.** **`1d6` per 4 Force levels averages that exactly at level 20.**
+
+**⚠ The tiers move the divisor rather than inventing a curve.**
+
+#### What it fixes
+
+**Damage scales with the caster, not the target's health bar.** **A dying enemy is no longer worth 100.**
+
+**⚠ And it cannot one-shot: `105` at FL30 is `1.3 ×` a Barrage across three rounds, during which the target acts twice.**
+
+**The save clause goes from `100 vs 20` to `105 vs 60`** — **worth casting even when the save succeeds, which it was not before.**
+
+---
+
+## PT-261 — What a successful save gives on the Strangle chain
+
+**⚠ First: there is no attack roll.** **Force powers in this system are save-or-suffer, and the points are spent either way.**
+
+| Tier | Save fails | Save passes |
+|---|---|---|
+| **Force Strangle** | `1d6` per 5 FL, 2 rounds | **⚠ nothing** |
+| **Force Choke** | `1d6` per 4 FL, 2 rounds, `Stunned` | **`2 ×` Force levels once, no stun** |
+| **Force Kill** | `1d6` per 3 FL, 3 rounds, `Stunned` | **`2 ×` Force levels once, no stun** |
+
+### It is the source's own clause, extended by one tier
+
+**KOTOR gives it to `Kill` alone:** *"they are not choked, but instead suffer damage equal to attacker level."*
+
+**And says of `Wound` and `Choke` that a successful save *"results in no effect."***
+
+> **⚠ Owner ruling: extend it to `Choke`, not to `Strangle`.**
+
+### Why stopping at `Choke` is right
+
+**⚠ A tier-1 power that always does something flattens the chain's own progression.**
+
+**The entry tier is where a whiff should cost you.** **`Strangle` is a gamble; `Choke` and `Kill` are reliable, and that difference is what the two upper tiers are for.**
+
+**And it answers the complaint the extension was meant to fix** — **the power that fires constantly at a table is the one a player invests in, and by `Choke` they have.**
+
+---
+
+## PT-262 — `Stunned` at all three tiers, on a failed save only. And I dropped it.
+
+**Owner ruling, and it corrects my own table.**
+
+**⚠ `PT-260` recorded `Force Strangle`'s stun as one of the four places our version deliberately diverges from the source** — *KOTOR's `Wound` does not stun.*
+
+**`PT-261`'s table, written one ruling later, did not carry it.**
+
+> **⚠ The correction reached the ruling and stopped at the table.** **Third instance — `PT-240` and `PT-244` were the first two.**
+
+### Final shape
+
+| Tier | Save fails | Save passes |
+|---|---|---|
+| Force Strangle | `1d6` per 5 FL, 2 rounds, `Stunned` | nothing |
+| Force Choke | `1d6` per 4 FL, 2 rounds, `Stunned` | `2 ×` FL once |
+| Force Kill | `1d6` per 3 FL, 3 rounds, `Stunned` | `2 ×` FL once |
+
+**No tier stuns on a successful save.**
+
+### ⚠ And it makes the progression cleaner
+
+**The tiers now separate on dice and duration alone.**
+
+> **The chain does one thing harder each tier rather than acquiring a new verb** — **which is `PT-182`'s test, and the version where the stun arrived at tier 2 failed it.**
+
+**⚠ Worth noting the shape of the error:** **I wrote a table summarising a ruling I had written an hour earlier, and the table lost a clause the ruling had.** **Summarising is a place corrections go missing.**
+
+---
+
+## PT-263 — The save-passes damage scales too
+
+**⚠ `PT-261` gave `Choke` and `Kill` the same `2 ×` Force levels.** **Flat, across a chain whose whole point is escalation.**
+
+    Force Strangle   nothing
+    Force Choke      1x Force levels     FL10 = 10 · FL20 = 20 · FL30 = 30
+    Force Kill       2x Force levels     FL10 = 20 · FL20 = 40 · FL30 = 60
+
+**⚠ `1 ×` is the source's own figure for `Kill`** — *"damage equal to attacker level."* **`Kill` doubles it because it sits two tiers up.**
+
+### Final shape, all four axes escalating
+
+| Tier | Dice | Rounds | Stun | Save passes |
+|---|---|---|---|---|
+| Force Strangle | `1d6` per 5 FL | 2 | yes | — |
+| Force Choke | `1d6` per 4 FL | 2 | yes | `1 ×` FL |
+| Force Kill | `1d6` per 3 FL | **3** | yes | `2 ×` FL |
+
+**⚠ Three of the four escalate and one is constant, which is the right shape.** **The stun is what the chain *is*; the numbers are how far along it you are.**
+
+### ⚠ And the error was the same one twice in a row
+
+**`PT-262` fixed a table that dropped a clause. `PT-263` fixes the same table giving two tiers one number.**
+
+> **Both were written while summarising a ruling into a grid.** **The grid is where the detail goes.**
+
+---
+
+## PT-265 — Species and homeworld skill bonuses stack
+
+**Atlas asked, because `F-OVERLAP-01` rests on the answer.**
+
+> **A species `+2` and a homeworld `+2` in the same skill STACK.**
+
+**⚠ Because they are different claims about a character.** **The species bonus says *what you are*; the homeworld pick says *where you were taught*.**
+
+**A Twi'lek raised on Ryloth being doubly persuasive is the setting being consistent** — **and it makes an origin-world character mechanically different from a diaspora one, which is content rather than redundancy.**
+
+### What it settles
+
+**`F-OVERLAP-01`'s 23 overlapping menus are harmless.** **No menu needs changing.**
+
+**⚠ And the two menus Atlas already changed on the unverified basis — Roche and Katarr — stand, since both were recorded as resting on independent evidence.**
+
+**⚠ One consequence to state:** **the aptitude half does NOT double.** **`SKILLS-01 §11.1` makes aptitude a cost rule — one point a rank instead of two — and a skill is either cheap or it is not.**
+
+    species +2 and homeworld +2 in Persuade   ->  +4 total
+    aptitude from both                        ->  still just aptitude
+
+---
+
+## PT-266 — A homeworld offers exactly FOUR trainable skills
+
+**Owner ruling, superseding the earlier verbal three.**
+
+**⚠ `PT-261` was issued against a prompt that contradicted itself** — **Atlas's section 4 still said *"three, flat"* while section 1 already carried `D-MENU4` at four.** **That document is corrected.**
+
+**And four sits inside `D-W30`'s stated three-to-five range, so the register does not conflict.**
+
+### ⚠ One correction to the argument, because it will matter next
+
+**The case offered was *"the register said three-to-five, the artefact said three, and you trusted the artefact — the artefact is now 70 menus at four."***
+
+    ⚠  70 menus at FOUR    59 finished worlds
+      222 menus at THREE   deliberately held pending research
+      ---
+      292
+
+> **⚠ 76% of the artefact is at three. Trust-the-artefact points the other way.**
+
+**The 222 are *incomplete* rather than *disagreeing*, which is a different thing and the reason the argument still lands.** **But it lands on the owner's direct ruling, not on the artefact.**
+
+**⚠ Stated because the 222 now carry a known gap** — **each needs a fourth skill added, and until then the artefact is internally inconsistent rather than merely unfinished.**
+
+### And the fourth skill should be the rare one
+
+**`PT-267`'s finding applies directly.** **Atlas's own distribution has `Awareness` in 36% of menus and `Beast Handling` in 5%, which is close to exactly inverted against class-skill scarcity.**
+
+    Alertness · Awareness   16 classes each   ⚠ worthless as a homeworld pick
+    Archaeology · Beast Handling · Swim   2 classes each   the most valuable
+
+> **⚠ The fourth slot is the natural place to put a rare skill, since the other three already carry the world's flavour.**
+
+**Which turns the expansion from 222 edits into 222 edits that also fix the weighting.**
+
+---
+
+## PT-267 — Class skills and homeworld skills do not interact
+
+**Atlas asked for confirmation. Confirmed, and the reason is that they are different mechanisms.**
+
+    class      grants a LIST of class skills — SKILLS-01 §9.2
+    species    grants a BONUS and one aptitude slot — §11.4
+    homeworld  grants a BONUS and aptitude in one chosen skill
+
+**⚠ Aptitude is a cost rule, not a bonus.** **A skill on your class list is already aptitude; a homeworld granting aptitude in a skill your class already gives you is a wasted pick, not a stacking one.**
+
+**That is a player-choice problem, not a rules interaction.**
+
+### ⚠ And Atlas should know this before building more menus
+
+**A world whose three skills are all commonly-held class skills offers less than one whose skills are rare.**
+
+**`PT-237` found `Beast Handling` was held by exactly one class.** **A homeworld granting it is worth far more than one granting `Awareness`, which six classes already have.**
+
+---
+
+## PT-268 — Every Force power that deals damage now rolls dice
+
+**Owner: this is a tabletop game; damage rolls and modifiers apply to rolls.**
+
+**⚠ Before: 89 powers, ONE using dice notation.** **Twelve wrote ranges like `3-18`; the rest were flat.**
+
+> **The ranges were dice in disguise. KOTOR wrote min–max because a video game rolls invisibly.**
+
+    3-18   -> 3d6         1-6 per level  -> 1d6 per level
+    5-30   -> 5d6         1-4 per level  -> 1d4 per level
+    7-42   -> 7d6         1-10 per level -> 1d10 per level
+
+**⚠ 20 powers now carry dice. Zero damage powers remain flat.**
+
+### The caps, decided per power rather than flat
+
+**⚠ `1d6 per Force level` at our cap of 30 is `30d6` — 105 average, `3.8x` a Barrage.** **KOTOR capped at 20 and had a healer spamming.**
+
+    Shock · Lightning · Storm      cap 10d6    ⚠ the source's TIERS do the pricing —
+                                               same dice, rising shape: single, line, area
+    Drain Life · Death Field       cap 10d4    ⚠ the source already capped these at 10 levels
+    Throw Lightsaber · Advanced    cap 6d6     ⚠ harder, because it ALWAYS HITS — no roll, no save
+    Force Crush                    cap 10d10   a granted campaign capstone, allowed to be large
+
+> **⚠ A flat cap would have made `Throw Lightsaber` too strong and `Force Crush` too weak.** **Going power by power produced four different answers.**
+
+### Twelve powers correctly do NOT roll
+
+**`Force Barrier` and `Energy Resistance` are damage *thresholds*.** **`Force Valor` is a *modifier*. `Plague` is a *counter*.**
+
+**⚠ Rolling those would be wrong. Recorded so nobody "fixes" them later.**
+
+### `Heal` now rolls
+
+    was   5 + CHA + WIS + level      flat
+    now   1d8 + CHA + WIS + Force levels
+
+---
+
+## PT-269 — ⚠ The attack rosters were already right, and for a reason worth stating
+
+**Swept `ATTACKS-04` through `-07`. 35 entries carry flat damage with no dice.**
+
+**⚠ All 35 are correct.**
+
+    attack chain   Power Attack = +5 damage
+                   ⚠ the WEAPON rolls. 2d8 lightsaber + 5.
+                   A flat +5 is a modifier applied to a roll.
+
+    Force power    Force Shock = 1d6 per Force level
+                   ⚠ there is no weapon. The power IS the damage source.
+
+> **Weapon rolls, chain modifies. Power rolls, nothing modifies.**
+
+**Two different objects, and the sweep confirms both are now correct.**
+
+**⚠ Recorded because a later reader running the same check will find 35 "flat damage" entries and try to fix them.**
+
+---
+
+## PT-270 — `Alertness` and `Awareness` split: one or the other, two exceptions
+
+**Owner ruling. Every class held both, which made them worthless as homeworld picks and as class distinctions.**
+
+**⚠ The two skills' own definitions decide most of it:**
+
+    Alertness   Wis · Listen + Sense Motive   -> people, intent, being lied to
+    Awareness   Int · Spot + Search           -> objects, places, finding things
+
+### Awareness — 9
+
+**Soldier · Bounty Hunter · Marksman · Machinist · Engineer · Treasure Hunter · Jedi Guardian · Sith Warrior**, and **Scout**.
+
+**⚠ `Machinist` and `Engineer` are Intelligence primary — the skill's own ability.**
+
+### Alertness — 9
+
+**Smuggler · Medic · Brawler · Duelist · Pirate · Jedi Sentinel · Sith Assassin · Jedi Consular · Sith Inquisitor**, and **Agent**.
+
+**⚠ `Duelist` was already described as *"read the opponent"* at `PT-227`.** **`Medic`, `Consular` and `Inquisitor` are Wisdom primary.**
+
+### ⚠ Two exceptions, both earned
+
+**`Scout` takes both.** **The class *is* perception — 24 grants in the source, more than any other, and its whole defensive suite is about not being caught out.**
+
+**`Agent` takes both.** **Cover work needs both halves: reading a room and reading a face.** **⚠ `PT-179` built the class on cover as a positional axis, which is the room half.**
+
+### What it does to the distribution
+
+    Alertness   16 -> 9        Awareness   16 -> 9
+
+**⚠ Both drop from universal to mid-scarcity, and no skill is now held by more than nine of sixteen classes.**
+
+**Every one of the 24 is still held by at least one class — `SKILLS-01 §312`'s guarantee holds.**
+
+### ⚠ And it fixes Atlas's weighting without Atlas doing anything
+
+**Their distribution has `Awareness` in 36% of 292 menus.** **That was 36% of menus offering a skill every class already had.**
+
+> **It is now a real pick for seven of sixteen classes.**
+
+**Class list sizes are now 5 to 11, from 6 to 11. No class lost enough to break its band.**
+
+---
+
+## PT-271 — The Engineer gets `Repair`. The Machinist already had `Demolitions`.
+
+**Owner ruling, prompted by `PT-270` stranding one class.**
+
+### ⚠ What the split broke
+
+    Engineer after PT-270   Slicing · Security · Science · Appraise · Awareness · Pilot   = 6
+
+    budget at level 8, Int +3   77 points
+    rank cap                    11
+    6 x 11                      66
+    ⚠ eleven points unspendable
+
+**The Engineer held seven, the split took one, and six is one short of its own budget.** **⚠ The only class this happened to.**
+
+**Check 5 caught it on the `T4-K9` pregen within a minute of the split being applied.**
+
+### ⚠ And `PT-225` is not reversed by this
+
+**That ruling withdrew *"give the Engineer `Repair`"* because it was fixing a symptom of a mis-assigned droid-construction ruling.**
+
+> **⚠ This is a different reason. The class cannot spend its skill points.** **`PT-83`'s mind-and-hands split survives — the Machinist still *builds*; the Engineer can now *fix*.**
+
+### The Machinist half was already true
+
+**Owner asked for `Demolitions` on the Machinist. ⚠ It has held it since the class was written.**
+
+    Machinist   Repair · Scavenging · Sleight of Hand · Demolitions · Appraise · Awareness · Pilot
+
+**Nothing to change. Recorded so it is not asked for a third time.**
+
+### Standing
+
+    Engineer   6 -> 7 skills
+    Repair     4 -> 5 classes
+    T4-K9      eleven stranded points spent on Repair
+
+**Gate clear. Nine of nine pregens legal.**
+
+---
+
+## PT-272 — Lightsaber upgrades extracted, and `PT-184` resolves in the owner's favour
+
+**⚠ Not in holdings. `upgrade.2da` and the item-property tables are absent, and `baseitems`' `maxprops` is a generic cap of 8 on every weapon.** **Wiki only, same as the Force powers.**
+
+### The structure
+
+> **A lightsaber takes TWO power crystals of different types, plus a colour crystal.**
+
+**Two colour crystals carry stats of their own — *Heart of the Guardian* and *Mantle of the Force*.** **The rest are cosmetic.**
+
+**Power crystals, with what they add:**
+
+    Solari    +2 attack, +1d10 energy, +4 deflection    ⚠ light-side restricted
+    Upari     +3 attack, +1d8 energy
+    Krayt Dragon Pearl  +3 attack, +1d8 energy
+    Phond     +1d10 physical
+    Sigil     +1 attack, +1d6 energy
+    Sapith    +2 attack, +3 energy
+    Jenruax   deflection
+    Nextor    threat range
+    Opila     critical damage
+    Bondar · Damind · Rubat · Luxum   minor
+
+### ⚠ And it answers `PT-184` almost exactly
+
+    unarmed, Unarmed Specialist VIII      8d4     20.0
+    lightsaber, BASE                      2d8      9.0
+    lightsaber + Heart of the Guardian    5-38    21.5
+    lightsaber + Mantle of the Force      6-42    24.0
+    double-blade, fully upgraded         17-47    32.0
+
+> **⚠ Base lightsaber loses to unarmed 2.2 to 1. Upgraded lightsaber ties it.**
+
+**`PT-184` deferred the comparison on the grounds that it compared a fully-scaled unarmed ladder against an un-upgraded weapon.**
+
+**⚠ That was right, and the numbers say so.** **Upgrades close the gap to within 1.5 points of average damage.**
+
+### What this means for the Brawler
+
+**No change needed.** **⚠ The Brawler's `8d4` is competitive with an upgraded lightsaber and beats an un-upgraded one — which is correct, because a fist needs no crystals and cannot be disarmed.**
+
+**And it pays for that: `PT-228`'s unarmed roster has five axes against the lightsaber's seven forms, and no Force chain reaches it.**
+
+### ⚠ Scope note
+
+**This is the *damage* half only.** **The crafting system, workbench rules and the several-hundred-item catalogue remain `AGENDA-CURRENT §2.2` and `§2.1`.**
+
+**Extracted because `PT-184` and the `S10` cantina scenario both needed a number, not because the system is being built.**
+
+---
+
+## PT-273 — Crafting scoped. K2's system is an expansion, not more crystals.
+
+**⚠ Three of the five source tables are KOTOR 2 only.**
+
+    upgrade.2da · upcrystals.2da            both games
+    itemcreate · chemicalcreate · itemcreatemira    ⚠ K2 only
+
+**K1 had crystals and nothing else. K2 added two station types, components and chemicals as currency, skill gates on every recipe, and character-specific lists.**
+
+> **⚠ The skill gate is the part that matters.** **`Repair` and `Treat Injury` decide what you can build, which makes crafting a reason to raise a skill rather than a loot filter.**
+
+### Four phases
+
+    1 structure   which slots each weapon has        ⚠ blocks everything
+    2 effects     crystals and components as data    replaces PT-272's wiki prose
+    3 recipes     what each station makes, and DCs   ⚠ design, not extraction
+    4 economy     components and chemicals as currency
+
+**⚠ Phases 1 and 2 start when the files land. 3 and 4 want `§2.1` items first.**
+
+### ⚠ And `PT-249`'s lesson applies before any of it
+
+**`spells.2da` did not carry Force power numbers and the whole plan rested on assuming it did.**
+
+> **Check `upgrade.2da` carries slot counts before scoping on it.**
+
+**Files requested, priority order, in `AGENDA-CURRENT §2.2-scope`.**
+
+---
+
+## PT-274 — The upgrade slot structure. Phase 1 done, and `upgradetype` was the answer.
+
+**⚠ I asked the batch holder to confirm `upgrade.2da` carried slot COUNTS, expecting it not to. It does not carry a count column — but the count is derivable and I was looking for the wrong thing.**
+
+> **`upgradetype` IS the slot. Twelve values, four groups by weapon class.**
+
+    class        slots   types
+    Lightsaber     4     crystal · emitter · lens · power cell
+    Blaster        3     scope · power pack · firing chamber
+    Melee          3     grip/edge · alloy · energy projector
+    Armour         2     reinforcement · underlay
+
+**⚠ The count is implicit — it is how many types that class has entries for.**
+
+### The expansion, measured
+
+    upgrade       K1   25 rows  ->  K2  369 rows    ⚠ 14.8x
+    upcrystals    K1    7 rows  ->  K2   14 rows       2.0x
+
+    K2 only:  itemcreate 209 · chemicalcreate 73 · itemcreatemira 214
+
+> **⚠ K2 did not add crystals. It added 344 upgrade items and 496 recipes.**
+
+### ⚠ And it corrects `PT-272`
+
+**That ruling took the wiki's *"two power crystals of different types, plus a colour crystal."***
+
+**⚠ That is KOTOR 1. K2 gives lightsabers FOUR slots**, and the colour crystal is `upcrystals`, a separate table of 14.
+
+**Which is why `k1_upgrade` has 25 rows and `k2_upgrade` has 369.**
+
+**⚠ `PT-272`'s damage figures stand** — they were measured from upgraded sabers in play — **but the structure behind them was K1's.**
+
+### Phase 3's risk is cleared
+
+**`k2_itemcreate` carries `label · skill · group · level · align`.**
+
+> **⚠ `skill` and `level` are real columns.** **The skill-gate half is source data, not something we author.**
+
+**That was the phase-3 unknown and it is answered.**
+
+### ⚠ One thing to carry into phase 2
+
+**93 of 369 rows are `upgradetype 0` — crystals. A quarter of the table on one slot.**
+
+**And `k2_upcrystals` holds 14.** **So the two are different objects: `upgradetype 0` is power crystals, `upcrystals` is colour crystals.**
+
+---
+
+## PT-275 — The `.uti` blueprints parse, and the upgrade join is live
+
+**896 KOTOR 2 item blueprints extracted from `templates.bif` and pushed to `data/items/k2/`.**
+
+**⚠ `gff.py` written — GFF V3.2 reader. 896 of 896 parse.**
+
+### The chain that was broken is now closed
+
+    k2_upgrade.2da    names 369 items, gives each a template resref
+    the .uti          holds PropertiesList — the effects
+    itempropdef.2da   turns PropertyName 38 into a readable label
+    iprp_*.2da        turns CostValue into a magnitude
+
+> **⚠ `PT-249` said the numbers were in code we could not read. For Force powers that is still true. For upgrades it was a file we did not have, and now do.**
+
+**Sample, joined:**
+
+    u_m_edge_13    slot 8   Damage +3 · Massive Criticals 13
+    u_l_emit_05    slot 2   Blaster Bolt Deflection +2 · Armor +1
+    u_l_lens_02    slot 1   Damage, type 12
+    questcrystal   slot 0   AttackBonus · three Ability bonuses · Damage · alignment-gated
+
+### ⚠ 270 of 369 matched. 99 did not.
+
+**The 99 are upgrade rows whose template is not in `templates.bif`** — **module-specific items, which live in the `.rim` and `.mod` archives rather than the base templates.**
+
+**⚠ Not a parser failure. A coverage gap, and a known one.**
+
+**270 is enough for phase 2: every slot type is represented and the tiering within each is visible.**
+
+### ⚠ What this buys over the wiki
+
+**`source_system: kotor_game` on every upgrade effect, rather than `wiki_description`.**
+
+**`PT-252` found the wiki text diverges from actual behaviour on `Affliction` and `Plague`.** > **A blueprint cannot lie about itself.**
+
+---
+
+## PT-276 — `CRAFTING-01`. The whole system is one sentence.
+
+> **Crafting at a base during a long rest always succeeds if your skill reaches the DC. Crafting anywhere else is a roll.**
+
+### ⚠ No new mechanism was needed
+
+**`SKILL-RESOLUTION-01` already permits taking 10 with no pressure and no distraction.** **A long rest at your base is that condition.**
+
+**Ceiling = `10 + ranks + ability`. Anything under it you build; anything over it you cannot yet attempt.**
+
+> **⚠ There is no failed craft and no wasted material at a base.** **Failure only exists when you are rushed, which is where variance belongs.**
+
+### The source's DCs map onto our curve untouched
+
+    DC 12  common upgrades         level 1
+    DC 20  good gear               level 7
+    DC 28  rare                    level 15
+    DC 32  the best in the game    level 19
+
+**⚠ `k2_itemcreate` carries a per-recipe DC from 1 to 32 and every one is ported unchanged.** **Take-10 turns the source's own scale into a career-long progression.**
+
+### Owner rulings layered on the port
+
+**Time is a cost — one long rest, one session.** **⚠ The rest is the price, not the item; ten stimulants and one crystal cost the same evening.**
+
+**Anywhere the party holds and returns to.** **⚠ The workbench object does not survive** — **KOTOR placed them because a video game needs somewhere to put the menu.**
+
+> **⚠ Which removes an encounter-design dependency rather than adding one.** **A GM who never places a workbench has not cut crafting.**
+
+**Breaking down yields less than the item cost.** **⚠ Self-regulating — each cycle loses material, so there is no craft loop and no separate scarcity rule is needed.**
+
+**Anyone crafts; skill is the only gate.** **The `Machinist` keeps its identity without a lock, because it is the only class that can build a *droid* — `PT-225` — and that is on no recipe list.**
+
+### ⚠ The two stations become two skills
+
+    k2_itemcreate      209 recipes    Repair
+    k2_chemicalcreate   73 recipes    Treat Injury
+
+**The lists survive; the furniture does not.** **⚠ And the skill split is why they were separate in the first place, which is worth keeping.**
+
+---
+
+## PT-277 — Crafting gates on six skills, not two, and `Treat Injury` was doing five jobs
+
+**Owner ruling to split `Treat Injury`. ⚠ Categorising the 73 chemical recipes from their blueprints shows it needed splitting five ways, not two.**
+
+    25  trap kits and mines            ⚠ Demolitions
+    16  implants                       ⚠ split by effect
+     6  adrenals and stimulants        Science
+     6  grenades                       ⚠ Demolitions
+     4  medical equipment              Medicine
+     3  computer spikes                ⚠ Slicing
+     3  air filters and breath masks   Medicine
+     5  hkpart01-05                    ⚠ not a recipe at all
+
+> **⚠ Of 73 "chemical" recipes, about seven are medicine. Thirty-one are explosives.**
+
+**KOTOR gated on `Repair` and `Treat Injury` because it had two pieces of furniture.** **We do not have furniture, so the gate is *what the thing is*.**
+
+### Medicine against Science
+
+**Medicine repairs a body. Science alters one.**
+
+### ⚠ The implant split derives from the blueprints
+
+**Not a judgement call. 16 implants joined to their `.uti` and sorted by property type:**
+
+    Ability · Regeneration · DamageImmunity · DamageResist   Medicine
+    Skill · granted feats · interface properties             ⚠ Science
+
+    e_imp1_02  DC 17  Ability + Skill        Medicine
+    e_imp2_01  DC  5  Immunity + Skill       ⚠ Science
+
+### ⚠ `Demolitions` and `Slicing` now build things
+
+**Both were pure obstacle skills — open the door, disarm the mine.** **They make things now, which is thirty-four recipes' worth of new reason to raise them.**
+
+---
+
+## PT-278 — `hkpart01`–`05` are a droid in parts, not a recipe list
+
+    hkpart01   HK Droid Processor
+    hkpart02   HK Chassis
+    hkpart03   HK Control Cluster
+    hkpart04   HK Vocabulator
+    hkpart05   HK Protocol Pacifist Package
+
+> **⚠ A processor, a chassis, a control cluster and a vocabulator is not an upgrade list. It is a whole droid.**
+
+**KOTOR put them on the chemical bench because it needed somewhere to put *rebuild HK-47*.**
+
+**`PT-225` deferred droid construction and said the mechanism was unwritten.** **⚠ These five are the mechanism.**
+
+**Removed from the crafting recipe count. 73 becomes 68.**
+
+### ⚠ And the category they vacate becomes something better
+
+**Owner ruling, `AGENDA-CURRENT §2.4f`:** **single-use permanent droid upgrades — unlock a feat, `+1` an ability, improve a skill.**
+
+**A droid cannot be a Jedi, cannot spend credits on melee, cannot take a Force or Combat-rate class, and cannot exceed eleven chains.** **⚠ Five hard restrictions and nothing has ever paid for them.**
+
+> **⚠ These do. It is how a droid becomes the equivalent of a Jedi — past the ceiling every other class sits under, with the restrictions still in place.**
+
+**And the source already built the mechanism:** **`d_tool_15` grants `+5` Dexterity and two bonus feats, gated on `DROID_UPGRADE_3`.** **⚠ Which closes `PT-210`'s open question about what a droid upgrade was.**
+
+---
+
+## PT-279 — The item inventory. 994 blueprints, eight documents, nothing authored.
+
+    294  ITEMS-WEAPONS-K2       95  ITEMS-ARMOUR-K2
+    144  ITEMS-UPGRADES-K2      82  ITEMS-DROID-K2
+    143  ITEMS-WORN-K2          45  ITEMS-USABLE-K2
+    149  ITEMS-QUEST-K2         42  ITEMS-OTHER-K2
+
+### ⚠ Every value is `source_system: kotor_game`
+
+**A property reads *"Damage +3"* because the blueprint says `PropertyName 15, CostTable 4, CostValue 3`, and `iprp_damagecost` row 3 says 3.**
+
+> **⚠ Four files deep, and not one number is a judgement.**
+
+**`itempropdef.2da` names the property. The 27 `iprp_` cost tables decode the magnitude. `iprp_abilities` and `iprp_damagetype` decode the subtype.**
+
+### The cost tables resolved by pattern, not by label
+
+**⚠ `iprp_costtable.2da` names them `Bonus`, `Melee`, `SpellUse` — and the files on disk are `iprp_bonuscost`, `iprp_meleecost`, `iprp_spellcost`.**
+
+**All 27 resolve once the pattern is applied.** **⚠ Reported as missing on a first read, which would have been a false hard negative.**
+
+### ⚠ Two numbers for whoever scopes the rules work
+
+**`quest/plot` is 149 — a sixth of everything extracted is plot furniture.** **The real catalogue is nearer 850.**
+
+**`upgrades/lightsaber-crystal` is 84 — more crystals than the entire armour category.**
+
+### `build_inventory.py` is re-runnable
+
+**Point it at a game and it regenerates all eight documents.** **⚠ When the K1 blueprints land it is one command.**
+
+---
+
+## PT-280 — `BEASTS-01`. The Beast Master's companion list, three tiers.
+
+**Owner named `Boma`, `Cannok` and `Maalraas`. Twelve Dxun creatures exist in the Wookieepedia category; the wider KOTOR bestiary adds the rest.**
+
+    tier 1  class level 1   Cannok · Iriaz · Tach · Laigrek · Shyrack · Gizka
+    tier 2  class level 4   Boma · Maalraas · Kath Hound · Firaxan Shark · Hssiss ·
+                            Nexu · Kinrath · Wraid · Brith
+    tier 3  class level 8   Zakkeg · Drexl · Canyon Krayt Dragon · Terentatek · Gundark
+
+    ⚠ 20 companions. Owner added Nexu and Shyrack; the rest fill the tiers out.
+
+### ⚠ The tiers are the source's own food chain
+
+**Wookieepedia states it: cannoks sit *"beneath both the maalraas, boma and the zakkeg,"* and the zakkeg *"easily dined on"* them.**
+
+> **⚠ Tier is not a power budget we invented. It is what eats what.**
+
+**And `Drexl` preys on everything else on the list, which is why it is tier 3 alongside the zakkeg.**
+
+### ⚠ Tier 1 companions are not meant to fight
+
+**Each does one thing no character can.** **A `Cannok` eats machinery — the only companion that can destroy an object as an action. A `Tach` manipulates objects. A `Laigrek` is armoured out of proportion to its size.**
+
+### Three exclusions worth recording
+
+**`Rakghoul`** — **⚠ a diseased transformed humanoid, not a beast.** **Bonding one is a horror conversation.**
+
+**`Orbalisk`** — **⚠ a parasite that attaches to a host. It is armour, not a companion.**
+
+**`Vornskr`** — **⚠ Force-sensitive hunting predator, thematically perfect, and excluded on a name collision.** **`Vornskr's Ferocity` is the Form VII lightsaber chain and check 21 would block it.**
+
+> **⚠ A naming decision made two hundred rulings ago cost us the single most appropriate beast in the setting.**
+
+**⚠ And a second: `Rancor` is `Rancor's Reach`, a Form VI lightsaber attack.** **Two beasts lost to chain names.**
+
+### ⚠ Two entries are alignment-restricted
+
+**`Hssiss` and `Terentatek` are both dark side creatures** — **the terentatek hunts Force users and feeds on their blood.**
+
+**A light-side Beast Master cannot bond either, which is the first time alignment has gated a class feature rather than a Force power.**
+
+### ⚠ What is still open
+
+**The stat block format does not exist.** **Hit die, attack, damage, Defence, saves, speed, size, and the one thing that makes each different.**
+
+**And the turn question.** **`PT-151` recorded the Beast Master's power as *"measured in other people's time"*; `PT-201` solved that for the Droid Master by collapsing four turns into one.**
+
+**⚠ Consistency says the beast acts on the master's turn.** **And the Beast Master has ONE companion rather than four, which is a far smaller problem than the one `PT-201` fixed.**
+
+---
+
+## PT-281 — Beast acquisition and scaling. Tier is a DC and a price, not a level gate.
+
+**Owner ruling.**
+
+    tier 1   DC 10   2,000-5,000 credits   ⚠ you START with one
+    tier 2   DC 18   20,000-50,000
+    tier 3   DC 26   ⚠ NOT FOR SALE
+
+    ⚠ Priced against the item corpus: 794 blueprints, median 1,600,
+      90th percentile 23,600, most expensive item in KOTOR 2 is 32,000.
+      A tier-2 beast costs more than any item in the game.
+
+**⚠ Either gate opens it at tiers 1 and 2. Skill only at tier 3.**
+
+> **The apex predators cannot be bought, only earned.** **Money works, and stops working exactly where the food chain tops out.**
+
+**⚠ The owner first proposed 100,000-1,000,000 for tier 3.** **That is 31x the most expensive item in the game — not a price, a way of saying no.** **Saying no is cleaner than a number no GM would honour.**
+
+**Bonding uses `Beast Handling` and `CRAFTING-01`'s rule applies unchanged:** **at your base with time you take 10; in the field you roll.**
+
+    DC 18  needs 8 ranks   ->  level 5
+    DC 26  needs 16 ranks  ->  level 13
+
+**⚠ Which finally makes `Beast Handling` worth having.** **`PT-237` recorded it as the rarest class skill in the game.**
+
+### Scaling — like a 3.5e familiar
+
+> **⚠ The beast has no hit dice of its own. It derives from its master.**
+
+    vitality   tier 1  50% of master · tier 2  75% · tier 3  100%
+    attack     the master's base attack bonus
+    saves      the master's, at the master's level
+
+**⚠ `PT-102`'s own principle at a different layer: derive, do not store.**
+
+### ⚠ The limit, stated by the owner rather than hidden
+
+**A tier-3 beast is better than a tier-1 beast at every level, and that does not change.**
+
+> **What changes is that a tier-1 beast is never *useless*.** **A cannok at 20 has a level-20 attack bonus and half a level-20 character's vitality.**
+
+**⚠ That closes the 5e Beast Master failure.** **The companion flatlined there because it kept its own statistics. This one cannot.**
+
+**The reason to bond up is that a zakkeg is better. The reason not to is that your cannok still works, still eats machinery, and you have had it since level 1.**
+
+### Also: `Firaxan Shark` cut
+
+**⚠ Aquatic-only. A companion that is useless outside water is a companion nobody takes.** **Nineteen remain.**
+
+---
+
+## PT-282 — ⚠ Stopped before authoring a beast stat block. RCR has one.
+
+**A web search for creature stat block formats returned the answer from our own governing rulebook.**
+
+**RCR's *Allies and Opponents* chapter is a mini Monster Manual** — **creature rules, pregenerated stats, and rules for creating your own.** **The revised edition added *expanded creature design rules* specifically.**
+
+> **⚠ `CANON-01`: RCR governs all mechanical questions. A creature stat block is a mechanical question.**
+
+### It was one step from a warrant error
+
+**`METHOD-RECORD-01 §1.5` requires a primary read at the point of assertion, and names this as the project's most frequently violated rule.**
+
+> **⚠ Authoring a creature format without opening the book that has one is precisely that failure.**
+
+**`BEASTS-01 §7` now says *read RCR and port the format* rather than proposing one.**
+
+### ⚠ And `PT-281` needs checking against it
+
+**That ruling gave beasts familiar-style derivation — no hit dice of their own, vitality and attack taken from the master.**
+
+**If RCR's creature rules carry their own companion-scaling mechanism, the two may conflict.** **Check before building further.**
+
+### What is needed
+
+**The RCR scan, or the *Allies and Opponents* pages.** **⚠ The project record says we hold one; it is not in uploads and not in the repo, so this session cannot read it.**
+
+**`AGENDA-CURRENT §2.4g`.**
+
+---
+
+## PT-283 — A beast is an RCR creature at the master's class level
+
+**The Extractor read RCR ff.329–333. Three findings.**
+
+### ⚠ 1 — RCR carries no companion rule, and the negative is properly scoped
+
+> **No animal companion, no bonded creature, no familiar-style scaling, no mount rules, no creature deriving statistics from a character's.**
+
+**Four folios read in full, the five creature types enumerated, `Creating Your Own Creatures` read.**
+
+**⚠ And what is NOT closed is named:** **`Handle Animal` at f.90 and `Animal Affinity` at f.105 are indexed and unread; Chapter 9's Force skills unchecked.**
+
+**That is how a negative should be reported. `PT-249` and `PT-250` were both weaker than this.**
+
+### ⚠ 2 — the `PT-281` conflict resolves into RCR's own machinery
+
+**RCR gives every creature its own level and derives attack and saves from it. `PT-281` wanted the beast to scale with its master.**
+
+> **⚠ Both are satisfied by setting the beast's creature LEVEL equal to the master's `Beast Master` class level.**
+
+**Everything else is ported:**
+
+    attack and saves   RCR Table 14-2, by creature type and level
+    vitality die       the per-type Game Rule Information block
+    wound points       RCR Table 14-1, by size — Con, Con x 2, Con ÷ 2
+    abilities          RCR Table 14-3 and its per-type siblings
+
+**⚠ `PT-281`'s percentage-of-master vitality is withdrawn.** **It was authored; this is ported.**
+
+### Tier stops being a scaling rule and becomes type and size
+
+    tier 1   Small    Vermin or Scavenger   wound points = Con
+    tier 2   Medium   Predator              wound points = Con
+    tier 3   Huge     Predator              wound points = Con x 2
+
+> **A tier-3 beast is better because it is *larger* and a *predator*, not because a rule says so.**
+
+**⚠ The owner's own instruction — *"higher level beasts are better and that's something we'll have to accept"* — falls out of RCR's tables rather than being imposed on them.**
+
+### ⚠ 3 — RCR corrected the list
+
+**Table 14-1's own size examples include `krayt dragon` Colossal, `rancor` Huge and `gundark` Medium.**
+
+> **⚠ RCR sizes a gundark MEDIUM. I had it at tier 3.** **Moved to tier 2.**
+
+**And the owner cut the `Canyon Krayt Dragon` entirely** — **Colossal, and not something a character bonds.**
+
+**⚠ Eighteen companions. Tier 3 is three: `Zakkeg`, `Drexl`, `Terentatek`.**
+
+### Two creature-only feats worth carrying
+
+**`Flyby Attack`** — **move and attack at any point during a fly move.** **`Drexl` and `Shyrack`.**
+
+**`Multiattack`** — **three or more natural weapons; secondary attacks at `−2` rather than `−5`.** **⚠ Every clawed beast on the list.**
+
+### ⚠ Still open
+
+**Per-creature stat blocks.** **Eighteen beasts, each needing type, size, abilities, special qualities and the one thing that makes it different.**
+
+**And three of RCR's five per-type blocks are unread** — **Predator, Scavenger and Vermin, on ff.333–334.** **⚠ Predator is the one tiers 2 and 3 need.**

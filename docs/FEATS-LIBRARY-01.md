@@ -713,6 +713,28 @@
 | **Sith Assassin** | **1, then every second from 5** | **9d6 at 20** |
 | **Scoundrel** *(prestige)* | **the Smuggler's ladder, continued past its cap** | **⚠ see below** |
 
+> **⚠ SUPERSEDED by `PT-192`. This ten-step ladder and the three-tier chain at `§124` are the same mechanic with different numbers, 568 lines apart, and neither referenced the other.**
+
+**`PT-101` had already decided the general case and this violated it.** **That ruling repriced `Targeting` from eight granted tiers to three, saying:** *"An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three."*
+
+**⚠ A ten-step granted ladder reaching `10d6` is the same object `PT-101` rejected, written by me four rulings after I ruled it.**
+
+#### The resolution
+
+**`§124`'s three-tier chain governs. It is the one that fits every other chain in the corpus** — three tiers, bought, gated, capped.
+
+**What survives from `PT-122` is the *speed distinction*, which was the finding:**
+
+    Smuggler        reaches each tier fastest
+    Sith Assassin   one level slower per tier
+    Jedi Watchman   slowest
+    Scoundrel       the Smuggler's speed, and it is the only class that
+                    can hold Master Sneak Attack at its Stealth cap
+
+**⚠ The three classes are granted the chain rather than buying it — `PT-101` — and reach its three tiers at different rates.** **`6d6` is the ceiling for everyone.**
+
+**And `PT-191` still holds: one tree, the higher governs, dice never sum.**
+
 > **⚠ The Scoundrel's ladder was ruled in `REPLY-28` and never written here. `PT-190`.**
 
 **A prestige class that continues a base class continues its progression rather than restarting it.** **The Scoundrel is what a Smuggler becomes when `Sneak Attack` is the only thing left.**

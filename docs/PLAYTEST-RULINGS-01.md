@@ -5304,3 +5304,49 @@
 **The ruling working as intended — one tree, and which one resolves to whichever is higher when checked.**
 
 **⚠ Stated because *"the higher"* reads as a fixed answer and is not one.**
+
+---
+
+## PT-192 — Two `Sneak Attack` systems in one file, and `PT-101` had already decided it
+
+**Found by the designer. Both are in `FEATS-LIBRARY-01`, 568 lines apart, and neither references the other.**
+
+    §124 the chain    3 tiers · 6d6 max · bought · gated on Stealth ranks
+    §692 the ladder   10 steps · 10d6 max · granted · gated on class
+
+### ⚠ `PT-101` ruled the general case and `PT-122` violated it
+
+**`PT-101` repriced `Targeting` from eight granted tiers to three:**
+
+> *"An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three."*
+
+**⚠ A ten-step granted ladder reaching `10d6` is the same object, written by me four rulings after I ruled against it.**
+
+### The resolution
+
+**`§124`'s three-tier chain governs.** **It is the shape every other chain in the corpus has — three tiers, bought, gated, capped.**
+
+**What survives from `PT-122` is the *speed distinction*, which was the actual finding:**
+
+    Smuggler        reaches each tier fastest
+    Sith Assassin   one level slower per tier
+    Jedi Watchman   slowest
+    Scoundrel       the Smuggler's speed
+
+**The three classes are *granted* the chain rather than buying it — `PT-101` — and reach its three tiers at different rates. `6d6` is the ceiling for everyone.**
+
+**`PT-191` unaffected: one tree, higher governs, dice never sum.**
+
+### ⚠ And the audit method is the transferable part
+
+**The designer's note:** *"Checking feature names is worthless — every name I authored now appears in the corpus because the main agent adopted it."*
+
+> **What works is checking the same *mechanic* for two different numbers.**
+
+    for each mechanic a class ruling depends on
+      grep every figure the corpus states for it
+      if the set has more than one value, one of them is ours
+
+**⚠ That found this in one pass, and it is the check that should have run before `PT-122`.**
+
+**Five contradictions found by it so far: `ATTACKS-06` vs `FORMS-01` on forms, `PT-160`'s range claim, the `Dueling` wield clause, `Master Spotter`'s half-range, and this.**

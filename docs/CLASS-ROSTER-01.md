@@ -283,6 +283,11 @@
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Doctor** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
 | **Agent** | Middle | d8 | **5** | **9** | **15** | **11** | **10** | 6 / 12 / 12 |
+| **Pirate** | Middle | d8 | **4** | **8** | **15** | — | — | 12 / 12 / 6 |
+
+**⚠ The Pirate's archetype was checked against our own canon rules before it was written.** **`Hondo Ohnaka` is *The Clone Wars*, ruled Disney canon and excluded. `Andronikos Revel` is SWTOR, excluded.** **What survives is Legends — `Nym`, a Feeorin pirate captain and exceptional pilot who raided the wealthy and the corrupt.**
+
+**And Wookieepedia's Legends distinction needs no new mechanism:** **a pirate sanctioned by a government is a *privateer*, and privateers held themselves to a more civilised standard.** > **`ALIGNMENT-01` already records which one a character is playing.**
 
 **⚠ The Brawler's skill base is 2, not 3. `PT-136`.**
 

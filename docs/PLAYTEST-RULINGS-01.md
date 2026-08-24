@@ -3948,3 +3948,60 @@
 **⚠ Authored with no precedent in either game — no combat mind control exists in the source at all.** **Owner has questioned it and it is flagged for revision.**
 
 **The tier below — a wounded enemy leaves the encounter — is the version that fits.**
+
+---
+
+## PT-146 — Every ported effect must be checked against the games
+
+**Owner instruction. It applies to work already adopted and it is the largest outstanding item in the class workstream.**
+
+> **Where a Force power or feat exists in KOTOR or KOTOR 2, its effect in our system is checked against what it actually does in the games.**
+
+### The scale, derived
+
+**`FORCE-POWERS-01` holds 88 entries. 39 carry a numeric effect. ⚠ 49 do not.**
+
+**And `§6` of that document records why:** *"Two S4 reports independently found that `POWER-COSTS-01` supplies cost and no effect — one authored eleven powers to run the scenario, the other refused."*
+
+**⚠ Eleven powers were authored inside a playtest to make it run, and those numbers are still in the corpus.**
+
+### ⚠ Two constraints
+
+**Owner-signed changes stay.** **Force Wound and others were changed before this workstream and signed off.** **They are not reverted because the source differs — the source is the foundation, not the ceiling.**
+
+**And the standard is the project's own:**
+
+> **We are taking what BioWare and Obsidian gave us, modifying and expanding it, and turning it into a TTRPG for people who want to play KOTOR without a screen.**
+
+**⚠ The source answers *what does this do*. We answer *what should it cost and how does it scale to level 30*.** **A power that runs 20 seconds in real time is not a power that lasts 20 seconds at a table.**
+
+### It already caught one
+
+**`Battle Meditation` was treated as a mind-control problem across three exchanges by both agents.** **Looked up: `+2` attack, damage and Will saves to the party, `−2` to enemies within 10 metres, faster regeneration.**
+
+> **A buff and a debuff. Nothing acts on anyone's turn.**
+
+**⚠ And there is no combat mind control in either game at all.** **`Dominate Mind` opens dialogue options and nothing else** — which puts `Cover Identity`'s capstone on notice as authored with no precedent.
+
+---
+
+## PT-147 — Explorer's feature replaced; Pirate added
+
+**`Prior Study` withdrawn by the designer before adoption.** **It was declared in advance and spent once per adventure.**
+
+> **A resource, not a competence — and the class is a competence.**
+
+**`Read the Ruin` replaces it: on a failed knowledge, `Security` or `Awareness` check you learn *why*, and may retry once that condition is met.**
+
+**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
+
+### Pirate — and the archetype was checked against our canon rules first
+
+**⚠ Two of the three famous Star Wars pirates are inadmissible here.** **`Hondo Ohnaka` is *The Clone Wars*, ruled Disney canon and excluded. `Andronikos Revel` is SWTOR.**
+
+**What survives is Legends and is the better model: `Nym`, a Feeorin captain and exceptional pilot who raided the wealthy and the corrupt.**
+
+**And the Legends distinction needs no new mechanism:** **a government-sanctioned pirate is a *privateer*.** **`ALIGNMENT-01` already records which one is being played.**
+
+    Middle · d8 · Dexterity · skill base 4 · 8 class skills · 15 feats
+    Saves 12 / 12 / 6 — ⚠ Will weak is the class. A pirate has no discipline.

@@ -27,7 +27,7 @@ The cursor only advances when you call --mark, after you have actually read
 the file. Reading is a separate act from being told the file exists; that is
 the same lesson as watch.py's [:4000] truncation.
 """
-import subprocess, sys, os, re, time, json
+import subprocess, sys, os, re, time, json, hashlib
 
 D = '/home/claude/handoff'
 STATE = '/home/claude/.sync_cursor.json'
@@ -61,10 +61,27 @@ def present(watch_dir, prefix):
     return out
 
 
-def report(unread, watch_dir, prefix):
-    print(f"UNREAD in {watch_dir}/ — {len(unread)} file(s):")
-    for n in sorted(unread):
-        print(f"  {prefix}-{n:02d}.md  {os.path.getsize(unread[n]):,} bytes  ->  {unread[n]}")
+def digest(p):
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:12]
+
+
+def amended(have, key):
+    """⚠ A file already read can be REWRITTEN IN PLACE. REPLY-11 was, at 00:59,
+    after it had been read and acted on at 00:10. A cursor keyed on the highest
+    number cannot see that -- max N does not move. So hash what we read."""
+    seen = load().get(key + ':hash', {})
+    out = {}
+    for n, p in have.items():
+        h = digest(p)
+        if str(n) in seen and seen[str(n)] != h:
+            out[n] = p
+    return out
+
+
+def report(files, watch_dir, prefix, label='UNREAD'):
+    print(f"{label} in {watch_dir}/ — {len(files)} file(s):")
+    for n in sorted(files):
+        print(f"  {prefix}-{n:02d}.md  {os.path.getsize(files[n]):,} bytes  ->  {files[n]}")
     print("\n(cursor NOT advanced. run: python3 sync.py --mark <dir> <prefix> <N>)")
 
 
@@ -73,6 +90,10 @@ def main():
         _, _, wd, prefix, n = sys.argv[:5]
         s = load()
         s[f'{wd}:{prefix}'] = int(n)
+        h = s.setdefault(f'{wd}:{prefix}:hash', {})
+        for k, p in present(wd, prefix).items():
+            if k <= int(n):
+                h[str(k)] = digest(p)
         save(s)
         print(f"cursor {wd}:{prefix} = {n}")
         return
@@ -88,10 +109,16 @@ def main():
     refresh()
     have = present(watch_dir, prefix)
     unread = {n: p for n, p in have.items() if n > cursor}
+    changed = amended(have, key)
+    if changed:
+        print(f"[catch-up] ⚠ AMENDED SINCE READ — content changed under a number "
+              f"already consumed:")
+        report(changed, watch_dir, prefix, label='CHANGED')
     if unread:
         print(f"[catch-up] cursor was {prefix}-{cursor:02d}; "
               f"highest present is {prefix}-{max(have):02d}")
         report(unread, watch_dir, prefix)
+    if unread or changed:
         return
 
     # STEP 2 — only now is waiting justified.

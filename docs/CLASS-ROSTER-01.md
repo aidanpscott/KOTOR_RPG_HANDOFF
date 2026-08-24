@@ -339,11 +339,11 @@
 
 | Class | Stat line | Entry |
 |---|---|---|
-| **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **Jedi Guardian 6** + `Weapon Focus: Lightsaber` |
+| **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Jedi base class 6** + `Weapon Focus: Lightsaber` |
 | **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
-| **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **Jedi Sentinel 6** + `Stealth` 8 |
-| **Jedi Master** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **Jedi Consular 6** + `Mysticism` 8 |
-| **Sith Lord** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Sith base class 6** + `Mysticism` 8 |
+| **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **any Jedi base class 6** + `Stealth` 8 |
+| **Jedi Sage** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Jedi base class 6** + `Mysticism` 8 |
+| **Sith Sorcerer** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Sith base class 6** + `Mysticism` 8 |
 | **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
 
 **⚠ Every feat total sits inside its rate's band. Verified.**
@@ -633,6 +633,51 @@
 **⚠ Zone control rather than damage absorption, which is a gap `ACTION-ECONOMY-01 §105–111` states directly.**
 
 **38 of 38 classes drafted.**
+
+
+### The Force prestige tier restructured — `PT-214`
+
+**Two owner rulings, applied together.**
+
+#### 1 — Every Force prestige class is open to any same-side base class
+
+    Jedi Weaponmaster   any Jedi base 6 + Weapon Focus: Lightsaber
+    Jedi Watchman       any Jedi base 6 + Stealth 8
+    Jedi Sage           any Jedi base 6 + Mysticism 8
+    Jedi Master         any Jedi base 6 + Persuade 8
+
+    Sith Marauder       any Sith base 6 + Weapon Focus: Lightsaber
+    Sith Battlemaster   any Sith base 6 + Weapon Focus: Lightsaber
+    Sith Sorcerer       any Sith base 6 + Mysticism 8
+    Sith Lord           any Sith base 6 + Persuade 8
+
+**⚠ `PT-155` opened the Sith and deliberately left the Jedi parent-locked. Both sides are open now.**
+
+> **The gate does the sorting without the roster having to** — **`PT-155`'s own argument, applied symmetrically.**
+
+**A Guardian may become a Sage; they will not be holding `Mysticism` 8.**
+
+#### 2 — ⚠ `Jedi Master` and `Jedi Sage` swap places
+
+**Owner: `Jedi Master` and `Sith Lord` become the *universal* capstone; `Jedi Sage` and `Sith Sorcerer` become the Consular and Inquisitor continuation.**
+
+**⚠ The snag, and it decided which line goes where.** **`jma` is literally `JediMaster` in the source and its line *is* the Consular continuation:**
+
+    Guardian d10/4  ->  Weaponmaster  d10/6
+    Sentinel  d8/6  ->  Watchman       d8/8
+    Consular  d6/8  ->  Jedi Master    d6/10    ⚠ the Sage's line
+
+**So `jma`'s ported line goes to the `Jedi Sage`, where the identity matches it.** **`Sith Lord`'s ported line goes to `Sith Sorcerer` on the same reasoning.**
+
+**⚠ `Jedi Master` and `Sith Lord` become authored** — **the first Force prestige classes with no ported line.**
+
+> **The Sage is the scholar taken further. The Master is the one who leads.**
+
+**Which mirrors the `Officer` on the standard side, defined by the owner as a Soldier moving from `Combat` to `Middle` with leadership as the bigger part.**
+
+**⚠ `Persuade` 8 as the holding rather than `Mysticism` 8 is what makes the distinction do work at the gate.**
+
+**Both classes are unbuilt — stat line, feature and rate all open.**
 
 
 ## 6. ⚠ What this roster now needs

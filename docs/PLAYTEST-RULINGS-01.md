@@ -5830,3 +5830,59 @@
 > **The point is not having both tools. It is using them on the same object — which neither parent can do and neither could reach by multiclassing.**
 
 **⚠ Third feature keyed to droids, after `Field Override` and `Jury Rig`.** **`PT-100`'s narrow-counter pattern reaching a third class.**
+
+---
+
+## PT-213 — The droid-dependency concern, withdrawn and recorded as a dependency
+
+**`REPLY-55` raised that three class features are keyed to droids being present.**
+
+**⚠ Owner, and all three points hold:**
+
+**The classes' *skills* work without droids** — `Slicing`, `Security`, `Science`, `Repair` on computers, doors and terminals. **Only the *features* need one.**
+
+**Both campaign packages are droid-heavy**, which is `PT-170`'s encounter dial at package level.
+
+**And the Engineer and Droid Master can build their own** — **which answers the *allied droid* half outright.**
+
+### ⚠ Two gaps it does not close
+
+**`PT-203` defers the build mechanism, so it does not exist yet.** **A Tech Specialist entering via `Machinist 6` has no build route at all.**
+
+**And every *enemy* droid clause still depends on encounter design.**
+
+**Withdrawn as a concern. Recorded on `AGENDA-CURRENT` as a dependency — the build mechanism now matters to three classes rather than one.**
+
+---
+
+## PT-214 — The Force prestige tier restructured
+
+**Two owner rulings.**
+
+### 1 — Every Force prestige is open to any same-side base class
+
+**⚠ `PT-155` opened the Sith and deliberately left the Jedi parent-locked. Both sides are open now.**
+
+> **The gate does the sorting without the roster having to** — **`PT-155`'s own argument, applied symmetrically.**
+
+**A Guardian may become a Sage; they will not be holding `Mysticism` 8.**
+
+### 2 — ⚠ `Jedi Master` and `Jedi Sage` swap places
+
+**Owner: `Jedi Master` and `Sith Lord` become the *universal* capstone; `Jedi Sage` and `Sith Sorcerer` become the Consular and Inquisitor continuation.**
+
+**⚠ The snag decided which line goes where.** **`jma` is literally `JediMaster` in the source and its line *is* the Consular continuation:**
+
+    Guardian d10/4  ->  Weaponmaster  d10/6
+    Sentinel  d8/6  ->  Watchman       d8/8
+    Consular  d6/8  ->  Jedi Master    d6/10    ⚠ the Sage's line
+
+**So `jma`'s ported line goes to the `Jedi Sage` and `sld`'s to the `Sith Sorcerer`, where the identities match.**
+
+**⚠ `Jedi Master` and `Sith Lord` become authored — the first Force prestige classes with no ported line.**
+
+> **The Sage is the scholar taken further. The Master is the one who leads.**
+
+**`Persuade` 8 rather than `Mysticism` 8 is what makes the distinction do work at the gate.**
+
+**Both are unbuilt: stat line, rate and feature all open. Handed to the class designer.**

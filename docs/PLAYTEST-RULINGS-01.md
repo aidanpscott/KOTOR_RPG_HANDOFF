@@ -4678,3 +4678,96 @@
 **Two lists of the same facts drift.** **`PT-84`, `PT-97`, `PT-140`, `PT-162`, and this.**
 
 **⚠ The difference here is that I created the second list, in a document I had open, three sections above the first.**
+
+
+---
+
+## PT-172 — `crithitmult` carries no information
+
+**Derived, `baseitems.2da`, both games.**
+
+    K1    crithitmult = 2 on every weapon, without exception
+    K2    2 on all but three — Ion Blaster, Ion Rifle, Bowcaster at 3
+
+**⚠ `EQUIPMENT-01 §105` ports K1, so for our source the multiplier is uniform.**
+
+> **The critical multiplier cannot distinguish a weapon.** **Exactly what `PT-72` found of base attack bonus.**
+
+**Recorded beside it in `ATTACKS-01` so nobody builds a weapon distinction on a column that has none.**
+
+**⚠ `critthreat` is where the information is** — **three values, and it multiplies the threat *range* rather than the damage.** **That is the column `§292`'s widening rule reads, and `PT-175` is what happens when a feature forgets it.**
+
+**And K2's three exceptions are worth knowing rather than porting:** **all three are ion weapons or a bowcaster, raised in the same pass that bumped every lightsaber a die step** — **the pass `§105` declined for widening the Jedi gap.**
+
+---
+
+## PT-173 — Both checkers filtered a two-condition rule on one condition
+
+**Found by the designer regenerating `CLASS-STATE`. The zero-slack list grew from five to eight, and the growth was wrong.**
+
+**⚠ The three Force prestige classes just placed at 11 chains cannot be taken by a droid at all.** **`PT-92` bars a droid from every Force class.**
+
+> **A Force class cannot be zero-slack against a cap that never applies to it.**
+
+### ⚠ And the error is older than their three
+
+**My list of five included the `Sith Inquisitor` — also a Force class.**
+
+**Both checkers filtered on one condition — *is the chain count 11* — when the rule has two, and the second was ruled thirty-odd rulings earlier.**
+
+    was    Bounty Hunter · Engineer · Agent · Sith Inquisitor · Droid Master
+    is     Bounty Hunter · Engineer · Agent · Droid Master
+
+### The fix states all three gates, including the redundant one
+
+    PT-92    a droid may take no Force class
+    PT-109   a droid chassis may take no Combat-rate class
+    PT-114   a droid may take no class whose chain count exceeds 11
+
+**⚠ `PT-109` never binds at 11 today, because every `Combat` class sits at 14 or above.**
+
+**Stated anyway.** > **A condition left out because it is currently redundant is how this happened.**
+
+**The comment in `audit_bands.py` says so, so the next person to simplify it reads the reason first.**
+
+---
+
+## PT-174 — Five prestige chain counts
+
+| Class | Rate | Chains | Caps |
+|---|---|---|---|
+| Jedi Watchman | Middle | 12 | 9 |
+| Sith Marauder | Middle | 11 | 10 |
+| Jedi Master | Specialist | 11 | 5 |
+| Sith Lord | Specialist | 11 | 5 |
+| **Tech Specialist** | Specialist | **8 — the floor** | **7** |
+
+**⚠ Verified: all inside their bands, all strand zero.** **They were the only classes with a rate and no count, and `PT-159` makes that number matter — a multiclass character takes the highest count they hold.**
+
+### The Tech Specialist at the floor
+
+**It is the only class in either game with no granted class feature — `PT-141`'s table: five proficiencies and nothing else.**
+
+> **A way for it to be something without inventing a chain the source never gave it.**
+
+**⚠ One correction: seven capstones *ties* the Smuggler rather than exceeding it.** **The Smuggler at 8 chains reaches seven too — same arithmetic, same `T`.**
+
+**Arguably better than beating it: the most concentrated *base* build and the most concentrated *prestige* one, at the same depth by the same route.**
+
+---
+
+## PT-175 — *"Threat range widens by one"* is ambiguous; it is a multiplier
+
+**Flagged by the designer against its own `Commando`.**
+
+    weapon              "+1 step"   "×2"
+    pistol, 20 only      19–20       19–20    ⚠ agree
+    vibrosword, 19–20    18–20       17–20    ⚠ differ
+
+**⚠ Both readings agree on a pistol and differ on anything with a printed range wider than 20.** **Which is why it survived — the worked examples were pistols.**
+
+**Ruled a multiplier.** **`§303` already gave the reason:** *"this is the reading that makes a weapon's own threat range matter. The alternative would erase the vibrosword-versus-double-blade trade."*
+
+**⚠ A `+1` reading has the same defect one step smaller** — **the same absolute widening regardless of what the weapon started with, which is what the multiplier exists to avoid.**
+
+**Any feature that widens threat says `×N` and never *"by one."***

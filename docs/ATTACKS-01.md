@@ -289,6 +289,25 @@
 
 > **Every Precision entry in three rosters says *critical threat ×2 / ×3 / ×4* and no document defines it.**
 
+
+### ⚠ `crithitmult` carries no information — `PT-172`
+
+**Derived, `baseitems.2da`, both games.**
+
+    K1    crithitmult = 2 on every weapon without exception
+    K2    2 on all but three — Ion Blaster, Ion Rifle, Bowcaster at 3
+
+**⚠ `PT-146` and `EQUIPMENT-01 §105` port K1. So for our source the multiplier is uniform.**
+
+> **The critical multiplier cannot distinguish a weapon. Exactly what `PT-72` found of base attack bonus.**
+
+**Recorded beside it so nobody builds a weapon distinction on a column that has none.**
+
+**⚠ `critthreat` is where the information is** — three values, 1 / 2 / 3, and it is the multiplier on the threat *range* rather than on the damage. **That is the column `§292`'s widening rule reads.**
+
+**And K2's three exceptions are worth knowing rather than porting:** **all three are ion weapons or a bowcaster, and K2 raised them as part of the same pass that bumped every lightsaber a die step** — **the pass `EQUIPMENT-01 §105` declined for widening the Jedi gap.**
+
+
 **A weapon's printed threat range is its base.** **The multiplier widens it by that factor, counting downward from 20.**
 
 | Weapon base | ×2 | ×3 | ×4 |

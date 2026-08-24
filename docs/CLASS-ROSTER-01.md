@@ -521,6 +521,53 @@
 **⚠ And the Droid Master is the fifth class to sit at exactly 11 chains** — **`PT-114`'s droid access ceiling.** **Bounty Hunter, Engineer, Sith Inquisitor, Agent, Droid Master — five, and the check found the Agent which no note had.** **Raising any by one silently closes it to droids.**
 
 
+### Five prestige chain counts — `PT-174`
+
+| Class | Rate | Chains | Capstones |
+|---|---|---|---|
+| **Jedi Watchman** | Middle | 12 | 9 |
+| **Sith Marauder** | Middle | 11 | 10 |
+| **Jedi Master** | Specialist | 11 | 5 |
+| **Sith Lord** | Specialist | 11 | 5 |
+| **Tech Specialist** | Specialist | **8 — the floor** | **7** |
+
+**⚠ Verified: all five inside their bands, all strand zero picks.** **They were the only classes with a rate and no count, and `PT-159` makes that number matter — a multiclass character takes the highest chain count they hold.**
+
+#### ⚠ The Tech Specialist at the floor is the interesting one
+
+**It is the only class in either game with no granted class feature at all** — **`PT-141`'s table: five proficiencies and nothing else.**
+
+**At 8 chains it reaches seven capstones.**
+
+> **A way for it to be something without inventing a chain the source never gave it.**
+
+**⚠ One correction to the framing: seven *ties* the Smuggler rather than exceeding it.** **The Smuggler at 8 chains also reaches seven — it is the same arithmetic on the same `T`.**
+
+**Which is arguably better than beating it.** **The Smuggler is the most concentrated *base* build and the Tech Specialist is the most concentrated *prestige* one, at the same depth by the same route.**
+
+
+### ⚠ *"Threat range widens by one"* is ambiguous — `PT-175`
+
+**The designer's own `Commando` carries it and flagged it.**
+
+**`ATTACKS-01 §292` expresses threat as a *multiplier*: *"the multiplier widens it by that factor, counting downward from 20."***
+
+    weapon         "+1 step"   "×2 multiplier"
+    pistol, 20      19–20       19–20     ⚠ agree
+    vibrosword,
+      19–20         18–20       17–20     ⚠ differ
+
+**⚠ Both readings agree on a pistol and differ on anything with a printed range wider than 20.** **Which is why it survived: the worked examples were pistols.**
+
+> **Ruled: it is a multiplier, like everything else on the axis.** **A `Commando`'s widening is `×2`, not `+1`.**
+
+**Because `§303` already ruled why:** *"this is the reading that makes a weapon's own threat range matter. The alternative — a flat 17–20 regardless of weapon — would erase the vibrosword-versus-double-blade trade."*
+
+**⚠ A `+1` reading has the same defect one step smaller.** **It gives every weapon the same absolute widening regardless of what it started with, which is what the multiplier exists to avoid.**
+
+**Any feature that widens threat says `×N` and never *"by one."***
+
+
 ## 6. ⚠ What this roster now needs
 
 **38 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

@@ -141,6 +141,58 @@
 
 
 
+## The two-ability model — `PT-246`
+
+**Every class names two abilities. `PT-227` set them; this states what the second one does.**
+
+> **The first sets your attack and DC stat, and one strong save.**
+> **The second sets a second strong save.**
+> **⚠ If both point at the same save, the class has one strong save.**
+
+    Strength or Constitution   ->  Fortitude
+    Dexterity                  ->  Reflex
+    Wisdom, Charisma or Intelligence  ->  Will
+
+**⚠ This is `PT-123` stated properly.** **That rule said *"a class takes a second strong save if it has a second job"* and never said what a second job was.**
+
+> **The second job is the second ability. Nobody wrote it down.**
+
+### It was already true, and it was derived rather than imposed
+
+**Tested across all thirteen standard base classes:**
+
+    11 of 13 predicted exactly
+
+**⚠ And both misses are ported anomalies rather than design errors.**
+
+    Scout      predicted Ref/Will, has all three     the source gives scout every save strong
+    Smuggler   predicted Ref/Will, has Reflex only   scd is Reflex-only in the source
+
+> **The model predicts every *authored* class exactly and misses only where the source overrode it.**
+
+### ⚠ What it buys
+
+**A new player picks a class and knows which two numbers to raise.** **That is the whole chargen problem for a first-timer — nineteen classes, six abilities, no guidance.**
+
+**And saves stop being a per-class decision.** **They fall out of what the class already is, which is one fewer table to keep in sync.**
+
+**⚠ It is also self-checking.** **If a class's abilities change and its saves do not, the two disagree and a script catches it.**
+
+**And a player can state their whole character in one sentence:** *"I am a Duelist. Dexterity and Intelligence. Good at dodging and at not being fooled."*
+
+### ⚠ The limit, stated
+
+**The second ability does nothing else.** **No bonus, no mechanic, no third effect.**
+
+> **A recommendation plus a save. Adding more would make it a fourth system, and it is currently free.**
+
+### ⚠ Compared with the 5e model the owner asked for
+
+**5e names two abilities and grants proficiency in both saves, flatly.**
+
+**Ours produces *one* strong save when the abilities agree and *two* when they do not** — **so a narrow class is narrow and a broad class is broad, without anyone deciding it.**
+
+
 ## The save assignment rule — `PT-123`
 
 > **A class takes one strong save, determined by its primary ability.**

@@ -343,6 +343,23 @@
 
 ---
 
+## 2.4e ⚠ `k2_spells.2da` — requested, blocks a third of `PT-146`
+
+**`PT-250`: the `spells.2da` we hold is KOTOR 1's and is not labelled as such.**
+
+    88 powers in FORCE-POWERS-01
+    38 mapped to a K1 source row
+    16 tier variants inheriting from a mapped parent
+    ⚠ 34 unmapped — most are K2 exclusives
+
+**⚠ For those 34 the wiki is the only route to *anything*** — **cost, range, class access and chain position, not only damage.**
+
+**On arrival: rename ours `k1_spells.2da`, so this cannot recur.**
+
+**⚠ Same shape as the `baseitems` pair, where we hold both halves and both are labelled.**
+
+---
+
 ## 2.9 Difficulty modes — the last thing before engine work
 
 **⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**

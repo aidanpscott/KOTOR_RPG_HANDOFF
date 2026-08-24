@@ -6954,3 +6954,178 @@
 ### ⚠ What this means for `PT-233`'s standing count
 
 **Eight instances of *a decision that lived in a reply and not in the rules*.** **This is a ninth of a different kind:** **a decision that reached the rules and not the copy anyone reads.**
+
+---
+
+## PT-246 — The two-ability model, and it was already true
+
+**Owner instruction: adopt the 5e shape where a class names two abilities that matter.**
+
+> **The first sets your attack and DC stat, and one strong save.**
+> **The second sets a second strong save.**
+> **⚠ If both point at the same save, the class has one strong save.**
+
+    Strength or Constitution          ->  Fortitude
+    Dexterity                         ->  Reflex
+    Wisdom, Charisma or Intelligence  ->  Will
+
+### ⚠ It is `PT-123` stated properly
+
+**That rule said *"a class takes a second strong save if it has a second job"* and never defined a second job.**
+
+> **The second job is the second ability. Nobody wrote it down.**
+
+### Derived rather than imposed
+
+**Tested across all thirteen standard base classes: 11 of 13 predicted exactly.**
+
+**⚠ Both misses are ported anomalies:**
+
+    Scout      predicted Ref/Will, has all three     the source gives sct every save strong
+    Smuggler   predicted Ref/Will, has Reflex only   scd is Reflex-only in the source
+
+**The model predicts every *authored* class exactly and misses only where the source overrode it.**
+
+### What it buys
+
+**A new player picks a class and knows which two numbers to raise** — **the whole chargen problem for a first-timer.**
+
+**Saves stop being a per-class decision and fall out of what the class already is.** **⚠ One fewer table to keep in sync.**
+
+**And a player can state their character in one sentence:** *"I am a Duelist. Dexterity and Intelligence. Good at dodging and at not being fooled."*
+
+### ⚠ The limit, stated
+
+**The second ability does nothing else. No bonus, no mechanic, no third effect.**
+
+> **A recommendation plus a save. Adding more would make it a fourth system, and it is currently free.**
+
+### ⚠ Better than the 5e model it was asked to copy
+
+**5e names two abilities and grants proficiency in both saves, flatly.**
+
+**Ours gives *one* strong save when the abilities agree and *two* when they do not** — **so a narrow class is narrow and a broad class is broad, without anyone deciding it.**
+
+---
+
+## PT-247 — Check 22: two abilities predict the strong saves
+
+**Blocking. It is what makes `PT-246` self-enforcing.**
+
+> **⚠ If a class's abilities change and its saves do not, the two disagree and the gate catches it.**
+
+**The two ported exceptions are *listed* rather than silently skipped, with the reason each carries.**
+
+**⚠ Which is `PT-173`'s lesson applied at build time:** **a check that quietly excludes a case reports clean and teaches nobody.**
+
+**Gate: 22 checks, 19 blocking, 3 reporting.**
+
+---
+
+## PT-248 — `GAP-002` closed: the KOTOR branch, decided by construction
+
+**⚠ It read *"framed, not decided"* while five documents implemented one branch and have for the whole project.**
+
+    FORCE-POWERS-01     88 discrete powers with FP costs
+    FORCE-POOL-01-v3    a Force POINT pool with a formula
+    POWER-COSTS-01      per-power costs
+    FORCE-TRAINING-01   powers learned from a teacher
+    FORCE-AWAKENING-01  becoming Force-sensitive
+
+**Branch A was RCR's nineteen ranked *skills* bought with *skill points*.** **⚠ The phrase *"skill points"* appears zero times in `FORCE-POWERS-01`.**
+
+> **The decision was made by building. Nobody wrote it down.**
+
+**`GAP-001b` unblocked.**
+
+---
+
+## PT-249 — ⚠ `spells.2da` does not carry the numbers, and there is no name mapping
+
+**Two hard negatives found before starting `PT-146`.**
+
+### The file does not have what everyone assumes
+
+    ✓ GIVES    forcepoints · range · category · immunitytype · prerequisites ·
+               guardian/consular/sentinel access · exclusion
+    ⚠ DOES NOT damage dice · duration · save DC · magnitude · area
+
+**Every power points at the same `impactscript` — `k_sp1_generic`, a compiled NCS script.**
+
+> **⚠ The numbers are inside code we do not hold and cannot read.**
+
+**Same shape as `racialtypes.2da` being a hard negative for species ports: the file everyone assumes has the answer does not.**
+
+**⚠ So the wiki is not a supplement to the source. It is the only route to the numbers.**
+
+### And our names diverged from the source without a mapping
+
+    88 powers in FORCE-POWERS-01
+    20 match a spells.2da label by exact name
+    34 match by token overlap
+    ⚠ 54 need manual mapping
+
+    Burst of Speed  ->  SPEED_BURST
+    Afflict         ->  AFFLICTION
+    Advanced Throw Lightsaber -> LIGHT_SABER_THROW_ADVANCED
+
+**⚠ We ported 88 powers from a source with different names and never recorded which is which.**
+
+**Which means every future claim about a power's source data has to re-derive the mapping.** **`force_extract.json` holds the 132 extracted rows; the mapping table is the next artefact.**
+
+### ⚠ The tier progression rule, derived and usable
+
+    Slow        -> Affliction     FP 15 -> 15    maxcr 3 -> 6
+    Wound       -> Choke          FP 15 -> 15    maxcr 3 -> 6
+    Drain Life  -> Death Field    FP 20 -> 20    maxcr 6 -> 9
+    Affect Mind -> Dominate       FP  0 ->  0    maxcr 3 -> 6
+
+> **⚠ Cost never rises. `maxcr` rises by 3 a tier.** **A higher tier is not a more expensive version — it is the same cost reaching a harder target.**
+
+**Three ways the source extends a power:** **reach a stronger target · add a second effect on top of the first · widen the target set.**
+
+**⚠ Whatever is authored for tiers 2 and 3 must extend tier 1 by one of those three, not replace it.**
+
+**18 parent-child links are in the `prerequisites` column. That is the chain skeleton, free.**
+
+---
+
+## PT-250 — ⚠ Our `spells.2da` is KOTOR 1's. Half the unmapped powers are K2 exclusives.
+
+**Derived. Checked nine known KOTOR 2 powers against the file:**
+
+    Force Body · Force Crush · Precognition · Revitalize · Battle Meditation
+    Force Scream · Force Enlightenment · Force Sight · Drain Force
+
+> **⚠ Zero of nine present.**
+
+**The file we hold is `k1`'s and is not labelled as such** — **unlike `k1_baseitems.2da` and `k2_baseitems.2da`, which are.**
+
+### What that explains
+
+    88 powers in FORCE-POWERS-01
+    38 mapped to a source row
+    16 tier variants inheriting from a parent
+    ⚠ 34 unmapped
+
+**⚠ Most of the 34 are K2 exclusives.** **They were never going to map, because the source row is in a file we do not hold.**
+
+### ⚠ And it means the extraction is only half done
+
+**`PT-249` said the wiki was the only route to the *numbers*. That stands.**
+
+**This adds: the wiki is the only route to *anything at all* for roughly a third of the powers** — **cost, range, class access and chain position included, not just damage.**
+
+### The ask
+
+**⚠ `k2_spells.2da` would close it.** **Same shape as the `baseitems` pair we already hold both halves of.**
+
+**Requested. Until it arrives:**
+
+    38 powers   full 2DA data — cost, range, immunity, prerequisites, class access
+    16 powers   inherit from a mapped parent
+    34 powers   wiki-only, and K2-sourced
+
+**⚠ And the file should be renamed `k1_spells.2da` on arrival of its pair, so this cannot recur.**
+
+**`force_namemap.json` holds the 38 confirmed mappings.**

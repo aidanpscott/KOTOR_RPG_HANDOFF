@@ -2161,9 +2161,9 @@
 |---|---|---|
 | **Combat** | **1–4** | Soldier **3** · Guardian **3** · Marksman **4** |
 | **Middle** | **2–5** | Bounty Hunter 4 · Scout 5 · Sentinel 5 · Engineer 4 |
-| **Specialist** | **3–6** | Smuggler **7 ⚠** · Machinist 6 · Consular 4 |
+| **Specialist** | **3–7** | Smuggler **7** · Machinist 6 · Consular 4 | **⚠ Opened from 3–6 by `PT-116`** |
 
-**⚠ `Smuggler` at 7 sits outside its own band.** **Either it drops to 6 or the band opens to 3–7. Unresolved.**
+**⚠ RESOLVED by `PT-116`: the band opened to 3–7.**
 
 **⚠ `Soldier` moved 2 → 1 → 3 in one session.** **At 1 it maxed two skills of seven, which read as too narrow.** **At 3 it ties the Guardian, and nothing currently sits at 1 or 2 — the band has room for classes that do not exist yet.**
 
@@ -3081,3 +3081,32 @@
 **Fixed by the designer: `--mark` records a content hash and catch-up reports `CHANGED` alongside `UNREAD`.**
 
 **⚠ The operational rule: do not rewrite a delivered file in place. Amend by pushing the next number and saying what it supersedes.**
+
+
+---
+
+## PT-116 — Register triage: four of sixteen open items were already closed
+
+**`FINDINGS-10 §3` ranked sixteen open items. Checked each against the tree rather than against the list.**
+
+### Already closed, and not by me
+
+**Item 5 — the class-lock mechanism.** **`CLASS-ATTACKS-01 §306` now reads *"a class-locked chain is a granted chain, and restricted means granted to exactly one class."*** **`PT-101`'s granted-versus-bought ruling closed it by implication, exactly as the register suspected.**
+
+**Item 14 — the proficiency table.** **Eight rows covering all ten classes; the Bounty Hunter is present.** **Fixed by the concurrent instance.**
+
+**Item 2 — the two live formulas.** **`FORCE-POOL-01-v3 §4` and `§6` both carry the `PT-108` formula with correction notes.**
+
+**Item 1 — the chassis reading.** **Closed by `PT-109` and corrected by `PT-114`.**
+
+**⚠ Four of sixteen, and three of the four were closed by an agent the register's author could not see.** **The register was accurate when written and stale within the hour.**
+
+### Closed here
+
+**Item 11 — the Smuggler's skill base of 7 outside its own band.**
+
+> **The band opens to `3–7`. The Smuggler does not drop to 6.**
+
+**It inherited the Scoundrel's kit entire — `PT-73` — and the Scoundrel was the most skill-dense class in the source at `skillpointbase` 4 against everyone else's 1 to 3.** **⚠ Dropping it to 6 would make the band tidy by making the class wrong.**
+
+**A band exists to describe the classes, not to discipline them.**

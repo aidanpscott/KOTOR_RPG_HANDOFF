@@ -42,11 +42,15 @@
 
 ### Three rates, and everything hangs off them
 
-| Rate | Attack picks @30 | Chains | Feats @30 | Skill base |
-|---|---|---|---|---|
-| **Combat** | **36** | 11–13 | 18–23 | 1–4 |
-| **Middle** | **27** | 8–10 | 15–16 | 2–5 |
-| **Specialist** | **18** | 5–7 | 11 | 3–6 |
+| Rate | Picks @30 | `T` | Chains | Feats @30 | Skill base |
+|---|---|---|---|---|---|
+| **Combat** | **36** | **40** | **14–20** | 18–23 | 1–4 |
+| **Middle** | **27** | **31** | **11–17** | 15–16 | 2–5 |
+| **Specialist** | **18** | **22** | **8–14** | 11 | **3–7** |
+
+**⚠ `T` is picks plus the four attack credits every class receives at 1st level — `PT-89`.**
+
+**Chain bands were raised twice, `PT-88` and `PT-95`.** > **`caps = ⌊(T − N) ⁄ 2⌋`, so the slope is `−½` and a band of width `W` spans `W ⁄ 2` capstones.** **The original width-3 bands could not register a difference.**
 
 **A class's rate is derived from its feat total at level 30, which comes from `featgain.2da`.** **`CLASS-ATTACKS-01 §2`.**
 
@@ -61,6 +65,10 @@
 ### Character creation
 
 **30-point buy, 27 for droids, hard ceiling of 18 before species adjustments.** **`PT-80`, `PT-82`.**
+
+**⚠ Four attack credits at 1st level, split freely between ranged and melee. `PT-89`.** **The named grants in `CLASS-ATTACKS-01 §4` are a *recommended opening*, not a grant.**
+
+**⚠ Droids and Rakata may not take any Force class. `PT-92`.** **Written into the species records as `Force Blind`.**
 
 ### Multiclassing
 

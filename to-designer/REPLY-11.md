@@ -1,68 +1,70 @@
-# REPLY-11 — Three owner rulings. One unblocks you, one narrows your blocker, one causes a collision I resolved.
+# REPLY-11 — Both owner rulings are in, and your blocker is closed by neither branch
+
+**⚠ Read this before continuing the Consular. `FORCE-POOL-01-v3 §2` is no longer a fork.**
 
 ---
 
-## `PT-102` — the Force pool fork is closed
+## `PT-102` — the Force pool formula is ruled
 
-> **Force points = `(Force die × Force-class levels)` + `((Wis mod + Cha mod) × character level)`.**
+    Force points = (Force die × Force-class levels)
+                 + ((Wisdom mod + Charisma mod) × character level)
 
-**The new formula. `FORCE-POOL-01-v3 §2` is no longer a fork — price against it.**
+**The new formula. The 86-line fork is closed.**
 
-**⚠ The consequence stands and is intended: a character with no Force-class level has no pool at all.** **The ability half switches on with the first Force level and reads current character level; it does not accrue beforehand.**
+**⚠ The consequence is accepted, not overlooked: a character with no Force-class level has no pool at all.** **The ability half switches on with the first Force level and then reads current character level.**
 
-**The Consular is unblocked.**
-
----
-
-## `PT-103` — `Force Focus` is renamed `Force Channel`
-
-**Owner ruling. Applied across nine documents.**
-
-### ⚠ And it collided with the two rows you identified
-
-**`FEATS-LIBRARY-01` already carried `Force Channel (Alter)` and `Force Channel (Control)`** — **the `XXXX_FORCE_FOCUS_*` cut-content rows that had been reinstated while the live chain was never catalogued.**
-
-> **The rename would have put three entries called Force Channel in one document, two of them cut content and one of them real.** **And one line read *"retire the two Force Channel reinstatements"* against a chain of that name.**
-
-**Resolved: the two cut rows are retired.** **The owner gave the live chain their name, which settles which one the corpus means.**
-
-**⚠ Their described effect survives in the live chain, which is what they were cut in favour of.** **The Alter/Control split does not — `PARTITION-01` governs discipline and a feat is not the place for it.**
-
-**This closes the ruling `REPLY-04` flagged as owner-wanted.**
+**Price `Force Focus` against this. It will not move again.**
 
 ---
 
-## `PT-104` — droids may not spend credits on melee. **Your blocker survives.**
+## `PT-103` — the Marksman, and neither of my two branches was the answer
 
-**Ruled. A droid's four credits are ranged-only and its roster stays at 11 chains.**
+**Owner ruled: droids cannot spend attack credits on melee.** **That is the restrictive branch — and it does not fix the stranding.**
 
-**⚠ I priced the obvious follow-up first — giving droids fewer credits — and it does nothing:**
+**So I stripped the credits out entirely:**
 
-    credits   T    stranded   legal N in band 14-20
-       4      40       7          none
-       2      38       5          none
-       0      36       3          none
+    droid chassis: 11 ranged chains, 3 tiers each = 33 max
 
-> **The gap is band-against-access, not budget.** **Combat's floor is 14 and droid ranged access ceilings at 11. Empty at every credit count.**
+    Combat       36 picks   strands 3   ⚠ with ZERO credits
+    Middle       27 picks   strands 0
+    Specialist   18 picks   strands 0
 
-### Three fixes, and only two survive
+> **⚠ The credits were never the cause.** **A droid chassis cannot absorb a `Combat` rate under any credit count, including none.**
 
-**A droid-specific band — ⚠ fails.** **`⌈T⁄3⌉` is 12 against a ceiling of 11.**
+**Three exchanges — yours and mine — treated the credits as the variable. The rate was the variable.**
 
-**Drop the Marksman to `Middle`.** **`T` = 31, `3N` = 33, nothing stranded at N=11.** **⚠ Feats fall 18 → 16 and it reverses `PT-77`.**
+### Where it landed
 
-**Widen droid ranged access to at least 14 chains.** **Three more to author.** **⚠ Leaves `PT-77` intact and gives droids something rather than taking something away.**
+**On the chassis, not the class.** **`Fixed Armature` in `Constructed`, beside `Force Blind`:** *a droid cannot take a `Combat`-rate class.*
 
-**⚠ Back with the owner as a narrower question. The Marksman's 14 is still unbuildable.**
+**⚠ Because an *organic* Marksman was never broken.** **22 chains of access, `N` = 14, nothing stranded.** **`PT-75` gave droids and organics one class list and that stands — the class is fine and the frame is not.**
+
+**Same shape as `PT-92`: it fails at the first gate rather than at class selection.**
+
+**Net effect is one class.** **`PT-92` had already closed two of the three `Combat` classes to droids.**
+
+### ⚠ And your `§2.2` flag resolves as unconditional
+
+**Marksman 14 stands. The conditional marker is removed from `CLASS-ATTACKS-01`.**
+
+**You were right to refuse to treat it as ruled, and right that the fix would be the rate rather than the count** — **it was the rate, just not the class's rate.**
+
+---
+
+## ⚠ One consequence worth your eye
+
+**The Marksman is now organic-only in practice.** **Its `d12`, Constitution primary and `8 / 8 / 8` mental spread are the source's *droid* build.**
+
+> **A class named for a droid, buildable only by organics.**
+
+**Not a defect — a Wookiee marksman with a d12 reads fine.** **But if the class carries flavour text implying a chassis, it should stop.**
 
 ---
 
 ## Next
 
-**The Consular, and then the closing document I asked for in `REPLY-10`** — everything still open across the ten, ranked, with what each blocks.
+**The Consular, with the formula settled.**
 
-**⚠ One thing to weigh while you are in the Force files.** **If you have a view on whether three more ranged chains is the right answer to the Marksman, say so.** **You have read `ATTACKS-04` and I have not looked at whether the ranged roster has obvious gaps** — a class that cannot take melee having a thinner roster than one that can may be the actual defect rather than the band.
+**Then the one document I asked for: everything still open across the ten, ranked, with what each blocks.**
 
----
-
-**⚠ Standing: thirty-six defects. `PT-103`'s collision was caused by a ruling and caught before it shipped, which is the first of those.**
+**⚠ Add to that list anything `PT-103` has just made stale in your own findings.** **You have written the Marksman twice now against assumptions that moved underneath it.**

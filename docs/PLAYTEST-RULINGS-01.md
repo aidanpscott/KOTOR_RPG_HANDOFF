@@ -2883,3 +2883,99 @@
 **Widen droid ranged access.** **Needs 14 accessible chains against the roster's 11.** **⚠ Leaves `PT-77` intact and gives droids something rather than taking something away.**
 
 **⚠ Narrower question than before: reverse `PT-77`, or author three ranged chains.**
+
+---
+
+## PT-105 — `FORCE-POOL-01-v3` carried both formulas, in three sections
+
+**⚠ Fourth instance of the `PT-84` shape: a correction applied to the section that states the rule and not to the sections that use it.**
+
+| Section | Carried |
+|---|---|
+| **`§2`** | The new formula, with the change announced |
+| **`§4`**, the fatigue table | **⚠ The old one** |
+| **`§6` Decided** | **⚠ The old one** |
+
+**Derived, Scout 8 / Consular 4, Wis + Cha `+4`:**
+
+    §2   (8 × 4) + (4 × 12)  =  80    floor 40
+    §4   12 + (3 × 12)       =  48    floor 24
+
+> **A 67% difference in the ceiling and the same in the floor, inside one document.**
+
+**⚠ And `§4` is the section that uses it hardest** — the working maximum degrades to half the *true maximum*, so which formula is live sets both ends.
+
+### Why it survived
+
+**⚠ It is invisible on every pregen and every worked example, because all of them are pure Jedi — where the two formulas coincide exactly.**
+
+**`§4`'s own examples are *"a level 5 Guardian"* and *"a level 20 Guardian"*.** **Nothing in the document exercises the case that separates them.**
+
+**Both corrected.**
+
+---
+
+## PT-106 — The class-lock mechanism was closed by `PT-101` and nobody noticed
+
+**`CLASS-ATTACKS-01 §6` carried:** *"`Killer's Instinct` and `Squad Tactics` are class-locked and nothing defines the mechanism."*
+
+**`PT-101` ruled restricted chains are *granted* — the class receives them at a stated level and nobody else may take them.**
+
+> **That is the mechanism.** **A class-locked chain is a granted chain, and *restricted* means *granted to exactly one class*.**
+
+**⚠ Recorded because the closure was invisible.** **`PT-101` answered a question about `Targeting` and settled a different open item three hundred lines away.**
+
+---
+
+## PT-107 — The proficiency table had nine rows for ten classes
+
+**`ACTION-ECONOMY-01 §18.2`. The Bounty Hunter had none.**
+
+**Added: all weapons, light and medium armour** — **consistent with `PT-68`'s full BAB and d10, and short of the Soldier's heavy.**
+
+**⚠ The Doctor is also absent, correctly — it is a stub with one class skill and no other numbers.**
+
+---
+
+## PT-102 — `FORCE-POOL-01-v3 §2`, fork closed
+
+**Owner ruling. The new formula stands.**
+
+    Force points = (Force die × Force-class levels)
+                 + ((Wisdom mod + Charisma mod) × character level)
+
+**The die is training. The modifiers are capacity.** **A character has a level-12 person's reserves whether or not they spent those levels in a temple.**
+
+**⚠ Accepted consequence: a character with no Force-class level has no pool at all.** **The ability half switches on with the first Force level and then reads current character level; it does not accrue beforehand.**
+
+**⚠ Why it came up now rather than earlier.** **The fork predates this session.** **It became undeferrable because the Consular's class feature is Force Focus, a Force-power-effectiveness multiplier — and a multiplier cannot be priced without the thing it multiplies.**
+
+---
+
+## PT-103 — A droid chassis cannot take a `Combat`-rate class
+
+**Owner ruled droids cannot spend attack credits on melee.** **That did not resolve the Marksman, and stripping the credits out entirely showed why.**
+
+    droid chassis: 11 ranged chains accessible, 3 tiers each = 33 max
+
+    Combat       36 picks   strands 3   ⚠ with ZERO credits
+    Middle       27 picks   strands 0
+    Specialist   18 picks   strands 0
+
+> **⚠ The credits were never the cause. Three exchanges treated them as the variable and the rate was the variable.**
+
+### Where the restriction belongs
+
+**`PT-75` dropped the droid/organic class split and that stands.** **An *organic* Marksman has 22 chains of access, `N` = 14, and strands nothing.** **The class was always fine.**
+
+**What cannot happen is a droid *chassis* running at `Combat` rate.**
+
+**So it went on the chassis, in `Constructed`, beside `Force Blind` — `Fixed Armature`.** **Same shape as `PT-92` and for the same reason: it fails at the first gate rather than at class selection.**
+
+**⚠ Net effect is one class.** **Soldier, Jedi Guardian and Marksman are the three `Combat` classes, and `PT-92` had already closed two of them to droids.**
+
+### ⚠ And the Marksman is now organic-only in practice
+
+**Its `d12`, Constitution primary and `8 / 8 / 8` mental spread are the source's droid build.** **A class named for a droid, buildable only by organics.**
+
+**Not a defect — `PT-75` is what makes it coherent, and a Wookiee marksman with a d12 reads fine.** **The flavour text should stop implying otherwise.**

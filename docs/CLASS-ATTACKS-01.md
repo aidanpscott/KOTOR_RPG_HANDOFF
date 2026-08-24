@@ -143,7 +143,7 @@
 |---|---|---|---|---|
 | **Soldier** | Combat | **14** | 23 | 13 |
 | **Jedi Guardian** | Combat | **18** | 20 | 11 |
-| **Marksman** | Combat | **14 ⚠** | 18 | 13 |
+| **Marksman** | Combat | **14** | 18 | 13 |
 | **Bounty Hunter** | Middle | **11** | 16 | 10 |
 | **Scout** | Middle | **17** | 16 | 7 |
 | **Jedi Sentinel** | Middle | **13** | 15 | 9 |
@@ -299,7 +299,15 @@
 
 ## 6. What this does not settle
 
-**Which attacks are *restricted* rather than merely ungranted.** **`Killer's Instinct` and `Squad Tactics` are class-locked and nothing defines the mechanism.**
+**⚠ CLOSED by implication. `PT-106`.**
+
+**`PT-101` ruled that restricted chains are *granted* — the class receives them at a stated level and nobody else may take them.**
+
+> **That is the mechanism.** **A class-locked chain is a granted chain, and *restricted* means *granted to exactly one class*.**
+
+**So `Killer's Instinct` and `Squad Tactics` are Soldier grants, on the ladder their entries state.**
+
+**⚠ Recorded because the closure was invisible.** **`PT-101` answered a question about `Targeting` and settled a different open item three hundred lines away.** **The designer noticed; nobody else would have.**
 
 **⚠ The multiclass pick question is closed** — `MULTICLASS-01 §3.1`. **Neither summing nor the higher rate: picks accrue at the rate of the class you take that level in, read at your current character level.**
 

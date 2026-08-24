@@ -108,6 +108,45 @@
 
 **A general table is wanted eventually. This ruling is one row of it.**
 
+### ⚠ A droid chassis cannot take a `Combat`-rate class
+
+**Owner-derivable, and it is a *species* restriction rather than a class one. `PT-103`.**
+
+**Derived, with credits stripped out entirely:**
+
+    droid chassis: 11 ranged chains accessible, 3 tiers each = 33 max
+
+    Combat       36 picks   strands 3   ⚠ before any credits
+    Middle       27 picks   strands 0
+    Specialist   18 picks   strands 0
+
+> **⚠ A droid chassis strands picks at `Combat` rate with zero credits. The four credits were never the cause — the rate was.**
+
+**With `PT-89`'s credits and the owner ruling that droids cannot spend them on melee:**
+
+    Combat       T = 40   needs N ≥ 14   access 11   IMPOSSIBLE
+    Middle       T = 31   needs N ≥ 11   access 11   exactly legal
+    Specialist   T = 22   needs N ≥  8   access 11   legal
+
+### Why this is the right shape
+
+**`PT-75` dropped the droid/organic class split: droids and organics draw from one list.** **That stands.**
+
+> **An *organic* Marksman works. 22 chains of access, `N` = 14, nothing stranded.** **The class is fine.**
+
+**What cannot happen is a *droid chassis* running at `Combat` rate, because its roster is too small to absorb the picks.**
+
+**⚠ So the restriction belongs where `Force Blind` belongs — on the chassis, in `Constructed`** — **not on the class.** **Same shape as `PT-92`, and for the same reason: it fails at the first gate rather than at class selection.**
+
+**Which classes this closes to a droid chassis: Soldier, Jedi Guardian, Marksman.** **⚠ Two of the three were already closed by `PT-92`.** **The net effect is one class.**
+
+### ⚠ And the Marksman is now an organic-only class in practice
+
+**Its `d12`, Constitution primary and `8 / 8 / 8` mental spread are the source's droid build.** **A class named for a droid, buildable only by organics.**
+
+**Not a defect — `PT-75` is what makes it coherent, and a Wookiee marksman with a d12 reads fine.** **But the flavour text should stop implying otherwise.**
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

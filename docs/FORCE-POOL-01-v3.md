@@ -132,7 +132,7 @@
 
 | Element | Rule |
 |---|---|
-| **True maximum** | Force die + Wis mod + Cha mod, per level. Maximum die at 1st. |
+| **True maximum** | **`(Force die × Force-class levels)` + `((Wis mod + Cha mod) × character level)`.** Maximum die on the first Force-class level. **⚠ Was the pre-`PT-102` formula. `PT-105`** |
 | **Working maximum** | Degrades during the day; never below **half** the true maximum |
 | **Degradation** | **A percentage of each power's own cost, scaled by tier — see §4.2** |
 | **Trigger** | **Per cast.** Not per encounter. |
@@ -275,7 +275,7 @@ At 25% and 50% the rests barely register. **75% is taken:** two rests produce a 
 ### Decided
 
 - Dedicated pool layered in front of vitality; overreach spills into vitality
-- Maximum = Force die + Wis mod + Cha mod per level, max die at 1st
+- Maximum = **`(Force die × Force-class levels)` + `((Wis mod + Cha mod) × character level)`**, max die on the first Force-class level. **⚠ Corrected — this line carried the pre-`PT-102` formula. `PT-105`**
 - Costs RCR-scale and tiered; typical cost blends across available tiers
 - Regeneration flat, per own turn, 3/2/1 base, +1 every 4/5/5 levels
 - In-combat regeneration ported from KOTOR 2, not authored

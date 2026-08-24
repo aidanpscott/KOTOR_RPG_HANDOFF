@@ -701,9 +701,16 @@
 |---|---|---|
 | **Smuggler** | every odd level from 1 | **10d6 at 19** |
 | **Jedi Watchman** | 1, then every third | **7d6 at 19** |
-| **Sith Assassin** | **1, then every second from 4** | **⚠ 9d6 at 20** |
+| **Sith Assassin** | **1, then every second from 5** | **9d6 at 20** |
 
-**⚠ The Assassin's is authored.** **It sits between the other two: faster than the Watchman, one tier short of the Smuggler at the ceiling, and it reaches each tier a level later than the Smuggler from 4d6 on.**
+**⚠ The Assassin's is authored.** **It sits between the other two: faster than the Watchman, one tier short of the Smuggler at the ceiling.**
+
+**⚠ CORRECTED. `PT-127`.** **The ladder first printed as *"every second from 4"*, which reaches 10d6 at 20 — the Smuggler's own cap, one level earlier.** **It was not slower at all.**
+
+    1, then every second from 4:   1, 4, 6, 8, 10, 12, 14, 16, 18, 20  -> 10d6
+    1, then every second from 5:   1, 5, 7, 9, 11, 13, 15, 17, 19      ->  9d6
+
+**Found by the designer computing the stated cap rather than accepting it.**
 
 **The reasoning is the classes' own cases.** **The Smuggler's whole identity is the opening — `PT-73` gave it the Scoundrel's kit and the Scoundrel was *"`Sneak Attack` and one good opening."*** **The Assassin has a Force pool and a lightsaber as well, so it should not also hold the fastest stealth ladder in the game.**
 

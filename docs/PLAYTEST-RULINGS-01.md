@@ -3416,3 +3416,68 @@
 **Feat totals place them at `Combat` / `Middle` / `Specialist` — the same spread as the Jedi.**
 
 **Saves on `PT-123`, all three at 33, identical to their Jedi mirrors.** **⚠ The Sith are not more fragile than the Jedi and nothing in the source says they are.**
+
+---
+
+## PT-126 — Sith Assassin: 12 feats and `Specialist`, by owner instruction
+
+**Amends `PT-125` on one axis. Everything about the *tier* stands — d8, Force die 6, Dexterity primary.**
+
+| | `PT-125` | **Now** |
+|---|---|---|
+| Feats at 30 | 15 | **12** |
+| Rate | `Middle` | **`Specialist`** |
+
+### Two consequences
+
+**The `Specialist` feat band opens to 10–12.** *It described 10–11.*
+
+> **⚠ Same move as `PT-116` on the Smuggler's skill base: a band exists to describe the classes, not to discipline them.**
+
+**⚠ The Sith side loses its `Middle` class.** **Jedi run `Combat` / `Middle` / `Specialist`; Sith run `Combat` / `Specialist` / `Specialist`.**
+
+**The Assassin and Inquisitor then share a rate and separate on hit die, Force die, primary ability, feat total, chain count, skill list and class feature — seven axes.** **The Guardian and Scout share a feat schedule byte for byte and were ruled distinct on two.**
+
+---
+
+## PT-127 — `PT-122`'s Assassin ladder was not slower than the Smuggler's
+
+**⚠ My error. Found by the designer computing the stated cap instead of accepting it.**
+
+    1, then every second from 4:   1, 4, 6, 8, 10, 12, 14, 16, 18, 20  ->  10d6 at 20
+    Smuggler, every odd from 1:    1, 3, 5, 7, 9, 11, 13, 15, 17, 19   ->  10d6 at 19
+
+> **⚠ The ladder I authored to be *slower* reached the Smuggler's own cap one level earlier than the Smuggler.**
+
+**Corrected: `1, then every second from 5` — 9d6 at 20, one tier short, which is what `PT-122` said it was doing.**
+
+**⚠ The ruling stated its intent and its mechanism and never checked that the mechanism produced the intent.** **A stated cap is a claim like any other.**
+
+---
+
+## PT-128 — Four prestige markers, not one
+
+**`PT-124` found the Sith columns sit at the prestige Force die. The designer swept the whole `sas` column and found three more.**
+
+| Marker | Base Jedi | Prestige | `sas` prints |
+|---|---|---|---|
+| **`Force Sensitive`** | level **2** | level 1 | **1** |
+| **Sense tier** | `Jedi Sense` | `Master Sense` | **`Master Sense`** |
+| **`Weapon Focus: Lightsaber`** | **not granted** | all six | **granted at 1** |
+| **Force die** | 4 / 6 / 8 | 6 / 8 / 10 | **8** |
+
+**⚠ Verified independently: `JEDI_SENSE` `sas=-1` `jsn=1`; `MASTER_SENSE` `sas=1` `jsn=-1`; `FORCE_SENSITIVE` `sas=1` `jsn=2`.**
+
+**And a fifth: `classpowergain.2da` gives every base Jedi 2 powers at 1st level. `sas` and `sma` print 1.**
+
+> **⚠ Five independent axes, all at the prestige value.** **`PT-124` was right on one and understated by four.**
+
+**All corrected for a base-tier Sith Assassin.**
+
+### ⚠ One grant not resolved and it is the owner's
+
+**`Armour Proficiency: Light` is carried by `sas`, `sma` and `jwa` and by no base Jedi — but also not by `sld`, `jma` or `jwm`.**
+
+**It does not stratify by tier, so it is not a marker.** **But `ACTION-ECONOMY-01 §18.2` gives Jedi no armour *deliberately*, because armour blocks Force powers.**
+
+**Whether Sith get light armour is a setting question.**

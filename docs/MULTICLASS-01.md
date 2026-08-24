@@ -196,6 +196,42 @@
 ---
 
 
+### ⚠ Prestige entry level is 10, and it is set below the optimum deliberately. `PT-142`.
+
+**Derived, cumulated over `k2_featgain.2da`:**
+
+    pure Guardian 30                   16 feats
+    Guardian 15 / Weaponmaster 15      18   <- optimum
+    Guardian 25 / Weaponmaster  5      18   <- also optimum
+    every other split                  17
+
+    pure Consular 30                   11
+    Consular 15 / Jedi Master 15       12
+
+> **⚠ Every split beats staying pure, and an even split beats it by two.**
+
+**`FEAT-SCHEDULE-01` rules that prestige feat columns read from their own class level, so a split character reads both columns from row 1.**
+
+**⚠ And `MULTICLASS-01 §4` states the opposite intent:** *"Ours charges you slowly, forever. A splitter is continuously behind."* **On feats, a prestige splitter is continuously ahead.**
+
+#### Not fixed. Bounded.
+
+**⚠ The source's own entry level was 15 and our optimum is 15.** **A requirement set there hands the player the optimal split as the minimum legal one.**
+
+**Entry is 10.** **A player who wants 18 still has to choose 15 rather than being handed it, and a player entering at 10 takes 17.**
+
+**The gap is 12.5% at worst — inside the noise of a single class feature.**
+
+**Two alternatives rejected:**
+
+**Make prestige columns read character level.** **⚠ `FEAT-SCHEDULE-01` closed that deliberately and every prestige feat total depends on it.**
+
+**Set entry above 15.** **⚠ It compresses the prestige career into fewer levels than the class needs, and 25/5 is also an optimum.**
+
+> **Same shape as `PT-70`: a small distortion is not worth new machinery.** **Four entry-credit systems were built and deleted for that reason.**
+
+---
+
 ### Prestige entry — the grammar, before any class requires anything. `PT-138`.
 
 **Nineteen sets of requirements is a design job. What they are *expressed in* is one ruling that shapes all nineteen.**

@@ -314,6 +314,28 @@
 **⚠ The `Explorer`'s first four class skills are owner-set** — `Archaeology`, `Xenology`, `Appraise`, `Science` — **which is why it exists.** **They were a Jedi monopoly before it.**
 
 
+### The six ported prestige classes — `PT-143`
+
+**Entry level 10 throughout, per `PT-142`.** **⚠ Every requirement names something the character must already have been doing. None is a tax.**
+
+| Class | Stat line | Entry |
+|---|---|---|
+| **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **Jedi Guardian 6** + `Weapon Focus: Lightsaber` |
+| **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **Sith Warrior 6** + `Weapon Focus: Lightsaber` |
+| **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **Jedi Sentinel 6** + `Stealth` 8 |
+| **Jedi Master** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **Jedi Consular 6** + `Mysticism` 8 |
+| **Sith Lord** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **Sith Inquisitor 6** + `Mysticism` 8 |
+| **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
+
+**⚠ Every feat total sits inside its rate's band. Verified.**
+
+**`Weapon Focus: Lightsaber` is a real purchase** — **the base Jedi are granted the *proficiency* and not the Focus.**
+
+**⚠ `Deflect` is the only granted chain in either game that no other class receives.** **The Jedi answer to a blaster, and the Sith are given none — `PT-129`.**
+
+**And `Tech Specialist` is the only one whose entry is a disjunction, because it is the *completion* prestige** — its skills are whichever of `Engineer` and `Machinist` the entrant is missing.
+
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

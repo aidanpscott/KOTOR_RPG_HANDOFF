@@ -3809,3 +3809,82 @@
 **A class was designed in a findings document, adopted into `CLASS-ROSTER-01`, and never reached the documents that govern it.**
 
 **Check 19 verifies bands. `audit_classskills` verifies lists that exist.** **⚠ Nothing asked whether every adopted class *has* an entry, because until five were adopted at once, none had been adopted without one.**
+
+---
+
+## PT-141 — `CLASS-ATTACKS-01 §5` is scoped to attack credits, not feats
+
+**`§5` reads *"Grants nothing"* while `jwm` has 23 grants, `jwa` 25 and `sma` 24.** **That looks like a flat contradiction and is not.**
+
+**⚠ `§5` sits under `§4`'s attack-credit table and is scoped to it.**
+
+> **It means a prestige class gives no attack credits at 1st level. It does not mean a prestige class grants no feats.**
+
+**And the alternative reading breaks the chain system.** **`PT-89` gives every class four credits; a prestige class giving four more would double a budget every chain count is built on.**
+
+### The counts are inflated by the Force package
+
+| Class | Grants | **Distinctive** |
+|---|---|---|
+| Jedi Weaponmaster | 23 | **7** |
+| Jedi Watchman | 25 | **7** |
+| Sith Marauder | 24 | **6** |
+| Jedi Master · Sith Lord | 17 | **2** |
+| Tech Specialist | 5 | **0** |
+
+**The rest is proficiencies, `Force Sensitive`, `Jedi Defense`, the Sense tier, and `Unarmed Specialist` I–VIII.**
+
+**⚠ No rules change. A scope clause, because *"grants nothing"* against a column of 23 will be read as a contradiction by the next person who checks.**
+
+---
+
+## PT-142 — Splitting into a prestige class beats staying pure, and entry is set below the optimum
+
+**Derived and verified independently:**
+
+    pure Guardian 30                   16 feats
+    Guardian 15 / Weaponmaster 15      18   <- optimum
+    Guardian 25 / Weaponmaster  5      18   <- also optimum
+    every other split                  17
+
+    pure Consular 30                   11
+    Consular 15 / Jedi Master 15       12
+
+> **⚠ Every split beats staying pure. An even split beats it by two.**
+
+**`FEAT-SCHEDULE-01` rules prestige feat columns read from their own class level, so a split character reads both columns from row 1.**
+
+**⚠ And `MULTICLASS-01 §4` states the opposite intent:** *"Ours charges you slowly, forever. A splitter is continuously behind."* **On feats, a prestige splitter is continuously ahead.**
+
+### Not fixed. Bounded.
+
+**⚠ The source's own entry level was 15 and our optimum is 15.** **A requirement set there hands the player the optimal split as the minimum legal one.**
+
+**Entry is 10.** **A player who wants 18 still has to choose 15; a player entering at 10 takes 17.** **The gap is 12.5% at worst — inside the noise of a single class feature.**
+
+**Rejected: making prestige columns read character level (`FEAT-SCHEDULE-01` closed that deliberately and every prestige total depends on it), and setting entry above 15 (compresses the career, and 25/5 is also optimal).**
+
+> **⚠ Same shape as `PT-70`. A small distortion is not worth new machinery.** **Four entry-credit systems were built and deleted for exactly that reason.**
+
+---
+
+## PT-143 — The six ported prestige classes
+
+**Entry level 10 throughout, per `PT-142`. `PT-138`'s grammar throughout.**
+
+| Class | Stat line | Entry |
+|---|---|---|
+| **Jedi Weaponmaster** | d10 · Force 6 · STR · 16 feats · Middle | Jedi Guardian 6 + `Weapon Focus: Lightsaber` |
+| **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle | Sith Warrior 6 + `Weapon Focus: Lightsaber` |
+| **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle | Jedi Sentinel 6 + `Stealth` 8 |
+| **Jedi Master** | d6 · Force 10 · WIS · 11 feats · Specialist | Jedi Consular 6 + `Mysticism` 8 |
+| **Sith Lord** | d6 · Force 10 · WIS · 11 feats · Specialist | Sith Inquisitor 6 + `Mysticism` 8 |
+| **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
+
+**⚠ Every feat total sits inside its rate's band. Verified independently.**
+
+**⚠ Every requirement names something the character must already have been doing.** **None is a tax.**
+
+**`Weapon Focus: Lightsaber` is a real purchase — the base Jedi are granted the proficiency and not the Focus.**
+
+**And `Tech Specialist` is the only disjunctive entry, because it is the completion prestige.**

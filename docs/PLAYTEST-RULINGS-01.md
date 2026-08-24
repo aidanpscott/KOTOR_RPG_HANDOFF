@@ -4383,3 +4383,139 @@
 **⚠ Five sit at exactly 11 chains — `PT-114`'s droid ceiling.** **Bounty Hunter, Engineer, Agent, Sith Inquisitor, Droid Master.**
 
 **The one `X` is the Agent, whose premise `REPLY-29` reversed and which has not been redrafted.**
+
+---
+
+## PT-163 — Range, ported from the games and expanded
+
+**Owner instruction: use the games' rules, expanded if need be.** **`PT-160` recorded that none existed and that two written feats already depended on them.**
+
+### What the source has
+
+**Every ranged weapon has a maximum: pistols **23 m**, rifles **28 m**.** **Verified against `EQUIPMENT-01` — eight ranged weapons, two distinct values, no others.**
+
+**And KOTOR 2 applies penalties in two places:** *shooting past your weapon's range, and shooting an enemy in melee at point blank.*
+
+### ⚠ Why a straight port does nothing
+
+**A KOTOR corridor is about 5 metres and a room about 15.**
+
+> **Every indoor encounter sits inside both weapons' maximum. The number never fires.**
+
+**That is exactly the defect `PT-160` found: a fact about the weapon that changes nothing.**
+
+### The expansion — the printed range is an *increment*
+
+    within one increment      23 / 28 m        no penalty
+    each further increment    to 46/56, 69/84  cumulative −2 attack
+    beyond three              past 69 / 84 m   cannot be attempted
+
+**`SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 ladder is the warrant for −2 per step.**
+
+**⚠ Three increments rather than RCR's ten.** **A ten-increment ceiling is meaningless at a table where a long room is 20 metres.**
+
+> **The printed number now does work at every distance instead of at one.**
+
+### Point blank — the rule the source has and we did not
+
+**⚠ In KOTOR a melee attacker gets `+10` against a ranged attacker at point blank, and the ranged attacker gets `+10` close proximity back.** **Players noticed those cancel and asked why the rule exists.**
+
+**Ours does not cancel:** > **firing a ranged weapon while adjacent to an enemy is at −4.**
+
+**The Reaction axis is the answer — `Snap Shot` fires as they close, before they are adjacent.**
+
+### What it unblocks
+
+**⚠ `Close Combat` had no definition.** **It read *"+1 attack at short range"* with short range undefined.** **Short range is within one increment, and the feat is now a specialist's answer to the `−4` rather than a bonus against nothing.**
+
+**`Master Spotter`'s *"within half their weapon's maximum range"* resolves.**
+
+**⚠ The `Sharpshooter` can be revisited** — it was built on *one shot, lined up* because outranging was not a thing that happened.
+
+**⚠ Still blocked: the `Pirate`'s dogfighting. That is ship rules, not range.**
+
+---
+
+## PT-164 — The melee-against-ranged bonus did not exist either
+
+**Found while repricing `Close Combat` against `PT-163`.**
+
+**`FEATS-LIBRARY-01`'s `Close Combat` reduces *"the usual +6"* an enemy gets for engaging a ranged fighter in melee.**
+
+> **⚠ Grepped: that `+6` is written nowhere in the corpus.**
+
+**A feat that reduces a bonus, and the bonus was never stated.** **Same defect as the range gap and found in the same pass.**
+
+### Stated, and it is the other half of point blank
+
+    firing a ranged weapon while adjacent to an enemy      −4 attack
+    attacking an adjacent enemy who holds a ranged weapon  +2 attack
+
+**⚠ Not `+6`.** **The source's `+10` was cancelled by a `+10` and did nothing. A `+6` on top of the `−4` is a 10-point swing on one axis, outside `SKILL-RESOLUTION-01`'s entire modifier ladder.**
+
+**`+2` against `−4` is a 6-point swing — decisive without being absurd.**
+
+### `Close Combat` repriced against the real number
+
+    tier 1   +1 within one increment, and the enemy's +2 drops to +1
+    tier 2   +2, and the enemy's bonus drops to 0
+    tier 3   +3, and your own −4 drops to −1
+
+**⚠ The capstone now touches the penalty rather than the enemy's bonus, because the enemy's bonus is already zero by tier 2.**
+
+### And `Master Spotter` resolves
+
+**It read *"within half their weapon's maximum range"* against no range system.** **Half one increment: 11 m with a pistol, 14 m with a rifle.**
+
+> **⚠ Three rules in the corpus referenced a range system that did not exist.** **All three are now grounded and none needed its wording changed — only its referent to start existing.**
+
+---
+
+## PT-165 — Point blank is 4 metres, and adjacent is not the same thing
+
+**`§9` sets a square at 2 metres and `§587` records that every distance in the corpus lands cleanly on one.**
+
+**⚠ Fourteen distances across four documents used 3 or 5 metres — 1.5 or 2.5 squares.**
+
+**All snapped to 4 metres. And it settled a distinction two rules were using differently:**
+
+    adjacent       1 square    2 m    the −4 firing penalty
+    point blank    2 squares   4 m    Point Blank Shot, Spray, Suppressing Fire
+
+> **⚠ Adjacent is *in melee with you*. Point blank is *close enough that they cannot react*.** **Both were in the corpus and neither was defined.**
+
+---
+
+## PT-166 — Three of the four source weapon ranges do not land on our grid
+
+**Found by check 20 immediately after `PT-165` claimed every distance did.**
+
+    source   squares   snapped
+    17 m      8.5       16 m     ion blaster, sonic pistol
+    23 m     11.5       24 m     blaster pistol, hold-out, disruptor pistol
+    25 m     12.5       24 m     blaster carbine
+    28 m     14.0       28 m     rifles, bowcaster — already clean
+
+**⚠ 23 and 25 both land on 24.** **Not a loss: the carbine's 2-metre edge was one square in a game with no squares, and it did nothing.**
+
+### Why snap the ranges rather than the square
+
+**`§9` records that 2 metres is RCR's own unit — a 5-foot square converted — and that every species speed is 10 metres because of it.**
+
+> **⚠ Moving the square to make four weapon ranges tidy would move every speed, every reach and every area effect in the corpus.**
+
+**Four ranges move by at most 1 metre. That is the cheaper end by a wide margin.**
+
+---
+
+## PT-167 — Check 20: grid alignment
+
+**`§587` asserted that every distance lands on a whole square. It was true when written and false when checked.**
+
+**⚠ Nothing caught it because a distance is prose, not a number a checker knew to look at.**
+
+**Check 20 looks at it. 142 documents, and the corpus is now clean.**
+
+> **⚠ Third time a stated invariant turned out to be false on first mechanical check.** **`PT-88`'s missing ruling, `PT-140`'s eight missing classes, and this.**
+
+**A claim in a document is a claim. Deriving it is the only thing that makes it a fact.**

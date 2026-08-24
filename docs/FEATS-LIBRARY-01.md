@@ -51,9 +51,11 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** | **+1 attack at short range.** Enemies engaging you in melee get **+4 attack instead of the usual +6.** Level 4. |
-| › Improved Close Combat |  | **+2 short-range attack**, enemy melee bonus reduced to **+2.** Level 8. |
-| ›› Master Close Combat | **Authored — the source chain stops at Improved.** | **+3 short-range attack**, enemy melee bonus reduced to **0.** |
+| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** | **+1 attack within one range increment** — `PT-163`. **⚠ And an adjacent enemy's `+2` against you drops to `+1`.** Level 4 |
+| › Improved Close Combat |  | **+2**, and the adjacent enemy's bonus drops to **0**. Level 8 |
+| ›› Master Close Combat | **Authored — the source chain stops at Improved.** | **+3**, and **your own `−4` for firing while adjacent drops to `−1`** |
+
+> **⚠ Repriced by `PT-164`.** **The chain reduced *"the usual +6"* and that `+6` was written nowhere.** **A feat that reduced a bonus nobody had stated.**
 | **Dueling** | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+1 attack and defence** when unarmed or wielding a single blaster pistol, melee weapon, or lightsaber. |
 | › Advanced Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+2 attack and defence.** Level 4. |
 | ›› Master Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+3 attack and defence.** Level 8. |
@@ -124,7 +126,7 @@
 | ›› Master Sneak Attack | The blade or the bolt goes in where they were not watching. | **Requires Stealth 15.** **+6d6**, capped at **Stealth ÷ 3**, and **your critical multiplier is increased by 1** on that attack. |
 | **Spotter** | You make the opening; someone else takes it. | **One ally adjacent to your target counts as flanking with you, regardless of position.** |
 | › Improved Spotter |  | **All allies adjacent to your target.** |
-| ›› Master Spotter |  | **Allies attacking your target at range also count**, within **half** their weapon's maximum range — see `ACTION-ECONOMY-01 §13`. |
+| ›› Master Spotter |  | **Allies attacking your target at range also count**, within **half one range increment** — 12 m with a pistol, 14 m with a rifle. **⚠ Resolved by `PT-163`; it previously read *"half their weapon's maximum range"* against no range system** |
 | **Tenacity** | Refusing to stop when the body has run out of reasons to continue. | **+1 wound point.** Wound points equal the Constitution score, so this raises the capacity itself — not the modifier. |
 | › Improved Tenacity |  | **+2 wound points.** |
 | ›› Master Tenacity |  | **+3 wound points**, and **Constitution damage is halved.** *Constitution drain shrinks wound capacity directly — this protects the container rather than filling it.* |
@@ -313,7 +315,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Combat Protocols** | Mass-produced infantry does not improvise. It moves and fires as one. | **+1 attack for each allied droid within 5 metres**, to a maximum of +3. |
+| **Combat Protocols** | Mass-produced infantry does not improvise. It moves and fires as one. | **+1 attack for each allied droid within 4 metres**, to a maximum of +3. |
 | › Advanced Combat Protocols |  | **+2 per allied droid**, maximum +6, and **allied droids in range share your Defence bonus from Logic Upgrade.** |
 | ›› Master Combat Protocols |  | **+3 per allied droid**, maximum +9, and **you may act on an ally's initiative** to coordinate a joint attack. |
 | **Standardised Parts** | Nothing about you is bespoke. Any droid's components fit. | **Repair parts cost one fewer** — minimum one — and **you may salvage parts from any destroyed droid** without a check. |
@@ -330,7 +332,7 @@
 | **Personal Cloaking Shield** | **G0-T0's, made learnable.** A cloaking field built into the frame. | **Use Stealth without a stealth field generator.** *Remote droids are the one chassis the source permits Stealth to.* |
 | › Improved Personal Cloaking Shield |  | **+4 Stealth**, and the field **holds through one attack** before dropping. |
 | ›› Master Personal Cloaking Shield |  | **+8 Stealth**, and **you may cloak one adjacent ally** while the field is up. |
-| **Repulsor Agility** | No legs, no wheels, no ground contact. | **Ignore difficult terrain**, and **cross gaps up to 5 metres** without a check. |
+| **Repulsor Agility** | No legs, no wheels, no ground contact. | **Ignore difficult terrain**, and **cross gaps up to 4 metres** without a check. |
 | › Improved Repulsor Agility |  | **+2 Acrobatics**, and **10-metre gaps.** You may hover over hazards. |
 | ›› Master Repulsor Agility |  | **+4 Acrobatics**, **20-metre gaps**, and **you may move vertically at full speed.** |
 
@@ -341,7 +343,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **−1 main / −2 off.** |
+| **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **−2 main / −2 off.** |
 | › Advanced Superior Two-Weapon Fighting |  | **0 main / −2 off.** |
 | ›› Master Superior Two-Weapon Fighting |  | **0 main / −1 off.** With a balanced off-hand weapon: **+2 main / −1 off.** |
 | **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. **⚠ Opened from lightsaber-only by `PT-150`.** | **+1 attack**, above the Specialization tier |

@@ -176,11 +176,116 @@
 
 **⚠ Two things cover interacts with and neither is settled.** **Whether `Covering Fire` should let an ally move without losing cover**, and **whether a lightsaber's Form II barrier-cutting removes cover** — *`Stabbing Strike` cuts through a bulkhead, and a bulkhead is cover.*
 
-## 6.2a ⚠ Range is unwritten, and two rules already depend on it
+## 6.2a Range — `PT-163`
+
+**⚠ `PT-160` recorded that no range rules existed and that two written feats already depended on them.** **This is the system, ported from the games and expanded where a straight port would do nothing.**
+
+### The source model
+
+**KOTOR gives every ranged weapon a maximum: **pistols 24 m, rifles 28 m**.** **Verified against `EQUIPMENT-01` — eight ranged weapons, two distinct values, no others.**
+
+**And KOTOR 2 applies penalties in two places:** *shooting past your weapon's range, and shooting an enemy who is in melee at point blank.*
+
+**⚠ A straight port does nothing.** **A KOTOR corridor is about 4 metres and a room about 15.** **Every indoor encounter sits inside both weapons' maximum, so the number never fires.**
+
+### The expansion: the printed range is an *increment*, not a ceiling
+
+| Distance | | |
+|---|---|---|
+| **Within one increment** | **24 m** pistol · **28 m** rifle · **16 m** sidearm | **no penalty** |
+| **Each further increment** | to 48 / 56 / 32, then 72 / 84 / 48 | **cumulative −2 attack** |
+| **Beyond three increments** | past 72 / 84 / 48 m | **cannot be attempted** |
+
+**⚠ `SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 ladder is the warrant for −2 per step**, and three increments is the RCR shape compressed — **the source's ten-increment ceiling is meaningless at a table where a long room is 20 metres.**
+
+> **Which makes the printed number do work at every distance instead of at one.**
+
+### Point blank — the rule the source has and we did not
+
+**⚠ In KOTOR a melee attacker gets `+10` against a ranged attacker at point blank, and the ranged attacker gets a `+10` close-proximity bonus back.** **Players noticed those cancel and asked why the rule exists.**
+
+**Ours does not cancel:**
+
+> **Firing a ranged weapon while adjacent to an enemy is at **−4**.** **The Reaction axis is the answer — `Snap Shot` fires as they close, before they are adjacent.**
+
+**⚠ And `Close Combat` now has a definition.** **It read *"+1 attack at short range"* with short range undefined.** **Short range is within one increment. The feat is a specialist's answer to the `−4`, and it stacks against it rather than against nothing.**
+
+
+### ⚠ And the melee-against-ranged bonus did not exist either
+
+**`FEATS-LIBRARY-01`'s `Close Combat` reduces *"the usual +6"* an enemy gets for engaging a ranged fighter in melee.** **Grepped: that `+6` is written nowhere.**
+
+> **A feat that reduces a bonus, and the bonus was never stated.** **Same defect as the range gap and found in the same pass.**
+
+**Stated now, and it is the other half of the point-blank rule:**
+
+    firing a ranged weapon while adjacent to an enemy      −4 attack
+    attacking an adjacent enemy who holds a ranged weapon  +2 attack
+
+**⚠ Not `+6`.** **The source's `+10` was cancelled by a `+10` and did nothing; a `+6` on top of the `−4` is a `10`-point swing on one axis, which is outside `SKILL-RESOLUTION-01`'s whole modifier ladder.**
+
+**`+2` and `−4` is a 6-point swing and it is decisive without being absurd.**
+
+**⚠ `Close Combat` is repriced against the real number.** **Its tiers reduce the enemy's bonus from `+2` to `+1` to `0`, rather than from a `+6` that never existed.**
+
+
+### ⚠ Point blank is 4 metres, not 5, and the increments in squares
+
+**`§9` sets a square at 2 metres and `§587` records that every distance in the corpus lands cleanly on one.**
+
+**⚠ `ATTACKS-04`'s `Point Blank Shot` and three `Spray` tiers use **4 metres** — 2.5 squares.** **They do not land cleanly and they are the only distances in the corpus that do not.**
+
+**Corrected to 4 metres — two squares.** **`PT-165`.**
+
+**Which also settles what *point blank* means, because two rules used two definitions:**
+
+    adjacent            1 square    2 m    the −4 firing penalty
+    point blank         2 squares   4 m    Point Blank Shot, Spray
+
+> **⚠ Adjacent and point blank are different distances and both were in the corpus unstated.** **Adjacent is *in melee with you*. Point blank is *close enough that they cannot react*.**
+
+**The increments, in squares:**
+
+    pistol   11 squares   no penalty   |  to 23   −2  |  to 34   −4
+    rifle    14 squares   no penalty   |  to 28   −2  |  to 42   −4
+
+**⚠ 11 and 14 squares against a map that `§551` says is ten to fifteen across.** **One increment covers a typical encounter, which is why the penalty tiers only fire outdoors or across a hangar — and that is correct.**
+
+
+### ⚠ Three of the four source ranges do not land on our grid
+
+**Found by check 20 immediately after `PT-165` claimed every distance did.**
+
+    source   squares   snapped   
+    16 m      8.5       16 m      ion blaster, sonic pistol
+    24 m     11.5       24 m      blaster pistol, hold-out, disruptor pistol
+    24 m     12.5       24 m      blaster carbine
+    28 m     14.0       28 m      all rifles, bowcaster — already clean
+
+**⚠ Snapped to the grid. `PT-166`.**
+
+**23 and 25 both land on 24 — twelve squares.** **That is not a loss: the carbine's 2-metre edge over a pistol was one square in a game that has no squares, and it did nothing.**
+
+> **⚠ The alternative was changing the square, and `§9` records that 2 metres is RCR's own unit — a 5-foot square converted — and that every species speed is 10 metres because of it.**
+
+**Moving the square to make four weapon ranges tidy would move every speed, every reach and every area effect in the corpus.**
+
+**Four ranges move by at most 2 metre. That is the cheaper end.**
+
+### What this unblocks
+
+**`Master Spotter` — *"within half their weapon's maximum range"* — now resolves: half of one increment.**
+**⚠ The `Sharpshooter` can be revisited.** **`PT-160` built it on *one shot, lined up* because outranging was not a thing that happened. It is now.**
+
+**⚠ Still blocked: the `Pirate`'s dogfighting. That is ship rules, not range.**
+
+---
+
+## ⚠ SUPERSEDED — the gap `PT-160` recorded, kept for the record
 
 **`PT-160`. Grepped `ACTION-ECONOMY-01`, `ATTACKS-01` and `ATTACKS-04` for maximum range, range penalties, short and long range. Nothing.**
 
-**The only ranges in the corpus are two numbers on equipment lines — blaster rifle 28 m, blaster pistol 23 m — and nothing consumes them.**
+**The only ranges in the corpus are two numbers on equipment lines — blaster rifle 28 m, blaster pistol 24 m — and nothing consumes them.**
 
 > **⚠ There is no penalty for shooting at distance, no maximum beyond which you cannot, and no benefit to being far away.** **A rifle's 28 metres is a fact about the weapon that changes nothing.**
 
@@ -473,9 +578,9 @@
 
 | Band | `maxattackrange` | Squares | Weapons |
 |---|---|---|---|
-| **Short** | **17 m** | **8** | Ion Blaster · Sonic Pistol |
-| **Medium** | **23 m** | **12** | Blaster Pistol · Heavy Blaster · Hold-Out Blaster · Disruptor Pistol |
-| | **25 m** | **12** | Blaster Carbine |
+| **Short** | **16 m** | **8** | Ion Blaster · Sonic Pistol |
+| **Medium** | **24 m** | **12** | Blaster Pistol · Heavy Blaster · Hold-Out Blaster · Disruptor Pistol |
+| | **24 m** | **12** | Blaster Carbine |
 | **Long** | **28 m** | **14** | Blaster Rifle · Ion Rifle · Bowcaster · Disruptor Rifle · Sonic Rifle · Repeating Blaster · Heavy Repeating Blaster |
 
 ## 13.2 A ranged attacker flanks within **half** their weapon's range
@@ -483,7 +588,7 @@
 | Band | Flanking reach | Squares *(2 m)* |
 |---|---|---|
 | **Short** | **8 m** | **4** |
-| **Medium** | **11 m** | **6** |
+| **Medium** | **12 m** | **6** |
 | **Carbine** | **12 m** | **6** |
 | **Long** | **14 m** | **7** |
 
@@ -497,13 +602,13 @@
 
 ## 13.3 Grenades do not flank
 
-**`maxattackrange` 25 m, but `maxrange` — actual projectile travel — is 10 m, and `prefattackdist` is 0.5.**
+**`maxattackrange` 24 m, but `maxrange` — actual projectile travel — is 10 m, and `prefattackdist` is 0.5.**
 
 > **The engine walks the thrower to near-melee before lobbing.** **A grenade is an area weapon with no angle**, and flanking is about angle. **No grenade or thrown explosive grants or benefits from flanking.**
 
 ## 13.4 Two findings for other workstreams
 
-**The Wrist Launcher has no `maxattackrange` at all.** **It is a launcher slot, not a fireable weapon** — the Rocket, its ammunition, carries 25 m attack range and 20 m travel. **Relevant when the Bounty Hunter class is built**, since `Weapon Proficiency: Wrist-Mounted` is assigned there.
+**The Wrist Launcher has no `maxattackrange` at all.** **It is a launcher slot, not a fireable weapon** — the Rocket, its ammunition, carries 24 m attack range and 20 m travel. **Relevant when the Bounty Hunter class is built**, since `Weapon Proficiency: Wrist-Mounted` is assigned there.
 
 **`weaponwield` distinguishes one-handed from two-handed at the data level.** **4 = one hand *(all pistols)*, 5 = two hands *(all rifles)*, 6 = special *(repeating blasters)*.** **`weaponsize` 2 = Small, 4 = Large.**
 
@@ -545,9 +650,9 @@
 
 **Two ways to resolve, and it should be one of them consistently:**
 
-**Round down** — 3 m becomes 1 square, 5 m becomes 2. **Tighter, and it makes Guarding Stance adjacent-only.**
+**Round down** — 4 m becomes 1 square, 4 m becomes 2. **Tighter, and it makes Guarding Stance adjacent-only.**
 
-**Round up** — 3 m becomes 2 squares, 5 m becomes 3. **More generous, and it keeps Guarding Stance covering a small cluster.**
+**Round up** — 4 m becomes 2 squares, 4 m becomes 3. **More generous, and it keeps Guarding Stance covering a small cluster.**
 
 **⚠ Or restate the affected radii in even metres** — 4 m and 6 m instead of 3 and 5 — **which is cleanest but touches eight entries across three documents.**
 
@@ -633,7 +738,7 @@
 
 | Item | Where it belongs |
 |---|---|
-| **How odd-metre radii round** — 3 m and 5 m on a 2 m square | **A ruling. §14.** |
+| **How odd-metre radii round** — 4 m and 4 m on a 2 m square | **A ruling. §14.** |
 | **Whether reach weapons can attack adjacent targets** | Playtest — 3.5 says no, we did not import it |
 | **Whether flanking is too cheap** | Playtest |
 | **Which Force powers are marked Bonus** | Force workstream |
@@ -818,7 +923,7 @@
 
 > **At 2 squares the knockback denied nothing at all.** **The target stood, walked back the two squares, and attacked exactly as it would have.**
 
-**Three squares also matches `Force Push`, which pushes 5 metres — and which denied the Dark Jedi two full turns in S4.** **It was the only Force power either Jedi cast in twenty rounds, and the movement denial is why.**
+**Three squares also matches `Force Push`, which pushes 4 metres — and which denied the Dark Jedi two full turns in S4.** **It was the only Force power either Jedi cast in twenty rounds, and the movement denial is why.**
 
 **⚠ Applies to melee enemies only, and that is a narrow buff by design** — **thirty-one enemy combatants across seven scenarios and three of them were melee.** **Being pushed three squares does not break a rifleman's line of sight or exceed his range.**
 

@@ -37,8 +37,8 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Spray** | Fire walked across a group rather than placed on one. | **Level 1.** **Fire on two enemies within 5 metres of each other, one shot each. Attack −3** against each. |
-| › Suppression Spray |  | **Level 4.** **Three enemies within 5 metres of each other. Attack −2.** |
+| **Spray** | Fire walked across a group rather than placed on one. | **Level 1.** **Fire on two enemies within 4 metres of each other, one shot each. Attack −3** against each. |
+| › Suppression Spray |  | **Level 4.** **Three enemies within 4 metres of each other. Attack −2.** |
 | ›› Sweeping Fire |  | **Level 8.** **Every enemy within 10 metres of your first target. Attack −1.** |
 
 ## Precision — One shot that counts
@@ -61,7 +61,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Point Blank Shot** | Firing with the muzzle almost touching. No time to react, nowhere to go. | **Level 1.** **+4 damage against a target within 5 metres, and it loses its Dexterity bonus to Defence.** **Once per encounter, against a target below 15% vitality, the damage is dealt directly to wounds.** |
+| **Point Blank Shot** | Firing with the muzzle almost touching. No time to react, nowhere to go. | **Level 1.** **+4 damage against a target within 4 metres, and it loses its Dexterity bonus to Defence.** **Once per encounter, against a target below 15% vitality, the damage is dealt directly to wounds.** |
 | › Lethal Shot |  | **Level 4.** **+8 damage.** **Wound threshold rises to 20%.** |
 | ›› Execute | The shot taken when the fight is already decided. | **Level 8.** **+12 damage.** **Wound threshold rises to 25%.** |
 
@@ -81,7 +81,7 @@
 | Attack | Description | Effects |
 |---|---|---|
 | **Covering Fire** | Fire placed to keep heads down rather than to kill. | **Level 1.** **Choose one enemy. Until the start of your next turn it suffers −4 on all attack rolls.** No damage. |
-| › Suppressing Fire |  | **Level 6.** **−4 to every enemy within 5 metres of the point you fired at**, and **an ally moving through that area is not attacked** by them. |
+| › Suppressing Fire |  | **Level 6.** **−4 to every enemy within 4 metres of the point you fired at**, and **an ally moving through that area is not attacked** by them. |
 | ›› Covering Barrage |  | **Level 12.** **−6 to every enemy within 10 metres of the point you fired at**, and **allies moving through take no attacks of opportunity** from them. |
 
 ## Reaction — Act on someone else’s turn
@@ -89,7 +89,7 @@
 | Attack | Description | Effects |
 |---|---|---|
 | **Snap Shot** | A shot fired on instinct, at whoever moved. | **Level 1. Requires Dexterity 12.** **As a reaction, fire on an enemy that enters your line of sight or leaves cover.** Attack at **−4.** **Reaction tier 1** — see the reaction pool. |
-| › Reflex Fire |  | **Level 6.** **Attack at −2**, and you may react to an enemy **attacking an ally within 5 metres of you.** **Reaction tier 2.** |
+| › Reflex Fire |  | **Level 6.** **Attack at −2**, and you may react to an enemy **attacking an ally within 4 metres of you.** **Reaction tier 2.** |
 | ›› Interdiction | Anyone who acts in your field is shot for it. | **Level 12.** **No attack penalty. Reaction tier 3.** |
 | **Overwatch** | You are not shooting. You are waiting. | **Level 6. Requires Dexterity 13.** **Hold your shot. The first enemy that moves or attacks within your line of sight is fired on before it acts.** If the shot reduces it to 0 vitality, **its action is lost entirely.** **Reaction tier 1.** |
 | › Sustained Overwatch |  | **Level 10.** **You may hold against two enemies**, each fired on before acting. **Reaction tier 2.** |

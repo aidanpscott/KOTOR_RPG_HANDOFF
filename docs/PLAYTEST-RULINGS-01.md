@@ -5886,3 +5886,49 @@
 **`Persuade` 8 rather than `Mysticism` 8 is what makes the distinction do work at the gate.**
 
 **Both are unbuilt: stat line, rate and feature all open. Handed to the class designer.**
+
+---
+
+## PT-215 — `Jedi Master` and `Sith Lord` are cut as classes and kept as ranks
+
+**Owner ruling. Replaces the second half of `PT-214`.**
+
+**`PT-214` made them the universal capstone and left them with no ported line, to be invented from nothing.**
+
+> **⚠ Cutting them removes the need to invent anything.**
+
+**All six remaining Force prestige classes keep a stat line ported straight from the games:**
+
+    Jedi Weaponmaster   <- Guardian     d10 / Force 6 / STR
+    Jedi Watchman       <- Sentinel      d8 / Force 8 / DEX
+    Jedi Sage           <- Consular      d6 / Force 10 / WIS    jma's line
+
+    Sith Marauder       <- Warrior      d10 / Force 6 / STR
+    Sith Battlemaster   <- Assassin      d8 / Force 8 / DEX
+    Sith Sorcerer       <- Inquisitor    d6 / Force 10 / WIS    sld's line
+
+**Three per side, one per base class.** **`PT-214`'s open entry stands — any Jedi may enter any of the three.**
+
+### Master and Lord become ranks
+
+**⚠ In the games and in Legends, *Master* is not a build.** **It is what the Council calls you when you have trained a Padawan.**
+
+> **Making it a class forced a Jedi to choose between being a Master and being good at something. That is backwards.**
+
+**A Weaponmaster can be a Master. So can a Sage.**
+
+**Same for `Sith Lord` — Malak is a Lord and a warrior; Kreia is a Lord and a scholar.** **It was never a fighting style.**
+
+### ⚠ What is lost, stated
+
+**Nothing in the corpus does leadership, and that was going to be `Jedi Master`'s job.**
+
+**It does not need to be a Force class.** **The `Officer` covers it on the standard side, and a Jedi who wants to lead may multiclass into it.**
+
+> **Leadership is not a Force power.**
+
+### ⚠ Open, not blocking
+
+**Something should say how a character earns the rank of Master or Lord.** **`FORCE-TRAINING-01` handles finding a teacher; this is the other end of the same ladder.**
+
+**Roster: 38 → 36.**

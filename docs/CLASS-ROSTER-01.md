@@ -89,7 +89,9 @@
 
 ## 4. Force prestige — 8
 
-**Jedi Master · Jedi Watchman · Jedi Weaponmaster · Jedi Sage · Sith Lord · Sith Marauder · Sith Sorcerer · Sith Battlemaster**
+**Jedi Weaponmaster · Jedi Watchman · Jedi Sage · Sith Marauder · Sith Battlemaster · Sith Sorcerer**
+
+**⚠ Six, not eight — `PT-215`.** **`Jedi Master` and `Sith Lord` are cut as classes and kept as *ranks*.**
 
 **⚠ `Sith Harbinger` renamed `Sith Battlemaster`.** **`Echani Battlemaster` cut** — the name now belongs to the Sith side and one Battlemaster is enough.
 
@@ -343,6 +345,7 @@
 | **Sith Marauder** | d10 · Force 6 · STR · 16 feats · Middle · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
 | **Jedi Watchman** | d8 · Force 8 · DEX · 15 feats · Middle · 12/12/9 | **any Jedi base class 6** + `Stealth` 8 |
 | **Jedi Sage** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Jedi base class 6** + `Mysticism` 8 |
+| **Sith Battlemaster** | d8 · Force 8 · DEX · 16 feats · Combat · 12/12/9 | **any Sith base class 6** + `Weapon Focus: Lightsaber` |
 | **Sith Sorcerer** | d6 · Force 10 · WIS · 11 feats · Specialist · 12/9/12 | **any Sith base class 6** + `Mysticism` 8 |
 | **Tech Specialist** | d6 · no Force · DEX · 11 feats · Specialist | **Engineer 5 *or* Machinist 5** |
 
@@ -632,7 +635,7 @@
 
 **⚠ Zone control rather than damage absorption, which is a gap `ACTION-ECONOMY-01 §105–111` states directly.**
 
-**38 of 38 classes drafted.**
+**38 of 36 classes drafted.**
 
 
 ### The Force prestige tier restructured — `PT-214`
@@ -680,9 +683,50 @@
 **Both classes are unbuilt — stat line, feature and rate all open.**
 
 
+### ⚠ `Jedi Master` and `Sith Lord` are cut as classes — `PT-215`
+
+**Owner ruling, and it replaces `PT-214`'s second half.**
+
+**`PT-214` made them the *universal* capstone and left them with no ported line, to be invented from nothing.**
+
+> **⚠ Cutting them removes the need to invent anything.** **All six remaining Force prestige classes keep a stat line ported straight from the games.**
+
+    Jedi Weaponmaster   <- Guardian     d10 / Force 6 / STR
+    Jedi Watchman       <- Sentinel      d8 / Force 8 / DEX
+    Jedi Sage           <- Consular      d6 / Force 10 / WIS    (jma's line)
+
+    Sith Marauder       <- Warrior      d10 / Force 6 / STR
+    Sith Battlemaster   <- Assassin      d8 / Force 8 / DEX
+    Sith Sorcerer       <- Inquisitor    d6 / Force 10 / WIS    (sld's line)
+
+**Three per side, one per base class, and `PT-214`'s open entry stands — any Jedi may enter any of the three.**
+
+#### Master and Lord become ranks
+
+**⚠ In the games and in Legends, *Master* is not a build.** **It is what the Council calls you when you have trained a Padawan.** **A Weaponmaster can be a Master. So can a Sage.**
+
+> **Making it a class forced a Jedi to choose between being a Master and being good at something. That is backwards.**
+
+**Same for `Sith Lord`** — **Malak is a Lord and a warrior; Kreia is a Lord and a scholar.** **It was never a fighting style.**
+
+#### ⚠ What is lost, stated
+
+**Nothing in the corpus does leadership, and that was going to be `Jedi Master`'s job.**
+
+**⚠ It does not need to be a Force class.** **The `Officer` covers it on the standard side, and a Jedi who wants to lead may multiclass into it.**
+
+> **Leadership is not a Force power.**
+
+#### ⚠ Open, not blocking
+
+**If Master and Lord are ranks, something should say how a character earns one.** **`FORCE-TRAINING-01` handles finding a teacher; this is the other end of the same ladder.**
+
+**Roster: 38 → 36.**
+
+
 ## 6. ⚠ What this roster now needs
 
-**38 classes. Nothing is written for 12 of them and 2 more have names but no identity.**
+**36 classes. Nothing is written for 12 of them and 2 more have names but no identity.**
 
 **Per new class:** **rate · hit die · skill base · class-skill list · feat total at 30 · chain count · attack grants.**
 

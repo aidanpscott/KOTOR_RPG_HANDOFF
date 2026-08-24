@@ -109,7 +109,7 @@
 
 ---
 
-### ⚠ And one more thing multiplies with threat — recorded, not ruled
+### `Assassin Protocols` multiplies with threat — examined and ACCEPTED
 
 **Swept `FEATS-LIBRARY-01` for anything else that stacks with a chain rather than competing with one. Three touch threat, critical or attack count, and one is a genuine multiplication.**
 
@@ -120,11 +120,27 @@
     Commando ×2          20%      4.0%
     Deathstroke ×4       40%      8.0%
 
-**⚠ At `Deathstroke` and `Master Assassin Protocols`, 8% of attacks halve the target's remaining life.** **Over three attacks a round that is roughly 22% per round.**
+**⚠ Owner ruling: accepted, not a defect. `PT-177`.**
 
-**Not obviously broken and not ruled here.** **`PT-176` does not reach it — the two do not both multiply *threat*; one multiplies threat and the other reads it.**
+**And the first framing of it was wrong.** **This was described as an *execute chance*. It is not one.**
 
-> **⚠ Recorded because it is the same shape: a feat that does not compete for the declaration, multiplying with a chain that does.**
+> **Half of *remaining* life is asymptotic. It never reaches zero.**
+
+    after 1 proc   50.00 remaining
+    after 4 procs   6.25
+    after 8 procs   0.39
+
+**⚠ A target reduced by this eight times is still standing.** **The effect guarantees a survivor by construction.**
+
+**And it is self-limiting in the direction that matters.** **The first proc is large and every one after is worth half the last** — **devastating against a full-health target and rounding error against a hurt one.**
+
+> **⚠ Strongest when the fight has the most left to go, weakest when it could close one out. The opposite of the shape that breaks a game.**
+
+**It needs `Master Assassin Protocols`, `Deathstroke` at tier 3 and a wide-threat weapon simultaneously — a deliberate late-career build rather than something stumbled into.**
+
+**⚠ Contrast the `Commando` case, which was genuinely different.** **`5–20` threat with critical damage multipliers behind it changes every round of every fight.** **This changes some rounds of some fights and ends none.**
+
+**Recorded so the next reader who derives the 8% figure does not re-raise it.**
 
 **`Increase Melee Damage` and `Increase Combat Damage` are flat adders and do not multiply. Checked.**
 

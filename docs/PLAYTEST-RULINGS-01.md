@@ -4824,3 +4824,41 @@
 **A weapon family spans printed widths, so the Commando's `×2` gives `19–20` with a long sword and `17–20` with a vibrosword.**
 
 **⚠ Correct rather than broken** — **the multiplier reads the weapon's own column, so a better weapon benefits more, which is what `§303` says it is for.** **Recorded because it will look like an inconsistency to the next checker.**
+
+---
+
+## PT-177 — `Assassin Protocols` × threat: examined and accepted
+
+**Owner ruling. `PT-176` recorded it as open; it is closed as not-a-defect.**
+
+**⚠ And the framing that raised it was wrong in two ways.**
+
+### It was called an execute chance. It is not one.
+
+> **Half of *remaining* life is asymptotic. It never reaches zero.**
+
+    after 1 proc   50.00 remaining
+    after 4 procs   6.25
+    after 8 procs   0.39
+
+**A target reduced by this eight times is still standing.** **The effect guarantees a survivor by construction.**
+
+### And it is self-limiting in the direction that matters
+
+**The first proc is large and every one after is worth half the last.**
+
+> **⚠ Devastating against a full-health target, rounding error against a hurt one.** **Strongest when the fight has the most left to go and weakest when it could close one out.**
+
+**That is the opposite of the shape that breaks a game.**
+
+### The build cost is real
+
+**It needs `Master Assassin Protocols`, `Deathstroke` at tier 3 and a wide-threat weapon simultaneously.** **A deliberate late-career build, not something stumbled into.**
+
+**⚠ Owner's standard, stated: *"if it's specific enough that it's somewhat hard to find, I'm okay with that."***
+
+### ⚠ Contrast the `Commando` case, which was genuinely different
+
+**`5–20` threat with critical damage multipliers behind it changes every round of every fight.** **This changes some rounds of some fights and ends none.**
+
+**⚠ Recorded rather than left open so the next reader who derives the 8% figure does not re-raise it.**

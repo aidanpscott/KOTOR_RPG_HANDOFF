@@ -4349,3 +4349,37 @@
 > **There are five: Bounty Hunter, Engineer, Sith Inquisitor, Agent, Droid Master.**
 
 **The Agent was never in any note.** **Raising any of the five by one silently closes it to droids.**
+
+---
+
+## PT-162 — `CLASS-STATE-02` reconciled, and the one diff was mine
+
+**The designer produced the state document `REPLY-34` asked for — and generated it from a `classes.json` rather than writing it.** **That is the better answer: it can be regenerated instead of maintained.**
+
+**38 classes. 26 adopted, 8 pushed-unconfirmed, 1 unresolved.**
+
+### The diff
+
+**Diffed mechanically against `audit_bands.py`'s fixtures. 19 classes overlapped. One disagreed.**
+
+    Pirate chains    mine 12    theirs 14
+
+**⚠ Mine was invented.** **The Pirate had no chain count when I added it to the check, and I supplied one to populate the table.**
+
+> **A checker's fixtures are a claim like any other, and that one had no warrant.**
+
+**Both values are legal in the `Middle` band and neither strands, so no check could have caught it.**
+
+### The fix
+
+**All 30 chain-bearing classes imported from `CLASS-STATE-02` and the table marked as imported rather than maintained.**
+
+**⚠ The hand-maintained duplicate is the defect, not the wrong number.** **Two lists of the same facts drift, and this project has now recorded that four times — `PT-84`, `PT-97`, `PT-140`, and here.**
+
+### And check 19 now covers thirty classes
+
+**All pass every band. All strand zero picks.**
+
+**⚠ Five sit at exactly 11 chains — `PT-114`'s droid ceiling.** **Bounty Hunter, Engineer, Agent, Sith Inquisitor, Droid Master.**
+
+**The one `X` is the Agent, whose premise `REPLY-29` reversed and which has not been redrafted.**

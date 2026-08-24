@@ -24,9 +24,9 @@
 
 | Rate | Classes | Source signal |
 |---|---|---|
-| **Combat** | **Soldier · Jedi Guardian · Marksman** | **Feats 18–23 at level 30.** **The Soldier's 23 is the ceiling; the Marksman's 18 is the floor** |
-| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Weaponmaster · Marauder · Watchman · Engineer** | **16 or 15 at level 30. `featgain.2da` treats these as one kind of character** |
-| **Specialist** | **Smuggler · Jedi Consular · Machinist · Jedi Master · Sith Lord · Assassin** | **11 or 10 at level 30** |
+| **Combat** | **Soldier · Jedi Guardian · Marksman · Sith Warrior · Brawler** | **Feats 18–23 at level 30.** **The Soldier's 23 is the ceiling; the Marksman's 18 is the floor** |
+| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Engineer · Agent · Explorer · Duelist · Weaponmaster · Marauder · Watchman** | **16 or 15 at level 30. `featgain.2da` treats these as one kind of character** |
+| **Specialist** | **Smuggler · Jedi Consular · Machinist · Sith Assassin · Sith Inquisitor · Doctor · Jedi Master · Sith Lord · Tech Specialist** | **11 or 10 at level 30** |
 
 **Derived from `FEAT-SCHEDULE-01`'s level-30 totals**, because that is the only signal the source gives about how fast a class acquires anything.
 

@@ -220,6 +220,9 @@
 | **Jedi Sentinel** | 5 | 24 | 48 | 78 | 138 | 198 | 9 |
 | **Machinist** | 6 | 28 | 56 | 91 | 161 | 231 | 8 |
 | **Smuggler** | 7 | 32 | 64 | 104 | 184 | 264 | 11 |
+| **Sith Warrior** | 3 | 12 | 24 | 39 | 69 | 99 | 6 |
+| **Sith Assassin** | 5 | 20 | 40 | 65 | 115 | 165 | 8 |
+| **Sith Inquisitor** | 4 | 16 | 32 | 52 | 92 | 132 | 8 |
 
 *Figures at Intelligence 12. Maximum rank in a skill with aptitude is character level + 3; without, half that.*
 
@@ -248,10 +251,20 @@
 
 **Eleven classes.**
 
-**Doctor — 1**
-Medicine
+**Doctor — 9**
+Medicine · Science · Botany · Xenology · Alertness · Awareness · Persuade · Appraise · Slicing
 
-> **⚠ STUB. `Medicine` assigned; everything else unwritten.**
+**Brawler — 6**
+Athletics · Acrobatics · Alertness · Awareness · Intimidate · Streetwise
+
+**Duelist — 7**
+Acrobatics · Alertness · Awareness · Athletics · Persuade · Intimidate · Streetwise
+
+**Explorer — 9**
+Archaeology · Xenology · Appraise · Science · Botany · Alertness · Awareness · Pilot · Mysticism
+
+**Agent — 9**
+Alertness · Awareness · Persuade · Intimidate · Stealth · Streetwise · Slicing · Security · Appraise
 
 **Soldier — 7**
 Alertness · Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim

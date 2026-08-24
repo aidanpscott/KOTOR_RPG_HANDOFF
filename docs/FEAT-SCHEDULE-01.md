@@ -18,6 +18,14 @@
 | **Sentinel** | 10 | **15** | | Assassin | 7 | **10** |
 | **Marksman** | 12 | **18** | | **Machinist** | 8 | **11** |
 | **Engineer** | 10 | **16** | | **Bounty Hunter** | 11 | **16** |
+| **Sith Warrior** | 14 | **20** | | | | |
+| **Sith Assassin** | 8 | **12** | | | | |
+| **Sith Inquisitor** | 7 | **11** | | | | |
+| **Agent** | 10 | **15** | | | | |
+| **Explorer** | 11 | **16** | | | | |
+| **Doctor** | 7 | **11** | | | | |
+| **Brawler** | 12 | **18** | | | | |
+| **Duelist** | 10 | **15** | | **Tech Specialist** *(prestige)* | 7 | **11** |
 | | | | | **Smuggler** | 8 | **11** |
 
 > **The Soldier's 23 is the ceiling. The Assassin's 10 is the floor.**

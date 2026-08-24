@@ -3752,3 +3752,60 @@
 **Verified in `feat.2da`: `jwm` 23 grants, `jwa` 25, `sma` 24, `jma` 17, `sld` 17, `tec` 5.**
 
 **⚠ Mixing ported and authored in one pass is how a ported number ends up beside an authored one with nothing marking the difference.** **`PT-68`'s Bounty Hunter and `PT-98`'s Machinist were both that error, and both were warrant errors rather than number errors.**
+
+---
+
+## PT-139 — Five class skill lists existed only in findings
+
+**`CLASS-IDENTITIES-01` says the Soldier has *"the fewest skills."* Checking it found that five classes had no list in `SKILLS-01` at all.**
+
+    Brawler · Duelist · Explorer · Agent    never written
+    Doctor                                  a one-skill stub
+
+**All five now written from their findings records. Fifteen lists, and `audit_classskills` passes.**
+
+### ⚠ And the claim it was checking is wrong
+
+    Brawler          6    ⚠ fewest, tied
+    Jedi Guardian    6    ⚠ fewest, tied
+    Soldier          7
+    Scout           11    widest, tied with Smuggler
+
+> **The Soldier is not the fewest. The Brawler and the Guardian are, at 6.**
+
+**⚠ And the Scout ties the Smuggler at 11 rather than holding the widest list alone.**
+
+**Both lines in `CLASS-IDENTITIES-01` need correcting** — **not because the classes are wrong but because a plain-language document that overstates a superlative will be quoted.**
+
+### ⚠ The general finding
+
+**A class was *designed* in a findings document, *adopted* into `CLASS-ROSTER-01`, and never reached `SKILLS-01`.**
+
+**Check 19 verifies bands. `audit_classskills` verifies lists that exist.** **Nothing asked whether every adopted class *has* a list, because until five were adopted at once nothing had been adopted without one.**
+
+---
+
+## PT-140 — Eight adopted classes had never been entered into the authorities
+
+**Found by extending check 16's roster to eighteen base classes.**
+
+    FEAT-SCHEDULE-01    missing 8: Agent · Explorer · Doctor · Brawler · Duelist
+                                   Sith Warrior · Sith Inquisitor · Tech Specialist
+    CLASS-ATTACKS-01    missing 9: the above plus Sith Assassin
+    SKILLS-01           missing 3: the three Sith
+
+**All entered. `audit_classroster` passes at 18 base + 6 prestige across three documents.**
+
+### ⚠ And check 16's own list carried `Smuggler` twice
+
+**A survivor of `PT-73`'s rename, which replaced `Scoundrel` with a name already in the list.**
+
+> **A duplicate in a list of things to look for is invisible.** **The check passed because both copies were found.**
+
+**⚠ Third artefact of that one edit.** **`PT-73` produced duplicate dictionary keys, `PT-84` found wrong referents in six documents, and this was in the checker itself.**
+
+### The general shape
+
+**A class was designed in a findings document, adopted into `CLASS-ROSTER-01`, and never reached the documents that govern it.**
+
+**Check 19 verifies bands. `audit_classskills` verifies lists that exist.** **⚠ Nothing asked whether every adopted class *has* an entry, because until five were adopted at once, none had been adopted without one.**

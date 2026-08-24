@@ -156,7 +156,7 @@
 
 **⚠ Intelligence added by `PT-133`.** **The rule as first written mapped four abilities of six.**
 
-**It did not surface on the thirteen because none is Intelligence-primary — `k2_classes.2da` gives `INT` as primary to no class in either game.** **The `Explorer` is the first, and any future scholar or slicer will be.**
+**It did not surface on the thirteen because none is Intelligence-primary — `k2_classes.2da` gives `INT` as primary to no class in either game.** **The `Treasure Hunter` is the first, and any future scholar or slicer will be.**
 
 **Will is the mental save, and the split between the three mental abilities is *what you know* against *what you sense* against *who you are* — none of which is a different kind of resilience.**
 

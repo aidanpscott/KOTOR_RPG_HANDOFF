@@ -139,15 +139,21 @@
 
 ## Stealth — the shot they never saw
 
-**Gating `2 / 4 / 10` — `ATTACKS-01 §223`. ⚠ `Stealth 5` is unreachable at level 1, and the capstone sits at 10 because it is a once-per-encounter alpha strike.**
+**Gating `1 / 5 / 10` — owner ruling, `PT-196`.**
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Stealthy Shot** | **2** | **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
-| › **Marked Shot** | **4** | **`+4d6`**, and the shot does not reveal you if it drops the target |
-| ›› **No Warning At All** | **10** | **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
+| **Stealthy Shot** | **1** | **Requires `Stealth` 6.** **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
+| › **Marked Shot** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and the shot does not reveal you if it drops the target |
+| ›› **No Warning At All** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
 
-**⚠ It competes for the declaration, which is what makes it an attack chain rather than a feat.** **`Killer's Instinct` is the rider that attaches to whatever you declared; this *is* the declaration.**
+> **⚠ Two clauses, both owner-ruled — `PT-197`.**
+>
+> **The `Stealth` requirements are `6 / 12 / 18` and they close the cap exactly.** **`Stealth ÷ 3` at each is `2d6 / 4d6 / 6d6` — a tier now delivers what it prints, always.**
+>
+> **⚠ And a granted tier is *held but inactive* until you meet its requirement.** **The grant gives you the tier; the ranks make it work.**
+
+**⚠ It IS a declaration — owner ruling, `PT-198`.** **`Killer's Instinct` is the rider that attaches to it, and is what makes it worth declaring over a multi-strike chain.**
 
 > **A stealth opener was one attack competing against Velocity's three, and lost to `Shoot`.** **As a rider it attaches to whatever you declare.** **`PLAYTEST-RULINGS-01 §C29`.**
 

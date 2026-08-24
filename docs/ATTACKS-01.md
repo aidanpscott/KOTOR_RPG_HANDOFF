@@ -220,7 +220,7 @@
 
 | Ladder | Chains | Why |
 |---|---|---|
-| **2 / 4 / 10** | Stealthy Shot · Sneak Attack | **Stealth 5 is unreachable at level 1** — maximum rank is character level + 3. **The capstone sits at 10 because it is a once-per-encounter alpha strike.** |
+| **1 / 5 / 10** | Stealthy Shot · Sneak Attack | **⚠ Re-gated from 2 / 4 / 10 by owner ruling — `PT-196`.** **The capstone sits at 10 because it is a once-per-encounter alpha strike.** |
 | **5 / 8 / 14** | Disarming Shot · Disarming Strike | **The capstone destroys a weapon permanently** — the only attacks that remove equipment from the game. |
 | **1 / 6 / 12** | Covering Fire · Guarding Stance · Parry · Snap Shot · Guided Strike | **All act outside your own turn, or permit two declarations in one.** *Categorically stronger than anything the source has.* |
 | **6 / 10 / 14** | Overwatch | **Both** — it fires before an enemy acts, and it holds a corridor. |
@@ -513,7 +513,13 @@
 
 **⚠ The feat chain that replaced them was itself replaced by `Killer's Instinct` and never deleted.** **Both sat in `FEATS-LIBRARY-01` 120 lines apart for the whole class workstream.**
 
-> **The dice attach to the first attack of whatever you declare.** **They are not a declaration you choose instead of attacking.**
+> **⚠ STRUCK by owner ruling — `PT-198`.** **`Sneak Attack` and `Stealthy Shot` ARE declarations. You choose one instead of another attack.**
+
+**This sentence said the opposite and it is the framework document, so a reader checking the governing rule got the wrong answer.**
+
+**⚠ `PT-195` reversed.** **I ruled it a rider on the argument that `ATTACKS-01` governs because it is the framework document.**
+
+> **The right principle applied to the wrong instance — the framework document can be the one that is stale, and here it was.**
 
 ### Why it moved
 

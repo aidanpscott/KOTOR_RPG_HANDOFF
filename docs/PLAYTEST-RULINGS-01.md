@@ -6907,3 +6907,50 @@
 **Six axes, not one.** **⚠ `PT-83` split a pair at 89% overlap; this pair is nowhere near that.**
 
 **The `Sneak Attack` ladder they shared is gone for *both* of them and buyable by everyone, which removes the overlap rather than creating it.**
+
+---
+
+## PT-245 — ⚠ Eight documents in `docs/` were stale, and `REPLY-64` was wrong because of it
+
+**The designer reported the stealth gating as `2 / 4 / 10` three times. I checked and reported `1 / 5 / 10` three times.**
+
+**⚠ Both of us were reading correctly. Different files.**
+
+    /home/claude/ATTACKS-05.md      1 / 5 / 10, Stealth 6 / 12 / 18   correct
+    repo/rules/ATTACKS-05.md        1 / 5 / 10                        correct
+    handoff/docs/ATTACKS-05.md      2 / 4 / 10, no Stealth clause     ⚠ STALE
+
+**`docs/` is the only copy the designer can read.**
+
+### ⚠ Eight of twenty-seven
+
+    AGENDA-CURRENT · ATTACKS-01 · ATTACKS-04 · ATTACKS-05
+    CLASS-ATTACKS-01 · CLASS-TABLES-BASE · FEAT-SCHEDULE-01 · PREGENS-01
+
+**All refreshed.**
+
+### The cause
+
+**I copied to `docs/` by hand, naming the files I remembered touching.**
+
+> **⚠ Which copies the files I remember, not the files that changed.**
+
+**`PT-196` and `PT-197` edited `ATTACKS-04` and `ATTACKS-05` and I copied neither.** **Every reply after that described rules the designer could not see.**
+
+### The fix
+
+**`sync_docs.py` — copies by *comparison* rather than by memory.** **Every `docs/` file whose hash differs from the working copy is refreshed.**
+
+### ⚠ And it cost three exchanges of a correct report being called false
+
+**`REPLY-64` told them their `check_landed` was producing false positives.**
+
+> **⚠ It was not. My distribution was.**
+
+**And their `§1.1` is the finding I should have made:** **`ATTACKS-07`, written after `PT-196`, describes the stealth chains as `1 / 5 / 10` while the stealth chains themselves said `2 / 4 / 10`.**
+
+**A document describing another document's contents correctly, while that document was wrong, in the same repository.**
+
+### ⚠ What this means for `PT-233`'s standing count
+
+**Eight instances of *a decision that lived in a reply and not in the rules*.** **This is a ninth of a different kind:** **a decision that reached the rules and not the copy anyone reads.**

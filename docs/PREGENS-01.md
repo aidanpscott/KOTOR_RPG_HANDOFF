@@ -76,7 +76,7 @@
 
 > **⚠ Budget was 22, briefly 11, now 33.** **`PT-78` moved the `Soldier` skill base 2 → 1 → 3.** **Three maxed skills where there were four partials.**
 
-**Equipment.** **Vibrosword** *(2d6 slashing, threat 19–20)* · **Medium Battle Armour** *(armour 7, max Dex +2)* · 3 medpacs
+**Equipment.** **Vibrosword** *(2d6 slashing, threat 19–20)* · **Medium Battle Armour** *(armour 7, max Dex +2)* · 4 medpacs
 
 **Proficiencies** — all weapons, all armour, granted by class.
 
@@ -135,7 +135,7 @@
 | **Defence** | **10 + 4 (light armour) + 4 (Dex)** = **18** |
 | **Skills** | **99** — **Stealth 11 · Security 11 · Slicing 11 · Sleight of Hand 11 · Persuade 11 · Streetwise 11 · Awareness 11 · Alertness 11 · Appraise 11** |
 
-**Equipment.** **Two Blaster Pistols** *(1d6 each, 23 m, Balanced)* · **Light Combat Suit** *(armour 4, max Dex +5)* · 3 medpacs
+**Equipment.** **Two Blaster Pistols** *(1d6 each, 24 m, Balanced)* · **Light Combat Suit** *(armour 4, max Dex +5)* · 4 medpacs
 
 **Proficiencies** — blasters, melee weapons, light armour.
 

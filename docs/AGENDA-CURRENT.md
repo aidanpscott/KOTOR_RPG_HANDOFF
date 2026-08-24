@@ -46,7 +46,7 @@
 
 ### Left — nine, every one authored from nothing
 
-**Standard base, five:** **Agent · Treasure Hunter · Doctor · Brawler · Duelist**
+**Standard base, five:** **Agent · Treasure Hunter · Medic · Brawler · Duelist**
 
 **⚠ The roster is incomplete without these.** **Nothing blocks them: rates, bands, save ladders, the `PT-123` assignment rule, chain bands, skill bands and `PT-89`'s credits are all ruled.**
 

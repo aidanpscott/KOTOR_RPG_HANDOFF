@@ -62,17 +62,33 @@
 
 ## Stealth — the blade they never saw
 
-**Gating `2 / 4 / 10` — `ATTACKS-01 §223`.** **⚠ Restored by `PT-193`: the melee stealth chain was moved to `FEATS-LIBRARY-01` and the move was reversed without being written back.**
+**Gating `1 / 5 / 10` — owner ruling, `PT-196`.** **⚠ Restored by `PT-193`: the melee stealth chain was moved to `FEATS-LIBRARY-01` and the move was reversed without being written back.**
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Sneak Attack** | **2** | **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
-| › **Improved Sneak Attack** | **4** | **`+4d6`**, and you may attempt to re-hide as part of the same declaration — opposed `Stealth` |
-| ›› **Master Sneak Attack** | **10** | **`+6d6`**, and **your critical threat multiplier against an unaware target is `+1`** |
+| **Sneak Attack** | **1** | **Requires `Stealth` 6.** **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
+| › **Improved Sneak Attack** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and you may attempt to re-hide as part of the same declaration — opposed `Stealth` |
+| ›› **Master Sneak Attack** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **your critical threat multiplier against an unaware target is `+1`** |
 
 **⚠ The ranged equivalent is `Stealthy Shot`, `ATTACKS-04`.** **Same gating, same dice, different roster — `ATTACKS-01 §4`'s parity holding.**
 
-**⚠ And it is not `Killer's Instinct`.** **That is a feat rider granted to three classes; this competes for the declaration.** **A character may hold both and they stack — the rider attaches to this chain as it attaches to any other.**
+> **⚠ Two clauses, both owner-ruled — `PT-197`.**
+>
+> **The `Stealth` requirements are `6 / 12 / 18` and they close the cap exactly.** **`Stealth ÷ 3` at each is `2d6 / 4d6 / 6d6` — a tier now delivers what it prints, always.**
+>
+> **⚠ And a granted tier is *held but inactive* until you meet its requirement.** **The grant gives you the tier; the ranks make it work.**
+
+**⚠ It IS a declaration — owner ruling, `PT-198`.** **You choose it instead of another attack.**
+
+**`ATTACKS-01 §516` said the opposite and has been struck.**
+
+    Barrage, 3 strikes, unconditional            27.3 a round
+    Sneak Attack, 1 strike + 6d6                 23.8
+    Sneak Attack + Killer's Instinct (+3d6)      31.1
+
+> **⚠ On its own it does not beat a Barrage.** **`Killer's Instinct` is what makes it worth declaring — the rider attaches to the declaration and the two together clear the bar.**
+
+**Which is the relationship between them: one is the action, the other is the reason to take it.**
 
 ## Position — Who moved first
 

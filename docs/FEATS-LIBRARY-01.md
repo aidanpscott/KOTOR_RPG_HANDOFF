@@ -228,7 +228,8 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Targeting 1** | Scouts are very effective with blaster pistols and rifles. | **+1 attack** with blasters. Granted at level 1. |
-| › Targeting 2–8 |  | **+2 through +8 attack**, granted at levels 5, 9, 13, 17, 21, 25, and 29. |
+| › **Targeting 2** |  | **+2 attack**, granted at level 6. **⚠ Repriced — `PT-101`** |
+| ›› **Targeting 3** |  | **+3 attack**, granted at level 12. **⚠ The ladder ends here.** The source ran to eight |
 | **Uncanny Dodge 1** | The character keeps their footing even when taken by surprise. | **Retains Dexterity bonus to defence when surprised.** Grenade DC −2. Level 4 Scout. |
 | › Uncanny Dodge 2 |  | **Grenade DC −4.** Level 7 Scout. |
 
@@ -623,6 +624,50 @@
 
 **Recorded, not resolved.** **The fix if it is one: a second mode on each that applies to machinery rather than to droids — doors, turrets, security systems.** **Not proposed.**
 
+
+---
+
+
+## 5a. ⚠ Restricted chains are GRANTED, not bought — and `Targeting` is repriced
+
+**The corpus never stated which. `feat.2da` carries a level in the `_granted` column for every class-restricted chain; this document files them under *restricted*, which is the section for feats a class *may take*; `ACTION-ECONOMY-01 §18.1` says grants cost nothing.**
+
+> **Ruled: granted. The source says so and this document's own wording says so** — *"Granted at level 1"*, *"granted at levels 5, 9, 13…"*
+
+### Why the reading mattered
+
+**If bought:** **the Scout would spend 8 of its 16 lifetime feats on the `Targeting` ladder. Half a career, which is not a choice.**
+
+**If granted, as ruled:** **`Targeting 8` is `+8` attack with blasters, free, by level 29.**
+
+    Weapon Focus   +1 attack   costs 1 feat
+    Targeting 8    +8 attack   costs 0
+
+**⚠ Worth eight feats and costing none, on the class that also holds the best saves in the game.**
+
+### `Targeting` is repriced. `PT-101`.
+
+**Three tiers, not eight. `+1 / +2 / +3` at levels 1 / 6 / 12.**
+
+> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Focus and `Uncanny Dodge` are all three-tier chains on the 1 / 6 / 12 ladder, and giving those free is what makes a class feel like itself from 1st level.**
+
+**An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three.**
+
+**⚠ `Precise Shot I–V` on the same column is under the same reading and needs the same look.**
+
+### And one pregen was already wrong
+
+**`PREGENS-01`, Vess, Scout 8:** *"`+6` BAB, `+4` Dex, `+1` Weapon Focus, `−1` Volley = `+10`."*
+
+**`TARGETING_2` is granted at Scout 5 and she carries a blaster rifle.** **Her attack was `+12` under the old ladder.**
+
+    stated   +10      hit rate 60%     8.10 dmg/round
+    actual   +12      hit rate 70%     9.45 dmg/round
+    melee-versus-ranged gap:  3.4x  ->  2.9x
+
+**⚠ Three scenarios are reported against the 3.4× figure.** **The finding is not overturned — the number it is stated in moves.**
+
+**Under the repriced ladder Vess holds `Targeting 1` only at level 8, so her attack is `+11` and the gap is roughly 3.1×.**
 
 ---
 

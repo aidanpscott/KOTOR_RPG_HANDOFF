@@ -41,7 +41,15 @@
 
 **⚠ Attack picks.** **`ATTACKS-01 §11.3`: at level 8 a Combat class has 10 picks, Middle has 7, Specialist has 4.** *Used as written.*
 
-**⚠ Class grants.** **`ATTACKS-01 §7` defers these to the class workstream.** **None are given below.** **Every attack and feat listed was *chosen*.**
+**⚠ Class grants — SUPERSEDED by `PT-89`, and every sheet below is short by four.**
+
+**`ATTACKS-01 §7` deferred grants to the class workstream and these sheets were built with none.** **`PT-89` gives every class four attack credits at 1st level, split freely between ranged and melee.**
+
+> **⚠ So a Combat sheet built on 10 picks now has 14 tiers, and a Middle sheet on 7 now has 11.**
+
+**Every attack and feat listed below was *chosen* and remains legal.** **What is missing is four more tiers per sheet.**
+
+**Not regenerated here.** **The sheets are a playtest artefact and re-running them is `AGENDA-CURRENT §7`'s job; recorded so nobody reads a sheet as current.**
 
 ---
 
@@ -101,7 +109,13 @@
 
 **Feats — 5.** Weapon Focus: Blaster Rifle · Perceptive · Spotter · Nimble · Conditioning
 
-> **Attack: +6 BAB, +4 Dex, +1 Weapon Focus, −1 Volley = +10.**
+> **Attack: +6 BAB, +4 Dex, +1 Weapon Focus, +1 Targeting 1, −1 Volley = +11.**
+
+**⚠ Was `+10`. The sheet omitted a granted class feature.** **`PT-101` ruled restricted chains are granted, and `Targeting 1` is granted at Scout 1.**
+
+**⚠ Under the source's eight-tier ladder she would hold `Targeting 2` at level 8 and be `+12`.** **`PT-101` repriced it to three tiers at 1 / 6 / 12, so she holds tier 1 only.**
+
+**This moves the figure `§5.1`'s melee-versus-ranged finding is stated in — roughly 3.4× to 3.1×.** **The finding stands; the number moves.**
 > **Damage: 1d8, average 4.5. No ability modifier — ranged adds nothing.**
 
 ---

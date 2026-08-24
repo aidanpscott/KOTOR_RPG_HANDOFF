@@ -2777,3 +2777,46 @@
 **⚠ The real risk is narrower than the pattern.** **Two of the four narrow features are both about droids.** **An Engineer and a Machinist in a droid-free campaign both hold a class feature that never fires.**
 
 **Recorded, not resolved.**
+
+---
+
+## PT-101 — Restricted chains are granted, and `Targeting` is repriced
+
+**Two rulings. The first was never stated anywhere; the second follows from it.**
+
+### Granted, not bought
+
+**`feat.2da` carries a level in the `_granted` column for every class-restricted chain.** **`FEATS-LIBRARY-01` files them under *restricted*, which is the section for feats a class *may take*. `ACTION-ECONOMY-01 §18.1` says grants cost nothing. Nothing said which applied.**
+
+> **Ruled granted.** **The source says so and the library's own wording says so — *"Granted at level 1"*, *"granted at levels 5, 9, 13…"*.**
+
+**⚠ The alternative was impossible for one class.** **Bought, the Scout would spend 8 of its 16 lifetime feats on `Targeting`. Half a career is not a choice.**
+
+### Which exposed the real defect
+
+    Weapon Focus   +1 attack   costs 1 feat
+    Targeting 8    +8 attack   costs 0
+
+**⚠ Worth eight feats, costing none, on the class that also holds the best saves in the game — 12/12/12.**
+
+**Repriced to three tiers: `+1 / +2 / +3` at 1 / 6 / 12.**
+
+> **`Targeting` was the outlier, not the principle.** **Force Jump, Force Immunity, Force Focus and `Uncanny Dodge` are all three-tier chains on the same ladder, and granting those free is what makes a class feel like itself from 1st level.**
+
+**An eight-tier ladder reaching `+8` is a different kind of object, and the source's own Jedi equivalents stop at three.**
+
+**⚠ `Precise Shot I–V` sits on the same column under the same reading and needs the same look.**
+
+### And a pregen was wrong because of it
+
+**`PREGENS-01`, Vess, Scout 8, blaster rifle:** *"`+6` BAB, `+4` Dex, `+1` Weapon Focus, `−1` Volley = `+10`."*
+
+**The sheet omitted a granted class feature.**
+
+    stated              +10   60% hit   8.10 dmg/round
+    source ladder       +12   70%       9.45
+    repriced ladder     +11   65%       8.75
+
+**⚠ `§5.1`'s melee-versus-ranged finding is reported at 3.4× across three scenarios.** **Under the repriced ladder it is roughly 3.1×.**
+
+**The finding stands. The number it is stated in moves.**

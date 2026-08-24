@@ -215,6 +215,63 @@
 **Not a defect — `PT-75` is what makes it coherent, and a Wookiee marksman with a d12 reads fine.** **But the flavour text should stop implying otherwise.**
 
 
+### ⚠ What separates a Sith from a Jedi — derived, not authored. `PT-129`.
+
+**`PT-125`'s mirror gives six Force base classes three stat blocks. The distinction lives elsewhere, and the source already states it.**
+
+**Every granted class chain, proficiencies and universals stripped:**
+
+    jgd   Force Jump      x3        sma   Ignore Pain x3, Increase Combat Damage x3
+    jsn   Force Immunity  x3        sld   Dark Side Corruption, Regenerate Force Points
+    jcn   Force Focus     x3        sas   — nothing —
+
+> **⚠ Every base Jedi has a three-tier class chain. No Sith base class has one at all.**
+
+**And the Sith prestige chains that exist are the Jedi prestige effects reshaped:**
+
+| Jedi Weaponmaster | Sith Marauder | |
+|---|---|---|
+| **`Inner Strength`** −5/−10/−15% damage taken | **`Ignore Pain`** −5/−10/−15% damage taken | **identical mechanic, different word** |
+| **`Increase Melee Damage`** +2/+4/+6, **melee only** | **`Increase Combat Damage`** +2/+4/+6, **unarmed, melee *or ranged*** | **⚠ the Sith version covers a weapon the Jedi's does not** |
+| **`Deflect`** — blaster deflection scaling with level | **— none —** | **⚠ granted to `jwm` alone in either game** |
+
+#### The principle
+
+> **A Jedi chain is conditional and answers a situation. A Sith chain is unconditional and raises a number.**
+
+**Force Jump needs a target more than ten metres away. Force Immunity does nothing on your turn. Force Focus multiplies a buff you had to cast first.** **All three require the right moment.**
+
+**`Ignore Pain` is always on. `Increase Combat Damage` is always on and does not care what you are holding.**
+
+**⚠ And `Deflect` is the sharpest single fact.** **The Jedi have a defensive answer to the setting's primary weapon and the Sith are given none.** **The Sith solution to a blaster is to carry one — which is exactly what `Increase Combat Damage` covering ranged says.**
+
+#### Why identical stat blocks are acceptable
+
+**`ATTACKS-01 §11.4` already ruled where identity lives:** *"Breadth buys the right answer more often; it does not buy more actions. Depth is where power lives."*
+
+**A Jedi and a Sith with the same hit die, Force die and rate are not the same character if one buys conditional answers and the other buys flat increases.** **They diverge at the point of choosing what to spend on, which is where every class in this system diverges.**
+
+### ⚠ The Sith Inquisitor's powers known — ruled. `PT-130`.
+
+**Derived, `classpowergain.2da` cumulated:**
+
+    lvl    jgd    jsn    jcn    sld    sma    sas
+      1      2      2      2      2      1      1
+      8      9      9     11     11      8      8
+     30     31     31     41     38     30     30
+
+> **The Consular alone is accelerated. 41 against 31, and it is the only base class with grants beyond +1 per level.**
+
+**There is no Sith base equivalent to mirror. `sld` is prestige at 38; `sma` and `sas` print 1 at 1st.**
+
+**Ruled: the Inquisitor takes the Consular's accelerated column — 41 at 30.**
+
+**⚠ Because the acceleration is what the *tier* is, not what the Order is.** **`PT-125` mirrors the base tier and the Consular's tier is d6 / Force die 8 / `Specialist` / accelerated powers.** **Taking three of four and dropping the fourth would make the Inquisitor a worse Consular rather than a different one.**
+
+**And `PT-129` says where the difference lives:** **the Consular's powers buy conditional answers; the Inquisitor's are damage** — *the dark side holds all seventeen.* **Same count, opposite use.**
+
+---
+
 ## 6. ⚠ What this roster now needs
 
 **37 classes. Nothing is written for 12 of them and 2 more have names but no identity.**

@@ -3481,3 +3481,89 @@
 **It does not stratify by tier, so it is not a marker.** **But `ACTION-ECONOMY-01 §18.2` gives Jedi no armour *deliberately*, because armour blocks Force powers.**
 
 **Whether Sith get light armour is a setting question.**
+
+---
+
+## PT-129 — What separates a Sith from a Jedi, derived from the source
+
+**`REPLY-20` asked for the principle before the numbers. The designer derived one rather than authoring one.**
+
+**Every granted class chain, proficiencies and universals stripped:**
+
+    jgd   Force Jump      x3        sma   Ignore Pain x3, Increase Combat Damage x3
+    jsn   Force Immunity  x3        sld   Dark Side Corruption, Regenerate Force Points
+    jcn   Force Focus     x3        sas   — nothing —
+
+> **⚠ Every base Jedi has a three-tier class chain. No Sith base class has one at all.**
+
+**Verified independently against `feat.2da`.**
+
+### The principle
+
+> **A Jedi chain is conditional and answers a situation. A Sith chain is unconditional and raises a number.**
+
+**Force Jump needs a target ten metres away. Force Immunity does nothing on your turn. Force Focus multiplies a buff you had to cast first.**
+
+**`Ignore Pain` is always on. `Increase Combat Damage` is always on and does not care what you are holding.**
+
+### ⚠ And the Sith prestige chains are the Jedi prestige effects reshaped
+
+| Jedi Weaponmaster | Sith Marauder | |
+|---|---|---|
+| `Inner Strength` −5/−10/−15% | `Ignore Pain` −5/−10/−15% | **identical mechanic, different word** |
+| `Increase Melee Damage` **melee only** | `Increase Combat Damage` **melee *or ranged*** | **the Sith version covers a weapon the Jedi's does not** |
+| **`Deflect`** | **— none —** | **⚠ granted to `jwm` alone in either game** |
+
+**⚠ `Deflect` is the sharpest single fact and it verified exactly.** **The Jedi have a defensive answer to the setting's primary weapon and the Sith are given none.**
+
+> **The Sith solution to a blaster is to carry one — which is exactly what `Increase Combat Damage` covering ranged says.**
+
+### Why `PT-125`'s identical stat blocks are acceptable
+
+**`ATTACKS-01 §11.4` already ruled where identity lives:** *"Breadth buys the right answer more often; it does not buy more actions. Depth is where power lives."*
+
+**⚠ Two characters with the same hit die, Force die and rate are not the same character if one buys conditional answers and the other buys flat increases.** **They diverge at the point of spending, which is where every class in this system diverges.**
+
+
+---
+
+## PT-130 — The Sith Inquisitor takes the Consular's accelerated powers column
+
+**Derived, `classpowergain.2da` cumulated:**
+
+    lvl    jgd    jsn    jcn    sld    sma    sas
+      1      2      2      2      2      1      1
+      8      9      9     11     11      8      8
+     30     31     31     41     38     30     30
+
+> **The Consular alone is accelerated — 41 against 31, and the only base class with grants beyond +1 per level.**
+
+**No Sith base equivalent exists to mirror. `sld` is prestige at 38; `sma` and `sas` print 1 at 1st.**
+
+**Ruled: 41 at 30.**
+
+**⚠ Because the acceleration is what the *tier* is, not what the Order is.** **`PT-125` mirrors the base tier, and the Consular's tier is d6 / Force die 8 / `Specialist` / accelerated powers.** **Taking three of four and dropping the fourth makes the Inquisitor a worse Consular rather than a different one.**
+
+**And `PT-129` says where the difference lives:** **the Consular's powers buy conditional answers; the Inquisitor's are damage.** **Same count, opposite use.**
+
+---
+
+## PT-131 — The Sith Warrior's skill list was written by `PT-81`
+
+**The designer found it rather than authoring it.**
+
+**`PT-81` cut `Intimidate` from the Jedi Guardian with the reason stated:** *"`Intimidate` now sits on Soldier, Bounty Hunter and Marksman only — the three classes that frighten people for a living. **A Jedi persuades.**"*
+
+> **⚠ That ruling wrote the Sith Warrior's list without knowing it.** **If a Jedi persuades, a Sith intimidates.**
+
+**One swap on both Sith classes — `Medicine` → `Intimidate`.** **The only skill difference between each Sith and its Jedi mirror.**
+
+**⚠ Thin on its own, and it is not carrying the identity.** **`PT-129` is.**
+
+### And one departure, recorded as such
+
+**The Sith Assassin's class feature is conditional — it requires a `Sneak Attack` to have landed — which breaks `PT-129`'s principle that Sith chains are unconditional.**
+
+**⚠ That is `PT-126`'s doing rather than the designer's.** **The owner ruled the Assassin off the mirror onto `Specialist` with the highest Specialist feat total, which makes it the one Sith built around a tool rather than a number.**
+
+**Recorded as a departure, not precedent.** **If `PT-129` is tested, the Assassin is what tests it.**

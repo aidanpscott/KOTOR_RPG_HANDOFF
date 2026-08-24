@@ -711,6 +711,13 @@
 | **Smuggler** | every odd level from 1 | **10d6 at 19** |
 | **Jedi Watchman** | 1, then every third | **7d6 at 19** |
 | **Sith Assassin** | **1, then every second from 5** | **9d6 at 20** |
+| **Scoundrel** *(prestige)* | **the Smuggler's ladder, continued past its cap** | **⚠ see below** |
+
+> **⚠ The Scoundrel's ladder was ruled in `REPLY-28` and never written here. `PT-190`.**
+
+**A prestige class that continues a base class continues its progression rather than restarting it.** **The Scoundrel is what a Smuggler becomes when `Sneak Attack` is the only thing left.**
+
+**It does not get a fourth speed — three is the source's shape and a fourth would flatten the distinction between the other three.**
 
 **⚠ The Assassin's is authored.** **It sits between the other two: faster than the Watchman, one tier short of the Smuggler at the ceiling.**
 
@@ -944,6 +951,31 @@
 **⚠ It is conditional, which is the Jedi shape under `PT-129` rather than the Sith one.** **That is correct here: `PT-129` describes *base* classes, and the prestige tier already departs — `Regenerate Force Points` and both alignment chains are unconditional on Jedi prestige classes.**
 
 **Priced against `Deflect`, which is a whole defensive system.** **⚠ It costs him nothing to satisfy — a class with 18 trees always has something else to declare.**
+
+
+---
+
+
+### ⚠ One `Sneak Attack` tree per character — `PT-191`
+
+**Owner ruling.**
+
+> **A character holds **one** `Sneak Attack` tree. Where two classes grant it, the higher governs and the lower is subsumed. Dice never sum.**
+
+**⚠ Third quantity settled on the same principle as `PT-159`** — highest rate held, highest chain count held, highest `Sneak Attack` held. **A pattern rather than three exceptions.**
+
+#### ⚠ *Higher* is measured at your level, not at the cap
+
+**The three ladders differ in speed *and* cap, and the caps are not the test.**
+
+    level 12      Smuggler 6d6      Watchman 4d6
+    level 30      Smuggler 10d6     Watchman 7d6
+
+**And a split character reads each ladder from its *own class level*, so the comparison shifts as you advance.**
+
+> **⚠ A player's governing tree can change mid-career.** **When the newer tree overtakes the frozen one, the old is subsumed from then on.**
+
+**That is the ruling working as intended — one tree, and which one resolves to whichever is higher when you check.** **⚠ It needs stating because *"the higher"* reads as a fixed answer and is not one.**
 
 
 ---

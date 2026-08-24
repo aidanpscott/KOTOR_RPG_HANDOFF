@@ -5265,3 +5265,42 @@
 **⚠ The roster's size is now justified by the acquisition schedule rather than by exclusivity.**
 
 **`§6.2`'s four Force forms are untouched: separate exclusion group, no attack chains, owner-deferred.**
+
+---
+
+## PT-190 — The Scoundrel's `Sneak Attack` ladder was ruled and never written
+
+**`REPLY-28` ruled it:** *"Scoundrel — the Smuggler's ladder, extended."*
+
+**⚠ Grepped: it appears in that reply and in no rules document.** **Neither `FEATS-LIBRARY-01`'s ladder table nor `PT-122`'s entry carried it.**
+
+**Same shape as `PT-88` and the five ghosts — a decision made, its reasoning written, and the document a reader consults not having it.**
+
+**Written now.** **A prestige class that continues a base class continues its progression rather than restarting it, and the Scoundrel is what a Smuggler becomes when `Sneak Attack` is the only thing left.**
+
+---
+
+## PT-191 — One `Sneak Attack` tree per character
+
+**Owner ruling.**
+
+> **A character holds one `Sneak Attack` tree. Where two classes grant it, the higher governs and the lower is subsumed. Dice never sum.**
+
+**⚠ Third quantity settled on the same principle as `PT-159`** — **highest rate held, highest chain count held, highest `Sneak Attack` held.**
+
+**That is a pattern rather than three exceptions, and it is worth naming: where a multiclass character holds two versions of one quantity, they take the higher and never the sum.**
+
+### ⚠ *Higher* is measured at your level, not at the cap
+
+**The three ladders differ in speed *and* cap, and the caps are not the test.**
+
+    level 12      Smuggler 6d6      Watchman 4d6
+    level 30      Smuggler 10d6     Watchman 7d6
+
+**A split character reads each ladder from its own class level, so the comparison shifts as they advance.**
+
+> **⚠ A player's governing tree can change mid-career.** **When the newer overtakes the frozen one, the old is subsumed from then on.**
+
+**The ruling working as intended — one tree, and which one resolves to whichever is higher when checked.**
+
+**⚠ Stated because *"the higher"* reads as a fixed answer and is not one.**

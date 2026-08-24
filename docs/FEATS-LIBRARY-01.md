@@ -935,7 +935,19 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why*** — one concrete fact about what would work. **You may retry once that condition is met** |
+| **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why* it failed** |
+| › **Second Look** | **4** | It also tells you **what would succeed** — a tool, a skill, or a piece of knowledge you lack |
+| ›› **Nothing Is Sealed** | **8** | It tells you **whether anything would**, so the party knows to stop trying |
+
+> **⚠ Tiers restored — `PT-240`.** **`PT-233` cut the old tiers 2 and 3 and left both of their ideas inside tier 1.**
+
+**Tier 1 read: *"you learn why — one concrete fact about what would work. You may retry once that condition is met."*** **⚠ *One concrete fact about what would work* is tier 2. *You may retry* is the retry clause `PT-182` cut.**
+
+**The cut removed the tiers and not the content.**
+
+**And the replacements were written in `FINDINGS-49 §4`, forty-eight documents before `PT-233` called them missing.**
+
+> **Each tier is more of *knowing why*, not a new verb — which is what `PT-182` asked for.**
 
 **⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Treasure Hunter is never not taking 10.**
 

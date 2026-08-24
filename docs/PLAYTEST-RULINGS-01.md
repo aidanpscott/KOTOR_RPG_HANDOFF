@@ -6686,3 +6686,114 @@
 **`Explorer` said what the class does. `Treasure Hunter` says why.**
 
 > **⚠ And it puts a named KOTOR character behind a class that was authored from nothing** — **the only standard base class with a canon exemplar we can point to.**
+
+---
+
+## PT-239 — When a class feature unlocks
+
+**Owner ruling. It closes `FINDINGS-80 §3` without the two-level rule the designer proposed.**
+
+**⚠ The problem: one level of any base class bought the whole first tier of its feature, permanently.** **`PT-159` closed the quantities and left the grants open.**
+
+### Base classes — 1 / 2 / 3 by what a one-level dip buys
+
+**Level 1 — cheap to dip, or source-granted at 1:**
+
+    Smuggler          Quickdraw            scd_granted at 1; fires only when a talk turns hostile
+    Scout             Terrain Sense        owner call — the most-granted class in the games
+    Machinist         Jury Rig             nothing in a party without droids
+    Engineer          Field Override       same
+    Doctor            Field Surgery        one wound; value set by campaign mode
+    Brawler           Nothing In My Hands  nothing against an unarmoured target
+    Pirate            Plunder              requires dropping someone first
+    Treasure Hunter   Read the Ruin        information on a failed check
+    Sith Assassin     Vanish               requires a Sneak Attack to have landed
+
+**Level 2 — real, not build-defining:**
+
+    Bounty Hunter · Agent · Marksman · Duelist · the three Jedi · Sith Warrior · Sith Inquisitor
+
+**⚠ Level 3 — `Both Hands`, Soldier.**
+
+> **Every Power tier you own doubles in reach, from one level, permanently.** **And the Soldier is the most dipped class in any d20 game.**
+
+### ⚠ Prestige classes start at class level 1
+
+**`REPLY-62`'s table put `Rally`, `Immovable Object` and `Vigil` at level 3 and implied the Officer was a base class. It is not.**
+
+**A prestige class is entered at character level 10 with six levels in a parent and a stated holding.**
+
+> **⚠ Nobody dips a prestige class. That is not a dip, it is a build.**
+
+**And `PT-138` ruled against charging twice for one purchase — the entry requirement is the price.**
+
+### The one natural exception
+
+**⚠ The `Juggernaut` carries two features and it is the only class that does.**
+
+    Immovable Object   class level 1    "nothing moves me" is what entering means
+    Hold the Line      class level 3    "and I will take the hit for you" is what you grow into
+
+**Every other prestige class has exactly one feature and it starts at 1.**
+
+### What this replaces
+
+**The designer proposed *a class feature needs two levels in the class* — one line, no new concept.**
+
+**⚠ The owner's version is more work to state and does more:** **it prices each feature by what it is actually worth to someone who is not the class, rather than applying one number to all of them.**
+
+> **`Quickdraw` at 2 would have cost nothing to stop and `Both Hands` at 2 would still have been worth taking.**
+
+### ⚠ And the Scout demonstrates the principle without needing the rule
+
+    level 1   Terrain Sense · Targeting 1 · Close Combat
+    level 4   Uncanny Dodge 1
+    level 6   Evasion
+    level 7   Uncanny Dodge 2
+
+**A one-level dip into Scout buys `Terrain Sense` and nothing else.** **The defensive suite needs four to seven levels, because the *source* put it there.**
+
+**⚠ `Smuggler's Luck`, `Uncanny Dodge` and `Evasion` are granted *feats*, not class features.** **Their levels are ported facts and do not move.**
+
+---
+
+## PT-240 — `Read the Ruin`'s tiers restored, and the cut left its own content behind
+
+**⚠ Two defects, both mine, found by the designer.**
+
+### The tiers were written forty-eight documents before I called them missing
+
+**`PT-233` said *"the replacements are specified but not written."* `PT-236` said *"Open."***
+
+**`FINDINGS-49 §4` had written them.**
+
+    Read the Ruin     1   a failed check tells you WHY it failed
+    Second Look       4   it also tells you WHAT would succeed
+    Nothing Is Sealed 8   it tells you WHETHER anything would
+
+> **Each tier is more of *knowing why*, not a new verb — which is what `PT-182` asked for.**
+
+### ⚠ And the cut left both cut ideas inside tier 1
+
+**Tier 1 as written:** *"you learn why — **one concrete fact about what would work**. **You may retry once that condition is met**."*
+
+> **⚠ *One concrete fact about what would work* is tier 2. *You may retry* is the retry clause `PT-182` cut.**
+
+**`PT-233` removed the tiers and not the content.** **A one-tier feature that still carried three ideas.**
+
+**⚠ Which is a new shape worth naming: a cut applied to the *structure* and not to the *text*.** **The chain passed `PT-178`'s test by being short while still failing what the test was for.**
+
+---
+
+## PT-241 — `FINDINGS-80 §3` is answered by `PT-239`
+
+**The designer flagged that `PT-236` called first-level multiclass benefits *"never started"* when `FINDINGS-80 §3` was exactly that and was pushed first.**
+
+**Correct. And the framing there is what made `PT-239` possible:**
+
+    the credits half   PT-89's four are granted once, at 1st CHARACTER level
+    ⚠ the real gap     every class feature grants tier 1 at CLASS level 1
+
+**⚠ Their prestige observation is also right and `PT-239` uses it:** **six levels of a named parent plus a holding is already a gate; the base half had none.**
+
+**`PT-239` prices each feature rather than applying one number, which is the only difference from their recommendation.**

@@ -11412,3 +11412,237 @@
 ### ⚠ `D-AB` not engaged
 
 **All six read are UAA-only species. The disagreement test can only run on the overlap, and the overlap is entirely unread.**
+
+---
+
+## PT-379 — `Table 6-2` delivered. ⚠ And my "in neither book" list was wrong by four.
+
+**`LIBRARY-05`. The library holds `species-chapter.md` in `_dead/` — retired, renamed, never deleted, which is why the table survived.**
+
+**⚠ My second hypothesis was right: it IS `SPECIES-CHAPTER-v2` under an older name, and the table was lost in the revision.**
+
+### ⚠ Coverage, corrected
+
+    UAA         Nautolan · Devaronian · Gand · Weequay · Togruta · Dashade · Bith
+    RCR 6-2     seventeen species, fourteen on our roster
+    ⚠ Campaign Guide   Arkanian · Arkanian Offshoot · Cathar · Miraluka ·
+                       Rakata · Selkath · Sith Kissai · Sith Massassi
+    ⚠ NOWHERE   Kaleesh · Echani
+
+**⚠ I wrote that `Rakata`, `Rattataki`, `Selkath` and `Sith` were *"in neither book."*** **The Campaign Guide has three of the four.**
+
+> **⚠ The real gap is two species, not six. And `Rattataki` is a third I cannot place.**
+
+### ⚠ The two extremes are worth printing
+
+    Wookiee      adult 18-300 · ⚠ venerable 400+
+    Gamorrean    adult 13-29  · ⚠ venerable 45+
+
+**⚠ A Wookiee is an adult for 282 years. A Gamorrean is venerable at forty-five.**
+
+### ⚠ Where I disagree with the library, and it matters for `FORCE-TRAINING-01`
+
+**They flag that a `Persuade` ladder keyed to age band gives a 200-year-old Wookiee the same rung as a 25-year-old Human, and call it a defect.**
+
+> **⚠ I think that is the ladder WORKING.**
+
+    Human      25   Adult   ~55 years ahead
+    Wookiee   200   Adult   ⚠ ~200 years ahead
+    Gamorrean  40   Old     ⚠ ~5 years ahead
+
+**⚠ The BAND already normalises for lifespan.** **`FORCE-TRAINING-01`'s ladder asks whether the mind is still open to training, and a Wookiee at 200 has as much life ahead as a Human at 25.**
+
+**⚠ Keying to raw years would be the defect. Recorded as a disagreement rather than a fix.**
+
+### ⚠ And they caught `rules/` regrowing
+
+    before 169 .md   ⚠ now 172   removed 0
+
+**⚠ Checked by re-cloning, not by asking. Cleaned: 59 files that were byte-identical to a specialist copy removed; 118 stay.**
+
+**⚠ Divergent duplicates kept, per their standing request — three of the nine renames were visible only because both copies existed.**
+
+---
+
+## PT-380 — The PDFs landed. ⚠ Five of seven are scans, and OCR is marginal.
+
+    ✓ text    D6 Conversion KOTOR CG (41p) · The Roleplaying Game Revised (512p)
+    ⚠ SCAN    RCR (387p) · UAA (229p) · KOTOR Campaign (226p)
+    ⚠ SCAN    New Essential Chronology (249p) · Essential Atlas (257p)
+
+**⚠ The three books that matter most — RCR, UAA, Campaign Guide — are all scans with zero text layer.**
+
+### ⚠ OCR works, badly, and better on tables than prose
+
+**Tesseract is installed. Prose comes out damaged:** ***"jatural"*** **for *natural*,** ***"tavttake"*** **for *can take*.**
+
+**⚠ Tables come out clean, because the layout is regular.** **`Table 7-2` read almost perfectly at 300 dpi.**
+
+### ⚠ `Table 7-2: Weapons` — read, and it settles nothing about the ceiling
+
+    Blaster pistol      3d6    20      10m
+    Blaster, hold-out   3d4    20       4m
+    Blaster carbine     3d8    19-20   20m
+    Blaster rifle       3d8    19-20   30m
+    Blaster cannon      4d8    19-20   40m
+    Blaster, E-Web      6d8    19-20   80m
+
+**⚠ The range increment is a DISTANCE, not a count.** **`PT-163`'s three-increment ceiling asks how many you may STACK, and this table does not answer that.**
+
+**⚠ And RCR's damage is far above KOTOR's:** **`3d6` pistol against KOTOR's `1d8`; `3d8` rifle against `1d12`.**
+
+> **⚠ `PT-339` took KOTOR's dice under `PT-372` rank 2. That decision now has a measured cost: our blasters are roughly half RCR's.**
+
+**⚠ Recorded rather than reopened. But anyone comparing our weapons to an RCR statblock will find them weak, and that is deliberate.**
+
+### ⚠ What the D6 Conversion is, and is not
+
+**The readable KOTOR file is a FAN D6 CONVERSION, not the Saga Edition Campaign Guide.**
+
+> **⚠ Under `PT-372` it is not rank 4. It is a derivative of rank 4.**
+
+**⚠ It carries NO age bands** — **`Move`, `Size`, `Attribute Dice`, no `Age in Years`.**
+
+**⚠ But its `Source:` lines cite real Campaign Guide page numbers**, **which makes it a usable INDEX to a book we cannot read.** **`Rakata` CG 17-18 · `Selkath` CG 18-19 · `Kissai` and `Massassi` CG 15-16 · `Cathar` CG 12 · `Miraluka` CG 16-17.**
+
+**That is exactly the four species `PT-379` still needs, with folios.**
+
+---
+
+## PT-381 — ⚠ The Campaign Guide HAS an age table. OCR'd from the scan.
+
+**`TABLE OF SPECIES AGES`, KOTOR Campaign Guide f.11. Twelve rows, our six bands.**
+
+**⚠ Eight of the twelve are on our roster** — **`Arkanian`, `Arkanian Offshoot`, `Cathar`, `Kissai`, `Massassi`, `Miraluka`, `Rakata`, `Selkath`.**
+
+    Arkanian    1-12 · 13-18 · 19-44 · 45-76 · 77-99 · 100+
+    Cathar      1-10 · 11-15 · 16-40 · 41-62 · 63-79 · 80+
+    Kissai      1-10 · 11-15 · 16-30 · 31-42 · 43-59 · 60+
+    Massassi    1-10 · 11-13 · ⚠ 14-25 · 26-35 · 36-50 · ⚠ 51+
+    Miraluka    1-11 · 12-15 · 16-44 · 45-69 · 70-84 · 85+
+    Rakata      1-11 · 12-16 · 17-50 · 51-69 · 70-79 · 80+
+    Selkath     1-10 · 11-15 · 16-54 · 55-84 · 85-99 · 100+
+    Arkanian Offshoot  1-8 · 9-13 · 14-30 · 31-45 · 46-55 · 56+
+
+### ⚠ Two conflicts with the UAA, and one of them is not a conflict
+
+    Miraluka   UAA 16-44, 85+   ⚠ CG identical
+    Cathar     UAA 16-49, 90+   ⚠ CG 16-40, 80+
+
+**⚠ `D-AB`: UAA governs on conflict. UAA's `Cathar` stands; the CG figure is recorded as the disagreement rather than silently dropped.**
+
+### ⚠ `Massassi` is the shortest-lived species on the roster
+
+**Adult at 14, old at 36, venerable at 51.** **⚠ Bred for war and used up, which is what the lore says.**
+
+### ⚠ And it corrects my own read of `LIBRARY-05`
+
+**They wrote *"the Campaign Guide for Arkanian, Cathar, Miraluka, Rakata, Selkath, Kissai, Massassi."*** **I read that as SPECIES coverage and doubted it carried ages, because Saga Edition dropped age categories.**
+
+> **⚠ Saga dropped them from the SPECIES ENTRIES. The Campaign Guide kept a standalone table.**
+
+**The library was right and I nearly reported otherwise.**
+
+### ⚠ Coverage now
+
+    read     6 UAA · 17 RCR Table 6-2 · 8 CG  =  ⚠ 29 of 32 base species
+    left     ⚠ Rattataki · Kaleesh · Echani
+
+---
+
+## PT-382 — The last three, authored. ⚠ Age bands complete at 32 of 32.
+
+**`Rattataki` searched in the Campaign Guide species chapter — ⚠ absent. Not in RCR's seventeen, not in the UAA's contents, not in the CG's twelve.**
+
+    ⚠ Echani      1-10 · 11-15 · 16-42 · 43-62 · 63-79 · 80+
+    ⚠ Kaleesh      1-9 · 10-15 · 16-38 · 39-54 · 55-70 · 71+
+    ⚠ Rattataki   1-10 · 11-15 · 16-38 · 39-55 · 56-72 · 73+
+
+### Anchored, not invented
+
+    Human (RCR)     16-40 · 80+     ⚠ the baseline
+    Zabrak (RCR)    15-44 · 70+     near-human, longer prime
+    Cathar (UAA)    18-49 · 90+     warrior, long-lived
+    Massassi (CG)   14-25 · ⚠ 51+   bred for war, spent fast
+
+**⚠ All three sit inside the range the read data establishes. None is an outlier.**
+
+### ⚠ Where I expect to be wrong
+
+**`Kaleesh` at `71+` is the boldest call** — **it says a Kaleesh elder is rare, which fits Grievous's culture and is stated nowhere.**
+
+> **⚠ And `Rattataki` is a guess dressed as a default.** **Being unable to source it is not evidence it is human-like. It is evidence nobody wrote it down.**
+
+**`DECISION-RECORD-04` records Rattatak's gladiatorial culture as pre-`Clone Wars` and standing — ⚠ a violent life, not a short-lived species. That is the reasoning and it is thin.**
+
+### ⚠ Complete
+
+    6 UAA · 17 RCR · 8 CG · 3 authored · Droid does not age  =  32 of 32
+
+**⚠ The 19 subraces inherit their base species unless the lore differs.**
+
+**⚠ `E-10`'s chargen ordinal and `E-11`'s age-category finding are unblocked after being flagged in two documents.**
+
+### ⚠ And the route that got here is worth recording
+
+**The Campaign Guide is a SCAN. `PT-380` reported OCR as marginal on prose and clean on tables.**
+
+> **⚠ `PT-381`'s eight species came out of a 400 dpi OCR of one page of a book I had described as unreadable an hour earlier.**
+
+**⚠ The lesson is narrower than *"OCR works"*: it works on TABLES, and every remaining gap in this project that lives in a table is now reachable without the Extractor.**
+
+---
+
+## PT-383 — ⚠ `Rattataki` was never unlocated. It is SWTOR, admitted by exception.
+
+**`LIBRARY-06`. `C06-SPECIES` line 897:**
+
+> ***"Source: SWTOR-attested, admitted by owner decision. Era evidence recorded above."***
+
+**⚠ It is absent from RCR, the UAA and the Campaign Guide because it comes from NONE of them.**
+
+> **⚠ I searched three books for a species that was never in any of them, and reported the absence as a mystery.**
+
+**`CANON-01` excludes SWTOR except by per-item owner approval. `Rattataki` has that approval. ⚠ The absence was the expected consequence of a decision already on record.**
+
+### What changes
+
+**⚠ Nothing in the numbers. `PT-382`'s three authored rows stand.**
+
+**⚠ But the REASON changes for one of them.** **`Rattataki` has no ages because no ADMITTED source supplies them, not because I failed to find them.**
+
+**That is a stronger warrant for authoring than *"I looked and could not find it."***
+
+### ⚠ And the library verified my cleanup by re-cloning
+
+    rules/  169 -> 172 -> 115     58 removed
+    ⚠ files removed with no other copy anywhere:  0
+
+**⚠ They checked by name across the whole tree rather than trusting `PT-379`.** **Two of the 58 were their own Phase 1 splice sources and now exist only at `force/` — noted, not lost.**
+
+---
+
+## PT-384 — `PT-352`'s feat remap applied to the item documents.
+
+**⚠ `PT-352` resolved all 56 feats and the documents kept printing `BonusFeats (SpellFocusAbj)`.** **`PT-295`'s shape — a ruling recorded and never applied — at ten weeks' distance.**
+
+    84  ⚠ attack chain   PT-315, granted while equipped
+    120 ⚠ bay gate       PT-318, Droid Upgrade 1/2/3
+    9   ⚠ cut content    XXX-prefixed, dropped
+    0   ⚠ unmapped
+
+### ⚠ Two failures getting there, both mine, both silent
+
+**⚠ I read `feat.2da` by splitting on tabs. It is a BINARY `2DA V2.b`.** **The output was a page of control characters inside a table cell.**
+
+**⚠ And before that I treated row 0 as the header. Row 0 is the version line.** **That produced 56 unmapped feats and no error.**
+
+> **⚠ Neither failed loudly. Both produced plausible-looking output — `?11 unmapped` reads like a missing entry rather than a broken reader.**
+
+**⚠ `k2_classes.2da` IS a TSV and `feat.2da` is not.** **Same extension, two formats, and I have now been wrong about this in both directions in one session — `PT-374` reported the TSV as unparseable.**
+
+### The rule
+
+> **⚠ Check the magic bytes. `2DA V2.b` means the binary parser; anything else means TSV.**
+
+**`parse2da` already does this and I bypassed it twice.**

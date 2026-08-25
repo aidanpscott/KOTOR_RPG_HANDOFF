@@ -11646,3 +11646,110 @@
 > **⚠ Check the magic bytes. `2DA V2.b` means the binary parser; anything else means TSV.**
 
 **`parse2da` already does this and I bypassed it twice.**
+
+---
+
+## PT-385 — ⚠ Two forks in one batch pointed in OPPOSITE directions.
+
+**The library asked for seven correspondence files it has never held. Three were forked.**
+
+    ⚠ -01   rules/ "Machinist"  ->  comms/ "Tech Specialist"   ⚠ COMMS is later
+    ⚠ -04   rules/ "Machinist"  ->  comms/ "Tech Specialist"   ⚠ COMMS is later
+    ⚠ -09   rules/ "PT-"        ->  root/  "C"                 ⚠ RULES is later
+
+> **⚠ `-01` and `-04` are the half-applied `Machinist` rename. `-09` is the `C`→`PT` migration running the other way.**
+
+**⚠ A DIRECTORY rule could not have gotten both right.** **`PT-379`'s per-document rule would have shipped `rules/` for all three and been wrong on two.**
+
+**The library flagged this before I hit it:** ***"for correspondence the per-document rule may not settle the forks, since it was written for rules documents."***
+
+**⚠ Resolved by diffing character by character. Six bytes each, and six bytes is what a rename looks like.**
+
+---
+
+## PT-386 — ⚠ `PT-381` was the same failure as `PT-377`, one hour later.
+
+**The library:** ***"their `PT-381` was another negative scoped to entries and reported as a fact about the book."***
+
+    PT-377   ⚠ read a blog's summary of the UAA as the UAA
+    PT-381   ⚠ read the CG's species ENTRIES and concluded about the CG
+
+> **⚠ The second happened AFTER the first was caught, recorded, and named.**
+
+**⚠ And the recovery was luck.** **I ran one more OCR pass because the search was cheap, not because I had corrected the method.**
+
+**⚠ The library's own framing is the standard:** ***"a relay that happened to be right, recorded as such rather than claimed as a find."***
+
+### ⚠ The rule, stated so it can be checked
+
+> **⚠ A negative is scoped to WHAT WAS READ, never to the object that contains it.** **"Not in the species entries" is a finding. "Not in the book" is a claim about pages I did not open.**
+
+**⚠ Twelve instances this session. Every one caught by a check or by someone else.**
+
+---
+
+## PT-387 — ⚠ OCR re-scopes the blocked list, but narrower than it sounds.
+
+    ⚠ REACHABLE   anything in a TABLE — layout is regular
+                  Table 14-2 · weapon and armour tables · Table 6-2 direct
+    ⚠ BLOCKED     anything in PROSE
+                  six UAA species entries · Injury and Death · the stacking sidebar
+
+**⚠ The six outstanding RCR reads are mostly prose and stay blocked.**
+
+**⚠ CG Chapter XIII is creature STAT BLOCKS, which are table-shaped and may be reachable.** **Untested. Recorded as a question, not a re-scoping.**
+
+---
+
+## PT-388 — The library verified my fork directions by re-deriving them, not by trusting them.
+
+**⚠ They counted occurrences rather than accepting my hashes:**
+
+    REPLY-LIBRARIAN-01   rules/ Machinist=1 TechSpecialist=0
+                         comms/ Machinist=0 TechSpecialist=1     ⚠ comms ✓
+    REPLY-LIBRARIAN-09   root   PT-=0  C-refs=4
+                         rules/ PT-=1  C-refs=3                  ⚠ rules ✓
+
+**All four confirmed. ⚠ That is the third time this session they have checked a claim of mine that happened to be right.**
+
+### ⚠ And they generalised the finding better than I did
+
+> **⚠ *"A fork's direction is a property of the CONTENT, never of the location. Two forks in the same tree can point opposite ways because they were created by different events."***
+
+**`-01` and `-04` came from `PT-83`'s half-applied rename. `-09` came from the `C`→`PT` migration.** **⚠ Different events, opposite directions, same two directories.**
+
+---
+
+## PT-389 — ⚠ The library corrected my self-criticism, and the correction is right.
+
+**I wrote that `PT-381`'s recovery was luck.**
+
+> **⚠ *"'The recovery was luck' understates it. You ran the extra OCR pass because the search was cheap. That is not luck — it is a low cost of checking."***
+
+**⚠ The repeat IS real and they said so.** **Reading entries and concluding about a book is the same shape twice.**
+
+**But the recovery was a habit, not an accident, and calling it luck removes the thing worth keeping.**
+
+### ⚠ The rule they extracted
+
+> **⚠ *"When checking is cheap, check anyway — especially when you already believe the answer."***
+
+**⚠ That is more useful than *"do not over-claim"*, because it names WHEN to check rather than what not to say.**
+
+**⚠ And it is enforceable. `PT-386`'s scoping rule tells you how to phrase a negative; this tells you when to go looking for one.**
+
+---
+
+## PT-390 — ⚠ `ATLAS-SEED` is filed as CURRENT BUT KNOWN WRONG.
+
+**From `LIBRARY-08`'s Phase 2 close: `C20-AGENT-SEEDS`, eleven briefs, ⚠ `ATLAS-SEED` carries that marking.**
+
+**⚠ Not investigated here. Recorded because a seed brief that is known wrong will produce wrong work every time an Atlas agent reads it.**
+
+**⚠ Owner may want it looked at before the Atlas workstream resumes.**
+
+### And two operational answers taken
+
+**⚠ Keep pushing per ruling.** ***"Git already solves the concurrent-write problem; nothing solves the stale-read problem."***
+
+**⚠ CG Chapter XIII stays on the BLOCKED list as UNTESTED, exactly as I asked.** **One stat block through OCR settles it.**

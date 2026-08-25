@@ -54,7 +54,7 @@
 
 **⚠ And it gives you what you actually need:** **you can answer *"is there a ruling about damage reduction"* from holdings, and *"what exactly does it say"* from the reference.**
 
-> **⚠ It also makes staleness VISIBLE.** **If your index stops at `PT-366` and the file is at `PT-400`, that is a number you can see. A stale 517 KB embed looks identical to a current one.**
+> **⚠ It also makes staleness VISIBLE.** **If your index stops sixty rulings behind the file, that is a number you can see. A stale 517 KB embed looks identical to a current one.**
 
 **⚠ I will generate the index and keep it current** — **it is a script, not a task.**
 

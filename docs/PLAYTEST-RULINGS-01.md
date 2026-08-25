@@ -11063,3 +11063,55 @@
 **Feats.** **⚠ One at 3rd level and every three after, plus a starting feat for the 14 predators.** **Roughly 250 picks across 27 beasts.**
 
 **`PT-357` ruled the entry PRINTS them rather than the player choosing.** **⚠ That is the last piece of the workstream.**
+
+---
+
+## PT-367 — `PT-INDEX-01`. The library gets an index, not the body.
+
+**⚠ 354 rulings, 24 KB, against a 517 KB log.**
+
+**The library asked: embed `PLAYTEST-RULINGS-01` into `C13`, or reference it?**
+
+> **⚠ Neither. Embed an index; reference the body.**
+
+**⚠ Embedding is a snapshot and this file will not hold still** — **it grew `PT-306` to `PT-366` in one session.**
+
+**⚠ Referencing loses the library's ability to answer from holdings, which is its job.**
+
+**The index gives both, and ⚠ it makes staleness VISIBLE:** **an index ending at one ruling while the file holds sixty more is a number you can see. A stale 517 KB embed looks identical to a current one.**
+
+**`make_index.py` regenerates it.**
+
+---
+
+## PT-368 — ⚠ The Tuk'ata IS Force-touched. The Maalrass may not be resistant at all.
+
+**Owner asked whether the game files support these.**
+
+### ⚠ Tuk'ata — confirmed, and stronger than the tag implied
+
+    g_i_crhide004   ⚠ ImprovedMagicResist 32   (costtable 11 = iprp_srcost)
+                    Regeneration 1
+
+> **⚠ Force resistance 32. The highest value on any creature hide in either game.**
+
+**`PT-359` gave it `pack` only and I added the Force-touched tag when writing the entry, on the grounds that Sith alchemy made it.** **⚠ The mechanical support is stronger than my reasoning was.**
+
+**Entry updated: powers targeting it take `−8` to their save DC.**
+
+### ⚠ Maalrass — the opposite. No support at all.
+
+**Its only equipped item, `g_w_crslash003`, carries `Monster_damage` and nothing else.** **⚠ No hide, no resistance, no Force property.**
+
+> **⚠ And the Tuk'ata proves the game DOES encode resistance when a creature has it.** **The maalraas has none.**
+
+**`PT-366` gave it `damage reduction 5 against lightsabers` from a Wookieepedia paraphrase — `PT-286`.**
+
+**⚠ SOURCE-FLAGGED in the entry rather than silently kept.** **Pending the Campaign Guide check, `TO-EXTRACTOR-FINAL` item 2.**
+
+### And the Young Rancor verified
+
+    Rancor        level 20 · 350 HP · ⚠ STR 45
+    Young Rancor  level 15 · 115 HP · ⚠ STR 45
+
+**⚠ Identical Strength, a third of the vitality. The entry is right.**

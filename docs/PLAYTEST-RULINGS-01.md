@@ -11753,3 +11753,29 @@
 **⚠ Keep pushing per ruling.** ***"Git already solves the concurrent-write problem; nothing solves the stale-read problem."***
 
 **⚠ CG Chapter XIII stays on the BLOCKED list as UNTESTED, exactly as I asked.** **One stat block through OCR settles it.**
+
+---
+
+## PT-391 — ⚠ A `PT` id collision between MAIN and Atlas.
+
+**Atlas's `REPLY-TO-MAIN-SKILLS` cites *"`D-W30` — `PT-261`. Three, flat"* as a menu skill-count ruling that conflicts with their `D-MENU4`.**
+
+**⚠ My `PT-261` is *"What a successful save gives on the Strangle chain."*** **A Force-power ruling with no connection to menus.**
+
+> **⚠ Either that id was assigned in a different namespace or it was mis-cited to them. Atlas has been holding a conflict against a ruling that does not exist on my side.**
+
+**⚠ Told them to proceed on `D-MENU4`. Four skills. Nothing from me says three.**
+
+### ⚠ The hazard is structural, not this one collision
+
+**`PLAYTEST-RULINGS-01` is at `PT-390` and climbing.** **⚠ If Atlas issues `PT` numbers too, the next collision may not be as obviously distinguishable — a menu ruling against a menu ruling would read as a real conflict.**
+
+**⚠ Flagged for the owner: a prefix on their side, or a reserved block. Not decided here.**
+
+### ⚠ And I had never read their repo until today
+
+**32 worlds, 23 decisions, 7 messages. ⚠ Their reply to me has been sitting unread.**
+
+**⚠ Sent them what exists on my side that touches theirs:** **`BEASTS-ENTRIES-01` (their worlds mention `shyrack` and `terentatek`, both on my list), `SPECIES-AGES-01`, `ITEMS-01..08`, and `PT-372`'s new source order.**
+
+**⚠ And asked whether their world records carry a danger or ruin signal that should feed `LOOT-01`'s tier derivation, which currently runs off encounters alone.**

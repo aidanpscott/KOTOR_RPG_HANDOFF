@@ -10814,3 +10814,252 @@
 **Tier 2 at 20,000–50,000 is reachable at character 11, not 6.**
 
 **⚠ A level-11 party can afford it; a level-6 party could not have.** **The two gates now agree by accident of the rebase, which is worth noting rather than assuming it will hold if either moves.**
+
+---
+
+## PT-359 — Eight traits. ⚠ RCR's five types were too coarse.
+
+**Owner: *"some are flyers, others hunters, scavengers, predators — I think this means we have to flesh out the tags."***
+
+**⚠ `PT-355`'s five types could not separate a zakkeg from a kath hound. Both are Predators.**
+
+> **⚠ Traits sit on top. A beast carries none to three, and the five types stay intact so the ported blocks still map.**
+
+    flying         Mykal · Shyrack · Shyrack Wyrm · Drexl · Brith
+    swarming       Shyrack · Gizka · Kinrath
+    apex           Zakkeg · Drexl · Terentatek
+    pack           Kath Hound · Maalrass · Tuk'ata
+    venomous       Kinrath · Hssiss
+    armoured       Laigrek · Wraid · Gundark
+    burrowing      Kor'slug · Kinrath · Laigrek
+    ⚠ Force-touched  Hssiss · Terentatek · Maalrass
+
+### ⚠ Two corrections to my own proposal
+
+**I proposed cutting `burrowing` as a `Kor'slug`-only descriptor. ⚠ Wrong.**
+
+**`Kinrath` are cave arachnids and `Laigrek` live in the Peragus tunnels.** **Three holders without adding a beast, and the owner asked for it kept.**
+
+**`aquatic` genuinely has zero holders** — **we cut the `Firaxan Shark` and nothing else swims. ⚠ A trait with no holders is not a trait.**
+
+### ⚠ Force-touched carries two gates on two beasts
+
+    Hssiss       bite clouds the Force · ⚠ ALSO dark-side restricted
+    Terentatek   hunts Force users, resists the Force · ⚠ ALSO dark-side restricted
+    Maalrass     cloaks itself with the Force
+
+**⚠ In a campaign made of Jedi, a Force-touched companion is a category unto itself.**
+
+---
+
+## PT-360 — `GM-CREATURES-01`. The derivation goes in the Gamemaster's book.
+
+**Owner instruction: the player's book prints finished beasts; the GM's book shows how they were made, so a GM can bring their own.**
+
+    1  TYPE            ⚠ five, exactly one per creature
+    2  SIZE            ⚠ sets abilities, natural attacks, wound points
+    3  LEVEL           the master's Beast Master level, or pick one
+    4  TRAITS          ⚠ ours, not RCR's
+    5  THE ONE THING   ⚠ what only this creature does
+    6  FEATS
+
+**⚠ Four of six are lookups. Two are judgement.**
+
+### ⚠ The section that matters most is step 5
+
+> **⚠ Type gives it numbers. Traits give it a category. The one thing gives it a reason to exist.**
+
+**And the advice is concrete:** ***"If the answer is 'it hits harder,' you have not found it yet."***
+
+**⚠ The KOTOR games are used as the warning.** **35 distinct stat blocks across 52 creatures; a zakkeg shares a block with a boma.** **Differentiated on appearance and nothing else.**
+
+### ⚠ It carries our own process failures as advice
+
+**⚠ *"Decide type and size FIRST."*** **We built the beast list before the type blocks arrived and revisited tiers twice.**
+
+**⚠ *"Do not gate the same thing twice."*** **We had a tier, a DC, a price AND a level bracket. Three said the same thing; `PT-358` deleted the bracket.**
+
+> **⚠ A GM's guide that only prints the rules teaches the rules.** **One that prints what went wrong teaches the judgement.**
+
+### ⚠ And two things a GM would otherwise miss
+
+**Predator is the strongest chassis — two high saves, a starting feat, and sole access to damage reduction and fast healing.**
+
+**⚠ Vermin get `+10` against mind-influencing effects, automatically.** **It sits in RCR's prose rather than its field list, and `PT-356` only caught it because the Extractor read the paragraph.**
+
+---
+
+## PT-361 — ⚠ RCR: damage reduction does not apply to vitality. 131 of our items carry it.
+
+**Extractor, f.159, verbatim:**
+
+> ***"A character wearing armor reduces the number of wound points lost to wound damage by the amount of the armor's damage reduction. Damage reduction does not apply to vitality points."***
+
+### ⚠ What that means at our scale
+
+    level-20 character   ~170 vitality   ⚠ armour does NOTHING here
+                         ~14 wounds      ⚠ armour applies ONLY here
+
+> **⚠ A `Resist_25/-` armour reduces damage on the last 8% of a character's health.**
+
+**⚠ 131 items in `ITEMS-01` to `-08` carry `DamageResist` or `DamageImmunity`.** **58 of them are armour.**
+
+### ⚠ Which makes armour nearly worthless, and that cannot be what KOTOR did
+
+**KOTOR has no vitality/wound split. It has one hit-point pool and damage reduction applies to all of it.**
+
+> **⚠ So we ported KOTOR's armour values onto RCR's two-pool structure without checking that the two were compatible.**
+
+**⚠ OWNER RULING WANTED. Three options:**
+
+**Port RCR as written** — **armour matters only when you are nearly dead.** **⚠ Defensible: it makes wounds terrifying and armour a last line.**
+
+**⚠ Apply damage reduction to vitality too** — **KOTOR's behaviour, and what our item values were tuned for.** **Departs from RCR on a printed rule.**
+
+**⚠ Halve it against vitality** — **a compromise, and a third number to remember.**
+
+---
+
+## PT-362 — Stacking, f.260. ⚠ `PT-176` is a rediscovery.
+
+**The general rule, verbatim:**
+
+> ***"Modifiers with the same descriptor apply only the best bonus or worst penalty."***
+
+**⚠ `PT-176` — *"threat multipliers do not compound; use the largest"* — is that rule stated for one case.**
+
+**⚠ It is not wrong. It was derived independently and it agrees.**
+
+### The printed list
+
+    ⚠ DO NOT STACK (14)   aptitude · charge · competence · cooperation · cover ·
+                          equipment · expert · favor · flanking · Force ·
+                          initiative · morale · reputation · size · species
+    ⚠ DO STACK (3)        circumstance · dodge · synergy
+    ⚠ ALL PENALTIES STACK including circumstance, multiclass and range penalties
+    ⚠ no descriptor       stacks with other undescribed modifiers
+
+### ⚠ And the Extractor found the list is not exhaustive
+
+**`natural armor` appears at f.31 (Trandoshan) and `rage` at f.33 (Wookiee).** **⚠ Neither is in the fourteen, and neither is among the three that stack.**
+
+> **⚠ Either the list is incomplete or those two are unclassified. Reported, not resolved.**
+
+**⚠ And whether a threat multiplier carries a descriptor at all is a question f.260 does not answer.**
+
+---
+
+## PT-363 — `Injury and Death`, f.159. The full ladder.
+
+    0 vitality    ⚠ not a condition — a threshold. Damage now hits wounds.
+    Fatigued      ⚠ ANY wound damage. −2 Strength and Dexterity until healed.
+    Knocked Out   failed Fort save, DC 5 + wounds lost that round. 1d4 rounds.
+    Disabled      at 0 wounds. ⚠ One move OR attack per round.
+                  ⚠ An attack while disabled costs 1 more wound point.
+    Dying         −1 to −9. Unconscious, loses 1 wound per round.
+    Dead          −10, or Constitution reduced to 0.
+
+### ⚠ Fatigue is automatic on the FIRST point of wound damage
+
+**Not a threshold. `−2 Strength and Dexterity` the moment you take any.**
+
+**⚠ Which makes the vitality/wound boundary a hard cliff rather than a gradient.**
+
+### ⚠ And a knocked-out character is NOT helpless
+
+> ***"An opponent can automatically grapple or bind a knocked-out character, but can't perform a coup de grace. Such a character is not considered helpless."***
+
+### ⚠ Two stabilisation mechanisms, not one
+
+**f.159: a `Fortitude DC 10` each round while dying; once stable, an hourly Fortitude save to regain consciousness, losing 1 wound on each failure.**
+
+**f.160: a `10%` chance per day to begin recovering naturally.**
+
+> **⚠ The Extractor reported these as parallel rather than conflicting** — **f.159 governs stabilising and waking; f.160 governs beginning to heal.** **Correct, and worth the care.**
+
+---
+
+## PT-364 — ⚠ POLICY. Our established rules govern over RCR, unless flagged.
+
+**Owner ruling:** ***"We should take the established rules that we have rather than what the RCR has, unless there's a clear flag you have for me."***
+
+### ⚠ This changes the standing position
+
+**`CANON-01` is cited across the corpus as *"RCR governs all mechanical questions."*** **⚠ It has been the default all session — `PT-282` stopped a creature format on it, and `PT-304` checked the ladders against it.**
+
+> **⚠ The new order: where WE have an established rule, ours governs. RCR fills gaps and settles questions we have not answered.**
+
+### ⚠ And the obligation it creates is mine
+
+**A flag is owed when RCR contradicts us in a way that MATTERS.** **Not every difference — the ones with consequences.**
+
+**⚠ `PT-361` is what a flag looks like:** **RCR says damage reduction applies only to wounds, 131 of our items carry it, and 58 are armour that would become near-worthless.**
+
+### ⚠ A caution on my own reach
+
+**`CANON-01` is cited in five documents and I have never read it.** **⚠ It is not in my working set.**
+
+> **⚠ So I am recording a change to a policy I know only by citation.** **If `CANON-01` says something more specific than *"RCR governs mechanics,"* this ruling may not reach it.**
+
+**Flagged rather than assumed. The Library holds the document.**
+
+---
+
+## PT-365 — Damage reduction applies to BOTH pools. ⚠ We had no rule; RCR's breaks our numbers.
+
+**⚠ Checked first: do we have an established rule? No.**
+
+**13 places USE damage reduction — `Enduring Guard` grants 5, `Ion Shielding` grants it, `Impale` ignores it, 131 items carry it.**
+
+> **⚠ Exactly one statement anywhere ties it to a pool, and that is in an unrelated entry.**
+
+**So `PT-364`'s *"take ours"* has nothing to take. RCR is the only source, and its answer breaks us.**
+
+### ⚠ Why both pools
+
+    RCR         wounds only        ⚠ 8% of a level-20 character's health
+    our items   tuned in KOTOR     ⚠ one pool, DR applied to all of it
+
+**⚠ 58 armours would become near-worthless, and `Enduring Guard` — a tier-2 attack chain priced as a defensive option — would do nothing until you were nearly dead.**
+
+**And one rule is simpler than a pool check every time damage lands.**
+
+### ⚠ Marked AUTHORED
+
+**This departs from a printed RCR rule. It is not a port and the documents should say so.**
+
+---
+
+## PT-366 — `BEASTS-ENTRIES-01`. Twenty-seven, statted, no lookup required.
+
+**Every number printed. Abilities and natural attacks from RCR's per-type tables — `PT-356`. Vitality die and saves from the per-type blocks. ⚠ The one thing is authored.**
+
+    tier 1   10 beasts      tier 2   12      tier 3   5
+
+### ⚠ Two added, per owner ruling
+
+**`Dianoga`** — **⚠ RCR names it as its own `Scavenger` example, so it is a ported creature with a ported type.**
+
+> **⚠ And it closes a gap I had not flagged: we had ZERO Scavengers.** **`PT-355` gave the type a behavioural tag and nothing carried it.**
+
+**`Duracrete Slug`** — **⚠ eats stone and permacrete.** **Genuinely different from a `Kor'slug`: one hides underground, the other goes through architecture.**
+
+### ⚠ `Parasite` still has zero holders
+
+    Predator 14 · Vermin 10 · Herd Animal 2 · Scavenger 1 · ⚠ Parasite 0
+
+**⚠ Recorded rather than fixed.** **A type with no beasts is `aquatic`'s problem one level up — but `Parasite` is a PORTED type with a full RCR block, so cutting it is not the same decision.**
+
+### ⚠ The one things, and three are worth naming
+
+**`Tuk'ata`** — **⚠ Intelligence 8. Under `PT-285`'s Pathfinder line it may take ANY feat it is physically capable of using.** **The only companion on the list that can.**
+
+**`Maalrass`** — **⚠ damage reduction 5 against lightsabers**, **from the wiki finding at `PT-286`.** **In a campaign made of lightsabers that is the sharpest single ability on the list.**
+
+**`Young Rancor`** — **⚠ the adult's Strength, a third of its vitality.** ***"It has not learned what it cannot survive."*** **Straight from the blueprint comparison at `PT-342`.**
+
+### ⚠ What is still missing
+
+**Feats.** **⚠ One at 3rd level and every three after, plus a starting feat for the 14 predators.** **Roughly 250 picks across 27 beasts.**
+
+**`PT-357` ruled the entry PRINTS them rather than the player choosing.** **⚠ That is the last piece of the workstream.**

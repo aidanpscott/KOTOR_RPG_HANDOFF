@@ -506,3 +506,33 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 **Gear Head Master gives +3 to Security. Skill Focus (Security) makes it 1 point per rank. A character may hold both.**
 
 > **They are different mechanics — a flat bonus against a cost discount — so stacking is coherent.** But nothing has ruled it, **and it is the difference between a specialist and a broken one.**
+
+---
+
+# ⚠ Our skill list is OURS. `PT-370`.
+
+**Owner ruling. ⚠ The Extractor found that three of the five skills `PT-277` gates crafting on do not exist in RCR:**
+
+    Repair        ⚠ exists in RCR, f.96
+    Demolitions   ⚠ exists
+    Medicine      ⚠ DOES NOT EXIST. RCR's nearest is Treat Injury.
+    Science       ⚠ DOES NOT EXIST. RCR's nearest is Knowledge.
+    Slicing       ⚠ NOT A SKILL in RCR — an application of Computer Use.
+
+> **⚠ This is not a defect. It is the design.**
+
+**RCR has eight skills. We have twenty-four.** **⚠ The divergence is deliberate and it predates the finding.**
+
+## ⚠ What that means in practice
+
+**⚠ A skill in `SKILLS-01` needs no RCR counterpart.** **`Medicine`, `Science` and `Slicing` are ours and answer to this document alone.**
+
+**⚠ Where a skill DOES share a name with RCR's — `Repair`, `Demolitions` — the name is shared and the content is still ours.**
+
+**⚠ And a rule written about an RCR skill does not automatically reach ours.** **f.72's take-10 conditions apply because they are GENERAL, not because `Repair` appears in both books.**
+
+## ⚠ The one thing this costs
+
+**⚠ An RCR mechanic that references a skill by name may reference one we do not have.**
+
+**Report it as a gap rather than mapping it silently.** **⚠ `Treat Injury` is not `Medicine` and `Knowledge` is not `Science`; they are different skills that happen to overlap.**

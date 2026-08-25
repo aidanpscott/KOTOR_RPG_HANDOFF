@@ -11084,34 +11084,99 @@
 
 ---
 
-## PT-368 — ⚠ The Tuk'ata IS Force-touched. The Maalrass may not be resistant at all.
+## PT-368a — ⚠ SUPERSEDED by `PT-368` and `PT-369`
 
-**Owner asked whether the game files support these.**
+**Written before the Wookieepedia Talk check and the blueprint read. Both conclusions were provisional and both were settled within the hour. Kept visible.**
 
-### ⚠ Tuk'ata — confirmed, and stronger than the tag implied
+---
 
-    g_i_crhide004   ⚠ ImprovedMagicResist 32   (costtable 11 = iprp_srcost)
-                    Regeneration 1
+## PT-368 — ⚠ The maalraas is NOT lightsaber-resistant. Wookieepedia's own Talk page says so.
 
-> **⚠ Force resistance 32. The highest value on any creature hide in either game.**
+**Owner: *"check if that's in lore on Wookieepedia — if so, they get it."***
 
-**`PT-359` gave it `pack` only and I added the Force-touched tag when writing the entry, on the grounds that Sith alchemy made it.** **⚠ The mechanical support is stronger than my reasoning was.**
+**⚠ The ARTICLE says:** ***"their hides and bones were heavily resistant to lightsabers as well as intense heat."***
 
-**Entry updated: powers targeting it take `−8` to their save DC.**
+**⚠ The TALK page says a Wookieepedia editor went looking:**
 
-### ⚠ Maalrass — the opposite. No support at all.
+> ***"I've read through the source materials and I haven't found anything that mentions of Maalras being lightsaber resistant. There is information about BLASTERS and HEAT but not lightsabers."***
 
-**Its only equipped item, `g_w_crslash003`, carries `Monster_damage` and nothing else.** **⚠ No hide, no resistance, no Force property.**
+**⚠ And the same page disputes the Maalraas/Nighthunter merge itself:** ***"it literally looks like some random Wookieepedia editor decided to retcon two similar looking animals into being one."***
 
-> **⚠ And the Tuk'ata proves the game DOES encode resistance when a creature has it.** **The maalraas has none.**
+### ⚠ Which is `CANON-01`'s own rule arriving as evidence
 
-**`PT-366` gave it `damage reduction 5 against lightsabers` from a Wookieepedia paraphrase — `PT-286`.**
+**Wiki is a route to sources, not a rank.** **⚠ The article carried a claim the sources do not.**
 
-**⚠ SOURCE-FLAGGED in the entry rather than silently kept.** **Pending the Campaign Guide check, `TO-EXTRACTOR-FINAL` item 2.**
+**And I built a beast's defining ability on it at `PT-366`.**
 
-### And the Young Rancor verified
+### The correction, and it is better than what it replaces
 
-    Rancor        level 20 · 350 HP · ⚠ STR 45
-    Young Rancor  level 15 · 115 HP · ⚠ STR 45
+    was   ⚠ damage reduction 5 against lightsabers   — unsourced
+    now   ⚠ damage reduction 5 against BLASTERS and heat — sourced
 
-**⚠ Identical Strength, a third of the vitality. The entry is right.**
+**⚠ In a campaign where most enemies carry blasters, that is more useful than lightsaber resistance, not less.**
+
+**⚠ And the game files agree by absence: `g_w_crslash003` carries only `Monster_damage`. No hide entry, no resistance of any kind.**
+
+---
+
+## PT-369 — Tuk-ata keeps Force-touched, and the game files prove it
+
+**Owner ruling, and the evidence was in the blueprints.**
+
+    Tuk'ata Hide (g_i_crhide004)
+      ⚠ ImprovedMagicResist  costtable 11 -> iprp_srcost row 11 -> Bonus_32
+      Regeneration 1
+
+**⚠ `costtable 11` is SPELL RESISTANCE. The Tuk'ata carries Force resistance 32.**
+
+> **⚠ The highest value on any creature hide in either game, and the only beast on our list with one.**
+
+**So Force-touched is not a flavour tag on this beast. It is a ported mechanic.**
+
+**⚠ Its entry gains: *Force resistance 32 — Force powers targeting it must beat this or fail.*** **Alongside Intelligence 8, which `PT-285`'s line already makes exceptional.**
+
+---
+
+## PT-370 — Our skill list is OURS, not RCR's
+
+**Owner ruling. ⚠ The Extractor found three of five crafting skills do not exist in RCR:**
+
+    Repair · Demolitions   ⚠ exist in RCR
+    Medicine               ⚠ DOES NOT EXIST — RCR's nearest is Treat Injury
+    Science                ⚠ DOES NOT EXIST — nearest is Knowledge
+    Slicing                ⚠ NOT A SKILL — an application of Computer Use
+
+> **⚠ Not a defect. The design. RCR has eight skills; we have twenty-four.**
+
+**⚠ A rule written about an RCR skill does not automatically reach ours.** **f.72's take-10 conditions apply because they are GENERAL, not because `Repair` appears in both books.**
+
+**⚠ And an RCR mechanic naming a skill we lack is a GAP to report, not a mapping to make silently.** **`Treat Injury` is not `Medicine`.**
+
+---
+
+## PT-371 — `GAP-002`'s partition question is closed by `PT-248`
+
+**`GAP-002 §4` asked how to partition Force skills into light and dark, since RCR's `+4/−8` rule names both and defines neither.**
+
+**⚠ That is Branch A's problem. `PT-248` took Branch C — the KOTOR branch, decided by construction.**
+
+### ⚠ KOTOR supplies the partition explicitly
+
+**`spells.2da` carries a `goodevil` column:**
+
+    G   14 powers    E   14 powers    -   104 powers
+
+> **⚠ A ported column, not thirteen judgement calls.**
+
+### ⚠ And `§4`'s deeper finding survives, reassigned
+
+**It observed the partition may be over APPLICATIONS rather than SKILLS — *Force Strike* grants a Dark Side Point only against a living target.**
+
+**⚠ True, and KOTOR does not contradict it. But that is an ALIGNMENT question.**
+
+    ALIGNMENT-01   ⚠ what earns a Dark Side Point
+    goodevil       ⚠ which powers are inherently one side
+
+**⚠ `§4` conflated them because Branch A had nowhere else to put the distinction.**
+
+**Left visible in the document so the next reader does not re-derive it.**

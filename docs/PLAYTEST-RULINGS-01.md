@@ -10979,29 +10979,11 @@
 
 ---
 
-## PT-364 — ⚠ POLICY. Our established rules govern over RCR, unless flagged.
+## PT-364 — ⚠ SUPERSEDED by `PT-372`. See below.
 
-**Owner ruling:** ***"We should take the established rules that we have rather than what the RCR has, unless there's a clear flag you have for me."***
+**⚠ This ruling said *"our established rules govern over RCR, unless flagged."*** **The Library found it collides with `D-AB`, a ratified decision in `C12-DECISION-REGISTER`.**
 
-### ⚠ This changes the standing position
-
-**`CANON-01` is cited across the corpus as *"RCR governs all mechanical questions."*** **⚠ It has been the default all session — `PT-282` stopped a creature format on it, and `PT-304` checked the ladders against it.**
-
-> **⚠ The new order: where WE have an established rule, ours governs. RCR fills gaps and settles questions we have not answered.**
-
-### ⚠ And the obligation it creates is mine
-
-**A flag is owed when RCR contradicts us in a way that MATTERS.** **Not every difference — the ones with consequences.**
-
-**⚠ `PT-361` is what a flag looks like:** **RCR says damage reduction applies only to wounds, 131 of our items carry it, and 58 are armour that would become near-worthless.**
-
-### ⚠ A caution on my own reach
-
-**`CANON-01` is cited in five documents and I have never read it.** **⚠ It is not in my working set.**
-
-> **⚠ So I am recording a change to a policy I know only by citation.** **If `CANON-01` says something more specific than *"RCR governs mechanics,"* this ruling may not reach it.**
-
-**Flagged rather than assumed. The Library holds the document.**
+**`PT-372` replaces it with a four-rank ordering that keeps `D-AB`'s protection.**
 
 ---
 
@@ -11180,3 +11162,253 @@
 **⚠ `§4` conflated them because Branch A had nowhere else to put the distinction.**
 
 **Left visible in the document so the next reader does not re-derive it.**
+
+
+---
+
+## PT-372 — ⚠ THE SOURCE ORDER. Supersedes `PT-364`; extends `D-AB`.
+
+**Owner ruling, reached after the Library flagged `PT-364` against `D-AB`.**
+
+    1  ⚠ our ratified rules       where we have decided, ours governs
+    2  ⚠ KOTOR design intent      what the game did, READ WITH JUDGEMENT
+    3  ⚠ RCR                      the mechanical language, and every gap
+    4     UAA, then Campaign Guide
+
+### ⚠ The critical word in rank 2 is JUDGEMENT
+
+**`D-AB` says:** ***"A game supplies what happened in the galaxy. It never supplies what a mechanic does."***
+
+**⚠ That clause is KEPT, and this session is why. Four cases where the FILES say something false:**
+
+    adrenal effects   ⚠ file says "Cure Moderate Wounds"       NWN leftovers — PT-311
+    item feats        ⚠ file says "Spell Focus (Abjuration)"   D&D leftovers — PT-312
+    lightsaber props  ⚠ 29 entries, 8x AttackBonus 3           a crystal MENU — PT-345
+    zakkeg stats      ⚠ identical to a boma                    a reused block — PT-342
+
+> **⚠ If the FILES governed, all four would be in our rules right now.**
+
+**⚠ Rank 2 is the game's DESIGN INTENT, not its data.** **The data is evidence for the intent and is read as such.**
+
+### ⚠ What this ratifies is existing practice
+
+**`PT-330` took the game's `+3/+7/+12` attack curve over ours.** **`PT-339` took its `2d10` lightsaber.** **`PT-307` took its treasure bands.**
+
+**And `PT-311`, `PT-312` and `PT-345` rejected the files where they were wrong.**
+
+> **⚠ The ordering was already how we worked. It had never been written, so `PT-364` tried to state it and stated it too broadly.**
+
+### ⚠ `D-AB`'s enforcement clause survives unchanged
+
+> ***"Record the disagreement; never silently take the lower."***
+
+**⚠ Which is what `PT-365` already did** — **marked itself `AUTHORED` and named the departure from f.159.**
+
+**⚠ The Library spotted that `D-AB` forbids taking the lower SILENTLY, not taking it at all.** **That reading is correct and it is what makes this ordering compatible rather than contradictory.**
+
+### ⚠ For the Library
+
+**`PT-364` is superseded, not deleted.** **`D-AB` is EXTENDED, not overturned** — **rank 3 onward is `D-AB`'s order verbatim; ranks 1 and 2 are new and sit above it.**
+
+---
+
+## PT-373 — ⚠ WITHDRAWN. `FORCE-POOL-01-v3 §3` is marked SETTLED and I restated it as a discovery.
+
+**I reported the `1.0` unit question as open and *"dissolving."***
+
+> **⚠ `§3` is headed `Regeneration — SETTLED` and carries a full class table.**
+
+    Class                                       in combat   out of combat
+    Guardian · Sentinel · Weaponmaster · Marauder    1            1
+    Consular · Watchman · Assassin                   2            2
+    Jedi Master · Sith Lord                          3            3
+
+**⚠ Flat points, no dice. In combat, once per round on the character's own turn. Fills to the working maximum, never past it.**
+
+### ⚠ And the document already says what I said
+
+> ***"`regeneration.2da` gives forceregen 0.0 in combat and 1.0 out of it — KOTOR grants no Force regeneration during a fight at all."***
+
+**⚠ That is the ZERO observation, already recorded, in the same paragraph as the flag I was answering.**
+
+### ⚠ The flag was narrower than I read it
+
+**It says the UNIT is an inference — *"per second"* rather than per round or per minute.** **It does not say the rule is unsettled.**
+
+> **⚠ We DEPART from the source here deliberately: KOTOR gives 0 in combat, we give 1 to 3.** **The document states that and I read past it.**
+
+**⚠ Tenth time this session I answered a question the corpus had already answered.**
+
+---
+
+## PT-374 — ⚠ WITHDRAWN. `PT-148` already answered this and I did not check.
+
+**I reported:** ***"The Force die base table does not exist. Searched every 2DA in holdings. `k2_classes.2da` is not parseable."***
+
+> **⚠ Both halves were wrong, and `PT-148` had already done the work.**
+
+### ⚠ `PT-148` verified against `k2_classes.2da` months ago
+
+> ***"Every prestige row continues a base row at `+2` Force die. Sith Battlemaster fills it: d8 · Force die 8 · Dexterity, continuing the Sith Assassin."***
+
+**⚠ There IS a rule and it was found: prestige continues its base at `+2`.**
+
+### ⚠ And the file parses. My PARSER was wrong.
+
+**`k2_classes.2da` is a TSV export, not a binary 2DA.** **⚠ `parse2da` rejected it on magic bytes and I reported the FILE as broken.**
+
+    JediGuardian   4    JediWeaponmaster  6    SithMarauder  6
+    JediSentinel   6    JediWatchman      8    SithAssassin  8
+    JediConsular   8    JediMaster       10    SithLord     10
+
+> **⚠ `+2` per prestige tier, exactly as `PT-148` said.**
+
+### ⚠ The failure, named
+
+**`SEND-TO-MECHANICS-AGENT` flagged an unlocated base table. I searched for the table, did not find one, and declared it absent** — **without searching the RULINGS LOG, where the answer was.**
+
+**⚠ Ninth time this session. And the owner caught it by asking *"did we already decide this?"*, which is a question I should be asking myself.**
+
+---
+
+## PT-375 — ⚠ Species age bands do not exist. `E-10` and `E-11` stay blocked. **STANDS.**
+
+**⚠ Checked against the record after `PT-373` and `PT-374` were both withdrawn for restating settled work.**
+
+**Nothing in the rulings log addresses age bands. `SPECIES-CHAPTER-v2 §55` states the dependency and says of the two `AUTHORED_PENDING` fields on Kaleesh and Echani: *"neither appears anywhere in this tree."***
+
+**⚠ This one is a real gap. The other two were not.**
+
+
+**Two documents flag the dependency. ⚠ Checked directly:**
+
+    SPECIES-MASTER   99 species rows · ⚠ ZERO with age data
+    SPECIES-CHAPTER  ⚠ describes the bands in prose; no species carries values
+
+**`SPECIES-CHAPTER-v2` says:** ***"Each species has age bands — child, young adult, adult, middle age, old, venerable — with mechanical effects."***
+
+> **⚠ The framework is written. The values are not. Ninety-nine species need six numbers each.**
+
+**⚠ That is ~594 values and it is a workstream, not a gap to close in a session.**
+
+**RCR has a species age table for its own species; ⚠ ours has 99 and most are not in RCR.**
+
+**Recorded as scoped rather than closed. `E-10` and `E-11` remain blocked and now the reason is a number.**
+
+
+---
+
+## PT-376 — ⚠ Two withdrawals in one batch. The pattern, named.
+
+**The owner asked: *"can you see where we landed on the answer in the files we worked on — did we come to a consensus at some point?"***
+
+**⚠ Two of three had. I had not looked.**
+
+    PT-373   ⚠ FORCE-POOL-01-v3 §3 is headed "Regeneration — SETTLED"
+             with a full class table. I restated it as a discovery.
+    PT-374   ⚠ PT-148 verified forcedie against k2_classes.2da and found
+             the rule: prestige continues its base at +2.
+    PT-375   ⚠ genuine. Nothing addresses age bands anywhere.
+
+### ⚠ And `PT-374` carried a second error inside the first
+
+**I reported `k2_classes.2da` as *"not parseable as a 2DA."*** **⚠ It is a TSV export. My PARSER rejected it on magic bytes and I reported the FILE as broken.**
+
+**`PT-148` had read it successfully months earlier.**
+
+### ⚠ The rule this produces
+
+> **⚠ Before answering a flag, search the RULINGS LOG and the FLAGGED DOCUMENT for a prior answer.**
+
+**⚠ Both were one command away.** **`FORCE-POOL-01-v3` contained its own answer three lines above the flag I was responding to.**
+
+**⚠ This is the tenth instance this session of answering from a proxy instead of the record.** **The others were caught by checks; this one was caught by the owner asking a question I should ask myself.**
+
+---
+
+## PT-377 — ⚠ WITHDRAWN. There is no UAA lifespan table. I read a blog post as a book.
+
+**I reported the UAA carries a complete lifespan table in our exact six bands.**
+
+> **⚠ It does not. The Extractor read the contents page's own TABLES list — nine tables, eight prestige-class progressions and one suit of armour.**
+
+### ⚠ Where the claim came from
+
+**A search result: Roqoo Depot, 2011.** ***"Here is a table of all the lifespan information provided in the Ultimate Alien Anthology."***
+
+**⚠ A fan COLLECTED per-entry data into a table. I read *"table of information provided in the UAA"* as *"table in the UAA."***
+
+**⚠ Eleventh time this session, and the shape is the one `CANON-01` exists to prevent: a secondary source describing a primary one, read as the primary.**
+
+### ⚠ The data exists — per entry, across ~190 entries
+
+    Bith f.24        Child 1-11 · young 12-15 · adult 16-50 · middle 51-70 · old 71-84 · venerable 85+
+    Hutt f.74        Child 1-70 · young 71-90 · adult 91-650 · middle 651-844 · old 845-925 · venerable 926+
+    Toydarian f.165  Child 1-5 · young 6-8 · adult 9-39 · middle 40-61 · old 62-74 · venerable 75+
+
+**⚠ Collecting them means reading ~190 entries across ff.7-196. A job, not a lookup.**
+
+### ⚠ And RCR's half was already delivered and already in our corpus
+
+**`Table 6-2: Ages by Species` f.120 — seventeen species. `Table 6-1: Aging Effects` same folio:**
+
+    Child         -3 Str/Con, -1 Dex     -1 mental
+    Young adult   -1 each                -1 each
+    Adult         none                   none
+    Middle age    -1 each                +1 each
+    Old           -2 each (cum -3)       +1 each (cum +2)
+    Venerable     -3 each (cum -6)       +1 each (cum +3)
+
+**⚠ Cumulative, nothing below 1. That is the effects half our chapter states in prose without numbers.**
+
+**⚠ And `FORCE-TRAINING-01` already builds a `Persuade` ladder on these bands and already records `Table 6-2` covers 17 of 31.**
+
+### ⚠ No conflict. `D-AB` is not engaged.
+
+**RCR has the EFFECTS and seventeen species' bands. UAA has bands for ~190 and no effects at all. Different jobs.**
+
+---
+
+## PT-378 — `SPECIES-AGES-01`. Six read, the rest scoped exactly.
+
+**Extractor read the UAA contents at ff.4–5 directly — the book's own species list, not an index.**
+
+    ⚠ present in UAA    25 of 32
+    ⚠ absent            7 — Human · Rakata · Rattataki · Selkath · Sith · Kaleesh · Echani
+
+### The six read
+
+    Bith        1-11 · 12-15 · 16-50 · 51-70 · 71-84 · 85+
+    Cathar      1-11 · 12-17 · 18-49 · 50-65 · 66-89 · 90+
+    Dashade     1-10 · 11-15 · 16-44 · 45-69 · 70-84 · 85+
+    Miraluka    1-11 · 12-15 · 16-44 · 45-69 · 70-84 · 85+
+    Nautolan     1-9 · 10-14 · 15-40 · 41-54 · 55-69 · 70+
+    Togruta     1-11 · 12-17 · 18-54 · 55-74 · 75-94 · 95+
+
+### ⚠ Three of my predictions were wrong, and all three in our favour
+
+**I expected `Cathar`, `Miraluka` and `Dashade` to be thin or absent. ⚠ All three have full UAA entries and all three are now read.**
+
+> **⚠ The gap is four species, not six.**
+
+### ⚠ And the Extractor narrowed the remaining job from nineteen to six
+
+**Of the nineteen still unread in the UAA, ⚠ seventeen overlap RCR's `Table 6-2`, which we can hold without another UAA read.**
+
+**⚠ Genuinely UAA-only and unread: `Arkanian`, `Devaronian`, `Gand`, `Nikto`, `Verpine`, `Weequay`. Six species, roughly eight folios.**
+
+### ⚠ And a practical finding worth keeping
+
+> ***"The `Age in Years` field sits near the end of the descriptive block, so a species opening late on a folio has its age line overleaf. Expect a two-folio read per species."***
+
+**`Cathar` opens on f.28 and its age line is on f.29.**
+
+### ⚠ What we cite but do not hold
+
+**`FORCE-TRAINING-01` builds a `Persuade` ladder on these bands and cites `Table 6-2` for seventeen species.** **⚠ We have never transcribed its numbers.**
+
+**That is fourteen of our species available from a table we already reference and cannot read.**
+
+### ⚠ `D-AB` not engaged
+
+**All six read are UAA-only species. The disagreement test can only run on the overlap, and the overlap is entirely unread.**

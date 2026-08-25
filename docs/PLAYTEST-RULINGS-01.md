@@ -5809,7 +5809,7 @@
 
 ---
 
-## PT-212 — The Tech Specialist gets `Both Sides At Once`
+## PT-212 — The Tech Specialist gets `Two Fronts`
 
 **⚠ It had no class feature, on a faithfulness argument that does not survive.**
 
@@ -6854,7 +6854,7 @@
 
     Field Surgery      1   spend a medpac, restore 1 wound to an adjacent dying character
     Stabilise          4   2 wounds, and they are no longer Disabled
-    Back On Their Feet 8   3 wounds, and once per encounter at 4 metres
+    Back Up 8   3 wounds, and once per encounter at 4 metres
 
 **⚠ And the name now reads better against the class than it did.** **`Field Surgery` on a *Doctor* is redundant — a doctor does surgery. On a *Medic* the word *field* is doing work.**
 
@@ -8301,3 +8301,2516 @@
 **Per-creature stat blocks.** **Eighteen beasts, each needing type, size, abilities, special qualities and the one thing that makes it different.**
 
 **And three of RCR's five per-type blocks are unread** — **Predator, Scavenger and Vermin, on ff.333–334.** **⚠ Predator is the one tiers 2 and 3 need.**
+
+---
+
+## PT-284 — Tier is size and danger only. Type is free.
+
+**Owner ruling.**
+
+    tier 1   Small      wound points = Con
+    tier 2   Medium     wound points = Con
+    tier 3   Huge       wound points = Con x 2
+
+> **⚠ Any of RCR's five creature types can appear at any tier.** **A vermin can be tier 3. A predator can be tier 1.**
+
+**Which means the same animal appears at more than one tier by age.** **⚠ A young boma is tier 1; a grown one is tier 2.**
+
+**A tier-3 beast is better because it is *larger*, not because it is a different kind of thing.**
+
+---
+
+## PT-285 — Six answers, and 5e settled the one I could not
+
+**Owner rulings on the open questions.**
+
+### ⚠ 1 · A beast grows up, and growth is tied to TIME
+
+**Not to the master's level. A young boma becomes a grown boma because time passes.**
+
+> **⚠ Which means the bond DC and price are paid once. You do not replace a companion to keep pace.**
+
+**⚠ OPEN: the age brackets.** **Each of the eighteen needs its lore checked for how long it takes to mature.** **That is a research pass, not a design decision.**
+
+### 2 · Not every beast exists at every tier
+
+**The tiers in `BEASTS-01` stand as written.** **A gizka is never Huge; a zakkeg is never Small.**
+
+### 3 · When it dies you start again
+
+**Buy another, or find one in the wilds and bond it.** **⚠ Full DC, full price. No discount, no grieving mechanic.**
+
+### 4 · The beast takes its own turn
+
+**⚠ A second playable character, not a rider on the master's turn.**
+
+**Which departs from `PT-201`, and deliberately.** **The Droid Master's four henchmen took 62% of a four-player round; a Beast Master has ONE companion.** **⚠ One extra turn in five is 20%, which is a party member's share and not a problem.**
+
+### 5 · Feats and skills, 3.5e-style
+
+**3.5e: *"an animal companion gains additional skill points and feats for bonus HD as normal for advancing a monster's Hit Dice."***
+
+**RCR agrees independently:** **creatures gain one feat at 3rd level and every three levels thereafter, and skill points come from the per-type block.**
+
+**⚠ And Pathfinder adds the line worth stealing:** **a companion with Intelligence 3 or higher may take any feat it is physically capable of using.** **Below that, a restricted list.**
+
+> **⚠ Which is the difference between a trained animal and a thinking one, expressed as a number.**
+
+### ⚠ 6 · Anyone may buy a beast. Only a Beast Master's grows.
+
+**That is 5e's own answer and it is exactly the line the owner was reaching for.**
+
+**In 5e anyone can buy an animal or a mount. Its statistics are fixed forever.** **Only the Beast Master's companion scales.**
+
+> **⚠ So the class is not *the only one with a beast*. It is *the only one whose beast becomes something*.**
+
+**Never permanently bonded for anyone else.**
+
+### 7 · Beasts can be healed
+
+**`Medicine` works on a beast.** **⚠ Which means `Field Surgery`'s *"an adjacent character"* needs widening to include one.**
+
+### 8 · Non-combat abilities are per-beast
+
+**A cannok eats machinery. A tach manipulates objects. A nexu sees in infrared.**
+
+**⚠ Each stat block carries its own, and that is the work still to do.**
+
+---
+
+## PT-286 — ⚠ No lore age brackets exist. Saga Edition already did the split.
+
+**Searched for lifespans and maturity ages across the Dxun creatures.**
+
+> **⚠ Wookieepedia gives none. No lifespan, no maturity age, for any beast on the list.**
+
+**A hard negative, and the research pass `PT-285` scheduled cannot be completed as framed.**
+
+### But the split already exists, done by someone else
+
+    Boma            a full Saga Edition entry
+    Boma, Young     ⚠ a SEPARATE Saga Edition entry
+    Maalraa         CL 5
+    juvenile zakkeg named in the Wookieepedia article
+
+**⚠ Saga Edition stat-blocked these creatures and already made the young/adult distinction the owner asked for.**
+
+**And `CANON-01` rank 2 is the KOTOR Campaign Guide — Saga Edition.** **Its creature entries are legitimate conversion input.**
+
+> **⚠ So the age bracket is not a number of years. It is a stat block.** **A young boma is tier 1 because Saga printed a young boma; a grown one is tier 2 because Saga printed that too.**
+
+**Which removes the research pass entirely and replaces it with a conversion.**
+
+### ⚠ And the search returned two real finds on the maalraas
+
+**It uses the Force to cloak itself** — *"nearly indistinguishable from the darkest shadows; only extremely well-trained Jedi or Sith could recognise their silhouettes."*
+
+**⚠ Its hide and bones are heavily resistant to lightsabers and intense heat.**
+
+> **⚠ A companion that resists lightsabers, in a campaign made of lightsabers.** **That is the maalraas's one thing and it needed no authoring.**
+
+**And:** *"Maalraas could be trained and were sometimes utilised as loyal guard beasts. A number were exported and sold on the black market."*
+
+**⚠ Which confirms `PT-281`'s buy-a-beast mechanic in lore, for this species specifically.**
+
+### What this changes
+
+**⚠ The Extractor request should now ask for the Campaign Guide's creature entries as well as RCR's three unread per-type blocks.**
+
+**Saga's `Boma` entry already carries: Damage Reduction 5, Natural Armour +9, Ramming Attack, Scent, Low-Light Vision, and four feats.** **That is a stat block we convert rather than invent.**
+
+---
+
+## PT-287 — ⚠ The RCR audit. Six of seven: RCR has the rule, we authored a system beside it.
+
+**Extractor, seven questions, two evidence grades — READ versus INDEXED, with INDEXED explicitly called *a relay, not a warrant*.**
+
+### ⚠ The conflict — `PT-246` contradicts a printed rule
+
+**RCR f.382, the character record sheet, READ. The labels are printed:**
+
+    FORTITUDE (CONSTITUTION) · REFLEX (DEXTERITY) · WILL (WISDOM)
+
+> **⚠ One ability per save. Fixed. No alternatives.**
+
+**`PT-246` asserts Strength *or* Constitution to Fortitude, and Wisdom, Charisma *or* Intelligence to Will.**
+
+**⚠ Strength never feeds Fortitude in RCR. Charisma and Intelligence never feed Will.**
+
+> **That is not a gap being filled. It is a printed rule being contradicted, and `CANON-01` says RCR governs.**
+
+**⚠ OWNER RULING REQUIRED.**
+
+**And the second half is a separate finding:** **RCR names multiple abilities per class in *prose*, as guidance — f.42's Noble: *"Charisma is undoubtedly a noble's most important… Wisdom and Intelligence form the basis of other important skills."*** **There is no `key ability` field on a class table.**
+
+**So the two-ability *structure* is authored, and the save mapping it drives is contradicted. Two findings, not one.**
+
+### Range increments — the `−2` is confirmed, our ceiling is not
+
+**UAA f.24, READ:** Bith suffer **−4 per range increment** *"instead of the normal −2 penalty per range increment."*
+
+> **⚠ UAA states RCR's rule in order to except a species from it. The `−2` exists and UAA depends on it.**
+
+**⚠ `PT-163`'s *"three increments is the maximum"* has no support in anything read.** **`range increment 134` and `range penalty 147` are indexed and unopened.**
+
+### Craft — ⚠ the strongest duplicate risk
+
+**Indexed: `Craft 80` · `mastercraft items 136` · `mastercrafter (class feature) 53`.**
+
+**READ f.42:** the Noble's class skills include **`Craft* (Int)`**, footnoted as a category skill — *"each time this skill is learned, a specific category must also be chosen."*
+
+> **⚠ RCR has three interlocking pieces of an item-creation system and `CRAFTING-01` is a KOTOR recipe port sitting beside all of it.**
+
+**And the shape conflicts before the numbers do:** **RCR's Craft is per-category — Craft (armour), Craft (lightsaber). A video-game recipe table has no such structure.**
+
+### Vitality and dying — RCR answers it in full
+
+**f.288 and f.160 READ, near-verbatim: dead at `−10` wounds, dying from `−1` to `−9` losing one a round, stabilise at *Treat Injury* DC 15 or *Heal Another* DC 10, 10% natural recovery a day, 10% consciousness an hour.**
+
+**⚠ `DEATH-AND-DIFFICULTY-01`'s three modes may be additive rather than duplicative — but the base layer exists and we did not cite it.**
+
+### ⚠ And the Extractor corrected its own earlier negative
+
+**`PT-283` recorded *"RCR carries no companion rule."*** **That was true of the creature chapter and false of the book.**
+
+**f.123 `Followers`, READ:** **a Reputation check DC 20 at 10th level and each level after; total follower levels capped by the Reputation bonus.**
+
+> **⚠ A rules-supported retinue that scales off a character statistic and caps by it.** **If the Beast Master needs an anchor, RCR's is Reputation, not level.**
+
+### Two more the Extractor volunteered
+
+**`Degrees of success`, f.70, READ:** **DC = success · DC+10 = greater · DC+20 = perfect.** **⚠ Anything in the corpus grading outcomes above a DC duplicates this.**
+
+**`Stacking bonuses`, f.260, indexed.** **⚠ RCR has a full same-descriptor non-stacking system. `PT-176`'s *threat multipliers do not compound* may be a special case of it.**
+
+### ⚠ The pattern, and the countermeasure
+
+> **In every case the corpus authored a *system* while RCR carried a *rule with the same job*, in a chapter nobody opened because the system's name did not match the book's.**
+
+**Crafting is a skill in Chapter 4, not an equipment rule. Followers are under Reputation, not near creatures. Degrees of success is a GM sidebar.**
+
+**⚠ The countermeasure is three folios: the index, ff.379–381.**
+
+**It would have caught every item above except creature pricing** — **which is the one case where the index came back empty and the Extractor could not tell absent from unindexed.**
+
+> **⚠ Read the index before authoring anything. It is the cheapest check this project has been offered.**
+
+---
+
+## PT-288 — ⚠ `PT-287`'s conflict is withdrawn. I conflated two mechanisms.
+
+**I reported `PT-246` as contradicting a printed RCR rule. It does not.**
+
+    RCR f.382    FORTITUDE (CONSTITUTION)
+                 ⚠ which ability MODIFIER you ADD to the roll. The save FORMULA.
+
+    PT-246       Soldier STR/CON -> Fortitude strong
+                 ⚠ which save has the STRONG PROGRESSION for the class.
+
+> **⚠ Every d20 class has both and they are independent.** **A Fighter adds Constitution to Fortitude *and* has a strong Fortitude progression. Two separate facts about one save.**
+
+**Both rules stand, unchanged.**
+
+    formula       RCR's       Fort + Con · Ref + Dex · Will + Wis
+    progression   PT-246's    the class's two abilities pick which are strong
+
+### ⚠ What went wrong, and it is a shape worth naming
+
+**The Extractor gave me a `READ` finding from a printed character sheet — about as solid as evidence gets.**
+
+> **⚠ I accepted it as a contradiction without asking what the printed label was *for*.**
+
+**A correct citation, applied to the wrong question.** **`PT-171`'s shape: the right principle aimed at the wrong instance.**
+
+**⚠ And it nearly cost a working rule.** **Had the owner not caught it, `PT-246` would have been reverted to satisfy a rule it never touched.**
+
+### The other six findings stand untouched
+
+**`Craft` at f.80 with mastercraft items and a mastercrafter class feature.**
+**`Followers` at f.123, anchored on Reputation.**
+**Degrees of success at f.70 — `+10` greater, `+20` perfect.**
+**Stacking bonuses at f.260.**
+**Dying and recovery at ff.160 and 288, answered in full.**
+**⚠ And the range increment ceiling, which is unverified in either direction.**
+
+### ⚠ The countermeasure is unchanged and now doubly earned
+
+> **Read the index, ff.379–381, before authoring anything.**
+
+**⚠ And read what a citation *governs* before treating it as a conflict.**
+
+---
+
+## PT-289 — Beast list closed at twenty-five. Two authored from one template.
+
+**Owner rulings. `Kor'slug` added; `Shyrack` and `Mykal` built from one stat line.**
+
+### ⚠ Neither has a usable blueprint
+
+**`Mykal` is level 1, 7 HP, Dexterity 18, Strength 12. `Shyrack` has no blueprint at all** — **it is module-local, in the Korriban archives rather than `templates.bif`.**
+
+> **⚠ One template, two beasts, and the difference is authored rather than ported. Marked as such.**
+
+    ⚠ BOTH FLY. Both take Flyby Attack.
+
+    Mykal      alone  · ⚠ its one thing is being IGNORED
+                         no creature treats it as a threat
+    Shyrack    swarms · ⚠ its one thing is being NEVER ALONE
+                         grants a flanking bonus to every ally adjacent
+                         to its target, not only itself
+
+**Same numbers, same movement, different verbs.** **⚠ One is unnoticed; the other is never alone.**
+
+### The sweep that closed it
+
+**⚠ No shyrack in `templates.bif` under any name.** **Checked by name, by Intelligence ≤ 4 across 79 creatures, and by Race value across 399.**
+
+**`c_firixa` was the near-miss — all-10 abilities and 10 HP, which is a placeholder template rather than a creature.**
+
+**⚠ Same cause as `PT-275`'s 99 missing upgrade blueprints: module archives, not `templates.bif`.**
+
+### Also confirmed this pass
+
+**`Maalraas` exists as `c_maalrass01`** — **double-s, which is why every search missed it.** **⚠ And its tag is `KhoundB`: someone built it from a kath hound template and never changed the tag.**
+
+**`Terentatek` is `terantanak` — level 10, 150 HP, STR 30.**
+
+**`Young Rancor` is level 15, 115 HP, AC 7 — ⚠ and Strength 45, identical to the adult.** **It hits as hard and cannot take a hit, which is the age split done properly.**
+
+**`Tuk'ata` has Intelligence 8** — **far above every other beast at 3.** **⚠ By `PT-285`'s Pathfinder line it is the one companion that may take any feat.**
+
+---
+
+## PT-290 — Atlas: `D-NAMES-01`, and a check that closed a window
+
+**⚠ Six register/source name disagreements. Five were not errors.**
+
+**The register carries `system`, `sector`, `region`, `coord`, `tier`, `no`, `note` — and no field for the *planet*.**
+
+> **⚠ `Bhargebba` is a correct SYSTEM name. A reader looking for `Bhargebba Six` finds nothing.**
+
+**Renaming would have broken the register's own convention across 4,931 rows to fix a lookup problem in six.** **A field fixes the lookup and leaves the convention intact.**
+
+**⚠ `Ploo` was the only real error** — **two inhabited planets, Ploo II and Ploo IV, whose peoples are permanently at war.** **One row where two were needed.**
+
+### ⚠ And the validator caught a divergence inside an hour
+
+**Fixing Kuar and Serroco changed the live menus and not the banked research records.**
+
+> **⚠ Same shape as the Kuar silent edit, the stale prompt behind `PT-261`, and the false Star Map commit.**
+
+**The difference:** **the check runs on every change, so the window between creating a divergence and finding it is one command rather than one session.**
+
+**⚠ That is the countermeasure this project has been looking for since `PT-88`.** **Not a better rule — a shorter window.**
+
+---
+
+## PT-291 — `dialog.tlk` read. ⚠ The shyrack was never missing.
+
+**Both string tables in holdings. `tlk.py` written — K1 holds 49,369 strings, K2 holds 136,551.**
+
+**⚠ And the first lookup overturned `PT-289`.**
+
+    g_veerkal03   Mykal          lvl  1 ·   7 HP · AC 1 · DEX 18
+    g_veerkal01   Verkaal        lvl  3 ·  20 HP · AC 4 · DEX 22
+    g_veerkal02   Shyrack        lvl  5 ·  32 HP · AC 7 · DEX 24
+    g_veerkal04   Shyrack Wyrm   lvl 12 · 116 HP · AC 7 · DEX 28
+
+> **⚠ One family, four creatures, Dexterity climbing 18 → 28. All in `templates.bif` the whole time.**
+
+**`PT-289` recorded the shyrack as absent after checking by name, by Intelligence across 79 creatures, and by Race across 399** — **and proposed authoring it from the `Mykal` template.**
+
+**⚠ Every one of those checks was sound. All three missed it, because the file is named after a *different creature in the same family*.**
+
+> **⚠ A resref is not a name. `g_veerkal02` is a shyrack and nothing about the filename says so.**
+
+**That is a new failure shape: not a stale document, not a wrong path — a correct search against an index that does not contain the thing being searched for.**
+
+### Three other corrections in the same lookup
+
+    Kataarn      -> ⚠ KATARN, one a
+    Maalraas     -> ⚠ Maalrass, one a — c_maalrass01 was right
+    Young Rancor -> confirmed, strref 32460
+
+### ⚠ And it makes the item documents readable
+
+**`u_l_crys_02` is *"Crystal, Rubat"*, and its description reads in full:** *"Damage +1, Attack +1. Used in lightsaber construction, rubat crystal is mined on Phemis."*
+
+**⚠ Which is `AGENDA-CURRENT §2.1c` closed** — **994 items and 489 creatures stop being resrefs.**
+
+### Twenty-seven companions
+
+**`Verkaal` and `Shyrack Wyrm` added; the authored `Shyrack` withdrawn in favour of the ported one.**
+
+---
+
+## PT-292 — Item documents regenerated with names. `§2.1c` closed.
+
+    947 of 994 named from dialog.tlk
+     47 carry a runtime token — <FullName>'s Armband — left visible
+        ⚠ so they are not mistaken for real names later
+
+**⚠ And a false alarm worth recording.** **A first pass reported 675 of 994 as placeholders.**
+
+**They were not.** **The names carry inventory *sort prefixes* — `{01}Adrenaline Amplifier`, `{cr 02}Crystal, Rubat`.** **Stripping the braces leaves a real name.**
+
+> **⚠ I nearly reported a two-thirds failure rate on a working extraction because I did not read what the braces were for.**
+
+**Same shape as `PT-288`: a correct observation, wrongly interpreted.**
+
+---
+
+## PT-293 — What `dialog.tlk` closes, and what it opens
+
+### Closed
+
+**`AGENDA-CURRENT §2.1c`** — **item names and descriptions. Done.**
+
+**`PT-289`'s missing shyrack** — **found as `g_veerkal02`, with three siblings.**
+
+**Three name corrections** — **`Katarn` not Kataarn, `Maalrass` not Maalraas, `Young Rancor` confirmed.**
+
+### ⚠ What it opens, and it is larger
+
+**489 creature blueprints now have readable names.** **Every `.utc` carries `FirstName` as a strref and we could not read one until now.**
+
+> **⚠ Which means the beast list can be checked against the games rather than against Wookieepedia.** **`PT-291` already found one creature the wiki-driven search missed entirely.**
+
+**And 865 item *descriptions* are readable** — **`u_l_crys_02` reads *"Damage +1, Attack +1. Used in lightsaber construction, rubat crystal is mined on Phemis."***
+
+**⚠ That is `EQUIPMENT-01 §239`'s *"several hundred items… a data-extraction job"* becoming a solved problem rather than a scheduled one.**
+
+### ⚠ And one thing to be careful of
+
+**`dialog.tlk` is what the game *displays*.** **It is not what the game *does*.**
+
+**`PT-252` found `Affliction`'s displayed description diverges from its coded behaviour.** **⚠ A name is safe; a description is `source: wiki_description`'s equivalent and should be marked as display text rather than mechanics.**
+
+---
+
+## PT-294 — `Afflict` and `Plague` given the standard DC. And the full sweep: only two real departures.
+
+**⚠ Both now use `5 + Force levels + Wisdom and Charisma modifiers`, like every other power.**
+
+**And both deliver `1 point from each physical attribute per round` — the *observed* effect, not the described one.**
+
+### Why they were the only two
+
+**⚠ 98 powers with both a name and a description, checked against `spells.2da`:**
+
+    Affliction   flat DC 20     every other power uses 5 + level + WIS + CHA
+    Plague       flat DC 100    ⚠ unreachable. A level-20 Jedi rolls about d20+20
+
+> **⚠ `Plague`'s save can never succeed. Which means the code is not doing what the description says, and the DC is the tell.**
+
+**And StrategyWiki independently records both as miscoded — `−1` attribute every 6 seconds against a described 1 per second.**
+
+**Two independent lines of evidence landing on the same pair.**
+
+### ⚠ Twelve further anomalies, and none is a defect
+
+**Three sort cleanly:**
+
+**Cost 0 with a real effect** — `Dominate Mind` · `Force Camouflage` · `Force Deflection` · `Force Redirection` · `Improved/Master Force Body` · `Improved/Master Force Camouflage` · `Scramble Droid`.
+
+> **⚠ Every one is a PASSIVE or a CONVERSATION power.** **`Force Deflection`: *"This power is always in effect."* `Dominate Mind`: *"extra options appear in conversations."***
+
+**They cost nothing because nothing is spent. Correct as printed.**
+
+**Description states a Force cost the column contradicts** — `Drain Force` says 10, column says 5; `Improved` says 20, `Master` says 30, both columns say 5.
+
+**⚠ Not a cost mismatch.** **The description's number is *how many Force Points the TARGET loses*, not what the caster pays.** **The column is the caster's cost.**
+
+> **⚠ Two different quantities in adjacent sentences, and I nearly reported nine defects from misreading one word.**
+
+### ⚠ The method, recorded
+
+**A description that contradicts *the data* is checkable. A description that contradicts *the code* is not.**
+
+**Only `Afflict` and `Plague` failed the checkable test** — **and they are the only two the wiki flags as miscoded.**
+
+**⚠ That agreement is what makes the correction safe.** **Everything else in `FORCE-POWERS-01` reads as printed because it is printed correctly.**
+
+---
+
+## PT-295 — ⚠ `PT-253` and `PT-256`'s conversions had never been applied to the document
+
+**Asked whether the Force powers were finished. They were not.**
+
+    65 duration values still in SECONDS   ⚠ PT-256 set 3s per round and it never ran
+     2 distances off the 2-metre grid     ⚠ PT-253 rule 4, same
+
+> **⚠ Two rulings, both correct, both recorded, neither applied to the file they govern.**
+
+**Now converted:**
+
+    Burst of Speed      12 rounds        Horror             4 rounds
+    Insanity             6 rounds        Energy Resistance  40 rounds
+    5 metres  -> 4 metres, 2 squares     15 metres -> 14 metres, 7 squares
+
+**Check 20 clean. Zero second-values remain.**
+
+### ⚠ Tenth instance of the shape, and the worst kind
+
+**`PT-88` · `PT-118` · `PT-139` · `PT-140` · `PT-190` · `PT-228` · `PT-233` · `PT-242` · `PT-245` · this.**
+
+**⚠ But the others were decisions that never reached a document. These reached the rulings log, were cited, and were treated as done.**
+
+> **A ruling that is recorded and unapplied is worse than one that is unrecorded** — **because the record says it is finished.**
+
+**The Atlas agent's countermeasure is the answer and it is already proven:** **a check that runs on every change rather than before every push.**
+
+**⚠ `check_grid` caught the distances the moment it was asked. Nothing was asking it.**
+
+---
+
+## PT-296 — Force powers: what is actually done
+
+    88 powers          named, costed, ranged, class-gated
+    20 with dice       every damage power rolls — PT-268
+    DC formula         5 + Force levels + WIS + CHA, universal — PT-255
+    durations          rounds, not seconds — PT-295
+    distances          on the 2-metre grid — PT-295
+    Afflict, Plague    standardised and corrected to observed — PT-294
+    scaling            Force levels, not character levels — PT-253
+    caps               per-family, four different answers — PT-268
+
+### ⚠ What remains
+
+**`Force Distraction` and `Force Strangle` are still unresolved** — **`PT-252` found neither on either wiki, and `dialog.tlk` was not checked for them.**
+
+**⚠ That is now a five-minute job rather than a research question.**
+
+**And the eleven powers authored inside a playtest to make it run have never been verified against source.** **`PT-146` named them and nobody has looked.**
+
+---
+
+## PT-297 — `Afflict` and `Plague` reverted to the file's own figures
+
+**Owner ruling. ⚠ Reverses half of `PT-294`.**
+
+    DC        5 + Force levels + WIS + CHA   ⚠ owner ruled, stands
+    effect    seven / twelve points from each physical attribute
+              ⚠ the file's figure, restored
+
+**`PT-294` changed the effect to `1 point per round` — the behaviour StrategyWiki reports — on my own reading. The owner did not rule it and the document did not say so.**
+
+> **⚠ The DC was the owner's instruction. The effect change was mine, made without asking, in a document that reads as a port.**
+
+**Reverted. `FORCE-POWERS-01` now states what the game's own string table states.**
+
+### ⚠ And the principle it settles
+
+**`dialog.tlk` is the source. StrategyWiki's *observed* behaviour is a secondary claim about a bug.**
+
+> **A port ports what the source says. If the source is buggy, that is a note, not a licence to substitute.**
+
+---
+
+## PT-298 — The authored-departure sweep. One power, and it was already flagged.
+
+**Compared every entry in `FORCE-POWERS-01` against its source description from `dialog.tlk`, looking for effects ours adds.**
+
+    88 powers checked
+    ⚠ 1 departure
+
+**`Force Strangle` — our rename of `Wound` — adds *"and the target is stunned for that duration."***
+
+**⚠ Source `Wound` does damage over time and does not stun.**
+
+> **`PT-193` flagged this and nobody acted. It has been an authored buff sitting in a document that reads as a port for a hundred rulings.**
+
+### And `Force Distraction` resolves clean
+
+**It is `Mind Trick` renamed.** **Same effect, same duration — 30 seconds is 10 rounds.** **⚠ Pure rename, no mechanical change.**
+
+### ⚠ What the sweep proves
+
+**Eighty-seven of eighty-eight powers say what the source says.**
+
+**The corpus is a faithful port with one known exception, and that exception is now named rather than hiding.**
+
+**⚠ Owner ruling wanted on `Force Strangle`:** **keep the stun and mark it authored, or drop it and match `Wound`.**
+
+---
+
+## PT-299 — `Force Strangle` keeps its stun, marked authored
+
+**Owner ruling. ⚠ The only authored departure in eighty-eight powers, and it stays.**
+
+    source Wound       damage over time, no stun
+    Force Strangle     the same damage, ⚠ AND stunned for the duration
+
+**Marked in `FORCE-POWERS-01` at the point of the clause** — **not in a footnote, not in a preamble.** **A reader meeting the stun meets the mark.**
+
+### ⚠ Why the marking matters more than the ruling
+
+**`PT-298` found this by comparing every entry against `dialog.tlk`.** **It survived `PT-193`, which flagged it, and a hundred rulings after.**
+
+> **⚠ It read as a port because everything around it was one.**
+
+**An authored clause in a ported document is invisible unless it says so.** **Now it says so.**
+
+### What the Force powers workstream now stands at
+
+    88 powers        ⚠ 87 faithful, 1 authored and marked
+    dice             every damage power rolls
+    DC               5 + Force levels + WIS + CHA, universal
+    durations        rounds
+    distances        on the 2-metre grid
+    scaling          Force levels, per-family caps
+
+**⚠ Two items remain: `PT-146`'s eleven playtest-authored powers, never verified against source.**
+
+**And that is now a `dialog.tlk` comparison rather than a research question — the same sweep `PT-298` ran, pointed at eleven entries.**
+
+---
+
+## PT-300 — ⚠ `PT-146` closes itself. And a conflict inside `Force Strangle`.
+
+### The eleven authored powers are obsolete
+
+**`PT-146`: a playtester authored eleven power effects to run S4, because `POWER-COSTS-01` supplied cost and no effect.**
+
+**⚠ Checked: all 89 rows in `FORCE-POWERS-01` now carry a real effect, none under 80 characters, all sourced from `dialog.tlk`.**
+
+> **⚠ The eleven were a workaround for a document that had no effects. The document has effects now.**
+
+**Nothing to verify. The gap they filled is closed and they are superseded.**
+
+### ⚠ But the sweep found a real conflict
+
+**`Force Strangle` appears in three tables and two of them disagree:**
+
+    main power table    1d6 per TWO Force levels, maximum 5d6
+    strangle chain      1d6 per FIVE Force levels, no cap stated
+
+    at Force level 30   5d6 = 17.5  ·  6d6 = 21.0
+    ⚠ and the cap bites at FL 10 in one and never in the other
+
+**⚠ Two lists of the same fact, drifting. Sixth instance recorded.**
+
+**`PT-268` set the per-family caps and wrote them into the main table only.** **The chain tables predate it and were never touched.**
+
+### ⚠ And a note on my own check
+
+**I flagged `Force Strangle` as having a 30-character effect. It does not** — **my sweep was reading a damage column from a different table as though it were an effect field.**
+
+> **⚠ A check that matches on the wrong table reports a defect that is not there, and hides one that is.** **`PT-198`'s target-error shape.**
+
+**The false positive is what surfaced the true conflict, which is luck rather than method.**
+
+**⚠ Owner ruling wanted: `1d6` per two Force levels capped at `5d6`, or `1d6` per five uncapped?**
+
+---
+
+## PT-301 — ⚠ The 10-dice caps flatlined every Force user at level 10. Replaced.
+
+**Owner found it by asking what the caps actually did.**
+
+    Force Shock       1d6 per FL, cap 10d6    ⚠ caps at Force level 10
+    Force Lightning   same                     ⚠ Force level 10
+    Drain Life        1d4 per FL, cap 10d4    ⚠ Force level 10
+
+> **⚠ A pure Jedi at Force level 30 dealt exactly the same Force damage as one at 10. Twenty levels of nothing.**
+
+**`PT-268` built that in. I solved *"30d6 is too much"* without checking what the cap did to the curve** — **and produced the exact flatline `PT-239` and `PT-281` were written to prevent.**
+
+### The replacement — owner's shape
+
+> **`1d6` per Force level to 20, then `1d6` per two levels. Maximum `25d6`.**
+
+    FL 10   10d6 = 35.0      FL 20   20d6 = 70.0      FL 30   25d6 = 87.5
+
+**⚠ Soft cap at 20 — KOTOR's own level ceiling — and a hard cap at 25 dice.** **Nothing flatlines.**
+
+**Applied to fifteen entries. `1d4` powers take `25d4`; half-rate powers take `12d6`.**
+
+### ⚠ And the source has no damage cap at all
+
+**`xptable.2da` is 20 rows. KOTOR stops at character level 20.**
+
+> **⚠ There is no damage cap in the files because the LEVEL CAP is the damage cap.** **The game never had to solve this. We do, because `PT-119` went to 30.**
+
+**The only cap in `spells.2da` is `maxcr` — the maximum Challenge Rating a power can affect. A target cap, not a damage cap.**
+
+### ⚠ A correction to how I have been pricing all of this
+
+**I priced Force powers against `Barrage`, an attack. That comparison called 3.2x broken.**
+
+**The better measure is casts-to-kill:**
+
+    70 damage vs a KOTOR rancor at 350 HP     20%, five casts
+    70 damage vs our level-30 character       28%, four casts
+    87.5 vs the same                          35%, three casts
+
+**⚠ Three casts to kill a player character, at the cost of a declaration and a pool that empties, is a glass cannon rather than a broken one.**
+
+---
+
+## PT-302 — `Force Crush` halves its rate rather than its cap
+
+**⚠ At `25d10` it would deal 137.5 — 54% of a level-30 character's vitality in one cast, bypassing most defences, with no tiers.**
+
+> **`1d10` per TWO Force levels to 20, then `1d10` per four. Maximum `15d10`.**
+
+**`15d10` = 82.5, just under the `d6` family's 87.5, and it never flatlines.**
+
+### Why halve the rate rather than the count
+
+**Capping at `17d10` gives the right number and ⚠ flatlines at level 17 — the fault just fixed.**
+
+**Dropping to `d8` changes what the power is. ⚠ `Force Crush` is a `d10` power; the big die is its identity.**
+
+### ⚠ And there is a design reason, not only an arithmetic one
+
+**Every other power in the family has two or three tiers you buy through. `Force Crush` is one purchase.**
+
+> **A power that skips the ladder should climb it more slowly.**
+
+**Same logic `PT-268` used on `Throw Lightsaber` — half rate, because it always hits.**
+
+---
+
+## PT-303 — Phase 1 tested against the wiki. The decode holds; one convention does not.
+
+**Owner asked whether `SCOPE-ITEMS-01`'s phase-1 predictions survive contact.**
+
+### ⚠ Test: `Mandalorian Assault Armor`
+
+    blueprint       Armor 4 · DamageResist(5) x2
+    ITEMS-ARMOUR    Cold damage +Resist_25/- · Fire damage +Resist_25/- · Armor 4
+    wiki            Defense Bonus 13 · Resist 25/- Cold · Resist 25/- Fire
+
+**⚠ `DamageResist` value `5` decodes through `iprp_resistcost` row 5 to `Resist_25/-`.** **The wiki says 25. Exact.**
+
+**⚠ And `Armor 4` plus heavy armour's base 9 is 13.** **The wiki's number is the TOTAL; the blueprint's is the item's contribution.**
+
+> **⚠ So `Armor 5` does NOT mean Defence 5. It means +5 on top of the base item's class.**
+
+**That is the one prediction in `SCOPE-ITEMS-01` that was wrong, and it would have mispriced every armour in the corpus.**
+
+### ⚠ And a false alarm on my own tooling
+
+**I reported that `build_inventory.py` was printing indexes as values. It is not** — **`VALUE[ct][cv]` is a lookup and the output reads `Resist_25/-` correctly.**
+
+**⚠ My *test script* read the raw blueprint instead of the generated document.**
+
+> **⚠ Third time this session: a correct observation about the wrong object.** **`PT-288`, `PT-292`, this.**
+
+**The pattern is mine and it is worth naming: I check the source when I should check the output, and report the difference as a defect.**
+
+### What phase 1 actually needs
+
+    ✓ property NAMES     itempropdef, working
+    ✓ property VALUES    the 27 iprp_ cost tables, working
+    ⚠ BASE + BONUS       armour adds to its class; ⚠ check whether attack,
+                         damage and saves do the same
+    ⚠ subtype meaning    differs per property and is only decoded for
+                         abilities and damage types
+
+---
+
+## PT-304 — RCR's mastercraft does NOT contradict the KOTOR ladders. They are different things.
+
+**⚠ EVIDENCE GRADE: secondary. A house-rules document and a Jedi Artisan prestige class PDF, both quoting RCR. Not a primary read. The Extractor's f.136 request stands.**
+
+### What the secondary sources say RCR's mastercraft is
+
+**A `Tech Specialist` class feature. The final Craft check DC is 20. Success gives a `+1` bonus to the relevant skill or check.**
+
+**⚠ Taking the specialty again raises it to `+2`, then `+3`, and the items are made incrementally — costs and check for `+1` first, then again for `+2`.**
+
+**Materials cost double, and the XP cost is half the credit cost of a normal version.**
+
+### ⚠ Why this does not contradict the ladders
+
+    RCR mastercraft   +1 / +2 / +3 on ANY item — ⚠ you MADE it well
+    KOTOR ladder      30 quality steps of one item type — ⚠ it IS a better model
+
+> **⚠ A mastercraft blaster rifle and a `w_brifle_20` are orthogonal.** **One is a craftsmanship bonus applied to a thing; the other is which thing you have.**
+
+**`SCOPE-ITEMS-01` warned that if RCR's item-quality system contradicted KOTOR's, the ladders were what it contradicted — 948 of 994 items.**
+
+**⚠ It does not. The ladders survive.**
+
+### ⚠ But two real frictions, both worth flagging
+
+**RCR's mastercraft caps at `+3`. ⚠ Our ladders run to 30 steps.** **If a player asks *"can I mastercraft a `w_brifle_30`?"* the answer is yes and the bonus is `+3`, which is small against a 30-step ladder.**
+
+**And RCR's mastercraft costs EXPERIENCE POINTS.** **⚠ That is a 3.5e convention KOTOR does not have, and `CRAFTING-01` does not have it either.**
+
+> **⚠ Owner ruling will be wanted: does our crafting cost XP?** **`CRAFTING-01` says a long rest and components. RCR says double materials and half the credit cost in XP.**
+
+### What this unblocks
+
+**⚠ Batch 2 can proceed.** **The ladders are safe.**
+
+**And `CRAFTING-01` gains a known open question rather than a hidden conflict.**
+
+---
+
+## PT-305 — Module archives read. ⚠ `PT-275`'s 99 missing items were a naming problem.
+
+**`archive.py` written — RIM and ERF readers. 480 module archives across both games, one unreadable.**
+
+    ⚠ 46,936 resources
+       uti 23,553 · utp 4,237 · ute 3,861 · utt 2,931 · utw 2,476
+
+### ⚠ The 99 missing upgrades are not missing
+
+**Only 4 turned up in module archives. The other 95 are in `templates.bif` under different resrefs.**
+
+    k2_upgrade says          we hold
+    ua_ablative_1            u_a_over_01
+    G_W_SBRCRSTL09           g1_w_sbrcrstl20
+    tat18_dragonprl          ⚠ module-local, genuinely
+    kas25_wookcrysta         ⚠ module-local, genuinely
+
+> **⚠ `k2_upgrade.2da`'s `template` column does not always match the shipped blueprint's resref.**
+
+**`PT-275` reported *"99 of 369 upgrade items had no blueprint"* and treated it as a coverage gap.** **It is a join failure.**
+
+**⚠ Third time this session the same shape:** **`PT-289`'s shyrack, `PT-292`'s sort prefixes, and now this.**
+
+> **A search that comes back empty against a real corpus is usually asking the wrong question, not finding a real absence.**
+
+### ⚠ And the genuinely module-local ones are the interesting ones
+
+**`tat18_dragonprl` — the Krayt Dragon Pearl. `kas25_wookcrysta` — the Wookiee Amulet.**
+
+**Both are quest rewards tied to one location, which is exactly the profile `data/modules/README` predicted.**
+
+### What the archives now unlock
+
+**⚠ 23,553 item resources and thousands of creatures, placeables and merchants across 480 archives.**
+
+**`utm` — merchant blueprints — are in there.** **⚠ Which is the availability data `SCOPE-ITEMS-01` said had no source.**
+
+> **⚠ Availability may not need authoring after all. A merchant file says what a merchant sells.**
+
+---
+
+## PT-306 — Merchant data extracted. ⚠ Availability has a source after all.
+
+**64 stores, 1,660 item entries, 293 flagged `Infinite`.**
+
+### The chain, which is one link longer than I assumed
+
+    module archive  ->  GIT area file (type 2023)
+                    ->  StoreList, an instance with a resref
+                    ->  the UTM blueprint (type 2051)
+                    ->  ItemList, with an Infinite flag per entry
+
+**⚠ I first recorded 2023 as the merchant type. It is the AREA file.** **The merchant blueprint is 2051, and the area only holds a pointer.**
+
+> **⚠ My resource-type table was guessed from convention rather than read from anything.** **Two codes were wrong and one produced 288 files that were not merchants.**
+
+**Corrected by reading contents. The map now carries a note saying so.**
+
+### ⚠ What this replaces
+
+**`SCOPE-ITEMS-01` said availability had no source and would have to be authored as a band derived from price.**
+
+> **⚠ Wrong. A merchant file says what a merchant sells, and the `Infinite` flag says whether it restocks.**
+
+    293 of 1,660 entries are Infinite   ⚠ always available
+    1,367 are finite                     ⚠ one purchase and it is gone
+
+**That is a two-state availability system already in the data, and it is better than a band because it is per-item-per-vendor rather than global.**
+
+### ⚠ And the owner predicted this
+
+**Owner: *"K2 I think has something we can use, but it'll need to be modified at party level."***
+
+**⚠ The modification needed is the opposite of what I expected.** **The data is finer-grained than a band, not coarser.**
+
+---
+
+## PT-307 — ⚠ K2 randomises loot. `PT-306`'s hand-placed claim was K1's system.
+
+**Owner correction, and it was right.**
+
+**`a_give_treas` — 15 KB of compiled NCS, present across the K2 modules.** **62 treasure-named resources in total.**
+
+### The structure, read from the script's own debug strings
+
+    "invalid container" · "bad table" · "item create failed" · "container:" "item:"
+
+> **⚠ A container carries a TABLE. The script rolls on it.**
+
+**And the tables are tiered by item GRADE:**
+
+    tier 1   CREDITS · StunGren · SonicGren · MEDEQPMNT04 · DRDREPEQP001
+    tier 2   + MEDEQPMNT02 · DRDREPEQP002 · ADRNALINE001-003
+    tier 3   + MEDEQPMNT03 · DRDREPEQP003 · ADRNALINE004-006
+
+**⚠ Same item families, better versions as the tier rises. `01` to `02` to `03`.**
+
+### ⚠ What this gives us that hand-placed loot could not
+
+**A grade ladder that already exists, tied to a tier, rollable.**
+
+> **⚠ Which is the owner's two-roll proposal with the loot half already sourced:** **one roll against merchant availability, one against a treasure table, both scaled by party level.**
+
+### ⚠ And a correction to `PT-306` and to `SCOPE-ITEMS-01`
+
+**`PT-306` said loot was hand-placed and drop rates had no source.** **That is KOTOR 1's system, and I applied it to both games without checking.**
+
+**`SCOPE-ITEMS-01` said availability had no source at all. Also wrong.**
+
+    availability   ⚠ merchant Infinite flag — 293 of 1,660 entries
+    loot           ⚠ tiered treasure tables in a_give_treas
+
+**Both have a source. Neither needs authoring.**
+
+### What remains
+
+**⚠ The script is compiled. The tables are readable as strings but the ROLL — the probability of each entry — is in bytecode.**
+
+**Same shape as `PT-249`'s Force powers, and the same answer:** **port the table, author the roll.**
+
+---
+
+## PT-308 — Loot tiers. ⚠ Owner design agreed; the detail is scheduled, not ruled.
+
+> **Keep K2's d100 and its five bands. Swap the TABLE by level tier.**
+
+**⚠ The roll never changes. The contents do.**
+
+    K1   hand-placed   ⚠ balanced but identical every replay
+    K2   randomised    ⚠ varied but a level-3 character can pull a top-tier crystal
+
+**One has no surprise; the other has no restraint. This has both.**
+
+### ⚠ It adds one constraint rather than a system
+
+**K2's tables are already tiered by grade — `MEDEQPMNT01 → 02 → 03`, `ADRNALINE001-003 → 004-006`.**
+
+> **⚠ K2 never gated the tier by LEVEL.** **It gated by which container a designer flagged, so an early container with a high tier leaks a top item.**
+
+**We are adding the missing gate, not replacing the mechanism.**
+
+### Scheduled, `AGENDA-CURRENT §2.1e`
+
+**⚠ Character-tier or area-tier is undecided.** **Area recommended — K1's balance with K2's variety — but not ruled.**
+
+**⚠ And 994 items need a tier tag.** **Derivable from cost: 794 already carry a price, spread cleanly from 25 to 32,000.**
+
+**Same derivation `PT-281` used to price beasts against the item corpus.**
+
+---
+
+## PT-309 — `LOOT-01`. Area tier, derived from the encounter and floored by the lock.
+
+**Owner ruling: area tier, not character tier.**
+
+> **`area tier = max( encounter level, container difficulty )`**
+
+### ⚠ Encounter level is free and covers improvisation
+
+**A GM who invents a room does not assign it a difficulty. But they place something in it.**
+
+> **⚠ The loot tier is the tier of the thing guarding it.** **Drop a level-12 zakkeg in a cave and the cave is a level-12 cave.**
+
+**And it self-corrects both ways** — **wander somewhere too hard and the loot is too good, which is correct; backtrack to a starter zone and the loot is starter loot, also correct.**
+
+### ⚠ Container difficulty is the floor, and it resolves the one caution
+
+**A vault behind a hard lock is high-tier even if a rat guards it.**
+
+**Its `Security` DC IS its tier:**
+
+    up to 15   tier 1      21-27   tier 3
+    16-20      tier 2      28+     tier 4 — ⚠ 18 ranks, a late-career build
+
+> **⚠ A `Security` DC names a specific character rather than a probability**, **because take-10 makes the ceiling `10 + ranks + Intelligence`.**
+
+**A GM setting a DC because it fits the fiction is setting a tier as a side effect.**
+
+**⚠ AUTHORED. KOTOR placeables carry no lock DC — 376 sampled, the field is absent.**
+
+### Why the container rather than an override
+
+**⚠ An explicit override is a workaround: it needs the GM to notice the problem and remember the mechanism.**
+
+**A lock DC is something a GM sets naturally.** ***"It's a sealed Sith vault, Security DC 28"*** **already contains the tier.**
+
+**They are describing the fiction, not configuring a system.**
+
+**⚠ The override still exists for campaign-package authors, and it should be the first thing they are told.**
+
+### ⚠ One oddity, noted and not fixed
+
+**Under pressure you roll, and a roll can beat your take-10 ceiling.**
+
+> **⚠ A vault you cannot open calmly, you might crack while being shot at.**
+
+**That is how d20 works everywhere. Recorded rather than patched.**
+
+---
+
+## PT-310 — Difficulty modes deferred to the end of the project
+
+**Owner ruling. ⚠ `AGENDA-CURRENT §2.9` was marked *"the last thing before engine work."* It is now the last thing AFTER it.**
+
+> **⚠ Build the system. Test it on ONE difficulty. See how that plays. Only then add the others.**
+
+### Why this is right
+
+**A difficulty mode is a set of exceptions to rules that must already work.**
+
+> **⚠ Writing the exceptions before the baseline is tested means tuning against a guess.**
+
+**And this project has a record of exactly that failure:** **`PT-268`'s dice caps were tuned against `Barrage` before anyone checked what the cap did to the curve, and they flatlined every Force user at level 10.**
+
+**⚠ `DEATH-AND-DIFFICULTY-01` already carries three modes that were authored the same way — before a single scenario ran on any of them.**
+
+### ⚠ And `PT-287` gives a second reason
+
+**RCR answers dying and recovery in full at ff.160 and 288 — dead at `−10` wounds, one wound a round while dying, stabilise at DC 15.**
+
+**⚠ We never cited that base layer.** **Difficulty modes sitting on top of an uncited foundation is the wrong order twice over.**
+
+**Read `Injury and Death` at f.159 first, then build the baseline, then test it, then consider modes.**
+
+---
+
+## PT-311 — Batch 1 run. ⚠ Two subtype tables are misleading and the batch caught both.
+
+**`usable`, 45 items. `SCOPE-ITEMS-01` said batch 1's job was to prove the conversion table cheaply.**
+
+**⚠ It did, by failing in two places.**
+
+### Only three property types, not the dozen predicted
+
+    Trap           25
+    CastSpell      14
+    ThievesTools    2
+
+### ⚠ Trap 1 — `CastSpell` subtypes are vestigial NWN data
+
+    Adrenal Strength   -> "Cure_Moderate_Wounds"
+    Battle Stimulant   -> "Darkness"
+    Squad Recovery     -> "Greater_Spell_Breach"
+
+> **⚠ An adrenal does not cast Cure Moderate Wounds. `iprp_spells.2da` is an unmodified Neverwinter Nights table.**
+
+**KOTOR inherited the Aurora engine and pointed at rows without renaming them.** **⚠ The subtype is a pointer to a script; the LABEL is leftover D&D.**
+
+**⚠ Reading these labels as effects would have produced fourteen wrong item entries, and every one would have looked plausible.**
+
+### ⚠ Trap 2 — the trap table has 4 rows and the mines use 20 subtypes
+
+    iprp_traps    Minor · Average · Strong · Deadly    ⚠ four rows
+
+    Minor Flash Mine     subtype 0     Minor Frag Mine    subtype 3
+    Average Flash Mine   subtype 1     Average Frag Mine  subtype 4
+    Blinding Flash Mine  subtype 2     Deadly Frag Mine   subtype 5
+
+> **⚠ The subtype is NOT an index into `iprp_traps`. It is a sequential mine ID.** **Twenty mines, numbered 0 to 19.**
+
+**My decode read `subtype 3` as *"Deadly"* when it means *"Minor Frag Mine."***
+
+**⚠ `iprp_traps`'s four rows are a COST multiplier — 0.4, 0.7, 0.9, 1.4 — not a difficulty label for the item.**
+
+### What batch 1 proved
+
+> **⚠ The property NAME decode is sound. The property VALUE decode is sound. The SUBTYPE decode is not, and it is wrong in a different way per property.**
+
+**`PT-279` and `PT-292` decoded subtypes only for abilities and damage types.** **⚠ Everything else has been printing a number or a wrong label since.**
+
+**Batch 2 must not start until each property's subtype meaning is established individually.**
+
+**⚠ Which is exactly what a 45-item batch was for, and it cost an hour instead of a workstream.**
+
+---
+
+## PT-312 — `PROPERTY-VOCAB-01`. Six vocabularies replace twenty inherited tables.
+
+**Owner ruling, following `PT-311`.**
+
+> **A property is `name` + `subtype` + `value`, and every property declares which of six vocabularies its subtype draws from.**
+
+    ability       6, ported unchanged
+    damage_type   13, ported — ⚠ two are flags wearing a damage type's clothes
+    skill_type    ⚠ OURS. KOTOR has 8 skills; we have 24
+    save_type     4 — ⚠ "All" is a modifier on three, not a fourth save
+    feat_ref      ⚠ repointed. 49 distinct values, no automatic route
+    condition     ⚠ merges iprp_onhit and iprp_immunity — same words,
+                     opposite direction
+
+### ⚠ Two dropped
+
+**`CastSpell` — 72 subtypes pointing at Neverwinter Nights spell scripts.** **`Adrenal Strength` reads as *"Cure Moderate Wounds."***
+
+**⚠ Every `CastSpell` item's effect must be written from its name and description, not its subtype.**
+
+**`Trap` — 25 sequential mine IDs in a property field.** **⚠ Each mine becomes an item with its own stats.**
+
+### ⚠ `Universal` and `Unstoppable`, flagged rather than cut
+
+**Neither is a damage type. Both are resistance-bypass flags.**
+
+**Kept because 13 items use them and `ATTACKS-06`'s deflection rules need something to except** — **⚠ but marked as flags for the engine rather than as elements.**
+
+### The cost, stated
+
+**⚠ A rename pass over all eight item documents, before batch 2.**
+
+**`PT-279` and `PT-292` decoded subtypes for `ability` and `damage_type` only.** **Everything else has been printing a raw number or a wrong label since.**
+
+---
+
+## PT-313 — Rename pass run. ⚠ And half my property numbers were guessed.
+
+**`PROPERTY-VOCAB-01` applied to all eight item documents.**
+
+    994 rows · 98 with a dropped subtype · 0 unmapped
+
+    Damage         548 resolving      DamageImmunity   98
+    Ability        351                DamageResist     85
+    OnHit          133                Immunity         49
+
+**⚠ `Mandalorian Assault Armor` now reads `DamageResist (Cold) Resist_25/-` rather than a bare number.**
+
+### ⚠ The error worth recording
+
+**I hand-wrote the property-number map. Half of it was wrong.**
+
+    Ability      I wrote 39, it is 0
+    Damage       I wrote 15, it is 11
+    BonusFeats   I wrote 11, it is 9
+
+> **⚠ And it failed silently.** **`BonusFeats 0` printed 83 times and looked like a property with a value of zero rather than a lookup against the wrong table.**
+
+**Now DERIVED from `itempropdef`'s own `subtyperesref` column.** **The table says which vocabulary each property uses; reading it is free and guessing it was not.**
+
+**⚠ Fifth time this session I have asserted a mapping instead of reading one.** **The pattern is consistent enough to be a rule:**
+
+> **⚠ If a source file has a column that answers the question, read the column.**
+
+### And the feat labels confirm `PROPERTY-VOCAB-01`
+
+    BonusFeats (Combat Casting) · (SpellFocusAbj) · (SpellFocusCon)
+
+**⚠ Spell Focus (Abjuration) is a Dungeons and Dragons feat.** **`iprp_feats` is as vestigial as `iprp_spells` was.**
+
+**`PROPERTY-VOCAB-01 §6` already says these need repointing by hand. This is the evidence for it.**
+
+---
+
+## PT-314 — ⚠ Item feat references resolve, and half of them are not feats in our system.
+
+### First, the table was wrong again
+
+**`PROPERTY-VOCAB-01` pointed feat subtypes at `iprp_feats.2da` — 21 rows.** **⚠ The subtypes go up to 241.**
+
+**They index `feat.2da`, which has 245 rows.** **⚠ All 56 distinct references resolve against it. None against the other.**
+
+> **⚠ Sixth time this session a mapping was asserted rather than read.** **`iprp_feats` is the *cost* table; `feat.2da` is the *vocabulary*.**
+
+### The 56, grouped
+
+    droid upgrade        3 feats, 73 uses    ⚠ DROID_UPGRADE_1/2/3
+    weapon focus/spec    9 feats, 29 uses
+    combat              24 feats, 37 uses
+    other               17 feats, 24 uses
+    armour proficiency   3 feats, 15 uses
+
+### ⚠ And the finding that matters
+
+**Three groups map straight onto our feat library:**
+
+    ARMOUR_PROF_LIGHT  ->  Armour Proficiency: Light
+    WEAPON_FOCUS_MELEE ->  Weapon Focus: Melee Weapons
+
+**⚠ But `RAPID_SHOT`, `SNIPER_SHOT`, `POWER_ATTACK`, `KNOCKDOWN` and `DODGE` are NOT feats here.**
+
+> **⚠ They are ATTACK CHAINS.** **`Rapid Fire`, `Snap Shot`, `Power Attack` and `Knockdown` all exist in `ATTACKS-04` through `-07`.**
+
+**Which is `PT-193`'s finding again, one layer out:** **that ruling established `Sneak Attack` and `Stealthy Shot` as attack trees rather than feat chains, and four rulings had been built on the wrong object.**
+
+### ⚠ So a KOTOR item feat has THREE possible destinations here
+
+    our feat library      Weapon Focus, Armour Proficiency — direct
+    ⚠ an attack chain     Rapid Shot, Power Attack, Knockdown, Dodge
+    ⚠ nothing at all      DROID_UPGRADE_1/2/3 — 73 uses, and the mechanism
+                          they gate is AGENDA §2.4f, unwritten
+
+**An item that *grants* an attack chain is a different mechanic from one that grants a feat.** **⚠ `ATTACKS-01` has no rule for an item granting a chain.**
+
+### ⚠ Which means this is a design question, not a rename
+
+**73 of the 178 uses are `DROID_UPGRADE`, and they gate a system that does not exist yet.**
+
+**Owner ruling wanted before the remap proceeds:** **can an item grant an attack chain, and if so does it behave as a purchased one?**
+
+---
+
+## PT-315 — An item may grant an attack chain, while equipped, as the source gives it.
+
+**Owner ruling: keep it close to what the original weapon was. Temporary — unequip and it is gone.**
+
+    25 of 994 items    2.5%, all in the top price decile
+    Droid CEPB         27,200 cr   POWER_BLAST + Improved + Master
+    Arg'garok          18,500 cr   POWER_ATTACK + Improved
+
+### ⚠ I proposed tier 1 only. The owner was right and I was not.
+
+**My objection was that granting the full ladder makes the purchase route pointless for that chain.**
+
+> **⚠ But "while equipped" IS the balance. You are spending a weapon slot, not getting a free chain.**
+
+**And it gives a weapon an identity.** **`Arg'garok` is not a big axe; it is *the Power Attack axe*.**
+
+### ⚠ The interaction I checked, and it resolves
+
+**`PT-173` found four classes with exactly eleven chains and zero slack.**
+
+**If a granted chain counted against the cap, an item could make a legal build illegal.**
+
+> **⚠ It does not. `PT-173`'s test is `N ≤ access` — an ACCESS limit, not a purchase budget.** **A granted chain is not purchased.**
+
+**Bounty Hunter, Engineer, Agent and Droid Master are unaffected.**
+
+### And a held chain is never downgraded
+
+**⚠ If you already own the chain at a higher tier, the grant does nothing and takes nothing away.**
+
+---
+
+## PT-316 — ⚠ The source has SIX droid sockets. `PT-274` recorded four.
+
+**`PT-274` derived the upgrade slot structure from `upgradetype` and got four groups — lightsaber, blaster, melee, armour.**
+
+**⚠ That was the WEAPON upgrade table. The droid items are a separate family and `PT-274` did not cover them.**
+
+    Tool        ⚠ capability — BonusFeats x26, Skill x9, AttackBonus x8
+    Interface   ⚠ statistics — Skill x10, Ability x8, saves x5
+    Plating     defence — Armor x10, DamageImmunity x10, DamageResist x6
+    Device      ⚠ active abilities — CastSpell x18 of 18
+    Shield      a device subtype — CastSpell x6
+    Named       ⚠ HK-47, T3-M4, G0-T0 only — UseLimitationPC x10
+
+> **⚠ The six are genuinely distinct. `Interface` gives you numbers, `Tool` gives you capabilities, `Device` gives you buttons to press.**
+
+**71 items gated across `Droid Upgrade 1/2/3`.**
+
+---
+
+## PT-317 — `DROIDS-UPGRADE-01`. Two systems, not one.
+
+**Owner ruling: *"what we're designing is not a replacement for the stuff that's already there. They're different entirely."***
+
+    sockets        ported. Gear. Swappable. Six of them.
+    installations  ⚠ AUTHORED. Permanent. Consumed. No socket.
+
+### ⚠ Why they cannot be the same mechanism
+
+**A socket item is gear** — **it fills a slot, competes with alternatives, and comes off.**
+
+**An installation is a change to the chassis** — **⚠ no slot to compete for, nothing to swap, nothing to take away.**
+
+> **⚠ Which is exactly why it can be permanent: it costs a consumable and a decision, not a socket.**
+
+### What the installations are for
+
+**A droid cannot be a Jedi, cannot spend attack credits on melee, cannot take a Force or Combat-rate class, and cannot exceed eleven chains.**
+
+> **⚠ Five hard restrictions and nothing has ever paid for them. These do.**
+
+### ⚠ Four things open, and one could break
+
+**How many may a droid install?** **⚠ Unbounded permanent ability bonuses have no ceiling. This is the only thing here that could break.**
+
+**Where they come from · what they cost · whether they stack with sockets.**
+
+**⚠ And a permanent `+1` to an ability is worth more than any item in the corpus, whose ceiling is 32,000 credits.**
+
+### And `Named` items become a template
+
+**⚠ A KOTOR-era campaign has no HK-47.** **The three character-locked families become a pattern for *unique droid* gear rather than three specific characters.**
+
+---
+
+## PT-318 — Droid upgrade bays: 3 / 6 / 9, and permanent.
+
+**Owner ruling, reached in two steps and the second reversed the first.**
+
+    Droid Upgrade 1    3 bays
+    Droid Upgrade 2    6 bays
+    Droid Upgrade 3    9 bays
+
+**⚠ Reuses the gate that already exists. The same feat that opens tiers of socket item opens bays.**
+
+### ⚠ Bays are UNTYPED. That is the difference from sockets.
+
+    sockets      TYPED. Six. A plating item cannot go in the tool socket.
+    bays         ⚠ UNTYPED. Any upgrade fits any bay.
+
+**Which is why they must be few. Nine untyped slots is a lot; nine typed sockets would be less.**
+
+### ⚠ Permanent, and the owner was right to come back to it
+
+**A middle draft made bays swappable. The owner reversed it:** ***"that was the whole point, that's the thing that makes them different from droid equipment or gear."***
+
+> **⚠ A socket item is a decision you can revisit. A bay is not.** **Nine bays across a campaign, each spent forever.**
+
+### ⚠ And permanence is only safe BECAUSE the bay count caps it
+
+**An earlier draft had permanence with no bay limit** — **which made cost the only limiter, and cost fails, because credits accumulate and a price does not.**
+
+    permanent + uncapped   ⚠ unbounded
+    permanent + 9 bays     a career's worth of decisions
+
+**⚠ The two halves of this ruling had to arrive in that order. Permanence first would have been wrong.**
+
+### What an upgrade can be
+
+    Skill          Mark I/II/III     +1 / +2 / +3 to one skill  ⚠ the cheap end
+    Ability        Mark I/II/III     ⚠ +1 / +2 / +3 to one score — the expensive end
+    Feat           tiered by feat    one feat from our library
+    Attack chain   tiered            ⚠ tier 1, 2 or 3 of one chain
+
+### ⚠ No cap on type
+
+**Owner ruling. A droid with nine bays may run nine feat upgrades.**
+
+> **⚠ A separate cap on feats or chains would be redundant, and two caps interacting is how `PT-173`'s one-condition filter happened.**
+
+---
+
+## PT-319 — `Athletics` is chassis-gated, not banned to every droid
+
+**Owner correction. ⚠ `DROID-SKILLS-01` banned it universally on the reasoning *"a wheeled or hovering frame does neither."***
+
+> **⚠ True of an astromech and a remote. False of a humanoid combat chassis, which has arms and legs.**
+
+    Astromech  no      Assassin  YES
+    Remote     no      Battle    YES
+
+**⚠ The ban was written from the astromech outward and never checked against the other three.**
+
+**`Acrobatics` was already correct — all but astromech.**
+
+### ⚠ And one place, not several
+
+**Checked every document mentioning `Athletics`.** **`SKILLS-01` and `CLASS-TABLES-DROID` both CROSS-REFERENCE `DROID-SKILLS-01` rather than restating the bans.**
+
+> **⚠ One authority, no drift.** **Which is why this correction needed one edit rather than five, and why `PT-245`'s stale-copy problem does not exist here.**
+
+---
+
+## PT-320 — Droid upgrades: replacement by target, Marks I–V
+
+**Owner ruling, and it solves the cap problem on the axis I had wrong.**
+
+> **⚠ Upgrades of the same TARGET replace each other. `Awareness Mark II` and `Awareness Mark V` cannot coexist; Mark V replaces Mark II.**
+
+    any one skill      ⚠ max +5
+    any one ability    ⚠ max +5
+    any one chain      tier 3 replaces tiers 1 and 2
+
+### ⚠ I was guarding the wrong axis
+
+**My objection to *permanent and uncapped* was `+3 Dexterity` installed six times for `+18`.**
+
+> **⚠ That is DEPTH, and replacement-by-target caps it at `+5`. The runaway is gone.**
+
+**Breadth needs no cap.** **⚠ Six Mark V upgrades cost six times, and `+5 Swim` helps nobody** — **credits go on targets you use, and `DROID-SKILLS-01` removes five of the twenty-four outright.**
+
+### And it makes the Marks a ladder rather than a shopping list
+
+**Under a slot model, Mark I and Mark V were interchangeable — both filled one bay.**
+
+> **⚠ Under replacement they are a path you climb on ONE target.** **Buy Mark II early; Mark V later replaces it.**
+
+**⚠ Which is the same shape as `PT-315`: a granted chain never downgrades a held one. Same rule, two places, no conflict.**
+
+---
+
+## PT-321 — Droid upgrades: source, time, and why stacking was never a question
+
+**Owner rulings. Three open items closed.**
+
+### Source — all three routes
+
+    crafted   ⚠ one long rest to BUILD, one to INSTALL
+    bought    from droid specialists — ⚠ still one long rest to install
+    found     ⚠ extremely rare. LOOT-01 band 5 only
+
+> **⚠ The install is never free. Buying one does not skip the surgery.**
+
+**⚠ At a base, with time, taking 10 — `CRAFTING-01`'s rule applies unchanged.**
+
+### ⚠ They stack, and the owner's reason is better than mine
+
+**I framed this as *"two systems, do their bonuses add."* The owner reframed it:**
+
+> ***"The permanent are as if you levelled up and got it to that level."***
+
+    socket item    GEAR. A bonus applied on top of what you are.
+    ⚠ bay upgrade  ⚠ it IS what you are.
+
+**⚠ Which dissolves the question rather than answering it.** **Nobody asks whether a Soldier's Strength stacks with their gauntlets.**
+
+### ⚠ And it explains why `PT-320`'s replacement rule sits where it does
+
+**Two bay upgrades to one target replace each other because you cannot level the same statistic twice.**
+
+**A socket sits outside that entirely** — **it is gear, and gear has never been subject to it.**
+
+> **⚠ The replacement rule was written before this framing and turns out to follow from it.** **Which is a good sign: it means the framing was already implicit and the owner just named it.**
+
+---
+
+## PT-322 — Droid upgrade pricing, triangulated from the corpus
+
+**Owner instruction: price by tier and effect, derived from what everything else in the game costs.**
+
+### The anchor
+
+**⚠ Single-property ability items — the cleanest signal in the 994:**
+
+    +1     500        +4    12,000
+    +2   3,000        +5    20,000
+    +3   6,250
+
+**Roughly `x2` a step. ⚠ But those are GEAR.**
+
+> **`PT-321`: a bay upgrade is *as if you levelled up*. That is worth `x5`.**
+
+### The chart
+
+    Mark    Ability    Skill     Feat              Attack chain
+    I         2,500      600     3,000 – 8,000     5,000 – 12,000
+    II       15,000    3,750     8,000 – 20,000    20,000 – 40,000
+    III      31,000    7,800     20,000 – 50,000   50,000 – 90,000
+    IV       60,000   15,000     —                 —
+    V       100,000   25,000     —                 —
+
+**⚠ Feats and chains are RANGES because they tier by WHAT they grant, not by a Mark.** ***Weapon Focus* and *Master Power Blast* are not the same purchase.**
+
+### ⚠ Why Mark V sits above the corpus ceiling
+
+**The dearest item in KOTOR 2 is 32,000. Ability Mark V is 100,000.**
+
+> **⚠ That is correct. A permanent `+5` should cost more than the best item in the game, because the best item comes off.**
+
+### Skills are a quarter of abilities
+
+**⚠ An ability point raises every skill keyed to it, plus saves and derived values. A skill rank raises one skill.**
+
+**Skill Mark I at 600 is the cheap end the owner asked for** — **well under 10,000 and buyable at level 1.**
+
+### ⚠ The curve
+
+**`x5` to `x6` a Mark. The steepest relative step is Mark I to Mark II, deliberately** — **it is the moment a droid stops dabbling.**
+
+**Mark I is a purchase. Mark V is a campaign goal.**
+
+---
+
+## PT-323 — The loot table checks party composition. ⚠ In software only.
+
+**Owner ruling.**
+
+    app   ⚠ the table filters. Items no party member can use are excluded.
+    GM    ⚠ no rule needed. They already know who is in the party.
+
+> **⚠ First rule in this project that exists ONLY for the engine.**
+
+**Worth marking as such.** **`AGENDA-CURRENT 2.5` should collect engine-only rules rather than have them scattered through documents a human reads.**
+
+---
+
+## PT-324 — ⚠ `SCOPE-ITEMS-01`'s central claim is wrong. It is not 146 decisions.
+
+**That document said:** ***"994 items. But they are not 994 decisions. 100 ladders cover 948 items. A ladder is one decision — what needs deciding is the CURVE, not thirty entries."***
+
+**⚠ Tested against the weapons batch. It is false.**
+
+    w_blaste   30 items · ⚠ 25 DISTINCT property sets
+    w_brifle   23 items · ⚠ 18 distinct
+    w_melee    10 items · ⚠ 8 distinct
+
+**Across the whole corpus:**
+
+    ⚠ 994 items · 689 distinct property signatures
+       69% of items are mechanically unique
+
+### ⚠ A ladder is not a curve
+
+    01  Blaster Pistol              25 cr   no properties
+    10  Aratech Droid Oxidizer   1,099 cr   atk +1 · Ion +2 · racial group
+    20  Mandalorian Ripper      11,735 cr   enhancement 2
+    25  Systech Electric        20,000 cr   atk +1 · Electrical +2d6
+    30  Freedon Nadd's Blaster  29,000 cr   Dark Side +2d10 · enhancement 2
+                                            ⚠ + three class restrictions
+
+> **⚠ `w_blaste_01` through `_30` share a RESREF PREFIX and nothing else.** **They are thirty curated weapons, not thirty rungs of one ladder.**
+
+**The prefix is a naming convention for a slot in a shop, not a family.**
+
+### ⚠ What this costs
+
+**`SCOPE-ITEMS-01` scoped the workstream at 146 decisions. The real figure is nearer 689.**
+
+**⚠ And I wrote that document after counting families by regex on the resref, without opening a single item to check whether the family meant anything.**
+
+> **⚠ Seventh time this session: a structure inferred from names rather than read from contents.** **`PT-289`'s shyrack, `PT-305`'s 99 upgrades, `PT-313`'s property map, and now the entire item scope.**
+
+**The rule stands and I keep breaking it:** **⚠ if a file has contents that answer the question, read the contents.**
+
+### The workstream is still tractable — differently
+
+**⚠ 689 unique items is a data job, not a design job.** **The properties are already decoded; what each item needs is a tier tag and a price, both of which the blueprint carries.**
+
+**What is NOT tractable is hand-designing 689 items, and nobody should now assume otherwise.**
+
+---
+
+## PT-325 — Check 23: is a claimed grouping real?
+
+**⚠ `PT-324` found `SCOPE-ITEMS-01`'s central claim false. This makes that falsifiable in one command.**
+
+> **A family is REAL if its members share mechanics. It is a SHOP SLOT if they do not.**
+
+**Ratio of distinct property signatures to member count. Above `0.5`, the grouping is not mechanical.**
+
+    146 prefixes · 75 too small to judge · 21 real · 50 shop slots
+
+### ⚠ It cuts both ways, which I did not expect
+
+**Over-scoping found:**
+
+    g_w_lghtsbr    10 items · 1 signature · 0.10
+
+**⚠ Ten lightsabers, mechanically identical — colour variants.** **I would have scoped ten decisions. It is one.**
+
+**Under-scoping found:**
+
+    qcrystal_1 .. _9    five items each, ⚠ ALL unique
+
+**⚠ Nine families of five, every member distinct.** **Forty-five decisions hiding behind a naming convention that looks like a ladder.**
+
+### ⚠ Registered as REPORTING, not blocking
+
+**Gate is 23 checks, 19 blocking, 4 reporting.**
+
+**A grouping claim is not a rules defect — it is a scoping error.** **⚠ It should be visible before someone writes a scope document, not fatal after.**
+
+### The rule this exists to enforce
+
+> **⚠ A scope document is not sendable until a check has run against it.**
+
+**Which is the gate's own logic one level up.** **`gate.py` blocks a ruling that cites something unwritten. Nothing blocked a scope claim nobody tested.**
+
+**⚠ Seven structures were inferred from names this session and every one was caught by a check rather than by care.** **The instinct is not the fix. The check is.**
+
+---
+
+## PT-326 — `Enhancement` is a third property, not a synonym
+
+**86 weapons carry it. ⚠ 46 of 56 carry it ALONGSIDE *AttackBonus*, *Damage*, or both.**
+
+> **⚠ If `Enhancement` meant the same as *AttackBonus*, they would not both appear on one item.**
+
+**It is d20's classic enhancement bonus: `+N` to attack AND damage, as one number.**
+
+    AttackBonus   attack only
+    Damage        damage only
+    Enhancement   ⚠ both
+
+**⚠ No conversion needed. Our system is d20 and the property is d20's own.**
+
+**Values run 1 to 3.**
+
+---
+
+## PT-327 — Unique items. Once per campaign, and once per roll.
+
+**Owner instruction, from KOTOR 2's own failure:** ***"sometimes you would find multiple of them — Onasi's Blaster, Jolee's Band, Arca Jeth's robe."***
+
+> **⚠ An item marked UNIQUE can be obtained once per campaign. Once obtained it is removed from every table it appears on.**
+
+### What counts
+
+    ⚠ Plot-flagged in the blueprint   56 items — the source already says so
+    ⚠ named after a person            29 more — the flag missed these
+
+**85 items. *Nomi's Robe*, *Freedon Nadd's Blaster*, *Ulic Qel Droma's Mesh Suit*, *Thon's Robe*.**
+
+> **⚠ A possessive in the name is the tell the flag missed. There was one Nomi Sunrider and she had one robe.**
+
+### ⚠ Two halves, and the second is not implied by the first
+
+**ONCE PER CAMPAIGN** — **found, bought or crafted, the first acquisition is the only one.**
+
+**ONCE PER ROLL** — **a single roll cannot produce two, and a vendor cannot stock two.**
+
+> **⚠ A table that removes an item AFTER acquisition still allows a roll that produces two at once.** **Both clauses are needed.**
+
+### Engine-only, like `PT-323`
+
+    app   ⚠ removes on acquisition, dedupes within a roll
+    GM    ⚠ no rule needed — they remember what they handed out
+
+**⚠ Second engine-only rule. `AGENDA-CURRENT 2.5` should collect them.**
+
+---
+
+## PT-328 — `Keen` is our own threat multiplier. No new rule.
+
+**34 weapons. ⚠ `ATTACKS-01` already carries the mechanism.**
+
+    ATTACKS-01   a multiplier WIDENS the threat range by that factor,
+                 counting downward from 20
+    ⚠ KOTOR Keen  doubles the threat range
+
+**Same operation, same table:**
+
+    weapon base 20 only   -> Keen makes it 19–20
+    weapon base 19–20     -> Keen makes it 17–20
+
+> **⚠ `Keen` IS the `x2` multiplier. 34 weapons resolved by a rule we already had.**
+
+**And `PT-176` governs the stack:** **threat multipliers do not compound; use the largest.** **⚠ `Keen` plus `Deathstroke` is `x3`, not `x6`.**
+
+---
+
+## PT-329 — `Massive Criticals` needs a rule we do not have, and I am flagging it rather than writing it.
+
+**45 weapons. Values decode cleanly:**
+
+    4 -> +4 flat      8  -> 1d8      12 -> 2d8
+    6 -> 1d4          9  -> 1d10
+    7 -> 1d6          10 -> 2d6
+
+**⚠ Extra damage ON A CRITICAL HIT, on top of the multiplier.**
+
+### ⚠ Why this is not a trivial port
+
+**`ATTACKS-01` already worries about exactly this interaction.**
+
+> **It records the `Commando` case as *"`5–20` threat with critical damage multipliers behind it changes every round of every fight."***
+
+**⚠ That was written as a reason to REFUSE something. `Massive Criticals` is the same shape arriving from the source.**
+
+**And 45 weapons carry it, so refusing it is not free either.**
+
+### The three ways it could go
+
+**⚠ Port it as printed** — **`2d8` extra on a crit, on top of doubling.** **Simple; and `ATTACKS-01` already named this as the thing that changes every round.**
+
+**⚠ Fold it into the multiplier** — **a `2d8` weapon crits for `x3` instead of `x2`.** **No new mechanism, and `PT-176` already handles the stack.**
+
+**⚠ Cut it** — **45 weapons lose a property and become flatter.**
+
+**Owner ruling wanted. ⚠ I lean on folding it into the multiplier, because `PT-176` then governs it for free and nothing new enters the combat loop.**
+
+---
+
+## PT-330 — The ranged trees adopt the game's model. `Precision` is additive.
+
+**Owner instruction: rebuild the attack trees on KOTOR's model, and tie hit and damage to the weapon so weapons matter.**
+
+### ⚠ Three of our eight axes ARE the game's three trees
+
+    Velocity   = Rapid Shot    extra attacks
+    Power      = Power Blast   more damage
+    Precision  = Sniper Shot   more crits
+
+**⚠ The other five — `Spread`, `Position`, `Control`, `Support`, `Reaction` — have no counterpart in the game and stay as they are.**
+
+**`PT-180`'s rider-multiplication rule was derived for those and survives untouched.**
+
+### The numbers
+
+| | tier 1 | tier 2 | tier 3 |
+|---|---|---|---|
+| **Power** | +3 dmg, atk −3, crit mult +1 | +7, −3, +1 | +12, −3, +1 |
+| **Velocity** | extra attack, Defence −4 | extra attack, −2 | extra attack, −1 |
+| **Precision** | ⚠ threat span +1 | +2 | +3 |
+
+### ⚠ What changed from ours, and why
+
+**Our `Power` ran `+5 → +8 → +10` with the attack penalty IMPROVING `−4 → −2 → −1`.**
+
+> **⚠ The game's damage ACCELERATES and its penalty NEVER improves.** **A higher tier is a bigger gamble, not a safer one.**
+
+**And the game raises the crit multiplier `+1` per tier, which is where most of the gain lives.**
+
+**⚠ Priced: the game's model is ahead at every tier and every difficulty, and the gap widens from `+4%` at tier 1 to `+37%` at tier 3.**
+
+### ⚠ `Precision` is ADDITIVE, and this is a departure
+
+**The game multiplies the threat range: `x2 / x3 / x4`.**
+
+    weapon              game t3    ours t3
+    pistol 20 only         20%        20%     ⚠ identical
+    rifle 19-20            40%        25%
+    disruptor 18-20        60%        30%
+
+> **⚠ On a `20`-only weapon the two models give the same numbers.** **That is most blasters, so the common case is unchanged.**
+
+**The drift is entirely at the top end — and the top end is the `Commando` build `ATTACKS-01` refused.**
+
+**⚠ Under the multiplier, three identical purchases pay a disruptor user three times what they pay a pistol user.** **That is not the weapon mattering; that is ONE weapon mattering.**
+
+**⚠ AUTHORED, not ported. Marked as such.**
+
+### And `Keen` stays multiplicative — `PT-328`
+
+**⚠ `Keen` is a property of one weapon and SHOULD scale with that weapon's base.** **`Precision` is a purchase and should pay what you paid for it.**
+
+**`PT-176` handles the collision: use the largest, they do not compound.**
+
+---
+
+## PT-331 — Melee trees. Same three levers; `Velocity` takes a middle ground.
+
+| | tier 1 | tier 2 | tier 3 |
+|---|---|---|---|
+| **Power** | +3 dmg, atk −3, crit mult +1 | +7, −3, +1 | +12, −3, +1 |
+| **Velocity** | extra attack, ⚠ **Defence −3** | −2 | −1 |
+| **Precision** | threat span +1 | +2 | +3 |
+
+**⚠ `Power` and `Precision` are IDENTICAL to ranged, exactly as the game has them.**
+
+### ⚠ Only `Velocity` differs, and the game's number was the problem
+
+    ranged Rapid Shot   Def −4 / −2 / −1     total −7
+    ⚠ KOTOR Flurry       Def −2 / −1 / −1     total −4
+    ours                 Def −3 / −2 / −1     total −6
+
+> **⚠ KOTOR gives melee a HALF-PRICE discount on dropping its guard, which is backwards** — **a melee attacker is already standing in reach.**
+
+**Likely because melee was behind on action economy in a real-time game.** **⚠ We do not have that problem: `PT-169`'s wield taxonomy and the chain system already balance the two.**
+
+### Why the middle rather than matching ranged
+
+**⚠ It converges with ranged at tier 3.**
+
+> **At tier 3 both are experts and the exposure is identical. The discount is for LEARNING, not for being melee.**
+
+### ⚠ And it fixes a flat step the source had
+
+**KOTOR's melee pays `−1` at tiers 2 AND 3 — the tree stops costing anything after the second purchase.**
+
+**`−3 → −2 → −1` is three distinct decisions. `−2 → −1 → −1` is two.**
+
+**⚠ AUTHORED on the `Velocity` line only. `Power` and `Precision` are ported.**
+
+---
+
+## PT-332 — Lightsabers keep their own tree, and it is a different KIND of tree.
+
+**Owner ruling:** ***"Lightsabers should have their own tree — more flavour, and something Jedi can look forward to. But no bar from a lightsaber user using melee attack trees with a lightsaber equipped."***
+
+### ⚠ The game has no lightsaber attack tree at all
+
+**Jedi in KOTOR use `Flurry`, `Power Attack` and `Critical Strike` — the melee trees.**
+
+**⚠ `Dueling` is not lightsaber-specific either:** ***"applies to both ranged and melee weapons, and to unarmed combat."***
+
+> **So `ATTACKS-06` is entirely ours. There was never anything to port.**
+
+### ⚠ And that is why it works
+
+    melee / ranged   NUMERIC LEVERS
+                     Power +3/+7/+12 · Velocity an extra attack ·
+                     Precision threat span +1/+2/+3
+
+    ⚠ lightsaber     EFFECTS the others cannot produce
+                     Sarlacc Sweep    three adjacent, then everyone within 2
+                     Disarming Slash  disarm, TAKE, or destroy the weapon
+                     Wide Parry       +5 Defence against one enemy
+                     Feint            one attack ignoring +4 Defence
+
+> **⚠ It is not a better ladder. It is a different verb.**
+
+**Which is the flavour the owner asked for, and it is already written — 66 entries across seven forms.**
+
+### ⚠ The lightsaber tree does NOT adopt `PT-330`'s model
+
+**`+3 / +7 / +12` is a damage ladder. `ATTACKS-06` is not a damage ladder.**
+
+**Its tiers already scale by widening an EFFECT** — **`Broad Sweep` hits three, `Way of the Sarlacc` hits everyone within two squares.**
+
+### And a Jedi may use both
+
+**⚠ No bar. A lightsaber is a melee weapon and the melee trees apply.**
+
+**⚠ Which does not make a Jedi strictly better, because `PT-173` caps chain ACCESS.** **A Jedi spending access on lightsaber chains spends the same budget a Soldier spends on melee ones.**
+
+> **⚠ The Jedi's advantage is that their options are more interesting, not that they have more of them.**
+
+---
+
+## PT-333 — `Position` gets dice and an accuracy swing. `Quick Attack` becomes flanking.
+
+**Owner rulings.**
+
+### `Position` mirrors `Power`
+
+    Power      1d6 / 2d6 / 3d6, ⚠ ALWAYS attack −3
+    Position   1d6 / 2d6 / 3d6, ⚠ attack +2..+4 in position, −2 out of it
+
+> **⚠ Same damage. Opposite risk profile.** **One is a gamble anywhere; the other is a certainty somewhere.**
+
+**Ranged `Point Blank Shot`: in position means within 4 metres.**
+
+### ⚠ `Quick Attack` moves from timing to position
+
+**It gave `+2/+2` against a target that had not yet acted.**
+
+> **⚠ That is a TIMING condition on a POSITION axis. Wrong axis.**
+
+**Now: `1d6` and `+2` attack against a target with an ally adjacent to it. `−2` against one without.**
+
+**⚠ The melee mirror of point-blank.** **Ranged closes DISTANCE; melee closes RANKS.**
+
+**And the concept already exists in the corpus** — **`BEASTS-01`'s `Maalraas` *"fights better with an ally adjacent."***
+
+**⚠ It also gives melee something ranged structurally cannot have: a reason to stand near your allies rather than spread out.** **Which plays against `Spread` and `Support`, both of which already care where people stand.**
+
+---
+
+## PT-334 — Melee roster converted. Three chains, nine entries.
+
+**`ATTACKS-05` now carries `PT-330`'s model throughout.**
+
+    Power Attack line     ⚠ +5/+12/+20  ->  1d6 / 2d6 / 3d6, attack −3 flat,
+                             critical multiplier +1 per tier
+    Critical Strike line  ⚠ ×2/×3/×4    ->  threat span +1 / +2 / +3
+    Quick Attack line     ⚠ +2/+2 timing -> 1d6 flanking, +2 attack in position
+
+**⚠ Zero flat `+N damage` entries and zero `Threat range ×` entries remain in the file.**
+
+### The other six axes were already correct
+
+**`Velocity`, `Spread`, `Control`, `Support`, `Reaction` and `Stealth` needed no change.**
+
+> **⚠ Six of nine axes were right before the rebuild started.** **The port touched only the three that overlap with the game.**
+
+---
+
+## PT-335 — Ranged roster converted. Nine entries, three chains.
+
+**`ATTACKS-04` now carries `PT-330`'s model throughout.**
+
+    Charged Shot line   ⚠ +5/+10/+16  ->  1d6 / 2d6 / 3d6, attack −3 flat,
+                           critical multiplier +1
+    Precise Shot line   ⚠ ×2/×3/×4    ->  threat span +1 / +2 / +3
+    Point Blank line    ⚠ +4/+8/+12   ->  1d6/2d6/3d6, ⚠ attack +2/+3/+4 within
+                           4 metres, −2 beyond it
+
+**⚠ Zero flat `+N damage` entries and zero threat-range multipliers remain.**
+
+### ⚠ `Point Blank Shot` keeps its own clause on top
+
+**It still strips the target's Dexterity bonus to Defence.**
+
+> **⚠ Which is what makes `Position` different from a conditional `Power`** — **the dice are the same, but only `Position` removes a defence.**
+
+### The other six axes were already correct
+
+**Same as melee: `Velocity`, `Spread`, `Control`, `Support`, `Reaction`, `Stealth` needed no change.**
+
+**⚠ Both rosters converted by touching three chains each. Six of nine axes in each were right before the rebuild began.**
+
+---
+
+## PT-336 — `Quick Attack` moves to Reaction. `Pincer` line takes Position.
+
+**Owner rulings.**
+
+### `Quick Attack` — a reaction, not a position
+
+> **⚠ Kill an enemy, and if another is adjacent to you, attack it for free.**
+
+    tier 1   1d6, attack +2
+    tier 2   2d6, attack +3
+    tier 3   ⚠ 3d6, attack +4, and it CHAINS if that kill drops someone too
+
+**⚠ `Reaction` now holds two chains — `Parry` defensive, `Quick Attack` offensive.** **Melee's `Velocity` already has two, so there is precedent.**
+
+**⚠ And a naming caution recorded:** **this is 3.5e's `Cleave`, and we already have a `Cleave` on the `Spread` axis doing something else.** **Both names are unique so check 21 passes, but the CONCEPTS collide for anyone who knows d20.**
+
+### `Pincer` → `Vise` → `Encircled` takes melee Position
+
+**⚠ The melee mirror of `Point Blank Shot`. Ranged closes DISTANCE; melee closes RANKS.**
+
+    tier 1   Pincer      1d6, +2 attack with an ally adjacent to the target
+    tier 2   Vise        2d6, +3
+    tier 3   Encircled   3d6, +4
+    ⚠ out of position: attack −2
+
+**⚠ The point of view shifts across the ladder** — **`Pincer` and `Vise` are what YOU do; `Encircled` is what THEY are.** **No other chain in the corpus does that.**
+
+**⚠ `Vise` is the one American spelling in a British corpus. `Vice` reads as a moral failing rather than a clamp.**
+
+---
+
+## PT-337 — Thirteen chain names shortened
+
+**Owner instruction: authored names of three or more words, renamed to one or two.**
+
+    Nothing Here Surprises Me  ->  Forewarned
+    Nothing Hides From Me      ->  Unhidden
+    Nothing Left To Lose       ->  Last Stand
+    Not Where You Struck       ->  Displaced
+    Never There At All         ->  Absent
+    Armour Is A Comfort        ->  Unburdened
+    Whatever Is To Hand        ->  Improvised
+    No Pattern At All          ->  ⚠ Unpredictable
+    No Warning At All          ->  Unheralded
+    Never the Same Twice       ->  Unrepeatable
+    Both Sides At Once         ->  Two Fronts
+    The Watch Is Kept          ->  Standing Watch
+    Back On Their Feet         ->  Back Up
+
+**19 replacements across 5 files. Check 21 clean.**
+
+### ⚠ `Unreadable` was rejected as a name
+
+**It was the natural rename for `No Pattern At All`.** **⚠ It is already a chain name elsewhere in the corpus.** **`Unpredictable` instead.**
+
+**Caught by checking chain names specifically rather than word occurrences** — **the word appears in ten files, but as a NAME in two.**
+
+### ⚠ And ten three-word names were KEPT
+
+**`Hold the Line` · `Circle of Shelter` · `Barrier of Blades` · `Rain of Blows` · `Way of the Sarlacc` · `Way of the Six Sisters` · `Point Blank Shot` · `Volley of Bolts` · `Read the Blade` · `Set the Line` · `Unity of Form`**
+
+> **⚠ Three words, but they scan as one phrase.** **`Circle of Shelter` does not shorten without losing something.**
+
+---
+
+## PT-338 — Forms are active again. ⚠ Reverses `PT-189`.
+
+**Owner ruling.**
+
+> **⚠ When combat starts, you open your turn in a form of your choice.**
+
+**It ends when:**
+
+    you use an attack from ANOTHER form's tree   ⚠ you switch to that form
+    combat ends
+    ⚠ you stop wielding a lightsaber              the form ends entirely
+
+**⚠ Re-equip a lightsaber and you choose again.**
+
+**A non-form attack does not break it** — **`PT-332` permits melee chains with a lightsaber.** **⚠ You stay in the form, but its benefits do not apply to the non-lightsaber move.**
+
+### ⚠ Why this reverses `PT-189` legitimately
+
+**`PT-189` deleted twenty-eight ported effect values:** ***"they are simply feats that unlock attack trees, with attacks that have benefits already."***
+
+> **⚠ That objection is answered. The effects are no longer a duplicate of the attacks — they are the reward for COMMITTING to one tree.**
+
+**And it charges something `PT-189` had no way to charge:**
+
+> **⚠ Switching trees mid-fight costs you the form you were in.**
+
+**A Jedi who wants `Sarlacc Sweep` this round and `Saber Pierce` next round pays for it in stance.**
+
+**⚠ Which makes a Jedi who knows four forms genuinely different from one who knows one, and makes *which form do I fight in* a live question every combat.**
+
+### ⚠ Nothing was re-authored
+
+**All seven effect lines survived in `FORMS-01` after `PT-189` deleted their status.** **The values are the ported ones, unchanged.**
+
+**⚠ `PT-187` said the stance should survive; `PT-189` reversed it; this restores it with a mechanism neither had.** **Recorded so the third reversal is visible as a resolution rather than a wobble.**
+
+---
+
+## PT-339 — Base dice adopt the game's. ⚠ Supersedes `EQUIPMENT-01 §105`.
+
+    Blaster Pistol      1d6   -> 1d8
+    Blaster Rifle       1d8   -> 1d12
+    Lightsaber          2d8   -> 2d10
+    Short Lightsaber    2d6   -> 2d8
+    Double Lightsaber   2d10  -> 2d12
+    Vibrosword          2d6      ⚠ already matched
+
+### ⚠ `§105`'s reasoning was sound and its conclusion was wrong
+
+**It declined the higher lightsaber dice to avoid widening the Jedi gap.**
+
+    gap, lightsaber over pistol
+      ours   2.57x
+      game   2.44x   ⚠ NARROWER
+
+**⚠ The pistol gains 29% and the lightsaber 22%.** **Adopting the game's dice CLOSES the gap.**
+
+**`§105` compared absolute values rather than the ratio.**
+
+---
+
+## PT-340 — Ranged adds Dexterity to damage
+
+**Owner ruling. ⚠ Neither KOTOR nor RCR does this; it is authored.**
+
+    melee 1H   weapon dice + Strength
+    melee 2H   weapon dice + 1.5x Strength
+    ⚠ ranged    weapon dice + Dexterity
+
+### ⚠ My first check said it overtook melee. It does not.
+
+    vibrosword 2H, 2d6 + 1.5x STR 5    14.0
+    blaster rifle, 1d12 + DEX 5        11.5   ⚠ 18% behind
+
+**⚠ I compared against ONE-HANDED melee and reported a 4% gap.** **Two-handed gets `1.5x` Strength and the real gap is 18%.**
+
+> **⚠ The alarm was mine and it was arithmetic, not design.** **The owner nearly reversed `PT-339` one message after ruling it, on the strength of my error.**
+
+**⚠ Eighth time this session an assertion went out before the check.**
+
+---
+
+## PT-341 — `Massive Criticals` ported, capped at `2d6`
+
+    +4 · 1d4 · 1d6 · 1d8 · 1d10 · 2d6   ⚠ unchanged
+    2d8  ->  2d6                         ⚠ the only value that moves
+
+**⚠ Six of seven distinctions survive.** **The owner proposed a flat `2d6`, which would have collapsed 45 weapons onto one value on this axis.** **As a CAP it changes one.**
+
+    2d10 lightsaber, crit x2 = 4d10 = 22
+                      + 2d6  =        29   ⚠ +32%
+                      + 2d8  =        31   ⚠ +41%
+
+**⚠ `ATTACKS-01` refused the `Commando` case because critical damage multipliers *"change every round of every fight."*** **The `2d8` weapons were that case.**
+
+**⚠ The weapon conversion is now closed: base dice, ability damage, `Enhancement`, `Keen`, `Massive Criticals`, and all twelve properties resolved.**
+
+---
+
+## PT-342 — K1 items filed. Three shared items differ; two were not what they looked like.
+
+**556 K1 items sorted. ⚠ 165 resrefs are shared with K2 and 162 are byte-identical in effect and price.**
+
+**⚠ The owner's K1-overrides-on-price rule never fires. All 165 shared items already agree on cost.**
+
+### ⚠ `HK-47 Hide 4` — K1's version, ladder intact
+
+    Hide 0   3 immunities
+    Hide 1   + Ability 2
+    Hide 2   + Armor 2
+    Hide 3   + Regeneration 1
+    Hide 4   ⚠ Ability 4, Regeneration 2 — the capstone DOUBLES both
+
+**⚠ K2 set Hide 4's regeneration to `1`, matching Hide 3 and flattening the top step.**
+
+**Owner first said cut it, then *"take whatever is the best one"* once the ladder was visible.** **K1's version taken.**
+
+> **⚠ I nearly executed the cut. Checking what the item was part of took one command and changed the answer.**
+
+### ⚠ `Security Spike` — I created a duplicate solving a problem K1 had already solved
+
+**The owner asked for both a basic and an advanced spike. ⚠ K1 already ships both:**
+
+    g_i_secspike01   Security Spike            ThievesTools 5
+    g_i_secspike02   Security Spike Tunneler   ⚠ ThievesTools 10
+
+**K2 renamed `secspike01` to *"Security Tunneler"* and dropped the advanced one entirely.**
+
+**⚠ So the apparent K1/K2 conflict was K2 collapsing two items into one.** **K1's pair is canonical.**
+
+**⚠ And the advanced spike is `10`, not the `6` I reported.** **`6` was K2's renamed basic spike, not its advanced one.**
+
+### `g_i_medeqpmnt08` — ⚠ a phantom
+
+**Identical in every displayed field.** **The difference is `BaseItem`, and K1 index 91 is `Squad_Recovery_kit` where K2's is `Wrist_Launcher`.**
+
+> **⚠ The baseitems index divergence surfacing as an item conflict. Not real.**
+
+---
+
+## PT-343 — `sort_items.py` is game-aware
+
+**⚠ `k1_baseitems` has 92 rows; `k2` has 104. Index 91 diverges. Everything below aligns.**
+
+**Sorting K1 with K2's table would have mislabelled exactly one item — silently.**
+
+**Three K1-only categories added:** **`armour/disguise` · `usable/light-source` · `armour/robes` for `Revan_Armor`, which is its own baseitem in K1.**
+
+**⚠ And the one-game splits confirm `PT-273`:** **K1 has no `upgrades/armour-*` at all.** **K2's upgrade system was an expansion, not a revision.**
+
+---
+
+## PT-344 — `ITEMS-01` to `ITEMS-08`. Both games, conversions applied.
+
+    ITEMS-01 weapons    k2 294  k1 198     ITEMS-05 worn      k2 143  k1  98
+    ITEMS-02 armour     k2  95  k1  87     ITEMS-06 usable    k2  45  k1  43
+    ITEMS-03 upgrades   k2 144  k1  22     ITEMS-07 quest     k2 150  k1  15
+    ITEMS-04 droid      k2  82  k1  56     ITEMS-08 other     k2  41  k1  37
+
+**1,550 item records across eight documents.**
+
+### Every field, and where it comes from
+
+    name          dialog.tlk
+    resref        the .uti filename
+    ⚠ tier         derived from cost — PT-308's owner-approved bands
+    cost          .uti Cost
+    ⚠ weapon       dice, threat and multiplier from baseitems — PT-339
+    properties    itempropdef + the iprp_ tables, subtypes per PT-313
+    ⚠ UNIQUE       Plot flag or a possessive name — PT-327
+    description   dialog.tlk DescIdentified
+
+**⚠ `PT-341`'s Massive Criticals cap is applied in the render function, not by hand.** **`2d8` becomes `2d6`; the other six values are untouched.**
+
+### ⚠ `PT-345` — lightsabers carry a MENU, not effects
+
+**38 items list up to 29 property entries with nine or more duplicates.**
+
+> **⚠ Their own description says why:** ***"properties can vary with the type of focusing crystal used in construction."***
+
+**They are not 29 active properties on a base sabre. They are what a crystal COULD grant.**
+
+**⚠ Printing them as effects would have given every base lightsaber eight stacked `AttackBonus 3` entries.** **Now they read *"properties come from the fitted crystals."***
+
+**Which is consistent with `PT-274`: a lightsaber has four upgrade slots and the crystal is one of them.**
+
+### ⚠ What is still missing
+
+**The `feat_ref` remap — `PT-314`. 56 feats still point at KOTOR's list.**
+
+**⚠ Step 3, and it needs the owner. Everything else in the item corpus is done.**
+
+---
+
+## PT-345 — Lightsabers carry a crystal MENU, not active properties
+
+**38 items list up to 29 property entries with nine or more duplicates.**
+
+> **⚠ Their own description says why:** ***"properties can vary with the type of focusing crystal used in construction."***
+
+**They are not 29 active properties on a base sabre. They are what a fitted crystal COULD grant.**
+
+**⚠ Printing them as effects gave every base lightsaber eight stacked `AttackBonus 3` entries.** **Now they read *"properties come from the fitted crystals."***
+
+**Consistent with `PT-274`: a lightsaber has four upgrade slots and the crystal is one of them.**
+
+---
+
+## PT-346 — Check 20 was firing on a port
+
+**`ITEMS-06` failed the grid check on *"3 m"* and *"15 m"*.**
+
+**⚠ Those are `dialog.tlk` description text, transcribed verbatim.**
+
+> **⚠ `PT-253`'s grid conversion governs OUR distances. It does not govern quoted source prose.**
+
+**The check now skips `ITEMS-01` through `-08`.**
+
+**⚠ Which is the third time this session a check has been correct about the wrong object** — **`PT-288`, `PT-292`, and now this.** **The pattern is mine and the checks keep surviving it.**
+
+---
+
+## PT-347 — Upgrade notices stripped from descriptions
+
+**KOTOR prefixes item descriptions with *"Fully Upgradeable"*, *"Not Upgradeable"*, or *"Upgradeable (Edge, Grip)"*.**
+
+> **⚠ That is UI text about the game's workbench, not a property of the item.**
+
+**Stripped in `name_and_desc`. `CRAFTING-01` and `PT-274` govern what upgrades what.**
+
+**⚠ Two forms existed and the first pass caught only one.** **The parenthetical variant survived 25 times in the weapons document until a second read.**
+
+---
+
+## PT-348 — Wiki check on the lightsabers. ⚠ `PT-274` undercounted the slots.
+
+**Owner asked for the crystal-menu finding to be checked against the wiki.**
+
+### Confirmed
+
+**Base dice.** *"Single blade deals `2d10` energy damage and double deals `2d12`."* **⚠ Exactly `PT-339`'s values.**
+
+**`PT-345`'s crystal menu.** **The base sabre has no inherent attack bonus; every property comes from a fitted crystal.**
+
+**And the K1-to-K2 expansion `PT-273` recorded:** *"the original KOTOR only had two upgrade slots."*
+
+### ⚠ The correction
+
+> ***"There are five upgrade or component slots in KOTOR 2's lightsabers"*** — ***"the same two crystal slots as the original, but now a cell, an emitter, and a lens."***
+
+**⚠ `PT-274` derived FOUR lightsaber slots from `upgradetype`: crystal, emitter, lens, cell.**
+
+**There are FIVE. ⚠ The crystal slot is doubled.**
+
+**`upgradetype 0` is one value in the table and TWO sockets on the weapon.** **The 2DA could not have shown that, and I read the table correctly and the weapon wrongly.**
+
+**⚠ Which is why `PT-272`'s wiki finding said *"two power crystals of different types"* and I recorded it as one slot.** **The evidence was in front of me at `PT-272` and I lost it by `PT-274`.**
+
+### What it changes
+
+    lightsaber   ⚠ 5 slots — crystal x2 · emitter · lens · cell
+    blaster      3
+    melee        3
+    armour       2
+
+---
+
+## PT-349 — `Upgradeable` becomes a field, not description prose
+
+**Owner ruling, reversing half of `PT-347`.** **The notice is stripped from the description AND kept as its own column.**
+
+    ⚠ five forms exist in the corpus
+
+    Not Upgradeable                 48    -> null
+    Fully Upgradeable               29
+    Upgradeable (Scope)             11    ⚠ names the actual sockets
+    Upgradeable (Scope, Chamber)     7
+    Upgradeable (Edge, Grip)         7
+
+> **⚠ The parenthetical forms are more useful than a boolean. They say WHICH sockets the item has.**
+
+### Where the source is silent, the category decides
+
+    weapons     ⚠ Fully Upgradeable — except creature, ammunition, grenade, mine
+    armour      ⚠ Fully Upgradeable — light, medium, heavy, clothing, robes
+    everything else                 null
+
+**⚠ The source only ever prints the notice on weapons and armour.** **100 of 294 weapons and 2 of 95 armours carry one; the rest are silent, and the owner's default fills them.**
+
+### Result
+
+    1,030 null · 494 Fully Upgradeable · 25 with named sockets
+
+### ⚠ What I would add, and it is a question rather than a proposal
+
+**⚠ Droid items.** **`PT-316` gave droids six sockets, and `DROIDS-UPGRADE-01` says droid gear IS the upgrade.** **82 droid items currently read null.**
+
+> **⚠ Are droid sockets *upgradeable*, or are they the upgrades?** **If a `d_armor` plating can itself take a component, it needs the field. If not, null is correct.**
+
+**⚠ And `worn` — belts, masks, implants — are null in both the source and the default.** **Confirmed silent rather than overlooked.**
+
+---
+
+## PT-350 — Droid gear is not upgradeable. Bays stay separate.
+
+**Owner ruling, closing `PT-349`'s open question.**
+
+    droid items    ⚠ Upgradeable field is null. All 82.
+
+### ⚠ The owner's argument, and it is the one I missed
+
+> ***"If a player upgrades droid armour and finds something way better, that upgrade is money and resources down the drain."***
+
+**⚠ A permanent investment in a SWAPPABLE object is a trap.** **You cannot know the socket item you improved is the one you will still be using at level 25.**
+
+**I argued the socket-tied version fails because the two options collapse to a dominant choice.** **⚠ That is true and it is the smaller problem.**
+
+> **⚠ The bigger one is that it punishes a player for a decision they could not have made correctly.**
+
+### And it confirms the two-system split
+
+**`DROIDS-UPGRADE-01`'s bays are separate from sockets, and this is why:**
+
+    socket   ⚠ gear. Swap it. Nothing you spent is lost.
+    bay      ⚠ permanent. It IS the droid, per PT-321. Nothing to obsolete.
+
+> **⚠ A permanent upgrade is safe precisely because it is not attached to an object.**
+
+**`PT-321`: *"the permanent are as if you levelled up."*** **⚠ Levelling cannot be made worthless by finding better gear.**
+
+---
+
+## PT-351 — ⚠ Everything an item grants is held only while equipped.
+
+**Owner, in passing:** ***"feats are properties of the item itself — you don't get the feat permanently."***
+
+> **⚠ Which generalises `PT-315` and dissolves a question I had been about to ask.**
+
+**I was asking whether `FORCE_IMMUNITY_STUN` should be a granted FEAT or an `Immunity` PROPERTY.**
+
+    granted feat      stun immunity while equipped
+    Immunity property stun immunity while equipped
+
+**⚠ Identical. The question was bookkeeping, not design.**
+
+**It goes in whichever vocabulary is cleaner** — **`PROPERTY-VOCAB-01`'s `condition` list already holds `Stun`.** **One vocabulary, not two.**
+
+---
+
+## PT-352 — The `feat_ref` remap. ⚠ All 55 resolve, and I was wrong twice.
+
+    ⚠ 17  attack chains          -> PT-315, granted while equipped
+      20  direct feat matches    -> Weapon Focus, Proficiency, Toughness,
+                                    Two-Weapon, Dueling all exist
+    ⚠  6  XXX-prefixed           -> cut content. XXXPRECISE_SHOT_I sits beside
+                                    a real PRECISE_SHOT_I. Dropped.
+    ⚠  5  TARGETING_1/2/3        -> our Targeting chain. PT-208, PT-209.
+                                    Owner confirmed: a tracking unit on a weapon.
+    ⚠  2  DROID_UPGRADE_2/3      -> PT-318, the bay gate
+       3  Force Jump, Regenerate Vitality Points -> direct
+
+### ⚠ The two I reported as absent and were not
+
+**`FORCE_FOCUS`.** **⚠ I proposed dropping it as *"no counterpart in our library."*** **The owner: *"force focus I think was renamed to force channel."***
+
+**⚠ *Force Channel* is live.** **`PT-103` retired two duplicates named *Force Channel (Alter)* and *(Control)* and kept the owner's name for the live chain.** **`FEATS-SETS-01` gives the Consular *Force Channel*, *Advanced*, *Mastery*.**
+
+**`CAUTIOUS` / `IMPROVED_CAUTION` / `MASTER_CAUTION`.** **⚠ I proposed authoring a new three-tier feat.**
+
+**⚠ It already exists.** **`FEATS-LIBRARY-01`: *"Cautious — +1 Demolitions and Stealth."*** **`FEATS-UNIVERSAL-01` carries the full chain: `Cautious` → `Improved Caution` → `Master Caution`.**
+
+> **⚠ Twice in one message I proposed authoring something the corpus already had.**
+
+**Both were caught by the owner, not by me. ⚠ And the search that would have found them was one grep.**
+
+### ⚠ Zero feats need authoring
+
+**55 of 55 resolve to an existing chain, an existing feat, a droid gate, or cut content.**
+
+**The item corpus is complete.**
+
+---
+
+## PT-353 — ⚠ The hard rule: an item-granted feat is a property of the ITEM.
+
+**Owner instruction, following `PT-351`.**
+
+    purchased    you spent a slot          permanent        ⚠ YOURS
+    class grant  a class feature gave it   while you hold it ⚠ YOURS
+    ⚠ item        an item grants it        ⚠ while equipped  ⚠ NOT YOURS
+    ⚠ droid bay   installed in a bay       ⚠ permanent       ⚠ YOURS
+
+### ⚠ The rule
+
+> **A feat held from an item cannot satisfy a prerequisite.** **Not a prestige class, not a higher tier of its own chain, not anything.**
+
+**⚠ Because a prerequisite is a statement about what you have LEARNED.** **An item you can take off has taught you nothing.**
+
+### What follows, and most of it was already ruled
+
+**⚠ It does not consume chain access** — **`PT-315`, resting on `PT-173`'s `N ≤ access` test.**
+
+**⚠ It does not stack with the same feat held permanently** — **`PT-315` again.**
+
+**⚠ It does not survive unequipping, including mid-combat** — **`PT-338` already applies this to lightsaber forms.**
+
+### ⚠ The droid bay is the deliberate exception
+
+**`PT-321`: *"the permanent are as if you levelled up and got it to that level."***
+
+**⚠ So a bay-installed feat IS yours. It satisfies prerequisites.**
+
+**Which is precisely what distinguishes a bay from a socket — `PT-350`.**
+
+### ⚠ Why it needed writing down
+
+**`PT-351` established item feats are temporary. `PT-318` established bay feats are permanent.**
+
+> **⚠ Both were true and neither said what that MEANT for prerequisites** — **which is where the two would first collide at a table.**
+
+**A rule that follows from two others is still unwritten until someone writes it.**
+
+---
+
+## PT-354 — The two games merged. ⚠ Zero real conflicts.
+
+    was   1,550 rows across two sections, 165 duplicated
+    now   ⚠ 1,385 unique items, one entry each, with a `Src` column
+
+    ITEMS-01 weapons   418  ⚠  74 in both     ITEMS-05 worn    241   0
+    ITEMS-02 armour    173  ⚠   9             ITEMS-06 usable   58  ⚠ 30
+    ITEMS-03 upgrades  164      2             ITEMS-07 quest   154    11
+    ITEMS-04 droid     135      3             ITEMS-08 other    42  ⚠ 36
+
+### ⚠ 164 of 165 shared items are identical on everything
+
+**Properties, cost, name strref, description strref.** **⚠ `PT-342`'s merge rule — K1's price, K2's text — never fires, because they already agree.**
+
+### ⚠ The one apparent conflict is a table artefact
+
+**`g_i_medeqpmnt08` reads `BaseItem 91` in K1 and `94` in K2.**
+
+    ⚠ K1 index 91 = Squad_Recovery_kit
+    ⚠ K2 index 94 = Squad_Recovery_kit
+
+> **⚠ Same category, different index.** **`k1_baseitems` has 92 rows and `k2` has 104, and they diverge above 91.**
+
+**Not a conflict. The same table divergence `PT-343` made `sort_items.py` game-aware for, surfacing a third time.**
+
+### ⚠ And `worn` shares nothing at all
+
+**241 worn items, ⚠ zero in both games.**
+
+**K2 replaced the entire belt, mask, gauntlet and implant line.** **Which is consistent with `PT-273` and `PT-348`: K2 expanded the equipment system rather than revising it.**
+
+### ⚠ `other` is 36 of 42 shared
+
+**Pazaak cards and credits. The two games ship the same ones.**
+
+---
+
+## PT-355 — Creature type does two jobs. ⚠ One ported, one authored.
+
+**Owner ruling: *"these three beast types may simply be tags we attach to individual beasts that define their function in mechanics."***
+
+    ⚠ statistical   vitality die · skill points · class skills
+                    PORTED from RCR's per-type blocks
+    ⚠ behavioural   how the creature FIGHTS
+                    ⚠ AUTHORED. Nothing in RCR does this.
+
+> **⚠ A GM needs *"it is a Predator"* to tell them how to run it. A `d6` vitality die does not.**
+
+### The tags
+
+    Predator      ⚠ attacks the nearest threat; will not disengage from a wounded one
+    Vermin        ⚠ swarms — better with its own kind adjacent
+    Scavenger     ⚠ opportunist — bonus on a wounded target, avoids a healthy one
+    Herd Animal   ⚠ flees when hurt; fights cornered or defending young
+    Parasite      ⚠ attaches — damage continues without further attacks
+
+### ⚠ Why our system can carry both and RCR cannot
+
+**RCR's type IS the chassis — it supplies everything.**
+
+**⚠ Ours already gets wound points from tier→size and attack and saves from the master's level — `PT-283`.** **So type was left doing only three things, which is not enough work for a whole classification.**
+
+> **⚠ `PT-284` had already decoupled type from tier. This gives type a job again.**
+
+### ⚠ And it unblocks the workstream without abandoning the port
+
+**23 of 25 beasts still need `Predator` and `Vermin` for the three numbers.**
+
+**But the behavioural half is written now, and the numbers slot in when the Extractor returns.**
+
+**⚠ The request stays open. It stops being a blocker.**
+
+### Our 25, tagged
+
+    Predator      14      Vermin  9      Herd Animal  2
+
+---
+
+## PT-356 — All five creature type blocks ported. ⚠ Item 3 closed.
+
+**Extractor, RCR ff.334–335. With ff.329–333 from the earlier pass, the entire creature apparatus is read.**
+
+    Herd Animal   1d4      Predator   ⚠ 1d8    14 of ours
+    Scavenger     1d6      Vermin     ⚠ 1d8     9 of ours
+    Parasite      1d6
+
+**⚠ Predator and Vermin are the top of the ladder. All 23 unblocked beasts take the highest die.**
+
+### ⚠ Predator is the mechanically privileged type
+
+**Two high saves — Fortitude AND Reflex, the only type with two.** **A starting feat, the only type that gets one.** **And sole access to damage reduction, fast healing, terrifying presence and swallow whole.**
+
+**⚠ Which matters when 14 of our 25 are predators.**
+
+### ⚠ The Vermin trait the field list does not carry
+
+> ***"Having little or no cognitive faculty, they receive a `+10` species bonus on saving throws against mind-influencing effects."***
+
+**⚠ It is in the descriptive paragraph, not in `Special Qualities`.** **Every vermin has it by default.**
+
+**⚠ Same magnitude as Dashade Force Resistance — the largest species modifier in three books.**
+
+> **⚠ Statting our nine vermin from the `Game Rule Information` block alone would have missed it entirely.** **The Extractor read the prose and flagged it unprompted.**
+
+### ⚠ Five physical-characteristics tables, not one
+
+**`Table 14-3` has four siblings — `14-4` Parasite, `14-5` Predator, `14-6` Scavenger, `14-7` Vermin.**
+
+**A boma's Strength comes from `14-5` and is a different number from the herd-animal value at the same size.**
+
+    Medium Predator   Str 15 · Dex 15 · Con 17 · bite 1d8 · claw 1d6
+    Medium Vermin     Str  8 · Dex 14 · Con  8 · bite 1d6 · claw 1d4
+
+**⚠ I asked whether the table had siblings and treated it as a maybe. It has four.**
+
+---
+
+## PT-357 — The beast entry is pre-statted. The player never opens the generator.
+
+**Owner asked what this looks like on the page for a first-time player.**
+
+> **⚠ The design constraint: ONE lookup, not six.**
+
+**RCR's tables generate a beast from type, size and level. ⚠ A player should never touch them.**
+
+**Each of the twenty-five entries prints its numbers already filled in, plus one line for what changes as you level.**
+
+    BOMA                            tier 2 · Predator · Medium
+    Str 15  Dex 15  Con 17  Int 3  Wis 13  Cha 9
+    bite 1d8 · claw 1d6
+    ⚠ AS YOU LEVEL  your Beast Master level. 1d8 vitality per level.
+    ⚠ WHAT IT DOES  ramming charge — moves two squares, hit knocks prone
+
+**⚠ Two numbers to track and one sentence of character.**
+
+### ⚠ Beast feats were about to be the problem
+
+**RCR gives a creature one feat at 3rd level and one every three after. Predators get one more at creation.**
+
+    master level 30   ⚠ predator holds 11 feats   others hold 10
+
+> **⚠ A player character at 30 holds about twelve. A companion would hold eleven.** **That is a second character sheet for one player.**
+
+### The fix
+
+**⚠ The entry prints its feats, keyed to level. The player does not choose.** **A boma comes with a boma's feats.**
+
+**⚠ Optional rule, flagged as optional: swap any ONE printed feat for another the beast qualifies for.** **One decision, not eleven.**
+
+### ⚠ And the game data settled an earlier worry
+
+**The owner's concern was that RCR generation makes all predators identical while the game data is differentiated.**
+
+**⚠ Checked: 35 distinct stat blocks across 52 K2 creatures, and six are shared.**
+
+    lvl 9 · 97 HP · STR 18   ⚠ shared by boma, hssiss, boma_sm AND zakkeg
+
+> **⚠ The game is differentiated on APPEARANCE, not statistics. A zakkeg fights exactly like a boma.**
+
+**And the game's numbers are 40–50% above RCR generation** — **`1.4x` on the boma, `1.5x` on the cannok.**
+
+**⚠ So anchoring on game stats would import generosity without importing distinctiveness.** **RCR generates the block; `BEASTS-01`'s *"one thing"* clause supplies the character.**
+
+**⚠ That clause was written before any of this and turns out to be the missing layer.**
+
+---
+
+## PT-358 — Beast DCs rebased. ⚠ The level bracket is deleted, not corrected.
+
+**Owner ruling, from the observation that the Beast Master is a PRESTIGE class.**
+
+### ⚠ The old DCs were set before we knew when the class can exist
+
+**Entry is `Scout 6` or `Treasure Hunter 6` plus `Beast Handling` 8.** **⚠ So the earliest Beast Master is CHARACTER LEVEL 6.**
+
+**⚠ Take-10 ceiling on day one: `10 + 8 + Wisdom` — call it 19 to 21.**
+
+> **⚠ `PT-281`'s tier 2 was `DC 18`. Already cleared at entry.** **Two of three tiers were free the moment you took the class.**
+
+### Rebased
+
+    tier 1   ⚠ DC 15   available at entry, character level 6
+    tier 2   ⚠ DC 24   character level ~11
+    tier 3   ⚠ DC 32   character level ~19
+
+**⚠ Which spreads the three tiers across the class rather than handing two over at entry.**
+
+### ⚠ And the level bracket is DELETED
+
+**`BEASTS-01` carried `tier 1 = levels 1-5`, written before we knew no Beast Master exists at levels 1-5.**
+
+**The owner's first instinct was to gate tiers by level bracket. ⚠ Then: *"the DC is the level gate — you may remove the level gate."***
+
+> **⚠ Right. Two rules meant to agree is how `PT-173`'s one-condition filter happened.**
+
+**One gate: `Beast Handling`. Or money, at tiers 1 and 2.**
+
+### ⚠ And the price bands now land with the skill gate
+
+**Tier 2 at 20,000–50,000 is reachable at character 11, not 6.**
+
+**⚠ A level-11 party can afford it; a level-6 party could not have.** **The two gates now agree by accident of the rebase, which is worth noting rather than assuming it will hold if either moves.**

@@ -556,3 +556,36 @@
 > **The gate is `Echani Combat Training`, which `SPECIES-CHAPTER-v2` makes trained rather than heritable.** ***"Other species may learn the chain from an Echani teacher."***
 
 **Which makes it the only thing in the corpus a GM grants on a narrative event rather than a level.**
+
+
+---
+
+## ⚠ An item may grant an attack chain — `PT-315`
+
+> **A few items grant a chain while equipped. Unequip it and the chain is gone.**
+
+**25 of 994 items do this — 2.5%, and every one is in the corpus's top price decile.**
+
+    Droid CEPB        27,200 cr    POWER_BLAST + Improved + Master
+    Tehk'la Blade     23,000 cr    CRITICAL_STRIKE + Improved
+    Arg'garok         18,500 cr    POWER_ATTACK + Improved
+
+**⚠ The item grants the ladder as the source gives it — not a single tier.** **The constraint is the equipment slot, not the tier count.**
+
+> **You are not getting free chains. You are committing to a weapon.**
+
+### ⚠ It does not count against chain access
+
+**`PT-173` derived that a chassis-restricted character needs `N ≤ access`** — **an ACCESS limit, not a purchase budget.**
+
+**⚠ A granted chain is not purchased and does not consume access.** **So an item cannot make a legal build illegal, and the four zero-slack classes — Bounty Hunter, Engineer, Agent, Droid Master — are unaffected.**
+
+### If you already hold the chain
+
+**⚠ The grant does nothing and takes nothing away.** **A higher purchased tier is not downgraded by a lower granted one.**
+
+### ⚠ And this is why a weapon has a name
+
+**`Arg'garok` is not a big axe. It is *the Power Attack axe*.**
+
+**Which is worth more than mechanical tidiness, and it is what the source was doing.**

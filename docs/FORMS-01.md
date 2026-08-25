@@ -494,3 +494,54 @@
 **Juyo is described as the most vicious form of lightsaber combat.** **Ferocity already grants Defence −4, Saves vs. Force −4, and +1 attack per round** — **it is all offence and no protection.**
 
 **Landing criticals is what the offence is for.** **Without the +4, Ferocity is a damage bonus with a Defence penalty and nothing that distinguishes it from Power Attack.**
+
+---
+
+## ⚠ Forms are ACTIVE again — `PT-338`. Reverses `PT-189`.
+
+**`PT-189` deleted twenty-eight ported effect values on the grounds that *"the attacks have benefits already."***
+
+> **⚠ That objection is answered. The effects are no longer a duplicate of the attacks — they are the REWARD for committing to one tree.**
+
+### The rule
+
+    ⚠ When combat starts, you open your turn in a form of your choice.
+
+**It lasts until one of four things:**
+
+    ⚠ you use an attack from ANOTHER form's tree     — you switch to that form
+    ⚠ combat ends
+    ⚠ you stop wielding a lightsaber                 — the form ends entirely
+    ⚠ nothing else
+
+**⚠ Re-equip a lightsaber and you choose your form again.**
+
+### ⚠ A non-form attack does not break it
+
+**`PT-332` permits a Jedi to use melee chains with a lightsaber.**
+
+> **⚠ You stay in the form. But the form's benefits do NOT apply to the non-lightsaber move.**
+
+**So a Guardian in `Perseverance` who uses `Power Attack` keeps the form for their next lightsaber strike — and gets no `Attack +2` on the `Power Attack` itself.**
+
+### ⚠ What this charges that `PT-189` could not
+
+**Switching trees mid-fight costs you the form you were in.**
+
+> **⚠ Which makes a Jedi who knows four forms genuinely different from one who knows one, and makes *which form do I fight in* a real question every combat.**
+
+**A Jedi who wants `Sarlacc Sweep` this round and `Saber Pierce` next round pays for it in stance.**
+
+### The seven, restored
+
+| Form | Effects while active |
+|---|---|
+| **Determination** | Attack +1; Defence +3; Defence vs. target −3 |
+| **Contention** | Attack +3 **vs lightsaber wielders only**; Damage +3; Deflection −5; Saves vs. Force +2 |
+| **Resilience** | Defence vs. target +2; Deflection +4; Threat Range −1 |
+| **Aggression** | Defence −2; Defence vs. target +5; Deflection −4; Threat Range +1 |
+| **Perseverance** | Attack +2; Defence vs. target −5; Deflection +2; ⚠ Critical Multiplier +1 |
+| **Moderation** | Attack +1; Defence +1; Defence vs. target +1; Deflection +1; Saves vs. Force +1 |
+| **Ferocity** | Defence −4; Defence vs. target +2; Saves vs. Force −4; ⚠ Attacks per round +1 |
+
+**⚠ Ported values, unchanged. `PT-189` deleted them; nothing was re-authored.**

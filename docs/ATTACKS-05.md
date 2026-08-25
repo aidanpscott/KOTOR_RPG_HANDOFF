@@ -18,7 +18,7 @@
 | **Spread** | Cleave | **Mirrors ranged exactly.** Two adjacent enemies, then three, then all. |
 | **Precision** | Critical Strike | Same |
 | **Power** | Power Attack | Same |
-| **Position** | Quick Attack | **Initiative replaces distance.** Ranged Position asks *where do I stand*; melee asks *who moved first*. |
+| **Position** | Quick Attack | ⚠ **`PT-333`. Melee closes RANKS where ranged closes DISTANCE.** Both ask *where do I stand*. |
 | **Control** | Sweep Attack · Disarming Strike | **Prone replaces immobilised**, and **both resolve on opposed rolls** rather than saves — you are close enough that the target's competence opposes you. |
 | **Support** | Guarding Stance | **Bodyguarding replaces suppression.** You cannot pin a corridor with a blade; **you can stand in front of someone.** |
 | **Reaction** | Parry | **Parry-riposte replaces opportunity fire.** The most natural reaction in the game. |
@@ -48,17 +48,17 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Critical Strike** | A precise strike aimed at a weak point. **Droids cannot take these.** | **Level 1.** **Critical threat range ×2.** **The threat range applies to every attack you make this round.** **A first-attack hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Strength modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
-| › Wounding Strike |  | **Level 4.** **Threat range ×3, on every attack. +4 damage on the first attack that hits.** **Stun as above. Defence −2.** |
-| ›› Deathstroke |  | **Level 8.** **Threat range ×4, on every attack. +8 damage on the first attack that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
+| **Critical Strike** | A precise strike aimed at a weak point. **Droids cannot take these.** | **Level 1.** **Threat span +1** — `PT-330`. **The threat range applies to every attack you make this round.** **A first-attack hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Strength modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
+| › Wounding Strike |  | **Level 4.** **Threat span +2, on every attack. `1d6` damage on the first attack that hits.** **Stun as above. Defence −2.** |
+| ›› Deathstroke |  | **Level 8.** **Threat span +3, on every attack. `2d6` damage on the first attack that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
 
 ## Power — More damage
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Power Attack** | A committed swing that sacrifices precision for force. **Droids cannot take these.** | **Level 1. Requires Strength 12.** **+5 damage on the first attack that hits this round. Attack −3.** **On that hit the target is knocked back 3 squares and falls prone** unless it saves — Reflex, DC 10 + your level + Strength modifier. |
-| › Forceful Slash |  | **Level 4.** **+12 damage on the first attack that hits. Attack −2.** **Knockback as above.** |
-| ›› Crushing Blow |  | **Level 8.** **+20 damage on the first attack that hits. Attack −1**, and **your critical multiplier is increased by 1** on that attack. **Knockback as above.** |
+| **Power Attack** | A committed swing that sacrifices precision for force. **Droids cannot take these.** | **Level 1. Requires Strength 12.** **`1d6` damage on the first attack that hits this round. Attack −3.** **On that hit the target is knocked back 3 squares and falls prone** unless it saves — Reflex, DC 10 + your level + Strength modifier. |
+| › Forceful Slash |  | **Level 4.** **`2d6` damage on the first attack that hits. Attack −3. Critical multiplier +1.** **Knockback as above.** |
+| ›› Crushing Blow |  | **Level 8.** **`3d6` damage on the first attack that hits. Attack −3**, and **your critical multiplier is increased by 1** on that attack. **Knockback as above.** |
 
 ## Stealth — the blade they never saw
 
@@ -94,7 +94,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **+2 attack and +2 damage against a target that has not yet acted this round, and it loses its Dexterity bonus to Defence.** **Defence −2 until the start of your next turn.** **If the attack reduces the target below half vitality, it acts last next round.** |
+| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **`1d6` damage and +2 attack against a target with an ally adjacent to it** — `PT-333`. **Against a target with no ally adjacent, attack −2. (Was: +2/+2 against a target that had not yet acted this round, and it loses its Dexterity bonus to Defence.** **Defence −2 until the start of your next turn.** **If the attack reduces the target below half vitality, it acts last next round.** |
 | › Opening Strike |  | **Level 4.** **+4 attack and +4 damage.** |
 | ›› First Blood | The fight is decided in the first exchange or not at all. | **Level 8.** **+6 attack and +6 damage.** |
 

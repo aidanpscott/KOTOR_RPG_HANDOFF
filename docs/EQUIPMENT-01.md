@@ -6,7 +6,7 @@
 
 ## 1. Two findings that matter more than the numbers
 
-> **Melee adds Strength to both attack and damage. Ranged adds nothing to damage.**
+> **Melee adds Strength to both attack and damage.** **⚠ Ranged adds Dexterity to damage — `PT-340`.**
 
 *"Strength modifier is added to both Attack and Damage."* *"Ranged weapons do not get a bonus to damage from STR or DEX, so they can easily be outpaced by melee weapons."*
 
@@ -74,12 +74,12 @@
 | **Disruptor Pistol** | **1d4** | physical | 24 m | 20 |
 | **Ion Blaster** | **1d4** + **1d10 vs droid** | ion | **16 m** | 20 |
 | **Sonic Pistol** | **1d4** | sonic | **16 m** | 20 · Dex damage |
-| **Blaster Pistol** | **1d6** | energy | 24 m | 20 |
+| **Blaster Pistol** | **1d8** | energy | 24 m | 20 |
 | **Disruptor Rifle** | **1d6** | physical | 28 m | 20 |
 | **Ion Rifle** | **1d6** | ion | 28 m | — |
 | **Sonic Rifle** | **1d6** | sonic | 28 m | 20 · Dex damage |
 | **Blaster Carbine** | **1d8** | energy | **24 m** | **19–20** |
-| **Blaster Rifle** | **1d8** | energy | 28 m | **19–20** |
+| **Blaster Rifle** | **1d12** | energy | 28 m | **19–20** |
 | **Bowcaster** | **1d10** | energy | 28 m | **19–20** |
 
 **All pistols are *Balanced*.**
@@ -97,7 +97,7 @@
 | Weapon | **K1** | K2 | Threat | Wield | Size |
 |---|---|---|---|---|---|
 | **Short Lightsaber** | **2d6** | 2d8 | **19–20 / ×2** | **2 — one-handed** | Small |
-| **Lightsaber** | **2d8** | 2d10 | **19–20 / ×2** | **2 — one-handed** | Medium |
+| **Lightsaber** | **2d10** | 2d10 | **19–20 / ×2** | **2 — one-handed** | Medium |
 | **Double-Bladed Lightsaber** | **2d10** | 2d12 | **20 only / ×2** | **3 — two-handed staff** | Large |
 
 > **Use K1's. Our campaign is 3956 BBY and K1 is the era.**
@@ -257,3 +257,65 @@
 **Light and Medium are uncapped because K2 sets their `dexbonus` to −1, which the engine reads as no limit.** **That much is attested.** **The `baseac` figures are not.**
 
 > **Replace when the rows are extracted. Until then every droid Defence in `PREGENS-01` carries this note.**
+
+
+---
+
+## ⚠ Base dice adopt the game's — `PT-339`. Supersedes `§105`.
+
+    weapon              was      now
+    Blaster Pistol      1d6      1d8
+    Blaster Rifle       1d8      1d12
+    Lightsaber          2d8      2d10
+    Short Lightsaber    2d6      2d8
+    Double Lightsaber   2d10     2d12
+    Vibrosword          2d6      2d6   ⚠ already matched
+
+**⚠ `§105` declined the higher lightsaber dice to avoid widening the Jedi gap. The arithmetic does not support that concern.**
+
+    gap, lightsaber over pistol
+      ours   2.57x
+      game   2.44x   ⚠ NARROWER
+
+**⚠ The pistol gains 29% and the lightsaber 22%.** **Adopting the game's dice CLOSES the gap slightly rather than widening it.**
+
+**`§105`'s reasoning was sound and its conclusion was wrong, because it compared absolute values rather than the ratio.**
+
+
+---
+
+## ⚠ Ranged adds Dexterity to damage — `PT-340`
+
+**Owner ruling. Neither KOTOR nor RCR does this; it is authored.**
+
+    melee 1H    weapon dice + Strength
+    melee 2H    weapon dice + 1.5x Strength
+    ⚠ ranged     weapon dice + Dexterity
+
+### ⚠ It does not overtake melee, and my first check said it did
+
+    vibrosword 2H, 2d6 + 1.5x STR 5    14.0
+    blaster rifle, 1d12 + DEX 5        11.5   ⚠ 18% behind
+
+**⚠ I first compared it against ONE-HANDED melee and reported the gap as 4%.** **Two-handed gets `1.5x` Strength and the real gap is 18%.**
+
+> **⚠ The alarm was mine and it was arithmetic, not design.**
+
+**18% behind two-handed melee, with range, is a fair trade.**
+
+---
+
+## ⚠ Massive Criticals — ported, capped at `2d6` — `PT-341`
+
+**45 weapons. Extra damage ON A CRITICAL, on top of the multiplier.**
+
+    +4 · 1d4 · 1d6 · 1d8 · 1d10 · 2d6    ⚠ unchanged
+    2d8  ->  2d6                          ⚠ the only value that moves
+
+**⚠ Six of seven distinctions survive.** **A flat `2d6` for all of them would have collapsed 45 weapons onto one value.**
+
+    2d10 lightsaber, crit x2 = 4d10 = 22
+                      + 2d6  =        29    ⚠ +32%
+                      + 2d8  =        31    ⚠ +41%
+
+**⚠ `ATTACKS-01` refused the `Commando` case on the grounds that critical damage multipliers *"change every round of every fight."*** **The `2d8` weapons were that case. Capping takes 9 points off the worst one and leaves the rest alone.**

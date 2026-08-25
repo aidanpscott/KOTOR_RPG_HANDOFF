@@ -197,6 +197,67 @@
 
 ---
 
+## 2.1d Item stat blocks and pricing — scoped. `SCOPE-ITEMS-01`.
+
+**⚠ 994 items, but 146 decisions.** **100 ladders cover 948 items; the biggest are 30 steps of one weapon.**
+
+> **A ladder is one decision. What needs deciding is the CURVE, not thirty entries.**
+
+**Phase 1 — stat blocks.** **⚠ Mostly done. What is missing is the property conversion: about a dozen KOTOR property types carry the whole corpus.**
+
+**Phase 2 — price and availability, together.** **⚠ 794 items already carry a price. Availability has NO source and must be authored as a band, derived from price.**
+
+**⚠ Batch 1 is `usable` — 45 items, median 200 credits.** **Smallest and cheapest. Proves the conversion table before it costs anything.**
+
+**⚠ Read RCR's `Craft` at f.80 before batch 2.** **`PT-287` flagged it as the strongest duplicate risk in the audit, and if RCR's item-quality system contradicts KOTOR's, the ladders are what it contradicts — 948 of the 994 items.**
+
+---
+
+## 2.1e Loot tiers — the design is agreed, the detail is not. `PT-308`.
+
+**⚠ Owner proposal, and it fixes what both games got wrong.**
+
+    K1   hand-placed   balanced, because a designer chose. ⚠ identical every replay
+    K2   randomised    varied. ⚠ a level-3 character can pull a top-tier crystal
+                       out of a footlocker
+
+> **One has no surprise. The other has no restraint.**
+
+### The shape
+
+**⚠ Keep K2's d100 and its five bands. Swap the TABLE by level tier.**
+
+    level 1-5     band 90-99 gives the best LEVEL 1-5 item
+    level 6-12    band 90-99 gives the best LEVEL 6-12 item
+    level 13-20   ...
+    level 21-30   ...
+
+**The roll never changes. The contents do.**
+
+**⚠ Variety survives — a 90-99 roll is still a moment.** **But it cannot break the curve, because the table's ceiling is the tier's ceiling.**
+
+### ⚠ We are adding the one constraint the source was missing
+
+**K2's tables ARE already tiered by grade — `MEDEQPMNT01 → 02 → 03`.**
+
+**⚠ It just never gated the tier by level.** **It gated by which container a designer flagged, so an early container with a high tier leaks a top item.**
+
+**Not a new system. One missing constraint.**
+
+### What still needs deciding
+
+**⚠ Does the tier follow the CHARACTER or the AREA?**
+
+**Character** — scales with you, always relevant. **⚠ But a level-20 party revisiting Taris finds level-20 loot in a starter zone.**
+
+**Area** — the world has fixed difficulty. **⚠ K1's balance with K2's variety.** **Recommended, not ruled.**
+
+**⚠ And every item needs a tier tag.** **994 items. Derivable from cost — the corpus already has 794 prices and a clean spread from 25 to 32,000.**
+
+**Which is the same derivation `PT-281` used to price beasts against the item corpus.**
+
+---
+
 ## 2.2 Crafting
 
 **Not started. Nothing exists.**
@@ -224,6 +285,8 @@
 **⚠ And  is already a field on the record.** **Whatever the model does, it should reuse that slot rather than adding a parallel one.**
 
 ## 2.4a The Beast Master's companion list — after the classes
+
+**⚠ CLOSED — `BEASTS-01`, `PT-280` to `PT-285`.** 27 companions, tiers, acquisition, scaling. Stat blocks blocked on `2.4g`.
 
 **Owner instruction: determine after the class workstream closes.**
 
@@ -297,6 +360,8 @@
 
 ## 2.4b Weapon upgrades — crystals and components
 
+**⚠ CLOSED — `PT-272`.** Lightsaber upgrades extracted; `PT-184` resolved.
+
 **⚠ Named by `PT-184`. Does not exist and blocks a real balance question.**
 
 **KOTOR weapons take crystals and upgrade components. `EQUIPMENT-01` carries base damage only.**
@@ -312,13 +377,15 @@
 
 **⚠ `PT-213` raises its priority: the build mechanism matters to three classes, not one.**
 
-**`Field Override`, `Jury Rig` and `Both Sides At Once` are all keyed to droids being present.** **Building your own answers the *allied droid* half for the **Machinist** and the Droid Master — `PT-225`.**
+**`Field Override`, `Jury Rig` and `Two Fronts` are all keyed to droids being present.** **Building your own answers the *allied droid* half for the **Machinist** and the Droid Master — `PT-225`.**
 
 **⚠ Two gaps it does not close:** **a Tech Specialist entering via `Engineer 6` has no build route, and every enemy-droid clause still depends on encounter design — `PT-170`.**
 
 **⚠ And the concern is smaller than first raised.** **The classes' *skills* — Slicing, Security, Science, Repair — work on computers, doors and terminals with no droid anywhere.** **Only the *features* need one, and both campaign packages are droid-heavy.**
 
 ## 2.4c ⚠ The unarmed roster is one chain deep
+
+**⚠ CLOSED — `PT-228`.** Five unarmed chains, fifteen entries.
 
 **`ATTACKS-07` against the others:**
 
@@ -350,6 +417,8 @@
 
 ## 2.4d Two recommended abilities per class — the 5e model
 
+**⚠ CLOSED — `PT-246`, `PT-247`.** Two-ability model, check 22.
+
 **Owner instruction: adopt the D&D 5e shape where a class names two abilities that matter, not one.**
 
 **The recommendations exist and are agreed** — **`PT-227`'s table, nineteen classes, a first and a second.**
@@ -361,6 +430,8 @@
 ---
 
 ## 2.4e ⚠ `k2_spells.2da` — requested, blocks a third of `PT-146`
+
+**⚠ CLOSED — `PT-251`.** The K2 data was already in holdings as `force_power_extract.tsv`.
 
 **`PT-250`: the `spells.2da` we hold is KOTOR 1's and is not labelled as such.**
 
@@ -454,7 +525,98 @@
 
 ---
 
-## 2.9 Difficulty modes — the last thing before engine work
+## 2.4h Aqualish — add to the playable species
+
+**Owner ruling. ⚠ Confirmed absent: the species chapter holds 47 records and none is Aqualish.**
+
+**Scheduled after the Beast Master work.**
+
+### ⚠ What makes it non-trivial
+
+**Aqualish have three sub-species, and they differ enough to matter mechanically:**
+
+    Aquala    finned, aquatic, the original stock
+    Quara     walrus-like, tusked, the common spacefaring form
+    Ualaq     four-eyed, rarer, associated with violence
+
+**⚠ `PT-113` established that seven species require subrace selection at character creation. This would be an eighth, and the subraces are genuinely distinct rather than cosmetic.**
+
+### What it needs
+
+**Ability adjustments · a racial feat — one per species is the rule, `PT-104` · a racial skill slot from `SKILLS-01 §11.4` · size, speed, vision · and the subrace split.**
+
+**⚠ And the standing check: `racialtypes.2da` is a hard negative for ability adjustments — `PT-71`.** **All values are zero in both games, so the numbers are authored or come from UAA.**
+
+**⚠ Check UAA first.** **It is rank-2 source and it covers species RCR does not.**
+
+### ⚠ And read the index before authoring
+
+**`PT-287`: six of seven audited systems turned out to duplicate an RCR rule nobody had opened.**
+
+**A species entry touches abilities, skills, feats and vision types. All four have RCR chapters.**
+
+---
+
+## 2.5b ⚠ Engine: banding a procedurally generated area
+
+**Owner instruction, for when the engine work begins. `LOOT-01 §4` assumes a human placed something.**
+
+> **⚠ `area tier = max( encounter level, container difficulty )` works because a GM who invents a room places an encounter in it.** **A generator does not.**
+
+### The problem
+
+**`LOOT-01`'s derivation has three layers and a generated area can defeat all three:**
+
+    encounter level        ⚠ the generator picked the encounter FROM a tier —
+                              so deriving the tier from it is circular
+    container difficulty   ⚠ the generator picked the lock DC too. Same circle.
+    party level            ⚠ the fallback, and it reintroduces character-tier
+                              scaling, which the owner ruled against
+
+### ⚠ What this actually needs
+
+**A generated area must be assigned its tier BEFORE its contents, not after.**
+
+**Which inverts `LOOT-01`'s direction:** **a hand-built area derives its tier FROM what is in it; a generated area derives its contents FROM its tier.**
+
+> **⚠ Same rule read backwards. Worth stating in `LOOT-01` when the engine exists, so the two halves are visibly one system rather than two.**
+
+### Open questions for that work
+
+**⚠ What sets a generated area's tier?** **Distance from the campaign's start, position in a quest chain, the region's own tier from the Atlas, or an explicit parameter.**
+
+**⚠ Should a generated area vary its tier internally?** **A dungeon whose depths are harder than its entrance is a real thing and one tier per area cannot express it.**
+
+**⚠ And what stops a generator producing an area whose tier the party cannot survive?** **`LOOT-01`'s self-correction — *wander somewhere too hard and the loot is too good* — assumes the party CHOSE to go there.**
+
+---
+
+## 2.9c ⚠ REMINDER — hiring for the test phase
+
+**`HIRING-QA-01` is filed in `repo/comms/`. ⚠ Do not action it yet.**
+
+    1     lead rules auditor      2   mechanical reviewers
+    3     blind-test GMs          12-20 rotating players
+    1     lore auditor            1   copy editor — ⚠ LAST
+
+**⚠ Owner asked to be reminded of this when the rules stop moving.**
+
+> **⚠ REMIND THE OWNER when `2.5` app functions is reached, or when a session opens with no rules items left on the agenda — whichever comes first.**
+
+**Key points so they do not need re-deriving:** **three GMs not one · ⚠ do NOT teach them the system · a finding register, not prose feedback · the lore auditor gets a paid five-entry test · and the IP question is settled before money is spent.**
+
+---
+
+## 2.9 Difficulty modes — ⚠ DEFERRED. The last thing after everything.
+
+
+**⚠ DEFERRED TO THE END — owner ruling.** **This was marked *"the last thing before engine work."* It is now the last thing AFTER it.**
+
+> **⚠ Build the system, test it on ONE difficulty, see how that plays. Only then add the others.**
+
+**The reason is that a difficulty mode is a set of exceptions to rules that must already work.** **⚠ Writing the exceptions before the baseline is tested means tuning against a guess.**
+
+**Renumbered in intent, not in label:** **`2.9` is now back-end work, after `2.5` app functions and after playtesting.**
 
 **⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**
 

@@ -45,25 +45,25 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Precise Shot** | A patient, aimed shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **Critical threat range ×2, on every shot you fire this round.** **A first-shot hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Intelligence modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
-| › Sniper Shot |  | **Level 4.** **Threat range ×3, on every shot. +4 damage on the first shot that hits.** **Stun as above. Defence −2.** |
-| ›› Assassinate |  | **Level 8.** **Threat range ×4, on every shot. +8 damage on the first shot that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
+| **Precise Shot** | A patient, aimed shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **Threat span +1, on every shot you fire this round.** **A first-shot hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Intelligence modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
+| › Sniper Shot |  | **Level 4.** **Threat span +2, on every shot. `1d6` damage on the first shot that hits.** **Stun as above. Defence −2.** |
+| ›› Assassinate |  | **Level 8.** **Threat span +3, on every shot. `2d6` damage on the first shot that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
 
 ## Power — When the weapon is not enough
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Charged Shot** | An overcharged shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **+5 damage on the first shot that hits this round. Attack −3.** **Knockback 3 squares on that hit** unless the target saves — Reflex, DC 10 + your level + Dexterity modifier. |
-| › Power Shot |  | **Level 4.** **+10 damage on the first shot that hits. Attack −2.** **Knockback as above.** |
-| ›› Blast |  | **Level 8.** **+16 damage on the first shot that hits. Attack −1**, and **your critical multiplier is increased by 1** on that shot. **Knockback as above.** |
+| **Charged Shot** | An overcharged shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **`1d6` damage on the first shot that hits this round. Attack −3.** **Knockback 3 squares on that hit** unless the target saves — Reflex, DC 10 + your level + Dexterity modifier. |
+| › Power Shot |  | **Level 4.** **`2d6` damage on the first shot that hits. Attack −3. Critical multiplier +1.** **Knockback as above.** |
+| ›› Blast |  | **Level 8.** **`3d6` damage on the first shot that hits. Attack −3**, and **your critical multiplier is increased by 1** on that shot. **Knockback as above.** |
 
 ## Position — Where you are
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Point Blank Shot** | Firing with the muzzle almost touching. No time to react, nowhere to go. | **Level 1.** **+4 damage against a target within 4 metres, and it loses its Dexterity bonus to Defence.** **Once per encounter, against a target below 15% vitality, the damage is dealt directly to wounds.** |
-| › Lethal Shot |  | **Level 4.** **+8 damage.** **Wound threshold rises to 20%.** |
-| ›› Execute | The shot taken when the fight is already decided. | **Level 8.** **+12 damage.** **Wound threshold rises to 25%.** |
+| **Point Blank Shot** | Firing with the muzzle almost touching. No time to react, nowhere to go. | **Level 1.** **`1d6` damage and +2 attack against a target within 4 metres, and it loses its Dexterity bonus to Defence.** ⚠ **Beyond 4 metres, attack −2** — `PT-333`. **Once per encounter, against a target below 15% vitality, the damage is dealt directly to wounds.** |
+| › Lethal Shot |  | **Level 4.** **`2d6` damage and +3 attack in position, −2 out of it.** **Wound threshold rises to 20%.** |
+| ›› Execute | The shot taken when the fight is already decided. | **Level 8.** **`3d6` damage and +4 attack in position, −2 out of it.** **Wound threshold rises to 25%.** |
 
 ## Control — Take the fight away
 
@@ -145,7 +145,7 @@
 |---|---|---|
 | **Stealthy Shot** | **1** | **Requires `Stealth` 6.** **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
 | › **Marked Shot** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and the shot does not reveal you if it drops the target |
-| ›› **No Warning At All** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
+| ›› **Unheralded** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
 
 > **⚠ Two clauses, both owner-ruled — `PT-197`.**
 >

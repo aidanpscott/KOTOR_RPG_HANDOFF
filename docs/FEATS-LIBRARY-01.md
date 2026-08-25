@@ -546,7 +546,7 @@
 |---|---|---|
 | **Terrain Sense** | **1** | **On entering an area, name one feature of it before anyone acts** — a cover position, a chokepoint, a hazard, a second exit. **The GM answers truthfully.** Once per encounter |
 | › **Ground Read** | **4** | **Two features**, and one ally who acts before you may use one of them — moving to a cover square you named as part of their own move |
-| ›› **Nothing Here Surprises Me** | **8** | **Two features**, and **the party is never surprised in an area you entered first** |
+| ›› **Forewarned** | **8** | **Two features**, and **the party is never surprised in an area you entered first** |
 
 **⚠ It does not touch initiative.** **`PT-96` closed that deliberately — *"a flat initiative bonus is a different feat and every class wants it."*** **This changes what the party *knows*, not the order they act in.**
 
@@ -818,7 +818,7 @@
 |---|---|---|
 | **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence** |
 | › **Through The Plate** | **4** | **4 points** |
-| ›› **Armour Is A Comfort** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely** |
+| ›› **Unburdened** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely** |
 
 > **⚠ *The first each round* — `PT-188`.** **Without it the capstone triples the moment an unarmed Velocity chain exists.**
 
@@ -1029,15 +1029,15 @@
 ---
 
 
-### Never the Same Twice — Sith Battlemaster only. Authored.
+### Unrepeatable — Sith Battlemaster only. Authored.
 
 **Owner-approved. Granted at class levels 1, 4 and 8.**
 
 | Tier | | Effect |
 |---|---|---|
-| **Never the Same Twice** | **1** | **If the attack you declare comes from a different chain than the one you declared last round, `+2` attack** |
+| **Unrepeatable** | **1** | **If the attack you declare comes from a different chain than the one you declared last round, `+2` attack** |
 | › **Unreadable** | **4** | **`+4`**, same condition |
-| ›› **No Pattern At All** | **8** | **`+4`**, and the target gains **no Defence bonus from any Defensive chain it has declared** against you |
+| ›› **Unpredictable** | **8** | **`+4`**, and the target gains **no Defence bonus from any Defensive chain it has declared** against you |
 
 > **He never attacks the same way twice, and you cannot get set for it.**
 
@@ -1185,7 +1185,7 @@
 | Tier | Level | Effect |
 |---|---|---|
 | **Both Hands** | **1** | **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other |
-| › **Whatever Is To Hand** | **4** | **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing |
+| › **Improvised** | **4** | **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing |
 | ›› **No Wrong Weapon** | **8** | As above, and **you take no penalty for firing a ranged weapon while adjacent** — `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply to you |
 
 **⚠ Tier 3 is the one that makes the class:** **the `−4` for firing while adjacent is the point-blank rule, and the Soldier is the one character it never touches.**
@@ -1196,7 +1196,7 @@
 ---
 
 
-### Both Sides At Once — Tech Specialist only. Authored.
+### Two Fronts — Tech Specialist only. Authored.
 
 **⚠ The class had no feature at all, on a faithfulness argument that does not survive.** **`PT-174` justified it as *"the only class in either game with no granted class feature — a way for it to be something without inventing a chain the source never gave it."***
 
@@ -1208,7 +1208,7 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Both Sides At Once** | **1** | **Use `Jury Rig` on an allied droid and `Field Override` on an enemy droid in the same round** — one is a Gear action, the other your declaration |
+| **Two Fronts** | **1** | **Use `Jury Rig` on an allied droid and `Field Override` on an enemy droid in the same round** — one is a Gear action, the other your declaration |
 | › **Nothing Is Scrap** | **4** | **Your `Field Override` target counts as an allied droid for `Jury Rig` while you hold it.** You can repair what you stole |
 | ›› **Salvage And Command** | **8** | **Once per encounter, repair and seize in one action** — an enemy droid at or below half vitality is restored to half and turned |
 
@@ -1241,8 +1241,8 @@
 | Tier | Level | Effect |
 |---|---|---|
 | **Vigil** | **1** | **You may `Scan` as a free action once per round**, and you use the better of `Awareness` or `Alertness` for it |
-| › **Nothing Hides From Me** | **4** | **Anything you find with a `Scan` is found by your whole party** until the end of your next turn |
-| ›› **The Watch Is Kept** | **8** | **An enemy Hidden from you when combat begins is not**, and **you may not be made unaware by anything short of losing consciousness** |
+| › **Unhidden** | **4** | **Anything you find with a `Scan` is found by your whole party** until the end of your next turn |
+| ›› **Standing Watch** | **8** | **An enemy Hidden from you when combat begins is not**, and **you may not be made unaware by anything short of losing consciousness** |
 
 **⚠ The capstone is the class's own parent chain finished.** **`Force Immunity` runs Fear → Stun → Paralysis, and two of those three are ways to be made *unaware* under `ACTION-ECONOMY-01 §19.5`.**
 
@@ -1309,7 +1309,7 @@
 |---|---|---|
 | **Field Surgery** | **1** | **A Gear action.** Spend a medpac to restore **`1` wound** to an adjacent character at or below 0. They stop dying |
 | › **Stabilise** | **4** | **`2` wounds**, and the character is no longer `Disabled` |
-| ›› **Back On Their Feet** | **8** | **`3` wounds**, and **once per encounter you may do this at range 4 metres** without touching them |
+| ›› **Back Up** | **8** | **`3` wounds**, and **once per encounter you may do this at range 4 metres** without touching them |
 
 > **You can heal wounds, which nothing else in the game can.**
 
@@ -1341,7 +1341,7 @@
 |---|---|---|
 | **Unrelenting** | **1** | **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter |
 | › **Past Caring** | **4** | **`+4` below half** |
-| ›› **Nothing Left To Lose** | **8** | **`+6` below half**, and **`+2` attack while below a quarter** |
+| ›› **Last Stand** | **8** | **`+6` below half**, and **`+2` attack while below a quarter** |
 
 **⚠ It multiplies — `PT-180`.** **`+6` on a three-strike `Barrage` is `+18`, which took the realised increase from a reported `+22%` to `+46%`.**
 
@@ -1356,8 +1356,8 @@
 | Tier | Level | Effect |
 |---|---|---|
 | **Vanish** | **1** | **Once per encounter, immediately after an attack of yours deals `Sneak Attack` damage, make a `Stealth` check as a free action** against the better of each enemy's `Awareness` or `Alertness` |
-| › **Not Where You Struck** | **4** | **Twice per encounter** |
-| ›› **Never There At All** | **8** | Twice, and **you may move up to half your speed as part of it**, before the check resolves |
+| › **Displaced** | **4** | **Twice per encounter** |
+| ›› **Absent** | **8** | Twice, and **you may move up to half your speed as part of it**, before the check resolves |
 
 **⚠ It is conditional, which is the Jedi shape under `PT-129` rather than the Sith one.** **`PT-131` records that as a departure caused by `PT-126` — the owner ruled the Assassin off the mirror onto `Specialist`, which made it the one Sith built around a tool rather than a number.**
 
@@ -1380,3 +1380,55 @@
 
 ---
 
+
+
+---
+
+# ⚠ How a feat reaches a character — `PT-353`
+
+**Three routes. They are not interchangeable and the difference is load-bearing.**
+
+| | How | Lasts | ⚠ Counts as yours? |
+|---|---|---|---|
+| **Purchased** | you spent a feat slot | permanently | **yes** |
+| **Class grant** | a class feature gave it | while you hold that class | **yes** |
+| **⚠ Item** | an item grants it | ⚠ **only while equipped** | **NO** |
+| **⚠ Droid bay** | installed in a bay | ⚠ **permanently, cannot be removed** | **yes** |
+
+---
+
+## ⚠ The hard rule
+
+> **⚠ A feat held from an ITEM is a property of the ITEM, not of the character.**
+
+**It cannot satisfy a prerequisite. Not for a prestige class, not for a higher tier of its own chain, not for anything.**
+
+**⚠ Because a prerequisite is a statement about what you have LEARNED.** **An item you can take off has taught you nothing.**
+
+### What follows
+
+**⚠ It does not consume chain access.** **`PT-173`'s `N ≤ access` test counts what you bought. An item cannot make a legal build illegal — `PT-315`.**
+
+**⚠ It does not stack with the same feat held permanently.** **If you already have it, the grant does nothing and takes nothing away.**
+
+**⚠ It does not survive unequipping.** **Including mid-combat.**
+
+---
+
+## ⚠ A droid bay is the exception, and deliberately
+
+**`PT-318` installs a feat into a bay permanently, and `PT-321` says why:**
+
+> ***"The permanent are as if you levelled up and got it to that level."***
+
+**⚠ So a bay-installed feat IS yours.** **It satisfies prerequisites, it counts, and it cannot be removed.**
+
+**Which is exactly what distinguishes a bay from a socket** — **`PT-350`.**
+
+---
+
+## ⚠ Why this needed writing down
+
+**`PT-351` established item-granted feats are temporary. `PT-318` established bay feats are permanent.**
+
+**⚠ Both were true and neither said what that MEANT for prerequisites**, **which is where the two would first collide at a table.**

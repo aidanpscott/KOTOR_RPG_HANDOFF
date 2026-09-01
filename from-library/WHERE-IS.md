@@ -69,7 +69,7 @@
 | `cost_tables` | `C21-ITEMS-AND-EQUIPMENT` | `dbe7b6fb` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `CRAFTING-01` | `C21-ITEMS-AND-EQUIPMENT` | `7d9fc9d1` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-225; main ca |
 | `D-AJ-SENTINEL-AND-CLASS-PLAN` | `C10-CLASSES` | `85919763` | CURRENT — Phase 1, main-newer. Evidence: post-PT-73 rename (Smuggler is the base |
-| `D-CURRENCY-01` | `C12-DECISION-REGISTER` | `52c3c3ae` | CURRENT — the Atlas's answer to the currency question this library raised in the |
+| `D-CURRENCY-01` | `C12-DECISION-REGISTER` | `02a6db2e` | CURRENT — AMENDED. **The Atlas corpus is SIX NAMED MODULES read through `resolve |
 | `D-REVAN-01` | `C19-AUTHORED-CANON` | `73203556` | **DESIGN — SUPERSEDED by D-REVAN-02 |
 | `D-REVAN-02` | `C19-AUTHORED-CANON` | `31d88174` | **DESIGN |
 | `D-REVAN-03` | `C19-AUTHORED-CANON` | `7011f3bf` | **DESIGN — SUPERSEDED by D-REVAN-04** on Malak: *"executing an order"* corrected |

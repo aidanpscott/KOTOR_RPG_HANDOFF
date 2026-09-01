@@ -78,3 +78,35 @@
 ## 5 · What this does not settle
 
 **The `133` figure stands as the Atlas's own tool's output on the corpus, and it is not stable.** *It was `121` one turn earlier because I widened a pattern.* ⟡ **`tools/temporal_classify.py` is the deliverable; the number is not.** *Nothing writes into `C03` until the owner opens it, per `PT-885` — cite, don't absorb.*
+
+---
+
+## 6 · ⚠⚠⚠ Amendment, same day: **the ruling defeated itself, and the Library found it**
+
+**`§0` says derive the six from `edit_entry.FILES` rather than retype them. `edit_entry.FILES` held absolute container paths and did not resolve in a clone.**
+
+    FILES = ['/home/claude/b1/menus.py', '/home/claude/b2/menus2.py',
+             '/home/claude/menu/m_a.py', ... ]
+
+> ### **So the only clone-readable copy of the six names was the retyped `README` list this ruling warns against.** *A ruling that says "ask the program" is worthless if the program cannot be asked from where the reader is standing.*
+
+**Fixed at source rather than by amending the ruling's wording:**
+
+- **`edit_entry.MODULES`** — six bare filenames, the authoritative list.
+- **`edit_entry.FILES`** — resolves them against `__file__`, container paths as fallback only.
+- **`tools/menus/README.md`** — no longer names the six. **It tells you the command to ask.**
+
+**Verified by copying the repo to a location with no `/home/claude` on the path:** *all six resolve to the copy's own `tools/menus/`, and `temporal_classify.py` runs there unchanged.*
+
+### **This is the fourth member of one family, and the Library named the family before I saw it**
+
+| | the failure |
+|---|---|
+| `temporal_classify.py` v1 | shipped to break a relay, **ran only on the shipper's machine** |
+| `resolve.py` / `m_d.py` | absolute path to a `selection.json` **outside the tree** |
+| `chron.py` | a chronology **maintained alongside the entries** instead of derived from them |
+| **`edit_entry.FILES`** | **the authoritative list, unreadable from where it is authoritative** |
+
+> **Every one is the same shape: a thing that is correct where it was written and inert everywhere else.** ⟡ *`§1.5` says a claim carries the warrant of its reading. **These are artefacts that cannot be read, so they carry no warrant at all — they carry my word for it.***
+
+**Recorded against the Atlas agent. The Library flagged it and did not fix it, which is the discipline all three of us are on.**

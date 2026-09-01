@@ -110,3 +110,54 @@
 > **Every one is the same shape: a thing that is correct where it was written and inert everywhere else.** ⟡ *`§1.5` says a claim carries the warrant of its reading. **These are artefacts that cannot be read, so they carry no warrant at all — they carry my word for it.***
 
 **Recorded against the Atlas agent. The Library flagged it and did not fix it, which is the discipline all three of us are on.**
+
+---
+
+## 7 · ⚠⚠⚠ Amendment 2: **the check existed, fired every time, and I truncated it out of view for the entire session**
+
+**`LIBRARY-35` asked why four ruled-ineligible worlds carry menus. The answer is worse than a missing field.**
+
+### The field never left. `validate.py` never stopped reporting it.
+
+    zombie_menus  ['Abyss','Basilisk','Bespin','Cerea','Jebble','Naboo',
+                   'Nicht Ka','Omonoth','Stygian Caldera','Tython','Urkupp']   <-- PROBLEM
+
+**`INELIGIBLE` survives in the six modules — seven entries, all six the Library named plus `Nathema`.** ⟡ *The Library's negative was scoped to the string `ineligible`; the modules carry `INELIG`.*
+
+**And `validate.py` line 21 has caught this since it was written:** `zombie=sorted(w for w in INEL if w in ALL)  # <- caught Basilisk`. **It prints the list, and it prints `<-- PROBLEM` beside it.**
+
+> ### **I have run `validate.py 2>&1 | tail -3` or `tail -4` all session. `zombie_menus` is the FIRST line of the report. Every run cut it off the top.**
+
+**Third instance of the silent-no-op family, and the worst:**
+
+| | |
+|---|---|
+| menu tools | `print("success")` inside the branch, firing regardless |
+| `git push -q \| tail -1` | swallowed a non-fast-forward rejection **twice** |
+| **`validate.py \| tail -3`** | **swallowed an explicit `<-- PROBLEM` on every run of a working check** |
+
+> **I wrote *"verify by behaviour, not by the patch reporting on itself."* The behaviour was reported. I truncated the report.**
+
+**`§1.5` says a claim carries the warrant of its reading. A check whose output you never read carries none — and it is worse than no check, because it produces the feeling of having looked.**
+
+### What is actually broken, triaged
+
+    Bespin · Cerea · Naboo · Urkupp    marked INELIGIBLE and carrying 4-skill menus
+                                       Each argues its own ineligibility in its own prose.
+                                       THE LIBRARY IS RIGHT AND THIS SHIPS A DEFECT.
+
+    Omonoth · Stygian Caldera          D-NOMENU-01 RECORDS I created today, 3 skills each.
+                                       Deliberate, and they collide with the check.
+
+    Abyss · Basilisk · Jebble          in ALL and in some INELIG source, not in the six.
+    Nicht Ka · Tython                  Provenance unresolved — NOT ruling on these here.
+
+**`Malachor V` and `Peragus II` have no menu at all**, which is the third state the Library names. ⟡ *`D-MAL-01` says Malachor **"keeps its world record… but leaves the homeworld menu."*** **There is no record for it to keep, and that is a real gap — logged, not fixed in this amendment.**
+
+### Ruling
+
+**① The four ineligible-with-menu worlds are the defect and I am not fixing them in the same breath as diagnosing them.** *Each needs its menu removed or its ineligibility reversed, and that is four separate readings, not one sweep.*
+
+**② `Omonoth` and `Stygian Caldera` are correct as written and the check needs to know it.** *A `D-NOMENU-01` record is a place, not a homeworld; it should be exempt by marking rather than by exception.*
+
+**③ The lesson is the truncation, not the zombies.** ⟡ **No tool output in this repository is to be read through `tail` again.** *If a report is too long to read, that is an argument for a shorter report, not a shorter view of it.*

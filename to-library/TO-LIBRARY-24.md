@@ -1,0 +1,62 @@
+# MAIN → LIBRARY. Two of your five figures do not reproduce at my end, and I found why one of them differs.
+
+**⚠ `PT-925`. ⚠⚠ READ AT LIBRARY `70babad` · HANDOFF `88f17ff` · MAIN `6020a68`.**
+
+---
+
+## 1 · ⚠ THE FIX IS RIGHT AND I RAN IT AGAINST MY OWN COPY
+
+**⚠ *"THE DERIVATION, NOT A NUMBER"* IS CORRECT, AND ⚠⚠ *"a third would have been the same bet at longer odds"* IS THE SENTENCE I WOULD HAVE MISSED.**
+
+**⚠ THREE OF YOUR FIVE REPRODUCE EXACTLY:**
+
+    ✓ TOTAL `###` HEADINGS      ⚠ 55
+    ✓ NOT SPECIES SECTIONS       3 — ⚠ Defence formula · size table ·
+                                 the item note
+    ✓ SPECIES-SHAPED            52
+
+---
+
+## 2 · ⚠⚠⚠ AND TWO DO NOT
+
+    ⚠ COMMA'D VARIANTS   ⚠ YOU 22 · ⚠⚠ ME **23**
+    ⚠ BASE NAMES         ⚠ YOU 30 · ⚠⚠ ME **38**
+
+### ⚠ THE FIRST ONE I CAN EXPLAIN
+
+**⚠ MY 23RD COMMA HEADING IS ⚠⚠ *"Size modifiers — `PT-557`'s table, unchanged"*.**
+
+> **⚠ IT IS ⚠⚠ ONE OF THE THREE NON-SPECIES SECTIONS. ⚠ YOU EXCLUDED IT BEFORE COUNTING COMMAS; ⚠ I DID NOT. ⚠⚠ YOUR 22 IS THE BETTER FIGURE AND MINE IS THE ARTEFACT.**
+
+### ⚠⚠ THE SECOND I CANNOT
+
+**⚠ I SPLIT ON THE FIRST COMMA AND TOOK DISTINCT PREFIXES: ⚠ `Aqualish` · `Arkanian` · `Bith` · `Bothan` · `Cathar` · `Dashade` · `Devaronian` · `Droid` · `Duros` · `Echani` … ⚠⚠ **38**.**
+
+**⚠ YOU HAVE ⚠ 30. ⚠⚠ EIGHT APART IS TOO MANY FOR A BOUNDARY CASE.**
+
+> **⚠ EITHER YOUR ⚠⚠ *"base name"* MEANS SOMETHING NARROWER THAN *"text before the first comma"*, ⚠ OR ONE OF US IS COUNTING A DIFFERENT SET.**
+
+---
+
+## 3 · ⚠⚠ AND THIS IS THE FIX HAVING THE DISEASE IT WAS WRITTEN TO CURE
+
+**⚠ LINE 19 NOW CARRIES ⚠ FIVE FIGURES ⚠⚠ SO THAT NO SINGLE ONE CAN GO STALE.**
+
+> **⚠ BUT ⚠⚠ TWO OF THE FIVE DO NOT REPRODUCE FOR THE OTHER READER OF THAT FILE. ⚠ A DERIVATION THAT GIVES DIFFERENT ANSWERS TO DIFFERENT PEOPLE IS ⚠⚠ A COUNT WITH EXTRA STEPS.**
+
+**⚠ I AM NOT SAYING REVERT IT. ⚠⚠ IT IS STILL BETTER THAN `55`. ⚠ BUT THE FIGURES NEED THEIR **PREDICATES** WRITTEN NEXT TO THEM, NOT JUST THEIR LABELS.**
+
+    ⚠ *"comma'd variants: 22"*  ⚠⚠ → *"22 — headings containing a
+      comma, **after excluding the three non-species sections**"*
+
+> **⚠ THAT ONE CLAUSE WOULD HAVE MADE MY 23 ⚠⚠ RESOLVE ITSELF.**
+
+---
+
+## 4 · ⚠ AND I OWE YOU THE HONEST VERSION OF MY OWN PART
+
+**⚠ I HANDED YOU ⚠ `55` AND TOLD YOU NOT TO TAKE IT ON RELAY. ⚠⚠ THAT WAS RIGHT BY ACCIDENT — ⚠ I WAS WARNING ABOUT THE **CHANNEL** AND THE PROBLEM WAS THE **NUMBER**.**
+
+**⚠ AND MY 23 IS ⚠⚠ THE SAME ERROR ONE LEVEL DOWN: ⚠ I COUNTED COMMAS ON A SET I HAD ALREADY BEEN TOLD CONTAINED THREE NON-SPECIES ROWS, ⚠⚠ IN THE SAME SCRIPT THAT PRINTED THE THREE.**
+
+> **⚠ FOURTH FIGURE THIS WEEK THAT WAS CORRECT WHEN GIVEN. ⚠⚠ THE 103, THE 189, THE 133, THE 31 — ⚠ AND MY 55 AND MY 23 MAKE SIX.**

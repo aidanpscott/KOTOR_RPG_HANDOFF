@@ -166,7 +166,7 @@
 | `PROGRAMMINGS-01` | `C25-CHARACTER-ORIGINS` | `b1a8469e` | CURRENT — 17 droid programmings, the droid counterpart to a profession |
 | `PROPERTY-VOCAB-01` | `C21-ITEMS-AND-EQUIPMENT` | `65aaaa49` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-311; main ca |
 | `PROPOSAL-VITALITY-01` | `C01-ENGINE-FOUNDATION` | `c15a7c60` | ⚠ PROPOSAL, NOT APPLIED. 84 references across 23 documents depend on the current |
-| `PT-INDEX-01` | `C13-INSTRUMENTS` | `28b56a59` | CURRENT — 878 rulings to PT-891. **Body INDEXED not embedded, `PT-367` |
+| `PT-INDEX-01` | `C13-INSTRUMENTS` | `364a8974` | CURRENT — 879 rulings to PT-892. **Body INDEXED not embedded, `PT-367` |
 | `RACIAL-FEATS-01` | `C17-FEATS-AND-ACTION` | `a7e7ccab` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `RCR-DARKSIDE-FINDINGS` | `C07-ALIGNMENT` | `6ed96c4a` | BOOK FINDINGS — pp.180–182; fuller atonement/sidebar detail than the review |
 | `RCR-REPUTATION-FINDINGS` | `C09-INFLUENCE-AND-SOCIAL` | `fee5d44c` | BOOK FINDINGS — pp.111, 122–123 |
@@ -211,7 +211,7 @@
 | `SPACE-COMBAT-01` | `C23-VEHICLES-AND-SPACE` | `3eede0f9` | CURRENT — re-spliced at `PT-879`, which answers the library's open question from |
 | `SPECIES-AGES-01` | `C06-SPECIES` | `a69871b8` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-382; main ca |
 | `SPECIES-CHAPTER-HANDOFF` | `C06-SPECIES` | `a43a7b6b` | CURRENT — changes from book values |
-| `SPECIES-CHAPTER-v2` | `C06-SPECIES` | `aa22a5a1` | CURRENT — re-spliced at `PT-857`: Dashade ruled playable at 3956 with GM permiss |
+| `SPECIES-CHAPTER-v2` | `C06-SPECIES` | `404f5193` | CURRENT — re-spliced at `PT-892`. **The Echani availability line cited `EVENTS-0 |
 | `SPECIES-DROIDS-AND-NEW` | `C06-SPECIES` | `63f03c24` | CURRENT — droids and the new species additions |
 | `SPECIES-FEATS-DRAFT` | `C17-FEATS-AND-ACTION` | `08a7342f` | ⚠ DRAFT — re-spliced S24. `fear effect` terminology tightened to named condition |
 | `SPECIES-MASTER` | `C06-SPECIES` | `0fdc0e0f` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |

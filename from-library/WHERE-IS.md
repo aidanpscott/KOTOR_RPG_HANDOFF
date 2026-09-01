@@ -166,7 +166,7 @@
 | `PROGRAMMINGS-01` | `C25-CHARACTER-ORIGINS` | `b1a8469e` | CURRENT — 17 droid programmings, the droid counterpart to a profession |
 | `PROPERTY-VOCAB-01` | `C21-ITEMS-AND-EQUIPMENT` | `65aaaa49` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-311; main ca |
 | `PROPOSAL-VITALITY-01` | `C01-ENGINE-FOUNDATION` | `c15a7c60` | ⚠ PROPOSAL, NOT APPLIED. 84 references across 23 documents depend on the current |
-| `PT-INDEX-01` | `C13-INSTRUMENTS` | `e0e91e49` | CURRENT — 865 rulings to PT-878. **The body `PLAYTEST-RULINGS-01` is INDEXED, NO |
+| `PT-INDEX-01` | `C13-INSTRUMENTS` | `21c30f09` | CURRENT — 875 rulings to PT-888. **The body `PLAYTEST-RULINGS-01` is INDEXED, NO |
 | `RACIAL-FEATS-01` | `C17-FEATS-AND-ACTION` | `a7e7ccab` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `RCR-DARKSIDE-FINDINGS` | `C07-ALIGNMENT` | `6ed96c4a` | BOOK FINDINGS — pp.180–182; fuller atonement/sidebar detail than the review |
 | `RCR-REPUTATION-FINDINGS` | `C09-INFLUENCE-AND-SOCIAL` | `fee5d44c` | BOOK FINDINGS — pp.111, 122–123 |
@@ -208,7 +208,7 @@
 | `SKILL-RESOLUTION-01` | `C16-SKILLS` | `854e36a3` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-73; main car |
 | `SKILLS-01` | `C16-SKILLS` | `107af385` | CURRENT — re-spliced at `PT-865`. **Header corrected by the Atlas agent reading  |
 | `SPACE-AI-01` | `C23-VEHICLES-AND-SPACE` | `351c01db` | CURRENT — four faction doctrines, PT-806/PT-807 |
-| `SPACE-COMBAT-01` | `C23-VEHICLES-AND-SPACE` | `a1bebe67` | CURRENT — re-spliced at `PT-878`. **`PT-808`'s claim that *"not one new mechanic |
+| `SPACE-COMBAT-01` | `C23-VEHICLES-AND-SPACE` | `3eede0f9` | CURRENT — re-spliced at `PT-879`, which answers the library's open question from |
 | `SPECIES-AGES-01` | `C06-SPECIES` | `a69871b8` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-382; main ca |
 | `SPECIES-CHAPTER-HANDOFF` | `C06-SPECIES` | `a43a7b6b` | CURRENT — changes from book values |
 | `SPECIES-CHAPTER-v2` | `C06-SPECIES` | `aa22a5a1` | CURRENT — re-spliced at `PT-857`: Dashade ruled playable at 3956 with GM permiss |

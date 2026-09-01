@@ -97,11 +97,11 @@
 | `ENGINE-SHAPES-01` | `C01-ENGINE-FOUNDATION` | `f63123ea` | CURRENT — defines the C1–C19 and S1–S12 numbers the red-team rounds cite through |
 | `EQUIPMENT-01` | `C17-FEATS-AND-ACTION` | `10246592` | CURRENT — Phase 1, main-newer. Evidence: post-PT-73 rename (Smuggler is the base |
 | `ERA-VITIATE-01` | `C19-AUTHORED-CANON` | `c568b9cb` | RESEARCH — Vitiate's history, 5113–4999 BBY. Attested material, admitted under ` |
-| `EVENTS-01` | `C04-TEMPORAL-DESIGN` | `cb70236b` | CURRENT — the dated spine. **Re-spliced at `PT-855`: the Mandalorian Wars start  |
-| `EVENTS-PLAN-01` | `C04-TEMPORAL-DESIGN` | `83eb484b` | CURRENT — PLAN ONLY. Nothing researched, PT-676. Not findings |
+| `EVENTS-01` | `C04-TEMPORAL-DESIGN` | `ded68682` | CURRENT — the dated spine. **Re-spliced at `PT-890`, the Atlas era read: the Man |
+| `EVENTS-PLAN-01` | `C04-TEMPORAL-DESIGN` | `3e1d66e3` | CURRENT — PLAN ONLY, nothing researched (`PT-676`). **Re-spliced at `PT-890`, th |
 | `EXPERIENCE-01` | `C25-CHARACTER-ORIGINS` | `8d0e0d87` | CURRENT — SETTLED, PT-660 |
 | `EXTRACTOR-QUERY-02` | `C12-DECISION-REGISTER` | `c0157b54` | OPEN QUERY — Rakata rage aftereffect / condition track (C-35) |
-| `FACTIONS-01` | `C26-FACTIONS` | `09f624bc` | CURRENT — SETTLED for both packages, PT-680 – PT-685; expanded at PT-787 – PT-78 |
+| `FACTIONS-01` | `C26-FACTIONS` | `89c3839c` | CURRENT — SETTLED for both packages. **Re-spliced at `PT-890`, the Atlas era rea |
 | `FEAT-SCHEDULE-01` | `C17-FEATS-AND-ACTION` | `6955d129` | CURRENT — re-spliced S24. Adds the `Saboteur` to the every-third-level row (`PT- |
 | `feat_tables` | `C17-FEATS-AND-ACTION` | `f95931c2` | **A READ |
 | `FEATS-CLASSWORK-01` | `C17-FEATS-AND-ACTION` | `16f3f12e` | **Findings and proposals, nothing decided |
@@ -166,7 +166,7 @@
 | `PROGRAMMINGS-01` | `C25-CHARACTER-ORIGINS` | `b1a8469e` | CURRENT — 17 droid programmings, the droid counterpart to a profession |
 | `PROPERTY-VOCAB-01` | `C21-ITEMS-AND-EQUIPMENT` | `65aaaa49` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-311; main ca |
 | `PROPOSAL-VITALITY-01` | `C01-ENGINE-FOUNDATION` | `c15a7c60` | ⚠ PROPOSAL, NOT APPLIED. 84 references across 23 documents depend on the current |
-| `PT-INDEX-01` | `C13-INSTRUMENTS` | `21c30f09` | CURRENT — 875 rulings to PT-888. **The body `PLAYTEST-RULINGS-01` is INDEXED, NO |
+| `PT-INDEX-01` | `C13-INSTRUMENTS` | `28b56a59` | CURRENT — 878 rulings to PT-891. **Body INDEXED not embedded, `PT-367` |
 | `RACIAL-FEATS-01` | `C17-FEATS-AND-ACTION` | `a7e7ccab` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `RCR-DARKSIDE-FINDINGS` | `C07-ALIGNMENT` | `6ed96c4a` | BOOK FINDINGS — pp.180–182; fuller atonement/sidebar detail than the review |
 | `RCR-REPUTATION-FINDINGS` | `C09-INFLUENCE-AND-SOCIAL` | `fee5d44c` | BOOK FINDINGS — pp.111, 122–123 |
@@ -223,7 +223,7 @@
 | `SPECIES-RACIAL-SKILL` | `C16-SKILLS` | `fc9c2f1a` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `SPECIES-RECORDS-01-20-LANGUAGE-CHECK` | `C06-SPECIES` | `02d45059` | CURRENT — records 1–20, language field only, book-sourced |
 | `SPECIES-SKILLS-TABLE` | `C16-SKILLS` | `ab2f00c7` | CURRENT — re-spliced S24. Adds the three Aqualish subspecies rows |
-| `STARSHIPS-01` | `C23-VEHICLES-AND-SPACE` | `2069fa0a` | CURRENT — 21 hull rows, era batches PT-804, spaceports PT-800 |
+| `STARSHIPS-01` | `C23-VEHICLES-AND-SPACE` | `5dd86bd1` | CURRENT — 21 hull rows, era batches `PT-804`. **Re-spliced at `PT-890`, the Atla |
 | `STARTING-EQUIPMENT-01` | `C25-CHARACTER-ORIGINS` | `9a00913c` | CURRENT — 18 organic arrays, 9 droid arrays, 28 profession grants |
 | `SUPPRESSION-TEST-01` | `C13-INSTRUMENTS` | `e92dd8b5` | RUNNER — pasteable |
 | `SWOOP-01` | `C24-DIVERSIONS` | `8dc2a624` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-824; main ca |

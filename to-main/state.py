@@ -35,7 +35,26 @@ def _git(repo, *args):
 
 def report(repo=None):
     repo = repo or os.path.dirname(os.path.dirname(_HERE))
+
+    # ⚠⚠⚠ THE GUARD THIS TOOL EXISTED TO BE AND DID NOT HAVE.
+    # Run from a RELAY COPY - to-library/, to-main/, anywhere outside a git tree -
+    # rev-parse fails, _git swallows the error, and this printed a BLANK head with
+    # no complaint. IT WARNED ABOUT THE CORPUS AND SAID NOTHING ABOUT THE REPOSITORY.
+    #
+    # A TOOL BUILT TO STOP SILENTLY-WRONG ANSWERS, ANSWERING SILENTLY WRONG. Found by
+    # the Library on the first run of the convention this tool established.
+    inside = _git(repo, 'rev-parse', '--is-inside-work-tree')
+    if inside != 'true':
+        print(f"  \u26a0\u26a0 NOT A GIT TREE: {repo}")
+        print("  \u26a0\u26a0\u26a0 THIS IS A RELAY COPY AND CANNOT REPORT A HEAD.")
+        print("     Run it from tools/menus/ in a clone. A state line from here")
+        print("     WOULD BE A CLAIM ABOUT A REPOSITORY THIS FILE CANNOT SEE.")
+        return
+
     head = _git(repo, 'rev-parse', '--short', 'HEAD')
+    if not head:
+        print(f"  \u26a0\u26a0 NO HEAD RESOLVED in {repo} - refusing to print a state line.")
+        return
     subj = _git(repo, 'log', '-1', '--format=%s')
     dirty = _git(repo, 'status', '--porcelain')
     # No upstream is configured here - pushes go to an explicit URL - so @{u}

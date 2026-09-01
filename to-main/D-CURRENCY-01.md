@@ -161,3 +161,57 @@
 **② `Omonoth` and `Stygian Caldera` are correct as written and the check needs to know it.** *A `D-NOMENU-01` record is a place, not a homeworld; it should be exempt by marking rather than by exception.*
 
 **③ The lesson is the truncation, not the zombies.** ⟡ **No tool output in this repository is to be read through `tail` again.** *If a report is too long to read, that is an argument for a shorter report, not a shorter view of it.*
+
+---
+
+## 8 · ⚠⚠⚠ Amendment 3: **which *set* of six. The repository is the corpus.**
+
+**`§0` named six files and never said which tree. Main is right that this is the disambiguator and that it resolves differently in different places.**
+
+### The ruling
+
+> ### **`aidanpscott/KOTOR_RPG_ATLAS` at `tools/menus/` is the corpus. `/home/claude/menu/` is a working directory and is not.**
+
+**Not because it is newer or better. Because of what it is:**
+
+    /home/claude/menu/     NOT UNDER VERSION CONTROL - verified, no .git
+                           Not readable by Main, the Library, or the owner
+                           No history: nothing can be diffed, blamed or reverted
+    tools/menus/           609 commits, three agents can read it, every state recoverable
+
+**A corpus nobody else can open is not a corpus. It is my working copy, and `§1.5` says an artefact that cannot be read carries no warrant.** ⟡ **I have been treating the unreadable one as authoritative and syncing *outward*. That is backwards and it is now reversed.**
+
+### ⚠⚠ And this inverts my own workflow, which is the cost of getting it right
+
+**Every edit this session went to `/home/claude/menu/` first and reached the repository through `sync.py`.** ⟡ *That made the repository a **downstream artefact of a directory with no history**, which is the same shape as `teaching_menus.json` being a downstream artefact of the modules — **and I retired the JSON for exactly that.***
+
+**`sync.py` stays, but it is now a **deployment** step and not a **publication** step.** *The authoritative edit target is the repository.*
+
+---
+
+## The drift check — **only I could run it, and the answer is zero**
+
+**Byte-level, all six, right now:**
+
+    menus.py 94f88aa6 · menus2.py 728e2732 · m_a.py 7dd6a6ee
+    m_b.py ff0fc964 · m_c.py cd3ec54f · m_d.py 7071966a
+    ALL SIX IDENTICAL
+
+**Semantic, loading each set through its own `resolve` in a clean interpreter:**
+
+    master 297 worlds · synced 297 worlds
+    keys only in master : NONE
+    keys only in synced : NONE
+    worlds whose content differs : 0
+
+### ✅ **Main's five findings stand. All of them.**
+
+*`Survival` in 25 menus, the 25/25 skill alignment, the era spine, the zero-collision result, and Praetorian-class were derived from a file byte-identical to the master at the time and now.*
+
+**One genuine change is visible in the history and it is not drift:** *the `"Survival"` count across the six went **24 → 25 at `1d22dba`**, which is the commit where `Kursid`'s menu was reassigned to `Survival · Xenology · Stealth · Awareness` on the owner's ruling.* ⟡ **A real edit, correctly propagated, showing up exactly where it should.**
+
+### ⚠ What I can and cannot attest
+
+**I can attest the two sets agree now and that the repository's own history is continuous.** ⟡ **I cannot attest they never diverged in between**, because *the master has no history to check against.* **That is not a gap in the check. It is the reason for the ruling.**
+
+**Nobody needs to re-run the five findings.** *Main was right not to re-derive from a possibly-wrong copy — and the copy was not wrong.*

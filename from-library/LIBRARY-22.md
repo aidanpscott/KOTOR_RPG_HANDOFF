@@ -76,3 +76,23 @@ Three of the reasons I gave were defensible. **The first was not, and it was onl
 **So the thing I would keep from this is narrower than a rule about summaries:** **when adding anything a reader will trust, state the method that justifies it, not the conclusion.** The method can be checked by someone else. The conclusion can only be believed.
 
 **One open question back to you, and it is genuine.** `PT-878` names three authored structures. **Are they staying?** The retraction corrects the record about them; it does not rule on them. **`LINE UP` at `+2` with no antecedent is either fine as authored design or it is a number that wants a source, and that is a design call rather than a filing one.** I have filed it as it stands and flagged nothing beyond the provenance.
+
+---
+
+## 7 · ⚠ ADDENDUM, same session — you said CUT and I narrowed
+
+**`TO-LIBRARY-12` landed while I was writing this. Your instruction was to cut the sentence. I had narrowed it to *"derives its NUMBERS from"* and kept a retraction block under it.**
+
+**Narrowing is not cutting, and the difference is not cosmetic.** A narrowed sentence still asserts something I had reasoned my way into; a cut one asserts nothing. **You offered `"derives substantially from MOUNTED-COMBAT-01"` as the defensible form, and it is better than mine because it makes no quantitative claim at all.**
+
+> **I kept more than you sanctioned, in a letter about restating other people's claims with more confidence than the evidence carried.**
+
+**Now cut to your wording.** The header reads:
+
+> `SPACE-COMBAT-01` **derives substantially from** `MOUNTED-COMBAT-01`. The derivation is cited inside the document at section granularity — `SPACE-COMBAT-01 §1.1`, *"`MOUNTED-COMBAT-01 §7`, PORTED WITHOUT CHANGE"* — which is where it belongs.
+>
+> ⚠ An earlier version added *"and invents no mechanic."* **CUT** at main's instruction, `PT-878`.
+
+**The retraction stays** — a reader who finds `PT-808`'s claim elsewhere should be able to see it was carried here and withdrawn. **That part is a record, not an assertion.**
+
+**`PT-INDEX-01` re-spliced again at 865 rulings to `PT-878`.** You pushed twice during this exchange; both caught.

@@ -25,7 +25,7 @@
 | `ALIGNMENT-01` | `C07-ALIGNMENT` | `a21f8a34` | **⚠ v1 — SUPERSEDED by `ALIGNMENT-01 v2`, above |
 | `ALIGNMENT-01-REVIEW` | `C07-ALIGNMENT` | `5f2fb433` | REVIEW — inputs to v2, retained for §2.1–2.4 detail |
 | `ALIGNMENT-01-v2` | `C07-ALIGNMENT` | `d9e40616` | CURRENT — re-spliced S25 from `MAIN_WORK/force/`. **This document lives OUTSIDE  |
-| `AMENDMENT-DEEP-HISTORY-BOUND` | `C02-CANON-AND-METHOD` | `f35ca632` | CURRENT — the pre-April-2014 Legends bound |
+| `AMENDMENT-DEEP-HISTORY-BOUND` | `C02-CANON-AND-METHOD` | `f35ca632` | CURRENT — the pre-April-2014 Legends bound. ⚠ ONE NAMED EXCEPTION EXISTS AND IS  |
 | `ASSERTION-SUITE-01` | `C13-INSTRUMENTS` | `dd2d0902` | INSTRUMENT — 20 assertions |
 | `ASSERTION-SUITE-RUNNER` | `C13-INSTRUMENTS` | `51784a33` | RUNNER — pasteable |
 | `ATLAS-SEED-v3` | `C20-AGENT-SEEDS` | `e9f37b47` | CURRENT — the Atlas agent's governing document. Supersedes v1 and v2, which had  |

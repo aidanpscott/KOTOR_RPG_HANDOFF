@@ -59,7 +59,7 @@
 | `CLASS-TABLES-DROID` | `C10-CLASSES` | `203ea695` | CURRENT — Phase 1, main-newer. Evidence: post-PT-73 rename (Smuggler is the base |
 | `CLASS-TABLES-JEDI` | `C10-CLASSES` | `e734c5c9` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-84; main car |
 | `CLASS-WORKSTREAM-PLAN` | `C10-CLASSES` | `5237be50` | CURRENT — Phase 1, main-newer. Evidence: Combat/Expert Droid -> Marksman/Enginee |
-| `CLASSES-STANDARD-PHB` | `C10-CLASSES` | `a10c1167` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-147; main ca |
+| `CLASSES-STANDARD-PHB` | `C10-CLASSES` | `ae2afaa0` | CURRENT — re-spliced at `PT-909`. **The deictic gap-notes the library flagged at |
 | `CLOCK-01` | `C04-TEMPORAL-DESIGN` | `ad6e2cd8` | CURRENT — two clocks; ledger_conditional retirement at §6.2 |
 | `COMBAT-SEED` | `C20-AGENT-SEEDS` | `5380dd9d` | CURRENT — re-spliced S25 from `MAIN_WORK/agents/`. **This document lives OUTSIDE |
 | `COMBAT-TEST` | `C20-AGENT-SEEDS` | `0a9006eb` | CURRENT — combat test brief |
@@ -108,7 +108,7 @@
 | `feat_tables` | `C17-FEATS-AND-ACTION` | `f95931c2` | **A READ |
 | `FEATS-CLASSWORK-01` | `C17-FEATS-AND-ACTION` | `16f3f12e` | **Findings and proposals, nothing decided |
 | `FEATS-CUT-AND-DROIDS-01` | `C17-FEATS-AND-ACTION` | `53249d23` | **A READ plus two proposals |
-| `FEATS-LIBRARY-01` | `C17-FEATS-AND-ACTION` | `f9263da2` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-353; main ca |
+| `FEATS-LIBRARY-01` | `C17-FEATS-AND-ACTION` | `90733949` | CURRENT — re-spliced at `PT-909`. **Same correction, and main has NAMED THE SHAP |
 | `FEATS-SETS-01` | `C17-FEATS-AND-ACTION` | `ebe0ea41` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `FEATS-SURVEY-01` | `C17-FEATS-AND-ACTION` | `8d3e6382` | **A READ, not a design |
 | `FEATS-UNIVERSAL-01` | `C17-FEATS-AND-ACTION` | `74543bfd` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
@@ -127,7 +127,7 @@
 | `GAZETTEER-PART-D` | `C05-LORE-SWEEPS` | `eebc91f4` | CURRENT — rank 2, book transcription. KOTOR Campaign Guide Timeline, pp.112–113, |
 | `GM-CREATURES-01` | `C22-CREATURES` | `402da011` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-360; main ca |
 | `HIRING-QA-01` | `C13-INSTRUMENTS` | `a7cfb895` | **⚠ THE TESTING-RECRUITMENT RECOMMENDATION THE OWNER ASKED THE LIBRARY TO SURFAC |
-| `IMMEDIATE-ITEMS-BATCH` | `C12-DECISION-REGISTER` | `75139503` | FULL TEXT — D-AA..D-AE |
+| `IMMEDIATE-ITEMS-BATCH` | `C12-DECISION-REGISTER` | `95bb032d` | CURRENT — re-spliced S31. **⚠ This is the source whose verbatim body the library |
 | `INFLUENCE-01` | `C09-INFLUENCE-AND-SOCIAL` | `58bc08b4` | CURRENT — D-AH |
 | `INFLUENCE-SYSTEM-REVISED` | `C09-INFLUENCE-AND-SOCIAL` | `e8ca8af2` | DATA READ — influence.2da; contains the false-negative correction that named the |
 | `ITEMS-01` | `C21-ITEMS-AND-EQUIPMENT` | `8ef18776` | CURRENT — weapons, 420 entries. Re-spliced at the S23 catch-up: 11 'CastSpell su |
@@ -144,7 +144,7 @@
 | `KOTOR-DATA-FINDINGS-03-rev2` | `C11-GAME-DATA` | `bfc23269` | DATA + METHOD — forceadjust/regeneration; C-1 is the citation rule's origin |
 | `KOTOR2-DATA-FINDINGS-01` | `C11-GAME-DATA` | `ae89c0c8` | DATA — K2 forms, exclusion group, formmask flag |
 | `LIBRARIAN-SEED` | `C20-AGENT-SEEDS` | `9d55b133` | CURRENT — the brief this library lineage was started from |
-| `LOOT-01` | `C21-ITEMS-AND-EQUIPMENT` | `a8497f75` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-404; main ca |
+| `LOOT-01` | `C21-ITEMS-AND-EQUIPMENT` | `e315ee89` | CURRENT — re-spliced S31 |
 | `MANIFEST-NOT-BUILT` | `C01-ENGINE-FOUNDATION` | `522f451a` | CURRENT — what deliberately does not exist |
 | `MECHANICS-DATA-01` | `C11-GAME-DATA` | `bafacaac` | CURRENT — §16 version, received as chat text 2026-08-21 after two failed file de |
 | `MECHANICS-RERUN` | `C13-INSTRUMENTS` | `ffe59255` | CURRENT — mechanics re-run |
@@ -168,7 +168,7 @@
 | `PROGRAMMINGS-01` | `C25-CHARACTER-ORIGINS` | `b1a8469e` | CURRENT — 17 droid programmings, the droid counterpart to a profession |
 | `PROPERTY-VOCAB-01` | `C21-ITEMS-AND-EQUIPMENT` | `65aaaa49` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-311; main ca |
 | `PROPOSAL-VITALITY-01` | `C01-ENGINE-FOUNDATION` | `c15a7c60` | ⚠ PROPOSAL, NOT APPLIED. 84 references across 23 documents depend on the current |
-| `PT-INDEX-01` | `C13-INSTRUMENTS` | `364a8974` | CURRENT — 879 rulings to PT-892. **Body INDEXED not embedded, `PT-367` |
+| `PT-INDEX-01` | `C13-INSTRUMENTS` | `8eb21a4f` | CURRENT — 918 rulings to PT-931. **Body INDEXED not embedded, `PT-367` |
 | `RACIAL-FEATS-01` | `C17-FEATS-AND-ACTION` | `a7e7ccab` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `RCR-DARKSIDE-FINDINGS` | `C07-ALIGNMENT` | `6ed96c4a` | BOOK FINDINGS — pp.180–182; fuller atonement/sidebar detail than the review |
 | `RCR-REPUTATION-FINDINGS` | `C09-INFLUENCE-AND-SOCIAL` | `fee5d44c` | BOOK FINDINGS — pp.111, 122–123 |
@@ -208,7 +208,7 @@
 | `SCOPE-ITEMS-01` | `C21-ITEMS-AND-EQUIPMENT` | `ac735c71` | **GOVERNS the workstream order |
 | `SEND-RED-TEAM-CLOCK` | `C14-RED-TEAM` | `79a727e6` | PACKET NOTE — attachment discipline; census stale |
 | `SKILL-RESOLUTION-01` | `C16-SKILLS` | `854e36a3` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-73; main car |
-| `SKILLS-01` | `C16-SKILLS` | `107af385` | CURRENT — re-spliced at `PT-865`. **Header corrected by the Atlas agent reading  |
+| `SKILLS-01` | `C16-SKILLS` | `7be84fe0` | CURRENT — re-spliced at `PT-931`. **`§10.0` added: the species bonus and the hom |
 | `SPACE-AI-01` | `C23-VEHICLES-AND-SPACE` | `351c01db` | CURRENT — four faction doctrines, PT-806/PT-807 |
 | `SPACE-COMBAT-01` | `C23-VEHICLES-AND-SPACE` | `3eede0f9` | CURRENT — re-spliced at `PT-879`, which answers the library's open question from |
 | `SPECIES-AGES-01` | `C06-SPECIES` | `a69871b8` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-382; main ca |

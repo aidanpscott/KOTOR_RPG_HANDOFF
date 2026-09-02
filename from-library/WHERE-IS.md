@@ -94,7 +94,7 @@
 | `DROID-MODELS-01` | `C06-SPECIES` | `dc2e1659` | CURRENT — makes and models by chassis, PT-585. SWTOR excluded |
 | `DROID-SKILLS-01` | `C16-SKILLS` | `50e08129` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-319; main ca |
 | `DROIDS-UPGRADE-01` | `C21-ITEMS-AND-EQUIPMENT` | `73fa0e88` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-316; main ca |
-| `ENCOUNTER-01` | `C22-CREATURES` | `d8479cc3` | CURRENT — §3 rewritten from 90 real areas at PT-834; it had been invented |
+| `ENCOUNTER-01` | `C22-CREATURES` | `2b0b89e8` | CURRENT — re-spliced. **Gained `§5b` and `§5c` |
 | `ENGINE-CORRECTIONS-01` | `C01-ENGINE-FOUNDATION` | `c8341da6` | CURRENT — E-1..E-11 with book locators. E-10/E-11 cited operationally by DECISIO |
 | `ENGINE-SHAPES-01` | `C01-ENGINE-FOUNDATION` | `f63123ea` | CURRENT — defines the C1–C19 and S1–S12 numbers the red-team rounds cite through |
 | `EQUIPMENT-01` | `C17-FEATS-AND-ACTION` | `10246592` | CURRENT — Phase 1, main-newer. Evidence: post-PT-73 rename (Smuggler is the base |
@@ -148,7 +148,7 @@
 | `MANIFEST-NOT-BUILT` | `C01-ENGINE-FOUNDATION` | `522f451a` | CURRENT — what deliberately does not exist |
 | `MECHANICS-DATA-01` | `C11-GAME-DATA` | `bafacaac` | CURRENT — §16 version, received as chat text 2026-08-21 after two failed file de |
 | `MECHANICS-RERUN` | `C13-INSTRUMENTS` | `ffe59255` | CURRENT — mechanics re-run |
-| `METHOD-RECORD-01` | `C02-CANON-AND-METHOD` | `54349bf8` | ⚠ CURRENT, AND THE LIBRARY HOLDS THE ONLY COPY CARRYING `§1.5` |
+| `METHOD-RECORD-01` | `C02-CANON-AND-METHOD` | `d2b14b06` | CURRENT — re-spliced at `PT-946`. **`§3b` NEW: the source-conflict tiebreak this |
 | `MOUNTED-COMBAT-01` | `C17-FEATS-AND-ACTION` | `90a58f38` | CURRENT — the shared-turn mount system. SPACE-COMBAT-01 derives from it |
 | `MULTICLASS-01` | `C10-CLASSES` | `ad936069` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-159; main ca |
 | `NEAR-TERM-ITEMS` | `C21-ITEMS-AND-EQUIPMENT` | `9cb404af` | CURRENT — re-spliced S25 from `MAIN_WORK/comms/`. **This document lives OUTSIDE  |
@@ -168,7 +168,7 @@
 | `PROGRAMMINGS-01` | `C25-CHARACTER-ORIGINS` | `b1a8469e` | CURRENT — 17 droid programmings, the droid counterpart to a profession |
 | `PROPERTY-VOCAB-01` | `C21-ITEMS-AND-EQUIPMENT` | `65aaaa49` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-311; main ca |
 | `PROPOSAL-VITALITY-01` | `C01-ENGINE-FOUNDATION` | `c15a7c60` | ⚠ PROPOSAL, NOT APPLIED. 84 references across 23 documents depend on the current |
-| `PT-INDEX-01` | `C13-INSTRUMENTS` | `8eb21a4f` | CURRENT — 918 rulings to PT-931. **Body INDEXED not embedded, `PT-367` |
+| `PT-INDEX-01` | `C13-INSTRUMENTS` | `304480d6` | CURRENT — 937 rulings to PT-950. **Body INDEXED not embedded, `PT-367` |
 | `RACIAL-FEATS-01` | `C17-FEATS-AND-ACTION` | `a7e7ccab` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-0; main carr |
 | `RCR-DARKSIDE-FINDINGS` | `C07-ALIGNMENT` | `6ed96c4a` | BOOK FINDINGS — pp.180–182; fuller atonement/sidebar detail than the review |
 | `RCR-REPUTATION-FINDINGS` | `C09-INFLUENCE-AND-SOCIAL` | `fee5d44c` | BOOK FINDINGS — pp.111, 122–123 |
@@ -208,7 +208,7 @@
 | `SCOPE-ITEMS-01` | `C21-ITEMS-AND-EQUIPMENT` | `ac735c71` | **GOVERNS the workstream order |
 | `SEND-RED-TEAM-CLOCK` | `C14-RED-TEAM` | `79a727e6` | PACKET NOTE — attachment discipline; census stale |
 | `SKILL-RESOLUTION-01` | `C16-SKILLS` | `854e36a3` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-73; main car |
-| `SKILLS-01` | `C16-SKILLS` | `7be84fe0` | CURRENT — re-spliced at `PT-931`. **`§10.0` added: the species bonus and the hom |
+| `SKILLS-01` | `C16-SKILLS` | `ed85df59` | CURRENT — re-spliced. **`§10.0` `PT-931` stacking and `§10.1` `PT-947` cardinali |
 | `SPACE-AI-01` | `C23-VEHICLES-AND-SPACE` | `351c01db` | CURRENT — four faction doctrines, PT-806/PT-807 |
 | `SPACE-COMBAT-01` | `C23-VEHICLES-AND-SPACE` | `3eede0f9` | CURRENT — re-spliced at `PT-879`, which answers the library's open question from |
 | `SPECIES-AGES-01` | `C06-SPECIES` | `a69871b8` | CURRENT — re-spliced at the S23 second pass. Held copy topped at PT-382; main ca |

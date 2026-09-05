@@ -9,6 +9,7 @@ UTM, UTS, UTW, UTE — and the GFF format they are all written in.
 | `README.md` | this file — GFF answers, **§3 the UTC vs CHARACTER-RECORD-01 comparison**, template/instance, items, positional sweep |
 | `FLAWS.md` | **Part one** F24–F33 (KOTOR). **Part two** OF01–OF07 (observations on *our* format, kept separate) |
 | `NAMING.md` | batch-3 vocabulary |
+| `LIVE-STATE.md` | **focused study, out of batch order** — what a K1 character carries *in play*, as opposed to what a blueprint declares. Filed here because it is the other half of the same question |
 
 **Method.** Every blueprint in both games was read with a GFF reader written for
 this pass — 2,656 K1 and 1,741 K2 creature blueprints, 13,000+ blueprints in

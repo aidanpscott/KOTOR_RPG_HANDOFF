@@ -6,8 +6,8 @@ UTM, UTS, UTW, UTE — and the GFF format they are all written in.
 | file | what it is |
 |---|---|
 | `RECORDS.md` | GFF + nine blueprint records |
-| `README.md` | this file — GFF answers, template/instance, items, positional sweep, our-system comparison |
-| `FLAWS.md` | F24–F33 |
+| `README.md` | this file — GFF answers, **§3 the UTC vs CHARACTER-RECORD-01 comparison**, template/instance, items, positional sweep |
+| `FLAWS.md` | **Part one** F24–F33 (KOTOR). **Part two** OF01–OF07 (observations on *our* format, kept separate) |
 | `NAMING.md` | batch-3 vocabulary |
 
 **Method.** Every blueprint in both games was read with a GFF reader written for
@@ -98,77 +98,359 @@ geometry**. The inconsistent part is which type gets to override what.
 
 ---
 
-## 3 · ⚠ UTC field-by-field, and the comparison against our system
+## 3 · ⚠ UTC against CHARACTER-RECORD-01
 
-The full field pass is in `RECORDS.md` → UTC. Ten groups: identity, attributes,
-vitals, progression, appearance, alignment, behaviour flags, inventory, scripts,
-and vestigial.
+**Source note.** This section was rewritten against the real specification, read
+from `STUDY/_reference/CHARACTER-RECORD-01.md`. The first version of this
+section inferred our side from `docs/`; that version is gone, not appended to.
+The reference copy is read-only — nothing below edits it, and where it looks
+wrong the observation is reported rather than corrected.
 
-### The asymmetry the brief asked to map, now mapped across the whole layer
+**A correction I should carry.** In the batch-3 report I flagged `SKILLS-01`
+line 15 reading "twenty-two skills" against a brief saying 24, and asked which
+was stale. Neither. That line is the **quoted text of a historical error** —
+`PT-865` records the header once reading that and being corrected. The live
+count is **24**, and every count below uses 24. The failure mode is worth
+naming because a corpus that records its corrections in place will produce it
+again: **a claim carries the warrant of its reading, not of its relay.** Raising
+it was right; concluding from it was not.
 
-```
-ClassList        [{Class, ClassLevel, KnownList0}]      explicit id
-  KnownList0     [{Spell, SpellMetaMagic, SpellFlags}]  explicit id
-FeatList         [{Feat}]                               explicit id
-SpecAbilityList  [{Spell, SpellCasterLevel, ...}]       explicit id
-SkillList        [{Rank}] × 8                           ⚠ POSITION ONLY
-```
+The full UTC field pass is in `RECORDS.md` → UTC. This section compares.
 
-**`SkillList` is the only progression list in the entire blueprint layer with no
-identifier.** Confirmed on all 1,741 K2 files and 2,653 of 2,656 K1 files.
+---
 
-The three K1 exceptions are the tell: `c_drdg`, `c_sebulba` and `partymember`
-ship **20-entry** skill lists, with real ranks past the eighth slot
-(`partymember` has rank 4 at index 18). Nothing validates the length, and
-nothing could — there is no id to validate against.
+### 3.1 Field by field
 
-### ⚠ The comparison — with a scope note first
+**Both store the concept.**
 
-**`CHARACTER-RECORD-01` does not exist in this repository.** Searched the whole
-tree by filename and by content; `WHERE-IS.md` shows the design documents live
-in `aidanpscott/KOTOR_RPG_Library`, which I cannot open. So this compares
-KOTOR's UTC against the specs that **are** visible in `docs/` — `SKILLS-01`,
-`CLASS-ROSTER-01`, `FORCE-POOL-01-v3`, `ALIGNMENT-01-v2`, `MULTICLASS-01`,
-`EQUIPMENT-01`, `FORMS-01`, `ACTION-ECONOMY-01`. **Treat the "ours" column as
-inferred from those documents, not read from a record spec.**
-
-*(One thing to check on your side: `SKILLS-01` §1 is headed "Twenty-two skills",
-while the brief for batch 3 says 24. One of the two is stale.)*
-
-**Where KOTOR stores something we appear not to:**
-
-| KOTOR field | what it does | do we have it? |
+| concept | UTC | CHARACTER-RECORD-01 |
 |---|---|---|
-| `PaletteID` | toolset grouping for the object browser | authoring metadata — we would need an equivalent if we ship a builder |
-| `Plot`, `Min1HP`, `NoPermDeath` | narrative-protection flags on the record | not visible in the docs; these are cheap and solve real problems |
-| `ChallengeRating` (+ `CRAdjust`) | encounter-balance number on the creature | `SCENARIOS-01` may cover it; not confirmed |
-| `PerceptionRange`, `BlindSpot`, `IgnoreCrePath` | AI sensing parameters | our system is tabletop-first; likely N/A |
-| 14 `Script*` hooks | per-object event bindings | our equivalent is the package layer, not the character |
-| `Faction` | one integer into a relationship matrix | not visible; worth having |
-| `SoundSetFile`, `PortraitId`, `Appearance_Type` | presentation, by table index | we would carry these as names, not indices |
+| name | `FirstName` + `LastName` (CExoLocString) | `identity.name` |
+| portrait | `PortraitId` (row index) | `identity.portrait{kind, ref}` |
+| species | `Race` + `Subrace` + `SubraceIndex` | `species{id, subrace, chassis, model}` |
+| gender | `Gender` (row index) | `gender` |
+| classes | `ClassList[{Class, ClassLevel, KnownList0}]` | `classes[{id, levels}]`, max 3 |
+| abilities | `Str Dex Con Int Wis Cha` | `abilities{str…cha}` |
+| skills | `SkillList[8]{Rank}` | `skills{name: rank}` |
+| feats | `FeatList[{Feat}]` | `feats[{id, source, at_level}]` |
+| powers | `ClassList[].KnownList0[{Spell, …}]` | `powers[{id, at_level}]` |
+| equipment | `Equip_ItemList` + `ItemList` | `equipment{route, items, credits}` |
+| level | `ClassList[].ClassLevel` | `progress{level, xp}` |
 
-**Where we store something KOTOR cannot:**
+**Only KOTOR has it** — grouped, because the grouping is the finding.
 
-| ours | KOTOR's position |
-|---|---|
-| **22+ skills** | **impossible** — 8 positional slots, no id, and the array is the record |
-| **Aptitude system** | no home. Nothing on UTC is a general per-character keyed store |
-| **Force pool with regeneration, fatigue and degradation** (`FORCE-POOL-01`) | `ForcePoints` + `CurrentForce`. Two integers. No rate, no fatigue, no tier state |
-| **7-band alignment with hysteresis and drift** (`ALIGNMENT-01-v2`) | `GoodEvil`, one 0–100 byte. No band, no direction, no history |
-| **Five action budgets** (`ACTION-ECONOMY-01`) | nothing — the engine's turn state is not on the record at all |
-| **Forms as conditions, two groups** (`FORMS-01`) | no condition/stance store. `SpecAbilityList` is the nearest and it is a spell list |
-| **37 classes across four lists** (`CLASS-ROSTER-01`) | `ClassList` handles multiclass fine — but see batch 2 F15: each class needs columns in five 2DAs |
-| **Species traits and bonuses** (`SKILLS-01` §5–6) | `Race` + `Subrace` + `SubraceIndex`, three fields, two of them redundant, all indices |
+*Current state:* `CurrentHitPoints`, `MaxHitPoints`, `HitPoints`, `CurrentForce`,
+`ForcePoints`.
+*Derived-but-frozen:* `NaturalAC`, `fortbonus`, `refbonus`, `willbonus`,
+`ChallengeRating`.
+*World identity:* `Tag`, `TemplateResRef`, `FactionID`, `IsPC`, `PaletteID`.
+*Narrative protection:* `Plot`, `Min1HP`, `NoPermDeath`, `Disarmable`,
+`Interruptable`, `PartyInteract`.
+*Embodiment:* `Appearance_Type`, `BodyVariation`, `TextureVar`, `Phenotype`,
+`SoundSetFile`, `BodyBag`.
+*Behaviour:* fourteen `Script*` hooks, `Conversation`, `PerceptionRange`,
+`WalkRate`, `BlindSpot`, `IgnoreCrePath`, `MultiplierSet`, `NotReorienting`.
+*Alignment:* `GoodEvil`.
+*Other:* `SpecAbilityList`, `Comment`.
 
-**The single most useful conclusion.** KOTOR's UTC is a **wide flat record of
-scalars plus five arrays**, and every extensible thing on it is extensible
-*because it carries an id*. The one place BioWare used position instead —
-skills — is the one place the record cannot grow, and it is exactly the axis our
-system needs most (22+ skills, plus an aptitude layer that has no KOTOR analogue
-at all).
+**Only ours has it.** `schema`, `id`, `package`; `identity.story` and
+`story_origin`; the whole `origin` block (`world`, `world_open`,
+`aptitude_skill`, `upbringing`); the whole `backstory` block (`profession`,
+`programming`, `lifestyle`, `grant_taken`); `species.chassis` and
+`species.model`; `feats[].source` and `at_level`; `powers[].at_level`;
+`equipment.route` and `credits`; `progress.xp`.
 
-**The design lesson is narrow and cheap: every list entry carries its own id,
-always, even when the list looks fixed.** Eight skills looked fixed in 2003 too.
+---
+
+### ⚠ Same concept, stored differently — the interesting category
+
+**Skills.** UTC: a fixed 8-slot array of bare ranks, position implying which
+skill. Ours: a sparse map keyed by skill name, with absent meaning rank 0. This
+is the divergence batch 3 spent most of its effort on, and it is the one place
+where the two designs are not on a spectrum — they are opposites. Ours can hold
+24 skills and grow; KOTOR's cannot hold 9.
+
+**Feats.** UTC stores `{Feat}` — the id and nothing else. Ours stores
+`{id, source, at_level}`. KOTOR records **that** you have a feat; ours records
+**how and when** you got it. Note the direction: KOTOR can *derive*
+granted-versus-chosen from `feat.2da`'s `<cls>_granted` column, which holds the
+level a class grants a feat at. We store what KOTOR computes. See §3.4.
+
+**Powers.** UTC nests them **inside the class entry** — `ClassList[].KnownList0`
+— so the record knows which class granted which power, and carries
+`SpellMetaMagic` and `SpellFlags` per power. Ours holds a flat top-level
+`powers[]` with only `id` and `at_level`. Given that `MULTICLASS-01` §2.2a
+identifies powers-known as the real multiclass gap and closes it with a pool
+split, KOTOR's nesting stores exactly the association that rule needs and ours
+discards it.
+
+**Name.** UTC uses `CExoLocString` — a string index into the game-wide table
+plus optional inline translations. Ours uses a plain string. KOTOR's is built
+for localisation and inherits batch 2's F23 with it; ours is not localisable at
+all.
+
+**Portrait.** UTC: a bare integer into `portraits.2da`. Ours:
+`{kind: "preset", ref: "bith_04"}` — a tagged union with a named referent, so a
+non-preset kind can be added without renumbering anything.
+
+**Species.** UTC spends three fields — `Race` (index), `Subrace` (string),
+`SubraceIndex` (index) — two of them redundant with each other and with no
+stated relationship. Ours uses one nested object with an explicit
+mutual-exclusion rule (`subrace` XOR `chassis`, `model` only with `chassis`).
+
+**Equipment.** UTC has two lists: `Equip_ItemList` with the **slot in the GFF
+struct type id** (F24), and `ItemList` with grid coordinates. Ours has one flat
+`items[]` array with no slot concept at all. See §3.5.
+
+**Level and XP.** UTC has per-class `ClassLevel` and **no XP field anywhere on
+the creature record** — experience lives in the save's party table. Ours has
+`progress{level, xp}` plus per-class `levels`, with a validation rule that they
+sum. Ours is the more complete record; KOTOR's split is a consequence of the
+blueprint being shared by 1,589 NPCs who never gain XP.
+
+**Absence.** Ours states "absent, not zeroed" as a principle — a droid has no
+`upbringing` key. UTC is the exact opposite: **every field present on every
+file**, zeroed when meaningless. Batch 2 F14 showed KOTOR loses the same
+distinction one layer down, where `****` collapses to empty string in compiled
+2DAs. KOTOR cannot express "not applicable" anywhere in either layer.
+
+---
+
+### 3.2 ⚠ The storage model
+
+Ours: the record is a **projection of an append-only event log**. Creation
+writes events; the record is what replaying them produces; the log persists.
+KOTOR's: the blueprint **is** the store, and a save holds a replacement copy —
+batch 1 found `SAVEGAME.sav` embedding full `UTC` records for companions
+(`AVAILNPC0…8`) alongside a per-module `{ARE, GIT, IFO}` snapshot.
+
+**What the event log buys.** Corrections do not destroy prior state. The "store
+the choice, derive the consequence" principle only works if the choice is what
+persisted — a rules change to `SKILLS-01`'s aptitude stacking then reaches every
+existing character, which is stated as the goal. History is answerable without
+being separately stored. And multiplayer sync falls out of visibility sets over
+the log rather than needing its own design.
+
+**What it costs, honestly.** Every read requires a replay, so nothing can just
+open the file. The log's own schema must stay replayable forever — an event type
+written today must be interpretable in five years, which is a stronger
+compatibility commitment than a record format's. Replay must be deterministic,
+which means every derivation is pure and every table lookup is version-pinned,
+or the same log yields different characters on different days. And the headline
+benefit has a matching hazard: **if a rules change reaches every existing
+character, then a live campaign's characters change under its players between
+sessions.** "Should change every character, not none of them" is right for a
+spec under development and dangerous for a saved game in progress. Nothing in
+`CHARACTER-RECORD-01` §4 addresses that — `validate on load` catches a record
+that became *illegal*, not one that quietly became *different*.
+
+**What KOTOR's model buys, argued in its own favour.**
+
+*Load is O(1).* Open the file, you have the creature. With 2,656 K1 creature
+blueprints and 1,619 placements in one area set, no replay budget would survive.
+
+*Authoring is direct.* A designer edits a UTC in a tool and sees the result.
+There is no "author an event stream" problem, and no need for the toolset to
+model creation as history.
+
+*The record is a portable artifact.* A blueprint can be handed to another
+module, another tool, another team and read standalone. An event log needs the
+replay engine **and** the rules tables at the right version to mean anything —
+so the log is not an interchange format, and something UTC-shaped has to be
+generated whenever content crosses a boundary.
+
+*Save/restore is trivially correct.* Batch 1 showed the save just embeds copies.
+There is no class of bug where the reloaded character differs from the one on
+screen, because nothing is recomputed.
+
+*Immunity to drift is a feature for authored content.* A shipped creature is
+exactly what shipped, and a later patch cannot silently restat it. (KOTOR broke
+this itself — F25's 82 blueprints with dangling appearance indices — but the
+breakage is a data error, not a model failure.)
+
+**The honest reconciliation, and it is the section's main conclusion.** These two
+models are not competing answers to one question. They serve different
+populations. An event log is right for a **player-owned character that evolves
+and whose history matters**. A frozen record is right for **authored content
+that is placed, not played** — the 1,589 NPCs a package ships. `CHARACTER-
+RECORD-01` covers only the first, and its opening line says so: it is the
+contract the creation screens write into.
+
+So the model choice is not ours-versus-KOTOR's. **We will need both**, and the
+missing half is unspecified — see §3.3 and §3.5.
+
+---
+
+### 3.3 ⚠ Against §4 — does our model collapse the same way?
+
+§4 established that a KOTOR creature instance can override nothing: six fields,
+and in practice 1,589 distinct blueprints for 1,619 placements — roughly one
+template per instance. The template layer is barely functioning as one.
+
+**Ours has the same collapse, and in a stronger form.**
+
+`CHARACTER-RECORD-01` has **no template/instance split at all.** Every character
+is a complete record with its own `uuid`. Two characters differing in one choice
+are two complete records. KOTOR at least *has* the split, even though the
+instance side is nearly empty; ours does not have the concept.
+
+**The event log makes templating harder, not easier.** Because the record is
+replay output, one record cannot inherit from another — inheritance would have
+to be a shared log prefix, which means either copying the events (the same
+collapse, one layer down) or a fork/branch model that nothing specifies.
+
+**Two things genuinely mitigate it.** Because we store choices rather than
+consequences, two near-identical characters diverge in a handful of *events*
+rather than in forty derived values — the authored difference is small even
+though the record count is not. And `package` scoping means records need not be
+globally unique in the way KOTOR's flat resref namespace demands (batch 3 F33).
+
+**But the real gap is not mitigation, it is absence.** A package ships hundreds
+of NPCs. `CHARACTER-RECORD-01` does not describe them, and nothing else does
+either. If NPCs are `CHARACTER-RECORD-01` records we inherit KOTOR's one-record-
+per-instance problem **plus** a replay cost per NPC that KOTOR never paid. If
+they are something else, that something else is unspecified. This is the largest
+structural hole the comparison found and it is recorded in `FLAWS.md` under the
+our-format heading.
+
+---
+
+### 3.4 Derived versus stored
+
+Ours derives, per `CHARACTER-RECORD-01` §3: ability adjustments, species
+bonuses and traits, the aptitude set, skill rank caps, vitality, defence, saves,
+attack bonus, Force points, languages, credits remaining.
+
+**KOTOR freezes every one of those into the blueprint.** `HitPoints`,
+`MaxHitPoints`, `CurrentHitPoints`, `ForcePoints`, `CurrentForce`, `NaturalAC`,
+`fortbonus`, `refbonus`, `willbonus`, `ChallengeRating` — all stored values on
+the record, not lookups.
+
+**And KOTOR ships our mechanism, disabled.** `racialtypes.2da` carries
+`stradjust`, `dexadjust`, `intadjust`, `chaadjust`, `wisadjust`, `conadjust` —
+exactly the derive-on-read species modifier `CHARACTER-RECORD-01` §5 closes at
+`PT-1260`. **Every one of those columns is `0`**, in both games, for both
+labelled rows; five of the seven rows have no label at all. KOTOR has two
+species, Human and Droid, and neither adjusts an ability. So the question of
+whether UTC stores bought or final scores is moot in KOTOR — with all
+adjustments zero they are the same number — and the mechanism is another
+instance of F30's dead-capability pattern.
+
+**Where KOTOR froze and freezing was the better call.**
+
+*Hit points, clearly.* A designer can give one particular guard 40 HP without
+touching a rule. Our model derives vitality from classes, abilities and feats,
+so **there is no way to author a one-off tougher enemy** short of inventing a
+class or a feat for it. A derived-only model has no escape hatch, and authored
+content needs one. If NPCs use our record shape, this becomes a daily problem.
+
+*`ChallengeRating`, probably.* It lets an author say "this fight is harder than
+the arithmetic suggests". We have no equivalent field. (F32's complaint stands —
+UTE duplicates it with nothing keeping the copies in step — but that is a
+denormalisation defect, not an argument against having the field.)
+
+*`CurrentHitPoints` as distinct from `MaxHitPoints`, decisively.* See §3.5.
+
+**Where we freeze and KOTOR derives — and we are on the wrong side of our own
+principle.** `feats[].source` distinguishes `granted` from `chosen`. That is a
+**consequence of the class feat schedule**, not a choice the player made — and
+KOTOR derives exactly this from `feat.2da`'s `<cls>_granted` column, which holds
+the level at which each class grants each feat. Storing it means
+`FEAT-SCHEDULE-01` changing leaves stored `source` values stale, which is the
+precise failure "store the choice, derive the consequence" exists to prevent.
+
+The mitigation is real but narrow: in a pure projection a denormalised field is
+harmless because it is regenerated. It becomes a hazard the moment anything
+persists the projection — a cache, a save file, an export, a package handed to
+another player. Recorded in `FLAWS.md`.
+
+---
+
+### 3.5 ⚠ What we are missing
+
+Bluntly, and in order of how much it will hurt. Twenty years of shipped content
+knows things a specification does not.
+
+**1 · There is no current state anywhere in the record.** No current hit points,
+no current Force, no conditions, no position. `CHARACTER-RECORD-01` is a
+creation-time contract — its own purpose line says so — and nothing else
+specifies what a character *in play* is. KOTOR carries `CurrentHitPoints` and
+`CurrentForce` on the record and position on the instance. A wounded character
+has nowhere to be wounded. This is the largest gap and it is not a rules
+difference; it is a missing half of the model.
+
+**2 · No alignment field.** `ALIGNMENT-01-v2` defines seven bands with
+hysteresis, drift, atonement routes and passive recovery. The record has no key
+for any of it. KOTOR has `GoodEvil`, one byte — crude, but present.
+
+**3 · No equipment slots.** Ours has a flat `items[]`. There is no way to
+express "wielding this, wearing that, carrying two of the other". KOTOR has
+`Equip_ItemList` keyed by slot plus `ItemList` for carried, with `StackSize` on
+the item. `EQUIPMENT-01` defines wield classes and armour categories that the
+record cannot represent.
+
+**4 · No faction or relationship handle.** KOTOR has `FactionID` into a
+relationship matrix (batch 2's `repute.2da`). Any NPC needs one, and so does any
+party member who can be turned hostile.
+
+**5 · No narrative-protection flags.** `Plot`, `Min1HP`, `NoPermDeath`. Three
+booleans that solve the story-NPC-must-not-die problem, cheaply, and we have
+none of them.
+
+**6 · No embodiment beyond a portrait.** An organic character has no body model
+reference at all. KOTOR has `Appearance_Type`, `BodyVariation`, `TextureVar`,
+`Phenotype` and `SoundSetFile`. Our `species.model` exists only for droid
+chassis.
+
+**7 · No script handle.** Ours has a `uuid`, which is identity but not a name
+anything can author against. KOTOR's `Tag` is how a script says "the guard in
+the cantina" without knowing which uuid that is.
+
+**8 · No behaviour attachment.** KOTOR has fourteen event hooks and a
+`Conversation`. For a tabletop-first app that may be correct — but a package has
+to attach *something* to a character, and nothing specifies what.
+
+**9 · No stacking or inventory position.** Two medpacs are two array entries.
+KOTOR has `StackSize` on the item and grid coordinates on the inventory entry.
+
+**10 · No `IsPC` equivalent.** Once packages ship NPCs, something has to say
+which records are player-owned.
+
+---
+
+### 3.6 What we carry that KOTOR structurally cannot
+
+Only structural differences — rules differences are not the point.
+
+**A sparse, named, extensible skill map.** 24 skills with room to grow, absent
+meaning zero. KOTOR has eight positional slots with no identifier and cannot
+reach nine.
+
+**Provenance on progression entries.** `source` and `at_level` on feats,
+`at_level` on powers. KOTOR's `FeatList` carries an id and nothing else, so a
+KOTOR record cannot answer "when did this happen" at all.
+
+**A declared content schema.** `schema: "CHARACTER-RECORD-01"` versions the
+*content*. KOTOR blueprints carry a *format* version (`V3.2`, on every one of
+3,097 files) and nothing about the shape of what is inside.
+
+**Declared scope.** `package` is on the record. Batch 3 F33 found KOTOR decides
+a blueprint's reach by which file it happens to sit in, with nothing on the
+record saying so.
+
+**Absent-as-meaningful.** A droid has no `upbringing` key. KOTOR ships every
+field on every file and cannot distinguish inapplicable from zero — at either
+layer, per batch 2 F14.
+
+**Player-authored free text with a recorded provenance.** `identity.story` plus
+`story_origin`, and `origin.world_open`. Earlier work established KOTOR consumes
+exactly one piece of typed text, the character's name, and nothing else in
+either game.
+
+**Stated invariants.** `subrace` XOR `chassis`; `origin` absent iff droid;
+`gender` absent iff Astromech or Remote; classes ≤ 3 and levels summing to
+`progress.level`. KOTOR has three overlapping species fields with no stated
+relationship between them and no validation anywhere.
 
 ---
 

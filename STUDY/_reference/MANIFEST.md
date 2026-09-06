@@ -22,3 +22,46 @@
 **`CLASSES-FORCE-PHB`** — the six Force classes. **⚠ Verify they agree with `§9.2` rather than assuming it** — they did when checked at `PT-1299`, and that agreement is itself the evidence dating the standard-class conflict.
 
 **⚠ Prestige classes have no lists anywhere. That is an open design question, not an omission. Do not synthesise.**
+
+
+---
+
+## Batch 2 sources — the remaining eight extractions
+
+**Same rules as before: fingerprint before extracting, count and diff by name, leave unclear values null and say so.**
+
+| File | md5 | lines |
+|---|---|---|
+| `UPBRINGING-01.md` | `d329117d` | 105 |
+| `PROFESSIONS-01.md` | `2dbd0350` | 459 |
+| `PROGRAMMINGS-01.md` | `b1a8469e` | 143 |
+| `SPECIES-CHAPTER-v2.md` | `404f5193` | 1274 |
+| `CLASS-ROSTER-01.md` | `409c0618` | 1097 |
+| `FEATS-LIBRARY-01.md` | `5d467121` | 1667 |
+| `WORLDS-REGISTER-01.md` | `2107a586` | 560 |
+| `EQUIPMENT-01.md` | `10246592` | 322 |
+
+**⚠ Expected counts, so a mismatch is visible immediately:**
+
+| Extract | Expect | Source |
+|---|---|---|
+| `upbringings.json` | **9** | `UPBRINGING-01` |
+| `professions.json` | **21** | `PROFESSIONS-01` |
+| `programmings.json` | **17** | `PROGRAMMINGS-01` |
+| `species.json` | **31 organic** + droid chassis | `SPECIES-CHAPTER-v2` |
+| `classes.json` | **18 base** (12 standard + 6 Force) + prestige | `CLASS-ROSTER-01` |
+| `feats.json` | **156** | `FEATS-LIBRARY-01` |
+| `worlds.json` | — no expected count; report what you find | `WORLDS-REGISTER-01` |
+| `equipment.json` | — no expected count | `EQUIPMENT-01` |
+
+**⚠ Where a count is absent above, that is deliberate — do not invent one to check against. Report the number you get and say it was unverified.**
+
+### Two traps this corpus has already sprung
+
+**⚠ INTERRUPTED TABLES.** `SKILLS-01`'s master table was broken by two prose lines mid-table, and a consecutive-row parser returned **24 from a 26-row table** — silently. **It was fixed there; ten more interrupted tables exist elsewhere in the corpus** (`PT-1301`). **Read a section before parsing it.**
+
+**⚠ QUOTED HISTORICAL ERRORS.** This corpus records its own corrections **in place**, so a document may contain the text of a claim that was later overturned. `SKILLS-01` line 15 quotes *"twenty-two skills"* as an error `PT-865` fixed. **Read for what a document ASSERTS, not what it QUOTES.**
+
+### Order
+
+**Smallest first** — `UPBRINGING-01` at 105 lines, then `PROGRAMMINGS-01`, then up. **A shape problem is cheaper to find on nine records than on 156.**

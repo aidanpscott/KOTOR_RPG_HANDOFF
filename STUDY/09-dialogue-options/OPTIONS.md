@@ -356,3 +356,184 @@ with what the player typed for being "the real line".
 - **The 90 K1 single-use prefixes** were counted, not read individually.
 - **Daggerfall's answer text** — how a topic resolves to a reply, and the
   `%`-macro layer that fills it. That is the earlier free-text study's territory.
+
+---
+---
+
+# ⚠ ADDENDUM — MARKING A LINE AT THE MOMENT IT FIRES
+
+*Added after a ruling that typed text meaning an authored reply **counts as
+picking it** — the branch fires, the check runs, the player's words are shown.
+So the question sharpened: **when the player typed the line, what is there to
+mark?** In both source games the reply was on screen before it was chosen; a
+typed line has no such object until after it resolves.*
+
+**Short answer: three commit-time mechanisms exist across the two games, and one
+of them is exactly the shape a typed line needs — because it never needed an
+object.**
+
+---
+
+## 1 · ⚠ K2 plays a stinger when a morally-weighted reply commits
+
+`guisounds.2da` — the **UI sound** table — carries 17 rows in K1 and **19 in
+K2**. The two K2 additions:
+
+```
+DarkSide     mus_s_darkshort
+LightSide    mus_s_lightshort
+```
+
+**The assets exist in K2's BIF *and* on the filesystem, and do not exist in K1
+in either place.** So K2 added the sounds and the table rows together; this is a
+sequel addition, not an inherited row.
+
+**And alignment shifts fire overwhelmingly from the player's own line:**
+
+```
+alignment-script firings on dialogue nodes
+             total    on PLAYER replies    on speaker lines
+   K1          365          275 (75%)           90
+   K2          631          525 (83%)          106
+
+K2's top scripts: a_givedark 201 · a_givelight 155 · a_darksml 121 ·
+                  a_lightsml 81 · a_lightmed 38 · a_darkmed 35
+```
+
+So the sequence is: the player's reply commits → its `Script` fires
+`a_givedark` → the engine adjusts alignment (`adddarkside` / `addlightside`,
+literals present in both binaries) → **K2 plays a short musical cue.**
+
+**⚠ Note where those rows live.** Not in `ambientmusic.2da`, where the stingers
+of batch 6 live. In `guisounds.2da`, beside `Quest_New_Notify`,
+`Quest_Complete_Notify` and `Level_Up_Notify`. **K2 classified an alignment
+shift as a UI notification** — the same category as gaining a level.
+
+**⚠ And this is the mechanism that transfers, for one specific reason: it is
+temporal, not spatial.** A sound needs no object on screen to attach to. It
+marks *the moment*, which is precisely what a typed line has and a pre-rendered
+option does not. Everything else either game does needs a row to hang on.
+
+---
+
+## 2 · Both games log the player's line, attributed by name
+
+`PARTYTABLE.res` carries `PT_DLG_MSG_LIST` — 64 entries of
+`{PT_DLG_MSG_SPKR, PT_DLG_MSG_MSG}`. Speakers in the save read:
+
+```
+(blank) x12 · Canderous Ordo x10 · Gail Dakari x9 · Security Terminal x7
+Zax x7 · Darth Malak x6 · T3-M4 x4 · Sith Governor x4 · Admiral Saul Kar x4
+```
+
+**`Gail Dakari` is the player character.** Their chosen line enters the
+transcript under their own name, alongside everyone else's.
+
+That is commit-time, and it is a *record* rather than a *marker* — nothing in
+the data distinguishes the player's entries from an NPC's beyond the speaker
+name. But it is the mechanism by which a chosen line becomes **a thing that was
+said**, which is the half of the problem a typed line already solves for itself.
+
+---
+
+## 3 · Daggerfall commits the question to a colour-differentiated transcript
+
+`SetQuestionAnswerPairInConversationListbox` runs on selection and does three
+things in order:
+
+1. **plays a click** — `PlayOneShot(SoundClips.ButtonClick)`
+2. **appends the question** to `listboxConversation`, coloured
+   `DaggerfallQuestionTextColor` and right-aligned
+3. **appends the answer** beneath it
+
+So the topic you picked becomes a line in a running exchange, visually distinct
+from the reply it drew.
+
+**⚠ Scope on this one.** Only **three** things in that window are guarded by
+`EnableModernConversationStyleInTalkWindow` — the background-colour treatment at
+lines 646, 1262 and 1273. **The transcript itself, the question colour and the
+click sound are unguarded**, so the reimplementation treats them as base
+behaviour. I cannot verify that against the original binary; I did not
+disassemble classic Daggerfall.
+
+*Separately, `textlabelPlayerSays` is a dedicated on-screen label showing the
+question the player is **about to** ask, live, as they browse the list. That is
+**pre**-commit and does not answer this question — but it is the closest either
+game comes to showing a line in the player's voice before it exists.*
+
+---
+
+## 4 · ⚠ What neither game has
+
+**Nothing in either game marks a reply with the outcome of its check.**
+
+Searched both entire string tables: `[success]` / `[failure]` variants appear
+**1,264 times in K1 and 831 in K2**, and **zero of them are attached to a player
+reply**. They belong to the computer-terminal and system-feedback channel.
+
+There is no field, no sound, no colour and no transcript treatment that says
+*"that was a Persuade, and it worked."* The `[Persuade]` bracket announces a
+skill is involved **before** the line, unreliably (§1), and then nothing follows
+it. **The check resolves silently.**
+
+Nor is there any per-reply commit treatment that is *systematic* rather than
+authored. The presentation fields that fire when a reply plays are hand-placed:
+
+```
+                    K1 of 27,465 replies      K2 of 28,509
+Script                 2,486  (9.1%)          3,563 (12.5%)
+AnimList                 277  (1.0%)            297  (1.0%)
+FadeType                  68  (0.2%)             40  (0.1%)
+CamVidEffect               —                       4  (0.0%)
+Emotion                    —                  28,509 (100%, K2 field)
+```
+
+A writer chose each of those. **None is generated from what the reply *did*.**
+
+---
+
+## 5 · So: borrowing or inventing?
+
+**Borrowing, for two of the three parts.**
+
+**Sound at the moment of commit — borrow it, and it is the important one.**
+K2's alignment stinger is a working precedent for marking a line that has no
+on-screen object, because a cue in time needs no row to attach to. The
+classification is worth borrowing too: K2 filed it as a **UI notification**
+beside level-up and quest-complete, not as music. That is the right register —
+it says *something just happened to you*, not *the scene changed*.
+
+**Attribution in a transcript — borrow it.** Both games make the chosen line a
+thing that was said, under the speaker's name; Daggerfall additionally colours
+the player's half differently from the reply. For typed text this is nearly
+free, and it is what converts *"I wrote something"* into *"I said something."*
+
+**Marking the check — inventing.** Neither game does it, in either direction,
+and the one convention that gestures at it (`[Persuade]`) is pre-commit,
+unenforced, and wrong more often than right. **There is no precedent to borrow
+and no bad precedent to avoid — the space is empty.**
+
+**One inherited warning that now applies differently.** §5 argued that a prompt
+shown for something an NPC cannot answer would rebuild KOTOR's bracket problem.
+Under the new ruling that risk moves: the failure is no longer a misleading
+*label*, it is a typed line that **looks** as if it matched an authored reply
+and did not. **The commit-time signal is what distinguishes the two cases**, and
+that is the argument for having one at all — not decoration, but the only way
+the player can tell which of the two things just happened to their sentence.
+
+---
+
+## 6 · Added to what was not checked
+
+- **Neither game run.** The stinger is established from `guisounds.2da`, the
+  presence of the assets in K2 and their absence in K1, and the script counts —
+  **not from hearing it fire.**
+- **Which K2 script actually triggers the stinger** — `a_givedark` calls an
+  engine alignment function; whether the engine plays the cue on every alignment
+  change or only above a threshold was not traced.
+- **Daggerfall's classic binary** — §3's transcript claims come from the
+  reimplementation, with the guarded/unguarded split reported as the evidence.
+- **K1's reply `VO_ResRef`**, present on 19,640 of 27,465 replies against K2's
+  32. A large divergence, noticed and not explained. It may mean K1 replies
+  carry timing data rather than audio; I did not check whether those resrefs
+  resolve to shipped files.

@@ -1,170 +1,222 @@
-[
-  {
-    "id": "acrobatics",
-    "name": "Acrobatics",
-    "attribute": "Dexterity",
-    "description": null,
-    "source": "docs/SKILLS-01.md:17"
+{
+  "source": {
+    "file": "STUDY/_reference/SKILLS-01.md",
+    "md5": "e157dea61da7402ea676019667867071",
+    "md5_short": "e157dea6",
+    "lines": 735,
+    "section_1_heading": "1. ⚠⚠ TWENTY-SIX SKILLS — ⚠ 25 CHARACTER + `Fly`, BEAST-ONLY"
   },
-  {
-    "id": "alertness",
-    "name": "Alertness",
-    "attribute": "Wisdom",
-    "description": null,
-    "source": "docs/SKILLS-01.md:18"
-  },
-  {
-    "id": "appraise",
-    "name": "Appraise",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:19"
-  },
-  {
-    "id": "archaeology",
-    "name": "Archaeology",
-    "attribute": "Intelligence",
-    "description": "the dead. Ruins, artifacts, vanished civilisations, deep history. Rakatan technology, Infinite Empire sites, reading a wall nobody has read in twenty thousand years.",
-    "source": "docs/SKILLS-01.md:20,52"
-  },
-  {
-    "id": "athletics",
-    "name": "Athletics",
-    "attribute": "Strength",
-    "description": null,
-    "source": "docs/SKILLS-01.md:21"
-  },
-  {
-    "id": "awareness",
-    "name": "Awareness",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:22"
-  },
-  {
-    "id": "beast-handling",
-    "name": "Beast Handling",
-    "attribute": "Charisma",
-    "description": null,
-    "source": "docs/SKILLS-01.md:23"
-  },
-  {
-    "id": "botany",
-    "name": "Botany",
-    "attribute": "Intelligence",
-    "description": "plant and soil analysis.",
-    "source": "docs/SKILLS-01.md:24"
-  },
-  {
-    "id": "demolitions",
-    "name": "Demolitions",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:25"
-  },
-  {
-    "id": "intimidate",
-    "name": "Intimidate",
-    "attribute": "Charisma",
-    "description": null,
-    "source": "docs/SKILLS-01.md:26"
-  },
-  {
-    "id": "medicine",
-    "name": "Medicine",
-    "attribute": "Wisdom",
-    "description": null,
-    "source": "docs/SKILLS-01.md:27"
-  },
-  {
-    "id": "mysticism",
-    "name": "Mysticism",
-    "attribute": "Wisdom",
-    "description": "the Force and its traditions. Recognising a power as it is used, Jedi and Sith doctrine, holocrons, what a Korriban tomb is for and what is likely inside it.",
-    "source": "docs/SKILLS-01.md:28,58"
-  },
-  {
-    "id": "persuade",
-    "name": "Persuade",
-    "attribute": "Charisma",
-    "description": null,
-    "source": "docs/SKILLS-01.md:29"
-  },
-  {
-    "id": "pilot",
-    "name": "Pilot",
-    "attribute": "Dexterity",
-    "description": null,
-    "source": "docs/SKILLS-01.md:30"
-  },
-  {
-    "id": "repair",
-    "name": "Repair",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:31"
-  },
-  {
-    "id": "scavenging",
-    "name": "Scavenging",
-    "attribute": "Wisdom",
-    "description": null,
-    "source": "docs/SKILLS-01.md:32"
-  },
-  {
-    "id": "science",
-    "name": "Science",
-    "attribute": "Intelligence",
-    "description": "laboratory analysis, chemistry, and physical theory",
-    "source": "docs/SKILLS-01.md:33"
-  },
-  {
-    "id": "security",
-    "name": "Security",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:34"
-  },
-  {
-    "id": "sleight-of-hand",
-    "name": "Sleight of Hand",
-    "attribute": "Dexterity",
-    "description": null,
-    "source": "docs/SKILLS-01.md:35"
-  },
-  {
-    "id": "slicing",
-    "name": "Slicing",
-    "attribute": "Intelligence",
-    "description": null,
-    "source": "docs/SKILLS-01.md:36"
-  },
-  {
-    "id": "stealth",
-    "name": "Stealth",
-    "attribute": "Dexterity",
-    "description": null,
-    "source": "docs/SKILLS-01.md:37"
-  },
-  {
-    "id": "streetwise",
-    "name": "Streetwise",
-    "attribute": "Charisma",
-    "description": null,
-    "source": "docs/SKILLS-01.md:38"
-  },
-  {
-    "id": "swim",
-    "name": "Swim",
-    "attribute": "Strength",
-    "description": null,
-    "source": "docs/SKILLS-01.md:39"
-  },
-  {
-    "id": "xenology",
-    "name": "Xenology",
-    "attribute": "Intelligence",
-    "description": "the living. Species, biology, customs, current factions and politics. Recognising a people and knowing how not to insult them.",
-    "source": "docs/SKILLS-01.md:40,56"
-  }
-]
+  "count": 26,
+  "character_skills": 25,
+  "beast_only": 1,
+  "records": [
+    {
+      "id": "acrobatics",
+      "name": "Acrobatics",
+      "attribute": "Dexterity",
+      "description": "Balance, tumbling and escaping a hold. Landing well, and getting free.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:25,708"
+    },
+    {
+      "id": "alertness",
+      "name": "Alertness",
+      "attribute": "Wisdom",
+      "description": "Noticing that something is off — a sound behind you, or a lie in front of you. **Resists Persuade.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:26,709"
+    },
+    {
+      "id": "appraise",
+      "name": "Appraise",
+      "attribute": "Intelligence",
+      "description": "Knowing what a thing is worth before anyone names a price.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:27,710"
+    },
+    {
+      "id": "archaeology",
+      "name": "Archaeology",
+      "attribute": "Intelligence",
+      "description": "Reading ruins, artefacts and the people who left them.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:28,711"
+    },
+    {
+      "id": "athletics",
+      "name": "Athletics",
+      "attribute": "Strength",
+      "description": "Climbing and jumping. Getting your body somewhere it was not.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:29,712"
+    },
+    {
+      "id": "awareness",
+      "name": "Awareness",
+      "attribute": "Intelligence",
+      "description": "Spotting what is hidden and searching where it might be. **Opposes Stealth.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:30,713"
+    },
+    {
+      "id": "beast-handling",
+      "name": "Beast Handling",
+      "attribute": "Charisma",
+      "description": "Riding, calming and directing animals.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:31,714"
+    },
+    {
+      "id": "botany",
+      "name": "Botany",
+      "attribute": "Intelligence",
+      "description": "Plant and soil analysis. *Astromechs run samples; Ithorians read a forest.*",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:32,715"
+    },
+    {
+      "id": "demolitions",
+      "name": "Demolitions",
+      "attribute": "Intelligence",
+      "description": "Placing charges and defusing someone else's. **Spends mines; the skill sets grade and radius.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:33,716"
+    },
+    {
+      "id": "intimidate",
+      "name": "Intimidate",
+      "attribute": "Charisma",
+      "description": "Making someone believe the cost of refusing. **Resisted differently from Persuade** — see `SKILL-RESOLUTION-01 §3.1`.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:34,717"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "attribute": "Wisdom",
+      "description": "Treating injury. **The roll answers how much a medpac restores**, not whether it works.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:35,718"
+    },
+    {
+      "id": "mysticism",
+      "name": "Mysticism",
+      "attribute": "Wisdom",
+      "description": "The Force as a subject of study — traditions, relics and what the untrained call superstition.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:36,719"
+    },
+    {
+      "id": "persuade",
+      "name": "Persuade",
+      "attribute": "Charisma",
+      "description": "Changing a mind that was made up. **Rolled against the target's Alertness** — *can they see through you?*",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:37,720"
+    },
+    {
+      "id": "pilot",
+      "name": "Pilot",
+      "attribute": "Dexterity",
+      "description": "Flying a ship, and knowing where to point it.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:38,721"
+    },
+    {
+      "id": "repair",
+      "name": "Repair",
+      "attribute": "Intelligence",
+      "description": "Restoring damaged equipment and droids. **Spends parts by damage — and a droid repairing itself restores more.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:39,722"
+    },
+    {
+      "id": "scavenging",
+      "name": "Scavenging",
+      "attribute": "Wisdom",
+      "description": "Finding value in wreckage, and food where there is none. **⚠ Reduces ration use only where a package tracks rations.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:40,723"
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "attribute": "Intelligence",
+      "description": "Laboratory analysis, chemistry and physical theory.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:41,724"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "attribute": "Intelligence",
+      "description": "Opening what was locked against you — locks, traps and sealed doors as one job. **Spikes grant a bonus, not access.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:42,725"
+    },
+    {
+      "id": "sleight-of-hand",
+      "name": "Sleight of Hand",
+      "attribute": "Dexterity",
+      "description": "Taking something without the hand being seen.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:43,726"
+    },
+    {
+      "id": "slicing",
+      "name": "Slicing",
+      "attribute": "Intelligence",
+      "description": "Getting into a closed system, and forging what comes out of it. **Spends spikes by terminal grade.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:44,727"
+    },
+    {
+      "id": "stealth",
+      "name": "Stealth",
+      "attribute": "Dexterity",
+      "description": "Moving unseen and unheard, as one act. **Opposed by Awareness** — see `§4`.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:45,728"
+    },
+    {
+      "id": "streetwise",
+      "name": "Streetwise",
+      "attribute": "Charisma",
+      "description": "Knowing who to ask, and passing for someone who belongs. **Spends credits; higher skill means cheaper informants.**",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:46,729"
+    },
+    {
+      "id": "fly",
+      "name": "Fly",
+      "attribute": "Dexterity",
+      "description": "⚠ **Beast only.** Does not appear on a character's skill list.",
+      "beast_only": true,
+      "source": "STUDY/_reference/SKILLS-01.md:47,733"
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "attribute": "Wisdom",
+      "description": "Tracking, foraging, shelter, and reading terrain and weather.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:48,731"
+    },
+    {
+      "id": "swim",
+      "name": "Swim",
+      "attribute": "Strength",
+      "description": "Moving through water, and staying above it.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:53,730"
+    },
+    {
+      "id": "xenology",
+      "name": "Xenology",
+      "attribute": "Intelligence",
+      "description": "Species, cultures and how to deal with something that does not think as you do.",
+      "beast_only": false,
+      "source": "STUDY/_reference/SKILLS-01.md:54,732"
+    }
+  ]
+}

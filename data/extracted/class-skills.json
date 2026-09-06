@@ -1,0 +1,374 @@
+{
+  "sources": [
+    {
+      "file": "STUDY/_reference/SKILLS-01.md",
+      "md5": "e157dea61da7402ea676019667867071",
+      "md5_short": "e157dea6",
+      "lines": 735,
+      "section_1_heading": "1. ⚠⚠ TWENTY-SIX SKILLS — ⚠ 25 CHARACTER + `Fly`, BEAST-ONLY"
+    },
+    {
+      "file": "STUDY/_reference/CLASSES-FORCE-PHB.md",
+      "md5": "ebc825312a4a02801ac4b629dc30a189",
+      "md5_short": "ebc82531",
+      "lines": 222
+    }
+  ],
+  "section_extracted": "SKILLS-01 §9.2b, lines 350-363 (standard); CLASSES-FORCE-PHB (force)",
+  "counts": {
+    "standard": 14,
+    "force": 6,
+    "prestige": 0
+  },
+  "prestige_note": "Prestige classes have no skill lists in any source. Open design question — deliberately not synthesised.",
+  "classes": [
+    {
+      "id": "soldier",
+      "name": "Soldier",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Athletics",
+        "Awareness",
+        "Demolitions",
+        "Intimidate",
+        "Medicine",
+        "Survival",
+        "Swim"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/SKILLS-01.md:350"
+    },
+    {
+      "id": "brawler",
+      "name": "Brawler",
+      "category": "standard",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Athletics",
+        "Awareness",
+        "Intimidate",
+        "Streetwise"
+      ],
+      "declared_count": 6,
+      "source": "STUDY/_reference/SKILLS-01.md:351"
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "category": "standard",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Awareness",
+        "Demolitions",
+        "Intimidate",
+        "Repair",
+        "Scavenging",
+        "Sleight of Hand"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/SKILLS-01.md:352"
+    },
+    {
+      "id": "scout",
+      "name": "Scout",
+      "category": "standard",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Awareness",
+        "Beast Handling",
+        "Botany",
+        "Demolitions",
+        "Pilot",
+        "Repair",
+        "Scavenging",
+        "Slicing",
+        "Survival",
+        "Swim"
+      ],
+      "declared_count": 12,
+      "source": "STUDY/_reference/SKILLS-01.md:353"
+    },
+    {
+      "id": "bounty-hunter",
+      "name": "Bounty Hunter",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Athletics",
+        "Awareness",
+        "Demolitions",
+        "Intimidate",
+        "Pilot",
+        "Scavenging",
+        "Stealth",
+        "Streetwise",
+        "Survival"
+      ],
+      "declared_count": 10,
+      "source": "STUDY/_reference/SKILLS-01.md:354"
+    },
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Awareness",
+        "Pilot",
+        "Repair",
+        "Science",
+        "Security",
+        "Slicing"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/SKILLS-01.md:355"
+    },
+    {
+      "id": "agent",
+      "name": "Agent",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Awareness",
+        "Intimidate",
+        "Persuade",
+        "Repair",
+        "Science",
+        "Security",
+        "Slicing",
+        "Stealth",
+        "Streetwise",
+        "Xenology"
+      ],
+      "declared_count": 12,
+      "source": "STUDY/_reference/SKILLS-01.md:356"
+    },
+    {
+      "id": "treasure-hunter",
+      "name": "Treasure Hunter",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Archaeology",
+        "Awareness",
+        "Beast Handling",
+        "Botany",
+        "Demolitions",
+        "Mysticism",
+        "Pilot",
+        "Science",
+        "Survival",
+        "Xenology"
+      ],
+      "declared_count": 12,
+      "source": "STUDY/_reference/SKILLS-01.md:357"
+    },
+    {
+      "id": "saboteur",
+      "name": "Saboteur",
+      "category": "standard",
+      "skills": [
+        "Awareness",
+        "Demolitions",
+        "Repair",
+        "Scavenging",
+        "Security",
+        "Sleight of Hand",
+        "Slicing",
+        "Stealth"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/SKILLS-01.md:358"
+    },
+    {
+      "id": "duelist",
+      "name": "Duelist",
+      "category": "standard",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Athletics",
+        "Awareness",
+        "Intimidate",
+        "Persuade",
+        "Streetwise"
+      ],
+      "declared_count": 7,
+      "source": "STUDY/_reference/SKILLS-01.md:359"
+    },
+    {
+      "id": "pirate",
+      "name": "Pirate",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Athletics",
+        "Intimidate",
+        "Pilot",
+        "Scavenging",
+        "Streetwise"
+      ],
+      "declared_count": 7,
+      "source": "STUDY/_reference/SKILLS-01.md:360"
+    },
+    {
+      "id": "smuggler",
+      "name": "Smuggler",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Awareness",
+        "Demolitions",
+        "Persuade",
+        "Pilot",
+        "Security",
+        "Sleight of Hand",
+        "Slicing",
+        "Stealth",
+        "Streetwise"
+      ],
+      "declared_count": 11,
+      "source": "STUDY/_reference/SKILLS-01.md:361"
+    },
+    {
+      "id": "machinist",
+      "name": "Machinist",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Awareness",
+        "Demolitions",
+        "Pilot",
+        "Repair",
+        "Scavenging",
+        "Sleight of Hand"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/SKILLS-01.md:362"
+    },
+    {
+      "id": "medic",
+      "name": "Medic",
+      "category": "standard",
+      "skills": [
+        "Alertness",
+        "Appraise",
+        "Awareness",
+        "Botany",
+        "Medicine",
+        "Persuade",
+        "Science",
+        "Slicing",
+        "Xenology"
+      ],
+      "declared_count": 9,
+      "source": "STUDY/_reference/SKILLS-01.md:363"
+    },
+    {
+      "id": "jedi-guardian",
+      "name": "Jedi Guardian",
+      "category": "force",
+      "skills": [
+        "Athletics",
+        "Awareness",
+        "Mysticism",
+        "Persuade",
+        "Medicine"
+      ],
+      "declared_count": 5,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:51"
+    },
+    {
+      "id": "jedi-sentinel",
+      "name": "Jedi Sentinel",
+      "category": "force",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Slicing",
+        "Mysticism",
+        "Security",
+        "Stealth",
+        "Streetwise",
+        "Medicine"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:82"
+    },
+    {
+      "id": "jedi-consular",
+      "name": "Jedi Consular",
+      "category": "force",
+      "skills": [
+        "Alertness",
+        "Archaeology",
+        "Mysticism",
+        "Persuade",
+        "Medicine",
+        "Science",
+        "Xenology"
+      ],
+      "declared_count": 7,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:113"
+    },
+    {
+      "id": "sith-warrior",
+      "name": "Sith Warrior",
+      "category": "force",
+      "skills": [
+        "Athletics",
+        "Awareness",
+        "Intimidate",
+        "Mysticism",
+        "Persuade",
+        "Survival"
+      ],
+      "declared_count": 6,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:143"
+    },
+    {
+      "id": "sith-inquisitor",
+      "name": "Sith Inquisitor",
+      "category": "force",
+      "skills": [
+        "Alertness",
+        "Archaeology",
+        "Mysticism",
+        "Persuade",
+        "Science",
+        "Slicing",
+        "Streetwise",
+        "Xenology"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:179"
+    },
+    {
+      "id": "sith-assassin",
+      "name": "Sith Assassin",
+      "category": "force",
+      "skills": [
+        "Acrobatics",
+        "Alertness",
+        "Mysticism",
+        "Security",
+        "Sleight of Hand",
+        "Stealth",
+        "Streetwise",
+        "Survival"
+      ],
+      "declared_count": 8,
+      "source": "STUDY/_reference/CLASSES-FORCE-PHB.md:212"
+    }
+  ]
+}

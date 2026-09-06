@@ -1,67 +1,103 @@
 # data/extracted — provenance and status
 
-## ⚠ `skills.json` is EXTRACTED FROM A STALE SOURCE. Do not trust its membership.
+**Status: CURRENT.** Both files were extracted on 2026-09-06 from fingerprinted
+sources in `STUDY/_reference/`, and each output carries its source fingerprint
+inline so a later run can tell whether it read the same document.
 
-**Status: 24 records, and the live list is 26.**
+| output | records | source | md5 | lines |
+|---|---|---|---|---|
+| `skills.json` | 26 (25 character + 1 beast-only) | `STUDY/_reference/SKILLS-01.md` | `e157dea6` | 735 |
+| `class-skills.json` | 20 (14 standard + 6 Force) | `SKILLS-01.md` §9.2b + `STUDY/_reference/CLASSES-FORCE-PHB.md` | `e157dea6`, `ebc82531` | 735, 222 |
 
-`skills.json` was extracted from `docs/SKILLS-01.md` in **this** repository
-(md5 `53fcd1b2269d9c5a41958245f27e5114`, 538 lines, unchanged since well before
-the extraction). That copy is **the pre-`PT-552` skill list**.
+`CLASSES-FORCE-PHB.md` hashes to `ebc82531`, **matching `from-library/WHERE-IS.md`
+exactly** — the Library's index and this copy are the same file.
 
-### What it is missing
+---
+
+## ⚠ The earlier extraction was stale. This one supersedes it.
+
+The pilot run extracted **24** skills from `docs/SKILLS-01.md`
+(md5 `53fcd1b2`, 538 lines, §1 heading *"Twenty-two skills"*, zero occurrences
+of `Survival`). That was the **pre-`PT-552`** list, short by `Survival` and
+`Fly`.
 
 ```
-my 24  +  Survival  +  Fly  =  26     the live table total
-my 24  +  Survival          =  25     the character skills
+pilot 24  +  Survival (PT-552)  +  Fly (PT-554, beast-only)  =  26
 ```
 
-- **`Survival`** — retired and readmitted at **`PT-552`**. Absent from the copy
-  here; the string `Survival` and the string `PT-552` do not appear anywhere in
-  `docs/SKILLS-01.md`.
-- **`Fly`** — **beast-only**, not on a character's skill list. Arrived after the
-  copy here was written.
+**`docs/SKILLS-01.md` must not be used for extraction.** It is an old snapshot
+retained for the study batches that already cite it.
 
-### How this was established
+The count is owner-confirmed at **26 — 25 character skills plus `Fly`, which is
+beast-only**. The stale figure of 24 was wrong in eleven places across the
+corpus because `Survival` was readmitted at `PT-552` and the count never
+propagated.
 
-**⚠ Owner-confirmed on 2026-09-06.** The count of **26 — 25 character skills
-plus `Fly`, beast-only** is confirmed by the project owner, who also records
-that the stale figure of 24 was wrong in **eleven places** across the corpus,
-because `Survival` was readmitted at `PT-552` and the count never propagated.
-The section below is how it was first established here, independently, before
-that confirmation.
+---
 
-Not from the source document — from the corpus's own reconciliation, written by
-other agents against the live copy in `KOTOR_RPG_MAIN_WORK`:
+## ⚠ The parsing trap in `SKILLS-01 §1`, recorded because it will recur
 
-| where | says |
-|---|---|
-| `to-library/TO-LIBRARY-20.md` §2 | *"24 the pre-PT-552 list — missing `Survival` · 25 the character skills · 26 the table total — 25 + `Fly`, which is BEAST-ONLY"* |
-| `to-library/TO-LIBRARY-20.md` §2 | quotes the **live** `SKILLS-01 §1` heading as *"Twenty-six skills — 25 character + `Fly`, beast-only"* |
-| `to-main/TO-MAIN-02-ATLAS.md` | *"`SKILLS-01` header … its own table has **26 rows**, **6** marked `new`"* |
-| `to-main/TO-MAIN-10-ATLAS.md` ③ | the same three-number reconciliation, kept verbatim |
-| `to-main/TO-MAIN-18-ATLAS.md` | *"25 / 24 / 22 — `Survival`, three correct measures at three moments"* |
+**The master table is interrupted.** Rows run from line 25 to line 48, then
+**lines 49–52 are prose** — a blockquote and a paragraph about `Survival` — and
+the table **resumes at lines 53–54** with `Swim` and `Xenology`.
 
-Corroborating, on the copy here: its §1 heading reads **"Twenty-two skills"**
-(not "Twenty-six"), and it carries **5** `**new**` markers where the live table
-carries **6**.
+A parser that reads *consecutive* rows stops at line 48 and returns **24**,
+silently losing `Swim` and `Xenology`. That is the exact failure the owner
+described: two independent 24s that differed by four names.
 
-### What is and is not wrong with the file
+`scripts/extract2.py` collects every table row within a bounded line window
+instead, and the interruption is visible in the committed data — `streetwise`
+cites line 46, `survival` line 48, and `swim` line 53.
 
-- **The 24 records it does contain were read correctly.** Names, attributes and
-  line citations are accurate *for the version they came from*.
-- **The membership is wrong** — it is short by two.
-- **19 of 24 `description` fields are `null`**, because the copy here has no
-  descriptions section. A "Descriptions — one line per skill" section is
-  reported to exist in the live document; it is not in this repository.
+---
 
-### What is needed to fix it
+## What was verified, and how
 
-The live `rules/SKILLS-01.md` from `KOTOR_RPG_MAIN_WORK`. That repository
-returns **403 — "Write access to repository not granted"** with the token
-available here, and no `rules/` directory has ever existed in this repository on
-any branch.
+**Run 1 — skills**
 
-**Nothing was synthesised.** `Survival` and `Fly` are *named* in the
-cross-reference documents but their governing attributes and descriptions are
-not, so they were not added. A guessed attribute is indistinguishable from a
-read one.
+- master-table rows read: **26**; records: **26**; unique ids and names: **26**
+- character skills **25**, beast-only **1** (`Fly`)
+- descriptions populated **26 of 26**; null attributes **none**
+- **diff by name** against the Descriptions table: **no difference in either
+  direction** — a count was not treated as a set
+- independent `grep` count of both tables: 26 and 26, agreeing with the parser
+
+**Run 2 — class skill lists**
+
+- standard classes from **`§9.2b`, lines 350–363**: **14**
+- each row's declared skill count matches its actual list length: **all 14 agree**
+- Force classes from `CLASSES-FORCE-PHB`: **6**
+- **agreement verified, not assumed**: all six lists are byte-identical to
+  `SKILLS-01 §9.2` — Guardian 5, Sentinel 8, Consular 7, Warrior 6, Inquisitor
+  8, Assassin 8
+- every class skill resolves to one of the **25 character skills**; **no
+  unrecognised name**
+- **`Fly` appears on no class list**, as the source requires
+
+---
+
+## Deliberate omissions
+
+**Prestige classes carry no skill lists in any source.** That is an open design
+question, not a gap to fill. None were synthesised.
+
+**`§9.2` and `CLASSES-STANDARD-PHB` were not used for standard classes.** Both
+are superseded by `§9.2b` per `PT-1299`. `§9.2` was read **only** to verify the
+Force six.
+
+---
+
+## One field added beyond the agreed shape, flagged for approval
+
+`skills.json` records carry **`beast_only`** (boolean) in addition to
+`id`/`name`/`attribute`/`description`/`source`.
+
+It was added because the brief asks for a character-versus-beast count, and
+without the field that count is not verifiable from the data — `Fly` would be
+indistinguishable from `Swim` on a character sheet.
+
+**Still without a home, and unchanged from the pilot report:** the master table's
+`Armour` column (✱ on Acrobatics, Athletics, Sleight of Hand, Stealth, Survival,
+Swim) and its `Consolidates` column. Both are real and both were dropped.
+`class-skills.json` also carries `category` (`standard`/`force`) and
+`declared_count`, since it merges two sources with different provenance.

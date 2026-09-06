@@ -23,6 +23,13 @@ my 24  +  Survival          =  25     the character skills
 
 ### How this was established
 
+**⚠ Owner-confirmed on 2026-09-06.** The count of **26 — 25 character skills
+plus `Fly`, beast-only** is confirmed by the project owner, who also records
+that the stale figure of 24 was wrong in **eleven places** across the corpus,
+because `Survival` was readmitted at `PT-552` and the count never propagated.
+The section below is how it was first established here, independently, before
+that confirmation.
+
 Not from the source document — from the corpus's own reconciliation, written by
 other agents against the live copy in `KOTOR_RPG_MAIN_WORK`:
 
@@ -32,6 +39,7 @@ other agents against the live copy in `KOTOR_RPG_MAIN_WORK`:
 | `to-library/TO-LIBRARY-20.md` §2 | quotes the **live** `SKILLS-01 §1` heading as *"Twenty-six skills — 25 character + `Fly`, beast-only"* |
 | `to-main/TO-MAIN-02-ATLAS.md` | *"`SKILLS-01` header … its own table has **26 rows**, **6** marked `new`"* |
 | `to-main/TO-MAIN-10-ATLAS.md` ③ | the same three-number reconciliation, kept verbatim |
+| `to-main/TO-MAIN-18-ATLAS.md` | *"25 / 24 / 22 — `Survival`, three correct measures at three moments"* |
 
 Corroborating, on the copy here: its §1 heading reads **"Twenty-two skills"**
 (not "Twenty-six"), and it carries **5** `**new**` markers where the live table

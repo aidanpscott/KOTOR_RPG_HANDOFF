@@ -167,3 +167,15 @@
 **Step 5 stopped on it.** `§2.1` gives universal droid skills, **`§2.2` closes some to EVERY chassis** — `Streetwise` *"stays closed to every chassis"* — and **`§2.4` is the per-chassis gate.**
 
 **⚠ It is referenced inside `classes.json` and has never been extracted.** Twenty-two extracts, none of them this.
+
+
+---
+
+## ⚠ Batch 5a — `DROID-SKILLS-01` RE-STAGED, and the check caught it
+
+| `DROID-SKILLS-01.md` | `a04516b6` | 165 |
+|---|---|---|
+
+**⚠ `PT-1405` corrected `§2.4`'s stale totals in place, which made `droid_skills.json` stale against its own source within minutes.** `check_extracts.py` flagged it on the next run — **the first time that check has caught a change I made myself, and it was added to the gate two hours ago.**
+
+**Nothing in the extract is wrong.** The correction is a **note beside the Athletics row** recording that `§2.4` says 14 and 12 where the grid computes 15 and 13. **Re-run so the fingerprint matches; the records should not change.**

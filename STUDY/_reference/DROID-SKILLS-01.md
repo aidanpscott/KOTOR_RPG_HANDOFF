@@ -83,6 +83,8 @@
 | **Intimidate** | no | **yes** | **yes** | no |
 | **Acrobatics** | no | **yes** | **yes** | **yes** |
 | **Athletics** | no | **yes** | **yes** | no |
+
+> **⚠ `§2.4`'s TOTALS ARE STALE — `PT-1405`.** `PT-319` opens Athletics to Assassin and Battle **and `§2.4` was never updated**: it says Assassin 14 and Battle 12 where the grid computes **15 and 13**. **The grid and the ruling agree; the totals lag.** Also stale: **`§2.2` says six and lists five; `§2.3` says eight and grids nine.** `9+6+8` and `9+5+9` both make 23, **which is why `§2`'s title survived the change unnoticed.**
 | **Scavenging** | no | **yes** | **yes** | no |
 | **Stealth** | no | **yes** | no | **yes** |
 

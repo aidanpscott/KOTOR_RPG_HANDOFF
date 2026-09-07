@@ -1055,7 +1055,19 @@
 
 ---
 
-## ⚠⚠ PRIMARY AND SECONDARY ABILITY — ALL EIGHTEEN BASE CLASSES. `PT-717`
+## ⚠ PRIMARY AND SECONDARY ABILITY — NINETEEN BASE CLASSES. `PT-717`
+
+**⚠ THE HEADING SAID EIGHTEEN OVER A 19-ROW TABLE — corrected at `PT-1387`.** `Saboteur` is in the table and was added at `PT-784`. **Third stale heading in this document.**
+
+### ⚠ AND `PT-717`'s SAVE MODEL CANNOT DESCRIBE THE SYSTEM — `PT-1387`
+
+**`PT-717` records a save as STRONG or NOT. `PT-119` has THREE ladders** — `Strong 2+L/2`, `Hybrid (2L+6)/5`, `Weak L/3` — **verified against the source tables**, and **21 of 30 classes use `Hybrid` on at least one save.**
+
+**⚠ So the two-state reading has no way to say `Hybrid`, and on the ten classes both documents cover THEY DISAGREE ON FIVE** — `Bounty Hunter`, `Machinist`, `Medic`, `Sith Warrior`, `Sith Assassin`. **Four are `PT-717` calling a Hybrid save strong; `Medic` is the reverse.**
+
+> **⚠ `PT-119` is the rule. `PT-717`'s ability→save derivation is a heuristic that predates it and is superseded where they conflict.**
+
+**The primary/secondary ability table below stands** — that is what it is for. **Its saves column does not.**
 
 > **⚠ `PT-246`'s MODEL: the FIRST ability sets one strong save, the SECOND sets another. ⚠ If both point at the same save, the class has one strong save.**
 

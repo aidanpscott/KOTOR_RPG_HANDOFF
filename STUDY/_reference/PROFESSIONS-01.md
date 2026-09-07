@@ -214,7 +214,9 @@
 
 ---
 
-## 1 · ⚠ The fifteen, and what each grants
+## 1 · What each grants — **22 of the 28**
+
+**⚠ Was "The fifteen" — corrected at `TRACE-97`.** `§0` carries the full roster of **28**; this table carries **22** and is a strict subset. **Six professions have a skill and no grant row:** `Antiquarian`, `Dancer`, `Diplomat`, `Fixer`, `Sentry`, `Spicerunner`.
 
 | Lifestyle | Grant | ⚠ Category | ⚠ Exists? |
 |---|---|---|---|

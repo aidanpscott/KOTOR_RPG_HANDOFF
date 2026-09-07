@@ -8,7 +8,9 @@
 
 ---
 
-## 1 · The thirteen
+## 1 · The seventeen
+
+**⚠ Was "The thirteen" — corrected at `TRACE-97`.** The table below has **17 rows**. `PT-774` added three chassis-locked programmings and `Scavenged Droid` came later; the heading never moved.
 
 | Programming | ⚠ From | ⚠ Grant | Cost | ⚠ Upgrade under `§2d` |
 |---|---|---|---|---|

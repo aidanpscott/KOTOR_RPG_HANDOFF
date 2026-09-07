@@ -129,3 +129,28 @@
 **`FEATS-LIBRARY-01` was staged in batch 2 and never in scope.** `TRACE-100` extracted it as `feats.json` — **192 entries against its own summary's 221**, with `§5a` and `§5b` excluded as class-ladder and prose tables rather than feats.
 
 **⚠ Two `CHARGEN-DATA-01 §3` gaps may live in these two, and may live nowhere:** the **granted versus selectable** distinction, and **`recommend_order`.** A scoped negative is the finding if they are absent.
+
+
+---
+
+## ⚠ Batch 4 — the five stale extracts, re-staged
+
+**`check_extracts.py` found them and every one traces to a ruling that edited the source after the extraction ran.**
+
+| File | md5 | lines |
+|---|---|---|
+| `CLASS-ROSTER-01.md` | `8ea73fd8` | 1113 |
+| `PROFESSIONS-01.md` | `54c775d8` | 461 |
+| `PROGRAMMINGS-01.md` | `d84fdebe` | 145 |
+| `SKILLS-01.md` | `f555ee88` | 831 |
+| `FORCE-POWERS-01.md` | `ff73a7f4` | 253 |
+
+**⚠ WHAT CHANGED IN EACH, so you know what to expect:**
+
+| extract | source | changed by |
+|---|---|---|
+| `classes.json` | `CLASS-ROSTER-01` | **`PT-1387`** — the `EIGHTEEN` heading corrected to nineteen, and **`PT-717`'s save model superseded by `PT-119`'s three ladders** |
+| `professions.json` · `programmings.json` | both | **`PT-1321`** — *"The fifteen"* → **22 of 28**, *"The thirteen"* → **seventeen** |
+| `skills.json` · `class-skills.json` | `SKILLS-01` | **`PT-1323`** armour withdrawn, **`PT-1322`** `§9.2c` added, **`PT-1345`** the text map |
+
+**⚠ AND `powers.json` NAMES A SOURCE THAT DOES NOT EXIST:** it recorded `rules/FORCE-POWERS-01.md` and the file lives in **`force/`**. Not stale — **mis-pathed**, so the check could not even test it.

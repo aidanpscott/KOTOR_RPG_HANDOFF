@@ -18,6 +18,10 @@
 
 ## Summary
 
+**⚠ THE TABLE BELOW DOES NOT MATCH THE DOCUMENT — `TRACE-100`.** It states **90 chains and 221 entries**. A direct extraction counts **74 chains and 192 entries**, excluding `§5a` (a class-to-ladder table) and `§5b` (prose definitions), neither of which contains feats.
+
+**⚠ And `CHARGEN-DATA-01` carries a third figure, 156.** **None of the three agree, and none is asserted here** — the library needs a recount, and this is the fourth count in this corpus found unreliable today.
+
 | Group | Chains | Entries |
 |---|---|---|
 | **1. Everyone** — organics and all droids | 6 | 16 |

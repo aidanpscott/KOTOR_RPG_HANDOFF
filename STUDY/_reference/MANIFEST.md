@@ -113,3 +113,19 @@
 **⚠ And `CLASS-TABLES-BASE` and `CLASS-TABLES-DROID` exist and nobody has ever mentioned them.** Four `CLASS-TABLES-*` files exist; **one was staged.**
 
 **Re-run the class extraction against these.** The three Sith progressions, the prestige class skills, and whatever `CLASS-TABLES-BASE` and `-DROID` carry that `CLASSES-STANDARD-PHB` does not.
+
+
+---
+
+## ⚠ Batch 3b — the eleventh file
+
+**`CLASS-TABLES-DROID` names `FEAT-SCHEDULE-01` as the home for feat schedules, and it was never staged.** `CLASS-TABLES-AUTHORED` has **no Feats column at all for any of its thirty classes** — so four base classes still carry `feat_levels: null`.
+
+| File | md5 | lines |
+|---|---|---|
+| `FEAT-SCHEDULE-01.md` | `6955d129` | 145 |
+| `FEATS-LIBRARY-01.md` | `a0667a1b` | 1671 |
+
+**`FEATS-LIBRARY-01` was staged in batch 2 and never in scope.** `TRACE-100` extracted it as `feats.json` — **192 entries against its own summary's 221**, with `§5a` and `§5b` excluded as class-ladder and prose tables rather than feats.
+
+**⚠ Two `CHARGEN-DATA-01 §3` gaps may live in these two, and may live nowhere:** the **granted versus selectable** distinction, and **`recommend_order`.** A scoped negative is the finding if they are absent.

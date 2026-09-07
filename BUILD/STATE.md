@@ -14,7 +14,7 @@ with a slice report, this file is the later one.
 | `Lodestar` | `fe58cfe` — `PACKAGE-FORMAT-01 §4·1`, required fields | ⚠ no |
 | `Lens` | `d532c0a` — an arrival can be emphasised, keyed by name | ⚠ no |
 | `Loom` | `ff4ff81` — required fields, where validate runs, deleting an arrival | ⚠ no |
-| `KOTOR-RPG-APP` | `7db8fa5` — Backstory, and the re-lock warning | ⚠ no |
+| `KOTOR-RPG-APP` | `b1e57ae` — Backstory one tab, and Abilities | ⚠ no |
 
 All six clean and level with origin.
 
@@ -60,8 +60,8 @@ the named point in the second area, and back.
 | **Worlds** | ✓ **closed at `PT-1396`.** 301 worlds ship in `base-rules`, exported from the Atlas resolver. Origin completes and the strip unlocks past step 1 |
 | **13 unfinished menus** | 13 worlds carry three skills because `D-MENU4` is applied only where a menu is finished. They ship, and are not offered |
 | **`ATLAS/decisions/`** | ⚠ 34 files `MAIN_WORK` has never read. `D-MENU4` sat there superseding a ruling three documents still carried |
-| ⚠ **Lifestyle** | No roster. `PROFESSIONS-01` heads its 28 rows "Lifestyle" and they are the professions; whether the two are one field is **unsettled at `PT-667`**. An organic cannot complete Backstory; a droid can |
-| **Hub steps 4–9** | Abilities, Skills, Feats, Powers, Equipment, Identity are unbuilt |
+| ⚠ **Droid ability scores** | `§399` excludes droids from the point buy and calls the chassis values a production spread; the chassis record carries **adjustments with no base**, 18 of 38 models carry `str·dex·con` only, and INT/WIS/CHA have no source. A droid cannot complete Abilities |
+| **Hub steps 5–9** | Skills, Feats, Powers, Equipment, Identity are unbuilt |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |
 | **Five species parents** | The ruling asks for 57 records as 35 parents + 22 subraces; the corpus has 57 with all five parents present since `PT-1333`. ✓ closed at batch 4 |

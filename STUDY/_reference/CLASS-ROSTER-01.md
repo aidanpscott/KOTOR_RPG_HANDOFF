@@ -17,7 +17,9 @@
 
 ---
 
-## 1. Standard base — 12
+## 1. Standard base — 13
+
+**⚠ Was "12" — corrected at `TRACE-98`.** `Saboteur` was added at `PT-784` and the heading never moved.
 
 | Class | State |
 |---|---|
@@ -184,7 +186,9 @@
 
 ---
 
-## 4. Force prestige — 8
+## 4. Force prestige — 6
+
+**⚠ Was "8" — corrected at `TRACE-98`.** The text below this heading already said so: *"Six, not eight — `PT-215`."* **The correction was written and the heading was not.**
 
 **Jedi Weaponmaster · Jedi Watchman · Jedi Sage · Sith Marauder · Sith Battlemaster · Sith Sorcerer**
 

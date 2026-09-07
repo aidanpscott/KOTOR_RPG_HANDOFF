@@ -65,3 +65,31 @@
 ### Order
 
 **Smallest first** — `UPBRINGING-01` at 105 lines, then `PROGRAMMINGS-01`, then up. **A shape problem is cheaper to find on nine records than on 156.**
+
+
+---
+
+## Batch 3 — class MECHANICS, powers, models
+
+**⚠ `TRACE-98` extracted `CLASS-ROSTER-01` and took only the roster.** `classes.json` carries `id`, `name`, `tier`, `state` — **no vitality die, no skill points, no class skills, no feat schedule.** Chargen cannot build Abilities, Skills or Feats on it.
+
+| File | md5 | lines |
+|---|---|---|
+| `CLASSES-STANDARD-PHB.md` | `6b54303d` | 1269 |
+| `CLASSES-FORCE-PHB.md` | `ebc82531` | 223 |
+| `CLASS-TABLES-JEDI.md` | `e734c5c9` | 224 |
+| `CLASS-ROSTER-01.md` | `80ef115f` | 1101 |
+| `DROID-MODELS-01.md` | `44dc8178` | 1066 |
+| `FORCE-POWERS-01.md` | `ff73a7f4` | 253 |
+
+**⚠ AND `CLASS-ROSTER-01` DOES CARRY MECHANICS — the earlier pass just did not take them.** `§PT-717` has **primary and secondary ability for all base classes**, with `PT-246`'s model: *the first ability sets one strong save, the second sets another; if both point at the same save, the class has one strong save.*
+
+**So this is not a new source. It is the same file, read further.**
+
+### What is wanted
+
+- **`classes.json` REPLACED** — the roster plus every mechanical field `CHARGEN-DATA-01 §3` names
+- **`powers.json` NEW** — `FORCE-POWERS-01`, never extracted. `PT-1317` counted 112
+- **`models.json` NEW** — `DROID-MODELS-01`, and **⚠ `CHARGEN-DATA-01` never asked for it**, which is why nobody noticed
+
+**⚠ Two count checks already established:** **19 base classes** (`TRACE-98`, and `PT-1295`'s 18 was one short — `Saboteur`) and **38 total**. **112 powers** is from a ruling, not a count — **verify it.**

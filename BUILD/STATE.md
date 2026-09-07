@@ -9,12 +9,12 @@ with a slice report, this file is the later one.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `869e13a` — batch 4, the five stale extracts closed | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `e5d68ab` — worlds exported from the Atlas resolver | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `fe58cfe` — `PACKAGE-FORMAT-01 §4·1`, required fields | ⚠ no |
 | `Lens` | `d532c0a` — an arrival can be emphasised, keyed by name | ⚠ no |
 | `Loom` | `ff4ff81` — required fields, where validate runs, deleting an arrival | ⚠ no |
-| `KOTOR-RPG-APP` | `592ec4b` — chargen step 2, the hub opens | ⚠ no |
+| `KOTOR-RPG-APP` | `addeb81` — Origin completes on a four-skill menu | ⚠ no |
 
 All six clean and level with origin.
 
@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 10 TOML files, 671 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 11 TOML files, 972 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -57,7 +57,9 @@ the named point in the second area, and back.
 
 | | Need |
 |---|---|
-| **Worlds** | No world roster and no three-skill menus. `WORLDS-MENUS-01` and the Atlas are named by `CHARGEN-DATA-01` and neither is staged. **This blocks Origin, and because unlock is sequential it blocks every hub step after it for any organic character.** |
+| **Worlds** | ✓ **closed at `PT-1396`.** 301 worlds ship in `base-rules`, exported from the Atlas resolver. Origin completes and the strip unlocks past step 1 |
+| **13 unfinished menus** | 13 worlds carry three skills because `D-MENU4` is applied only where a menu is finished. They ship, and are not offered |
+| **`ATLAS/decisions/`** | ⚠ 34 files `MAIN_WORK` has never read. `D-MENU4` sat there superseding a ruling three documents still carried |
 | **Hub steps 3–9** | Backstory, Abilities, Skills, Feats, Powers, Equipment, Identity are unbuilt |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |

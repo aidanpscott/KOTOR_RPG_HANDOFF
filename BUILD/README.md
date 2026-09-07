@@ -27,7 +27,18 @@ That happened five times in seven reports before this directory existed.
 
 | | Slice | Repo | Head |
 |---|---|---|---|
+| `00a` | [The Lens split — why a fourth package exists](00a-lens-split.md) | `Lens` | `d532c0a` |
+| `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
+| `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
 
-**⚠ Slices before `01` predate this directory** and exist only as chat reports.
-`STATE.md` carries their outcome; their reasoning is not recoverable here.
+**⚠ The `00` slices are BACKFILLED** — three where someone reading the code would
+ask *why* and find nothing. **Deliberately not everything:** a backfill that
+reconstructs every slice is a second history, and the ruling record already holds
+the decisions.
+
+## Reconnaissance
+
+| File | What it is |
+|---|---|
+| [`RECON-worlds.md`](RECON-worlds.md) | ⚠ Where the world roster and its menus actually are, and why the Origin stop is not a staging fix |

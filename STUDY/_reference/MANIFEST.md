@@ -154,3 +154,16 @@
 | `skills.json` · `class-skills.json` | `SKILLS-01` | **`PT-1323`** armour withdrawn, **`PT-1322`** `§9.2c` added, **`PT-1345`** the text map |
 
 **⚠ AND `powers.json` NAMES A SOURCE THAT DOES NOT EXIST:** it recorded `rules/FORCE-POWERS-01.md` and the file lives in **`force/`**. Not stale — **mis-pathed**, so the check could not even test it.
+
+
+---
+
+## ⚠ Batch 5 — `DROID-SKILLS-01`, authored and never extracted
+
+| File | md5 | lines |
+|---|---|---|
+| `DROID-SKILLS-01.md` | `50e08129` | 163 |
+
+**Step 5 stopped on it.** `§2.1` gives universal droid skills, **`§2.2` closes some to EVERY chassis** — `Streetwise` *"stays closed to every chassis"* — and **`§2.4` is the per-chassis gate.**
+
+**⚠ It is referenced inside `classes.json` and has never been extracted.** Twenty-two extracts, none of them this.

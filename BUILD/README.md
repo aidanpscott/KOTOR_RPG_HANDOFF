@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `03` | [Reconciling the two decision records](03-decision-records.md) | recon | — |
 | `02` | [The world menus exported, and Origin completes](02-worlds-and-origin.md) | both | `e5d68ab` · `addeb81` |
 
 **⚠ The `00` slices are BACKFILLED** — three where someone reading the code would

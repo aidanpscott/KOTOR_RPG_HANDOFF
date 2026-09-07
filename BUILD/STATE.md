@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 11 TOML files, 972 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 12 TOML files, 979 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -60,8 +60,10 @@ the named point in the second area, and back.
 | **Worlds** | ✓ **closed at `PT-1396`.** 301 worlds ship in `base-rules`, exported from the Atlas resolver. Origin completes and the strip unlocks past step 1 |
 | **13 unfinished menus** | 13 worlds carry three skills because `D-MENU4` is applied only where a menu is finished. They ship, and are not offered |
 | **`ATLAS/decisions/`** | ⚠ 34 files `MAIN_WORK` has never read. `D-MENU4` sat there superseding a ruling three documents still carried |
-| ⚠ **Droid ability scores** | `§399` excludes droids from the point buy and calls the chassis values a production spread; the chassis record carries **adjustments with no base**, 18 of 38 models carry `str·dex·con` only, and INT/WIS/CHA have no source. A droid cannot complete Abilities |
-| **Hub steps 5–9** | Skills, Feats, Powers, Equipment, Identity are unbuilt |
+| **Droid ability scores** | ✓ **closed at `PT-1403`.** `chassis.toml` ships 7 production spreads, all totalling 72 — 4 derived, 3 inferred and marked as such on screen. A droid completes Abilities |
+| ⚠ **Droid skills** | `rules/DROID-SKILLS-01.md` is authored and **not extracted**. `§2.2` closes three skills to every chassis and `§2.4` gates the rest per chassis. The gate does not exist as data, so a droid cannot complete Skills — and offering the organic list would let one take Mysticism |
+| **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
+| **Hub steps 6–9** | Feats, Powers, Equipment, Identity are unbuilt. Skills is built for organics |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |
 | **Five species parents** | The ruling asks for 57 records as 35 parents + 22 subraces; the corpus has 57 with all five parents present since `PT-1333`. ✓ closed at batch 4 |

@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 12 TOML files, 979 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 13 TOML files, 983 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -61,9 +61,14 @@ the named point in the second area, and back.
 | **13 unfinished menus** | 13 worlds carry three skills because `D-MENU4` is applied only where a menu is finished. They ship, and are not offered |
 | **`ATLAS/decisions/`** | ⚠ 34 files `MAIN_WORK` has never read. `D-MENU4` sat there superseding a ruling three documents still carried |
 | **Droid ability scores** | ✓ **closed at `PT-1403`.** `chassis.toml` ships 7 production spreads, all totalling 72 — 4 derived, 3 inferred and marked as such on screen. A droid completes Abilities |
-| ⚠ **Droid skills** | `rules/DROID-SKILLS-01.md` is authored and **not extracted**. `§2.2` closes three skills to every chassis and `§2.4` gates the rest per chassis. The gate does not exist as data, so a droid cannot complete Skills — and offering the organic list would let one take Mysticism |
+| **Droid skills** | ✓ **closed at batch 5.** `droid_skills.toml` ships the four bodies. A droid completes Skills |
+| ⚠ **`DROID-SKILLS-01` §2.3 vs §2.4** | They disagree about **Athletics** on the Assassin and Battle bodies — 15 against 14, and 13 against 12. `§2.2` says six and lists five; `§2.3` says eight and grids nine. **Reported, not resolved.** The app withholds Athletics meanwhile, which is valid under both readings |
+| ⚠ **Science and Survival for droids** | On the 25-skill roster and **nowhere in the chapter**. Neither opened nor closed. Withheld, and said on screen |
+| ⚠ **`PT-621`'s Protocol carve-out** | Opens `Persuade` to a "Protocol chassis" that is not one of `§2.3`'s four bodies. The carve-out names an axis the table cannot express |
+| ⚠ **Three Sith base classes have no feat schedule** | `CLASS-TABLES-AUTHORED` has no Feats column and `FEAT-SCHEDULE-01`'s grid has no column for them. How many feats they gain at 1st level is not written, so Feats cannot complete for them |
+| ⚠ **Skill Focus** | `SKILLS-01 §12` says 23 exist, one per skill; the library holds **one generic record**. And it grants aptitude at step 6, after Skills was priced at step 5 — a second backwards dependency where `CHARGEN-FLOW-MAP-01` names one. `PT-1200` ruled the first; nothing rules this |
 | **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
-| **Hub steps 6–9** | Feats, Powers, Equipment, Identity are unbuilt. Skills is built for organics |
+| **Hub steps 7–9** | Powers, Equipment, Identity are unbuilt. Skills and Feats are built |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |
 | **Five species parents** | The ruling asks for 57 records as 35 parents + 22 subraces; the corpus has 57 with all five parents present since `PT-1333`. ✓ closed at batch 4 |

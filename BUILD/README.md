@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `06` | [Backstory, and the re-lock warning](06-backstory.md) | `KOTOR-RPG-APP` | `7db8fa5` |
 | `05` | [Two fixes, and what the stale citations said](05-open-01-and-the-check.md) | `MAIN_WORK` | — |
 | `04` | [check_decisions.py — the boundary nothing watched](04-check-decisions.md) | `MAIN_WORK` | — |
 | `03` | [Reconciling the two decision records](03-decision-records.md) | recon | — |

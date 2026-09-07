@@ -1,0 +1,347 @@
+# CLASS-TABLES-BASE — Soldier, Scout, Smuggler
+
+**Source: `k1_classes.2da`, `cls_atk_1/2`, `cls_st_soldier`, `cls_st_scout`, `cls_st_scndrl`.** `source_system: kotor_game`. **Values identical in both games.**
+
+**Companion to `CLASS-TABLES-JEDI`, which holds Guardian, Consular, and Sentinel.**
+
+---
+
+## Summary
+
+| Class | Hit die | BAB | ⚠ Key abilities | Base skill points | Saves |
+|---|---|---|---|---|---|
+| **Soldier** | **d10** | **full** — `CLS_ATK_1` | Strength | 2 | **Fortitude only** |
+| **Scout** | **d8** | three-quarters — `CLS_ATK_2` | Dexterity | 6 | **all three good** |
+| **Smuggler** | **d6** | three-quarters — `CLS_ATK_2` | Dexterity | 8 | **Reflex only** |
+
+> **The Scout is the anomaly and it is the source's own.** **It has every save at the good progression** — +2 at level 1 rising to +12 — **where the Soldier and Smuggler each get one.** **Nothing in either game explains it.**
+
+**Three BAB progressions exist.** **`CLS_ATK_1` is full** *(+1 per level, +20 at 20)*. **`CLS_ATK_2` is three-quarters** *(+15 at 20)*. **`CLS_ATK_3` is half** *(+10 at 20)* **and no class in either game uses it** — **not the Engineer, which uses `CLS_ATK_2`.** *An earlier version of this line called it "the droid-expert table" and that was wrong; see `CLASS-TABLES-DROID`.*
+
+---
+
+## Soldier — d10, Strength, 2 base skill points
+
+**Full base attack bonus. Fortitude is the only good save.**
+
+| Level | BAB | Fort | Ref | Will |
+|---|---|---|---|---|
+| **1** | +1 | +2 | +0 | +0 |
+| **2** | +2 | +3 | +0 | +0 |
+| **3** | +3 | +3 | +1 | +1 |
+| **4** | +4 | +4 | +1 | +1 |
+| **5** | +5 | +4 | +1 | +1 |
+| **6** | +6 | +5 | +2 | +2 |
+| **7** | +7 | +5 | +2 | +2 |
+| **8** | +8 | +6 | +2 | +2 |
+| **9** | +9 | +6 | +3 | +3 |
+| **10** | +10 | +7 | +3 | +3 |
+| **11** | +11 | +7 | +3 | +3 |
+| **12** | +12 | +8 | +4 | +4 |
+| **13** | +13 | +8 | +4 | +4 |
+| **14** | +14 | +9 | +4 | +4 |
+| **15** | +15 | +9 | +5 | +5 |
+| **16** | +16 | +10 | +5 | +5 |
+| **17** | +17 | +10 | +5 | +5 |
+| **18** | +18 | +11 | +6 | +6 |
+| **19** | +19 | +11 | +6 | +6 |
+| **20** | +20 | +12 | +6 | +6 |
+
+**Skill points: `(2 + Int mod) × 4` at level 1, `2 + Int mod` per level.** *`SKILLS-01 §9.1`.*
+
+---
+
+## Scout — d8, Dexterity, 6 base skill points
+
+**Three-quarters base attack bonus. All three saves good.**
+
+| Level | BAB | Fort | Ref | Will |
+|---|---|---|---|---|
+| **1** | +0 | +2 | +2 | +2 |
+| **2** | +1 | +3 | +3 | +3 |
+| **3** | +2 | +3 | +3 | +3 |
+| **4** | +3 | +4 | +4 | +4 |
+| **5** | +3 | +4 | +4 | +4 |
+| **6** | +4 | +5 | +5 | +5 |
+| **7** | +5 | +5 | +5 | +5 |
+| **8** | +6 | +6 | +6 | +6 |
+| **9** | +6 | +6 | +6 | +6 |
+| **10** | +7 | +7 | +7 | +7 |
+| **11** | +8 | +7 | +7 | +7 |
+| **12** | +9 | +8 | +8 | +8 |
+| **13** | +9 | +8 | +8 | +8 |
+| **14** | +10 | +9 | +9 | +9 |
+| **15** | +11 | +9 | +9 | +9 |
+| **16** | +12 | +10 | +10 | +10 |
+| **17** | +12 | +10 | +10 | +10 |
+| **18** | +13 | +11 | +11 | +11 |
+| **19** | +14 | +11 | +11 | +11 |
+| **20** | +15 | +12 | +12 | +12 |
+
+**Skill points: `(6 + Int mod) × 4` at level 1, `6 + Int mod` per level.**
+
+---
+
+## Smuggler — d6, Dexterity, 8 base skill points
+
+**Three-quarters base attack bonus. Reflex is the only good save.**
+
+| Level | BAB | Fort | Ref | Will |
+|---|---|---|---|---|
+| **1** | +0 | +0 | +2 | +0 |
+| **2** | +1 | +0 | +3 | +0 |
+| **3** | +2 | +1 | +3 | +1 |
+| **4** | +3 | +1 | +4 | +1 |
+| **5** | +3 | +1 | +4 | +1 |
+| **6** | +4 | +2 | +5 | +2 |
+| **7** | +5 | +2 | +5 | +2 |
+| **8** | +6 | +2 | +6 | +2 |
+| **9** | +6 | +3 | +6 | +3 |
+| **10** | +7 | +3 | +7 | +3 |
+| **11** | +8 | +3 | +7 | +3 |
+| **12** | +9 | +4 | +8 | +4 |
+| **13** | +9 | +4 | +8 | +4 |
+| **14** | +10 | +4 | +9 | +4 |
+| **15** | +11 | +5 | +9 | +5 |
+| **16** | +12 | +5 | +10 | +5 |
+| **17** | +12 | +5 | +10 | +5 |
+| **18** | +13 | +6 | +11 | +6 |
+| **19** | +14 | +6 | +11 | +6 |
+| **20** | +15 | +6 | +12 | +6 |
+
+**Skill points: `(8 + Int mod) × 4` at level 1, `8 + Int mod` per level.**
+
+---
+
+## Cross-checks
+
+**Hit dice against `SKILLS-01`'s skill-point table:** **Soldier 2, Scout 6, Smuggler 8.** **`k1_classes.2da` agrees on all three.** *`SKILLS-01` also lists Machinist at 6 and the three Jedi classes; those come from K2 and are held separately.*
+
+**⚠ Key abilities — `PT-719`.** ⚠ *Was `Primary ability`.* **Soldier STR, Scout DEX, Smuggler DEX** in K1. **K2 changed the Soldier's to CON** — *the change that dates the cut Bounty Hunter row, which kept STR.*
+
+> **⚠ This cited `FEATS-LIBRARY-01 §9.1`, which does not exist — that document has sections 1 through 5.** **Grepped: the STR/CON claim appears in no other file either.** **Citation struck rather than repointed, because repointing it would require guessing which document was meant.** **The claim itself may still be true and now rests on nothing.**
+
+**No `forcedie` on any of the three.** **Force points are a Jedi property.**
+
+---
+
+## Two things this does not carry
+
+**Class skill lists** — **`SKILLS-01 §9.2` holds the rebuilt versions** against our **25 character skills** (`PT-1292`), not the source's 8. **⚠ Verified at `PT-1294`** — those lists use skills KOTOR never had. **The rebuild is done for 21 classes; 18, largely prestige, have no list.**
+
+**Feat and attack grants** — **`ATTACKS-01 §7` and §11.6 defer both to the class workstream.** **`k1_classes.2da` names a `featstable` per class — `SOL`, `SCT`, `SCD` — which is where the source's grant schedule lives.** **Those tables are not in current holdings.**
+
+---
+
+## Still missing for a playable character
+
+**Machinist** — **K2 only.** `k1_classes.2da` does not carry it. **`SKILLS-01` gives 6 base skill points and `FEATS-CLASSWORK-01` discusses its feat table; hit die, BAB, and saves need `k2_classes.2da`.**
+
+**✓ Vitality per level — ⚠ STATED HERE AT `PT-648`.**
+
+    ⚠ LEVEL 1     the MAXIMUM of the hit die, plus your Constitution modifier
+    ⚠ EACH LEVEL  the die's AVERAGE ROUNDED UP, plus your Constitution modifier
+                  ⚠ d12 → 7 · d10 → 6 · d8 → 5 · d6 → 4
+
+> **⚠ NOTHING IS ROLLED. A character's vitality is the same at level 12 whoever plays them.**
+
+**⚠ THE FORMULA EXISTED IN `PREGENS-01 §1` — a TEST-SHEET document — AND IN NO RULES DOCUMENT.** **Nine sheets computed from it and `CLASS-TABLES-BASE` called it open.**
+
+**⚠ AND IT IS LOAD-BEARING NOW: `PT-559` REPLACED THE TWO-POOL SYSTEM WITH A SINGLE VITALITY POOL AND SET DEATH AT `−Constitution`.** **The number this formula produces is the ONLY thing standing between a character and the dying track.**
+
+
+
+## The two-ability model — `PT-246`
+
+**Every class names two abilities. `PT-227` set them; this states what the second one does.**
+
+> **⚠⚠ SUPERSEDED AT `PT-718`. ⚠ OWNER RULING: THE ABILITIES NO LONGER SET SAVES, ATTACK OR DC.**
+
+**⚠ *Was:* *"the first sets your attack and DC stat, and one strong save; the second sets a second strong save."***
+
+**⚠ WHY IT COST NOTHING: ⚠ SAVES ARE PRINTED PER LEVEL IN EVERY CLASS TABLE — `Jedi Guardian` READS `+12 / +12 / +9` AT LEVEL 20 — AND ⚠ RCR COMPUTES ATTACK FROM `BAB + STR` OR `BAB + DEX` BY **WEAPON TYPE**, NOT BY CLASS.**
+
+> **⚠ THE ABILITIES NEVER PRODUCED EITHER NUMBER. `PT-246` ASSERTED THEY SHOULD **PREDICT** THE SAVES, AND THE SAVES WERE ALWAYS INDEPENDENT.**
+
+**⚠ WHAT THE PAIR DOES NOW — `PT-718`:**
+
+    ⚠ WHICH IMPLANT you begin with — `PT-716`, the primary
+    ⚠ WHAT WEAPON suits the class in the starting array
+    ⚠ ⚠ A DESCRIPTOR THE GM AND THE ENGINE READ, not a value they compute
+> **⚠ If both point at the same save, the class has one strong save.**
+
+    Strength or Constitution   ->  Fortitude
+    Dexterity                  ->  Reflex
+    Wisdom, Charisma or Intelligence  ->  Will
+
+**⚠ This is `PT-123` stated properly.** **That rule said *"a class takes a second strong save if it has a second job"* and never said what a second job was.**
+
+> **The second job is the second ability. Nobody wrote it down.**
+
+### It was already true, and it was derived rather than imposed
+
+**Tested across all thirteen standard base classes:**
+
+    11 of 13 predicted exactly
+
+**⚠ And both misses are ported anomalies rather than design errors.**
+
+    Scout      predicted Ref/Will, has all three     the source gives scout every save strong
+    Smuggler   predicted Ref/Will, has Reflex only   scd is Reflex-only in the source
+
+> **The model predicts every *authored* class exactly and misses only where the source overrode it.**
+
+### ⚠ What it buys
+
+**A new player picks a class and knows which two numbers to raise.** **That is the whole chargen problem for a first-timer — nineteen classes, six abilities, no guidance.**
+
+**And saves stop being a per-class decision.** **They fall out of what the class already is, which is one fewer table to keep in sync.**
+
+**⚠ It is also self-checking.** **If a class's abilities change and its saves do not, the two disagree and a script catches it.**
+
+**And a player can state their whole character in one sentence:** *"I am a Duelist. Dexterity and Intelligence. Good at dodging and at not being fooled."*
+
+### ⚠ The limit, stated
+
+**The second ability does nothing else.** **No bonus, no mechanic, no third effect.**
+
+> **A recommendation plus a save. Adding more would make it a fourth system, and it is currently free.**
+
+### ⚠ Compared with the 5e model the owner asked for
+
+**5e names two abilities and grants proficiency in both saves, flatly.**
+
+**Ours produces *one* strong save when the abilities agree and *two* when they do not** — **so a narrow class is narrow and a broad class is broad, without anyone deciding it.**
+
+
+## The save assignment rule — `PT-123`
+
+> **A class takes one strong save, determined by its primary ability.**
+> **It takes a second strong if it has a second job.**
+> **If the second job is the Force, the third save is `Hybrid` rather than `Weak`.**
+> **A third strong is reserved to a class whose whole identity is breadth.**
+
+**Which save follows the primary ability:**
+
+    Strength or Constitution primary            ->  Fortitude
+    Dexterity primary                           ->  Reflex
+    Wisdom, Charisma or Intelligence primary    ->  Will
+
+**⚠ Intelligence added by `PT-133`.** **The rule as first written mapped four abilities of six.**
+
+**It did not surface on the thirteen because none is Intelligence-primary — `k2_classes.2da` gives `INT` as primary to no class in either game.** **The `Treasure Hunter` is the first, and any future scholar or slicer will be.**
+
+**Will is the mental save, and the split between the three mental abilities is *what you know* against *what you sense* against *who you are* — none of which is a different kind of resilience.**
+
+**⚠ The alternative — `Intelligence → Reflex` on a *thinking fast* argument — would make the only Intelligence class defensively identical to the Dexterity classes and lose the distinction entirely.**
+
+### ⚠ It reproduces nine of the ten placements exactly
+
+| Class | Primary | Jobs | Derived | |
+|---|---|---|---|---|
+| Soldier | STR | 1 | S / W / W = 24 | ✓ |
+| Marksman | CON | 1 | S / W / W = 24 | ✓ |
+| Smuggler | DEX | 1 | W / S / W = 24 | ✓ |
+| Machinist | DEX | 1 | W / S / W = 24 | ✓ |
+| Bounty Hunter | — | 2 | S / S / W = 30 | ✓ |
+| Jedi Guardian | STR | Force | S / S / **H** = 33 | ✓ |
+| Jedi Sentinel | DEX | Force | S / S / **H** = 33 | ✓ |
+| Jedi Consular | WIS | Force | S / **H** / S = 33 | ✓ |
+| Scout | DEX | breadth | S / S / S = 36 | ✓ |
+| **Engineer** | DEX | 2 | W / S / S = 30 | **⚠ DEPARTURE** |
+
+**⚠ The Engineer is the one exception and it is authored, not derived.** **`PT-96` gave it a strong Will over a strong Fortitude on the argument that a mind which keeps working under pressure is what separates it from the Machinist.**
+
+**Marked a departure so it is not read as precedent.**
+
+> **A rule that reproduces nine of ten and names its own exception is a rule. One that reproduces ten of ten was fitted to the data.**
+
+---
+
+## The three save ladders — named, and closed forms
+
+**`PT-119`. Named `Strong` · `Hybrid` · `Weak`.**
+
+| Ladder | Closed form | L1 | L10 | L20 | L30 |
+|---|---|---|---|---|---|
+| **Strong** | **`2 + ⌊L ⁄ 2⌋`** | 2 | 7 | 12 | **17** |
+| **Hybrid** | **`⌊(2L + 6) ⁄ 5⌋`** | 1 | 5 | 9 | **13** |
+| **Weak** | **`⌊L ⁄ 3⌋`** | 0 | 3 | 6 | **10** |
+
+**⚠ Verified against every row of `cls_st_soldier.2da` and `cls_st_jedi_g.2da`.** **Every value in both files matches one of the three exactly.**
+
+**The hybrid increments on a 3-2-3-2 alternation from level 2 — levels 2, 5, 7, 10, 12, 15, 17, 20 — which is why no simple half-rate expression fits it.**
+
+**⚠ The source tables stop at 20 and `PT-55` sets the ceiling at 30.** **The L30 column is the closed forms extended and is authored on that basis.**
+
+### Where the ten sit
+
+    strong / strong / strong    Scout                            36
+    strong / strong / hybrid    Jedi Guardian · Jedi Sentinel     33
+    strong / hybrid / strong    Jedi Consular                     33
+    strong / strong / weak      Bounty Hunter                     30
+    weak   / strong / strong    Engineer                          30
+    strong / weak   / weak      Soldier · Marksman                24
+    weak   / strong / weak      Smuggler · Machinist              24
+
+**Four totals — 36, 33, 30, 24 — and the twelve unwritten classes place onto them without inventing a fifth.**
+
+**⚠ The Scout is alone at 36. Two sit at 30 and four at 24.** **If any of the twelve is meant to be defensively distinctive, 33 and 30 are where the room is.**
+
+### ⚠ The naming was itself a collision
+
+**Three names existed for two ladders across two agents and one document** — **`Hybrid`, `middle`, and *"the good progression"* for `Strong`.**
+
+> **Same shape as the filename collision, but a word rather than a path, so nothing refused to write it.**
+
+---
+
+**⚠ Marksman saving throws — authored. `PT-98`.**
+
+    Fort strong, Reflex weak, Will weak — 12 / 6 / 6 at level 20, total 24.
+
+**`PLAYTEST-RULINGS-01 B2` gives *"Marksman — Fortitude"* and nothing else. `cls_st_cm_drd.2da` is not in holdings.**
+
+**It is the Soldier's profile, and the Marksman is the Soldier's shape pushed further** — **d12 against d10, Constitution primary, slower acquisition, more skills.** **A body that endures and a mind that does not.**
+
+**⚠ Constitution primary with a weak Will is the sharpest expression of what the class is, and the one stated column already points at the Soldier's table.**
+
+**⚠ Machinist saving throws — authored. `PT-98`.**
+
+    Fort weak, Reflex strong, Will weak — 6 / 12 / 6 at level 20, total 24.
+
+**`k2_classes.2da` points at `k2_cls_st_techspec.2da`, which is not in holdings.** **⚠ It is a KOTOR 2 table — the Tech Specialist does not exist in KOTOR 1 — and we hold 65 of 418 k2 files. `PT-529`.**
+
+**⚠ This is the one place the duplicated row is evidence rather than an accident.** **BioWare wrote a separate save file for this class instead of pointing at `CLS_ST_SCNDRL`** — **so the table exists and would settle it. `k2_cls_st_techspec.2da` and `cls_st_cm_drd.2da` are the two files wanted.**
+
+**Until then: the Smuggler's profile, because the source made the two classes literally the same on every other design column.**
+
+**⚠ Engineer saving throws — authored. `PT-96`.**
+
+    Fort weak, Reflex strong, Will strong — 6 / 12 / 12 at level 20, total 30.
+
+**`PLAYTEST-RULINGS-01 B2` gave *"Engineer — Reflex"* and nothing else.** **`cls_st_ex_drd.2da` is not in holdings.**
+
+**The Engineer is the Smuggler's structural twin on the other side of the mental stats** — **both are support classes with strong Reflex; the Smuggler's case is nerve and the Engineer's is a mind that does not stop working under pressure.**
+
+**⚠ Strong Will is also the only defensive thing distinguishing it from the Machinist**, which is otherwise the same character with hands.
+
+**⚠ It contradicts `PREGENS-01`, which builds T4-K9 at weak/weak.** **That sheet moves from 24 to 30.** **If the owner prefers the sheet, `6 / 12 / 6` is the alternative and the Engineer joins the Soldier and Smuggler at 24.** **What is not defensible is leaving two of three columns unstated in a shipped class.**
+
+**⚠ Bounty Hunter saving throws — authored. `PT-93`.**
+
+    Fort strong, Reflex strong, Will weak — 12 / 12 / 6 at level 20.
+
+    Scout           12 / 12 / 12  = 36
+    Guardian        12 / 12 /  9  = 33
+    Bounty Hunter   12 / 12 /  6  = 30
+    Soldier         12 /  6 /  6  = 24
+    Smuggler         6 / 12 /  6  = 24
+
+**No Bounty Hunter save progression existed in any document.** **The source row points at `CLS_ST_SOLDIER`, which `PT-68` rejected as a placeholder — so it could not be ported without reversing that ruling.**
+
+**Fort and Reflex is `PT-68`'s own description made mechanical:** *"hits as often and as hard as a Soldier, carries a Scout's bag of tricks."* **The Soldier's body and the Scout's feet.** **Will stays weak because nothing in the class is about resolve, and 33 would put it level with a Jedi.**
+
+**⚠ It sits above the Soldier, 30 to 24. That is the price of the Soldier's twelve capstones.** **If that reads as too much the lever is Reflex to 9, giving 27.**
+
+**Bounty Hunter and Smuggler** — **both are ours to design.** *`classes.2da` row 10 carries the cut Bounty Hunter skeleton: d10, `CLS_ATK_1`, Soldier saves, `skillpointbase` 1.*

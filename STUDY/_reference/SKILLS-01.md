@@ -46,12 +46,13 @@
 | **Streetwise** | Cha |  | Gather Information + Disguise + the *sourcing* half of Forgery |
 | **Fly** | Dex | ⚠ — | **new** — ⚠ `PT-555`, `PT-556`. **⚠ BEAST ONLY. It does not appear on a character's skill list, on any class list, or under any skill feat.** ⚠ And a beast may take it only with the `flying` tag |
 | **Survival** | Wis | ✱ | **new** — ⚠ `PT-552`. Tracking, foraging, shelter, terrain and weather |
+| **Swim** | Str | ✱ |  |
+| **Xenology** | Int |  | **new** |
+
 
 > **⚠ `Survival` DOES NOT OVERRIDE A SENSE.** **A creature with `Scent`, `Tremorsense`, `Acute Hearing`, `Echolocation` or `Bloodscent` does NOT roll `Survival` for anything that sense already answers — it simply knows.** **`PT-480`: senses are not skills and do not check.**
 
 **⚠ It was added because CHARACTERS had no way to track, forage, read weather or shelter at all.** **Beasts never needed it — they have noses. `PT-552`.**
-| **Swim** | Str | ✱ |  |
-| **Xenology** | Int |  | **new** |
 
 > **No category skills remain.** Every skill is a single flat value — no brackets, no specialisation chosen at learning. That removes a whole class of character-creation bookkeeping.
 
@@ -367,6 +368,56 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 **⚠ `Agent` keeps its union at 12 — owner ruling.** The PHB imagined a social operative and `§9.2` a technical one. **A covert operative is both.**
 
 **⚠ `Saboteur`'s three duplicate entries were a formatting artifact**, not a design difference — a `⚠` prefix on the same three skills in one source. Resolved to 8.
+
+---
+
+---
+
+### 9.2c Prestige class skills — RANKED, and the grant is computed — `PT-1322`
+
+**⚠ A prestige class does NOT hand you a list. It hands you AT MOST THREE SKILLS, chosen by walking its ranked list.**
+
+> **On taking the class, walk the list from the top and grant the first three skills the character does not already have. Skip what they have. If they have all six, they gain nothing.**
+
+**Three properties this has that a flat list does not:**
+
+- **⚠ THE CEILING IS THREE, BY CONSTRUCTION.** Not a cap imposed by decree — **there is no combination that grants a fourth.** `PT-1297`'s union rule cannot run away through prestige.
+- **⚠ IT IS PATH-DEPENDENT, AND THAT IS FREE VARIETY.** A Guardian who becomes a Watchman and a Sentinel who becomes a Watchman **get different skills**, because they arrive missing different things. Same class, different outcome, **no extra authoring.**
+- **A broad character gains less than a narrow one** — which is correct. **They already have what the specialisation would have taught them.**
+
+**⚠ And it works with a pencil.** A GM reads down the list and takes the first three unticked. **No lookup, no arithmetic** — which matters because this is a tabletop system first.
+
+#### The lists
+
+| Class | Ranked, 1 → 6 |
+|---|---|
+| **Commando** | Demolitions · Athletics · Intimidate · Alertness · Awareness · Survival |
+| **Droid Master** | Repair · Slicing · Science · Security · Xenology · Appraise |
+| **Gunslinger** | Sleight of Hand · Acrobatics · Streetwise · Alertness · Intimidate · Awareness |
+| **Officer** | Persuade · Intimidate · Alertness · Awareness · Streetwise · Medicine |
+| **Shadow Hunter** | Stealth · Acrobatics · Athletics · Streetwise · Alertness · Awareness |
+| **Juggernaut** | Athletics · Intimidate · Survival · Swim · Awareness · Alertness |
+| **Beast Master** | Beast Handling · Survival · Botany · Xenology · Athletics · Awareness |
+| **Scoundrel** | Stealth · Sleight of Hand · Streetwise · Persuade · Security · Appraise |
+| **Tech Specialist** | Repair · Slicing · Security · Science · Demolitions · Appraise |
+| **Sharpshooter** | Awareness · Alertness · Stealth · Athletics · Survival · Repair |
+| **Operative** | Stealth · Security · Slicing · Streetwise · Alertness · Awareness |
+| **Shock Trooper** | Alertness · Acrobatics · Athletics · Demolitions · Awareness · Intimidate |
+| **Blademaster** | Acrobatics · Athletics · Intimidate · Alertness · Awareness · Survival |
+| | |
+| **— Force prestige —** | |
+| **Jedi Weaponmaster** | Athletics · Acrobatics · Mysticism · Awareness · Alertness · Intimidate |
+| **Jedi Watchman** | Stealth · Security · Slicing · Streetwise · Awareness · Alertness |
+| **Jedi Sage** | Mysticism · Archaeology · Science · Xenology · Persuade · Medicine |
+| **Sith Marauder** | Athletics · Intimidate · Acrobatics · Survival · Awareness · Alertness |
+| **Sith Battlemaster** | Intimidate · Persuade · Athletics · Mysticism · Alertness · Awareness |
+| **Sith Sorcerer** | Mysticism · Archaeology · Science · Intimidate · Persuade · Xenology |
+
+**⚠ `Shadow Hunter` and `Operative` are the corpus's own six**, reordered so the distinguishing skill leads. `§3`'s table calls that pair *"deliberately identical on every number"* with the whole difference being `Security`+`Slicing` against `Acrobatics`+`Athletics` — so shared `Stealth` leads and **positions 2–3 carry the split.**
+
+**⚠ `Alertness` and `Awareness` sit low almost everywhere ON PURPOSE.** They are the most commonly held skills, so ranking them high would mean most characters skip them and take positions 4–6 anyway. **Low placement makes them the fallback they should be.**
+
+**Only the granted skills become class skills.** The rest of the list is a priority order, not a grant.
 
 ---
 
@@ -733,3 +784,47 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 | **Fly** | ⚠ **Beast only.** Does not appear on a character's skill list. |
 
 **⚠ Two things this section does not do.** It does not restate the resolution mode — that is `SKILL-RESOLUTION-01`'s job and duplicating it would create two sources that drift. And it does not assign aptitude, which `SKILLS-01 §11` governs.
+
+---
+
+## Armour check — WITHDRAWN, `PT-1323`
+
+**⚠ THE MARKS ARE REMOVED AND NO PENALTY IS ADDED. Checked against both games, and the column exists in both and is ZERO IN EVERY ROW.**
+
+| | rows | non-zero |
+|---|---|---|
+| **K1 `baseitems.2da` → `armorcheckpen`** | 91 | **0** |
+| **K2 `baseitems.2da` → `armorcheckpen`** | 103 | **0** |
+
+**KOTOR inherited the column from its D&D ancestry and never used it.** That is the **seventh dead capability** this project has found in the source — after `racialtypes`' ability adjusts, `LawfulChaotic`, `Mod_CutSceneList`, unvalidated `SkillList` slots, `IsMoviePlaying`, and `Mod_StartMovie`.
+
+### ⚠ So `EQUIPMENT-01` was right and the marks were the error
+
+`EQUIPMENT-01 §5` ported the **Dexterity cap** — *"the sum of armour and Max Dexterity Bonus is always 9"* — and **no check penalty.** `PT-1302` read that as an omission. **It was not: it matched the source exactly.**
+
+**The seven marked skills came from RCR's D&D lineage, not from KOTOR**, and they marked a rule the game they descend from had already abandoned.
+
+**⚠ The Dexterity cap is the whole cost of armour.** Heavy armour already surrenders Dexterity, and **five of the seven marked skills were `Dex` or `Str` based** — so a second penalty would have double-charged the same trade.
+
+---
+
+## Consolidates — what each skill absorbed, `PT-1302`
+
+**The `§1` column records twelve merge provenances**, and `§3` argues from them. **It has a home here so extraction stops dropping it.**
+
+| Skill | Absorbed |
+|---|---|
+| **Acrobatics** | Balance + Tumble + Escape Artist |
+| **Alertness** | Listen + Sense Motive |
+| **Athletics** | Climb + Jump |
+| **Awareness** | Spot + Search |
+| **Beast Handling** | Ride + Handle Animal |
+| **Persuade** | Bluff + Diplomacy |
+| **Pilot** | + Astrogate |
+| **Scavenging** | + Ithorian wilderness lore |
+| **Security** | Disable Device + Open Lock |
+| **Slicing** | + the *making* half of Forgery |
+| **Stealth** | Hide + Move Silently |
+| **Streetwise** | Gather Information + Disguise + the *sourcing* half of Forgery |
+
+**⚠ This is provenance, not mechanics.** Nothing resolves against it. **It exists so a reader asking "where did Open Lock go?" gets an answer** — and `Forgery` splitting across two skills is the case that most needs recording.

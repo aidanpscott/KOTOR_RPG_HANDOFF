@@ -93,3 +93,23 @@
 - **`models.json` NEW** — `DROID-MODELS-01`, and **⚠ `CHARGEN-DATA-01` never asked for it**, which is why nobody noticed
 
 **⚠ Two count checks already established:** **19 base classes** (`TRACE-98`, and `PT-1295`'s 18 was one short — `Saboteur`) and **38 total**. **112 powers** is from a ruling, not a count — **verify it.**
+
+
+---
+
+## ⚠ Batch 3a — RE-STAGED, and three files that were never staged at all
+
+**⚠ `SKILLS-01` was STALE and that is my error.** It was staged once, long ago, at `e157dea6`. **`§9.2c` — the ranked prestige lists, `PT-1322` — was written FIFTEEN RULINGS LATER and never re-staged.** The agent read a copy that predates it and correctly reported the section as absent.
+
+| File | md5 | lines |
+|---|---|---|
+| `SKILLS-01.md` | `f555ee88` | 831 |
+| `CLASS-TABLES-AUTHORED.md` | `2a21ce25` | 1152 |
+| `CLASS-TABLES-BASE.md` | `248ad8f7` | 348 |
+| `CLASS-TABLES-DROID.md` | `203ea695` | 89 |
+
+**⚠ `CLASS-TABLES-AUTHORED` was named by `CLASSES-FORCE-PHB` as holding the Sith progressions and was never staged** — which is why the three Sith base classes have no feat schedule.
+
+**⚠ And `CLASS-TABLES-BASE` and `CLASS-TABLES-DROID` exist and nobody has ever mentioned them.** Four `CLASS-TABLES-*` files exist; **one was staged.**
+
+**Re-run the class extraction against these.** The three Sith progressions, the prestige class skills, and whatever `CLASS-TABLES-BASE` and `-DROID` carry that `CLASSES-STANDARD-PHB` does not.

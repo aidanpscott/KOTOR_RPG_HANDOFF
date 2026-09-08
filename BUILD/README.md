@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `15` | [Ledger batch 1 — events and replay](15-ledger-batch-1.md) | `Lodestar` · app | `172963b` · `e9483fb` |
 | `14` | [Identity — the last step, and what Play owes](14-identity-and-what-play-owes.md) | `KOTOR-RPG-APP` | `fd48d5c` |
 | `13` | [Batch 6, and Equipment — `PT-1200` resolves](13-batch6-and-equipment.md) | both | `c85a9c4` · `c827da5` |
 | `12` | [Import, the import question answered, and the Equipment stop](12-import-and-the-equipment-stop.md) | `KOTOR-RPG-APP` | `251fb66` |

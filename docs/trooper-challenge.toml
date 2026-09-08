@@ -1,0 +1,61 @@
+# dialogue/trooper-challenge.toml — the worked example from DIALOGUE-FORMAT-01 §9.
+# ⚠ A REFERENCE EXAMPLE, NOT PACKAGE CONTENT. Nothing loads this.
+
+[conversation]
+id    = "trooper-challenge"
+owner = "sith-trooper.command-deck.07"
+
+[[npc]]
+id      = "challenge"
+say     = "This deck is sealed. Turn around."
+replies = [
+  "bluff",
+  { to = "flash-rank",  gate = { background = "republic-officer" } },
+  { to = "buy-passage", gate = { payment = 50 } },
+  { to = "push",        gate = { skill = "persuade", dc = 14 } },
+  "back-off",
+]
+
+[[player]]
+id   = "bluff"
+say  = "Command sent me. Check your board."
+tag  = "lie"
+then = ["not-on-my-board"]
+
+[[player]]
+id   = "flash-rank"
+say  = "You are speaking to a commissioned officer."
+then = ["stands-down"]
+
+[[player]]
+id     = "buy-passage"
+say    = "Fifty credits says you saw nobody."
+effect = [ { kind = "item.lost", item = "credits", count = 50 } ]
+then   = ["stands-down"]
+
+[[player]]
+id   = "push"
+say  = "You are one man on a dying ship. Move."
+then = [
+  { to = "stands-down", gate = { skill = "persuade", dc = 14 } },
+  "not-on-my-board",
+]
+
+[[player]]
+id   = "back-off"
+say  = "My mistake."
+
+[[npc]]
+id      = "not-on-my-board"
+say     = "My board says otherwise. Last warning."
+replies = ["back-off", "push"]
+
+[[npc]]
+id      = "stands-down"
+say     = "…Go. I saw nothing."
+effect  = [ { kind = "quest.flag-set", flag = "spire.trooper-passed" } ]
+
+[[npc]]
+id  = "carth-cuts-in"
+by  = "carth.command-deck.01"
+say = "Don't push him. He is looking for a reason."

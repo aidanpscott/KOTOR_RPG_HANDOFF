@@ -14,6 +14,15 @@
 
 That is `§2` verbatim, and `STUDY 18 R18.02` confirms it is what the shipped files do. **The alternation is structural:** an NPC line's links may only name player lines and a player line's links may only name NPC lines. **It is not a rule the format asks you to follow — there are two lists, and a link that crosses wrongly names an id that is not in the list it must be in.**
 
+> **⚠⚠ AN NPC LINE MAY CONTINUE TO ANOTHER NPC LINE — `PT-1434`.** The conversion measured the gap: **24.1% of K1's blank player nodes and 12.4% of K2's are an NPC line continuing to an NPC line with no player input**, and that had no form here.
+>
+> **⚠ It is what `by` was for.** `§6` added a speaker override so a second character can answer — **and a second character answering almost always follows the first with nothing said in between.** Carth speaks three lines inside `bastila.dlg`, and **four of that conversation's six unfoldable nodes are exactly that.** The field existed and the shape it needed did not.
+>
+> **And it is `PT-1430`'s "beat" arriving from another direction** — that was flagged as *the one deletion that may want revisiting*, and this is the same thing with a number on it.
+>
+> **⚠ THE GUARANTEE NARROWS RATHER THAN GOING.** It was *NPC, player, NPC, player.* It is now: **a player line is always reached from an NPC line, and two player lines can never be adjacent.** That is the invariant that mattered — **the reader still refuses a player line linking to a player line.**
+
+
 ```toml
 [conversation]
 id    = "trooper-challenge"
@@ -81,12 +90,17 @@ replies = ["bluff", "back-off"]
 |---|---|---|
 | `id` | its name in this file | **yes** |
 | `say` | the authored line | **yes** |
-| `replies` | ordered links to player lines | no — absent means the conversation ends here |
+| `replies` | **SHOW ALL** — ordered links to **player lines**, and every one whose gate passes is put in front of the player | no |
+| `then` | **PICK ONE** — ordered links to **NPC lines**, first that passes. `PT-1434`'s continuation | no |
 | `by` | speaker override — `§6` | no |
 | `to` | who it is addressed to | no |
 | `effect` | what it writes — `§5` | no |
 | `pinned` | never rephrase this line — `§4b` | no |
 | `note` | the author's comment, read by nobody at runtime | no |
+
+**⚠ `replies` OR `then`, NEVER BOTH, and absent means the conversation ends here.** `PT-1432` makes them **different kinds of list**; carrying both would race two semantics with nothing to say which won. **After a line the player either chooses or the conversation continues.**
+
+**⚠ AND `then` IS THE PICK-ONE NAME EVERYWHERE.** A player line's `then` and an NPC line's `then` are the same field doing the same job, and `replies` is the only show-all list in the format.
 
 **A player line:**
 
@@ -385,26 +399,21 @@ say = "Don't push him. He is looking for a reason."
 - **Nothing about who is PRESENT.** `by` names a tag; whether that tag is in the area is not the file's business and no rule says what happens when it is not. **`PACKAGE-FORMAT-01 §6a` distinguishes a missing asset from a missing dependency and does not cover this case.**
 - **`pinned` is per line, not per character.** `§4b` says *"pinned inverts from exception to default for canonical characters"* — **the file cannot say that.** It is a blueprint property and the blueprint has no field for it.
 - **No XP.** `PlotXPPercentage` is on their nodes; **whether a conversation awards XP in our design is not ruled anywhere I could find.**
-- **⚠⚠ THE TWO SHAPES A BLANK ROUTING NODE COULD TAKE THAT WE HAVE NO WORD FOR, MEASURED.** `PT-1433` rules that every job a blank node did has a better home, and folding a real conversation says **how often that is true.** Across both shipped games, of every blank player node:
+- **⚠ A BLANK ROUTING NODE THAT SITS UNDER A LINE ALREADY OFFERING REAL REPLIES.** Folding a real `.dlg` measures what has no home here, and after `PT-1434` **there is one shape left and it is 0.5%:**
 
     ```
-                                                       K1              K2
-    terminal — the NPC line simply ends           20.8%           20.6%
-    merges into the NPC line above                34.1%           41.7%
-    ── folds cleanly ──────────────────────       54.9%           62.3%
-    a SWITCH — 2+ outgoing links, not one test     7.6%            8.1%
-    the SPEAKER changes across the fold           12.8%           13.7%
-    shared by several NPC nodes                    0.3%            3.5%
-    the parent also offers real replies            0.3%            0.1%
-    ── genuinely ambiguous ────────────────       21.1%           25.4%
-    the target NPC has other parents              24.1%           12.4%
+                                                     K1        K2
+    terminal — the NPC line simply ends           20.8%     20.6%
+    became a `then` — an NPC line continuing      78.7%     79.0%
+    ── EXPRESSIBLE ───────────────────────        99.5%     99.6%
+    the parent also offers real replies            0.5%      0.5%
     ```
 
-  **⚠ SO THE FOLD IS NOT ALWAYS UNAMBIGUOUS, AND THE COMMONEST AMBIGUITY IS NOT THE ONE EXPECTED.** A blank node with two outgoing links is **a switch, not a test** — *"route to A if X, else B"* — and it cannot become one gate. But **the speaker changing across the fold is larger than that in both games**: two NPC lines merge into one only if the same character says both, and 12.8% of the time a different one does.
+  **⚠ `PT-1434` took this from 54.9% to 99.5%.** Before it, a blank node had to MERGE two NPC lines into one — lossy, and impossible whenever the target had other parents (24.1%) or **the speaker changed across the fold (12.8%)**. It now folds to a **link**, which is what it always was.
 
-  **⚠ AND THE LAST ROW IS NOT AMBIGUOUS AT ALL — IT IS UNEXPRESSIBLE.** When the NPC line below has other parents it cannot be merged away, and **an NPC line continuing to another NPC line with no player input has no form in this format.** In the source that is a blank node; here it is nothing. **A quarter of K1's blank nodes are that.**
+  **What is left is a parent offering options AND a silent continuation at once**, which `§3`'s *`replies` or `then`, never both* forbids. **77 nodes in K1 and 56 in K2.**
 
-- **⚠ A gate nested more than two deep.** **TOML inline tables cannot span lines**, so a composed gate is one line however long it gets. `§4`'s measurement says one-term gates are the overwhelming case and this may never bind — **but it is a limit of the file, not of `§4b`'s schema, which nests arbitrarily deep.** The escape is `§4`'s rejected hoisted-gate table.
+- **⚠ A gate nested more than two deep.**- **⚠ A gate nested more than two deep.** **TOML inline tables cannot span lines**, so a composed gate is one line however long it gets. `§4`'s measurement says one-term gates are the overwhelming case and this may never bind — **but it is a limit of the file, not of `§4b`'s schema, which nests arbitrarily deep.** The escape is `§4`'s rejected hoisted-gate table.
 - **A validator is assumed and not specified.** Unreachable nodes, links naming a missing id, an alternation violation, an unknown gate key, an `effect` naming an engine-written kind — **all detectable, none specified here.** `§9`'s `carth-cuts-in` is deliberately left unreachable to make the point.
 
 ---

@@ -73,7 +73,12 @@ the named point in the second area, and back.
 | ⚠ **`FEAT-SCHEDULE-01`'s "Seven schedules" row** | Reads `Every third from 1 · Sith Assassin · 10`, where its own summary gives Sith Assassin **12** and the grid's `Assassin` column reaches 10 on that cadence. Either a mislabel of the prestige Assassin, or a cadence contradicting `PT-126`'s owner-instructed 12. **Reported, not resolved** |
 | ⚠ **Skill Focus** | Half closed at `PT-1405`: the aptitude applies from level 2 and Skills are not repriced. **Still unbuildable** — `SKILLS-01 §12` says 23 exist, one per skill, and the library holds **one generic record with no skill on it** |
 | **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
-| **Hub steps 8–9** | Equipment and Identity are unbuilt. Skills, Feats and Powers are built |
+| ⚠ **Hub step 8, Equipment** | **STOPPED.** `STARTING-EQUIPMENT-01` — 709 lines, CLOSED, 18 organic + 9 droid arrays, three routes, 28 grants — **is the source of no extract**, and neither is `ITEMS-01..09`. `equipment.json` reads `EQUIPMENT-01` and is the weapon RULES table, not a catalogue. So `PT-1200`'s offer cannot be priced and the two boxes stay unclickable |
+| **Hub step 9, Identity** | Unbuilt |
+| ⚠ **The profession grant is a category** | *robe · gauntlets · melee weapon · a tier above* — not an item and not a value. Resolving it needs the item catalogue |
+| **The import question** | ✓ **Answered: ART.** `ITEMS-01..09` already hold 1,425 converted resrefs under seven named rulings; a stats import would overwrite them with the game's balance. See BUILD 12 |
+| ⚠ **`PT-1369`'s pairing must count ICONS, not items** | K1 ships **183 `ii_*` icons across 38 classes** against **557** `.uti` blueprints — icons are per class + variation. Counted against items the pairing can never balance |
+| ⚠ **K2's item icons not located** | No `ii_*` in K2's `chitin.key`, and this Steam build's `TexturePacks/` holds only controller overlays. Not checked: module `.rim`/`.erf`, `override/` |
 | ⚠ **Powers at 1st level reads two sources one way** | `MULTICLASS-01 §2.2a` states 2 at Jedi level 1 and `PT-128` corrected the Sith Assassin to it; `POWER-COSTS-01 §6` calls acquisition **open**. Read as compatible — §6's open item is the schedule *after* level 1 — **and that reading is Claude's, not a ruling** |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |

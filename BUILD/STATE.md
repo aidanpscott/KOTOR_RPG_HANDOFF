@@ -84,6 +84,13 @@ the named point in the second area, and back.
 | ⚠ **The custom-portrait spec is unwritten** | `PT-1180`: ours supports a player-side folder like NWN's. `§2`: *"A custom portrait needs no art, but it needs a spec: accepted formats, dimensions, and what happens to an image of the wrong aspect."* **The half of this that needs no drawing** |
 | **The save file** | ✓ **built at batch 2.** `KRSV` header + gzip payload, `.sav`, in `Locations.saves`. **`PT-1265`'s bit-identical guarantee runs**, on a synthetic log and on a real chargen one |
 | ⚠ **The compressor is `gzip`, not `zstd`** | `PT-1328` recommended zstd-10 and measured the gap at **0.09 MB on 16.3 MB**. Dart ships gzip and no zstd; every zstd on pub is an FFI binding. **The header records which**, so switching later orphans nothing |
+| ⚠⚠ **THE WHOLE LOOP RUNS** | ✓ **batch 3.** Make a character, Play, quit, reopen, Continue, same character. **The first thing here to survive a restart** |
+| **`Continue` and `Load Game`** | ✓ **alive.** Continue opens the most recent and **the disk decides which**; Load Game lists them with each save's rules version |
+| ⚠ **"The same place" is the entry area** | `character.moved` and `area.entered` are **`session`** lifetime, and `§4` makes lifetimes decide what is written at all. **By the vocabulary's own rules a save cannot know where you were standing.** A player who walks to the second area and continues arrives back at the first |
+| ⚠ **Three of `§4`'s twelve rules cannot be checked** | derived-aptitude skill caps, granted feats against a class schedule, and feat prerequisites — each missing its data. **Returned, not skipped**, and the play HUD shows the count |
+| **`§5`'s five load steps** | 3, 4 and 5 built. Step 1 is done by the time it runs; step 2 has no snapshots and `PT-1327` makes them a cache |
+| **Save slots and rewind** | `§5·0` specifies a slot as **a point in the log** with a rewind event. **Specified, not built** |
+| ~~⚠⚠ **What a save is NAMED, and how many**~~ | ✓ **answered at `PT-1416`** |
 | ⚠⚠ **What a save is NAMED, and how many** | `§5a` settles where; **nothing settles how many or what one is called**, and the header carries **no time, no name, no character and no package**. `Continue` cannot order saves without a field the format does not have. `§6`'s *"a save that is a log may want showing differently from a save that is a slot"* is the same question |
 | **Loading is step 3 of five** | `§5`'s sequence is resolve packages · snapshots · replay · validate · open. **Only replay is built** |
 | **The log and replay** | ✓ **built at batch 1**, in `Lodestar/lib/src/ledger.dart`. Chargen writes events; `replay()` reproduces the character field by field for **both** shapes. **In memory only** |

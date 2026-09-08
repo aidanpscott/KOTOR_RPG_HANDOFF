@@ -18,7 +18,23 @@ That is `§2` verbatim, and `STUDY 18 R18.02` confirms it is what the shipped fi
 [conversation]
 id    = "trooper-challenge"
 owner = "sith-trooper.command-deck.07"     # whose conversation this is
+start = ["challenge"]                      # the ways in, in order
 ```
+
+**⚠ `start` IS `.dlg`'s `StartingList` AND IT IS A LINK LIST LIKE ANY OTHER** — bare ids or tables with gates, walked in order, first pass wins. **It is how one character opens differently depending on what has happened**, and `STUDY 18` found a real companion conversation using **eleven of them**.
+
+**⚠ A conversation with no `start` cannot begin**, and this document omitted it from `§9`'s worked example until the validator said so — recorded in `§12` rather than quietly fixed.
+
+### ⚠⚠ AND THERE ARE TWO KINDS OF LINK LIST. `§2` DESCRIBES ONE. **Reported, not resolved**
+
+`ENGINE-SPEC-03 §2` says of every link: *"walk links in order, run each `Active`, take the first that passes."*
+
+    PICK ONE    start · a player line's `then`     which one fires
+    SHOW ALL    an NPC line's `replies`            the options in front of you
+
+**`§4c` is the evidence, and it is not a preference.** It designs an option **list** — `[Persuade]` amber beside `[Lie]` grey beside `[Zabrak]` teal — and rules that **unavailable options are HIDDEN, not greyed.** *Hiding the ones that fail is only meaningful if the ones that pass are all shown.* **And `STUDY 18` measured the shape: 27.7% of K1's NPC nodes offer more than one reply, up to seven** — dead weight under first-pass-wins.
+
+**⚠ This is a contradiction between `§2` and `§4c` and only the owner closes it.** The reader and validator take the reading that makes `§4c` possible; **run `§2` literally and every multi-option node in both shipped games is broken**, which is how it surfaced.
 
 **`owner` is a placement tag, not a blueprint path** — `PT-1331`, a tag names ONE placed thing. **It is the default speaker for every NPC line and the only thing the file says about who you are talking to.**
 
@@ -87,6 +103,14 @@ then = ["believed"]
 
 ## 4 · ⚠⚠ The gate is data, and there is nowhere to put a write
 
+> **⚠ `not` IS RULED IN — `PT-1431`.** Proposed as `b1` and flagged as wanting a ruling before a package relied on it. **It is necessary rather than convenient.**
+>
+> **`PT-1284` makes a flag permanent.** So without `not`, **nothing can ever stop being offered** — every option a conversation opens stays open forever, and *"not yet"* has no expression at all.
+>
+> **⚠ And the source measured it: `c_local_notset` is K2's SECOND MOST-USED CONDITION IN THE GAME, at 1,489 sites.** A vocabulary missing the second-commonest thing authors reach for is a vocabulary authors will work around — **and working around a closed grammar means asking for an extension point, which `§4` refuses on purpose.**
+>
+> **⚠ It does not weaken the no-write rule.** `not` inverts a comparison; **it reads a projection like every other term and cannot change what it folds.**
+
 `STUDY 18 F18.01` is the finding this section exists to answer:
 
 > Our gate is a declared predicate — **a question you may ask twice.** Their `Active` is a procedure that returns a number, and in `bastila.dlg` **eleven of eleven opening gates write to global state while deciding.**
@@ -140,7 +164,7 @@ replies = [
 
 **⚠ A hoisted named-gate table (`gate = "some-name"` resolving elsewhere in the file) was considered and rejected** — it buys shorter lines at the cost of a second namespace and a second lookup. **It is the obvious answer if the ceiling above ever binds**, and it is named here so that it is a decision rather than a rediscovery.
 
-### ⚠ `not` is proposed and is NOT in `RULES-02`
+### ✅ `not` — RULED IN at `PT-1431`
 
 `RULES-02 §3` shows `all_of` and `any_of` and no negation. **`STUDY 18` says negation is not optional:** `c_local_notset` is K2's **second most-used condition in the game, 1,489 sites**, and `PT-1284` makes flags permanent — *"flags are never unset"* — so **"this has not happened yet" is the only way to express a thing that stops being offered.**
 
@@ -148,7 +172,9 @@ replies = [
 gate = { not = { flag = "spire.alarm-raised" } }
 ```
 
-**Proposed as a fourth composition form. It is mine, it is not in `RULES-02`, and it wants an owner ruling before a package relies on it.**
+**Ruled in at `PT-1431`, and the ruling is sharper than the proposal was: *"That is not a missing convenience; it is a missing tense."*** The alternative was being argued into an extension point later — **and `§4` refuses one on purpose.**
+
+**⚠ And it does not weaken the no-write rule.** `not` inverts a comparison, reads a projection like every other term, and **cannot change what it folds.**
 
 ---
 
@@ -252,6 +278,7 @@ IsChild on a link into a
 [conversation]
 id    = "trooper-challenge"
 owner = "sith-trooper.command-deck.07"
+start = ["challenge"]
 
 [[npc]]
 id      = "challenge"
@@ -356,7 +383,9 @@ say = "Don't push him. He is looking for a reason."
 
 ## 12 · Open
 
-- **`not` as a gate form.** `§4`. **Proposed by me, not in `RULES-02`, and wanted before a package relies on it.**
+- ~~`not` as a gate form~~ ✅ **RULED IN at `PT-1431`.** `§4`.
+- **⚠⚠ `ENGINE-SPEC-03 §2` AND `§4c` DISAGREE ABOUT WHAT A LINK LIST DOES.** `§1`. **First-pass-wins is right for `start` and `then` and wrong for `replies`**, and the build reads it narrowly so `§4c`'s option list is possible. **An owner ruling closes it; nothing here should be taken as having closed it.**
+- **⚠ `§9`'s worked example shipped without a `start` and nothing caught it until the validator existed.** The document described `[conversation]` with `id` and `owner` and **never documented the entry points at all**; `§1` now does. **Recorded rather than quietly fixed, because a format document that omits a required field is the failure the validator was built for and it found it on its own example.**
 - **`conversation = "dialogue/<id>"` on a creature blueprint.** One line, and it belongs to the blueprint's format rather than this one. **Flagged, not added.**
 - **`RULES-02 §3`'s examples are pre-conversion.** They read `payment: 50gp` and `skill: diplomacy`; ours are **credits** and the eight skills of `§4c`. **The SHAPE is what this document adopts. The example values are stale and are not corrected here** — that is a document change and an owner's call.
 - ~~`ENGINE-SPEC-03 §4c` still carries a superseded block~~ ✅ **RULED at `PT-1428` and `PT-1429`.** It is **a live alternative, not history** — *"a decision made with the other answer still on the table."* **This document builds `PT-1307` and forecloses nothing**, per the note in `§4`.

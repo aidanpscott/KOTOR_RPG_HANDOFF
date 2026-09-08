@@ -1,9 +1,10 @@
 # dialogue/trooper-challenge.toml — the worked example from DIALOGUE-FORMAT-01 §9.
-# ⚠ A REFERENCE EXAMPLE, NOT PACKAGE CONTENT. Nothing loads this.
+# ⚠ A REFERENCE EXAMPLE, NOT PACKAGE CONTENT. Nothing loads this in play.
 
 [conversation]
 id    = "trooper-challenge"
 owner = "sith-trooper.command-deck.07"
+start = ["challenge"]
 
 [[npc]]
 id      = "challenge"

@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `20` | [Combat slice 2 — the check fix, pools and damage](20-combat-slice-2.md) | `Lodestar` · app | `8c281e8` · `508f741` |
 | `19` | [Combat slice 1 — `resolve()` and one attack](19-combat-slice-1.md) | `Lodestar` | `442b600` |
 | `18` | [The two checks — emitted, declared, handled](18-vocabulary-checks.md) | all three | `3d0be11` · `d08c2f` · `5510cbf` |
 | `17` | [Ledger batch 3 — Continue and Load Game light up](17-ledger-batch-3.md) | app · `Lodestar` | `d1a2c05` · `fc4fb3` |

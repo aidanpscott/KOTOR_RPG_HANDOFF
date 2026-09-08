@@ -103,7 +103,11 @@ the named point in the second area, and back.
 | ⚠ **A droid model has no `id`** | `DROID-MODELS-01` is keyed by chassis; `character.model-set` records the **name** because there is nothing else |
 | **Combat `resolve()`** | ✓ **slice 1.** Four check types, one attack, the whole derivation. **Callable without a game.** No pools, no turn order, no damage applied |
 | ⚠ **A tie in an opposed roll** | Goes to the defender because it had to do something. **Nothing rules it** |
-| ⚠ **`emitted == handledByReplay` breaks when combat emits** | `attack.resolved` is `transient` and replay will never fold it. The generalisation: **an emitted kind replay ignores must be declared non-permanent.** Next slice's first task |
+| **Check A compares against lifetime** | ✓ **`PT-1420`, fixed on its own before the emission.** A `permanent` kind replay ignores is the bug; a `transient` one is the design — **and the rule is proved against a case it does not yet have**, so it cannot pass vacuously |
+| **Pools, damage, the death boundary** | ✓ **slice 2.** Vitality is one pool with a negative band; the Force pool has three values. Difficulty enters here and only here |
+| ⚠ **`DEATH-AND-DIFFICULTY-01` Hard says −10, `§5b` supersedes it** | *"E-2's flat −10 is superseded — the threshold SCALES with Constitution."* The superseding line is followed. **Reported, not resolved** |
+| ⚠ **Three more things had to behave somehow** | healing past `max` (unclamped for vitality, deliberately), negative damage as healing, and `down → dead` in one blow writing only `character.died`. **All flagged, none settled** |
+| ⚠ **`campaign` kinds replay ignores are owed a second projection** | `character.died` and friends are `campaign` and the character record has no *alive* field, by design. **`PLAY-STATE-01` owns current state and nothing has built it** |
 | **`§5` difficulty** | **`resolve` never sees it** — the mode acts at the death boundary, not on the dice |
 | ⚠⚠ **What Play owes: a LOG, not a record** | `CHARACTER-RECORD-01`: *"This record is a **PROJECTION** of the event log, not the store… the log is what persists."* `SAVE-LOAD-01`: *"the save is the log."* So the next stretch is not serialising the hub — it is writing the choices as **ordered events** |
 | **The re-lock as an event** | ✓ **answered at batch 1** — and building it found that the hub **kept the value of the step it re-opened**. Nothing read it back, so nothing had noticed |

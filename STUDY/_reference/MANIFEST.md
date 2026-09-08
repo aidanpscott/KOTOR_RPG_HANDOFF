@@ -179,3 +179,27 @@
 **⚠ `PT-1405` corrected `§2.4`'s stale totals in place, which made `droid_skills.json` stale against its own source within minutes.** `check_extracts.py` flagged it on the next run — **the first time that check has caught a change I made myself, and it was added to the gate two hours ago.**
 
 **Nothing in the extract is wrong.** The correction is a **note beside the Athletics row** recording that `§2.4` says 14 and 12 where the grid computes 15 and 13. **Re-run so the fingerprint matches; the records should not change.**
+
+
+---
+
+## ⚠ Batch 6 — the equipment sources. MY BRIEF AIMED AT THE WRONG FILE
+
+**`equipment.json` is `EQUIPMENT-01`'s weapon and armour RULES table** and its own `_notes` say so: *"This is NOT an item catalogue… Item instances live in ITEMS-01..09."* **I read the records and not the notes.**
+
+| File | md5 | lines |
+|---|---|---|
+| `ITEMS-01.md` | `101aec95` | 786 |
+| `ITEMS-02.md` | `bcb5e8c2` | 412 |
+| `ITEMS-03.md` | `ad2f6860` | 349 |
+| `ITEMS-04.md` | `a7fe767b` | 311 |
+| `ITEMS-05.md` | `e92a92fb` | 530 |
+| `ITEMS-06.md` | `c9b62e21` | 150 |
+| `ITEMS-07.md` | `9462c0b9` | 199 |
+| `ITEMS-08.md` | `c5d16d84` | 200 |
+| `ITEMS-09.md` | `f7d58cbf` | 196 |
+| `STARTING-EQUIPMENT-01.md` | `9a00913c` | 710 |
+
+**`STARTING-EQUIPMENT-01` is 709 lines, status CLOSED at `PT-724`–`PT-779`**, holding 18 organic arrays, 9 droid arrays, 28 profession grants, the upgrade and random rules, and **the three routes — the Assortment, the Purse, and the GM decides.** **⚠ It is the source of no extract.**
+
+**`ITEMS-01..09` hold 1,425 distinct resrefs across 1,251+ items**, already converted from both games by **seven named rulings** — `PT-339` dice, `PT-341` Massive Criticals, `PT-308` tiers, `PT-327` unique, `PT-345` crystals, `PT-349` Upgradeable, `PT-384` the feat remap.

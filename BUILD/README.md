@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `22` | [Combat slice 4 — enemy decisions](22-combat-slice-4.md) | `Lodestar` | `44b8eb9` |
 | `21` | [Combat slice 3 — the round](21-combat-slice-3.md) | `Lodestar` | `16b5593` |
 | `20` | [Combat slice 2 — the check fix, pools and damage](20-combat-slice-2.md) | `Lodestar` · app | `8c281e8` · `508f741` |
 | `19` | [Combat slice 1 — `resolve()` and one attack](19-combat-slice-1.md) | `Lodestar` | `442b600` |

@@ -107,8 +107,12 @@ the named point in the second area, and back.
 | **Pools, damage, the death boundary** | ✓ **slice 2.** Vitality is one pool with a negative band; the Force pool has three values. Difficulty enters here and only here |
 | ⚠ **`DEATH-AND-DIFFICULTY-01` Hard says −10, `§5b` supersedes it** | *"E-2's flat −10 is superseded — the threshold SCALES with Constitution."* The superseding line is followed. **Reported, not resolved** |
 | **The round** | ✓ **slice 3.** Five budgets on **three** reset boundaries, initiative, surprise, and the dying countdown. **A character can now die untouched** |
-| ⚠⚠ **FIVE things have had to behave somehow** | slice 1: the opposed tie and crit confirmation — **both ruled at `PT-1420`**. Slice 2: healing past `max`, negative damage as healing, `down → dead` in one blow. **Slice 3: a tie in INITIATIVE** |
-| ⚠ **The initiative tie matters more than the opposed one** | Initiative order is **shown on every player's screen** as *"a fact of the fight"*. A tie broken by declaration order is a fact about **the array the caller passed in** |
+| **Enemy decisions** | ✓ **slice 4, doctrine only.** `SPACE-AI-01`'s four questions; deterministic, and a doctrine that rolls takes the injected die |
+| **A doctrine is not a reaction** | `PT-1373`: a trigger produces an event and a reaction consumes one. **A doctrine is asked, at a known point.** Two mechanisms, one built |
+| ⚠ **`§6a` slot 1.5's `Cleave` is a CHAIN, not a feat** | It is in `ATTACKS-05` — level 1/4/8, Strength 12 — and **not in `feats.json`**. The `on_kill` recursion it tests runs through the attack system |
+| **`§6a` slots 1, 3 and 7 verify** | Against the 104 extracted powers, **and slot 7's prerequisites are in the data** |
+| ⚠⚠ **SIX things have had to behave somehow** | slice 1: the opposed tie and crit confirmation — **both ruled at `PT-1420`**. Slice 2: healing past `max`, negative damage as healing, `down → dead` in one blow. **Slice 3: a tie in INITIATIVE** |
+| ⚠⚠ **The initiative tie now decides WHO GETS ATTACKED** | A targeting tie takes the first in **initiative** order — deliberately, because initiative is *"a fact of the fight"* rather than of the caller's array. **It was a display question in slice 3 and is a targeting question now; the two are one ruling** |
 | **The second projection** | **Not forced by the round.** `§4` makes a round transient; the encounter answers *who is standing* from its own combatants. `PLAY-STATE-01` is owed for state that outlives a fight |
 | ⚠ **`campaign` kinds replay ignores are owed a second projection** | `character.died` and friends are `campaign` and the character record has no *alive* field, by design. **`PLAY-STATE-01` owns current state and nothing has built it** |
 | **`§5` difficulty** | **`resolve` never sees it** — the mode acts at the death boundary, not on the dice |

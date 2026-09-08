@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `25` | [The enemy takes a turn](25-the-enemy-takes-a-turn.md) | `KOTOR-RPG-APP` | `e8fba9b` |
 | `24` | [A creature in the bed, and the seam reachable](24-a-creature-in-the-bed.md) | `Loom` · app | `9d06456` |
 | `23` | [Three rulings, and the seam](23-rulings-and-the-seam.md) | `Lodestar` · app | `ae4a87f` · `3edf2b7` |
 | `22` | [Combat slice 4 — enemy decisions](22-combat-slice-4.md) | `Lodestar` | `44b8eb9` |

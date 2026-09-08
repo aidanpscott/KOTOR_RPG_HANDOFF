@@ -116,7 +116,10 @@ the named point in the second area, and back.
 | **Walk into it to attack** | ✓ **and it is Claude's reading.** A step onto an occupied square strikes instead of moving; no document rules it |
 | ⚠ **The New Creature dialog overflows by 58px at 1280×720** | Found by clicking it. **Reported, not fixed** — Loom's layout, and nobody asked |
 | ⚠⚠ **The wound does NOT survive leaving the area** | Combatants are rebuilt from the blueprint on every entry, which is what `§4` rules — *"not written: current vitality."* **The other choice would have been `PLAY-STATE-01` arriving**, and a persistent wound is a design question rather than a line of code |
-| **The second projection** | **Still not forced, and now by an explicit choice rather than by absence.** See the wound row |
+| **The second projection** | **Not forced a fourth time.** A multi-round fight needs who-is-standing across turns, and `§4` puts every one of those facts on its not-written list. **The thing that would force it is a fight that survives being left, and this one does not** |
+| **The enemy takes a turn** | ✓ **slice 5.** Initiative, five budgets, doctrine, round boundary, dying countdown — the app calls all of it |
+| ⚠ **A fight can always be left, and never lost by leaving** | Two readings, both falling out of `§4` writing nothing. **Fleeing is not built; this is what transience gives you** |
+| **The dying countdown, in a real fight** | ✓ **and the risk lay the other way.** A dying combatant is not standing, so the advance skips it and the round boundary fires **sooner**, not never |
 | ⚠⚠ **SIX things have had to behave somehow** | slice 1: the opposed tie and crit confirmation — **both ruled at `PT-1420`**. Slice 2: healing past `max`, negative damage as healing, `down → dead` in one blow. **Slice 3: a tie in INITIATIVE** |
 | **Five of the six are ruled** | `PT-1420` took two, `PT-1422` took the initiative tie **and the targeting tie with it**, and the brief ruled the clamp and the named heal door. **One left: `down → dead` in one blow writes only `character.died`** |
 | **The second projection** | **Not forced by the round.** `§4` makes a round transient; the encounter answers *who is standing* from its own combatants. `PLAY-STATE-01` is owed for state that outlives a fight |

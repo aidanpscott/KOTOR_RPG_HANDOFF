@@ -116,6 +116,10 @@ replies = [ { to = "push", gate = { skill = "persuade", dc = 14 } } ]
 | `alignment` | the band, derived per `ALIGNMENT-01-v2` | **teal** |
 | `all_of`, `any_of` | composition, nesting arbitrarily deep — `§4b.1` | of its parts |
 
+**⚠ AND THE RENDER COLUMN IS PRESENTATION OVER THIS DATA, WHICH IS WHY `PT-1429` COSTS THE FORMAT NOTHING.** `PT-1429` keeps `PT-1307`'s *no numbers* as the answer **for now** and keeps `PT-1306`'s `[Persuade DC 14]` as **a live alternative** — *"not wrong, unchosen, and the choice is provisional."*
+
+**The file already carries `dc`.** Showing it, hiding it, greying a shut option or hiding it entirely are **four presentation switches over one unchanged field set.** **Nothing in this document has to be re-decided if the alternative wins**, and a `label` field would have been exactly the thing that foreclosed it — `§3`.
+
 **Two shapes, and the second is the exception:**
 
 ```toml
@@ -355,6 +359,6 @@ say = "Don't push him. He is looking for a reason."
 - **`not` as a gate form.** `§4`. **Proposed by me, not in `RULES-02`, and wanted before a package relies on it.**
 - **`conversation = "dialogue/<id>"` on a creature blueprint.** One line, and it belongs to the blueprint's format rather than this one. **Flagged, not added.**
 - **`RULES-02 §3`'s examples are pre-conversion.** They read `payment: 50gp` and `skill: diplomacy`; ours are **credits** and the eight skills of `§4c`. **The SHAPE is what this document adopts. The example values are stale and are not corrected here** — that is a document change and an owner's call.
-- **`ENGINE-SPEC-03 §4c` still carries a superseded block.** `STUDY 18 F18.06`: the `PT-1306` two-stage reveal with `[Persuade DC 14]` and a greyed `[Slicing DC 18]` sits below `PT-1307`'s *"NO NUMBERS ANYWHERE"* and is not marked superseded. **This document follows `PT-1307`.** If that is wrong, `§3`'s no-`label` rule and `§4`'s render column both change.
-- **⚠ `TRACE-112` COULD NOT BE READ AND IS NOT REFLECTED HERE.** The brief cites it as having *"just gave it more than most formats start with."* **The corpus I can read ends at `TRACE-111`** (`PLAYTEST-RULINGS-01.md`, newest ruling `PT-1426`). **This document is built from `ENGINE-SPEC-03`, `RULES-02`, `PACKAGE-FORMAT-01`, `AREA-FORMAT-01` and `STUDY 18`, all of which were available.** The one decision it could plausibly move is **`§8`'s serialisation choice**; nothing in `§1`–`§7` depends on it.
+- ~~`ENGINE-SPEC-03 §4c` still carries a superseded block~~ ✅ **RULED at `PT-1428` and `PT-1429`.** It is **a live alternative, not history** — *"a decision made with the other answer still on the table."* **This document builds `PT-1307` and forecloses nothing**, per the note in `§4`.
+
 - **Whether a conversation may be attached to something other than a creature** — a door, a terminal, a placeable. **Their `ConversationType` and `ComputerType` fields say theirs could.**

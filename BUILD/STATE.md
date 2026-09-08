@@ -101,6 +101,10 @@ the named point in the second area, and back.
 | ⚠ **The re-lock ruling is Claude's** | `character.step-reopened` carries its own discard list so an old log replays the same way after the flow changes. **Flagged, not ruled** |
 | ⚠ **`CHARACTER-RECORD-01 §2` vs `§5` on `abilities`** | `§2` says final scores, `§5` says bought scores. The ledger follows `§5` and `§1`'s principle. **Reported, not resolved** |
 | ⚠ **A droid model has no `id`** | `DROID-MODELS-01` is keyed by chassis; `character.model-set` records the **name** because there is nothing else |
+| **Combat `resolve()`** | ✓ **slice 1.** Four check types, one attack, the whole derivation. **Callable without a game.** No pools, no turn order, no damage applied |
+| ⚠ **A tie in an opposed roll** | Goes to the defender because it had to do something. **Nothing rules it** |
+| ⚠ **`emitted == handledByReplay` breaks when combat emits** | `attack.resolved` is `transient` and replay will never fold it. The generalisation: **an emitted kind replay ignores must be declared non-permanent.** Next slice's first task |
+| **`§5` difficulty** | **`resolve` never sees it** — the mode acts at the death boundary, not on the dice |
 | ⚠⚠ **What Play owes: a LOG, not a record** | `CHARACTER-RECORD-01`: *"This record is a **PROJECTION** of the event log, not the store… the log is what persists."* `SAVE-LOAD-01`: *"the save is the log."* So the next stretch is not serialising the hub — it is writing the choices as **ordered events** |
 | **The re-lock as an event** | ✓ **answered at batch 1** — and building it found that the hub **kept the value of the step it re-opened**. Nothing read it back, so nothing had noticed |
 | **`backstory.lifestyle`** | ✓ **answered: no event.** `PT-1411` marks it orphaned; an event for a choice nobody makes invents a value |

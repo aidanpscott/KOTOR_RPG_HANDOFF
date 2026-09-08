@@ -1,13 +1,15 @@
 # The nine chargen screens, seen
 
-**23 captures at 1280×720, `KOTOR-RPG-APP` `fd48d5c`+.** Produced by
+**⚠ RE-CAPTURED AFTER THE FIXES — `KOTOR-RPG-APP` `623451f`.** 23 captures at
+1280×720. **All ten findings below are now fixed**; each is kept with what the
+capture showed, because the point of the pass is that looking found ten things
+four slices of passing tests did not. Produced by
 `test/capture_test.dart` — the app's own pixels through `RepaintBoundary`, at
 device ratio 1.0. Not a window grab.
 
-> **⚠ A WIDGET TEST DRAWS EVERY GLYPH AS A BOX unless a real font is loaded.**
-> The first capture proved the layout and hid every word. A real face
-> (`Arimo`) is loaded and pushed down as the ambient default. **That is why the
-> tofu boxes below are a finding rather than an artefact — see §A.**
+> **⚠ THE HARNESS NOW LOADS THE APP'S OWN BUNDLED FACE**, so a capture shows
+> what ships. In the first pass it loaded a system font, which is how the
+> missing-glyph defect became visible at all.
 
 ---
 
@@ -18,7 +20,7 @@ device ratio 1.0. Not a window grab.
 | [`01-entry`](01-entry.png) | The entry screen. `Select Premade` correctly dead at `none` |
 | [`02-species-subrace-open`](02-species-subrace-open.png) | Species with a subrace picker open |
 | [`04-class`](04-class.png) | Class |
-| [`05a-origin-world`](05a-origin-world.png) · [`05b`](05b-origin-upbringing.png) | Origin, before and after a world is picked |
+| [`05a`](05a-origin-world.png) · [`05b`](05b-origin-world-picked.png) · [`05c`](05c-origin-upbringing.png) | Origin, **now two stages** with `◂ change world` inside the step |
 | [`06-gender`](06-gender.png) | Gender |
 | [`07-backstory`](07-backstory.png) | Backstory, one tab — `PT-1401` |
 | [`08-abilities-organic`](08-abilities-organic.png) | Abilities, the point buy |
@@ -47,12 +49,14 @@ device ratio 1.0. Not a window grab.
 
 ---
 
-# ⚠ WHAT LOOKS WRONG
+# THE TEN — what looked wrong, and what was done
 
-Ten findings. **Nothing here was fixed** — three are divergences from a ruling
-and belong to the owner.
+**All ten are fixed at `623451f`.** Kept in full, because the finding is worth
+more than the fix.
 
 ## ⚠ A · The UI needs nine glyphs the app ships no font for
+
+**✓ FIXED.** `assets/fonts/DejaVuSans.ttf` is bundled — 742 KB, licence beside it — and `M.font` is set once at the app root, where `Text`, `Text.rich` and `EditableText` all merge it. **All fourteen marks the UI draws are covered:** `✓ › ▸ ⚠ → • ⇄ … ◂ — · − § ×`. **The padlock is drawn, not typed** — a `CustomPainter` stroked in the row's own colour, because `🔒` is a colour emoji no text face should have to carry and DejaVu does not. `⭐` is also uncovered and is no longer drawn either — see `F`.
 
 **This is the biggest one and it is not a capture artefact.**
 
@@ -77,6 +81,8 @@ coverage is therefore whatever the user's system happens to have.
 
 ## ⚠ B · Origin is one screen, and `§3` says it is two stages
 
+**✓ FIXED.** `world → [Upbringing ▸] → upbringing`, with **`◂ change world` inside the step**. The dead middle column is gone; the upbringing gets the whole panel and the world list gets the freed width.
+
 `CHARGEN-FLOW-MAP-01 §3`: *"`ORIGIN world → [Upbringing ▸] → upbringing`… **The
 panel transitions in place**"*, and *"Origin and Identity carry a **back control
 inside the step** — `◂ change world`"*.
@@ -87,12 +93,16 @@ built to `§3`; Origin was not.** Reported, not changed.
 
 ## ⚠ C · The world description is a database dump
 
+**✓ FIXED, BY FILTERING — NOT BY REWRITING THE ATLAS.** Text before the first research bullet, cut again at the first `⚠ ⭐ ✅` marker, with folio citations (**ours**) and `DC n:` lines (**the GM's**) dropped. **193 of the 316 strata keep a real sentence; 123 end up with none** — and an empty description beats a working note shown as flavour. Taris now reads *"Wealth, swoop racing, and Lhosan Industries money — until it left."*
+
 `05b` — screaming caps mid-sentence, `GAZETTEER f.122`, `Bureaucracy DC 15:`,
 `DC 30:`, three tofu marks. It is the Atlas's own research prose shown to a
 player verbatim. **The one screen where a player reads about their homeworld
 reads like a spreadsheet cell.**
 
 ## ⚠ D · Three lines are simply wrong
+
+**✓ FIXED.** The discard list names the step — `gender — Female`. The chip collapses when the variant **is** the species. The count reads `nine of nine`.
 
 | Where | Reads | Should read |
 |---|---|---|
@@ -102,17 +112,23 @@ reads like a spreadsheet cell.**
 
 ## ⚠ E · The story generator lowercases proper nouns
 
+**✓ FIXED.** The sentences are rebuilt around the names rather than lowercasing them.
+
 `13c` — *"you get **acolyte**, immediately"*, *"A **jedi sentinel** reads
 people"*. `toLowerCase()` is applied to the class and profession names to make
 them read mid-sentence, and they are proper nouns.
 
 ## ⚠ F · The rundown has no portrait, and `PT-1243` names one
 
+**✓ FIXED.** And it is the **same widget** as the portrait stage's, so the two cannot drift apart.
+
 *"A FULL RUNDOWN above: **portrait**, name, species, class, all six abilities…"*
 `13c` shows name, species, class, abilities and chips. **The portrait is
 absent** — the one element of the rundown that is also the step's first stage.
 
 ## ⚠ G · Developer prose on player screens
+
+**✓ FIXED, ACROSS ALL NINE STEPS — 27 strings**, not the two named. The fact stays; the citation goes.
 
 `13a` and `12a` open with a paragraph citing `UI-ASSETS-01 §2`,
 `ASSET-REPLACEMENT-01`, `PT-1350`, `STARTING-EQUIPMENT-01 §1`. **Written for the
@@ -121,11 +137,15 @@ nothing needs importing, that route 2 is not offered — the *citations* do not.
 
 ## ⚠ H · Nothing shows which species is selected
 
+**✓ FIXED.** A `›` in a reserved gutter, so no row shifts when the mark moves.
+
 `02` — the panel on the right is the only feedback, and **the selected row
 carries no mark in the list.** With the list scrolled, the selection can be off
 screen entirely and nothing on the screen says what is chosen.
 
 ## ⚠ I · Rows are sliced, not scrolled
+
+**✓ FIXED.** Rows are variable height — a skill with an aptitude source is taller — so the viewport cannot be sized to whole rows. Every long list **fades at its foot** instead, which says *more below* at any row height.
 
 `09`, `21` — the last visible row is cut through the middle of its `+` control
 rather than clipped at a row boundary. It reads as broken rather than as more
@@ -133,11 +153,20 @@ below.
 
 ## ⚠ J · Half the width is empty on four screens
 
+**✓ FIXED, and my own finding needed a correction:** Powers and Feats did not lay out in 420px — they stretched a two-item row across the whole 1280 so the eye had to cross an empty screen. Skills and Abilities were genuinely narrow. All four now sit in one **centred measure**. Powers also had `universal` **wrapping to two lines** in a box too narrow for it — not in the original ten.
+
 `09` skills, `10` feats, `11` powers, `20` abilities all lay out in roughly
 420px of 1280 and leave the rest black. `05` origin and `02` species use the
 width properly, so the two halves of the flow do not look like one product.
 
 ---
+
+## ⚠ And the tests were pinned to the citations
+
+**Fifteen assertions matched ruling numbers rather than what a player reads**,
+so rewriting the prose broke them. They assert the fact now, which is what they
+should have asserted. **Four more broke on Origin's second stage** — the change
+working, caught by the drive that has to cross `[Upbringing ▸]`.
 
 ## What was NOT captured
 

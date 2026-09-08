@@ -57,6 +57,15 @@ start = ["challenge"]                      # the ways in, in order
 
 ## 3 · ⚠ The eight fields, not the forty-eight
 
+> **⚠ `say` MAY NOT BE EMPTY — `PT-1433`, owner ruling.** An empty string loaded, because `""` is a `String` — **which quietly re-admitted the silent node the format does not have.** ✅ **The reader refuses it, on both node kinds.**
+>
+> **⚠ THEIR BLANK NODES EXIST TO WORK AROUND SOMETHING WE FIXED.** K2's `Logic` joins **exactly two** conditions with one operator, so asking a compound question meant **chaining blank nodes, each testing one piece and pointing at the next.** **59% of K1's player nodes are that.**
+>
+> **`§4`'s `all_of`/`any_of` nest arbitrarily deep**, `PT-1431` added `not`, and `PT-1432` made a reply list show ALL that pass. **Between them, every job a blank node did has a better home** — a compound gate, a negation, or two replies with two gates rather than a fork.
+>
+> **⚠ So refusing it takes nothing away.** It says the thing you would have used it for is expressed **on the link** instead.
+
+
 `STUDY 18 F18.04`: of K2's ~48 node fields **about eight carry meaning rather than staging**, and `PT-1319` deleted the rest for us before this document existed — a character is a portrait, nothing animates, there is no model.
 
 **An NPC line:**
@@ -376,6 +385,25 @@ say = "Don't push him. He is looking for a reason."
 - **Nothing about who is PRESENT.** `by` names a tag; whether that tag is in the area is not the file's business and no rule says what happens when it is not. **`PACKAGE-FORMAT-01 §6a` distinguishes a missing asset from a missing dependency and does not cover this case.**
 - **`pinned` is per line, not per character.** `§4b` says *"pinned inverts from exception to default for canonical characters"* — **the file cannot say that.** It is a blueprint property and the blueprint has no field for it.
 - **No XP.** `PlotXPPercentage` is on their nodes; **whether a conversation awards XP in our design is not ruled anywhere I could find.**
+- **⚠⚠ THE TWO SHAPES A BLANK ROUTING NODE COULD TAKE THAT WE HAVE NO WORD FOR, MEASURED.** `PT-1433` rules that every job a blank node did has a better home, and folding a real conversation says **how often that is true.** Across both shipped games, of every blank player node:
+
+    ```
+                                                       K1              K2
+    terminal — the NPC line simply ends           20.8%           20.6%
+    merges into the NPC line above                34.1%           41.7%
+    ── folds cleanly ──────────────────────       54.9%           62.3%
+    a SWITCH — 2+ outgoing links, not one test     7.6%            8.1%
+    the SPEAKER changes across the fold           12.8%           13.7%
+    shared by several NPC nodes                    0.3%            3.5%
+    the parent also offers real replies            0.3%            0.1%
+    ── genuinely ambiguous ────────────────       21.1%           25.4%
+    the target NPC has other parents              24.1%           12.4%
+    ```
+
+  **⚠ SO THE FOLD IS NOT ALWAYS UNAMBIGUOUS, AND THE COMMONEST AMBIGUITY IS NOT THE ONE EXPECTED.** A blank node with two outgoing links is **a switch, not a test** — *"route to A if X, else B"* — and it cannot become one gate. But **the speaker changing across the fold is larger than that in both games**: two NPC lines merge into one only if the same character says both, and 12.8% of the time a different one does.
+
+  **⚠ AND THE LAST ROW IS NOT AMBIGUOUS AT ALL — IT IS UNEXPRESSIBLE.** When the NPC line below has other parents it cannot be merged away, and **an NPC line continuing to another NPC line with no player input has no form in this format.** In the source that is a blank node; here it is nothing. **A quarter of K1's blank nodes are that.**
+
 - **⚠ A gate nested more than two deep.** **TOML inline tables cannot span lines**, so a composed gate is one line however long it gets. `§4`'s measurement says one-term gates are the overwhelming case and this may never bind — **but it is a limit of the file, not of `§4b`'s schema, which nests arbitrarily deep.** The escape is `§4`'s rejected hoisted-gate table.
 - **A validator is assumed and not specified.** Unreachable nodes, links naming a missing id, an alternation violation, an unknown gate key, an `effect` naming an engine-written kind — **all detectable, none specified here.** `§9`'s `carth-cuts-in` is deliberately left unreachable to make the point.
 
@@ -384,7 +412,8 @@ say = "Don't push him. He is looking for a reason."
 ## 12 · Open
 
 - ~~`not` as a gate form~~ ✅ **RULED IN at `PT-1431`.** `§4`.
-- **⚠⚠ `ENGINE-SPEC-03 §2` AND `§4c` DISAGREE ABOUT WHAT A LINK LIST DOES.** `§1`. **First-pass-wins is right for `start` and `then` and wrong for `replies`**, and the build reads it narrowly so `§4c`'s option list is possible. **An owner ruling closes it; nothing here should be taken as having closed it.**
+- ~~`ENGINE-SPEC-03 §2` and `§4c` disagree about what a link list does~~ ✅ **RULED at `PT-1432`** — *"first-pass-wins is true of a pick-one list and false of an option list."* `§1`. **The reader and validator were already narrowed this way and are now correct rather than provisional.**
+- ~~An empty `say` loads~~ ✅ **RULED at `PT-1433`.** `§3`.
 - **⚠ `§9`'s worked example shipped without a `start` and nothing caught it until the validator existed.** The document described `[conversation]` with `id` and `owner` and **never documented the entry points at all**; `§1` now does. **Recorded rather than quietly fixed, because a format document that omits a required field is the failure the validator was built for and it found it on its own example.**
 - **`conversation = "dialogue/<id>"` on a creature blueprint.** One line, and it belongs to the blueprint's format rather than this one. **Flagged, not added.**
 - **`RULES-02 §3`'s examples are pre-conversion.** They read `payment: 50gp` and `skill: diplomacy`; ours are **credits** and the eight skills of `§4c`. **The SHAPE is what this document adopts. The example values are stale and are not corrected here** — that is a document change and an owner's call.

@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 14 TOML files, 986 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 21 TOML files, 2,497 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -73,9 +73,14 @@ the named point in the second area, and back.
 | ⚠ **`FEAT-SCHEDULE-01`'s "Seven schedules" row** | Reads `Every third from 1 · Sith Assassin · 10`, where its own summary gives Sith Assassin **12** and the grid's `Assassin` column reaches 10 on that cadence. Either a mislabel of the prestige Assassin, or a cadence contradicting `PT-126`'s owner-instructed 12. **Reported, not resolved** |
 | ⚠ **Skill Focus** | Half closed at `PT-1405`: the aptitude applies from level 2 and Skills are not repriced. **Still unbuildable** — `SKILLS-01 §12` says 23 exist, one per skill, and the library holds **one generic record with no skill on it** |
 | **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
-| ⚠ **Hub step 8, Equipment** | **STOPPED.** `STARTING-EQUIPMENT-01` — 709 lines, CLOSED, 18 organic + 9 droid arrays, three routes, 28 grants — **is the source of no extract**, and neither is `ITEMS-01..09`. `equipment.json` reads `EQUIPMENT-01` and is the weapon RULES table, not a catalogue. So `PT-1200`'s offer cannot be priced and the two boxes stay unclickable |
-| **Hub step 9, Identity** | Unbuilt |
-| ⚠ **The profession grant is a category** | *robe · gauntlets · melee weapon · a tier above* — not an item and not a value. Resolving it needs the item catalogue |
+| **Hub step 8, Equipment** | ✓ **closed at batch 6.** `PT-1200` resolves: the item is named and priced against the array. Route 1 only |
+| ⚠ **Route 2, the purse** | Needs the array's own credit value, which is **not written**. The arrays name items in prose and only **18 of 41** names resolve to exactly one catalogue row; `§2c` disambiguates 14. Not offered |
+| ⚠ **Five `ITEMS` file headers are stale** | `ITEMS-01, 02, 04, 05, 08` state a total their own category headings do not add to, and `ITEMS-09` states none. **All 44 category counts are right.** Same shape `ITEMS-07` documents at `PT-871` |
+| ⚠ **`STARTING-EQUIPMENT-01`'s status block says 18 twice** | `§4` and `§4a` each carry **19** — all 19 base classes. The nineteenth is the **Saboteur**, new at `PT-784`. `classes.json` already records this class going missing in three places; this is the fourth and fifth |
+| ⚠ **Three grants name no item** | `Augmented`, `Dancer`, `Initiate` depend on the character, so `§5` names no resref and no price. 13 of 16 slot-fillers resolve |
+| **Hub step 9, Identity** | Unbuilt. The only step left, and the character record and save with it |
+| **The profession grant is a category** | ✓ **resolved at batch 6.** `STARTING-EQUIPMENT-01 §5` names the item behind each category and prices 13 of 16 |
+| ⚠ **An annotation past the closing pipe drops a value** | `PT-1408`'s inline correction made the Guardian's rows three cells and `read_phb` took only two — the correction **silently un-extracted both fields**. Fixed in the reader; worth remembering as a shape, not a one-off |
 | **The import question** | ✓ **Answered: ART.** `ITEMS-01..09` already hold 1,425 converted resrefs under seven named rulings; a stats import would overwrite them with the game's balance. See BUILD 12 |
 | ⚠ **`PT-1369`'s pairing must count ICONS, not items** | K1 ships **183 `ii_*` icons across 38 classes** against **557** `.uti` blueprints — icons are per class + variation. Counted against items the pairing can never balance |
 | ⚠ **K2's item icons not located** | No `ii_*` in K2's `chitin.key`, and this Steam build's `TexturePacks/` holds only controller overlays. Not checked: module `.rim`/`.erf`, `override/` |

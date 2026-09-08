@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `13` | [Batch 6, and Equipment — `PT-1200` resolves](13-batch6-and-equipment.md) | both | `c85a9c4` · `c827da5` |
 | `12` | [Import, the import question answered, and the Equipment stop](12-import-and-the-equipment-stop.md) | `KOTOR-RPG-APP` | `251fb66` |
 | `11` | [`PT-1407`, the attack gap surveyed, and Powers](11-pt1407-and-powers.md) | both | `73b5324` · `43f2840` |
 | `10` | [Batch 5a, three rulings, and the Sith stop searched](10-batch5a-and-the-sith-stop.md) | both | `a271f73` · `45a58a1` |

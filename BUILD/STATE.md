@@ -112,8 +112,11 @@ the named point in the second area, and back.
 | ⚠ **`§6a` slot 1.5's `Cleave` is a CHAIN, not a feat** | It is in `ATTACKS-05` — level 1/4/8, Strength 12 — and **not in `feats.json`**. The `on_kill` recursion it tests runs through the attack system |
 | **`§6a` slots 1, 3 and 7 verify** | Against the 104 extracted powers, **and slot 7's prerequisites are in the data** |
 | **The seam** | ✓ **built, both sides.** A placement becomes a combatant through the blueprint it names, and one attack runs from the app. **The vitality formula was already ruled at `PT-648` — nothing is rolled** |
-| ⚠⚠ **AND IT IS UNREACHABLE BY A PERSON** | `Endar Spire` has **no `blueprints/` folder at all**. `PT-1346`: the Builder makes the bed. **Loom already has `new_creature`, `character_writer` and `contents_writer` — nothing is missing but the act** |
-| ⚠ **The second projection — margin is thinner** | Still not forced: nothing about one attack survives the fight. **The moment a placed creature's damage persists between visits, it is forced** |
+| **The bed has a creature** | ✓ **made in Loom by clicking** — the dialog, then a click on a square. A Sith Trooper stands at `[6, 4]` on the command deck, and **Lodestar reads back what Loom wrote** |
+| **Walk into it to attack** | ✓ **and it is Claude's reading.** A step onto an occupied square strikes instead of moving; no document rules it |
+| ⚠ **The New Creature dialog overflows by 58px at 1280×720** | Found by clicking it. **Reported, not fixed** — Loom's layout, and nobody asked |
+| ⚠⚠ **The wound does NOT survive leaving the area** | Combatants are rebuilt from the blueprint on every entry, which is what `§4` rules — *"not written: current vitality."* **The other choice would have been `PLAY-STATE-01` arriving**, and a persistent wound is a design question rather than a line of code |
+| **The second projection** | **Still not forced, and now by an explicit choice rather than by absence.** See the wound row |
 | ⚠⚠ **SIX things have had to behave somehow** | slice 1: the opposed tie and crit confirmation — **both ruled at `PT-1420`**. Slice 2: healing past `max`, negative damage as healing, `down → dead` in one blow. **Slice 3: a tie in INITIATIVE** |
 | **Five of the six are ruled** | `PT-1420` took two, `PT-1422` took the initiative tie **and the targeting tie with it**, and the brief ruled the clamp and the named heal door. **One left: `down → dead` in one blow writes only `character.died`** |
 | **The second projection** | **Not forced by the round.** `§4` makes a round transient; the encounter answers *who is standing* from its own combatants. `PLAY-STATE-01` is owed for state that outlives a fight |

@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 21 TOML files, 2,497 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 22 TOML files, 2,533 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -94,7 +94,10 @@ the named point in the second area, and back.
 | ⚠⚠ **What a save is NAMED, and how many** | `§5a` settles where; **nothing settles how many or what one is called**, and the header carries **no time, no name, no character and no package**. `Continue` cannot order saves without a field the format does not have. `§6`'s *"a save that is a log may want showing differently from a save that is a slot"* is the same question |
 | **Loading is step 3 of five** | `§5`'s sequence is resolve packages · snapshots · replay · validate · open. **Only replay is built** |
 | **The log and replay** | ✓ **built at batch 1**, in `Lodestar/lib/src/ledger.dart`. Chargen writes events; `replay()` reproduces the character field by field for **both** shapes. **In memory only** |
-| ⚠ **`EVENT-KINDS-01` has no creation vocabulary** | One kind, `character.created`, and payloads deliberately unspecified. **Thirteen kinds are proposed** in the ledger and the document does not know about them |
+| ⚠ **14 emitted kinds are not in `EVENT-KINDS-01`** | `PT-1415`'s thirteen plus `step-reopened`. **Now asserted rather than reported**: check A names them as an exception list, every entry is owed to the document, and a fifteenth fails the build. Writing them in is the owner's |
+| **The vocabulary reaches the code** | ✓ **extracted** to `event_kinds.toml` — 36 kinds from 24 rows — so both checks compare code to the DOCUMENT, and `check_extracts.py` watches it |
+| **Replay's silent no-op** | ✓ **closed.** `replayDetailed` returns every kind it had no case for; `replay()` drops the report. **The fix is the report, not the test** |
+| **Every kind has a lifetime** | ✓ **checked.** 36 of 36, and the four are exactly `PLAY-STATE-01 §2`'s |
 | ⚠ **The re-lock ruling is Claude's** | `character.step-reopened` carries its own discard list so an old log replays the same way after the flow changes. **Flagged, not ruled** |
 | ⚠ **`CHARACTER-RECORD-01 §2` vs `§5` on `abilities`** | `§2` says final scores, `§5` says bought scores. The ledger follows `§5` and `§1`'s principle. **Reported, not resolved** |
 | ⚠ **A droid model has no `id`** | `DROID-MODELS-01` is keyed by chassis; `character.model-set` records the **name** because there is nothing else |

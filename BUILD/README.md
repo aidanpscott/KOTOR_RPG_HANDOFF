@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `11` | [`PT-1407`, the attack gap surveyed, and Powers](11-pt1407-and-powers.md) | both | `73b5324` · `43f2840` |
 | `10` | [Batch 5a, three rulings, and the Sith stop searched](10-batch5a-and-the-sith-stop.md) | both | `a271f73` · `45a58a1` |
 | `09` | [Batch 5, a droid completes Skills, and Feats](09-droid-skills-and-feats.md) | both | `61d05ea` · `81ab9ec` |
 | `08` | [The droid Abilities close, and Skills](08-skills.md) | both | `4ffbe26` · `8668390` |

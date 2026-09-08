@@ -41,7 +41,7 @@ area and the walk, and character generation as far as the hub. 10 test files,
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 13 TOML files, 983 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 14 TOML files, 986 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
@@ -65,11 +65,16 @@ the named point in the second area, and back.
 | **`DROID-SKILLS-01` §2.3 vs §2.4** | ✓ **closed at `PT-1405`.** The grid is right and the totals lag: Assassin 15, Battle 13. `stated_total` still carries what `§2.4` says, with the ruling named beside it. Athletics is offered |
 | ⚠ **Science and Survival for droids** | On the 25-skill roster and **nowhere in the chapter**. Neither opened nor closed. Withheld, and said on screen |
 | ⚠ **`PT-621`'s Protocol carve-out** | Opens `Persuade` to a "Protocol chassis" that is not one of `§2.3`'s four bodies. The carve-out names an axis the table cannot express |
-| ⚠ **Three Sith base classes have no feat schedule** | **Searched and it holds.** All 34 `ATLAS/decisions/`, the Library's live tree, `CLASS-TABLES-AUTHORED` (`Level·BAB·Fort·Ref·Will`, no Feats column), `CLASSES-FORCE-PHB` (says it holds no level tables), and every `MAIN_WORK` file naming a Sith base class. **Level-30 totals exist; no cadence and no first-level count does.** Feats cannot complete for them |
+| **Three Sith base classes at creation** | ✓ **closed at `PT-1407`.** One feat at first level. `first_level_feats.toml` carries it as an override with `sets_cadence: false` |
+| ⚠ **Three Sith base classes at LEVEL-UP** | Still open, and `PT-1407` says so. Level-30 totals are authored — `PT-126` fixes the Sith Assassin's at 12 — and **when they gain the other eleven is unwritten** |
+| ⚠ **`CLASSES-FORCE-PHB`'s Jedi Guardian attack row is transposed** | It reads `picks 18 · chains 20`; `CLASS-ATTACKS-01` gives Combat **36** picks and assigns the Guardian **18** chains with **20** feats at 30. Capstones match at 11, which says the row was built from `§2.3` and the two numbers crossed. **The extraction is faithful; the source is wrong.** Reported, not fixed |
+| ⚠ **`PT-126` vs the Sith Assassin's rate** | `PT-126` ruled it **`Specialist`** *"by owner instruction"* and said the Sith side loses its `Middle` class; `CLASSES-FORCE-PHB` and `classes.json` both carry **`Middle`**. Does not touch creation; does touch attacks |
+| **`attack_chains` / `attack_picks_at_30`** | Populated for **14** classes, not one. Read from each PHB chapter's record table, which 5 of 6 Force classes and all prestige classes lack. **`picks` is derivable from `rate`** (`§3`: 36/27/18); **`chains` is not** — `§2.3` makes it a per-class assignment inside a band, and its table is headed *"Assigned so far"* |
 | ⚠ **`FEAT-SCHEDULE-01`'s "Seven schedules" row** | Reads `Every third from 1 · Sith Assassin · 10`, where its own summary gives Sith Assassin **12** and the grid's `Assassin` column reaches 10 on that cadence. Either a mislabel of the prestige Assassin, or a cadence contradicting `PT-126`'s owner-instructed 12. **Reported, not resolved** |
 | ⚠ **Skill Focus** | Half closed at `PT-1405`: the aptitude applies from level 2 and Skills are not repriced. **Still unbuildable** — `SKILLS-01 §12` says 23 exist, one per skill, and the library holds **one generic record with no skill on it** |
 | **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
-| **Hub steps 7–9** | Powers, Equipment, Identity are unbuilt. Skills and Feats are built |
+| **Hub steps 8–9** | Equipment and Identity are unbuilt. Skills, Feats and Powers are built |
+| ⚠ **Powers at 1st level reads two sources one way** | `MULTICLASS-01 §2.2a` states 2 at Jedi level 1 and `PT-128` corrected the Sith Assassin to it; `POWER-COSTS-01 §6` calls acquisition **open**. Read as compatible — §6's open item is the schedule *after* level 1 — **and that reading is Claude's, not a ruling** |
 | **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
 | **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |
 | **Five species parents** | The ruling asks for 57 records as 35 parents + 22 subraces; the corpus has 57 with all five parents present since `PT-1333`. ✓ closed at batch 4 |

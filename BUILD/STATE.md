@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `8884ac8` — `PT-1443`, the first real playtest | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `f7fe50d` — `DOCTRINE-FORMAT-01`'s reader | ⚠ no |
+| `Lodestar` | `70a1107` — `PT-1452`, the item blueprint | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `b2308e1` — authoring tests write to a copy of the bed | ⚠ no |
-| `KOTOR-RPG-APP` | `4f8a242` — `PT-1448`, the wound survives a quit | ⚠ no |
+| `Loom` | `a66960c` — `PT-1452`, Loom writes an item | ⚠ no |
+| `KOTOR-RPG-APP` | `1407b4e` — `PT-1452`, the seam reads the equipped weapon | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 210 — 595, all
+**`Lodestar` 282 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 214 — 614, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -131,8 +131,11 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | ⚠ **The door template** | `[[connections]] from` names a file in `blueprints/doors/` — **a folder in the layout with no format behind it.** Same stop one level down |
 | ⚠ **Path or handle is undecided** | `AUTHORED-CHARACTER-01` writes a path, `ATTACHMENT-01 §2` writes a bare handle. `DOCTRINE-FORMAT-01` settled it for doctrines; **the general ruling is still owed** |
 | ⚠ **`format = 1` is read by nobody** | `§4` shows it, `PT-1366` ruled it, and `package_open` does not read it. **A ruled field neither side implements** |
-| ⚠⚠ **Equipment is authorable and CANNOT be read — `BUILD 42` STOP** | `items/weapons/blaster-rifle` names `blueprints/items/…`, **a folder in `PACKAGE-FORMAT-01`'s layout with no format behind it and no reader** — the third instance of `BUILD/34`'s stop. The one thing that looks like an answer, `base-rules`'s `equipment.toml`, is the wrong shape: resolving a path by its last segment would make `PACKAGE-NAMING-01`'s *"identity and location are the same thing"* false, and its damage sits in an **untyped positional `values` array** whose shape changes by section. **Needs: what an `[equipment]` value refers to, and the format of whatever that is** |
-| ⚠ **TWO hardcoded weapons, not one** | `play_screen.dart:694` gives the PLAYER `unarmed 1d3`; `fight.dart:107` gives the TROOPER `vibroblade 1d6` — **a creature holding a blaster rifle attacking with a melee weapon at range.** The player has no `[equipment]` to read at all: chargen's Equipment step resolves an item's name and price, never dice |
+| ⚠⚠ **`PT-1453` — the wound is HALF fixed and the fix made two defects** | `BUILD 41` fixed the path it tested, not the one the request quoted. **My reading of the third exit:** `_endFight` and `_enter` persist; **leaving the screen with `esc` goes through neither.** Plus **N1** a second fight in an area with outcomes in the log ends immediately, and **N2** the working line grows without bound — six from one fight. **Not started; its own slice** |
+| ⚠ **The player is unarmed, and it is TWO fixes** | The seam half is done and shared. The other is chargen writing an `[equipment]` reference, which needs the class arrays' prose names to resolve to blueprint paths — **the same 18-of-41 problem that keeps Route 2's purse unoffered.** Not a seam change |
+| ⚠ **The viewport hygiene, 23 one-line additions** | Sized at `BUILD 42` as hygiene, not re-verification. **Deferred deliberately at `BUILD 43`**: a sweep across two repos folded into a feature slice makes both harder to review |
+| ~~⚠⚠ **Equipment is authorable and CANNOT be read**~~ | ✓ **closed at `BUILD 43`, `PT-1452`.** | `items/weapons/blaster-rifle` names `blueprints/items/…`, **a folder in `PACKAGE-FORMAT-01`'s layout with no format behind it and no reader** — the third instance of `BUILD/34`'s stop. The one thing that looks like an answer, `base-rules`'s `equipment.toml`, is the wrong shape: resolving a path by its last segment would make `PACKAGE-NAMING-01`'s *"identity and location are the same thing"* false, and its damage sits in an **untyped positional `values` array** whose shape changes by section. **Needs: what an `[equipment]` value refers to, and the format of whatever that is** |
+| ⚠ **`unarmed` is still ours** | `EQUIPMENT-01` has 25 base weapons and **no unarmed row**, so those dice are invented. `PT-1425` named it a placeholder; `PT-1452` did not change that. **Defined once now**, so the next search for invented numbers finds one hit |
 
 ### Save and load
 
@@ -210,7 +213,8 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **Loom's tests writing into the test bed** | ✓ `BUILD 39`, and **`BUILD 38` had only fixed the app.** Loom rewrote `endar-spire` — **the fixture every other suite loads** — on every run. Its sandbox **copies** where the app's **symlinks**: a reader wants a link, a writer wants a copy |
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
-| **The wound surviving a quit** | ✓ `BUILD 41`, `PT-1448`. `PT-1427` built the projection and **nothing wrote what it folds** — two paths end an encounter and only one persisted, and the log was discarded after replay. **The question the code called undecidable was already answered**: `encounter.ended` is `campaign` and `PT-1415` makes the log one per character per campaign |
+| **The item blueprint, and the equipped weapon** | ✓ `BUILD 43`, `PT-1452`. `[equipment]` → item → base type → dice, and **every link fails out loud**. The trooper's hardcoded vibroblade is gone — **a melee weapon swung at range by a creature holding a rifle.** ⚠ And the extraction's positional array **silently shifted**: a dropped em-dash put the Stun Baton's `attacks` in `balanced`'s place |
+| **The wound surviving a quit** | ⚠ **half** — `BUILD 41`, `PT-1448`. `PT-1427` built the projection and **nothing wrote what it folds** — two paths end an encounter and only one persisted, and the log was discarded after replay. **The question the code called undecidable was already answered**: `encounter.ended` is `campaign` and `PT-1415` makes the log one per character per campaign |
 | **The runner faking a pass** | ✓ `BUILD 41`. It built only when the binary was **missing**, so after the first run it never rebuilt again — for any change, ever. ⚠ **The third instrument to report success without looking** |
 | **The dialogue side panel** | ✓ `BUILD 40`. The board keeps FULL height and gives up width it was not using. ⚠ **`maxLines` was the click bug in a second costume** — ample in a 1280px strip, truncating in a 480px column |
 | **`§4c`'s colours** | ✓ **asserted at `BUILD 40`**, and nothing guarded them before. `TRACE-93`'s defect had been reproduced twice and caught by a person looking both times |

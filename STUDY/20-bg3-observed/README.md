@@ -285,6 +285,25 @@ own screen, twice.**
 `compatdata/1086940` is **empty**, so Proton was never used; **there is no `.exe`
 in the install**, so forcing Proton means fetching the Windows depot.
 
+> ## ⚠⚠ CORRECTION — `libssl` IS THE FIRST BLOCKER, NOT THE ONLY ONE
+>
+> **Recorded at `STUDY 24`, from `Tester`'s run. This section named `libssl.so.1.1`
+> as *the* blocker and that is half the story.**
+>
+> **`Tester` solved the loader half:** copying sniper's `libssl.so.1.1` and
+> `libcrypto.so.1.1` into a scratch directory and pointing `LD_LIBRARY_PATH`
+> there **removes the loader error entirely.** Everything below about OpenSSL 1.1
+> and the sniper/steamrt4 mismatch stands as *diagnosis*, but it is not what
+> stops the game.
+>
+> **⚠ The real blocker is the Steam bootstrap handoff.** `bg3` starts, **spawns
+> `steam.sh` to relaunch itself, and parks as a single sleeping thread with no
+> window.** Steam's own console shows it failing twice before `Tester` arrived.
+>
+> **So there are at least two blockers in series, and this section found the
+> first and stopped.** That is the same shape as this study's other errors — a
+> correct finding mistaken for a complete one.
+
 **⚠ 2 · It needs OpenSSL 1.1, absent from Debian 13.** `libssl.so.1.1` exists on
 this machine in exactly one place — inside the **sniper** runtime. Scoped:
 `find /` for `libssl.so.1.1` and `libcrypto.so.1.1`.
@@ -294,7 +313,9 @@ this machine in exactly one place — inside the **sniper** runtime. Scoped:
 a game's required runtime — **but steamrt4 does not carry `libssl.so.1.1`** and
 fails identically to a bare launch. **The runtime that has the library is
 `sniper`; the runtime provisioned is `4.0`.** That mismatch is the first place to
-look.
+look. ⚠ **Superseded as *the* answer** — `Tester` cleared the loader error with
+`LD_LIBRARY_PATH`, and the game still does not open a window. See the correction
+above: **the bootstrap handoff is the blocker that survives fixing this one.**
 
 **4 · No minidump is produced** — scoped: `/tmp`, `~/.local/share/Larian
 Studios/`, and the install tree, for `*.dmp` newer than 40 minutes.

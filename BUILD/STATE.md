@@ -96,7 +96,24 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ THE CAST PAYS AND DOES NOTHING — `PT-1487`
+### ⚠⚠ THE CAST PAYS AND DOES NOTHING — `PT-1487`, and the effect half needs AUTHORED COLUMNS
+
+⚠ **Alongside, not first, and neither is first.** `_cast(PowerRecord p)` has
+**no target parameter**, so a gate has no input and an effect has nothing to
+land on. One slice whose subject is the target: choose, check eligibility,
+resolve. `excludes` landing early was right because it is **data rather than
+behaviour**.
+
+⚠ **The gate must answer SILENT for 15 of the 22 powers open at 1st level** —
+4 have `excludes`, 3 have `targets`. Treating silence as either permission or
+refusal is wrong fifteen times.
+
+⚠⚠ **And the effect half is not extractable.** 53 saves in **19 phrasings**,
+with three genuine formulas — `DC 5 + character level`, ⚠ `DC 10 + attacker
+level` (the Force Scream chain), ⚠ `DC 5 + FORCE levels` (Affliction,
+Contagion, Plague) — and `Force Resistance` is an **opposed roll, not a save**.
+Damage dice appear in 25 of 104 and movement in **3**. **Authored columns
+first; that is a rules slice.**
 
 The verb landed at `PT-1478` and **the effect half does not exist.** The cost
 derivation is complete — pool, ceiling, true maximum, all three projected for

@@ -234,3 +234,57 @@ against a shape you would otherwise correct after 104.
 nine.** If `affects` cannot hold *"harms an enemy and heals the caster"*, I
 would rather learn it on row 23 than row 104 — and `not_modelled` is a
 perfectly good answer there.
+
+---
+
+# ⚠ AUTHORED — the two that might not fit, first — `PT-1492`
+
+**`Coder` flagged `Death Field` and `Drain Life` as possibly not fitting `affects` at all, and asked to learn that on row 23 rather than row 104. Authored first for exactly that reason.**
+
+## `affects` HOLDS, and the drain is `not_modelled`
+
+**Both harm an enemy AND heal the caster.** **⚠ `affects: enemy` is still correct — the power is AIMED at an enemy, and the self-heal is a CONSEQUENCE rather than a second target.** Same distinction as an attack that grants its wielder something.
+
+**⚠ And the drain goes in `not_modelled`, which is the mechanism already in use for `Force Resistance`** — not an eighteenth column for three rows. **`Coder` said it was not proposing an eighteenth and it should not have to.**
+
+```toml
+[[power]]
+name              = "Death Field"
+tier              = 2
+cost              = 20
+affects           = "enemy"
+area_squares      = 5
+save_type         = "Fortitude"
+dc_base           = 5
+dc_scale          = "attacker_level"
+dc_abilities      = "wis+cha"
+save_effect       = "halve"
+damage            = "1d4"
+damage_scale      = "force_level"
+damage_scale_to   = 20
+damage_scale_then = "1d4 per two levels"
+damage_max        = "20d4"
+not_modelled      = "drains the damage dealt to heal the caster"
+
+[[power]]
+name              = "Drain Life"
+tier              = 1
+cost              = 10
+affects           = "enemy"
+area_squares      = 0            # ⚠ single target — 0 is NOT silence
+save_type         = "Fortitude"
+dc_base           = 5
+dc_scale          = "attacker_level"
+dc_abilities      = "wis+cha"
+save_effect       = "halve"
+damage            = "1d4"
+damage_scale      = "force_level"
+damage_scale_to   = 20
+damage_scale_then = "1d4 per two levels"
+damage_max        = "15d4"
+not_modelled      = "drains the damage dealt to heal the caster"
+```
+
+**⚠ ONE THING THE SHAPE NEEDED AND THE WORKED ROW DID NOT SAY: `area_squares = 0` for a single target, against ABSENT for a power that does not say.** `Death Field` is 5 and `Drain Life` is 1 target — **and a missing `area_squares` on 85 rows would otherwise mean both "one target" and "nobody wrote it".** Eighteenth instance of that distinction in this corpus.
+
+**And `save_effect = "halve"` on both — *reduces damage by half* — which is the 5 of 24 `Coder` counted, not the 17 that negate.**

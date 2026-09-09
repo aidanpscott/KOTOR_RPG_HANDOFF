@@ -44,7 +44,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `86dcc0c` — `§4a` pinned, not fixed | ⚠ no |
+| `KOTOR-RPG-APP` | `c10c7a6` — `PT-1484` recorded, not built | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
@@ -96,7 +96,45 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ `§4a` NEEDS A RULING, AND IS PINNED UNTIL IT GETS ONE
+### ⚠ QUEUED, BOTH WAITING ON `Tester`'s GUARDIAN RUN
+
+**`PT-1484` — the item half is NOT OFFERED AT ALL** where it cannot reach this
+character. `PT-695` gives a profession one grant with the player choosing the
+form; where the item form cannot reach them **there is no choice to make**.
+Recorded in `grant_reaches_class_test.dart`; **its last assertion turning red
+is the fix working.**
+
+**`PT-1485` — an Acolyte who is not a Force user needs an item of their own.**
+⚠ The OPPOSITE operation to `PT-1484`: that one withholds an item a class
+cannot use, this one adds one a class can. `Acolyte` teaches **Mysticism**, a
+knowledge skill, and its grant is `Padawan Robe → Jedi Robe`; withholding would
+empty the item half for most of the roster.
+
+### ⚠⚠ `professions.teaches` IS `equipment.section` AGAIN
+
+**11 of 28 values are not a skill name.** Ten are a skill with flavour fused on
+— *"Athletics — they marched it into you before they trusted you with a
+rifle"* — and ⚠ **all ten resolve to a real skill when trimmed.** The eleventh
+is `Mysterious Stranger`'s `ANY SKILL`, which is a value.
+
+⚠ **The field is rendered to the player as their aptitude**, and it is a value
+used as a key — `PT-1480`'s defect, at `PT-1482`'s proportion. The split is
+mechanically decidable here, unlike the seven; **where the flavour goes is a
+data-shape ruling**, and it is good flavour.
+
+### ⚠ `targets`: THE NEGATIVE IS TRANSCRIBABLE, THE POSITIVE IS NOT
+
+*"Populate from the prose"* does not survive contact. The prose states a
+**negative** (*"does not affect droids"*) and `targets` is a **positive** list;
+of the 21 silent powers the cells name **no positive kind at all**. Converting
+needs the closed set of kinds and ⚠ **nothing declares it** — the four in use
+appear only inside individual cells.
+
+⚠ **Recording `excludes = ["droid"]` is transcription**, composes with
+`targets`, and lets a gate answer *permitted · excluded · silent* rather than
+guessing on 21. Needs a ruling on the field, not on the kinds.
+
+### ⚠⚠ `§4a` — RULED AT `PT-1484`, PINNED UNTIL THE GUARDIAN RUN
 
 `grantFor` keys on the **profession alone and never looks at the class**, so
 `Tester`'s open question is settled: **Agent and Guardian are one path, not

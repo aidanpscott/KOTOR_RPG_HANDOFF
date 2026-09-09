@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `cd3f6e2` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `cfbbd68` — `PT-1467`, the annotation beside a trait does not print | ⚠ no |
+| `KOTOR-RPG-APP` | `9fb1762` — `PT-1468`, who is here is placements plus the player | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 297 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 233 — 649, all
+**`Lodestar` 297 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 237 — 653, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,24 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ `PT-1468` — the runtime is fixed and there is NOTHING TO READ
+
+The player now resolves `[equipment]` by the same three hops a placement uses,
+and a record naming `items/weapons/blaster-rifle` fires a Blaster Rifle. **An
+Engineer will still swing a fist**, because two things are missing:
+
+- **A producer.** `EquipmentChoice` is a single `bool takesItem` and
+  `hub.dart` writes `items: const <String>[]`. ⚠ Scoped negative: **all seven
+  saves** carry `{"route":"standard","items":[],"credits":100}` and not one has
+  a weapon slot.
+- **The content.** `endar-spire` ships **one** item blueprint,
+  `items/weapons/blaster-rifle`. There is no Ion Blaster to point at.
+
+The screen now says why rather than swinging in silence. `item_disambiguation.
+toml` — still zero readers — may be the other half: the arrays name items in
+prose and 18 of 41 resolve to exactly one row, with `§2c` covering 14 more.
+
 
 ### ⚠ `PT-1467` — 51 of 149 aside-in-a-value cells remain
 

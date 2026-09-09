@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `ba1295f` — `PT-1486`, excludes transcribed | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
+| `Lodestar` | `a5afc6f` — `PT-1490`, a blueprint names its species | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `97e0c03` — `PT-1488`, the target slice | ⚠ no |
+| `Loom` | `627a2cd` — `PT-1490`, the writer names a species | ⚠ no |
+| `KOTOR-RPG-APP` | `7d8ec3f` — `PT-1490`, a placement has a kind | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 269 — 696, all
+**`Lodestar` 306 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 270 — 700, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,21 +96,29 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ A CHARACTER BLUEPRINT HAS NO SPECIES — `PT-1488`
+### ⚠⚠ `affects` — MY GATE CANNOT TELL A FRIEND FROM AN ENEMY
+
+`targets` and `excludes` say what KIND a power may affect. **Nothing says
+whether it is aimed at a friend or an enemy**, and six powers heal — three of
+them **party members**. So `PT-1488`'s gate would let you Force Push an ally
+and Heal a trooper with equal confidence. ⚠ **Mine to fix, and not fixable
+without the column**, which is in the filed amendment.
+
+### ✓ `PT-1490` — a character blueprint names its species (was: it did not)
 
 `AUTHORED-CHARACTER-01` gives it a name, a class, a level, a faction,
 abilities, vitality and protection **and no species and no chassis.** The Sith
 Trooper's file names none, `Loom`'s writer offers none, `OpenedCharacter` has
 no field for one.
 
-⚠ So **no placement has a kind**, `kindOf` returns null for every creature in
-the bed, and `PT-1488`'s gate is correct and **permanently silent about
-placements** — `PT-1486`'s `excludes` has nothing to refuse.
+✓ Both symptoms closed. A placement has a kind, so `excludes` has something to
+refuse; and `combatantsIn` reads speed from the species, per line 144. ⚠ **It
+happens to be 10 for a human, which is why the hardcoding survived every
+slice** — and where a species states none, `speedNote` says the default was
+used.
 
-⚠ **One absent field, two symptoms:** `combatantsIn` hardcodes `speed` because
-line 144 says speed lives on the species — *"the blueprint carrying one would
-be a second source for a fact the species already owns"* — **and there is no
-species to own it.**
+⚠ **`loom_can_write_test` caught the writer before it had the fields** — the
+first time that guard has fired on a field added the same day.
 
 
 ### ⚠⚠ THE CAST PAYS AND DOES NOTHING — `PT-1487`, and the effect half needs AUTHORED COLUMNS

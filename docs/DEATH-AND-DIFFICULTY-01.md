@@ -34,6 +34,16 @@
 
 **⚠ This is what the games actually do.** **A downed party member in KOTOR stands up when the fight ends; the only true loss is a total party defeat.**
 
+> **⚠⚠ THAT IS A PARTY RULE AND THE CODE APPLIES IT TO EVERYTHING — `PT-1515`.** The sentence above says it outright: **a downed PARTY MEMBER stands up when the fight ends.** `TEST 020` found an enemy doing the same thing, **and persisting it.**
+>
+> **⚠ SO NOTHING DIES.** Tester struck a sentinel to **−2** and it **stood again at 1 the moment combat ended**, with `character.revived` written into the log. After a full quit and Continue it is **still at 1.**
+>
+> **⚠⚠ AND THE CONSEQUENCE IS A GAME NOBODY DESIGNED: EVERY CREATURE ANYONE HAS EVER BEATEN STANDS AT 1 VITALITY, PERMANENTLY.** Tester's line is the one to keep — **a second visit is never a second fight. It is one hit.**
+>
+> **RULED: the stand-at-1 rule is the PARTY's.** An enemy reduced past its threshold **dies**, on every difficulty. **`Easy` protects the player from loss; it was never a promise that the galaxy is unkillable.**
+>
+> **⚠ And that makes `PT-1511`'s vacated square reachable for the first time.** Tester could not construct it *because nothing dies* — it will exist the moment this lands, and the wall-under-a-creature question stops being hypothetical.
+
 ### Normal
 
 > **Players can die. ⚠ So do BEAST and DROID companions. Henchmen get up.**

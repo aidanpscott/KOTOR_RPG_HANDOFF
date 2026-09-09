@@ -95,6 +95,17 @@ default = "floor"
 | **`difficult`** | yes | no | **costs DOUBLE to cross — `PT-1513`** |
 | **`hazard`** | yes | no | crossing it does something. **⚠ What, is unruled** |
 
+> **⚠⚠ IT COSTS DOUBLE, AND THE MULTIPLIER IS ON THE CREATURE — `PT-1513`.** `TEST 016` found it **costs nothing**: the move budget spends a flat 1 with no tile lookup, and `difficult` appears nowhere else in either repo.
+>
+> **⚠ And `STUDY 19` found the harder half: NEITHER SOURCE ENGINE EVER MODELLED IT.** `surfacemat.2da`'s `walk` and `walkcheck` are **booleans in K1 and NWN**, with no cost column — **Swamp, Mud and Water price identically to Stone.** So our code matched KOTOR exactly **and this document was the outlier.**
+>
+> **RULED: the document wins, because the tile type is offered.** Loom paints `difficult` beside four types that do something, in an idiom that reads like a rule — **an author paints it expecting it to bite.** A type that is offered and inert is `PT-1500`'s defect one layer up.
+>
+> **⚠ AND BG3'S ANSWER TRANSFERS AND OURS SHOULD COPY IT: the multiplier is a property of the CREATURE, not the tile.** `ActionResourceConsumeMultiplier(Movement, 4, 0)`, grouped so **one immunity clears every source at once.** Put it on the tile and every future exemption — a hover droid, a Force power, a boot — has to know about every terrain kind separately.
+>
+> **⚠ And `hazard` stays inert and stays unruled.** `§2·0a` says what it does is undecided, and **that is a different problem from a type whose cost was written and never spent.**
+
+
 **⚠ Five. Nothing else exists, and a package cannot add one** — `PT-1361`. A swamp is **`water` and `difficult` with swamp art**, not a new type.
 
 **⚠ And `door` is NOT a tile type**, though `§2`'s own legend example shows one. `§4a` makes a door **a connection with an optional template.** The example is wrong and is the kind of thing that would have become a second door model.

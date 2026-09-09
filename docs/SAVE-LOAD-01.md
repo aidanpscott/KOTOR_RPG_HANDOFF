@@ -62,7 +62,7 @@ magic          identifies the file as ours
 format version so a future change is detectable
 compressor     which one, so it can change without breaking old saves
 rules version  PT-1270's OF07 pin — what this log was played under
-⚠ PT-1514 — format = 2:
+⚠ THE HEADER RULING — format = 2:
 saved at       UTC milliseconds. A fact about the PLAY SESSION
 package        which package — so listing need not replay every log
 character      the player's name for them
@@ -70,7 +70,7 @@ class, level   what a save row shows beside a name
 area           where they were standing
 ```
 
-**⚠⚠ `format = 2` SINCE `PT-1514`, AND THE BUMP IS LOAD-BEARING RATHER THAN CEREMONIAL.** The header is **positional** and its length is **derived from the fields a reader knows**. New fields sit before the payload, so a `format = 1` build reading a `format = 2` save computes the payload offset short, hands header bytes to the decompressor, and reports **"Damaged save: the contents could not be unpacked."** **That is a wrong reason for a perfectly good file** — `PT-1366`'s motivating case exactly: *an old file must be distinguishable from a broken one.* The machinery to say the true thing already existed (`formatFromTheFuture`, *refused rather than read optimistically*) **and it only fires if the number moves.**
+**⚠⚠ `format = 2` SINCE THE HEADER RULING, AND THE BUMP IS LOAD-BEARING RATHER THAN CEREMONIAL.** The header is **positional** and its length is **derived from the fields a reader knows**. New fields sit before the payload, so a `format = 1` build reading a `format = 2` save computes the payload offset short, hands header bytes to the decompressor, and reports **"Damaged save: the contents could not be unpacked."** **That is a wrong reason for a perfectly good file** — `PT-1366`'s motivating case exactly: *an old file must be distinguishable from a broken one.* The machinery to say the true thing already existed (`formatFromTheFuture`, *refused rather than read optimistically*) **and it only fires if the number moves.**
 
 **⚠ And moving it is what keeps old saves readable, not what breaks them.** A `format = 1` save still parses and still yields its log; it carries none of the new fields, and **absent means *older than the field*** — never a value invented from the filesystem.
 
@@ -203,7 +203,7 @@ area           where they were standing
 
 **`PACKAGE-NAMING-01` answers this shape and the answer transfers:** the **path is identity**, a **name is what a player reads**, and **an id is derived from the name and stays correctable.** A character's name is free text and not unique; **`kaeda-vos.sav` is both readable and stable.**
 
-### ~~⚠ `Continue` ORDERS BY FILESYSTEM TIME, and the header gains NOTHING~~ — ⚠⚠ OVERTURNED AT `PT-1514`
+### ~~⚠ `Continue` ORDERS BY FILESYSTEM TIME, and the header gains NOTHING~~ — ⚠⚠ OVERTURNED, IN PLACE
 
 > **`PT-1416` ruled that and it was wrong.** The argument came from `PT-1358` — *"which tile sorts first is not a fact about the package"* — **and that holds for a SHELF, where nothing is being resumed. It does not hold here.**
 >

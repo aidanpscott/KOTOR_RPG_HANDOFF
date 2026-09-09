@@ -130,13 +130,30 @@ rules version  PT-1270's OF07 pin — what this log was played under
 
 **A player character's outcome goes in that character's log** — `PT-1415`'s one-log-per-character-per-campaign, unchanged.
 
-### ⚠ And an NPC has no log, which is the real question
+### ⚠ And an NPC has no log — CLOSED at `PT-1510`, not deferred
 
-**A wounded trooper's state is not a fact about any player.** It is **a fact about the campaign** — and today the campaign has **one character and therefore one file**, so the distinction costs nothing and is invisible.
+**A wounded trooper's state is not a fact about any player.** It is **a fact about the campaign** — and `PT-1415` already makes a save **one log per character per CAMPAIGN**, so the character's log *is* the campaign's log for a solo campaign. **That is the design, not a stand-in for one.**
 
-**⚠ It stops being invisible at multiplayer**, and `PT-1330` already says which way it goes: **in-fiction shared, out-of-fiction private.** A trooper's wound is **in-fiction**, so it belongs to a **shared campaign log** that does not exist yet.
+> **⚠⚠ RULED AT `PT-1510`: A PACKAGE IS A MODULE, NOT A WORLD.** Two characters in one package are **two campaigns of the same module** — *"two groups running the same book do not share a dead ogre"* — and it is what KOTOR and NWN both did.
 
-**So: the character's log carries world state today because it is the only log there is.** **⚠ Recorded as a known conflation rather than a design** — the split is `PT-1330`'s to force, and forcing it now would build a second log with one writer and no reader.
+**⚠ SO THE EARLIER "KNOWN CONFLATION" FRAMING IS REMOVED: THERE WAS NO CONFLATION.** This section previously recorded the character's log carrying world state as a debt to be split later. It is not a debt. **The scope was right; only the wording was wrong** — `PT-1510`.
+
+**⚠ And the multiplayer question is closed with it.** `PT-1330`'s *in-fiction shared, out-of-fiction private* still holds, and what it shares is a **campaign**: **multiplayer characters share a CAMPAIGN, not a package.** A shared campaign log is one log for one campaign's several characters — **not a per-package world log**, which is the thing this document used to be reaching for and which the ruling says does not exist.
+
+**⚠ WHAT WAS ACTUALLY WRONG WAS A SENTENCE**, and `TEST 018` found it by making a second character: the same tagged creature stood at **3 for one and 2 for the other, at the same time**, which is correct — while the app said *"encounter `a01-probe-room` left you at 3"*, **phrased about the room.** A fact about your campaign must say so, or a player meets an untouched creature they personally beat and is told nothing.
+
+> **⚠⚠ THE CONFLATION ARRIVED, AND IT IS NOT ONE — `PT-1510`.** `TEST 018` made a second character in one package and found **the same tagged creature at 3 for one and 2 for the other, at the same time.** Persistence works perfectly; **it is scoped to the character.**
+>
+> **⚠ AND NO CODE WOULD NEED TO BE WRONG FOR THIS TO HAPPEN — it falls out of the format.** An outcome is written into that character's own log, and a second character replays only its own.
+>
+> **RULED: A PACKAGE IS A MODULE, NOT A WORLD.** A campaign is the playthrough. **Two characters in one package are two campaigns of the same module** — exactly what `PT-1415` said: *one log per character per CAMPAIGN.*
+>
+> **⚠ That is what a published module IS.** Two groups running the same book do not share a dead ogre. **And it is what KOTOR and NWN both did** — a module is a scenario, not a place that remembers everyone who visited.
+>
+> **⚠ SO THE BEHAVIOUR IS CORRECT AND THE WORDING IS WRONG.** *"Encounter `a01-probe-room` left you at 3"* is **phrased about the room.** It is about **your campaign**, and the sentence must say so — otherwise a player meets an untouched creature they personally beat, **with no explanation anywhere.**
+>
+> **⚠ And the shared-log question is now CLOSED rather than deferred.** It was recorded as owed to multiplayer; **multiplayer characters share a CAMPAIGN, not a package**, so a shared campaign log is still the right home when it exists — **and this was never that case.**
+
 
 ---
 

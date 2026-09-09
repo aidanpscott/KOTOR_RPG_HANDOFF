@@ -158,6 +158,12 @@ area        = "a01-endar-spire"
 >
 > **RULED: an area not in this list is not in the package.** The manifest is the roster; **the folder is storage.** A package's contents are **declared, not discovered** — otherwise a stray file left in a folder becomes content, and `PT-1368`'s missing-versus-degraded distinction has nothing to measure against.
 >
+> **⚠⚠ AND `§1` ALREADY REQUIRED THIS — `PT-1507`.** *"A package is a folder. The manifest says what is in it and what it needs. **Nothing is discovered by scanning.**"* Line 11, and **`TRACE-89`'s central mechanism.**
+>
+> **So `PT-1505` is not a sentence I added.** `[order].areas` is the only field saying which areas a package has, **so membership was always the manifest's job** — and **the play client is the one program that never implemented `§1`.** Two of three were already obeying it.
+>
+> **⚠ That changes what kind of fix it is:** not a new rule reaching a program that disagreed, **but a rule that never reached one program at all.**
+>
 > **⚠ The section name is misleading and it stays.** Renaming it breaks every package written, and `format = 1` exists for changes that earn it. **This one is a sentence, not a version.**
 >
 > **⚠⚠ AND `§1` ALREADY REQUIRED THIS — found at the build, and it changes what kind of thing the fix was.** *"A package is a folder. The manifest says what is in it and what it needs. **Nothing is discovered by scanning**."* `[order].areas` is the only field that says which areas a package has, so **membership was always the manifest's job.** `validateConnections` reads areas that way and always has; `Loom` refuses to author past it. **The play client was not disagreeing with a new rule — it was the one program that never implemented `§1`.** The ruling names what was already required rather than adding to it.

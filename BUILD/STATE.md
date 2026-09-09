@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `05a7bf7` — `PT-1505` recorded, and `§1` already required it | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `a91e92e` — `PT-1510` closes the "known conflation" | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `7fc7620` — `PT-1505`, `openAreaIn`; two asserted clauses checked | ⚠ no |
+| `Lodestar` | `2e19964` — `PT-1501`, the check rolls on commit; `PT-1510` | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `cc9dc60` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `776f088` — `PT-1505`/`PT-1506`, the roster, the guard, the refusal | ⚠ no |
+| `Loom` | `7fc9d2d` — `PT-1500`, the palette says what it cannot list | ⚠ no |
+| `KOTOR-RPG-APP` | `da360c7` — level with `Lodestar` | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 334 · `Lens` 5 · `Loom` 123 · `KOTOR-RPG-APP` 280 — 742, all
+**`Lodestar` 340 · `Lens` 5 · `Loom` 127 · `KOTOR-RPG-APP` 280 — 752, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,53 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A SKILL GATE ON A `replies` LINK ROLLS ON COMMIT — `PT-1501`, BUILT
+
+**How a flag and a skill are told apart was already in the runtime.**
+`_gateVerdict` returns a third verdict, `Verdict.isACheck`, instead of
+pass/fail — **that exists so a check is OFFERED rather than filtered**, and
+`Option.check` is the term it kept for the amber bracket. `PT-1432` is not at
+risk from the fix; a test asserts the flag-gated reply is hidden while the
+skill-gated one is offered, in the same fixture as the roll.
+
+    a gate on a `replies` link, flag       HIDES
+    a gate on a `replies` link, skill      SHOWS, and ROLLS ON COMMIT
+    a gate on a `then` link                ROUTES the committed outcome
+
+⚠ **ONE ROLL, NOT TWO.** `§9` gates the outbound link as well — that is how an
+author says which node is the pass, not a second check — so the committed
+outcome is carried into `_pick` and routes there. **Order is meaning.**
+
+⚠ **Nothing rolls while the list is merely shown**, or opening a conversation
+spends the check. Asserted.
+
+**Measured against the shipped bed, 4000 commits per rank: 35.9% at rank 0
+(expected 35.0%) and 56.2% at rank 4 (expected 55.0%).**
+
+### ⚠⚠ A SAVE HEADER CARRIES NOTHING ABOUT THE GAME — `TEST 018`'s two, one root
+
+`SaveEntry` is `handle`, `formatVersion`, `compressor`, `rulesVersion`. **No
+name, no character, no level, no place, no time.** Both of `TEST 018`'s
+observations fall out of that single fact:
+
+- **`Load Game` lists the older save first and `Continue` takes the newer.**
+  The screen that offers a choice and the button that makes one **disagree
+  about which is first.**
+- **The only distinguishing field on a save row is the id.**
+
+⚠⚠ **AND THE SHARP EDGE: `Continue` ALREADY DOES THE THING THE ENGINE SAYS
+CANNOT BE DONE HONESTLY.** `SaveListing` refuses to supply a "most recent" —
+*"ordering by file mtime would be the caller's filesystem guessing at a fact
+the format does not record"* — and `SaveStore.mostRecentHandle` orders by file
+mtime. **One surface refuses the guess and the other is built on it**, which is
+exactly why they disagree.
+
+⚠ **Not built, and deliberately.** Making the two agree is one line; making
+them agree *honestly* is a **format** change — `SAVE-LOAD-01` giving the header
+a time and an identity — and that is a ruling, not a UI decision. **The owner
+called these observations rather than defects; this is the root under both, for
+whenever they are ruled.**
 
 ### ⚠⚠ A HELPFUL CLAUSE ASSERTED RATHER THAN CHECKED — THREE INSTANCES
 
@@ -173,12 +220,18 @@ measured.
 COUNT.** Truncation can then hide *which*, never *that*. Anywhere else joining
 a list into one capped `Text` has the same exposure.
 
-### ⚠ `PT-1500` — THE PALETTE, RULED AND UNSTARTED
+### ✅ `PT-1500` — THE PALETTE. **BUILT.**
 
-`right_pane`'s `folderFor` has one entry; for the other nine kinds `of()`
-returns `const []` **without looking at disk**, so *"none in this package"* is
-a constant rather than a fact. Fourteenth instance of absence-versus-blank and
-the first where the blank is a hardcoded empty list.
+Three kinds have a home and **none of the three was invented**: `creatures` →
+`blueprints/characters`, `doctrines` → `blueprints/doctrines`, `items` →
+`blueprints/items`. Each is a constant `Lodestar` already declares, a `Loom`
+writer already writes, and a folder the shipped bed already has.
+
+⚠ **THE OTHER SEVEN GET NOTHING AND THAT IS THE ANSWER.** `doors`,
+`encounters`, `placeables`, `sounds`, `stores`, `triggers`, `waypoints` have
+**no format, no reader, no writer, no folder constant.** They report *cannot
+list*, in the Builder's own terms. Inventing homes to make the pane look
+complete would be the same move as the hardcoded `const []`, one step along.
 
 
 ### ⚠⚠ `PT-1367`'s PREFABS ARE UNBUILT AND WERE UNTRACKED — `TEST 017`

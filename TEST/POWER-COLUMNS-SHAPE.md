@@ -99,3 +99,82 @@ condition     = "stunned"
 nearly unique. A column would be null on 101 rows and a push system would serve
 three powers. ⚠ **Leave it in the prose and let the line say so**; when a
 fourth power needs it, that is the slice that earns it.
+
+---
+
+# ⚠⚠ AMENDMENT before you author — four things the worked row was missing
+
+You asked, and measuring found four. **A shape corrected after 104 rows is 104
+rows**, so all four are here with their counts.
+
+## 1 · `save_effect` — what a SUCCESSFUL save does · **24 of 53**
+
+    save_effect    negates | half            null = the document does not say
+
+⚠ Without it a save is rolled and **nothing knows what passing means.** 17
+powers say *negates*, 5 say *half*, 2 say *"results in no effect"* — which is
+`negates` in different words, and is why this is a column rather than a
+keyword match. The other 29 saves state nothing, and `null` must stay
+distinguishable from `negates`.
+
+## 2 · `area_squares` — **19 of 104**, and it changes the TARGET slice
+
+    area_squares   integer radius in SQUARES   null = a single target
+
+⚠ **Nineteen powers do not have "a target".** *"all enemies within a 10-metre
+radius"*, *"every creature in the user's line of sight within 10 metres"*,
+*"every enemy within a 15-meter radius"*.
+
+⚠ **In squares, because that is the board's unit** — and the document already
+converts, twice: *"a 10-metre radius — 5 squares"*, *"14 metres — 7 squares"*.
+**Please keep converting; the app cannot use metres and I do not want to divide
+by two and call it a rule.**
+
+## 3 · `damage_per_round` — **6 of 104**
+
+    damage_per_round   true                   null = once, on the cast
+
+`Force Choke` and `Force Strangle` deal their damage *"each round, for the
+duration"*. Without this, `damage` × `duration` is unresolvable: **the same two
+numbers mean one hit or twelve.**
+
+## 4 · ⚠⚠ `affects` — WHO the power is aimed at · **and this one is not a column, it is a gap in my gate**
+
+    affects        enemy | ally | self        null = the document does not say
+
+Six powers **heal**, and ⚠ **three of them heal party members**: *"heals all
+party members within 14 metres"*. `Dark Healing` heals **self**. `Death Field`
+and `Drain Life` damage an enemy **and** heal the caster.
+
+⚠ **`targets` and `excludes` say what KIND may be affected. Nothing says
+whether a power is aimed at a friend or an enemy** — so `PT-1488`'s gate would
+let you Force Push an ally and Heal a trooper with equal confidence. **That is
+mine to fix and I cannot fix it without this column.**
+
+## The worked row, amended
+
+```toml
+[[powers]]
+id               = "force_choke"
+save_type        = "fortitude"
+save_effect      = "negates"
+dc_base          = 5
+dc_scale         = "caster_level"
+dc_abilities     = "wis+cha"
+affects          = "enemy"
+area_squares     = null          # a single target
+damage_die       = "1d6"
+damage_per       = 1
+damage_scale     = "force_levels"
+damage_to        = 20
+damage_then      = 2
+damage_max       = "25d6"
+damage_per_round = true          # ⚠ each round, for the duration
+duration         = 2
+condition        = "stunned"
+```
+
+⚠ **Seventeen columns, and I am not proposing an eighteenth.** Every one is a
+fact the document already states in prose; none is a derivation. If a row needs
+something none of them holds, `not_modelled` is the honest answer and I would
+rather read that than a column bent to fit.

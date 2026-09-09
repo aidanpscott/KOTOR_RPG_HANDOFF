@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `44` | [`PT-1453` — more than one, and the class underneath it](44-more-than-one.md) | `Lodestar` · `Loom` · app | `a42f9b3` |
 | `43` | [`PT-1452` — the item blueprint, and the trooper fires its rifle](43-the-item-blueprint.md) | all four | `1407b4e` |
 | `42` | [⚠ STOP — the equipped weapon cannot be read](42-the-equipment-stop.md) | none — nothing built | — |
 | `41` | [The runner faked a pass, and the wound survives a quit](41-the-runner-and-the-wound.md) | `KOTOR-RPG-APP` | `4f8a242` |

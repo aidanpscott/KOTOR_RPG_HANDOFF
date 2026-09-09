@@ -39,7 +39,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `a46f6e9` — three extracts re-run | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `890db53` — `extract_feats.py` | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `3a24455` — `PT-1459`, a dead check is refused | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
@@ -100,10 +100,12 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 | | Need |
 |---|---|
+| ⚠⚠ **`PT-1464` — my droid wiring HARD-BLOCKS four classes** | Soldier, Marksman, Brawler and Saboteur, **with Soldier the pre-selected default** — pick Droid, leave the class alone, and you cannot create a character. ⚠ **I called null "the honest answer" and asserted it in a test; it is honest and enforced at the WRONG STEP.** `STARTING-EQUIPMENT-01 §3` opens nine of eighteen classes to a droid and means it. **The bar belongs at the CLASS step**, as `PT-92` greys out the Force classes there. The nine are on disk — `droid_arrays.toml` has exactly nine rows |
+| ⚠ **Ten array cells mix a VALUE with an ANNOTATION** | *"1 Sensor Probe — was Adrenal Stamina"*, *"NONE — the class feature is the weapon"*, *"Ion Blaster — w_blaste_02, 50cr"*. **`PT-1463`'s defect in a second file**, and `PT-1464` reports it now printing to players. ⚠ **This, not unresolved names, is what actually blocks arming the player** |
 | ⚠⚠ **`item_disambiguation.toml` — 14 rows, ZERO readers** | ⚠ **It is the answer to a blocker I cited twice.** `STATE` has said arming the player is blocked because *"only 18 of 41 array names resolve to exactly one catalogue row; §2c disambiguates 14"* — **those 14 ship in `base-rules` and nothing opens them.** The remaining gap is 41 − 18 − 14 |
 | ⚠ **`two_weapon.toml` — 19 rows, ZERO readers** | The per-class two-weapon kit. Authored, shipped, unread |
 | ⚠⚠ **23 of 30 duplicated documents have DIVERGED** | `HANDOFF/docs/` is **the copy visible to the owner's token** and is stale in 23 of 30 — `PLAYTEST-RULINGS-01` is **11,781 lines there against 54,233** at source. ⚠ **`sync_docs.py` was built for exactly this at `PT-245` and its paths no longer exist**: it globs a directory that is not there and prints *"docs/ matches the working tree"*, rc 0. **Its own slice** |
-| ⚠ **`feats.json` cannot be re-extracted yet** | **No `extract_feats.py` exists** — it was done ad hoc at batch 3c. And **`PT-1462`'s marks were appended to the EFFECTS CELL**, the column extracted into `effect`, **which the Feats screen shows a player**. ⚠ **Needs somewhere for a defect annotation to live that is not a data cell** |
+| ⚠ **`starting_equipment.json` is stale** | From `PT-1464`'s edit. `event_kinds` stays stale deliberately |
 | ⚠ **`Environmental Sealing` says `selectable` and means `granted`** | Its own description reads *"Granted at 1st level to every droid"*, and `availability` **already has a `granted` value used by 188 feats.** A wrong value, not a missing field — **and deriving it from prose is `TRACE-83` again.** This is why a droid is still charged for a feat it already has |
 | ⚠ **`Plating Proficiency: Light` is misfiled at source** | Line 80 of `FEATS-LIBRARY-01`, under **§3 Organics only**, its own text saying **DROID ONLY**. **The extraction is faithful; the source row belongs in §4.** ⚠ Marked at source as `PT-1462`. *(My earlier claim that it was absent from the document was wrong — I grepped `HANDOFF/docs/`'s stale copy.)* |
 | ⚠ **Feat groups 2 and 5 are still offered to everyone** | Group 2 is *"organics and combat droids"* and **nothing says which chassis is a combat droid**; group 5 is restricted by class or chassis and **the extract carries no field naming which.** Left offered rather than guessed at, with a test asserting they still are |
@@ -243,6 +245,7 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The item blueprint, and the equipped weapon** | ✓ `BUILD 43`, `PT-1452`. `[equipment]` → item → base type → dice, and **every link fails out loud**. The trooper's hardcoded vibroblade is gone — **a melee weapon swung at range by a creature holding a rifle.** ⚠ And the extraction's positional array **silently shifted**: a dropped em-dash put the Stun Baton's `attacks` in `balanced`'s place |
+| **`extract_feats.py`** | ✓ `BUILD 49`, `PT-1463`. The corpus's largest extract **could not be re-run at all** — ad hoc at batch 3c, like `equipment.json` before it. ⚠ **The control is exact reproduction and it passes**: 320 of 320, zero field differences, only `source` lines moved. Three bugs in the first attempt were invisible in the output and obvious in the diff |
 | **The Builder refuses what `validate` refuses** | ✓ `BUILD 47`, `PT-1379`/`PT-1461`. The tab showed the problems the whole time **and wrote anyway** — which is why `PT-1459` made the bed invalid: **Loom wrote it.** Refuses on ANY problem, so a later check needs no wiring |
 | **The feat eligibility field** | ✓ `BUILD 47`, `PT-1460` — ⚠ **and it already existed.** `section` IS `FEATS-LIBRARY-01`'s five groups, counts matching 16/9/68, **and nothing read it.** Same shape as `droid_arrays.toml`, one slice apart |
 | **A front-end pinned behind the engine** | ✓ `BUILD 47`. `check_engine_pin.py` catches **the class, not the instance** — a test can only fail on behaviour it already knows to look for. Compares each lock to the engine's `origin/main`; `PT-1451`'s three exit codes, all controlled |

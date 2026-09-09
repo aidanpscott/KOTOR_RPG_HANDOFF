@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `0cded88` — extracts current | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `ba1295f` — `PT-1486`, excludes transcribed | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `c10c7a6` — `PT-1484` recorded, not built | ⚠ no |
+| `KOTOR-RPG-APP` | `4bcc8d9` — `PT-1486`, flavour and excludes | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 257 — 684, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 263 — 690, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,6 +96,24 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
+### ⚠⚠ THE CAST PAYS AND DOES NOTHING — `PT-1487`
+
+The verb landed at `PT-1478` and **the effect half does not exist.** The cost
+derivation is complete — pool, ceiling, true maximum, all three projected for
+the first time — and then the line prints the power's prose, **which promises
+an outcome**: *"1d6 per two Force levels, maximum 12d6"* reads as a promise. A
+trooper hit by Force Push was 18 of 18, in the same square, unmoved.
+
+⚠ Filed as the next question rather than a regression, which is right: nothing
+claimed the effects were built.
+
+### ⚠ `PT-1484` IS UNBLOCKED
+
+`Tester`'s Guardian confirmation has landed and resolves the open question the
+same way: **a build difference, not a class path.** The fix is ruled and
+recorded in `grant_reaches_class_test.dart`.
+
+
 ### ⚠ QUEUED, BOTH WAITING ON `Tester`'s GUARDIAN RUN
 
 **`PT-1484` — the item half is NOT OFFERED AT ALL** where it cannot reach this
@@ -110,19 +128,20 @@ cannot use, this one adds one a class can. `Acolyte` teaches **Mysticism**, a
 knowledge skill, and its grant is `Padawan Robe → Jedi Robe`; withholding would
 empty the item half for most of the roster.
 
-### ⚠⚠ `professions.teaches` IS `equipment.section` AGAIN
+### ✓ `professions.teaches` — split at `PT-1486` (was: a value used as a key)
 
 **11 of 28 values are not a skill name.** Ten are a skill with flavour fused on
 — *"Athletics — they marched it into you before they trusted you with a
 rifle"* — and ⚠ **all ten resolve to a real skill when trimmed.** The eleventh
 is `Mysterious Stranger`'s `ANY SKILL`, which is a value.
 
-⚠ **The field is rendered to the player as their aptitude**, and it is a value
-used as a key — `PT-1480`'s defect, at `PT-1482`'s proportion. The split is
-mechanically decidable here, unlike the seven; **where the flavour goes is a
-data-shape ruling**, and it is good flavour.
+✓ Split into `teaches` and `teaches_flavour`. ⚠⚠ **`flavour` is a THIRD KIND OF
+FIELD** — rendered, and never a key — and it is the category the corpus was
+missing through four slices of annotation work: every sweep had two boxes, and
+the fused cells that kept resisting were the ones that were **both**.
+**`flavour` is NOT exempt from `check_annotations`**, because it is shown.
 
-### ⚠ `targets`: THE NEGATIVE IS TRANSCRIBABLE, THE POSITIVE IS NOT
+### ✓ `targets` — the negative is transcribed (`PT-1486`)
 
 *"Populate from the prose"* does not survive contact. The prose states a
 **negative** (*"does not affect droids"*) and `targets` is a **positive** list;
@@ -130,9 +149,11 @@ of the 21 silent powers the cells name **no positive kind at all**. Converting
 needs the closed set of kinds and ⚠ **nothing declares it** — the four in use
 appear only inside individual cells.
 
-⚠ **Recording `excludes = ["droid"]` is transcription**, composes with
-`targets`, and lets a gate answer *permitted · excluded · silent* rather than
-guessing on 21. Needs a ruling on the field, not on the kinds.
+✓ **`excludes` is built.** 25 powers carry it; a droid question is answerable
+for **41 of 104 rather than 17**, with nothing inferred. Three sentences are
+deliberately not transcribed — a conditional, a word outside the four kinds,
+and a quotation of the source. ⚠ **63 are still silent, and that is the
+document, not the extractor.**
 
 ### ⚠⚠ `§4a` — RULED AT `PT-1484`, PINNED UNTIL THE GUARDIAN RUN
 

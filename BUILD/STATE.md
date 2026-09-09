@@ -22,8 +22,9 @@ with a slice report, this file is the later one.
 wants the code where the games are. **Use `~/kotor-repos` in anything you
 write** — it is the stable name and it is why the move cost one symlink.
 
-**⚠ Steam can delete things under `common/` on a verify.** Everything except
-the uncommitted files named below is on GitHub, so the exposure is a re-clone.
+**⚠ Steam can delete things under `common/` on a verify.** ✓ **Everything is
+now on GitHub** — the app's last uncommitted work went in at `BUILD 38` — so
+the exposure is a re-clone and nothing else.
 
 **⚠ Packages and saves did NOT move and are not repo paths.**
 `~/.local/share/kotor-rpg/`, derived from `XDG_DATA_HOME`/`$HOME` by
@@ -43,15 +44,16 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `f7fe50d` — `DOCTRINE-FORMAT-01`'s reader | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `387fcf1` — the doctrine format, and a check instead of an errand | ⚠ no |
-| `KOTOR-RPG-APP` | `14b02f5` — the capture output path is relative | ⚠ no |
+| `KOTOR-RPG-APP` | `3d97d52` — `PT-1445`, a log records the id | ⚠ no |
 
-**⚠ NOT all clean.** `KOTOR-RPG-APP` carries **10 uncommitted files** — see the
-first row of *What is open*. The other five are clean and level with origin.
+**All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
+committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206 (202 pass, ⚠ 4
-failing).** The four failures are the uncommitted work, not the codebase.
+**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206.** ✓ **All
+green**, and ⚠ **the suite no longer writes into `~/.local/share/kotor-rpg/`** —
+`BUILD 38`.
 
 ## What each repository is
 
@@ -90,14 +92,12 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### The live wall
+### ⚠ The live wall is clear
 
 | | Need |
 |---|---|
-| ⚠⚠ **10 uncommitted files in the app, and 4 red tests** | The previous session's `PT-1443` fix, unpushed. `hub.dart` logs `packageId` where the tests still expect `packageName` — `ledger_test` ×3, `save_round_trip_test` ×1. **Whether the log records the id or the name is a `PACKAGE-NAMING-01` ruling**, and `SaveStore.listFor` already carries a both-ways concession for old saves. **Not decided by an agent** |
-| ⚠⚠ **`PT-1443` — six defects in ten minutes** | The first time the owner ran both programs. Saves not filtered by package; `Continue` red-screens on `base-rules`; **nothing saved at all on the real folder**; Select Premade empty; Back after the hub silently entering play. The uncommitted work above addresses most of them |
-| ⚠ **A temp-directory test passed where the real path failed — three times** | `PT-1382`, `PT-1425`, `PT-1417`. **The pattern, not the instances, is the finding** |
-| ⚠ **And the mirror of it: 19 app test files write to the REAL data folder** | `Locations.desktop()`, not a temp dir. `kaeda-vos.sav` is rewritten by every suite run — same bytes, so `PT-1265` holds, but it is a write into live data. **`BUILD 37`, reported not fixed** |
+| **Nothing is open here** | ✓ `PT-1443`'s save work and the suite's writes into live data both closed at `BUILD 38`. What remains of `PT-1443` is design — the next section |
+| ⚠ **A temp-directory test passed where the real path failed — three times** | `PT-1382`, `PT-1425`, `PT-1417`. **The pattern, not the instances, is the finding** — and it is why `BUILD 38` kept every real-shelf READ rather than sandboxing the suite wholesale |
 
 ### Asked for at the playtest, and not built
 
@@ -189,4 +189,7 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **Every dialog scrolls, and `New Creature`'s 58px overflow** | ✓ `BUILD 34`, one fix. ⚠ **And the rule it produced:** anything you can click must be laid out where it can be seen — **three times this session** a scroll turned *content you cannot see* into *content you can click by accident* |
 | **The `Lens` board re-fits** | ✓ `BUILD 32`. `_tile` was cached so a player's zoom survives a rebuild, and it therefore never re-fitted when the **view** changed. **A deliberate zoom is still the player's** |
 | **On the machine, runnable** | ✓ `BUILD 36`. `run-app.sh`, `run-loom.sh`, `env.sh` |
+| **`PT-1445` — a log records the id, never the name** | ✓ `BUILD 38`, and **the four failing tests were RIGHT.** `hub.dart` had two paths to one record and only the log half had moved to the id; `recordFromChoices` still carried the name. **One line, zero test edits.** `replay()` cannot map an id back to a name, so the record had to move and the log could not |
+| **`SaveStore.listFor`'s both-ways read** | ✓ recorded as a **migration allowance** — reads both, writes one. **When it can go is checkable:** when no save remains whose `package` is not an id in the library |
+| **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The tree moved to the Steam library** | ✓ `BUILD 37`. Baseline before, identical after. **No path dependency existed** — `Lens` and `Lodestar` are git dependencies through `~/.pub-cache` |

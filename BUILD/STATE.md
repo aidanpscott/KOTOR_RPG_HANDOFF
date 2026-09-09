@@ -101,7 +101,7 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | | Need |
 |---|---|
 | ⚠ **Eight defects and three questions are open** | `BUILD 41 §4` names them all. The sharpest: **the hub tells the player nothing is saved directly above the button that saves** — the sentence that produced `PT-1443` — and **Loom's entry-area chooser sits below the fold**, which is `BUILD/34`'s rule a fourth time |
-| ⚠ **23 test files lie about their viewport** | `MediaQuery` claims 1280×720 while the surface stays Flutter's default **800×600**, so widgets size for one screen and are laid out in another. It produced a 78px overflow that **does not exist in the product**. One fixed at `BUILD 41`; the rest reported rather than swept |
+| **23 test files lie about their viewport** | ✓ **sized at `BUILD 42`, and it is hygiene rather than re-verification.** `MediaQuery` claims 1280×720 while the surface stays **800×600**. ⚠ **NONE of the 23 asserts a geometric fact** — all are text-and-interaction; the single `getCenter` is positioning a mouse, not claiming a layout. So **no published layout number rests on them**, and **the side panel is not among them**: its tests set the surface, and its tile figure was cross-checked against a real capture (56px computed, ~57px on screen). The cost of the fix is 23 one-line additions; the gain is removing spurious overflow noise like the 78px one at `BUILD 41` |
 | ⚠ **Three `check_*.py` exit 0 having examined nothing** | From an empty tree `check_derived`, `check_absence_claims` and `check_stale_claims` print *"0 declared pairs"* / *"0 documents known"* and **still exit 0**. A reader sees the zero; **automation reads the exit code** |
 | ⚠ **`check_citations` exits 1 today** | `TEMPORAL-LEAKAGE-FINDINGS-01 §2` unresolved; `check_extracts` reports `stale 1`. **Pre-existing, found while auditing, not touched** |
 
@@ -131,7 +131,8 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | ⚠ **The door template** | `[[connections]] from` names a file in `blueprints/doors/` — **a folder in the layout with no format behind it.** Same stop one level down |
 | ⚠ **Path or handle is undecided** | `AUTHORED-CHARACTER-01` writes a path, `ATTACHMENT-01 §2` writes a bare handle. `DOCTRINE-FORMAT-01` settled it for doctrines; **the general ruling is still owed** |
 | ⚠ **`format = 1` is read by nobody** | `§4` shows it, `PT-1366` ruled it, and `package_open` does not read it. **A ruled field neither side implements** |
-| ⚠ **Equipment is authorable but not read in play** | The bed's trooper carries a blaster rifle, made by clicking. `strike()` still uses a hardcoded fist. **`PT-1425`'s fist is now a code gap, not a data gap** |
+| ⚠⚠ **Equipment is authorable and CANNOT be read — `BUILD 42` STOP** | `items/weapons/blaster-rifle` names `blueprints/items/…`, **a folder in `PACKAGE-FORMAT-01`'s layout with no format behind it and no reader** — the third instance of `BUILD/34`'s stop. The one thing that looks like an answer, `base-rules`'s `equipment.toml`, is the wrong shape: resolving a path by its last segment would make `PACKAGE-NAMING-01`'s *"identity and location are the same thing"* false, and its damage sits in an **untyped positional `values` array** whose shape changes by section. **Needs: what an `[equipment]` value refers to, and the format of whatever that is** |
+| ⚠ **TWO hardcoded weapons, not one** | `play_screen.dart:694` gives the PLAYER `unarmed 1d3`; `fight.dart:107` gives the TROOPER `vibroblade 1d6` — **a creature holding a blaster rifle attacking with a melee weapon at range.** The player has no `[equipment]` to read at all: chargen's Equipment step resolves an item's name and price, never dice |
 
 ### Save and load
 

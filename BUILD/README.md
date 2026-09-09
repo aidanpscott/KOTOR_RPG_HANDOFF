@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `42` | [⚠ STOP — the equipped weapon cannot be read](42-the-equipment-stop.md) | none — nothing built | — |
 | `41` | [The runner faked a pass, and the wound survives a quit](41-the-runner-and-the-wound.md) | `KOTOR-RPG-APP` | `4f8a242` |
 | `40` | [`PT-1447` — the side panel, and the room doubles](40-the-side-panel.md) | `KOTOR-RPG-APP` | `f924efb` |
 | `39` | [The other half of the sandbox, and the `Tester` protocol](39-the-other-half-of-the-sandbox.md) | `Loom` | `b2308e1` |

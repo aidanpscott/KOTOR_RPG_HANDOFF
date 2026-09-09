@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `1467947` — `PT-1473`, eleven of eleven resolve | ⚠ no |
-| `KOTOR-RPG-APP` | `0cd77e0` — `PT-1473`, 36 base types | ⚠ no |
+| `KOTOR-RPG-APP` | `2eea873` — `PT-1475`, the producer | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 297 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 241 — 661, all
+**`Lodestar` 297 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 246 — 666, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -122,7 +122,45 @@ war blade). Both need a ruling.
 cannot read it. **When the producer lands the table must move to data** —
 `item_disambiguation.toml` is the shape.
 
-### ⚠ `PT-1468` — the producer, still open
+### ✓ `PT-1468` — THE PRODUCER IS BUILT (`PT-1475`)
+
+Chargen writes `weapon_r_1 = "items/weapons/<base>"`, the same shape a
+blueprint uses. **23 of 28 arrays arm a character**; 1 is the Brawler's `NONE`,
+a value. Proved end to end: the producer's output goes through `equippedFrom`
+and comes back **Blaster Rifle 1d12**. `item_disambiguation.toml` has its first
+reader.
+
+⚠⚠ **AND THE LOG IS THE DURABLE THING.** The first version wrote the reference
+into the derived record and not into the EVENT; `ledger_test`'s replay caught
+it in the same run. One `equipmentPayload()` now, called by both.
+
+⚠ **A taken grant names which item** — `taken: "item"` named nothing. An item
+taken with no grant row resolving writes `item_unresolved`.
+
+### ⚠ FOUR CLASSES ARE UNARMED BY ONE HYPHEN
+
+`EQUIPMENT-01` spells the base type `Hold-Out Blaster`; **the arrays AND the
+item catalogue** spell it `Hold Out Blaster`. Two documents against one. Agent
+and Medic, organic and droid. The catalogue row is `g_w_hldoblstr01`,
+unambiguous, 100cr. ⚠ **Which spelling is right is the owner's.**
+
+### ⚠ `§4a`'s GRANT REACHES CLASSES IT DOES NOT NAME — `TEST 008` D3
+
+The label names Soldier, Scout and Duelist; a Jedi Guardian is none of them and
+is still offered the grant. A selection defect in which grant reaches which
+class. **Not fixed** — the log now makes it visible in any save it happens in.
+
+### ⚠ A CONDITIONAL-DAMAGE MODEL — costed, not built
+
+`1d4 + 1d10 vs droid` is the **only** conditional damage in 36 base types, and
+needs four structural things: a damage expression that is a LIST of conditioned
+terms (`Weapon` is three scalars); a target predicate the engine can evaluate
+(**`Combatant` does not know whether it is a droid**); a grammar inferred from
+more than one example, with `PT-1452`'s refusal surviving it; and a damage line
+that can say *"1d10 because it is a droid"*. ⚠ `PT-1474`'s `targets` column is
+the same fact from the other side — whoever builds one should build both.
+
+### ⚠ `PT-1468` — what is left
 
 **A producer is still missing.** `EquipmentChoice` is a single `bool
 takesItem` and `hub.dart` writes `items: const <String>[]`. ⚠ Scoped negative:

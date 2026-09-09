@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `5ca5180` — `PT-1480`, section is a key | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `0b085aa` — `PT-1481`, the seven leave the cells | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `9a86ffd` — `PT-1482`, the Brawler is not shouted at | ⚠ no |
+| `KOTOR-RPG-APP` | `1c845f5` — `PT-1481`, the seven applied | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 253 — 680, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 254 — 681, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,7 +96,23 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠ THE `consumable` COLUMN IS MISNAMED — `TEST 012`
+### ⚠⚠ A CITATION ASSEMBLED AT RUNTIME FALLS BETWEEN THE TWO GUARDS
+
+    check_annotations      reads base-rules/*.toml      — the DATA half
+    check_player_strings   reads Dart string literals   — the LITERAL half
+
+**Neither sees `'you fall — ' + ruleName + ' (' + ptNumber + ')'`.** The data
+half has no cell to read; the literal half sees only `'you fall — '`, which is
+clean.
+
+⚠ **Nothing in the tree does this today — checked.** So it is a gap between two
+guards rather than a defect, and it is written here because the person who
+built both is the only one who can see where they stop. What would close it: a
+rule that citations live in one named place and are never interpolated is
+checkable; *"never assemble player text from a variable that could hold one"*
+is not.
+
+### ✓ `PT-1482` — the column is `kit` (was: misnamed)
 
 **16 of 44 entries in `class_arrays.consumable` / `droid_arrays.consumable` are
 durable gear**, across 9 distinct items: Sparring Gloves (`gauntlets`), Stealth
@@ -104,9 +120,9 @@ Field Generator (`belt`), Glow Rod (`light-source`), Recording Rod (`misc`),
 Repair Kit (`tool`), Computer Spike / Security Tunneler / Parts (`spike`), and
 a tier-1 saber upgrade with no catalogue row at all.
 
-The column is *"the rest of your kit"*, not *"consumables"* — the header is the
-document's and the screen repeats it verbatim as a slot label. ⚠ **Renaming a
-rules column is the owner's**; the app follows in one line.
+Renamed in both tables at `PT-1482`; the extractor's field and the app's label
+follow. A test asserts the label is `kit`, `consumable` is gone, and **the
+gloves are still there** — renamed, not emptied.
 
 
 ### ⚠⚠ `PT-1468` — the content half is done; the PRODUCER is next

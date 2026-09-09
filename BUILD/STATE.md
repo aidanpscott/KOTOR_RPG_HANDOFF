@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `0b085aa` — `PT-1481`, the seven leave the cells | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `0cded88` — extracts current | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `1c845f5` — `PT-1481`, the seven applied | ⚠ no |
+| `KOTOR-RPG-APP` | `86dcc0c` — `§4a` pinned, not fixed | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 254 — 681, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 257 — 684, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,25 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ `§4a` NEEDS A RULING, AND IS PINNED UNTIL IT GETS ONE
+
+`grantFor` keys on the **profession alone and never looks at the class**, so
+`Tester`'s open question is settled: **Agent and Guardian are one path, not
+two.** Sixteen of nineteen classes are offered `Hunter`'s upgrade.
+
+⚠ **Two grants, not four.** `Hunter` names Soldier/Scout/Duelist and `Veteran`
+names Smuggler/Bounty Hunter. `Conscript` and `Acolyte` name **no** class and
+that is correct — *"the best armour the character's Armour Proficiency
+allows"* applies to any of them.
+
+**The ruling needed:** when an upgrade names classes the character is not — do
+not offer the item half at all · offer it and apply nothing (today) · or apply
+it to whatever the class's array carries. **Three different games.**
+
+`grant_reaches_class_test.dart` changes nothing and pins the current behaviour,
+naming in its own body which assertion turns red when the fix lands.
+
 
 ### ⚠⚠ A CITATION ASSEMBLED AT RUNTIME FALLS BETWEEN THE TWO GUARDS
 

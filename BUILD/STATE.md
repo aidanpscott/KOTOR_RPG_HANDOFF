@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `8884ac8` — `PT-1443`, the first real playtest | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `78782b6` — `PT-1453`, the latest outcome not every one | ⚠ no |
+| `Lodestar` | `4b3a482` — `PT-1458`, a droid bases at 10 | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `2058b16` — tests laid out on the screen they claim | ⚠ no |
-| `KOTOR-RPG-APP` | `a42f9b3` — `PT-1453`, the third exit and the sweep | ⚠ no |
+| `KOTOR-RPG-APP` | `d95ad2c` — `PT-1326`, the attack line names its weapon | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 285 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 214 — 617, all
+**`Lodestar` 289 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 216 — 623, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,19 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠ Open from `Tester`'s fourth report — the droid run
+
+| | Need |
+|---|---|
+| ⚠⚠ **The droid path is TWO causes, not six bugs** | `BUILD 45` swept it. **A screen consults `isDroid` when the answer changes WHETHER it renders, and not when it would only change WHAT IT OFFERS** — `equipment_screen` and `feats_screen` mention a droid **zero** times. ⚠ **And underneath: there is nothing to filter on.** `feats.toml` says *"Granted at 1st level to every droid"* in **prose** and still carries `availability = "selectable"`; `class_arrays.toml` is keyed by class and mentions a droid **not once**. `droid_skills.toml` is a whole file, **which is why `SKILLS` is the best screen in the app** |
+| ⚠ **A feat record has no field for who may take it** | `id · name · chain · is_chain_head · section · description · effect · availability`. **One missing field, two symptoms**: a droid is charged for a feat it already has, and an organic is offered `Droid Upgrade 1`. `U2` from both sides |
+| ⚠ **`[Persuade]` offered to a droid — a RULING, not a bug** | `_rank` returns 0 for an absent skill so a droid rolls untrained, which may be legal. **`SKILLS` says *"closed to every droid"* and nothing reconciles the two** |
+| ⚠ **Four of six conversation options are dead ends** | **The bed's content** — four player lines carry no `then`. ⚠ **But the validator reports ZERO problems on that file**: it checks unreachable nodes and dead links and **not *a check with nothing to roll toward*.** A show-all reply with a `skill` term renders amber and never rolls, so **the bracket promises a roll the structure cannot deliver.** Fix the validator first |
+| ⚠ **A conversation that ends says nothing** | `Tester` took `[Persuade]`, the panel closed, and nothing said whether it passed |
+| ⚠ **Raw resrefs reach the player** | Five of seventeen programmings — `Parts — g_i_parts01`. **Upstream in `gen_base_rules.py`**, and `Protocol Droid`'s grant is the only fully upper-case one of the seventeen |
+| ⚠ **The abilities screen explains a Remote using Battle's numbers** | A hardcoded example in a screen that otherwise knows about droids — **the one true screen bug of the six** |
+| ⚠ **Losing a fight is never stated** | Tester went to −4 of 12; the marker is drawn as before and it still offers *arrows to move*. Outside a fight the player has no working line at all |
 
 ### ⚠ Open from `Tester`'s first report
 
@@ -218,6 +231,8 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The item blueprint, and the equipped weapon** | ✓ `BUILD 43`, `PT-1452`. `[equipment]` → item → base type → dice, and **every link fails out loud**. The trooper's hardcoded vibroblade is gone — **a melee weapon swung at range by a creature holding a rifle.** ⚠ And the extraction's positional array **silently shifted**: a dropped em-dash put the Stun Baton's `attacks` in `balanced`'s place |
+| **`PT-1458` — a droid bases at 10** | ✓ `BUILD 45`. The validator applied the **organic** point-buy floor to an authored production spread and refused a character the app had built and called final. ⚠ **Verified on `Tester`'s own `t3-k9.sav`**, which now validates legal. And the spreads are **authored to parity at 72**, not derived from the base — deriving would have made every droid twelve points weaker than any organic |
+| **The attack line carries its derivation** | ✓ `BUILD 45`, `PT-1326`. It named the roll and what was LEFT and never what fired or what was subtracted |
 | **The third exit, N1 and N2** | ✓ `BUILD 44`, `PT-1453`. ⚠ **Three shapes of one class**: a CONSUMER with no producer (`character.revived` was handled and never emitted — N1), a PRODUCER with no guard (`_endFight` re-entrant, six outcomes from one fight), and a FOLD whose value and narration disagree (N2). **All three are invisible until a sequence exists** |
 | **The wound surviving a quit** | ⚠ **half** — `BUILD 41`, `PT-1448`. `PT-1427` built the projection and **nothing wrote what it folds** — two paths end an encounter and only one persisted, and the log was discarded after replay. **The question the code called undecidable was already answered**: `encounter.ended` is `campaign` and `PT-1415` makes the log one per character per campaign |
 | **The runner faking a pass** | ✓ `BUILD 41`. It built only when the binary was **missing**, so after the first run it never rebuilt again — for any change, ever. ⚠ **The third instrument to report success without looking** |

@@ -150,6 +150,18 @@ area        = "a01-endar-spire"
 
 **Order is a field. It is never inferred from a name.**
 
+> **⚠⚠ AND IT IS MEMBERSHIP AS WELL AS ORDER — `PT-1505`.** The section is named `[order]` and **two of three programs already read it as the package's roster:** `targetAreaUnknown` exists as a fault, and Loom refuses to author a connection to an unlisted area.
+>
+> **⚠ The play client does not read it at all.** `TEST 017` removed an area from the list, left the file on disk, walked into its door, **and the app took it there.** Board, arrival point, everything. **Nothing said anywhere.**
+>
+> **⚠ AND THE HARM IS NOT "A BROKEN PACKAGE LIMPS":** a player can be taken into **content the package declares is not part of it**, and **removing an area from the manifest has no effect on what a player can reach.**
+>
+> **RULED: an area not in this list is not in the package.** The manifest is the roster; **the folder is storage.** A package's contents are **declared, not discovered** — otherwise a stray file left in a folder becomes content, and `PT-1368`'s missing-versus-degraded distinction has nothing to measure against.
+>
+> **⚠ The section name is misleading and it stays.** Renaming it breaks every package written, and `format = 1` exists for changes that earn it. **This one is a sentence, not a version.**
+>
+> **⚠⚠ AND `§1` ALREADY REQUIRED THIS — found at the build, and it changes what kind of thing the fix was.** *"A package is a folder. The manifest says what is in it and what it needs. **Nothing is discovered by scanning**."* `[order].areas` is the only field that says which areas a package has, so **membership was always the manifest's job.** `validateConnections` reads areas that way and always has; `Loom` refuses to author past it. **The play client was not disagreeing with a new rule — it was the one program that never implemented `§1`.** The ruling names what was already required rather than adding to it.
+
 ---
 
 ## ⚠ 4·1 What a library tile shows — `PT-1358`

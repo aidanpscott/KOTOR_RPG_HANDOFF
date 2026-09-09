@@ -1,4 +1,4 @@
-# BUILD 70 — `PT-1501`/`PT-1505`: every authored check in this project was free
+# BUILD 70 — `PT-1501`: every authored check in this project was free
 
 **728 green** — Lodestar 326 · Lens 5 · Loom 123 · app 274.
 
@@ -96,7 +96,7 @@ the case fails.
 
 ---
 
-## ⚠⚠ `PT-1506` — AND THEN THE ROLL HAPPENED IN SILENCE
+## ⚠⚠ AND THEN THE ROLL HAPPENED IN SILENCE — still `PT-1501`
 
 Making it roll surfaced the reason it was ever findable only by counting.
 `_pick` called `resolve`, read `succeeded`, and **threw the derivation away.**
@@ -166,11 +166,15 @@ that conversation is refused by `validate` and Loom will not write it.
 ## ⚠ A CITATION COLLISION, CORRECTED — and two records outside my reach
 
 I filed this slice's two findings as `PT-1503` and `PT-1504`. **The index had
-already spent both on the previous slice** — `PT-1503` is *"`PT-1499` was built
-and Tester was still right"* and `PT-1504` is *"the fourth instance was beside
-the third"*. Renumbered to **`PT-1505`** (the dead check `PT-1459` could not
-see; `unlink`) and **`PT-1506`** (the roll that recorded nothing; `§9`'s retry)
-everywhere I write.
+already spent both on the previous slice.** I renumbered to `PT-1505` and
+`PT-1506` — **and the owner then spent those on `TEST 017`'s findings.** Twice
+in two slices.
+
+⚠ **CORRECTED FOR GOOD: they cite `PT-1501`, whose BUILD they are.** The dead
+check `PT-1459` could not see, `unlink`, the roll that recorded nothing and
+`§9`'s retry are all consequences of *"a skill check on a `replies` link is
+shown and never rolled"* — **they are not rulings of their own, and numbers are
+the owner's to assign.** I stop minting them.
 
 ⚠ **Two records cannot be corrected and are recorded instead:**
 

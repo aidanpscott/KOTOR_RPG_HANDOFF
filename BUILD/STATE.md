@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `792187e` — `PT-1479`, no citation reaches a player | ⚠ no |
+| `KOTOR-RPG-APP` | `9a86ffd` — `PT-1482`, the Brawler is not shouted at | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 252 — 679, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 253 — 680, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,19 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠ THE `consumable` COLUMN IS MISNAMED — `TEST 012`
+
+**16 of 44 entries in `class_arrays.consumable` / `droid_arrays.consumable` are
+durable gear**, across 9 distinct items: Sparring Gloves (`gauntlets`), Stealth
+Field Generator (`belt`), Glow Rod (`light-source`), Recording Rod (`misc`),
+Repair Kit (`tool`), Computer Spike / Security Tunneler / Parts (`spike`), and
+a tier-1 saber upgrade with no catalogue row at all.
+
+The column is *"the rest of your kit"*, not *"consumables"* — the header is the
+document's and the screen repeats it verbatim as a slot label. ⚠ **Renaming a
+rules column is the owner's**; the app follows in one line.
+
 
 ### ⚠⚠ `PT-1468` — the content half is done; the PRODUCER is next
 

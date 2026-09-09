@@ -31,6 +31,7 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `48` | [Data nothing examined — the sweep, and two corrections](48-data-nothing-examined.md) | `MAIN_WORK` | `a46f6e9` |
 | `47` | [`PT-1461` — the Builder refuses, the bed answers, and the field was there](47-the-builder-refuses.md) | `Loom` · app · `MAIN_WORK` | `5571dd7` |
 | `46` | [Three slices — the droid loads, the wire is connected, `PT-1459`](46-three-slices.md) | all three | `4eb7d28` |
 | `45` | [`PT-1458`, and two diagnoses before any fixing](45-the-droid-and-two-diagnoses.md) | `Lodestar` · app | `d95ad2c` |

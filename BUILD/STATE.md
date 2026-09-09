@@ -39,7 +39,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `4b67616` — `check_engine_pin` | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `a46f6e9` — three extracts re-run | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `3a24455` — `PT-1459`, a dead check is refused | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
@@ -100,8 +100,12 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 | | Need |
 |---|---|
+| ⚠⚠ **`item_disambiguation.toml` — 14 rows, ZERO readers** | ⚠ **It is the answer to a blocker I cited twice.** `STATE` has said arming the player is blocked because *"only 18 of 41 array names resolve to exactly one catalogue row; §2c disambiguates 14"* — **those 14 ship in `base-rules` and nothing opens them.** The remaining gap is 41 − 18 − 14 |
+| ⚠ **`two_weapon.toml` — 19 rows, ZERO readers** | The per-class two-weapon kit. Authored, shipped, unread |
+| ⚠⚠ **23 of 30 duplicated documents have DIVERGED** | `HANDOFF/docs/` is **the copy visible to the owner's token** and is stale in 23 of 30 — `PLAYTEST-RULINGS-01` is **11,781 lines there against 54,233** at source. ⚠ **`sync_docs.py` was built for exactly this at `PT-245` and its paths no longer exist**: it globs a directory that is not there and prints *"docs/ matches the working tree"*, rc 0. **Its own slice** |
+| ⚠ **`feats.json` cannot be re-extracted yet** | **No `extract_feats.py` exists** — it was done ad hoc at batch 3c. And **`PT-1462`'s marks were appended to the EFFECTS CELL**, the column extracted into `effect`, **which the Feats screen shows a player**. ⚠ **Needs somewhere for a defect annotation to live that is not a data cell** |
 | ⚠ **`Environmental Sealing` says `selectable` and means `granted`** | Its own description reads *"Granted at 1st level to every droid"*, and `availability` **already has a `granted` value used by 188 feats.** A wrong value, not a missing field — **and deriving it from prose is `TRACE-83` again.** This is why a droid is still charged for a feat it already has |
-| ⚠ **`Plating Proficiency: Light` is section 3 — organics only** | Its description says *"DROID ONLY — PT-615"*, and ⚠ **it is not in `FEATS-LIBRARY-01` at all**, so its section came from somewhere else |
+| ⚠ **`Plating Proficiency: Light` is misfiled at source** | Line 80 of `FEATS-LIBRARY-01`, under **§3 Organics only**, its own text saying **DROID ONLY**. **The extraction is faithful; the source row belongs in §4.** ⚠ Marked at source as `PT-1462`. *(My earlier claim that it was absent from the document was wrong — I grepped `HANDOFF/docs/`'s stale copy.)* |
 | ⚠ **Feat groups 2 and 5 are still offered to everyone** | Group 2 is *"organics and combat droids"* and **nothing says which chassis is a combat droid**; group 5 is restricted by class or chassis and **the extract carries no field naming which.** Left offered rather than guessed at, with a test asserting they still are |
 | ~~⚠⚠ **The bed's own conversation is INVALID**~~ | ✓ **closed at `BUILD 47`** — four answers, authored in Loom. |
 | ⚠⚠ **The bed's own conversation is now INVALID, and the fix is authoring** | `PT-1459` refuses a check that cannot roll, and **Loom authors one.** What a successful `Persuade` LEADS TO is content — **not code, and not `Coder`'s to invent.** The Loom test asserts the one known problem by name so it cannot grow quietly. **Owed a decision** |

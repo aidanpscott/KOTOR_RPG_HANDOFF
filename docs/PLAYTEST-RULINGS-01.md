@@ -55159,3 +55159,38 @@ PT-1495s check found a copy in area_open_test  from = blueprints/characters/g  �
 ⚠ AND A DESIGNER READING THAT MIRROR WOULD HAVE READ THE WRONG PATH FORM  the exact defect PT-1495 fixed at source, still live in the copy a human actually opens.
 
 SIX REFRESHED. ⚠ AND AGENDA-CURRENT IS LEFT ALONE AND CORRECTLY SO: IT DIVERGES BOTH WAYS  1,136 LINES THE MIRROR LACKS AND 423 THE SOURCE LACKS. THAT IS NOT STALENESS, IT IS A FORK, and it refused to guess which side is right.
+
+
+---
+
+## PT-1499 — ⚠⚠ A  THAT CONTAINS  WITHOUT STARTING WITH IT IS A FAULT, NOT A DOOR
+
+TEST 015 confirmed BUILD 67 against the package that found it and PUT BOTH FORMS SIDE BY SIDE IN ONE ROOM  four placements, two that resolve and two that do not, ON PURPOSE. Every claim is a comparison inside one area rather than between two runs.
+
+THE SEAM IS CLOSED: IT STOPPED IT, IT TALKED, AND ⚠ A CREATURE IT AUTHORED BEAT IT IN A FIGHT. And the four rows now LOOK different  the two that resolve draw filled and the two that do not draw hollow, so LENS STILL DRAWS EVERY ROW AND THE PLAYER CAN NOW SEE WHICH ARE REAL.
+
+⚠⚠ BUT F1 IS THE ONE THAT NEEDED A RULING AND IT DID NOT PROPOSE ONE, WHICH WAS RIGHT. combatantsIn OPENS WITH !p.from.startsWith(charactersIn) AND CONTINUES SILENTLY  CORRECTLY JUSTIFIED AS A DOOR IS NOT A FAULT.
+
+AND blueprints/characters/probe-warden TRIPS THAT GUARD. ⚠ IT IS A CREATURE BY ANY READING, IT IS THE EXACT STRING LOOM SHIPPED FOR SIX SLICES, AND TO THE RUNTIME IT IS INDISTINGUISHABLE FROM A DOOR. Verify catches it; the play screen cannot, BECAUSE THE FILTER THAT DECIDES NOT A CREATURE IS THE SAME FILTER THE OLD STRING TRIPS.
+
+RULED, AND IT NEEDS NO MIGRATION AND NO DUAL-FORM ACCEPTANCE: ⚠ A PATH THAT CONTAINS characters/ WITHOUT STARTING WITH IT IS A MALFORMED CHARACTER REFERENCE AND SAYS SO. A door names doors/ and contains no characters/ anywhere; the old string does. THE TWO CASES WERE ONLY IDENTICAL BECAUSE THE TEST WAS startsWith AND NOTHING ELSE.
+
+That keeps A DOOR IS NOT A FAULT intact and closes the one shape the guard could not name  and it REFUSES the old string rather than accepting it, so nothing is migrated and nothing is silently tolerated.
+
+---
+
+## PT-1500 — ⚠⚠ A PALETTE THAT CANNOT LOOK MUST NOT SAY none in this package
+
+TEST 015: Loom writes hold-the-room.toml to disk and then reports DOCTRINES, NONE IN THIS PACKAGE  and it is NOT staleness. It cold-opened three times.
+
+right_pane.darts folderFor HAS ONE ENTRY. For the other nine kinds folder IS null AND of() RETURNS const [] WITHOUT LOOKING AT DISK. ⚠ NONE IN THIS PACKAGE IS A CONSTANT, NOT A FACT  for doctrines, items, doors, encounters, placeables, sounds, stores, triggers and waypoints.
+
+RULED: A PALETTE THAT CANNOT ENUMERATE A KIND MUST SAY SO, NOT SAY THERE ARE NONE. Fourteenth instance of absence-versus-blank, and the first where the blank is a hardcoded empty list rather than a missing field.
+
+⚠ AND ITS FRAMING IS THE REASON THIS MATTERS NOW: HARMLESS WHILE NOTHING COULD WRITE THOSE FOLDERS, AND 67 MADE IT FALSE. THE SAME PANE THAT OFFERS TO CREATE A DOCTRINE REPORTS IT ABSENT FOR EVER, AND A CREATURES doctrine FIELD IS A TYPED PATH WITH NO LIST TO PICK FROM. F3s shape one step along  BUILT, TESTED, CONSTRUCTED NOWHERE became CONSTRUCTIBLE, LISTABLE NOWHERE.
+
+AND TWO MORE, REPORTED: equipmentMissing ONLY FIRES THROUGH A PLACEMENT THAT RESOLVES  proven before and after inside one package, 2 then 3  SO A BLUEPRINT AUTHORED AND NOT YET PLACED HAS ITS EQUIPMENT UNCHECKED, WHICH IS THE NORMAL STATE BETWEEN BEING MADE AND BEING USED. ⚠ Its own line: THE NEW CHECK IS STILL AT A SEAM; IT IS A PLACEMENTS SEAM INSTEAD OF A PLAY SESSIONS.
+
+AND AN ENEMYS weaponNote IS COMPUTED AND NEVER READ  the only one on a screen is the PLAYERS  so THE WARDENS DEAD BLASTER WOULD READ unarmed, IDENTICAL TO A CREATURE THAT GENUINELY CARRIES NOTHING. ⚠ AND IT LABELLED THAT AS A SOURCE READING PLUS AN ON-SCREEN ASYMMETRY BECAUSE IT COULD NOT STAGE THE FIGHT, AND STOPPED RATHER THAN WORKING AROUND.
+
+⚠ AND IT REPORTED ITS OWN ERROR UNPROMPTED: IT NEARLY FILED THE DOCTRINE DIALOG AS DROPPING FIELDS AND THE DIALOG WAS RIGHT  prefer nearest IS AN ADD BUTTON THAT BY DESIGN DOES NOT CONSUME A MATCH. IT MISREAD THE FORM AND SAID SO.

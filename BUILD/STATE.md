@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `ba1295f` — `PT-1486`, excludes transcribed | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `ce42542` — `PT-1493`, verify sees a blueprint | ⚠ no |
+| `Lodestar` | `aac8505` — `PT-1501`, verify walks every blueprint | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `51b49db` — `PT-1493`, the path, the dialog and the order | ⚠ no |
-| `KOTOR-RPG-APP` | `0a40e4b` — `PT-1493`, the room says what it could not place | ⚠ no |
+| `Loom` | `0cc9bcf` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `d4dc2ea` — `PT-1501`, the count leads | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 310 · `Lens` 4 · `Loom` 122 · `KOTOR-RPG-APP` 272 — 706, all
+**`Lodestar` 321 · `Lens` 4 · `Loom` 122 · `KOTOR-RPG-APP` 274 — 721, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,25 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A `find.textContaining` TEST PASSES ON ELLIPSED TEXT
+
+`PT-1501`: the widget's `data` is whole and the **render** truncates, so a
+presence test cannot see a line a player cannot read. The panel is one `Text`
+with `maxLines: 2`; **one 203-character sentence fits and two do not**,
+measured.
+
+⚠ **The rule that came out of it: WHEN A LIST CAN BE ELLIPSED, LEAD WITH THE
+COUNT.** Truncation can then hide *which*, never *that*. Anywhere else joining
+a list into one capped `Text` has the same exposure.
+
+### ⚠ `PT-1500` — THE PALETTE, RULED AND UNSTARTED
+
+`right_pane`'s `folderFor` has one entry; for the other nine kinds `of()`
+returns `const []` **without looking at disk**, so *"none in this package"* is
+a constant rather than a fact. Fourteenth instance of absence-versus-blank and
+the first where the blank is a hardcoded empty list.
+
 
 ### ⚠⚠ LOOM CANNOT READ A RULES FILE — `PT-1493`
 

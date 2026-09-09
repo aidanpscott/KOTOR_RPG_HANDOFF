@@ -178,3 +178,59 @@ condition        = "stunned"
 fact the document already states in prose; none is a derivation. If a row needs
 something none of them holds, `not_modelled` is the honest answer and I would
 rather read that than a column bent to fit.
+
+---
+
+# ⚠ Batch one: **22 is enough — plus nine rows, and I measured which**
+
+You asked whether 22 is enough to build against. **Yes**, and here is the check
+rather than the opinion. Twelve shapes the columns have to carry, counted in
+the 22 and in all 104:
+
+| shape | in the 22 | in all 104 |
+|---|---|---|
+| save · negates | 4 | 17 |
+| save · half | 4 | 17 |
+| `dc_base` 5 | 12 | 46 |
+| `dc_base` 10 / 15 | 1 | 5 |
+| `dc_scale` force levels | 2 | 15 |
+| ⚠ `damage_scale` character levels | **0** | 3 |
+| `area_squares` | 2 | 25 |
+| `damage_per_round` | 1 | 6 |
+| ⚠⚠ heals — i.e. `affects` | **0** | 6 |
+| `condition` | 5 | 13 |
+| damage dice | 6 | 25 |
+| no save at all | 9 | 47 |
+
+**Ten of twelve are exercised**, several by a single row — which is enough to
+find a shape that does not fit, and that is what a first batch is for.
+
+## ⚠⚠ But the two it misses are not random
+
+**No row in the 22 heals.** So `affects` would read `enemy` on all 22 and
+**the column would look unnecessary** — the very column I argued hardest for,
+untested by the batch chosen to test the shape. And `damage_scale` would be
+`force_levels` on all 22, so a second value would never be written.
+
+⚠ **A shape that survives 22 rows chosen by reachability is not the same as a
+shape that survives 22 rows chosen to exercise it.**
+
+## So: **31 rows, and the nine are named**
+
+The 22, plus:
+
+    Heal · Improved Heal · Master Heal      heal ALLIES  → affects = "ally"
+    Dark Healing                            heals SELF   → affects = "self"
+    Death Field · Drain Life                harm an enemy AND heal the caster
+                                            ⚠ the two that may not fit `affects`
+                                              at all — say so rather than
+                                              choosing one
+    the 3 rows scaling on character levels  → damage_scale = "character_levels"
+
+**That is the smallest batch that exercises every column.** Nine extra rows
+against a shape you would otherwise correct after 104.
+
+⚠ **And `Death Field` and `Drain Life` are the ones to author first of the
+nine.** If `affects` cannot hold *"harms an enemy and heals the caster"*, I
+would rather learn it on row 23 than row 104 — and `not_modelled` is a
+perfectly good answer there.

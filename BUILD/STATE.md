@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `4bcc8d9` — `PT-1486`, flavour and excludes | ⚠ no |
+| `KOTOR-RPG-APP` | `97e0c03` — `PT-1488`, the target slice | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 263 — 690, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 269 — 696, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,23 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A CHARACTER BLUEPRINT HAS NO SPECIES — `PT-1488`
+
+`AUTHORED-CHARACTER-01` gives it a name, a class, a level, a faction,
+abilities, vitality and protection **and no species and no chassis.** The Sith
+Trooper's file names none, `Loom`'s writer offers none, `OpenedCharacter` has
+no field for one.
+
+⚠ So **no placement has a kind**, `kindOf` returns null for every creature in
+the bed, and `PT-1488`'s gate is correct and **permanently silent about
+placements** — `PT-1486`'s `excludes` has nothing to refuse.
+
+⚠ **One absent field, two symptoms:** `combatantsIn` hardcodes `speed` because
+line 144 says speed lives on the species — *"the blueprint carrying one would
+be a second source for a fact the species already owns"* — **and there is no
+species to own it.**
+
 
 ### ⚠⚠ THE CAST PAYS AND DOES NOTHING — `PT-1487`, and the effect half needs AUTHORED COLUMNS
 

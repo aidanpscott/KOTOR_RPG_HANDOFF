@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `25f7472` — the notes leave the cells | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `70aaa17` — `PT-1467`, the convention and its check | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `3a24455` — `PT-1459`, a dead check is refused | ⚠ no |
+| `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `f5a5103` — `PT-1461`, Loom refuses to write what validate refuses | ⚠ no |
-| `KOTOR-RPG-APP` | `edaf92d` — `PT-1464`, the bar at the class step | ⚠ no |
+| `Loom` | `cd3f6e2` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `cfbbd68` — `PT-1467`, the annotation beside a trait does not print | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 293 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 230 — 642, all
+**`Lodestar` 297 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 233 — 649, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,24 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠ `PT-1467` — 51 of 149 aside-in-a-value cells remain
+
+`MAIN_WORK/scripts/check_annotations.py` reports them. **It is red on four
+files and three of those are deliberate.**
+
+| what | cells | why it is still open |
+|---|---|---|
+| `equipment.section` | 6 | ⚠ slice 2, ordered. A value used as a KEY — `Wield classes - PT-169`. Anything filtering on it matches nothing, as `records.dart:879` already does for `feats.section`. A latent defect, not cosmetics. |
+| `powers.effect` + `prerequisites` | 43 | ⚠ slice 3, ordered. `targets: sentient · beast` is a machine-readable field fused into prose and needs a `targets` COLUMN, not an edit. |
+| ⚠ an authoring decision | 2 | The citation is the sentence's SUBJECT — `and PT-559 removed the second pool`. Removing the token leaves `and removed the second pool`, so the splitter refuses and reports. `species.extraordinary_recuperation` and `feats.effect`'s Sneak Attack. |
+
+⚠ **The extractors disagree about their own first argument.** Four take
+`(source, dest)`; `extract_feats` and `extract_starting_equipment` hardcode the
+source and take `(dest)`. `_paths.dest()` now refuses a `.md` destination —
+which closed the data-loss class — but **the orders are still inconsistent**.
+Unifying them is six scripts and their callers.
+
 
 ### ⚠ Open from `Tester`'s fourth report — the droid run
 

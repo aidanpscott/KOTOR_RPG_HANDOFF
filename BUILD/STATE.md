@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `bdda99a` — `PT-1477`, the hyphen goes | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `5ca5180` — `PT-1480`, section is a key | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `7e66c23` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `c39aa89` — `PT-1478`, the Force verb | ⚠ no |
+| `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
+| `KOTOR-RPG-APP` | `abc394d` — `PT-1479`, no citation reaches a player | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 303 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 251 — 677, all
+**`Lodestar` 303 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 252 — 679, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -137,16 +137,22 @@ it in the same run. One `equipmentPayload()` now, called by both.
 ⚠ **A taken grant names which item** — `taken: "item"` named nothing. An item
 taken with no grant row resolving writes `item_unresolved`.
 
-### ⚠⚠ THREE FORCE CLASSES HAVE NO FORCE DIE — `PT-1478`
+### ⚠ `targets` IS UNDER-POPULATED BY 21 AGAINST ITS OWN PROSE
 
-`CLASSES-FORCE-PHB` states three — **Guardian d4, Sentinel d6, Consular d8** —
-and `sith_warrior`, `sith_assassin` and `sith_inquisitor` carry **none**. That
-is the corpus, not the extraction.
+**23 powers say *"does not affect droids"* in prose and 2 carry it in the
+`targets` column.** A gate built on `targets` today would block 17 and
+**silently permit 21 the prose says should be blocked** — a wrong answer with a
+machine's confidence. ⚠ The column is not under-read, it is under-populated,
+and nothing could know because nothing read it. **The check comes before the
+gate**; conditional damage then shares the *"a combatant knows its kind"* half.
 
-`forcePoolFor` **refuses rather than mirroring the Jedi**: a Sith Warrior
-mirrors a Guardian in every other column, and obvious is not stated. **A Sith
-cannot have a Force pool until this is ruled**, and the screen says so instead
-of inventing one.
+### ✓ `PT-1478` — THE THREE SITH FORCE DICE ARE RULED
+
+Warrior d4, Assassin d6, Inquisitor d8 — mirrored pairwise, and **attested
+rather than assumed**: `PT-126` states the Assassin's directly. They were
+stated in a **blockquote table under a different shape** from the per-class
+rows, so `read_phb` returned null for all three until `PT-1478` taught it to
+read the table the document actually wrote.
 
 ✓ `PT-1477` — the hyphen is gone and **27 of 28 arrays arm a character**; 1 is
 the Brawler's `NONE`, a value, and 0 refuse.

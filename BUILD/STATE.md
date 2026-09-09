@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `f7fe50d` — `DOCTRINE-FORMAT-01`'s reader | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `b2308e1` — authoring tests write to a copy of the bed | ⚠ no |
-| `KOTOR-RPG-APP` | `3d97d52` — `PT-1445`, a log records the id | ⚠ no |
+| `KOTOR-RPG-APP` | `f924efb` — `PT-1447`, the dialogue panel moves to the side | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206 — 591, all
+**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 210 — 595, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -107,7 +107,9 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 | | Need |
 |---|---|
-| ⚠ **The side panel** | Confirmed wanted **at the machine**. The panel runs full-width along the bottom, so ~70% of the width is black; down one side gives a **66px tile against 29px**. Measured at `BUILD 32`, decided at `PT-1443` |
+| ~~**The side panel**~~ | ✓ **built at `BUILD 40`, `PT-1447`.** ⚠ **The tile is 56px, not the 66px promised** — `Lens` insets a board by one tile all round and the estimate divided by the room's size instead. Still nearly double the 29px recorded before |
+| ⚠ **The replies start at five different x positions** | Each bracket is a different width and two options carry none, so the left edge is ragged in a narrow column in a way it never was in a wide band. **`§4c` rules colour and says nothing about alignment.** Found by a capture, reported not decided |
+| ⚠ **Two agents share one data folder** | `BUILD 38`/`39` stopped the suites WRITING to live data. **Reads are only deterministic while nobody else writes** — `Tester` made a package mid-slice and three of my assertions failed on correct work. Fixed by naming packages instead of counting them; **the general hazard stands** |
 | ⚠ **Click-to-move, and there is no settings surface** | NWN/BG3 style, keys as an alternative. **Needs key bindings and an options screen that do not exist**, and `PT-1425` made walking-into-something the attack affordance *on the arrow keys* — that gesture needs re-answering |
 | ⚠ **Baldur's Gate 3 as a fourth source** | Movement limits, where you can go in combat, rounds, dice-roll visuals. **The first modern one** — every study so far has read a 2002–2005 engine |
 | **Nothing has been designed** | `UI-STYLE-VALUES-01 §7`'s sizes are re-derived against a real viewport (`BUILD 32`); **typography, palette and framing have never been touched.** Not a defect |
@@ -198,4 +200,6 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **Loom's tests writing into the test bed** | ✓ `BUILD 39`, and **`BUILD 38` had only fixed the app.** Loom rewrote `endar-spire` — **the fixture every other suite loads** — on every run. Its sandbox **copies** where the app's **symlinks**: a reader wants a link, a writer wants a copy |
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
+| **The dialogue side panel** | ✓ `BUILD 40`. The board keeps FULL height and gives up width it was not using. ⚠ **`maxLines` was the click bug in a second costume** — ample in a 1280px strip, truncating in a 480px column |
+| **`§4c`'s colours** | ✓ **asserted at `BUILD 40`**, and nothing guarded them before. `TRACE-93`'s defect had been reproduced twice and caught by a person looking both times |
 | **The tree moved to the Steam library** | ✓ `BUILD 37`. Baseline before, identical after. **No path dependency existed** — `Lens` and `Lodestar` are git dependencies through `~/.pub-cache` |

@@ -320,7 +320,18 @@ tag_seq = 7          # ⚠ never decreases. The next tag is 8
 ```toml
 [[contents]]
 tag  = "guard.command-deck.01"          # PT-1331 — permanent, logged
-from = "blueprints/characters/sith-trooper"        # the template
+from = "characters/sith-trooper"          # the template — ⚠ PT-1495, relative to blueprints/
+```
+
+> **⚠ THE PATH IS RELATIVE TO `blueprints/` — `PT-1493`. Loom's palette is the outlier.**
+>
+> **`TEST 014` found three places disagreeing and one of them is Loom:** it writes `blueprints/characters/probe-warden`, while **this document, `contents_writer`'s own doc comment, and `endar-spire`'s shipped contents all say `characters/…`.** **⚠ Three against one.**
+>
+> **And `PT-1452` settled the same convention for items:** `[equipment]` names **`items/weapons/blaster-rifle`**, not `blueprints/items/…`. **One rule, both folders.**
+>
+> **⚠ AND THE CONSEQUENCE IS THE HEADLINE: A CREATURE LOOM PLACES IS DRAWN AND IS NOT THERE.** `attack.dart` checks `startsWith('characters/')` and prepends the folder itself, **so a Loom-placed creature never resolves — and you can walk through it.**
+
+
 at   = [12, 4]
 ```
 

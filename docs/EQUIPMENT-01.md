@@ -70,7 +70,13 @@
 
 | Weapon | Damage | Type | Range | Threat |
 |---|---|---|---|---|
-| **Hold-Out Blaster** | **1d4** | energy | 24 m | **19–20** · on-hit stun |
+| **Hold Out Blaster** | **1d4** | energy | 24 m | **19–20** · on-hit stun |
+
+> **⚠ THE HYPHEN GOES — `PT-1477`.** `BUILD 55` found **four classes unarmed by one character.** This document spelled it **Hold-Out Blaster** (the old spelling, quoted not cited); **`STARTING-EQUIPMENT-01` spells it without the hyphen 13 times and `ITEMS-01` once.** **Fifteen to one, and this was the one.**
+>
+> **⚠ And the catalogue is closest to the source** — `g_w_hldoblstr01` is the game's own resref, and `ITEMS-01..09` were converted from the shipped files. **The outlier is the document furthest from where the name came from.**
+>
+> **`Coder` did not normalise the matcher, and that was right:** *a matcher that stripped hyphens and case would resolve the eleventh name and would also quietly resolve the next one that only looks close* — **which is how a Remote ended up in Dockworker's Treads.**
 | **Disruptor Pistol** | **1d4** | physical | 24 m | 20 |
 | **Ion Blaster** | **1d4** + **1d10 vs droid** | ion | **16 m** | 20 |
 | **Sonic Pistol** | **1d4** | sonic | **16 m** | 20 · Dex damage |
@@ -80,6 +86,15 @@
 | **Sonic Rifle** | **1d6** | sonic | 28 m | 20 · Dex damage |
 | **Blaster Carbine** | **1d8** | energy | **24 m** | **19–20** |
 | **Blaster Rifle** | **1d12** | energy | 28 m | **19–20** |
+| **Marksman Rifle** | **1d12** | energy | **40 m** | **19–20** |
+
+> **⚠ TWO BASE TYPES ADDED — `PT-1473`, owner ruling.** `BUILD 53` found both named by a class array with nothing to map to. **A name that no base type carries is not a mapping problem; it is a missing row.**
+>
+> **`Marksman Rifle` — 1d12, 40 m, threat 19–20.** Blaster Rifle's dice at **longer range and a wider threat**: the same weapon reworked for reach, which is what the class it arms is for. **It is not a `blaster-rifle` alias** — `EQUIPMENT-01` already distinguishes four rifles by damage type, and this one differs on the two columns that matter to a marksman.
+>
+> **`Training Lightsaber` — 1d8, threat 19–20.** **⚠ NOT 2d10.** `lightsaber` is a war blade and **giving a padawan's practice weapon a master's dice is a ruling, and this is it.** A step below the `Short Sword`'s cousin and well below the real thing — **it is what you learn on.**
+>
+> **⚠ And `PT-1472` still governs the crystal:** a Training Lightsaber **carries a colour crystal like any other**, and the crystal supplies properties while **the base supplies these dice.**
 | **Bowcaster** | **1d10** | energy | 28 m | **19–20** |
 
 **All pistols are *Balanced*.**
@@ -98,6 +113,7 @@
 |---|---|---|---|---|---|
 | **Short Lightsaber** | **2d6** | 2d8 | **19–20 / ×2** | **2 — one-handed** | Small |
 | **Lightsaber** | **2d10** | 2d10 | **19–20 / ×2** | **2 — one-handed** | Medium |
+| **Training Lightsaber** | **1d8** | energy | 19–20 / ×2 | yes | 1 |
 | **Double-Bladed Lightsaber** | **2d10** | 2d12 | **20 only / ×2** | **3 — two-handed staff** | Large |
 
 > **Use K1's. Our campaign is 3956 BBY and K1 is the era.**
@@ -135,7 +151,7 @@
 | **1** | **One-handed light** | Stun Baton | **yes** |
 | **2** | **One-handed** | Long Sword · Vibro Sword · Short Sword · Vibro Blade · Lightsaber · Short Lightsaber | **yes** |
 | **3** | **Two-handed staff** | Quarterstaff · Gaffi Stick · Wookiee Warblade · Double-Bladed Sword · Vibro Double Blade · Double-Bladed Lightsaber | **no — it *is* the pair** |
-| **4** | **Pistol** | Blaster · Heavy Blaster · Hold-Out · Ion Blaster · Disruptor Pistol · Sonic Pistol | **yes** |
+| **4** | **Pistol** | Blaster · Heavy Blaster · Hold Out · Ion Blaster · Disruptor Pistol · Sonic Pistol | **yes** |
 | **5** | **Rifle** | Ion · Bowcaster · Carbine · Disruptor · Sonic · Blaster Rifle | **no** |
 | **6** | **Heavy** | Repeating Blaster · Heavy Repeating Blaster | **no** |
 

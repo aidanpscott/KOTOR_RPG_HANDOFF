@@ -329,6 +329,18 @@ classes_closed = ["sith-warrior"]
 
 ---
 
+## ⚠ AN AUTHORED ARTIFACT IS A COPY OF THE DATA — `PT-1480`
+
+**`TEST 012` found one item with two spellings on two screens, and the cause was not what either of us guessed.** Not title-casing: **Loom's own tool authored the blueprint carrying the then-current `Hold-Out Blaster`, and `PT-1477` corrected the DATA and not the COPY.**
+
+> **⚠ Every blueprint Loom writes is a SNAPSHOT of the corpus at authoring time, and nothing compared them.**
+
+**That generalises past one hyphen.** `PT-1346` made the Builder's output the test bed **precisely so content is reproducible** — and reproducible is not the same as **current.** **A blueprint authored in March against a rule corrected in April is wrong and nothing anywhere says so.**
+
+**⚠ It is `check_extracts` one register over:** that compares an extract to its source; **nothing compares an AUTHORED artifact to the rules it was authored from.**
+
+---
+
 ## ⚠ 3d · AN ITEM BLUEPRINT NAMES A BASE TYPE — `PT-1452`
 
 **`BUILD 42` stopped here: `[equipment]` names `items/weapons/blaster-rifle`, `blueprints/items/` is in the layout, and **no document defines what an item blueprint contains.** Third time a folder has existed with no format behind it.
@@ -371,6 +383,16 @@ classes_closed = ["sith-warrior"]
 **A second route is worth having:** an area in the tree offering **"set as entry"**, since that is where an author is when the thought occurs.
 
 ### ⚠ And `validate` must refuse it
+
+> **⚠⚠ `validate` SAYS NOTHING ABOUT A BLUEPRINT REFERENCE, AND THE SILENCE IS STRUCTURAL — `PT-1494`.**
+>
+> **`TEST 014` counted `PackageProblem`'s nine members and NOT ONE is about a blueprint's contents.** So an unresolvable `from` and a `weapon_r_1` naming an item in a package with no items **both pass**, and `verify` reports *"No problems found"* **about a room you can walk through.**
+>
+> **⚠ THE SHAPE IS NAMED AND IT IS THE ONE THAT MATTERS: Loom refused an unresolvable check and wrote an unresolvable item path THE SAME AFTERNOON.** The refusal was in the dialogue editor because that editor happens to check; **nothing checks a blueprint reference anywhere.**
+>
+> **⚠ RULED: a reference that names a file which is not there is a `PackageProblem`.** Every `from`, every `conversation`, every `doctrine`, every equipment path. **`PT-1379` already governs this one file type over** — the area loader refuses a dangling connection and says *did you mean* — and **the same rule stops at the blueprint boundary for no reason anyone chose.**
+>
+> **⚠ And it is not enough for the checker alone.** `Lens/board.dart` **draws `area.contents` with no reference to whether anything resolved** — *there is no bad `from` the board will not render.* **A thing drawn by one program and unknown to the other, in the same frame,** is the defect `TEST 014` walked through twice.
 
 **`ENGINE-INTERFACE-01` has `validate(path) → report`, and the agent already built `validateConnections`. This is the same shape.**
 

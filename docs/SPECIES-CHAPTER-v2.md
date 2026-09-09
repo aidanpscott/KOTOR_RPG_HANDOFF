@@ -402,6 +402,12 @@ Droids are built rather than generated. **They do not use the 30-point buy** —
 
 - **Constructed:** **A droid is built, not born.** **Immune to poison, disease, suffocation, radiation, and anything requiring a living metabolism.** **It does not eat, sleep, or breathe.** **It has no Force points, cannot take `Force-Sensitive`, and Force powers that target the mind do not affect it.**
 - **Force Blind:** **A droid cannot take `Force-Sensitive` and cannot take any Force class.** **`PT-92`.** *Built, not born. There is nothing to awaken.*
+
+> **⚠ A SUBRACE INHERITS THIS FROM ITS PARENT — `PT-1475`.** `TEST 010` measured it: **four entries, two species.** `Rakata` carries it **and restates it in both its subraces**; `Droid` carries it **and restates it in NONE of its four bodies** — **and all four grey the Force classes anyway.**
+>
+> **So the app inherits from the parent, and `Rakata`'s restatement is REDUNDANT rather than load-bearing.** **⚠ Nothing distinguishes a restatement from an inheritance until somebody checks**, because the behaviour is identical either way.
+>
+> **And it is `PT-1391`'s overlay direction with a second user** — *the variant wins where both speak; the parent fills silence.* **Here both say the same thing, which is why the inconsistency has cost nothing — and why it would cost everything the day one of them changed.**
 - **Fixed Armature:** **A droid cannot take a `Combat`-rate class.** **`PT-109`.** *A chassis reaches eleven ranged attack chains and no melee at all — thirty-three tiers against a Combat class's forty. The frame cannot absorb the training.*
 - **Ion Vulnerability:** **Ion damage drains 1 Constitution per hit, 2 on a critical**, recovered at 1 per day. *`PLAYTEST-RULINGS-01 B4`.*
 - **Languages:** **Every droid understands five languages at creation.** **Basic and Binary are two of them; the other three are chosen freely.** *A droid's language bank is storage, and storage is cheap.*

@@ -43,7 +43,20 @@ does not move the data, which is the intended behaviour.
     ./run-app.sh      the play client
     ./run-loom.sh     the Builder
 
-**Each builds on first run (a minute or two) and starts instantly after.**
+**⚠⚠ THEY ALWAYS BUILD, AND THE VERSION THAT DID NOT FAKED A PASS.** Until
+`PT-1448` both scripts read `[ -x <binary> ] || flutter build linux --debug` —
+build only when the binary is **missing**. An edited source with a built binary
+therefore ran the **old code and said nothing**, and `Tester` caught it live:
+the bundle was 21:31 while the two files carrying the save work were 22:10 and
+22:11. **Following the instructions literally would have confirmed six fixes
+against a build containing none of them.**
+
+**⚠ The conditional was buying 3.4 seconds** — the measured cost of a no-op
+build on this machine; a build with real changes is ~7s. A cleverer staleness
+check is just a second thing that can be wrong, and `flutter build` already
+knows what is stale.
+
+**First run takes a minute or two; after that it is a few seconds.**
 
 **⚠ WHY THERE IS A SCRIPT RATHER THAN A COMMAND.** Flutter, CMake, Ninja and
 Clang are installed under `~/spike`, **not on the system PATH**, and CMake needs

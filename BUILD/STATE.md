@@ -43,7 +43,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `f7fe50d` — `DOCTRINE-FORMAT-01`'s reader | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `387fcf1` — the doctrine format, and a check instead of an errand | ⚠ no |
+| `Loom` | `b2308e1` — authoring tests write to a copy of the bed | ⚠ no |
 | `KOTOR-RPG-APP` | `3d97d52` — `PT-1445`, a log records the id | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
@@ -51,9 +51,13 @@ committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206.** ✓ **All
-green**, and ⚠ **the suite no longer writes into `~/.local/share/kotor-rpg/`** —
-`BUILD 38`.
+**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206 — 591, all
+green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
+`~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
+did the app, `BUILD 39` did Loom.
+
+⚠ **But USING either program is not a test** — it writes real saves to the real
+folder, because that is the product working.
 
 ## What each repository is
 
@@ -191,5 +195,7 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **On the machine, runnable** | ✓ `BUILD 36`. `run-app.sh`, `run-loom.sh`, `env.sh` |
 | **`PT-1445` — a log records the id, never the name** | ✓ `BUILD 38`, and **the four failing tests were RIGHT.** `hub.dart` had two paths to one record and only the log half had moved to the id; `recordFromChoices` still carried the name. **One line, zero test edits.** `replay()` cannot map an id back to a name, so the record had to move and the log could not |
 | **`SaveStore.listFor`'s both-ways read** | ✓ recorded as a **migration allowance** — reads both, writes one. **When it can go is checkable:** when no save remains whose `package` is not an id in the library |
+| **Loom's tests writing into the test bed** | ✓ `BUILD 39`, and **`BUILD 38` had only fixed the app.** Loom rewrote `endar-spire` — **the fixture every other suite loads** — on every run. Its sandbox **copies** where the app's **symlinks**: a reader wants a link, a writer wants a copy |
+| **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The tree moved to the Steam library** | ✓ `BUILD 37`. Baseline before, identical after. **No path dependency existed** — `Lens` and `Lodestar` are git dependencies through `~/.pub-cache` |

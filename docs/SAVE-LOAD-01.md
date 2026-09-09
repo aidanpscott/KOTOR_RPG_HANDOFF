@@ -62,7 +62,17 @@ magic          identifies the file as ours
 format version so a future change is detectable
 compressor     which one, so it can change without breaking old saves
 rules version  PT-1270's OF07 pin — what this log was played under
+⚠ PT-1514 — format = 2:
+saved at       UTC milliseconds. A fact about the PLAY SESSION
+package        which package — so listing need not replay every log
+character      the player's name for them
+class, level   what a save row shows beside a name
+area           where they were standing
 ```
+
+**⚠⚠ `format = 2` SINCE `PT-1514`, AND THE BUMP IS LOAD-BEARING RATHER THAN CEREMONIAL.** The header is **positional** and its length is **derived from the fields a reader knows**. New fields sit before the payload, so a `format = 1` build reading a `format = 2` save computes the payload offset short, hands header bytes to the decompressor, and reports **"Damaged save: the contents could not be unpacked."** **That is a wrong reason for a perfectly good file** — `PT-1366`'s motivating case exactly: *an old file must be distinguishable from a broken one.* The machinery to say the true thing already existed (`formatFromTheFuture`, *refused rather than read optimistically*) **and it only fires if the number moves.**
+
+**⚠ And moving it is what keeps old saves readable, not what breaks them.** A `format = 1` save still parses and still yields its log; it carries none of the new fields, and **absent means *older than the field*** — never a value invented from the filesystem.
 
 **⚠ The compressor field is what makes the choice reversible.** `PT-1328` recommends `zstd` with `gzip` as fallback; **recording which one was used means switching later does not orphan existing saves.** Without it, the choice is permanent by accident.
 
@@ -193,13 +203,26 @@ rules version  PT-1270's OF07 pin — what this log was played under
 
 **`PACKAGE-NAMING-01` answers this shape and the answer transfers:** the **path is identity**, a **name is what a player reads**, and **an id is derived from the name and stays correctable.** A character's name is free text and not unique; **`kaeda-vos.sav` is both readable and stable.**
 
-### ⚠ `Continue` ORDERS BY FILESYSTEM TIME, and the header gains NOTHING
+### ~~⚠ `Continue` ORDERS BY FILESYSTEM TIME, and the header gains NOTHING~~ — ⚠⚠ OVERTURNED AT `PT-1514`
 
-**`PT-1358` settled this exact argument one object over:** the manifest carries **nothing temporal**, because *an author writing a date is writing a claim, not a fact* — **and the app may sort by filesystem time, because which tile sorts first is not a fact about the package.**
+> **`PT-1416` ruled that and it was wrong.** The argument came from `PT-1358` — *"which tile sorts first is not a fact about the package"* — **and that holds for a SHELF, where nothing is being resumed. It does not hold here.**
+>
+> **⚠⚠ WHICH SAVE IS MOST RECENT IS A FACT ABOUT THE PLAY SESSION, not about the disk.** A copied folder or a restored backup **changes the answer without a player having played.**
 
-**⚠ The same holds here. WHICH SAVE IS MOST RECENT IS NOT A FACT ABOUT THE SAVE.** It is a fact about the disk, **and the disk already knows it.**
+**⚠ AND THE CODE HAD ALREADY SPLIT ON IT.** `save_listing.dart` refused to supply a *latest* — *"ordering by file mtime would be the caller's filesystem guessing at a fact the format does not record"* — while `SaveStore.mostRecentHandle` **ordered by file mtime**. **One surface refused the guess and the other was built on it**, which is why `Load Game` and `Continue` disagreed about which save was first.
 
-**So the four-field header stays four fields**, and `save_listing.dart`'s refusal to supply a *latest* was right: **the format should not answer it, and the app should.**
+**⚠ `TEST 018` measured the cost:** `Load Game` listed **fifteen saves in `Directory.list()` order** — arbitrary, stable, meaningless; not alphabetical, not most-recent — and **every row also read *"rules 0.1.0"***. A player looking for *the one I played yesterday* read fifteen filenames in scrambled order.
+
+**RULED: the header gains a time and an identity.** The field set is above, and **every field is there for a named consumer** rather than for completeness:
+
+| field | who needed it | what it was doing instead |
+|---|---|---|
+| `saved at` | `Load Game` order **and** `Continue` | guessing from file mtime |
+| `package` | `listFor` | **decompressing and replaying every log** to learn the owner |
+| `character`, `class`, `level` | the save row | showing a filename |
+| `area` | the save row | nothing — *"no where"* |
+
+**⚠ `package` is the sharpest of them.** `save_listing.dart`'s own contract is *"replaying one to answer 'is there a save?' would be the expensive answer to a cheap question"* — **and filtering by package was doing exactly that, fifteen times, to draw a menu.**
 
 ---
 

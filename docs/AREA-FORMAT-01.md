@@ -92,7 +92,7 @@ default = "floor"
 | **`floor`** | yes | no | the default |
 | **`wall`** | **no** | **yes** | drawn as mass, `§2b` |
 | **`water`** | **no** | no | **⚠ not merely slow — you cannot simply walk over it** |
-| **`difficult`** | yes | no | costs more to cross |
+| **`difficult`** | yes | no | **costs DOUBLE to cross — `PT-1513`** |
 | **`hazard`** | yes | no | crossing it does something. **⚠ What, is unruled** |
 
 **⚠ Five. Nothing else exists, and a package cannot add one** — `PT-1361`. A swamp is **`water` and `difficult` with swamp art**, not a new type.
@@ -100,6 +100,22 @@ default = "floor"
 **⚠ And `door` is NOT a tile type**, though `§2`'s own legend example shows one. `§4a` makes a door **a connection with an optional template.** The example is wrong and is the kind of thing that would have become a second door model.
 
 **Open:** whether `hazard` needs a magnitude, and whether `water` is one type or a family (shallow, deep). **Neither blocks `4c`.**
+
+### ⚠⚠ `2·0c` What `difficult` COSTS, and where the number lives — `PT-1513`
+
+**A square of `difficult` costs two.** This table has said *"costs more to cross"* since it was written and **nothing ever charged for it.**
+
+> **⚠ `STUDY 19` found neither source engine modelled it either.** `surfacemat`'s `walk` and `walkcheck` are **booleans** in K1 and NWN with no cost column, and **Swamp, Mud and Water price identically to Stone.** **Our code matched KOTOR exactly and this document was the outlier.**
+
+**The document wins anyway, and the reason is a Builder one:** `Loom` paints `difficult` beside four types that **do** something, in an idiom that reads like a rule. **An author paints it expecting it to bite.** A type offered and inert is `PT-1500`'s defect one layer up.
+
+**⚠⚠ AND THE MULTIPLIER IS A PROPERTY OF THE CREATURE, NOT THE TILE.** Copied from BG3's `ActionResourceConsumeMultiplier(Movement, 4, 0)` rather than invented — **the tile names what kind of hard it is; the creature prices it**, and the multipliers are **grouped so one immunity clears every source at once.**
+
+**Why the direction matters:** put the number on the tile and every future exemption — **a hover droid, a Force power, a boot** — has to know about every terrain kind separately, and **every kind added later silently escapes all of them.**
+
+**⚠ `hazard` STAYS INERT.** `§2·0a` leaves what it does undecided, and **that is a different problem from a cost that was written and never spent**: the first waits for a ruling, the second was a defect.
+
+**⚠ Stacking cannot arise, per `PT-1366`:** *"a text-map cell is one character and therefore ONE TYPE"* — a swamp is composed from `water` tiles and `difficult` tiles — so **a square names at most one costed source.** The engine takes the highest applicable multiplier, recorded so that whoever makes tiles combinable finds the decision rather than rediscovering it.
 
 ---
 

@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `a91e92e` — `PT-1510` closes the "known conflation" | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `001d1a7` — `PT-1513` and the `format = 2` header | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `2e19964` — `PT-1501`, the check rolls on commit; `PT-1510` | ⚠ no |
+| `Lodestar` | `851a588` — `PT-1513`; the save header gains a time and an identity | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `7fc9d2d` — `PT-1500`, the palette says what it cannot list | ⚠ no |
-| `KOTOR-RPG-APP` | `da360c7` — level with `Lodestar` | ⚠ no |
+| `Loom` | `8a63e99` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `8fc0afe` — `PT-1513` charged; `Load Game` and `Continue` agree | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 340 · `Lens` 5 · `Loom` 127 · `KOTOR-RPG-APP` 280 — 752, all
+**`Lodestar` 353 · `Lens` 5 · `Loom` 127 · `KOTOR-RPG-APP` 286 — 766, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,6 +96,20 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
+### ⚠ A COST WRITTEN AND NEVER SPENT — `PT-1513`, BUILT
+
+`difficult` costs **two**, and the multiplier is on the **creature**:
+`moveCostMultipliers` plus **one** `ignoresMoveCostMultipliers` flag that clears
+every source. The tile names what kind of hard it is and sets no number, so a
+hover droid, a Force power or a boot each state their exemption **once**.
+
+⚠ **Stacking cannot arise** — `PT-1366`: a text-map cell is one character and
+therefore one type, so a square names at most one costed source.
+
+⚠⚠ **AND THE PRICE EXPOSED AN ORDER BUG INVISIBLE AT PARITY:** the spend ran
+**before** the impassable check, so **walking into a wall cost a point of
+movement and then refused.** Unseeable while every square cost one.
+
 ### ⚠⚠ A SKILL GATE ON A `replies` LINK ROLLS ON COMMIT — `PT-1501`, BUILT
 
 **How a flag and a skill are told apart was already in the runtime.**
@@ -119,7 +133,28 @@ spends the check. Asserted.
 **Measured against the shipped bed, 4000 commits per rank: 35.9% at rank 0
 (expected 35.0%) and 56.2% at rank 4 (expected 55.0%).**
 
-### ⚠⚠ A SAVE HEADER CARRIES NOTHING ABOUT THE GAME — `TEST 018`'s two, one root
+### ✅ THE SAVE HEADER — **BUILT**, and it is `format = 2`
+
+`SaveEntry` gains `savedAt`, `package`, `character`, `className`, `level`,
+`area`. **Every one has a named consumer**; `package` alone removes a
+decompress-and-replay **per save** from drawing the package menu.
+
+⚠⚠ **THE BUMP IS MECHANICAL, NOT CEREMONIAL.** The header is positional and its
+length is derived from the fields a reader knows, so a `format = 1` build
+reading a `format = 2` save computes the payload offset short and reports
+**"Damaged save"** — a wrong reason for a good file, which is `PT-1366`'s
+motivating case exactly. `formatFromTheFuture` already exists and **only fires
+if the number moves.**
+
+⚠ **And moving it is what keeps old saves readable.** A `1` still parses and
+still yields its log; absent means *older than the field*, never a time
+invented from the filesystem.
+
+⚠ `Load Game` and `Continue` **sort by the same comparator** now, so the first
+row is the one the button takes. A save with no recorded time sorts **last** —
+*unknown* is not *oldest*.
+
+### ~~⚠⚠ A SAVE HEADER CARRIES NOTHING ABOUT THE GAME~~ — closed above
 
 `SaveEntry` is `handle`, `formatVersion`, `compressor`, `rulesVersion`. **No
 name, no character, no level, no place, no time.** Both of `TEST 018`'s

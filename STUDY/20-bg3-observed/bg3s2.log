@@ -1,0 +1,9 @@
+nice() priority range MaxPriority (20) - MinPriority (19) is less than 5, threads priorities will be disabled, performance might degrade significantly
+[S_API] SteamAPI_Init(): Loaded '/home/aidan/.local/share/Steam/linux64/steamclient.so' OK.
+Setting breakpad minidump AppID = 1086940
+SteamInternal_SetMinidumpSteamID:  Caching Steam ID:  76561198073458081 [API loaded no]
+Fossilize INFO: Overriding serialization path: "/mnt/ga/SteamLibrary/steamapps/shadercache/1086940/fozpipelinesv6/steamapprun_pipeline_cache".
+[226092:226092:20260909,183027.601085:ERROR elf_dynamic_array_reader.h:64] tag not found
+[226092:226092:20260909,183027.607312:ERROR elf_dynamic_array_reader.h:64] tag not found
+[226092:226092:20260909,183027.607373:ERROR elf_dynamic_array_reader.h:64] tag not found
+nice() priority range MaxPriority (20) - MinPriority (19) is less than 5, threads priorities will be disabled, performance might degrade significantly

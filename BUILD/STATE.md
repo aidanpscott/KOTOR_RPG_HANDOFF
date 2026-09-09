@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `8884ac8` — `PT-1443`, the first real playtest | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `4b67616` — `check_engine_pin` | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `3a24455` — `PT-1459`, a dead check is refused | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `3249dde` — Loom authors a dead check, and says so | ⚠ no |
-| `KOTOR-RPG-APP` | `4eb7d28` — `PT-1459`, the app says a conversation ended | ⚠ no |
+| `Loom` | `f5a5103` — `PT-1461`, Loom refuses to write what validate refuses | ⚠ no |
+| `KOTOR-RPG-APP` | `5571dd7` — `PT-1460`, feats filter by eligibility | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 293 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 221 — 632, all
+**`Lodestar` 293 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 225 — 637, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -100,6 +100,10 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 | | Need |
 |---|---|
+| ⚠ **`Environmental Sealing` says `selectable` and means `granted`** | Its own description reads *"Granted at 1st level to every droid"*, and `availability` **already has a `granted` value used by 188 feats.** A wrong value, not a missing field — **and deriving it from prose is `TRACE-83` again.** This is why a droid is still charged for a feat it already has |
+| ⚠ **`Plating Proficiency: Light` is section 3 — organics only** | Its description says *"DROID ONLY — PT-615"*, and ⚠ **it is not in `FEATS-LIBRARY-01` at all**, so its section came from somewhere else |
+| ⚠ **Feat groups 2 and 5 are still offered to everyone** | Group 2 is *"organics and combat droids"* and **nothing says which chassis is a combat droid**; group 5 is restricted by class or chassis and **the extract carries no field naming which.** Left offered rather than guessed at, with a test asserting they still are |
+| ~~⚠⚠ **The bed's own conversation is INVALID**~~ | ✓ **closed at `BUILD 47`** — four answers, authored in Loom. |
 | ⚠⚠ **The bed's own conversation is now INVALID, and the fix is authoring** | `PT-1459` refuses a check that cannot roll, and **Loom authors one.** What a successful `Persuade` LEADS TO is content — **not code, and not `Coder`'s to invent.** The Loom test asserts the one known problem by name so it cannot grow quietly. **Owed a decision** |
 | ⚠ **A feat record has no eligibility field — the Feats wire is a STOP** | `FeatsScreen` has the same missing chassis as Equipment, **and wiring it changes nothing**: `feats.toml` says *"Granted at 1st level to every droid"* in **prose** and carries `availability = "selectable"`. Filtering on prose is `TRACE-83` again. **Not wired — a parameter nothing can use is building ahead** |
 | ⚠ **The front-ends silently run an older engine** | `PT-1458` shipped and **the app stayed pinned to the commit before it**, so the save went on being refused by a build containing the fix nowhere. `BUILD/37` wrote this down and it still caught me. **`droid_loads_test` now asserts the RESOLVED engine behaves** |
@@ -235,6 +239,9 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The item blueprint, and the equipped weapon** | ✓ `BUILD 43`, `PT-1452`. `[equipment]` → item → base type → dice, and **every link fails out loud**. The trooper's hardcoded vibroblade is gone — **a melee weapon swung at range by a creature holding a rifle.** ⚠ And the extraction's positional array **silently shifted**: a dropped em-dash put the Stun Baton's `attacks` in `balanced`'s place |
+| **The Builder refuses what `validate` refuses** | ✓ `BUILD 47`, `PT-1379`/`PT-1461`. The tab showed the problems the whole time **and wrote anyway** — which is why `PT-1459` made the bed invalid: **Loom wrote it.** Refuses on ANY problem, so a later check needs no wiring |
+| **The feat eligibility field** | ✓ `BUILD 47`, `PT-1460` — ⚠ **and it already existed.** `section` IS `FEATS-LIBRARY-01`'s five groups, counts matching 16/9/68, **and nothing read it.** Same shape as `droid_arrays.toml`, one slice apart |
+| **A front-end pinned behind the engine** | ✓ `BUILD 47`. `check_engine_pin.py` catches **the class, not the instance** — a test can only fail on behaviour it already knows to look for. Compares each lock to the engine's `origin/main`; `PT-1451`'s three exit codes, all controlled |
 | **`droid_arrays.toml` is read** | ✓ `BUILD 46`, `PT-1459`. It shipped in `base-rules` since the extraction with **exactly the droid kit per class** and **nothing anywhere opened it** — a disconnected wire, not a missing feature. ⚠ **And the boots were a HARDCODED ROW**, which is why a hoverer got treads |
 | **A dead check, and the end of a conversation** | ✓ `BUILD 46`, `PT-1459`. `_pick` returns null **before any dice are touched**, so amber promised a roll that could not happen. And the runtime **manufactured `NpcLine(id: '', say: '')`** — the shape `PT-1433` refuses from an author — which the app sniffed to notice the end **and then said nothing** |
 | **`PT-1458` — a droid bases at 10** | ✓ `BUILD 45`. The validator applied the **organic** point-buy floor to an authored production spread and refused a character the app had built and called final. ⚠ **Verified on `Tester`'s own `t3-k9.sav`**, which now validates legal. And the spreads are **authored to parity at 72**, not derived from the base — deriving would have made every droid twelve points weaker than any organic |

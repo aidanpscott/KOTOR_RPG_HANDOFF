@@ -443,7 +443,7 @@
 
 ### 12.2 A declaration is atomic
 
-**When a multi-attack declaration drives a target past 0 wounds partway through, the remaining attacks still resolve.**
+**When a multi-attack declaration drives a target past 0 partway through, the remaining attacks still resolve.**
 
 > **The target is removed after the whole declaration finishes, not mid-Barrage.**
 
@@ -465,11 +465,17 @@
 
 **`E-2` gives the thresholds. This is what they mean at the table.**
 
-| Wounds | State |
+| Vitality | State |
 |---|---|
 | **0** | **Disabled.** Takes no actions. **Still a legal target.** |
-| **−1 to −9** | **Dying. Loses 1 wound per round** and may take no actions. **A Medicine check stabilises.** |
-| **−10** | **Dead. Removed.** |
+| **−1 to −(Con − 1)** | **Dying. Loses 1 vitality per round** and may take no actions. **A `Medicine` check stabilises.** |
+| **⚠ −Constitution** | **Dead. Removed.** |
+
+**⚠ ONE POOL — `PT-559`. `wound points` are GONE.** **Damage comes off vitality and keeps going into the negative; the blow that reduces a character to 0 CARRIES ITS EXCESS THROUGH.**
+
+> **⚠ A hit taking someone from 3 vitality to `−18` puts them at `−18`.** **The old system threw that away — a hit taking you from 3 to 0 did exactly the same as one taking you from 3 to −40.**
+
+**⚠ THE NEGATIVE BAND ONLY EXISTS WHERE DEATH DOES — `DEATH-AND-DIFFICULTY-01`.** **On `Easy` a character at 0 is simply DOWN: out until an ally helps them up, or until combat ends, when everyone who was down stands at 1 vitality.**
 
 ### 12.5 What an attack roll is
 

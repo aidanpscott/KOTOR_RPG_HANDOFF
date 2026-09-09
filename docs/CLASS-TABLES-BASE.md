@@ -8,7 +8,7 @@
 
 ## Summary
 
-| Class | Hit die | BAB | Primary ability | Base skill points | Saves |
+| Class | Hit die | BAB | ⚠ Key abilities | Base skill points | Saves |
 |---|---|---|---|---|---|
 | **Soldier** | **d10** | **full** — `CLS_ATK_1` | Strength | 2 | **Fortitude only** |
 | **Scout** | **d8** | three-quarters — `CLS_ATK_2` | Dexterity | 6 | **all three good** |
@@ -117,7 +117,7 @@
 
 **Hit dice against `SKILLS-01`'s skill-point table:** **Soldier 2, Scout 6, Smuggler 8.** **`k1_classes.2da` agrees on all three.** *`SKILLS-01` also lists Machinist at 6 and the three Jedi classes; those come from K2 and are held separately.*
 
-**Primary ability:** **Soldier STR, Scout DEX, Smuggler DEX** in K1. **K2 changed the Soldier's to CON** — *the change that dates the cut Bounty Hunter row, which kept STR.*
+**⚠ Key abilities — `PT-719`.** ⚠ *Was `Primary ability`.* **Soldier STR, Scout DEX, Smuggler DEX** in K1. **K2 changed the Soldier's to CON** — *the change that dates the cut Bounty Hunter row, which kept STR.*
 
 > **⚠ This cited `FEATS-LIBRARY-01 §9.1`, which does not exist — that document has sections 1 through 5.** **Grepped: the STR/CON claim appears in no other file either.** **Citation struck rather than repointed, because repointing it would require guessing which document was meant.** **The claim itself may still be true and now rests on nothing.**
 
@@ -127,7 +127,7 @@
 
 ## Two things this does not carry
 
-**Class skill lists** — **`SKILLS-01 §9.2` holds the rebuilt versions** against our 24 skills, not the source's 8.
+**Class skill lists** — **`SKILLS-01 §9.2` holds the rebuilt versions** against our **25 character skills** (`PT-1292`), not the source's 8. **⚠ Verified at `PT-1294`** — those lists use skills KOTOR never had. **The rebuild is done for 21 classes; 18, largely prestige, have no list.**
 
 **Feat and attack grants** — **`ATTACKS-01 §7` and §11.6 defer both to the class workstream.** **`k1_classes.2da` names a `featstable` per class — `SOL`, `SCT`, `SCD` — which is where the source's grant schedule lives.** **Those tables are not in current holdings.**
 
@@ -137,7 +137,17 @@
 
 **Machinist** — **K2 only.** `k1_classes.2da` does not carry it. **`SKILLS-01` gives 6 base skill points and `FEATS-CLASSWORK-01` discusses its feat table; hit die, BAB, and saves need `k2_classes.2da`.**
 
-**Vitality per level** — **`PORT-01 v2` makes vitality accumulative from class, level, and Constitution modifier.** **The hit die is here; the formula that uses it should be checked against `RULES-01 v2`.**
+**✓ Vitality per level — ⚠ STATED HERE AT `PT-648`.**
+
+    ⚠ LEVEL 1     the MAXIMUM of the hit die, plus your Constitution modifier
+    ⚠ EACH LEVEL  the die's AVERAGE ROUNDED UP, plus your Constitution modifier
+                  ⚠ d12 → 7 · d10 → 6 · d8 → 5 · d6 → 4
+
+> **⚠ NOTHING IS ROLLED. A character's vitality is the same at level 12 whoever plays them.**
+
+**⚠ THE FORMULA EXISTED IN `PREGENS-01 §1` — a TEST-SHEET document — AND IN NO RULES DOCUMENT.** **Nine sheets computed from it and `CLASS-TABLES-BASE` called it open.**
+
+**⚠ AND IT IS LOAD-BEARING NOW: `PT-559` REPLACED THE TWO-POOL SYSTEM WITH A SINGLE VITALITY POOL AND SET DEATH AT `−Constitution`.** **The number this formula produces is the ONLY thing standing between a character and the dying track.**
 
 
 
@@ -145,8 +155,19 @@
 
 **Every class names two abilities. `PT-227` set them; this states what the second one does.**
 
-> **The first sets your attack and DC stat, and one strong save.**
-> **The second sets a second strong save.**
+> **⚠⚠ SUPERSEDED AT `PT-718`. ⚠ OWNER RULING: THE ABILITIES NO LONGER SET SAVES, ATTACK OR DC.**
+
+**⚠ *Was:* *"the first sets your attack and DC stat, and one strong save; the second sets a second strong save."***
+
+**⚠ WHY IT COST NOTHING: ⚠ SAVES ARE PRINTED PER LEVEL IN EVERY CLASS TABLE — `Jedi Guardian` READS `+12 / +12 / +9` AT LEVEL 20 — AND ⚠ RCR COMPUTES ATTACK FROM `BAB + STR` OR `BAB + DEX` BY **WEAPON TYPE**, NOT BY CLASS.**
+
+> **⚠ THE ABILITIES NEVER PRODUCED EITHER NUMBER. `PT-246` ASSERTED THEY SHOULD **PREDICT** THE SAVES, AND THE SAVES WERE ALWAYS INDEPENDENT.**
+
+**⚠ WHAT THE PAIR DOES NOW — `PT-718`:**
+
+    ⚠ WHICH IMPLANT you begin with — `PT-716`, the primary
+    ⚠ WHAT WEAPON suits the class in the starting array
+    ⚠ ⚠ A DESCRIPTOR THE GM AND THE ENGINE READ, not a value they compute
 > **⚠ If both point at the same save, the class has one strong save.**
 
     Strength or Constitution   ->  Fortitude
@@ -289,9 +310,9 @@
 
     Fort weak, Reflex strong, Will weak — 6 / 12 / 6 at level 20, total 24.
 
-**`k2_classes.2da` points at `CLS_ST_TECHSPEC`, which is not in holdings.**
+**`k2_classes.2da` points at `k2_cls_st_techspec.2da`, which is not in holdings.** **⚠ It is a KOTOR 2 table — the Tech Specialist does not exist in KOTOR 1 — and we hold 65 of 418 k2 files. `PT-529`.**
 
-**⚠ This is the one place the duplicated row is evidence rather than an accident.** **BioWare wrote a separate save file for this class instead of pointing at `CLS_ST_SCNDRL`** — **so the table exists and would settle it. `cls_st_techspec.2da` and `cls_st_cm_drd.2da` are the two files wanted.**
+**⚠ This is the one place the duplicated row is evidence rather than an accident.** **BioWare wrote a separate save file for this class instead of pointing at `CLS_ST_SCNDRL`** — **so the table exists and would settle it. `k2_cls_st_techspec.2da` and `cls_st_cm_drd.2da` are the two files wanted.**
 
 **Until then: the Smuggler's profile, because the source made the two classes literally the same on every other design column.**
 

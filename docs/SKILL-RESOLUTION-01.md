@@ -100,6 +100,8 @@
 
 ## 4. Stealth, and the stealth field generator
 
+**UI presentation locked separately, mechanics here untouched — see `APP-UI-VISION-01`, `PT-1108`.** A visible Hidden indicator and running-disabled-while-hidden are app-side decisions built on top of everything below; nothing in this section changed to accommodate them.
+
 **The defender rolls the better of Awareness or Alertness.**
 
 **A stealth field generator imposes −10 on Awareness only. Alertness is unaffected.**
@@ -196,7 +198,7 @@ Acrobatics · Alertness · Appraise · Archaeology · Athletics · Awareness · 
 | Item | Status |
 |---|---|
 | **Base consumable costs** | The reduction curve is settled; **what a terminal or a droid repair costs before reduction is not.** |
-| **K1 versus K2 mine tiers** | Sources conflict — **three grades (15/20/25) or five (10/15/20/25/30).** The five-grade version matches `traps.2da`, which we hold for K2. **One question to the 2DA holder settles it.** |
+| **✓ ⚠ K1 mine tiers — SETTLED FROM THE FILE, `PT-654`** | ⚠ **THREE GRADES, AND NEITHER REPORTED NUMBER SET WAS RIGHT.** **`data/2da/k1/traps.2da`, 14 rows, read directly:** ⚠ `MINOR / AVERAGE / DEADLY` across four families — flash stun, fragmentation, plasma, poison gas. ⚠ **Detect `20 / 30 / 40` · Disarm `20 / 25 / 30`.** **⚠ NOT `15/20/25` and NOT five grades.** ⚠ *Two `ROCK_FALL` rows read `140/130` — scenery, not a placeable mine.* ⚠ **`k2/traps.2da` IS NOT IN THIS REPO; the K2 half remains with the DATA agent.** |
 | **The scaling band's constant** | KOTOR uses level + 28. **Ours is unset.** |
 | **Knowledge-skill DCs** | Archaeology, Xenology, Mysticism, and Botany need a DC-by-obscurity ladder — common 10, specialist 20, lost 30 is a starting shape, not a decision. |
 

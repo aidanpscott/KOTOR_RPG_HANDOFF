@@ -89,8 +89,8 @@
 | Power | Tier | Cost | Ceiling | Notes |
 |---|---|---|---|---|
 | **Force Slow** | 1 | 6 | −1 |  |
-| › **Afflict** | 2 | 12 | −3 |  |
-| ›› **Plague** | 3 | 20 | −6 |  |
+| › **Force Affliction** | 2 | 12 | −3 |  |
+| ›› **Force Plague** | 3 | 20 | −6 |  |
 | | | | | |
 | **Force Strangle** | 1 | 6 | −1 |  |
 | › **Force Choke** | 2 | 14 | −3 |  |
@@ -226,7 +226,23 @@
 | **Force Distraction** | 1 | 15 | −2 |  |
 | › **Force Confusion** | 2 | 20 | −4 |  |
 | | | | | |
-| **Beast Trick** | 1 | 6 | −1 |  |
+| **Force Mire** | 2 | 12 | −3 | ⚠ `PT-465`, Character Level 9, Force Slow |
+| **Force Root** | 3 | 18 | −5 | ⚠ `PT-465`, Character Level 15 |
+| **Force Contagion** | 2 | 16 | −4 | ⚠ `PT-465`, Character Level 9, Force Affliction |
+| **Force Sleep** | 2 | 14 | −3 | ⚠ `PT-465`, Character Level 9, Force Stun |
+| **Force Enflame** | 1 | 8 | −1 | ⚠ `PT-467`, Character Level 8 |
+| **Force Combustion** | 2 | 14 | −3 | ⚠ `PT-467`, Character Level 12 |
+| **Force Incinerate** | 3 | 22 | −6 | ⚠ `PT-467`, Character Level 18 |
+| **Force Static Field** | 2 | 14 | −3 | ⚠ `PT-467`, Character Level 9, Stun Droid |
+| **Force Blindness** | 2 | 14 | −3 | ⚠ `PT-470`, Character Level 9 |
+| **Dark Healing** | 3 | 24 | −6 | ⚠ `PT-471`, Sith Marauder/Assassin/Lord |
+| **Sever Force** | 3 | 22 | −4 | ⚠ `PT-473`, L21, Force Breach |
+| **Spear of Midnight Black** | 3 | 30 | −10 | ⚠ `PT-473`, L30, Sith prestige |
+| **Arrow of White Dawn** | 3 | 30 | −10 | ⚠ `PT-473`, L30, Jedi prestige |
+| **Deadly Sight** | 3 | 24 | −6 | ⚠ `PT-464`, Sith Lord/Assassin L15, Force Sight |
+| **Shutdown** | 1 | 6 | −1 | ⚠ `PT-463` |
+| › **Overload** | 3 | 20 | −2 | ⚠ `PT-463`, Character Level 15 |
+| **Beast Control** | 1 | 6 | −1 |  |
 | › **Beast Confusion** | 2 | 14 | −3 |  |
 | ›› **Dominate Beast** | 3 | 22 | −7 | **new** |
 | | | | | |
@@ -333,7 +349,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 **Costs are authored, not ported.** KOTOR 2 runs 0–60 across ten values on a differently built pool; ours runs 4–30 on RCR's scale. **`FORCE-POOL-01 v2 §5` governs: only the shape ports.**
 
-**Names follow the docx**, a prior conversion carrying *Force Slow*, *Afflict*, *Force Choke*, *Dark Fury*, *Force Deflection*, and *Force Distraction* where the 2DA carries internal labels. **The 2DA governs mechanical values; the docx governs names and prose.**
+**Names follow the docx**, a prior conversion carrying *Force Slow*, *Force Affliction*, *Force Choke*, *Dark Fury*, *Force Deflection*, and *Force Distraction* where the 2DA carries internal labels. **The 2DA governs mechanical values; the docx governs names and prose.**
 
 **One rename departs from both:** `MASS_STASIS` is **Stasis Field**, dropping the docx's *Force* prefix.
 
@@ -353,7 +369,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 | Power | Restored as | Availability |
 |---|---|---|
 | **Breath Control** | Universal, T1, 6 | **Not in a KOTOR 1 package.** Available in KOTOR 2 and later. |
-| **Beast Trick** | Universal, T1, 6 | **Not in a KOTOR 1 package.** |
+| **Beast Control** | Universal, T1, 6 | **Not in a KOTOR 1 package.** |
 | **Beast Confusion** | Universal, T2, 14 | Same. |
 | **Droid Trick** | Universal, T1, 6 | **Restricted to a specific set of droids** — likely G0-T0 only. **Revisit with droid classes and racial traits.** |
 | **Droid Confusion** | Universal, T2, 14 | Same. |
@@ -368,7 +384,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 | Power | Tier | Cost | Ceiling |
 |---|---|---|---|
-| Beast Trick | 1 | 6 | −1 |
+| Beast Control | 1 | 6 | −1 |
 | › Beast Confusion | 2 | 14 | −3 |
 | ›› **Dominate Beast** | 3 | 22 | −7 |
 

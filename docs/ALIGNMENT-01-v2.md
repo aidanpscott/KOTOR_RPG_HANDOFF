@@ -149,9 +149,9 @@ Without it, dark power use generates constant downward pressure that light story
 
 ### 2.5 Meditation
 
-**Long rest with meditation** restores the Force pool and true maximum as any long rest does, and additionally moves the character **1 point toward their chosen side.**
+**Eight hours of meditation** restores the Force pool and the true maximum in full, and additionally moves the character **1 point toward their chosen side.** **⚠ Was *"long rest"* — `REST-AND-MEDITATION-01` defines the unit as eight hours of meditation and states RCR has no long rest. `PT-482`.**
 
-**Short rest with meditation** restores Force points only. No alignment movement.
+**One hour of meditation** restores Force points only — 75% of lost ceiling, maximum twice per day. No alignment movement. **⚠ Was *"short rest."*, `PT-482`.**
 
 **The Sith equivalent needs its term sourced.** "Sith meditation" is attested in Legends, but the KOTOR-era term should be confirmed by the wiki researcher rather than authored — it will appear in player-facing text constantly.
 

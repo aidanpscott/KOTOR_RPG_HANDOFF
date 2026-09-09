@@ -1,5 +1,11 @@
 # CLASS-ATTACKS-01 — grants and schedules
 
+> **⚠ MOVED from `comms/` to `rules/` at `PT-568`.**
+
+**It is a RULES document and it sat where no check looked at it.** **`audit_refs`, `audit_source`, `audit_grid` and the rest all scan `rules/`.**
+
+**⚠ All 41 inbound references still resolve — they cite this document BY NAME rather than by path, which is why nothing had noticed for the length of the project.**
+
 **The document `ATTACKS-01 §7` and `§11.6` have both been deferring to.**
 
 > **Two separate things.** **What a class is *given*, and how fast it *picks*.** **The first is identity; the second is budget.**
@@ -233,21 +239,48 @@
 
 > **⚠ That flattens a distinction the grants were carrying.** **Re-check the chain counts against the new `T` before treating them as settled.**
 
-### ⚠ And it overrides the chassis block, which was not obvious
+### ⚠ RESOLVED — `PT-568`. Reading ②, and the credit COUNT is what changes
 
-**`ATTACKS-01` line 124: *"Melee is chassis-blocked; ranged is role-blocked. No droid frame swings a blade."***
+**`ATTACKS-01` line 124: *"Melee is chassis-blocked; ranged is role-blocked. No droid frame swings a blade."*** **`§3a` gave every class four credits *"split any way"*, and named the collision itself: *"two readings, and they cannot both hold."***
 
-**But this rule says *every class* gets four credits split *any* way.** **A droid `Marksman` spending one on melee has entered a melee tree.**
+    ① credits carry ACCESS   a droid Marksman spending one on melee enters a
+                             melee tree — ⚠ the chassis block yields
+    ② credits are TIERS      ⚠ a droid's credits are RANGED-ONLY, and `T` rises
+                             to 40 against an access ceiling of 33
 
-**Two readings, and they cannot both hold:**
+> **⚠ RULED: ② — AND THE `T`-VERSUS-ACCESS PROBLEM IS FIXED BY GIVING DROIDS FEWER CREDITS, NOT BY LETTING `T` CLIMB.**
 
-**The credits carry access.** **Then the chassis block yields to the class rule, and the `Marksman` and `Engineer` stranding problem is solved** — *a droid with a vibroblade is not absurd, and `PT-75` already said droids and organics draw from one class list.*
+**⚠ A droid gets fewer credits PRECISELY BECAUSE IT CAN ONLY SPEND THEM ONE WAY.** **An organic splitting four between two trees and a droid pouring four into one are not the same purchase.**
 
-**The credits are tiers only, spendable within existing access.** **⚠ Then a droid's four credits are ranged-only, `T` rises to 40 against an access ceiling of 33, and the Marksman strands seven instead of five.** **The ruling makes the blocker worse.**
+### 3b · ⚠ The droid table — `PT-568`
 
-**⚠ Owner ruling wanted. The first reading resolves an open blocker; the second deepens it.**
+| | Credits | ⚠ Determined by class | ⚠ Chosen | Split |
+|---|---|---|---|---|
+| **ORGANIC — every species but droid** | **4** | — | **all four** | ⚠ **any, ranged or melee** |
+| **⚠ Battle · Assassin** | **3** | **2** | **1** | ⚠ **RANGED ONLY** |
+| **⚠ Astromech · Remote** | **2** | **1** | **1** | ⚠ **RANGED ONLY** |
 
----
+**⚠ THE *"DETERMINED BY CLASS"* CREDITS ARE `§4`'s RECOMMENDED OPENINGS, TAKEN IN ORDER.** **A Battle-droid Scout takes `Rapid Fire` and `Precise Shot`; a Battle-droid Soldier takes `Charged Shot` and `Shoot`, because `Power Attack` and `Strike` are melee and closed to it.**
+
+> **⚠ WHERE A CLASS'S OPENING IS MELEE, THE DROID SKIPS IT AND TAKES THE NEXT RANGED ENTRY.** **`§4.1a`: *"a chassis may be closed out of a grant; a class is not."*** **⚠ It does not get a replacement — that deficit is real and is the upgrade system's job.**
+
+**⚠ AND THE CHOSEN CREDIT IS FREE WITHIN RANGED.** **A droid is not handed a build; it picks its last opening like anyone else, from a smaller menu.**
+
+### ⚠ Why `Battle` and `Assassin` get one more than `Astromech` and `Remote`
+
+**`ATTACKS-04` has barred Astromechs and Remotes from `Rapid Fire` and two other chains since `PT-333`.** **⚠ THE SOURCE ALREADY TREATED THEM AS A LESSER COMBAT FRAME, and this states the same thing at level 1 rather than only in the chain list.**
+
+**⚠ `Battle` and `Assassin` are the two chassis built to fight. The other two are a diagnostic computer and a floating sensor.**
+
+### ⚠ `T` and access, recomputed
+
+    ORGANIC              4 credits    `T` as `§3a` states
+    ⚠ Battle · Assassin  3 credits    ⚠ `T` one LOWER than `§3a`'s figures
+    ⚠ Astromech · Remote 2 credits    ⚠ `T` two LOWER
+
+**⚠ `PT-114`'s access ceiling is 11 ranged chains and `PT-173`'s test is `N ≤ access`.** **Fewer credits means less pressure on both, which is the point: `§3a` warned that four credits raised `T` to 40 against a droid ceiling of 33.**
+
+**⚠ THE FOUR ZERO-SLACK CLASSES — Bounty Hunter, Engineer, Agent, Droid Master — are the ones this matters for, and all four are now further from their ceiling rather than past it.**
 
 ## 4. Grants
 
@@ -261,17 +294,53 @@
 | **Smuggler** | `Precise Shot` · `Sneak Attack`* · `Shoot` | **The source grants Sniper Shot and Sneak Attack.** *`Sneak Attack` is a feat rider, not an attack — `PT-29` |
 | **Scoundrel** *(prestige)* | `Snap Shot` · `Point Blank Shot` · `Shoot` | **⚠ Held.** Close, fast, and gone. **This was the pre-merge Smuggler's row and survived `PT-73` as an orphan** — reassigned to the prestige class rather than deleted, because it is a real identity and the Scoundrel needs one |
 | **Machinist** | `Charged Shot` · `Covering Fire` · `Shoot` | Fights by preparation and by denying ground |
+| **⚠ Saboteur** | `Spray` · `Covering Fire` · `Shoot` | ⚠ **The area axis, and nobody else opens on it.** ⚠ A `Saboteur` does not aim at a person — ⚠ it puts fire and ordnance where people are going to be. |
 | **Jedi Guardian** | `Sarlacc Sweep` · `Strike` · `Shoot` | The blade first. A crowd answer at 1st level |
 | **Jedi Sentinel** | `Deflecting Slash` · `Strike` · `Shoot` | Defence that answers back |
 | **Jedi Consular** | `Saber Pierce` · `Strike` · `Shoot` | One precise blade, because the Force is the weapon |
 | **Marksman** | `Power Attack` · `Strike` · `Shoot` | **⚠ Melee restored.** `PT-75` dropped the droid/organic class split; an organic may take this class and `ATTACKS-05`'s closure is a *chassis* restriction, not a class one |
 | **Engineer** | `Covering Fire` · `Shoot` | Support, and the only attack it reliably contributes |
 
+| **⚠ Brawler** | `Combination` · `Body Blow` · `Strike` · `Shoot` | ⚠ **UNARMED, from `ATTACKS-07`'s own roster — `PT-228`.** **Velocity and Power: strike twice, or put everything behind one.** ⚠ **`AGENDA-CURRENT` still says the Brawler *"opens with `Flurry`, `Quick Attack` and `Dual Strike` — all weapon chains"*. THAT NOTE IS STALE — it predates `PT-228` building the unarmed roster.** `PT-569` |
+| **⚠ Duelist** | `Quick Attack` · `Deflecting Slash` · `Strike` · `Shoot` | ⚠ **One blade, answered fast.** **Speed and a defence that returns — the Sentinel's chain on a class with no Force behind it.** `PT-569` |
+| **⚠ Agent** | `Precise Shot` · `Snap Shot` · `Shoot` | ⚠ **One shot that lands, and the reaction to take it first.** **Nothing that draws attention — the Agent's whole premise is not being identified.** `PT-569` |
+| **⚠ Medic** | `Covering Fire` · `Snap Shot` · `Shoot` | ⚠ **It does not open the fight; it keeps people alive in one.** **`Covering Fire` is the only attack that helps someone else, and `Field Surgery` is where the class actually spends its turn — `PT-559`.** `PT-569` |
+| **⚠ Treasure Hunter** | `Point Blank Shot` · `Precise Shot` · `Shoot` | ⚠ **Close quarters and opportunism.** **A corridor, a tomb, and whatever is in it — `Sneak Attack` is the Smuggler's and this class earns its damage by position instead.** `PT-569` |
+| **⚠ Sith Warrior** | `Power Attack` · `Sarlacc Sweep` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Guardian — `PT-125`, `PT-553`.** **The Guardian opens with the crowd answer; the Warrior opens with the crowd answer AND weight, because a Sith does not defend.** `PT-569` |
+| **⚠ Sith Inquisitor** | `Saber Pierce` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Consular.** **One precise blade, because the Force is the weapon.** `PT-569` |
+| **⚠ Sith Assassin** | `Critical Strike` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Sentinel and departs from it.** **The Sentinel answers back; the Assassin ends it before there is anything to answer.** **`FEATS-LIBRARY-01` already names it among *"the four classes built on"* `Killer's Instinct`.** `PT-569` |
+
 **⚠ `Strike` and `Shoot` are the free baseline** — `ATTACKS-01`. **Listing them is a statement that no class is denied them, not a grant of anything scarce.**
+
+**⚠ ALL 18 BASE CLASSES NOW HAVE AN OPENING — `PT-569`. `§4` covered ELEVEN.**
 
 ### 4.1 The recommended openings
 
 **⚠ Superseded as *grants* by `§3a`. Retained as what each class looks like if the player does not want to choose.**
+
+### 4.1b · ⚠ TWO BASE CLASSES ARE CLOSED TO DROIDS — `PT-569`
+
+**`PT-92` closes the six FORCE base classes to a droid chassis. ⚠ TWO MORE ARE CLOSED, and for a different reason.**
+
+    ⚠ Brawler   unarmed MELEE. `ATTACKS-05` bars melee to every chassis.
+    ⚠ Duelist   a BLADE class. Same bar.
+
+> **⚠ THEY PASSED `PT-92`'s TEST AND WERE UNPLAYABLE ANYWAY.** **`PT-568` makes a droid's attack credits RANGED ONLY — a droid Brawler would begin with no attacks it could use and gain none it could spend on.**
+
+**⚠ `ATTACKS-07` already noticed the shape — *"so the `Brawler` could not take a single unarmed chain as a starting attack"* — and nothing stated the conclusion.**
+
+**⚠ *"Technically legal, produces a character with no attacks"* is worse than a stated restriction. CLOSED — owner ruling.**
+
+**⚠ CLASS ACCESS IS NOW PER-CHASSIS, NOT PER-DROID — `PT-577`.**
+
+    ⚠ Assassin · Battle    ten base classes
+    ⚠ ASTROMECH · REMOTE   ⚠ NINE — `Soldier` is CLOSED to them
+
+**Soldier · Scout · Smuggler · Bounty Hunter · Marksman · Engineer · Machinist · Agent · Medic · Treasure Hunter.**
+
+**⚠ `Soldier` is closed to `Astromech` and `Remote` — owner ruling.** **A diagnostic computer is not a soldier, and those chassis cap at `Droid Upgrade 2` where a Soldier's progression assumes the top of the ladder.**
+
+**⚠ Brawler and Duelist REMAIN OPEN TO ORGANICS and still need their recommended openings — `§4` covers only 11 of 18 base classes.**
 
 ### 4.1a A chassis may be closed out of a grant; a class is not
 

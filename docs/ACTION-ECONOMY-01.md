@@ -18,6 +18,8 @@
 
 ## The five budgets
 
+**UI presentation built on top of these, locked separately — see `APP-UI-VISION-01`, `PT-1105`/`PT-1108`.** On-screen slots per budget, contextual targeting, and the dual interaction-style setting are app-side decisions; nothing below changed to accommodate them.
+
 | Budget | Frequency |
 |---|---|
 | **Move** | Every round, up to your speed, splittable around your Action |
@@ -382,9 +384,9 @@
 
 ## 6.3 What a dying character can do
 
-**`E-2` gives the thresholds — disabled at 0 wounds, dying from −1 to −9, dead at −10.** **Nothing says what a dying character may do on their turn.**
+**⚠ SUPERSEDED BY `PT-559`. `E-2` gave the thresholds as *disabled at 0 wounds, dying from −1 to −9, dead at −10* — that was the TWO-POOL system.** **One pool now: disabled at 0, dying from −1, dead at `−Constitution`, and the negative band does not exist on `Easy`.** **Nothing says what a dying character may do on their turn.**
 
-**Nothing. They lose 1 wound per round until stabilised.** **A Medicine check by an ally stops the bleed.**
+**Nothing. They lose ⚠ 1 VITALITY per round until stabilised — `PT-559`.** **A Medicine check by an ally stops the bleed.**
 
 ---
 
@@ -558,6 +560,14 @@
 ## Initiative
 
 **d20 + Dexterity modifier, rolled once per encounter. No re-rolls.**
+
+> **⚠ `PT-1422` — A TIE BREAKS ON DEXTERITY, THEN ON TAG. NEVER ON A ROLL.**
+>
+> **"No re-rolls" settles it: a tiebreak roll IS a re-roll.** So the break is deterministic — **higher Dexterity modifier first**, and if still level, **tag order**.
+>
+> **⚠ And it may NOT be the order the caller passed in.** `APP-UI-VISION-01` requires *"one shared, objective order, identical on every player's screen, since initiative is a fact of the fight"* — **and a tie broken by declaration order is a fact about the array a caller happened to build.** Two clients could show different orders for the same encounter.
+>
+> **A tag is permanent, unique and never reassigned (`PT-1331`), so it is the only stable name a combatant has** — and it makes the order **replayable**, which a caller's array never was.
 
 **⚠ CLOSED. No class modifies initiative. `PT-96`.**
 

@@ -100,9 +100,9 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Circle of Shelter** | **Form III, Resilience.** *"Tight and efficient movements. A true Form III master was considered invincible by many."* **Soresu does not try to win. It tries not to lose.** | **Level 1. Requires the Resilience form.** **Attack −2, Defence +4 and damage reduction 3** until the start of your next turn. |
-| › Enduring Guard |  | **Level 4.** **Attack −1, Defence +6, damage reduction 5.** **Each consecutive round you declare this, the target takes a cumulative −1 attack**, to −4. |
-| ›› Unbreakable Circle | They run out before you do. | **Level 8.** **No penalty, Defence +8, damage reduction 8**, and **the cumulative penalty is −2 per round**, to −8. |
+| **Circle of Shelter** | **Form III, Resilience.** *"Tight and efficient movements. A true Form III master was considered invincible by many."* **Soresu does not try to win. It tries not to lose.** | **Level 1. Requires the Resilience form.** **Attack −2, Defence +4 and **damage reduction 2** ⚠⚠ *(`PT-1070`, was 3)*** until the start of your next turn. |
+| › Enduring Guard |  | **Level 4.** **Attack −1, Defence +6, **damage reduction 3** ⚠⚠ *(`PT-1070`, was 5)*.** **Each consecutive round you declare this, the target takes a cumulative −1 attack**, to −4. |
+| ›› Unbreakable Circle | They run out before you do. | **Level 8.** **No penalty, Defence +8, **damage reduction 5** ⚠⚠ *(`PT-1070`, was 8)* — old text: damage reduction 8**, and **the cumulative penalty is −2 per round**, to −8. |
 | **Deflecting Slash** | **Form III, Resilience.** *"An extrapolation of Shii-Cho blast-deflect training."* **Soresu was built when blasters were.** | **Level 1. Requires the Resilience form.** **Blaster Bolt Deflection +5 until the start of your next turn, and you may still attack** at −2. **The first bolt aimed at you each round is deflected without a roll.** |
 | › Mynock's Guard |  | **Level 4.** **Deflection +10, attack −1.** |
 | ›› Impenetrable Guard | The bolts simply stop. | **Level 8.** **Deflection +15, no attack penalty**, and **you may deflect bolts aimed at an ally within 4 metres.** |
@@ -131,7 +131,7 @@
 | Attack | Description | Effects |
 |---|---|---|
 | **Shien Deflection** | **Form V, Perseverance.** *"Shien's focus on returning blaster bolts to their origin."* **Form V uses an opponent's attack against them.** | **Level 1. Requires the Perseverance form.** **Every bolt you deflect this round is returned at its shooter** rather than turned aside. **Attack −2** on your own strike. |
-| › Bolt Return |  | **Level 4.** **Attack −1**, and **returned bolts deal +50% damage.** |
+| › Bolt Return |  | **Level 4.** **Attack −1**, and ⚠ **returned bolts deal HALF AGAIN the damage, rounded down** — `PT-629`. *(source: +50%)* |
 | ›› Barrier of Blades | Everything they send comes back. | **Level 8.** **No penalty**, returned bolts deal **double damage**, and **you may return a bolt aimed at an ally within 4 metres.** |
 | **Falling Avalanche** | **Form V, Perseverance.** *"Designed to use an opponent's attack against them — an emphasis on immediate counterattacks."* **Defend, then answer.** | **Level 1. Requires the Perseverance form.** **If you were struck since your last turn, +3 attack and +3 damage** on this declaration. **Stacks once per attacker who struck you**, to two. |
 | › Answering Strike |  | **Level 4.** **+5 attack and +5 damage**, stacking to **three** attackers. |

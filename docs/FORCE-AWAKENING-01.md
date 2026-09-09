@@ -208,6 +208,20 @@
 
 ---
 
+## ⚠ 6a. WHO CAN AWAKEN AT ALL — `PT-576`
+
+> **⚠ MOST SPECIES CAN. A FEW CANNOT, AND THEY NEVER ROLL.**
+
+    ⚠ CANNOT   every DROID chassis — `PT-92`
+               ⚠ RAKATA, both subraces — `SPECIES-CHAPTER-v2`'s `Force Blind`
+    ⚠ CAN      ⚠ EVERY OTHER SPECIES ON THE ROSTER, unless its own entry says otherwise
+
+**⚠ THE DEFAULT IS *CAN*. A species is closed only where its OWN ENTRY says so, and only two do.**
+
+**⚠ A species that cannot awaken is `Closed` from character creation and NEVER GETS AN ECHO.** **It does not roll, and `§12`'s *"the Echoes simply stop"* does not apply — they never start.**
+
+> **⚠ AND THAT IS DISTINGUISHABLE FROM `Closed`, WHICH `§11` SAYS MUST NOT BE.** **A Rakata player KNOWS they are Force Blind; the species entry says so. A HUMAN who is `Closed` does not.** **The secrecy protects the UNDETERMINED, not the impossible.**
+
 ## 7. Roll 2 — is the character Force-sensitive?
 
 **The flavour dial. This number says how common Force-sensitivity is in the galaxy.**

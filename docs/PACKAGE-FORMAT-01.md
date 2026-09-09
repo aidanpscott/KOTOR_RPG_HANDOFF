@@ -41,7 +41,7 @@ my-campaign/
   areas/
     a01-endar-spire/
   blueprints/               ⚠ PT-1374 — the nine categories, one folder each
-    characters/  doors/  items/  placeables/
+    characters/  doctrines/  doors/  items/  placeables/
     encounters/  sounds/  stores/  triggers/  waypoints/
   quests/
   dialogue/
@@ -326,6 +326,33 @@ classes_closed = ["sith-warrior"]
 **The app needs the filter**, at Species and Class in the pre-hub.
 
 **⚠ And `validate` needs a rule nobody has written: what happens when a package closes every class a species can take?** `PT-92` already bars droids and Rakata from Force classes — **a package closing the rest could make a species unplayable without saying so.**
+
+---
+
+## ⚠ 3d · AN ITEM BLUEPRINT NAMES A BASE TYPE — `PT-1452`
+
+**`BUILD 42` stopped here: `[equipment]` names `items/weapons/blaster-rifle`, `blueprints/items/` is in the layout, and **no document defines what an item blueprint contains.** Third time a folder has existed with no format behind it.
+
+**⚠ And it refused the shortcut for three right reasons** — resolving a path by its last segment would make `items/weapons/` decorative and `PACKAGE-NAMING-01`'s *identity and location are the same thing* **false**; the shapes differ; and **`values` is an untyped positional array whose meaning lives only in a prose column order.**
+
+### The two halves already exist and nobody joined them
+
+| | | |
+|---|---|---|
+| **`EQUIPMENT-01`** | **base weapon TYPES** — 11 melee, 11 ranged, 3 lightsabers | **carries the dice** |
+| **`ITEMS-01..09`** | **1,425 specific items**, converted by seven rulings | tier, cost, properties |
+
+**⚠ That is `baseitems.2da` and `.uti` — the structure both source games use, sitting in our corpus with the join never stated.**
+
+### The ruling
+
+> **`[equipment]` names a PATH to an item blueprint. Always. There is no second form.**
+>
+> **An item blueprint names a BASE TYPE from the rules, and the base type carries the dice.**
+
+**⚠ One form, because two would be ambiguous** — a path resolving to *either* a blueprint or a base record puts the reader in the business of guessing which. **And it matches the source: a `.utc` references a `.uti`, always. There is no creature carrying a raw baseitem.**
+
+**⚠ AND THE POSITIONAL ARRAY IS A DEFECT IN THE EXTRACTION, NOT AN INTERFACE.** `equipment.json` stores `values` positionally because that is how the table reads; **it must be re-extracted with NAMED fields per section.** Nothing should ever infer a schema from a prose column order — that is `TRACE-83`'s position-as-identity, in our own data.
 
 ---
 

@@ -27,7 +27,7 @@
 
 Three independent signals, and they agree:
 
-- **No `spelldesc`.** Its siblings Beast Trick (49184) and Beast Confusion (108459) both carry one. Every other shipped power in the family has a description.
+- **No `spelldesc`.** Its siblings Beast Control (49184) and Beast Confusion (108459) both carry one. Every other shipped power in the family has a description.
 - **The chain skips it.** Beast Confusion's prerequisite is row **182**, not 183 — **the chain was re-pointed around it**, which is what happens when a power is cut late.
 - **The `XXX` marker is on the wrong side.** Every other cut row reads `FORCE_POWER_..._XXX` as a suffix; this reads `XXXFORCE_POWER_...` as a prefix. **Fifty-six other `XXX` rows in K2 use the suffix form.**
 
@@ -43,7 +43,7 @@ Three independent signals, and they agree:
 
 **`FORCE_POWER_BEAST_DOMINATION` — authored, universal, third tier of the Beast chain.**
 
-**Beast Trick → Beast Confusion → Beast Domination.** The family was built as a three-tier chain, the middle tier was cut, and the remaining two were re-pointed. **This restores the intended shape rather than inventing one.**
+**Beast Control → Beast Confusion → Beast Domination.** The family was built as a three-tier chain, the middle tier was cut, and the remaining two were re-pointed. **This restores the intended shape rather than inventing one.**
 
 **Universal**, matching its siblings. **Marked `hybrid_authored`** — no game data supports it, and the record should say so.
 
@@ -174,7 +174,7 @@ Three independent signals, and they agree:
 
 **Cut:** `BREATH_CONTROL`, `BEAST_TRICK`, `BEAST_CONFUSION`, `DROID_TRICK`, `DROID_CONFUSION`.
 
-> **`BEAST_DOMINATION` is withdrawn.** It was authored to complete the Beast tree; cutting Beast Trick and Beast Confusion removes the tree it completed.
+> **`BEAST_DOMINATION` is withdrawn.** It was authored to complete the Beast tree; cutting Beast Control and Beast Confusion removes the tree it completed.
 >
 > **Droid Trick and Droid Confusion are a G0-T0 feat**, not player powers. **Held for the KOTOR 2 campaign package** rather than deleted.
 

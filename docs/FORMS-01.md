@@ -129,6 +129,8 @@
 
 ### 2.3 ⚠ SUPERSEDED — the stance does not survive. `PT-189`.
 
+> **⚠⚠ AND `PT-976` **RESTORES THEM** ON A DIFFERENT MECHANISM — ⚠ SEE `§5c`. ⚠⚠ THE ARGUMENT BELOW KILLED A **PERMANENT, FREE, CUMULATIVE** STANCE; ⚠ IT DOES NOT REACH ONE THAT IS ⚠⚠ **EARNED BY AN ATTACK AND HELD ONE AT A TIME**.**
+
 **Owner ruling, delivered through the designer:** > ***"Lightsaber forms should not keep their stat effects. They are simply feats that unlock attack trees, with attacks that have benefits already."***
 
 **⚠ Reading A. `PT-187` below is wrong and is kept only for the argument it lost.**
@@ -245,7 +247,7 @@
 | **Jedi Consular** | **III — Resilience** | `d6` and Force die 8. Survival is the gap |
 | **Sith Warrior** | **V — Perseverance** | Attack `+2`, critical multiplier `+1`. More forward |
 | **Sith Assassin** | **IV — Aggression** | `Hawk-Bat Swoop` — move your full speed and strike as one declaration |
-| **Sith Inquisitor** | **VI — Moderation** | Casting does not provoke. The only form built for someone who fights with the Force |
+| **Sith Inquisitor** | **VI — Moderation** | **⚠⚠ CORRECTED — `PT-1094`.** ⚠ `+1` ACROSS FIVE SUB-AXES. ⚠⚠ **THE ONLY FORM WITH NO WEAK AXIS** — ⚠ WHICH SUITS A CASTER **BECAUSE NOTHING IS SACRIFICED TO GET IT** |
 
 **⚠ A recommendation, like the second. Any form may be taken.**
 
@@ -322,11 +324,61 @@
 
 ---
 
+## 5c · ⚠⚠⚠ STANCES ARE **RESTORED**, AND THE ATTACK TREE DRIVES THEM. `PT-976`
+
+> **⚠ OWNER RULING. ⚠⚠ `PT-189` CUT THE STANCES; ⚠ THIS RESTORES THEM ⚠⚠ **ON A DIFFERENT MECHANISM**, AND `PT-189`'s ARGUMENT DOES NOT REACH IT.**
+
+### ⚠ THE RULE
+
+    ⚠ 1  ⚠⚠ A FORM'S STANCE GIVES **`§6.1`'s MODIFIER LINE** — ⚠ THE
+         IN-GAME STATS, UNCHANGED
+    ⚠ 2  ⚠ A CHARACTER **STARTS** IN ⚠⚠ FORM I, `Determination` —
+         ⚠ THE ONE FORM `PT-230` GRANTS EVERYONE
+    ⚠ 3  ⚠⚠ **USING A LIGHTSABER ATTACK FROM A FORM'S TREE PUTS YOU
+         IN THAT FORM'S STANCE**
+    ⚠ 4  ⚠ KEEP ATTACKING FROM THAT TREE TO ⚠⚠ **STAY** IN IT
+    ⚠ 5  ⚠ ATTACK FROM ANOTHER TREE AND YOU ⚠⚠ **SWITCH**
+    ⚠ 6  ⚠⚠ **A LIGHTSABER MUST BE EQUIPPED.** ⚠ UNEQUIPPING
+         ⚠⚠ **IMMEDIATELY** ENDS THE STANCE
+    ⚠ 7  ⚠ REDRAWING RETURNS YOU TO ⚠⚠ **THE STANCE YOU WERE LAST IN**
+
+### ⚠⚠⚠ AND THIS IS NOT WHAT `PT-189` CUT
+
+**⚠ `PT-189` KILLED A ⚠⚠ **PERMANENT, FREE, CUMULATIVE** STANCE. ⚠ ITS ARGUMENT WAS THAT `Impenetrable Guard` HELD ⚠⚠ *"`+15` FROM THE CHAIN AND `+4` FROM THE FORM — `+19`, **FOUR OF IT INVISIBLE**."***
+
+> **⚠ THAT WAS TRUE BECAUSE A JEDI HELD ⚠⚠ **EVERY** FORM'S STANCE AT ONCE, FOR FREE, FOREVER.**
+
+**⚠ UNDER THIS RULE A JEDI HOLDS ⚠⚠ **ONE** STANCE, ⚠ ONLY WHILE ARMED, ⚠⚠ AND ONLY BY **SPENDING AN ATTACK IN THAT TREE**.**
+
+    ⚠ THE `+4` IS NO LONGER ⚠⚠ INVISIBLE — ⚠ IT IS **DECLARED**
+      BY THE ATTACK THAT EARNED IT
+    ⚠⚠ AND SWITCHING TREES **COSTS** THE OLD STANCE
+
+> **⚠ SO THE STACK `PT-189` OBJECTED TO IS ⚠⚠ THE **CORRECT** OUTCOME HERE: ⚠ A JEDI WHO COMMITS TO ONE FORM'S TREE GETS ITS BONUS ⚠⚠ **BECAUSE HE COMMITTED**.**
+
+### ⚠⚠ AND THE DISARM CASE IS THE PART THAT MAKES IT A **SYSTEM**
+
+**⚠ `ATTACKS-06 §238` NAMES ⚠⚠ `Disarming Slash` AND `Disarming Strike` AMONG FIVE ATTACKS THAT DEAL NO DAMAGE.**
+
+> **⚠ A JEDI DISARMED ⚠⚠ **LOSES HIS STANCE INSTANTLY** — ⚠ AND GETS IT BACK THE MOMENT HE RECOVERS THE WEAPON. ⚠⚠ DISARMING A JEDI IS NOW WORTH DOING FOR A REASON THE RULES ALREADY SUPPORT.**
+
+---
+
 ## 6. The forms, with their effects
 
 **Descriptions received. `Lightsaber_Forms_Table.docx` and `Force_Forms_Table.docx`.**
 
 ### 6.1 Lightsaber forms — seven, with one restored and authored
+
+> **⚠⚠⚠ **THIS TABLE IS THE STANCE TABLE.** ⚠ `PT-976`, `PT-977`. ⚠⚠ THESE SEVEN MODIFIER LINES ARE **WHAT A STANCE GIVES YOU**, AND THEY ARE THE GAME'S OWN VALUES.**
+
+**⚠ `PT-189` CUT THEM AS A ⚠⚠ PERMANENT FREE GRANT. ⚠ `PT-976` RESTORES THEM AS ⚠⚠ **ONE AT A TIME, EARNED BY AN ATTACK, LOST WITH THE WEAPON**. ⚠ THE **NUMBERS** NEVER CHANGED — ⚠⚠ ONLY WHAT IT COSTS TO HOLD THEM.**
+
+    ⚠ `§5c`  ⚠⚠ **HOW YOU ENTER AND LEAVE A STANCE**
+    ⚠ `§6.1` ⚠⚠ **WHAT THE STANCE DOES** — ⚠ THIS TABLE
+    ⚠ `ATTACKS-06` ⚠ THE TWO CHAINS EACH FORM UNLOCKS
+
+> **⚠ AND `Moderation`'s LINE IS ⚠⚠ **AUTHORED** — ⚠ `hybrid_authored`, ⚠ NO SOURCE SUPPLIES IT. ⚠⚠ IT IS THE ONLY ONE OF THE SEVEN THAT IS NOT THE GAME'S OWN NUMBER, AND IT SAYS SO.
 
 **Niman is absent from the docx and from GameBanshee.** Two independent sources, same omission — it is in the 2DA and documented nowhere.
 
@@ -346,6 +398,18 @@
 
 > **Caveat: the Force-integration clause depends on rules not yet written.** Whether casting in melee provokes anything is `RULES-03` territory. **If nothing penalises casting in melee, the clause is empty and Moderation needs a different sixth line.**
 
+> **⚠⚠ ✓ **RESOLVED — `PT-1093`, 2026-09-02.** ⚠ THE DEPENDENCY IS **`ENGINE-SPEC-06`**, NAMED AT `PT-1089`. ⚠⚠ AND THE ANSWER IS **THE ONE THIS CAVEAT FEARED**.**
+
+**⚠ `ACTION-ECONOMY-01`: ⚠⚠ *"OPPORTUNITY ATTACKS TRIGGER ON AN ENEMY ***LEAVING*** MELEE REACH. ⚠ **NOTHING TRIGGERS ON AN ENEMY *CLOSING*.**"* ⚠ AND: ⚠⚠ *"**ENTERING REACH PROVOKES NOTHING WITHOUT A SPECIFIC FEAT.**"***
+
+    ⚠ ⚠⚠ **NOTHING IN OUR RULES PENALISES CASTING IN MELEE.**
+    ⚠ ⚠⚠ **SO THE FORCE-INTEGRATION CLAUSE IS *EMPTY*,**
+    ⚠ ⚠⚠ **AND `Moderation` NEEDS A DIFFERENT SIXTH LINE.**
+
+> **⚠ ⚠⚠ THE CAVEAT SAID SO ITSELF: ⚠ *"**IF NOTHING PENALISES CASTING IN MELEE, THE CLAUSE IS EMPTY AND `Moderation` NEEDS A DIFFERENT SIXTH LINE.**"* ⚠⚠ **IT WROTE ITS OWN VERDICT AND WAITED FOR SOMEBODY TO CHECK.***
+
+**⚠ ⚠⚠ AND `ACTION-ECONOMY-01` **ALREADY HELD THE ANSWER** — ⚠ *"THAT IS DELIBERATE AND IT IS **D&D'S OWN LINE**."***
+
 | Form | Also known as | What it does |
 |---|---|---|
 | **Determination** | Shii-Cho, Form I | Attack +1; Defence +3; Defence vs. current target −3. **Net +0 against your target, +3 against everyone else** — defensive when outnumbered. |
@@ -361,6 +425,65 @@
 **Defence splits into two values** — general Defence and *Defence against your current target*, **and they are cumulative.** Four of six forms use the split, and three of those set the two in opposite directions. **A single Defence number cannot express Determination or Aggression.**
 
 **Attack modifiers feed blaster deflection.** Perseverance's note says so outright: its stated +2 deflection is really +4 because the +2 attack also applies. **A derived value the engine must compute rather than store.**
+
+### ⚠⚠⚠ 6.2a · FORCE FORMS ARE **DECLARED**, NOT TRIGGERED. `PT-978`
+
+> **⚠ OWNER RULING. ⚠⚠ A CHARACTER **CHOOSES** A FORCE FORM AND IT HOLDS UNTIL HE CHANGES IT. ⚠ SWITCHING COSTS ⚠⚠ **AN ACTION**.**
+
+    ⚠ ⚠⚠ ONE FORCE FORM AT A TIME
+    ⚠ ⚠⚠ SWITCHING COSTS AN ACTION
+    ⚠ ⚠⚠ NO LIGHTSABER REQUIREMENT — ⚠ IT IS NOT A SABER STANCE
+    ⚠ AND IT ⚠⚠ **STACKS WITH A LIGHTSABER STANCE** — ⚠ THEY ARE
+      ⚠⚠ SEPARATE EXCLUSION GROUPS, ⚠ WHICH THIS SECTION ALWAYS SAID
+
+### ⚠⚠⚠ AND A FORCE FORM IS ACTIVE **OUT OF COMBAT**. `PT-979`
+
+> **⚠ OWNER QUESTION, AND ⚠⚠ THE ANSWER IS ALREADY IN THE EFFECTS TABLE.**
+
+**⚠ **Force Focus** READS ⚠⚠ *"FP REGENERATION **+50% OUT OF COMBAT**."***
+
+    ⚠⚠ IF FORMS ONLY WORKED IN COMBAT, ⚠ **Force Focus**
+       ⚠⚠ **WOULD DO NOTHING AT ALL**
+
+**⚠ AND **Force Affinity** READS ⚠⚠ *"FP REGENERATE **DURING** COMBAT, AT A REDUCED RATE **AGAINST THE NON-COMBAT RATE**."***
+
+> **⚠ THAT SENTENCE ⚠⚠ **PRESUPPOSES A NON-COMBAT RATE THAT A FORM IS MODIFYING**. ⚠ TWO OF THE FOUR ARE WRITTEN AROUND OUT-OF-COMBAT TIME.**
+
+### ⚠⚠ SO THE MECHANICAL BENEFIT IS THE CHOICE BETWEEN THEM
+
+    ⚠ **Force Focus**    ⚠⚠ RECOVER **FAST BETWEEN FIGHTS**
+    ⚠⚠ **Force Affinity** ⚠ RECOVER **SLOWLY DURING THEM**
+
+**⚠ A PLAYER WHO EXPECTS ⚠ ONE LONG FIGHT TAKES `Affinity`. ⚠⚠ A PLAYER WHO EXPECTS **SEVERAL SHORT ONES** TAKES `Focus` AND ARRIVES FULL EACH TIME.**
+
+> **⚠ THAT IS A ⚠⚠ REAL DECISION, AND IT ONLY EXISTS IF FORMS PERSIST OUT OF COMBAT.**
+
+**⚠ AND IT FOLLOWS FROM `§6.2a` WITHOUT A NEW RULE: ⚠⚠ A **DECLARED** FORM HOLDS UNTIL YOU CHANGE IT. ⚠ COMBAT ENDING IS NOT A CHANGE.**
+
+### ⚠ AND THE ATTACK-TREE MECHANISM **CANNOT** PORT
+
+**⚠ `PT-976` KEYS A SABER STANCE TO ⚠⚠ THE CHAIN YOU JUST ATTACKED FROM. ⚠ THE FOUR FORCE FORMS HAVE ⚠⚠ **NO CHAINS AT ALL** — ⚠ THERE IS NOTHING TO KEY ON.**
+
+> **⚠ AND THEIR EFFECTS ARE ⚠⚠ **ECONOMIC, NOT REACTIVE**: ⚠ REGENERATION, COST, DURATION, SAVES. ⚠⚠ NOT ONE OF THE FOUR MODIFIES AN ATTACK.**
+
+### ⚠⚠ THREE REASONS THE DECLARATION IS RIGHT
+
+    ⚠ **Force Focus**    ⚠⚠ *"FP REGENERATION **+50% OUT OF COMBAT**"* —
+                       ⚠ SET UP **BEFORE** A FIGHT, NOT MID-SWING
+    ⚠⚠ **Force Potency** ⚠ AND **Force Mastery** CARRY ⚠⚠ **`FP COST +20%`** —
+                       ⚠ A REAL PRICE, AND THEREFORE **A DECISION**
+    ⚠⚠ **Force Affinity** ⚠ *"FP REGENERATE **DURING** COMBAT"* — ⚠⚠ UNDER
+                       A TRIGGER YOU WOULD **FLICKER IN AND OUT OF YOUR
+                       OWN REGENERATION**
+
+### ⚠⚠⚠ AND THE SYMMETRY IS THE DESIGN
+
+    ⚠ LIGHTSABER  ⚠⚠ **EARNED BY ACTING** — ⚠ YOU SHOW WHAT YOU ARE DOING
+    ⚠⚠ FORCE      ⚠ **CHOSEN BY INTENT** — ⚠⚠ YOU DECIDE HOW YOU WILL DRAW
+
+> **⚠ ONE IS ⚠⚠ REACTIVE, ONE IS ⚠ DELIBERATE — ⚠⚠ WHICH IS WHAT A SABER FORM AND A FORCE DISCIPLINE ACTUALLY ARE.**
+
+**⚠ AND IT MATCHES THE GAME: ⚠⚠ KOTOR'S FORCE FORMS ARE A **TOGGLE ON THE POWER BAR**, NOT A CONSEQUENCE OF WHAT YOU CAST.**
 
 ### 6.2 Force forms — four, and one is renamed
 

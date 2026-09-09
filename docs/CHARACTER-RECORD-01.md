@@ -153,8 +153,17 @@ gender absent iff chassis is Astromech or Remote
 origin absent iff droid
 classes non-empty, ≤ 3 entries, levels sum to progress.level
 no droid holds a Force class                                    PT-92, PT-569
-abilities 8..18 at level 1
+abilities 8..18 at level 1        ⚠ ORGANICS ONLY — PT-1456
+           a droid takes its chassis spread
 skill ranks ≤ cap for their derived aptitude
+
+> **⚠ `PT-1456` — THE BOUND IS A PROPERTY OF HOW THE SCORES WERE GENERATED, NOT OF THE RECORD.** `8` is not a floor anyone chose — it is `PT-1260`'s **base for a 30-point buy**, and the ceiling is that buy's cap. **A droid does not buy.**
+>
+> **`PT-1403` gave `Remote` a Strength of 6**, from its `−4 Strength` — the only `−4` in the set. **The screen says in its own words that a droid does not buy and these are FINAL SCORES**, and then the validator refused the character it had just built. **⚠ A save the app wrote and could not open.**
+>
+> **⚠ And the margin was one point:** `Astromech` sits exactly on 8. **Four chassis are offered and one was already outside.**
+>
+> **The refusal itself was correct** — it refused a value outside the rule it knew. **The rule was the organic one.**
 every feat with source=granted appears in that class's schedule at ≤ level
 every chosen feat's prerequisites are met
 powers present only if a held class grants them

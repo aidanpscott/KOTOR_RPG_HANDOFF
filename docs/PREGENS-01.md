@@ -68,7 +68,7 @@
 | **Class** | **Soldier** |
 | **Abilities** | STR **18** · DEX 14 · CON 14 · WIS 12 · INT 10 · CHA 10 |
 | **Modifiers** | +4 / +2 / +2 / +1 / +0 / +0 |
-| **Vitality** | **84** *(Improved Toughness replaces Toughness at +2/level, retroactive)* · **Wounds 14** |
+| **Vitality** | **84** *(Improved Toughness replaces Toughness at +2/level, retroactive)* · ⚠ **dies at −14** *(Constitution — `PT-559`)* |
 | **BAB** | **+8** |
 | **Saves** | Fort **+9** · Ref **+5** · Will **+4** *(base + ability + Conditioning +1)* |
 | **Defence** | **10 + 7 (medium armour) + 2 (Dex, capped at +2)** = **19** |
@@ -97,7 +97,7 @@
 | **Class** | **Scout** |
 | **Abilities** | STR 12 · DEX **18** · CON 12 · WIS 12 · INT 14 · CHA 10 |
 | **Modifiers** | +1 / +4 / +1 / +1 / +2 / +0 |
-| **Vitality** | **51** · **Wounds 12** |
+| **Vitality** | **51** · ⚠ **dies at −12** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** |
 | **Saves** | Fort **+8** · Ref **+11** · Will **+8** *(base + ability + Conditioning +1)* |
 | **Defence** | **10 + 5 (light armour) + 4 (Dex, capped)** = **19** |
@@ -129,7 +129,7 @@
 | **Class** | **Smuggler** |
 | **Abilities** | STR 10 · DEX **18** · CON 10 · WIS 12 · INT 14 · CHA 14 |
 | **Modifiers** | +0 / +4 / +0 / +1 / +2 / +2 |
-| **Vitality** | **34** · **Wounds 10** |
+| **Vitality** | **34** · ⚠ **dies at −10** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** |
 | **Saves** | Fort **+2** · Ref **+10** · Will **+3** *(base + ability)* |
 | **Defence** | **10 + 4 (light armour) + 4 (Dex)** = **18** |
@@ -160,7 +160,7 @@
 | **Class** | **Jedi Guardian** |
 | **Abilities** | STR **16** · DEX 14 · CON 14 · WIS 14 · INT 12 · CHA 10 |
 | **Modifiers** | +3 / +2 / +2 / +2 / +1 / +0 |
-| **Vitality** | **68** · **Wounds 14** |
+| **Vitality** | **68** · ⚠ **dies at −14** *(Constitution — `PT-559`)* |
 | **BAB** | **+8** |
 | **Saves** | Fort **+9** · Ref **+9** · Will **+7** *(base + ability + Conditioning +1)* |
 | **Defence** | **10 + 2 (Jedi Knight Robe) + 2 (Dex, uncapped)** = **14** · **16 against her current target** *(Resilience gives +2 vs current target only)* |
@@ -208,7 +208,7 @@
 | **Class** | **Jedi Consular** |
 | **Abilities** | STR 10 · DEX 16 · CON 10 · **WIS 16** · INT 14 · CHA 12 |
 | **Modifiers** | +0 / +3 / +0 / +3 / +2 / +1 |
-| **Vitality** | **34** · **Wounds 10** |
+| **Vitality** | **34** · ⚠ **dies at −10** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** |
 | **Saves** | Fort **+6** · Ref **+7** · Will **+9** *(base + ability)* |
 | **Defence** | **10 + 1 (Jedi Robe) + 3 (Dex, uncapped) + 1 (Moderation)** = **15** · **16 against her current target** |
@@ -236,7 +236,7 @@
 | **Battle Meditation** | Universal | 1 | 12 | −2 |
 | **Disable Droid** | Universal | 2 | 12 | −3 |
 | **Force Confusion** | Universal | 2 | 20 | −4 |
-| **Beast Trick** | Universal | 1 | 6 | −1 |
+| **Beast Control** | Universal | 1 | 6 | −1 |
 
 > **71 points and nine powers — she is the only character in the set who can cast all fight.**
 > **⚠ Force Whirlwind, Force Stasis, Improved Heal, and Force Wave were removed. All four gate above level 8.**
@@ -261,7 +261,7 @@
 | **Class** | **Engineer** |
 | **Abilities** | STR 10 · DEX 14 · CON 10 · **WIS 18** · INT 16 · CHA 8 |
 | **Modifiers** | +0 / +2 / +0 / +4 / +3 / −1 |
-| **Vitality** | **43** *(Engineer d8, Con +0)* · **Wounds 10** |
+| **Vitality** | **43** *(Engineer d8, Con +0)* · ⚠ **dies at −10** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** *(`CLS_ATK_2` — Engineer, per `CLASS-TABLES-DROID`)* |
 | **Saves** | Fort **+2** · Ref **+8** · Will **+6** *(Engineer: Reflex strong, plus ability)* |
 | **Defence** | **10 + 4 (Light Droid Plating) + 2 (Dex, uncapped)** = **16** ⚠ |
@@ -294,7 +294,7 @@
 |---|---|
 | **Class** | **Soldier** |
 | **Abilities** | 16 / 14 / 14 / 12 / 10 / 10 |
-| **Vitality** | **31** *(Toughness +1/level, retroactive)* · **Wounds 14** |
+| **Vitality** | **31** *(Toughness +1/level, retroactive)* · ⚠ **dies at −14** *(Constitution — `PT-559`)* |
 | **BAB** | **+3** · **Saves** Fort **+6** · Ref **+4** · Will **+3** *(+ Conditioning)* |
 | **Defence** | 10 + 6 (medium) + 2 = **18** |
 | **Reactions** | **1** |
@@ -318,7 +318,7 @@
 |---|---|
 | **Class** | **Jedi Guardian** |
 | **Abilities** | 15 / 14 / 14 / 14 / 12 / 10 |
-| **Vitality** | **58** *(Toughness +1/level, retroactive)* · **Wounds 14** |
+| **Vitality** | **58** *(Toughness +1/level, retroactive)* · ⚠ **dies at −14** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+8** · Will **+6** *(+ Conditioning)* |
 | **Defence** | **13 base.** **Ferocity −4 → 9 general · 11 against his current target.** **Declaring Crushing Strike costs a further −4 → 5 general.** |
 | **Force points** | **28** *(Guardian 6, Wis +2, Cha +0)* · **regen 1 per round in combat, 1 per second out** |
@@ -364,7 +364,7 @@
 |---|---|
 | **Class** | **Bounty Hunter** |
 | **Abilities** | STR 14 · DEX 14 · **CON 17** · WIS 8 · INT 8 · CHA 8 |
-| **Vitality** | **59** · **Wounds 17** |
+| **Vitality** | **59** · ⚠ **dies at −17** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+4** · Will **+1** |
 | **Defence** | **10 + 6 (Medium Droid Plating) + 2 (Dex, uncapped)** = **18** ⚠ |
 | **Reactions** | **2** *(BAB +6)* — **and he now holds `Snap Shot → Reflex Fire`, so they are spendable** |
@@ -474,7 +474,7 @@
 
 | Correction | |
 |---|---|
-| HK-24 wounds 17 → **18** | B |
+| ⚠ HK-24 death threshold — `wounds 17 → 18` is VOID, `PT-559`. It dies at `−Constitution`, and `Hardened Chassis` widens that band | B |
 | Engineer attack rate unassigned | B |
 
 ### Two disagreements, both resolved against the minority
@@ -649,7 +649,10 @@
 ### T3-K9 — Astromech chassis, Machinist 5 / Droid Master 5.
 
     ⚠ Force Blind and Fixed Armature apply — PT-92, PT-114
-    Command Protocol  tier 2 — three droids, acting on his turn   PT-201
-    ⚠ Tests the fix: turns collapse from 4 to 1
+    ⚠ Squad Protocol  three droids, ⚠ EACH ON ITS OWN INITIATIVE   PT-573, PT-582
+    ⚠ SUPERSEDED: "tier 2 — three droids, acting on his turn, PT-201"
+    ⚠ Tests the SPREAD, not a collapse — turns are 4, deliberately
+
+**⚠ AND T3-K9 IS AN ASTROMECH — `PT-577` caps that chassis at `Droid Upgrade 2`, closes `Soldier` to it, and leaves `Shock Trooper` its only prestige route.** **⚠ Its `Machinist 5 / Droid Master 5` build is still legal; its UPGRADE CEILING is not what it was.**
 
 **⚠ Tests whether a Droid Master still takes a disproportionate share of the round after `PT-201`.**

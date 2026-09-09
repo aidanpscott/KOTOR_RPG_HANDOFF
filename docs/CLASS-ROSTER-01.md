@@ -2,11 +2,24 @@
 
 **Owner rulings. Names settled; mechanics for the twelve new classes not yet written.**
 
+> **⚠⚠ SUPERSEDED — `PT-990`. ⚠ THE STATUS LINE IS ⚠⚠ **STALE**, AND THE TABLE BELOW IT DISAGREES.**
+
+    ⚠ ROWS READING ⚠⚠ **BUILT**          ⚠ 10
+    ⚠ ROWS READING ⚠ **BUILT `PT-732`**, ⚠⚠ **NEW `PT-784`**,
+      ⚠ **PARTLY BUILT**, ⚠ **MOVED**    ⚠⚠ 9
+    ⚠⚠ ROWS READING ⚠ *"not yet written"* ⚠⚠ **0**
+
+**⚠ AND `CLASS-TABLES*` CARRIES ⚠⚠ **43 LEVEL TABLES** — ⚠ BAB AND SAVES THROUGH 20, ⚠⚠ FOR MORE CLASSES THAN THIS ROSTER LISTS.**
+
+> **⚠ TWO REMAIN ⚠⚠ **PARTLY** BUILT — ⚠ `Sith Inquisitor` AND `Sith Warrior`. ⚠⚠ THAT IS THE REAL REMAINDER, AND IT IS **TWO**, NOT TWELVE.**
+
 **Two axes: Force-using or not, base or prestige.**
 
 ---
 
-## 1. Standard base — 12
+## 1. Standard base — 13
+
+**⚠ Was "12" — corrected at `TRACE-98`.** `Saboteur` was added at `PT-784` and the heading never moved.
 
 | Class | State |
 |---|---|
@@ -17,11 +30,12 @@
 | **Engineer** | **⚠ Was Expert Droid.** `PT-76`, direction corrected by `PT-83` |
 | **Marksman** | Built. **`PT-75`, `PT-77`** |
 | **Machinist** | Built. **⚠ Was `Tech Specialist`. `PT-83`** |
-| **Agent** | **NEW — nothing written** |
-| **Treasure Hunter** | **NEW — nothing written** |
+| **Agent** | ⚠ **BUILT. `PT-179`** — *rebuilt as the spy; `REPLY-29` reversed `PT-135`.* ⚠ Two class feats authored: `Field Position`, `Cover Identity`. |
+| **Treasure Hunter** | ⚠ **BUILT — `PT-732`.** Class feat `Read the Ruin`; hook printed. |
 | **Medic** | Built. **`PT-134`, `PT-243`** — *was `Doctor`* |
-| **Brawler** | **NEW — nothing written** |
-| **Duelist** | **NEW — nothing written** |
+| **Brawler** | ⚠ **BUILT — `PT-732`.** Class feat `Nothing In My Hands`; hook printed. |
+| **Duelist** | ⚠ **BUILT — `PT-732`.** Class feat `Single Combat`; hook printed. |
+| **⚠ Saboteur** | ⚠⚠ **NEW — `PT-784`.** Class feat `Salvage Charge`; hook printed; ⚠ `Key abilities` `INT · DEX`. |
 
 ## 2. Force base — 6
 
@@ -30,8 +44,8 @@
 | **Jedi Guardian** | Built |
 | **Jedi Sentinel** | Built |
 | **Jedi Consular** | Built |
-| **Sith Inquisitor** | **NEW** |
-| **Sith Warrior** | **NEW** |
+| **Sith Inquisitor** | ⚠⚠ **BUILT — `PT-997`.** Class feat `Dominion`; ⚠ **PLAYER-FACING ENTRY IN `CLASSES-FORCE-PHB`.** |
+| **Sith Warrior** | ⚠⚠ **BUILT — `PT-997`.** Class feat `Unrelenting`; ⚠ **PLAYER-FACING ENTRY IN `CLASSES-FORCE-PHB`.** |
 | **Sith Assassin** | **⚠ MOVED from prestige.** Feat total 10 exists; everything else is new |
 
 **⚠ Every Sith column in the source is a Jedi *prestige* column. `PT-124`.**
@@ -81,13 +95,100 @@
 
 **Three per side, and the naming asymmetry is deliberate.** **Jedi take role-nouns — Guardian, Sentinel, Consular. Sith take rank-nouns — Warrior, Inquisitor, Assassin.** *That is what the two orders are.*
 
-## 3. Standard prestige — 11
+## 3. Standard prestige — ⚠ 13
 
-**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Juggernaut · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative**
+**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Juggernaut · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative · ⚠ Shock Trooper · ⚠ Blademaster**
+
+**⚠ THIRTEEN — `PT-578` added `Shock Trooper` and `Blademaster`.**
+
+**⚠ NOT `Vanguard` — `PT-202` renamed that class to `Juggernaut`, and reusing a retired name resurrects a dead one.**
+
+### ⚠ `Shock Trooper` — SPEED, CONTROL and PROTECTION. `PT-579`
+
+**⚠ THE LORE SAYS THE OPPOSITE OF HEAVY WEAPONS.**
+
+> ***"Shock troopers were a special type of military personnel used by various organizations throughout the galaxy. They usually served as POLICE OR ELITE SOLDIERS RESERVED FOR OPERATIONS REQUIRING SPEED AND SKILL."***
+
+**Clone shock troopers were the Coruscant Guard — security police, bodyguards, RIOT CONTROL, prison guards, military police. ⚠ NOT A FIREPOWER ROLE AT ALL.**
+
+**⚠ AND THERE IS AN ERA-EXACT ONE: *"Tetan shock trooper — ELITE WARRIORS OF KRATH CULT."*** **Krath is Empress Teta, ~3997 BBY — Tales of the Jedi, forty years before our setting, and INSIDE `PT-574`'s source bounds.**
+
+**⚠ AND `Vanguard` WAS THE HEAVY-ARMOUR TROOPER.** **SWTOR splits its Trooper into Commando and Vanguard, and `PT-202` ALREADY TURNED `Vanguard` INTO `Juggernaut` — that space is taken.**
+
+### ⚠ It fills a gap nothing else covers
+
+    Juggernaut     holds GROUND        Sharpshooter   kills at RANGE
+    Blademaster    kills in REACH      Operative · Shadow Hunter   work UNSEEN
+    ⚠ NOBODY       controls a CROWD or protects a PERSON
+
+**⚠ AND IT TAKES `Weapon Focus`, NOT `Specialization` — which makes it THE ONLY PRESTIGE CLASS AN `Astromech` OR `Remote` MAY ENTER, `PT-577`.** **A security droid is entirely in genre.**
+
+### ⚠ The weapon-family prestige set is now COMPLETE — `PT-578`, `PT-579`
+
+    Gunslinger      pistols            `Master Two-Weapon Fighting`
+    Sharpshooter    rifles             `Weapon Specialization: Blaster Rifle`
+    ⚠ Blademaster   MELEE              `Weapon Specialization: Melee Weapons`
+    ⚠ Commando      ⚠ ANY ONE RANGED   `Weapon Specialization`, any ranged family
+
+**⚠ `Shock Trooper` IS NOT IN THIS SET — `PT-579`.** **It is not a weapon-family class at all: *"police or elite soldiers reserved for operations requiring SPEED AND SKILL."*** **See `§3c`.**
+
+> **⚠ `Commando` IS THE GENERALIST AND THAT IS NOW ITS IDENTITY RATHER THAN ITS VAGUENESS.** **The other four name a family; the Commando names none, and takes whichever one the character already mastered.**
+
+**⚠ BEFORE `PT-578` THERE WAS NO MELEE PRESTIGE CLASS AT ALL OUTSIDE THE FORCE TIER.** **`Jedi Weaponmaster` and `Sith Marauder` are both Force-gated — a non-Force melee character had NO prestige route while ranged had three.**
 
 **⚠ Scoundrel and Tech Specialist are demoted base classes** — `PT-73` and this ruling. **Their numbers exist and their prestige requirements do not.**
 
-## 4. Force prestige — 8
+## ⚠ 3b. DROIDS AND PRESTIGE CLASSES — `PT-577`
+
+**⚠ SIX are already closed by `PT-92`: every Force prestige class.**
+
+| Class | Droids | Why |
+|---|---|---|
+| **Sharpshooter** | ⚠ **OPEN — the best fit in the game** | Ranged, `Dex`, and a droid is ranged-only |
+| **Scoundrel · Operative · Shadow Hunter** | **OPEN** | ⚠ The `Assassin` and `Probe` chassis ARE this fiction |
+| **Officer · Tech Specialist · Droid Master** | **OPEN** | ⚠ A droid Droid Master is HK-47 with a squad |
+| **⚠ Gunslinger** | **OPEN** | ⚠ **A droid HAS an off-hand rule** — owner ruling. Two blaster pistols, or a rifle two-handed. |
+| **⚠ Juggernaut** | ⚠ **OPEN, requirement SWAPPED** | ⚠ `Heavy Armour Proficiency` → **`Droid Upgrade 3`.** A droid chassis wears no armour; its plating is a hardpoint. **⚠ CLOSED to `Astromech` and `Remote`, which cap at `Droid Upgrade 2`.** |
+| **⚠ Commando** | ⚠ **OPEN to `Assassin` and `Battle` ONLY** | Requires `Weapon Specialization` in **any ONE RANGED family** — `PT-579`. ⚠ **Only those two chassis reach Specialization at all** |
+| **⚠ Shock Trooper** | ⚠ **OPEN TO EVERY CHASSIS** | ⚠ **NEW — `PT-579`.** Requires `Alertness` 8 + `Weapon Focus` in any ranged family. **⚠ THE ONLY PRESTIGE CLASS AN `Astromech` OR `Remote` MAY ENTER — it stops at `Focus`, which they reach.** |
+| **⚠ Blademaster** | ⚠ **CLOSED** | ⚠ **NEW — `PT-578`, the MELEE prestige class.** **`ATTACKS-05` closes melee to EVERY droid chassis** |
+| **⚠ Beast Master** | ⚠ **CLOSED** | ⚠ `Beast Handling` is `Cha`, droids run `Cha −2` or `−4`, **`DROID-SKILLS-01` CLOSES the skill to droids outright**, and `PT-553` requires 6 ranks in it. **The requirement is unmeetable.** |
+
+### ⚠ THE WEAPON LADDER IS CHASSIS-TIERED — `PT-577`
+
+    Assassin · Battle      Proficiency → Focus → ⚠ SPECIALIZATION
+    ⚠ Astromech · Remote   Proficiency → Focus → ⚠ STOPS
+
+**⚠ IT CLOSES `Commando` TO THE LIGHT CHASSIS WITHOUT A SPECIAL RULE. They cannot meet the prerequisite.**
+
+### ⚠ AN ITEM CANNOT MAKE AN ILLEGAL BUILD LEGAL — `PT-577`
+
+**Owner ruling: *"there are some droid gear that can temporarily grant them the specialization bonus feat when worn — even then, that doesn't allow them to become Commandos."***
+
+> **⚠ THE MIRROR OF `PT-315`, WHICH RULED THE OTHER DIRECTION: *"an item cannot make a legal build ILLEGAL."***
+
+**⚠ A GRANTED FEAT SATISFIES *USE*, NOT *ENTRY*.** **Otherwise every prestige requirement becomes a shopping list — and `ITEMS-05` has a 20,000-credit helmet granting `Immunity (MindSpells)`.**
+
+---
+
+## ⚠ 3a. WHICH PRESTIGE CLASSES A CHARACTER MAY ENTER — `PT-573`
+
+> **⚠ A BASE FORCE CLASS MAY ENTER A STANDARD PRESTIGE CLASS. A BASE STANDARD CLASS MAY NOT ENTER A FORCE PRESTIGE CLASS.**
+
+    ⚠ Jedi Guardian → Gunslinger        ✓ legal
+    ⚠ Soldier → Jedi Weaponmaster       ⚠ NOT LEGAL
+
+**⚠ THE GATE RUNS ONE WAY.** **A Jedi who learns to shoot is a Jedi who learns to shoot. A soldier does not become Force-sensitive by taking a level.**
+
+**⚠ `PT-92` already bars a DROID CHASSIS and a RAKATA from every Force class, base or prestige. This bars every ORGANIC who did not start Force-sensitive.**
+
+**⚠ The route in is `Force-Sensitive` and a BASE Force class — not a prestige level.** **`AGENDA-CURRENT`'s *"the Force-Sensitive gate has no warrant"* remains open and is a DIFFERENT question: this ruling says the gate EXISTS, not what justifies it.**
+
+---
+
+## 4. Force prestige — 6
+
+**⚠ Was "8" — corrected at `TRACE-98`.** The text below this heading already said so: *"Six, not eight — `PT-215`."* **The correction was written and the heading was not.**
 
 **Jedi Weaponmaster · Jedi Watchman · Jedi Sage · Sith Marauder · Sith Battlemaster · Sith Sorcerer**
 
@@ -233,7 +334,7 @@
 
 | Jedi Weaponmaster | Sith Marauder | |
 |---|---|---|
-| **`Inner Strength`** −5/−10/−15% damage taken | **`Ignore Pain`** −5/−10/−15% damage taken | **identical mechanic, different word** |
+| **`Inner Strength`** ⚠ `DR 1/2/3` — `PT-629` | **`Ignore Pain`** ⚠ `DR 1/2/3` — `PT-629` | **identical mechanic, different word** |
 | **`Increase Melee Damage`** +2/+4/+6, **melee only** | **`Increase Combat Damage`** +2/+4/+6, **unarmed, melee *or ranged*** | **⚠ the Sith version covers a weapon the Jedi's does not** |
 | **`Deflect`** — blaster deflection scaling with level | **— none —** | **⚠ granted to `jwm` alone in either game** |
 
@@ -281,10 +382,10 @@
 | | Rate | Die | Skill base | Class skills | Feats@30 | Chains | Capstones | Saves |
 |---|---|---|---|---|---|---|---|---|
 | **Brawler** | Combat | d10 | **2** | **6** | **18** | **14** | **13** | 12 / 6 / 6 |
-| **Treasure Hunter** | Middle | d8 | **5** | **9** | **16** | **15** | **8** | 12 / 6 / 12 |
+| **Treasure Hunter** | Middle | d8 | **5** | **12** | **16** | **15** | **8** | 12 / 6 / 12 |
 | **Duelist** | Middle | d8 | 4 | **7** | **15** | **12** | **9** | 6 / 12 / 12 |
 | **Medic** | Specialist | d6 | **6** | **9** | **11** | **12** | **5** | 12 / 6 / 12 |
-| **Agent** | Middle | d8 | **5** | **8** | **15** | **11** | **10** | 6 / 12 / 12 |
+| **Agent** | Middle | d8 | **5** | **12** | **15** | **11** | **10** | 6 / 12 / 12 |
 
 **⚠ Rebuilt as the spy — `PT-179`. `Intelligence` primary, not Charisma.**
 
@@ -299,7 +400,7 @@
     Agent           seen, and behind something  cover
 
 **⚠ And `REPLY-29`'s own SWTOR reference — *"cover as a positional resource with abilities that only work from it"* — is `PT-3` almost word for word, and `PT-3` predates it.**
-| **Pirate** | Middle | d8 | **4** | **8** | **15** | — | — | 12 / 12 / 6 |
+| **Pirate** | Middle | d8 | **4** | **7** | **15** | — | — | 12 / 12 / 6 |
 
 **⚠ The Pirate's archetype was checked against our own canon rules before it was written.** **`Hondo Ohnaka` is *The Clone Wars*, ruled Disney canon and excluded. `Andronikos Revel` is SWTOR, excluded.** **What survives is Legends — `Nym`, a Feeorin pirate captain and exceptional pilot who raided the wealthy and the corrupt.**
 
@@ -313,7 +414,7 @@
 
 **`PT-78` noted that nothing sat at 1 or 2 in the `Combat` band and that *"the band has room for classes that do not exist yet."*** **This is one of them. At 3 it ties the Soldier and Guardian and the room stays empty.**
 
-**⚠ The Agent is the first Charisma-primary class in the game. `PT-135`.**
+**⚠⚠ SUPERSEDED — `PT-179` MOVED THE AGENT TO `INT`.** ⚠ *Was:* **the first Charisma-primary class in the game, `PT-135`.** **⚠ `REPLY-29` REVERSED IT ON OWNER INSTRUCTION: *take the spy, drop the impersonation.*** **⚠ FLAGGED AT `PT-731`.**
 
 **And the premise it was nearly built on failed a measurement:** **`Smuggler` and `Jedi Sentinel` each hold all four covert skills — `Stealth`, `Security`, `Slicing`, `Streetwise` — and no other class holds more than two.**
 
@@ -375,6 +476,22 @@
 > **Ruled: both survive, on *what the covert work is for*.**
 
 **`Operative`** — **the one who was never there.** *Intelligence work: the target does not know they were robbed, read or followed.* **Continues the Agent.**
+### ⚠ THREE ENTRY REQUIREMENTS TESTED ROUTE ONLY — `PT-628`
+
+**`PT-554` asked: *"does the requirement test the COMPETENCE the class is about, or only the ROUTE a character took?"*** **⚠ SIXTEEN OF NINETEEN PASSED. THREE DID NOT.**
+
+| Class | Was | ⚠ Now |
+|---|---|---|
+| **⚠ Shadow Hunter** | any base 6 | **+ ⚠ `Stealth` 8 and `Killer's Instinct`** — *"the target is dead and NOBODY KNOWS WHO DID IT"* |
+| **⚠ Operative** | any base 6 | **+ ⚠ `Stealth` 8 and `Slicing` 8** — *"the target DOES NOT KNOW they were robbed, read or followed"* |
+| **⚠ Tech Specialist** | Engineer 6 or Machinist 6 | **+ ⚠ `Repair` 8** — the same competence `PT-161` already required of the `Droid Master` from the same two parents |
+
+**⚠ THE TWO STEALTH CLASSES SPLIT ON WHAT THEY LEAVE BEHIND.** **The `Shadow Hunter` needs `Killer's Instinct` — it KILLS; the `Operative` needs `Slicing` — it TAKES.** **Both need `Stealth` 8, and neither had needed anything.**
+
+**⚠ AND `Tech Specialist` WAS THE ODD ONE OUT ALREADY.** **`Engineer 6 or Machinist 6` is the `Droid Master`'s exact parent pair — and `PT-161` gave the Droid Master `Repair` 8 while the Tech Specialist got nothing.**
+
+---
+
 **`Shadow Hunter`** — **the one who was there and left nothing.** *Elimination: the target is dead and nobody knows who did it.* **Continues the Smuggler or the Agent.**
 
 #### `Scoundrel` and `Gunslinger` held the same identity
@@ -432,7 +549,7 @@
 
 ### `Droid Master` and `Beast Master` — premises, and the constraint they share. `PT-151`.
 
-**Owner definitions. Both are henchman classes; `PT-145` gave them their mechanism before either had a premise.**
+**Owner definitions. ⚠ Both are COMPANION classes — `PT-571` split companion from henchman, and `PT-145` gave them a henchman's mechanism before either had a premise.**
 
 **`Droid Master`** — ***"like the Engineer, except they specialise in controlling an army of droids. Think the necromancer."***
 
@@ -449,7 +566,9 @@
 
 **⚠ The `Droid Master` is the only class in the game with more than one henchman, and a henchman has its own turn under `PT-145`.**
 
-> **An army of henchmen is an army of turns.** **Combat length is a real cost and the class charges it to the whole table.**
+> **⚠ An army of COMPANIONS IS an army of turns — `PT-573`.** **What `PT-566` bounds is the SIZE of each: a droid's turn is three options deep and none of them is a character sheet.**
+
+**⚠ `PT-201` measured the cost at 62% of the round. Owner ruling: 62% SPREAD ACROSS the round is a different table experience from 62% delivered in one block.**
 
 #### ⚠ Four constraints, recorded before either is drafted
 
@@ -521,15 +640,22 @@
 
 **⚠ Both verified inside every band, both strand zero picks.**
 
-#### `Command Protocol` — the Droid Master, on 5e's answer
+#### **Command Protocol** — the Droid Master. ⚠ SUPERSEDED, see `FEATS-LIBRARY-01` and `PT-582`
+
+**⚠ THE BLOCK BELOW IS `PT-201`'s AND IS KEPT AS A RECORD. It is WRONG on four counts as of `PT-582`.**
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Command Protocol** | **1** | **Two droids**, each a henchman under `PT-145`. **⚠ One order to all of them as a Bonus action, persisting until its task is complete.** A droid with no order **takes cover and moves only to avoid harm** |
-| › **Squad Doctrine** | **4** | **Three droids**, and an order may name two tasks split among them |
-| ›› **Master and Servants** | **8** | **Four droids**, and once per encounter an order is a free action |
+| **Command Protocol** | **1** | ⚠ *Two droids, each a HENCHMAN under `PT-145`. One order to all of them.* |
+| › **Squad Doctrine** | **4** | ⚠ *Three droids* — ⚠ **WITHDRAWN at `PT-582`; the tier is now `Squad Protocol`** |
+| ›› **Master and Servants** | **8** | ⚠ *Four droids* — ⚠ **WITHDRAWN at `PT-582`; the tier is now `Master Protocol` and the cap is THREE** |
 
-> **⚠ Cap is four, stated in the class rather than left to a GM.**
+    ⚠ HENCHMAN     → COMPANION. `PT-571`.
+    ⚠ ONE ORDER    → each droid acts SEPARATELY from a menu of three. `PT-566`.
+    ⚠ YOUR TURN    → each rolls its OWN INITIATIVE. `PT-573`.
+    ⚠ CAP OF FOUR  → ⚠ THREE. `PT-582`.
+
+**⚠ CURRENT: `Command Protocol` → `Squad Protocol` → `Master Protocol`, GRANTED by the class at Droid Master 1 / 4 / 8, gated on character level 7 / 15.**
 
 **The turn-order cost is bounded the way `REPLY-31` asked:** **decision cost is one order, not one per droid, and silence resolves instantly.**
 
@@ -664,6 +790,37 @@
 
 **A Guardian may become a Sage; they will not be holding `Mysticism` 8.**
 
+---
+
+### ⚠⚠⚠ AMENDED — ANY **FORCE** BASE CLASS, GATED BY **ALIGNMENT AND A TEACHER**. `PT-1005`
+
+> **⚠ OWNER RULING. ⚠⚠ THE ROUTE IS NO LONGER *"any **Jedi** base 6"* OR *"any **Sith** base 6"*. ⚠ IT IS ⚠⚠ **ANY FORCE BASE CLASS 6**, PLUS TWO THINGS.**
+
+    ⚠ 1 ⚠⚠ **ALIGNMENT FITS THE SIDE** — ⚠ `ALIGNMENT-01-v2`'s BANDS
+    ⚠ 2 ⚠⚠ **A TEACHER WHO CAN TEACH THAT SIDE**
+
+**⚠ A ⚠⚠ JEDI MASTER TEACHES JEDI PRESTIGE. ⚠ A SITH LORD TEACHES SITH PRESTIGE.**
+
+> **⚠ AND `Kreia` IS THE WORKED EXAMPLE: ⚠⚠ SHE CAN TEACH **BOTH**, BECAUSE SHE **HAS BEEN BOTH** — ⚠ A JEDI MASTER **AND** A SITH LORD.**
+
+### ⚠ AND `Jedi Master` AND `Sith Lord` NOW HAVE A **FUNCTION**
+
+**⚠ `PT-215` CUT THEM AS CLASSES AND KEPT THEM AS ⚠⚠ **RANKS**. ⚠ A RANK THAT DID NOTHING.**
+
+> **⚠ ⚠⚠ NOW THEY ARE **WHAT LETS YOU TEACH**. ⚠ THE CUT CLASSES BECAME THE **GATE**.**
+
+### ⚠⚠ AND IT EXTENDS `PT-1001` FROM BASE TO PRESTIGE
+
+**⚠ `PT-1001` RULED: ⚠⚠ *"**THE TEACHER DECIDES THE TIER.** ⚠ A SITH TEACHES SITH CLASSES; A JEDI TEACHES JEDI ONES."***
+
+    ⚠ BASE TIER      ⚠ `FORCE-TRAINING-01` — ⚠⚠ WHO TAUGHT YOU
+                     DECIDES WHICH THREE OPEN
+    ⚠⚠ PRESTIGE TIER ⚠ **THE SAME RULE**, ONE LEVEL UP
+
+> **⚠ AND IT REPLACES A ⚠⚠ **PARENT LOCK** WITH A **FICTION GATE**. ⚠ `PT-155` OPENED THE SITH SIDE ARGUING ⚠⚠ *"THE GATE DOES THE SORTING WITHOUT THE ROSTER HAVING TO."* ⚠ THIS IS THAT ARGUMENT **FINISHED**.**
+
+**⚠ A `Jedi Guardian` WHO FALLS, DRIFTS TO ⚠⚠ `Committed Dark`, AND FINDS A SITH WILLING TO TEACH HIM ⚠ **CAN BECOME A `Sith Marauder`**. ⚠⚠ THE ROSTER NO LONGER HAS TO FORBID IT — ⚠ THE **BAND** AND THE **TEACHER** DO.**
+
 #### 2 — ⚠ `Jedi Master` and `Jedi Sage` swap places
 
 **Owner: `Jedi Master` and `Sith Lord` become the *universal* capstone; `Jedi Sage` and `Sith Sorcerer` become the Consular and Inquisitor continuation.**
@@ -784,7 +941,9 @@
 
 | | From | Holdings |
 |---|---|---|
-| **Commando** | any base class 6 | `Weapon Specialization` in the chosen family |
+| **Commando** | any base class 6 | ⚠ `Weapon Specialization` in **ANY ONE RANGED FAMILY** — `PT-578`, narrowed by `PT-579` |
+| **⚠ Shock Trooper** | any base class 6 | ⚠ `Alertness` 8 + `Weapon Focus` in any RANGED family — **SPEED, CONTROL and PROTECTION. `PT-579`.** ⚠ **COMPETENCE — `PT-628`.** |
+| **⚠ Blademaster** | any base class 6 | ⚠ `Weapon Specialization: Melee Weapons` — **the MELEE class, `PT-578`.** ⚠ **COMPETENCE — `PT-628`.** |
 | **Gunslinger** | any base class 6 | `Master Two-Weapon Fighting` |
 | **Sharpshooter** | any base class 6 | `Weapon Specialization: Blaster Rifle` |
 | **Shadow Hunter** | any base class 6 | `Stealth` 8 + a melee chain at tier 2 |
@@ -844,7 +1003,7 @@
 | **Sharpshooter** | any base 6 + rifle chain | **Scout / Marksman / Bounty Hunter 6** + `Weapon Specialization: Blaster Rifle` |
 | **Shadow Hunter** | any base 6 | **Agent 6 or Smuggler 6** |
 | **Scoundrel** | any base 6 + `Sneak Attack` tier 2 | **Smuggler 6 or Agent 6** |
-| **Beast Master** | **Scout 6** | Scout 6 **or Treasure Hunter 6** |
+| **Beast Master** | **Scout 6** | Scout 6 **or Treasure Hunter 6** ⚠ **plus `Beast Handling` aptitude and 6 ranks — `PT-553`** |
 | **Officer** | Soldier 6 **or Agent 6** + `Alertness` 8 | Soldier 6 + **`Persuade` 8** |
 
 **⚠ `PT-217`'s *open* model survives.** **It is the owner's ruling and it matches what `PT-214` did on the Force side.** **The designer's drafts predate both.**
@@ -858,6 +1017,12 @@
 #### ⚠ And one of theirs is wrong
 
 **`Beast Master` at *"Scout 6 or Treasure Hunter 6"*.**
+
+> **⚠ `PT-553` ADDS A COMPETENCE REQUIREMENT: `Beast Handling` APTITUDE and at least 6 RANKS.**
+
+**⚠ The class level alone said WHERE YOU CAME FROM and not WHETHER YOU CAN DO THIS.** **A Scout 6 who has never taken a rank in `Beast Handling` could enter the class whose every mechanic rolls that skill — `BEASTS-OBEDIENCE-01`'s obedience checks, `PT-510`.**
+
+**⚠ Both gateway classes carry `Beast Handling` aptitude already — `Scout` and `Treasure Hunter` — so the requirement costs a player RANKS, not a rebuild.** **Six ranks at Scout 6 is what a character who intended this would have anyway.**
 
     Beast Handling class-skill holders: Scout
 
@@ -887,3 +1052,61 @@
 **Whether `Operative` and `Shadow Hunter` are distinct enough to both exist.** **Both are covert prestige.**
 
 **Nothing outside the Jedi and Sith orders exists in the Force lists.** **⚠ No Jolee Bindo slot** — a trained Force user who belongs to neither. **KOTOR 2's premise is Force users outside the institutions.**
+
+---
+
+## ⚠ PRIMARY AND SECONDARY ABILITY — NINETEEN BASE CLASSES. `PT-717`
+
+**⚠ THE HEADING SAID EIGHTEEN OVER A 19-ROW TABLE — corrected at `PT-1387`.** `Saboteur` is in the table and was added at `PT-784`. **Third stale heading in this document.**
+
+### ⚠ AND `PT-717`'s SAVE MODEL CANNOT DESCRIBE THE SYSTEM — `PT-1387`
+
+**`PT-717` records a save as STRONG or NOT. `PT-119` has THREE ladders** — `Strong 2+L/2`, `Hybrid (2L+6)/5`, `Weak L/3` — **verified against the source tables**, and **21 of 30 classes use `Hybrid` on at least one save.**
+
+**⚠ So the two-state reading has no way to say `Hybrid`, and on the ten classes both documents cover THEY DISAGREE ON FIVE** — `Bounty Hunter`, `Machinist`, `Medic`, `Sith Warrior`, `Sith Assassin`. **Four are `PT-717` calling a Hybrid save strong; `Medic` is the reverse.**
+
+> **⚠ `PT-119` is the rule. `PT-717`'s ability→save derivation is a heuristic that predates it and is superseded where they conflict.**
+
+**The primary/secondary ability table below stands** — that is what it is for. **Its saves column does not.**
+
+> **⚠ `PT-246`'s MODEL: the FIRST ability sets one strong save, the SECOND sets another. ⚠ If both point at the same save, the class has one strong save.**
+
+| Base class | ⚠ Primary | ⚠ Secondary | Strong saves |
+|---|---|---|---|
+| **Soldier** | **STR** | CON | Fort |
+| **Scout** | **DEX** | WIS | ⚠ Fort · Ref · Will |
+| **Smuggler** | **DEX** | CHA | Ref |
+| **Bounty Hunter** | **DEX** | CON | Fort · Ref |
+| **Marksman** | **CON** | DEX | Fort · Ref |
+| **Machinist** | **INT** | DEX | Ref · Will |
+| **Engineer** | **INT** | WIS | Will |
+| **Agent** | **INT** | DEX | Ref · Will |
+| **Treasure Hunter** | **INT** | CON | Fort · Will |
+| **Medic** | **WIS** | INT | Will |
+| **Brawler** | **STR** | CON | Fort |
+| **Duelist** | **DEX** | INT | Ref · Will |
+| **⚠ Jedi Guardian** | **STR** | DEX | Fort · Ref |
+| **⚠ Jedi Sentinel** | **CON** | DEX | Fort · Ref |
+| **⚠ Jedi Consular** | **WIS** | CON | Fort · Will |
+| **⚠ Sith Warrior** | **STR** | CHA | Fort · Will |
+| **⚠ Sith Assassin** | **DEX** | INT | Ref · Will |
+| **⚠ Sith Inquisitor** | **CON** | CHA | Fort · Will |
+| **⚠ Saboteur** | **INT** | DEX | Ref · Will |
+
+**⚠ TWELVE WERE ALREADY RULED AT `PT-246` AND FROZEN IN `audit_abilities.py`. ⚠ THE SIX FORCE CLASSES ARE NEW AND DERIVED FROM THEIR OWN LEVEL-20 SAVES:**
+
+    ⚠ Jedi Guardian   `+12 / +12 / +9`  → Fort and Ref strong → STR + DEX
+    ⚠ Jedi Sentinel   `+12 / +12 / +9`  → ⚠ THE SAME SHAPE → CON + DEX
+    ⚠ Jedi Consular   `+12 / +9 / +12`  → Fort and Will → WIS + CON
+
+**⚠⚠ `Jedi Guardian` AND `Jedi Sentinel` HAVE IDENTICAL SAVE PROGRESSIONS. ⚠ THEY ARE SEPARATED BY THEIR PRIMARY — `STR` AGAINST `CON` — AND BY HIT AND FORCE DICE, `d10/d4` AGAINST `d8/d6`.**
+
+### ⚠ What the primary is FOR
+
+**⚠ `PROFESSIONS-01`'s `Augmented` GRANTS AN IMPLANT, AND ⚠ `PT-716` MAKES IT THE ONE MATCHING THE CLASS'S PRIMARY ABILITY.**
+
+    ⚠ STR  `Motor Package`      ⚠ CON  `Cardio Package`
+    ⚠ DEX  `Response Package`   ⚠ INT  `Memory Package`
+    ⚠ WIS  `Clarity Package`    ⚠ CHA  `Presence Package`
+
+**⚠ ALL SIX AT TIER 2, 1,000cr, `+1`. ⚠ THREE PORTED, THREE AUTHORED AT `PT-716`.**

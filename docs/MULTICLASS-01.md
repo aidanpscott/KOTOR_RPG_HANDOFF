@@ -132,7 +132,27 @@
 
 ### 3.3 Force-Sensitive
 
-**A non-Force-using character must hold `Force-Sensitive` before taking a Force-class level.** **The three Force classes receive it free at 1st level; anyone else pays a feat for it.**
+**A non-Force-using character must hold `Force-Sensitive` before taking a Force-class level.**
+
+> **⚠ IT IS NOT PURCHASED. `PT-576`.**
+
+**⚠ THIS SECTION READ *"anyone else PAYS A FEAT FOR IT"* AND THAT WAS WRONG.** **`FORCE-AWAKENING-01 §21`: *"The feat is GRANTED SECRETLY at Stage 2 determination. It is hidden. `Confirmed — yes` reveals it. IT COSTS NOTHING. THE AWAKENING WAS THE PAYMENT."***
+
+**⚠ A character DISCOVERS they are Force-sensitive through the three-stage Echo pipeline. They do not decide to be, and they cannot buy it at level-up.**
+
+**The three Force base classes receive it at 1st level because taking one IS a declaration that the character already awakened.**
+
+### ⚠ 3.3a · THE ROUTE INTO A FORCE CLASS — `PT-576`
+
+    ⚠ `Confirmed — yes` from `FORCE-AWAKENING-01`, and NOTHING ELSE.
+
+**⚠ A character who is `Sensitive` but not CONFIRMED may not take a Force class — they do not know what they are.** **A character who is `Open` or `Closed` never will.**
+
+**⚠ AND THIS CLOSES THE ROUTE `PT-573` LEFT OPEN.** **`PT-573` barred a base standard class from a FORCE PRESTIGE class, and `§3.3` as written let a Soldier BUY `Force-Sensitive`, take a Jedi Guardian level, and enter one anyway.**
+
+> **⚠ THAT ROUTE REQUIRED A PURCHASE THAT DOES NOT EXIST.** **A Soldier who awakens genuinely — Echo, determination, confirmation — may take Jedi Guardian and go on from there, and that is a REAL STAR WARS STORY rather than a build.**
+
+**⚠ Owner ruling on `PT-573`: the indirect route is CLOSED where it rests on a purchase, and OPEN where it rests on an awakening.**
 
 **⚠ Warrant: `FORCE-TRAINING-01`. Owner ruling, and it supersedes two dead citations.**
 
@@ -309,11 +329,117 @@
 
 ---
 
+## 5b · ⚠⚠ THREE CLASSES, MAXIMUM — `PT-723`, owner ruling
+
+> **⚠ A CHARACTER MAY HOLD ⚠ NO MORE THAN THREE CLASSES. ⚠ THIS IS A DEPARTURE FROM 3.5, WHICH HAS NO CAP.**
+
+**⚠ `PT-722` RULED THERE WAS NO CAP ON THE GROUND THAT 3.5 HAS NONE AND THE MATHS PUNISHES SPREADING. ⚠ THE OWNER OVERRULED IT ONE RULING LATER.**
+
+### ⚠ Why three is the right number here and not in 3.5
+
+**⚠ 3.5's BRAKE WAS THE FAVOURED-CLASS XP PENALTY, AND ⚠ `§3` CUT IT — *"it is fiddly, it punishes exactly the character concept this game is about."***
+
+> **⚠⚠ CUTTING THE BRAKE AND KEEPING NO CAP LEFT NOTHING AT ALL. ⚠ THREE RESTORES A LIMIT WITHOUT RESTORING THE BOOKKEEPING.**
+
+**⚠ AND IT IS A HARD NUMBER RATHER THAN A SOFT DISINCENTIVE, WHICH SUITS A SYSTEM THAT ALSO HAS TO RUN IN AN ENGINE.**
+
+### ⚠ What three permits
+
+    ⚠ base + prestige                         ⚠ THE COMMON CASE
+    ⚠ base + base + prestige                  ⚠ *"a soldier who knows a few
+                                              Force powers"* — `PT-721`
+    ⚠ base + prestige + prestige              ⚠ `PT-628`'s entry requirements
+                                              gate the second
+    ⚠⚠ AND `Soldier 3 / Scout 2 / Soldier 2` STILL COUNTS AS **TWO** —
+       ⚠ RETURNING TO A CLASS YOU HOLD IS NOT A FOURTH CLASS. `PT-648`.
+
+**⚠ THE CAP COUNTS ⚠ DISTINCT CLASSES HELD, NOT TIMES ENTERED.**
+
+### ⚠ What it forbids, and it is the right thing to forbid
+
+**⚠ THE FOUR-WAY SPREAD. ⚠ A `Soldier 2 / Scout 2 / Smuggler 2 / Medic 2` HAS NO IDENTITY AND `PT-159`'s HIGHEST-RATE RULE WOULD HAND IT EVERY GOOD SAVE.**
+
+> **⚠ THAT IS THE EXPLOIT `PT-722` SAID THE MATHS WOULD PUNISH. ⚠ IT DOES NOT — `PT-159` TAKES THE **BEST** OF EACH, SO BREADTH IS REWARDED, NOT PENALISED.**
+
+**⚠ `PT-722` WAS WRONG ABOUT ITS OWN EVIDENCE, AND THE CAP IS THE FIX.**
+
+---
+
+## 5a · ⚠⚠ A PRESTIGE CLASS IS NOT A DESTINATION — `PT-721`
+
+> **⚠ YOU MAY TAKE BASE-CLASS LEVELS AFTER A PRESTIGE CLASS. ⚠ FREELY, AND IN ANY ORDER.**
+
+**⚠ THIS WAS NEVER A NEW RULE. ⚠ `§3` ALREADY SAID *"take a level in ANY CLASS YOU QUALIFY FOR, AT ANY LEVEL-UP"* AND THREE OTHER RULINGS ASSUMED IT.**
+
+    ⚠ `§3`      *"any class you qualify for, at any level-up"*
+    ⚠ `PT-648`  a character MAY RETURN to a class they have left
+    ⚠ `PT-159`  ⚠ SAVES TAKE THE HIGHEST RATE ACROSS ALL CLASSES HELD —
+                ⚠ A FORMULA OVER A SET, NOT A SEQUENCE
+
+**⚠⚠ `PT-159` IS THE TELL. ⚠ A RULE THAT CANNOT DISTINGUISH `Soldier 3 / Scout 2 / Soldier 2` FROM `Soldier 5 / Scout 2` IS A RULE WRITTEN EXPECTING PEOPLE TO MOVE BACK AND FORTH.**
+
+### ⚠ KOTOR's lock does not transfer
+
+**⚠ THE GAMES LOCK YOU INTO A JEDI CLASS BECAUSE THEY ARE VIDEO GAMES WITH A SCRIPTED TURN AND A TWENTY-LEVEL ARC.**
+
+> **⚠ WE GO TO THIRTY, A PACKAGE MAY CAP ANYWHERE — `PT-667` — AND ⚠ A PRESTIGE CLASS HERE IS A CLASS WITH AN ENTRY REQUIREMENT, NOT AN ENDING.**
+
+**⚠ `PT-628` GAVE ALL NINETEEN THEIR ENTRY REQUIREMENTS. ⚠ THE GATE IS AT THE DOOR, NOT BEHIND IT.**
+
+### ⚠⚠ AND *"a soldier who knows a few Force powers"* IS ALREADY LEGAL
+
+**⚠ `§3`: *"Force die accrues ONLY on Force-class levels."***
+
+    ⚠ `Soldier 15 / Jedi Consular 3` — ⚠ A TINY FORCE POOL AND A HANDFUL
+      OF POWERS, AND EVERY SOLDIER LEVEL INTACT
+
+**⚠ NOTHING FORBIDS IT TODAY AND NOTHING SHOULD. ⚠ THE FORCE DIE RULE ALREADY PRICES IT: you get the powers you paid levels for and no more.**
+
+### ⚠ NOT a campaign-package toggle
+
+**⚠ A PACKAGE THAT LOCKED BASE CLASSES AFTER PRESTIGE WOULD HAVE TO RESTATE `PT-648`, `PT-159` AND THE `Key abilities` DESCRIPTOR. ⚠ THREE SYSTEMS BENT FOR ONE SETTING FLAG.**
+
+> **⚠ AND IT IS THE WRONG LEVER. ⚠ A KOTOR-1 PACKAGE DOES NOT NEED A RULE STOPPING `Scout 5` AFTER `Jedi Guardian` — ⚠ THE STORY IS OVER BY THEN.**
+
+    ⚠ THE RULE      free multiclassing, as 3.5
+    ⚠ THE PACKAGE   ⚠ may RECOMMEND a path in its player-facing text
+    ⚠ THE GM        may say no at their table, as any GM may
+
+### ⚠ The consequence, accepted
+
+**⚠ `Soldier 19 / Jedi Guardian 1` GETS A LIGHTSABER AND `Force Jump` FOR ONE LEVEL.**
+
+**⚠ 3.5 HAS THE SAME DIP PROBLEM AND LIVES WITH IT. ⚠ `PT-628`'s ENTRY REQUIREMENTS ARE THE REAL BRAKE, AND ⚠ `PT-696`'s *"no benefit to duplication, and no penalty"* ALREADY SETS THE TONE: ⚠ THE SYSTEM LETS A PLAYER MAKE A BAD CHOICE RATHER THAN PREVENTING IT.**
+
+---
+
 ## 6. Open
 
 **⚠ Prestige entry requirements — the *grammar* is ruled at `PT-138`. The nineteen individual sets are not written.**
 
-**Whether a character may return to a class they have left.** **3.5 says yes. Nothing here says otherwise, and nothing says so explicitly.**
+> **⚠⚠ SUPERSEDED — `PT-992`. ⚠ THE SETS ARE ⚠⚠ **WRITTEN, AND THEY ARE IN `CLASS-ROSTER-01`**, NOT HERE.**
+
+    ⚠ PRESTIGE ROWS CARRYING AN ENTRY REQUIREMENT  ⚠⚠ **11**
+    ⚠ `Commando` ⚠ *"`Weapon Specialization` in ANY ONE RANGED FAMILY"*
+    ⚠ `Gunslinger` ⚠ *"`Master Two-Weapon Fighting`"*
+    ⚠ `Shadow Hunter` ⚠ *"`Stealth` 8 + a melee chain at tier 2"*
+    ⚠ `Juggernaut` ⚠ *"`Heavy Armour Proficiency`"*
+
+**⚠ AND `CLASS-ROSTER-01 §475` CARRIES ⚠⚠ *"THREE ENTRY REQUIREMENTS **TESTED** — ROUTE ONLY, `PT-628`."***
+
+> **⚠ THIS FILE'S OWN `§5` CITES THEM AS ⚠⚠ *"`PT-628`'s ENTRY REQUIREMENTS ARE **THE REAL BRAKE**"* — ⚠ WHILE `§6` SAYS THEY ARE ⚠⚠ **NOT WRITTEN**. ⚠ TWO SECTIONS OF ONE DOCUMENT, ⚠⚠ DISAGREEING.**
+
+**⚠ WHAT REMAINS IS ⚠⚠ **EIGHT OF NINETEEN**, ⚠ NOT NINETEEN.
+
+**✓ ⚠ A CHARACTER MAY RETURN TO A CLASS THEY HAVE LEFT — `PT-648`.**
+
+> **⚠ 3.5 SAYS YES, NOTHING HERE SAID OTHERWISE, AND NOTHING SAID SO EXPLICITLY. IT SAYS SO NOW.**
+
+**⚠ AND `PT-159`'s MULTICLASS RULE ALREADY ASSUMED IT.** **Saves take the HIGHEST RATE and the HIGHEST CHAIN COUNT across all classes held — ⚠ A FORMULA OVER A SET, NOT A SEQUENCE. It cannot tell the difference between `Soldier 3 / Scout 2 / Soldier 2` and `Soldier 5 / Scout 2`.**
+
+**⚠ THE PROHIBITION WOULD HAVE NEEDED A MECHANISM AND THERE IS NONE.** **A rule nothing enforces is not a rule.**
+
+**⚠ AND THE PARAGRAPH BELOW ALREADY RULED THE ONLY EXPLOIT: credit is ONCE PER CLASS, so returning buys levels and NOT a second entry bonus.**
 
 **Whether a character who returns to a first class collects credit again.** **No — credit is once per class, and the class is already held.** **Stated here because the wording could be read either way.**
 

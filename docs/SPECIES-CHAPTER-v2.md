@@ -4,7 +4,8 @@
 
 ---
 
-The galaxy of the Old Republic is home to hundreds of sentient species. Thirty-one of them are available to player characters in this game — ranging from the ubiquitous Humans who dominate galactic politics to the reclusive Miraluka who see the world through the Force alone, from the ferocious Massassi who once served the Sith Empire to the scholarly Bith whose homeworld has known no war for generations.
+
+The galaxy of the Old Republic is home to hundreds of sentient species. **Thirty-five** of them are available to player characters (`PT-1333`) in this game — ranging from the ubiquitous Humans who dominate galactic politics to the reclusive Miraluka who see the world through the Force alone, from the ferocious Massassi who once served the Sith Empire to the scholarly Bith whose homeworld has known no war for generations.
 
 This chapter tells you what you need to know to play each of them.
 
@@ -34,7 +35,7 @@ When you create a character, you choose a species before anything else. Your spe
 
 > **`Mind Trick` · `Advanced Mind Trick` · `Force Distraction` · `Force Confusion` · `Fear` · `Horror` · `Insanity`**
 
-**⚠ `Beast Trick`, `Beast Confusion`, `Droid Trick` and `Droid Confusion` are cut or held for the KOTOR 2 package — `PARTITION-01 §6.1`.** **They are not in the set.**
+**⚠ `Beast Control`, `Beast Confusion`, `Droid Trick` and `Droid Confusion` are cut or held for the KOTOR 2 package — `PARTITION-01 §6.1`.** **They are not in the set.**
 
 **⚠ And the name `Mind Trick` moved.** **It was row 181 and is now row 6.** **Any reference written before `D-AK` that says *Mind Trick* meant the costed combat power, now `Force Distraction`.** **Every reference in this chapter is post-ruling and means row 6.**
 
@@ -100,6 +101,134 @@ Where a species is drawn from a source other than the *Revised Core Rulebook*, a
 
 ---
 
+## ⚠⚠ SIZE IS MECHANICAL FOR CHARACTERS — `PT-623`
+
+**⚠ IT WAS A BARE LABEL. `Droid, Astromech` read `Size: Small` and `Droid, Remote` read `Size: Tiny`, and NEITHER GRANTED ANYTHING.**
+
+> **⚠ SIZE WAS FULLY MECHANICAL FOR BEASTS — `PT-557` — AND DID NOTHING AT ALL FOR CHARACTERS.** **The same word meant something on one side of the game and nothing on the other.**
+
+### The character Defence formula — ⚠ stated for the first time
+
+    ⚠ Defence = 10 + armour + Dexterity modifier + SIZE MODIFIER
+
+**⚠ `PREGENS-01` HAS BEEN COMPUTING `10 + armour + Dex` ON NINE SHEETS AND NO DOCUMENT EVER STATED IT.** **`PT-623` states it and adds the size term.**
+
+### Size modifiers — `PT-557`'s table, unchanged
+
+    ⚠ Tiny +2 · Small +1 · Medium 0 · Large −1 · Huge −2 · Colossal −4
+
+**⚠ A SMALLER TARGET IS HARDER TO HIT. The table is the beasts' own and is not re-derived.**
+
+    ⚠ Droid, Remote      Tiny    ⚠ +2 Defence
+    ⚠ Droid, Astromech   Small   ⚠ +1 Defence
+    every other species  Medium  0
+
+**⚠ AND IT PARTLY ANSWERS `PT-577`.** **The `Astromech` and `Remote` are the two chassis the roster caps hardest — `Droid Upgrade 2`, no `Soldier`, one attack, no ranged chains. ⚠ THEY ARE ALSO THE TWO THAT ARE HARD TO HIT.**
+
+**⚠ NO OTHER SIZE EFFECT IS ADDED.** **Reach, carrying capacity and weapon sizing remain unwritten for characters — `RULES-01`, and a bigger job than this.**
+
+---
+
+## ⚠ CHARACTER CREATION ORDER — SPECIES BEFORE ANYTHING ELSE. `PT-594`
+
+> **⚠ SPECIES IS CHOSEN FIRST. Everything that follows depends on it.**
+
+**⚠ A DROID HAS NO SEX AND NO GENDER.** **It has a VOICE MODULE, and the player chooses whether it reads MASCULINE, FEMININE, or NEITHER.** **That is a cosmetic choice with NO mechanical effect and it is not a species trait.**
+
+    ⚠ 1. SPECIES        ⚠ this decides whether step 2 exists at all
+    ⚠ 2. SEX            ⚠ ORGANICS ONLY, and mechanical for exactly ONE species
+       3. class · abilities · skills · feats · everything else
+
+**⚠ SEX IS MECHANICAL FOR ONE SPECIES AND ONE ONLY:** **the `Devaronian` carries TWO ability arrays — `SPECIES-MASTER` line 50, and `§1174` calls it *"a mechanical oddity no one else shares."***
+
+**⚠ FOR EVERY OTHER ORGANIC IT IS DESCRIPTION.** **For a DROID it does not exist.**
+
+**⚠ AND THIS IS WHY THE ORDER MATTERS.** **A creator that asks for gender BEFORE species asks a droid player a question with no answer — and asks a Devaronian player a question whose consequences they cannot yet see.**
+
+### ⚠ The one item that reads sex
+
+**`ITEMS-02`'s `Dancer's Outfit` carries a `UseLimitationGender` property from the game files.** **⚠ A DROID CAN NEVER MEET IT — not because it is barred, but because it has no value in that field.**
+
+---
+
+### Aqualish
+
+Ando is a Mid Rim ocean world dotted with swampy islands and rocky outcroppings, and its three peoples are one species caught at three points of the same climb out of the water. The **Aquala** are the baseline stock — hands ending in cup-shaped fins, skin from dark blue to dark green, a layer of blubber against cold water. They keep to floating cities and to nets kilometres long, and they rarely leave. The **Quara** finished the climb: five clawed digits, the wetlands, a tenth of the world's population. The **Ualaq** finished it too but kept four eyes the other two lost, and kept to caves and dark rainforest.
+
+All three are tusked, and the tusks are dense with nerve endings. An Aqualish rubbing its tusks against a wooden bar is enjoying itself. One with a chipped tusk may be immobilised by the pain for weeks.
+
+**Aqualish open on strangers with aggression and read a soft answer as weakness**, and the harassment continues until it is answered in kind. The galaxy has noticed. A Bith will call them a sickly species to their faces; a Taris swoop champion thinks an Aqualish winner is laughable; the Exchange hires them as muscle on four worlds and rarely as anything else. **The −2 Charisma is what the galaxy thinks of Aqualish, not what any one of them is.**
+
+**And they reserve their deepest contempt for each other.** Aquala despise the Quara and the Ualaq; the Quara despise the Aquala and the Ualaq; the Ualaq despise both. Each strain holds the other two to be inferior and weak, and each is entirely certain of it. **A Quara will tell you the three dialects are one language and say so with contempt.**
+
+Their history is a war over fish that nearly ended them — the Aquala blamed the other two for overfishing — halted only when a starship made landfall. They killed its crew, kept the hull intact, and reverse-engineered their way into space together. They fired on the first Republic vessel they met, lost badly, and gave up their offensive shipboard weaponry as a term of peace. **By 3956 BBY Ando is a long-settled Republic ward** and its fisheries are the finest table food in the Core.
+
+**Shared Aqualish Traits** — every subrace carries these.
+
+- **Ability Adjustments:** **−2 Wisdom, −2 Charisma**, plus a +2 set by subrace. *See each entry.*
+- **Size:** Medium. *1.7 metres.*
+- **Speed:** 10 metres.
+- **Low-Light Vision.** *Eyes built for deep water, not for daylight.*
+- **Waterbreathing:** **Cannot drown.**
+- **Languages:** Speak and read/write **Aqualish and Basic**. **The three subraces speak dialects of one tongue** — mutually intelligible, whatever any of them says about it.
+**Availability:** **Present and unambiguous at 3956 BBY.** ⚠ **Ando is a long-settled Republic ward by the campaign date, disarmed as a term of peace.**
+
+
+---
+
+### Aqualish, Aquala
+
+*The finned Aqualish.* The baseline stock, and the only one still shaped by the sea. **An Aquala offworld is the rare one** — the fins that make them the best swimmers on Ando make everything built for five fingers a fight.
+
+- **Fins:** Cup-shaped hands where the other two have fingers. **You swim at your full land speed and take no penalty fighting submerged.** **And −4 on any skill check using equipment not designed for fins** — Computer Use, Security, Repair, Slicing, Sleight of Hand, and any console or control-panel task. **Weapons are not affected.**
+- **Ability Adjustments:** +2 Constitution, −2 Wisdom, −2 Charisma. *Cold water and blubber.*
+- **Skill Bonuses:** +4 Swim.
+- **Speed:** 10 metres, on land and in water.
+
+---
+
+### Aqualish, Quara
+
+*Five-fingered, and out of the water for good.* A tenth of Ando's population, living off the wetlands and the waterfowl. **The fine motor control the Aquala never developed made the Quara the spacefarers**, and most Aqualish the galaxy meets are Quara or Ualaq.
+
+- **Tusked Charge:** After moving at least two squares, a melee attack deals `1d6` extra damage and the target makes a Fortitude save or is knocked prone.
+- **Ability Adjustments:** +2 Strength, −2 Wisdom, −2 Charisma. *Wetland hunters.*
+- **Skill Bonuses:** +2 Swim, +2 Intimidate.
+
+---
+
+### Aqualish, Ualaq
+
+*Four eyes.* Not a mutation but a retention — the trait the other two lost. The Ualaq kept the caves and the dark rainforest, and their eyes are the most light-sensitive of the three. **The rarest, and the most feared.**
+
+- **Wide Field:** Four eyes and almost no blind spot. **Cannot be flanked by anything it can see**, and take no penalty for attacking a target you cannot see clearly.
+- **Ability Adjustments:** +2 Dexterity, −2 Wisdom, −2 Charisma. *Dexterous hands, dark places.*
+- **Skill Bonuses:** +2 Swim, +2 Stealth.
+
+**Availability:** **All three are present at 3956 BBY.** **Aqualish appear in both games as Exchange muscle, smugglers, arms dealers and swoop racers — Taris, Nar Shaddaa, Onderon.** **Aqualish heroes are typically scoundrels or soldiers, and Force-using Aqualish are rare.**
+
+*Source: Ultimate Alien Anthology, f.14 — ability line, Swim bonuses, `Fins`, age bands, and the note on adventurers. KOTOR 1 and 2 dialogue for presence, occupation and reputation. ⚠ The per-subrace +2 split, `Tusked Charge`, `Wide Field`, `Low-Light Vision` and the full-speed swimming are authored; `Fins` is narrowed from the printed −4. PT-413, PT-416, PT-418, PT-420. Descriptive lore from The New Essential Guide to Alien Species, pp.37–40 — ⚠ unranked source, PT-415 pending.*
+
+---
+
+### Arkanian
+
+The Arkanians are a proud and brilliant people from the icy world of Arkania in the Colonies region. Their civilisation is ancient, sophisticated, and more than a little arrogant — famous across the Republic for their research in genetics and medicine, and infamous for the reckless experiments that sometimes follow. Arkanian corporations bring advanced medical treatments to market at opportune times, and Arkanian scientists have been known to treat other species as research subjects without excessive concern for consent.
+
+At the campaign date, Arkania is a thriving corporate meritocracy. Off-world contractors harvest its famous diamond deposits alongside the natives, and a Jedi training academy founded by Master Arca Jeth operates on the planet. The cities are built enclosed to spare visitors from the bitter cold.
+
+**⚠ Relocated at `PT-1335`, not written.** These paragraphs describe the **species** and were sitting inside `Arkanian, Pureblood`, where a reader looking up `Arkanian` would never find them. **Nothing was invented; the subrace entry keeps everything specific to it.**
+
+**Shared Arkanian Traits** — both subraces carry these.
+
+- **Size:** Medium.
+- **Speed:** 10 metres.
+- **Ability Adjustments, Skill Bonuses and Languages:** **set by subrace.** *See each entry.*
+
+**Subraces:** Pureblood, Offshoot.
+
+---
+
 ### Arkanian, Pureblood
 
 The Arkanians are a proud and brilliant people from the icy world of Arkania in the Colonies region. Their civilisation is ancient, sophisticated, and more than a little arrogant — famous across the Republic for their research in genetics and medicine, and infamous for the reckless experiments that sometimes follow. Arkanian corporations bring advanced medical treatments to market at opportune times, and Arkanian scientists have been known to treat other species as research subjects without excessive concern for consent.
@@ -114,9 +243,11 @@ Arkanians tend toward intellectual pride and social aloofness. They are not shy 
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Perfect Recall:** An Arkanian remembers any text, face, or conversation exactly. **+4 on Archaeology and Xenology checks concerning anything previously studied.**
-- **Cold Calculation:** *Racial feat — learned on level-up, maximum level 6.* **+2 initiative, and immune to fear.** *An Arkanian does not believe anything in the room outranks them.*
+- **Cold Calculation:** *Racial feat — learned on level-up, maximum level 6.* **+2 initiative, and immune to fear effects — cannot be `shaken` or `panicked`.** *An Arkanian does not believe anything in the room outranks them.*
 - **Skill Bonuses:** +2 Science, +2 Xenology.
 - **Languages:** Speak and read/write Arkanian and Basic.
+**Availability:** **Present and unambiguous at 3956 BBY.** **Arkania is a thriving corporate meritocracy at the campaign date.**
+
 
 *Source: Ultimate Alien Anthology, p.16.*
 
@@ -203,8 +334,10 @@ The extent of the massacre remained unknown to the Republic until an expedition 
 - **Speed:** 10 metres.
 - **Natural Weapons:** **Claws. Unarmed damage is 1d6 and cannot be disarmed.**
 - **Racial Attacks:** Cathar may take the *Pounce* and *Claw* unarmed attacks — `ATTACKS-07`. **Both are attacks, not feats, and cost an attack pick.**
-- **Skill Bonuses:** +2 Awareness, +2 Athletics.
+- **Skill Bonuses:** +2 Survival, +2 Athletics.
 - **Languages:** Speak and read Catharese and Basic.
+**Availability:** ⚠ **Present at 3956 BBY, and SCARCE.** **⚠ The 3973 BBY massacre killed most of the species — `EVENTS-01 §1`.** **Survivors are scattered across Republic worlds; the homeworld is rebuilding and has no central authority.** ⚠ **A Cathar character is a survivor or a survivor's child, and that is not optional flavour.**
+
 
 *Source: KOTOR Campaign Guide, p.12. Converted from Saga Edition.*
 
@@ -227,7 +360,11 @@ Their homeworld of Urkupp was destroyed approximately forty years before the cam
 - **Skill Bonuses:** +2 Stealth, +2 Intimidate.
 - **Languages:** Speak and read/write Dashadi; speak Basic.
 
-**Availability:** Dashade are available only in campaigns set before 3996 BBY. After the destruction of Urkupp, surviving Dashade are vanishingly rare.
+**Availability:** ⚠⚠ **Playable at 3956 BBY, with GM permission.** ⚠ **`PT-857`.**
+
+⚠ Urkupp was consumed in the Cron Cluster supernova in 3996 BBY. ⚠⚠ A player Dashade is **a survivor of a dead world** — ⚠ hibernated, enslaved, or simply off-world when it happened. ⚠ There are no others where they come from.
+
+> **⚠ THE OLD LINE READ ⚠ *"available only in campaigns set before 3996 BBY."* ⚠⚠ THAT EXCLUDED THE CAMPAIGN DATE, ⚠ CONTRADICTED THE ENTRY'S OWN *"a handful survived"*, AND ⚠⚠ IS THE ONLY SPECIES IN THE CHAPTER WHOSE HOMEWORLD IS **GONE** — WHICH IS PRECISELY THE CASE THE TWO-FIELD HOMEWORLD MODEL EXISTS FOR.**
 
 *Adapted from the Ultimate Alien Anthology, pp.43–44.*
 
@@ -237,7 +374,7 @@ Their homeworld of Urkupp was destroyed approximately forty years before the cam
 
 Devaronians are among the oldest spacefaring species in the galaxy, with males common in spaceports for thousands of years. Their horned appearance — and their reputation for wanderlust, unreliability, and a cheerful willingness to bend the truth — has made them a familiar sight on smuggler's runs and in frontier cantinas from the Core to the Rim.
 
-What makes Devaronians mechanically unusual is that males and females are built differently. Male Devaronians are quick and socially brash; females are contemplative, intelligent, and perceptive. The book gives two adjustment arrays, keyed by sex — the only species on this roster that works this way.
+⚠ **`PT-594`: SEX IS A SPECIES PROPERTY, NOT A CHARACTER-CREATION STEP OF ITS OWN — and a DROID HAS NEITHER.** What makes Devaronians mechanically unusual is that males and females are built differently. Male Devaronians are quick and socially brash; females are contemplative, intelligent, and perceptive. The book gives two adjustment arrays, keyed by sex — the only species on this roster that works this way.
 
 **Devaronian Species Traits**
 
@@ -287,6 +424,8 @@ Droids are built rather than generated. **They do not use the 30-point buy** —
 
 ### Droid, Astromech
 
+**⚠ CLOSED CLASSES — `PT-92`, `PT-569`: no Force class, and ⚠ NOT `Brawler` OR `Duelist`.** **Both are melee classes and `ATTACKS-05` bars melee to every chassis.**
+
 Wheeled or treaded, a metre tall, built to plug into a starship and fix what is wrong with it. **T3-M4.**
 
 - **Ability Adjustments:** +2 Intelligence, −2 Strength, −2 Charisma.
@@ -303,13 +442,15 @@ Wheeled or treaded, a metre tall, built to plug into a starship and fix what is 
 
 ### Droid, Assassin
 
+**⚠ CLOSED CLASSES — `PT-92`, `PT-569`: no Force class, and ⚠ NOT `Brawler` OR `Duelist`.** **Both are melee classes and `ATTACKS-05` bars melee to every chassis.**
+
 Humanoid combat frame with precision servos. **The chassis a protocol droid and a killer share** — the difference is the class, not the body. **HK-47.**
 
 - **Ability Adjustments:** +2 Dexterity, −2 Wisdom, −2 Charisma.
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Assassin Protocols:** **+2 damage against any target that has not acted this encounter.**
-- **Heavy Weapon Mounts:** **An Assassin chassis may equip heavy weapons and assault cannons**, which no other droid chassis and no Medium organic can carry unbraced. **It may not equip melee weapons** — `ATTACKS-05` closes melee to every droid.
+- **Heavy Weapon Mounts:** **An Assassin chassis may equip heavy weapons and assault cannons**, which no Medium organic can carry unbraced. **⚠ The `Battle` chassis may also, all the way to `Weapon Specialization` — `PT-578`.** **⚠ Heavy weapons no longer gate a prestige class — `PT-579` — so this is a CAPABILITY rather than a class route.** **⚠ `Astromech` and `Remote` may NOT.** **It may not equip melee weapons** — `ATTACKS-05` closes melee to every droid.
 - **Targeting Computer:** *Racial feat — learned on level-up, maximum level 6.* **+1 attack with blasters.** *The feat KOTOR grants through the Superior Targeting Computer, which cannot be obtained by levelling in the source.*
 - **Skill Bonuses:** +2 Repair, +2 Demolitions.
 - **Languages:** **Five, as every droid, and it speaks all of them.** **This chassis ships with a vocabulator** — which is why protocol droids use it, and why an Assassin droid can talk to you before it kills you.
@@ -317,6 +458,8 @@ Humanoid combat frame with precision servos. **The chassis a protocol droid and 
 ---
 
 ### Droid, Battle
+
+**⚠ CLOSED CLASSES — `PT-92`, `PT-569`: no Force class, and ⚠ NOT `Brawler` OR `Duelist`.** **Both are melee classes and `ATTACKS-05` bars melee to every chassis.**
 
 Mass-produced infantry. Cheap, identical, and never manufactured in ones.
 
@@ -332,6 +475,8 @@ Mass-produced infantry. Cheap, identical, and never manufactured in ones.
 ---
 
 ### Droid, Remote
+
+**⚠ CLOSED CLASSES — `PT-92`, `PT-569`: no Force class, and ⚠ NOT `Brawler` OR `Duelist`.** **Both are melee classes and `ATTACKS-05` bars melee to every chassis.**
 
 Repulsorlift spheroid, no limbs, no footfalls. **G0-T0 at Medium; Bao-Dur's Remote at Tiny.** **Size is a property of the individual, not a separate chassis.**
 
@@ -362,8 +507,29 @@ Blue-skinned, hairless, and large-eyed, Duros are intense, adventurous, self-suf
 - **Steady Hands:** *Racial feat — learned on level-up, maximum level 4.* **+1 attack with blasters beyond half your weapon's range.**
 - **Skill Bonuses:** +4 Pilot.
 - **Languages:** Speak and read/write Durese and Basic.
+**Availability:** **Present at 3956 BBY.** ⚠ **Duro was overrun by the Mandalorians in 3963 BBY — seven years before the campaign date.** **The occupation is over; the memory is not.**
+
 
 *Source: Revised Core Rulebook, p.25.*
+
+---
+
+### Echani
+
+The Echani are a near-Human species from Eshan in the Inner Rim, the heart of a confederacy of six worlds known as the Six Sisters. They are lean, pale-skinned, silver-haired, and strikingly uniform in appearance — siblings are nearly indistinguishable to outsiders, and family resemblance extends to facial features across generations. Echani identify one another through subtle shifts in body language, a necessary adaptation when faces cannot do the work.
+
+Echani culture revolves around a martial tradition in which combat is treated as a form of communication — but that tradition is cultural, not biological. A child raised off Eshan would not inherit it. What *is* heritable is the perceptive acuity that makes the tradition possible: an instinct for reading body language that other species cannot match.
+
+**⚠ Relocated at `PT-1335`, not written.** These paragraphs describe the **species** and were sitting inside `Echani, Eshan`, where a reader looking up `Echani` would never find them. **Nothing was invented; the subrace entry keeps everything specific to it.**
+
+**Shared Echani Traits** — both subraces carry these.
+
+- **Size:** Medium.
+- **Speed:** 10 metres.
+- **Echani Combat Training:** Grants access to the Echani Strike attack chain from character level 5 — ATTACKS-07. Other species may learn the chain from an Echani teacher; the tradition is trained, not heritable.
+- **Ability Adjustments, Skill Bonuses and Languages:** **set by subrace.** *See each entry.*
+
+**Subraces:** Eshan, Thyrsian.
 
 ---
 
@@ -387,6 +553,8 @@ At the campaign date, the Echani take the Republic's side during the Mandalorian
 - **Silver Reflex:** *Racial feat — learned on level-up, maximum level 4.* **+2 on Reflex saves and on initiative.**
 - **Skill Bonuses:** +2 Alertness, +2 Acrobatics.
 - **Languages:** Speak and read/write Basic. An Echani may select one additional language at character creation. Few records exist of an original Echani language; Basic became their tongue of choice on entering the galactic community — the only species on this roster whose own language is effectively lost.
+**Availability:** **Present at 3956 BBY.** ⚠ **The Echani take the Republic's side during the Mandalorian Wars — `EVENTS-01 §1`, ⚠⚠ 3964–3960 BBY · ⚠ raiding from 3976, `PT-892`.** **Narrative, and it influences no value.**
+
 
 **A note on provenance.** No d20 source exists for the Echani in any edition. This entry was authored using the *Ultimate Alien Anthology's* Customized Aliens procedure, with every quality borrowed from a book species and the donor named. The ability line and the Constitution penalty are the least defensible values — neither is attested by any source, and the penalty in particular is conventional counterweighting rather than evidence. A reviewer may strike the Constitution penalty and the record loses nothing sourced.
 
@@ -519,9 +687,11 @@ Kaleesh of the same tribe communicate by scent on the Weequay pattern — **20 m
 - **Speed:** 10 metres.
 - **Natural Armour:** **+1 natural armour bonus to Defence.**
 - **Hunter's Scent:** **Detect creatures by smell within 10 metres — 20 upwind, 6 downwind.** **Doubled for strong scents and tripled for overpowering ones.** *UAA p.183.*
-- **Death Mask:** *Racial feat — learned on level-up, maximum level 5.* **+2 Intimidate, and enemies who fail a fear effect against you are `Slowed` for one round.**
-- **Skill Bonuses:** +2 Beast Handling, +2 Scavenging.
+- **Death Mask:** *Racial feat — learned on level-up, maximum level 5.* **+2 Intimidate, and enemies who fail a `fear effect` against you are `Slowed` for one round.**
+- **Skill Bonuses:** +2 Beast Handling, +2 Survival.
 - **Languages:** Speak and read Kaleesh; speak Basic.
+**Availability:** ⚠ **UNCERTAIN at 3956 BBY, and the entry says so.** **Kalee lies in Wild Space beyond the Outer Rim and contact is not attested in this era.** ⚠ **A GM may allow one as an outsider; a campaign package may bar them.**
+
 
 **A note on provenance.** No d20 source exists for the Kaleesh in any edition. This entry was authored using the *Ultimate Alien Anthology's* Customized Aliens procedure, with every quality borrowed from a named book species. The ability line is the least defensible value in the record — nothing sources it. It was built from the attested description of strong, agile, technologically primitive hunter-warriors, mapped onto the shape the ruleset uses for that profile.
 
@@ -549,6 +719,25 @@ Despite this, the Kel Dor have a long and proud Force tradition, having adapted 
 
 ---
 
+### Sith
+
+The Kissai are one of two surviving subspecies of the original Sith race of Korriban — the priests, scholars, and spiritual leaders of the ancient Sith Empire. Where the Massassi were the soldiers, the Kissai served the Sith Lords directly, indoctrinating their comrades in the teachings of the dark side. They are intelligent, observant, adaptable, and fiercely loyal to those they serve.
+
+Physically, Kissai and Massassi share crimson skin, glowing yellow eyes, and sharp predatory features. The Kissai are slighter in build, more socially adept, and far more likely to be found in the roles of nobles, scoundrels, and scouts.
+
+**⚠ Relocated at `PT-1335`, not written.** These paragraphs describe the **species** and were sitting inside `Sith, Kissai`, where a reader looking up `Sith` would never find them. **Nothing was invented; the subrace entry keeps everything specific to it.**
+
+**Shared Sith Traits** — both subraces carry these.
+
+- **Size:** Medium.
+- **Speed:** 10 metres.
+- **Sith Bloodline:** +2 on saving throws against Force powers.
+- **Ability Adjustments, Skill Bonuses and Languages:** **set by subrace.** *See each entry.*
+
+**Subraces:** Kissai, Massassi.
+
+---
+
 ### Sith, Kissai
 
 The Kissai are one of two surviving subspecies of the original Sith race of Korriban — the priests, scholars, and spiritual leaders of the ancient Sith Empire. Where the Massassi were the soldiers, the Kissai served the Sith Lords directly, indoctrinating their comrades in the teachings of the dark side. They are intelligent, observant, adaptable, and fiercely loyal to those they serve.
@@ -563,9 +752,11 @@ At the campaign date, the Kissai are scattered remnants. Their homeworld of Korr
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Sith Bloodline:** **+2 on saving throws against Force powers.**
-- **Ritual Scarring:** *Racial feat — learned on level-up, maximum level 5.* **+2 Intimidate, and enemies who fail a fear effect against you are `Slowed` for one round.**
+- **Ritual Scarring:** *Racial feat — learned on level-up, maximum level 5.* **+2 Intimidate, and enemies who fail a `fear effect` against you are `Slowed` for one round.**
 - **Skill Bonuses:** +2 Mysticism, +2 Archaeology.
 - **Languages:** Speak and read/write Basic and Sith.
+**Availability:** ⚠ **Present at 3956 BBY as SCATTERED REMNANTS.** ⚠ **Not a standing population — `F-SITH-EMPTY` puts the Sith heartland abandoned since ~5000 BBY, `EVENTS-01 §1`.**
+
 
 *Source: KOTOR Campaign Guide, p.16. Converted from Saga Edition.*
 
@@ -586,7 +777,7 @@ Massassi are large, powerful, and distinctly unintelligent by galactic standards
 - **Speed:** 10 metres.
 - **Sith Bloodline:** **+2 on saving throws against Force powers.**
 - **Warrior's Awareness:** **Once per encounter, a Massassi may act in a surprise round in which they would otherwise be surprised.** *Growing up in a warlike society means never entirely relaxing.*
-- **Blood Frenzy:** *Racial feat — learned on level-up, maximum level 6.* **While below half vitality, +2 damage and immune to fear.**
+- **Blood Frenzy:** *Racial feat — learned on level-up, maximum level 6.* **While below half vitality, +2 damage and immune to fear effects — cannot be `shaken` or `panicked`.**
 - **Skill Bonuses:** +2 Archaeology, +2 Intimidate.
 - **Languages:** Speak Sith. Massassi do not commonly speak Basic.
 
@@ -611,6 +802,8 @@ It is highly unusual for an entire sapient species to be Force-sensitive. Given 
 - **Force-Sensitive:** **Miraluka receive `Force-Sensitive` as a bonus feat at 1st level.** **They perceive entirely through the Force and know `Force Sight` from creation** — it is how they see, not a power they learned.
 - **Skill Bonuses:** +2 Mysticism, +2 Alertness.
 - **Languages:** Speak and read/write Basic and Miralukese.
+**Availability:** ⚠ **Present at 3956 BBY.** ⚠ **RESTRICTED AFTER THE JEDI CIVIL WAR — `katarr_consumed`, `PT-678`'s record 4.** **Katarr exists at the campaign date and is consumed by Darth Nihilus afterwards.** ⚠ **A campaign set after 3956 BBY should treat Miraluka as near-extinct.**
+
 
 *Source: KOTOR Campaign Guide, p.17. Converted from Saga Edition.*
 
@@ -652,7 +845,7 @@ Their language, Nautila, is pronounceable only underwater. On land, it loses so 
 - **Low-Light Vision.**
 - **Waterbreathing:** **Cannot drown.**
 - **Pheromonal Sensor:** **Nautolan tendrils read chemical state directly.** **+4 Alertness while in water, +1 out of it**, and **+4 Alertness to detect a lie or read intent within 5 squares.**
-- **Nerve Tendrils:** *Racial feat — learned on level-up, maximum level 4.* **+2 on saves against fear and against any mind-influencing Force power.**
+- **Nerve Tendrils:** *Racial feat — learned on level-up, maximum level 4.* **+2 on saves against `fear effects` and against any mind-influencing Force power.**
 - **Skill Bonuses:** +4 Swim.
 - **Languages:** Speak and read/write Nautila and Basic.
 
@@ -751,11 +944,30 @@ Quarren are practical, conservative, and pragmatic. They are tough — physicall
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Waterbreathing:** **Cannot drown.**
-- **Cold Blood:** **+2 on Will saves against fear, Intimidate, and any mind-influencing Force power.** *A Quarren face gives nothing away.*
+- **Cold Blood:** **+2 on Will saves against `fear effects`, Intimidate, and any mind-influencing Force power.** ⚠ *The engine separates `Fear` and `MindSpells` — `PT-446`.* *A Quarren face gives nothing away.*
 - **Skill Bonuses:** +2 Swim, +2 Intimidate.
 - **Languages:** Speak and read/write Quarrenese and Basic.
 
 *Source: Revised Core Rulebook, p.30.*
+
+---
+
+### Rakata
+
+The Rakata are an ancient species whose civilisation once stretched from the Unknown Regions to distant parts of the galaxy. At the height of their power, they built the Star Forge — a massive space station factory that used the dark side of the Force to create the ships and materiel of an interstellar empire. They called it the Infinite Empire, and it was.
+
+Then, for reasons unknown, the Rakata lost their connection to the Force. Their technology failed. Their subjugated worlds threw off their masters. Rakata civilisation collapsed into primitiveness over thousands of years. By the campaign date, the Rakata are rediscovered by Darth Revan on their homeworld of Lehon. They are small in number, tribal, and profoundly aware of what they once were.
+
+**⚠ Relocated at `PT-1335`, not written.** These paragraphs describe the **species** and were sitting inside `Rakata, Builder`, where a reader looking up `Rakata` would never find them. **Nothing was invented; the subrace entry keeps everything specific to it.**
+
+**Shared Rakata Traits** — both subraces carry these.
+
+- **Size:** Medium.
+- **Speed:** 10 metres.
+- **Force Blind:** A Rakata cannot take Force-Sensitive. They still accrue Dark Side Points and are still affected by Force powers — they simply cannot wield the Force.
+- **Ability Adjustments, Skill Bonuses and Languages:** **set by subrace.** *See each entry.*
+
+**Subraces:** Builder, Flesh Raider.
 
 ---
 
@@ -800,7 +1012,7 @@ They are bulky, they are carnivorous, and their teeth are built to strip a carca
 - **Speed:** 10 metres.
 - **Razor Teeth:** **Attack with the bite instead of a held weapon.** **1d6 plus Strength at 1st, 2d6 at 6th, 3d6 at 12th, 4d6 at 18th.** **Cannot be disarmed, works while grappled, and is always available** — a Flesh Raider is never unarmed.
 - **Force Blind:** **As the parent species. Cannot take `Force-Sensitive`.**
-- **Skill Bonuses:** +4 Scavenging.
+- **Skill Bonuses:** +2 Scavenging, +2 Survival.
 - **Languages:** Speak a degraded dialect of Rakata. They do not read or write. **A Flesh Raider cannot learn Basic** — only the rarest individuals in any generation manage it, and that is a GM's decision rather than a character option.
 
 **Availability:** **Flesh Raiders are not available in any campaign in the KOTOR 1 or KOTOR 2 window.** **At 3956 BBY Tython is lost — the Deep Core has erased the hyperlanes to it and nobody in the galaxy knows the world exists.** **No source places a Flesh Raider anywhere else, ever.**
@@ -875,10 +1087,28 @@ The tension at the heart of Selkath society is that they are isolationists who h
 - **Waterbreathing:** **Cannot drown.**
 - **Acute Hearing:** **+4 Alertness on anything heard rather than seen.** **And sustained exposure to a hostile sonic frequency forces a Will save at DC 15** — **on a failure the Selkath attacks the nearest creature, ally or enemy, for `1d4` rounds.** *The Progenitor's wailing at the Hrakert Rift drove the Selkath there to attack everyone around them.*
 - **Kolto Sense:** *Racial feat — learned on level-up, maximum level 5.* **You identify a wound, poison, or illness by sight.** **+4 Medicine to diagnose rather than to treat.**
+- **Toxic Claws:** *Racial feat — learned on level-up, maximum level 5.* **Your unarmed attacks carry `Weakening`.** **Fortitude save or `1d2` Strength damage, and a second save 10 rounds later or `1d2` again.** **⚠ `1d4` at character level 6, `1d6` at 12. DC 10, then 14, then 18.** *An antidote kit or the `Heal` power ends it.*
 - **Skill Bonuses:** +2 Alertness, +2 Swim.
 - **Languages:** Speak Selkath.
 
 *Adapted from the KOTOR Campaign Guide, p.19. Converted from Saga Edition.*
+
+---
+
+### Snivvian
+
+**Marn Hierogryph is one. ⚠ The Campaign Guide's own example names include him — `KOTOR-CG-OCR.txt` PDF p21, folio 19, rank 2.**
+
+Short, stocky, tusked scavengers from the frozen world of Cadomai Prime. **A Snivvian reads a room before it speaks in it** — the species produced more novelists, satirists and confidence tricksters than its size or its homeworld would suggest.
+
+- **Ability Adjustments:** **+2 Wisdom, ⚠ −2 Strength.**
+- **Size:** ⚠ **Small — `+1` Defence, `PT-623`.**
+- **Speed:** ⚠ **8 metres.**
+- **Observant:** *Racial feat — learned on level-up, maximum level 5.* **Once per encounter, substitute an `Alertness` check for a `Persuade` check.** **⚠ You are not talking them round; you have already read them.**
+- **Cold-Adapted:** ⚠ **`+2` on any check or save against cold, ice or exposure.** ⚠ **A GM ruling hangs on it until an environment system exists — `PT-624`.**
+- **Skill Bonuses:** +2 Alertness, +2 Stealth.
+- **Racial Skill:** **Alertness.**
+- **Languages:** Basic and Snivvian.
 
 ---
 
@@ -1031,12 +1261,33 @@ Wookiees understand Basic but cannot speak it — their vocal apparatus produces
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Wookiee Rage:** **Once per day a Wookiee may enter a rage.** **While raging: +4 Strength, +2 vitality per character level, and +2 on Will saves.**
-- **Extraordinary Recuperation:** **A Wookiee regains vitality and wound points at twice the normal rate** — 2 vitality per level per hour, 2 wound points per day. **It doubles the cost of meditating**, since a Wookiee forgoes twice as much. *`REST-AND-MEDITATION-01`, from RCR p.33.*
+- **Extraordinary Recuperation:** **A Wookiee regains vitality at twice the normal rate — ⚠ 2 vitality per hour of rest, and `PT-559` removed the second pool it also doubled
 - **Skill Bonuses:** +4 Intimidate, +2 Beast Handling.
 
 - **Languages:** Read/write Shyriiwook and Basic; speak Shyriiwook; understand Basic. Wookiees cannot speak Basic or any language other than Shyriiwook.
+**Availability:** **Present at 3956 BBY.** ⚠ **Kashyyyk was overrun by the Mandalorians in 3963 BBY and is under Czerka slaving operations at the campaign date.** ⚠ **`kashyyyk_liberated` is `superseded` — `PT-678`'s record 7.**
+
 
 *Source: Revised Core Rulebook, pp.32–33.*
+
+---
+
+### Zabrak
+
+The Zabrak took to the stars early in galactic history and have settled a vast number of colony worlds — many Zabrak identify themselves by the colony they hail from rather than by species. They have an iron will and a survival instinct second to none. Distinguished by patterns of vestigial horns atop their heads, Zabrak are explorers, warriors, and settlers.
+
+In 3963 BBY, Iridonia — the Zabrak homeworld — was among the Republic worlds overrun by the Mandalorians.
+
+**⚠ Relocated at `PT-1335`, not written.** These paragraphs describe the **species** and were sitting inside `Zabrak, Iridonian`, where a reader looking up `Zabrak` would never find them. **Nothing was invented; the subrace entry keeps everything specific to it.**
+
+**Shared Zabrak Traits** — both subraces carry these.
+
+- **Size:** Medium.
+- **Speed:** 10 metres.
+- **Determined:** +2 species bonus on Fortitude and Will saving throws. Two hearts and a refusal to be told what to do.
+- **Ability Adjustments, Skill Bonuses and Languages:** **set by subrace.** *See each entry.*
+
+**Subraces:** Iridonian, Clanhold.
 
 ---
 
@@ -1056,6 +1307,8 @@ Zabrak carry no ability adjustments, sharing that distinction with Humans. Where
 - **Determined:** **+2 species bonus on Fortitude and Will saving throws.** *Two hearts and a refusal to be told what to do.*
 - **Skill Bonuses:** +2 Athletics, +2 Repair.
 - **Languages:** Speak and read/write Zabrak and Basic.
+**Availability:** **Present at 3956 BBY.** ⚠ **Iridonia was overrun by the Mandalorians in 3963 BBY.** ⚠ **`iridonia_colonies_secede` fires AFTER the Jedi Civil War — `PT-678`'s record 9.**
+
 
 *Source: Revised Core Rulebook, p.33.*
 
@@ -1074,7 +1327,7 @@ They carry the same vestigial horns and the same two hearts. What marks them out
 - **Speed:** 10 metres.
 - **Determined:** **+2 species bonus on Fortitude and Will saving throws.** *As the parent species.*
 - **Highland Bred:** **No penalty for difficult terrain, and +2 Athletics on any climb.**
-- **Skill Bonuses:** +2 Athletics, +2 Intimidate.
+- **Skill Bonuses:** +2 Athletics, +2 Survival.
 - **Languages:** Speak and read/write Zabrak. **Basic is learned rather than native** — a Clanhold Zabrak who has left Iridonia speaks it.
 
 *Source: Legends. Iridonian clan structure and the tattoo tradition are attested; the Iridonian/Clanhold split is our division of a species the sources treat as one.*
@@ -1090,7 +1343,7 @@ A sourcebook that pretends its rough edges are smooth is lying to the reader. Th
 
 **Several species are converted from Saga Edition.** Cathar, Miraluka, Kissai, Massassi, Rakata, Selkath, and Arkanian Offshoot were drawn from the *KOTOR Campaign Guide*, which is a Saga Edition book — a different game. Their ability adjustments and narrative content transfer cleanly. Their mechanical traits required conversion, and some Saga concepts (swift actions, trained skills, the condition track) do not exist in Revised. Where a Saga trait could not be cleanly converted, the entry notes it.
 
-**Some species are not available at the campaign date.** Dashade's homeworld was destroyed forty years before the game begins, and surviving Dashade are vanishingly rare. Rakata remain on Lehon until after the Jedi Civil War, and Lehon is a world in the Unknown Regions that cannot be reached by accident. Kaleesh come from Wild Space, beyond the Outer Rim — no species on this roster with established Republic contact comes from that far out.
+**⚠ Some species are ⚠⚠ RARE at the campaign date, not absent.** ⚠ Dashade's homeworld was destroyed forty years before the game begins, and surviving Dashade are vanishingly rare. Rakata remain on Lehon until after the Jedi Civil War, and Lehon is a world in the Unknown Regions that cannot be reached by accident. Kaleesh come from Wild Space, beyond the Outer Rim — no species on this roster with established Republic contact comes from that far out.
 
 **One entry was locked and has since been opened by owner decision.** **The Flesh Raiders are now playable — `Rakata, Flesh Raider`.**
 
@@ -1112,4 +1365,6 @@ A sourcebook that pretends its rough edges are smooth is lying to the reader. Th
 
 ---
 
-*Thirty-one species. Fourteen from the Revised Core Rulebook, seven from the Ultimate Alien Anthology, seven converted from the KOTOR Campaign Guide, one found in the UAA after being listed as missing, and two authored from scratch for this setting. The provenance varies, and now you know where each one stands.*
+*⚠ **Thirty-five species**, corrected at `PT-1333` — the provenance breakdown below counts **by source** and totalled thirty-one, which was never the roster size. Fourteen from the Revised Core Rulebook, seven from the Ultimate Alien Anthology, seven converted from the KOTOR Campaign Guide, one found in the UAA after being listed as missing, and two authored from scratch for this setting. The provenance varies, and now you know where each one stands.*
+
+**Five species had no entry of their own and now do:** `Arkanian`, `Echani`, `Rakata`, `Sith`, `Zabrak`.*

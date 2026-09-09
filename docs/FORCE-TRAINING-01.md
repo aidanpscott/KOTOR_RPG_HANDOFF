@@ -207,12 +207,31 @@
 
 **⚠ Whether Sith training opens the same three classes or different ones is not settled.** **Open item.**
 
+> **⚠⚠ CLOSED — `PT-1001`. ⚠ SITH TRAINING OPENS ⚠⚠ **THE THREE SITH BASE CLASSES**, ⚠ NOT THE JEDI ONES.**
+
+    ⚠ JEDI TRAINING  ⚠ `Jedi Guardian` · `Jedi Sentinel` · `Jedi Consular`
+    ⚠⚠ SITH TRAINING ⚠ `Sith Warrior` · `Sith Inquisitor` · `Sith Assassin`
+
+**⚠ THE THREE SITH BASE CLASSES ⚠⚠ ALREADY EXIST AND ARE **BUILT** — ⚠ `CLASS-ROSTER-01`, `CLASS-TABLES-AUTHORED`, ⚠⚠ AND `CLASSES-FORCE-PHB` SINCE `PT-997`.**
+
+> **⚠ AND `SKILLS-01 §9.2` SHOWS THEY WERE ⚠⚠ **BUILT TO MIRROR THEIR JEDI COUNTERPARTS** — `PT-125`.**
+
+**⚠ SO THE ANSWER IS ⚠⚠ *"DIFFERENT ONES"* — ⚠ AND THE **DIFFERENT ONES WERE DESIGNED AS THE PAIR** OF THE JEDI THREE, ⚠⚠ WHICH IS WHY THE QUESTION LOOKED OPEN.**
+
+### ⚠ AND THE RULE-BREAKER AND THE COUNCIL OPEN THE **JEDI** THREE
+
+> **⚠ ⚠⚠ THE TEACHER DECIDES THE TIER. ⚠ A SITH TEACHES SITH CLASSES; ⚠⚠ A JEDI TEACHES JEDI ONES — ⚠ **HOWEVER IRREGULARLY THEY DO IT**.
+
 ---
 
 ## 6. Open
 
-**⚠ Age bands for fourteen roster species.** **Held in the UAA or the Campaign Guide, not yet collected into one table.** **Extraction job, not a design job.**
-**⚠ Age bands for Kaleesh and Echani.** **In no source.** **Must be authored from lore against the six-tier ladder.**
+**✓ ⚠ CLOSED — `PT-653`. `SPECIES-AGES-01` HOLDS 38 SPECIES WITH FULL BANDS.** ⚠ *was:* **Age bands for fourteen roster species.** **Held in the UAA or the Campaign Guide, not yet collected into one table.** **Extraction job, not a design job.**
+**✓ ⚠ CLOSED — `PT-653`. AUTHORED, AND `SPECIES-AGES-01` CARRIES BOTH.** ⚠ `Echani` **1–10 · 11–15 · 16–42 · 43–62 · 63–79 · 80+** — *a warrior culture built on physical perfection.* ⚠ `Kaleesh` **1–9 · 10–15 · 16–38 · 39–54 · 55–70 · 71+**.
 **⚠ The three Sith base classes and the Sith prestige classes.** **Owner-ruled to exist; not yet written.** **Class workstream, and `§5` cannot close without them.**
+
+> **⚠⚠ CLOSED — `PT-1001`. ⚠ THE THREE SITH **BASE** CLASSES ARE ⚠⚠ **BUILT** — ⚠ `CLASS-ROSTER-01`, AND `CLASSES-FORCE-PHB` SINCE `PT-997`. ⚠⚠ `§5` NOW CLOSES.**
+
+**⚠ THE SITH ⚠⚠ **PRESTIGE** CLASSES ARE A SEPARATE MATTER AND ⚠ `CLASS-ROSTER-01` CARRIES THEM WITH LEVEL TABLES — ⚠⚠ `PT-989` FOUND **43 TABLES** WHERE A DOCUMENT CLAIMED NONE.**
 
 **`MULTICLASS-01 §3.3`'s warrant — resolved.** **This document is it, by owner ruling.** **Installed at `MULTICLASS-01 §3.3`.**

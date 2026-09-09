@@ -126,6 +126,20 @@ then = ["believed"]
 
 ## 4 · ⚠⚠ The gate is data, and there is nowhere to put a write
 
+> **⚠ AND LOOM MUST REFUSE TO AUTHOR ONE — `PT-1461`.** The rule made the bed's own conversation invalid, **because Loom wrote it.** `PT-1379`: **the Builder cannot create the fault it detects.** A tool that authors what `validate` refuses is a tool that manufactures work.
+>
+> **And the bed gets four continuations, authored in Loom.** `PT-1346` — the test bed is the Builder's output. **⚠ Minimal is correct: the bed is a fixture, not content.** A gated reply's `then` is **the NPC's answer to that particular approach** — the trooper stands aside, believes you, defers, or takes the money.
+
+> **⚠ A GATE ON A REPLY WHOSE TARGET HAS NO `then` IS A DEAD CHECK — `PT-1459`.** `TEST 005` found it: the amber comes from the gate on the **link**, and the roll happens over the **player line's own `then`.** With no `then`, `_pick` returns null **before any dice are touched — `resolve()` is never called.**
+>
+> **⚠ So the bracket promises a roll that cannot happen.** *"Did I pass or fail"* has a third answer: **neither.** And `§4c`'s amber means **a real check** — a bracket that cannot roll makes the colour lie.
+>
+> **`validate` must refuse it**, the same way it refuses a connection landing on an undeclared arrival (`PT-1379`). **A reference that cannot resolve is a load failure whether it names a place or a roll.**
+
+> **⚠ AND THE END OF A CONVERSATION IS NOT AN EMPTY LINE — `PT-1459`.** The runtime signals the end by **manufacturing `NpcLine(id: '', say: '')`** and letting the screen detect it. **That is exactly the shape `PT-1433` refuses from an author, constructed internally as a sentinel.**
+>
+> **⚠ And it costs something visible: the app knows the conversation ended and chooses to say nothing.** Four of the bed's six options close the panel in silence. **An ending is a state, not a blank line** — and a format that refuses empty text should not use one as its own terminator.
+
 > **⚠ `not` IS RULED IN — `PT-1431`.** Proposed as `b1` and flagged as wanting a ruling before a package relied on it. **It is necessary rather than convenient.**
 >
 > **`PT-1284` makes a flag permanent.** So without `not`, **nothing can ever stop being offered** — every option a conversation opens stays open forever, and *"not yet"* has no expression at all.
@@ -202,6 +216,15 @@ gate = { not = { flag = "spire.alarm-raised" } }
 ---
 
 ## 5 · Effects are on NODES, never on links — and they name declared event kinds
+
+> **⚠ A CONVERSATION MAY END IN A FIGHT — `PT-1437`, and NO NEW KIND IS NEEDED.** `encounter.began` is **already declared and already campaign.** The gap was never a missing event; it was that **nothing let an author name one.**
+>
+> **⚠ So an effect naming `encounter.began` is legal on any node**, and reaching that node ends the conversation and starts the fight. The trooper who tells you to turn around **and shoots when you do not** is one node with one effect.
+>
+> **⚠ AND IT REPLACES `PT-1436`'s PLACEHOLDER.** *Talk first, fight after, tracked per visit* made **hostility a function of whether a file exists** — a creature with a conversation could never be fought and one without could never be spoken to. **Both were wrong, and the data now says which happens.**
+>
+> **⚠ It is also the doctrine layer's first caller from outside a test** (`PT-1423`), and the first time `PT-1425`'s walk-into affordance leads to a fight **because an author said so** rather than because a file was absent.
+
 
 **This is the other half of `§4`'s guarantee.** A link may not carry an effect; **the link table has no `effect` key.** A node may, because a node's effect fires **when the line plays** — once, at a moment the format names — and not while a list is being built.
 

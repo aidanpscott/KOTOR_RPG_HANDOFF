@@ -436,7 +436,9 @@ R3 · KORR declares Barrage · Defence 18 until R4
 
 ## What this tests
 
-**⚠ `PT-201`'s turn collapse.** **T3-K9 holds three droids. Under the old `Command Protocol` that was four turns; under the new one it is one.** **Count them.**
+**⚠ SUPERSEDED — `PT-573`, `PT-582`: droids roll their OWN INITIATIVE and the cap is THREE.** **The collapse this scenario tests now exists ONLY as **Master Protocol**, once per encounter.**
+
+**⚠ `PT-201`'s turn collapse.** **T3-K9 holds three droids. Under the old **Command Protocol** that was four turns; under the new one it is one.** **Count them.**
 
 **⚠ `Rally` across a party that includes droids — `PT-222`.** **The droids get the bonus. Confirm nobody at the table expects otherwise.**
 

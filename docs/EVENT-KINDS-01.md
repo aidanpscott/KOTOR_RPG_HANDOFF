@@ -80,6 +80,12 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 > **⚠ `PT-1420` — AN EMITTED KIND REPLAY IGNORES MUST SAY IT NEED NOT PERSIST.** Check A asserts `emitted == handledByReplay`, **which holds only because the two sets currently coincide.** `attack.resolved` is **transient** and replay will never fold it — **so the first combat emission breaks that assertion.**
 >
 > **The generalisation, and it is the agent's:** **⚠ a PERMANENT kind replay ignores is the bug; a TRANSIENT one is the design.** The check must compare against **lifetime**, not against replay's switch.
+>
+> **⚠ CORRECTED at `PT-1435` — REPLAY IS NO LONGER THE ONLY PROJECTION.** `PT-1427` built `projectPlayState`, and dialogue proved the gap: **`quest.flag-set` is PERMANENT, replay does not fold it, and that is correct** — it is world state, and the character record was never going to hold it.
+>
+> **The rule as written would call that a bug.** It should read: **⚠ a permanent kind that NO PROJECTION folds is the bug.** The check compares against the **union** of what every projection folds, not against `replay`'s switch alone.
+>
+> **⚠ And dialogue introduces DATA-DRIVEN EMISSION, which check A cannot see at all.** Its `emitted` set is *"every kind this build can write"*, **listed by hand** — and **a package's `effect` may name any declared kind.** The validator checks those against this document; **nothing checks their lifetimes.**
 
 > **⚠ `PT-1418` — THE FOURTEEN, AND WHY `permanent`.** `PT-1415` proposed them as a reading and the check made the debt runnable: **fourteen of fifteen emitted kinds were undeclared.** They are **`permanent` because `character.created` is** — a creation choice never expires and never resolves.
 >

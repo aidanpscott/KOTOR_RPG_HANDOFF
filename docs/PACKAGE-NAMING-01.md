@@ -57,6 +57,12 @@ An earlier sketch went `items/armor/chest/light/` — but **weight class is a st
 
 ## 3 · ⚠ Path is identity — and the file knows its own path
 
+> **⚠ A LOG RECORDS THE `id`, NEVER THE NAME — `PT-1445`.** Four app tests expect `packageName` (*"Endar Spire"*) where `hub.dart` logs `packageId` (`endar-spire`). **`hub.dart` is right and the tests are wrong.**
+>
+> **A name is what a player reads and it CHANGES.** An id is **derived and stable.** A log entry is **permanent** (`PT-1418`) — **so a permanent record carrying a mutable display string goes stale the first time somebody renames a package**, and nothing would catch it because the string was valid when written.
+>
+> **⚠ And `SaveStore.listFor` already carries a both-ways concession for saves written before the change.** That is a migration allowance, not a second opinion — **it reads both and writes one.**
+
 **Moving a file changes its identity.** That is the cost of making location and identity the same thing, and it is accepted deliberately.
 
 **Three safeguards:**

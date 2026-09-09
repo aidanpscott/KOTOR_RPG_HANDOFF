@@ -94,7 +94,7 @@
 | **1, 3, 6, 7, 9, 12, 13, 15, 18, 19…** | **Sentinel · Watchman** | **15** |
 | **1, 3, 5, 6, 9, 11, 12, 15, 17, 18…** | **Engineer** | **16** |
 | **1, 3, then every third** | **Consular · Marksman · Jedi Master · Sith Lord** | **11** |
-| **1, 2, then every third** | **Smuggler · Machinist** | **11** |
+| **1, 2, then every third** | **Smuggler · Machinist · ⚠ Saboteur** | **11** |
 | **Every third from 1** | **Sith Assassin** | **10** |
 
 > **The prestige classes inherit their base class's rhythm.** **Weaponmaster and Marauder run the Guardian's. Jedi Master and Sith Lord run the Consular's.** **A character who prestiges does not change how often they gain feats.**

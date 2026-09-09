@@ -8,9 +8,17 @@
 
 ---
 
-## 1. Twenty-two skills
+## 1. ⚠⚠ TWENTY-SIX SKILLS — ⚠ 25 CHARACTER + `Fly`, BEAST-ONLY
 
-**From RCR's thirty-eight. Twelve merges, eight cuts, three additions.**
+**⚠ From RCR's thirty-eight. ⚠ Twelve merges, eight cuts, ⚠⚠ SEVEN ADDITIONS.**
+
+> **⚠⚠ CORRECTED AT `PT-865`. ⚠ THE HEADER READ ⚠ *"Twenty-two skills… three additions"* ⚠ AGAINST A TABLE OF ⚠⚠ 26 ROWS AND 7 MARKED `new`.**
+
+**⚠ THE SEVEN: ⚠ `Archaeology` · `Botany` · `Mysticism` · `Science` · ⚠ `Fly` (`PT-554`, beast-only) · ⚠⚠ `Survival` (`PT-552`) · `Xenology`.**
+
+**⚠ EACH ADDITION WAS RULED SEPARATELY AND ⚠⚠ THE HEADER NEVER MOVED. ⚠ `§12`'s COUNT DID — IT READS 25 CHARACTER SKILLS AND CARRIES ITS OWN DRIFT NOTE.**
+
+> **⚠ FOUND BY THE ⚠⚠ ATLAS AGENT, READING MY FILE AT SOURCE RATHER THAN TAKING MY RELAY.**
 
 | Skill | Key | Armour | Consolidates |
 |---|---|---|---|
@@ -36,8 +44,15 @@
 | **Slicing** | Int |  | + the *making* half of Forgery |
 | **Stealth** | Dex | ✱ | Hide + Move Silently |
 | **Streetwise** | Cha |  | Gather Information + Disguise + the *sourcing* half of Forgery |
+| **Fly** | Dex | ⚠ — | **new** — ⚠ `PT-555`, `PT-556`. **⚠ BEAST ONLY. It does not appear on a character's skill list, on any class list, or under any skill feat.** ⚠ And a beast may take it only with the `flying` tag |
+| **Survival** | Wis | ✱ | **new** — ⚠ `PT-552`. Tracking, foraging, shelter, terrain and weather |
 | **Swim** | Str | ✱ |  |
 | **Xenology** | Int |  | **new** |
+
+
+> **⚠ `Survival` DOES NOT OVERRIDE A SENSE.** **A creature with `Scent`, `Tremorsense`, `Acute Hearing`, `Echolocation` or `Bloodscent` does NOT roll `Survival` for anything that sense already answers — it simply knows.** **`PT-480`: senses are not skills and do not check.**
+
+**⚠ It was added because CHARACTERS had no way to track, forage, read weather or shelter at all.** **Beasts never needed it — they have noses. `PT-552`.**
 
 > **No category skills remain.** Every skill is a single flat value — no brackets, no specialisation chosen at learning. That removes a whole class of character-creation bookkeeping.
 
@@ -95,7 +110,7 @@
 
 **Beast Handling — Ride + Handle Animal.** Riding, calming, driving off, training. **Two narrow skills into one that earns its slot.**
 
-> **It also gives non-Force characters parity with a Force option.** Beast Trick, Beast Confusion, and Dominate Beast already do this job for Jedi. **Beast Handling is what everyone else reaches for — and a Force user with both can do things neither alone allows.**
+> **It also gives non-Force characters parity with a Force option.** Beast Control, Beast Confusion, and Dominate Beast already do this job for Jedi. **Beast Handling is what everyone else reaches for — and a Force user with both can do things neither alone allows.**
 
 ### 3.1 Forgery split rather than merged
 
@@ -182,10 +197,10 @@
 
 | Item | Status |
 |---|---|
-| **The 38th skill** | **The extractor states thirty-eight; the delivered table has thirty-seven.** **Open Lock is the likely candidate** — a 3.5 skill, absent from the list, and lockpicking was independently expected to exist. **Security assumes it. Confirm before this is final.** |
+| **✓ ⚠ The 38th skill — MOOT, `PT-652`** | **⚠ THE QUESTION WAS ABOUT RCR'S 38, AND WE DID NOT PORT RCR'S LIST.** **⚠ OURS IS 26, AUTHORED.** **`Open Lock` appears nowhere in the corpus but this line; `Security` covers lockpicking and always has. ⚠ THE COUNT THAT MATTERED WAS NEVER OURS.** |
 | **Astrogate and Ride descriptions** | Both now absorbed, but **only their names and key abilities were extracted.** Their scope is reconstructed from general d20 and setting knowledge. **Marked as reconstruction.** |
-| **Class skill lists** | **Seven lists in `CLASS-TABLES-JEDI` were built from KOTOR's eight and must be rebuilt** against these twenty-four. |
-| **Skill points per level** | **May need rescaling.** The class tables carry KOTOR's values against an eight-skill list; twenty-four changes what a point buys. |
+| **Class skill lists** | ~~Seven lists in `CLASS-TABLES-JEDI` were built from KOTOR's eight and must be rebuilt~~ **DONE — `PT-1294`.** `§9.2` holds authored lists for **21 classes**, using `Mysticism`, `Survival`, `Xenology` and `Science` heavily — **skills KOTOR never had.** And `CLASS-TABLES-JEDI` carries **no skill list at all**; it explicitly defers, saying *ours is authored*. **⚠ What remains is 18 classes, largely prestige, with no list.** |
+| **Skill points per level** | **May need rescaling.** The class tables carry KOTOR's values against an eight-skill list; twenty-five changes what a point buys. |
 
 ---
 
@@ -219,6 +234,7 @@
 | **Scout** | 5 | 24 | 48 | 78 | 138 | 198 | 11 |
 | **Jedi Sentinel** | 5 | 24 | 48 | 78 | 138 | 198 | 9 |
 | **Machinist** | 6 | 28 | 56 | 91 | 161 | 231 | 8 |
+| **⚠ Saboteur** | 6 | 28 | 56 | 91 | 161 | 231 | 8 |
 | **Smuggler** | 7 | 32 | 64 | 104 | 184 | 264 | 11 |
 | **Sith Warrior** | 3 | 12 | 24 | 39 | 69 | 99 | 6 |
 | **Sith Assassin** | 5 | 20 | 40 | 65 | 115 | 165 | 8 |
@@ -226,7 +242,7 @@
 
 *Figures at Intelligence 12. Maximum rank in a skill with aptitude is character level + 3; without, half that.*
 
-> **KOTOR's values do not port and were never going to.** They were balanced against **eight** skills — a Smuggler's 8 points covered the entire list every level. **Against twenty-four the same number means something completely different**, so these are authored against what each class should be able to master rather than scaled from the source.
+> **KOTOR's values do not port and were never going to.** They were balanced against **eight** skills — a Smuggler's 8 points covered the entire list every level. **Against twenty-five the same number means something completely different**, so these are authored against what each class should be able to master rather than scaled from the source.
 
 **A Soldier ends with 132 career points at level 30 and a Smuggler with 264, both at Intelligence 12. **⚠ Every figure in this section assumes Int 12 unless it says otherwise.**** The gap opens at 1st level and never closes.
 
@@ -260,8 +276,8 @@ Athletics · Acrobatics · Alertness · Intimidate · Streetwise
 **Duelist — 6**
 Acrobatics · Alertness · Athletics · Persuade · Intimidate · Streetwise
 
-**Treasure Hunter — 10**
-Archaeology · Xenology · Appraise · Science · Botany · Awareness · Pilot · Mysticism · Beast Handling · Demolitions
+**Treasure Hunter — 11**
+Archaeology · Xenology · Appraise · Science · Botany · Awareness · Pilot · Mysticism · Beast Handling · Demolitions · Survival
 
 **Agent — 8**
 Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology · Repair
@@ -269,11 +285,11 @@ Slicing · Security · Awareness · Alertness · Stealth · Science · Xenology 
 **Pirate — 7**
 Pilot · Appraise · Athletics · Alertness · Intimidate · Streetwise · Scavenging
 
-**Soldier — 6**
-Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim
+**Soldier — 7**
+Athletics · Awareness · Demolitions · Intimidate · Medicine · Swim · Survival
 
-**Bounty Hunter — 8**
-Athletics · Awareness · Demolitions · Intimidate · Pilot · Scavenging · Stealth · Streetwise
+**Bounty Hunter — 9**
+Athletics · Awareness · Demolitions · Intimidate · Pilot · Scavenging · Stealth · Streetwise · Survival
 
 **Jedi Guardian — 5**
 Athletics · Awareness · Mysticism · Persuade · Medicine
@@ -284,11 +300,14 @@ Alertness · Archaeology · Mysticism · Persuade · Medicine · Science · Xeno
 **Jedi Sentinel — 8**
 Acrobatics · Alertness · Slicing · Mysticism · Security · Stealth · Streetwise · Medicine
 
-**Scout — 11**
-Alertness · Acrobatics · Awareness · Beast Handling · Botany · Slicing · Demolitions · Pilot · Repair · Scavenging · Swim
+**Scout — 12**
+Alertness · Acrobatics · Awareness · Beast Handling · Botany · Slicing · Demolitions · Pilot · Repair · Scavenging · Swim · Survival
 
 **Machinist — 7**
 Repair · Scavenging · Sleight of Hand · Demolitions · Appraise · Awareness · Pilot
+
+**Saboteur — 8**
+Demolitions · Slicing · Scavenging · Security · Repair · Awareness · Stealth · Sleight of Hand
 
 **Smuggler — 10**
 Alertness · Appraise · Slicing · Demolitions · Persuade · Pilot · Security · Sleight of Hand · Stealth · Streetwise
@@ -296,10 +315,111 @@ Alertness · Appraise · Slicing · Demolitions · Persuade · Pilot · Security
 **Marksman — 7**
 Repair · Demolitions · Awareness · Sleight of Hand · Intimidate · Acrobatics · Scavenging
 
+**Sith Warrior — 6**
+Athletics · Awareness · Intimidate · Mysticism · Persuade · Survival
+
+**Sith Inquisitor — 8**
+Alertness · Archaeology · Mysticism · Persuade · Science · Slicing · Streetwise · Xenology
+
+**Sith Assassin — 8**
+Acrobatics · Alertness · Mysticism · Security · Sleight of Hand · Stealth · Streetwise · Survival
+
+**⚠ `PT-553`: the three Sith BASE classes had no aptitude block.** **`PT-125` made them mirror the Jedi base tier, and `§11` listed seventeen blocks for eighteen base classes plus two prestige ones.**
+
+**⚠ Built to mirror their Jedi counterparts — `PT-125`.** **`Sith Warrior` against `Jedi Guardian` (5): `Athletics · Awareness · Mysticism · Persuade · Medicine` becomes the same shape with `Intimidate` and `Survival` for `Medicine`.** **`Sith Inquisitor` against `Jedi Consular` (7) and `Sith Assassin` against `Jedi Sentinel` (8), each `+1` for the Sith habit of knowing things it should not.**
+
+**Beast Master — 9**
+Alertness · Athletics · Beast Handling · Medicine · Scavenging · Stealth · Survival · Swim · Acrobatics
+
+**⚠ `PT-552`: the class had NO APTITUDE BLOCK.** **Sixteen classes are listed in `§11` and the Beast Master is not among them** — the class whose whole feature is a living companion had no skill list at all.
+
 **Engineer — 7**
 Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 **⚠ The two droid lists were already written and lived only in `scripts/audit_skills.py`.** **They had never reached this document.** **They are reproduced above unchanged.**
+
+---
+
+### 9.2b Standard class lists — MERGED, `PT-1299`
+
+**⚠ These supersede both prior lists.** `CLASSES-STANDARD-PHB` and `§9.2` disagreed on 13 of 14 standard classes (`TRACE-92`). **Owner ruled union.** Both were marked `CURRENT` by the Library, from the same phase — **neither was stale, and neither contained the other.**
+
+**⚠ The six FORCE classes are NOT here because they never disagreed** — `CLASSES-FORCE-PHB` and `§9.2` match exactly on all six. That is itself evidence: **the Force PHB was written after `§9.2`, the standard PHB before.**
+
+| Class | # | Class skills |
+|---|---|---|
+| **Soldier** | 8 | Alertness · Athletics · Awareness · Demolitions · Intimidate · Medicine · Survival · Swim |
+| **Brawler** | 6 | Acrobatics · Alertness · Athletics · Awareness · Intimidate · Streetwise |
+| **Marksman** | 8 | Acrobatics · Alertness · Awareness · Demolitions · Intimidate · Repair · Scavenging · Sleight of Hand |
+| **Scout** | 12 | Acrobatics · Alertness · Awareness · Beast Handling · Botany · Demolitions · Pilot · Repair · Scavenging · Slicing · Survival · Swim |
+| **Bounty Hunter** | 10 | Alertness · Athletics · Awareness · Demolitions · Intimidate · Pilot · Scavenging · Stealth · Streetwise · Survival |
+| **Engineer** | 8 | Alertness · Appraise · Awareness · Pilot · Repair · Science · Security · Slicing |
+| **Agent** | 12 | Alertness · Appraise · Awareness · Intimidate · Persuade · Repair · Science · Security · Slicing · Stealth · Streetwise · Xenology |
+| **Treasure Hunter** | 12 | Alertness · Appraise · Archaeology · Awareness · Beast Handling · Botany · Demolitions · Mysticism · Pilot · Science · Survival · Xenology |
+| **Saboteur** | 8 | Awareness · Demolitions · Repair · Scavenging · Security · Sleight of Hand · Slicing · Stealth |
+| **Duelist** | 7 | Acrobatics · Alertness · Athletics · Awareness · Intimidate · Persuade · Streetwise |
+| **Pirate** | 7 | Alertness · Appraise · Athletics · Intimidate · Pilot · Scavenging · Streetwise |
+| **Smuggler** | 11 | Alertness · Appraise · Awareness · Demolitions · Persuade · Pilot · Security · Sleight of Hand · Slicing · Stealth · Streetwise |
+| **Machinist** | 8 | Alertness · Appraise · Awareness · Demolitions · Pilot · Repair · Scavenging · Sleight of Hand |
+| **Medic** | 9 | Alertness · Appraise · Awareness · Botany · Medicine · Persuade · Science · Slicing · Xenology |
+
+**Mean 9.0 of 25 skills.** For scale: KOTOR's lists ran 3–6 of **8**, so 37–75%. **Ours at 36% is proportionally tighter than KOTOR's ever were.**
+
+**⚠ `Agent` keeps its union at 12 — owner ruling.** The PHB imagined a social operative and `§9.2` a technical one. **A covert operative is both.**
+
+**⚠ `Saboteur`'s three duplicate entries were a formatting artifact**, not a design difference — a `⚠` prefix on the same three skills in one source. Resolved to 8.
+
+---
+
+---
+
+### 9.2c Prestige class skills — RANKED, and the grant is computed — `PT-1322`
+
+**⚠ A prestige class does NOT hand you a list. It hands you AT MOST THREE SKILLS, chosen by walking its ranked list.**
+
+> **On taking the class, walk the list from the top and grant the first three skills the character does not already have. Skip what they have. If they have all six, they gain nothing.**
+
+**Three properties this has that a flat list does not:**
+
+- **⚠ THE CEILING IS THREE, BY CONSTRUCTION.** Not a cap imposed by decree — **there is no combination that grants a fourth.** `PT-1297`'s union rule cannot run away through prestige.
+- **⚠ IT IS PATH-DEPENDENT, AND THAT IS FREE VARIETY.** A Guardian who becomes a Watchman and a Sentinel who becomes a Watchman **get different skills**, because they arrive missing different things. Same class, different outcome, **no extra authoring.**
+- **A broad character gains less than a narrow one** — which is correct. **They already have what the specialisation would have taught them.**
+
+**⚠ And it works with a pencil.** A GM reads down the list and takes the first three unticked. **No lookup, no arithmetic** — which matters because this is a tabletop system first.
+
+#### The lists
+
+| Class | Ranked, 1 → 6 |
+|---|---|
+| **Commando** | Demolitions · Athletics · Intimidate · Alertness · Awareness · Survival |
+| **Droid Master** | Repair · Slicing · Science · Security · Xenology · Appraise |
+| **Gunslinger** | Sleight of Hand · Acrobatics · Streetwise · Alertness · Intimidate · Awareness |
+| **Officer** | Persuade · Intimidate · Alertness · Awareness · Streetwise · Medicine |
+| **Shadow Hunter** | Stealth · Acrobatics · Athletics · Streetwise · Alertness · Awareness |
+| **Juggernaut** | Athletics · Intimidate · Survival · Swim · Awareness · Alertness |
+| **Beast Master** | Beast Handling · Survival · Botany · Xenology · Athletics · Awareness |
+| **Scoundrel** | Stealth · Sleight of Hand · Streetwise · Persuade · Security · Appraise |
+| **Tech Specialist** | Repair · Slicing · Security · Science · Demolitions · Appraise |
+| **Sharpshooter** | Awareness · Alertness · Stealth · Athletics · Survival · Repair |
+| **Operative** | Stealth · Security · Slicing · Streetwise · Alertness · Awareness |
+| **Shock Trooper** | Alertness · Acrobatics · Athletics · Demolitions · Awareness · Intimidate |
+| **Blademaster** | Acrobatics · Athletics · Intimidate · Alertness · Awareness · Survival |
+| | |
+| **— Force prestige —** | |
+| **Jedi Weaponmaster** | Athletics · Acrobatics · Mysticism · Awareness · Alertness · Intimidate |
+| **Jedi Watchman** | Stealth · Security · Slicing · Streetwise · Awareness · Alertness |
+| **Jedi Sage** | Mysticism · Archaeology · Science · Xenology · Persuade · Medicine |
+| **Sith Marauder** | Athletics · Intimidate · Acrobatics · Survival · Awareness · Alertness |
+| **Sith Battlemaster** | Intimidate · Persuade · Athletics · Mysticism · Alertness · Awareness |
+| **Sith Sorcerer** | Mysticism · Archaeology · Science · Intimidate · Persuade · Xenology |
+
+**⚠ `Shadow Hunter` and `Operative` are the corpus's own six**, reordered so the distinguishing skill leads. `§3`'s table calls that pair *"deliberately identical on every number"* with the whole difference being `Security`+`Slicing` against `Acrobatics`+`Athletics` — so shared `Stealth` leads and **positions 2–3 carry the split.**
+
+**⚠ `Alertness` and `Awareness` sit low almost everywhere ON PURPOSE.** They are the most commonly held skills, so ranking them high would mean most characters skip them and take positions 4–6 anyway. **Low placement makes them the fallback they should be.**
+
+**Only the granted skills become class skills.** The rest of the list is a priority order, not a grant.
+
+---
 
 ### 9.2a Where the three orphan skills went
 
@@ -309,7 +429,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 **`Science` → Jedi Consular and Machinist.** *The scholar and the technician.*
 **`Swim` → Soldier, Scout and Smuggler.** *It was separated from Athletics precisely because it does identity work; three classes that cross terrain now carry it.*
 
-> **Every one of the twenty-four skills is now a class skill for at least one class, and a racial skill for at least one species.**
+> **⚠ Every one of the TWENTY-FIVE character skills is now a class skill for at least one class — `PT-652`, verified by `audit_classskills` every gate, and a racial skill for at least one species.**
 
 ### 9.3 A correction to `CLASS-TABLES-JEDI` and `D-AJ`
 
@@ -362,6 +482,20 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 | **Origin world** | **The species** | Never | Selkath come from Manaan, Kissai from Korriban, Rodians from Rodia. **Availability restrictions act on this.** |
 | **Homeworld** | **The character** | Chosen at creation | Where this individual was actually raised. **Grants a +2 skill bonus.** |
 
+> **⚠⚠ THE PLAYER MAKES ⚠ **ONE** CHOICE, NOT TWO — ⚠ `PT-929`, OWNER RULING.**
+
+**⚠ `ORIGIN WORLD` IS ⚠⚠ NOT SELECTABLE. ⚠ IT IS A **PROPERTY OF THE SPECIES**, FIXED THE MOMENT THE SPECIES IS PICKED. ⚠ SELKATH ARE FROM `Manaan` WHETHER OR NOT ANYONE CHOOSES IT.**
+
+**⚠ `HOMEWORLD` IS THE ⚠⚠ ONLY THING A PLAYER SELECTS, AND IT IS THE ONLY ONE THAT ⚠ GRANTS THE `+2`.**
+
+    ⚠ AT CREATION THE PLAYER PICKS   ⚠⚠ SPECIES · HOMEWORLD
+    ⚠ ORIGIN WORLD IS ⚠⚠ DERIVED, NEVER CHOSEN
+
+> **⚠ SO `ORIGIN WORLD` EXISTS FOR ⚠⚠ TWO REASONS AND NEITHER IS CHARACTER CREATION: ⚠ **LORE**, AND ⚠⚠ **PARSING** — ⚠ IT IS WHAT AVAILABILITY RESTRICTIONS AND SPECIES LOOKUPS KEY ON.**
+
+**⚠ A SHEET NEVER SHOWS A BLANK FOR IT. ⚠⚠ IF THE SPECIES IS KNOWN, THE ORIGIN WORLD IS KNOWN.**
+
+
 > **A Selkath raised on Taris has origin world Manaan and homeworld Taris.** They carry Selkath species traits and Taris's skill bonus. **Neither field constrains the other by default.**
 
 **The canonical species chapter uses "homeworld" fifteen times, all in prose, all meaning origin world.**
@@ -372,11 +506,57 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 **So the rename is clean against the canonical layer** — every current use becomes *origin world*, and *homeworld* becomes a new character-level field.
 
+### ⚠⚠ 10.0 THE SPECIES BONUS AND THE HOMEWORLD BONUS ⚠ **STACK** — `PT-931`
+
+> **⚠ OWNER RULING. ⚠⚠ A HOMEWORLD `+2` IN A SKILL THE SPECIES ALREADY GRANTS ⚠ MAKES IT `+4`.**
+
+**⚠ 23 HOMEWORLD MENUS OVERLAP THEIR OWN SPECIES BONUS — ⚠⚠ THE ATLAS'S `F-OVERLAP-01`. ⚠ TWELVE OVERLAP ON **TWO** OPTIONS.**
+
+    ⚠ A TWI'LEK RAISED ON `Ryloth`
+    ⚠ FROM THE SPECIES  ⚠ +2 Persuade · +2 Streetwise — ⚠⚠ UNCHOSEN
+    ⚠ `Ryloth`'s MENU   ⚠ Persuade · Stealth · Streetwise
+    ⚠⚠ TAKING `Persuade` ⚠ GIVES **+4**
+
+### ⚠ WHY
+
+**⚠ THE OVERLAP IS ⚠⚠ NOT AN ERROR. ⚠ A SPECIES EVOLVED ON ITS ORIGIN WORLD, SO THE WORLD TEACHES WHAT THE SPECIES IS GOOD AT.**
+
+> **⚠⚠ THE `Ryloth`-RAISED TWI'LEK ⚠ **DOUBLES DOWN**. ⚠ THE `Taris`-RAISED ONE ⚠⚠ **BRANCHES OUT**. ⚠ SAME SPECIES, GENUINELY DIFFERENT CHARACTERS.**
+
+**⚠ AND THE ALTERNATIVE PUNISHES THE WRONG THING. ⚠⚠ 277 MENUS CARRY FOUR SKILLS; ⚠ 31 CARRY THREE — AND ⚠⚠ THE 31 ARE THE WORLDS STILL PENDING RESEARCH.**
+
+> **⚠ A THREE-OPTION MENU WITH TWO OVERLAPS LEAVES ⚠⚠ ONE REAL CHOICE. ⚠ UNDER *"do not stack"*, ⚠⚠ THE PENALTY FALLS HARDEST ON THE LEAST-FINISHED ENTRIES — ⚠ WORK-IN-PROGRESS LEAKING INTO CHARACTER CREATION.**
+
+### ⚠⚠ AND NO MENU IS REWRITTEN
+
+**⚠ THE THIRD OPTION WAS ⚠ TO EDIT 23 MENUS SO NO OVERLAP EXISTS. ⚠⚠ THAT MEANS WRITING `Ryloth` A MENU THAT AVOIDS THE TWO THINGS TWI'LEKS ARE KNOWN FOR. ⚠ DECLINED.**
+
+---
+
 ### 10.1 Three consequences
 
 **Availability restrictions are origin-world facts and stay with the species.** Rakata remain on Lehon until after the Jedi Civil War; Kaleesh come from Wild Space; Dashade's origin world was destroyed. **None of that is about where a given character grew up.**
 
 **But some species cannot freely choose a homeworld.** **A Rakata raised on Coruscant is not plausible** — Lehon is unreachable and its population is tribal and isolated. **Where a species' origin world is closed, the character's homeworld is effectively fixed to it.** That interaction needs stating, not assuming.
+
+> **⚠⚠ AND THE ATLAS HAS ALREADY BUILT THE MECHANISM — ⚠ `D-CARD-01`, `PT-947`.**
+
+**⚠ `§10.1` SAID ⚠ *"a Rakata raised on `Coruscant` is not plausible"* AND LEFT IT AT ⚠⚠ **PLAUSIBILITY**. ⚠ THAT IS A JUDGEMENT CALL AT EVERY CHARACTER SHEET.**
+
+    ⚠ 47 SPECIES × 290 WORLDS = ⚠⚠ 13,630 COMBINATIONS
+    ⚠ *"NOBODY CAN CHECK THAT, AND A SHEET READING ⚠⚠ **Rakata,
+      homeworld Coruscant** WOULD PASS SILENTLY."*
+
+**⚠ `D-CARD-01` MAKES THE SET ⚠⚠ FINITE. ⚠ FOUR BANDS, ALL 47 ASSIGNED:**
+
+    ⚠ LOCKED    15  ⚠ ORIGIN WORLD ONLY
+    ⚠ PAIRED     3  ⚠ EXACTLY TWO
+    ⚠ REGIONAL  14  ⚠ ORIGIN PLUS A NAMED REGION
+    ⚠ DIASPORA  15  ⚠⚠ ORIGIN PLUS ANY WITH ATTESTED PRESENCE
+
+> **⚠⚠ *"CARDINALITY IS A PROPERTY OF THE **SPECIES**, NOT THE WORLD. ⚠ THE WORLD SAYS WHO LIVES THERE; ⚠ CARDINALITY SAYS WHERE A SPECIES MAY HAVE BEEN RAISED. ⚠⚠ THEY MEET AT THE CHARACTER SHEET."***
+
+**⚠ SO THE CHECK IS ⚠⚠ A LOOKUP, NOT A JUDGEMENT. ⚠ THE BAND LIVES IN THE ATLAS; ⚠⚠ THIS SECTION ONLY NEEDS TO SAY THAT IT GOVERNS.**
 
 **And the homeworld bonus is a much larger content surface than the species list.** Thirty-one species have origin worlds; **a character can be raised anywhere.** Whether homeworld bonuses are assigned to a curated list of worlds or to every world the atlas produces is an open decision.
 
@@ -395,6 +575,30 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 **Maximum rank in a skill with aptitude is character level + 3.** Without, half that.
 
+### ⚠⚠ 11.1a THE CAP IS A **TOTAL**. BONUSES COUNT AGAINST IT. `PT-954`
+
+> **⚠ OWNER RULING. ⚠⚠ THE MAXIMUM IS THE MAXIMUM — ⚠ A `+2` FROM A SPECIES OR A HOMEWORLD ⚠⚠ DOES NOT RAISE IT.**
+
+    ⚠ AT LEVEL 1, ⚠⚠ WITH APTITUDE     ⚠ **4** — ⚠ RANKS + BONUSES
+    ⚠ AT LEVEL 1, ⚠⚠ WITHOUT           ⚠ **2** — ⚠ RANKS + BONUSES
+
+**⚠ A CHARACTER WITH ⚠ `+2 Persuade` FROM THEIR SPECIES AND APTITUDE IN IT ⚠⚠ MAY BUY **TWO** RANKS, NOT FOUR.**
+
+> **⚠⚠ WITHOUT THIS, A BONUS IS **FREE HEADROOM** AND THE CAP MEASURES NOTHING. ⚠ THE POINT OF A CEILING IS THAT ⚠⚠ EVERYTHING BELOW IT COUNTS.**
+
+### ⚠⚠⚠ AND THIS BITES `PT-931`'s STACKING AT LEVEL 1
+
+**⚠ `§10.0` RULED SPECIES AND HOMEWORLD BONUSES ⚠⚠ STACK. ⚠ A TWI'LEK RAISED ON `Ryloth` TAKING `Persuade` HAS ⚠⚠ **+4**.**
+
+    ⚠ WITH APTITUDE  ⚠ CAP 4 · ⚠ BONUS 4 · ⚠⚠ RANKS AVAILABLE: **ZERO**
+    ⚠⚠ WITHOUT       ⚠ CAP 2 · ⚠ BONUS 4 · ⚠⚠ **ALREADY OVER**
+
+> **⚠ THE STACK DOES NOT BECOME ILLEGAL. ⚠⚠ IT BECOMES **SELF-LIMITING** — ⚠ A `+4` AT LEVEL 1 IS A CHARACTER WHO IS ALREADY AS GOOD AS A LEVEL-1 CHARACTER CAN BE AT THAT SKILL, AND ⚠⚠ SPENDS NO POINTS TO GET THERE.**
+
+**⚠ THAT IS ⚠⚠ THE SPECIALIST `PT-931` DESCRIBED, ⚠ PAID FOR IN **OPPORTUNITY** RATHER THAN POINTS. ⚠⚠ THE CAP RELEASES AT LEVEL 2.**
+
+---
+
 ### 11.2 Five sources, and the sheet shows which
 
 **A skill is marked with an icon for each source granting it. A character may hold aptitude from several at once — there is no benefit to duplication, and no penalty.**
@@ -403,18 +607,23 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 |---|---|---|
 | **Class skills** | Most of them | 6 to 11 per class. See §9.2. |
 | **Racial skills** | **1**, chosen | **Aptitude in one of the species' own bonus skills, chosen at creation.** See §11.4. |
-| **Background skills** | 2 | **One from homeworld, one from profession.** |
+| **Background skills** | ⚠ **1, or 2** | ⚠ **HOMEWORLD always. ⚠⚠ UPBRINGING GRANTS NOTHING — corrected at `PT-1210`.** `UPBRINGING-01 §1` is titled *"IT GRANTS NOTHING. THAT IS THE DESIGN"*, and records that `PT-694` made it aptitude #2 before `PT-705` took that back. This row carried the withdrawn grant. ⚠ **PLUS a SECOND from `PROFESSIONS-01`, IF the player gives up their starting item — `PT-695`**, forward-looking per `PT-1200`. |
 | **Skill Focus** | 1 per feat taken | **A feat. 23 exist, one per skill.** §12. |
 | **Trained skills** | Rare | **Campaign-granted, at special moments.** Not available at character creation. |
 
 > **The first three are who you are. Skill Focus is what you chose. Trained is what happened to you.**
 
-### 11.3 Profession is not yet designed
+### 11.3 ✓ ⚠ THE SECOND APTITUDE IS THE PROFESSION'S — `PT-705`
 
-**Background grants two aptitudes: homeworld and profession.** **Homeworld also grants a +2 skill bonus** — see §10. **Profession has no design at all** and is on the agenda.
+**Background grants two aptitudes: ⚠ HOMEWORLD and PROFESSION.** **Homeworld also grants a `+2` skill bonus** — see §10.
+
+> **⚠ `PROFESSIONS-01` FILLS THIS, AND IT IS WHAT THIS SECTION ORIGINALLY SAID. ⚠ `PT-694` MOVED THE SLOT TO `origin`; `PT-705` MOVED IT BACK.**
+
+**⚠ THE PROFESSION'S APTITUDE IS TAKEN ⚠ INSTEAD OF ITS GRANT, NOT AS WELL. ⚠ A `Doctor` TAKES MEDPACS **OR** `Medicine`.**
+
+**⚠ AND `UPBRINGING-01` GRANTS NOTHING AT ALL — ⚠ IT IS PURE FLAVOUR, OWNER RULING. ⚠ IT WAS RENAMED FROM `UPBRINGING-01` BECAUSE `§10` ALREADY USES `origin world` FOR THE SPECIES' WORLD.**
 
 ---
-
 ### 11.4 The racial skill is a choice, not a lookup
 
 > **A species grants aptitude in **one** of the skills it already gives a bonus to. The player picks which, at character creation.**
@@ -444,7 +653,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 ## 12. Skill feats
 
-**Ten feats, 24 skills, one feat per skill, no overlap.**
+**⚠ Thirteen feats, 25 CHARACTER skills, one feat per skill, no overlap — `PT-652`.** **⚠ The table holds 26; `Fly` is BEAST-ONLY — `PT-554` — and takes no feat.** **⚠ Was `24`: `Survival` — `PT-552` — was added and this sentence did not move. ⚠⚠ CONFIRMED LIVE AT `PT-859` — `ATLAS-SEED-v3` LISTS `Survival` AMONG THREE **RETIRED** NAMES AND THAT IS WRONG.**
 
 > **The source had three feats covering its eight skills exactly once each — no gaps, no duplication.** That principle is preserved at three times the scale.
 
@@ -454,7 +663,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 | **Empathy** → Improved → Master | Persuade · Medicine | +1 / +2 / +3 |
 | **Nimble** → Improved → Master | Acrobatics · Swim | +1 / +2 / +3 |
 | **Gear Head** → Adept → Master | Slicing · Repair · Security | +1 / +2 / +3 |
-| **Hardiness** → Improved → Master | Athletics · Scavenging | +1 / +2 / +3 |
+| **Hardiness** → Improved → Master | Athletics · Scavenging · Survival | +1 / +2 / +3 |
 | **Hustler** → Improved → Master | Intimidate · Sleight of Hand · Streetwise | +1 / +2 / +3 |
 | **Loremaster** → Advanced → Grand | Archaeology · Mysticism · Xenology | +1 / +2 / +3 |
 | **Naturalist** → Improved → Master | Beast Handling · Botany · Science | +1 / +2 / +3 |
@@ -463,7 +672,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 **All ten are universal, non-droid.**
 
-> **⚠ Two changes reached the feat library and not this table, and were corrected after an audit.** **Streetwise moved from `Freetrader` to `Hustler`; `Naturalist` gained `Science`.** **`scripts/audit_skillfeats.py` now verifies both directions and that all 24 skills are covered exactly once.**
+> **⚠ Two changes reached the feat library and not this table, and were corrected after an audit.** **Streetwise moved from `Freetrader` to `Hustler`; `Naturalist` gained `Science`.** **`scripts/audit_skillfeats.py` now verifies both directions and that all ⚠ **25 CHARACTER SKILLS** are covered exactly once — ⚠ `Fly` is `BEAST_ONLY` and exempt, `PT-554`.**
 
 ### 12.1 Three are ported, seven are new
 
@@ -521,7 +730,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 > **⚠ This is not a defect. It is the design.**
 
-**RCR has eight skills. We have twenty-four.** **⚠ The divergence is deliberate and it predates the finding.**
+**RCR has eight skills. We have twenty-five character skills, plus `Fly` for beasts** (`PT-1292`). **⚠ The divergence is deliberate and it predates the finding.**
 
 ## ⚠ What that means in practice
 
@@ -536,3 +745,86 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 **⚠ An RCR mechanic that references a skill by name may reference one we do not have.**
 
 **Report it as a gap rather than mapping it silently.** **⚠ `Treat Injury` is not `Medicine` and `Knowledge` is not `Science`; they are different skills that happen to overlap.**
+
+---
+
+## Descriptions — one line per skill, `PT-1291`
+
+**⚠ Why this section exists.** `TRACE-91`'s extraction pilot found **most skills carried no description** — they existed only as a row in the master table above. Three locked screens (`PT-1201`, `PT-1230`, `PT-1250`) each show a skill description panel, so those screens could not be built as specified.
+
+**⚠ These are ASSEMBLED, not invented.** Every line is drawn from the derivation column above and from `SKILL-RESOLUTION-01`'s behaviour rules. **Where the corpus said nothing, the line says less rather than inventing more.**
+
+| Skill | What it is |
+|---|---|
+| **Acrobatics** | Balance, tumbling and escaping a hold. Landing well, and getting free. |
+| **Alertness** | Noticing that something is off — a sound behind you, or a lie in front of you. **Resists Persuade.** |
+| **Appraise** | Knowing what a thing is worth before anyone names a price. |
+| **Archaeology** | Reading ruins, artefacts and the people who left them. |
+| **Athletics** | Climbing and jumping. Getting your body somewhere it was not. |
+| **Awareness** | Spotting what is hidden and searching where it might be. **Opposes Stealth.** |
+| **Beast Handling** | Riding, calming and directing animals. |
+| **Botany** | Plant and soil analysis. *Astromechs run samples; Ithorians read a forest.* |
+| **Demolitions** | Placing charges and defusing someone else's. **Spends mines; the skill sets grade and radius.** |
+| **Intimidate** | Making someone believe the cost of refusing. **Resisted differently from Persuade** — see `SKILL-RESOLUTION-01 §3.1`. |
+| **Medicine** | Treating injury. **The roll answers how much a medpac restores**, not whether it works. |
+| **Mysticism** | The Force as a subject of study — traditions, relics and what the untrained call superstition. |
+| **Persuade** | Changing a mind that was made up. **Rolled against the target's Alertness** — *can they see through you?* |
+| **Pilot** | Flying a ship, and knowing where to point it. |
+| **Repair** | Restoring damaged equipment and droids. **Spends parts by damage — and a droid repairing itself restores more.** |
+| **Scavenging** | Finding value in wreckage, and food where there is none. **⚠ Reduces ration use only where a package tracks rations.** |
+| **Science** | Laboratory analysis, chemistry and physical theory. |
+| **Security** | Opening what was locked against you — locks, traps and sealed doors as one job. **Spikes grant a bonus, not access.** |
+| **Sleight of Hand** | Taking something without the hand being seen. |
+| **Slicing** | Getting into a closed system, and forging what comes out of it. **Spends spikes by terminal grade.** |
+| **Stealth** | Moving unseen and unheard, as one act. **Opposed by Awareness** — see `§4`. |
+| **Streetwise** | Knowing who to ask, and passing for someone who belongs. **Spends credits; higher skill means cheaper informants.** |
+| **Swim** | Moving through water, and staying above it. |
+| **Survival** | Tracking, foraging, shelter, and reading terrain and weather. |
+| **Xenology** | Species, cultures and how to deal with something that does not think as you do. |
+| **Fly** | ⚠ **Beast only.** Does not appear on a character's skill list. |
+
+**⚠ Two things this section does not do.** It does not restate the resolution mode — that is `SKILL-RESOLUTION-01`'s job and duplicating it would create two sources that drift. And it does not assign aptitude, which `SKILLS-01 §11` governs.
+
+---
+
+## Armour check — WITHDRAWN, `PT-1323`
+
+**⚠ THE MARKS ARE REMOVED AND NO PENALTY IS ADDED. Checked against both games, and the column exists in both and is ZERO IN EVERY ROW.**
+
+| | rows | non-zero |
+|---|---|---|
+| **K1 `baseitems.2da` → `armorcheckpen`** | 91 | **0** |
+| **K2 `baseitems.2da` → `armorcheckpen`** | 103 | **0** |
+
+**KOTOR inherited the column from its D&D ancestry and never used it.** That is the **seventh dead capability** this project has found in the source — after `racialtypes`' ability adjusts, `LawfulChaotic`, `Mod_CutSceneList`, unvalidated `SkillList` slots, `IsMoviePlaying`, and `Mod_StartMovie`.
+
+### ⚠ So `EQUIPMENT-01` was right and the marks were the error
+
+`EQUIPMENT-01 §5` ported the **Dexterity cap** — *"the sum of armour and Max Dexterity Bonus is always 9"* — and **no check penalty.** `PT-1302` read that as an omission. **It was not: it matched the source exactly.**
+
+**The seven marked skills came from RCR's D&D lineage, not from KOTOR**, and they marked a rule the game they descend from had already abandoned.
+
+**⚠ The Dexterity cap is the whole cost of armour.** Heavy armour already surrenders Dexterity, and **five of the seven marked skills were `Dex` or `Str` based** — so a second penalty would have double-charged the same trade.
+
+---
+
+## Consolidates — what each skill absorbed, `PT-1302`
+
+**The `§1` column records twelve merge provenances**, and `§3` argues from them. **It has a home here so extraction stops dropping it.**
+
+| Skill | Absorbed |
+|---|---|
+| **Acrobatics** | Balance + Tumble + Escape Artist |
+| **Alertness** | Listen + Sense Motive |
+| **Athletics** | Climb + Jump |
+| **Awareness** | Spot + Search |
+| **Beast Handling** | Ride + Handle Animal |
+| **Persuade** | Bluff + Diplomacy |
+| **Pilot** | + Astrogate |
+| **Scavenging** | + Ithorian wilderness lore |
+| **Security** | Disable Device + Open Lock |
+| **Slicing** | + the *making* half of Forgery |
+| **Stealth** | Hide + Move Silently |
+| **Streetwise** | Gather Information + Disguise + the *sourcing* half of Forgery |
+
+**⚠ This is provenance, not mechanics.** Nothing resolves against it. **It exists so a reader asking "where did Open Lock go?" gets an answer** — and `Forgery` splitting across two skills is the case that most needs recording.

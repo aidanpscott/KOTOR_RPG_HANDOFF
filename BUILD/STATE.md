@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `8884ac8` — `PT-1443`, the first real playtest | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `4b3a482` — `PT-1458`, a droid bases at 10 | ⚠ no |
+| `Lodestar` | `3a24455` — `PT-1459`, a dead check is refused | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `2058b16` — tests laid out on the screen they claim | ⚠ no |
-| `KOTOR-RPG-APP` | `d95ad2c` — `PT-1326`, the attack line names its weapon | ⚠ no |
+| `Loom` | `3249dde` — Loom authors a dead check, and says so | ⚠ no |
+| `KOTOR-RPG-APP` | `4eb7d28` — `PT-1459`, the app says a conversation ended | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 289 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 216 — 623, all
+**`Lodestar` 293 · `Lens` 4 · `Loom` 114 · `KOTOR-RPG-APP` 221 — 632, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -100,6 +100,10 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 | | Need |
 |---|---|
+| ⚠⚠ **The bed's own conversation is now INVALID, and the fix is authoring** | `PT-1459` refuses a check that cannot roll, and **Loom authors one.** What a successful `Persuade` LEADS TO is content — **not code, and not `Coder`'s to invent.** The Loom test asserts the one known problem by name so it cannot grow quietly. **Owed a decision** |
+| ⚠ **A feat record has no eligibility field — the Feats wire is a STOP** | `FeatsScreen` has the same missing chassis as Equipment, **and wiring it changes nothing**: `feats.toml` says *"Granted at 1st level to every droid"* in **prose** and carries `availability = "selectable"`. Filtering on prose is `TRACE-83` again. **Not wired — a parameter nothing can use is building ahead** |
+| ⚠ **The front-ends silently run an older engine** | `PT-1458` shipped and **the app stayed pinned to the commit before it**, so the save went on being refused by a build containing the fix nowhere. `BUILD/37` wrote this down and it still caught me. **`droid_loads_test` now asserts the RESOLVED engine behaves** |
+| ~~⚠⚠ **The droid path is TWO causes**~~ | ✓ **the Equipment half closed at `BUILD 46`.** |
 | ⚠⚠ **The droid path is TWO causes, not six bugs** | `BUILD 45` swept it. **A screen consults `isDroid` when the answer changes WHETHER it renders, and not when it would only change WHAT IT OFFERS** — `equipment_screen` and `feats_screen` mention a droid **zero** times. ⚠ **And underneath: there is nothing to filter on.** `feats.toml` says *"Granted at 1st level to every droid"* in **prose** and still carries `availability = "selectable"`; `class_arrays.toml` is keyed by class and mentions a droid **not once**. `droid_skills.toml` is a whole file, **which is why `SKILLS` is the best screen in the app** |
 | ⚠ **A feat record has no field for who may take it** | `id · name · chain · is_chain_head · section · description · effect · availability`. **One missing field, two symptoms**: a droid is charged for a feat it already has, and an organic is offered `Droid Upgrade 1`. `U2` from both sides |
 | ⚠ **`[Persuade]` offered to a droid — a RULING, not a bug** | `_rank` returns 0 for an absent skill so a droid rolls untrained, which may be legal. **`SKILLS` says *"closed to every droid"* and nothing reconciles the two** |
@@ -231,6 +235,8 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 | **`HANDOFF/TEST/` and the Coder→Tester protocol** | ✓ `BUILD 39`. ⚠ `requests/` is `Coder`'s and `reports/` is `Tester`'s, because `PT-1446` gives both the same directory. **A request is a journey, not a suite** |
 | **The suite writing into live data** | ✓ `BUILD 38`. ⚠ **The split is READ versus WRITE, not real versus temp** — every real-shelf read was kept, because that coupling is what caught `PT-1382`, `PT-1425` and `PT-1417`. Only the 6 writers were sandboxed. **Controlled**: breaking the sandbox's shelf link makes those tests fail |
 | **The item blueprint, and the equipped weapon** | ✓ `BUILD 43`, `PT-1452`. `[equipment]` → item → base type → dice, and **every link fails out loud**. The trooper's hardcoded vibroblade is gone — **a melee weapon swung at range by a creature holding a rifle.** ⚠ And the extraction's positional array **silently shifted**: a dropped em-dash put the Stun Baton's `attacks` in `balanced`'s place |
+| **`droid_arrays.toml` is read** | ✓ `BUILD 46`, `PT-1459`. It shipped in `base-rules` since the extraction with **exactly the droid kit per class** and **nothing anywhere opened it** — a disconnected wire, not a missing feature. ⚠ **And the boots were a HARDCODED ROW**, which is why a hoverer got treads |
+| **A dead check, and the end of a conversation** | ✓ `BUILD 46`, `PT-1459`. `_pick` returns null **before any dice are touched**, so amber promised a roll that could not happen. And the runtime **manufactured `NpcLine(id: '', say: '')`** — the shape `PT-1433` refuses from an author — which the app sniffed to notice the end **and then said nothing** |
 | **`PT-1458` — a droid bases at 10** | ✓ `BUILD 45`. The validator applied the **organic** point-buy floor to an authored production spread and refused a character the app had built and called final. ⚠ **Verified on `Tester`'s own `t3-k9.sav`**, which now validates legal. And the spreads are **authored to parity at 72**, not derived from the base — deriving would have made every droid twelve points weaker than any organic |
 | **The attack line carries its derivation** | ✓ `BUILD 45`, `PT-1326`. It named the roll and what was LEFT and never what fired or what was subtracted |
 | **The third exit, N1 and N2** | ✓ `BUILD 44`, `PT-1453`. ⚠ **Three shapes of one class**: a CONSUMER with no producer (`character.revived` was handled and never emitted — N1), a PRODUCER with no guard (`_endFight` re-entrant, six outcomes from one fight), and a FOLD whose value and narration disagree (N2). **All three are invisible until a sequence exists** |

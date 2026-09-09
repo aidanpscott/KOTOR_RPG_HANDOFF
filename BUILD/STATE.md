@@ -39,7 +39,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `70aaa17` — `PT-1467`, the convention and its check | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `5678a4b` — `PT-1470`, the denominator and the guard | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
@@ -125,11 +125,15 @@ files and three of those are deliberate.**
 | `powers.effect` + `prerequisites` | 43 | ⚠ slice 3, ordered. `targets: sentient · beast` is a machine-readable field fused into prose and needs a `targets` COLUMN, not an edit. |
 | ⚠ an authoring decision | 2 | The citation is the sentence's SUBJECT — `and PT-559 removed the second pool`. Removing the token leaves `and removed the second pool`, so the splitter refuses and reports. `species.extraordinary_recuperation` and `feats.effect`'s Sneak Attack. |
 
-⚠ **The extractors disagree about their own first argument.** Four take
-`(source, dest)`; `extract_feats` and `extract_starting_equipment` hardcode the
-source and take `(dest)`. `_paths.dest()` now refuses a `.md` destination —
-which closed the data-loss class — but **the orders are still inconsistent**.
-Unifying them is six scripts and their callers.
+⚠ **The extractors disagree about their own first argument, and it is not six
+— it is fourteen in four shapes**, measured by `Tester` at `PT-1470`. `argv[1]`
+is **the file I will overwrite in seven** and the file I will read in six:
+near-equal populations, which is why no habit protects you.
+
+`_paths.dest()` refuses a `.md` destination **and** a `.json` that belongs to a
+different extract — the script derives its own expected output from its
+filename. **The orders themselves are still inconsistent**, recorded and
+deferred.
 
 
 ### ⚠ Open from `Tester`'s fourth report — the droid run

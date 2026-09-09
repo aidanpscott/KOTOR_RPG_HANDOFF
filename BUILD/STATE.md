@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `ba1295f` — `PT-1486`, excludes transcribed | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `a5afc6f` — `PT-1490`, a blueprint names its species | ⚠ no |
+| `Lodestar` | `ce42542` — `PT-1493`, verify sees a blueprint | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `627a2cd` — `PT-1490`, the writer names a species | ⚠ no |
-| `KOTOR-RPG-APP` | `d114ee9` — `PT-1491`, the gate declines on half | ⚠ no |
+| `Loom` | `51b49db` — `PT-1493`, the path, the dialog and the order | ⚠ no |
+| `KOTOR-RPG-APP` | `0a40e4b` — `PT-1493`, the room says what it could not place | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 306 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 272 — 702, all
+**`Lodestar` 310 · `Lens` 4 · `Loom` 122 · `KOTOR-RPG-APP` 272 — 706, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,32 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ LOOM CANNOT READ A RULES FILE — `PT-1493`
+
+`NewItemDialog` is built, tested and **constructed nowhere in `lib/`**, because
+it needs `baseTypes` from `base-rules/rules/equipment.toml` and **Loom has no
+TOML reader at all**: it writes TOML by hand and reads through `Lodestar`'s
+typed openers, none of which opens a rules file. ⚠ Its own test hardcodes three
+base types, which is how it passed while being unreachable.
+
+⚠ So `PT-1480`'s aim is **unanswered, not passed** — `Tester` could not author
+the artifact it is about. `dialogs_reachable_test` names which assertion turns
+red the day this changes.
+
+### ⚠ A CREATURE'S CONVERSATION CANNOT BE CHANGED AFTER CREATION
+
+Set in `NewCreatureDialog` and nowhere else. The dialog now says so, which
+turns a dead end into an order — ⚠ **it does not rescue `probe-sentinel`.** The
+fix is a creature editor, which is a new surface.
+
+### ⚠ `endar-spire`'s PROVENANCE
+
+`RUNNING-ON-THIS-MACHINE` says the bed is Loom's output, and the bed carries
+the **correct** `characters/` form while Loom wrote the wrong one. **They
+cannot both be true.** `Tester` would not regenerate the fixture and neither
+would I — which one moved is worth knowing before either is overwritten.
+
 
 ### ✓ `PT-1491` — the gate declines rather than blessing on half (was: it could not tell friend from enemy)
 

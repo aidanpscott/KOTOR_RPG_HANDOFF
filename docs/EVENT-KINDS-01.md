@@ -147,6 +147,40 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 ---
 
+## ⚠⚠ 3b · WHAT A KIND CARRIES IS MOSTLY UNWRITTEN — named at `PT-1516`
+
+**This document declares kinds and their LIFETIMES. It does not say what any of them CARRIES**, and `PLAY-STATE-01 §6` leaves every payload **deliberately unspecified**. That is a real gap and it is named here rather than filled.
+
+**⚠ It bit for the first time at `PT-1516`.** `Loom`'s effect button wrote `{ kind: … }` and nothing else, so the best an author could produce was:
+
+```toml
+effect = [ { kind = "quest.flag-set" } ]
+```
+
+**`DialogueView.flagsFrom` matches on a `flag` field.** So **a flag effect authored in Loom was silently a no-op** — beside a `flag` GATE button that could read one. **A readable half with no writable half, offered as if complete.**
+
+### The three kinds something actually reads
+
+**Derived from the CONSUMERS, not from what a field name suggests:**
+
+| kind | carries | read by |
+|---|---|---|
+| **`quest.flag-set`** | **`flag`** — a string | `DialogueView.flagsFrom` |
+| **`quest.concluded`** | **`quest`, `conclusion`** — both strings | `DialogueView.questsFrom` |
+| **`encounter.began`** | **nothing.** The kind alone is the whole effect | `PT-1437`, `Beat.endsInFight` |
+
+**`validateConversation` requires exactly those fields and nothing else**, and `PT-1379` means `Loom` therefore cannot author one that is missing them.
+
+### ⚠ And the gap is left open on purpose
+
+**Every other declared kind has no specified payload and no consumer reading one.** Requiring fields nobody reads would be **a validator inventing a format.**
+
+> **⚠⚠ `item.lost` IS THE SHARP CASE.** `DIALOGUE-FORMAT-01 §9`'s own worked example writes `{ kind = "item.lost", item = "credits", count = 50 }` — **and nothing in this project reads it.** The fields look load-bearing and are decoration. **An author following the format's own example writes an effect that does nothing**, and the only reason that is not `PT-1516` again is that no gate reads a purse.
+
+**What would close it:** a payload column in the tables above, written **when a consumer exists** — kind by kind, as each one gains a reader. **Not all at once, and not from what the names imply.**
+
+---
+
 ## 4 · What is deliberately absent
 
 **No `heartbeat`, no `tick`, no timer.** `§1` — a heartbeat is a missing kind wearing a costume. **If an author reaches for one, add the kind.**

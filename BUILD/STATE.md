@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `001d1a7` — `PT-1513` and the `format = 2` header | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `e74b974` — `PT-1516`'s payload gap named in `EVENT-KINDS-01 §3b` | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `851a588` — `PT-1513`; the save header gains a time and an identity | ⚠ no |
+| `Lodestar` | `3ae6f0e` — `PT-1515` nothing dies; `PT-1516` an effect carries what it needs | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `8a63e99` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `8fc0afe` — `PT-1513` charged; `Load Game` and `Continue` agree | ⚠ no |
+| `Loom` | `a6c6ceb` — `PT-1516`, the effect vocabulary is closed | ⚠ no |
+| `KOTOR-RPG-APP` | `bd47c4c` — `PT-1515`, a placement is not the party | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 353 · `Lens` 5 · `Loom` 127 · `KOTOR-RPG-APP` 286 — 766, all
+**`Lodestar` 366 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 291 — 793, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,40 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ NOTHING DIED — `PT-1515`, BUILT, and it had THREE causes
+
+    1  Role had four members and EVERY ONE was a party role, so
+       combatantFrom's Role.player default made every placement party.
+    2  ⚠ THE REVIVE ASKED A RAW NUMBER — `current <= 0` — and stood
+       everything up at 1. Tester's sentinel at −2 was DYING, never dead:
+       making death work would not have fixed this on its own.
+    3  character.died had no CONSTANT, so nothing could switch on it and
+       no projection folded it. A death could not have survived a quit.
+
+⚠ **A recorded death outranks the arithmetic** — a death floors the pool at 0
+and `stateOf` calls 0 `down`, so re-deriving state from the pool would have
+handed the creature back at 1. **The event is the fact.**
+
+⚠⚠ **A DEAD CREATURE LEAVES NOTHING**, and that is a consequence: no corpse in
+the five tile types, `[[contents]]` is authored, and `§4` bars the engine from
+writing a package. It is removed from `_here` **once** rather than skipped in
+four places — the difference between *gone* and *ignored by whichever list
+someone remembered*. **`PT-1511`'s vacated square is now walkable.**
+
+### ⚠⚠ WHAT AN EFFECT CARRIES IS MOSTLY UNWRITTEN — `PT-1516`
+
+`EVENT-KINDS-01` declares ~40 kinds and `PLAY-STATE-01 §6` leaves every payload
+**deliberately unspecified**. **Three have a shape something reads:**
+
+    quest.flag-set    flag                    flagsFrom
+    quest.concluded   quest, conclusion       questsFrom
+    encounter.began   (none)                  PT-1437
+
+⚠ **`item.lost` is the sharp one:** `§9`'s own worked example writes it with
+`item` and `count` and **nothing reads it** — an author following the format's
+own example writes an effect that does nothing. **Named in `EVENT-KINDS-01 §3b`,
+not filled**: a payload column belongs written *when a consumer exists*.
 
 ### ⚠ A COST WRITTEN AND NEVER SPENT — `PT-1513`, BUILT
 

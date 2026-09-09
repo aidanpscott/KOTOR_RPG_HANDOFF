@@ -43,7 +43,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `cd3f6e2` — level with `Lodestar` | ⚠ no |
+| `Loom` | `d59bd66` — `PT-1471`, the weapons the arrays name | ⚠ no |
 | `KOTOR-RPG-APP` | `9fb1762` — `PT-1468`, who is here is placements plus the player | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
@@ -51,7 +51,7 @@ committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 297 · `Lens` 4 · `Loom` 115 · `KOTOR-RPG-APP` 237 — 653, all
+**`Lodestar` 297 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 237 — 657, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,22 +96,43 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ `PT-1468` — the runtime is fixed and there is NOTHING TO READ
+### ⚠⚠ `PT-1468` — the content half is done; the PRODUCER is next
 
-The player now resolves `[equipment]` by the same three hops a placement uses,
-and a record naming `items/weapons/blaster-rifle` fires a Blaster Rifle. **An
-Engineer will still swing a fist**, because two things are missing:
+`PT-1471` authored **nine** item blueprints into the bed through `ItemWriter`,
+so a chargen `[equipment]` reference now has something to point at. **Eleven
+distinct weapons across both arrays, not forty-one.**
 
-- **A producer.** `EquipmentChoice` is a single `bool takesItem` and
-  `hub.dart` writes `items: const <String>[]`. ⚠ Scoped negative: **all seven
-  saves** carry `{"route":"standard","items":[],"credits":100}` and not one has
-  a weapon slot.
-- **The content.** `endar-spire` ships **one** item blueprint,
-  `items/weapons/blaster-rifle`. There is no Ion Blaster to point at.
+⚠ **One weapon name is genuinely unresolved** — `Blaster Rifle`, two catalogue
+rows, both 300cr, not among the 14 disambiguation entries. `Training
+Lightsaber`'s five cells were never ambiguous: the array reads
+`Training Lightsaber  blue` because the source separates the colour with `⚠`
+and `_tables.clean()` strips it. **An extractor fix, not a content gap.**
 
-The screen now says why rather than swinging in silence. `item_disambiguation.
-toml` — still zero readers — may be the other half: the arrays name items in
-prose and 18 of 41 resolve to exactly one row, with `§2c` covering 14 more.
+⚠⚠ **A THIRD NEED, UNDERNEATH THE OTHER TWO.** The Ion Blaster is authored and
+still arms nobody: `EQUIPMENT-01` gives it `1d4 + 1d10 vs droid` and
+`weaponFromBase` refuses a conditional expression rather than truncating it.
+**The engine has no model for damage that depends on the target** — the exact
+case `TEST 007` opened with.
+
+⚠ Two are unauthored because the rules lack a base type: `Marksman Rifle` (no
+`marksman-rifle` anywhere) and `Training Lightsaber` (`lightsaber` is 2d10, the
+war blade). Both need a ruling.
+
+⚠ And `authored` is keyed by the array's spelling in `Loom/tool`, where the app
+cannot read it. **When the producer lands the table must move to data** —
+`item_disambiguation.toml` is the shape.
+
+### ⚠ `PT-1468` — the producer, still open
+
+**A producer is still missing.** `EquipmentChoice` is a single `bool
+takesItem` and `hub.dart` writes `items: const <String>[]`. ⚠ Scoped negative:
+**all seven saves** carry `{"route":"standard","items":[],"credits":100}` and
+not one has a weapon slot.
+
+⚠ **Ruled at `PT-1471`: content first, and it is done.** A dangling reference
+is no worse than the fist ON SCREEN — `PT-1452` makes every link fail out loud
+— but it is worse IN THE RECORD, which is a log: the path shape would be fixed
+into every save written before anything could resolve one.
 
 
 ### ⚠ `PT-1467` — 51 of 149 aside-in-a-value cells remain

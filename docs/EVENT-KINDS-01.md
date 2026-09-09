@@ -181,6 +181,26 @@ effect = [ { kind = "quest.flag-set" } ]
 
 ---
 
+## ⚠⚠ 3c · THE THIRD WAY THIS DOCUMENT AND THE CODE CAN DISAGREE — `PT-1523`
+
+**Two directions were checked and the third was not:**
+
+| | | |
+|---|---|---|
+| **A** | a kind **emitted** and **undeclared** | `PT-1418` — fourteen of fifteen |
+| **B** | a kind **declared** and replay **ignores** it | `PT-1418` |
+| **⚠⚠** | a kind **declared**, **folded by a projection**, and **written by nobody** | **unseen until `PT-1523`** |
+
+**`character.moved` was the third.** Declared `campaign` **with the reason in its own comment** — `PT-1417` moved it up from `session` *because a save needed to know where a player was standing* — folded by `projectPlayState` into a `Position`, and **emitted by nothing at all.** `TEST 021` checked all 17 saves: **zero occurrences.** It passed both checks.
+
+**⚠ Neither could see it, and the reason is structural:** both compare THIS DOCUMENT against a set of kinds **the code declares it handles.** Neither asks *is there a construction site* — which is a plain source-level fact and nothing was reading it.
+
+**`scripts/check_event_producers.py` reads it now.** ⚠ **Its honest limit is data-driven emission**, which `PT-1435` already named: a package's `effect` may name any declared kind, so the runtime writes it through a site that names no kind at all. The check therefore carries an **explicit allowance list with a reason per entry** — because *a check that excuses whatever it finds checks nothing* — and verifies that list **both ways.**
+
+> **⚠⚠ AND IT FOUND ONE MORE WHILE PASSING: `character.faction-changed` is folded and no engine code writes one.** `FACTIONS-01 §4b` gives a character **one handle and explicitly not a standing track**, so there is nothing for the engine to move. **Allowed with that as the reason**, so the day something should change a faction, this is the argument to overturn.
+
+---
+
 ## 4 · What is deliberately absent
 
 **No `heartbeat`, no `tick`, no timer.** `§1` — a heartbeat is a missing kind wearing a costume. **If an author reaches for one, add the kind.**

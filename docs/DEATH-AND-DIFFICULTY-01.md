@@ -34,6 +34,16 @@
 
 **⚠ This is what the games actually do.** **A downed party member in KOTOR stands up when the fight ends; the only true loss is a total party defeat.**
 
+> **⚠⚠ THE WHOLE BAND IS THE PARTY'S, NOT JUST THE STANDING UP — `PT-1524`.** `PT-1515` made the stand-at-1 rule party-only and left a **dying enemy nothing ticks out of combat.** `STUDY 23` settles it from the source.
+>
+> **⚠ KOTOR HAS NO DYING BAND AT ALL.** `DYING` and `BLEED` appear **zero times** in the whole 216,650-byte API; `GetIsDead` is binary and there is no `GetIsDying`. **And it is a deletion rather than an absence — NWN keeps `EVENT_SCRIPT_MODULE_ON_PLAYER_DYING` and KOTOR dropped it.**
+>
+> **⚠ What KOTOR used instead is a FLAG ON NINE CHARACTERS.** `NoPermDeath=1` on **17 of 205 K1 blueprints — all nine recruitable party members plus eight plot NPCs. NO ENEMY CARRIES IT.**
+>
+> **RULED: AN ENEMY DIES AT 0. There is no dying enemy, so nothing needs to tick one out.** The band — dying, the bleed, the threshold at −Constitution — **is the party's, entire.**
+>
+> **⚠ And `STUDY 23`'s line is why this is not a loss: KOTOR PROVES A BAND IS NOT REQUIRED TO FEEL LIKE KOTOR.** Ours was a **universal** band where theirs was **a flag on nine characters.**
+
 > **⚠⚠ THAT IS A PARTY RULE AND THE CODE APPLIES IT TO EVERYTHING — `PT-1515`.** The sentence above says it outright: **a downed PARTY MEMBER stands up when the fight ends.** `TEST 020` found an enemy doing the same thing, **and persisting it.**
 >
 > **⚠ SO NOTHING DIES.** Tester struck a sentinel to **−2** and it **stood again at 1 the moment combat ended**, with `character.revived` written into the log. After a full quit and Continue it is **still at 1.**

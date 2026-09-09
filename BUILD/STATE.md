@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `e74b974` — `PT-1516`'s payload gap named in `EVENT-KINDS-01 §3b` | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `cf54484` — `PT-1523`'s third direction, `EVENT-KINDS-01 §3c` | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `3ae6f0e` — `PT-1515` nothing dies; `PT-1516` an effect carries what it needs | ⚠ no |
+| `Lodestar` | `e1aa968` — `PT-1524`, an enemy dies at 0 and the band is the party's | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `a6c6ceb` — `PT-1516`, the effect vocabulary is closed | ⚠ no |
-| `KOTOR-RPG-APP` | `bd47c4c` — `PT-1515`, a placement is not the party | ⚠ no |
+| `Loom` | `1565cc7` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `26196fb` — `PT-1523`, a save knows where you stood | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 366 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 291 — 793, all
+**`Lodestar` 368 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 295 — 804, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,18 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A SAVE KNOWS WHERE YOU STOOD — `PT-1523`, BUILT, and it had THREE ends missing
+
+`character.moved` was declared `campaign` **with the reason in its own
+comment**, folded into a `Position` — **and `.position` had zero uses in the
+whole app** while `_open` set `_entry` to the package entry unconditionally.
+**Declared, folded, unread AND unwritten.** Writing it alone would have fixed
+nothing visible.
+
+⚠ **Two moments, not every keypress:** `onAppend` rewrites the whole file, so a
+`moved` per arrow key is a **file write** per arrow key. The volume question is
+settled; the **write-frequency** one was not.
 
 ### ⚠⚠ NOTHING DIED — `PT-1515`, BUILT, and it had THREE causes
 
@@ -472,6 +484,42 @@ it to whatever the class's array carries. **Three different games.**
 `grant_reaches_class_test.dart` changes nothing and pins the current behaviour,
 naming in its own body which assertion turns red when the fix lands.
 
+
+### ✅ THE THIRD DIRECTION IS CHECKABLE, AND IT IS CHECKED — `PT-1523`
+
+**Three ways a kind and the code can disagree. Two were checked; the third was
+not, and it is the one that shipped a player-facing defect.**
+
+    A  ⚠ EMITTED and UNDECLARED           check A, PT-1418 — 14 of 15
+    B  ⚠ DECLARED and replay IGNORES IT   check B, PT-1418
+    ⚠⚠ DECLARED, FOLDED, and NOBODY WRITES  — unseen until PT-1523
+
+**Why neither could see it:** both compare the DOCUMENT against a set of kinds
+**the code declares it handles**. Neither ever asks *is there a construction
+site* — and that is a plain source-level fact.
+
+`scripts/check_event_producers.py` asks it: a `CharacterEvent(...)` whose first
+argument names the kind. **95 files, 50 declared kinds.**
+
+⚠ **ITS HONEST LIMIT IS DATA-DRIVEN EMISSION**, which `PT-1435` already named.
+A package's `effect` may name any declared kind and the runtime writes it
+through `CharacterEvent(e['kind'] as String)` — **a site that names no kind at
+all.** Four such sites exist. So the check carries an **explicit allowance
+list** with a reason per entry, rather than letting one dynamic site excuse
+every kind: *a check that excuses whatever it finds checks nothing.* The
+allowance is verified **both ways** — an entry for a kind that IS constructed
+is reported as a stale excuse.
+
+⚠ **Controlled:** with `character.moved`'s only producer removed it exits 1 and
+names the kind; with it restored, 0.
+
+⚠⚠ **AND IT FOUND SOMETHING WORTH KNOWING WHILE PASSING:**
+**`character.faction-changed` is folded by `projectPlayState` and NO ENGINE CODE
+EVER WRITES ONE.** `PlayState.faction` is only ever what a package's effect set.
+`FACTIONS-01 §4b` gives a character one handle and explicitly **not** a standing
+track, so there is nothing for the engine to move — **allowed, with that as the
+reason, so the day something should change a faction this line is the
+argument.**
 
 ### ⚠⚠ A CITATION ASSEMBLED AT RUNTIME FALLS BETWEEN THE TWO GUARDS
 

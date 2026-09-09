@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `ba1295f` — `PT-1486`, excludes transcribed | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `47ce4ea` — `PT-1506`, §9's failure node re-offers the check | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `aac8505` — `PT-1501`, verify walks every blueprint | ⚠ no |
-| `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `0cc9bcf` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `d4dc2ea` — `PT-1501`, the count leads | ⚠ no |
+| `Lodestar` | `4606c8e` — `PT-1506`, a conversation check records its roll | ⚠ no |
+| `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
+| `Loom` | `47f9c8b` — `PT-1505`, `unlink`, and the bed's check made to roll | ⚠ no |
+| `KOTOR-RPG-APP` | `20c5087` — `PT-1506`, the roll is said | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 321 · `Lens` 4 · `Loom` 122 · `KOTOR-RPG-APP` 274 — 721, all
+**`Lodestar` 326 · `Lens` 5 · `Loom` 123 · `KOTOR-RPG-APP` 274 — 728, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,58 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ `tester-probe/sentinel-challenge` IS REFUSED, AND THE FIX IS CONTENT
+
+`PT-1505`: `stand-down-i` is offered as a `Persuade` DC 14 check and its `then`
+carries no check, so it never rolls. `§9`'s form needs a **failure node** —
+where a failed Persuade against the sentinel lands — and that is the owner's
+choice. **`tester-probe` is Tester's package.** Until it has one, `validate`
+refuses that conversation and Loom will not write it.
+
+`endar-spire` was fixed: `§9` is a worked example of **that file by name** and
+authors its failure node, so the content was not invented.
+
+### ⚠⚠ `§9`'s OWN FAILURE NODE RE-OFFERS THE CHECK
+
+`not-on-my-board` carries `replies = ["back-off", "push"]`, so a failed Persuade
+returns the player to the same check **with nothing spent** — passed eventually,
+always. `PT-1501`'s defect by a longer road. **The bed's failure node is
+terminal instead, and that divergence is reported, not decided:** whether a
+failed check may be retried is a rule and it is the owner's.
+
+### ⚠⚠ A DECLARED EVENT KIND NOTHING EMITTED — `PT-1506`
+
+`check.resolved | transient` has been in `EVENT-KINDS-01` since `PT-1418` and
+**no code wrote it.** `PT-1418` found fourteen emitted kinds undeclared; this is
+the mirror, and it is why a free check could only be found by counting twelve
+outcomes. **A check that rolls and records nothing is indistinguishable from a
+check that does not roll.** Emitted now from all three `_pick` sites and said on
+screen, verdict first.
+
+### ⚠⚠ A GATE ON A `replies` LINK COLOURS; A GATE ON A `then` LINK ROLLS
+
+`PT-1432`'s distinction, and the runtime tells them apart **by position** —
+`Verdict.isACheck` and `_pick`. The same gate is written **twice** in `§9`, on
+the reply and on the outbound link, and that is not duplication: one is the
+amber bracket, the other is the dice. **Any fix that merges them flattens
+`PT-1432`.**
+
+⚠ **And the ORDER of the outbound links is meaning.** `_pick` returns on the
+first **ungated** link, so the gated one must come first.
+
+### ⚠⚠ A RULE THAT FIRES ON NOTHING REAL IS A RULE NOBODY HAS TESTED
+
+`PT-1459` checked only whether a gated reply had a `then` **at all** — a shape
+no author produces. It was green for four slices while **every shipped
+conversation in the project** carried the fault it was written to catch.
+
+### ⚠ THE BUILDER COULD NOT REPAIR WHAT IT WROTE
+
+`ConversationDraft.link` only ever appended; there was no `unlink`. `PT-1379`
+stopped Loom **creating** a detectable fault and left it unable to **correct**
+one. Added at `PT-1505` — but **the editor has no button for it**, so a
+conversation authored by clicking still cannot be corrected by clicking.
 
 ### ⚠⚠ A `find.textContaining` TEST PASSES ON ELLIPSED TEXT
 

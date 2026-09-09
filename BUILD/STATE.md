@@ -3,140 +3,190 @@
 **⚠ Rewritten in full each time, never appended.** If a line here disagrees
 with a slice report, this file is the later one.
 
+> **⚠ THIS FILE WENT ELEVEN SLICES STALE.** It was last rewritten at `BUILD 25`
+> and slices **26–36 landed without it being touched** — every repository head
+> in it was wrong, it still said *"70 app tests"* against 206, it carried a row
+> struck through as answered **and the same row live below it**, and it knew
+> nothing of dialogue, doctrines or the first playtest. **The one file whose
+> whole contract is *what is true right now* was the stalest thing in the
+> tree.** Rewritten at `BUILD 37` from the slice reports and from the code.
+
 ---
+
+## ⚠ Where everything is — this changed at `BUILD 37`
+
+    /mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT   the real path
+    /home/aidan/kotor-repos                                   the same folder (a SYMLINK)
+
+**It moved from `/home/aidan/step1` into a Steam library**, because the owner
+wants the code where the games are. **Use `~/kotor-repos` in anything you
+write** — it is the stable name and it is why the move cost one symlink.
+
+**⚠ Steam can delete things under `common/` on a verify.** Everything except
+the uncommitted files named below is on GitHub, so the exposure is a re-clone.
+
+**⚠ Packages and saves did NOT move and are not repo paths.**
+`~/.local/share/kotor-rpg/`, derived from `XDG_DATA_HOME`/`$HOME` by
+`Locations.desktop()`. Verified from all three repos after the move.
+
+**⚠ `env.sh` is not optional and neither is its `clang` shim.** Flutter, CMake,
+Ninja and Clang live under `~/spike`; clang is installed as `clang-19` with no
+plain `clang`. Without the shim a **cold** build dies with *"CMAKE_CXX_COMPILER
+not set"* — earlier builds only worked because CMake had cached the compiler.
 
 ## Repository heads
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `d4a4ca1` — check_decisions.py | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `8884ac8` — `PT-1443`, the first real playtest | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `fe58cfe` — `PACKAGE-FORMAT-01 §4·1`, required fields | ⚠ no |
-| `Lens` | `d532c0a` — an arrival can be emphasised, keyed by name | ⚠ no |
-| `Loom` | `ff4ff81` — required fields, where validate runs, deleting an arrival | ⚠ no |
-| `KOTOR-RPG-APP` | `b1e57ae` — Backstory one tab, and Abilities | ⚠ no |
+| `Lodestar` | `f7fe50d` — `DOCTRINE-FORMAT-01`'s reader | ⚠ no |
+| `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
+| `Loom` | `387fcf1` — the doctrine format, and a check instead of an errand | ⚠ no |
+| `KOTOR-RPG-APP` | `14b02f5` — the capture output path is relative | ⚠ no |
 
-All six clean and level with origin.
+**⚠ NOT all clean.** `KOTOR-RPG-APP` carries **10 uncommitted files** — see the
+first row of *What is open*. The other five are clean and level with origin.
+
+## Tests, as measured
+
+**`Lodestar` 270 · `Lens` 4 · `Loom` 111 · `KOTOR-RPG-APP` 206 (202 pass, ⚠ 4
+failing).** The four failures are the uncommitted work, not the codebase.
 
 ## What each repository is
 
-**`Lodestar`** — the rules engine. Pure Dart, no Flutter. Opens packages, areas
-and characters; validates a package; answers where packages and saves live
-(`Locations`, needs D and E). 10 test files.
+**`Lodestar`** — the rules engine. Pure Dart, no Flutter. Packages, areas,
+characters, the ledger and replay, combat, `PLAY-STATE-01`, the dialogue reader
+and validator, the doctrine reader; `Locations` answers where things live.
 
 **`Lens`** — the shared view layer, `PT-1381`. The area board, its palette, its
 metrics and the pan/zoom viewport. Exists because `AREA-FORMAT-01 §2b` governs
-how an area looks in **both** Loom and the app, the engine may hold no widgets,
-and neither program may depend on the other.
+how an area looks in **both** Loom and the app.
 
-**`Loom`** — the Builder. Package and area creation, tile painting, placing,
-connections and arrivals, Package Properties, and `validate` on open with a
-re-runnable Verify dialog. 12 test files.
+**`Loom`** — the Builder. Packages and properties, areas, tile painting,
+placing, connections and arrivals, creatures with equipment, **the conversation
+editor** and **the doctrine editor**, and `validate` on open.
 
-**`KOTOR-RPG-APP`** — the play client. Console Home, the Package Main Menu, the
-area and the walk, and character generation as far as the hub. 10 test files,
-70 tests.
+**`KOTOR-RPG-APP`** — the play client. Console Home, the Package Main Menu, all
+nine chargen steps, save/load/continue, the walk, **the dialogue screen**, and
+a fight an author started.
 
 ## The shelf — `~/.local/share/kotor-rpg/packages/`
 
 | Package | What it is |
 |---|---|
-| `base-rules` | ⚠ **Generated, not authored.** 22 TOML files, 2,533 records. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. |
+| `base-rules` | ⚠ **Generated, not authored.** 22 TOML files. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. **301 worlds.** |
 | `endar-spire` | The two-area test bed, made entirely in Loom |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
 ## What runs end to end
 
-Console Home lists three packages → selecting one reaches the Package Main
-Menu → New Game opens the character entry screen → Create New Character runs
-the pre-hub (Species → Model for droids → Class) → the hub opens with its step
-strip → Back reaches the area → the marker walks through a door and arrives at
-the named point in the second area, and back.
+Console Home → a package → the Main Menu → New Game → the pre-hub → the hub's
+nine steps → Play → the area and the walk → walk into the trooper and a
+**conversation** opens → an option starts a **fight** → initiative, turns, a
+doctrine the author wrote → quit, reopen, **Continue**, the same character.
+
+---
 
 ## ⚠ What is open
 
+### The live wall
+
 | | Need |
 |---|---|
-| **Worlds** | ✓ **closed at `PT-1396`.** 301 worlds ship in `base-rules`, exported from the Atlas resolver. Origin completes and the strip unlocks past step 1 |
-| **13 unfinished menus** | 13 worlds carry three skills because `D-MENU4` is applied only where a menu is finished. They ship, and are not offered |
-| **`ATLAS/decisions/`** | ⚠ 34 files `MAIN_WORK` has never read. `D-MENU4` sat there superseding a ruling three documents still carried |
-| **Droid ability scores** | ✓ **closed at `PT-1403`.** `chassis.toml` ships 7 production spreads, all totalling 72 — 4 derived, 3 inferred and marked as such on screen. A droid completes Abilities |
-| **Droid skills** | ✓ **closed at batch 5.** `droid_skills.toml` ships the four bodies. A droid completes Skills |
-| **`DROID-SKILLS-01` §2.3 vs §2.4** | ✓ **closed at `PT-1405`.** The grid is right and the totals lag: Assassin 15, Battle 13. `stated_total` still carries what `§2.4` says, with the ruling named beside it. Athletics is offered |
-| ⚠ **Science and Survival for droids** | On the 25-skill roster and **nowhere in the chapter**. Neither opened nor closed. Withheld, and said on screen |
-| ⚠ **`PT-621`'s Protocol carve-out** | Opens `Persuade` to a "Protocol chassis" that is not one of `§2.3`'s four bodies. The carve-out names an axis the table cannot express |
-| **Three Sith base classes at creation** | ✓ **closed at `PT-1407`.** One feat at first level. `first_level_feats.toml` carries it as an override with `sets_cadence: false` |
-| ⚠ **Three Sith base classes at LEVEL-UP** | Still open, and `PT-1407` says so. Level-30 totals are authored — `PT-126` fixes the Sith Assassin's at 12 — and **when they gain the other eleven is unwritten** |
-| ⚠ **`CLASSES-FORCE-PHB`'s Jedi Guardian attack row is transposed** | It reads `picks 18 · chains 20`; `CLASS-ATTACKS-01` gives Combat **36** picks and assigns the Guardian **18** chains with **20** feats at 30. Capstones match at 11, which says the row was built from `§2.3` and the two numbers crossed. **The extraction is faithful; the source is wrong.** Reported, not fixed |
-| ⚠ **`PT-126` vs the Sith Assassin's rate** | `PT-126` ruled it **`Specialist`** *"by owner instruction"* and said the Sith side loses its `Middle` class; `CLASSES-FORCE-PHB` and `classes.json` both carry **`Middle`**. Does not touch creation; does touch attacks |
-| **`attack_chains` / `attack_picks_at_30`** | Populated for **14** classes, not one. Read from each PHB chapter's record table, which 5 of 6 Force classes and all prestige classes lack. **`picks` is derivable from `rate`** (`§3`: 36/27/18); **`chains` is not** — `§2.3` makes it a per-class assignment inside a band, and its table is headed *"Assigned so far"* |
-| ⚠ **`FEAT-SCHEDULE-01`'s "Seven schedules" row** | Reads `Every third from 1 · Sith Assassin · 10`, where its own summary gives Sith Assassin **12** and the grid's `Assassin` column reaches 10 on that cadence. Either a mislabel of the prestige Assassin, or a cadence contradicting `PT-126`'s owner-instructed 12. **Reported, not resolved** |
-| ⚠ **Skill Focus** | Half closed at `PT-1405`: the aptitude applies from level 2 and Skills are not repriced. **Still unbuildable** — `SKILLS-01 §12` says 23 exist, one per skill, and the library holds **one generic record with no skill on it** |
-| **13 unfinished menus → aptitude** | The 13 three-skill worlds grant one fewer aptitude source than the 288 four-skill ones. They are not offered, so nothing is wrong today |
-| **Hub step 8, Equipment** | ✓ **closed at batch 6.** `PT-1200` resolves: the item is named and priced against the array. Route 1 only |
-| ⚠ **Route 2, the purse** | Needs the array's own credit value, which is **not written**. The arrays name items in prose and only **18 of 41** names resolve to exactly one catalogue row; `§2c` disambiguates 14. Not offered |
-| ⚠ **Five `ITEMS` file headers are stale** | `ITEMS-01, 02, 04, 05, 08` state a total their own category headings do not add to, and `ITEMS-09` states none. **All 44 category counts are right.** Same shape `ITEMS-07` documents at `PT-871` |
-| ⚠ **`STARTING-EQUIPMENT-01`'s status block says 18 twice** | `§4` and `§4a` each carry **19** — all 19 base classes. The nineteenth is the **Saboteur**, new at `PT-784`. `classes.json` already records this class going missing in three places; this is the fourth and fifth |
-| ⚠ **Three grants name no item** | `Augmented`, `Dancer`, `Initiate` depend on the character, so `§5` names no resref and no price. 13 of 16 slot-fillers resolve |
-| **Hub step 9, Identity** | ✓ **built.** Three stages in place, with a back control. All nine steps are built and **Play can unlock — `PT-1216`** |
-| ⚠ **There is no portrait set** | `UI-ASSETS-01 §2` asks for presets per species — *"the largest art commitment in the flow"* — and `ASSET-REPLACEMENT-01` carries the row as **ours and unticked**. `§2`'s own current state is *"a filled circle"*, which is what the screen shows. **The first place a player can see that we ship no source assets** |
-| ⚠ **An import cannot fill it** | K1's **181 `po_*` portraits are named for the games' own characters**, not for a species. `PT-1214` asks for species presets; the art import answers a different question |
-| ⚠ **The custom-portrait spec is unwritten** | `PT-1180`: ours supports a player-side folder like NWN's. `§2`: *"A custom portrait needs no art, but it needs a spec: accepted formats, dimensions, and what happens to an image of the wrong aspect."* **The half of this that needs no drawing** |
-| **The save file** | ✓ **built at batch 2.** `KRSV` header + gzip payload, `.sav`, in `Locations.saves`. **`PT-1265`'s bit-identical guarantee runs**, on a synthetic log and on a real chargen one |
-| ⚠ **The compressor is `gzip`, not `zstd`** | `PT-1328` recommended zstd-10 and measured the gap at **0.09 MB on 16.3 MB**. Dart ships gzip and no zstd; every zstd on pub is an FFI binding. **The header records which**, so switching later orphans nothing |
-| ⚠⚠ **THE WHOLE LOOP RUNS** | ✓ **batch 3.** Make a character, Play, quit, reopen, Continue, same character. **The first thing here to survive a restart** |
-| **`Continue` and `Load Game`** | ✓ **alive.** Continue opens the most recent and **the disk decides which**; Load Game lists them with each save's rules version |
-| ⚠ **"The same place" is the entry area** | `character.moved` and `area.entered` are **`session`** lifetime, and `§4` makes lifetimes decide what is written at all. **By the vocabulary's own rules a save cannot know where you were standing.** A player who walks to the second area and continues arrives back at the first |
-| ⚠ **Three of `§4`'s twelve rules cannot be checked** | derived-aptitude skill caps, granted feats against a class schedule, and feat prerequisites — each missing its data. **Returned, not skipped**, and the play HUD shows the count |
-| **`§5`'s five load steps** | 3, 4 and 5 built. Step 1 is done by the time it runs; step 2 has no snapshots and `PT-1327` makes them a cache |
-| **Save slots and rewind** | `§5·0` specifies a slot as **a point in the log** with a rewind event. **Specified, not built** |
-| ~~⚠⚠ **What a save is NAMED, and how many**~~ | ✓ **answered at `PT-1416`** |
-| ⚠⚠ **What a save is NAMED, and how many** | `§5a` settles where; **nothing settles how many or what one is called**, and the header carries **no time, no name, no character and no package**. `Continue` cannot order saves without a field the format does not have. `§6`'s *"a save that is a log may want showing differently from a save that is a slot"* is the same question |
-| **Loading is step 3 of five** | `§5`'s sequence is resolve packages · snapshots · replay · validate · open. **Only replay is built** |
-| **The log and replay** | ✓ **built at batch 1**, in `Lodestar/lib/src/ledger.dart`. Chargen writes events; `replay()` reproduces the character field by field for **both** shapes. **In memory only** |
-| ⚠ **14 emitted kinds are not in `EVENT-KINDS-01`** | `PT-1415`'s thirteen plus `step-reopened`. **Now asserted rather than reported**: check A names them as an exception list, every entry is owed to the document, and a fifteenth fails the build. Writing them in is the owner's |
-| **The vocabulary reaches the code** | ✓ **extracted** to `event_kinds.toml` — 36 kinds from 24 rows — so both checks compare code to the DOCUMENT, and `check_extracts.py` watches it |
-| **Replay's silent no-op** | ✓ **closed.** `replayDetailed` returns every kind it had no case for; `replay()` drops the report. **The fix is the report, not the test** |
-| **Every kind has a lifetime** | ✓ **checked.** 36 of 36, and the four are exactly `PLAY-STATE-01 §2`'s |
-| ⚠ **The re-lock ruling is Claude's** | `character.step-reopened` carries its own discard list so an old log replays the same way after the flow changes. **Flagged, not ruled** |
-| ⚠ **`CHARACTER-RECORD-01 §2` vs `§5` on `abilities`** | `§2` says final scores, `§5` says bought scores. The ledger follows `§5` and `§1`'s principle. **Reported, not resolved** |
+| ⚠⚠ **10 uncommitted files in the app, and 4 red tests** | The previous session's `PT-1443` fix, unpushed. `hub.dart` logs `packageId` where the tests still expect `packageName` — `ledger_test` ×3, `save_round_trip_test` ×1. **Whether the log records the id or the name is a `PACKAGE-NAMING-01` ruling**, and `SaveStore.listFor` already carries a both-ways concession for old saves. **Not decided by an agent** |
+| ⚠⚠ **`PT-1443` — six defects in ten minutes** | The first time the owner ran both programs. Saves not filtered by package; `Continue` red-screens on `base-rules`; **nothing saved at all on the real folder**; Select Premade empty; Back after the hub silently entering play. The uncommitted work above addresses most of them |
+| ⚠ **A temp-directory test passed where the real path failed — three times** | `PT-1382`, `PT-1425`, `PT-1417`. **The pattern, not the instances, is the finding** |
+| ⚠ **And the mirror of it: 19 app test files write to the REAL data folder** | `Locations.desktop()`, not a temp dir. `kaeda-vos.sav` is rewritten by every suite run — same bytes, so `PT-1265` holds, but it is a write into live data. **`BUILD 37`, reported not fixed** |
+
+### Asked for at the playtest, and not built
+
+| | Need |
+|---|---|
+| ⚠ **The side panel** | Confirmed wanted **at the machine**. The panel runs full-width along the bottom, so ~70% of the width is black; down one side gives a **66px tile against 29px**. Measured at `BUILD 32`, decided at `PT-1443` |
+| ⚠ **Click-to-move, and there is no settings surface** | NWN/BG3 style, keys as an alternative. **Needs key bindings and an options screen that do not exist**, and `PT-1425` made walking-into-something the attack affordance *on the arrow keys* — that gesture needs re-answering |
+| ⚠ **Baldur's Gate 3 as a fourth source** | Movement limits, where you can go in combat, rounds, dice-roll visuals. **The first modern one** — every study so far has read a 2002–2005 engine |
+| **Nothing has been designed** | `UI-STYLE-VALUES-01 §7`'s sizes are re-derived against a real viewport (`BUILD 32`); **typography, palette and framing have never been touched.** Not a defect |
+
+### Blocked on a format that does not exist
+
+| | Need |
+|---|---|
+| ⚠⚠ **A reaction has no home and no format** | `ATTACHMENT-01 §3` specifies `on: <kind> then: <response>` and **nothing says where one is declared.** `BUILD 34`'s stop. The doctrine half was answered at `BUILD 35`; **reaction was not** |
+| ⚠ **The door template** | `[[connections]] from` names a file in `blueprints/doors/` — **a folder in the layout with no format behind it.** Same stop one level down |
+| ⚠ **Path or handle is undecided** | `AUTHORED-CHARACTER-01` writes a path, `ATTACHMENT-01 §2` writes a bare handle. `DOCTRINE-FORMAT-01` settled it for doctrines; **the general ruling is still owed** |
+| ⚠ **`format = 1` is read by nobody** | `§4` shows it, `PT-1366` ruled it, and `package_open` does not read it. **A ruled field neither side implements** |
+| ⚠ **Equipment is authorable but not read in play** | The bed's trooper carries a blaster rifle, made by clicking. `strike()` still uses a hardcoded fist. **`PT-1425`'s fist is now a code gap, not a data gap** |
+
+### Save and load
+
+| | Need |
+|---|---|
+| ⚠⚠ **What a save is NAMED, and how many** | `§5a` settles *where*. The header carries **no time, no name, no character and no package** — so `Continue` cannot order saves, and nothing can tell which package a save belongs to without a full read. **`SaveStore.listFor` reads every log to answer it; the right fix is a fifth header field, and that is the format's call** |
+| ⚠ **"The same place" is the entry area** | `character.moved` and `area.entered` are **`session`** lifetime. **By the vocabulary's own rules a save cannot know where you were standing** |
+| ⚠ **Loading is step 3 of five** | `§5`'s sequence is resolve · snapshots · replay · validate · open. **Only replay is built** |
+| ⚠ **Save slots and rewind** | `§5·0` specifies a slot as a point in the log with a rewind event. **Specified, not built** |
+| ⚠ **Three of `§4`'s twelve rules cannot be checked** | derived-aptitude skill caps, granted feats against a class schedule, feat prerequisites. **Returned, not skipped** |
+| ⚠ **The compressor is `gzip`, not `zstd`** | `PT-1328` measured the gap at 0.09 MB on 16.3 MB. Dart ships no zstd. **The header records which**, so switching orphans nothing |
+
+### Data that is missing or contradictory
+
+| | Need |
+|---|---|
+| ⚠ **`ATLAS/decisions/`** | **34 files `MAIN_WORK` has never read.** `D-MENU4` sat there superseding a ruling three documents still carried |
+| ⚠ **Skill Focus** | `SKILLS-01 §12` says 23 exist, one per skill; the library holds **one generic record with no skill on it**. Still unbuildable |
+| ⚠ **`attack_chains` / `attack_picks_at_30`** | Populated for **14** classes. **`picks` is derivable from `rate`; `chains` is not** — `§2.3` makes it a per-class assignment |
+| ⚠ **Three Sith base classes at LEVEL-UP** | Level-30 totals are authored; **when they gain the other eleven is unwritten** |
+| ⚠ **Science and Survival for droids** | On the 25-skill roster and **nowhere in the chapter**. Withheld, and said on screen |
+| ⚠ **`PT-621`'s Protocol carve-out** | Opens `Persuade` to a chassis that is not one of `§2.3`'s four bodies |
+| ⚠ **Route 2, the purse** | Needs the array's own credit value, which is **not written**. Only 18 of 41 names resolve to one row |
+| ⚠ **Three grants name no item** | `Augmented`, `Dancer`, `Initiate` depend on the character. 13 of 16 slot-fillers resolve |
+| ⚠ **Reported, not resolved** | The Jedi Guardian attack row transposed · `PT-126` (`Specialist`) vs `classes.json` (`Middle`) · `FEAT-SCHEDULE-01`'s "Seven schedules" row · `DEATH-AND-DIFFICULTY-01` Hard −10 vs `§5b` · `CHARACTER-RECORD-01 §2` vs `§5` on abilities · five stale `ITEMS` headers · `STARTING-EQUIPMENT-01` saying 18 where `§4` carries 19 |
+
+### Assets — nothing is ours
+
+| | Need |
+|---|---|
+| ⚠ **There is no portrait set** | `UI-ASSETS-01 §2` asks for presets per species — *"the largest art commitment in the flow"*. The screen shows a filled circle. **The first place a player can see we ship no source assets** |
+| ⚠ **An import cannot fill it** | K1's 181 `po_*` portraits are named for **the games' own characters**, not for a species |
+| ⚠ **The custom-portrait spec is unwritten** | `PT-1180` wants a player-side folder. **The half of this that needs no drawing** |
+| ⚠ **The icon pairing must count ICONS, not items** | 183 `ii_*` across 38 classes against 557 `.uti`. Counted against items it can never balance |
+| ⚠ **K2's item icons not located** | ⚠ **Checked:** K2's `chitin.key` and this build's `TexturePacks/`. **Not checked:** module `.rim`/`.erf`, `override/` |
+
+### Rulings that are Claude's, flagged not made
+
+| | Need |
+|---|---|
+| ⚠ **`down → dead` in one blow** | Writes only `character.died`. **The last of the six had-to-behave-somehows.** The other five are ruled — `PT-1420` took two, `PT-1422` two, the brief one |
+| ⚠ **The re-lock discard list** | `character.step-reopened` carries its own, so an old log replays the same way after the flow changes |
+| ⚠ **Walk into it to attack** | A step onto an occupied square strikes instead of moving. **No document rules it** |
+| ⚠ **Powers at 1st level** | `MULTICLASS-01 §2.2a` states 2; `POWER-COSTS-01 §6` calls acquisition open. **Read as compatible, and that reading is Claude's** |
+| ⚠ **The dialogue panel holds up to seven options** | `STUDY 18` found source nodes offering that many; **nothing rules the number** |
+| ⚠ **14 emitted kinds are not in `EVENT-KINDS-01`** | Now **asserted** rather than reported: check A names them as an exception list and a fifteenth fails the build. **Writing them into the document is the owner's** |
 | ⚠ **A droid model has no `id`** | `DROID-MODELS-01` is keyed by chassis; `character.model-set` records the **name** because there is nothing else |
-| **Combat `resolve()`** | ✓ **slice 1.** Four check types, one attack, the whole derivation. **Callable without a game.** No pools, no turn order, no damage applied |
-| ⚠ **A tie in an opposed roll** | Goes to the defender because it had to do something. **Nothing rules it** |
-| **Check A compares against lifetime** | ✓ **`PT-1420`, fixed on its own before the emission.** A `permanent` kind replay ignores is the bug; a `transient` one is the design — **and the rule is proved against a case it does not yet have**, so it cannot pass vacuously |
-| **Pools, damage, the death boundary** | ✓ **slice 2.** Vitality is one pool with a negative band; the Force pool has three values. Difficulty enters here and only here |
-| ⚠ **`DEATH-AND-DIFFICULTY-01` Hard says −10, `§5b` supersedes it** | *"E-2's flat −10 is superseded — the threshold SCALES with Constitution."* The superseding line is followed. **Reported, not resolved** |
-| **The round** | ✓ **slice 3.** Five budgets on **three** reset boundaries, initiative, surprise, and the dying countdown. **A character can now die untouched** |
-| **Enemy decisions** | ✓ **slice 4, doctrine only.** `SPACE-AI-01`'s four questions; deterministic, and a doctrine that rolls takes the injected die |
-| **A doctrine is not a reaction** | `PT-1373`: a trigger produces an event and a reaction consumes one. **A doctrine is asked, at a known point.** Two mechanisms, one built |
-| ⚠ **`§6a` slot 1.5's `Cleave` is a CHAIN, not a feat** | It is in `ATTACKS-05` — level 1/4/8, Strength 12 — and **not in `feats.json`**. The `on_kill` recursion it tests runs through the attack system |
-| **`§6a` slots 1, 3 and 7 verify** | Against the 104 extracted powers, **and slot 7's prerequisites are in the data** |
-| **The seam** | ✓ **built, both sides.** A placement becomes a combatant through the blueprint it names, and one attack runs from the app. **The vitality formula was already ruled at `PT-648` — nothing is rolled** |
-| **The bed has a creature** | ✓ **made in Loom by clicking** — the dialog, then a click on a square. A Sith Trooper stands at `[6, 4]` on the command deck, and **Lodestar reads back what Loom wrote** |
-| **Walk into it to attack** | ✓ **and it is Claude's reading.** A step onto an occupied square strikes instead of moving; no document rules it |
-| ⚠ **The New Creature dialog overflows by 58px at 1280×720** | Found by clicking it. **Reported, not fixed** — Loom's layout, and nobody asked |
-| ⚠⚠ **The wound does NOT survive leaving the area** | Combatants are rebuilt from the blueprint on every entry, which is what `§4` rules — *"not written: current vitality."* **The other choice would have been `PLAY-STATE-01` arriving**, and a persistent wound is a design question rather than a line of code |
-| **The second projection** | **Not forced a fourth time.** A multi-round fight needs who-is-standing across turns, and `§4` puts every one of those facts on its not-written list. **The thing that would force it is a fight that survives being left, and this one does not** |
-| **The enemy takes a turn** | ✓ **slice 5.** Initiative, five budgets, doctrine, round boundary, dying countdown — the app calls all of it |
-| ⚠ **A fight can always be left, and never lost by leaving** | Two readings, both falling out of `§4` writing nothing. **Fleeing is not built; this is what transience gives you** |
-| **The dying countdown, in a real fight** | ✓ **and the risk lay the other way.** A dying combatant is not standing, so the advance skips it and the round boundary fires **sooner**, not never |
-| ⚠⚠ **SIX things have had to behave somehow** | slice 1: the opposed tie and crit confirmation — **both ruled at `PT-1420`**. Slice 2: healing past `max`, negative damage as healing, `down → dead` in one blow. **Slice 3: a tie in INITIATIVE** |
-| **Five of the six are ruled** | `PT-1420` took two, `PT-1422` took the initiative tie **and the targeting tie with it**, and the brief ruled the clamp and the named heal door. **One left: `down → dead` in one blow writes only `character.died`** |
-| **The second projection** | **Not forced by the round.** `§4` makes a round transient; the encounter answers *who is standing* from its own combatants. `PLAY-STATE-01` is owed for state that outlives a fight |
-| ⚠ **`campaign` kinds replay ignores are owed a second projection** | `character.died` and friends are `campaign` and the character record has no *alive* field, by design. **`PLAY-STATE-01` owns current state and nothing has built it** |
-| **`§5` difficulty** | **`resolve` never sees it** — the mode acts at the death boundary, not on the dice |
-| ⚠⚠ **What Play owes: a LOG, not a record** | `CHARACTER-RECORD-01`: *"This record is a **PROJECTION** of the event log, not the store… the log is what persists."* `SAVE-LOAD-01`: *"the save is the log."* So the next stretch is not serialising the hub — it is writing the choices as **ordered events** |
-| **The re-lock as an event** | ✓ **answered at batch 1** — and building it found that the hub **kept the value of the step it re-opened**. Nothing read it back, so nothing had noticed |
-| **`backstory.lifestyle`** | ✓ **answered: no event.** `PT-1411` marks it orphaned; an event for a choice nobody makes invents a value |
-| **`identity.story_origin`** | `CHARACTER-RECORD-01` calls it *"proposed here, not ruled"*. The screen produces all three values |
-| **The profession grant is a category** | ✓ **resolved at batch 6.** `STARTING-EQUIPMENT-01 §5` names the item behind each category and prices 13 of 16 |
-| ⚠ **An annotation past the closing pipe drops a value** | `PT-1408`'s inline correction made the Guardian's rows three cells and `read_phb` took only two — the correction **silently un-extracted both fields**. Fixed in the reader; worth remembering as a shape, not a one-off |
-| **The import question** | ✓ **Answered: ART.** `ITEMS-01..09` already hold 1,425 converted resrefs under seven named rulings; a stats import would overwrite them with the game's balance. See BUILD 12 |
-| ⚠ **`PT-1369`'s pairing must count ICONS, not items** | K1 ships **183 `ii_*` icons across 38 classes** against **557** `.uti` blueprints — icons are per class + variation. Counted against items the pairing can never balance |
-| ⚠ **K2's item icons not located** | No `ii_*` in K2's `chitin.key`, and this Steam build's `TexturePacks/` holds only controller overlays. Not checked: module `.rim`/`.erf`, `override/` |
-| ⚠ **Powers at 1st level reads two sources one way** | `MULTICLASS-01 §2.2a` states 2 at Jedi level 1 and `PT-128` corrected the Sith Assassin to it; `POWER-COSTS-01 §6` calls acquisition **open**. Read as compatible — §6's open item is the schedule *after* level 1 — **and that reading is Claude's, not a ruling** |
-| **Character record** | Nothing is written and nothing is saved. `Continue` stays disabled |
-| **`base-rules` distribution** | `§3c` says it ships with the product and does not say from where. It is generated onto the shelf and lives in no repository |
-| **Five species parents** | The ruling asks for 57 records as 35 parents + 22 subraces; the corpus has 57 with all five parents present since `PT-1333`. ✓ closed at batch 4 |
-| **Feat grant levels** | `granted` vs `selectable` is structural and carried; the per-level `_granted` column lives in `feat.2da`, a game file |
-| **`recommend_order`** | Unauthored. Scoped negative across all staged files |
+| ⚠ **A fight can always be left, and never lost by leaving** | Fleeing is not built. **This is what transience gives you** |
+| ⚠ **`recommend_order`** | Unauthored. Scoped negative across all staged files |
+
+---
+
+## ⚠ Closed since `BUILD 25` — so nobody re-opens them
+
+| | |
+|---|---|
+| **`PLAY-STATE-01`, the second projection** | ✓ `BUILD 26`. A **second fold over the same log**, beside `replay()`. No new store, no snapshot, **no new event kind** — the outcome rides on `encounter.ended`, already declared and already `campaign` |
+| **The wound survives leaving the area** | ✓ `BUILD 26`, and it closed **as a consequence** rather than as a feature. `Fight.abandon()` now writes the outcome first. **This was a ⚠⚠ open row for four slices** |
+| **The dialogue reader and validator** | ✓ `BUILD 27`. Refuses what is not a conversation; reports one that loads and is still wrong; **says what it could NOT check**, so "clean" never means "nothing was looked at" |
+| **`SHOW ALL` vs `PICK ONE`** | ✓ `PT-1432`/`PT-1434`. `replies` shows all, `then` picks one, **never both** — and the ruling took the conversion from 54.9% to **99.5%** expressible across both games |
+| **The empty `say`** | ✓ `PT-1433` refuses it. **59% of K1's player nodes are blank** because K2's `Logic` joined exactly two conditions; `all_of`/`any_of` nest, so the node has nothing left to do |
+| **The dialogue screen** | ✓ `BUILD 30`, `§4c`'s colours drawn. **No numbers on a check**; a shut option is not drawn at all; the bracket is derived, so nothing an author typed can disagree with what rolls |
+| **The option list cannot be clipped** | ✓ `BUILD 32`. **There is no cap** — a clipped row is still hit-testable, so a tap landed on the wrong option silently. Asserted at seven option counts across three viewports |
+| **A conversation may end in a fight** | ✓ `BUILD 31`, `PT-1437`. `Beat.startsFight` is **derived from the events**; the effect IS the fact |
+| **Loom's conversation editor** | ✓ `BUILD 31`/`33`. The creature dialog had been **silently erasing** a hand-added `conversation` line — *anything the Builder cannot write, the Builder eventually destroys* |
+| **The audit of the bed** | ✓ `BUILD 33`. Every file traced to the Loom action that made it; **only the conversation had been hand-written**, and it is authorable now |
+| **`[requires]`, `[continues]`, `cover`, equipment** | ✓ `BUILD 34`. Four of the five unwritable fields, plus a sixth found by looking again |
+| **The doctrine format** | ✓ `BUILD 35`, `DOCTRINE-FORMAT-01`. **`never` is not a preference that lost** — and that survives *by construction*: two sections, an unknown key is a load failure, and the dialog has two verbs |
+| **The `plainAggression` fixture** | ✓ `BUILD 35`. The bed's trooper carries an **authored** doctrine, made by clicking. A scaffold since `PT-1423` |
+| **Every dialog scrolls, and `New Creature`'s 58px overflow** | ✓ `BUILD 34`, one fix. ⚠ **And the rule it produced:** anything you can click must be laid out where it can be seen — **three times this session** a scroll turned *content you cannot see* into *content you can click by accident* |
+| **The `Lens` board re-fits** | ✓ `BUILD 32`. `_tile` was cached so a player's zoom survives a rebuild, and it therefore never re-fitted when the **view** changed. **A deliberate zoom is still the player's** |
+| **On the machine, runnable** | ✓ `BUILD 36`. `run-app.sh`, `run-loom.sh`, `env.sh` |
+| **The tree moved to the Steam library** | ✓ `BUILD 37`. Baseline before, identical after. **No path dependency existed** — `Lens` and `Lodestar` are git dependencies through `~/.pub-cache` |

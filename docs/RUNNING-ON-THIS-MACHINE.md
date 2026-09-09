@@ -4,8 +4,18 @@
 repositories below were cloned here as the work was done, and they all point at
 `github.com/aidanpscott`.
 
-    /home/aidan/step1            ⚠ the real path
+    /mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT   ⚠ the real path
     /home/aidan/kotor-repos      the same folder under an obvious name (a symlink)
+
+**⚠ It lives under a Steam library on purpose — the owner wanted it where the
+games are.** `~/kotor-repos` is the stable name: it survived the move from
+`/home/aidan/step1`, and every instruction below uses it rather than the real
+path so that the next move costs one symlink.
+
+**⚠ Packages and saves do NOT live here.** They are at
+`~/.local/share/kotor-rpg/` and are derived from `XDG_DATA_HOME`/`$HOME`, never
+from the repo location — `Lodestar/lib/src/locations.dart`. Moving the code
+does not move the data, which is the intended behaviour.
 
 ---
 
@@ -39,8 +49,18 @@ repositories below were cloned here as the work was done, and they all point at
 Clang are installed under `~/spike`, **not on the system PATH**, and CMake needs
 a library from the same place. Run `flutter build linux` without that
 environment and it stops with **"CMake is required for Linux development"** —
-which is misleading, because it is installed. `env.sh` is those three lines;
-the scripts source it.
+which is misleading, because it is installed. `env.sh` sets that up and the
+scripts source it.
+
+**⚠⚠ AND `env.sh` ALSO MAKES A `clang` SYMLINK, WHICH IS NOT OPTIONAL.** Clang
+is installed as `clang-19` with **no plain `clang`** on the PATH, and CMake
+looks for `clang`/`clang++`. Builds before 2026-09-08 only worked because CMake
+had **cached** the compiler from an earlier run — delete `build/linux` and the
+next build fails with *"CMAKE_CXX_COMPILER not set, after EnableLanguage"*,
+which names the compiler and **not the missing symlink**. `env.sh` creates
+`~/spike/shim/clang` and `clang++` and puts that directory first on the PATH.
+**This was one wipe away from not building at all and nothing would have said
+why**, so it is recorded here and not only in a comment.
 
 **To develop rather than just run** — hot reload, from either repo:
 

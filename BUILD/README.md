@@ -31,6 +31,18 @@ That happened five times in seven reports before this directory existed.
 | `00b` | [The extraction batches — and the limit that matters most](00b-extraction-batches.md) | `MAIN_WORK` | `869e13a` |
 | `00c` | [`base-rules` — audit trail versus rule](00c-base-rules.md) | shelf | — |
 | `01` | [Chargen step 2 — the hub opens](01-chargen-hub.md) | `KOTOR-RPG-APP` | `592ec4b` |
+| `37` | [The tree moves to the Steam library](37-the-move.md) | all six | `14b02f5` |
+| `36` | [On the machine, and runnable](36-on-the-machine.md) | — | — |
+| `35` | [The doctrine format, and a check instead of an errand](35-the-doctrine-format.md) | `Lodestar` · `Loom` | `f7fe50d` · `387fcf1` |
+| `34` | [Four of the five closed, one stop, and a sixth found](34-four-of-five.md) | `Loom` | — |
+| `33` | [The audit, and Loom authors a conversation](33-the-audit-and-the-create-path.md) | `Loom` · app | — |
+| `32` | [The viewport pass — `§7` re-derived](32-the-viewport-pass.md) | app · `Lens` | `04e4061` |
+| `31` | [A fight from a conversation, and the Builder's editor](31-a-fight-and-an-editor.md) | `Loom` · app | — |
+| `30` | [The dialogue screen](30-the-dialogue-screen.md) | `KOTOR-RPG-APP` | — |
+| `29` | [`PT-1434` measured, and the dialogue runtime](29-npc-continuation-and-the-runtime.md) | `Lodestar` | — |
+| `28` | [The empty `say` refused, and the converter folds](28-refuse-the-empty-say-and-fold.md) | `Lodestar` | — |
+| `27` | [The dialogue reader, and a real `.dlg` converted](27-the-dialogue-reader.md) | `Lodestar` | — |
+| `26` | [`PLAY-STATE-01` — the second projection](26-play-state-the-second-projection.md) | `Lodestar` · app | — |
 | `25` | [The enemy takes a turn](25-the-enemy-takes-a-turn.md) | `KOTOR-RPG-APP` | `e8fba9b` |
 | `24` | [A creature in the bed, and the seam reachable](24-a-creature-in-the-bed.md) | `Loom` · app | `9d06456` |
 | `23` | [Three rulings, and the seam](23-rulings-and-the-seam.md) | `Lodestar` · app | `ae4a87f` · `3edf2b7` |

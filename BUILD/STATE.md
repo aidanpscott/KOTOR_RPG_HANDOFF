@@ -44,14 +44,14 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `a5afc6f` — `PT-1490`, a blueprint names its species | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `627a2cd` — `PT-1490`, the writer names a species | ⚠ no |
-| `KOTOR-RPG-APP` | `7d8ec3f` — `PT-1490`, a placement has a kind | ⚠ no |
+| `KOTOR-RPG-APP` | `d114ee9` — `PT-1491`, the gate declines on half | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 306 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 270 — 700, all
+**`Lodestar` 306 · `Lens` 4 · `Loom` 120 · `KOTOR-RPG-APP` 272 — 702, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,13 +96,15 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ `affects` — MY GATE CANNOT TELL A FRIEND FROM AN ENEMY
+### ✓ `PT-1491` — the gate declines rather than blessing on half (was: it could not tell friend from enemy)
 
 `targets` and `excludes` say what KIND a power may affect. **Nothing says
 whether it is aimed at a friend or an enemy**, and six powers heal — three of
 them **party members**. So `PT-1488`'s gate would let you Force Push an ally
-and Heal a trooper with equal confidence. ⚠ **Mine to fix, and not fixable
-without the column**, which is in the filed amendment.
+and Heal a trooper with equal confidence. ✓ **Fixed before the column exists.** A kind that agrees now returns **silent**,
+naming what it could not check, and **tightens into permission or refusal the
+day `PT-1489` authors `affects`** — a test builds the authored shape by hand so
+that day is a change rather than a discovery.
 
 ### ✓ `PT-1490` — a character blueprint names its species (was: it did not)
 

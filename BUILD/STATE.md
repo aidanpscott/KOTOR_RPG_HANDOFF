@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `5678a4b` — `PT-1470`, the denominator and the guard | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `e8042c9` — `PT-1474`, the targets column | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `b7e9198` — `PT-1467`, an annotation is identified by its name | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
-| `Loom` | `d59bd66` — `PT-1471`, the weapons the arrays name | ⚠ no |
-| `KOTOR-RPG-APP` | `9fb1762` — `PT-1468`, who is here is placements plus the player | ⚠ no |
+| `Loom` | `1467947` — `PT-1473`, eleven of eleven resolve | ⚠ no |
+| `KOTOR-RPG-APP` | `0cd77e0` — `PT-1473`, 36 base types | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 297 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 237 — 657, all
+**`Lodestar` 297 · `Lens` 4 · `Loom` 119 · `KOTOR-RPG-APP` 241 — 661, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -135,7 +135,25 @@ is no worse than the fist ON SCREEN — `PT-1452` makes every link fail out loud
 into every save written before anything could resolve one.
 
 
-### ⚠ `PT-1467` — 51 of 149 aside-in-a-value cells remain
+### ⚠ `PT-1467` — 48 cells remain, and the count is honest rather than good
+
+⚠⚠ **The check could not see a citation that named a DOCUMENT** until
+`PT-1474`. It matched `PT-\d+`/`TRACE-\d+` and nothing else, so `ATTACKS-07`
+and `FEATS-LIBRARY-01` were invisible — **33 cells across 7 files, in the
+instrument built to find exactly them.**
+
+⚠⚠ **And its splitter had damaged five shipped cells**, removing a citation
+that was the object of a preposition — `cap lowered at.`, `AUTHORED at.`,
+`… only by.` Wrong in `base-rules` for two slices; restored verbatim by
+re-extraction. A citation is removable only when something SEPARATES it.
+
+`species` 8 → 3, `professions`/`programmings` → 0, `powers` 44 → 7.
+`items`/`feats`/`worlds` ROSE, because the broadened mark can finally see them.
+**Everything left is a citation doing grammatical work** — an authoring
+decision, not a formatting one. Two are named: the Droid/Assassin
+design-rationale paragraph, and Wookiee `extraordinary_recuperation`.
+
+### ⚠ `PT-1467` — `equipment.section` is the last mechanical one
 
 `MAIN_WORK/scripts/check_annotations.py` reports them. **It is red on four
 files and three of those are deliberate.**
@@ -143,7 +161,7 @@ files and three of those are deliberate.**
 | what | cells | why it is still open |
 |---|---|---|
 | `equipment.section` | 6 | ⚠ slice 2, ordered. A value used as a KEY — `Wield classes - PT-169`. Anything filtering on it matches nothing, as `records.dart:879` already does for `feats.section`. A latent defect, not cosmetics. |
-| `powers.effect` + `prerequisites` | 43 | ⚠ slice 3, ordered. `targets: sentient · beast` is a machine-readable field fused into prose and needs a `targets` COLUMN, not an edit. |
+| ~~`powers.effect` + `prerequisites`~~ | ~~43~~ → 7 | ✓ `PT-1474` — 17 powers have a `targets` column; 87 are null, which is the document being silent. |
 | ⚠ an authoring decision | 2 | The citation is the sentence's SUBJECT — `and PT-559 removed the second pool`. Removing the token leaves `and removed the second pool`, so the splitter refuses and reports. `species.extraordinary_recuperation` and `feats.effect`'s Sneak Attack. |
 
 ⚠ **The extractors disagree about their own first argument, and it is not six

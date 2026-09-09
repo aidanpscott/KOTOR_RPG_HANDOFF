@@ -44,7 +44,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `12fabf7` — `PT-1478`, the pool a character has | ⚠ no |
 | `Lens` | `04e4061` — the board re-fits when its space changes | ⚠ no |
 | `Loom` | `9aa1bc5` — `PT-1479`, a blueprint name is the base type's | ⚠ no |
-| `KOTOR-RPG-APP` | `abc394d` — `PT-1479`, no citation reaches a player | ⚠ no |
+| `KOTOR-RPG-APP` | `792187e` — `PT-1479`, no citation reaches a player | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.

@@ -230,11 +230,91 @@ settled; the **write-frequency** one was not.
 and `stateOf` calls 0 `down`, so re-deriving state from the pool would have
 handed the creature back at 1. **The event is the fact.**
 
-⚠⚠ **A DEAD CREATURE LEAVES NOTHING**, and that is a consequence: no corpse in
-the five tile types, `[[contents]]` is authored, and `§4` bars the engine from
-writing a package. It is removed from `_here` **once** rather than skipped in
-four places — the difference between *gone* and *ignored by whichever list
-someone remembered*. **`PT-1511`'s vacated square is now walkable.**
+⚠⚠ **A DEAD CREATURE LEAVES NOTHING** — and `PT-1525` reframed the REASON, and
+`PT-1532` has now answered the question. It is removed from `_here` **once**
+rather than skipped in four places — the difference between *gone* and *ignored
+by whichever list someone remembered*. **`PT-1511`'s vacated square is now
+walkable.**
+
+### ⚠⚠ WHAT A CORPSE IS FOR — asked and answered, `PT-1532` (`BUILD 83`)
+
+**Four purposes. Three are already served and the fourth is the one we cannot
+do.**
+
+    1 LOOT          the REAL purpose — a KOTOR corpse IS the creature, same
+                    object, same inventory (STUDY 23). And we have NO
+                    machinery at any layer: no event kind for gaining an
+                    item (`item.lost` is declared and READ BY NOTHING), no
+                    inventory transfer in either tree, and chargen does not
+                    write the player's own `[equipment]`
+    2 OBSTRUCTION   buildable today — and it would UNDO `PT-1511`'s vacated
+                    square, the consequence that currently WORKS
+    3 EVIDENCE      already answered without a body: `character.died` is a
+                    constant, folded, campaign-scoped, survives a quit. A
+                    corpse would be a second weaker source — a value used
+                    as a key, again
+    4 DRESSING      honest, and exactly the *marker with no consequence*
+
+⚠⚠ **THE ANSWER: NOT YET, AND THE BLOCKER IS NAMED.** A corpse is for looting.
+**Build looting and the corpse comes with the container it is.** Built first it
+is a marker that blocks a square that used to be walkable, delivered before the
+thing that would make it worth walking to.
+
+⚠ **And it is CHEAP and still not worth doing**, which is a different answer
+from *the format forbids it* — my three original blockers all block the
+**placeable** path, and KOTOR abandoned that path.
+
+### ✓ `PT-1550` — A PLACEMENT MAY BE HIDDEN (`BUILD 83`)
+
+`AREA-FORMAT-01 §3a`. **One field on `[[contents]]`, no checks, nothing
+computed, no tile involved.** Absent means shown, so no area needs migrating.
+
+⚠⚠ **Hidden is NOT ABSENT.** The creature is in the room, holds its square, and
+**contact reveals it** — the ruling names no mechanism because a mechanism is
+what it rules out.
+
+⚠ **Three surfaces show a creature and one predicate answers all three**: the
+`Lens` token (`concealed`, passed by the caller — **Loom passes nothing**, an
+author must see what they placed), the marker overlay, and the panel's wound
+line.
+
+⚠ **A `hidden` that is present and not a boolean is an ERROR, not a false** —
+and contents are read **once**, before either `[tiles]` branch.
+
+⚠⚠ **AND `LOOM CANNOT WRITE IT` — `loom_can_write_test` CAUGHT IT THE HOUR THE
+FIELD EXISTED.** Excused with a reason, not closed: **a checkbox for the
+Builder rebuild.** It is survivable rather than safe — Loom appends and removes
+whole entries and **never rewrites one**, so a hand edit is not dropped **until
+Loom gains an edit-in-place path.**
+
+⚠ **Limitation, named:** a reveal is the **visit's**, not the campaign's.
+Walking out and back re-hides. One that outlived the visit would need an event
+kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
+`character.moved` came to be declared, read and written by nothing.**
+
+### ⚠⚠ `check_extracts` IS AT STALE 3, AND ONE OF THEM WAS ALREADY EXPECTED
+
+    ⚠ event_kinds.json         DELIBERATE — the row above says why
+    ⚠ chassis.json             CHARGEN-DATA-01.md
+    ⚠ first_level_feats.json   CHARGEN-DATA-01.md
+
+⚠ **The last two are NEW since the row that said "stale 1", and I did not cause
+them in `BUILD 83`** — the only corpus file this slice touched is
+`AREA-FORMAT-01.md`. Both name the same source, so **one edit to
+`CHARGEN-DATA-01.md` moved two extracts.**
+
+⚠⚠ **NOT RE-STAMPED.** Re-running the extractors would make the check green and
+**destroy the only evidence of what changed.** The right next step is a diff of
+what the two re-runs would produce — `PT-1463`'s rule: *the control is exact
+reproduction*, and three bugs were invisible in the output and obvious in the
+diff.
+
+### ⚠ FOG STAYS OUT, AND `wall.blocksSight` STAYS UNREAD — `PT-1550`
+
+**A roadmap rather than a defect** (`PT-1529`'s rule). The board shows what is
+in the area; what perception governs is **who is standing in it**. And the half
+that matters is built — `PT-1509`'s per-character map of where this character
+has stood is a real fog of war, **of the world rather than the room**.
 
 ### ⚠⚠ WHAT AN EFFECT CARRIES IS MOSTLY UNWRITTEN — `PT-1516`
 

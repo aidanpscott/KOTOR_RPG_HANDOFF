@@ -366,6 +366,36 @@ at   = [12, 4]
 
 **⚠ And `tag` follows `PT-1331`: a tag names ONE placed thing and is never reassigned.** A `role` may be refilled; a tag may not. **The log records tags.**
 
+### ⚠⚠ `3a` · `hidden` — an ambush without the machinery, `PT-1550`
+
+```toml
+[[contents]]
+tag    = "ambusher.command-deck.03"
+from   = "characters/sith-trooper"
+at     = [7, 1]
+hidden = true                             # ⚠ PT-1550 — not shown until something reveals it
+```
+
+> **An author may place a creature that is not shown until something reveals it. A PROPERTY OF THE PLACEMENT, NOT A PERCEPTION SYSTEM** — one field, no checks. **An author says what is hidden; nothing computes it.**
+
+**⚠ IT LIVES HERE BECAUSE IT IS A FACT ABOUT ONE PLACEMENT, not about a creature.** The same blueprint placed twice may be hidden once: `from` is a template and `hidden` is this instance's.
+
+**⚠⚠ AND `LOOM MUST BE ABLE TO WRITE IT` — `PT-1440`: *anything the Builder cannot write, the Builder eventually destroys.*** **Today it cannot.** `ContentsWriter.render` emits exactly `tag`, `from` and `at`, so a hidden placement is a hand edit. **⚠ THAT IS A NEED FOR THE BUILDER REBUILD, NOT A DEFECT IN THIS RULING** — and it is the same shape as `conversation`, which `bed_creature_test:113` records as *read and written by nothing* until `PT-1425` gave Loom the field.
+
+**⚠ AND THE HAND EDIT SURVIVES TODAY — checked, not assumed.** Loom **appends and removes whole entries and never rewrites one** (`ContentsWriter.append` / `withTagRemoved`; the only callers are `area_tab.dart:105` and `:183`). So `hidden` written by hand is not silently dropped by a later placement. **⚠ The moment that changes is the moment Loom gains an edit-in-place path** — which is exactly when the rebuild must carry the field.
+
+**⚠ Absent means shown.** A placement with no `hidden` is visible, which keeps every area written before this ruling correct without migration.
+
+### ⚠ And what is NOT here — `PT-1550`
+
+**Fog of war on the terrain is ruled OUT.** `wall.blocksSight` **stays `true` and stays UNREAD** — the field is right and nothing consumes it, which `PT-1529` established is a **roadmap rather than a defect**.
+
+> **The board shows what is in the area. What perception governs is WHO IS STANDING IN IT.**
+
+**⚠ The reason is that fog needs a system we do not have.** Hiding requires something to hide **and rules for finding it** — a stealth score, a perception check, a detection radius. **We have none.** Building fog without them produces the worst version: **everything visible except what a wall blocks**, which hides nothing interesting **and stops you seeing the room you are standing in.**
+
+**⚠ AND THE MAP IS THE HALF THAT MATTERS AND IS BUILT — `PT-1509`.** What this character has **stood in** is a real fog of war — **of the WORLD rather than the room** — and it is per-character, so a droid and a Jedi genuinely know different things.
+
 ---
 
 ## 4 · ⚠ Connections are named on both sides

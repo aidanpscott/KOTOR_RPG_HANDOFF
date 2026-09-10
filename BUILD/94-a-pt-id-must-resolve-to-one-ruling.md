@@ -101,14 +101,70 @@ authority.** It flags ambiguity; a person picks the winner.
 
 ---
 
+---
+
+# ⚠⚠ AND THEN `STUDY 30` CAME BACK WITH THE CAUSE AND THE BILL
+
+**Both verified here before folding in.**
+
+## ⚠⚠ FOUR OF THE SIX ARE ONE EVENT
+
+    :462  # Added after S6   →  PT-29 · PT-30 · PT-31 · PT-32
+    :512  # Added after S6   →  PT-29 · PT-30 · PT-31 · PT-32
+
+**The S6 batch was written up twice and both were kept** — and it is a
+**re-drafting, not a copy**: `PT-31` goes from *"`Ready` is the ranged answer to
+an approaching enemy"* to *"No change to reactions. Use `Ready`."*
+
+> **A duplicated SECTION is a duplicated decision. One line to see, four to
+> chase.**
+
+**It is the only duplicated top-level heading in the file** — checked. The check
+reports it as the cause, with its own ratchet, so **the owner is making THREE
+decisions and not six.**
+
+## ⚠⚠ AND THE BILL IS `PT-484`, NOT `PT-1085`
+
+I called `PT-1085` the sharpest. **The exposure is somewhere else.**
+
+`BEASTS-ATTACKS-01` cites `PT-484` **four times** — 148, 355, 880, 900 — and the
+citations rely on the **second** heading, *"NATURAL WEAPONS ARE PER-BEAST, NOT
+PER-TYPE."* **The first, unmarked heading is narrower**: *"HERD ANIMAL weapons
+are per-beast."*
+
+**Lines 880 and 900 cite it about a biting, clawing beast and about a PACK
+predator** — neither of which the herd-animal version licenses.
+
+> **Nothing is wrong today. And the earlier heading is at 15447 against the
+> later at 15503, so THE WRONG VERSION IS THE ONE YOU REACH FIRST.**
+
+**`PT-1085` has no substantive citation at all.** *The sharpest-looking case and
+the one that could cost something were not the same case*, which is worth more
+than either finding.
+
+## ⚠⚠ AND A FLOOR ON THE ID COUNT, BECAUSE TWO OF THREE INSTRUMENTS GOT IT WRONG
+
+`LIBRARY-12:15` — **same file, same ids**:
+
+> *"The pattern dropped every one- and two-digit ruling id — PT-21, PT-29,
+> PT-30, PT-31, PT-32, and the rest. It did not error. **IT RETURNED A SMALLER
+> NUMBER THAT LOOKED LIKE AN ANSWER.**"*
+
+**`STUDY 30`'s regex invented a duplicate; that one dropped forty. Both returned
+a number that looked like an answer.** So the check pins `ID_FLOOR = 1538`.
+
+**⚠ A FLOOR RATHER THAN A PIN**, because rulings are added and never removed: a
+pinned count would fail on the owner's next ruling and teach everyone to bump
+it. **A floor cannot be satisfied by a pattern that silently matches less**,
+which is the only failure it is for. **Controlled**: narrowing the regex to
+three-digit ids reports *1448 against a floor of 1538* and fails.
+
+---
+
 ## ⚠ WHAT NEITHER OF US CHECKED, AND IT IS THE QUESTION THAT MATTERS
 
-    ⚠⚠ has it already cost something?   `audit_superseded.py` / CHECK 38 asks
-                                        whether a document CITES an overturned
-                                        ruling. NOBODY HAS RUN IT AGAINST THE
-                                        SIX. That is the question that says
-                                        whether this is a hazard or a bill
-                                        already paid
+    ✓  has it already cost something?   ANSWERED by `STUDY 30`, above. Not
+                                        yet, and `PT-484` is the near miss
     ⚠  a differently-shaped heading     the check is structural, over ##/###
                                         only — invisible to the study and to
                                         the check alike

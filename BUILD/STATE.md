@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `2636efc` — `PT-1531`, BAB extracted; defence's class term is an RCR read | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `f938c58` — `PT-1535`, Marksman and Engineer extracted | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `12f8a14` — `PT-1534`, a zero term is shown and the tautology is gone | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
 | `Loom` | `30e8cc9` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `7a2fa73` — `PT-1533`, the species applies on read | ⚠ no |
+| `KOTOR-RPG-APP` | `b62a24b` — `PT-1538`, the dead leave the board when they die | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 382 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 317 — 835, all
+**`Lodestar` 382 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 319 — 837, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,27 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A RULE APPLIED AT ONE OF TWO MOMENTS — `PT-1538`
+
+`_here` was filtered for the dead **in `_enter` alone**, so a creature killed
+during a visit stayed on the board until you walked out and back — and could be
+fought again, and buried again. **The rule was right and it ran at one of the
+two moments a creature can die.** Arrival was the one I had a reason to think
+about.
+
+⚠ **And a fixture depended on the defect:** `fightAndRead` kept pressing after
+the fight and the corpse absorbed those presses as fresh fights, so a roll line
+was always on screen. A test that passed because a defect kept the screen busy.
+
+### ⚠⚠ THREE CLASSES, THREE UNRELATED TYPOGRAPHIC REASONS — `PT-1535`
+
+`Marksman` and `Engineer` were **never missing**: a filename that says *droid*
+over two *classes*, a table of **two classes side by side** with a
+`\multicolumn` artifact and a blank line inside it, and headers that are
+**initials** (`CD`/`ED`) so the class name matches nothing. **35 → 37 of 38.**
+The `Saboteur`'s heading carries a **warning glyph**, which defeats a
+`^# ([A-Za-z ]+)$` reader — the same shape, a third file.
 
 ### ⚠⚠ A DERIVATION IS FURTHER ALONG THAN THE PLAY SCREEN SUGGESTS — three times
 

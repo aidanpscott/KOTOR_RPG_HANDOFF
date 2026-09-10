@@ -143,7 +143,17 @@
 >
 > **✅ `attack bonus` WAS AN EXTRACTION GAP AND IS FIXED — `PT-1531`.** All four `CLASS-TABLES-*` files carry a per-level `BAB` column; the extractor's merge was **first-wins**, so the PHB tables (`feats`, `attack_picks`, saves) claimed `progression` and the BAB-bearing table was skipped. `CLASS-TABLES-BASE`'s own progressions were read by **nothing**. **Merged by level: 25 → 35 of 38.**
 >
-> **⚠ Three have no per-level table anywhere** — `engineer`, `marksman`, `saboteur`. The Engineer's *rate* is named in prose (`CLS_ATK_2`); **a ladder derived from an endpoint is authoring, not extraction.**
+> **⚠⚠ AND TWO OF THE THREE WERE NOT MISSING — `PT-1535`. 35 → 37 of 38.** `Marksman` and `Engineer` have **complete ladders** in `CLASS-TABLES-DROID`, unreachable for **three unrelated typographic reasons at once**: the **filename says droid** and the contents are two *classes*; the table is **two classes side by side** with a `\multicolumn` artifact row **and a blank line inside it**; and the headers are **initials** — `**CD**` and `**ED**` — so *"Marksman"* matches the summary and the title and **never the ladder**.
+>
+> **⚠ Which column is which is PROVED, not assumed from the initials.** The summary states the rate per class and `CLASS-TABLES-BASE` gives the closed forms — full is `+20 at 20`, three-quarters is `+15 at 20`. The extractor **checks the ladders against those endpoints and refuses the pairing if they disagree**, because reading a column by position is exactly how the wrong class gets a full ladder.
+>
+> **⚠ And it must not come from K2**: K2 flattens all seventeen classes to `CLS_ATK_1`, so **the Engineer's three-quarters is a K1 fact.**
+
+> **⚠⚠ THE SABOTEUR IS THE ONLY ONE TRULY ABSENT — the sixth omission of that one class**, all downstream of it being added late. **Its heading carries a warning glyph**, which defeats a `^# ([A-Za-z ]+)$` extractor — the same shape as `CD`/`ED` in a different file.
+>
+> **⚠ Its ladder must NOT be derived from its rate word.** Rates come from `FEAT-SCHEDULE-01`'s level-30 totals — **an attack-PICK rate from a FEAT signal** — and `Engineer` (Middle), `Smuggler` (Specialist) and `Consular` (Specialist) **all have three-quarters BAB. Three rate words, one ladder.**
+>
+> **The survey settles the shape:** 36 tables at L1/L20 give **8 full, 28 three-quarters, zero half**, and `CLS_ATK_3` is used by **no class in either game**. **So it is a choice between two ladders, not an open field — and that choice is the owner's.** The term stays omitted.
 | Force points | class + abilities |
 | languages | species + programming |
 | credits remaining | equipment route + lifestyle |

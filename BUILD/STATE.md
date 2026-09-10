@@ -37,22 +37,30 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 ## Repository heads
 
+> **⚠⚠ AND THIS FILE WENT STALE AGAIN, BY THE MECHANISM `PT-1608` NAMES.** The
+> table below carried `BUILD 39`'s heads and *"846 tests"* until `BUILD 103` —
+> **sixty-four slices** — because *"rewritten in full each time"* is a promise
+> with **no trigger anybody watches.** The same shape as *"next time that file
+> is open."* It is refreshed here; it will go stale again unless something
+> makes it fail.
+
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `93985a4` — `PT-1547`, and a check for coined names | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `2cf773e` — `PT-1608`, and a check that says when this table is behind | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `6094abe` — `PT-1547`, a ladder named for its shape | ⚠ no |
-| `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `59e1030` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `928d914` — level with `Lodestar` | ⚠ no |
+| `Lodestar` | `bef95c7` — `PT-1607`, `PT-1604`'s position category | ⚠ no |
+| `Lens` | `5534554` — `movedTo`, a token drawn where it stands | ⚠ no |
+| `Loom` | `813d58d` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `fb666f0` — level with `Lodestar` | ⚠ no |
 
-**All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
-committed at `BUILD 38` once `PT-1445` decided what was blocking them.
+**All six clean and level with origin**, and `check_engine_pin.py` compares the
+four pins on every slice — **which is the difference between this row and the
+one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 389 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 321 — 846, all
-green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
+**`Lodestar` 456 · `Lens` 7 · `Loom` 217 · `KOTOR-RPG-APP` 367 — 1,047, all
+green.** *(`BUILD 103`. This line read 846 for sixty-four slices.)* ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
 
@@ -93,6 +101,28 @@ nine steps → Play → the area and the walk → walk into the trooper and a
 doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ---
+
+## ⚠⚠ DEFERRED — promises with no trigger anybody watches — `PT-1608`
+
+> **A deferral with a condition no check evaluates is a `TODO` with better
+> prose.** And it is worse than a `TODO`, because a `TODO` is at least in a
+> list. **This is the list.**
+
+⚠ **Nothing removes an entry here but doing the work.** Each names what it is,
+what it costs, and the condition that was supposed to trigger it — because the
+condition is the part that failed, not the estimate.
+
+| What | Cost | The condition that never fired |
+|---|---|---|
+| **The palette's two gestures** — `BUILD 93` | *"one line"* | *"next time the palette is open"*. `right_pane.dart` has been open since and it did not happen: **nobody was watching for the trigger, including me.** |
+| **The viewport-hygiene sweep** — `BUILD 43` | 23 one-line additions across two repositories | *"its own small slice"*, deferred on `PT-1453`'s lesson that breadth outran testing. **The slice never came.** Partly overtaken — several suites now set `physicalSize` in `setUp` — so the first job is to re-measure how many of the 23 are left. |
+
+⚠ **And two that DID fire, kept here as the shape rather than as work:**
+`BUILD 92`'s *"the fenced-example check should go in the gate NOW"* sat
+unapplied for **eight slices** and closed at `BUILD 101`; `BUILD 96`'s *"I will
+change them the next time either file is open"* closed at `BUILD 102` only
+because a sweep went looking. **Both were found by grepping my own reports, not
+by the trigger.**
 
 ## ⚠ What is open
 

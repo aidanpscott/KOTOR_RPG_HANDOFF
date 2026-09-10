@@ -324,25 +324,38 @@ row.
 hand; the tree's own doc claiming *"nothing is placed yet"*; the selection
 owned by the tab. **Four remain:**
 
-    ⚠⚠ right_pane.dart:220   the category→folder mapping, written a SECOND
-                             time as `k == 'creatures' ? … : '$k/$e'`, and
-                             it is the copy that WRITES the path. Correct
-                             only because `doctrines` and `items` name their
-                             own folders. `BlueprintIndex.folderFor` is the
-                             declaration. The day a fourth kind's folder
-                             differs from its category — as `characters` /
-                             `creatures` already does — PT-1493 recurs
-    ⚠  create dialogs        TWO return a HANDLE, one returns a PATH, and
-                             all three call sites name the parameter `path`.
-                             Blocks the palette's analogue of this slice:
-                             `selectedBlueprint` is a PATH, so "select what
-                             you just created" cannot be done for two kinds
-                             of three
-    ⚠  the `+` verb          three routes to one idea — onNewCreature,
-                             onNewOfKind, and no `+` for the other seven
-    ⚠  new_package_test      a `findsNWidgets(2)` on a kind NAME now depends
-                             on what is placed. Passes because that package
-                             is empty; invisible before today
+    ✓  right_pane.dart       FIXED, `BUILD 86`. The category→folder mapping
+                             was written a SECOND time — and that was THE
+                             COPY THAT WROTE a placement's `from`. It reads
+                             `BlueprintIndex.pathFor` now; `new_item.dart`
+                             was a THIRD copy and asks `kindOfFrom`. The
+                             suite asserts every declared kind round-trips
+                             both ways, and a WIDGET test asserts what the
+                             palette emits — the copy that writes is the
+                             copy that is tested
+    ✓  create dialogs        FIXED, `BUILD 86`. All three return
+                             `Created(kind, id)`; `blueprintPath` is derived
+                             and is NULL for a kind with no blueprint
+                             folder, so a conversation can carry the shape
+                             without pretending to be a blueprint
+    ⚠  the `+` verb          STANDS, and it is NOT a defect — owner's
+                             reason: SEVEN OF TEN KINDS HAVE NO FILE FORMAT
+                             YET, so three routes are three real
+                             situations. It resolves when the palette is
+                             rebuilt rather than by being tidied first
+    ⚠  new_package_test      STANDS AND IS KNOWN. It passes only because its
+                             package is empty, and it WILL BREAK LOUDLY the
+                             first time somebody tests a package with things
+                             in it — which is the right way round. Not
+                             loosened: a test that stops counting is a test
+                             that stops noticing
+
+### ⚠⚠ AND A CAST ON A MAP LOOKUP, FOUND WRITING THE TEST (`BUILD 86`)
+
+The palette read `(bp[k] as Listed)`. **A kind the index did not answer for
+crashed the pane** instead of reading as *not read yet* — **absence treated as
+an error**, in the shape this corpus repeats most. `BlueprintIndex.of` fills
+every kind, so it was unreachable. **Unreachable is not the same as safe.**
 
 ### ✓ THE TWO STALE EXTRACTS — DIFFED, EXPLAINED, RE-STAMPED (`BUILD 84`)
 

@@ -41,17 +41,17 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `2636efc` — `PT-1531`, BAB extracted; defence's class term is an RCR read | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `1f3e47a` — `PT-1531`, defence is 10 + Dex + class + grants | ⚠ no |
+| `Lodestar` | `12f8a14` — `PT-1534`, a zero term is shown and the tautology is gone | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `fc289e6` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `645cab3` — `PT-1531`, BAB and Dexterity reach the fight | ⚠ no |
+| `Loom` | `30e8cc9` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `7a2fa73` — `PT-1533`, the species applies on read | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 381 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 314 — 831, all
+**`Lodestar` 382 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 317 — 835, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,21 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ A DERIVATION IS FURTHER ALONG THAN THE PLAY SCREEN SUGGESTS — three times
+
+`PT-1424` found **speed** derived from species rather than stored. `PT-1531`
+found the **base attack bonus** in four rules files the extractor was dropping.
+`PT-1533` found the **species ability modifier** parsed, tested and applied —
+**in chargen, and nowhere else.**
+
+> **The pattern: a complete path on one side and a constant on the other.** The
+> thing to check first is not *"is this written?"* but ***"who calls it?"***
+
+⚠ **And the same shape one field over:** the reaction pip was grey from the
+first frame of every fight because `_playerCombatant` hardcoded
+`reactionsLeft: 0` — while `PT-1517`'s *"a grey pip is a promise"* had been
+applied to the bonus pip beside it.
 
 ### ⚠⚠ THE CLASS DEFENCE BONUS IS A READ OF RCR CHAPTER 3 — `PT-1531`
 

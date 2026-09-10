@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `2cf773e` — `PT-1608`, and a check that says when this table is behind | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `9b9cca6` — `PT-1612`, and `owner` leaves the format |  ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `bef95c7` — `PT-1607`, `PT-1604`'s position category | ⚠ no |
-| `Lens` | `5534554` — `movedTo`, a token drawn where it stands | ⚠ no |
-| `Loom` | `813d58d` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `fb666f0` — level with `Lodestar` | ⚠ no |
+| `Lodestar` | `5031aed` — `PT-1607` — `owner` is gone, and its two checks with it |  ⚠ no |
+| `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
+| `Loom` | `7d04511` — level with `Lodestar` |  ⚠ no |
+| `KOTOR-RPG-APP` | `d11b724` — level with `Lodestar` |  ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,12 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 456 · `Lens` 7 · `Loom` 217 · `KOTOR-RPG-APP` 367 — 1,047, all
-green.** *(`BUILD 103`. This line read 846 for sixty-four slices.)* ⚠ **All four suites are hermetic**: a full run of every one leaves
+**`Lodestar` 452 · `Lens` 7 · `Loom` 217 · `KOTOR-RPG-APP` 367 — 1,043, all
+green.** *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
+now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
+⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
+field that no longer exists, against two that assert a file carrying one still
+loads. ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
 

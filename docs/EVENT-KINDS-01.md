@@ -201,6 +201,22 @@ effect = [ { kind = "quest.flag-set" } ]
 
 ---
 
+### ⚠⚠ `3d` · A FOURTH STATE, AND ALL THREE CHECKS ARE BLIND TO IT — `PT-1509`
+
+`§3c` names three ways this document and the code can disagree. **There is a fourth, and it has no end at all:**
+
+> **`area.entered` has NO CONSTANT, NO PRODUCER AND NO CONSUMER anywhere in the project.** Declared `campaign` at `PT-1417`, and **entirely unimplemented.**
+
+**Check A** wants *emitted and undeclared*. **Check B** wants *declared and replay ignores it*. **`check_event_producers`** wants *a fold with no producer*. **A kind with neither end is invisible to all three.**
+
+**⚠ AND IT IS NOT ADDED TO THE CHECK, DELIBERATELY.** *Declared and unimplemented* describes most of this vocabulary — `door.opened`, `container.opened`, `party.joined`, `item.used` — and that is **a roadmap, not a defect.** A check that flags a roadmap is a check somebody switches off, which is `TEST 016 F3`'s lesson applied before the fact.
+
+**⚠⚠ IT WAS A DEFECT HERE ONLY BECAUSE A RULING LEANED ON IT.** `PT-1509` calls the map *"nearly free"* **because `area.entered` is campaign lifetime** — a premise that reads as *the event is there* and is not. The map folds `character.moved` instead, which carries `area` and has been written at every arrival since `PT-1523`.
+
+**The premise held for a different reason than the ruling gave**, and that is the thing to know before anyone else builds on `area.entered`.
+
+---
+
 ## 4 · What is deliberately absent
 
 **No `heartbeat`, no `tick`, no timer.** `§1` — a heartbeat is a missing kind wearing a costume. **If an author reaches for one, add the kind.**

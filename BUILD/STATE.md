@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `cf54484` — `PT-1523`'s third direction, `EVENT-KINDS-01 §3c` | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `77279fa` — `PT-1509`, and `EVENT-KINDS-01 §3d`'s fourth state | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `e1aa968` — `PT-1524`, an enemy dies at 0 and the band is the party's | ⚠ no |
+| `Lodestar` | `0035afa` — `PT-1509`, the map is memory | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `1565cc7` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `26196fb` — `PT-1523`, a save knows where you stood | ⚠ no |
+| `Loom` | `fe9c1e4` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `7552602` — `PT-1517`/`PT-1519` budgets, `PT-1509` the map | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 368 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 295 — 804, all
+**`Lodestar` 372 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 305 — 813, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,17 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ✅ THE FLAKE WAS A PATTERN AND IT IS CLOSED
+
+**Four occurrences, two slices, one cause:** a **fixed millisecond budget around
+a real disk read** — ample alone, not ample in a full run with four isolates.
+`Loom` already had the rule and the app had never adopted it: *wait for it
+rather than sleeping at it.*
+
+⚠ **The brittle wait and the reported symptom were in different places.**
+`play_walk_test` reported a failure at the round trip and the short wait was the
+**first assertion**. Three consecutive clean full runs, then two more.
 
 ### ⚠⚠ A SAVE KNOWS WHERE YOU STOOD — `PT-1523`, BUILT, and it had THREE ends missing
 

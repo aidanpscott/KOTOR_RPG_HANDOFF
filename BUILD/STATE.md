@@ -292,7 +292,7 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
-### ⚠⚠ QUEUED — `PT-1559`, A CONVERSATION WIZARD. **The slice AFTER the palette.**
+### ✓ `PT-1559` — A CONVERSATION WIZARD, BUILT (`BUILD 87`). *Was: queued.*
 
 **`PT-1552` found the best idea in any Aurora study and the sharpest criticism
 of our own tooling in one sentence.** Aurora's Store Wizard **asks in the
@@ -345,9 +345,27 @@ deliberately unspecified — and **exactly three have a shape anything reads**:
 `encounter.began` (the kind alone). **A pick-list of three is a wizard question;
 forty would have been a text box wearing a menu.**
 
-⚠ **NOT NOW.** The palette is slice two, and `Tester` is still closing the
-quest, script and import/export holes — **quests especially may want a home in
-the palette.**
+⚠⚠ **AND THE VALIDATOR CAUGHT THE GENERATOR WRITING A FREE CHECK ON ITS FIRST
+RUN — `PT-1501`.** A `skill` gate on the OFFER link renders amber and **never
+rolls**: `_pick` takes the first ungated outbound link before any dice are
+touched. **So a check asks a second question** — *"and what if it fails?"* — and
+generates the pass node, the fail node, the check on the **outbound** link with
+the gated link **first**, and a **terminal** failure node, because `§9`'s own
+example re-offers the check and that is what made it free.
+
+⚠ **WHAT IT CANNOT ASK IS ON THE SCREEN**, not only in a comment — compound
+conditions, more than one beat, a second speaker, `pinned`, an effect nothing
+reads, and **which of `§4c`'s eight skills, which is a GAP rather than a
+choice**: the eight are not written down anywhere the Builder can read.
+
+⚠ **AND TWO MORE DUPLICATED VOCABULARIES, IN THE TREE EDITOR, REPORTED NOT
+TAKEN** — `conversation_tab.dart`'s `_effectFields` is a hand copy of the
+reader's `effectPayloadFields`, and its gate row offers **five of fifteen keys
+with nothing saying why those five.** Neither can produce a wrong file; both
+offer a smaller menu than the vocabulary they render.
+
+⚠ **THE PALETTE IS STILL SLICE TWO AND STILL WAITS** — `Tester` is closing the
+quest, script and import/export holes, and **quests may want a home in it.**
 
 ### ✓ `PT-1553` — TWO TREES, SLICE ONE (`BUILD 85`)
 

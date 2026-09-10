@@ -46,7 +46,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `9b9cca6` — `PT-1612`, and `owner` leaves the format |  ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `7f50a8e` — `PT-1609` and the rulings after it |   ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `5031aed` — `PT-1607` — `owner` is gone, and its two checks with it |  ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |

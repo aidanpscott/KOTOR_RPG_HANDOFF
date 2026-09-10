@@ -44,7 +44,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `6094abe` — `PT-1547`, a ladder named for its shape | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
 | `Loom` | `59e1030` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `6f039e0` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `928d914` — level with `Lodestar` | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.

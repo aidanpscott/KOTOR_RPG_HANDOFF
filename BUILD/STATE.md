@@ -50,7 +50,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `9aa7382` — `PT-1622` — damage clamped where the total is computed |    ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `802dec5` — `PT-1623` — everything starts collapsed |     ⚠ no |
+| `Loom` | `ee0e7aa` — `PT-1621`, and two defects only the screen showed |      ⚠ no |
 | `KOTOR-RPG-APP` | `660134a` — level with `Lodestar` |    ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
@@ -59,7 +59,7 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 463 · `Lens` 7 · `Loom` 236 · `KOTOR-RPG-APP` 367 — 1,073, all
+**`Lodestar` 463 · `Lens` 7 · `Loom` 239 · `KOTOR-RPG-APP` 367 — 1,076, all
 green.** *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
 now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a

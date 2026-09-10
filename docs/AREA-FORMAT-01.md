@@ -386,6 +386,35 @@ hidden = true                             # ⚠ PT-1550 — not shown until some
 
 **⚠ Absent means shown.** A placement with no `hidden` is visible, which keeps every area written before this ruling correct without migration.
 
+### ⚠⚠ `3b` · `dc` — how hard it is to find, `PT-1564`
+
+```toml
+[[contents]]
+tag    = "ambusher.command-deck.03"
+from   = "characters/sith-trooper"
+at     = [7, 1]
+hidden = true
+dc     = 15                               # ⚠ moderate — SKILL-RESOLUTION-01 §2
+```
+
+**⚠⚠ THE NUMBER CARRIES ITS OWN LABEL, AND THERE IS NO SECOND FIELD.** The seven tiers of `SKILL-RESOLUTION-01 §2` — trivial 5 · easy 10 · moderate 15 · hard 20 · formidable 25 · heroic 30 · legendary 35, **the middle five being `traps.2da`'s own values** — are offered as a dropdown, and **the FILE carries the number.** Nothing stores the word.
+
+> **`PT-1546` in one field.** Aurora's Encounter category was filed under *Hard*, named *"Hard 001"*, with Difficulty *"Easy"*, and nothing in the UI distinguished the category from the property. **A label computed from a number cannot disagree with it.**
+
+**⚠ And a number off the ladder is still a number.** `§2` names ±2, ±5 and ±10 as its modifiers, so the ladder **recommends rather than constrains** — the dropdown is the recommended values, not the permitted ones.
+
+**⚠⚠ AND A `dc` WITHOUT `hidden` IS A LOAD FAILURE, NOT AN IGNORED FIELD.** It is a difficulty for finding something already in plain sight: the author has said two things that cannot both be true, and **silently keeping one is exactly the defect above.**
+
+### ⚠⚠ AND A CONTRADICTION IS RECORDED HERE RATHER THAN SETTLED
+
+**`SKILL-RESOLUTION-01` is SETTLED (`D-AO`)** and says:
+
+> *"Three of KOTOR's eight skills do not roll against anything… **Stealth and Awareness are a contested pair.** A system that assumed every skill has a DC would have got three of eight wrong."*
+
+and `§4`: ***"the defender rolls the better of Awareness or Alertness"*** — an **OPPOSED** roll.
+
+**⚠ So a DC for Awareness is a resolution mode our own settled document says that skill does not use.** The field is written as `PT-1564` rules it and the conflict is the owner's to settle. **What both readings share is that this number is what a finder must beat** — under a fixed-DC reading it is a DC; under the opposed reading it is the hider's Stealth total. **The number is the same; only its name is in question.**
+
 ### ⚠ And what is NOT here — `PT-1550`
 
 **Fog of war on the terrain is ruled OUT.** `wall.blocksSight` **stays `true` and stays UNREAD** — the field is right and nothing consumes it, which `PT-1529` established is a **roadmap rather than a defect**.

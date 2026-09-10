@@ -292,22 +292,40 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
-### ⚠⚠ `check_extracts` IS AT STALE 3, AND ONE OF THEM WAS ALREADY EXPECTED
+### ✓ THE TWO STALE EXTRACTS — DIFFED, EXPLAINED, RE-STAMPED (`BUILD 84`)
 
-    ⚠ event_kinds.json         DELIBERATE — the row above says why
-    ⚠ chassis.json             CHARGEN-DATA-01.md
-    ⚠ first_level_feats.json   CHARGEN-DATA-01.md
+**`check_extracts` is back to STALE 1** — `event_kinds.json`, the deliberate one
+the row above explains.
 
-⚠ **The last two are NEW since the row that said "stale 1", and I did not cause
-them in `BUILD 83`** — the only corpus file this slice touched is
-`AREA-FORMAT-01.md`. Both name the same source, so **one edit to
-`CHARGEN-DATA-01.md` moved two extracts.**
+⚠⚠ **THE DIFF WAS READ BEFORE THE STAMP, AND IT IS THE WHOLE ANSWER.** Both
+extracts were re-run to a scratch path and compared against what was on disk:
 
-⚠⚠ **NOT RE-STAMPED.** Re-running the extractors would make the check green and
-**destroy the only evidence of what changed.** The right next step is a diff of
-what the two re-runs would produce — `PT-1463`'s rule: *the control is exact
-reproduction*, and three bugs were invisible in the output and obvious in the
-diff.
+    every value                  BYTE IDENTICAL — seven chassis, three
+                                 first-level overrides, every ability score,
+                                 every basis mark, every note
+    the recorded digest          moved
+    every `source` citation      shifted by EXACTLY +32 lines
+
+⚠ **THIRTY-TWO IS `PT-1489`'s BLOCK.** `## ⚠ THE EFFECT HALF NEEDS AUTHORED
+COLUMNS — PT-1489` occupies lines **186–217** of `CHARGEN-DATA-01.md`, exactly
+32 lines, inserted above everything either extractor reads. It is `BUILD 63`'s
+measurement of the effect columns — **prose, no table** — so **nothing an
+extract reads changed.**
+
+⚠⚠ **AND THAT IS WHY THE STAMP WAS RIGHT AND WOULD HAVE BEEN WRONG A DAY
+EARLIER.** Ten `source` citations now pointed **32 lines off** — `PT-1483` and
+`PT-1474` are both about a citation being *where it was decided*, and a citation
+that is silently wrong is worse than a check that is amber. **Re-stamping
+without the diff would have hidden that; re-stamping after it FIXED it.**
+
+⚠ **AND `base-rules` DID NOT MOVE.** `gen_base_rules.py` re-run against the live
+shelf: 22 of 22 kinds written, **directory identical byte for byte.** The
+shipped package was never affected.
+
+⚠ **What nobody said:** the document was edited on **2026-09-09** and the two
+extracts were not re-stamped in the same slice. **An extractor's citations are
+part of its output**, so a prose insertion above a table is a re-run, not a
+no-op.
 
 ### ⚠ FOG STAYS OUT, AND `wall.blocksSight` STAYS UNREAD — `PT-1550`
 

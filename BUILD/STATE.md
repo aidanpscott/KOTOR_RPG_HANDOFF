@@ -292,6 +292,58 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
+### ✓ `PT-1553` — TWO TREES, SLICE ONE (`BUILD 85`)
+
+**An authored thing has a home.** The tree nests **area → kind → instance tag**,
+and `[[contents]]`, `[[connections]]` and `[[arrivals]]` all appear as leaves.
+
+⚠⚠ **WHAT IT CLOSES:** a placement existed only as a row in a file. `proposeTag`
+has numbered tags since `PT-1377`, `ContentsWriter` has written them and `Lens`
+has drawn tokens for them — **and the author who caused a tag had never seen
+it.** Placing one now SELECTS it, so the tag is on screen before the next click.
+
+⚠ **IN PLACE, NOT BESIDE.** No reader and no writer changed — `placed.dart` is a
+view over what the openers already return, so the tree cannot disagree with the
+board.
+
+⚠ **ONE SELECTION, TWO SURFACES.** It was `AreaTab`'s own field; it is the
+shell's now. The handle is the board's own string — a tag, or `arrival:<name>`
+for the one placed thing `§4·0` gives no tag.
+
+⚠ **An arrival has no tag and the tree keeps that difference.** A doorway does,
+and it was equally invisible.
+
+⚠⚠ **AND A `from` NOTHING DECLARES GETS ITS OWN GROUP, IN ALERT** — `⚠ unknown
+kind`. Not dropped and not guessed into a category: **a thing you cannot
+classify must still be selectable, or you cannot delete it.** `PT-1493` is that
+row.
+
+### ⚠⚠ WHAT STILL ASSUMES THE OLD SHAPE — the list, and it outlives slice one
+
+**Three were fixed in `BUILD 85`:** two `blueprintKinds` lists kept level by
+hand; the tree's own doc claiming *"nothing is placed yet"*; the selection
+owned by the tab. **Four remain:**
+
+    ⚠⚠ right_pane.dart:220   the category→folder mapping, written a SECOND
+                             time as `k == 'creatures' ? … : '$k/$e'`, and
+                             it is the copy that WRITES the path. Correct
+                             only because `doctrines` and `items` name their
+                             own folders. `BlueprintIndex.folderFor` is the
+                             declaration. The day a fourth kind's folder
+                             differs from its category — as `characters` /
+                             `creatures` already does — PT-1493 recurs
+    ⚠  create dialogs        TWO return a HANDLE, one returns a PATH, and
+                             all three call sites name the parameter `path`.
+                             Blocks the palette's analogue of this slice:
+                             `selectedBlueprint` is a PATH, so "select what
+                             you just created" cannot be done for two kinds
+                             of three
+    ⚠  the `+` verb          three routes to one idea — onNewCreature,
+                             onNewOfKind, and no `+` for the other seven
+    ⚠  new_package_test      a `findsNWidgets(2)` on a kind NAME now depends
+                             on what is placed. Passes because that package
+                             is empty; invisible before today
+
 ### ✓ THE TWO STALE EXTRACTS — DIFFED, EXPLAINED, RE-STAMPED (`BUILD 84`)
 
 **`check_extracts` is back to STALE 1** — `event_kinds.json`, the deliberate one

@@ -431,17 +431,43 @@ and `§4`: ***"the defender rolls the better of Awareness or Alertness"*** — a
 
 **⚠ AND THE OVERRIDE IS ON THE PLACEMENT, WHICH IS WHERE `TRACE-83` PUTS IT** — *"an instance is a template plus a named set of permitted overrides."* But `AUTHORED-CHARACTER-01 §3`'s guard is that an override is **declared on the TEMPLATE, never patched onto an instance**, and `TRACE-83` is the evidence for that guard. **The two must be reconciled before the field is written.** Named here rather than assumed either way.
 
-### ⚠ HOW IT IS FOUND — ruled at `PT-1569`, and NOT YET BUILT
+### ⚠⚠ `3c` · `range` — how far off it can be noticed, `PT-1571`, `PT-1573`
 
-    on approach       the find happens when the player comes within range
-    passive           the finder's number taken at 10, no dice
+```toml
+hidden  = true
+stealth = 15
+range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
+```
+
+**⚠⚠ AND THE NUMBER IS OURS.** KOTOR gives the PLAYER **250 m of sight**, which on our grid is **125 squares — the whole area.** That is a constraint of a real-time 3D game **where the player owns the camera**, not an answer about perception. `PT-1496`: **Aurora's ANSWERS transfer; Aurora's CONSTRAINTS do not.** This is a tabletop RPG and a GM uses distance.
+
+**⚠ TWO INDEPENDENT SOURCES ARRIVE AT TEN SQUARES:**
+
+    KOTOR's effective distances   10 m · 20 m · 35 m, 97.8% on the 20 m default
+    RCR darkvision                20 m, flat
+    RCR scent                     10 m
+
+**`20 m ÷ 2 m = 10 squares`**, and `§9`'s square makes every one convert **exactly** rather than nearly. **The default is what 97.8% of 4,397 blueprints already carried** — the opposite of a number invented to make a rule runnable.
+
+**⚠ ONE DEFAULT AND AN OVERRIDE ON THE PLACEMENT, NEVER A TABLE — `PT-1571`, and ruled on DATA.** 4,397 blueprints, two races, non-default rates of **2.4% against 2.1%**: *KOTOR had the field, had the two races, had 4,397 chances, and used it to separate droids from organics **zero times.***
+
+**⚠ And a `range` follows `stealth`'s rules**: hidden only, a whole number, and **above zero** — a range of zero is a creature nothing can ever notice, and that is not what `hidden` means.
+
+### ⚠ HOW IT IS FOUND — ruled at `PT-1569`/`PT-1573`, and BUILT
+
+    on approach       after every step, and after arriving in an area
+    passive           the finder's number TAKEN AT 10, no dice
     settled once      a failure stands; there is no retrying it
+
+**⚠ AND IT IS AN OPPOSED PAIR, NOT A DC.** `§4`: **the defender rolls the better of Awareness or Alertness** against the hider's `stealth`. **Two skills that fail differently is worth more than one that is simply better** — without a stealth field sight leads, with one hearing does. Nothing models the field yet; **taking the better of the two is what makes it expressible later without changing this.**
+
+**⚠⚠ AND ONE NUMBER IN THE IMPLEMENTATION IS MINE, AND THE CODE SAYS SO: how a distance is measured across squares.** `§9` gives a square 2 metres and **nothing in the corpus says whether a diagonal counts as one square or more.** Our movement has no diagonals at all, so the runtime counts **the greater of the two axes** — the reading that cannot disagree with a move that does not exist. **A ruling replaces it in one line.**
 
 **⚠ `PT-1550`'s CONTACT IS THE REVEAL remains the floor and is built** — walking into a hidden creature always finds it, whatever the numbers say.
 
-**⚠⚠ AND THE RANGE IS WITH THE OWNER — find-on-approach against find-on-notice.** **KOTOR gives the PLAYER 250 m of sight**, which on our grid is **the whole area** — so the two readings are not a detail. At that range *"on approach"* and *"on entering"* are the same rule wearing different words, and which one we mean decides whether a hidden creature is ever a surprise.
+**⚠ RULED AT `PT-1573`: FIND ON APPROACH**, against find-on-notice. **And the reason it needed a ruling is that at KOTOR's 250 m the two are the same rule wearing different words** — 125 squares is the whole area, so *"on approach"* and *"on entering"* would have been indistinguishable and a hidden creature would never have been a surprise.
 
-**⚠ NOTHING IS BUILT AGAINST EITHER.** The field is authored and read; **nothing computes an approach**, and a radius invented to make the ruling runnable would be exactly the modifier this project keeps refusing to invent.
+**⚠ SO THE DISTANCE HAD TO BE OURS BEFORE THE RULE COULD RUN**, and `§3c` is where it came from.
 
 ### ⚠ And what is NOT here — `PT-1550`
 

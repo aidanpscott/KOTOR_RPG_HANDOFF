@@ -294,7 +294,7 @@ Three columns. **The third is the one nothing has produced.**
 | **Groups** (multi-tile stamps) | **prefabs** (`PT-1367`) — *"a prefab is a saved selection"* |
 | Features (single-tile set pieces) | a 1×1 prefab; we need no separate kind |
 | Area Properties → Basic/Visual/Audio/Events/Advanced | area properties |
-| **`Tileset`, `Length`, `Width` disabled after creation** | **⚠ our identical limit is not a gap we invented** |
+| ~~**`Tileset`, `Length`, `Width` disabled after creation**~~ | ⚠⚠ **CORRECTED BY `STUDY/29`.** They are disabled *in that dialog* because resizing is **`Edit > Resize Area`**, a separate command. **Aurora CAN resize an area; our limit IS a gap.** |
 | `Variables …` per area | — see OURS ✗ |
 | status bar `Grid(row/col)` + `Tile(...)` | **⚠ take this** |
 
@@ -401,10 +401,12 @@ it needs no escape hatch — **and that is precisely what we rejected.** Ours is
   here.** *(And `PT-1533` already caught our own version of it: the species
   adjustment not reaching the fight, proved as `Strength 2` where the sheet said
   STR 18.)*
-- **⚠ `[protection]`'s three booleans** — `plot`, `min_1_hp`, `raiseable`.
-  Taken from KOTOR, **not from NWN**, and Aurora's creature sheet has **`Plot`
-  (a single checkbox) and no other two.** We have three orthogonal states where
-  Aurora has one.
+- ~~**`[protection]`'s three booleans**~~ — ⚠⚠ **CORRECTED BY `STUDY/29`. This
+  is NOT column three.** I had not opened the creature's `Advanced` tab. Aurora
+  carries **all three**: `Plot` → our `plot`, **`Immortal`** → our `min_1_hp`,
+  **`No Permanent Death`** → our `raiseable`. **We took them from KOTOR and NWN
+  has the same three** — a convergent answer across both source engines, which
+  strengthens our copy rather than weakening it.
 - **⚠ Force.** No powers, no pool, no alignment-gated access, no
   `FORCE-AWAKENING-01`. Aurora has spell lists; **a spell list is not a pool with
   a cost model.**
@@ -653,3 +655,18 @@ nothing in the UI distinguished the binding case from the decorative one.**
   behaviour** — still only the labels were compared.
 - **Import/Export.** Present on the File menu and on every blueprint context
   menu; never exercised. **`PT-1334`'s exchange has no Aurora comparison yet.**
+
+---
+
+> ## ⚠ SUPERSEDED IN PART BY `STUDY/29`
+>
+> **`STUDY/29-the-four-never-opened` closes every hole in this appendix** — the
+> Journal and Faction editors, the script editor, Import/Export, all four
+> remaining menus, and the red overlay lines. It also **corrects two statements
+> in this document**, both struck through above:
+>
+> 1. **Aurora CAN resize an area** (`Edit > Resize Area`). Our limit is a gap.
+> 2. **Aurora has all three `[protection]` booleans**, not one — `Plot`,
+>    `Immortal`, `No Permanent Death`, on the creature's `Advanced` tab.
+>
+> **Read `29` alongside Part B before building from it.**

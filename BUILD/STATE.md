@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `f938c58` — `PT-1535`, Marksman and Engineer extracted | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `c4ee0ec` — `PT-1539`, 38 of 38; the defence track's structure | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `12f8a14` — `PT-1534`, a zero term is shown and the tautology is gone | ⚠ no |
+| `Lodestar` | `e00ca7f` — `PT-1541`/`PT-1544`, two curves and a named track | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `30e8cc9` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `b62a24b` — `PT-1538`, the dead leave the board when they die | ⚠ no |
+| `Loom` | `e0bf5ee` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `6b0e096` — `PT-1543`, components and total on one row | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 382 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 319 — 837, all
+**`Lodestar` 389 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 321 — 846, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,17 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ THE NOBLE'S DEFENCE INTERIOR — AN RCR READ I CANNOT REACH
+
+`PT-1541` reports the RCR PDF on the owner's machine, verified from the title
+page. **It is not on any path this build can read** — searched by filename and
+by title across the home and library trees; `data/books/` holds three files and
+not that one.
+
+**The structure is built so reading it is a DATA change, not a code change:** a
+named track, the Consular as an **offset** from the Noble, the Soldier as a
+**computed rule**, and `bonusAt` returning **null** rather than interpolating.
 
 ### ⚠⚠ A RULE APPLIED AT ONE OF TWO MOMENTS — `PT-1538`
 

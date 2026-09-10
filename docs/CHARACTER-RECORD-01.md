@@ -135,6 +135,22 @@
 
 > **⚠⚠ TWO OF THOSE HAD NO ARITHMETIC AND ONE STILL HAS A GAP — `PT-1528`, `PT-1531`.**
 >
+> **✅✅ AND THE CLASS TERM HAS A STRUCTURE NOW — `PT-1544`. A DEFENCE TRACK IS A NAMED LADDER CLASSES POINT AT**, not numbers copied per class: `RCR`'s Noble and Consular are **the same curve, exactly +1 apart at every level**, and two classes sharing a curve must not be able to drift.
+>
+> ⚠⚠ **The games already do it this way, which is where the shape comes from:** `classes.2da`'s `armorclasscolumn` names a **COLUMN** in `acbonus.2da`. **Attack is three TABLES by table name; defence is ONE table by COLUMN name.** `TRACE-85`'s *"class 4"* is a lookup into it.
+>
+> ⚠⚠ **TWO CURVES, NOT ONE AND NOT THREE — `PT-1541`, checked row by row.** The **Consular is the Noble `+1` at every one of the twenty levels**, so it carries an **OFFSET rather than numbers** — the day the Noble's interior is read, the Consular's follows and they cannot drift. ⚠ **An offset from nothing is nothing:** where the Noble is unread, so is the Consular.
+>
+> ⚠ **THE SOLDIER IS COMPUTED**, because the source states it as a rule — *"linear, plus one every two levels"*, `+3` at 1st reaching `+12` at 20th. It lands on both attested endpoints and **clamps past 20 rather than extrapolating.**
+>
+> ⚠ **THE NOBLE IS ENDPOINTS ONLY AND ITS INTERIOR IS UNREAD.** The irregular curve *"holds three levels then two then three then two throughout and no single formula reproduces it — it has to be READ from the table."* **The lookup does not interpolate:** a level-7 Noble gets **no class term at all**, which is `PT-1531`'s rule at a finer grain than a whole class.
+>
+> ⚠ **AND I COULD NOT REACH THE BOOK.** `PT-1541` reports the RCR PDF on the owner's machine, verified from the title page; **it is not on any path this build can read** — searched by filename and by title across the home and library trees. **The interiors stay unread here until it is.**
+>
+> ⚠ **Three classes point at a ladder and sixteen point at nothing.** A small roster **under-counts tracks** — two from six classes in K1, six from seventeen in K2 — so three `RCR` classes giving two curves is consistent with two *and* with six. **A class on the wrong ladder is worse than a class with none.**
+>
+> ⚠ **And the two sources are NOT mixed.** `RCR` gives the Soldier the strongest of the three; **K1 gives it zero at every level.** KOTOR's is a **light-armour compensation**, `RCR`'s a **universal track** — two numbers that look like the same field, answering different questions.
+
 > **✅ `defence` is RULED: `10 + Dexterity modifier + class bonus + anything a feat or item grants`.** From `RCR`, which governs every mechanical question here. KOTOR's *"18 = base 10 + dex mod 4 + class 4"* is **evidence the shape survived the port, not the source of it** — a number that had been on the page three times as an *example* and never once as an answer.
 >
 > **⚠ Its class term has nowhere to read from, and our own corpus says where it would come from.** `CLASS-TABLES-JEDI §5A`: *"RCR class tables carry a `Defense Bonus` that progresses by level. Confirmed on the Noble (RCR pp.42–43), where it runs +2 at 1st to +10 at 20th. **The three tables above carry the column with values unextracted — the Jedi progressions are in RCR Chapter 3 and have not been read.**"*
@@ -153,7 +169,9 @@
 >
 > **⚠ Its ladder must NOT be derived from its rate word.** Rates come from `FEAT-SCHEDULE-01`'s level-30 totals — **an attack-PICK rate from a FEAT signal** — and `Engineer` (Middle), `Smuggler` (Specialist) and `Consular` (Specialist) **all have three-quarters BAB. Three rate words, one ladder.**
 >
-> **The survey settles the shape:** 36 tables at L1/L20 give **8 full, 28 three-quarters, zero half**, and `CLS_ATK_3` is used by **no class in either game**. **So it is a choice between two ladders, not an open field — and that choice is the owner's.** The term stays omitted.
+> **The survey settles the shape:** 36 tables at L1/L20 give **8 full, 28 three-quarters, zero half**, and `CLS_ATK_3` is used by **no class in either game**.
+>
+> **✅ RULED THREE-QUARTERS at `PT-1539` — `CLS_ATK_2`. 38 of 38.** Not from its rate word: **the Smuggler is its exact twin, `Specialist` AND `d6`**, matched on the whole profile rather than one field. ⚠ **And it POINTS at the Smuggler's ladder rather than carrying a copy** (`PT-1544`) — if that table is corrected, the Saboteur follows.
 | Force points | class + abilities |
 | languages | species + programming |
 | credits remaining | equipment route + lifestyle |

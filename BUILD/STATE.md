@@ -292,6 +292,55 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
+### ✓ `PT-1560` — THE PALETTE IS A MODE SELECTOR (`BUILD 88`, slice two)
+
+⚠⚠ **ONE SELECTION, BY CONSTRUCTION.** The pane held three — tile, way,
+blueprint — **nulled against each other in three separate closures.** One
+`PaintMode` now; what `AreaTab` takes is derived from it in one place.
+
+⚠⚠ **AND TWO OF THE SEVEN "CANNOT LIST" KINDS WERE ALREADY PAINTABLE, UNDER
+THEIR REAL NAMES.** `doors` and `waypoints` were called unlistable **three
+inches below** a `ways` section offering `doorway` and `arrival point`, both
+working. `§4a` makes a connection's `from` optional; `§4·0` makes an arrival a
+name and a coordinate. **The FOLDER has no format; the THING never needed one.**
+
+⚠ **The other five cannot be painted and the pane says why** — a placement names
+a blueprint by path (`§3`), so painting one would write a reference nothing can
+resolve. `PT-1379`.
+
+⚠ **TAXONOMY** — the blueprint lists nest by the folders an author made, at
+whatever depth. **The label is the leaf; the identity is the whole path**, and a
+grouping node is not selectable. ⚠ The ruling's *271 worlds / 320 feats / 104
+powers* are **chargen data and are not in this pane** — the shape is here, those
+three lists are elsewhere.
+
+⚠ **STANDARD = `base-rules`; CUSTOM = the package** — `PT-1386`'s merge already
+turns on it. **And it is ABSENT rather than empty**: base-rules ships `rules/`
+and no `blueprints/`, checked. `items` is the exception and the proof — an item
+names a BASE TYPE, which is standard content and **is what a custom item is made
+FROM rather than something you place** (`PT-1452`).
+
+⚠⚠ **`PT-1546`** — the tile heading is the TYPE (mechanical), the entries are
+VARIETIES (art), and a blueprint mode carries a kind and a path and nothing
+else. ⚠ **And I nearly shipped the defect while stating the rule**: `PaintTile`
+had a `variety` field, declared, defaulted and read by nothing. Removed.
+
+⚠ **SLICE ONE'S FINDING 5 PAYS OFF** — select-what-you-just-made works for all
+three kinds now. **FINDING 3 RESOLVES** — one route to `+`, and the difference
+lives in data with a reason. It was worse than reported: `newableKinds` said
+`{doctrines, items}` while `creatures` was special-cased beside it.
+
+### ⚠ AND WHAT STILL ASSUMES THE OLD SHAPE AFTER SLICE TWO
+
+    ⚠  AreaTab's signature   still three parameters, now DERIVED from one
+                             mode in one place. Editor work; not this slice
+    ⚠  NewItemDialog         forces exactly one level of nesting ("two levels
+                             under items/"). The pane renders any depth and
+                             the dialog writes one — the reader, the pane and
+                             the dialog disagree about how deep a taxonomy
+                             may go, and only the dialog is narrow
+    ⚠  the `assistant` tab   still says "not built yet"
+
 ### ✓ `PT-1559` — A CONVERSATION WIZARD, BUILT (`BUILD 87`). *Was: queued.*
 
 **`PT-1552` found the best idea in any Aurora study and the sharpest criticism

@@ -56,6 +56,7 @@ to this table in the same commit.**
 | 26 | `26-the-defence-ladder-in-the-games` | **the games DO have a class Defence ladder** — `classes.2da.armorclasscolumn` → `acbonus.2da`. ⚠ K2 flattened attack and **kept** defence. K1 2 tracks, K2 6. **All values EVEN, so RCR's `+1` offset is unrepresentable.** ⚠ RCR gives the Soldier the best ladder; K1 gives it **zero** |
 | 27 | `27-perception-range` | ⚠ **NOT a third negative** — `.utc PerceptionRange` indexes `ranges.2da`, which carries **sight AND hearing in metres**. Default 20/20; 97.8% of 4,397 creatures use it. **Droids and organics indistinguishable.** NWN's blank default is the row KOTOR runs on; player sight 35 m → **250 m** |
 | 28 | `28-examples-that-cannot-parse` | **`PT-1575`'s document half** — 43 worked examples parsed, **3 defects**: `AUTHORED-CHARACTER-01:86` (`;` as separator, the one Tester copied) and `PACKAGE-FORMAT-01:132,463` (bare `⚠` with no `#`). ⚠ **Two are the house style working as designed, in the wrong place** |
+| 29 | `29-the-diagonal-was-already-ruled.md` | ⚠ **the diagonal COST is already ruled** — `PLAYTEST-RULINGS-01:238`, *"diagonal costs 1 square"*, the same sentence `PT-1581` took its reach half from. **`AREA-FORMAT-01:464` asserts a corpus silence that is not there**, and the runtime's Chebyshev already implements the ruling. ⚠ **RCR is not on this machine** |
 
 *(There is no batch 13.)* **`_reference/`** holds our own design documents for comparison — not a batch.
 

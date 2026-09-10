@@ -292,6 +292,70 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
+### ✓ SLICE THREE — THE PROPERTY SHEETS (`BUILD 89`), AND `PT-1568`/`PT-1569`
+
+⚠⚠ **`PT-1551`'s EXCUSE IS SPENT, RETIRED BY THE THING IT PREDICTED.** *"The day
+Loom gains an edit-in-place path, this excuse stops being true and the field
+must be written."* `ContentsWriter.setFields` is that path; `hidden` and
+`stealth` are in `loom_can_write_test`'s **writable** list.
+
+⚠⚠ **AND THE WRITER EDITS ONLY THE NAMED KEYS** — every other line of the entry
+survives, whitespace and trailing comment included. **That is exactly what the
+excuse protected, and it is asserted** with a field this build does not know.
+
+⚠ **`PT-1567`** — depth is unbounded. `NewItemDialog` enforced *"two levels"*
+from a table column headed **EXAMPLE**: an example read as a rule, `PT-1495` in
+a second document. And the palette had already outgrown it.
+
+⚠ **Finding 6** — `AreaTab` takes the mode. **A signature that lies about the
+model is a defect waiting for its second caller.**
+
+⚠ **`PT-1565`** — vitality shows `derived · override · vitality`, all three, and
+**the operator is on the row because ours REPLACES where Aurora's ADDS.** And on
+abilities: the row already existed — **the columns were unnamed**, which is why
+it read as a coincidence. **The BONUS was genuinely absent, and it is the number
+`§12.5` puts on every attack.**
+
+### ⚠⚠ `PT-1568` — THE PLACEMENT'S NUMBER IS A `stealth` TOTAL, NOT A `dc`
+
+**Ruled after `BUILD 89` reported the contradiction.** `SKILL-RESOLUTION-01` is
+**SETTLED (`D-AO`)**: *"Stealth and Awareness are a contested pair… a system
+that assumed every skill has a DC would have got three of eight wrong,"* and
+`§4` has the defender roll **the better of Awareness or Alertness**.
+
+**The number is unchanged — what a finder must beat — and it is named for what
+it is.** Renamed **before anything authored against `dc`.**
+
+### ⚠ `PT-1569` — HOW A HIDDEN PLACEMENT IS FOUND. RULED, NOT BUILT.
+
+    on approach       when the player comes within range
+    passive           the finder's number taken at 10, no dice
+    settled once      a failure stands; there is no retrying it
+
+⚠ **`PT-1550`'s CONTACT IS THE REVEAL is the floor and IS built** — walking into
+one always finds it.
+
+⚠⚠ **AND ONE NUMBER IS STILL UNRULED: THE RANGE.** *"On approach"* needs a
+distance and **no document carries one.** The field is authored and read;
+**nothing computes an approach yet**, and inventing a radius would be the
+modifier this project keeps refusing to invent.
+
+### ⚠ AND WHAT STILL ASSUMES THE OLD SHAPE AFTER SLICE THREE
+
+    ⚠⚠ new_creature.dart   HAS NO `species` FIELD, and `CharacterWriter` takes
+                           one. `PT-1490` gave the WRITER species and chassis
+                           and the dialog never gained the input — so a
+                           Loom-authored creature is always species-less.
+                           **That is the `PT-1533` shape inside the Builder:
+                           the value that reaches a blow has no author-facing
+                           control**
+    ⚠  PlaceWayDialog      the only dialog that asks before writing. Placing a
+                           creature writes immediately; a way asks first,
+                           because a doorway needs a target. Defensible — and
+                           "place" now means two gestures depending on the
+                           mode. Worth a ruling before a third arrives
+    ⚠  the `assistant` tab still says "not built yet" — third slice running
+
 ### ✓ `PT-1560` — THE PALETTE IS A MODE SELECTOR (`BUILD 88`, slice two)
 
 ⚠⚠ **ONE SELECTION, BY CONSTRUCTION.** The pane held three — tile, way,

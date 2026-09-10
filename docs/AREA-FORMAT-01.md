@@ -386,7 +386,7 @@ hidden = true                             # ⚠ PT-1550 — not shown until some
 
 **⚠ Absent means shown.** A placement with no `hidden` is visible, which keeps every area written before this ruling correct without migration.
 
-### ⚠⚠ `3b` · `dc` — how hard it is to find, `PT-1564`
+### ⚠⚠ `3b` · `stealth` — how well it is hidden, `PT-1564`, `PT-1568`
 
 ```toml
 [[contents]]
@@ -394,7 +394,7 @@ tag    = "ambusher.command-deck.03"
 from   = "characters/sith-trooper"
 at     = [7, 1]
 hidden = true
-dc     = 15                               # ⚠ moderate — SKILL-RESOLUTION-01 §2
+stealth = 15                              # ⚠ moderate — SKILL-RESOLUTION-01 §2
 ```
 
 **⚠⚠ THE NUMBER CARRIES ITS OWN LABEL, AND THERE IS NO SECOND FIELD.** The seven tiers of `SKILL-RESOLUTION-01 §2` — trivial 5 · easy 10 · moderate 15 · hard 20 · formidable 25 · heroic 30 · legendary 35, **the middle five being `traps.2da`'s own values** — are offered as a dropdown, and **the FILE carries the number.** Nothing stores the word.
@@ -403,9 +403,9 @@ dc     = 15                               # ⚠ moderate — SKILL-RESOLUTION-01
 
 **⚠ And a number off the ladder is still a number.** `§2` names ±2, ±5 and ±10 as its modifiers, so the ladder **recommends rather than constrains** — the dropdown is the recommended values, not the permitted ones.
 
-**⚠⚠ AND A `dc` WITHOUT `hidden` IS A LOAD FAILURE, NOT AN IGNORED FIELD.** It is a difficulty for finding something already in plain sight: the author has said two things that cannot both be true, and **silently keeping one is exactly the defect above.**
+**⚠⚠ AND A `stealth` WITHOUT `hidden` IS A LOAD FAILURE, NOT AN IGNORED FIELD.** It is how well something in plain sight is hiding: the author has said two things that cannot both be true, and **silently keeping one is exactly the defect above.**
 
-### ⚠⚠ AND A CONTRADICTION IS RECORDED HERE RATHER THAN SETTLED
+### ⚠⚠ AND IT IS A `stealth` TOTAL BECAUSE A SETTLED DOCUMENT SAYS SO — `PT-1568`
 
 **`SKILL-RESOLUTION-01` is SETTLED (`D-AO`)** and says:
 
@@ -413,7 +413,21 @@ dc     = 15                               # ⚠ moderate — SKILL-RESOLUTION-01
 
 and `§4`: ***"the defender rolls the better of Awareness or Alertness"*** — an **OPPOSED** roll.
 
-**⚠ So a DC for Awareness is a resolution mode our own settled document says that skill does not use.** The field is written as `PT-1564` rules it and the conflict is the owner's to settle. **What both readings share is that this number is what a finder must beat** — under a fixed-DC reading it is a DC; under the opposed reading it is the hider's Stealth total. **The number is the same; only its name is in question.**
+**⚠ So a fixed DC for Awareness is a resolution mode that document says the skill does not have.** `PT-1564` proposed `dc`; `PT-1568` renamed it **before anything authored against it**. The number is unchanged — **what a finder must beat** — and it is now named for what it is: **the hider's total.**
+
+**⚠ AND `stealth` IS OUR OWN WORD FOR OUR OWN SKILL.** `PT-1547` bars a coined name that collides with something our data already uses; this is the opposite move — **it names the thing the data has**, rather than inventing a term beside it.
+
+**⚠ The seven tiers stay as recommended VALUES.** `§2`'s ladder is what a number to beat looks like at each tier, and **an opposed roll needs one just as a fixed DC does.**
+
+### ⚠ HOW IT IS FOUND — ruled at `PT-1569`, and NOT YET BUILT
+
+    on approach       the find happens when the player comes within range
+    passive           the finder's number taken at 10, no dice
+    settled once      a failure stands; there is no retrying it
+
+**⚠ `PT-1550`'s CONTACT IS THE REVEAL remains the floor and is built** — walking into a hidden creature always finds it, whatever the numbers say.
+
+**⚠⚠ AND ONE NUMBER IS STILL UNRULED: THE RANGE.** *"On approach"* needs a distance, and no document carries one. **The field is authored and read; nothing computes an approach yet**, and inventing a radius would be exactly the modifier this project keeps refusing to invent.
 
 ### ⚠ And what is NOT here — `PT-1550`
 

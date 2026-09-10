@@ -54,6 +54,7 @@ to this table in the same commit.**
 | 24 | `24-one-file-deeper` | **`k_ai_master` does nothing about the body** (`PT-1525`); the GIT half closed; **the BG3 combat-log grammar** |
 | 25 | `25-the-three-classes-and-the-defence` | **Marksman and Engineer BAB found** in `CLASS-TABLES-DROID` (= K1's `CombatDroid`/`ExpertDroid`); **only the Saboteur is truly absent**; BAB is binary and `Rate` does not give it; **Defence has one data point and no second** |
 | 26 | `26-the-defence-ladder-in-the-games` | **the games DO have a class Defence ladder** — `classes.2da.armorclasscolumn` → `acbonus.2da`. ⚠ K2 flattened attack and **kept** defence. K1 2 tracks, K2 6. **All values EVEN, so RCR's `+1` offset is unrepresentable.** ⚠ RCR gives the Soldier the best ladder; K1 gives it **zero** |
+| 27 | `27-perception-range` | ⚠ **NOT a third negative** — `.utc PerceptionRange` indexes `ranges.2da`, which carries **sight AND hearing in metres**. Default 20/20; 97.8% of 4,397 creatures use it. **Droids and organics indistinguishable.** NWN's blank default is the row KOTOR runs on; player sight 35 m → **250 m** |
 
 *(There is no batch 13.)* **`_reference/`** holds our own design documents for comparison — not a batch.
 

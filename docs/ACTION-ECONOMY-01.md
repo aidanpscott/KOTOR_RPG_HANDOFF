@@ -36,6 +36,16 @@
 
 **The main thing you do. One per round, and resolving it ends your turn.**
 
+> **⚠⚠ THE TURN DOES NOT END ITSELF — `PT-1540`, owner ruling.** `TEST 025` found the action pip **can never be seen spent**: the strike spends the action, ends the turn, runs the enemy's turn and begins a new round **inside one keypress.** `PT-1517`'s *a spent pip goes grey* is unreachable for it.
+>
+> **⚠ And auto-advancing deletes half the action economy.** Four of five budgets survive an action — **move you have not spent, gear, bonus, reaction** — and ending the turn on resolution means **you can never spend them after acting.** You would have to move first, always, or lose it.
+>
+> **⚠ And the pip row exists to say what is left.** If the turn ends the instant you act, **the row only ever describes a turn you can no longer use.**
+>
+> **RULED: ending your turn is a deliberate act.** Resolving an action still **spends the action** — `§1` is unchanged about the budget. **What changes is that the turn waits for you.**
+>
+> **⚠ And BG3 already answered the affordance:** an **End Turn** button that **glows when the budgets are spent and is cancellable** (`STUDY 20`). One more keypress per turn, and the same one every tactical game asks for.
+
 | Action | What it does |
 |---|---|
 | **Attack** | **Declare one attack.** It applies to every swing or shot this round. `Strike` and `Shoot` are the defaults. |

@@ -24,6 +24,46 @@
 
 ---
 
+## ⚠ Everything after the seven — and this index went SIXTEEN STUDIES STALE
+
+**The seven above were the original plan. Sixteen more landed and none were
+listed here.** `STUDY 24` was re-briefed as unstarted work **because it was in
+git and not in this file** — the front door stopped at 7.
+
+⚠ **`STATE.md`'s own shape, in my own directory**: *a thing neither built nor
+tracked is the one that gets forgotten.* **Anything added to `STUDY/` is added
+to this table in the same commit.**
+
+| # | Folder | Covers |
+|---|---|---|
+| 8 | `08-census` | census of the source data |
+| 9 | `09-dialogue-options` | dialogue options, as counted |
+| 10 | `10-stack` | the resolution stack |
+| 11 | `11-spike` | a spike |
+| 12 | `12-toolset-ui` | **Aurora's toolset UI** — the conversation tree is a plain `TreeView`; *Paste As Link* expresses a DAG |
+| 14 | `14-toolset-flow` | Aurora's flow, launch to a placed creature — **the editor is a TAB, master over detail** |
+| 15 | `15-blocks` | **Daggerfall's** prefab and block system |
+| 16 | `16-tree` | Aurora's module tree — found `characters` at top level where it belonged under Blueprints |
+| 17 | `17-editors` | which editors Aurora has and which we need — **three editing surfaces, 32 context verbs** |
+| 18 | `18-dialogue-compare` | the three dialogue systems, and whether theirs imports into ours |
+| 19 | `19-input-and-combat` | **input and combat across K1/K2/NWN/BG3.** `actions.2da` is 3 columns; `surfacemat` prices nothing; `keymap.2da` is 4 columns in NWN and 22 in K1 |
+| 20 | `20-bg3-observed` | BG3's combat presentation from the UI layer — **and the record of why BG3 cannot be run here.** ⚠ its `§3` world-space question is **CLOSED WITH NO ROUTE** |
+| 21 | `21-bg3-hotbar-and-ceremony` | the hotbar, the partial-move dial, the dice ceremony, the two log surfaces |
+| 22 | `22-keyboard-bar-and-wording` | **`PT-1517` verified** — folder = state, filename = identity; the written cost; `<LSTag>` answers `§4c` |
+| 23 | `23-dying-and-what-remains` | **KOTOR has no dying band**; a corpse is the creature itself; `NoPermDeath` is literally the party rule |
+| 24 | `24-one-file-deeper` | **`k_ai_master` does nothing about the body** (`PT-1525`); the GIT half closed; **the BG3 combat-log grammar** |
+
+*(There is no batch 13.)* **`_reference/`** holds our own design documents for comparison — not a batch.
+
+### ⚠ Tools live with the study that needed them
+
+`19-input-and-combat/tools/` — `keybif.py` (chitin.key/BIF, **written because it
+did not exist**), `d2.py` (2DA V2.b *and* V2.0 text), `lspk.py` + `lz4block.py`
+(BG3 LSPK v18, stdlib only, nothing installed).
+`22-keyboard-bar-and-wording/tools/loca.py` (Larian `.loca`, 232,878 strings).
+
+---
+
 ## The record — one per resource type, every field, every time
 
 ```

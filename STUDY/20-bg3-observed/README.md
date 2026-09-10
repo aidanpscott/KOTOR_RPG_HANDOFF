@@ -238,7 +238,36 @@ ground**, and this study will not guess.
 **⚠ That is the one target of the three that genuinely requires watching the
 game.**
 
----
+### ⚠⚠ CLOSED WITH NO ROUTE — not pending
+
+**Three attempts, by three parties: this agent, `Tester`, and the owner at the
+machine. BG3 does not run on this install.** The blockers are in series and both
+are now known — `§5`, and the correction above it. **The owner's own launch
+crashed past both.**
+
+> **⚠ An open question waiting on a screenshot and a question with no route are
+> different things, and this is the second.** Nothing in this project should
+> carry *"pending: watch BG3"* again.
+
+**What that costs, stated exactly:** how BG3 *draws* a reachable area, what a
+partial path looks like on the ground, and how difficult terrain is signalled
+before you step on it **are unanswered and will stay unanswered.** No amount of
+further file reading reaches them — `§3` establishes they are world-space decals
+and shaders, present in **zero** of 310 `.xaml`.
+
+**⚠ And most of it we do not need, because we are a GRID.** BG3's decal
+projection exists to paint a smooth reachable area onto *uneven 3D terrain* — a
+problem we do not have. On a grid the reachable set **is** a set of squares:
+enumerable, exactly drawable, and countable. **Their hardest rendering problem is
+one our shape deletes**, so the missing answer is mostly an answer to a question
+we were never going to ask.
+
+**What is genuinely lost is narrower:** *how a cost that is not the square count
+is signalled on the ground before commitment* — `PT-1513`'s doubling. **The file
+layer gave the mechanism** (`ActionResourceConsumeMultiplier(Movement, 4, 0)`,
+`§4` of `STUDY 19`) **and the HUD half** (`ValueAfterUse` against `Value`,
+`STUDY 21 §2`). **What no file gives is the on-tile signal, and that is ours to
+invent rather than to copy.**
 
 ## 4 · What was not checked, and what stopped
 
@@ -265,16 +294,23 @@ game.**
 
 ---
 
-## 5 · Why the game would not run — the diagnostic record
+## 5 · Why the game will not run — the diagnostic record, CLOSED
 
-Kept because it is the wall, and because `§3` still needs it solved.
+**⚠ This is no longer a wall to be solved. Three parties attempted it — this
+agent, `Tester`, and the owner at the machine — and it is a property of this
+install.** Kept as the record of *why*, not as an open item.
 
-| route | result |
-|---|---|
-| `steam steam://rungameid/1086940` | process appears, dies before any window |
-| `bin/bg3` bare | **`libssl.so.1.1: cannot open shared object file`** |
-| `SteamLinuxRuntime_sniper/run-in-sniper` | ran 100 s foreground; crashed in background, **no window** |
-| `SteamLinuxRuntime_4/_v2-entry-point` | **same `libssl.so.1.1` failure** |
+| # | who | route | result |
+|---|---|---|---|
+| 1 | agent | `steam steam://rungameid/1086940` | process appears, dies before any window |
+| 1 | agent | `bin/bg3` bare | **`libssl.so.1.1: cannot open shared object file`** |
+| 1 | agent | `SteamLinuxRuntime_sniper/run-in-sniper` | ran 100 s foreground; crashed in background, **no window** |
+| 1 | agent | `SteamLinuxRuntime_4/_v2-entry-point` | **same `libssl.so.1.1` failure** |
+| 2 | `Tester` | sniper's `libssl.so.1.1` + `libcrypto.so.1.1` copied to a scratch dir, `LD_LIBRARY_PATH` pointed at it | ⚠ **loader error GONE.** `bg3` then **spawns `steam.sh` to relaunch itself and parks as a single sleeping thread**, no window |
+| 3 | **owner, at the machine** | launched by hand, going round the bootstrap | ⚠ **crashed past both known blockers** |
+
+**⚠ At least two blockers in series, both identified, and a third failure mode
+past them.** The first is solvable and was solved; solving it did not help.
 
 **Measured, not assumed:** `bin/bg3` process count was **0** at t=30/60/90/120 s,
 and the root window was **pure black (`mean=0.000`)** at t=60 and t=90 before
@@ -325,6 +361,7 @@ call), **nothing installed**, Steam's `config.vdf` not edited, *Verify integrity
 not run — `STATE.md` warns Steam can delete things under `common/` on a verify,
 **which is where all six repos live.**
 
-**To close `§3`, cheapest first:** the owner plays and screenshots **one** moment
-— a selected character mid-move with the range drawn on difficult ground. **One
-picture closes it.**
+**⚠ `§3` IS CLOSED WITH NO ROUTE — see the block at the end of `§3`.** This
+section previously said one owner screenshot would close it. **The owner tried,
+and it crashed.** There is no cheapest-first list any more, and **nothing in this
+project should carry *"pending: watch BG3"* again.**

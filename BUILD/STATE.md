@@ -292,6 +292,63 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
+### ⚠⚠ QUEUED — `PT-1559`, A CONVERSATION WIZARD. **The slice AFTER the palette.**
+
+**`PT-1552` found the best idea in any Aurora study and the sharpest criticism
+of our own tooling in one sentence.** Aurora's Store Wizard **asks in the
+domain's language** — *"what does the shopkeeper say when the conversation
+begins?"* — with **working prefilled answers**, and GENERATES a conversation and
+a script.
+
+> **Ours asks for nodes, replies and links. The schema.**
+
+⚠ **NOTHING IN THE FORMAT OR THE RUNTIME CHANGES.** `DIALOGUE-FORMAT-01` was
+designed against `TRACE-112`'s reading of a real `.dlg`, and `PT-1435` measured
+the runtime at **4,000 commits per rank.** The reader, the validator and
+`DialogueRun` are **Lodestar's**, and `PT-1553` keeps them. A wizard **sits on
+top of the editor, not instead of it** — the tree editor stays for anything
+intricate.
+
+⚠⚠ **AND IT CANNOT BE PORTED FROM AURORA'S.** Aurora has **no NPC-to-NPC
+continuation, no two kinds of link list, and no closed gate vocabulary** — so a
+wizard copied from theirs would **generate conversations that work and never use
+the things we added.** Take the idea; write the questions ourselves.
+
+**⚠ FOUR RULINGS ARE ALREADY QUESTIONS — and all four are live in the reader,
+checked at `BUILD 86`:**
+
+    PT-1432  show-all vs pick-one    dialogue.dart — `replies` SHOWS ALL,
+                                     `then` PICKS ONE, never both, refused
+                                     by the validator
+    PT-1434  continuation            an NPC line's `then` names NPC lines
+    PT-1430  the CLOSED gate         `gateKeys` — 11 leaves and 3 composers,
+             vocabulary              a `const Set` in the reader TODAY. **A
+                                     list to choose from, not a box to type
+                                     in**, and the list already exists
+    PT-1437  may end in a fight      `endsInFight` is DERIVED from the
+                                     effect — the effect IS the fact
+
+> *"Does this line have replies, or does it continue?"* is a question **Aurora
+> never needed to ask**, and it is `PT-1432` and `PT-1434` in one sentence an
+> author can answer.
+
+**⚠ AND `PT-1433` MAKES IT EASIER RATHER THAN HARDER.** We refuse an empty
+`say`, where **59% of their player nodes are blank**: their wizard must generate
+**routing nodes a player never sees**; ours generates **only lines somebody
+says.**
+
+**⚠ AND ONE MORE THING THE QUESTIONS CAN BE CLOSED ON, from the same read:**
+*"and then what happens?"* has **three answers, not forty.**
+`EVENT-KINDS-01` declares ~40 kinds and `PLAY-STATE-01 §6` leaves every payload
+deliberately unspecified — and **exactly three have a shape anything reads**:
+`quest.flag-set` (flag), `quest.concluded` (quest, conclusion), and
+`encounter.began` (the kind alone). **A pick-list of three is a wizard question;
+forty would have been a text box wearing a menu.**
+
+⚠ **NOT NOW.** The palette is slice two, and `Tester` is still closing the
+quest, script and import/export holes — **quests especially may want a home in
+the palette.**
+
 ### ✓ `PT-1553` — TWO TREES, SLICE ONE (`BUILD 85`)
 
 **An authored thing has a home.** The tree nests **area → kind → instance tag**,

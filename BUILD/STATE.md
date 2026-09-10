@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `7f50a8e` — `PT-1609` and the rulings after it |   ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `88de5ef` — `PT-1618` — `character.dying` declared |    ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `5031aed` — `PT-1607` — `owner` is gone, and its two checks with it |  ⚠ no |
+| `Lodestar` | `2b75092` — `PT-1619`’s seed, and `dying` at the crossing |   ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `2e78da7` — slice four: the left pane empties, the palette selects a mode |   ⚠ no |
-| `KOTOR-RPG-APP` | `d11b724` — level with `Lodestar` |  ⚠ no |
+| `Loom` | `323c3b5` — `PT-1619` — faults on the rows they name |    ⚠ no |
+| `KOTOR-RPG-APP` | `a74750f` — the crossing reaches the save |   ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,7 +59,7 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 452 · `Lens` 7 · `Loom` 225 · `KOTOR-RPG-APP` 367 — 1,051, all
+**`Lodestar` 456 · `Lens` 7 · `Loom` 233 · `KOTOR-RPG-APP` 367 — 1,063, all
 green.** *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
 now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a

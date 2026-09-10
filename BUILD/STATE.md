@@ -39,12 +39,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `c4ee0ec` — `PT-1539`, 38 of 38; the defence track's structure | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `93985a4` — `PT-1547`, and a check for coined names | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `e00ca7f` — `PT-1541`/`PT-1544`, two curves and a named track | ⚠ no |
+| `Lodestar` | `6094abe` — `PT-1547`, a ladder named for its shape | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `e0bf5ee` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `6b0e096` — `PT-1543`, components and total on one row | ⚠ no |
+| `Loom` | `59e1030` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `6f039e0` — level with `Lodestar` | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
@@ -96,7 +96,23 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ THE NOBLE'S DEFENCE INTERIOR — AN RCR READ I CANNOT REACH
+### ⚠⚠ A NAME WE COIN MUST NOT BE A NAME WE ALREADY USE — `PT-1547`
+
+I named a defence ladder **`noble`**. It is one of our **nine upbringings**, and
+`PT-705` rules that an upbringing **grants nothing** — **the one identifier that
+must never appear beside a bonus.** A value used as a key, **ninth in this
+corpus**, and nothing checked.
+
+`scripts/check_coined_names.py` checks it: **the names this project coins**
+against the **2,433** identifiers our extracts own. ⚠ **Narrow on purpose** — a
+class id used as a KEY INTO the class data is correct, so `defenceTrackOf` being
+keyed by `soldier` is not a hit. **Its coining sites are listed by hand and that
+list is its scope line.**
+
+⚠ **And the ladders are named for their shapes now:** `hold-three-then-two` and
+`step-every-two`. **A ladder named for a class is not a named ladder.**
+
+### ⚠⚠ THE IRREGULAR LADDER'S INTERIOR — AN RCR READ I CANNOT REACH
 
 `PT-1541` reports the RCR PDF on the owner's machine, verified from the title
 page. **It is not on any path this build can read** — searched by filename and

@@ -139,11 +139,17 @@
 >
 > ⚠⚠ **The games already do it this way, which is where the shape comes from:** `classes.2da`'s `armorclasscolumn` names a **COLUMN** in `acbonus.2da`. **Attack is three TABLES by table name; defence is ONE table by COLUMN name.** `TRACE-85`'s *"class 4"* is a lookup into it.
 >
-> ⚠⚠ **TWO CURVES, NOT ONE AND NOT THREE — `PT-1541`, checked row by row.** The **Consular is the Noble `+1` at every one of the twenty levels**, so it carries an **OFFSET rather than numbers** — the day the Noble's interior is read, the Consular's follows and they cannot drift. ⚠ **An offset from nothing is nothing:** where the Noble is unread, so is the Consular.
+> ⚠⚠ **A LADDER CARRIES ITS OWN NAME DESCRIBING ITS SHAPE — `PT-1547`, and nothing else owns one.** The two shapes are `hold-three-then-two` (irregular, endpoints only) and `step-every-two` (linear, computed). **A ladder named for a class is not a named ladder** — it is a class's copy that a second class borrows, which is what `PT-1544` was written to prevent.
+>
+> ⚠⚠ **AND `noble` WAS NOT AN AVAILABLE NAME.** It is one of our **nine upbringings**, and `PT-705` rules that **an upbringing grants nothing** — `grants` is null **by design**, and `PT-1385` already warned an agent not to read that null as missing data. **The one identifier that must never appear beside a bonus is the name of the thing ruled to grant none.** A value used as a key, **ninth in this corpus**, and `scripts/check_coined_names.py` now checks it.
+>
+> ⚠⚠ **AND IT IS TWO OF OUR CLASSES, NOT THREE** — this corrects the count. **We do not ship a Noble class:** our nineteen base classes contain none, and `noble` in our data is an upbringing. **The Noble's table is EVIDENCE for the ladder's values, not a binding. Seventeen point at nothing.**
+>
+> ⚠ **TWO CURVES, checked row by row — `PT-1541`.** The **Consular is the irregular ladder `+1` at every one of the twenty levels**, so the **offset lives on the BINDING** rather than on a second ladder — the day the ladder's interior is read, the Consular's follows and they cannot drift. ⚠ **An offset from nothing is nothing:** where the Noble is unread, so is the Consular.
 >
 > ⚠ **THE SOLDIER IS COMPUTED**, because the source states it as a rule — *"linear, plus one every two levels"*, `+3` at 1st reaching `+12` at 20th. It lands on both attested endpoints and **clamps past 20 rather than extrapolating.**
 >
-> ⚠ **THE NOBLE IS ENDPOINTS ONLY AND ITS INTERIOR IS UNREAD.** The irregular curve *"holds three levels then two then three then two throughout and no single formula reproduces it — it has to be READ from the table."* **The lookup does not interpolate:** a level-7 Noble gets **no class term at all**, which is `PT-1531`'s rule at a finer grain than a whole class.
+> ⚠ **THE IRREGULAR LADDER IS ENDPOINTS ONLY AND ITS INTERIOR IS UNREAD.** The irregular curve *"holds three levels then two then three then two throughout and no single formula reproduces it — it has to be READ from the table."* **The lookup does not interpolate:** a level-7 Consular gets **no class term at all**, which is `PT-1531`'s rule at a finer grain than a whole class.
 >
 > ⚠ **AND I COULD NOT REACH THE BOOK.** `PT-1541` reports the RCR PDF on the owner's machine, verified from the title page; **it is not on any path this build can read** — searched by filename and by title across the home and library trees. **The interiors stay unread here until it is.**
 >

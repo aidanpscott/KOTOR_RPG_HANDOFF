@@ -50,7 +50,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `5031aed` — `PT-1607` — `owner` is gone, and its two checks with it |  ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `7d04511` — level with `Lodestar` |  ⚠ no |
+| `Loom` | `2e78da7` — slice four: the left pane empties, the palette selects a mode |   ⚠ no |
 | `KOTOR-RPG-APP` | `d11b724` — level with `Lodestar` |  ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
@@ -59,7 +59,7 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 452 · `Lens` 7 · `Loom` 217 · `KOTOR-RPG-APP` 367 — 1,043, all
+**`Lodestar` 452 · `Lens` 7 · `Loom` 225 · `KOTOR-RPG-APP` 367 — 1,051, all
 green.** *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
 now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a

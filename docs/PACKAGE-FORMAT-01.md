@@ -129,7 +129,7 @@ packages    = [
 ]
 
 [continues]
-chain       = "my-first-campaign"      ⚠ cross-campaign carry
+chain       = "my-first-campaign"    # ⚠ cross-campaign carry
 
 [order]
 areas       = ["a01-endar-spire", "a02-taris-hideout"]
@@ -460,7 +460,7 @@ classes_closed = ["sith-warrior"]
 [[requires.packages]]
 id       = "base-rules"
 version  = ">=2.0"
-digest   = "sha256:…"        ⚠ what was actually depended on
+digest   = "sha256:…"      # ⚠ what was actually depended on
 ```
 
 **⚠ The digest is what makes a dependency verifiable rather than merely named.** Two packages claiming `base-rules 2.1` may differ; **a digest says which one this package was built against.** And a copy found anywhere — a friend, an archive, a backup — **can be checked rather than trusted.**

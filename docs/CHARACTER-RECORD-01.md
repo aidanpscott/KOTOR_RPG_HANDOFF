@@ -132,6 +132,18 @@
 | **aptitude set** | class skills + species + origin world + profession-if-taken + Skill Focus feats (`SKILLS-01 §11.2`) |
 | skill rank caps | aptitude, level (`PT-1227`) |
 | vitality, defence, saves, attack bonus | classes + abilities + feats |
+
+> **⚠⚠ TWO OF THOSE HAD NO ARITHMETIC AND ONE STILL HAS A GAP — `PT-1528`, `PT-1531`.**
+>
+> **✅ `defence` is RULED: `10 + Dexterity modifier + class bonus + anything a feat or item grants`.** From `RCR`, which governs every mechanical question here. KOTOR's *"18 = base 10 + dex mod 4 + class 4"* is **evidence the shape survived the port, not the source of it** — a number that had been on the page three times as an *example* and never once as an answer.
+>
+> **⚠ Its class term has nowhere to read from, and our own corpus says where it would come from.** `CLASS-TABLES-JEDI §5A`: *"RCR class tables carry a `Defense Bonus` that progresses by level. Confirmed on the Noble (RCR pp.42–43), where it runs +2 at 1st to +10 at 20th. **The three tables above carry the column with values unextracted — the Jedi progressions are in RCR Chapter 3 and have not been read.**"*
+>
+> **So it is NOT an extraction gap.** `classes.json` already carries a `defence` key for the three Jedi classes and **every value in it is an em dash** — the column was extracted and there was nothing in it. **One data point is attested in the whole corpus.** Nineteen base classes plus prestige across thirty levels is **a read of RCR Chapter 3**, not a decision.
+>
+> **✅ `attack bonus` WAS AN EXTRACTION GAP AND IS FIXED — `PT-1531`.** All four `CLASS-TABLES-*` files carry a per-level `BAB` column; the extractor's merge was **first-wins**, so the PHB tables (`feats`, `attack_picks`, saves) claimed `progression` and the BAB-bearing table was skipped. `CLASS-TABLES-BASE`'s own progressions were read by **nothing**. **Merged by level: 25 → 35 of 38.**
+>
+> **⚠ Three have no per-level table anywhere** — `engineer`, `marksman`, `saboteur`. The Engineer's *rate* is named in prose (`CLS_ATK_2`); **a ladder derived from an endpoint is authoring, not extraction.**
 | Force points | class + abilities |
 | languages | species + programming |
 | credits remaining | equipment route + lifestyle |

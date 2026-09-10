@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `882c992` — `PT-1528`, two derived rows with no arithmetic | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `2636efc` — `PT-1531`, BAB extracted; defence's class term is an RCR read | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `176d9d8` — `PT-1528`, §12.5 term by term with sources | ⚠ no |
+| `Lodestar` | `1f3e47a` — `PT-1531`, defence is 10 + Dex + class + grants | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `8b834cf` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `2a03060` — `PT-1528`, the abilities reach the fight | ⚠ no |
+| `Loom` | `fc289e6` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `645cab3` — `PT-1531`, BAB and Dexterity reach the fight | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 378 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 309 — 824, all
+**`Lodestar` 381 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 314 — 831, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -96,7 +96,25 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 
 ## ⚠ What is open
 
-### ⚠⚠ TWO DERIVED VALUES HAVE NO ARITHMETIC — `PT-1528`
+### ⚠⚠ THE CLASS DEFENCE BONUS IS A READ OF RCR CHAPTER 3 — `PT-1531`
+
+**Not an extraction gap.** `classes.json` **already carries a `defence` key**
+for the three Jedi classes and **every value in it is an em dash** — the column
+was extracted and there was nothing in it. `CLASS-TABLES-JEDI §5A` says where it
+lives: *"the Jedi progressions are in RCR Chapter 3 and have not been read."*
+
+**One data point is attested in the whole corpus: the Noble, +2 at 1st to +10 at
+20th.** Nineteen base classes plus prestige across thirty levels. **The
+expression is ruled and one of its terms has nowhere to read from.**
+
+### ✅ BASE ATTACK BONUS WAS AN EXTRACTION GAP — FIXED, 25 → 35 of 38
+
+The extractor's merge was **first-wins**, and the PHB tables (`attack_picks`)
+claimed `progression` before the source tables (`BAB`) could contribute.
+`CLASS-TABLES-BASE`'s own progressions were read by **nothing**. ⚠ **Three still
+have no table anywhere**: `engineer`, `marksman`, `saboteur`.
+
+### ~~⚠⚠ TWO DERIVED VALUES HAVE NO ARITHMETIC~~ — `PT-1528`, superseded above
 
 **`defence`** — `CHARACTER-RECORD-01 §3` names the inputs and **no document
 states the sum**; no class carries a defence column. The only defence sum in

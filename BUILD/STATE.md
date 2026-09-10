@@ -292,6 +292,52 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
+### ✓ `PT-1570`/`PT-1571` (`BUILD 90`) — the old shape as parameters, and the eight
+
+⚠⚠ **EIGHT RE-DERIVED FIELDS ACROSS TWO WIDGETS, and the general form is the
+finding:** *the old shape survives as parameters describing it.* **`PT-1553`'s
+named risk in its third costume** — a second copy of a mapping, then a special
+case, now a signature.
+
+    ModuleTree      packageName · areas · entryArea, three fields of ONE
+                    object pulled apart at the call site — where three could
+                    have come from three different packages. Plus
+                    `problemCount`, which is **the report with the reasons
+                    removed**
+    _SelectionBar   a record AND a `PlacedThing`, from TWO SEPARATE
+                    TRAVERSALS of `a.contents` — the same object twice, with
+                    `tag`, `x` and `y` on both sides and nothing to stop them
+                    disagreeing
+
+⚠ **The cost landed on three tests, which now build an `OpenedPackage` instead
+of passing three loose strings — exactly the thing three loose strings could not
+be checked for.**
+
+### ✓ `PT-1571` — THE CHECK-TAG VOCABULARY IS DECLARED, AND TWO OF THE EIGHT ARE GAPS
+
+`TRACE-12` reduced **2,509 bracketed lines and 256 distinct strings** to eight
+checks, one manner tag and one retirement — **the most earned list in the corpus,
+and it lived only in prose.**
+
+⚠⚠ **AND THE WORK WAS THE MAPPING, NOT THE TRANSCRIPTION.** The eight are
+KOTOR's; ours are the 26 shipped in `base-rules/rules/skills.toml`. Six map;
+**`Computer Use` and `Treat Injury` map to nothing of ours, and `SKILLS-01`
+forbids fixing it silently:** *"Treat Injury is not Medicine… report it as a gap
+rather than mapping it silently."* **`null` is a NAMED GAP**, and the suite
+asserts the silent mappings ABSENT.
+
+⚠ **And `§4c` counts eight while naming a ninth** — `Intimidate`, *"ours, stated
+plainly, not assumed sourced"*. Recorded; it is one of our 26.
+
+⚠ **The wizard's check question is a list**, read from `base-rules` through
+`openRules` — the route the item dialog already uses, because **Loom still has
+no parser.** An uninstalled `base-rules` says so rather than showing an empty
+dropdown.
+
+⚠ **`whatItCannotAsk` lost the entry that said the eight were unwritable, and a
+count assertion failed until it did.** An entry that is no longer true is an
+excuse that outlived its exception.
+
 ### ✓ SLICE THREE — THE PROPERTY SHEETS (`BUILD 89`), AND `PT-1568`/`PT-1569`
 
 ⚠⚠ **`PT-1551`'s EXCUSE IS SPENT, RETIRED BY THE THING IT PREDICTED.** *"The day

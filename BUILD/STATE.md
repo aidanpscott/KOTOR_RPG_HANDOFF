@@ -292,7 +292,41 @@ Walking out and back re-hides. One that outlived the visit would need an event
 kind, and `PLAY-STATE-01` has none — **inventing one nothing rules is how
 `character.moved` came to be declared, read and written by nothing.**
 
-### ✓ `PT-1570`/`PT-1571` (`BUILD 90`) — the old shape as parameters, and the eight
+### ⚠⚠ `PT-1571` — NO PER-SPECIES AND NO PER-CHASSIS PERCEPTION TABLE. RECORDED, NOT BUILT.
+
+> **One default, and an author may override it on a placement.**
+
+⚠ **RULED ON DATA RATHER THAN ON SILENCE**, which is the difference between a
+gap and a finding: **4,397 blueprints across both games**, two races,
+non-default rates of **2.4% against 2.1%**.
+
+> **KOTOR had the field, had the two races, had 4,397 chances, and used it to
+> separate droids from organics ZERO TIMES.**
+
+⚠ **AND ONE THING TO RECONCILE BEFORE THE FIELD IS WRITTEN.** The override is on
+the PLACEMENT — `TRACE-83`'s *"an instance is a template plus a named set of
+permitted overrides"* — while `AUTHORED-CHARACTER-01 §3`'s guard is that an
+override is **declared on the TEMPLATE, never patched onto an instance**, and
+`TRACE-83` is the evidence for THAT guard too. **Named rather than assumed
+either way.**
+
+⚠⚠ **THE OTHER HALF IS WITH THE OWNER AND NOTHING IS BUILT AGAINST IT** —
+find-on-approach against find-on-notice. **KOTOR gives the PLAYER 250 m of
+sight, which on our grid is the whole area**, so the two are not a detail: at
+that range *"on approach"* and *"on entering"* are the same rule in different
+words, and which one we mean decides whether a hidden creature is ever a
+surprise.
+
+### ⚠⚠ AND TWO CITATIONS I MINTED, CORRECTED
+
+`BUILD 90` cited **`PT-1570` and `PT-1571`, numbers I invented.** `PT-1508`:
+*"ruling numbers are mine to assign."* **One of them collided with the real
+`PT-1571` within the day** — which is the concrete cost, not a rule about
+tidiness. Both re-cited to the rulings that govern them, and the owner named
+both in the same message: **`PT-1553`** for the re-derived parameters,
+**`PT-1565`** for the check-tag vocabulary.
+
+### ✓ `PT-1553`/`PT-1565` (`BUILD 90`) — the old shape as parameters, and the eight
 
 ⚠⚠ **EIGHT RE-DERIVED FIELDS ACROSS TWO WIDGETS, and the general form is the
 finding:** *the old shape survives as parameters describing it.* **`PT-1553`'s
@@ -313,7 +347,7 @@ case, now a signature.
 of passing three loose strings — exactly the thing three loose strings could not
 be checked for.**
 
-### ✓ `PT-1571` — THE CHECK-TAG VOCABULARY IS DECLARED, AND TWO OF THE EIGHT ARE GAPS
+### ✓ `PT-1565` — THE CHECK-TAG VOCABULARY IS DECLARED, AND TWO OF THE EIGHT ARE GAPS
 
 `TRACE-12` reduced **2,509 bracketed lines and 256 distinct strings** to eight
 checks, one manner tag and one retirement — **the most earned list in the corpus,

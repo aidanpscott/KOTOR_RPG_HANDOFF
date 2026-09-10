@@ -419,6 +419,18 @@ and `§4`: ***"the defender rolls the better of Awareness or Alertness"*** — a
 
 **⚠ The seven tiers stay as recommended VALUES.** `§2`'s ladder is what a number to beat looks like at each tier, and **an opposed roll needs one just as a fixed DC does.**
 
+### ⚠⚠ `PT-1571` — NO PER-SPECIES AND NO PER-CHASSIS PERCEPTION TABLE
+
+> **One default, and an author may override it on a placement.**
+
+**⚠ AND IT IS RULED ON DATA RATHER THAN ON SILENCE**, which is the difference between a gap and a finding. Across **4,397 blueprints in both games**, two races, non-default rates of **2.4% against 2.1%**:
+
+> **KOTOR had the field, had the two races, had 4,397 chances, and used it to separate droids from organics ZERO TIMES.**
+
+**⚠ So a per-species table would be OURS, and would be inventing one.** `PT-1424` already found `speed` derived from species rather than stored; this is the same question answered the other way **because the data answered it.**
+
+**⚠ AND THE OVERRIDE IS ON THE PLACEMENT, WHICH IS WHERE `TRACE-83` PUTS IT** — *"an instance is a template plus a named set of permitted overrides."* But `AUTHORED-CHARACTER-01 §3`'s guard is that an override is **declared on the TEMPLATE, never patched onto an instance**, and `TRACE-83` is the evidence for that guard. **The two must be reconciled before the field is written.** Named here rather than assumed either way.
+
 ### ⚠ HOW IT IS FOUND — ruled at `PT-1569`, and NOT YET BUILT
 
     on approach       the find happens when the player comes within range
@@ -427,7 +439,9 @@ and `§4`: ***"the defender rolls the better of Awareness or Alertness"*** — a
 
 **⚠ `PT-1550`'s CONTACT IS THE REVEAL remains the floor and is built** — walking into a hidden creature always finds it, whatever the numbers say.
 
-**⚠⚠ AND ONE NUMBER IS STILL UNRULED: THE RANGE.** *"On approach"* needs a distance, and no document carries one. **The field is authored and read; nothing computes an approach yet**, and inventing a radius would be exactly the modifier this project keeps refusing to invent.
+**⚠⚠ AND THE RANGE IS WITH THE OWNER — find-on-approach against find-on-notice.** **KOTOR gives the PLAYER 250 m of sight**, which on our grid is **the whole area** — so the two readings are not a detail. At that range *"on approach"* and *"on entering"* are the same rule wearing different words, and which one we mean decides whether a hidden creature is ever a surprise.
+
+**⚠ NOTHING IS BUILT AGAINST EITHER.** The field is authored and read; **nothing computes an approach**, and a radius invented to make the ruling runnable would be exactly the modifier this project keeps refusing to invent.
 
 ### ⚠ And what is NOT here — `PT-1550`
 

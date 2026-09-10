@@ -1,4 +1,10 @@
-# BUILD 90 — `PT-1570`/`PT-1571`: the old shape as parameters, and the eight as a list
+# BUILD 90 — `PT-1553`/`PT-1565`: the old shape as parameters, and the eight as a list
+
+> **⚠⚠ CORRECTED. This shipped citing `PT-1553` and `PT-1565`, two numbers I
+> minted. `PT-1508` rules that ruling numbers are the owner's — and one of mine
+> collided with the real `PT-1565`, the perception ruling, within the day.**
+> **That is the cost, and it is not a rule about tidiness.** Both now cite the
+> ruling that governs them: `PT-1553`'s named risk, and `PT-1565`'s gap.
 
 **982 green** — Lodestar 397 · Lens 7 · Loom 201 · app 331 · `+33`.
 
@@ -9,7 +15,7 @@ Lodestar `bce8221` · Lens `6b55219` · Loom `4d8be62` · app `d3c1dd5`.
 
 ---
 
-# ⚠⚠ `PT-1570` — EIGHT RE-DERIVED FIELDS, ACROSS TWO WIDGETS
+# ⚠⚠ `PT-1553` — EIGHT RE-DERIVED FIELDS, ACROSS TWO WIDGETS
 
 > **The old shape survives as parameters describing it.**
 
@@ -52,7 +58,7 @@ could not be checked for.**
 
 ---
 
-# ⚠⚠ `PT-1571` — THE EIGHT, AND WHAT THE CORPUS ACTUALLY SAYS ABOUT THEM
+# ⚠⚠ `PT-1565` — THE EIGHT, AND WHAT THE CORPUS ACTUALLY SAYS ABOUT THEM
 
 `TRACE-12` surveyed the whole of `dialog.tlk`: **2,509 bracketed lines across
 256 distinct strings expressing ~25 actual concepts** — a tenfold inflation,

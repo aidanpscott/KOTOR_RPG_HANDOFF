@@ -5,6 +5,12 @@
 '2DA V2.0' (plain text, shlex-quoted). Detected from the magic, not the game.
 """
 import sys, os, shlex, tempfile
+# ⚠ THE READER MOVED TO `MAIN_WORK/scripts/` — `PT-1642`, owner ruling: a tool
+# goes in `scripts/`, not in a study folder. Repaired in place rather than left
+# broken; this file is `Scholar`'s and only its import changed.
+import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                '..', '..', '..', '..', 'MAIN_WORK', 'scripts'))
 from keybif import KeyIndex
 from parse2da import parse as parse_binary
 

@@ -136,6 +136,20 @@
 | languages | species + programming |
 | credits remaining | equipment route + lifestyle |
 
+### ⚠⚠ TWO OF THESE HAVE NO ARITHMETIC ANYWHERE — `PT-1528`
+
+**The table above names INPUTS. For two rows that is all there is, and the play client had a constant in place of each:**
+
+> **⚠⚠ DEFENCE HAS NO EXPRESSION IN THIS CORPUS.** This row says *classes + abilities + feats* and **no document states the sum.** No class carries a defence column. Features grant `+N Defence` and beasts carry an `AC` from the source, **so the pieces assume a base that was never written.**
+>
+> **⚠ The only defence sum anywhere is KOTOR's own** — *"Defense Breakdown: 18 = base 10 + dex mod 4 + class 4"*, `TRACE-85` — quoted in `PLAY-STATE-01 §5`, `ENGINE-INTERFACE-01` and `ENGINE-SPEC-03` **to argue that a derivation should be SHOWN.** It was never adopted as a rule, and adopting it by accident because it is the only number in sight is exactly what naming this is meant to prevent.
+
+> **⚠⚠ BASE ATTACK BONUS IS NAMED BY `ATTACKS-01 §12.5` AND WE DO NOT HAVE ONE.** `CLASSES-STANDARD-PHB` says what `rate` is: *"how fast you acquire **attack picks** — `Combat`, `Middle` or `Specialist`"* — **a count of chains, not a bonus.** The per-level `bab` column survives in some class progressions and not others, which is source residue rather than our rule.
+>
+> **So the first term of the attack expression has no source in our data.** The engine takes it as **nullable and omits it** rather than passing zero: a zero would claim the term was computed and found to be nothing.
+
+**⚠ WHAT IS SPECIFIED AND IS NOW BUILT** — `ATTACKS-01 §12.5`, which assembles both expressions because *"no document assembled the expression"*: the **ability modifier** on attack (Strength for melee and lightsaber, Dexterity for ranged) and on damage (**melee adds Strength, ranged adds nothing** — `EQUIPMENT-01 §1`; two-handed 1.5×). **Every term carries its source**, so `PT-1326`'s derivation line writes itself.
+
 **⚠ The aptitude set is the one to get right.** Five sources contribute and they **stack** (`PT-1201`) — a skill can hold aptitude from class *and* species *and* homeworld. The UI names which sources granted it, so the derivation must return the **set of sources**, not a boolean.
 
 **⚠ And it is mutable mid-campaign.** A Skill Focus feat taken at level 8 adds aptitude the character did not have at level 1 (`TRACE-68`). Any cached aptitude set invalidates on feat gain.

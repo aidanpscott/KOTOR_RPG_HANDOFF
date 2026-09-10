@@ -39,19 +39,19 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `77279fa` — `PT-1509`, and `EVENT-KINDS-01 §3d`'s fourth state | ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `882c992` — `PT-1528`, two derived rows with no arithmetic | ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `0035afa` — `PT-1509`, the map is memory | ⚠ no |
+| `Lodestar` | `176d9d8` — `PT-1528`, §12.5 term by term with sources | ⚠ no |
 | `Lens` | `9ca5982` — `PT-1502`, travel re-fits the board | ⚠ no |
-| `Loom` | `fe9c1e4` — level with `Lodestar` | ⚠ no |
-| `KOTOR-RPG-APP` | `7552602` — `PT-1517`/`PT-1519` budgets, `PT-1509` the map | ⚠ no |
+| `Loom` | `8b834cf` — level with `Lodestar` | ⚠ no |
+| `KOTOR-RPG-APP` | `2a03060` — `PT-1528`, the abilities reach the fight | ⚠ no |
 
 **All six clean and level with origin.** ⚠ The app's 10 uncommitted files were
 committed at `BUILD 38` once `PT-1445` decided what was blocking them.
 
 ## Tests, as measured
 
-**`Lodestar` 372 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 305 — 813, all
+**`Lodestar` 378 · `Lens` 5 · `Loom` 131 · `KOTOR-RPG-APP` 309 — 824, all
 green.** ⚠ **All four suites are hermetic**: a full run of every one leaves
 `~/.local/share/kotor-rpg/` untouched, verified by mtime snapshot. `BUILD 38`
 did the app, `BUILD 39` did Loom.
@@ -95,6 +95,22 @@ doctrine the author wrote → quit, reopen, **Continue**, the same character.
 ---
 
 ## ⚠ What is open
+
+### ⚠⚠ TWO DERIVED VALUES HAVE NO ARITHMETIC — `PT-1528`
+
+**`defence`** — `CHARACTER-RECORD-01 §3` names the inputs and **no document
+states the sum**; no class carries a defence column. The only defence sum in
+the corpus is **KOTOR's own**, quoted in three documents to argue a derivation
+should be SHOWN. `defence: 10` stays with the gap named beside it.
+
+**`base attack bonus`** — `§12.5` names it and `rate` is *"how fast you acquire
+ATTACK PICKS"*, a count of chains. Taken as **nullable and omitted**, because a
+zero claims the term was computed.
+
+⚠ **Removing the invented `Term('attack', 2)` changed the game:** a Sith
+Trooper is all tens, so **+0 against defence 10**, and a `Str/Dex 14` soldier
+now wins the fight it used to lose. **Every creature is markedly worse at
+hitting until that term has a source.**
 
 ### ✅ THE FLAKE WAS A PATTERN AND IT IS CLOSED
 

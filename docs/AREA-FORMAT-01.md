@@ -461,7 +461,15 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **⚠ AND IT IS AN OPPOSED PAIR, NOT A DC.** `§4`: **the defender rolls the better of Awareness or Alertness** against the hider's `stealth`. **Two skills that fail differently is worth more than one that is simply better** — without a stealth field sight leads, with one hearing does. Nothing models the field yet; **taking the better of the two is what makes it expressible later without changing this.**
 
-**⚠⚠ AND ONE NUMBER IN THE IMPLEMENTATION IS MINE, AND THE CODE SAYS SO: how a distance is measured across squares.** `§9` gives a square 2 metres and **nothing in the corpus says whether a diagonal counts as one square or more.** Our movement has no diagonals at all, so the runtime counts **the greater of the two axes** — the reading that cannot disagree with a move that does not exist. **A ruling replaces it in one line.**
+**⚠⚠ AND A DISTANCE IS THE GREATER OF THE TWO AXES — `PT-1581`, and it was ALREADY RULED BEFORE THAT.**
+
+**`PLAYTEST-RULINGS-01:238`:** *"**Grid diagonals** — Ruled here: **diagonal costs 1 square**, diagonally touching is adjacent, and diagonal adjacency satisfies both melee reach and flanking."* **One sentence carrying three rulings**, and `PT-4` at line 117 rules flanking geometry consistently with it.
+
+> **⚠⚠ AND THIS PARAGRAPH USED TO ASSERT THE OPPOSITE.** It said *"nothing in the corpus says whether a diagonal counts as one square or more"* and called the number mine. **It does say, and it had said all along.**
+>
+> **That is a scoped negative that searched the wrong shelf** — `design/` and `rules/`, and **not `playtest/`.** The same defect this corpus keeps finding, in a document rather than in code: *a claim about absence is only as wide as the search behind it, and this one did not name its scope.*
+
+**⚠ AND `REACH` AND `COST` ARE ONE FUNCTION ONLY BECAUSE THE COST IS ONE.** `squaresBetween` answers *how far*; a diagonal step costs what any step costs. **Had the cost alternated — d20's 1, 2, 1, 2 — they would have had to be two**, because an alternating cost depends on the path taken and a reach does not.
 
 **⚠ `PT-1550`'s CONTACT IS THE REVEAL remains the floor and is built** — walking into a hidden creature always finds it, whatever the numbers say.
 

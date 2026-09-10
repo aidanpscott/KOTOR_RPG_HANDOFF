@@ -105,7 +105,96 @@ current, are both theirs. **Reported, not edited, and no check was built —
 
 ---
 
-## 5 · What was NOT checked
+## 5 · ⚠ CORRECTED BY `Coder`, AND VERIFIED — NINE, NOT TEN; SIX LIVE
+
+**`Coder` built `scripts/check_ruling_ids.py` and found two errors in `§2`. Both
+stand, re-derived here independently.**
+
+**⚠ `PT-368` was MY false positive**, and it is my own caveat firing the opposite
+way round — I warned a differently-shaped heading would be *missed*, not that a
+loose pattern would *invent* a duplicate:
+
+```
+:11069  ## PT-368a — ⚠ SUPERSEDED by `PT-368` and `PT-369`
+:11075  ## PT-368  — ⚠ The maalraas is NOT lightsaber-resistant
+```
+
+**`PT-(\d+)` with no trailing guard matches `PT-368` inside `PT-368a`.** Two
+distinct ids, one heading each. With `PT-(\d+[a-z]*)\b` the distinct-id count goes
+**1,537 → 1,538** and the duplicates **10 → 9**. **The suffix is part of the id.**
+
+**And three of the nine are already marked**, so the live class is **six**:
+
+| already marked | six genuinely live |
+|---|---|
+| `PT-21` — *"is withdrawn"* · `PT-394` — *"⚠ SUPERSEDED by `PT-401`"* · `PT-426` — *"CLOSED"* | `PT-29` · `PT-30` · `PT-31` · `PT-32` · `PT-484` · `PT-1085` |
+
+**A heading that says it is not current is the record working, not ambiguity.**
+
+### ⚠⚠ AND FOUR OF THE SIX ARE ONE EVENT, NOT FOUR
+
+**There are two sections with the same title:**
+
+```
+:462   # Added after S6      → PT-29 (464) · PT-30 (490) · PT-31 (496) · PT-32 (504)
+:512   # Added after S6      → PT-29 (514) · PT-30 (534) · PT-31 (542) · PT-32 (556)
+```
+
+**The S6 batch was written up twice and both were kept.** ⚠ **And it is not a
+copy-paste** — the second is a *re-drafting*:
+
+| id | first | second |
+|---|---|---|
+| `PT-29` | *Stealth damage is a rider, **not a declaration*** | *Stealth damage is a rider* |
+| `PT-31` | *`Ready` is the ranged answer to an approaching enemy* | *No change to reactions. Use `Ready`.* |
+| `PT-32` | *Staggered dice **for** single-declaration comparisons* | *Staggered dice **offsets** for…* |
+
+> **So the live class is THREE EVENTS, not six pairs: one duplicated section, plus
+> `PT-484` and `PT-1085`.** Fixing the duplicated `# Added after S6` retires four
+> of the six at once. **`Coder`'s check will correctly report six ids; the owner
+> should know it is three decisions.**
+
+---
+
+## 6 · ⚠ HAS IT COST ANYTHING? — `Coder`'s open question, answered
+
+**Searched every `.md`/`.json`/`.toml`/`.py` in `MAIN_WORK` and `HANDOFF` for the
+six ids, excluding the ruling record and the meta-files that discuss the defect.**
+
+**Two substantive citations exist, and neither is currently wrong:**
+
+* **`PT-29` → `CLASS-ATTACKS-01:294`** — *"`Sneak Attack` is a feat rider, not an
+  attack — `PT-29`"*. **Both headings support it.** No exposure.
+* **`PT-484` → `BEASTS-ATTACKS-01`, four times** (lines 148, 355, 880, 900) —
+  *"`gore` and `hoof`, not `bite` and `claw`"*, and two citations applying it to a
+  **biting, clawing** beast and to a **pack** predator.
+
+> **⚠ `PT-484` IS THE NEAR MISS.** The citations rely on the **second** heading —
+> *"NATURAL WEAPONS ARE PER-BEAST, NOT PER-TYPE"*. **The first, unmarked heading
+> is narrower** — *"**Herd Animal** weapons are per-beast"* — **and would not
+> license the bite/claw and pack citations at all.**
+>
+> **A reader landing on line 15447 first gets a rule about herd animals and finds
+> it cited about a predator.** Nothing is wrong today; **the wrong version is the
+> one you reach first.**
+
+### ⚠⚠ And this exact failure has happened here before — to a tool
+
+`HANDOFF/from-library/LIBRARY-12.md:15`:
+
+> *"**The pattern dropped every one- and two-digit ruling id** — `PT-21`, `PT-29`,
+> `PT-30`, `PT-31`, `PT-32`, and the rest. **It did not error. It returned a
+> smaller number that looked like an answer.**"*
+
+**Same file, same ids, same class of defect as my `PT-368` error** — a ruling-id
+pattern that silently mis-matches and yields a plausible count. **Mine invented a
+duplicate; that one dropped forty. Both returned a number that looked like an
+answer.** ⚠ **`check_ruling_ids.py` is now the third instrument to touch this
+file's ids, and the first two both got the pattern wrong.**
+
+---
+
+## 7 · What was NOT checked
 
 * **56,185 lines were not read.** Everything here is keyword and structure.
 * **Only `##`/`###` headings matching `PT-<n>` were counted.** A ruling under a

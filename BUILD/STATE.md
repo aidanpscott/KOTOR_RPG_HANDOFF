@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `2d52d53` — `PT-1646`/`PT-1647` — areaHasNoWayIn, and three sentences repaired |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
 | `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `1721be8` — `PT-1648` — health on the library tile |      ⚠ no |
+| `KOTOR-RPG-APP` | `7d2c63f` — `PT-1654`/`PT-1657` — the race shipped, and a read stops writing |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 392 — 1,133, all
-green.** *(`BUILD 114`.)* *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
+**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 398 — 1,139, all
+green.** *(`BUILD 115`.)* *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
 now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
@@ -121,11 +121,11 @@ condition is the part that failed, not the estimate.
 | **The palette's two gestures** — `BUILD 93` | *"one line"* | *"next time the palette is open"*. `right_pane.dart` has been open since and it did not happen: **nobody was watching for the trigger, including me.** |
 | **The viewport-hygiene sweep** — `BUILD 43` | 23 one-line additions across two repositories | *"its own small slice"*, deferred on `PT-1453`'s lesson that breadth outran testing. **The slice never came.** Partly overtaken — several suites now set `physicalSize` in `setUp` — so the first job is to re-measure how many of the 23 are left. |
 | ~~**A wipe stops nothing** — `BUILD 111`~~ | — | ✓ **CLOSED at `BUILD 112`, `PT-1642`.** K2's panel, read out of `gameover_p.gui`: three buttons, no Continue, no Resume. The keyboard is swallowed while wiped. |
+| **⚠⚠ THREE SAVES SIT AT THE EXACT VALUE NOBODY CAN JUDGE** — `PT-1656`, `BUILD 115` | `CHARACTER-RECORD-01 §3`'s derived-aptitude rule, and it is a larger piece of work | **A live rules gap with real subjects, recorded rather than built.** `§4`'s cap on a skill depends on a DERIVED aptitude, and the derivation does not exist — so `validateRecord` returns *not checked* rather than passing. ⚠ **Three saves on the shelf sit at rank 3, which is exactly the value the missing derivation would adjudicate**, and nobody can say whether they are legal. ⚠ It is not *"a rule that is unenforced"* — it is a rule with **named subjects already in the data**, which is a different and sharper thing. Owner: not mine to build yet. |
 | **⚠⚠ THE TREE'S HEIGHT IS SPENT ON PROSE** — `BUILD 113`, `PT-1647` | one line per fault on its row; the sentence in the report the row already points at | **Named, measured, not built.** Each fault's wrapped explanation costs **35px** at scale 2 in a 280-wide pane, so twelve push the rest of the tree **420px** down — `tester-probe` has fourteen. **The more wrong a package is, the less of it you can see at once.** ⚠ It is a `PT-1575` question — *"an author who cannot see their file cannot fix it"* — and that argument is about the reason being AVAILABLE rather than INLINE. Not mine to reinterpret; the number is here so it can be decided on one. |
 | **⚠⚠ THERE IS NO AUTOSAVE SLOT** — `BUILD 112`, `PT-1642` | a second save file per campaign, and a rule for when it is written | **Not deferred: revealed.** `_append` writes the log IN PLACE, so a wipe overwrites the very save *"Load Last Saved Game"* would open — **the button is offered only when it leads somewhere else, and today that is almost never.** K2's works because K2 writes autosaves the death does not touch. ⚠ The condition is watchable: the button becomes live the day a campaign has a save the run does not write to. |
 | **`AbilityAdjustment` carries three abilities of six** — `BUILD 111`, `PT-1636` | three fields and their reads | Strength, Dexterity and Constitution are what a `Combatant` reads today, so `snivvian`'s **`+2 Wisdom` is parsed and dropped**. Declared-and-read-by-nothing is a named defect here, which is why the other three are absent rather than zero. ⚠ **The condition is watchable**: the first thing that reads Wisdom, Intelligence or Charisma off a combatant. |
-| **`main._append`'s read-modify-write — ⚠⚠ ANSWERED, NOT SHIPPED** — `BUILD 114` | a save-path change AND a harness change: the walker must dismiss a conversation before it walks | ⚠⚠ **THE QUESTION IS ANSWERED: it does not break travel, it FIXES THE SAVE, and `whole_loop_test` cannot survive a correct one.** Shipped: 32 events, 1 `character.moved`, `Continue` resumes at `0,0`. With the fix: 33 events, 2 moves, resumes at `5,4` — **where the character actually was.** So the shipped build loses a move and puts the player back at the front door, which is `PT-1523`'s own defect, LIVE. The test passes only because the lost event drops the player away from the trooper. `PT-1632` is the owner's to lift; it is no longer half-understood. |
-| ~~`main._append`, as originally filed~~ — `BUILD 108`–`110` | unknown until the harness question is answered | Real, proven by `the_crossing_reaches_the_save_test`, and **closed only for the fight-ending pair.** Every future writer inherits it. ⚠ **Blocked on a question, not on effort**: an `AppendQueue` broke travel and so did extending `main._log` before its own `await`, and *"a half-understood change to the save path is not one to ship"* is now a ruling. |
+| ~~**`main._append`'s read-modify-write**~~ | — | ✓ **CLOSED at `BUILD 115`, `PT-1654`.** Shipped, with the guard in `session_log_test` — ⚠ **the first guard did not bite and was replaced**: asserting inside `whole_loop_test` passed with the fix reverted. |
 
 ⚠ **And two that DID fire, kept here as the shape rather than as work:**
 `BUILD 92`'s *"the fenced-example check should go in the gate NOW"* sat

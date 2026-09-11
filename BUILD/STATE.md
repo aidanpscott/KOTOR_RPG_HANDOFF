@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `6de8c19` — `PT-1709`'s corner rule, and what it narrows |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `35d5c1b` — `AUTHORED-CHARACTER-01 §5a` |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `fae2613` — `PT-1709` — a diagonal may not cut a corner |     ⚠ no |
+| `Lodestar` | `6fd064a` — `PT-1713` — a droid may not hold a blade |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `b355cf0` — repin for `PT-1708`/`PT-1709` |        ⚠ no |
-| `KOTOR-RPG-APP` | `78f2493` — `PT-1708` the pool, `PT-1709` the corner |      ⚠ no |
+| `Loom` | `7e22d6b` — `PT-1713` — the Builder hands over the sections |        ⚠ no |
+| `KOTOR-RPG-APP` | `b5eed5e` — `PT-1713` — the runtime gate says why |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 607 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 482 — 1,353, all
-green.** *(`BUILD 134b`.)*
+**`Lodestar` 615 · `Lens` 10 · `Loom` 256 · `KOTOR-RPG-APP` 487 — 1,368, all
+green.** *(`BUILD 135`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

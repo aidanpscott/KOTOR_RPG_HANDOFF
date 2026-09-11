@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `188d5fb` — the combat roster, and two checks repaired |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `18b626c` — sides in a fight, `PT-1678` |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `1e61423` — `PT-1675` — an interruption nobody can afford is said |     ⚠ no |
+| `Lodestar` | `f1bf0de` — `PT-1678` — two ways on one square is a fault |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `36924f8` — repin for `PT-1672`/`PT-1675` |        ⚠ no |
-| `KOTOR-RPG-APP` | `488b8b0` — `PT-1672` — the roster panel |      ⚠ no |
+| `Loom` | `f3ba09d` — `PT-1678` — a square holds one way |        ⚠ no |
+| `KOTOR-RPG-APP` | `509f86e` — `PT-1678` — more than one enemy |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 542 · `Lens` 10 · `Loom` 252 · `KOTOR-RPG-APP` 420 — 1,224, all
-green.** *(`BUILD 123`.)*
+**`Lodestar` 545 · `Lens` 10 · `Loom` 253 · `KOTOR-RPG-APP` 426 — 1,234, all
+green.** *(`BUILD 124`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves
@@ -93,6 +93,7 @@ a fight an author started.
 | Package | What it is |
 |---|---|
 | `base-rules` | ⚠ **Generated, not authored.** 22 TOML files. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. **301 worlds.** |
+| `two-enemies` | ⚠ `PT-1678`'s fixture — three droids, one `hidden`, adjacent. Walk right into the first. Built so multi-enemy could be exercised without editing a bed four suites walk through |
 | `endar-spire` | The two-area test bed, made entirely in Loom. ⚠ `a01`'s aft door carries `save_on_use = true` and `a02`'s way back does not — `PT-1666` needs one of each, and `PT-1667` said a checked door did not exist yet |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 

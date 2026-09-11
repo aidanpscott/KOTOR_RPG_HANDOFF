@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `a42bb29` — `PT-1662` — CHARACTER-RECORD-01 §3's derivation |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
 | `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `7dc3e28` — `PT-1662` — the aptitude set |      ⚠ no |
+| `KOTOR-RPG-APP` | `843fbb0` — `PT-1663` — the door says it saved |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -60,7 +60,7 @@ one above it: the pins have a check and the heads have a habit.**
 ## Tests, as measured
 
 **`Lodestar` 503 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 399 — 1,153, all
-green.** *(`BUILD 118`.)*
+green.** *(`BUILD 119`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

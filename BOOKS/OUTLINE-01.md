@@ -1,5 +1,17 @@
 # OUTLINE-01 — the seven books, chapter by chapter
 
+> **⚠⚠ SUPERSEDED — `OUTLINE-02.md`.** MAIN ruled book identity (`PT-1705`, relayed —
+> not independently read; the copy of `docs/PLAYTEST-RULINGS-01.md` in this repository
+> tops out at `PT-1548` and does not carry it). **Eight books now, five core three
+> supplementary, not seven.** Species returns to the Player's Handbook — **this closes
+> Wall 1 below**, by returning to the single-PHB spine rather than away from it, which
+> was one of this document's own three predicted readings (**§3.1**, second bullet).
+> The Bestiary named at **§3, BOOK THREE** below is cut entirely; nothing it held is
+> lost — redistributed by function across the new Threat Database, Species Compendium,
+> and Advanced Player's Guide. **Retained here in full, unedited below this notice,
+> because it is the record of how Wall 1 and Wall 2 were first found and it is cited
+> by that number from later work.**
+
 **From AUTHOR. First deliverable. ⚠ NO PROSE IS DRAFTED HERE and none will be until this is reviewed.**
 
 **Scope of this document:** a chapter list for each of the seven books, with every chapter

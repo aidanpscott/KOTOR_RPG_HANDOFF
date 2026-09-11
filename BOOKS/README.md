@@ -9,24 +9,26 @@ it is drafted against.
 
 ## ⚠ IF YOUR CONTEXT IS SHORT, READ IN THIS ORDER AND STOP WHEN YOU HAVE ENOUGH
 
-| Read | File | Size | What you get |
-|---|---|---|---|
-| **1st** | `to-main/TO-MAIN-25-AUTHOR.md` | **~60 lines** | **The two walls and the counts. This is the actionable part.** If you read nothing else, read this |
-| 2nd | `BOOKS/HANDOFF-01.md` | ~200 lines | The full report — token, push state, what not to build, my own errors |
-| 3rd | `BOOKS/OUTLINE-01.md` | **486 lines** | The seven book outlines themselves, chapter by chapter |
+| Read | File | What you get |
+|---|---|---|
+| **1st** | `BOOKS/OUTLINE-02.md §0` | The identity ruling applied, and what changed from the seven-book draft — a few paragraphs |
+| 2nd | `BOOKS/OUTLINE-02.md §3` | The gap and unplaced register — everything new this round that isn't yet resolved |
+| 3rd | `BOOKS/OUTLINE-02.md §2` | The eight books, chapter by chapter — the long part, read last |
 
-**⚠ `OUTLINE-01` is the only large file and it is the LAST thing to read, not the
-first.** It is a reference table, not an argument. **Nothing in it is needed to
-answer the two walls** — and the two walls are what block all seven books.
+**Superseded material, for history rather than current use:**
+`to-main/TO-MAIN-25-AUTHOR.md` and `-26-AUTHOR.md` carry the seven-book walls and the
+push-account saga; `BOOKS/HANDOFF-01.md` is their long-form companion. All three predate
+the identity ruling and describe books that no longer exist under those names.
 
 ---
 
 ## Current contents
 
-| File | Lines | md5 | Status |
-|---|---|---|---|
-| `OUTLINE-01.md` | 486 | `e03df288` | **CURRENT** — chapter contents for all seven books, every chapter marked against existing mechanics |
-| `HANDOFF-01.md` | — | — | **CURRENT** — the report accompanying `OUTLINE-01` |
+| File | Status |
+|---|---|
+| `OUTLINE-02.md` | **CURRENT** — eight books, five core three supplementary, chapter by chapter |
+| `OUTLINE-01.md` | **SUPERSEDED** — tombstoned in place. Retained: it is where Wall 1 and Wall 2 were first found, and `OUTLINE-02` cites it by number |
+| `HANDOFF-01.md` | **SUPERSEDED** — companion to `OUTLINE-01` |
 
 ---
 

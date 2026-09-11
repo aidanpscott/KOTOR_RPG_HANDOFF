@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `687dfb4` — `PT-1635`–`PT-1647`, plus the verified type map |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `2d52d53` — `PT-1646`/`PT-1647` — areaHasNoWayIn, and three sentences repaired |     ⚠ no |
+| `Lodestar` | `a42bb29` — `PT-1662` — CHARACTER-RECORD-01 §3's derivation |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
 | `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `708eff8` — `PT-1605`/`PT-1661` — the save thread, closed |      ⚠ no |
+| `KOTOR-RPG-APP` | `7dc3e28` — `PT-1662` — the aptitude set |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 398 — 1,139, all
-green.** *(`BUILD 117`.)*
+**`Lodestar` 503 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 399 — 1,153, all
+green.** *(`BUILD 118`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves
@@ -120,7 +120,10 @@ condition is the part that failed, not the estimate.
 | **The palette's two gestures** — `BUILD 93` | *"one line"* | *"next time the palette is open"*. `right_pane.dart` has been open since and it did not happen: **nobody was watching for the trigger, including me.** |
 | **The viewport-hygiene sweep** — `BUILD 43` | 23 one-line additions across two repositories | *"its own small slice"*, deferred on `PT-1453`'s lesson that breadth outran testing. **The slice never came.** Partly overtaken — several suites now set `physicalSize` in `setUp` — so the first job is to re-measure how many of the 23 are left. |
 | ~~**A wipe stops nothing** — `BUILD 111`~~ | — | ✓ **CLOSED at `BUILD 112`, `PT-1642`.** K2's panel, read out of `gameover_p.gui`: three buttons, no Continue, no Resume. The keyboard is swallowed while wiped. |
-| **⚠⚠ THREE SAVES SIT AT THE EXACT VALUE NOBODY CAN JUDGE** — `PT-1656`, `BUILD 115` | `CHARACTER-RECORD-01 §3`'s derived-aptitude rule, and it is a larger piece of work | **A live rules gap with real subjects, recorded rather than built.** `§4`'s cap on a skill depends on a DERIVED aptitude, and the derivation does not exist — so `validateRecord` returns *not checked* rather than passing. ⚠ **Three saves on the shelf sit at rank 3, which is exactly the value the missing derivation would adjudicate**, and nobody can say whether they are legal. ⚠ It is not *"a rule that is unenforced"* — it is a rule with **named subjects already in the data**, which is a different and sharper thing. Owner: not mine to build yet. |
+| ~~**Three saves at the exact value nobody can judge**~~ — `PT-1656` | — | ✓ **CLOSED at `BUILD 118`, `PT-1662`.** All three legal; every rank a class skill. Whole shelf: **0 illegal · 2 undecidable.** |
+| **⚠⚠ THE RACIAL APTITUDE IS CHOSEN AT CREATION AND RECORDED NOWHERE** — `BUILD 118`, `SKILLS-01 §11.4` | a record field and a chargen step | **One of the five aptitude sources cannot be derived.** The record has `origin.aptitude_skill` for the homeworld and no equivalent for the species, and no chargen step asks. ⚠ The validator answers *unknown* rather than *no*, and the cardinality bounds it — `§11.4` grants ONE, so at most one skill can be excused. ⚠ **Two saves rest on it**: `rell-vantt` and `sero-kade` at `beast handling` rank 4. |
+| **⚠ THE TWENTY-THREE SKILL FOCUS FEATS ARE NOT EXTRACTED** — `BUILD 118` | an extraction | `§11.2` says *"23 exist, one per skill"*; `feats.toml` carries one generic `skill_focus` and `feats_screen` refuses to offer it for that reason. **The lookup is written and empty**, so no character can hold one and nothing is mis-derived. |
+| ~~**Three saves at rank 3**~~ superseded above — `PT-1656`, `BUILD 115` | `CHARACTER-RECORD-01 §3`'s derived-aptitude rule, and it is a larger piece of work | **A live rules gap with real subjects, recorded rather than built.** `§4`'s cap on a skill depends on a DERIVED aptitude, and the derivation does not exist — so `validateRecord` returns *not checked* rather than passing. ⚠ **Three saves on the shelf sit at rank 3, which is exactly the value the missing derivation would adjudicate**, and nobody can say whether they are legal. ⚠ It is not *"a rule that is unenforced"* — it is a rule with **named subjects already in the data**, which is a different and sharper thing. Owner: not mine to build yet. |
 | **⚠⚠ THE TREE'S HEIGHT IS SPENT ON PROSE** — `BUILD 113`, `PT-1647` | one line per fault on its row; the sentence in the report the row already points at | **Named, measured, not built.** Each fault's wrapped explanation costs **35px** at scale 2 in a 280-wide pane, so twelve push the rest of the tree **420px** down — `tester-probe` has fourteen. **The more wrong a package is, the less of it you can see at once.** ⚠ It is a `PT-1575` question — *"an author who cannot see their file cannot fix it"* — and that argument is about the reason being AVAILABLE rather than INLINE. Not mine to reinterpret; the number is here so it can be decided on one. |
 | **⚠⚠ THERE IS NO AUTOSAVE SLOT** — `BUILD 112`, `PT-1642` | a second save file per campaign, and a rule for when it is written | **Not deferred: revealed.** `_append` writes the log IN PLACE, so a wipe overwrites the very save *"Load Last Saved Game"* would open — **the button is offered only when it leads somewhere else, and today that is almost never.** K2's works because K2 writes autosaves the death does not touch. ⚠ The condition is watchable: the button becomes live the day a campaign has a save the run does not write to. |
 | **`AbilityAdjustment` carries three abilities of six** — `BUILD 111`, `PT-1636` | three fields and their reads | Strength, Dexterity and Constitution are what a `Combatant` reads today, so `snivvian`'s **`+2 Wisdom` is parsed and dropped**. Declared-and-read-by-nothing is a named defect here, which is why the other three are absent rather than zero. ⚠ **The condition is watchable**: the first thing that reads Wisdom, Intelligence or Charisma off a combatant. |

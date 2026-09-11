@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `25b1de0` + this slice — `AREA-FORMAT-01 §4b` |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `75f72ac` — `PLAY-STATE-01 §3` remains |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `33c401f` — `PT-1666` — a door decides whether crossing it saves |     ⚠ no |
-| `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `14c8c39` — `PT-1666` — the checkbox is on the doorway |        ⚠ no |
-| `KOTOR-RPG-APP` | `869ae85` — `PT-1666` — the gate is the door's |      ⚠ no |
+| `Lodestar` | `f2b5772` — `PT-1525` — a pile is a projection, never a placement |     ⚠ no |
+| `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
+| `Loom` | `64c4fbc` — repin for `PT-1525` |        ⚠ no |
+| `KOTOR-RPG-APP` | `6cd87aa` — `PT-1525` — the token goes, a pile stays |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 515 · `Lens` 7 · `Loom` 252 · `KOTOR-RPG-APP` 405 — 1,179, all
-green.** *(`BUILD 121`.)*
+**`Lodestar` 527 · `Lens` 10 · `Loom` 252 · `KOTOR-RPG-APP` 409 — 1,198, all
+green.** *(`BUILD 122`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

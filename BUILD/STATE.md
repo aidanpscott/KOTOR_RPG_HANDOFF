@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `cebbc18` — how a creature crosses a room |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `6de8c19` — `PT-1709`'s corner rule, and what it narrows |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `56395f8` — `PT-1637` — a wall is cover, not an off switch |     ⚠ no |
+| `Lodestar` | `fae2613` — `PT-1709` — a diagonal may not cut a corner |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `71b407d` — repin for `PT-1637` |        ⚠ no |
-| `KOTOR-RPG-APP` | `26e1540` — `PT-1645` — the row names the room you are in |      ⚠ no |
+| `Loom` | `b355cf0` — repin for `PT-1708`/`PT-1709` |        ⚠ no |
+| `KOTOR-RPG-APP` | `78f2493` — `PT-1708` the pool, `PT-1709` the corner |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 602 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 474 — 1,340, all
-green.** *(`BUILD 133`.)*
+**`Lodestar` 607 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 482 — 1,353, all
+green.** *(`BUILD 134b`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `2d52d53` — `PT-1646`/`PT-1647` — areaHasNoWayIn, and three sentences repaired |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
 | `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `d548f36` — `PT-1658` — a load must not write |      ⚠ no |
+| `KOTOR-RPG-APP` | `708eff8` — `PT-1605`/`PT-1661` — the save thread, closed |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,10 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 397 — 1,138, all
-green.** *(`BUILD 116` — ⚠ one FEWER than `BUILD 115`, deliberately: three
-vacuous cases deleted, two real ones added.)* *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
-now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
+**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 398 — 1,139, all
+green.** *(`BUILD 117`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves
@@ -144,6 +142,16 @@ guard for the append race had the same shape.
 
 ⚠ **BOTH WERE FOUND THE SAME WAY — by removing the fix and re-running.** That
 is now the habit: **a guard is not a guard until it has been seen to fail.**
+
+⚠⚠ **A THIRD WAS FOUND BY SWEEP AT `BUILD 117`** — `a_wiped_save_opens_the_panel`
+starts an entry that never finishes. **Its conclusions still stand**, checked by
+inverting `partyIsWiped` and watching both its cases fail. Twenty-six files
+assert an absence; the eight most at risk were measured by instrumenting
+`combatantsIn`, and seven complete their entries.
+
+⚠ **AND THE ROOT IS STILL UNDIAGNOSED**: `combatantsIn` → `openCharacter` never
+returns in some widget harnesses and returns fine in others, on the same
+package. It made two tests worthless and nothing detects it.
 
 ## ⚠ What is open
 

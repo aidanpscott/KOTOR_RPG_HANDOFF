@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `fba9ee1` — a wipe ends the fight, `PT-1683` |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `6a4216e` — `[package] faction`, and who joins a fight |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `f1bf0de` — `PT-1678` — two ways on one square is a fault |     ⚠ no |
+| `Lodestar` | `0eab8cc` — `PT-1686`/`PT-1687` — a latecomer's place, and hostility |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `f3ba09d` — `PT-1678` — a square holds one way |        ⚠ no |
-| `KOTOR-RPG-APP` | `4eb7cc3` — `PT-1683` — a wipe ends the fight |      ⚠ no |
+| `Loom` | `e03f816` — repin for `PT-1686`/`PT-1687` |        ⚠ no |
+| `KOTOR-RPG-APP` | `0c91428` — `PT-1686`/`PT-1687` — detection and factions |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 545 · `Lens` 10 · `Loom` 253 · `KOTOR-RPG-APP` 441 — 1,249, all
-green.** *(`BUILD 126`.)*
+**`Lodestar` 555 · `Lens` 10 · `Loom` 253 · `KOTOR-RPG-APP` 447 — 1,265, all
+green.** *(`BUILD 127`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

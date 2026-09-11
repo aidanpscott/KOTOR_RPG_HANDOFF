@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `687dfb4` — `PT-1635`–`PT-1647`, plus the verified type map |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `584063d` — `PT-1636` — a wipe is the party's, and a species reaches a placed creature |     ⚠ no |
+| `Lodestar` | `2d52d53` — `PT-1646`/`PT-1647` — areaHasNoWayIn, and three sentences repaired |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `81f53c1` — `PT-1636` — every kind's page says which kind it is |        ⚠ no |
-| `KOTOR-RPG-APP` | `0b9370b` — `PT-1642` — K2's game-over panel, and Continue shows it |      ⚠ no |
+| `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
+| `KOTOR-RPG-APP` | `e2be241` — `PT-1642` — K2's game-over panel |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 480 · `Lens` 7 · `Loom` 242 · `KOTOR-RPG-APP` 385 — 1,114, all
-green.** *(`BUILD 112`.)* *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
+**`Lodestar` 490 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 385 — 1,126, all
+green.** *(`BUILD 113`.)* *(`BUILD 104`. This line read 846 for sixty-four slices; it is checked
 now — `check_state_fresh.py`, and it caught this table on the very next slice.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
@@ -121,6 +121,7 @@ condition is the part that failed, not the estimate.
 | **The palette's two gestures** — `BUILD 93` | *"one line"* | *"next time the palette is open"*. `right_pane.dart` has been open since and it did not happen: **nobody was watching for the trigger, including me.** |
 | **The viewport-hygiene sweep** — `BUILD 43` | 23 one-line additions across two repositories | *"its own small slice"*, deferred on `PT-1453`'s lesson that breadth outran testing. **The slice never came.** Partly overtaken — several suites now set `physicalSize` in `setUp` — so the first job is to re-measure how many of the 23 are left. |
 | ~~**A wipe stops nothing** — `BUILD 111`~~ | — | ✓ **CLOSED at `BUILD 112`, `PT-1642`.** K2's panel, read out of `gameover_p.gui`: three buttons, no Continue, no Resume. The keyboard is swallowed while wiped. |
+| **⚠⚠ THE TREE'S HEIGHT IS SPENT ON PROSE** — `BUILD 113`, `PT-1647` | one line per fault on its row; the sentence in the report the row already points at | **Named, measured, not built.** Each fault's wrapped explanation costs **35px** at scale 2 in a 280-wide pane, so twelve push the rest of the tree **420px** down — `tester-probe` has fourteen. **The more wrong a package is, the less of it you can see at once.** ⚠ It is a `PT-1575` question — *"an author who cannot see their file cannot fix it"* — and that argument is about the reason being AVAILABLE rather than INLINE. Not mine to reinterpret; the number is here so it can be decided on one. |
 | **⚠⚠ THERE IS NO AUTOSAVE SLOT** — `BUILD 112`, `PT-1642` | a second save file per campaign, and a rule for when it is written | **Not deferred: revealed.** `_append` writes the log IN PLACE, so a wipe overwrites the very save *"Load Last Saved Game"* would open — **the button is offered only when it leads somewhere else, and today that is almost never.** K2's works because K2 writes autosaves the death does not touch. ⚠ The condition is watchable: the button becomes live the day a campaign has a save the run does not write to. |
 | **`AbilityAdjustment` carries three abilities of six** — `BUILD 111`, `PT-1636` | three fields and their reads | Strength, Dexterity and Constitution are what a `Combatant` reads today, so `snivvian`'s **`+2 Wisdom` is parsed and dropped**. Declared-and-read-by-nothing is a named defect here, which is why the other three are absent rather than zero. ⚠ **The condition is watchable**: the first thing that reads Wisdom, Intelligence or Charisma off a combatant. |
 | **`main._append`'s read-modify-write** — `BUILD 108`–`110` | unknown until the harness question is answered | Real, proven by `the_crossing_reaches_the_save_test`, and **closed only for the fight-ending pair.** Every future writer inherits it. ⚠ **Blocked on a question, not on effort**: an `AppendQueue` broke travel and so did extending `main._log` before its own `await`, and *"a half-understood change to the save path is not one to ship"* is now a ruling. |

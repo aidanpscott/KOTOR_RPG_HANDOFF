@@ -80,7 +80,7 @@ that repository. **They are not lost. They are not reachable from here.**
 | **Player's Handbook** | `SKILLS-01`, `SKILL-RESOLUTION-01`, `CLASS-ROSTER-01`, `CLASSES-STANDARD-PHB`, `CLASSES-FORCE-PHB`, `CLASS-TABLES-{BASE,JEDI,DROID,AUTHORED}`, `CLASS-ATTACKS-01`, `MULTICLASS-01`, `FEAT-SCHEDULE-01`, `FEATS-LIBRARY-01`, `ATTACKS-01`/`-04`/`-05`/`-06`/`-07`, `ACTION-ECONOMY-01`, `ALIGNMENT-01-v2`, `DEATH-AND-DIFFICULTY-01`, `PARTITION-01`, `FORCE-POOL-01-v3`, `POWER-COSTS-01`, `FORCE-POWERS-01`, `FORCE-TRAINING-01`, `FORCE-AWAKENING-01`, `FORMS-01`, `PREGENS-01`, `CHARACTER-RECORD-01` | **DRAFTABLE** |
 | **Species Compendium** | `SPECIES-CHAPTER-v2`, `DROID-MODELS-01`, `DROID-SKILLS-01`, `UPBRINGING-01`, `PROFESSIONS-01`, `PROGRAMMINGS-01`, `STARTING-EQUIPMENT-01` | **MOSTLY** — nine `SPECIES-*` supporting documents absent |
 | **Armory** | `EQUIPMENT-01`, `ITEMS-01`–`09`, `STARTING-EQUIPMENT-01` | **PARTLY** — ten supporting documents absent |
-| **Field Guide to Beasts and Machines** | `DROID-MODELS-01`, `DROID-SKILLS-01` only | **⚠ BLOCKED on the beasts half** |
+| **Bestiary** | `DROID-MODELS-01`, `DROID-SKILLS-01` only | **⚠ BLOCKED on the beasts half** |
 | **Gamemaster's Holocron** | `DEATH-AND-DIFFICULTY-01`, `SKILL-RESOLUTION-01`, `ALIGNMENT-01-v2`, `SCENARIOS-01`, `PREGENS-01`, `D-CURRENCY-01` | **PARTLY** |
 | **Galactic Timeline** | **none** | **⚠ BLOCKED** |
 | **Planetary Atlas** | `WORLDS-REGISTER-01` (admission and permission rules — **not world entries**), `ATLAS-SEED-v3`, `to-atlas/`, `to-main/findings/` (4 of 16) | **⚠ BLOCKED on world entries** |
@@ -230,7 +230,11 @@ is Book Three, and the separation is the brief's, not mine.**
 
 ---
 
-## BOOK THREE — FIELD GUIDE TO BEASTS AND MACHINES
+## BOOK THREE — BESTIARY
+
+**⚠ NAMED. MAIN ruled this title over the brief's "Field Guide to Beasts and Machines" —
+the collision named in this outline's first draft. Retired here; use `Bestiary` in every
+future reference to this book.**
 
 **What a GM reads to run an encounter. ⚠ The droid half is draftable. The beast half is not
 reachable from here.**

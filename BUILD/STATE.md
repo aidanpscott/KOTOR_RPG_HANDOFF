@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `edf39c4` — `§5a` reaches a player character |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `9f7b3d1` — `§5b`, the stock weapon must exist |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `6fd064a` — `PT-1713` — a droid may not hold a blade |     ⚠ no |
+| `Lodestar` | `1251878` — `PT-1730` — the stock weapon must exist |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `7e22d6b` — `PT-1713` — the Builder hands over the sections |        ⚠ no |
-| `KOTOR-RPG-APP` | `a32f8d9` — `PT-1715` — no blade for a droid, either door |      ⚠ no |
+| `Loom` | `dd0c26c` — `PT-1730` — the Builder computes the paths |        ⚠ no |
+| `KOTOR-RPG-APP` | `03f7500` — `PT-1719` — the name becomes a prompt |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 615 · `Lens` 10 · `Loom` 256 · `KOTOR-RPG-APP` 492 — 1,373, all
-green.** *(`BUILD 136`.)*
+**`Lodestar` 619 · `Lens` 10 · `Loom` 258 · `KOTOR-RPG-APP` 493 — 1,380, all
+green.** *(`BUILD 137`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

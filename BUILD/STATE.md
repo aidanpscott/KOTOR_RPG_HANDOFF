@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `5843f70` — two sections that were right and unread |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `dfef447` — `§10`, and what cannot fire yet |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `ce48793` — `PT-1675` — the pool is the ability allowance |     ⚠ no |
+| `Lodestar` | `ad699f5` — `leavesReach`, `Disengage`, `reactionsMax` |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `5c77037` — repin for `PT-1699`/`PT-1675` |        ⚠ no |
-| `KOTOR-RPG-APP` | `40ba86b` — `PT-1675` — Interrupt becomes reachable |      ⚠ no |
+| `Loom` | `cefa5e2` — repin for `§10` |        ⚠ no |
+| `KOTOR-RPG-APP` | `4c47de1` — `§10` — leaving a reach is struck at |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 579 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 456 — 1,299, all
-green.** *(`BUILD 131`.)*
+**`Lodestar` 595 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 473 — 1,332, all
+green.** *(`BUILD 132`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

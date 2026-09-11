@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `687dfb4` — `PT-1635`–`PT-1647`, plus the verified type map |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `25b1de0` + this slice — `AREA-FORMAT-01 §4b` |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `ba70db5` — `PT-1664` — a third link list, priced in reactions |     ⚠ no |
+| `Lodestar` | `33c401f` — `PT-1666` — a door decides whether crossing it saves |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
-| `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `7ad041e` — `PT-1664` — interrupt |      ⚠ no |
+| `Loom` | `14c8c39` — `PT-1666` — the checkbox is on the doorway |        ⚠ no |
+| `KOTOR-RPG-APP` | `869ae85` — `PT-1666` — the gate is the door's |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 511 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 404 — 1,166, all
-green.** *(`BUILD 120`.)*
+**`Lodestar` 515 · `Lens` 7 · `Loom` 252 · `KOTOR-RPG-APP` 405 — 1,179, all
+green.** *(`BUILD 121`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves
@@ -93,7 +93,7 @@ a fight an author started.
 | Package | What it is |
 |---|---|
 | `base-rules` | ⚠ **Generated, not authored.** 22 TOML files. `PACKAGE-FORMAT-01 §3c`. Rebuild with `scripts/gen_base_rules.py` in MAIN_WORK. **301 worlds.** |
-| `endar-spire` | The two-area test bed, made entirely in Loom |
+| `endar-spire` | The two-area test bed, made entirely in Loom. ⚠ `a01`'s aft door carries `save_on_use = true` and `a02`'s way back does not — `PT-1666` needs one of each, and `PT-1667` said a checked door did not exist yet |
 | `taris-undercity` | A second package, so the library holds more than one tile |
 
 ## What runs end to end

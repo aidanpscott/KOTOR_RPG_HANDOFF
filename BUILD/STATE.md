@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `16b2fff` — sight has three callers, `PT-1694` |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `a41cac7` — `POWER-COSTS-01 §5a`, `DIALOGUE-FORMAT-01 §0a` |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `01f9ec9` — `canSee`, and `range` stops being hidden-only |     ⚠ no |
+| `Lodestar` | `f5f6f9e` — `PT-1697` powers, and the nine-reply ceiling |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `63856f7` — the range control comes out from behind `hidden` |        ⚠ no |
-| `KOTOR-RPG-APP` | `cebb08e` — `PT-1694`/`PT-1692` — a shot needs a line |      ⚠ no |
+| `Loom` | `7fc069f` — repin for `PT-1697` |        ⚠ no |
+| `KOTOR-RPG-APP` | `4a710cb` — `PT-1697` — the powers number is the rule |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 566 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 455 — 1,285, all
-green.** *(`BUILD 129`.)*
+**`Lodestar` 573 · `Lens` 10 · `Loom` 254 · `KOTOR-RPG-APP` 455 — 1,292, all
+green.** *(`BUILD 130`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

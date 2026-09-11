@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `687dfb4` — `PT-1635`–`PT-1647`, plus the verified type map |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `a42bb29` — `PT-1662` — CHARACTER-RECORD-01 §3's derivation |     ⚠ no |
+| `Lodestar` | `ba70db5` — `PT-1664` — a third link list, priced in reactions |     ⚠ no |
 | `Lens` | `5534554` — `movedTo`, a token drawn where it stands |  ⚠ no |
 | `Loom` | `e5da70e` — `PT-1647` — the identity is a second field |        ⚠ no |
-| `KOTOR-RPG-APP` | `843fbb0` — `PT-1663` — the door says it saved |      ⚠ no |
+| `KOTOR-RPG-APP` | `7ad041e` — `PT-1664` — interrupt |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 503 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 399 — 1,153, all
-green.** *(`BUILD 119`.)*
+**`Lodestar` 511 · `Lens` 7 · `Loom` 244 · `KOTOR-RPG-APP` 404 — 1,166, all
+green.** *(`BUILD 120`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

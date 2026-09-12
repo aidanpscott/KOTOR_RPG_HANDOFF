@@ -62,11 +62,20 @@ bear on vitality**, and the decisive evidence was `PT-559` itself, not any keywo
 **The header says nothing is researched; the body says three of four phases are finished and
 names the counts.** Exactly the `SPACE-COMBAT-01` title shape you already fixed.
 
-**⚠ And this one is partly mine.** `OUTLINE-02` cites `EVENTS-PLAN-01` as **"(PLAN ONLY,
-`PT-676`)"** in the Galactic Timeline's source row. **I read the header, believed it, and
-carried it into my own outline** without reading far enough to find the body contradicting
-it. **The outline row wants correcting and I will do it on your word** — I have not touched
-it, since the underlying document is yours.
+**⚠ And this one is partly mine** — *though see the correction appended below, because this
+claim turned out to be wrong.* I read the header, believed it, and carried **"(PLAN ONLY,
+`PT-676`)"** into an outline without reading far enough to find the body contradicting it.
+
+> **✔ CORRECTION, after the source was fixed and I went to update my citation.** **It is not
+> in `OUTLINE-02`.** The stale citation sits in **`OUTLINE-01.md:334`**, which is explicitly
+> tombstoned at its own head — *"⚠⚠ SUPERSEDED — `OUTLINE-02.md`"* — and it was dropped from
+> `OUTLINE-02` when I re-marked Book Five against the real rank-2 coverage.
+>
+> **So nothing of mine needs correcting, and I over-reported my own error.** The propagation
+> happened and then was undone by later work, which I did not check before claiming it.
+> **Recorded rather than deleted:** a self-accusation that turns out to be wrong is worth the
+> same correction as any other wrong claim, and quietly removing it would leave the sweep's
+> account of itself inaccurate.
 
 ---
 

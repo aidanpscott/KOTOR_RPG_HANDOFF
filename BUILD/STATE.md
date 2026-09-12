@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `d0f0369` — the shelf-vs-extract gate check, and its first live catch |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `1407db2` — `§4a` as options, and it was never unextracted |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `30954f0` — `PT-1772` — a droid may not take a taken name |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `c48e909` — the Builder hands over the ban list |        ⚠ no |
-| `KOTOR-RPG-APP` | `7497018` — pinned to `PT-1772`'s engine |      ⚠ no |
+| `KOTOR-RPG-APP` | `db5b647` — the inventory gains `§4a`'s upgrades |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -60,7 +60,11 @@ one above it: the pins have a check and the heads have a habit.**
 ## Tests, as measured
 
 **`Lodestar` 668 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 533 — 1,474, all
-green.** *(`BUILD 149`.)*
+green.** *(`BUILD 150`.)*
+
+⚠ **`weapon_upgrades.toml` SHIPPED AT `BUILD 150`** — `§4a` as 21 structured
+rows rather than prose. **Nothing reads it yet**: the second offer on the
+Equipment screen is the other half and is not built.
 
 ⚠⚠ **THE GATE NOW COMPARES THE INSTALLED SHELF AGAINST THE EXTRACTS** —
 `check_shelf.py`, `PT-1772`, blocking. Three states, one check per boundary:

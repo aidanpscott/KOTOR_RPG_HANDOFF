@@ -149,7 +149,7 @@ moved to Armory. **Not a `GAP` here; it is correctly homed elsewhere.**
 | — | Choosing a homeworld | **`RULED`** | `WORLDS-REGISTER-01 §7`. Origin vs. homeworld — `SKILLS-01 §10` |
 | — | The entries | **⚠ `NOT HELD` — and the count needs a correction** | See §4 below. Not resolving the count; citing what the corpus itself already disputes about it |
 | — | Sith space / Ord worlds / Twenty Wonders | **`NOT HELD` (partial)** | `to-main/findings/F-SITH-ROADS`, `F-ORD-CRUSADE`, `F-WONDERS` held; the rest of each thread is not |
-| — | Currency and trade | **`RULED`** | `D-URKUPP-01`; `D-CURRENCY-01` — AMENDED |
+| — | Currency and trade | **⚠ `GAP` — both original citations were wrong** | Checked while drafting Armory's Chapter Eleven: `D-CURRENCY-01` is a corpus-governance ruling for which Atlas world-record source is authoritative, not a currency ruling; `D-URKUPP-01` is a species-eligibility reconciliation (the Dashade homeworld question), also unrelated. Neither says anything about currency or trade. **No confirmed source for this row's actual subject** — credits-as-currency itself is `STARTING-EQUIPMENT-01`'s territory, already placed in Book One/Two, but *trade between worlds* specifically has no citation I can find |
 
 **Kept from `OUTLINE-01`: the `F-STEREOTYPE` caution.** *"The menus default to the
 tier's cliché whenever the world is thin"* — measured across 292 menus, and this book's
@@ -232,7 +232,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | Worn gear | **`DRAFTED`** | `ITEMS-05` — 241 items, five categories, two mixing authored content with extracted. **Text at `BOOKS/armory/08-worn-gear.md`** |
 | — | Usable items | **`DRAFTED`** | `ITEMS-06` — 58 items. Medpac healing values are `PT-1`'s deliberate replacement of the source game's own WIS/skill-scaled mechanic. **Text at `BOOKS/armory/09-usable-items.md`** |
 | — | Quest and miscellaneous items | **`DRAFTED`** | `ITEMS-07` + `ITEMS-08`. Two authored categories, one (`boots`) inventing an equipment slot KOTOR never had (`PT-690`). **Text at `BOOKS/armory/10-quest-and-miscellaneous-items.md`** |
-| — | Tiers, pricing, availability | **`RULED`** | `PT-308`/`327`/`384`. Currency `D-CURRENCY-01` |
+| — | Tiers, pricing, availability | **`DRAFTED`** | `PT-308` (loot tiers — agreed in concept, character-vs-area gate undecided), `PT-327` (unique items), `PT-384` (feat remap). Currency is `STARTING-EQUIPMENT-01`, not `D-CURRENCY-01` — see note. **Text at `BOOKS/armory/11-tiers-pricing-and-availability.md`** |
 | — | The weapon matrix / crafting | **`RULED · NOT HELD`** | `WEAPON-MATRIX-01`; `CRAFTING-01` |
 | — | Loot | **`RULED · NOT HELD` — see Book Two's UNPLACED list** | `LOOT-01` |
 | — | Starships / space combat | **`RULED · NOT HELD`** | `STARSHIPS-01` — 21 hulls; `SPACE-COMBAT-01`, derives from `MOUNTED-COMBAT-01` |

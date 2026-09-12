@@ -1,16 +1,17 @@
 # Chapter Fourteen — Droid Construction and Upgrade
 
-**Status: DRAFT, for review.** Third of the Armory's four remaining chapters.
+**Chapter Seven covers 135 droid items. Chapter Twelve found five entries on the crafting
+bench that were not recipes at all** — a processor, a chassis, a control cluster, a
+vocabulator and a protocol pacifist package — and said they belonged here.
 
----
+**Four of the five are where they belong.** A droid is the one thing in this book you can
+build from nothing, and the one thing that can be upgraded past the ceiling every other
+character sits under.
 
-**Chapter Seven catalogued 135 droid items. Chapter Twelve found five entries on the
-crafting bench that were not recipes at all** — a processor, a chassis, a control cluster,
-a vocabulator — and said they belonged here.
-
-**This is where they belong.** A droid is the one thing in this book you can build from
-nothing, and the one thing that can be upgraded past the ceiling every other character sits
-under.
+**⚠ The fifth has no rule, and this chapter would rather say so than invent one.**
+`hkpart05`, the **HK Protocol Pacifist Package**, belongs to KOTOR 2's rebuild of one
+particular droid rather than to droid construction in general. **It has no cost, no tier and
+no place in a build here.**
 
 ---
 
@@ -33,7 +34,7 @@ deliberate departure from the model.
 ## The four parts, and they were in the files all along
 
 **The parts are not invented.** KOTOR 2 has its own droid-parts quest, and it carries them
-with prices attached (`PT-612`):
+with prices attached:
 
 | Part | File | What it is |
 |---|---|---|
@@ -44,14 +45,14 @@ with prices attached (`PT-612`):
 
 **Three are universal. One decides the chassis.**
 
-**And the Vocabulator quietly closes two rulings made from lore**: a droid's voice module
-reads masculine, feminine or neither (`PT-594`) — **this is that component, and it is a part
-you buy.** And the `LB-series`, *"a fifth-class drone, no speech center"* (`PT-598`), **is
-simply a droid built without one.**
+**And the Vocabulator quietly settles two things the setting had already established.** A
+droid has no sex, but its voice module can read masculine, feminine or neither — **this is
+that component, and it is a part you buy.** And the `LB-series`, described as *"a
+fifth-class drone, no speech center"*, **is simply a droid built without one.**
 
-**⚠ There is no Power Cell.** An earlier draft borrowed one from the lightsaber quest;
-**the droid quest has no power component and the project declined to invent one**
-(`PT-612`).
+**⚠ There is no Power Cell.** The lightsaber quest has an energy cell and it is an easy
+assumption that a droid needs one too. **The droid quest has no power component, and this
+game did not invent one to match it.**
 
 ## The chassis is the price. Everything else is nearly flat
 
@@ -76,7 +77,7 @@ roster.**
 
 ## Brain first, body second
 
-**The source gives the build order, and the project's first draft had it backwards:**
+**The setting gives the build order, and it is the reverse of the obvious one:**
 
 > *"When a droid was built properly, it was usually **the processors that were the starting
 > point**, followed by the physical structure."*
@@ -95,8 +96,10 @@ roster.**
 
 ## The parts ladder
 
-**Parts scale by chassis tier** (`PT-608`), and the three-tier shape is the corpus's own —
-droid plating already sorts Light, Medium and Heavy with three types each.
+**Parts scale by chassis tier**, and the three-tier shape is the game's own rather than
+something imposed on it — **KOTOR's droid plating already sorts into Light, Medium and Heavy
+with three types each**: `g_i_drdltplat001`–`003`, `g_i_drdmdplat001`–`003`,
+`g_i_drdhvplat001`–`003`.
 
 | Part | Light | Medium | Heavy |
 |---|---|---|---|
@@ -113,10 +116,10 @@ droid plating already sorts Light, Medium and Heavy with three types each.
 **The Droid Processor is the dearest of the three at every tier** — it is the part that
 makes a droid a character rather than a machine.
 
-**An earlier flat 2,800 broke the low end**: against model prices running 350 to 4,200, it
-made building a `Marksman-H` **nine times** the cost of buying one. **Tiered, a Marksman-H
-costs 900 to build against 350 to buy** — still a bad deal, which is right for a
-mass-produced throwaway, **but a bad deal rather than an absurd one.**
+**A flat 2,800 at every tier would break the low end.** Against model prices running 350 to
+4,200, it would make building a `Marksman-H` **nine times** the cost of buying one.
+**Tiered, a Marksman-H costs 900 to build against 350 to buy** — still a bad deal, which is
+right for a mass-produced throwaway, **but a bad deal rather than an absurd one.**
 
 ## Build or buy
 
@@ -153,8 +156,9 @@ expensive one.** Nobody builds a protocol droid; everybody builds an assassin dr
 **for someone else**, and the only one whose `Repair` and `Scavenging` reduce the parts
 bill.
 
-**⚠ `Droid Master` is a prestige class** and lives in the Advanced Player's Guide, not the
-Player's Handbook — see Flag 4.
+**⚠ `Droid Master` is a prestige class**, and prestige classes live in the Advanced
+Player's Guide rather than the Player's Handbook. **A reader working from the Player's
+Handbook alone will not find it there.**
 
 ## Assembly
 
@@ -210,8 +214,10 @@ of somebody else's parts.
     the same Repair check, at the same DC
     one day, regardless of chassis
 
-**So a destroyed Assassin droid costs its parts bill to rebuild — not the 6,900 a fresh
-build costs.** The expensive part of a droid is its body, and the body is what is left.
+**So a rebuild costs the tier's parts bill and nothing more** — **700 light, 1,400 medium,
+2,800 heavy.** A destroyed Assassin droid costs **2,800** against the 6,900 a fresh build
+costs; a destroyed Remote costs **700**. The expensive part of a droid is its body, and the
+body is what is left.
 
 **⚠ But every installed upgrade is lost.** Bay installations are permanent **and consumed**
 — they do not come out of a wreck. **Socket items are gear and are recovered.**
@@ -219,14 +225,14 @@ build costs.** The expensive part of a droid is its body, and the body is what i
 > **That is the real cost of losing a droid, and it is not the credits.** A nine-bay droid
 > at tier-3 socket prices has more value installed than the chassis ever cost.
 
-**A droid PC rebuilds on all three difficulty modes** (`PT-953`); **on `Hard` the bays come
-back empty.**
+**A droid PC rebuilds on all three difficulty modes**; **on `Hard` the bays come back
+empty.**
 
 ---
 
 # Part Two — Sockets and Bays
 
-**Two systems, not one**, and the owner's ruling is the clearest statement of why:
+**Two systems, not one**, and the reason is worth stating before any of the detail:
 
 > *"What we're designing is not a replacement for the stuff that's already there. They're
 > different entirely."*
@@ -236,7 +242,7 @@ back empty.**
 
 ## Sockets — ported
 
-**The source has six slots, not four** (`PT-274`, corrected at `PT-316`):
+**The source has six slots, not four:**
 
 | Socket | What it grants |
 |---|---|
@@ -295,11 +301,9 @@ four levels early — and that is **earliness rather than a higher ceiling.**
     Assassin · Battle · Labor · Probe · Protocol    up to Droid Upgrade 3
     ASTROMECH · REMOTE                              STOP AT Droid Upgrade 2
 
-> **A light chassis caps at six bays, permanently.**
+> **Those two chassis cap at six bays, permanently.**
 
-**A diagnostic computer and a floating sensor do not accept nine hardpoints** — and the
-roster already carried the same fact in three other places, so this reuses an existing gate
-rather than inventing a second one.
+**A diagnostic computer and a floating sensor do not accept nine hardpoints.**
 
 **It also closes a prestige class without a special rule:** `Juggernaut` requires
 `Droid Upgrade 3`, so **an Astromech or Remote can never hold it.**
@@ -352,56 +356,20 @@ rules.
 
 ---
 
-*Sources: `DROID-CONSTRUCTION-01` (`PT-572`, `PT-607`–`PT-613`, `PT-225`, `PT-558`,
-`PT-594`, `PT-598`, `PT-599`, `PT-609`, `PT-953`) and `DROIDS-UPGRADE-01` (`PT-274`,
-`PT-316`, `PT-323`, `PT-577`, `PT-616`, `PT-654`). `CLASS-ROSTER-01` for the prestige-class
-check. `DEATH-AND-DIFFICULTY-01 §5b` for rebuild by difficulty mode.*
+## Sources for this chapter
 
-## Open items, carried from review
+**The four parts are KOTOR 2's own.** `hkpart01` through `hkpart04` are real items in the
+game's files, carrying real prices, and this chapter takes its parts list from them rather
+than inventing one.
 
-**⚠⚠ Flag 1 — this chapter contradicts Chapter Twelve, and Chapter Twelve has the weaker
-source.** `CRAFTING-01` states the `Machinist` *"is the **only class** that can build a
-droid — `PT-225`"*, and **Chapter Twelve repeats that.** `DROID-CONSTRUCTION-01 §4` says
-otherwise: **Machinist, Droid Master and Engineer may all build**, and explains the
-relationship — *"`PT-225` is explicit that construction belongs to the Machinist, and
-`PT-572` does not take it away — it **extends** it to the two classes whose premise is
-droids."*
+**The build order, the junk droid and the `LB-series` come from the setting**, quoted
+directly where they are quoted.
 
-**`PT-572` is the later and more specific ruling, and it is the one this chapter follows.**
-`CRAFTING-01`'s sentence was true when written and was not updated when `PT-572` extended
-it — **`PT-961`'s shape again.**
+**Everything else is this game's addition**, and the chapter says so where it matters: the
+tiered parts ladder, the build-or-buy economics, the `Repair` DCs and build times, the junk
+droid's two penalties, and the whole of Part Two's bay system. **Sockets are ported from
+KOTOR 2. Bays are not** — and the chapter keeps the line between them visible throughout,
+because it is the line between gear and permanence.
 
-**✔ Fixed.** Chapter Twelve now reads that the Machinist is **the only class that can build
-a droid *for someone else***, and states that `PT-572` extended building itself to
-`Droid Master` and `Engineer`. **Both citations were verified against `PT-225`'s own
-heading and `DROID-CONSTRUCTION-01`'s reconciling text before the edit.**
-
-**⚠ Flag 2 — `DROID-CONSTRUCTION-01 §6` uses part names that `PT-612` retired.** The
-rebuild section reads *"the **Motivator**, **Processor Core** and **Power Cell** are
-destroyed"*. But `PT-612` **renamed `Motivator` to `Control Cluster`**, uses **`Droid
-Processor`** rather than *Processor Core*, and **withdrew `Power Cell` entirely** — *"the
-droid quest has no power component and we should not invent one."*
-
-**So §6 lists a part that no longer exists.** This chapter states the three current parts
-instead. **Reported, not fixed.**
-
-**⚠ Flag 3 — and the same section carries a figure from the superseded flat-cost model.**
-§6 gives the rebuild cost as **2,800 credits** and *"one day, regardless of chassis"*. But
-`PT-608` replaced the flat 2,800 with the tiered ladder — **700 / 1,400 / 2,800.** 2,800 is
-now the **heavy-tier** figure only; **rebuilding a Remote should cost 700, not 2,800.**
-This chapter states it as *"its parts bill"* rather than repeating the stale number.
-**Same edit-lag as Flag 2 and probably the same moment.**
-
-**⚠ Flag 4 — the Armory references a class the Player's Handbook does not contain.**
-`Droid Master` appears in this chapter's build permissions and in the bay-grant ladder, and
-`CLASS-ROSTER-01` lists it among the **prestige** classes. **`PT-1705` moved prestige
-classes to the Advanced Player's Guide**, so a reader of the Armory and the PHB together
-will not find it. **Not an error — a cross-book reference that wants a pointer** when Book
-Eight exists.
-
-**⚠ Flag 5 — `DROIDS-UPGRADE-01` documents its own staleness and leaves it.** Its closing
-paragraph reads: *"`LOOT-01` answered this in the same words as the worry — 'a party with no
-droid gets nothing' — **and this paragraph never moved.**"* The document knows the text is
-superseded, says so, and keeps it. **Harmless here because the two agree**, but it is the
-third instance in two chapters of a rules document carrying a retracted or superseded
-passage alongside its replacement.
+**The model prices, plating tiers and socket-item counts** all come from this book's own
+catalogue chapters.

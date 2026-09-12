@@ -1015,3 +1015,129 @@ exactly.
 **⚠ Deliberately NOT loosened.** Every threshold, tier boundary, DC band, formula and count
 survives — including `area tier = min( max(encounter, container), world danger + 1 )`, the
 180-of-288 constraint, the 47 named sites, and both unique-item halves.
+
+---
+
+# Chapter Fourteen — Droid Construction and Upgrade
+
+*Original source line, as it stood before the `PT-1844` pass:*
+
+> *Sources: `DROID-CONSTRUCTION-01` (`PT-572`, `PT-607`–`PT-613`, `PT-225`, `PT-558`,
+> `PT-594`, `PT-598`, `PT-599`, `PT-609`, `PT-953`) and `DROIDS-UPGRADE-01` (`PT-274`,
+> `PT-316`, `PT-323`, `PT-577`, `PT-616`, `PT-654`). `CLASS-ROSTER-01` for the
+> prestige-class check. `DEATH-AND-DIFFICULTY-01 §5b` for rebuild by difficulty mode.*
+
+## Flags, carried from review
+
+**⚠⚠ Flag 1 — this chapter contradicts Chapter Twelve, and Chapter Twelve has the weaker
+source.** `CRAFTING-01` states the `Machinist` *"is the **only class** that can build a
+droid — `PT-225`"*, and **Chapter Twelve repeats that.** `DROID-CONSTRUCTION-01 §4` says
+otherwise: **Machinist, Droid Master and Engineer may all build**, and explains the
+relationship — *"`PT-225` is explicit that construction belongs to the Machinist, and
+`PT-572` does not take it away — it **extends** it to the two classes whose premise is
+droids."*
+
+**`PT-572` is the later and more specific ruling, and it is the one this chapter follows.**
+`CRAFTING-01`'s sentence was true when written and was not updated when `PT-572` extended
+it — **`PT-961`'s shape again.**
+
+**✔ Fixed.** Chapter Twelve now reads that the Machinist is **the only class that can build
+a droid *for someone else***, and states that `PT-572` extended building itself to
+`Droid Master` and `Engineer`. **Both citations were verified against `PT-225`'s own
+heading and `DROID-CONSTRUCTION-01`'s reconciling text before the edit.**
+
+**⚠ Flag 2 — `DROID-CONSTRUCTION-01 §6` uses part names that `PT-612` retired.** The
+rebuild section reads *"the **Motivator**, **Processor Core** and **Power Cell** are
+destroyed"*. But `PT-612` **renamed `Motivator` to `Control Cluster`**, uses **`Droid
+Processor`** rather than *Processor Core*, and **withdrew `Power Cell` entirely** — *"the
+droid quest has no power component and we should not invent one."*
+
+**So §6 lists a part that no longer exists.** This chapter states the three current parts
+instead. **Reported, not fixed.**
+
+**⚠ Flag 3 — and the same section carries a figure from the superseded flat-cost model.**
+§6 gives the rebuild cost as **2,800 credits** and *"one day, regardless of chassis"*. But
+`PT-608` replaced the flat 2,800 with the tiered ladder — **700 / 1,400 / 2,800.** 2,800 is
+now the **heavy-tier** figure only; **rebuilding a Remote should cost 700, not 2,800.**
+This chapter states it as *"its parts bill"* rather than repeating the stale number.
+**Same edit-lag as Flag 2 and probably the same moment.**
+
+**⚠ Flag 4 — the Armory references a class the Player's Handbook does not contain.**
+`Droid Master` appears in this chapter's build permissions and in the bay-grant ladder, and
+`CLASS-ROSTER-01` lists it among the **prestige** classes. **`PT-1705` moved prestige
+classes to the Advanced Player's Guide**, so a reader of the Armory and the PHB together
+will not find it. **Not an error — a cross-book reference that wants a pointer** when Book
+Eight exists.
+
+**⚠ Flag 5 — `DROIDS-UPGRADE-01` documents its own staleness and leaves it.** Its closing
+paragraph reads: *"`LOOT-01` answered this in the same words as the worry — 'a party with no
+droid gets nothing' — **and this paragraph never moved.**"* The document knows the text is
+superseded, says so, and keeps it. **Harmless here because the two agree**, but it is the
+third instance in two chapters of a rules document carrying a retracted or superseded
+passage alongside its replacement.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 13 internal citations from 407 lines**, plus the `Status: DRAFT, for review`
+header and its *"third of the Armory's four remaining chapters"* build-state claim, which
+told a reader nothing and would have been wrong within the week.
+
+**⚠ Flag 3's reader-facing half was promoted, and it is the change that matters most.** The
+rebuild section said a destroyed droid *"costs its parts bill"* — true, and useless at a
+table, because a Gamemaster mid-session needs a number. **The chapter now states all three:
+700 light, 1,400 medium, 2,800 heavy**, with the two worked cases the flag itself supplied —
+**an Assassin rebuilds for 2,800 against 6,900 to build fresh; a Remote rebuilds for 700.**
+
+**That was the flag's whole point.** The stale figure in `DROID-CONSTRUCTION-01 §6` is a flat
+2,800 for every chassis, which over-charges a Remote fourfold. **Stating the ladder in the
+chapter closes the reader's exposure to it regardless of when the rules document is fixed.**
+The project-facing half — that §6 is still stale — stayed here.
+
+**⚠ Flag 4's reader-facing half was promoted too.** `Droid Master` is used twice in this
+chapter and does not appear in the Player's Handbook. The chapter said *"see Flag 4"* — a
+pointer to a note that has now moved out of the book entirely. **It now says plainly that
+prestige classes live in the Advanced Player's Guide and that a reader with only the
+Player's Handbook will not find the class there.** The project-facing half — that this wants
+a real cross-book pointer once Book Eight exists — stayed here.
+
+**⚠⚠ A real content find, reported rather than papered over: the fifth crafting-bench
+entry.** Chapter Twelve identifies **five** entries that are not recipes, `hkpart01` through
+`hkpart05`, and says all five belong in Chapter Fourteen. **This chapter built from four.**
+The opening paragraph named four and called them five.
+
+**`hkpart05` — the HK Protocol Pacifist Package — has no ruling anywhere in the corpus.** A
+search of the rules documents and the ledger returns nothing but Chapter Twelve's own
+listing. **So there is no crunch to borrow and none was invented.** The chapter now names the
+part, says it belongs to KOTOR 2's rebuild of one particular droid rather than to general
+construction, and states plainly that it has no cost, no tier and no place in a build.
+
+**⚠ This is a gap, not a fix.** If the owner wants the Protocol Pacifist Package to be a
+buildable part, it needs a ruling; the chapter's current sentence is honest about its absence
+and nothing more. **Raised for a decision.**
+
+**⚠ One precision fix inside a rule, changing no rule.** The chassis-cap section read *"a
+light chassis caps at six bays"* while the parts ladder four sections earlier sorts
+`Astromech` as **medium**. **The cap applies to `Astromech` and `Remote` specifically**, so
+the line now reads *"those two chassis cap at six bays, permanently."* **Same gate, same two
+chassis, no longer contradicting the tier table on the same page.**
+
+**Smaller rewrites.** The Vocabulator passage stated two rulings-made-from-lore and now
+states the two facts themselves; the `LB-series` quote is kept and attributed to the setting
+rather than to a ruling number. The three-tier parts shape is now attributed to the game's
+own plating items, by resref — **`g_i_drdltplat001`–`003`, `g_i_drdmdplat001`–`003`,
+`g_i_drdhvplat001`–`003`** — which is a stronger justification than the ruling number was,
+because a reader can check it.
+
+**Three passages lost their development history and kept their content.** The flat-2,800
+problem is now stated as what a flat price *would* do rather than as what an earlier draft
+did; the brain-first build order no longer mentions that a draft had it backwards; the
+six-socket count no longer records that it was first read as four. **The corrections
+themselves all survive, stated directly — which is the standing method for rulings that exist
+because something is commonly got wrong.**
+
+**⚠ Deliberately NOT loosened.** Every price, tier, DC, bay count, class grant, cap and
+formula survives unchanged: the 700 / 1,400 / 2,800 ladder and its per-part breakdown, all
+seven build-or-buy rows, the `Repair` DC ladder 15–30, one day per 1,000 credits, the junk
+droid's half price / DC +5 / `−2` / natural-1 / `Droid Upgrade 1` ceiling, the six sockets,
+the 3 / 6 / 9 bays, the whole class-grant table, the `Astromech`/`Remote` cap, and
+`Juggernaut`'s exclusion by it.

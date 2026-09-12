@@ -486,7 +486,7 @@ sixteen chapters were written in:
 
     1.  Ten — quest and miscellaneous        20 items
     2.  Nine — usable items                  58 items
-    3.  Seven — droid equipment             135 items
+    3.  Seven — droid equipment             135 items  ⚠ WRONG — it is 129
     4.  Six — upgrades                      164 items + 118 rows
     5.  Five — armour                       173 items
     6.  Eight — worn gear                   241 items
@@ -1660,3 +1660,71 @@ against the string table.
 chapters whose counts reconciled in the earlier survey, and the counts held when the rows
 were actually counted. **The survey's arithmetic was right here; it was the Chapter Ten
 undercount that was the outlier, not this.**
+
+---
+
+# ⚠ `PT-1770` — Chapter Seven expanded to a full catalogue
+
+**129 items, all eight categories, every category count agreed on the first pass.** 68 lines
+in, 358 out. Zero internal citations. Resrefs unique across all 129.
+
+## ⚠⚠ The chapter's item total was wrong, and it disagreed with its own table
+
+**The count had stood at 135. It is 129.**
+
+    device 29 · interface 15 · named 10 · plating 25
+    sensor 12 · shield 13 · spike-mount 7 · tool 18   = 129
+
+**All eight category figures were already right and already summed to 129.** The total was
+the only wrong number — **and it sat directly above a table that contradicted it.**
+
+**This was the one flagged in the Chapter Ten pass as *"droid, header 135, sum 129, short by
+6"*, and counting the rows settled which of the two was wrong.** The rows are 129. **The
+header was the error, in the source catalogue and in the chapter that copied it.**
+
+**⚠ And it had cross-records.** Chapter Fourteen opened with *"Chapter Seven covers 135
+droid items"*, and the live outline carried `ITEMS-04 — 135 items`. **Both corrected.** The
+superseded outline was left alone; it is tombstoned. **Found by grepping the value rather
+than the document — which is the only thing that finds this class of error.**
+
+## ⚠⚠ Forty-nine of the 129 rows carry a property the data does not resolve
+
+**The commonest shape is a skill bonus whose size is known and whose skill is not** — `Skill
+bonus +4`, with no name attached. The games store the skill as a numeric index and that
+index was never mapped back to a name for most of these rows.
+
+    interface 13 · named 10 · sensor 9 · tool 7
+    spike-mount 6 · plating 4                        = 49
+
+**The magnitude is real and usable; only the label is missing.** The chapter says so
+directly, keeps each unresolved property's index in the margin so it can be resolved from
+the page, and **guesses at nothing.** A `Droid Motion Sensors Type 2` grants `+4` to
+something that its own name makes obvious — **and obvious is not recorded.**
+
+**⚠ One row proves the resolution exists.** The `Advanced Droid Interface` carries its four
+skills **by name** — Awareness, Computer Use, Demolitions, Security — where its six
+neighbours in the same category carry bare indices. **So this is not missing data. It is
+data that was resolved once and not applied to the rest.**
+
+**⚠ I did not resolve them, and the reason is worth recording.** The index almost certainly
+maps through the games' skill table, and four items corroborate a reading by name alone
+(motion sensors to Awareness, a lockout bypass to Computer Use and Security, a stealth
+booster to Stealth, a machine interface to Repair). **But the repo's own copy of that table
+is a binary file that cannot be read as text** — the same trap the Armory's front matter
+already records about `k2_baseitems.2da`.
+
+**More importantly it is not a catalogue pass's call.** Resolving 49 rows changes what ruled
+material means, it would apply to the remaining chapters as much as this one, and **it is
+better done once, globally, than improvised here.** **Proposed as a follow-up.**
+
+## What was verified rather than assumed
+
+**Every specific value the chapter already claimed was checked against the data before the
+rewrite**, not after: the five representative device prices, the five plating entries, the
+`Droid Desh Plating` `−3` penalty, *"three appearing in both games"* — **three rows carry
+`K2+K1`, exactly** — and the `Advanced Droid Interface`'s tier, price, `Droid Upgrade 3`
+gate and all four skill values. **All correct.**
+
+**The corrupted-name warning was kept and extended.** It is still true of the game files;
+the chapter now adds that the item is catalogued below under its real name, which it was not
+before.

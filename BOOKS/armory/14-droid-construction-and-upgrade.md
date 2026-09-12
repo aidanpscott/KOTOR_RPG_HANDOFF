@@ -1,6 +1,6 @@
 # Chapter Fourteen — Droid Construction and Upgrade
 
-**Chapter Seven covers 135 droid items. Chapter Twelve found five entries on the crafting
+**Chapter Seven covers 129 droid items. Chapter Twelve found five entries on the crafting
 bench that were not recipes at all** — a processor, a chassis, a control cluster, a
 vocabulator and a protocol pacifist package — and said they belonged here.
 

@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `884207b` — `EQUIPMENT-01 §7a` |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `73ca0cc` — `§10`'s enemy half, and the zero pool |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `ea486f7` — `PT-1740` — conditional damage vs a kind |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `948f536` — the Ion Blaster arms somebody now |        ⚠ no |
-| `KOTOR-RPG-APP` | `a7525ae` — `PT-1740`, and the shelf flake confirmed |      ⚠ no |
+| `KOTOR-RPG-APP` | `ac1b358` — `§10`'s enemy half is driven |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 509 — 1,424, all
-green.** *(`BUILD 142`.)*
+**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 511 — 1,426, all
+green.** *(`BUILD 143`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

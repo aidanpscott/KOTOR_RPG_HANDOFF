@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `73ca0cc` — `§10`'s enemy half, and the zero pool |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `5284473` — `PT-1745` in `PLAY-STATE-01`'s party section |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `ea486f7` — `PT-1740` — conditional damage vs a kind |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `948f536` — the Ion Blaster arms somebody now |        ⚠ no |
-| `KOTOR-RPG-APP` | `ac1b358` — `§10`'s enemy half is driven |      ⚠ no |
+| `KOTOR-RPG-APP` | `d875bfb` — `PT-1745` — a conversation recruits |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,15 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 511 — 1,426, all
-green.** *(`BUILD 143`.)*
+**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 513 — 1,428, all
+green.** *(`BUILD 144`.)*
+
+⚠ **ONE FULL APP RUN IN FOUR FAILED TWO `whole_loop_test` CASES AND I DID NOT
+CATCH THE MESSAGE.** The file passes in isolation and passed the other three
+runs. **It is already on `copiedShelf`**, so `BUILD 142`'s fix does not cover
+it — and `copiedShelf` still copies the LIVE shelf at copy time, which is a
+hypothesis and not a finding. **Open, undiagnosed, and not counted as green
+above on the strength of one run.**
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

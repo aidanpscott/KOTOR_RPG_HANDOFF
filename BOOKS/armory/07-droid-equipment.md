@@ -24,10 +24,9 @@ catalogue.** This chapter is what they get instead.
 | **Tool** | 18 | Combat-utility bonuses (the sample entry adds an attack bonus alongside a skill bonus) |
 
 **Every device-category item, and most plating, carries a `Use Limitation Feat (Droid
-Upgrade N)` property — the "bay gate" `FEATS-LIBRARY-01` already names as the
-deliberate exception to how a feat normally reaches a character.** A droid doesn't
-learn these the way an organic character learns a feat; the gate is the item
-requirement itself, not a separate feat purchase.
+Upgrade N)` property — the "bay gate", and it is a deliberate exception to how a feat
+normally reaches a character.** A droid doesn't learn these the way an organic character
+learns a feat; **the gate is the item requirement itself, not a separate feat purchase.**
 
 ## Representative entries — devices
 

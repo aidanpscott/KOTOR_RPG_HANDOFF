@@ -1,7 +1,7 @@
 # Galactic Timeline — Sources and Credits
 
-**Status: per `PT-1813`.** Scoped to what **this book** actually drew on. Other books in
-this set used other sources and carry their own lists.
+**Scoped to what *this book* actually drew on.** Other books in this set used other sources
+and carry their own lists.
 
 **⚠ Every entry carries one of three confidence levels**, and they are deliberately not
 blended. A credit page is the worst place in a book to blur the line between what was
@@ -64,23 +64,23 @@ a credit page, which is reason enough to verify them properly.
 Rank 1 in this project's source hierarchy. **Chapter Five's events are this game's story**,
 and 3,956 BBY is its year — the campaign's default clock.
 
-**✔ BioWare's authorship is attested in this project's own corpus**, which cites the
-studio's internal comments in the game's data files directly. **◆ The publisher
+**✔ BioWare's authorship is verified from the game's own data files**, which carry the
+studio's internal developer comments. **◆ The publisher
 (LucasArts) and the game's creative credits are relayed** — researched externally and
 corroborated, not read from anything held here.
 
 **The full credit roll for both games lives in the Armory's front matter
 (`BOOKS/armory/00-front-matter.md`) and is deliberately not duplicated here.** That book's
 content is overwhelmingly these teams' design work; this one uses the games as a rank-1
-cross-check. **One list, maintained in one place** — `D-W32`'s reasoning, applied to
-credits.
+cross-check. **One list, maintained in one place**, so that a correction to a credit has one place to be
+made.
 
 ### *Star Wars: Knights of the Old Republic II — The Sith Lords* (2004) — **Obsidian Entertainment**
 
 Rank 1. **Chapter Six's events are this game's story.**
 
-**◆ Relayed.** The corpus reads this game's data extensively but never names its
-developer, publisher or staff. **Obsidian Entertainment, published by LucasArts**, with
+**◆ Relayed.** This project reads the game's data extensively, **but that data never names
+its developer, publisher or staff.** **Obsidian Entertainment, published by LucasArts**, with
 **Chris Avellone** as lead designer and lead writer — researched externally and
 corroborated. **Full credits in the Armory's front matter**, not duplicated here.
 
@@ -110,8 +110,8 @@ finishes this page can name them properly rather than leaving it at the publishe
 
 ### *The New Essential Chronology* (2005) — **Daniel Wallace**
 
-Rank 6. **◆ Relayed** — researched and relayed by MAIN; the book is not staged here and
-its credits page has not been read. **⚠ If the volume has a co-author, this entry is
+Rank 6. **◆ Relayed** — researched externally and corroborated; the book is not held here
+and its credits page has not been read. **⚠ If the volume has a co-author, this entry is
 incomplete**, and the full credit should be taken from a physical copy before publication.
 
 **Three claims in this entire book rest on it**, all in Chapter Two and all marked in that
@@ -123,8 +123,9 @@ book was **not staged**; those three facts were researched and relayed.
 
 ## Admissible but not used
 
-**Recorded so a later reader does not assume they were consulted.** `PT-1800` ranked both
-at rank 8 — descriptive lore only, never mechanics, nothing after 3,956 BBY:
+**Recorded so a later reader does not assume they were consulted.** Both sit at **rank 8**
+on the ladder Chapter One sets out — descriptive lore only, never mechanics, nothing after
+3,956 BBY:
 
 - ***Jedi vs. Sith: The Essential Guide to the Force*** (2007) — **Windham.** **⚠
   Unverified attribution.** **Never used in this book at any point.**
@@ -134,13 +135,14 @@ at rank 8 — descriptive lore only, never mechanics, nothing after 3,956 BBY:
 
 ---
 
-## This project's own documents
+## And where the sources above disagree
 
-**Not third-party sources and not listed for credit** — recorded so the chapters' citations
-resolve. The internal documents this book reads from are `CANON-01-v2`, `METHOD-RECORD-01`,
-`EVENTS-01`, `TIMELINE-01`, `WORLDS-REGISTER-01`, `SPECIES-CHAPTER-v2`, the decision records
-and the playtest ruling ledger. **They are the project's, and the project's own rulings
-govern this book over any source above where the two disagree.**
+**Chapter One decides it, and decides it in full** — a ranked ladder, the losing reading kept
+on record rather than deleted, and a worked example.
+
+**This book reports; it does not rule.** Where one of its own pages contradicts a ranked
+source about a date, **the source wins and this book has a mistake in it** — which is
+Chapter One's position in its own words, and it governs this page too.
 
 ---
 

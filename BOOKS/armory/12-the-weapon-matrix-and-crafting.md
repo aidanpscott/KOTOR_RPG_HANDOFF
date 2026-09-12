@@ -1,8 +1,7 @@
 # Chapter Twelve — The Weapon Matrix and Crafting
 
-**Status: DRAFT, for review.** The first of the Armory's four remaining chapters. Two
-systems in one chapter because they answer the same question from opposite ends: **what a
-character has at the start, and how they get anything else.**
+**Two systems in one chapter, because they answer the same question from opposite ends:
+what a character has at the start, and how they get anything else.**
 
 ---
 
@@ -134,7 +133,7 @@ Force class in the game starts with one.
 
 **A droid may take only nine of the eighteen classes:**
 
-    No Force class        all six — CLASS-ROSTER-01
+    No Force class        all six of them
     No Combat-rate class  Soldier · Marksman · Brawler
 
 **Nine remain:** Scout, Smuggler, Bounty Hunter, Engineer, Machinist, Agent, Treasure

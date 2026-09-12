@@ -1,8 +1,9 @@
 # Armory — Front Matter
 
-**Status: per `PT-1813`.** The three required elements. **The disclaimer is reproduced word
-for word and must not be edited, paraphrased, shortened, or reformatted in any way that
-changes its wording.**
+**The three front-matter elements every book in this set carries.**
+
+**⚠ The disclaimer below is reproduced word for word and must not be edited, paraphrased,
+shortened, or reformatted in any way that changes its wording.**
 
 ---
 
@@ -15,7 +16,7 @@ changes its wording.**
 > created by fans, for fans, and is distributed free of charge. No part of it is sold, and
 > no revenue is generated from it in any form.
 
-**Placement: page two or three, before any content** (`PT-1813`).
+**Placement: page two or three, before any content.**
 
 ---
 
@@ -35,7 +36,7 @@ confidence levels, and they are deliberately not blended:
 | Mark | Meaning |
 |---|---|
 | **✔ verified** | Read directly from a source held on this machine |
-| **◆ relayed** | Externally researched by MAIN against a live search and corroborated across multiple independent sources — **not** read from anything held here |
+| **◆ relayed** | Externally researched against a live search and corroborated across multiple independent sources — **not** read from anything held here |
 | **⚠ unverified** | General knowledge or assumption. Confirm before publication |
 
 **The middle tier exists because collapsing it into either neighbour would be a lie.**
@@ -43,8 +44,7 @@ Relayed credits are far stronger than assumption and are not the same thing as h
 the source — the same discipline the Galactic Timeline applies to its three relayed
 deep-history claims.
 
-**✔ This list covers all sixteen chapters.** Refreshed after Chapters Twelve through
-Sixteen were drafted; Chapter Three's family catalogue is complete at 122 items.
+**This list covers all sixteen chapters.**
 
 ---
 
@@ -60,8 +60,7 @@ occasionally corrects those values. **It did not invent them.**
 
 Where this project *has* invented something — the Training Lightsaber, the Sniper Rifle's
 catalogue row, a handful of prices — **it is marked `⚠ AUTHORED` in place** and is not
-passed off as extracted (`PT-1352`). **That tagging exists precisely so this credit stays
-honest**, and a reader can tell at a glance which values are BioWare's or Obsidian's and
+passed off as the games'. **That tagging exists precisely so this credit stays honest**, and a reader can tell at a glance which values are BioWare's or Obsidian's and
 which are ours.
 
 ---
@@ -72,8 +71,8 @@ which are ours.
 
 **BioWare**, published by **LucasArts.**
 
-**✔ BioWare's authorship is verified** from this project's own corpus, which quotes the
-studio's internal developer comments out of the game's `.uti` files directly. **That is the
+**✔ BioWare's authorship is verified** from the game's own `.uti` item files, which carry
+the studio's internal developer comments. **That is the
 only credit on this page read from something held here.**
 
 **◆ The following are relayed** — researched externally and corroborated across multiple
@@ -95,8 +94,8 @@ independent sources, not read from any held source:
 
 **Obsidian Entertainment**, published by **LucasArts.**
 
-**◆ Relayed**, on the same basis. The corpus reads this game's data extensively but never
-names its developer, publisher or staff:
+**◆ Relayed**, on the same basis. This book reads the game's data extensively, **but that
+data never names its developer, publisher or staff:**
 
 | Role | Credited |
 |---|---|
@@ -129,9 +128,9 @@ data rather than from any secondary description:
 
 **⚠ Two of these were read incompletely and both chapters say so.** `a_give_treas` gave up
 its constants but not its control flow, so **which loot band draws from which list is an
-inference**, which Chapter Thirteen states directly. And `k2_baseitems.2da` needs the project's own
-binary-2DA parser rather than a text read — a fact found the hard way while checking
-Chapter Three's ranged dice.
+inference**, which Chapter Thirteen states directly. And `k2_baseitems.2da` is stored in a
+binary format rather than as text and has to be parsed as one — **a fact found the hard way
+while checking Chapter Three's ranged dice.**
 
 **These are BioWare's and Obsidian's design data.** Reading them is what let this book
 correct several values that secondary sources had wrong — the K1 Lightsaber's `2d8`, the
@@ -149,10 +148,9 @@ material, no KOTOR Campaign Guide. **Verified by search across all sixteen chapt
 occurrences.**
 
 **Chapters Fifteen and Sixteen do draw on out-of-game reference material** for the ship
-roster and the faction navies — hull names, service dates and doctrine, sourced through the
-project's own `STARSHIPS-01` and `SPACE-COMBAT-01` rather than read here directly. **Those
-documents cite a Legends wiki index**, which sits at the bottom of this project's source
-ladder and is **⚠ unverified from anything held on this machine.**
+roster and the faction navies — hull names, service dates and doctrine. **⚠ None of it was
+read from a source held here.** It traces back to a Legends wiki index, which sits at the
+bottom of this project's source ladder, and it is **unverified.**
 
 **That is a real finding about this book's character rather than an omission.** The Galactic
 Timeline rests almost entirely on a published sourcebook; the Armory rests almost entirely
@@ -161,15 +159,16 @@ alike.**
 
 ---
 
-## This project's own documents
+## And where this book and a source above disagree
 
-**Not third-party sources and not listed for credit** — recorded so the chapters' citations
-resolve: `EQUIPMENT-01`, `ITEMS-01`–`ITEMS-09`, `STARTING-EQUIPMENT-01`,
-`ACTION-ECONOMY-01`, `ATTACKS-01`, `WEAPON-MATRIX-01`, `CRAFTING-01`, `LOOT-01`,
-`DROID-CONSTRUCTION-01`, `DROIDS-UPGRADE-01`, `STARSHIPS-01`, `SPACE-COMBAT-01`,
-`MOUNTED-COMBAT-01`, `SKILL-RESOLUTION-01`, `REST-AND-MEDITATION-01`, `CLASS-ROSTER-01`,
-and the playtest ruling ledger. **The project's own
-rulings govern this book over any source above where the two disagree.**
+**This book wins, and that is not arrogance — it is what kind of book this is.** A game
+supplies what a weapon *was*. **It never supplies what a mechanic** ***does*** **at a
+table**, and every value here has been converted, reconciled and sometimes corrected to work
+as a rule rather than as game data.
+
+**Which is exactly why the `⚠ AUTHORED` marks and the confidence tiers above matter.** They
+are how a reader tells the corrections from the originals without having to take this book's
+word for it.
 
 ---
 
@@ -186,5 +185,5 @@ two studios by name alone for a book whose content is overwhelmingly their teams
 **What remains owed:** the **full** credit rolls. The lists above are core credits — the
 programmers, artists, QA, audio and localisation staff who also built this material are not
 on them, and a complete roll should be taken from the games themselves before publication.
-**Still the highest-priority item on this page, above every factual flag in the eleven
+**Still the highest-priority item on this page, above every factual flag in all sixteen
 chapters** — but it is now a matter of completing a real list rather than starting one.

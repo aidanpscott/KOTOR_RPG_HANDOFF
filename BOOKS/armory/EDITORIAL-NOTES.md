@@ -1425,3 +1425,97 @@ that made them false. **A status line is the part of a document nobody rereads.*
 **And one content gap was found rather than fixed:** `hkpart05`, the HK Protocol Pacifist
 Package, which Chapter Twelve sends to Chapter Fourteen and which has no ruling anywhere.
 **Named as unbuildable rather than invented.**
+
+---
+
+# ⚠ `PT-1844` pass 25 — front matter, bibliography, and three chapter misses
+
+**Scope: the three reader-facing files that were never in the twenty-four-chapter count** —
+both books' front matter and the Timeline's bibliography. **Approved as a single pass because
+all three are short and of a kind.**
+
+## What was removed
+
+**Both books' `Status: per PT-1813` headers**, and both `Placement: page two or three`
+citations. **A reader needs to know a book has a disclaimer and where it sits. They do not
+need the ruling number that required it.** The non-negotiable-wording warning on the
+disclaimer stayed — that is a production instruction, not a citation.
+
+**`PT-1800` in the Timeline bibliography, per the owner's ruling: keep the rank, drop the
+number.** The entry now reads that both titles sit at **rank 8 on the ladder Chapter One sets
+out**, which is where the ladder is actually explained. Same treatment as every other rank
+marking in that book.
+
+**`PT-1352` in the Armory's authored-marking paragraph.** The `⚠ AUTHORED` tag is the thing a
+reader uses; the ruling that created it is not.
+
+**`D-W32` in the Timeline bibliography**, which justified keeping one credit list in one
+place. **The reason is better than the citation was** and now states itself: so that a
+correction to a credit has one place to be made.
+
+**Three references to MAIN** — one in the Armory's confidence-tier table, one in the
+Timeline's relay note, one implicit in the Armory's. **MAIN is a coordinating role inside
+this project's development, and no reader has any idea what it is.** Externally researched
+and corroborated says the same thing and is true on its own terms.
+
+**Four uses of "this project's own corpus."** A reader cannot resolve *corpus*. Both games'
+authorship credits now name the thing that was actually read: **KOTOR's `.uti` item files,
+which carry the studio's internal developer comments**, and K2's data, which reads
+extensively and never names its own staff.
+
+**`STARSHIPS-01` and `SPACE-COMBAT-01` in the Armory's "Not used in this book" section.**
+**The warning underneath them was the point and it survives at full strength** — Chapters
+Fifteen and Sixteen's ship roster was not read from any source held here, traces to a Legends
+wiki index at the bottom of the ladder, and is unverified.
+
+**A build-state note on the Armory's credit page** — *"refreshed after Chapters Twelve
+through Sixteen were drafted; Chapter Three's family catalogue is complete at 122 items."*
+**The 122 figure belongs in Chapter Three and is stated there**; a credits page is not where
+a reader looks for a catalogue count.
+
+## ⚠ Both books' "This project's own documents" sections are gone, and that needs explaining
+
+Each book carried a list of internal documents *"recorded so the chapters' citations
+resolve."* **Those citations no longer exist. The section's entire stated purpose was removed
+by this task**, and a list of unreadable filenames is worse than nothing on a credits page.
+
+**But each section carried a rider that was not housekeeping**, and the two books needed
+different answers.
+
+**The Armory's rider — that this book's rulings govern over any source above — is true and
+is now stated as what it is:** a game supplies what a weapon *was*; it never supplies what a
+mechanic *does* at a table. **The section was replaced rather than deleted**, and it points
+at the `⚠ AUTHORED` marks and the confidence tiers as how a reader checks that claim instead
+of taking it on trust.
+
+**⚠ The Timeline's identical rider sat in tension with its own Chapter One**, which says in
+plain words that *"if a date here contradicts the sources, the sources win and this book has
+a mistake in it."* **A bibliography claiming the project's rulings govern over any source
+contradicts the chapter a reader has just read.** The replacement follows Chapter One rather
+than the rider, points at Chapter One for the full ladder, and **the tension was reported
+rather than quietly resolved** — it is a disagreement between two reader-facing pages, which
+is the owner's to settle, not this pass's.
+
+## ⚠⚠ And the sweep caught three misses in chapters already passed and approved
+
+**This is the part worth recording.** Running one uniform pattern across every file in both
+books found internal citations in **three places the per-chapter passes had cleared:**
+
+    Ch7   FEATS-LIBRARY-01, inside the bay-gate paragraph
+    Ch12  Status: DRAFT, for review — "the first of the Armory's four
+          remaining chapters"
+    Ch12  CLASS-ROSTER-01, inside a monospace block
+
+**The cause is mine and it is worth naming exactly.** Each chapter pass ran its own
+verification grep, and **the patterns were not identical from pass to pass** — the earlier
+ones were weaker, and two of these three sit in formatting a reading eye skips: a monospace
+block and a header nobody rereads. **Every pass verified itself. No pass verified the same
+way as the others.**
+
+**A third stale status line**, after Chapter Fourteen's and Chapter Fifteen's — and this one
+survived its own chapter's dedicated pass.
+
+**The lesson, recorded because it generalises past this task: a per-item check that varies
+between items is not a check on the set.** The uniform sweep at the end is what caught this,
+and it is the thing worth keeping, not the individual fixes. **All three are fixed and both
+books now return zero under a single pattern run over every file.**

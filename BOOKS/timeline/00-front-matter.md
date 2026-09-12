@@ -1,8 +1,9 @@
 # Galactic Timeline — Front Matter
 
-**Status: per `PT-1813`.** This file carries the two front-matter elements required in
-every book. **The disclaimer below is reproduced word for word and must not be edited,
-paraphrased, shortened, or reformatted in any way that changes its wording.**
+**The two front-matter elements every book in this set carries.**
+
+**⚠ The disclaimer below is reproduced word for word and must not be edited, paraphrased,
+shortened, or reformatted in any way that changes its wording.**
 
 ---
 
@@ -15,7 +16,7 @@ paraphrased, shortened, or reformatted in any way that changes its wording.**
 > created by fans, for fans, and is distributed free of charge. No part of it is sold, and
 > no revenue is generated from it in any form.
 
-**Placement: page two or three, before any content** (`PT-1813`).
+**Placement: page two or three, before any content.**
 
 ---
 

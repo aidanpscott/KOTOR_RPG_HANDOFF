@@ -205,10 +205,10 @@ against two existing corpus citations (`D-W42`'s *"Timeline p.113"*; this table'
 |---|---|---|---|
 | 1 | What this timeline is, and isn't | **`DRAFTED`** | `CANON-01-v2 §§2, 2.1, 2.2, 4, 10.0`; `METHOD-RECORD-01 §§2–3`; `WORLDS-REGISTER-01` `D-W3`, `D-W32`, `D-W42`. **⚠ Corrected: this row previously cited `CANON-01-v2 §3.4`, which is *"`requires` is a predicate, not a list"* — the canon ledger's predicate, nothing to do with the timeline** |
 | 2 | Deep history | **`DRAFTED`** — **⚠ previously marked `RULED · NOT HELD`, which understated what is held** | **Campaign Guide at rank 2, ff. 16, 110, 145** — Adas by name, the ~28,000 BBY unification, the Rakatan invasion and its outcome, the dark side as the Infinite Empire's bequest, the Hundred-Year Darkness exiles, Ajunta Pall, Jen'jidai/Jen'ari, Tund, the interbreeding. `METHOD-RECORD-01 §3` for the standard. `SPECIES-CHAPTER-v2` + `D-Q` for the Flesh Raider/Rakata relation. ⚠ Plague, Tython, Corbos at rank 6, relayed |
-| 3 | The Tales of the Jedi era | **`RULED`** — held | **Campaign Guide ff. 5–6 (war narrative + Restoration Period) and ff. 112–113 (dated timeline)**; `EVENTS-01`. ⚠ Same-rank conflict between the two CG sections — `PT-946` |
-| 4 | The Mandalorian Wars | **`RULED`** — held | **Campaign Guide "The Mandalorian Wars" f. 6 (3,965–3,960 BBY) and ff. 112–113**; `EVENTS-01` incl. the Mandalorian correction (`PT-675`, `PT-681`). **⚠ Should also absorb the orphaned Restoration Period, f. 5 (3,995–3,966 BBY) — see the era-alignment note below** |
+| 3 | The Tales of the Jedi era | **`DRAFTED`** | **Campaign Guide f. 5 (war narrative) and ff. 112–113 (dated timeline)**; `EVENTS-01`. ⚠ Same-rank conflict between the two CG sections — `PT-946` |
+| 4 | The Mandalorian Wars | **`RULED`** — held | **Campaign Guide "The Mandalorian Wars" f. 5 (3,965–3,960 BBY) and ff. 112–113**; `EVENTS-01` incl. the Mandalorian correction (`PT-675`, `PT-681`). **⚠ Should also absorb the orphaned Restoration Period, f. 5 (3,995–3,966 BBY) — see the era-alignment note below** |
 | 5 | The Jedi Civil War | **`RULED`** — held | **Campaign Guide "The Jedi Civil War" f. 6 (3,959–3,956 BBY) and f. 113**; KOTOR 1 at rank 1; `EVENTS-01` |
-| 6 | The Sith Lords' return | **`RULED`** — held | **Campaign Guide "The Dark Wars" f. 7 (3,955–3,951 BBY) and f. 113**; KOTOR 2 at rank 1; `EVENTS-01` |
+| 6 | The Sith Lords' return | **`RULED`** — held | **Campaign Guide "The Dark Wars" f. 6 (3,955–3,951 BBY) and f. 113**; KOTOR 2 at rank 1; `EVENTS-01` |
 | 7 | The Reconstruction | **⚠ `RULED` — thinnest chapter in the book** | **The Campaign Guide has NO era section after 3,951 BBY and its timeline stops at 3,950.** Rests on the Dark Wars section's tail, the single 3,950 BBY entry, and KOTOR 2 at rank 1. **⚠ Corrected: the 3,985 BBY Coruscant Financial Exchange act belongs to the *Restoration Period* after the Great Sith War, NOT to this chapter** — two different recoveries, and `TO-MAIN-44` conflated them |
 | 8 | The unwritten future | **`PROSE`** | Mine. No fixed roster by design (`PT-1802`) |
 
@@ -233,7 +233,7 @@ Species* sit at rank 8 — descriptive lore only, never mechanics, nothing after
 and they do not line up.** Found while drafting Chapter Three; full detail at that
 chapter's Flag 4.
 
-| Campaign Guide era, ff. 5–7 | Years | Chapter |
+| Campaign Guide era, ff. 5–6 | Years | Chapter |
 |---|---|---|
 | The Great Sith War | 4,000–3,996 BBY | 3 ✔ |
 | **The Restoration Period** | **3,995–3,966 BBY** | **⚠ orphaned** |

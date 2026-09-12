@@ -182,7 +182,7 @@ Lord — his relevance here is posthumous, which is itself the era's characteris
 ---
 
 *Sources: KOTOR Campaign Guide — "The Great Sith War" and "The Restoration Period"
-narrative, ff. 5–6; the dated timeline, ff. 112–113. Folios are printed page numbers; the
+narrative, both f. 5; the dated timeline, ff. 112–113. Folios are printed page numbers; the
 OCR's page markers run three higher (Chapter One, Flag 3). Rank 2 throughout; no rank 6 or
 8 material was needed for this chapter.*
 
@@ -226,7 +226,7 @@ over this file will silently miss that line. Worth telling anyone searching this
 do not line up. One period currently has no home.** Caught while writing this chapter's
 closing hand-off, which I had initially pointed at the wrong chapter.
 
-The Campaign Guide divides this stretch of history into five named eras, ff. 5–7:
+The Campaign Guide divides this stretch of history into five named eras, ff. 5–6:
 
 | Campaign Guide era | Years | Book chapter |
 |---|---|---|

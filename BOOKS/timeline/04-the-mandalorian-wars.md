@@ -238,8 +238,8 @@ matters: he led the *Crusaders*, lost the duel at Kuar, and died at Onderon in 3
 
 ---
 
-*Sources: KOTOR Campaign Guide — "The Restoration Period" f. 5 and "The Mandalorian Wars"
-f. 6; the dated timeline ff. 112–113. `EVENTS-01 §§1–3` for the Mandalorian correction
+*Sources: KOTOR Campaign Guide — "The Restoration Period" and "The Mandalorian Wars", both
+f. 5; the dated timeline ff. 112–113. `EVENTS-01 §§1–3` for the Mandalorian correction
 (`PT-675`, `PT-681`, `PT-855`), the three-era split, and the Malachor V surrender terms.
 Folios are printed page numbers; the OCR's page markers run three higher (Chapter One,
 Flag 3). Rank 2 and the rulings on it throughout; no rank 6 or 8 material needed.*

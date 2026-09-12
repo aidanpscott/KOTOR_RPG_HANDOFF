@@ -2238,6 +2238,30 @@ completeness.
 143 upgrade-tree figure, the `Bonded Plates Mark IV` note and the corrected crystal
 arithmetic all reapplied, so the restored prose matches everything ruled since.
 
+## ⚠ A near-miss on the way in, worth recording
+
+**Applying this correction conflicted with upstream, and resolving it the obvious way would
+have destroyed real work.**
+
+**While I was fixing the names, the subtype resolution landed** — every *"which skill is
+unresolved"* marker across the catalogue chapters replaced with the real skill, **139 of them
+in Chapter Eight alone.** My branch still carried the unresolved versions.
+
+**A rebase would have replayed my edits over theirs and silently reintroduced 62 unresolved
+markers in Chapter Eight.** Taking either side of the conflict wholesale was wrong: **theirs
+had the right properties and the wrong names; mine had the right names and the wrong
+properties.**
+
+**Resolved by merging upstream first and taking their file wholesale, then re-applying the
+five names onto their entries** — so their resolution survives intact and the names sit on
+top of it. **Verified after: zero unresolved markers anywhere, 139 resolved labels still in
+Chapter Eight, all twelve names correct.**
+
+**The tell was not the conflict itself but reading what was in it.** The conflicted hunk
+showed `Skill (Awareness) 4` on one side and `Skill bonus +4 ⚠ (which skill is unresolved)`
+on the other. **A conflict whose two sides are each right about different things is not a
+conflict to resolve by preference.**
+
 ## What remains genuinely unresolved, and is not part of this fix
 
 **Seven `g1_` rows still carry wrong names** and were not among the twelve: `g1_a_class5002`,

@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `44672ae` — `PT-1735` — a placement may join the party |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `e508480` — `PT-1735` — the Builder can place a companion |        ⚠ no |
-| `KOTOR-RPG-APP` | `f482886` — `PT-1735` — companions, slice one |      ⚠ no |
+| `KOTOR-RPG-APP` | `b94525e` — the companion swings, and the flake has a cause |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 625 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 503 — 1,399, all
-green.** *(`BUILD 139`.)*
+**`Lodestar` 625 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 504 — 1,400, all
+green.** *(`BUILD 140`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

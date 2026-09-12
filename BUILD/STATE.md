@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `9f2b2ed` — `PT-1782` gets a column |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `89b79e1` — the `×3` revert re-shipped |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `1e17025` — `§3a`'s exploration catalogue |     ⚠ no |
+| `Lodestar` | `3b7e038` — `PT-1122`'s standing order |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
-| `Loom` | `e60942b` — pinned to `PT-1123`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `24ade3d` — a class reads the same on every row |      ⚠ no |
+| `Loom` | `7ae4f07` — pinned to `PT-1122`'s engine |        ⚠ no |
+| `KOTOR-RPG-APP` | `8219d52` — solo mode on the sidebar |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,18 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 690 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 562 — 1,528, all
-green.** *(`BUILD 157`.)*
+**`Lodestar` 697 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 571 — 1,544, all
+green.** *(`BUILD 158`.)*
+
+⚠⚠ **SOLO MODE IS BUILT AT `BUILD 158` AND DOES NOT SURVIVE A SAVE.**
+*Wait here* and *Follow / regroup* work for the whole session and across
+rooms; `_persist` then drops them, because it keeps only kinds the shelf
+declares at `campaign` lifetime and **`party.waiting` / `party.following` are
+not in `EVENT-KINDS-01`.** They are the **only two kinds this build emits that
+the vocabulary does not declare** — diffed, not assumed. `ledger.dart` proposes
+both in the document's own shape and says they are *"a reading and not a
+ruling"*; the document is the owner's. `emitted_kinds_test` pins the gap and is
+written to fail the day it is paid. **Awaiting two rows at `campaign`.**
 
 ✓ **THE LOCKED SIDEBAR IS BUILT AT `BUILD 154`** — `PartySidebar`, docked
 left, running during exploration, one portrait treatment for the player and

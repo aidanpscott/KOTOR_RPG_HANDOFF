@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `15b8da0` — `PT-1729`, and the rule written where it extracts |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `cc780df` — `PT-1610`'s shape, and a sentence nothing read |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `5ed6185` — pinned to `PT-1729`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `cc4277f` — `PT-1729` — a droid is designated |      ⚠ no |
+| `KOTOR-RPG-APP` | `081ef6b` — the edge speaks, and so does the speed note |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 523 — 1,453, all
-green.** *(`BUILD 145`.)*
+**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 530 — 1,460, all
+green.** *(`BUILD 146`.)*
 
 ⚠ **`base-rules` GAINED TWO FILES AT `BUILD 145`** — `designations.toml` (38
 rows) and `reserved.toml` (8). The generated package was diffed against the

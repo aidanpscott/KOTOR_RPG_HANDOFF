@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `91f4d60` — the Armory closes |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `acdb477` — item durations convert at six |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `d25bbb0` — `PT-1855`'s Scan |     ⚠ no |
+| `Lodestar` | `e66d44a` — `PT-1903`'s effect model and duration |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
-| `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `3d8d331` — Scan gets its exploration half |      ⚠ no |
+| `Loom` | `64cabe2` — pinned to `PT-1903`'s engine |        ⚠ no |
+| `KOTOR-RPG-APP` | `cb13d3c` — pinned to `PT-1903`'s engine |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 740 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,613, all
-green.** *(`BUILD 176`.)*
+**`Lodestar` 757 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,630, all
+green.** *(`BUILD 177`.)*
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one
@@ -246,6 +246,47 @@ returns in some widget harnesses and returns fine in others, on the same
 package. It made two tests worthless and nothing detects it.
 
 ## ⚠ What is open
+
+### ⚠⚠ THE POISON HALF OF `PT-1903` CANNOT SHIP UNTIL A POISON CAN SAVE
+
+`PT-1903` ruled the duration conversion **and** the sub-round tick folding, and
+the conversion shipped: nine adrenals carry `rounds = 20`, seconds ÷ 6 rounded
+up, mutation-checked by `check_item_durations.py`. **The tick folding did not**,
+and the reason is not the arithmetic — all four worked examples reproduce their
+source totals exactly under it.
+
+⚠⚠ **TWELVE OF THE SEVENTEEN CONDITION ITEMS STATE A SAVE**, DC 15 to DC 100.
+A poison emitted with no save channel lands on every target unconditionally —
+**a wrong answer indistinguishable from a right one**, which is the failure the
+refusal channel exists to prevent. Better refused and counted.
+
+⚠ **AND THE SAVE HAS THREE OUTCOMES, NOT ONE.** *"for no effect"* is the common
+case; the Kyber Dart is *"for half damage"*; the **Paralysis Dart is `DC20 for
+Slow for 3sec`** — a save that applies a DIFFERENT condition for a DIFFERENT
+duration. The third shape is a compound nothing in the model expresses.
+
+⚠ **AND THE VOCABULARY HAS NO WORD FOR DAMAGE OVER TIME.** The approved five are
+`heal · ability · absorb · resist · regenerate`. Minting a sixth is a format
+decision and **`RULING NUMBERS ARE MINE TO ASSIGN` is not the only thing that
+is** — reported rather than taken.
+
+### ⚠⚠ SIX ITEM ROWS STATE THEIR RULE TWICE, WITH DIFFERENT NUMBERS
+
+Found while reading the poison data. An item's `properties` column and its
+blueprint `description` are **two sources for one rule**, and six rows disagree:
+
+    Average Flash Mine · Average Frag Mine · Average Plasma Mine
+    Deadly Frag Mine   · Deadly Plasma Mine          save DC differs
+    Average Gas Mine        4 pts every 3 sec / 30 sec  (properties)
+                            4 pts every 6 sec / 36 sec  (description)
+
+⚠ **THE GAS MINE'S TWO READINGS ARE 40 DAMAGE AND 24.** Not a rounding gap —
+a different item. ⚠ **And the extractor reads BOTH columns**, so whichever
+matcher fires first would silently pick one. Today all six land in `_control`
+as refused, so nothing has been decided by accident. **Which column is
+authoritative is not mine to rule** — `ITEMS-06.md` carries the properties
+form, the description comes from the `.uti`.
+
 
 ### ⚠⚠ A NAME WE COIN MUST NOT BE A NAME WE ALREADY USE — `PT-1547`
 

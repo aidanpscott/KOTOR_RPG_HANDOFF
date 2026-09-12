@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `c7a8aac` — `PT-1851`'s Dash |     ⚠ no |
+| `Lodestar` | `d25bbb0` — `PT-1855`'s Scan |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `e4682f7` — the keys are on the screen |      ⚠ no |
+| `KOTOR-RPG-APP` | `31c8abb` — `c` scans |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 734 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 595 — 1,605, all
-green.** *(`BUILD 171`.)*
+**`Lodestar` 740 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 595 — 1,611, all
+green.** *(`BUILD 173`.)*
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one

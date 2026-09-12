@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `ce3937b` — creature skills, condition kinds |     ⚠ no |
+| `Lodestar` | `17bba42` — `PT-1841`'s `positionsIn` |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `7c3d00a` — Hide is a key you can press |      ⚠ no |
+| `KOTOR-RPG-APP` | `b7e16cf` — a room as you left it |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,15 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 721 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 581 — 1,578, all
-green.** *(`BUILD 162`.)*
+**`Lodestar` 727 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 583 — 1,586, all
+green.** *(`BUILD 163`.)*
+
+✓ **A ROOM IS AS YOU LEFT IT — `PT-1841`, `BUILD 163`.** Walked positions are
+written on the way out (only for what actually moved) and folded back on
+arrival by `positionsIn`. **Nothing is written into the package** — `PT-1525`'s
+argument for a corpse, applied to a position. And a companion arriving through
+a door now lands on the **interior-most** free neighbour rather than
+`stepOffsets`' up-left corner, which was the wall it had just come through.
 
 ✓ **A CREATURE CARRIES SKILLS — `PT-1843`, `BUILD 162`.** `[skills]` on the
 blueprint, read into `OpenedCharacter` and carried across the `combatantFrom`

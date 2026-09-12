@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `8e5542f` — 118 descriptions reunited |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `74bdfd0` — `PT-1136`'s follow |     ⚠ no |
+| `Lodestar` | `953c481` — `PT-1108`'s stealth |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `295d268` — the sidebar reads the roster |      ⚠ no |
+| `KOTOR-RPG-APP` | `cbdf0ee` — the stealth gap, asserted |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,21 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 705 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 576 — 1,557, all
-green.** *(`BUILD 160`.)*
+**`Lodestar` 716 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 579 — 1,571, all
+green.** *(`BUILD 161`.)*
+
+⚠⚠ **A CREATURE CARRIES NO SKILLS, AND FIVE ACTIONS WAIT ON IT — `BUILD 161`.**
+`Combatant` has `dexModifier`, `strengthModifier`, `constitution`, `budgets`
+and `role`; `OpenedCharacter` has abilities, vitality, protection, equipment,
+doctrine and reactions. **Neither has a skill of any kind.** The player has
+ranked skills from chargen; the thing on the other side of an opposed roll does
+not. So `ACTION-ECONOMY-01 §1`'s **Hide, Scan, Slice, Treat and Repair** cannot
+be offered, and `PT-1123`'s catalogue cannot aim `Repair` at a droid or
+`Pick Pocket` at a person. `PT-1108`'s Hide is **built and pinned as having no
+caller**. ⚠ A format question — `AUTHORED-CHARACTER-01` is the owner's.
+
+⚠ **`Dash` IS UNBUILT**, so `PT-1108`'s *Hidden disables running* has nothing
+to disable. Its natural key `d` is already Disengage.
 
 ✓ **THE SIDEBAR READS THE ROSTER, NOT THE ROOM — `PT-1833`, `BUILD 160`.**
 Its exploration list was built from `_here`, the currently loaded area's

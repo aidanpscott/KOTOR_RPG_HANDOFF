@@ -189,18 +189,63 @@ and the Atlas's own agents have already said so once.
 
 ### BOOK FIVE — GALACTIC TIMELINE
 
-**⚠ Nothing for this book is in this repository. Unchanged from `OUTLINE-01` — not
-re-measured this round.**
+**⚠⚠ RE-MEASURED AND RE-MARKED, and the earlier header was wrong twice over.** *"Nothing
+for this book is in this repository"* was carried unexamined from `OUTLINE-01`. **Most of
+this book's real content is held**, at rank 2, in `MAIN_WORK/data/books/KOTOR-CG-OCR.txt`
+— a searchable 21,339-line OCR of the Campaign Guide with per-page markers. The eight-
+chapter structure below supersedes the seven rows this table used to carry.
+
+**⚠ Folio convention for every Campaign Guide citation in this book: the OCR's
+`=== PAGE n ===` markers are NOT printed folios.** Pages 1–3 are cover, title and credits,
+which carry no printed number. **Printed folio = OCR marker − 3**, verified exactly
+against two existing corpus citations (`D-W42`'s *"Timeline p.113"*; this table's own
+*"pp. 112–113"*).
 
 | # | Chapter | Mark | Source |
 |---|---|---|---|
-| — | How this timeline was built | **`PROSE`** over **`RULED`** | `CANON-01-v2 §3.4` and `METHOD-RECORD-01` — **both present in `MAIN_WORK/rules/` (`AUDIT-01`)** |
-| — | The dated spine | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `EVENTS-01` |
-| — | Eras | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `TIMELINE-01`; `CLOCK-01`; `EVENTS-PLAN-01` (PLAN ONLY, `PT-676`) |
-| — | Deep history | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `RULING-SWTOR-DEEP-HISTORY`; `ERA-VITIATE-01`; `D-VIT-01` |
-| — | The Tales of the Jedi sweeps | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `TEMPORAL-SWEEP-TOTJ-*` (12 deep + batch); `TEMPORAL-SWEEP-LEGENDS-01`; `TEMPORAL-ENUM-01` |
-| — | Revan | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `D-REVAN-04` — current in the chain |
-| — | The Campaign Guide timeline | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `GAZETTEER-PART-D` — pp. 112–113 |
+| 1 | What this timeline is, and isn't | **`DRAFTED`** | `CANON-01-v2 §§2, 2.1, 2.2, 4, 10.0`; `METHOD-RECORD-01 §§2–3`; `WORLDS-REGISTER-01` `D-W3`, `D-W32`, `D-W42`. **⚠ Corrected: this row previously cited `CANON-01-v2 §3.4`, which is *"`requires` is a predicate, not a list"* — the canon ledger's predicate, nothing to do with the timeline** |
+| 2 | Deep history | **`DRAFTED`** — **⚠ previously marked `RULED · NOT HELD`, which understated what is held** | **Campaign Guide at rank 2, ff. 16, 110, 145** — Adas by name, the ~28,000 BBY unification, the Rakatan invasion and its outcome, the dark side as the Infinite Empire's bequest, the Hundred-Year Darkness exiles, Ajunta Pall, Jen'jidai/Jen'ari, Tund, the interbreeding. `METHOD-RECORD-01 §3` for the standard. `SPECIES-CHAPTER-v2` + `D-Q` for the Flesh Raider/Rakata relation. ⚠ Plague, Tython, Corbos at rank 6, relayed |
+| 3 | The Tales of the Jedi era | **`RULED`** — held | **Campaign Guide ff. 5–6 (war narrative + Restoration Period) and ff. 112–113 (dated timeline)**; `EVENTS-01`. ⚠ Same-rank conflict between the two CG sections — `PT-946` |
+| 4 | The Mandalorian Wars | **`RULED`** — held | **Campaign Guide "The Mandalorian Wars" f. 6 (3,965–3,960 BBY) and ff. 112–113**; `EVENTS-01` incl. the Mandalorian correction (`PT-675`, `PT-681`). **⚠ Should also absorb the orphaned Restoration Period, f. 5 (3,995–3,966 BBY) — see the era-alignment note below** |
+| 5 | The Jedi Civil War | **`RULED`** — held | **Campaign Guide "The Jedi Civil War" f. 6 (3,959–3,956 BBY) and f. 113**; KOTOR 1 at rank 1; `EVENTS-01` |
+| 6 | The Sith Lords' return | **`RULED`** — held | **Campaign Guide "The Dark Wars" f. 7 (3,955–3,951 BBY) and f. 113**; KOTOR 2 at rank 1; `EVENTS-01` |
+| 7 | The Reconstruction | **⚠ `RULED` — thinnest chapter in the book** | **The Campaign Guide has NO era section after 3,951 BBY and its timeline stops at 3,950.** Rests on the Dark Wars section's tail, the single 3,950 BBY entry, and KOTOR 2 at rank 1. **⚠ Corrected: the 3,985 BBY Coruscant Financial Exchange act belongs to the *Restoration Period* after the Great Sith War, NOT to this chapter** — two different recoveries, and `TO-MAIN-44` conflated them |
+| 8 | The unwritten future | **`PROSE`** | Mine. No fixed roster by design (`PT-1802`) |
+
+**⚠ Supporting documents still `NOT HELD`** — Library-held, confirmed absent from
+`MAIN_WORK` (`AUDIT-01`), and none of them blocks a chapter above:
+`RULING-SWTOR-DEEP-HISTORY`, `ERA-VITIATE-01`, `D-VIT-01`, `TEMPORAL-SWEEP-TOTJ-*`,
+`TEMPORAL-SWEEP-LEGENDS-01`, `TEMPORAL-ENUM-01`, `D-REVAN-04`, `GAZETTEER-PART-D`.
+**`GAZETTEER-PART-D` is specifically a transcription of the Campaign Guide timeline at
+pp. 112–113, which is now readable directly at rank 2** — so its absence costs nothing.
+
+**Structure, `PT-1802`:** Chapters 3–7 each carry a short framing paragraph, the events
+narrative, and a **Major Figures** section that cross-references back into the narrative
+rather than re-telling it. **Not applied to Chapter 2** (the deep-history standard is
+evocative rather than tracked, and a roster would fight it) **or Chapter 8** (no fixed
+roster exists by design).
+
+**Ranks 7 and 8, `PT-1800`:** rank 7 is reserved for `D-W32`'s local Wookieepedia
+extension (worlds register only); *Jedi vs. Sith* and *The New Essential Guide to Alien
+Species* sit at rank 8 — descriptive lore only, never mechanics, nothing after 3,956 BBY.
+
+**⚠⚠ ERA ALIGNMENT — the Campaign Guide has five eras, this book has five era chapters,
+and they do not line up.** Found while drafting Chapter Three; full detail at that
+chapter's Flag 4.
+
+| Campaign Guide era, ff. 5–7 | Years | Chapter |
+|---|---|---|
+| The Great Sith War | 4,000–3,996 BBY | 3 ✔ |
+| **The Restoration Period** | **3,995–3,966 BBY** | **⚠ orphaned** |
+| The Mandalorian Wars | 3,965–3,960 BBY | 4 ✔ |
+| The Jedi Civil War | 3,959–3,956 BBY | 5 ✔ |
+| The Dark Wars | 3,955–3,951 BBY | 6 ✔ |
+| *(no CG era exists)* | 3,950 BBY onward | 7 |
+
+**Recommended, not decided:** the Restoration Period opens **Chapter Four** — it is that
+war's direct set-up, containing the Republic's economic rebuild and the Mandalorians
+rearming in secret, and reads as an opening movement rather than a chapter. **Owner's
+call.**
 
 **⚠⚠ New production note, from the brief's own instruction:** *"link the two by having
 timeline entries reference world names."* **This makes Book Five's authoring order-

@@ -1,10 +1,5 @@
 # Chapter Fifteen — Starships and Space Combat
 
-**Status: DRAFT, for review.** The Armory's last chapter, and its largest subject — roughly
-1,950 lines of source across three documents.
-
----
-
 Every other chapter in this book equips a character. **This one equips the party.**
 
 A ship is the only thing in the Armory that four people own together, that three other
@@ -24,7 +19,7 @@ Core Galaxy Systems, and produced under a constraint that turns out to matter:
 > rather rare sight."*
 
 **The class is rare and the ship is unique, and those are two different facts** — the same
-distinction the project draws between `HK-47` and the `HK-50` series.
+distinction that separates `HK-47` from the `HK-50` series.
 
 > **A GM may give a party a `Dynamic-class freighter`. There is one `Ebon Hawk`.**
 
@@ -100,8 +95,8 @@ a party who sells one is giving up more than a hull.
 
 > ***"Not sold"* is not a property of the ship. It is a property of who you are.**
 
-Every campaign package is written with a faction in mind, and both shipped packages are
-Republic — **so the flags above are the Republic-campaign flags.**
+Every campaign package is written with a faction in mind, and the two this game comes with
+are both Republic — **so the flags above are the Republic-campaign flags.**
 
     a Republic campaign      the Sith interceptor is contraband;
                              the Republic shuttle is military issue
@@ -168,9 +163,9 @@ make the ship a problem. It may not make it absent.**
 ### Capacity, and a ship you do not own
 
 **A ship carries the party, their companions, and every recruited companion not currently
-fielded** — plus held droids, which are unlimited. **There is no weight limit**; carrying
-capacity was killed and encumbrance deferred, **and a ship hold is not where either comes
-back.** The `Dynamic-class` is 25.5 metres and KOTOR fit nine companions in one. **The
+fielded** — plus held droids, which are unlimited. **There is no weight limit** — this game
+has no carrying capacity and no encumbrance rule at all, **and a ship hold is not where
+either arrives.** The `Dynamic-class` is 25.5 metres and KOTOR fit nine companions in one. **The
 fiction does not count bunks and neither does this game.**
 
 **Passage on someone else's ship is not a base.** You may rest; **you may not craft, swap,
@@ -195,21 +190,23 @@ ticket — and it is why the first one is a gift rather than a purchase.
 
 > **There is no turret system to extend. There is a control scheme with two verbs.**
 
-**So this system is strictly more than the game ever had**, and the owner's brief is the
-design: *"flying, with enemies, on a tabletop battle map. Instead of rails, **the pilot
-moves**, and the other characters can be in whatever turrets there are. Whoever can't join
-has to wait."*
+**So this system is strictly more than the game ever had**, and the design is stated plainly
+enough to hold as a summary of the whole of Part Two:
 
-## Two foundations the project already owned
+> *"Flying, with enemies, on a tabletop battle map. Instead of rails, **the pilot moves**,
+> and the other characters can be in whatever turrets there are. Whoever can't join has to
+> wait."*
+
+## Two foundations this game already had
 
 **The swoop-bike upgrade table** supplies the grammar — three groups, four tiers each — and
 it is the only vehicle-upgrade structure KOTOR shipped.
 
-**And mounted combat supplies the rest.** A multi-station vehicle was already ruled and
-playtested: *"only the first rider controls it. Everyone else is a passenger: they act on
-their own initiative, with their own Action and Gear, and **no Move** — the mount's movement
-is not theirs to spend."* Plus altitude bands and *"a flier may not reverse direction in a
-round; it may turn up to 90 degrees, once."*
+**And mounted combat supplies the rest.** This game's mounted rules had already solved a
+multi-station vehicle: *"only the first rider controls it. Everyone else is a passenger: they
+act on their own initiative, with their own Action and Gear, and **no Move** — the mount's
+movement is not theirs to spend."* Plus altitude bands and *"a flier may not reverse
+direction in a round; it may turn up to 90 degrees, once."*
 
 > **A ship is a mount with more seats.**
 
@@ -261,8 +258,8 @@ thin** — a facing-and-turn-radius system is a second game.
                        like anyone without a seat.
     at zero            the ship is DISABLED, not destroyed
 
-**A ship fight cannot end a campaign by accident** — losing the ship is authored only, and
-that was the rule before this system existed.
+**A ship fight cannot end a campaign by accident** — losing the ship is authored only, as
+Part One sets out, and a disabled ship is not a lost one.
 
 **`Repair` at DC 20 brings an offline turret back for one round.** It costs the repairer's
 action, and they must be aboard and unseated.
@@ -319,6 +316,25 @@ and a freighter does not.** The `Ebon Hawk` has none.
 
 **Two skills and one attack. Nothing else is rolled in a ship fight.**
 
+### ⚠ Three numbers in this system that only play will settle
+
+**Everything else in Part Two is a rule. These three are rules with a question mark against
+them, and a table that finds one wrong should change it rather than work around it.**
+
+    Repair at DC 20    the price of bringing an offline turret back. Too low
+                       and losing a turret stops mattering; too high and the
+                       unseated role is a dead seat.
+    LINE UP's +2       authored with nothing to copy — half of `Aid Another`,
+                       on the reasoning that it reaches every gunner aboard
+                       rather than one target
+    EVASIVE's check    the one roll in the system that was originally opposed,
+                       and is now a check against the attacker's Defence
+
+**They are named because they are the three least anchored numbers in the chapter**, not
+because they are suspected of being wrong. **Every other figure here is either derived from
+the games' own data or falls straight out of the rules the rest of this book already
+uses.**
+
 ## The risk — how a character gets hurt in space
 
 **The real gap was that a ship fight had no consequence for a *character*.** A ship could be
@@ -341,7 +357,7 @@ station.** If it is hit again, they are the one in it.
 
 ## Ship statistics
 
-**Every number is derived from the 205 K1 creatures the project already parsed. A ship is a
+**Every number below is derived from the 205 creatures in KOTOR's own files. A ship is a
 CR-rated thing like everything else**, which means the encounter rules already price it.
 
 | Stat | Value |
@@ -398,10 +414,11 @@ different numbers.**
 
 ---
 
-# Part Three — What else is built
+# Part Three — Three more systems, in brief
 
-**Four further components exist in full and are summarised here rather than reproduced;
-see Flag 3.**
+**Three systems finish the ship rules, and each gets a paragraph here rather than a section
+of its own.** The rest of the ship material — ship parts, specialist parts, boarding and the
+enemy roster — **is catalogue work, and it has a chapter of its own next.**
 
 **Upgrades** follow the swoop table's grammar — three groups, four tiers, `Accel` cut — with
 prices anchored to the ship rather than to the party.
@@ -412,68 +429,38 @@ one-player ship**, and a bigger hull is how the rest of the party gets something
 **Two fights you cannot win**, and both are deliberate: **a capital ship is terrain, not an
 opponent**, and **a shuttle escape is a shared countdown.**
 
-**Enemy ships by faction and role** — five combat roles, and each navy fights differently
-*from its own lore* rather than from its statistics. **Boarding** has three ways aboard,
-does not pause the ship fight, and **a captured party is a scene rather than a loss.**
+**And then Chapter Sixteen.** **Ship parts** run six groups across four tiers — 24 parts —
+with **shields as damage reduction rather than a second pool**, which keeps the single
+Vitality pool intact. **Specialist parts** give each builder one axis and no duplication:
+Duros hyperdrives, Corellian modularity, Mandalorian boarding, Czerka selling to everyone.
+**Enemy ships** run five combat roles, with each navy fighting differently *from its own
+lore* rather than from its statistics. And **boarding** has three ways aboard, does not pause
+the ship fight, and treats **a captured party as a scene rather than a loss.**
 
-**Ship parts** run six groups across four tiers — 24 parts — with **shields ruled as damage
-reduction rather than a second pool**, consistent with the single-Vitality architecture.
-**Specialist parts** give each builder one axis and no duplication: Duros hyperdrives,
-Corellian modularity, Mandalorian boarding, Czerka selling to everyone.
+**All four are there in full, with their tables.**
 
 ---
 
-*Sources: `STARSHIPS-01` (`PT-669`, `PT-670`, `PT-672`, `PT-673`, `PT-800`, `PT-825`),
-`SPACE-COMBAT-01` (`PT-791`–`PT-808`, `PT-819`, `PT-820`, `PT-879`), and
-`MOUNTED-COMBAT-01 §§7, 9` for the pilot/passenger split, the movement rule and the range
-bands. `CRAFTING-01 §5` for the base definition; `ENCOUNTER-01` for CR; `SKILLS-01` for
-`Pilot` and `Awareness`.*
+## Sources for this chapter
 
-## Open items, carried from review
+**The `Ebon Hawk` and its class are the games' and the setting's** — the `Dynamic-class`
+freighter, its 25.5 metres, its one-at-a-time production and its heavy modification are all
+described rather than invented here.
 
-**⚠⚠ Flag 1 — `STARSHIPS-01 §3` says space combat and ship stats are not built. Both are.**
-Its *"What is NOT built"* list reads **`SPACE COMBAT — NOTHING`** and **`SHIP STATS —
-NOTHING`**, with no ✓, while the same list marks travel time and the ship-as-base as closed.
-**`SPACE-COMBAT-01` built both**: eight components at `PT-791`–`PT-808`, and ship stats
-specifically at `PT-796` — Vitality `10 × CR`, Defence `10 + CR`, Speed 4.
+**⚠ Almost nothing else in Part Two came from the games, and the chapter says so at the top
+of it.** KOTOR has no ship statistics anywhere in its 637 data tables, and its space combat
+is a rail shooter with two verbs. **Every rule in Part Two is this game's**: the map scale
+and range bands, the station turns, the pilot's manoeuvre checks, the station hit, the
+turret damage ladder, and the `10 × CR` / `10 + CR` / Speed 4 statistics.
 
-**A reader consulting `STARSHIPS-01` alone would conclude this chapter's entire second half
-does not exist.** **Reported, not fixed.**
+**Two of this game's own systems are load-bearing and are borrowed rather than restated.**
+Mounted combat supplies the driver-and-passengers split, the 90-degree turn and the altitude
+bands. The single Vitality pool — one pool, no separate shield track — is the same
+architecture every character, beast and droid in this game runs on.
 
-**⚠ Flag 2 — `SPACE-COMBAT-01`'s own title contradicts its own status line.** The document
-is titled ***"the plan, not the rules"*** and its status line immediately beneath reads
-**"ALL EIGHT COMPONENTS BUILT."** The title is a fossil from when it was a plan. **Harmless
-to anyone who reads two lines; misleading to anyone who reads one.**
+**Prices are this game's economy, not canon's**, for the reason the chapter gives: at canon
+prices a starship costs less than one late-game rifle.
 
-**⚠⚠ Flag 3 — this chapter summarises four components rather than reproducing them, and
-that is a judgement call worth your review.** Components 5 through 8 — upgrades, seats per
-hull class, the unwinnable fights, enemy ships and boarding — plus the 24-part ship-parts
-table and the specialist-parts material, run to several hundred lines of ruled content.
-
-**Part Three names them and gives each its governing idea; it does not carry their tables.**
-**My reasoning:** the Armory is an equipment book, and this chapter is already the longest
-in it. **The enemy-ship roster and the ship-parts catalogue are catalogue material** of the
-same kind Chapter Three carries for ranged weapons — **and they would be better as their own
-chapter than as an appendix to this one.**
-
-**Recommend a Chapter Sixteen** covering ship parts, specialist parts and the enemy roster.
-**Say if you would rather it folded in here instead and I will expand Part Three.**
-
-**⚠ Flag 4 — three numbers in the combat system are flagged as unverified in their own
-source.** `SPACE-COMBAT-01` marks them itself: **whether `Repair` at DC 20 is the right
-number**; **`LINE UP`'s `+2`, which is authored with no antecedent** (*"half of `Aid
-Another`, because it reaches every gunner rather than one target"*); and the **`EVASIVE`
-check, which `PT-879` converted from an opposed roll** — the only one in the system — to a
-flat DC. **All three are the kind of number that only play settles.**
-
-**⚠ Flag 5 — `STARSHIPS-01 §4` is headed *"Recommendation, not yet ruled"* and this chapter
-does not draw on it.** Recorded so a later reader knows the omission is deliberate rather
-than an oversight.
-
-**Not a flag, but the pattern is now worth naming.** This is the **fifth** rules document in
-four chapters carrying a superseded or self-contradicting passage alongside its replacement
-— after `LOOT-01`'s duplicated paragraph, `DROID-CONSTRUCTION-01`'s retired part names and
-flat rebuild cost, and `DROIDS-UPGRADE-01`'s self-documented stale paragraph. **Each
-instance is minor and every one was caught by reading the source rather than the summary.**
-**A sweep for "documents that describe their own content as unbuilt" would likely find
-more.**
+**The `10 × CR` fit** was measured against the 205 creatures in KOTOR's own files — **21%
+mean absolute error across 14 CR bands** — and the chapter states it as a design curve
+deliberately smoother than the real one.

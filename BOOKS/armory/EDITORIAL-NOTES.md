@@ -1141,3 +1141,137 @@ seven build-or-buy rows, the `Repair` DC ladder 15–30, one day per 1,000 credi
 droid's half price / DC +5 / `−2` / natural-1 / `Droid Upgrade 1` ceiling, the six sockets,
 the 3 / 6 / 9 bays, the whole class-grant table, the `Astromech`/`Remote` cap, and
 `Juggernaut`'s exclusion by it.
+
+---
+
+# Chapter Fifteen — Starships and Space Combat
+
+*Original source line, as it stood before the `PT-1844` pass:*
+
+> *Sources: `STARSHIPS-01` (`PT-669`, `PT-670`, `PT-672`, `PT-673`, `PT-800`, `PT-825`),
+> `SPACE-COMBAT-01` (`PT-791`–`PT-808`, `PT-819`, `PT-820`, `PT-879`), and
+> `MOUNTED-COMBAT-01 §§7, 9` for the pilot/passenger split, the movement rule and the range
+> bands. `CRAFTING-01 §5` for the base definition; `ENCOUNTER-01` for CR; `SKILLS-01` for
+> `Pilot` and `Awareness`.*
+
+## Flags, carried from review
+
+**⚠⚠ Flag 1 — `STARSHIPS-01 §3` says space combat and ship stats are not built. Both are.**
+Its *"What is NOT built"* list reads **`SPACE COMBAT — NOTHING`** and **`SHIP STATS —
+NOTHING`**, with no ✓, while the same list marks travel time and the ship-as-base as closed.
+**`SPACE-COMBAT-01` built both**: eight components at `PT-791`–`PT-808`, and ship stats
+specifically at `PT-796` — Vitality `10 × CR`, Defence `10 + CR`, Speed 4.
+
+**A reader consulting `STARSHIPS-01` alone would conclude this chapter's entire second half
+does not exist.** **Reported, not fixed.**
+
+**⚠ Flag 2 — `SPACE-COMBAT-01`'s own title contradicts its own status line.** The document
+is titled ***"the plan, not the rules"*** and its status line immediately beneath reads
+**"ALL EIGHT COMPONENTS BUILT."** The title is a fossil from when it was a plan. **Harmless
+to anyone who reads two lines; misleading to anyone who reads one.**
+
+**⚠⚠ Flag 3 — this chapter summarises four components rather than reproducing them, and
+that is a judgement call worth your review.** Components 5 through 8 — upgrades, seats per
+hull class, the unwinnable fights, enemy ships and boarding — plus the 24-part ship-parts
+table and the specialist-parts material, run to several hundred lines of ruled content.
+
+**Part Three names them and gives each its governing idea; it does not carry their tables.**
+**My reasoning:** the Armory is an equipment book, and this chapter is already the longest
+in it. **The enemy-ship roster and the ship-parts catalogue are catalogue material** of the
+same kind Chapter Three carries for ranged weapons — **and they would be better as their own
+chapter than as an appendix to this one.**
+
+**Recommend a Chapter Sixteen** covering ship parts, specialist parts and the enemy roster.
+**Say if you would rather it folded in here instead and I will expand Part Three.**
+
+**✔ Resolved. Chapter Sixteen was approved and written**, and carries ship parts, specialist
+parts, boarding and the enemy roster in full. **The `PT-1844` pass rewrote Part Three to
+match**: it now summarises only the three systems that genuinely have no chapter of their own
+— upgrades, seats per hull class, and the two unwinnable fights — and points the other four
+at Chapter Sixteen by name.
+
+**⚠ Flag 4 — three numbers in the combat system are flagged as unverified in their own
+source.** `SPACE-COMBAT-01` marks them itself: **whether `Repair` at DC 20 is the right
+number**; **`LINE UP`'s `+2`, which is authored with no antecedent** (*"half of `Aid
+Another`, because it reaches every gunner rather than one target"*); and the **`EVASIVE`
+check, which `PT-879` converted from an opposed roll** — the only one in the system — to a
+flat DC. **All three are the kind of number that only play settles.**
+
+**⚠ Flag 5 — `STARSHIPS-01 §4` is headed *"Recommendation, not yet ruled"* and this chapter
+does not draw on it.** Recorded so a later reader knows the omission is deliberate rather
+than an oversight.
+
+**Not a flag, but the pattern is now worth naming.** This is the **fifth** rules document in
+four chapters carrying a superseded or self-contradicting passage alongside its replacement
+— after `LOOT-01`'s duplicated paragraph, `DROID-CONSTRUCTION-01`'s retired part names and
+flat rebuild cost, and `DROIDS-UPGRADE-01`'s self-documented stale paragraph. **Each
+instance is minor and every one was caught by reading the source rather than the summary.**
+**A sweep for "documents that describe their own content as unbuilt" would likely find
+more.**
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 11 internal citations from 480 lines**, plus the `Status: DRAFT, for review`
+header, whose *"roughly 1,950 lines of source across three documents"* measured the
+development record rather than the chapter.
+
+**⚠ And that header carried a claim that had since become false.** It called this **"the
+Armory's last chapter."** Chapter Sixteen was approved and written after it was drafted.
+**Second chapter in this task whose status line had quietly gone wrong** — the same shape as
+Chapter Fourteen's *"third of the four remaining."* **A status line is the part of a document
+nobody rereads, which is exactly why it rots.**
+
+**⚠⚠ Flag 4's reader-facing half was promoted, and it is the important change.** Three
+numbers in the space-combat system are marked unverified in their own source, and a
+Gamemaster running the system is the person who needs to know which three. The chapter now
+carries them directly, right after the four-line summary of what each seat rolls:
+
+> **Three numbers in this system that only play will settle.** Everything else in Part Two is
+> a rule. **These three are rules with a question mark against them**, and a table that finds
+> one wrong should change it rather than work around it — `Repair` at DC 20, `LINE UP`'s
+> `+2`, and `EVASIVE`'s check.
+
+**And the note draws the line rather than vaguely hedging the chapter.** It says explicitly
+that these are the three least anchored numbers, that they are not suspected of being wrong,
+and that **every other figure is either derived from the games' own data or falls out of
+rules the rest of the book already uses.** A caveat that spreads doubt over a whole system is
+worse than no caveat; this one is bounded to three lines.
+
+**⚠⚠ Flag 3 is resolved, and resolving it turned up a real error in Part Three.** Part Three
+opened with *"four further components exist in full and are summarised here rather than
+reproduced; see Flag 3"* — **an orphan pointer into a note this pass was removing**, and
+worse, **no longer true.** Chapter Sixteen now carries ship parts, specialist parts, boarding
+and the enemy roster **in full, with their tables.**
+
+**But it does not carry all four of the summarised components.** Upgrades, seats per hull
+class and the two unwinnable fights have no chapter of their own and are genuinely summary
+here. **So Part Three was split along the real line**: three systems summarised because they
+are summaries, four pointed at Chapter Sixteen by name because they are there in full. The
+heading changed from *"What else is built"* — a build-state description — to **"Three more
+systems, in brief."**
+
+**Five passages lost their development history and kept their content.** *"The project draws"*
+the `HK-47`/`HK-50` distinction became the distinction itself; *"both shipped packages"*
+became *"the two this game comes with"*; *"carrying capacity was killed and encumbrance
+deferred"* became **"this game has no carrying capacity and no encumbrance rule at all"** —
+which is what a reader needs and is a stronger statement, not a weaker one; *"the project
+already parsed"* 205 creatures became **"the 205 creatures in KOTOR's own files"**; and *"the
+owner's brief"* became the design statement itself, set as a pull quote, since it summarises
+the whole of Part Two better than any paraphrase.
+
+**⚠ One directional reference was repaired in passing.** *"That was the rule before this
+system existed"* dated a rule against the project's own build order. It now reads **"as Part
+One sets out"** — verified: the authored-loss rule is in Part One, above.
+
+**⚠ The sources section states the honest proportion, which this chapter needed more than
+most.** Almost nothing in Part Two came from the games: **KOTOR has no ship statistics
+anywhere in its 637 data tables, and its space combat is a rail shooter with two verbs.** The
+section says so plainly and then lists what is this game's — which is nearly all of it —
+rather than letting the chapter's confident tone imply a source it does not have.
+
+**⚠ Deliberately NOT loosened.** Every price in all three tables, the map scale, all three
+range bands, the `−2` at LONG, the 90-degree turn and its `Pilot` DC 15 / DC 20 exceptions,
+the half-Vitality turret loss, `Repair` DC 20, the beat-Defence-by-10 station hit, all three
+pilot actions, all three co-pilot actions, `10 × CR` / `10 + CR` / Speed 4, the 21% mean
+absolute error, the `2d8`–`5d8` turret ladder, and the fully statted `Ebon Hawk` all survive
+unchanged.

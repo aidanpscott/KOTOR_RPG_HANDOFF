@@ -1,10 +1,5 @@
 # Chapter Eight — The Unwritten Future
 
-**Status: APPROVED** by MAIN. `PROSE`. **No Major Figures section** — `PT-1802` scopes that
-structure to Chapters Three through Seven, and this chapter has no fixed roster by design.
-
----
-
 > *"Look, everybody always figures the time they live in is the most epic, most important
 > age to end all ages. But tyrants and heroes rise and fall, and historians sort out the
 > pieces."*
@@ -20,9 +15,9 @@ structure to Chapters Three through Seven, and this chapter has no fixed roster 
 > *3,950 BBY: The last remnants of the Sith Empire crumble, and the Republic once again
 > establishes control over worlds that have been under Sith rule since the Great Sith War.*
 
-**After that, nothing.** Not sparse coverage — nothing. A search of the Campaign Guide's
-entire twenty-one thousand lines finds no date later than 3,950 BBY, and every era-divided
-section in the book, from factions to starships to personnel, stops at the Dark Wars.
+**After that, nothing.** Not sparse coverage — **nothing.** No source describes a single
+dated event later than 3,950 BBY, and every part of the Campaign Guide that divides itself
+by era — factions, starships, droids, personnel — stops at the Dark Wars.
 
 **This chapter is about that edge**, and the first thing to say about it is the most
 important:
@@ -78,25 +73,23 @@ praxeum she built to shape the Order to her taste.
 **The Mandalorians have a Mandalore again.** Canderous Ordo reunited the clans on Dxun in
 3,951, and the Preserver era opens with no stated end.
 
-**The Star Forge's fate is a branch, not a fact** — the project's engine records it as the
-*only* branching event in its entire enumeration, and who destroyed it is determined at your
-table rather than in a book.
+**The Star Forge's fate is a branch, not a fact.** As Chapter Five said, it is **the only
+event in this book whose outcome your campaign decides** — who destroyed it is settled at
+your table rather than in any source.
 
-**And KOTOR 3 was left open deliberately.** `CANON-01-v2 §2` places it under **"open for
-user invention"** — the one category in the canon hierarchy reserved for what has not been
-written. **That is not an oversight in the source hierarchy. It is a slot held empty on
-purpose.**
+**And KOTOR 3 was left open deliberately.** Chapter One's four categories include one
+reserved for **what has not been written** — and KOTOR 3 is the only thing in it. **That is
+not an oversight. It is a slot held empty on purpose.**
 
 ## The rule for filling the gaps
 
-**This project has a ruling for this, and it is nine words long:**
+**The rule is nine words long, and it is the same source ladder from Chapter One pointed
+at the act of making things up:**
 
 > **Invent freely in the gaps; never contradict a ranked source.**
 
-`WORLDS-REGISTER-01` records it as *"`D-AB` applied to narration"* — the same source ladder
-that governs every citation in this book, pointed at the act of making things up. **It
-killed a proposed per-world "improvisation" field in favour of a single principle**, and
-the principle is permissive on purpose.
+**One principle, deliberately permissive**, in place of a list of what you may and may not
+touch.
 
 **Read both halves.** *Invent freely* is the larger half. Everything this book has not
 said is yours: the worlds nobody surveyed, the people nobody wrote down, what happened on
@@ -108,36 +101,32 @@ players*, not *never deviate from the games* — **never contradict something th
 actually says.** The record says less than most people assume, which is exactly why this
 book spent so much effort establishing what it does say.
 
-### The three tiers, and the one question the architecture says not to answer
+### The one question this book will not answer
 
-The project's own narration policy sorts every question a player can ask into three tiers:
+**Most questions a player asks fall into one of three kinds, and only the third is hard:**
 
-| Tier | When | Action |
-|---|---|---|
-| 1 | The fact is authored | Answer from the pack |
-| 2 | The question touches nothing the ledger tracks | **Improvise and log** |
-| 3 | The question touches a tracked fact the pack has not set | **Defer to the DM** |
+| The question | What to do |
+|---|---|
+| The book answers it | Read it off the page |
+| The book is silent, and nothing depends on the answer | **Invent freely** |
+| The book is silent, but something in play depends on it | **That is the Gamemaster's call, not a lookup** |
 
-**Tier 2 is the large one** and it is where this chapter lives. **Tier 3 is small, and its
-canonical example is the subject of this chapter.**
+**The middle row is where this chapter lives.** The third is small — and its most famous
+member is the one this book has been circling since Chapter Five.
 
-`CANON-01-v2 §5.1` names the failure that tier 3 exists to prevent, in so many words: *"the
-AI invents an answer to what happened to Revan."*
+**What happened to Revan?**
 
-**That is a remarkable thing to find at the end of this book.** The architecture identified,
-independently and for engineering reasons, the same question the sources deliberately
-refuse — and ruled that **the correct response is not to answer it but to hand it to a
-person.**
+**This book does not know, and neither do the sources.** The Campaign Guide's last word is
+*"Revan leaves once more for the Unknown Regions."* KOTOR 2 makes the search for Revan a
+thread running through an entire game **and still does not say.**
 
-**So this chapter will not tell you what happened to Revan**, and the refusal is not
-coyness. It is the project's own policy, applied to its own book. **Some questions are for
-the table, and the record is designed to leave them there.**
+> **The silence is not an omission. It is the shape of the story.**
 
-*(The source is honest that the mechanism is imperfect: tier-3 detection is marked
-**mitigated, not answered**, because distinguishing tier 2 from tier 3 needs information
-that cannot safely sit in context — a schema listing `kotor1.bastila.fell` would disclose
-that Bastila can fall to a player who has not learned it. **The hole is raised, not
-closed**, and the book records that rather than papering over it.)*
+**So this chapter will not tell you either** — not out of coyness, but because answering it
+would mean inventing and calling it reporting, **which is the one thing this book has
+refused to do for seven chapters.**
+
+**That question belongs to your table, and the record was built to leave it there.**
 
 ## Why the edge is the best part
 
@@ -160,9 +149,9 @@ Campaign Guide itself calling that last one *"a blank slate."*
 
 ## What this book was, one last time
 
-**Chapter One said this book is not the authority on dates, and that stands.** The engine
-holds the timeline; this book explains it. Where the two disagree, the engine is right and
-these pages have a bug.
+**Chapter One said this book is not the authority on dates, and that stands.** The sources
+hold the record; this book explains it. **Where the two disagree, the sources are right and
+these pages have a mistake in them.**
 
 **What this book claimed to do was smaller and, I hope, more useful:** to say what is
 actually known about the long history behind this campaign, to say who says it and
@@ -179,74 +168,17 @@ people at the table.
 
 ---
 
-*Sources: KOTOR Campaign Guide — the Jolee Bindo epigraph, f. 6; the closing timeline
-entry, f. 113; "Rakatan Mysteries", f. 110. `CANON-01-v2 §2` (the canon layers and KOTOR 3
-as open for user invention) and `§5`–`§5.1` (improvisation, the three-tier policy, and the
-tier-3 example). `WORLDS-REGISTER-01` for* "invent freely in the gaps; never contradict a
-ranked source" *as `D-AB` applied to narration. `EVENTS-01 §4` for the Star Forge branch
-and the Preserver era. Folios are printed page numbers; the OCR's page markers run three
-higher (Chapter One, Flag 3).*
+## Sources for this chapter
 
-## Open items, carried from review
+**Less than any other chapter in the book, which is the point of it.**
 
-**⚠ Flag 1 — the epigraph's attribution is OCR-corrupted, and the quotation is set from a
-reconstructed reading.** The Campaign Guide's text at f. 6 renders the attribution as
-**`—-WJOLEE BINDO`**, and the quote itself is broken across twelve short all-capital lines
-by the scan. **The attribution is plainly *Jolee Bindo*** — a KOTOR 1 companion, so the
-name is not in doubt — and I have set the quotation in sentence case with the line breaks
-removed. **Nothing was added or reworded.** Recording it because this is the fourth OCR
-corruption found in this file and the first one this book actually prints; if the epigraph
-survives to a finished page, someone should check it against a physical copy.
+From the *Knights of the Old Republic Campaign Guide*, at printed page numbers:
 
-**⚠ Flag 2 — two comparisons in this chapter are mine, not the sources'.** The fifty-years
--versus-four-thousand measurement and the Hammurabi's-Babylon line are **my own
-illustrations**, arithmetic on rank-2 dates rather than sourced statements. **Flagged so
-they are not mistaken for citations.**
+- **The Jolee Bindo epigraph** — p. 6
+- **The closing timeline entry**, 3,950 BBY — p. 113
+- **"Rakatan Mysteries"**, for the Infinite Empire's leavings — p. 110
 
-**⚠ An earlier draft of this passage got the comparison backwards** — it claimed the
-distance from the campaign to the Republic's fall exceeded the distance from King Adas to
-the campaign. **It does not:** Adas to 3,956 BBY is roughly twenty-four thousand years, the
-campaign to the Empire roughly four. Caught in the consistency pass and replaced with the
-measurement above, which compares the book's own fifty-year span against the four-thousand
--year gap that follows it. **Recorded rather than quietly fixed**, because it is the only
-arithmetic error the pass found that had actually reached a finished chapter. Everything else in the chapter is either quoted, cited, or
-explicitly framed as the book addressing itself.
-
-**⚠ Flag 3 — I used `CANON-01-v2 §5.1`'s tier-3 example as a thematic point, and want that
-visible rather than clever.** The document names *"the AI invents an answer to what happened
-to Revan"* as an **engineering failure mode**, in a section about ledger key-sets and
-context safety. **This chapter repurposes it as an argument about narrative restraint.**
-The two readings are compatible and I think the convergence is genuine — the architecture
-and the sources refuse the same question — **but the source is not making a literary point
-and this chapter says so in its own text.** Recording it because borrowing a technical
-statement for a thematic purpose is exactly the kind of move that should be declared rather
-than performed.
-
----
-
-## ⚠ Book status — for MAIN, not for the reader
-
-**All eight chapters are drafted.** For the record, and for whoever audits this book next:
-
-| # | Chapter | Primary rank | Reference books used |
-|---|---|---|---|
-| 1 | What this timeline is, and isn't | project documents | none |
-| 2 | Deep history | **2**, with 3 claims at 6 | **Chronology, relayed — 3 claims** |
-| 3 | The Tales of the Jedi era | **2** | none |
-| 4 | The Mandalorian Wars | **2** | none |
-| 5 | The Jedi Civil War | **2**, KOTOR 1 at rank 1 corroborating | none |
-| 6 | The Sith Lords' Return | **2** | none |
-| 7 | The Reconstruction | **2** | none |
-| 8 | The unwritten future | project documents | none |
-
-**Neither reference book was staged, and only three claims in the whole book rest on rank
-6** — the Rakatan plague and its date, the Jedi Order's founding on Tython, and the Battle
-of Corbos, all in Chapter Two and all marked in the text. ***Jedi vs. Sith* was never
-needed**, at rank 8 or otherwise.
-
-**The sourcing assessment that opened this book predicted the opposite**, and was wrong in
-the useful direction: it estimated the Campaign Guide covered Chapters Three and Four and
-flagged Chapter Two as the real gap. **In fact the Campaign Guide carried seven of eight
-chapters at rank 2, including most of Chapter Two.** That estimate was corrected three
-times in the course of drafting — the timeline's true extent, the era alignment, and the
-post-3,950 sweep — each time downward in favour of what was actually held.
+**Everything else in this chapter is this book talking about itself** — what it admitted,
+what it refused, and where it stops. **The one rule it offers — invent freely in the gaps,
+never contradict a ranked source — is this game's own, and it is the last thing in the book
+that needs a source at all.**

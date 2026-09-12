@@ -768,3 +768,153 @@ have rested almost entirely on the weakest book available.
 argument is intact: **the Republic's reconstruction programme produced a criminal empire, an
 assassin-droid industry and a bounty on every Force-user alive — not by failing, but by
 executing its brief correctly.**
+
+---
+
+# Chapter Eight — The Unwritten Future
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance. **This section
+also absorbs the chapter's "Book status — for MAIN, not for the reader" table**, which was
+internal by its own heading.*
+
+**Chapter status: APPROVED by MAIN.** `PROSE`, no Major Figures section per `PT-1802`.
+**Sources it stood on:** `CANON-01-v2 §2` (the canon layers, KOTOR 3 as open for user
+invention) and `§5`–`§5.1` (improvisation, the three-tier policy, the tier-3 example);
+`WORLDS-REGISTER-01` for *"invent freely in the gaps"* as `D-AB` applied to narration;
+`EVENTS-01 §4` for the Star Forge branch.
+
+**⚠ Flag 1 — the epigraph's attribution is OCR-corrupted, and the quotation is set from a
+reconstructed reading.** The Campaign Guide's text at f. 6 renders the attribution as
+**`—-WJOLEE BINDO`**, and the quote itself is broken across twelve short all-capital lines
+by the scan. **The attribution is plainly *Jolee Bindo*** — a KOTOR 1 companion, so the
+name is not in doubt — and I have set the quotation in sentence case with the line breaks
+removed. **Nothing was added or reworded.** Recording it because this is the fourth OCR
+corruption found in this file and the first one this book actually prints; if the epigraph
+survives to a finished page, someone should check it against a physical copy.
+
+**⚠ Flag 2 — two comparisons in this chapter are mine, not the sources'.** The fifty-years
+-versus-four-thousand measurement and the Hammurabi's-Babylon line are **my own
+illustrations**, arithmetic on rank-2 dates rather than sourced statements. **Flagged so
+they are not mistaken for citations.**
+
+**⚠ An earlier draft of this passage got the comparison backwards** — it claimed the
+distance from the campaign to the Republic's fall exceeded the distance from King Adas to
+the campaign. **It does not:** Adas to 3,956 BBY is roughly twenty-four thousand years, the
+campaign to the Empire roughly four. Caught in the consistency pass and replaced with the
+measurement above, which compares the book's own fifty-year span against the four-thousand
+-year gap that follows it. **Recorded rather than quietly fixed**, because it is the only
+arithmetic error the pass found that had actually reached a finished chapter. Everything else in the chapter is either quoted, cited, or
+explicitly framed as the book addressing itself.
+
+**⚠ Flag 3 — I used `CANON-01-v2 §5.1`'s tier-3 example as a thematic point, and want that
+visible rather than clever.** The document names *"the AI invents an answer to what happened
+to Revan"* as an **engineering failure mode**, in a section about ledger key-sets and
+context safety. **This chapter repurposes it as an argument about narrative restraint.**
+The two readings are compatible and I think the convergence is genuine — the architecture
+and the sources refuse the same question — **but the source is not making a literary point
+and this chapter says so in its own text.** Recording it because borrowing a technical
+statement for a thematic purpose is exactly the kind of move that should be declared rather
+than performed.
+
+---
+
+## ⚠ Book status — for MAIN, not for the reader
+
+**All eight chapters are drafted.** For the record, and for whoever audits this book next:
+
+| # | Chapter | Primary rank | Reference books used |
+|---|---|---|---|
+| 1 | What this timeline is, and isn't | project documents | none |
+| 2 | Deep history | **2**, with 3 claims at 6 | **Chronology, relayed — 3 claims** |
+| 3 | The Tales of the Jedi era | **2** | none |
+| 4 | The Mandalorian Wars | **2** | none |
+| 5 | The Jedi Civil War | **2**, KOTOR 1 at rank 1 corroborating | none |
+| 6 | The Sith Lords' Return | **2** | none |
+| 7 | The Reconstruction | **2** | none |
+| 8 | The unwritten future | project documents | none |
+
+**Neither reference book was staged, and only three claims in the whole book rest on rank
+6** — the Rakatan plague and its date, the Jedi Order's founding on Tython, and the Battle
+of Corbos, all in Chapter Two and all marked in the text. ***Jedi vs. Sith* was never
+needed**, at rank 8 or otherwise.
+
+**The sourcing assessment that opened this book predicted the opposite**, and was wrong in
+the useful direction: it estimated the Campaign Guide covered Chapters Three and Four and
+flagged Chapter Two as the real gap. **In fact the Campaign Guide carried seven of eight
+chapters at rank 2, including most of Chapter Two.** That estimate was corrected three
+times in the course of drafting — the timeline's true extent, the era alignment, and the
+post-3,950 sweep — each time downward in favour of what was actually held.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 8 internal citations, and this was the only chapter that quoted internal
+documents for their *arguments* rather than their facts.** That made it the hardest pass
+and the one MAIN asked for a proposal on before any rewrite.
+
+### ⚠⚠ The Revan convergence — a correction to the reasoning, not just the citation
+
+**The passage previously rested its refusal on a convergence between two things:** the
+project's own narration policy, whose tier-3 example is *"the AI invents an answer to what
+happened to Revan"*, and the source material's own silence. **It called the agreement
+remarkable, and it is.**
+
+**But one of those two things is invisible to a reader.** They can see the sources refuse;
+they cannot inspect the architecture. **So the convergence is not observable to them** — it
+asked them to accept that something they cannot see agrees with something they can. **And
+it was the invisible half doing the justifying work:** *"the refusal is not coyness. It is
+the project's own policy, applied to its own book."*
+
+**The refusal is now grounded in the visible half, which was always the stronger argument.**
+A reference book does not decline a question because a software policy says so. **It
+declines because answering would be inventing, and this book reports.** The architecture
+merely happened to agree.
+
+**And the sources' refusal is checkable**, which the chapter now says: the Campaign Guide's
+last word is *"Revan leaves once more for the Unknown Regions"*, and **KOTOR 2 makes the
+search for Revan a thread running through an entire game and still does not say.**
+
+> **The silence is not an omission. It is the shape of the story.**
+
+**MAIN's assessment, recorded because it is the right reading:** this was not a citation fix
+but a correction to the underlying reasoning, and grounding the refusal in what a reader can
+check was the better argument **independent of accessibility.**
+
+### ⚠ The convergence observation itself, preserved here because it is real
+
+**Two independent processes — an engineering design concerned with context safety, and a
+body of source material written across twenty years — landed on refusing the same
+question.** The architecture ruled that the correct response is **not to answer it but to
+hand it to a person**, which is exactly what the sources do. **That is a genuine finding
+about this project and worth keeping. It is simply not something the book can show
+anyone.**
+
+**Also dropped:** the parenthetical recording that tier-3 detection is *"mitigated, not
+answered"*, because a schema listing `kotor1.bastila.fell` would disclose that Bastila can
+fall to a player who has not learned it. **The honesty is admirable and the point does not
+transfer** — a reader has no schema, no tiers, and nothing to leak.
+
+### The rest of the pass
+
+**The three tiers survived as reader advice** rather than a policy table: the book answers
+it, or nothing depends on the answer and you invent freely, or **something in play depends
+on it and that is the Gamemaster's call rather than a lookup.**
+
+**The Star Forge line** now points at Chapter Five's plain statement — **the only event in
+this book whose outcome your campaign decides** — instead of the enumeration.
+
+**KOTOR 3's open slot** is credited to Chapter One's four categories rather than the canon
+hierarchy.
+
+**The closing paragraph** said *"the engine holds the timeline; this book explains it."* It
+now says **the sources hold the record** — the same relationship, and the one Chapter One
+now sets up.
+
+**Process narration moved here:** the *"twenty-one thousand lines"* search that established
+nothing exists after 3,950 BBY. **The fact stayed; the method left.**
+
+**✔ The Jolee Bindo epigraph stayed untouched** — a real quotation from a real book with a
+real page number, which is what this whole task is trying to produce more of.
+
+**⚠ Deliberately NOT loosened.** The refusal is at least as firm as before, the
+four-thousand-year distance to the films is unchanged, every open thread survives, and the
+closing *"everything after 3,950 BBY is yours"* is intact.

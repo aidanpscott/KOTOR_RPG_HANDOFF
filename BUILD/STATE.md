@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `7328920` — `check_extracts` at stale 0, first time |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `9f2b2ed` — `PT-1782` gets a column |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `20e0565` — every projection declares what it folds |     ⚠ no |
+| `Lodestar` | `f1c2cc0` — `perceptionSquares`, and a floor not a ceiling |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `ca0423b` — pinned to `PT-1435`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `24b903f` — the check asks every projection, not `replay` |      ⚠ no |
+| `Loom` | `7a0ca16` — pinned to `PT-1782`'s engine |        ⚠ no |
+| `KOTOR-RPG-APP` | `8626028` — a sniper rifle notices farther, not through |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,16 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 675 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 547 — 1,495, all
-green.** *(`BUILD 152`.)*
+**`Lodestar` 682 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 550 — 1,505, all
+green.** *(`BUILD 153`.)*
+
+⚠⚠ **THE PLAY SCREEN'S `RosterPanel` DOES NOT IMPLEMENT `APP-UI-VISION-01`'s
+LOCKED SIDEBAR** — answered at `BUILD 153 §1`. Right-docked where `PT-1111`
+locks left, combat-only where `PT-1124` locks exploration too, text rows where
+`PT-1132` locks a portrait, and two treatments where `PT-1132` locks one. The
+companion work is **orthogonal to that design, not in conflict with it**: it
+built the rules half, and every fact the locked portrait needs is already
+folded.
 
 ⚠ **`weapon_upgrades.toml` IS READ AT `BUILD 151`** — 35 rows from
 `WEAPON-MATRIX-01` (`PT-1780`), and the Equipment screen's second offer

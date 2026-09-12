@@ -28,19 +28,27 @@ Upgrade N)` property — the "bay gate", and it is a deliberate exception to how
 normally reaches a character.** A droid doesn't learn these the way an organic character
 learns a feat; **the gate is the item requirement itself, not a separate feat purchase.**
 
-## ⚠ One spike-mount item has a broken name in the game data
+## ⚠ Six items here were catalogued under the wrong names
 
-**The best item in the Spike-mount category is hard to find, because its name field is
-corrupted.** It is the **Advanced Droid Interface** — `g1_i_drdcomspk01`, Tier 3, **9,000
-credits**, and it requires `Droid Upgrade 3`.
+**All six are now correct**, and five of them were not even marked as doubtful — they simply
+carried somebody else's words. `g1_i_drdhvplat01` read *"Lock"* and is **Composite Heavy
+Plating**; `g1_i_drdshld001` read *"Search"* and is the **Baragwin Droid Shield**; and the
+three `g1_i_drdutldev` devices read *"Mastercraft: Armor I Description"*, *"Mastercraft:
+Armor III Description"* and *"is knocked down"* — they are the **Baragwin Flame Thrower**,
+**Baragwin Stun Ray** and **Baragwin Shield Disruptor**.
+
+**The sixth is the one this section was originally about.** It is the **Advanced Droid
+Interface** — `g1_i_drdcomspk01`, Tier 3, **9,000 credits**, and it requires
+`Droid Upgrade 3`.
 
 **It grants skill 7 in Awareness, Computer Use, Demolitions and Security** — four bonuses
 at once, which is why it costs what it does. Its own description calls it *"a
 self-contained artificial intelligence system… to provide them with additional resources
 useful in the bypassing of computer and conventional"* security.
 
-> **If you are searching the game files for this item by name, you will not find it.
-> Search the code instead.** **It is catalogued below under its real name.**
+> **All six were recoverable the whole time.** Their names sat in KOTOR 1's own string
+> table; the wrong game's table was being read for KOTOR 1-only items. **Every one is
+> catalogued below under its real name.**
 
 ---
 
@@ -122,11 +130,11 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Droid Ion Blast Mark III** · `d_device_14` · K2 · Tier 2 · 2,500 credits · Damage: Ion, 30pts · On Hit: Stun, 100% for 12sec · Save: DC18 to ignore stun · Range: Medium · Charges: Using this item consumes two charges. This it · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate — *“Damage: Ion, 30pts On Hit: Stun, 100% for 12sec Save: DC18 to ignore stun Range: Medium Charges: Using this item consumes two charges. This item is automatically discarded after all available charges are consumed. Items that have charges do not stack in inventory. The Mark III is the most feared weapon by droid army commanders. There is a drawback in the unit's power consumption. The interal circuitry can only withstand a few shots before it destroys itself. This version is also equipped with a beam-splitter to allow the beam to be directed at multiple targets simultaneously.”*
 
-**Mastercraft: Armor I Description** · `g1_i_drdutldev01` · K1 · Tier 2 · 3,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“Mastercraft: Armor II Description”* ⚠ *(description truncated in source)*
+**Baragwin Flame Thrower** · `g1_i_drdutldev01` · K1 · Tier 2 · 3,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“Using an innovative technique, the Baragwin have managed to modify a normal flame thrower to operate in such a fashion as to ignite the very atmosphere around a charged guidance beam. The result is a flame thrower that d”* ⚠ *(description truncated in source)*
 
-**Mastercraft: Armor III Description** · `g1_i_drdutldev02` · K1 · Tier 2 · 3,000 credits · While not the most powerful of weapons, the Baragwin have modified a normal Stun Ray to run at such efficiency that it can tap into the power supply of the droid mounting · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“is not knocked down”* ⚠ *(description truncated in source)*
+**Baragwin Stun Ray** · `g1_i_drdutldev02` · K1 · Tier 2 · 3,000 credits · While not the most powerful of weapons, the Baragwin have modified a normal Stun Ray to run at such efficiency that it can tap into the power supply of the droid mounting · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“While not the most powerful of weapons, the Baragwin have modified a normal Stun Ray to run at such efficiency that it can tap into the power supply of the droid mounting it, giving it unlimited charges.”*
 
-**is knocked down** · `g1_i_drdutldev03` · K1 · Tier 2 · 3,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate
+**Baragwin Shield Disruptor** · `g1_i_drdutldev03` · K1 · Tier 2 · 3,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate
 
 **Blowtorch** · `g_d_blowtrch01` · K2 · Tier 1 · 100 credits · Damage: Heat, 6pts · Save: DC15 for half damage · Range: Short · Charges: Using this item consumes one charge. This item is automatically discarded af · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“Damage: Heat, 6pts Save: DC15 for half damage Range: Short Charges: Using this item consumes one charge. This item is automatically discarded after all available charges are consumed. Items that have charges do not stack in inventory. This droid-mounted acetylene blowtorch can be used as an improvised weapon, inflicting minor heat damage over an area.”*
 
@@ -244,7 +252,7 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Droid Energized Armor Mark III** · `d_armor_15` · K2 · Tier 4 · 29,905 credits · DamageResist (Bludgeoning) Resist_10/- · DamageResist (Piercing) Resist_10/- · DamageResist (Slashing) Resist_10/- · Armor 5 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · ImprovedSavingThrowsSpecific (Fortitude) 5 — *“Energized armor draws on the droid's power source and applies a current through a specially designed matrix on this armor. This energy matrix binds the molecules of the armor together to create a nearly inpenetrable physical barrier. Extremely difficult to manufacture, energized armor takes years to produce, thus making this the most expensive droid armor on the open market.”*
 
-**Lock** · `g1_i_drdhvplat01` · K1 · Tier 2 · 3,000 credits · Armor 4 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate
+**Composite Heavy Plating** · `g1_i_drdhvplat01` · K1 · Tier 2 · 3,000 credits · Armor 4 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate
 
 **Droid Heavy Plating Type 1** · `g_i_drdhvplat001` · K1 · Tier 2 · 1,250 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“Originally used on starship hulls, durasteel is the best protection available for droids. This particular variant of the alloy is the standard for mass-production heavy combat droids.”*
 
@@ -306,7 +314,7 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Droid Unity Grid** · `d_shield_06` · K2 · Tier 2 · 1,350 credits · Duration: 200 seconds, · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate — *“Absorbs: Energy, Sonic, Cold, Heat, Ion 110pts total Duration: 200 seconds, or max damage taken This shielding module creates overlapping shield vectors and then unifies them into a single shield, greatly increasing its absorption capacity as a result.”*
 
-**Search** · `g1_i_drdshld001` · K1 · Tier 2 · 4,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“Droid Interface”* ⚠ *(description truncated in source)*
+**Baragwin Droid Shield** · `g1_i_drdshld001` · K1 · Tier 2 · 4,000 credits · CastSpell ⚠ subtype dropped · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“A super-efficient version of a normal droid energy shield, the Baragwin version has been modified and customized to be able to run off the power supply of the droid mounting it. While the energy drain on the droid is ins”* ⚠ *(description truncated in source)*
 
 **Energy Shield Level 1** · `g_i_drdshld001` · K1 · Tier 1 · 300 credits · Duration: 200 seconds, · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“Deflection: Energy, 20pts Duration: 200 seconds, or max damage taken This is a basic model energy shield universally applicable to most droids. The power drain is significant, however, and units like this must be replaced regularly.”*
 

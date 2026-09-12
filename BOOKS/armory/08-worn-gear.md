@@ -75,22 +75,22 @@ most plausibly support"*, with `Safety Harness` as the clearest example. **It is
 `Demolitions` 1** — a Peragus mining harness for setting charges, which is what the
 description said all along and what the data now confirms rather than suggests.
 
-## ⚠ And four rows have a corrupted name
+## ⚠ Nine rows were once catalogued under the wrong names
 
-**Four entries below carry a name lifted from somewhere else in the game's string table** —
-*"Deflect"*, *"Inner Strength I"*, *"Inner Strength III"* and *"Craft Description"*, none of
-which has anything to do with a gauntlet, an implant or a mask. **The items themselves are
-real and their properties are their own.**
+**All nine are now correct.** `g1_i_belt001` is the **Baragwin Stealth Unit**;
+`g1_i_gauntlet01` the **Advanced Stabilizer Gloves**; `g1_i_implant301`, `302`, `303` and
+`304` the **Advanced Sensory**, **Bio-Stabilizer**, **Combat** and **Alacrity** implants *(the
+last misspelled "Impant" in the game's own data)*; and `g1_i_mask01`, `02` and `03` the
+**Advanced Bio-Stabilizer Mask**, **Medical Interface Visor** and **Advanced Agent
+Interface**.
 
-**They are catalogued by resref and marked. No name has been invented for any of them**, and
-they are the same family of damage found in the armour, upgrade and droid chapters.
+**⚠ And two rows have no name at all.** `g_i_implant104` and `g_i_implant204` are blank in
+the source rather than wrong — they carry real descriptions and no name, and are marked as
+unnamed rather than given one.
 
-**⚠ Five more were on that list and are now named.** `g1_i_belt001` is the **Baragwin Stealth
-Unit**, `g1_i_implant303` the **Advanced Combat Implant**, `g1_i_implant304` the **Advanced
-Alacrity Impant** *(the misspelling is the game's own)*, `g1_i_mask02` the **Medical Interface
-Visor**, and `g1_i_mask03` the **Advanced Agent Interface**. **Their names were always
-recoverable** and had simply been read against the wrong game's string table. **All five are
-catalogued below under their real names.**
+**A reader's copy of this chapter previously showed feat text in their place** — *"Deflect"*,
+*"Inner Strength I"*, *"Prerequisites: Droid only"*. **Their real names were in KOTOR 1's own
+string table the whole time and had simply never been read there.**
 
 ---
 
@@ -329,7 +329,7 @@ properties and the item's own description.
 
 **Lightning Gloves** · `a_gloves_30` · K2 · Tier 4 · 29,600 credits · AttackBonus 1 · Damage (Electrical) 2d6 · DamageResist (Electrical) Resist_10/- — *“High charges of electricity pulse through these gloves when they strike an object, making them powerful in unarmed combat.”*
 
-**⚠ Name corrupted in the source** · `g1_i_gauntlet01` · K1 · Tier 3 · 8,500 credits · Ability (Dexterity) 3 · Blaster Bolt Deflect Increase 5 — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Stabilizer Gloves** · `g1_i_gauntlet01` · K1 · Tier 3 · 8,500 credits · Ability (Dexterity) 3 · Blaster Bolt Deflect Increase 5 — *“These gloves contain an advanced fire control and trajectory analysis system which links to held ranged weapons. This allows the user greater accuracy when aiming their own weapons, and also gives warning when incoming f”* ⚠ *(description truncated in source)*
 
 **Strength Gauntlets** · `g_i_gauntlet01` · K1 · Tier 2 · 1,000 credits · Ability (Strength) 1 — *“Developed by the Mephilis Corporation, these gauntlets use pulses of energy to stimulate muscles at the key leverage points of combat actions, effectively increasing strength.”*
 
@@ -443,9 +443,9 @@ properties and the item's own description.
 
 **Mental Boost D-Package** · `e_imp4_10` · K2 · Tier 4 · 29,000 credits · Ability (Charisma) 3 · Ability (Intelligence) 3 · Ability (Wisdom) 3 · UseLimitationAttribute (Constitution) >=18 — *“D-Package implants are larger and more intrusive than other types. They tend to have more impressive effects, but can only be used by very healthy individuals.”*
 
-**⚠ Name corrupted in the source** · `g1_i_implant301` · K1 · Tier 2 · 3,500 credits · Ability (Dexterity) 2 · Skill (Awareness) 10 — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Sensory Implant** · `g1_i_implant301` · K1 · Tier 2 · 3,500 credits · Ability (Dexterity) 2 · Skill (Awareness) 10 — *“By assisting the areas of the user's brain dedicated to sensory-interpretation, this implant greatly heightens the user's awareness of their surroundings, as well as spatial perception and analysis.”*
 
-**⚠ Name corrupted in the source** · `g1_i_implant302` · K1 · Tier 2 · 3,000 credits · Immunity (MindSpells) 0 · Immunity (Poison) 0 — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Bio-Stabilizer Implant** · `g1_i_implant302` · K1 · Tier 2 · 3,000 credits · Immunity (MindSpells) 0 · Immunity (Poison) 0 — *“This detailed micro-computer analyzes the contents of the user's circulatory system, as well as surges and drops in nerve transmission rates. It attempts to stabilize the user's system, and remove undesirable elements fr”* ⚠ *(description truncated in source)*
 
 **Advanced Combat Implant** · `g1_i_implant303` · K1 · Tier 3 · 7,000 credits · BonusFeats (Weapon Focus Blaster) · BonusFeats (Weapon Focus Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Focus Melee Weapons) · BonusFeats (Weapon Prof Blaster) · BonusFeats (Weapon Prof Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Prof Melee Weapons) · BonusFeats (Weapon Spec Blaster) · BonusFeats (Weapon Spec Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Spec Melee Weapons) — *“The Advanced Combat Implant is an experimental technology, designed to make computer data available to the user. Naturally, one of the first uses for this technology was combat. This implant contains weapons specificatio”* ⚠ *(description truncated in source)*
 
@@ -457,7 +457,7 @@ properties and the item's own description.
 
 **Memory Package** · `g_i_implant103` · K1 · Tier 2 · 1,000 credits · Ability (Intelligence) 1 — *“This implant stimulates the brain, effectively increasing the user's capacity for intelligent thought, all at a price cheaper than a trip to the libraries of Coruscant.”*
 
-**—** · `g_i_implant104` · K1 · Tier 1 · no sale value — *“This implant releases synthetic versions of the natural stimulants produced by the body, temporarily boosting the user's stamina.”*
+**⚠ Unnamed in the source** · `g_i_implant104` · K1 · Tier 1 · no sale value — *“This implant releases synthetic versions of the natural stimulants produced by the body, temporarily boosting the user's stamina.”*
 
 **Biotech Package** · `g_i_implant201` · K1 · Tier 2 · 1,000 credits · Regeneration 1 — *“This implant does use relatively experimental nano-technology to speed healing, but relies more on coagulants and solid doses of pain relievers. If you feel better, you are better.”*
 
@@ -465,7 +465,7 @@ properties and the item's own description.
 
 **Nerve Enhancement Package** · `g_i_implant203` · K1 · Tier 1 · 500 credits · Immunity (MindSpells) 0 — *“This implant regulates the nervous system, preventing loss of consciousness due to sudden impact or sensory overload.”*
 
-**—** · `g_i_implant204` · K1 · Tier 1 · no sale value — *“This implant bolsters the immune system, prompting it to react immediately aggressively toward any virus or bacterium that might have otherwise resulted in a debilitating sickness.”*
+**⚠ Unnamed in the source** · `g_i_implant204` · K1 · Tier 1 · no sale value — *“This implant bolsters the immune system, prompting it to react immediately aggressively toward any virus or bacterium that might have otherwise resulted in a debilitating sickness.”*
 
 **Bavakar Cardio Package** · `g_i_implant301` · K1 · Tier 2 · 2,000 credits · Ability (Constitution) 2 — *“This implant stimulates cardiovascular performance well beyond the user's norm. The Bavakar Medical Research Labs are at the forefront of developmental cybernetics.”*
 
@@ -551,7 +551,7 @@ properties and the item's own description.
 
 **Force Focusing Visor** · `a_helmet_30` · K2 · Tier 4 · 32,000 credits · Ability (Charisma) 1 · Ability (Wisdom) 4 · Regeneration Force Points 2 — *“Restricted: not useable by Wookiees Through means unknown, this visor helps the wearer clear their mind of distractions. It is especially potent when worn by a Force sensitive.”*
 
-**⚠ Name corrupted in the source** · `g1_i_mask01` · K1 · Tier 3 · 6,000 credits · Use Limitation Feat (Armour Prof Light) · Immunity (MindSpells) 0 · Immunity (Poison) 0 · Saving throw +1 (All) — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Bio-Stabilizer Mask** · `g1_i_mask01` · K1 · Tier 3 · 6,000 credits · Use Limitation Feat (Armour Prof Light) · Immunity (MindSpells) 0 · Immunity (Poison) 0 · Saving throw +1 (All) — *“Similar to the Advanced Bio-Stabilizer Implant, this mask analyzes circulation patterns through the skin, monitors breathing through chemical sensors, and reactions through eye movements. It additionally acts as a nearly”* ⚠ *(description truncated in source)*
 
 **Medical Interface Visor** · `g1_i_mask02` · K1 · Tier 2 · 5,000 credits · Use Limitation Feat (Armour Prof Light) · Skill (Treat Injury) 10 — *“Similar in functionality to the Bio-Stabilizer series of medical equipment, this visor is designed to assist in the care and treatment of injured individuals. By providing constant data and analysis on the condition of t”* ⚠ *(description truncated in source)*
 

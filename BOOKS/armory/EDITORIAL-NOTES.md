@@ -2273,3 +2273,56 @@ four rather than four and nine**, and each is still catalogued by resref and mar
 reads *"Lock"*, `g1_i_drdshld001` reads *"Search"*, and `g1_i_drdutldev03` reads *"is knocked
 down"*. **Those are not plausible item names**, and on this finding's evidence they are
 likely the same fault. **Raised — they were not in the twelve and I have not touched them.**
+
+---
+
+# ⚠ The misnaming was 24 rows, not 12 — the rest are now corrected too
+
+**Investigating the rows I had flagged as still open found that all of them had been resolved
+at source since.** Twelve more items were carrying somebody else's words in the books.
+
+    Ch5   g1_a_class5002   Baragwin Shadow Armor
+          g1_a_class6001   Environmental Bastion Armor
+          g1_a_class8001   Heavy Exoskeleton
+    Ch7   g1_i_drdhvplat01 Composite Heavy Plating        (read "Lock")
+          g1_i_drdshld001  Baragwin Droid Shield          (read "Search")
+          g1_i_drdutldev01 Baragwin Flame Thrower
+          g1_i_drdutldev02 Baragwin Stun Ray
+          g1_i_drdutldev03 Baragwin Shield Disruptor      (read "is knocked down")
+    Ch8   g1_i_gauntlet01  Advanced Stabilizer Gloves
+          g1_i_implant301  Advanced Sensory Implant
+          g1_i_implant302  Advanced Bio-Stabilizer Implant
+          g1_i_mask01      Advanced Bio-Stabilizer Mask
+
+**⚠ The Chapter Seven five are the ones that matter most, because none was marked.** They
+carried plausible-looking short names — *"Lock"*, *"Search"*, *"is knocked down"* — and sat in
+the catalogue as though those were the items. **Nothing flagged them and no reader would have
+known.** They surfaced only from the pattern: every misnamed row so far was `g1_`-prefixed and
+**KOTOR 1-only**, and these five are both.
+
+**Every one of the 24 is K1 or K2+K1.** The fault's signature held across all of them.
+
+## ⚠ And the check that found them is the one worth keeping
+
+**Rather than fix the rows I already knew about, I compared every catalogue entry's name in
+both books against the source** — 1,184 entries, matched by resref. **That found the twelve,
+and two more besides.**
+
+**`g_i_implant104` and `g_i_implant204` have no name in the source at all** and this chapter
+was printing a bare em dash where a name should be. **Chapter Nine already had a convention
+for exactly this** — *⚠ Unnamed in the source* — and Chapter Eight was not following it.
+**Now marked, with a note.**
+
+**Final state: 1,184 entries checked, zero name disagreements.** That check is cheap and
+should be re-run after any future source correction, because **a name is the one field a
+reader cannot sanity-check against anything else.**
+
+## What the chapters now say
+
+**Chapters Five, Seven and Eight no longer claim any corrupted names**, because none remain.
+Each carries a short note recording that rows were once catalogued under wrong identities,
+what they actually are, and the single cause: **a strref read against the wrong game's table
+for KOTOR 1-only items.**
+
+**⚠ One genuinely unresolved marker remains** — `Crystal, Solari`'s alignment lock in Chapter
+Six. Upstream's resolution did not reach it; left marked rather than invented.

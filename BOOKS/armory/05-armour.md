@@ -113,16 +113,14 @@ armour row.
 **All 173 items, by category**, with resref, which game each comes from, tier, price,
 properties and the item's own description.
 
-**⚠ Three rows have a corrupted name.** `g1_a_class5002`, `g1_a_class6001` and
-`g1_a_class8001` are real armour with real properties, **but their name and description
-fields both carry unrelated text** — feat descriptions and *"Mastercraft"* labels that belong
-somewhere else in the game's string table. **They are catalogued by resref and marked. No
-name has been invented for any of them.**
+**⚠ Four rows in this chapter were once catalogued under the wrong names, and all four are
+now correct.** `g1_a_class5001` is the **Light Exoskeleton**, `g1_a_class5002` the **Baragwin
+Shadow Armor**, `g1_a_class6001` the **Environmental Bastion Armor** and `g1_a_class8001` the
+**Heavy Exoskeleton**.
 
-**⚠ A fourth was on that list and is now named.** `g1_a_class5001` is the **Light
-Exoskeleton** — *"a relatively new type of power-assisted armor."* Its name was always
-recoverable and had simply been read against the wrong game's string table. **It is
-catalogued below under its real name.**
+**They were never unrecoverable.** Their names were sitting in KOTOR 1's own string table the
+whole time, and a reader's copy of this chapter showed feat descriptions and *"Mastercraft"*
+labels in their place. **All four are catalogued below under their real names.**
 
 **⚠ Many rows carry a property the data does not resolve** — a species restriction without
 the species, a Defence penalty without its type, a skill bonus without its skill. **Each
@@ -206,7 +204,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Light Exoskeleton** · `g1_a_class5001` · K1 · Tier 3 · 10,000 credits · Ability (Dexterity) 1 · Ability (Strength) 1 · Ability (Strength) 2 · Armor 2 · Armor 1 · Armor 1 — *“A relatively new type of power-assisted armor, this suit mimics the major muscle movements of the wearer with mechanical impulses, resulting in greater strength and faster reaction times.”*
 
-**⚠ Name corrupted in the source** · `g1_a_class5002` · K1 · Tier 3 · 6,000 credits · Armor 2 · Armor 2 · Skill (Stealth) 4 · Skill (Stealth) 8 — ⚠ *Its name and description fields both carry unrelated text; the properties above are the item’s own. Recorded, not renamed.*
+**Baragwin Shadow Armor** · `g1_a_class5002` · K1 · Tier 3 · 6,000 credits · Armor 2 · Armor 2 · Skill (Stealth) 4 · Skill (Stealth) 8 — *“A specialty of the Baragwin, this modifiable suit has advanced adaptive camouflage technology that, when combined with a stealth generator, allows it to blend in nearly seamlessly with the background whe”* ⚠ *(description truncated in source)*
 
 **Combat Suit** · `g_a_class4001` · K1 · Tier 1 · 50 credits · (Human) — *“Even the most frugal of mercenaries know they need at least some protection from the rigors of combat, although suits of this type are recommended for light skirmishes only.”*
 
@@ -296,9 +294,9 @@ keeps its index in the margin and none is guessed at.**
 
 **Darth Malak's Armor** ⚠ **UNIQUE** · `a_robe_26` · K2 · Tier 4 · 25,000 credits · UseLimitationAlignmentGroup (Dark_Side) 0 · Ability (Strength) 1 · Armor 4 · Regeneration 2 · (Human) — *“Does not restrict use of Force Powers. It is believed that Darth Malak, the fallen former apprentice of Darth Revan, once possessed this garment. Malak and Revan are credited with starting the Jedi Civil War, which led to the collapse of the Jedi Order.”*
 
-**⚠ Name corrupted in the source** · `g1_a_class6001` · K1 · Tier 4 · 22,000 credits · DamageImmunity (Cold) ⚠ **IMMUNE** *(100%)* · DamageImmunity (Fire) ⚠ **IMMUNE** *(100%)* · DamageImmunity (Sonic) ⚠ **IMMUNE** *(100%)* · Armor 1 · Armor 1 · Armor 1 · Immunity (MindSpells) 0 · Immunity (Poison) 0 — ⚠ *Its name and description fields both carry unrelated text; the properties above are the item’s own. Recorded, not renamed.*
+**Environmental Bastion Armor** · `g1_a_class6001` · K1 · Tier 4 · 22,000 credits · DamageImmunity (Cold) ⚠ **IMMUNE** *(100%)* · DamageImmunity (Fire) ⚠ **IMMUNE** *(100%)* · DamageImmunity (Sonic) ⚠ **IMMUNE** *(100%)* · Armor 1 · Armor 1 · Armor 1 · Immunity (MindSpells) 0 · Immunity (Poison) 0 — *“A modified environmental suit, this armor gives the wearer complete protection from the elements as well as superior combat protection. With additional enhancements, it can be converted into a completely”* ⚠ *(description truncated in source)*
 
-**⚠ Name corrupted in the source** · `g1_a_class8001` · K1 · Tier 3 · 20,000 credits · Ability (Constitution) 1 · Ability (Constitution) 3 · Ability (Strength) 2 · Ability (Strength) 3 · Armor 2 · Armor 4 — ⚠ *Its name and description fields both carry unrelated text; the properties above are the item’s own. Recorded, not renamed.*
+**Heavy Exoskeleton** · `g1_a_class8001` · K1 · Tier 3 · 20,000 credits · Ability (Constitution) 1 · Ability (Constitution) 3 · Ability (Strength) 2 · Ability (Strength) 3 · Armor 2 · Armor 4 — *“A heavy and durable suit, this mechanical exoskeleton provides much greater strength and endurance, and vastly improved armor protection to the wearer than lighter models. With additional enhancements, t”* ⚠ *(description truncated in source)*
 
 **Armored Flight Suit** · `g_a_armrdfsuit` · K2 · Tier 1 · 200 credits · DamageResist (Cold) Resist_20/- — *“This combat-ready flight suit provides additional protection against vacuum for limited periods. Its many models appeal to a wide range of users, from military pilots and mercenaries to fringe explorers and space pirates.”*
 

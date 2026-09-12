@@ -1,13 +1,7 @@
 # Chapter Three — Ranged Weapons
 
-**Status: REVISED — drafted against `MAIN_WORK/rules/`, the authoritative sources.**
-Wield classes and critical-hit resolution are taught in Chapter One and not restated
-here.
-
-**⚠ This chapter's earlier draft was built on a stale copy.** Every correction it
-reported has since been absorbed into the live `EQUIPMENT-01`, and the live document
-also carries three things that copy never had: `Heavy Blaster`, `Marksman Rifle`, and
-`Sniper Rifle`. The table below is the live one.
+**Every ranged weapon in both games.** Wield classes and critical-hit resolution are
+taught in Chapter One and not restated here.
 
 ---
 
@@ -33,13 +27,11 @@ also carries three things that copy never had: `Heavy Blaster`, `Marksman Rifle`
 **All pistols are *Balanced*** — they take the reduced off-hand penalty from Chapter
 One's wield classes.
 
-**The name is `Hold Out Blaster`, no hyphen — `PT-1477`.** `STARTING-EQUIPMENT-01`
-spells it unhyphenated thirteen times and `ITEMS-01` once; the hyphenated form survived
-in one document only. The catalogue sits closest to the source — `g_w_hldoblstr01` is
-the game's own resref — so the outlier was the document furthest from where the name
-came from.
+**The name is `Hold Out Blaster` — three words, no hyphen.** You will see it hyphenated
+elsewhere; **the games spell it unhyphenated**, and `g_w_hldoblstr01` is their own code for
+it.
 
-## The two long rifles — `PT-1783`
+## The two long rifles
 
 **`Marksman Rifle`, 1d10 at 40 metres.** Revised from `1d12`. Blaster Rifle's reach
 problem solved the other way round: less damage per shot, considerably more range. It
@@ -53,7 +45,7 @@ Both are plain. No proficiency gates, no class restrictions, no special ammuniti
 the same simple shape `Blaster Rifle` has. What a character does with the extra reach is
 the only thing that distinguishes them in play.
 
-### What the perception-extension property actually does — `PT-1782`
+### What the perception-extension property actually does
 
 Both rifles carry it. It is **passive** (no action to activate, nothing to maintain),
 it **matches the weapon's own range** rather than granting some separate fixed bonus,
@@ -73,34 +65,33 @@ range would be a number on a sheet that never changed a fight.
 (`1d12`) and adds Strength.** A Soldier at Strength 16 (+3) swings for 9.5 average with
 a weapon costing 120 credits, where a blaster does 4.5 at any Strength.
 
-*This paragraph was held out of the previous draft as stale on two counts. Both are
-now fixed at source: the vibrosword figure for `PT-1747`'s die change, and the pistol
-figure, which read `3.5` — `1d6`'s average rather than `1d8`'s — and appears to have
-gone stale independently, possibly predating `PT-339`. Ranged weapons add Dexterity to
-damage under `PT-340`, which the comparison's own framing now accommodates rather than
-contradicts.*
+**Ranged weapons add Dexterity to damage**, so the gap closes for a character built that
+way — but it closes by the shooter's own ability, not by the weapon's.
 
-**The best pistol in either game** is Cassus Fett's Heavy Pistol — 6–19 damage, +5
-attack, 25% chance to stun, on top of rifle-like damage.
+**The best pistol in either game** is Cassus Fett's Heavy Pistol — 6–19 damage, +5 attack,
+25% chance to stun, on top of rifle-like damage.
 
 ---
 
-## Sniper Rifle — ruled, and now catalogued
+## ⚠ The two rifles this game added
 
-**The gap this chapter flagged is closed.** `Sniper Rifle` now has its catalogue row:
-`a_w_snprrfl01`, authored, Tier 2, 800 credits, `1d12` at threat 19–20 ×2 — *"A
-precision-milled barrel and an integrated scope, built for a shot no other rifle can
-guarantee."* Note it is not to be confused with `Sith Sniper Rifle` (`g_w_blstrrfl002`),
-a different and pre-existing K1 weapon that shares part of the name.
+**Neither the Sniper Rifle nor the Marksman Rifle exists in either game.** Both were
+written for this book, and they are marked as such wherever they appear.
 
-The 800-credit price is a reasonable default rather than a hard derivation — it is a
-genuine two-dimension upgrade over the Marksman Rifle's 400, gaining both a die step and
-ten metres — and is open to a second look if it doesn't sit right in play.
+**Sniper Rifle** · `a_w_snprrfl01` · Tier 2 · **800 credits** · `1d12`, threat 19–20 ×2 —
+*"A precision-milled barrel and an integrated scope, built for a shot no other rifle can
+guarantee."*
 
-`Marksman Rifle` sits beside it at `a_w_mrksmnrfl01`, Tier 1, 400 credits — *"A long
-barrel, a heavy stock and a scope rail. It hits softly and it hits from where nobody
-expected."* Both descriptions sit in the same register: plain, physical, and about what
-the weapon does to a fight rather than what it is made of.
+**Marksman Rifle** · `a_w_mrksmnrfl01` · Tier 1 · **400 credits** · `1d10` at 40 metres —
+*"A long barrel, a heavy stock and a scope rail. It hits softly and it hits from where
+nobody expected."*
+
+**⚠ Do not confuse the Sniper Rifle with the `Sith Sniper Rifle`** (`g_w_blstrrfl002`), a
+different and genuine K1 weapon that shares part of the name.
+
+**The 800-credit price is a sensible default rather than a derived figure.** It buys a die
+step and ten metres over the Marksman Rifle's 400, **and it is the kind of number a table
+should feel free to adjust** if it sits wrong in play.
 
 ---
 
@@ -112,9 +103,9 @@ the weapon does to a fight rather than what it is made of.
 organised Base versus Advanced by tier, the same shape as Chapter Two's eleven melee
 families.
 
-**What is not here, and why.** `ITEMS-01` carries 172 rows across its `pistol` and `rifle`
-sections. **Fifty are excluded** under the owner's ruling that assets existing only to make
-a video game work are not items:
+**What is not here, and why.** The games carry 172 pistol and rifle entries between them.
+**Fifty are excluded**, because they are things that exist only to make a video game work
+rather than items a character could ever own:
 
 - **40 nameless `prop*` rows** — K2 placeholder weapons with no name at all.
 - **5 `g_w_null*` rows** — engine null-items, cost 0, literally named *"Blaster Pistol:
@@ -124,10 +115,10 @@ a video game work are not items:
   in a character's hands. **Their `g_i_` prefix marks them as items rather than weapons**,
   and all five carry the generic blaster-pistol description by copy-paste.
 
-**⚠ Families were determined by stat line plus damage type, never by resref stem.** The
-stem is not a reliable proxy for base type in either direction — `w_brifle_` alone spans
-**four different families** in this data. Where the stat line is ambiguous, the weapon's
-name and damage type settle it.
+**⚠ As in Chapter Two, the item code is not a guide to the family.** `w_brifle_` alone
+spans **four different families** here. **Families are determined by a weapon's own damage,
+threat range and damage type** — and where those are ambiguous, by what the weapon is
+called.
 
 ## Hold Out Blaster — base die `1d4`, threat 19–20 / ×2
 
@@ -227,7 +218,7 @@ name and damage type settle it.
 
 **Empty Hand** · `w_emptyhnd_01` · K2 · Tier 1 · 25 credits · *no properties* — *“The most common ranged weapon in the galaxy is the basic blaster pistol, firing a bolt of intense coherent light powered by a replaceable power pack.”*
 
-**KillBlaster** · `killblaster` · K2 · Tier 1 · 100 credits · *⚠ properties come from the fitted crystals — `PT-345`* — *“The most common ranged weapon in the galaxy is the basic blaster pistol, firing a bolt of intense coherent light powered by a replaceable power pack.”*
+**KillBlaster** · `killblaster` · K2 · Tier 1 · 100 credits · *⚠ properties come from the fitted crystals, not the weapon — see Chapter Six* — *“The most common ranged weapon in the galaxy is the basic blaster pistol, firing a bolt of intense coherent light powered by a replaceable power pack.”*
 
 **Bendak's Blaster** ⚠ *unique* · `g_w_blstrpstl006` · K1 · Tier 1 · found only · *AttackBonus 5 · Damage (Energy) 2 · Use Limitation Feat (Rapid Shot) ⚠ attack chain · Use Limitation Feat (Sniper Shot) ⚠ attack chain* — *“Special: , Ranged This blaster belonged to Bendak Starkiller, a duelist legendary on Taris. It is a highly adaptable weapon, and is definitely of better quality than any standard issue pistol.”*
 
@@ -340,7 +331,7 @@ name and damage type settle it.
 
 **Bothan Droid Disruptor** · `w_brifle_15` · K2 · Tier 2 · ⚠⚠ **750** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d10 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. A”* ⚠ *(description truncated in source)*
 
-**⚠ *name-field corrupted*** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6 · Keen 0* — *“Mastercraft: Armor III”* ⚠ *(description truncated in source)* **⚠ The Name field on this row reads `Mastercraft: Armor II` — an armour upgrade's name on an ion rifle's resref. Fourth instance of the corrupted-Name pattern; the item is real, the name is not. Left unnamed rather than invented.**
+**⚠ *name-field corrupted*** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6 · Keen 0* — *“Mastercraft: Armor III”* ⚠ *(description truncated in source)* **⚠ This item has no usable name.** Its name field in the game data reads *"Mastercraft: Armor II"* — an armour upgrade's name sitting on an ion rifle's entry. **The weapon is real; the name is not.** It is left unnamed here rather than given an invented one.
 
 **Verpine Droid Disruptor** · `w_brifle_20` · K2 · Tier 3 · ⚠⚠ **1750** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d10 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids. While ion weapons are generally less damaging”* ⚠ *(description truncated in source)*
 
@@ -466,70 +457,3 @@ name and damage type settle it.
 
 
 ---
-
-## Open items, carried from review
-
-**✔ The family catalogue is complete** — 122 items across fourteen families, replacing the
-placeholder this section previously carried.
-
-**✔ Flag 1 — the ruled corrections have landed, and this catalogue matches the corrected
-file exactly.** The owner ruled that **K2's dice stand**, with two exceptions: **Blaster
-Carbine's threat moves to 19–20** (die stays `1d12`) and **Ion Blaster and Ion Rifle revert
-from ×3 to ×2**. `EQUIPMENT-01` now carries all three.
-
-**Re-verified after the sync:** of this catalogue's 122 entries, **zero are absent from the
-corrected file, zero changed stat line, and zero real rows are missing from the
-catalogue.** The membership capture held.
-
-**✔ The ×3 revert is now complete** (`PT-1825`, commit `f408708`) — **all nine ion variant
-rows and all six Bowcaster rows corrected to ×2.** Verified by reading the file at that
-commit directly: **the only ×3 rows remaining are the seven nameless `prop*` placeholders**,
-which this catalogue already excludes. **The Bowcaster was extended into scope on the
-reasoning that ×3 is unsupported by either game's raw data** — K1's `Bowcaster` base row
-carries `crithitmult` 2 — **which is the same reasoning the ion revert rested on.**
-
-*Recorded for the history, since the flag-resolution convention keeps what was raised:* the
-nine ion variants were —
-
-    Ion Blaster   w_blaste_10   Aratech Droid Oxidizer
-                  w_blaste_21   Aratech Ionmaster
-    Ion Rifle     g_w_ionrfl02  Bothan Droid Disruptor
-                  g_w_ionrfl03  Verpine Droid Disruptor
-                  w_brifle_02   Ion Carbine
-                  w_brifle_15   Bothan Droid Disruptor
-                  w_brifle_20   Verpine Droid Disruptor
-                  w_brifle_29   Verpine Droid Disintegrator
-                  g1_w_ionrfl01 (the corrupted-name row, Flag 4)
-
-— **all now ×2**, along with the six Bowcaster rows.
-
-**The family headings above state ×2 throughout and always did**, so nothing in this
-catalogue changed when the fix landed.
-
-**⚠ Flag 2 — `ITEMS-01`'s ion rows are internally inconsistent, which is how this was
-caught.** Two base Ion Rifles (`g_w_ionrfl01`, `w_brifle_07`) already read ×2 while their
-own variants read ×3. **That inconsistency is corroboration for the ruled ×2**, and it is
-why Ion and Sonic rifles cannot be separated by stat line alone once the fix lands — both
-become `1d10, 20 ×2`. **Damage type is the discriminator, and it is recorded per entry.**
-
-**⚠ Flag 3 — 30 of 122 descriptions are truncated mid-sentence in `ITEMS-01`**, several at
-identical points — the disruptor description cuts at *"disruptors igno"* in three separate
-items. **This is an extraction defect, not a source one:** a character limit applied during
-extraction. **Each affected entry is marked in place** rather than completed by invention.
-**A re-extraction would fix all thirty at once.**
-
-**⚠ Flag 4 — a fourth instance of the corrupted Name-field pattern.** `g1_w_ionrfl01` is an
-ion rifle whose Name field reads **`Mastercraft: Armor II`** — an armour upgrade's name on
-a weapon's resref. **Left unnamed in the catalogue rather than given an invented one.**
-Same shape as the Baragwin, Weapon Master and spike-mount cases.
-
-**⚠ Flag 5 — `Sniper Rifle` and `Marksman Rifle` have one entry each**, both `⚠ AUTHORED`
-(`a_w_snprrfl01`, `a_w_mrksmnrfl01`). **They are the only families here with no extracted
-members**, which is expected — both were added by ruling (`PT-1473`, `PT-1783`) and no game
-item carries them.
-
-**Closed from the earlier draft:** `Hold Out Blaster`'s naming flag (`PT-1477`) and the
-Sniper Rifle catalogue gap, both resolved above.
-
-`Hold Out Blaster`'s earlier "could not be confirmed" flag is closed; `PT-1477` explains
-both why it existed and why searching for the hyphenated form missed it.

@@ -143,3 +143,122 @@ kind of weapon something is. Read the family heading, not the code.**
 price and property line survives. **The K1-over-K2 rule is stated in reader terms rather
 than by ruling number, and the one place a genuine divergence is called out — the Sith
 Tremor Sword's sonic value — still names both figures.**
+
+---
+
+# Chapter Three — Ranged Weapons
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: catalogue complete, 122 items across 14 families.** Base table drafted
+against `MAIN_WORK/rules/`. **Rulings it stood on:** `PT-1783` (the two long rifles),
+`PT-1782` (the perception extension), `PT-1477` (the Hold Out Blaster name), `PT-1473`,
+`PT-345` (crystals), `PT-1747`/`PT-339`/`PT-340` (the ceiling comparison), `PT-1825` /
+commit `f408708` (the ×3 revert).
+
+**✔ The family catalogue is complete** — 122 items across fourteen families, replacing the
+placeholder this section previously carried.
+
+**✔ Flag 1 — the ruled corrections have landed, and this catalogue matches the corrected
+file exactly.** The owner ruled that **K2's dice stand**, with two exceptions: **Blaster
+Carbine's threat moves to 19–20** (die stays `1d12`) and **Ion Blaster and Ion Rifle revert
+from ×3 to ×2**. `EQUIPMENT-01` now carries all three.
+
+**Re-verified after the sync:** of this catalogue's 122 entries, **zero are absent from the
+corrected file, zero changed stat line, and zero real rows are missing from the
+catalogue.** The membership capture held.
+
+**✔ The ×3 revert is now complete** (`PT-1825`, commit `f408708`) — **all nine ion variant
+rows and all six Bowcaster rows corrected to ×2.** Verified by reading the file at that
+commit directly: **the only ×3 rows remaining are the seven nameless `prop*` placeholders**,
+which this catalogue already excludes. **The Bowcaster was extended into scope on the
+reasoning that ×3 is unsupported by either game's raw data** — K1's `Bowcaster` base row
+carries `crithitmult` 2 — **which is the same reasoning the ion revert rested on.**
+
+*Recorded for the history, since the flag-resolution convention keeps what was raised:* the
+nine ion variants were —
+
+    Ion Blaster   w_blaste_10   Aratech Droid Oxidizer
+                  w_blaste_21   Aratech Ionmaster
+    Ion Rifle     g_w_ionrfl02  Bothan Droid Disruptor
+                  g_w_ionrfl03  Verpine Droid Disruptor
+                  w_brifle_02   Ion Carbine
+                  w_brifle_15   Bothan Droid Disruptor
+                  w_brifle_20   Verpine Droid Disruptor
+                  w_brifle_29   Verpine Droid Disintegrator
+                  g1_w_ionrfl01 (the corrupted-name row, Flag 4)
+
+— **all now ×2**, along with the six Bowcaster rows.
+
+**The family headings above state ×2 throughout and always did**, so nothing in this
+catalogue changed when the fix landed.
+
+**⚠ Flag 2 — `ITEMS-01`'s ion rows are internally inconsistent, which is how this was
+caught.** Two base Ion Rifles (`g_w_ionrfl01`, `w_brifle_07`) already read ×2 while their
+own variants read ×3. **That inconsistency is corroboration for the ruled ×2**, and it is
+why Ion and Sonic rifles cannot be separated by stat line alone once the fix lands — both
+become `1d10, 20 ×2`. **Damage type is the discriminator, and it is recorded per entry.**
+
+**⚠ Flag 3 — 30 of 122 descriptions are truncated mid-sentence in `ITEMS-01`**, several at
+identical points — the disruptor description cuts at *"disruptors igno"* in three separate
+items. **This is an extraction defect, not a source one:** a character limit applied during
+extraction. **Each affected entry is marked in place** rather than completed by invention.
+**A re-extraction would fix all thirty at once.**
+
+**⚠ Flag 4 — a fourth instance of the corrupted Name-field pattern.** `g1_w_ionrfl01` is an
+ion rifle whose Name field reads **`Mastercraft: Armor II`** — an armour upgrade's name on
+a weapon's resref. **Left unnamed in the catalogue rather than given an invented one.**
+Same shape as the Baragwin, Weapon Master and spike-mount cases.
+
+**⚠ Flag 5 — `Sniper Rifle` and `Marksman Rifle` have one entry each**, both `⚠ AUTHORED`
+(`a_w_snprrfl01`, `a_w_mrksmnrfl01`). **They are the only families here with no extracted
+members**, which is expected — both were added by ruling (`PT-1473`, `PT-1783`) and no game
+item carries them.
+
+**Closed from the earlier draft:** `Hold Out Blaster`'s naming flag (`PT-1477`) and the
+Sniper Rifle catalogue gap, both resolved above.
+
+`Hold Out Blaster`'s earlier "could not be confirmed" flag is closed; `PT-1477` explains
+both why it existed and why searching for the hyphenated form missed it.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 10 internal citations from the body**, plus the five-flag section. **The
+catalogue itself was almost untouched:** 124 entries, 14 family headings and all 29
+truncation markers survive unchanged.
+
+**⚠ The `⚠ AUTHORED` marking became the chapter's most important rewrite.** The Sniper
+Rifle and Marksman Rifle section was headed *"Sniper Rifle — ruled, and now catalogued"*
+and described a gap being closed. **A reader does not know there was a gap.** The section is
+now headed **"The two rifles this game added"** and opens by saying plainly that **neither
+weapon exists in either game** and both were written for this book. **That is the
+ours-versus-extracted discipline stated where a reader meets it**, rather than signalled by
+a ruling number.
+
+**The price caveat became advice rather than a note to ourselves.** It read *"open to a
+second look if it doesn't sit right in play."* It now says the 800 credits is **"the kind
+of number a table should feel free to adjust."**
+
+**⚠ The ceiling paragraph lost a stale-value confession it should never have carried.** Two
+sentences explained that the figures had previously been wrong, why, and which rulings
+fixed them. **A reader needs the comparison, not its repair history.** What replaced it is
+a fact the old paragraph only implied: **ranged weapons add Dexterity, so the gap closes
+for a character built that way — but it closes by the shooter's ability, not the weapon's.**
+
+**The corrupted-name entry now warns a reader rather than counting instances.** It said
+*"fourth instance of the corrupted-Name pattern."* It now says **this item has no usable
+name**, its name field holds an armour upgrade's name, **the weapon is real and the name is
+not.**
+
+**✔ Resrefs kept throughout**, per Chapter Two's finding, and the families note now points
+at Chapter Two's caution rather than restating the resref lesson.
+
+**✔ The standing orphan check was run** after every removal — the new step adopted in
+Chapter Two. **Zero dangling cross-references.** The `KillBlaster`'s crystal note was the
+one at risk; it cited a crystal ruling and now points at Chapter Six, which is where
+crystals are actually catalogued.
+
+**⚠ Deliberately NOT loosened.** All 14 base weapons keep their dice, threat ranges and
+ranges; both long rifles keep their full treatment including the perception extension's
+three properties; the 122-item catalogue is untouched; and **the 50 excluded entries are
+still listed with the reason for each exclusion.**

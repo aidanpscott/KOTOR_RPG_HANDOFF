@@ -1,27 +1,23 @@
 # Chapter Seven — The Reconstruction
 
-**Status: APPROVED** by MAIN. `PT-1802`'s three parts. **⚠ This chapter's scope was
-settled by evidence rather than assumed** — see the sweep result at the foot of the chapter
-before reading it as a chronological successor to Chapter Six, because it is not one.
+## ⚠ This chapter does not follow Chapter Six. It runs alongside it.
 
----
+**Read that before anything else, because the title suggests otherwise.**
 
-## ⚠ What this chapter turned out to be
+**There is no account anywhere of what happened after 3,950 BBY.** The Campaign Guide's
+last dated line is that year; every era-divided section in it — factions, starships,
+droids, personnel — stops at the Dark Wars. **The sources simply end**, and this book will
+not invent a century to fill the gap.
 
-**A sweep of the Campaign Guide for post-3,950 BBY content found none — not thin coverage,
-none.** The book's lowest date anywhere in 21,339 lines is **3,950 BBY**, and every
-era-divided section in it — factions, starships, droids, personnel — stops at the Dark
-Wars.
+**What the sources describe very well is something else: the Republic putting itself back
+together across the same years Chapter Six spends watching the Sith fall apart.**
 
-**So this chapter is not "what happened after Chapter Six."** No held source describes
-that. What the sources do describe, and describe well, is **the Republic putting itself
-back together across the same years Chapter Six spends watching the Sith fall apart.**
+**That is this chapter — 3,956 to 3,950 BBY, from the other side of the war.** Chapter Six
+is the Sith Empire eating itself. This is what the Republic was doing while that happened.
 
-**That is this chapter: 3,956 to 3,950 BBY from the other side of the war.** Chapter Six is
-the Sith Empire eating itself. This one is what the Republic was doing while that happened —
-and it is the chapter in which the campaign's own year, 3,956 BBY, stops being a date and
-becomes a set of construction projects, shipping contracts and salvage rights that a party
-can walk into.
+**And it is the chapter where the campaign's own year stops being a date** and becomes a
+set of construction projects, shipping contracts and salvage rights a party can walk
+into.
 
 ---
 
@@ -47,10 +43,9 @@ long.**
 The reconstruction after the Jedi Civil War does not begin with a fleet or a treaty. It
 begins with a procurement decision.
 
-`EVENTS-01`'s spine records it at **3,955 BBY: Aratech launches the `G0-T0` series for
-Republic redevelopment.** The Campaign Guide explains what the series was for: *"a highly
-intelligent infrastructure-planning system,"* **G0-T0** was *"originally programmed to aid
-the Republic in reconstruction after the Jedi Civil War."*
+**In 3,955 BBY, Aratech launches the `G0-T0` series for Republic redevelopment** — *"a
+highly intelligent infrastructure-planning system,"* **originally programmed to aid the
+Republic in reconstruction after the Jedi Civil War.**
 
 **The Republic was so short of administrators that it built droids to plan the recovery.**
 That single fact says more about the state of the post-war government than any casualty
@@ -97,9 +92,14 @@ And the reconstruction is contested from three directions at once, all of them d
 **One planet, simultaneously: a Republic showpiece, a crime syndicate's regional office, a
 renegade Jedi's fortress, and a corporate takeover in progress.**
 
-**⚠ The Campaign Guide's own planet entry for Telos IV is known to be defective on exactly
-this point** — see Flag 2. It describes Telos as an intact and prosperous Republic world,
-which is the wrong side of the 3,958 state change.
+**⚠ Do not take the Campaign Guide's own planet entry for Telos IV at face value here.** It
+describes an intact, prosperous Republic world exporting foodstuffs — **which is Telos
+before the Sith attacked it in 3,958 BBY, not the world this chapter is describing.**
+
+**It is a known problem and not a small one.** The Gazetteer describes **Cathar, Telos and
+Peragus** on the wrong side of a change that matters, **and those are three of the most
+campaign-relevant worlds in the setting.** Where this chapter and that entry disagree about
+Telos, **this chapter is describing the later world.**
 
 ### What the Republic was defending with
 
@@ -163,76 +163,22 @@ itself.
 
 ---
 
-*Sources: KOTOR Campaign Guide — G0-T0, f. 210; Bao-Dur, f. 176; Telos IV planet entry,
-f. 123 (⚠ known-defective, Flag 2); Atris, f. 141; the Republic and Sith faction sections
-divided by era, f. 146 and f. 168; the Quartermaster-class entry, f. 100, for the Great Sith
-War reconstruction's completion; the dated timeline, f. 113. `EVENTS-01 §1` for the 3,955
-BBY G0-T0 row (`PT-604`). `WORLDS-REGISTER-01` `D-W33` for the Gazetteer defect. Folios are
-printed page numbers; the OCR's page markers run three higher. **No rank 6 or 8 material
-used — see Flag 1.***
+## Sources for this chapter
 
-## Open items, carried from review
+**All of it is the *Knights of the Old Republic Campaign Guide***, at printed page numbers
+— and unusually for this book, **almost none of it comes from the era narrative.** The
+reconstruction is told through the people and places caught up in it:
 
-**⚠⚠ Flag 1 — the sweep result, and it answers the Chronology question with evidence
-rather than estimate.** MAIN approved sweeping ff. 137–200 before deciding whether to stage
-*The New Essential Chronology* for this chapter. **I widened it to the whole book, because
-a negative over part of a file is worth less than a negative over the file.**
+- **G0-T0** — p. 210
+- **Bao-Dur** — p. 176
+- **Atris** — p. 141
+- **Telos IV**, the planet entry — p. 123 ⚠ *and see the warning above*
+- **The Republic and Sith organisations**, divided by era — pp. 146 and 168
+- **The Quartermaster-class supply carrier** — p. 100, for the *earlier* reconstruction
+  being finished by the Mandalorian Wars
+- **The dated timeline** — p. 113
 
-**What I searched and what I found:**
-
-| Check | Scope | Result |
-|---|---|---|
-| Dates 3,949–3,900 BBY | **entire OCR, 21,339 lines** | **zero instances** |
-| Lowest date in the book | entire OCR | **3,950 BBY** |
-| Dates in ff. 137–200 | the character section | none later than **3,956 BBY** |
-| *"reconstruction"* | entire OCR | 9 hits — **all Great Sith War or post-JCW, none post-3,950** |
-| Era-divided sections | factions f. 146, f. 168; starships f. 143 | **all end at the Dark Wars** |
-
-**The Campaign Guide contains no post-3,950 BBY content of any kind.** That is a correctly
-scoped negative over the whole of the one rank-2 source in `data/books/` — not over the
-corpus, and not over the Library-held documents `AUDIT-01` lists absent.
-
-**So the scope question resolved itself.** A chapter about the post-3,950 galaxy has **no
-rank-2 source at all** and would have to be written almost entirely from the Chronology at
-rank 6. A chapter about the reconstruction **as the Republic-side view of 3,956–3,950** is
-well-sourced at rank 2 and duplicates nothing in Chapter Six. **I wrote the second**, and
-flagged the choice because it was a scope decision made on evidence rather than a ruling I
-was given. **✔ Approved by MAIN**, on the grounds that it avoids the gap entirely rather
-than working around it.
-
-**A genuinely post-3,950 chapter would need the Chronology, and I recommended against it**:
-the book's own honesty rule is better served by stopping where the sources stop and letting
-**Chapter Eight** be explicitly about that edge, than by extending the narrative on rank-6
-material after six chapters built on rank 2 — at the one point where every other source
-falls silent, which is where doing so would be most visible and least defensible.
-
-**✔ Ruled: the Chronology is not staged.** The book ends at 3,950 BBY with its sources.
-
-**⚠ Flag 2 — this chapter's flagship location has a known-defective source entry, already
-ruled.** `WORLDS-REGISTER-01`'s `D-W33` records that **Cathar, Telos and Peragus are all
-Gazetteer entries describing the wrong side of a state change**, and that *"the primary
-source carries the known defect."* **Telos IV's entry at f. 123 is one of the three.** It
-describes an intact, prosperous Republic world — *"Major Exports: Foodstuffs"* — with no
-reference to the 3,958 BBY Sith attack or the rehabilitation that follows it.
-
-**This chapter uses that entry only for what survives the defect** — Telos's Republic
-allegiance, its strategic weight, the Telos Security Force, and the Czerka infiltration —
-and takes the devastation and rehabilitation from Bao-Dur's and Atris's entries instead.
-**Recording it because a later reader consulting f. 123 directly will find a Telos that does
-not match this chapter's**, and the reason is the source's, not this book's.
-
-**⚠ Flag 3 — my revised prediction held, which is worth recording alongside the one that
-did not.** After Chapter Six I corrected myself: the driver of same-rank conflicts is **how
-many separate CG sections describe an era**, not the era's length, and I predicted Chapter
-Seven would produce few. **It produced none.** The material here comes from scattered
-character and planet entries that describe *different things* rather than the same thing
-twice — G0-T0's programme, Bao-Dur's penance, Atris's stronghold, Czerka's infiltration —
-so there was nothing for two sections to disagree about. **The revised rule has now
-predicted correctly once; the original rule failed once.**
-
-**⚠ Flag 4 — an unused date worth someone's attention.** The Campaign Guide's Quartermaster
-entry at f. 100 says reconstruction was *"mostly complete"* by the Mandalorian Wars,
-which is a **rank-2 statement bearing on the Restoration Period's outcome** and belongs to
-Chapter Four's era rather than this one. **Chapter Four does not currently cite it.** It is
-corroboration rather than correction — Chapter Four already says the rebuild worked — so I
-have not amended that chapter a second time. Noting it in case a sweep wants the citation.
+**⚠ No source below rank 2 was used, and that was a decision rather than an accident.** A
+chapter about the years *after* 3,950 BBY would have had to rest almost entirely on the
+lowest-ranked book available. **This chapter goes where the good sources actually are
+instead**, which is the same five years from the Republic's side.

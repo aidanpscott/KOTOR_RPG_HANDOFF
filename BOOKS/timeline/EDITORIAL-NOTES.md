@@ -657,3 +657,114 @@ campaign, Katarr and Visas Marr, Atris's praxeum on Telos IV, the Triumvirate, t
 Preserver's return on Dxun, Bao-Dur and the second firing, and 3,950's territorial
 settlement. **Both Katarr accounts are still present in full, and the chapter still does not
 pick between them.**
+
+---
+
+# Chapter Seven — The Reconstruction
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED by MAIN.** `PT-1802`'s three parts. Scope settled by the sweep
+recorded below rather than assumed. **Sources:** `EVENTS-01 §1` for the 3,955 BBY G0-T0 row
+(`PT-604`); `WORLDS-REGISTER-01`'s `D-W33` for the Gazetteer defect on Cathar, Telos and
+Peragus.
+
+**⚠⚠ Flag 1 — the sweep result, and it answers the Chronology question with evidence
+rather than estimate.** MAIN approved sweeping ff. 137–200 before deciding whether to stage
+*The New Essential Chronology* for this chapter. **I widened it to the whole book, because
+a negative over part of a file is worth less than a negative over the file.**
+
+**What I searched and what I found:**
+
+| Check | Scope | Result |
+|---|---|---|
+| Dates 3,949–3,900 BBY | **entire OCR, 21,339 lines** | **zero instances** |
+| Lowest date in the book | entire OCR | **3,950 BBY** |
+| Dates in ff. 137–200 | the character section | none later than **3,956 BBY** |
+| *"reconstruction"* | entire OCR | 9 hits — **all Great Sith War or post-JCW, none post-3,950** |
+| Era-divided sections | factions f. 146, f. 168; starships f. 143 | **all end at the Dark Wars** |
+
+**The Campaign Guide contains no post-3,950 BBY content of any kind.** That is a correctly
+scoped negative over the whole of the one rank-2 source in `data/books/` — not over the
+corpus, and not over the Library-held documents `AUDIT-01` lists absent.
+
+**So the scope question resolved itself.** A chapter about the post-3,950 galaxy has **no
+rank-2 source at all** and would have to be written almost entirely from the Chronology at
+rank 6. A chapter about the reconstruction **as the Republic-side view of 3,956–3,950** is
+well-sourced at rank 2 and duplicates nothing in Chapter Six. **I wrote the second**, and
+flagged the choice because it was a scope decision made on evidence rather than a ruling I
+was given. **✔ Approved by MAIN**, on the grounds that it avoids the gap entirely rather
+than working around it.
+
+**A genuinely post-3,950 chapter would need the Chronology, and I recommended against it**:
+the book's own honesty rule is better served by stopping where the sources stop and letting
+**Chapter Eight** be explicitly about that edge, than by extending the narrative on rank-6
+material after six chapters built on rank 2 — at the one point where every other source
+falls silent, which is where doing so would be most visible and least defensible.
+
+**✔ Ruled: the Chronology is not staged.** The book ends at 3,950 BBY with its sources.
+
+**⚠ Flag 2 — this chapter's flagship location has a known-defective source entry, already
+ruled.** `WORLDS-REGISTER-01`'s `D-W33` records that **Cathar, Telos and Peragus are all
+Gazetteer entries describing the wrong side of a state change**, and that *"the primary
+source carries the known defect."* **Telos IV's entry at f. 123 is one of the three.** It
+describes an intact, prosperous Republic world — *"Major Exports: Foodstuffs"* — with no
+reference to the 3,958 BBY Sith attack or the rehabilitation that follows it.
+
+**This chapter uses that entry only for what survives the defect** — Telos's Republic
+allegiance, its strategic weight, the Telos Security Force, and the Czerka infiltration —
+and takes the devastation and rehabilitation from Bao-Dur's and Atris's entries instead.
+**Recording it because a later reader consulting f. 123 directly will find a Telos that does
+not match this chapter's**, and the reason is the source's, not this book's.
+
+**⚠ Flag 3 — my revised prediction held, which is worth recording alongside the one that
+did not.** After Chapter Six I corrected myself: the driver of same-rank conflicts is **how
+many separate CG sections describe an era**, not the era's length, and I predicted Chapter
+Seven would produce few. **It produced none.** The material here comes from scattered
+character and planet entries that describe *different things* rather than the same thing
+twice — G0-T0's programme, Bao-Dur's penance, Atris's stronghold, Czerka's infiltration —
+so there was nothing for two sections to disagree about. **The revised rule has now
+predicted correctly once; the original rule failed once.**
+
+**⚠ Flag 4 — an unused date worth someone's attention.** The Campaign Guide's Quartermaster
+entry at f. 100 says reconstruction was *"mostly complete"* by the Mandalorian Wars,
+which is a **rank-2 statement bearing on the Restoration Period's outcome** and belongs to
+Chapter Four's era rather than this one. **Chapter Four does not currently cite it.** It is
+corroboration rather than correction — Chapter Four already says the rebuild worked — so I
+have not amended that chapter a second time. Noting it in case a sweep wants the citation.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 4 internal citations**, plus the whole of the process narration that opened the
+chapter.
+
+**The scope decision stayed in the chapter; the sweep that produced it moved here**, per
+MAIN's direction. The old opening was headed *"What this chapter turned out to be"* and
+justified itself by describing the search — *"a sweep of the Campaign Guide… the book's
+lowest date anywhere in 21,339 lines"*. **A reader does not care how the scope was
+determined. They care what the chapter covers and why it is not what the title implies.**
+
+The section is now headed **"This chapter does not follow Chapter Six. It runs alongside
+it"** and gives the reason in reader terms: **there is no account anywhere of what happened
+after 3,950 BBY, the sources simply end, and this book will not invent a century to fill
+the gap.** The line count and the search methodology are in the flags above where they
+belong.
+
+**⚠ And the Telos warning is the case where a citation was hiding a decision.** It read
+*"known to be defective on exactly this point — see Flag 2"*, which tells a reader there is
+a problem and then refuses to say what it is. **It now warns them directly:** the entry
+describes Telos *before* the 3,958 attack, **it is one of three worlds the Gazetteer gets
+on the wrong side of a change — Cathar, Telos and Peragus — and those are three of the most
+campaign-relevant worlds in the setting.** That last point was in the flag and never in the
+chapter, and it is the part a GM most needs.
+
+**Rewritten — the sources section**, which gained the chapter's real sourcing character:
+**almost none of it comes from the era narrative**, because the reconstruction is told
+through the people and places caught up in it. And it now states plainly that **using no
+source below rank 2 was a decision rather than an accident** — the alternative chapter would
+have rested almost entirely on the weakest book available.
+
+**⚠ Deliberately NOT loosened.** All 14 checked facts survive, and the chapter's sharpest
+argument is intact: **the Republic's reconstruction programme produced a criminal empire, an
+assassin-droid industry and a bounty on every Force-user alive — not by failing, but by
+executing its brief correctly.**

@@ -226,7 +226,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | Melee weapons | **`DRAFTED`** | `EQUIPMENT-01 §2`–`§3`; `ITEMS-01`. **Text at `BOOKS/armory/02-melee-weapons.md`. Split from a single combined chapter — MAIN ruled Melee/Ranged/Lightsabers are three chapters, not one: different mechanical shapes, lightsabers carry their own crystal layer, and the book's own browsable-reference identity argues against one chapter covering all of `ITEMS-01`'s weapon count** |
 | — | Ranged weapons | **`DRAFTED`** | `EQUIPMENT-01 §4`, corrected against `ITEMS-01` directly — six of eleven base-table rows didn't match the game data. **Text at `BOOKS/armory/03-ranged-weapons.md`** |
 | — | Lightsabers | **`DRAFTED`** | `EQUIPMENT-01 §4b`, K1 standard-Lightsaber die corrected against raw `data/k1_baseitems.2da` (2d8, not the stated 2d10); crystals `PT-345`. **Text at `BOOKS/armory/04-lightsabers.md`** |
-| — | Armour | **`RULED`** | `EQUIPMENT-01 §5`; `ITEMS-02` — 173 items. **⚠ `§8` droid plating: named placeholder values** |
+| — | Armour | **`DRAFTED`** | `ITEMS-02` — 173 items, six categories. Defence formula and droid plating taught in Chapter One, pointed back to rather than restated. **Text at `BOOKS/armory/05-armour.md`** |
 | — | Upgrades and the upgrade tree | **`RULED`** | `ITEMS-03` — 164; `ITEMS-09`, refiled `PT-781` |
 | — | Droid equipment / worn gear / usable / quest / other | **`RULED`** | `ITEMS-04`–`08` — 476 items total across the five |
 | — | Tiers, pricing, availability | **`RULED`** | `PT-308`/`327`/`384`. Currency `D-CURRENCY-01` |

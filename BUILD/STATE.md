@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `f1c2cc0` — `perceptionSquares`, and a floor not a ceiling |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `7a0ca16` — pinned to `PT-1782`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `01cc030` — the locked sidebar, built to it |      ⚠ no |
+| `KOTOR-RPG-APP` | `a27edce` — named entries and the low-health flash |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 682 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 556 — 1,511, all
-green.** *(`BUILD 154`.)*
+**`Lodestar` 682 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 559 — 1,514, all
+green.** *(`BUILD 155`.)*
 
 ✓ **THE LOCKED SIDEBAR IS BUILT AT `BUILD 154`** — `PartySidebar`, docked
 left, running during exploration, one portrait treatment for the player and

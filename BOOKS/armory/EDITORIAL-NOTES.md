@@ -397,13 +397,77 @@ is.** It now says plainly: **one price in this chapter is deliberately not the g
 because two items that do exactly the same thing now cost the same. **That is this game
 changing something on purpose, and a reader is told so.**
 
-**⚠⚠ A content gap noticed during the pass and NOT addressed by it** — reported separately
-to MAIN. **This chapter samples five of 173 items.** Chapters Two and Three carry full
-catalogues under the full-catalogue standard; this one carries a category table and five
-representative entries, with the closing paragraph defending that choice. **That predates
-`PT-1844` and is outside its scope**, but it is a real inconsistency with the standard the
-other catalogue chapters were held to.
+**⚠⚠ A content gap noticed during the pass and NOT addressed by it.** **This chapter
+samples five of 173 items** where Chapters Two and Three carry full catalogues.
+
+**✔ RULED — `PT-1770` already required this, retroactively.** MAIN checked: the
+full-catalogue standard was not a convention Chapter Five was written before, it was **an
+explicitly retroactive rule that already governed this chapter and was never enforced on
+it.** So this is compliance, not a new decision.
+
+**⚠⚠ OUTSTANDING TASK — expand Chapter Five to the full 173-item catalogue**, matching
+Chapters Two and Three: six categories, Base/Advanced where it applies, ordered by tier.
+
+**Sequenced AFTER the `PT-1844` sweep completes, by AUTHOR's call, for a practical
+reason:** writing the 173 entries fresh means **they are born compliant with both standards
+at once.** Expanding first would produce 173 entries that then need a de-jargoning pass of
+their own — the same work twice. **Recorded here so it cannot be lost between tasks.**
 
 **⚠ Deliberately NOT loosened.** All six category counts, the 173 total, the nine
 both-games items, every representative entry with its armour value, the Dark Padawan Robe's
 two prices, and the `DecreaseAC` worked example's exact figures all survive.
+
+---
+
+# Chapter Six — Upgrades and the Upgrade Tree
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: DRAFT.** Sources `ITEMS-03` (164 items) and `ITEMS-09` (118 rows, *"the
+upgrade tree"*, refiled at `PT-781` from material originally scattered across the `plot`,
+`device`, `sensor`, `clothing` and `creature` categories). `PT-345` governs crystals.
+
+Same lightsaber-damage flag as every chapter so far. New here: the deferred
+unique-weapon mechanic is explained rather than mechanically resolved, and how common
+its four-resref shape is across the rest of the catalogue is an open, unscoped
+question rather than a closed one.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 7 internal citations from 96 lines.** Four were section headings that carried a
+source document's name as a subtitle, which told a reader nothing and made the contents page
+unreadable.
+
+**The unique-weapon survey question became a reader-facing caveat.** It read as a scoping
+note about what *"hasn't been budgeted for."* It now tells a reader what to do with the
+uncertainty: **treat the pattern as demonstrated for the two weapons named and unproven
+elsewhere.**
+
+**⚠ And the pass caught an inaccuracy I introduced myself, two chapters ago.** Chapter
+Four's crystal pointer — written during this task's Chapter Four pass — said **"Chapter Six
+catalogues 104 crystals."** **It does not catalogue them. It describes them.** Corrected to
+*"covers"*. **The forward-reference check exists for exactly this, and it caught a false
+claim of my own making rather than an inherited one.**
+
+## ⚠⚠ And the pass measured the real scope of the `PT-1770` gap
+
+**Chapter Five is not an isolated case.** Counting catalogue entries against claimed item
+totals across every item chapter:
+
+| Chapter | Entries present | Items claimed |
+|---|---|---|
+| Two — melee weapons | **62** | complete |
+| Three — ranged weapons | **124** | complete |
+| **Five — armour** | **0** | **173** |
+| **Six — upgrades** | **0** | **164** + 118 rows |
+| **Seven — droid equipment** | **0** | **135** |
+| **Eight — worn gear** | **0** | **241** |
+| **Nine — usable items** | **0** | **58** |
+| **Ten — quest and miscellaneous** | **0** | **20** |
+
+**Six chapters carry a category table and a handful of representative entries instead of a
+catalogue. Roughly 791 items are uncatalogued.**
+
+**Verified by inspection, not by pattern-match** — Chapters Eight and Nine were opened
+directly to confirm they use the same category-table-plus-sample shape as Chapter Five
+rather than a format the entry count was failing to recognise.

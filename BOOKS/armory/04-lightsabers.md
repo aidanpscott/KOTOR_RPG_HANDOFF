@@ -61,7 +61,7 @@ saying which game it is quoting, **will silently give you one game's value for b
 itself** — which is why this weapon category needs a chapter of its own rather than a
 family heading in Chapter Two.
 
-**Chapter Six catalogues 104 crystals**, from Rubat — `+1` damage, `+1` attack, 1,000
+**Chapter Six covers the 104 crystals**, from Rubat — `+1` damage, `+1` attack, 1,000
 credits — up through rarer stones with larger and mixed bonuses. **They are not repeated
 here.**
 

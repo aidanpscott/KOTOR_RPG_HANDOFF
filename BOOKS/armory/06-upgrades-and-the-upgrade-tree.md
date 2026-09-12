@@ -1,18 +1,15 @@
 # Chapter Six — Upgrades and the Upgrade Tree
 
-**Status: DRAFT, for review.** Two sources, both primary rather than secondary-sourced
-like `EQUIPMENT-01`'s tables were: `ITEMS-03` (164 items — armour components and
-lightsaber crystals) and `ITEMS-09` (118 rows, *"the upgrade tree,"* refiled at
-`PT-781` from material originally scattered across the `plot`, `device`, `sensor`,
-`clothing` and `creature` categories).
+**Two systems live in this chapter: 164 armour components and lightsaber crystals, and a
+further 118 weapon-specific upgrades.** Both were taken straight from the games' own item
+files.
 
-An item marked *"Fully Upgradeable"* throughout this book — every weapon and most
-armour in Chapters Two through Five carried this flag — has slots this chapter's
-components fill.
+**An item marked *"Fully Upgradeable"* anywhere in this book** — every weapon and most
+armour in Chapters Two through Five — **has slots that these components fill.**
 
 ---
 
-## Armour components — `ITEMS-03`
+## Armour components
 
 Two categories, 30 items each, both requiring a workbench to install.
 
@@ -50,15 +47,16 @@ Underlay` line is the other claim Chapter One made:
 What wasn't said there is that every tier also raises Dexterity itself, not only its
 cap** — the line is doing two things at once, and the cap alone undersold it.
 
-## Lightsaber crystals — `ITEMS-03`, `PT-345`
+## Lightsaber crystals
 
-104 of them, already named as the reason Chapter Four deferred them here. A crystal
-determines most of a lightsaber's properties beyond its base damage die — from `Rubat`
-(damage +1, attack +1, 1,000 credits) up through rarer stones with larger, mixed
-bonuses. Not catalogued in full here either — 104 entries is its own reference table,
-not prose.
+**104 of them** — the reason Chapter Four sends you here rather than listing a lightsaber's
+properties beside its die.
 
-## The weapon-specific upgrade tree — `ITEMS-09`
+**A crystal determines most of what a lightsaber does beyond its base damage**, from
+`Rubat` — damage `+1`, attack `+1`, 1,000 credits — up through rarer stones carrying larger
+and mixed bonuses.
+
+## The weapon-specific upgrade tree
 
 Nine categories, keyed to weapon type: lightsaber emitters (32) and cells (3), melee
 cells (15), edges (15), and grips (12), and ranged cells (30), chambers (12), firing
@@ -80,17 +78,9 @@ baked into a specific resref rather than anything a player installs.
 
 **⚠ Not fully resolved, and stated as a scoped negative rather than closed:** I checked
 two unique weapons and found the same four-resref, feat-conditional shape in both.
-Whether this is a general pattern across most or all unique weapons, or something
-specific to these two, hasn't been surveyed — that would mean checking every `⚠
-UNIQUE`-marked entry across `ITEMS-01` through `08` for the same multi-resref shape,
-which is a real task and a bigger one than this chapter, or the two chapters that
-deferred to it, budgeted for.
+**⚠ Whether this holds for unique weapons generally, or only for these two, is not
+settled.** Establishing it would mean checking every unique-marked item in the book for the
+same shape — **a real piece of work, and larger than this chapter.** Until then, treat the
+pattern as demonstrated for the two weapons named and unproven elsewhere.
 
 ---
-
-## Open items, carried from review
-
-Same lightsaber-damage flag as every chapter so far. New here: the deferred
-unique-weapon mechanic is explained rather than mechanically resolved, and how common
-its four-resref shape is across the rest of the catalogue is an open, unscoped
-question rather than a closed one.

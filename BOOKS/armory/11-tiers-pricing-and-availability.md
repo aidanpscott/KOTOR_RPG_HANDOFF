@@ -1,83 +1,75 @@
 # Chapter Eleven — Tiers, Pricing, and Availability
 
-**Status: DRAFT, for review.** `PT-308`, `PT-327`, `PT-384` — the three rulings the
-outline already cited for this chapter — plus a citation error traced back to this
-book's very first outline pass, corrected here rather than carried forward silently.
+**What an item costs, what makes it rare, and what stops a first-level character walking
+out of a shop with the best rifle in the galaxy.**
 
 ---
 
-## ⚠ `D-CURRENCY-01` was miscited from the start — not this chapter's fault to fix quietly
+## Currency
 
-**The outline's own row for this chapter, and separately Book Seven's Planetary Atlas
-row for "currency and trade," both cite `D-CURRENCY-01` as the source. It isn't.**
-Read the actual document: 217 lines, entirely about *which Atlas world-record source
-governs* — a corpus-authority ruling for the Planetary Atlas's own data, unrelated to
-in-game currency. The word "currency" appears exactly once, in a single aside about
-*"the currency question"* being asked in the same letter as the actual subject —
-incidental, not the topic.
+**Credits are the only medium of exchange in this game.** Every price in every chapter of
+this book is in credits, and there is no second currency, barter system or regional
+variation to track.
 
-**This isn't a gap, just a wrong pointer.** The real currency mechanic — credits as
-the sole medium of exchange, starting purses, item costs — is already `RULED` and
-held, in `STARTING-EQUIPMENT-01`: the Purse/Array choice (`PT-728`, *"the array may
-contain what the purse could not afford... a player who takes the purse gets freedom,
-a player who takes the array gets value"*), per-class starting credits, and the cost
-columns already running through every `ITEMS` file in this book. **Both outline rows
-citing `D-CURRENCY-01` should point to `STARTING-EQUIPMENT-01` instead — flagging this
-for correction at the outline level, not just inside this one chapter.**
+**A character's starting money depends on their class**, and at character creation they
+choose between **a purse** — spend it how you like — **and an array** of pre-selected gear.
 
-## Unique items — `PT-327`
+> **The array may contain what the purse could not afford.** A player who takes the purse
+> gets freedom; a player who takes the array gets value.
 
-**Once per campaign, and once per roll.** An item marked `⚠ UNIQUE` throughout this
-book — every chapter so far has carried several — can be obtained once. Once acquired,
-it's removed from every table it appears on.
+**The Player's Handbook covers that choice in full.** This chapter is about what the money
+buys.
 
-**Both halves matter and neither implies the other.** *Once per campaign*: found,
-bought, or crafted, the first acquisition is the only one. *Once per roll*: a single
-roll can't produce two, and a vendor can't stock two — a table that only removes an
-item after acquisition still allows one roll to produce two at once before that
-removal takes effect.
+## Unique items
 
-85 items carry this flag: 56 already plot-flagged in their own source blueprint, and
-29 more the flag missed — caught by a simpler tell, a possessive in the name. *There
-was one Nomi Sunrider, and she had one robe.*
+**An item marked unique can be obtained once, and once only.**
 
-**Engine-only, same shape as other rules already marked that way in this book: the
-app removes an item on acquisition and dedupes within a roll; a GM needs no rule at
-all, because a GM remembers what they handed out.**
+You will see the mark throughout this book — **85 items carry it.** Once such an item has
+been acquired, **it is removed from every table it could have appeared on.**
 
-## Loot tiers — `PT-308`, and it's agreed in concept, not fully ruled
+**The rule has two halves, and neither follows from the other:**
 
-**⚠ Stated honestly rather than presented as settled: `PT-308` is the owner agreeing to
-a design, with the detail still scheduled.** The agreed shape — keep K2's d100 roll and
-its five bands, but swap which table those bands draw from based on tier, rather than
-K2's own approach of gating tier by which container a designer happened to flag. K1's
-loot is hand-placed (balanced, but identical every replay); K2's is randomised (varied,
-but a low-level character can pull a top-tier item from an early container). The
-agreed design keeps K2's roll structure and adds the tier gate K2 never had.
+**Once per campaign.** Found, bought or crafted, **the first acquisition is the only one.**
 
-**What's still undecided:** whether the tier gate keys off character level or area
-danger. Area is the recommended direction — it would keep K1's sense of place-based
-balance while retaining K2's variety — but that's a recommendation, not a ruling.
-**This is also where Book Two's own `Loot` chapter, still `UNPLACED`, would connect** —
-whichever book ends up owning loot rules needs this same undecided gate resolved
-first.
+**Once per roll.** A single roll cannot produce two of the same unique item, and a vendor
+cannot stock two. **This half is easy to miss** — a system that only removes an item *after*
+it has been acquired still allows one roll to produce two at once, before the removal takes
+effect.
 
-## The feat remap, applied — `PT-384`
+### How the 85 were identified
 
-**This is the ruling that makes every "bay gate" and "attack chain" annotation in this
-book trustworthy rather than a raw, unmapped code.** `PT-384` confirms `PT-352`'s feat
-remap was actually applied to the item documents, after an earlier pass recorded the
-remap and never used it. Of item properties referencing a feat: 84 resolve to attack
-chains (`PT-315`, granted while equipped), 120 to droid bay gates (`PT-318`, `Droid
-Upgrade 1/2/3`), 9 are cut content, and zero are left unmapped. Every "`Use Limitation
-Feat (Droid Upgrade N)` ⚠ bay gate" note already made in Chapters Seven through Ten
-rests on this resolution.
+**56 were already flagged as unique in the games' own item data.** The remaining **29 were
+not** — and they were found by a much simpler tell: **a possessive in the name.**
 
----
+> **There was one Nomi Sunrider, and she had one robe.**
 
-## Open items, carried from review
+*Freedon Nadd's Blaster. Ulic Qel-Droma's Mesh Suit. Thon's Robe.* **If an item is named
+after a person, there was only ever one of it.**
 
-Same lightsaber-damage flag, unaffected. New here: the `D-CURRENCY-01` miscitation,
-which needs fixing at the outline level in both Book Four's and Book Seven's rows —
-not something one chapter file can close on its own. The loot-tier character-vs-area
-question is named as undecided rather than resolved.
+## Tiers, and what gates them
+
+**Every item in this book carries a tier from 1 to 4**, and the tier is what decides whether
+an item can turn up in a given place.
+
+**Chapter Thirteen sets out how that works in full** — the roll, the bands, how an area's
+tier is determined, and how a world's own danger caps it. **It is not repeated here.**
+
+**What matters for reading the catalogue chapters is simply this:** a tier-4 item is not
+merely expensive, **it is gated**, and no amount of money will produce one in a place that
+cannot hold it.
+
+## Feat gates on items
+
+**Some items in Chapters Seven through Ten carry a requirement rather than a price** — most
+often `Droid Upgrade 1`, `2` or `3`, which gate droid equipment by what the droid can
+accept.
+
+**Others grant something instead: an attack chain the character has while the item is
+equipped.**
+
+**Both are real and both were resolved against the games' own data rather than guessed at.**
+Of every item property in this book that references a feat, **84 grant an attack chain, 120
+are droid bay gates, 9 belong to content the games cut, and none are unaccounted for.**
+
+> **Where this book says an item gates or grants something, that came from the item
+> itself.**

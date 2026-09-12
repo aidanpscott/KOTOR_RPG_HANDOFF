@@ -755,3 +755,88 @@ Gamemaster who wants to run a hand has the props and will need to supply the gam
 **⚠ Deliberately NOT loosened.** Both authored categories keep their full specifications
 including prices, dice and gating; all five miscellaneous categories and their counts
 survive; and the quest-item categories are unchanged.
+
+---
+
+# Chapter Eleven — Tiers, Pricing, and Availability
+
+*`PT-1844` pass. **This chapter was rewritten rather than edited**, because more of it was
+addressed to the project than to a reader. The removed material is preserved below.*
+
+**Chapter status: DRAFT.** Rulings: `PT-308` (loot tiers), `PT-327` (unique items),
+`PT-384` (the feat remap, confirming `PT-352` was applied). Currency is
+`STARTING-EQUIPMENT-01`, **not** `D-CURRENCY-01`.
+
+## ⚠ The `D-CURRENCY-01` miscitation — removed from the chapter, still outstanding at the outline level
+
+## ⚠ `D-CURRENCY-01` was miscited from the start — not this chapter's fault to fix quietly
+
+**The outline's own row for this chapter, and separately Book Seven's Planetary Atlas
+row for "currency and trade," both cite `D-CURRENCY-01` as the source. It isn't.**
+Read the actual document: 217 lines, entirely about *which Atlas world-record source
+governs* — a corpus-authority ruling for the Planetary Atlas's own data, unrelated to
+in-game currency. The word "currency" appears exactly once, in a single aside about
+*"the currency question"* being asked in the same letter as the actual subject —
+incidental, not the topic.
+
+**This isn't a gap, just a wrong pointer.** The real currency mechanic — credits as
+the sole medium of exchange, starting purses, item costs — is already `RULED` and
+held, in `STARTING-EQUIPMENT-01`: the Purse/Array choice (`PT-728`, *"the array may
+contain what the purse could not afford... a player who takes the purse gets freedom,
+a player who takes the array gets value"*), per-class starting credits, and the cost
+columns already running through every `ITEMS` file in this book. **Both outline rows
+citing `D-CURRENCY-01` should point to `STARTING-EQUIPMENT-01` instead — flagging this
+for correction at the outline level, not just inside this one chapter.**
+
+Same lightsaber-damage flag, unaffected. New here: the `D-CURRENCY-01` miscitation,
+which needs fixing at the outline level in both Book Four's and Book Seven's rows —
+not something one chapter file can close on its own. The loot-tier character-vs-area
+question is named as undecided rather than resolved.
+
+## ⚠⚠ A contradiction between two chapters, found and fixed by this pass
+
+**Chapter Eleven said the loot-tier gate was undecided. Chapter Thirteen answers it.**
+
+The old text read: *"What's still undecided: whether the tier gate keys off character level
+or area danger. Area is the recommended direction… but that's a recommendation, not a
+ruling."*
+
+**`LOOT-01` resolved this, and Chapter Thirteen states it in full** — a character-level
+table (1–5 → tier 1, through 21–30 → tier 4), **and** an area tier derived as
+`max(encounter level, container difficulty)`, **and** world danger capping both. **The
+answer turned out to be *both*, not one or the other.**
+
+**So Chapter Eleven was carrying an open question that a later chapter in the same book had
+already closed** — a reader consulting Eleven would have been told the system was unsettled
+while Thirteen described it working. **Chapter Eleven now defers to Chapter Thirteen
+instead.**
+
+**That is the sixth instance of the self-description pattern found in this work, and the
+second in a chapter I wrote.**
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**This was the heaviest rewrite of the task.** The chapter opened with a section about a
+miscitation in the project's own outline, and three of its four remaining sections were
+organised around ruling numbers.
+
+**What survived, because it is genuinely reader-facing:** the unique-item rule in both its
+halves, the 85-item count and — the best thing in the chapter — **how the 29 unflagged ones
+were found.** *"There was one Nomi Sunrider, and she had one robe"* is now supported by the
+rule it demonstrates: **if an item is named after a person, there was only ever one of it.**
+
+**What was added, because the chapter's title promised it and the text never delivered it:**
+**a section on currency.** The chapter was called *Tiers, Pricing and Availability* and said
+nothing about money except inside the miscitation report. **It now states that credits are
+the only medium of exchange, and that a character chooses between a purse and an array at
+creation** — with the purse-versus-array line kept, since it explains the trade in one
+sentence.
+
+**What was reframed:** the feat remap. It was a confirmation that a data pass had been
+applied. **A reader needs the consequence instead** — that where this book says an item
+gates or grants something, **that came from the item itself** — with the four counts kept as
+evidence.
+
+**⚠ Deliberately NOT loosened.** Every figure survives: 85 unique items split 56 and 29, the
+feat-property counts of 84, 120 and 9, and the purse-versus-array choice. **The one thing
+genuinely removed is an open question that was no longer open.**

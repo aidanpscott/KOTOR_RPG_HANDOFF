@@ -1275,3 +1275,153 @@ the half-Vitality turret loss, `Repair` DC 20, the beat-Defence-by-10 station hi
 pilot actions, all three co-pilot actions, `10 × CR` / `10 + CR` / Speed 4, the 21% mean
 absolute error, the `2d8`–`5d8` turret ladder, and the fully statted `Ebon Hawk` all survive
 unchanged.
+
+---
+
+# Chapter Sixteen — Ship Parts and the Enemy Roster
+
+*Original source line, as it stood before the `PT-1844` pass:*
+
+> *Sources: `SPACE-COMBAT-01` — Component 5 (`PT-797`), Component 7 (`PT-803`), Component 7a
+> (`PT-805`), Component 8 (`PT-808`), Ship Parts (`PT-819`), Specialist Parts (`PT-820`), and
+> the boarding-resolution ruling at `PT-1128`. Prices cross-checked against
+> `STARSHIPS-01 §2a` and `§9` (`PT-800`).*
+
+## Flags, carried from review
+
+**⚠ Flag 1 — the parts list doubled and the earlier figure is still in the document.**
+Component 5 specifies **three groups and "12 items to author"** — Engine, Frame, Weapon,
+with `Accel` cut. **`PT-819` delivered six groups and 24 parts**, adding Shield, Turret and
+Sensor. **That is growth rather than contradiction**, but *"12 items to author"* still reads
+as current where it sits, and the true figure is **24 standard parts plus 6 specialist
+parts — 30.**
+
+**⚠ Flag 2 — the Turret group has its own price ladder and it is easy to miss.** Every other
+group uses 15,000 / 40,000 / 90,000 / 180,000. **Turret parts are double throughout —
+30,000 / 80,000 / 180,000 / 360,000** — which is why the full four-part conversion reaches
+650,000. **Stated in the table above so a reader does not price a turret ring off the
+standard band.**
+
+**⚠ Flag 3 — two acknowledged gaps in the enemy roster.** The source names both:
+
+- **No Mandalorian fighter is listed**, and **they fought a war.** The Basilisk fills the
+  grunt role in the doctrine section, which may be the intended answer — but the roster
+  table shows *none*, and the two are not reconciled in the document.
+- **No Sith freighter is listed.** The note says *"they used captured ones"*, which is a
+  reasonable in-fiction answer and leaves the table cell genuinely empty.
+
+**⚠ Flag 4 — the Corellian hardpoint is the only part that breaks a structural rule, and
+that is deliberate.** Every other part obeys *one per group*; the `CEC Modular Hardpoint`
+permits a second from one group. **Recorded prominently because a rule with exactly one
+exception is the kind of thing a later sweep "corrects" by mistake.**
+
+**⚠ Flag 5 — boarding's resolution is explicitly a floor, and the source says so.** Boarding
+hands off to ordinary ground combat with no new geography. **A real ship-interior map is
+wanted and explicitly deferred** — *"the honest floor, not a ceiling."* **Recorded so the
+simplicity reads as a decision rather than an omission.**
+
+**Not a flag — the `Accel` group's fate is worth knowing.** The swoop table has Engine,
+`Accel` and Frame; **`Accel` was cut** because *"acceleration matters in a race, where the
+track is fixed and the clock decides. In a fight, speed is speed."* It **goes back on the
+shelf for swoop racing, which is where it came from.**
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 8 internal citations from 370 lines**, plus the `Status: DRAFT, for review`
+header, which explained the chapter's own commissioning: *"written on the recommendation made
+at the end of Chapter Fifteen and approved."* **A reader does not need to know a chapter was
+recommended before it was written.** What survives from it is the one part that was about the
+book rather than the process — that this is catalogue material of the kind Chapter Three
+carries, which is why it is a chapter and not an appendix.
+
+**⚠⚠ Flag 3's reader-facing half was promoted, and it is the change that matters most.** The
+faction table has two cells a Gamemaster will build an encounter from and be wrong about:
+the Mandalorians read *none on the roster* for fighters, and the Sith have an em dash where
+their freighter should be. **A blank cell tells a reader nothing about whether it is a gap or
+a statement.** The chapter now says which, directly after the table:
+
+> **Two cells in that table are gaps, not statements.** The Mandalorians have no fighter on
+> the roster, and they fought a war. The `Basilisk war droid` does a fighter's job in the
+> doctrine section below — **but a Basilisk is a ridden war droid rather than a starfighter,
+> and the table still reads *none*. The two have not been reconciled.** … The Sith have no
+> freighter, and that gap has an answer: **they used captured ones.**
+
+**⚠ And the unreconciled one was left unreconciled.** The flag says the Basilisk *"may be the
+intended answer"* — **may be is not is**, and this pass had no standing to close it. The
+chapter states both halves and tells a Gamemaster who wants a Mandalorian starfighter
+specifically that they are inventing one. **Naming the gap is the service; closing it by
+assumption would have been the error.**
+
+**⚠ Flag 5's reader-facing half was promoted too, and it had been attributed to a document a
+reader cannot open.** The boarding rule read *"the source is honest that this is a floor
+rather than a ceiling"* — **which asks a reader to trust a source they have never seen.** It
+now says the thing itself: a real ship-interior map would be better, this game does not have
+one, and **the handoff to ground combat always works and is not the last word.**
+
+**⚠ Flag 1's number was promoted; its stale-source half stayed here.** The flag exists
+because the parts list doubled and *"12 items to author"* still reads as current in the
+source. **A reader has no exposure to that** — but they do benefit from knowing the list is
+closed, so the chapter now states the total: **24 standard parts plus six specialist parts,
+thirty, and there is nothing else to bolt to a ship.**
+
+**⚠ A real content promotion from the "not a flag" note: `Accel`.** The swoop table has
+Engine, `Accel` and Frame; this chapter has Engine and Frame and never said why. **A reader
+who knows the swoop table would notice a missing group and have no explanation.** The
+reasoning was sitting in the notes and is good, so it went into the chapter beside the Engine
+table: *"acceleration matters in a race, where the track is fixed and the clock decides. In a
+fight, speed is speed."* **`Accel` goes back to the swoop table it came from.**
+
+**Flags 2 and 4 needed no promotion** — both were already stated in the chapter body, the
+turret group's doubled price ladder in its own table and the Corellian hardpoint's
+rule-breaking in a ⚠ line. **Their project-facing halves stayed here**, including Flag 4's
+real point: a rule with exactly one exception is the kind of thing a later sweep "corrects"
+by mistake.
+
+**Three passages lost their development history and kept their content.** The shield ruling
+no longer explains itself by which earlier rulings it threatened to reopen — **it states what
+the rule is and what it keeps true**, one Vitality pool and no systems-officer seat. The
+upgrade design principle and the specialist-part test both became statements of the principle
+rather than quotations of a brief.
+
+**⚠ The sources section draws the line this chapter most needed drawn.** Every part here is
+authored — **KOTOR has no ship parts at all, only a swoop-bike table** — while every ship in
+the enemy roster is real, and so are the manufacturer names the parts are built on. The
+section says which is which, and names the one thing that is the chapter's own argument
+rather than anyone's source: **that each navy's doctrine falls out of its lore rather than
+out of its statistics.**
+
+**⚠ Deliberately NOT loosened.** Every part name, effect and price survives: both price
+ladders including the turret group's doubled one, the 650,000 four-part conversion, all six
+specialist parts, the five untouched axes, the boarding gates, every roster row, all three CR
+formulas, the five combat roles and their CR offsets, and the pirate rule.
+
+---
+
+# ⚠ `PT-1844` complete — 24 of 24
+
+**Both finished books are through.** Galactic Timeline, eight chapters; the Armory, sixteen.
+**Zero internal citations remain in either**, verified chapter by chapter by search rather
+than by assumption.
+
+**What the task actually turned out to be.** Removing a citation was the easy half. **The
+work was in the sentences the citations were holding up** — and the recurring finding across
+all twenty-four passes was the same one: **a citation frequently hid a decision more
+interesting than the citation itself.** The Katarr entry, the Telos warning, the loot bands'
+inferred mapping, the droid rebuild's real price, the three unsettled space-combat numbers,
+and this chapter's two roster gaps were all buried behind a ruling number that told a reader
+nothing.
+
+**The split-by-audience default did most of the work.** Where a flag had a reader-facing
+half, it went into the chapter; where it was project housekeeping, it stayed in these notes.
+**Every flag that had a reader-facing half had it promoted; none were dropped, and none were
+softened on the way.** No count is given here because counting them reliably would mean
+re-reading twenty-four chapters, and an unchecked number is exactly the kind of thing this
+task existed to remove.
+
+**Two stale status lines were caught in passing** — Chapter Fourteen's *"third of the four
+remaining"* and Chapter Fifteen's *"the Armory's last chapter"*, both written before the work
+that made them false. **A status line is the part of a document nobody rereads.**
+
+**And one content gap was found rather than fixed:** `hkpart05`, the HK Protocol Pacifist
+Package, which Chapter Twelve sends to Chapter Fourteen and which has no ruling anywhere.
+**Named as unbuildable rather than invented.**

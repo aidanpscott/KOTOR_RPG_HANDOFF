@@ -122,14 +122,14 @@ data rather than from any secondary description:
 | `.uti` item files | Individual item properties, names and descriptions across the catalogue chapters |
 | `k2_itemcreate.2da` · `k2_chemicalcreate.2da` · `k2_upgrade.2da` | Chapter Twelve's crafting recipes and their DC ladder, ported unchanged |
 | `k2_itemcreatemira.2da` | Named in Chapter Twelve as **deliberately deferred** — companion content |
-| `hkpart01`–`hkpart05` | Chapter Twelve identified them as not-recipes; Chapter Fourteen builds droids from them |
+| `hkpart01`–`hkpart05` | Chapter Twelve identified them as not-recipes; Chapter Fourteen builds droids from four of them |
 | `a_give_treas` | Chapter Thirteen's loot bands — **constants read, control flow not disassembled** |
 | `k2_swoopupgrade.2da` | The upgrade grammar Chapters Fifteen and Sixteen build ship parts on |
 | `keymap.2da` | Chapter Fifteen's evidence for how little space combat the source had — two verbs |
 
 **⚠ Two of these were read incompletely and both chapters say so.** `a_give_treas` gave up
 its constants but not its control flow, so **which loot band draws from which list is an
-inference** (Chapter Thirteen, Flag 1). And `k2_baseitems.2da` needs the project's own
+inference**, which Chapter Thirteen states directly. And `k2_baseitems.2da` needs the project's own
 binary-2DA parser rather than a text read — a fact found the hard way while checking
 Chapter Three's ranged dice.
 

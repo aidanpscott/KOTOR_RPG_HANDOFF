@@ -1,13 +1,10 @@
 # Chapter Sixteen — Ship Parts and the Enemy Roster
 
-**Status: DRAFT, for review.** Written on the recommendation made at the end of Chapter
-Fifteen and approved: this is catalogue material of the same kind Chapter Three carries for
-ranged weapons, and it belongs in its own chapter rather than as an appendix.
-
----
-
 **Chapter Fifteen built the ship and the fight. This chapter is what you bolt to one and
 what you point it at.**
+
+**Thirty parts and five navies** — catalogue material of the same kind Chapter Three carries
+for ranged weapons, which is why it is a chapter rather than an appendix.
 
 ---
 
@@ -15,20 +12,23 @@ what you point it at.**
 
 ## The shield ruling, which had to come first
 
-**Adding shields threatened to reopen two settled rulings** — the single Vitality pool, and
-the co-pilot seat that was cut because there were no ship systems to manage. **So shields
-were ruled before any part was written:**
+**Shields are the one part group that could have changed the game rather than added to it**,
+so the rule was settled before a single part was written:
 
 > **A shield part gives damage reduction. It does *not* add a track.**
 
-**Both earlier rulings survive intact.** There is still one pool, and there is still nothing
-for a systems officer to *manage* — **`DR` is passive.**
+**That keeps two things true.** There is still **one Vitality pool** — the same architecture
+every character, beast and droid in this game runs on — and there is still **nothing for a
+systems officer to *manage***, which is why no ship carries that seat. **`DR` is passive.**
 
 ## Six groups, four tiers, 24 parts
 
 **Prices follow the upgrade band:** 15,000 · 40,000 · 90,000 · **180,000.** **Tier 4 is
 never sold** — at 180,000 credits it costs more than most ships, and nothing that expensive
 sits on a shelf.
+
+**These 24 plus the six specialist parts in Part Two are the whole list — thirty parts.**
+There is nothing else to bolt to a ship.
 
 ### 1 · Engine — speed
 
@@ -38,6 +38,15 @@ sits on a shelf.
 | **Incom Vector Drive** | Speed **6** |
 | **Aratech Burn Array** | Speed **7** |
 | **Core Galaxy Slipstream Core** | Speed **8** — *crosses the `LONG` band in one move* |
+
+**⚠ There is no `Accel` group, and the absence is deliberate.** KOTOR's swoop-bike upgrades
+sort into Engine, `Accel` and Frame, and on a race track the first two are genuinely
+different things. **In a fight they are not.**
+
+> **Acceleration matters in a race, where the track is fixed and the clock decides. In a
+> fight, speed is speed.**
+
+**So `Accel` stays where it came from** — on the swoop table, for swoop racing.
 
 ### 2 · Frame — Vitality and Defence
 
@@ -64,8 +73,10 @@ against an even-CR opponent. **`+2` Defence makes it one in twenty.**
 | **Mandalorian Siege Cannon** | **`6d8`** |
 
 **One weapon upgrade cuts a level-5 party's fight from three rounds to two.** That is a real
-benefit from **one** part, which is what the owner's brief asked for: *"a party may invest
-in only a handful, or even none at all. But upgrades should offer real benefits."*
+benefit from **one** part, and it is the whole design principle behind this list:
+
+> **A party may buy a handful of these, or none at all. Every one they do buy should be
+> worth the credits on its own.**
 
 ### 4 · Shield — damage reduction
 
@@ -119,11 +130,10 @@ one-turret `Ebon Hawk` to five** — **a capital's seat count on a freighter's h
 
 # Part Two — Specialist Parts
 
-**Six parts, and the test they had to pass is the interesting thing about them.** The
-owner's constraint: *"provided they actually provide a natural benefit that others don't
-offer."*
+**Six parts, and the test each had to pass is the interesting thing about them:** a
+specialist part earns its place **only if it does something no standard part does.**
 
-**So the 24 standard parts were swept first, and five axes came back untouched:**
+**Checked against all 24 standard parts, five axes came back untouched:**
 
     the pilot's own roll    nothing gave +Pilot
     the unseated            nothing helped Repair at DC 20
@@ -191,10 +201,11 @@ any new rules of its own.
 **Combatants are whoever is actually aboard** — pilot, co-pilot, turret crew, any passengers
 — **mapped onto real characters already built for everything else.**
 
-**⚠ And the source is honest that this is a floor rather than a ceiling.** A real
-ship-interior map — distinct areas a boarding fight could move through, the way KOTOR 2's
-own scripted boarding sequence has real geography — **is wanted eventually and explicitly
-not built now.** The narrative handoff is *"the honest floor, not a ceiling."*
+**⚠ And this is a floor rather than a ceiling, which is worth saying plainly.** A real
+ship-interior map — distinct areas a boarding fight could move through, the way KOTOR 2's own
+scripted boarding sequence has real geography — **would be better, and this game does not
+have one.** The handoff to ground combat is the honest floor: **it always works, and it is
+not the last word on the subject.**
 
 ## Czerka — it sells to everyone
 
@@ -234,6 +245,20 @@ capitals and no fighter of their own. They fly what they bought.**
 > Czerka is a vendor because it sells to everyone. **The criminal factions are the other
 > side of that coin — they buy from everyone**, and a party that sees a `Lethisk` does not
 > know whose it is.
+
+### ⚠ Two cells in that table are gaps, not statements
+
+**Both are worth knowing before you build an encounter from it.**
+
+**The Mandalorians have no fighter on the roster, and they fought a war.** The `Basilisk war
+droid` does a fighter's job in the doctrine section below — **it is the grunt that closes** —
+but a Basilisk is a ridden war droid rather than a starfighter, **and the table still reads
+*none*. The two have not been reconciled.** A Gamemaster who wants a Mandalorian starfighter
+specifically is inventing one, and should know that going in.
+
+**The Sith have no freighter, and that gap has an answer**: they used captured ones. **So a
+Sith supply run is flying somebody else's hull** — which is a better encounter than a Sith
+freighter would have been.
 
 ## Pirates — a stat, not a faction
 
@@ -325,45 +350,27 @@ leaving, the other arrives whether you like it or not.
 
 ---
 
-*Sources: `SPACE-COMBAT-01` — Component 5 (`PT-797`), Component 7 (`PT-803`), Component 7a
-(`PT-805`), Component 8 (`PT-808`), Ship Parts (`PT-819`), Specialist Parts (`PT-820`), and
-the boarding-resolution ruling at `PT-1128`. Prices cross-checked against `STARSHIPS-01 §2a`
-and `§9` (`PT-800`).*
+## Sources for this chapter
 
-## Open items, carried from review
+**Every part in this chapter is this game's.** KOTOR has no ship parts — its only
+vehicle-upgrade table is for a swoop bike, which is where the three-groups-and-four-tiers
+shape came from and where `Accel` went back to. **The 24 standard parts, the six specialist
+parts, their effects and all their prices are authored here.**
 
-**⚠ Flag 1 — the parts list doubled and the earlier figure is still in the document.**
-Component 5 specifies **three groups and "12 items to author"** — Engine, Frame, Weapon,
-with `Accel` cut. **`PT-819` delivered six groups and 24 parts**, adding Shield, Turret and
-Sensor. **That is growth rather than contradiction**, but *"12 items to author"* still reads
-as current where it sits, and the true figure is **24 standard parts plus 6 specialist
-parts — 30.**
+**The names are not.** Rendili, Incom, Aratech, Core Galaxy Systems, Czerka, Corellian
+Engineering, Kuat and Duros hyperdrive work are all the setting's own manufacturers, and each
+specialist part is built on what that maker is actually known for.
 
-**⚠ Flag 2 — the Turret group has its own price ladder and it is easy to miss.** Every other
-group uses 15,000 / 40,000 / 90,000 / 180,000. **Turret parts are double throughout —
-30,000 / 80,000 / 180,000 / 360,000** — which is why the full four-part conversion reaches
-650,000. **Stated in the table above so a reader does not price a turret ring off the
-standard band.**
+**The enemy roster is the games' and the setting's.** The `Sith interceptor`, the
+`Aurek-class tactical strikefighter`, the `Hammerhead`, `Interdictor` and `Derriphan`, the
+`Kandosii` and `Kyramud`, the `Shaadlar`, the `Lethisk`, the `Heraklon` and the `Basilisk war
+droid` are all real ships of this era, and the quoted lines describing how they were used are
+the setting's own.
 
-**⚠ Flag 3 — two acknowledged gaps in the enemy roster.** The source names both:
+**What this chapter adds to them is the combat role and the CR** — grunt, heavy, support,
+carrier, objective — **and the observation that each navy's doctrine falls out of its lore
+rather than out of its statistics.** That last part is the chapter's argument, not a source's.
 
-- **No Mandalorian fighter is listed**, and **they fought a war.** The Basilisk fills the
-  grunt role in the doctrine section, which may be the intended answer — but the roster
-  table shows *none*, and the two are not reconciled in the document.
-- **No Sith freighter is listed.** The note says *"they used captured ones"*, which is a
-  reasonable in-fiction answer and leaves the table cell genuinely empty.
-
-**⚠ Flag 4 — the Corellian hardpoint is the only part that breaks a structural rule, and
-that is deliberate.** Every other part obeys *one per group*; the `CEC Modular Hardpoint`
-permits a second from one group. **Recorded prominently because a rule with exactly one
-exception is the kind of thing a later sweep "corrects" by mistake.**
-
-**⚠ Flag 5 — boarding's resolution is explicitly a floor, and the source says so.** Boarding
-hands off to ordinary ground combat with no new geography. **A real ship-interior map is
-wanted and explicitly deferred** — *"the honest floor, not a ceiling."* **Recorded so the
-simplicity reads as a decision rather than an omission.**
-
-**Not a flag — the `Accel` group's fate is worth knowing.** The swoop table has Engine,
-`Accel` and Frame; **`Accel` was cut** because *"acceleration matters in a race, where the
-track is fixed and the clock decides. In a fight, speed is speed."* It **goes back on the
-shelf for swoop racing, which is where it came from.**
+**The numbers that connect to Chapter Fifteen** — the station hit at Defence plus 10, the
+turret count as the action budget, `Repair` at DC 20, the co-pilot's `ASSIST`, the
+three-round fight at level 5 — **all come from that chapter and are used here unchanged.**

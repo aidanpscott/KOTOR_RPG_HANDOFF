@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `79eaae8` — the matrix wins, and `§4a` is derived |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `7328920` — `check_extracts` at stale 0, first time |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `30954f0` — `PT-1772` — a droid may not take a taken name |     ⚠ no |
+| `Lodestar` | `20e0565` — every projection declares what it folds |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `c48e909` — the Builder hands over the ban list |        ⚠ no |
-| `KOTOR-RPG-APP` | `f26d62f` — the profession's weapon upgrade is applied |      ⚠ no |
+| `KOTOR-RPG-APP` | `24b903f` — the check asks every projection, not `replay` |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 668 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 546 — 1,487, all
-green.** *(`BUILD 151`.)*
+**`Lodestar` 675 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 547 — 1,495, all
+green.** *(`BUILD 152`.)*
 
 ⚠ **`weapon_upgrades.toml` IS READ AT `BUILD 151`** — 35 rows from
 `WEAPON-MATRIX-01` (`PT-1780`), and the Equipment screen's second offer
@@ -1379,7 +1379,7 @@ deferred.
 | ⚠ **`format = 1` is read by nobody** | `§4` shows it, `PT-1366` ruled it, and `package_open` does not read it. **A ruled field neither side implements** |
 | ⚠ **`subrace_test` passes only because its viewport is wrong** | The one file the hygiene sweep did NOT get. A real 1280×720 surface makes the Zabrak tap land at y≈616 and miss; Zabrak is both a species and its own subrace so the finder is ambiguous and neither end of it reaches the right row. **Whether that row is reachable at all at 1280×720 is a PRODUCT question** — the clipped-reply shape again. Named in the file, not diagnosed |
 | ⚠ **The player's log `subject` is their DISPLAY NAME** | `identity['name']`, where creatures use a tag — **`PT-1445` ruled a log records the id, never the name**, and this is a permanent entry breaking it. Found in the owner's saves. **Re-keying orphans every existing player outcome**, so it is a migration and a ruling, not a patch |
-| ⚠ **`check_extracts` stale 1 — and re-stamping would hide it** | `event_kinds.json`, **not equipment**. Two copies of `EVENT-KINDS-01.md` have diverged; the rows are byte-identical, so the DATA is current. **The lag is in the code**: `PT-1435` says check A must compare against the **union of what every projection folds**, and `emitted_kinds_test` still uses `handledByReplay` alone |
+| ✓ ~~`check_extracts` stale 1~~ **CLOSED at `BUILD 152`** | The code lag was the point and it is fixed: each projection declares what it folds, `foldedByAnyProjection` adds them up, and `emitted_kinds_test` asks the union. **The re-stamp then cleared the flag for the right reason** rather than hiding the signal. `check_extracts` is at **stale 0** — first time |
 | ⚠ **`[requires] packages` and multiclass: never tested with two** | `§4` makes the order the precedence; `PT-723` caps classes at three. **Chargen writes one and one rules package exists**, so both folds have only ever seen a single element |
 | ~~⚠⚠ **`PT-1453` — the wound is HALF fixed**~~ | ✓ **closed at `BUILD 44`.** | `BUILD 41` fixed the path it tested, not the one the request quoted. **My reading of the third exit:** `_endFight` and `_enter` persist; **leaving the screen with `esc` goes through neither.** Plus **N1** a second fight in an area with outcomes in the log ends immediately, and **N2** the working line grows without bound — six from one fight. **Not started; its own slice** |
 | ⚠ **The player is unarmed, and it is TWO fixes** | The seam half is done and shared. The other is chargen writing an `[equipment]` reference, which needs the class arrays' prose names to resolve to blueprint paths — **the same 18-of-41 problem that keeps Route 2's purse unoffered.** Not a seam change |

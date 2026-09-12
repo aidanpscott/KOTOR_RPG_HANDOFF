@@ -54,7 +54,7 @@ before writing the other ten.
 
 | **Vibrosword** | `g_w_vbroswrd01` · K1 · Tier 1 · 120 credits |
 |---|---|
-| **Damage** | 2d6, slashing, threat 19–20 ×2 |
+| **Damage** | 1d12, slashing, threat 19–20 ×2 |
 | **Properties** | None |
 | **Description** | *"Ultrasonic generators power this Echani-developed weapon design. A rare cortosis weave that protects against sparring damage ensures that traditional swordplay will endure in the time of lightsabers."* |
 
@@ -66,13 +66,13 @@ weave"*) — one of `PT-342`'s 162 byte-identical shared resrefs.
 
 | **Krath Dire Sword** | `g_w_vbroswrd02` · K1 · Tier 1 · 250 credits |
 |---|---|
-| **Damage** | 2d6, slashing, threat 19–20 ×2 |
+| **Damage** | 1d12, slashing, threat 19–20 ×2 |
 | **Properties** | Enhancement 1 |
 | **Description** | *"This was a weapon of distinction in the time of the Krath. Protected against lightsaber sparring damage, Sith would grant these cortosis-laced blades to only the most loyal underlings."* |
 
 | **Sith Tremor Sword** | `g_w_vbroswrd03` · K1 · Tier 2 · 980 credits |
 |---|---|
-| **Damage** | 2d6, slashing, threat 19–20 ×2, +2 sonic |
+| **Damage** | 1d12, slashing, threat 19–20 ×2, +2 sonic |
 | **Properties** | Damage (Sonic) 2 · Enhancement 2 |
 | **Description** | *"Traced to the Bladeborn, a Sith offshoot dedicated to sword mastery, these cortosis-laced weapons were given to 'masterblades' who survived no less than ten lightsaber-wielding warriors in combat."* |
 
@@ -83,13 +83,13 @@ transcription error.
 
 | **Echani Foil** | `g_w_vbroswrd04` · K1 · Tier 2 · 1,750 credits |
 |---|---|
-| **Damage** | 2d6, slashing, threat 19–20 ×2 |
+| **Damage** | 1d12, slashing, threat 19–20 ×2 |
 | **Properties** | Enhancement 3 · Keen |
 | **Description** | *"These swords were crafted to honor Raskta Fenni, the best Echani duelist of her time. Many were sold, but imperfections in the difficult lightsaber-deflecting cortosis weave caused few to survive."* |
 
 | **Bacca's Ceremonial Blade** ⚠ unique | `g_w_vbroswrd05` · K1 · Tier 2 · 2,480 credits |
 |---|---|
-| **Damage** | 2d6, slashing, threat 19–20 ×2, +4 energy, Massive Criticals 2d6 |
+| **Damage** | 1d12, slashing, threat 19–20 ×2, +4 energy, Massive Criticals 2d6 |
 | **Properties** | Damage (Energy) 4 · Damage (Racial: Droid) 2d6 · Enhancement 2 (×2) · Massive Criticals 2d6 |
 | **Description** | *"The great Bacca was hunting the Shadowlands ages ago when an alien ship crashed through the forest. He saw that first contact as a warning of the destruction outsiders could bring. Made from the debris..."* |
 

@@ -1,6 +1,6 @@
 # Chapter Seven — Droid Equipment
 
-**Status: DRAFT, for review.** Split out from a combined outline row that bundled
+**Status: APPROVED.** Split out from a combined outline row that bundled
 droid equipment with worn gear, usable items, and quest/miscellaneous items — five
 `ITEMS` files that aren't one coherent category the way Armour's six sub-categories
 were. Proposed as four chapters instead of one; see the note at the end.

@@ -1,6 +1,6 @@
 # Chapter Ten — Quest and Miscellaneous Items
 
-**Status: DRAFT, for review.** Last of the four chapters split from the combined
+**Status: APPROVED.** Last of the four chapters split from the combined
 outline row. Two sources: `ITEMS-07` (quest) and `ITEMS-08` (other) — both small
 enough, and both genuinely miscellaneous enough, to share one chapter rather than
 stand alone the way Droid Equipment, Worn Gear, and Usable Items each did.
@@ -24,12 +24,10 @@ sampled entry) rather than anything with combat properties.
 
 ## Miscellaneous items — `ITEMS-08`
 
-**⚠ The category count here doesn't cleanly reconcile, and it's stated honestly rather
-than forced.** The file's own header says 42 items; the five categories I found —
-credits (15), misc (3), pazaak (24), shock-arm (2), boots (25) — sum to 69. Not
-resolving the gap here; it may be the same kind of stale-header issue `ITEMS-07`'s own
-history already shows this catalogue is prone to, or I may be missing an overlap
-between categories. Flagged, not guessed at.
+**The category-count gap is resolved, and it was the header, not the arithmetic.** The
+file originally stated 42 items against a five-category sum of 69 — the same
+stale-header shape `ITEMS-07`'s own corrected history already showed this catalogue is
+prone to. Header corrected to **69**, matching the sum exactly.
 
 **Credits** (15 entries) are the currency itself, represented as an item for stacking
 purposes. **Misc** (3) is a small residual category — `Aesthetic Item` is the sampled
@@ -42,12 +40,13 @@ whether that book ever gets the rules chapter to go with them.
 and one of them invents an entire equipment slot that didn't exist before this
 project.**
 
-`Shock-arm` (2 items, `⚠ AUTHORED`, `PT-713`) is chassis-integrated droid hardware.
-`Droid Shock Arm` is unique to T3-M4 specifically, gated behind `Droid Upgrade 1` — a
-level-1 droid doesn't have that feat, so this is deliberately not a starting item. The
-generic line exists alongside it. **`PT-714`, owner ruling: a shock arm is not a melee
-weapon — it's chassis hardware, the same category a beast's claws belong to.** Worth
-knowing for whoever eventually drafts the Bestiary's or Threat Database's droid
+`Shock-arm` (`⚠ AUTHORED`, `PT-713`) is chassis-integrated droid hardware. **Simplified
+since this chapter first drafted: the free, auto-upgrading T3-M4-unique design was
+deleted entirely.** One purchasable line remains, at two price points (120 and 500
+credits) using this book's normal upgrade slots rather than a feat-gated special case.
+**`PT-714`, owner ruling, still stands regardless of that redesign: a shock arm is not
+a melee weapon — it's chassis hardware, the same category a beast's claws belong to.**
+Worth knowing for whoever eventually drafts the Bestiary's or Threat Database's droid
 sections, since it means a shock arm doesn't go through this book's wield-class system
 at all.
 
@@ -65,7 +64,7 @@ KOTOR's own design rather than translating it.
 
 ## Open items, carried from review
 
-Same lightsaber-damage flag, unaffected. New here: `ITEMS-08`'s category-count
-discrepancy (69 summed against 42 stated), and a cross-reference worth someone
+Same lightsaber-damage flag, unaffected. The category-count question and the
+Shock-arm design are both closed above. Still open: the cross-reference worth someone
 picking up later — Pazaak's cards exist here while its rules chapter is still
 unplaced in Book Five.

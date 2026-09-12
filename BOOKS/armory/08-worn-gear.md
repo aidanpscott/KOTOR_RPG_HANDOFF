@@ -1,6 +1,6 @@
 # Chapter Eight — Worn Gear
 
-**Status: DRAFT, for review.** One of the four chapters split out from a combined
+**Status: APPROVED.** One of the four chapters split out from a combined
 outline row, per the approved four-way split. `ITEMS-05`, another primary-source
 catalogue — no cross-check against a more-primary source needed, same footing as
 Chapters Five through Seven.

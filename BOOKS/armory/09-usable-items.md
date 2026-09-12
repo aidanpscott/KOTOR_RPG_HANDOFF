@@ -1,6 +1,6 @@
 # Chapter Nine — Usable Items
 
-**Status: DRAFT, for review.** Second of the four chapters split from the combined
+**Status: APPROVED.** Second of the four chapters split from the combined
 outline row. `ITEMS-06`, primary-source catalogue, same footing as Chapters Five
 through Eight.
 

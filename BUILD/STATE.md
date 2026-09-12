@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `1c886f2` — the party, in `PLAY-STATE-01` |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `884207b` — `EQUIPMENT-01 §7a` |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `614f01b` — `PT-1741` — who is travelling with you |     ⚠ no |
+| `Lodestar` | `ea486f7` — `PT-1740` — conditional damage vs a kind |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `67bf294` — repin for `PT-1741` |        ⚠ no |
-| `KOTOR-RPG-APP` | `5b51efb` — `PT-1741` — the companion comes with you |      ⚠ no |
+| `Loom` | `948f536` — the Ion Blaster arms somebody now |        ⚠ no |
+| `KOTOR-RPG-APP` | `a7525ae` — `PT-1740`, and the shelf flake confirmed |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 633 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 507 — 1,411, all
-green.** *(`BUILD 141`.)*
+**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 509 — 1,424, all
+green.** *(`BUILD 142`.)*
 ⚠ **Lodestar is four DOWN**, and that is `owner` leaving: five cases about a
 field that no longer exists, against two that assert a file carrying one still
 loads. ⚠ **All four suites are hermetic**: a full run of every one leaves

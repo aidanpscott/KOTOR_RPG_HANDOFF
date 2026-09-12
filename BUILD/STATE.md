@@ -50,7 +50,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `948f536` — the Ion Blaster arms somebody now |        ⚠ no |
+| `Loom` | `5ed6185` — pinned to `PT-1729`'s engine |        ⚠ no |
 | `KOTOR-RPG-APP` | `cc4277f` — `PT-1729` — a droid is designated |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the

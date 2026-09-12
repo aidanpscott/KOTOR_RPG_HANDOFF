@@ -129,7 +129,7 @@ Exit codes read from `$?` directly, never through a pipe.
 ## Heads
 
     Lodestar        95bc648    engine pin upgraded in the app to match
-    Loom            948f536   (unchanged)
+    Loom            5ed6185    engine pin upgraded to match
     Lens            e59ff95   (unchanged)
     KOTOR-RPG-APP   cc4277f
     MAIN_WORK       15b8da0

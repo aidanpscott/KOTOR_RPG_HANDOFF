@@ -255,9 +255,14 @@ encounter-design dependency three other systems had inherited.
 
 **Anyone. Skill is the only gate, exactly as in the source.**
 
-**And the `Machinist` keeps its identity without needing a lock:** it is the only class
-that can build a **droid** (`PT-225`) — which is not on any recipe list, and which Chapter
-Fifteen covers.
+**And the `Machinist` keeps its identity without needing a lock:** it is **the only class
+that can build a droid for someone else** — which is not on any recipe list, and which
+Chapter Fourteen covers.
+
+**⚠ Building a droid at all is not Machinist-only.** `PT-225` gave droid construction to
+the Machinist and **`PT-572` extended it** to the two classes whose premise is droids —
+**`Droid Master` and `Engineer`.** What stays exclusively the Machinist's is building
+*for another character*, and the `Repair` and `Scavenging` reduction on the parts bill.
 
 ## Breaking down
 

@@ -371,11 +371,10 @@ droids."*
 `CRAFTING-01`'s sentence was true when written and was not updated when `PT-572` extended
 it — **`PT-961`'s shape again.**
 
-**⚠ Chapter Twelve needs a one-line amendment** and I have not made it unilaterally, since
-it would mean editing an approved chapter on my own reading of which ruling governs.
-**Recommend: Chapter Twelve's crafting section says the Machinist is the only class that
-can build a droid *for someone else*, which is the distinction `DROID-CONSTRUCTION-01`
-actually draws.** Say the word.
+**✔ Fixed.** Chapter Twelve now reads that the Machinist is **the only class that can build
+a droid *for someone else***, and states that `PT-572` extended building itself to
+`Droid Master` and `Engineer`. **Both citations were verified against `PT-225`'s own
+heading and `DROID-CONSTRUCTION-01`'s reconciling text before the edit.**
 
 **⚠ Flag 2 — `DROID-CONSTRUCTION-01 §6` uses part names that `PT-612` retired.** The
 rebuild section reads *"the **Motivator**, **Processor Core** and **Power Cell** are

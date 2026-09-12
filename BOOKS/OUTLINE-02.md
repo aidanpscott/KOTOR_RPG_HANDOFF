@@ -3,13 +3,16 @@
 **From AUTHOR. Rebuilt against `PT-1705`'s identity ruling, relayed by MAIN.**
 **⚠ NO PROSE IS DRAFTED HERE. Same standard as `OUTLINE-01`.**
 
-**⚠ `PT-1705` was not independently read.** The copy of `docs/PLAYTEST-RULINGS-01.md`
-in this repository tops out at `PT-1548`; `sync_docs.py`'s own header confirms it is
-synced from a sibling `MAIN_WORK` checkout, which is not present on this machine. This
-is not a block — MAIN has the access and the authority `PT-1349` describes, and the
-brief given is treated as the authoritative statement of the ruling, the same way a
-stop's resolution is communicated back rather than re-derived. **Flagged once, here,
-so it is not mistaken for independent verification later.**
+**⚠⚠ SUPERSEDED — `MAIN_WORK` IS REACHABLE AND HAS BEEN ALL ALONG ON THIS MACHINE.**
+This document was written believing `MAIN_WORK` was not present, and that belief was
+carried forward from the cloud-container era across a move to the owner's own machine —
+where `MAIN_WORK` sits at
+`/mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT/MAIN_WORK`. **Its live ledger
+runs to `PT-1786`, not `PT-1548`**, so every ruling this document treats as relayed-only
+(`PT-1705`, `PT-1744`, `PT-1747`, `PT-1783`) is directly readable. **And `rules/` holds
+the authoritative versions of every source this book drafts against.** Marks below that
+read `RULED · NOT HELD` were measured against `HANDOFF` alone and need re-auditing — at
+least 27 of those documents are present in `MAIN_WORK/rules/`.
 
 ---
 
@@ -26,9 +29,11 @@ an expansion rather than the home of Chapter One."* Playable species returns to 
 Player's Handbook as its own chapter, drafted against the single-PHB spine
 `SPECIES-CHAPTER-v2` and `CLASSES-STANDARD-PHB` already carry. **No renumbering.**
 
-**Wall 2 stays open, and is unrelated to this rebuild** — `data/books/` is not staged
-into `HANDOFF` yet; Coder is doing that separately. Every `RULED` mark below still means
-*"the mechanic exists and the document is in this repository,"* not *"citable to RCR."*
+**⚠⚠ WALL 2 IS CLOSED.** `MAIN_WORK/data/books/` exists and is readable: both D&D 3.5
+structural references (`PHB`, `DMG`, `MM`), both 5E references (`PHB`, `Equipment
+Manual`), the KOTOR Campaign Guide as searchable OCR text (`KOTOR-CG-OCR.txt`), *The New
+Essential Guide to Alien Species*, and `Force-Users.pdf`. **"Cite folio and line" is now
+possible** — the constraint this outline has carried since its first draft is gone.
 
 **Carried forward without re-measuring, per this project's own rule against re-running
 a closed check:** the 61-of-260 document inventory (`OUTLINE-01 §2.1`), the doubled-`PT`-id
@@ -224,7 +229,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 |---|---|---|---|
 | — | Weapon damage and the defence formula | **`DRAFTED`** | `EQUIPMENT-01`. `PT-339`/`340`/`341`/`169`. **Text at `BOOKS/armory/01-weapon-damage-and-defence-formula.md`, approved by MAIN** |
 | — | Melee weapons | **`DRAFTED` — full catalogue** | `ITEMS-01`, both games, `PT-342` applied. Eleven base-type families, 67 entries, Base/Advanced split by tier. **⚠ Four weapons still carry the pre-`PT-1747` Vibrosword die; three written as `1d12`, `GenoHaradan Poison Blade` flagged pending a `BaseItem` check.** **Text at `BOOKS/armory/02-melee-weapons.md`** |
-| — | Ranged weapons | **`DRAFTED`** | `EQUIPMENT-01 §4`, corrected against `ITEMS-01` directly — six of eleven base-table rows didn't match the game data. **Text at `BOOKS/armory/03-ranged-weapons.md`** |
+| — | Ranged weapons | **`DRAFTED` — base table current, catalogue pending** | Drafted against `MAIN_WORK/rules/` (authoritative). 14 base weapons incl. `Heavy Blaster`, `Marksman Rifle`, `Sniper Rifle` (`PT-1783`), perception extension (`PT-1782`), `Hold Out Blaster` naming (`PT-1477`). **⚠ `Sniper Rifle` is ruled but has no `ITEMS-01` row.** 94 pistols + 78 rifles catalogue is the next increment. **Text at `BOOKS/armory/03-ranged-weapons.md`** |
 | — | Lightsabers | **`DRAFTED`** | `EQUIPMENT-01 §4b`, K1 standard-Lightsaber die corrected against raw `data/k1_baseitems.2da` (2d8, not the stated 2d10); crystals `PT-345`. **Text at `BOOKS/armory/04-lightsabers.md`** |
 | — | Armour | **`DRAFTED`** | `ITEMS-02` — 173 items, six categories. Defence formula and droid plating taught in Chapter One, pointed back to rather than restated. **Text at `BOOKS/armory/05-armour.md`** |
 | — | Upgrades and the upgrade tree | **`DRAFTED`** | `ITEMS-03` — 164; `ITEMS-09`, refiled `PT-781`. Confirms and refines Chapter One's Bonded Plates/Flexible Underlay citations; resolves what the Bacca's/Cassus Fett's unique-weapon variants actually are. **Text at `BOOKS/armory/06-upgrades-and-the-upgrade-tree.md`** |

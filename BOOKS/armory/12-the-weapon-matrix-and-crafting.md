@@ -17,10 +17,9 @@ furniture.
 
 # Part One — The Weapon Matrix
 
-**⚠ This part is a view, not the record.** `WEAPON-MATRIX-01` states its own status
-plainly: *"THIS DOCUMENT RESTATES `STARTING-EQUIPMENT-01 §2`, `§4a` AND `§5`. THOSE ARE THE
-SOURCE; THIS IS THE VIEW."* **Where this chapter and `STARTING-EQUIPMENT-01` disagree, the
-source governs** — the same discipline the Galactic Timeline applies to its own rank ladder.
+**⚠ The Player's Handbook is the authority on starting equipment; this is a summary of it.**
+The table below exists so you can see every class's opening kit at once. **Where it and the
+Player's Handbook disagree, the Player's Handbook is right.**
 
 ## Four columns, because two things modify a starting kit
 
@@ -30,12 +29,12 @@ Every class's weapons resolve four ways:
 |---|---|
 | **Default** | what the class starts with |
 | **+ `Two-Weapon Fighting`** | the feat |
-| **+ profession** | **`Hunter` upgrades melee. `Veteran` upgrades ranged.** Neither names a weapon of its own (`PT-763`) |
+| **+ profession** | **`Hunter` upgrades melee. `Veteran` upgrades ranged.** Neither names a weapon of its own |
 | **+ both** | the feat's *two* and the profession's *better*, together |
 
 ## ⚠ The melee option is a choice. The ranged one is not
 
-**This is the asymmetry that explains the whole table**, and it is `PT-765`:
+**This is the asymmetry that explains the whole table:**
 
     MELEE   two one-handed weapons OR one double-bladed. Every class picks.
     RANGED  two one-handed blasters. No choice, because there is nothing
@@ -72,7 +71,7 @@ grant to fill the cell.
 
 ## The ceiling, and the one class allowed past it
 
-**`PT-766` caps the feat-plus-profession line at the `Double-Bladed Sword`** — `2d6`, 100
+**The feat-plus-profession line is capped at the `Double-Bladed Sword`** — `2d6`, 100
 credits, `Balanced`, two attacks.
 
 **The tier-1 melee ceiling is actually one rung higher**, and the ruling stops below it on
@@ -91,13 +90,13 @@ The `Hunter` grant is a **Vibrosword** (`1d12`) and the off hand keeps the **Vib
 
 > **Biggest weapon main hand, balanced weapon off hand.**
 
-**That shape is already correct everywhere else in the table** (`PT-760`); the Duelist was
+**That shape is already correct everywhere else in the table**; the Duelist was
 simply brought into line with it.
 
 ### What the feat gives, and what the profession gives
 
-**`PT-764` corrects a mistake worth understanding, because it recurs across five rows.**
-An earlier version put *"two Heavy Blasters"* in the `Two-Weapon Fighting` column alone.
+**⚠ A mistake worth understanding, because it affects five rows.** It is tempting to read
+*"two Heavy Blasters"* as something the feat alone provides. **It is not.**
 
     Feat only        two Blaster Pistols
     Profession only  one Heavy Blaster
@@ -119,8 +118,8 @@ Marksman rows.
 | **Sith Inquisitor** | Training Lightsaber — *red* | as above |
 
 **There is no profession column, and the reason is good:** a Force class's weapon upgrade
-is **the real lightsaber**, and `PT-702` makes that a **campaign event rather than a
-profession grant.** Nobody is handed a Jedi's weapon at character creation because they
+is **the real lightsaber**, and that is **a campaign event rather than a profession
+grant.** Nobody is handed a Jedi's weapon at character creation because they
 picked the right background.
 
 **The `Initiate` profession grants a crystal or a saber upgrade** — it improves the blade
@@ -133,15 +132,15 @@ Force class in the game starts with one.
 
 ## The droid arrays
 
-**A droid may take only nine of the eighteen classes** (`PT-767`):
+**A droid may take only nine of the eighteen classes:**
 
     No Force class        all six — CLASS-ROSTER-01
-    No Combat-rate class  Soldier · Marksman · Brawler — PT-109
+    No Combat-rate class  Soldier · Marksman · Brawler
 
 **Nine remain:** Scout, Smuggler, Bounty Hunter, Engineer, Machinist, Agent, Treasure
 Hunter, Medic, Duelist.
 
-**And every droid array is ranged**, because `PT-567` bars melee to every chassis:
+**And every droid array is ranged**, because no chassis may use melee weapons:
 
 | Class | Droid default | + Two-Weapon Fighting |
 |---|---|---|
@@ -165,12 +164,12 @@ single **blaster pistol**, melee weapon, or lightsaber."*
 | Chassis | Armour | Hardware |
 |---|---|---|
 | **Battle · Assassin** | Droid Light Plating Type 1 — 75cr | — |
-| **Astromech · Remote** | none | **Shock Arm** — chassis hardware (`PT-714`) |
+| **Astromech · Remote** | none | **Shock Arm** — chassis hardware, see Chapter Ten |
 
 **The Shock Arm occupies no weapon slot**, so pairing is unaffected — an Astromech with the
 feat carries two pistols **and** its arm.
 
-**A droid takes no profession** (`PT-692`). There is no third or fourth column.
+**A droid takes no profession.** There is no third or fourth column.
 
 ---
 
@@ -185,8 +184,8 @@ feat carries two pistols **and** its arm.
 
 ## Why there is no roll at a base
 
-**This is not a crafting rule. It is the skill rules applied.** `SKILL-RESOLUTION-01`
-permits taking 10 where there is no pressure and no distraction, and **eight uninterrupted
+**This is not a crafting rule. It is the ordinary skill rules applied.** You may take 10 on
+a skill check where there is no pressure and no distraction — and **eight uninterrupted
 hours at your ship or your hideout is the definition of that condition.**
 
 **Your ceiling is `10 + ranks + ability modifier`.** Anything at or under it you can build;
@@ -201,7 +200,7 @@ craft and no wasted material at a base. **The DC is a gate, not a test.**
 
 ### The source's own DCs become a career
 
-`k2_itemcreate` carries a per-recipe DC from 1 to 32, **ported unchanged**, and take-10
+**The games' own recipe table carries a DC from 1 to 32 for each recipe, ported unchanged**, and take-10
 maps it onto this game's level curve without a number being touched:
 
 | DC | What it buys | Ranks | Level |
@@ -234,10 +233,9 @@ session builds as many items as you have components for.
 Ten stimulants and one lightsaber crystal cost the same rest, **because the constraint is
 *you had an evening*, not *you performed ten operations*.**
 
-**And it is the same period `REST-AND-MEDITATION-01` already draws from.** One period, one
-choice among **rest, meditation, crafting, or droid construction** — never more than one.
-Consistent with `PT-203` and `PT-225`, and stated here as a unified rule rather than left
-as parallel citations.
+**And it is the same downtime period that rest and meditation already draw from.** One
+period, one choice among **rest, meditation, crafting, or droid construction** — never more
+than one.
 
 ## Where — and the furniture that isn't
 
@@ -259,9 +257,8 @@ encounter-design dependency three other systems had inherited.
 that can build a droid for someone else** — which is not on any recipe list, and which
 Chapter Fourteen covers.
 
-**⚠ Building a droid at all is not Machinist-only.** `PT-225` gave droid construction to
-the Machinist and **`PT-572` extended it** to the two classes whose premise is droids —
-**`Droid Master` and `Engineer`.** What stays exclusively the Machinist's is building
+**⚠ Building a droid at all is not Machinist-only.** **`Droid Master` and `Engineer` can
+both build one** — the two other classes whose whole premise is droids. What stays exclusively the Machinist's is building
 *for another character*, and the `Repair` and `Scavenging` reduction on the parts bill.
 
 ## Breaking down
@@ -331,49 +328,19 @@ the chemical recipes are theirs, which is a larger share than medicine's.
 > is a whole droid, in parts.**
 
 **KOTOR put them on the chemical bench because it needed somewhere to put *rebuild
-HK-47*.** `PT-225` deferred droid construction and said the mechanism was unwritten —
-**these five are the mechanism, and they belong with it.** Removed from the recipe count:
+HK-47*.** **These five are not recipes at all — they are droid construction, and they belong
+with it in Chapter Fourteen.** Removed from the recipe count:
 **73 becomes 68.**
 
 ---
 
-*Sources: `WEAPON-MATRIX-01` (⚠ a derived view — `STARTING-EQUIPMENT-01 §2`, `§4a`, `§5`
-are the record) for Part One, with `PT-760`, `PT-763`–`PT-767`, `PT-692`, `PT-702`,
-`PT-714`, `PT-109`, `PT-567`. `CRAFTING-01` for Part Two, with `PT-203`, `PT-225`,
-`PT-482`; `SKILL-RESOLUTION-01` for take-10 and `REST-AND-MEDITATION-01` for the downtime
-period. Source tables `k2_itemcreate.2da`, `k2_chemicalcreate.2da`, `k2_upgrade.2da`.*
+## Sources for this chapter
 
-## Open items, carried from review
+**Part One — starting equipment.** The Player's Handbook is the authority; this chapter
+summarises it so the whole roster can be seen at once. **Where the two differ, the Player's
+Handbook governs.**
 
-**⚠ Flag 1 — Part One restates a document that is itself a restatement, and I have said so
-rather than hidden it.** `WEAPON-MATRIX-01` declares itself `DERIVED` and names
-`STARTING-EQUIPMENT-01 §2`/`§4a`/`§5` as the record. **This chapter is therefore a third
-copy**, and `D-W32`'s reasoning applies — *cite, do not restate, because copies drift.*
-**The table is reproduced here because a player-facing book cannot send a reader to a rules
-document for their own starting kit**, but the pointer is stated at the top of Part One and
-the source governs on conflict. **A future sweep should check this table against
-`STARTING-EQUIPMENT-01` directly, not against `WEAPON-MATRIX-01`.**
-
-**⚠ Flag 2 — fifteen item names in this table resolve to more than one item.**
-`WEAPON-MATRIX-01 §4` records it: *"which row each item name means — `§2c`, because fifteen
-of these names resolve to more than one item."* **Chapter Three proves the point** — thirty
-separate items are called some variety of Blaster Pistol. **A GM handing out a "Blaster
-Pistol" at character creation should take the base row**, `g_w_blstrpstl001`, not whichever
-variant a search returns first.
-
-**⚠ Flag 3 — the crafting item catalogue is deliberately deferred and stays deferred.**
-994 blueprints are extracted and joined; **turning them into readable entries is a separate
-job** and is not attempted here. Also deferred at source: `k2_itemcreatemira`'s 214
-character-specific recipes (companion content, and there is no companion system yet) and
-the 99 upgrade rows whose blueprints live in module archives rather than `templates.bif`.
-**This chapter documents the system, not the recipe list.**
-
-**⚠ Flag 4 — the recipe count in circulation is 73 and the true figure is 68.**
-`CRAFTING-01` corrects it in place, but **73 is the number printed on the source table** and
-will keep resurfacing. **The five removed are the HK parts above**, which are a droid rather
-than recipes.
-
-**Not a flag, but worth stating: nothing in this chapter needed the base weapon dice.**
-Part One names weapons; it does not restate their stat lines, which Chapters One through
-Four already carry. **That insulates it entirely from the ranged-dice question** that
-stopped Chapter Three's catalogue.
+**Part Two — crafting.** The recipe lists, their DCs and the upgrade tables came straight
+from KOTOR 2's own crafting data, **ported unchanged.** What this game added is the time
+cost, the always-succeeds-at-a-base rule, the lossy breakdown, and **the reassignment of
+recipes across six skills instead of two.**

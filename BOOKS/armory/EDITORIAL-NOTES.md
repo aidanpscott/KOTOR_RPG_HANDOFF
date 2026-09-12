@@ -840,3 +840,84 @@ evidence.
 **⚠ Deliberately NOT loosened.** Every figure survives: 85 unique items split 56 and 29, the
 feat-property counts of 84, 120 and 9, and the purse-versus-array choice. **The one thing
 genuinely removed is an open question that was no longer open.**
+
+---
+
+# Chapter Twelve — The Weapon Matrix and Crafting
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+*Sources: `WEAPON-MATRIX-01` (⚠ a derived view — `STARTING-EQUIPMENT-01 §2`, `§4a`, `§5`
+are the record) for Part One, with `PT-760`, `PT-763`–`PT-767`, `PT-692`, `PT-702`,
+`PT-714`, `PT-109`, `PT-567`. `CRAFTING-01` for Part Two, with `PT-203`, `PT-225`,
+`PT-482`; `SKILL-RESOLUTION-01` for take-10 and `REST-AND-MEDITATION-01` for the downtime
+period. Source tables `k2_itemcreate.2da`, `k2_chemicalcreate.2da`, `k2_upgrade.2da`.*
+
+**⚠ Flag 1 — Part One restates a document that is itself a restatement, and I have said so
+rather than hidden it.** `WEAPON-MATRIX-01` declares itself `DERIVED` and names
+`STARTING-EQUIPMENT-01 §2`/`§4a`/`§5` as the record. **This chapter is therefore a third
+copy**, and `D-W32`'s reasoning applies — *cite, do not restate, because copies drift.*
+**The table is reproduced here because a player-facing book cannot send a reader to a rules
+document for their own starting kit**, but the pointer is stated at the top of Part One and
+the source governs on conflict. **A future sweep should check this table against
+`STARTING-EQUIPMENT-01` directly, not against `WEAPON-MATRIX-01`.**
+
+**⚠ Flag 2 — fifteen item names in this table resolve to more than one item.**
+`WEAPON-MATRIX-01 §4` records it: *"which row each item name means — `§2c`, because fifteen
+of these names resolve to more than one item."* **Chapter Three proves the point** — thirty
+separate items are called some variety of Blaster Pistol. **A GM handing out a "Blaster
+Pistol" at character creation should take the base row**, `g_w_blstrpstl001`, not whichever
+variant a search returns first.
+
+**⚠ Flag 3 — the crafting item catalogue is deliberately deferred and stays deferred.**
+994 blueprints are extracted and joined; **turning them into readable entries is a separate
+job** and is not attempted here. Also deferred at source: `k2_itemcreatemira`'s 214
+character-specific recipes (companion content, and there is no companion system yet) and
+the 99 upgrade rows whose blueprints live in module archives rather than `templates.bif`.
+**This chapter documents the system, not the recipe list.**
+
+**⚠ Flag 4 — the recipe count in circulation is 73 and the true figure is 68.**
+`CRAFTING-01` corrects it in place, but **73 is the number printed on the source table** and
+will keep resurfacing. **The five removed are the HK parts above**, which are a droid rather
+than recipes.
+
+**Not a flag, but worth stating: nothing in this chapter needed the base weapon dice.**
+Part One names weapons; it does not restate their stat lines, which Chapters One through
+Four already carry. **That insulates it entirely from the ranged-dice question** that
+stopped Chapter Three's catalogue.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 17 internal citations from 379 lines**, plus the four-flag section. **The
+highest raw count of any chapter in the task**, though most were single ruling numbers
+attached to otherwise clean sentences rather than dense passages.
+
+**⚠ The derived-view warning was the important one.** Part One opened by quoting
+`WEAPON-MATRIX-01`'s own status line — *"THIS DOCUMENT RESTATES `STARTING-EQUIPMENT-01`…
+THOSE ARE THE SOURCE; THIS IS THE VIEW"* — and explaining that this chapter is therefore a
+third copy.
+
+**All true, all internal, and the reader-facing half is one sentence:** **the Player's
+Handbook is the authority on starting equipment, this is a summary of it, and where the two
+differ the Player's Handbook is right.** A reader does not need to know how many copies
+deep the summary is; they need to know which one wins.
+
+**⚠ The feat-versus-profession correction was re-pointed at the reader.** It read *"`PT-764`
+corrects a mistake worth understanding"* — a mistake *this project* made. **The reader's
+version of that mistake is different and more likely:** it is tempting to read *"two Heavy
+Blasters"* as something the feat alone provides. **It is not.** Same correction, aimed at
+the person who will actually make it.
+
+**The `hkpart` entries now point at Chapter Fourteen** rather than at the ruling that
+deferred droid construction — **which is where a reader can actually follow them.**
+
+**The take-10 rule, the DC ladder, the downtime period and the droid-construction
+permissions all lost their citations and kept their content**, including the Machinist's
+exclusive right to build *for another character*, which was corrected during this same task
+at Chapter Fourteen.
+
+**⚠ Deliberately NOT loosened.** All thirteen standard classes, six Force classes and nine
+droid arrays keep their full four-column entries; the `Brawler`'s empty row keeps its
+explanation; the ceiling ruling keeps both weapons and both prices; every crafting DC,
+skill reassignment and implant split survives; and **the five `hkpart` entries are still
+named individually.**

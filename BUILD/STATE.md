@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `5284473` — `PT-1745` in `PLAY-STATE-01`'s party section |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `15b8da0` — `PT-1729`, and the rule written where it extracts |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `ea486f7` — `PT-1740` — conditional damage vs a kind |     ⚠ no |
+| `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `948f536` — the Ion Blaster arms somebody now |        ⚠ no |
-| `KOTOR-RPG-APP` | `d875bfb` — `PT-1745` — a conversation recruits |      ⚠ no |
+| `KOTOR-RPG-APP` | `cc4277f` — `PT-1729` — a droid is designated |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,12 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 644 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 513 — 1,428, all
-green.** *(`BUILD 144`.)*
+**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 523 — 1,453, all
+green.** *(`BUILD 145`.)*
+
+⚠ **`base-rules` GAINED TWO FILES AT `BUILD 145`** — `designations.toml` (38
+rows) and `reserved.toml` (8). The generated package was diffed against the
+installed one first: **those two were the only difference.**
 
 ⚠ **ONE FULL APP RUN IN FOUR FAILED TWO `whole_loop_test` CASES AND I DID NOT
 CATCH THE MESSAGE.** The file passes in isolation and passed the other three

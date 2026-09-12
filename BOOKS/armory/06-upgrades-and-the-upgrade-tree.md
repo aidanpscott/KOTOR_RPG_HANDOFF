@@ -14,7 +14,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Heat Shielding Mark I** · `u_a_over_01` · K2 · Tier 1 · 20 credits · DamageImmunity (Fire) ⚠ **DR 2** *(10%)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Armorply Plating Mark I** · `u_a_over_02` · K2 · Tier 1 · 40 credits · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 2)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Armorply Plating Mark I** · `u_a_over_02` · K2 · Tier 1 · 40 credits · Skill (Stealth) 2 — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Sound Dampening Overlay Mark I** · `u_a_over_03` · K2 · Tier 1 · 60 credits · DamageImmunity (Sonic) ⚠ **DR 2** *(10%)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -30,7 +30,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Heat Shielding Mark II** · `u_a_over_09` · K2 · Tier 2 · 850 credits · DamageImmunity (Fire) ⚠ **DR 3** *(15%)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Armorply Plating Mark II** · `u_a_over_10` · K2 · Tier 2 · 1,000 credits · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 2)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Armorply Plating Mark II** · `u_a_over_10` · K2 · Tier 2 · 1,000 credits · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill (Stealth) 4 — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Sound Dampening Overlay Mark II** · `u_a_over_11` · K2 · Tier 2 · 1,125 credits · DamageImmunity (Sonic) ⚠ **DR 3** *(15%)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -46,7 +46,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Heat Shielding Mark III** · `u_a_over_17` · K2 · Tier 3 · 6,000 credits · DamageImmunity (Fire) ⚠ **DR 3** *(15%)* · DamageResist (Fire) Resist_5/- — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Armorply Plating Mark III** · `u_a_over_18` · K2 · Tier 3 · 7,500 credits · Ability (Dexterity) 1 · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 2)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Armorply Plating Mark III** · `u_a_over_18` · K2 · Tier 3 · 7,500 credits · Ability (Dexterity) 1 · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill (Stealth) 6 — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Sound Dampening Overlay Mark III** · `u_a_over_19` · K2 · Tier 3 · 9,000 credits · DamageImmunity (Sonic) ⚠ **DR 4** *(20%)* · DamageResist (Sonic) Resist_5/- — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -62,7 +62,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Heat Shielding Mark IV** · `u_a_over_25` · K2 · Tier 3 · 19,250 credits · DamageImmunity (Fire) ⚠ **DR 4** *(20%)* · DamageResist (Fire) Resist_10/- — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Armorply Plating Mark IV** · `u_a_over_26` · K2 · Tier 4 · 21,250 credits · Ability (Dexterity) 2 · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill bonus +8 ⚠ *(which skill is unresolved — subtype 2)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Armorply Plating Mark IV** · `u_a_over_26` · K2 · Tier 4 · 21,250 credits · Ability (Dexterity) 2 · **Reflex save +2** ⚠ *(the game’s own file records +1; this game sets it at +2)* · Skill (Stealth) 8 — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Sound Dampening Overlay Mark IV** · `u_a_over_27` · K2 · Tier 4 · 22,500 credits · DamageImmunity (Sonic) ⚠ **DR 10** *(50%)* · DamageResist (Sonic) Resist_5/- — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -84,7 +84,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Flexible Underlay Mark I** · `u_a_unde_05` · K2 · Tier 1 · 225 credits · DEXBonusMax 1 — *“Armor Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked asFlexible Underlay can only be used on Heavy Armor.”*
 
-**Durasteel Underlay Mark I** · `u_a_unde_06` · K2 · Tier 1 · 350 credits · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 0)* 1 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 1)* 1 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 2)* 1 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Durasteel Underlay Mark I** · `u_a_unde_06` · K2 · Tier 1 · 350 credits · ArmorDamageType (Bludgeoning) 1 · ArmorDamageType (Piercing) 1 · ArmorDamageType (Slashing) 1 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Environment Underlay Mark II** · `u_a_unde_07` · K2 · Tier 2 · 600 credits · DamageImmunity (Cold) ⚠ **DR 4** *(20%)* · DamageImmunity (Fire) ⚠ **DR 4** *(20%)* · DamageResist (Cold) Resist_5/- · DamageResist (Fire) Resist_5/- — *“and Robes Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -96,7 +96,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Flexible Underlay Mark II** · `u_a_unde_11` · K2 · Tier 2 · 1,475 credits · Ability (Dexterity) 1 · DEXBonusMax 1 — *“Armor Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked asFlexible Underlay can only be used on Heavy Armor.”*
 
-**Durasteel Underlay Mark II** · `u_a_unde_12` · K2 · Tier 2 · 1,950 credits · DecreaseAbilityScore (Dexterity) Penalty_-1 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 0)* 2 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 1)* 2 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 2)* 2 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Durasteel Underlay Mark II** · `u_a_unde_12` · K2 · Tier 2 · 1,950 credits · DecreaseAbilityScore (Dexterity) Penalty_-1 · ArmorDamageType (Bludgeoning) 2 · ArmorDamageType (Piercing) 2 · ArmorDamageType (Slashing) 2 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Environment Underlay Mark III** · `u_a_unde_13` · K2 · Tier 2 · 2,650 credits · DamageImmunity (Cold) ⚠ **DR 5** *(25%)* · DamageImmunity (Fire) ⚠ **DR 5** *(25%)* · DamageResist (Cold) Resist_5/- · DamageResist (Fire) Resist_5/- — *“and Robes Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -108,7 +108,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Flexible Underlay Mark III** · `u_a_unde_17` · K2 · Tier 3 · 6,550 credits · Ability (Dexterity) 1 · DEXBonusMax 2 — *“Armor Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked asFlexible Underlay can only be used on Heavy Armor.”*
 
-**Durasteel Underlay Mark III** · `u_a_unde_18` · K2 · Tier 3 · 8,750 credits · DecreaseAbilityScore (Dexterity) Penalty_-2 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 0)* 3 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 1)* 3 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 2)* 3 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Durasteel Underlay Mark III** · `u_a_unde_18` · K2 · Tier 3 · 8,750 credits · DecreaseAbilityScore (Dexterity) Penalty_-2 · ArmorDamageType (Bludgeoning) 3 · ArmorDamageType (Piercing) 3 · ArmorDamageType (Slashing) 3 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Environment Underlay Mark IV** · `u_a_unde_19` · K2 · Tier 3 · 9,925 credits · DamageImmunity (Cold) ⚠ **DR 6** *(30%)* · DamageImmunity (Fire) ⚠ **DR 6** *(30%)* · DamageResist (Cold) Resist_5/- · DamageResist (Fire) Resist_5/- — *“and Robes Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -120,7 +120,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Flexible Underlay Mark IV** · `u_a_unde_23` · K2 · Tier 3 · 17,555 credits · Ability (Dexterity) 2 · DEXBonusMax 2 — *“Armor Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked asFlexible Underlay can only be used on Heavy Armor.”*
 
-**Durasteel Underlay Mark IV** · `u_a_unde_24` · K2 · Tier 3 · 19,685 credits · DecreaseAbilityScore (Dexterity) Penalty_-3 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 0)* 4 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 1)* 4 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 2)* 4 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Durasteel Underlay Mark IV** · `u_a_unde_24` · K2 · Tier 3 · 19,685 credits · DecreaseAbilityScore (Dexterity) Penalty_-3 · ArmorDamageType (Bludgeoning) 4 · ArmorDamageType (Piercing) 4 · ArmorDamageType (Slashing) 4 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Environment Underlay Mark V** · `u_a_unde_25` · K2 · Tier 4 · 20,995 credits · DamageImmunity (Cold) ⚠ **DR 6** *(30%)* · DamageImmunity (Fire) ⚠ **DR 6** *(30%)* · DamageResist (Cold) Resist_10/- · DamageResist (Fire) Resist_10/- — *“and Robes Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -132,7 +132,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Flexible Underlay Mark V** · `u_a_unde_29` · K2 · Tier 4 · 28,950 credits · Ability (Dexterity) 3 · DEXBonusMax 3 — *“Armor Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked asFlexible Underlay can only be used on Heavy Armor.”*
 
-**Durasteel Underlay Mark V** · `u_a_unde_30` · K2 · Tier 4 · 29,950 credits · DecreaseAbilityScore (Dexterity) Penalty_-3 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 0)* 5 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 1)* 5 · ArmorDamageType ⚠ *(unresolved — `iprp_combatdam` subtype 2)* 5 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
+**Durasteel Underlay Mark V** · `u_a_unde_30` · K2 · Tier 4 · 29,950 credits · DecreaseAbilityScore (Dexterity) Penalty_-3 · ArmorDamageType (Bludgeoning) 5 · ArmorDamageType (Piercing) 5 · ArmorDamageType (Slashing) 5 — *“Underlay can have a variety of effects on the armor to which it is applied. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
 
 ---
 
@@ -210,7 +210,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Crystal, Dragite** · `u_l_crys_05` · K2 · Tier 2 · 980 credits · Ability (Constitution) 1 · Damage (Sonic) 1 — *“Constitution: +1 Damage: +1 Sonic Dragite crystals are found on M'haeli, in the D'olop mountain range. The beam they create resonates loudly when it strikes, inflicting a minor amount of sonic damage.”*
 
-**Crystal, Firkrann** · `u_l_crys_06` · K2 · Tier 2 · 2,500 credits · AttackBonus 2 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2d6 — *“Damage: +2-12 vs droids Attack: +2 This heavy crystal is collected by the natives of Rafa V. If used in lightsaber construction it produces an electrically charged beam that is devastating to droids.”*
+**Crystal, Firkrann** · `u_l_crys_06` · K2 · Tier 2 · 2,500 credits · AttackBonus 2 · DamageRacialGroup (Droid) 2d6 — *“Damage: +2-12 vs droids Attack: +2 This heavy crystal is collected by the natives of Rafa V. If used in lightsaber construction it produces an electrically charged beam that is devastating to droids.”*
 
 **Crystal, Phond** · `u_l_crys_07` · K2 · Tier 2 · 1,500 credits · Damage (Slashing) 1d6 — *“Damage: Physical, +1-6 The strange byproduct of rare impurities bonding during the making of certain alloys and some random external condition, this crystal produces a fiercely burning lightsaber beam.”*
 
@@ -228,7 +228,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Crystal, Eralam** · `u_l_crys_14` · K2 · Tier 2 · 3,000 credits · AttackBonus 2 · Damage (Energy) 2 — *“Damage: +2 Attack: +2 Once mined on the third moon of Erai, ancient Sith bombardment shattered much that remained. If they can be found, these crystals produce a clear, superior lightsaber beam.”*
 
-**Crystal, Stygium** · `u_l_crys_15` · K2 · Tier 2 · 2,980 credits · AttackBonus 1 · Ability (Dexterity) 1 · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 2)* — *“Dexterity: +1 Attack: +1 Stealth: +4 The stygium mineral can be used to create cloaking effects that foil enemy sensors. In its pure crystal form, it is suitable for a lightsaber.”*
+**Crystal, Stygium** · `u_l_crys_15` · K2 · Tier 2 · 2,980 credits · AttackBonus 1 · Ability (Dexterity) 1 · Skill (Stealth) 4 — *“Dexterity: +1 Attack: +1 Stealth: +4 The stygium mineral can be used to create cloaking effects that foil enemy sensors. In its pure crystal form, it is suitable for a lightsaber.”*
 
 **Crystal, Damind** · `u_l_crys_16` · K2 · Tier 2 · 2,000 credits · AttackBonus 3 — *“Attack: +3 Found on the desert world of Daminia, this crystal can be used in lightsaber construction to produce a clearly defined beam of subtly wider width and length.”*
 
@@ -240,7 +240,7 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 **Ultima-pearl** · `u_l_crys_20` · K2 · Tier 2 · 4,980 credits · AttackBonus 3 · Damage (Energy) 2 · Massive Criticals 1d6 — *“Damage: +2 Attack: +3 Massive Criticals: 1-6 An unusual choice for a lightsaber focusing crystal, this rare stone can be found on Calamari. Difficult to properly install in a lightsaber, this valuable stone has powerful effects.”*
 
-**Crystal, Solari** · `u_l_crys_21` · K2 · Tier 2 · 5,000 credits · ⚠ *Alignment-locked (which alignment is unresolved)* · AttackBonus 3 · Damage (Energy) 3 · DamageAlignmentGroup ⚠ *(unresolved — `iprp_aligngrp` subtype 3)* 1d8 — *“Damage: +3, +1-8 Physical Damage vs. Dark Side Attack: +3 Limitation: Can only be used by a Light Jedi. There are many famous lightsaber crystals spoken of in the history of the Jedi Order. An artifact of true Light Side power, only those Jedi who are pure in spirit can wield a lightsaber equipped with this gleaming white gem. When the great Jedi Master Ood Bnar initiated his life-cycle change after a thousand years of serving the Order, he bequeathed the Solari crystal to his most promising student, a young female Jedi named Shaela Nuur. When Shaela disappeared shortly after the time of the Great Hunt, the Solari crystal vanished with her.”*
+**Crystal, Solari** · `u_l_crys_21` · K2 · Tier 2 · 5,000 credits · ⚠ *Alignment-locked (which alignment is unresolved)* · AttackBonus 3 · Damage (Energy) 3 · DamageAlignmentGroup (Dark_Side) 1d8 — *“Damage: +3, +1-8 Physical Damage vs. Dark Side Attack: +3 Limitation: Can only be used by a Light Jedi. There are many famous lightsaber crystals spoken of in the history of the Jedi Order. An artifact of true Light Side power, only those Jedi who are pure in spirit can wield a lightsaber equipped with this gleaming white gem. When the great Jedi Master Ood Bnar initiated his life-cycle change after a thousand years of serving the Order, he bequeathed the Solari crystal to his most promising student, a young female Jedi named Shaela Nuur. When Shaela disappeared shortly after the time of the Great Hunt, the Solari crystal vanished with her.”*
 
 **Crystal, Qixoni** · `u_l_crys_21x` · K2 · Tier 2 · 5,000 credits · ⚠ *Alignment-locked (which alignment is unresolved)* · Damage (Energy) 5 · Regeneration Force Points 1 — *“Damage: +5 Regenerate Force Points: +1 Limitation: Can only be used by a Dark Jedi. Qixoni crystals were formed on a planet that was destroyed millenia ago when its star went supernova. They are exceedingly rare and also quite powerful.”*
 
@@ -311,11 +311,11 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 ## Lightsaber emitters — 32
 
-**Energy Emitter Mk 1** · `w_blhvy001` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup ⚠ *(unresolved — `iprp_aligngrp` subtype 0)* 1
+**Energy Emitter Mk 1** · `w_blhvy001` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup (All) 1
 
-**Energy Emitter Mk 2** · `w_lghtsbr001` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup ⚠ *(unresolved — `iprp_aligngrp` subtype 0)* 1
+**Energy Emitter Mk 2** · `w_lghtsbr001` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup (All) 1
 
-**Energy Emitter Mk 1** · `w_bstrcrbn` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup ⚠ *(unresolved — `iprp_aligngrp` subtype 0)* 1
+**Energy Emitter Mk 1** · `w_bstrcrbn` · K1 · Tier 1 · 400 credits · EnhancementAlignmentGroup (All) 1
 
 **Droid Toxin Emitter** · `d_device_04` · K2 · Tier 2 · 550 credits · Damage: None · On Hit: Paralyzed, 25% for 6sec · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“Damage: None On Hit: Paralyzed, 25% for 6sec Poisoned, Mild Weakness Save: DC10 to negate each Charges: Using this item consumes one charge. This item is automatically discarded after all available charges are consumed. Items that have charges do not stack in inventory. This small canister fits under a droid's plating and when activated, releases a small cloud of toxic gas.”*
 
@@ -325,29 +325,29 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Deflection Emitter** · `u_l_emit_01` · K2 · Tier 1 · 295 credits · Blaster Bolt Deflect Increase 1 — *“Deflection emitters are optimzied for use against blaster fire. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Disrupting Emitter** · `u_l_emit_02` · K2 · Tier 2 · 665 credits · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 0)* · OnHit (Slow) 10 — *“On Hit Properties: Slow DC 10, 25% for 2 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Disrupting Emitter** · `u_l_emit_02` · K2 · Tier 2 · 665 credits · Defence penalty -1 (dodge) · OnHit (Slow) 10 — *“On Hit Properties: Slow DC 10, 25% for 2 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Crude Phobium Emitter** · `u_l_emit_03` · K2 · Tier 2 · 1,085 credits · Defence penalty -3 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Slow) 14 — *“On Hit Properties: Slow DC 14 25% for 2 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Crude Phobium Emitter** · `u_l_emit_03` · K2 · Tier 2 · 1,085 credits · Defence penalty -3 (deflection) · OnHit (Slow) 14 — *“On Hit Properties: Slow DC 14 25% for 2 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Fencing Emitter** · `u_l_emit_04` · K2 · Tier 2 · 1,665 credits · Blaster Bolt Defect Decrease Penalty_-2 · Damage (Energy) 1 · Armor 1 — *“Damage Bonus: 1, Energy Fencing emitters are most suitable for parrying hand-to-hand attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Improved Deflection Emitter** · `u_l_emit_05` · K2 · Tier 2 · 2,885 credits · Blaster Bolt Deflect Increase 2 · Armor 1 — *“Deflection emitters are optimzied for use against blaster fire. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Advanced Disrupting Emitter** · `u_l_emit_06` · K2 · Tier 2 · 4,665 credits · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Stun) 10 — *“On Hit Properties: Stun DC 10 25% for 2 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Advanced Disrupting Emitter** · `u_l_emit_06` · K2 · Tier 2 · 4,665 credits · Defence penalty -1 (deflection) · OnHit (Stun) 10 — *“On Hit Properties: Stun DC 10 25% for 2 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Synthesized Phobium Emitter** · `u_l_emit_07` · K2 · Tier 3 · 7,555 credits · Defence penalty -3 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Stun) 14 — *“On Hit Properties: Stun DC 14 25% for 2 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Synthesized Phobium Emitter** · `u_l_emit_07` · K2 · Tier 3 · 7,555 credits · Defence penalty -3 (deflection) · OnHit (Stun) 14 — *“On Hit Properties: Stun DC 14 25% for 2 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Improved Fencing Emitter** · `u_l_emit_08` · K2 · Tier 3 · 10,115 credits · Blaster Bolt Defect Decrease Penalty_-2 · Damage (Energy) 2 · Armor 2 — *“Damage Bonus: 2, Energy Fencing emitters are most suitable for parrying hand-to-hand attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Expert Deflection Emitter** · `u_l_emit_09` · K2 · Tier 3 · 13,555 credits · Blaster Bolt Deflect Increase 4 · Armor 1 — *“Deflection emitters are optimzied for use against blaster fire. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Superior Disrupting Emitter** · `u_l_emit_10` · K2 · Tier 3 · 17,775 credits · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Stun) 14 — *“On Hit Properties: Stun DC 14 25% for 3 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Superior Disrupting Emitter** · `u_l_emit_10` · K2 · Tier 3 · 17,775 credits · Defence penalty -1 (deflection) · OnHit (Stun) 14 — *“On Hit Properties: Stun DC 14 25% for 3 Rounds Disrupting emitters create an unsteady beam which can wreck havoc on a victim's nervous system. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Phobium Alloy Emitter** · `u_l_emit_11` · K2 · Tier 4 · 20,225 credits · Defence penalty -3 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Stun) 18 — *“On Hit Properties: Stun DC 18 25% for 3 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Phobium Alloy Emitter** · `u_l_emit_11` · K2 · Tier 4 · 20,225 credits · Defence penalty -3 (deflection) · OnHit (Stun) 18 — *“On Hit Properties: Stun DC 18 25% for 3 Rounds Made for the more aggressive combatant, the phobium emitter is heavier and less wieldy than the typical disrupting emitter. It is also indisputably more effective. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Expert Fencing Emitter** · `u_l_emit_12` · K2 · Tier 4 · 24,450 credits · Damage (Energy) 3 · Armor 2 — *“Damage Bonus: 3, Energy Fencing emitters are most suitable for parrying hand-to-hand attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Refined Phobium Emitter** · `u_l_emit_13` · K2 · Tier 4 · 28,885 credits · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 4)* · OnHit (Slow) 18 — *“On Hit Properties: Slow DC 18 50% for 3 Rounds This most advanced disruptor emitter is both effective and easier to use than most phobium emitters. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Refined Phobium Emitter** · `u_l_emit_13` · K2 · Tier 4 · 28,885 credits · Defence penalty -1 (deflection) · OnHit (Slow) 18 — *“On Hit Properties: Slow DC 18 50% for 3 Rounds This most advanced disruptor emitter is both effective and easier to use than most phobium emitters. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Synthesized Kunda Lens** · `u_l_lens_01` · K2 · Tier 1 · 300 credits · Blaster Bolt Deflect Increase 1 — *“The kunda stone has numerous practical applications in medicine and communications. It can also be combined with normal lens to produce a broader, yet still focused beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -357,7 +357,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Beam Gem Lens** · `u_l_lens_04` · K2 · Tier 2 · 1,700 credits · Damage (Energy) 1 · Keen 0 — *“Damage Bonus: 1, Energy Keen The aptly named beam gem crystals are common in optical computers such as those involved in navigational systems. Not surprisingly, they also can create a highly focused lightsaber beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Vibration Lens** · `u_l_lens_05` · K2 · Tier 2 · 2,900 credits · AttackPenalty Penalty_-1 · Damage (Energy) 1d8 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 4)* — *“Damage Bonus: 1-8, Energy This lens vibrates very rapidly, resulting in a less stable, but more deadly beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Vibration Lens** · `u_l_lens_05` · K2 · Tier 2 · 2,900 credits · AttackPenalty Penalty_-1 · Damage (Energy) 1d8 · Defence penalty -1 (deflection) — *“Damage Bonus: 1-8, Energy This lens vibrates very rapidly, resulting in a less stable, but more deadly beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Pure Kunda Lens** · `u_l_lens_06` · K2 · Tier 2 · 4,700 credits · AttackBonus 1 · Blaster Bolt Deflect Increase 2 — *“The kunda stone has numerous practical applications in medicine and communications. It can also be combined with normal lens to produce a broader, yet still focused beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -367,7 +367,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Improved Beam Gem Lens** · `u_l_lens_09` · K2 · Tier 3 · 14,600 credits · AttackBonus 1 · Damage (Energy) 2 · Keen 0 — *“Damage Bonus: 2, Energy Keen The aptly named beam gem crystals are common in optical computers such as those involved in navigational systems. Not surprisingly, they also can create a highly focused lightsaber beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Improved Vibration Lens** · `u_l_lens_10` · K2 · Tier 3 · 18,200 credits · AttackPenalty Penalty_-1 · Damage (Energy) 2d6 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 4)* — *“Damage Bonus: 2-12, Energy This lens vibrates very rapidly, resulting in a less stable, but more deadly beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Improved Vibration Lens** · `u_l_lens_10` · K2 · Tier 3 · 18,200 credits · AttackPenalty Penalty_-1 · Damage (Energy) 2d6 · Defence penalty -1 (deflection) — *“Damage Bonus: 2-12, Energy This lens vibrates very rapidly, resulting in a less stable, but more deadly beam. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Ossus Dueling Lens** · `u_l_lens_11` · K2 · Tier 4 · 21,800 credits · AttackBonus 2 · Blaster Bolt Deflect Increase 3 — *“Ossus was know for its Great Jedi Library, however other training still took place on its surface. After being consumed by the Cron supernova, several pieces of equipment were still found in the halls of the Jedi Enclave. The dueling lens was meant to focus a lightsaber into a finely tuned blade meant for dueling and other instances where complete control is needed. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -385,19 +385,19 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 ## Melee cells — 15
 
-**Ion Cell** · `u_m_cell_01` · K2 · Tier 1 · 50 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d3 · Massive Criticals 1 — *“Damage Bonus vs Droid: 1-3, Ion Massive Criticals: 1 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
+**Ion Cell** · `u_m_cell_01` · K2 · Tier 1 · 50 credits · DamageRacialGroup (Droid) 1d3 · Massive Criticals 1 — *“Damage Bonus vs Droid: 1-3, Ion Massive Criticals: 1 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
 **Sonic Discharge Cell** · `u_m_cell_04` · K2 · Tier 2 · 700 credits · AttackPenalty Penalty_-1 · Damage (Sonic) 2 · Massive Criticals 1d8 — *“Damage Bonus: 2, Sonic Massive Criticals: 1-8 Sonic discharge energy cells release sound waves upon impact. Though the sonic discharge makes the weapon unwieldy, few types of armor protect against this type of attack. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
-**Ion Cell Mark II** · `u_m_cell_05` · K2 · Tier 2 · 1,100 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d6 · Massive Criticals 1d6 — *“Damage Bonus vs Droid: 1-6, Bludgeoning Massive Criticals: 1-6 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
+**Ion Cell Mark II** · `u_m_cell_05` · K2 · Tier 2 · 1,100 credits · DamageRacialGroup (Droid) 1d6 · Massive Criticals 1d6 — *“Damage Bonus vs Droid: 1-6, Bludgeoning Massive Criticals: 1-6 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
 **Sonic Discharge Cell Mark II** · `u_m_cell_08` · K2 · Tier 2 · 4,700 credits · AttackPenalty Penalty_-1 · Damage (Sonic) 4 · Massive Criticals 2d6 — *“Damage Bonus: 4, Sonic Massive Criticals: 2-12 Sonic discharge energy cells release sound waves upon impact. Though the sonic discharge makes the weapon unwieldy, few types of armor protect against this type of attack. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
-**Ion Cell Mark III** · `u_m_cell_09` · K2 · Tier 3 · 7,600 credits · Damage (Ion) 1d4 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2d6 · Massive Criticals 2d6 — *“Damage Bonus: 1-4, Ion Damage Bonus vs Droid: 2-12, Ion Massive Criticals: 2-12 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
+**Ion Cell Mark III** · `u_m_cell_09` · K2 · Tier 3 · 7,600 credits · Damage (Ion) 1d4 · DamageRacialGroup (Droid) 2d6 · Massive Criticals 2d6 — *“Damage Bonus: 1-4, Ion Damage Bonus vs Droid: 2-12, Ion Massive Criticals: 2-12 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
 **Sonic Discharge Cell Mark III** · `u_m_cell_12` · K2 · Tier 3 · 18,200 credits · AttackPenalty Penalty_-1 · Damage (Sonic) 1d10 · Massive Criticals 2d6 — *“Damage Bonus: 1-10, Sonic Massive Criticals: 2-16 Sonic discharge energy cells release sound waves upon impact. Though the sonic discharge makes the weapon unwieldy, few types of armor protect against this type of attack. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
-**Ion Cell Mark IV** · `u_m_cell_13` · K2 · Tier 4 · 21,800 credits · Damage (Ion) 1d6 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2d10 · Massive Criticals 2d6 — *“Damage Bonus: 1-6, Ion Damage Bonus vs Droid: 2-20, Ion Massive Criticals: 2-16 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
+**Ion Cell Mark IV** · `u_m_cell_13` · K2 · Tier 4 · 21,800 credits · Damage (Ion) 1d6 · DamageRacialGroup (Droid) 2d10 · Massive Criticals 2d6 — *“Damage Bonus: 1-6, Ion Damage Bonus vs Droid: 2-20, Ion Massive Criticals: 2-16 Ion cells discharge ions along the length of the blade. Only certain melee weapons, like vibroblades, can utilize energy cells. The modifications require a workbench with adequate tools.”*
 
 **Basket Hilt** · `u_m_grip_04` · K2 · Tier 2 · 765 credits · AttackPenalty Penalty_-1 · Armor 1 — *“The basket hilt makes a weapon ideal for parrying, but slightly less wieldy. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -419,7 +419,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Mild Devaronian Edge** · `u_m_edge_01` · K2 · Tier 1 · 43 credits · Massive Criticals 1d3 — *“Massive Criticals: 1-3 Devaronian Blood-poison is a gemstone that can release poison into a victim's bloodstream. Application of Devaronian particles on a blade's edge can cause great pain to the weapon's victim. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Basic Ionite Edge** · `u_m_edge_02` · K2 · Tier 1 · 90 credits · Damage (Ion) 1 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d4 — *“Damage Bonus: 1, Ion Damage Bonus vs Droid: 1-4, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Basic Ionite Edge** · `u_m_edge_02` · K2 · Tier 1 · 90 credits · Damage (Ion) 1 · DamageRacialGroup (Droid) 1d4 — *“Damage Bonus: 1, Ion Damage Bonus vs Droid: 1-4, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Basic Mullinine Edge** · `u_m_edge_03` · K2 · Tier 1 · 285 credits · Keen 0 — *“Keen Mullinine is an ideal building material for melee weapons as it holds an edge very well. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -427,7 +427,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Moderate Devaronian Edge** · `u_m_edge_05` · K2 · Tier 2 · 1,025 credits · Damage (Slashing) 2 · Massive Criticals 1d8 — *“Damage Bonus: 2, Slashing Massive Criticals: 1-8 Devaronian Blood-poison is a gemstone that can release poison into a victim's bloodstream. Application of Devaronian particles on a blade's edge can cause great pain to the weapon's victim. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Improved Ionite Edge** · `u_m_edge_06` · K2 · Tier 2 · 1,550 credits · Damage (Ion) 1d4 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d6 — *“Damage Bonus: 1-4, Ion Damage Bonus vs Droid:1-6, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Improved Ionite Edge** · `u_m_edge_06` · K2 · Tier 2 · 1,550 credits · Damage (Ion) 1d4 · DamageRacialGroup (Droid) 1d6 — *“Damage Bonus: 1-4, Ion Damage Bonus vs Droid:1-6, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Improved Mullinine Edge** · `u_m_edge_07` · K2 · Tier 2 · 2,850 credits · Damage (Slashing) 1d4 · Keen 0 — *“Damage Bonus: 1-4, Slashing Keen Mullinine is an ideal building material for melee weapons as it holds an edge very well. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -435,7 +435,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Severe Devaronian Edge** · `u_m_edge_09` · K2 · Tier 3 · 7,550 credits · Damage (Slashing) 2 · Massive Criticals 2d6 — *“Damage Bonus: 2, Slashing Massive Criticals: 2-12 Devaronian Blood-poison is a gemstone that can release poison into a victim's bloodstream. Application of Devaronian particles on a blade's edge can cause great pain to the weapon's victim. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Superior Ionite Edge** · `u_m_edge_10` · K2 · Tier 3 · 10,085 credits · Damage (Ion) 1d8 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d8 — *“Damage Bonus: 1-8, Ion Damage Bonus vs Droid: 1-8, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Superior Ionite Edge** · `u_m_edge_10` · K2 · Tier 3 · 10,085 credits · Damage (Ion) 1d8 · DamageRacialGroup (Droid) 1d8 — *“Damage Bonus: 1-8, Ion Damage Bonus vs Droid: 1-8, Ion Ionite alloy produces the inverse charge of its surroundings, creating a disrupting effect to electronic systems. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Superior Mullinine Edge** · `u_m_edge_11` · K2 · Tier 3 · 14,500 credits · Damage (Slashing) 1d8 · Keen 0 — *“Damage Bonus: 1-8, Slashing Keen Mullinine is an ideal building material for melee weapons as it holds an edge very well. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -453,7 +453,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Contoured Grip** · `u_m_grip_02` · K2 · Tier 1 · 105 credits · AttackBonus 1 · DamagePenalty Penalty_-1 — *“Damage Penalty: -1 This shorter grip allows maximum accuracy, but the reduced leverage limits the weapon's power. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Zabrak Grip** · `u_m_grip_03` · K2 · Tier 1 · 330 credits · AttackBonus 1 · Damage (Slashing) 1 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 0)* — *“Damage Bonus: 1, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Zabrak Grip** · `u_m_grip_03` · K2 · Tier 1 · 330 credits · AttackBonus 1 · Damage (Slashing) 1 · Defence penalty -1 (dodge) — *“Damage Bonus: 1, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Nagai Grip** · `u_m_grip_05` · K2 · Tier 2 · 1,250 credits · AttackBonus 1 — *“The Nagai designed this grip to improve a weapon's performance without any side-effects. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -461,7 +461,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Advanced Contoured Grip** · `u_m_grip_07` · K2 · Tier 2 · 3,000 credits · AttackBonus 2 · DamagePenalty Penalty_-1 — *“Damage Penalty: -1 This shorter grip allows maximum accuracy, but the reduced leverage limits the weapon's power. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Advanced Zabrak Grip** · `u_m_grip_08` · K2 · Tier 2 · 4,850 credits · AttackBonus 3 · Damage (Slashing) 2 · Defence penalty -2 ⚠ *(which Defence type is unresolved — subtype 0)* — *“Damage Bonus: 2, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Advanced Zabrak Grip** · `u_m_grip_08` · K2 · Tier 2 · 4,850 credits · AttackBonus 3 · Damage (Slashing) 2 · Defence penalty -2 (dodge) — *“Damage Bonus: 2, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Advanced Nagai Grip** · `u_m_grip_10` · K2 · Tier 3 · 11,125 credits · AttackBonus 1 · Armor 1 — *“The Nagai designed this grip to improve a weapon's performance without any side-effects. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -469,37 +469,37 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Superior Contoured Grip** · `u_m_grip_12` · K2 · Tier 3 · 19,850 credits · AttackBonus 3 · DamagePenalty Penalty_-1 — *“Damage Penalty: -1 This shorter grip allows maximum accuracy, but the reduced leverage limits the weapon's power. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Superior Zabrak Grip** · `u_m_grip_13` · K2 · Tier 4 · 22,250 credits · AttackBonus 3 · Damage (Slashing) 1d8 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 0)* — *“Damage Bonus: 1-8, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Superior Zabrak Grip** · `u_m_grip_13` · K2 · Tier 4 · 22,250 credits · AttackBonus 3 · Damage (Slashing) 1d8 · Defence penalty -1 (dodge) — *“Damage Bonus: 1-8, Slashing This specialized grip has a reduced crossguard, increasing both accuracy and damage, but making it less useful for parrying. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Superior Nagai Grip** · `u_m_grip_15` · K2 · Tier 4 · 29,650 credits · AttackBonus 2 · Armor 1 — *“The Nagai designed this grip to improve a weapon's performance without any side-effects. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 ## Ranged cells — 30
 
-**Ion Charger Mark I** · `u_r_powe_01` · K2 · Tier 1 · 40 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d4 — *“Damage Bonus vs Droid: 1-4, Ion This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Charger Mark I** · `u_r_powe_01` · K2 · Tier 1 · 40 credits · DamageRacialGroup (Droid) 1d4 — *“Damage Bonus vs Droid: 1-4, Ion This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Power Pulsator Mark I** · `u_r_powe_02` · K2 · Tier 1 · 90 credits · Massive Criticals 1d4 — *“Massive Criticals: 1-4 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Basic Rylith Power Cell** · `u_r_powe_03` · K2 · Tier 1 · 280 credits · Damage (Energy) 2 — *“Damage Bonus: 2, Energy The rylith crystal is capable of collecting solar energy and is employed in the design of some advanced weapon power supplies. This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Ion Charger Mark II** · `u_r_powe_04` · K2 · Tier 2 · 690 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d6 · Massive Criticals 2 — *“Damage Bonus vs Droid: 1-6, Ion Massive Criticals: 2 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Charger Mark II** · `u_r_powe_04` · K2 · Tier 2 · 690 credits · DamageRacialGroup (Droid) 1d6 · Massive Criticals 2 — *“Damage Bonus vs Droid: 1-6, Ion Massive Criticals: 2 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Power Pulsator Mark II** · `u_r_powe_05` · K2 · Tier 2 · 1,035 credits · Massive Criticals 1d8 — *“Massive Criticals: 1-8 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Standard Rylith Power Cell** · `u_r_powe_06` · K2 · Tier 2 · 1,635 credits · Damage (Energy) 1d4 — *“Damage Bonus: 1-4, Energy The rylith crystal is capable of collecting solar energy and is employed in the design of some advanced weapon power supplies. This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Ion Charger Mark III** · `u_r_powe_07` · K2 · Tier 2 · 2,780 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d8 · Massive Criticals 4 — *“Damage Bonus vs Droid: 1-8, Ion Massive Criticals: 4 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Charger Mark III** · `u_r_powe_07` · K2 · Tier 2 · 2,780 credits · DamageRacialGroup (Droid) 1d8 · Massive Criticals 4 — *“Damage Bonus vs Droid: 1-8, Ion Massive Criticals: 4 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Power Pulsator Mark III** · `u_r_powe_08` · K2 · Tier 2 · 4,645 credits · Damage (Energy) 2 · Massive Criticals 1d10 — *“Damage Bonus: 2, Energy Massive Criticals: 1-10 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Advanced Rylith Power Cell** · `u_r_powe_09` · K2 · Tier 3 · 7,560 credits · Damage (Energy) 1d6 — *“Damage Bonus: 1-6, Energy The rylith crystal is capable of collecting solar energy and is employed in the design of some advanced weapon power supplies. This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Ion Charger Mark IV** · `u_r_powe_10` · K2 · Tier 3 · 10,185 credits · Damage (Ion) 1d6 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d6 · Massive Criticals 5 — *“Damage Bonus: 1-6, Ion Damage Bonus vs Droid: 1-6, Ion Massive Criticals: 5 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Charger Mark IV** · `u_r_powe_10` · K2 · Tier 3 · 10,185 credits · Damage (Ion) 1d6 · DamageRacialGroup (Droid) 1d6 · Massive Criticals 5 — *“Damage Bonus: 1-6, Ion Damage Bonus vs Droid: 1-6, Ion Massive Criticals: 5 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Power Pulsator Mark IV** · `u_r_powe_11` · K2 · Tier 3 · 13,995 credits · Damage (Energy) 4 · Massive Criticals 2d6 — *“Damage Bonus: Energy 4 Massive Criticals: 2-16 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Superior Rylith Power Cell** · `u_r_powe_12` · K2 · Tier 3 · 17,500 credits · Damage (Energy) 2d6 — *“Damage Bonus: 2-12, Energy The rylith crystal is capable of collecting solar energy and is employed in the design of some advanced weapon power supplies. This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Ion Charger Mark V** · `u_r_powe_13` · K2 · Tier 4 · 21,635 credits · Damage (Ion) 1d8 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2d6 · Massive Criticals 2d6 — *“Damage Bonus: 1-8, Ion Damage Bonus vs Droid: 2-12, Ion Massive Criticals: 2-16 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Charger Mark V** · `u_r_powe_13` · K2 · Tier 4 · 21,635 credits · Damage (Ion) 1d8 · DamageRacialGroup (Droid) 2d6 · Massive Criticals 2d6 — *“Damage Bonus: 1-8, Ion Damage Bonus vs Droid: 2-12, Ion Massive Criticals: 2-16 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Power Pulsator Mark V** · `u_r_powe_14` · K2 · Tier 4 · 25,345 credits · Damage (Energy) 5 · Massive Criticals 2d10 — *“Damage Bonus: 5, Energy Massive Criticals: 2-20 This cell increases the energy output of blasters, blaster rifles, and bowcasters. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -511,19 +511,19 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Diatium Energy Cell** · `u_l_cell_02` · K2 · Tier 2 · 775 credits · Damage (Energy) 1 — *“Damage Bonus: 1, Energy This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Ion Energy Cell** · `u_l_cell_03` · K2 · Tier 2 · 1,120 credits · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d4 · Massive Criticals 1d4 — *“Massive Criticals: 1-4 Damage Bonus vs Droid: 1-4, Ion This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Ion Energy Cell** · `u_l_cell_03` · K2 · Tier 2 · 1,120 credits · DamageRacialGroup (Droid) 1d4 · Massive Criticals 1d4 — *“Massive Criticals: 1-4 Damage Bonus vs Droid: 1-4, Ion This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Improved Discharge Energy Cell** · `u_l_cell_05` · K2 · Tier 2 · 3,275 credits · Massive Criticals 1d6 — *“Massive Criticals: 1-6 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Improved Diatium Energy Cell** · `u_l_cell_06` · K2 · Tier 2 · 4,985 credits · Damage (Energy) 2 — *“Damage Bonus: 2, Energy This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Improved Ion Energy Cell** · `u_l_cell_07` · K2 · Tier 3 · 8,950 credits · Damage (Ion) 1 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d8 · Massive Criticals 1d3 — *“Damage Bonus: 1, Ion Damage Bonus vs Droid: 1-8, Ion Massive Criticals: 1-3 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Improved Ion Energy Cell** · `u_l_cell_07` · K2 · Tier 3 · 8,950 credits · Damage (Ion) 1 · DamageRacialGroup (Droid) 1d8 · Massive Criticals 1d3 — *“Damage Bonus: 1, Ion Damage Bonus vs Droid: 1-8, Ion Massive Criticals: 1-3 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Superior Discharge Energy Cell** · `u_l_cell_09` · K2 · Tier 3 · 14,995 credits · Massive Criticals 1d8 — *“Massive Criticals: 1-8 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Superior Diatium Energy Cell** · `u_l_cell_10` · K2 · Tier 3 · 19,750 credits · Damage (Energy) 4 — *“Damage Bonus: 4, Energy This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Superior Ion Energy Cell** · `u_l_cell_11` · K2 · Tier 4 · 20,365 credits · Damage (Ion) 2 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 1d12 · Massive Criticals 1d6 — *“Damage Bonus: 2, Ion Damage Bonus vs Droid: 1-12, Ion Massive Criticals: 1-6 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Superior Ion Energy Cell** · `u_l_cell_11` · K2 · Tier 4 · 20,365 credits · Damage (Ion) 2 · DamageRacialGroup (Droid) 1d12 · Massive Criticals 1d6 — *“Damage Bonus: 2, Ion Damage Bonus vs Droid: 1-12, Ion Massive Criticals: 1-6 This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Ultimate Diatium Energy Cell** · `u_l_cell_13` · K2 · Tier 4 · 29,850 credits · Damage (Energy) 5 — *“Damage Bonus: 5, Energy This power cell modifies the energy output of lightsabers, allowing skilled users to better deliver powerful attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -543,7 +543,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Precision Chamber Mark I** · `u_r_firi_03` · K2 · Tier 1 · 320 credits · AttackBonus 1 · Massive Criticals 1 — *“Massive Criticals: 1 This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Mandalorian Chamber Mark I** · `u_r_firi_05` · K2 · Tier 2 · 1,230 credits · AttackBonus 1 · Damage (Energy) 1d4 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 0)* — *“Damage Bonus: 1-4, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Mandalorian Chamber Mark I** · `u_r_firi_05` · K2 · Tier 2 · 1,230 credits · AttackBonus 1 · Damage (Energy) 1d4 · Defence penalty -1 (dodge) — *“Damage Bonus: 1-4, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Broadened Chamber Mark II** · `u_r_firi_06` · K2 · Tier 2 · 1,775 credits · AttackBonus 1 · Massive Criticals 4 — *“Massive Criticals: 4 This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -551,7 +551,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Precision Chamber Mark II** · `u_r_firi_08` · K2 · Tier 2 · 4,780 credits · AttackBonus 2 · Massive Criticals 1d6 — *“Massive Criticals: 1-6 This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Mandalorian Chamber Mark II** · `u_r_firi_10` · K2 · Tier 3 · 11,265 credits · AttackBonus 1 · Damage (Energy) 1d12 · Defence penalty -2 ⚠ *(which Defence type is unresolved — subtype 0)* — *“Damage Bonus: 1-12, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Mandalorian Chamber Mark II** · `u_r_firi_10` · K2 · Tier 3 · 11,265 credits · AttackBonus 1 · Damage (Energy) 1d12 · Defence penalty -2 (dodge) — *“Damage Bonus: 1-12, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 **Broadened Chamber Mark III** · `u_r_firi_11` · K2 · Tier 3 · 14,665 credits · AttackBonus 1 · Massive Criticals 1d12 — *“Massive Criticals: 1-12 This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
@@ -559,7 +559,7 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 **Precision Chamber Mark III** · `u_r_firi_13` · K2 · Tier 4 · 22,305 credits · AttackBonus 2 · Massive Criticals 2d6 — *“Massive Criticals: 2-12 This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
-**Mandalorian Chamber Mark III** · `u_r_firi_15` · K2 · Tier 4 · 29,650 credits · Damage (Energy) 2d8 · Defence penalty -1 ⚠ *(which Defence type is unresolved — subtype 0)* · Enhancement 1 — *“Damage Bonus: 2-16, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
+**Mandalorian Chamber Mark III** · `u_r_firi_15` · K2 · Tier 4 · 29,650 credits · Damage (Energy) 2d8 · Defence penalty -1 (dodge) · Enhancement 1 — *“Damage Bonus: 2-16, Energy This item can broaden the beam of certain blaster types, increasing damage or possibly granting other effects. The modifications require a workbench and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 
 ## Ranged firing mechanisms — 5
 
@@ -575,11 +575,11 @@ gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref*
 
 ## Ranged scopes — 19
 
-**Droid Search Scope Type 1** · `g_i_drdsrcscp001` · K1 · Tier 1 · no sale value · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 3)* — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
+**Droid Search Scope Type 1** · `g_i_drdsrcscp001` · K1 · Tier 1 · no sale value · Skill (Awareness) 2 — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
 
-**Droid Search Scope Type 2** · `g_i_drdsrcscp002` · K1 · Tier 1 · no sale value · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 3)* — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
+**Droid Search Scope Type 2** · `g_i_drdsrcscp002` · K1 · Tier 1 · no sale value · Skill (Awareness) 3 — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
 
-**Droid Search Scope Type 3** · `g_i_drdsrcscp003` · K1 · Tier 1 · no sale value · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
+**Droid Search Scope Type 3** · `g_i_drdsrcscp003` · K1 · Tier 1 · no sale value · Skill (Awareness) 4 — *“These detectors help droids scan for traps or other security measures. Cost increases with quality, though success depends mostly on the complexity of the device to be detected.”*
 
 **Scope** · `g_i_upgrade001` · K2+K1 · Tier 1 · 200 credits — *“This scope increases the accuracy of certain blaster types, increasing the user's effectiveness with sniper attacks. The modifications require a workbench with adequate tools and a weapon of high quality marked as”* ⚠ *(description truncated in source)*
 

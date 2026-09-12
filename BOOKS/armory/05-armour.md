@@ -1,6 +1,6 @@
 # Chapter Five — Armour
 
-**Status: DRAFT, for review.** The defence formula, the sum-of-nine rule, robes, and
+**Status: APPROVED.** The defence formula, the sum-of-nine rule, robes, and
 droid plating are all taught in full in Chapter One and not restated here — this
 chapter is the item catalogue, the same relationship Chapter Two's melee weapons had
 to Chapter One's damage formula.
@@ -45,21 +45,26 @@ specifically because it is *mechanically identical* to the standard Jedi Robe �
 `Armor 1`, same Force Point regeneration, same restriction. Same effect, same price,
 by ruling.
 
-**⚠ One property I'm not confident reading correctly, flagged rather than guessed at:**
-several Light-armour entries carry a `DecreaseAC` property with a negative value (e.g.
-`Penalty_-1`) rather than the `Armor N` flat bonus most entries use. Whether this means
-the item is genuinely below its category's usual protection, or whether `DecreaseAC`
-is a different mechanic entirely (a penalty layered on top of a separate base value not
-shown in this same row), isn't something I can resolve from the property list alone.
-Not stated as fact either way in this chapter.
+**`DecreaseAC` is a real penalty against a base value that exists elsewhere, resolved
+rather than guessed at.** The property's subtype (2) resolves against
+`iprp_acmodtype.2da` to `AC_Armor` specifically — not some narrower vs-melee or
+vs-ranged distinction. `Light Combat Suit`'s own `BaseItem` reference points to
+`baseitems.2da`'s `Armor_Class_4` row (`baseac` 4, `dexbonus` 5) — an ordinary Light
+entry under Chapter One's sum-of-nine rule. So this item's true net protection is **+3
+armour**, not the category's usual +4, while keeping the full +5 Dexterity cap:
+genuinely below-average gear, not a display quirk or a separate mechanic.
+
+**The same two-step path resolves any other `DecreaseAC`/`IncreaseAC` entry in the
+catalogue:** `iprp_acmodtype.2da` for which AC component the property touches, and the
+item's own `BaseItem` reference into `baseitems.2da` for the number being modified.
 
 ---
 
 ## Open items, carried from review
 
-Same lightsaber-damage flag, unaffected by this chapter. New here: the `DecreaseAC`
-property reading above, and a scoped negative worth stating plainly — this chapter
-samples five of 173 items rather than auditing the full catalogue line by line, the way
+Same lightsaber-damage flag, unaffected by this chapter. `DecreaseAC` closed above —
+confirmed, not a real gap. Still worth stating plainly: this chapter samples five of
+173 items rather than auditing the full catalogue line by line, the way
 the eleven-row weapon tables in Chapters Two through Four could be. A category count
 and a representative sample is the right grain for a browsable-reference chapter; a
 full 173-item transcription would belong to `ITEMS-02` itself, not to prose built on

@@ -1,0 +1,96 @@
+# Chapter Six — Upgrades and the Upgrade Tree
+
+**Status: DRAFT, for review.** Two sources, both primary rather than secondary-sourced
+like `EQUIPMENT-01`'s tables were: `ITEMS-03` (164 items — armour components and
+lightsaber crystals) and `ITEMS-09` (118 rows, *"the upgrade tree,"* refiled at
+`PT-781` from material originally scattered across the `plot`, `device`, `sensor`,
+`clothing` and `creature` categories).
+
+An item marked *"Fully Upgradeable"* throughout this book — every weapon and most
+armour in Chapters Two through Five carried this flag — has slots this chapter's
+components fill.
+
+---
+
+## Armour components — `ITEMS-03`
+
+Two categories, 30 items each, both requiring a workbench to install.
+
+**Armour reinforcement** (overlays) trades a flat bonus for a growing cost, and
+sometimes a growing penalty. The `Bonded Plates` line is the direct source of a claim
+already made back in Chapter One:
+
+| Tier | Cost | Grants | Costs |
+|---|---|---|---|
+| Bonded Plates I | 475 | Armor 1 | — |
+| Heavy Bonded Plates I | 650 | Armor 2 | −2 Dexterity |
+| Bonded Plates II | 3,500 | Armor 2 | — |
+| Heavy Bonded Plates II | 4,500 | Armor 3 | −3 Dexterity |
+| Bonded Plates III | 5,400 | Armor 3 | — |
+| **Heavy Bonded Plates III** | 6,100 | **Armor 4** | −4 attack, though it trades the Dexterity penalty for damage resistance instead |
+
+**Chapter One said this line recovers K2 heavy armour's lost Defence point, "up to +4
+Defence" — confirmed exactly, at Mark III. What wasn't said there is that every tier of
+the Heavy line before Mark III carries a Dexterity penalty, and Mark III trades that
+penalty for an attack penalty instead — the recovery isn't free at any tier, only the
+shape of what it costs changes.**
+
+**Armour underlay** works the other side of the sum-of-nine rule. The `Flexible
+Underlay` line is the other claim Chapter One made:
+
+| Tier | Cost | Grants |
+|---|---|---|
+| Flexible Underlay I | 225 | Max Dex +1 |
+| Flexible Underlay II | 1,475 | Dexterity +1, Max Dex +1 |
+| Flexible Underlay III | 6,550 | Dexterity +1, Max Dex +2 |
+| Flexible Underlay IV | 17,555 | Dexterity +2, Max Dex +2 |
+| **Flexible Underlay V** | 28,950 | Dexterity +3, **Max Dex +3** |
+
+**Chapter One said this line recovers "up to +3 Max Dex" — confirmed exactly, at Mark V.
+What wasn't said there is that every tier also raises Dexterity itself, not only its
+cap** — the line is doing two things at once, and the cap alone undersold it.
+
+## Lightsaber crystals — `ITEMS-03`, `PT-345`
+
+104 of them, already named as the reason Chapter Four deferred them here. A crystal
+determines most of a lightsaber's properties beyond its base damage die — from `Rubat`
+(damage +1, attack +1, 1,000 credits) up through rarer stones with larger, mixed
+bonuses. Not catalogued in full here either — 104 entries is its own reference table,
+not prose.
+
+## The weapon-specific upgrade tree — `ITEMS-09`
+
+Nine categories, keyed to weapon type: lightsaber emitters (32) and cells (3), melee
+cells (15), edges (15), and grips (12), and ranged cells (30), chambers (12), firing
+mechanisms (5), and scopes (19). Each slot on a weapon's own wield class from Chapter
+One accepts a specific subset of these — a rifle's scope slot doesn't take a melee
+grip, and a lightsaber's emitter is a different component from its crystal, adjusting
+different properties on the same weapon.
+
+## What this resolves — the deferred unique-weapon variants
+
+**Chapters Two and Three each deferred a mechanic to this chapter: a unique weapon
+(`Bacca's Ceremonial Blade`, `Cassus Fett's Heavy Pistol`) existing as four resrefs
+rather than one, with the purchasable form carrying flat properties and the three
+cost-0 forms swapping in feat-gated ones.** Having now seen the upgrade system in full,
+this isn't an upgrade-tree mechanic — none of the four resrefs' properties come from
+slotted components the way `Bonded Plates` or a crystal do. It's closer to the "Massive
+Criticals" and "Keen" pattern already cited in earlier chapters: fixed properties
+baked into a specific resref rather than anything a player installs.
+
+**⚠ Not fully resolved, and stated as a scoped negative rather than closed:** I checked
+two unique weapons and found the same four-resref, feat-conditional shape in both.
+Whether this is a general pattern across most or all unique weapons, or something
+specific to these two, hasn't been surveyed — that would mean checking every `⚠
+UNIQUE`-marked entry across `ITEMS-01` through `08` for the same multi-resref shape,
+which is a real task and a bigger one than this chapter, or the two chapters that
+deferred to it, budgeted for.
+
+---
+
+## Open items, carried from review
+
+Same lightsaber-damage flag as every chapter so far. New here: the deferred
+unique-weapon mechanic is explained rather than mechanically resolved, and how common
+its four-resref shape is across the rest of the catalogue is an open, unscoped
+question rather than a closed one.

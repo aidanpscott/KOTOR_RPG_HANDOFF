@@ -921,3 +921,97 @@ droid arrays keep their full four-column entries; the `Brawler`'s empty row keep
 explanation; the ceiling ruling keeps both weapons and both prices; every crafting DC,
 skill reassignment and implant split survives; and **the five `hkpart` entries are still
 named individually.**
+
+---
+
+# Chapter Thirteen — Loot
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+*Sources: `LOOT-01`, with `PT-307` (the bands, ported), `PT-308`/`PT-309` (the tier gate,
+authored), `PT-323` (party composition), `PT-327` (unique items), `PT-404` (world danger),
+`PT-651` (every item carries a tier), `PT-655` (party level), `PT-666` (authored versus
+generated), `PT-912`/`PT-922` (named sites). `SKILL-RESOLUTION-01` for take-10;
+`PARTY-01 §2` for party level; `ITEMS-01`–`08` for the tier data.*
+
+**⚠⚠ Flag 1 — the band-to-table mapping is an inference, and the source document says so.**
+This is the largest open item in the chapter. `PT-307` **read the constants out of
+`a_give_treas`, not the control flow** — so the band *thresholds* (60/70/80/90) are
+verified, but **which band draws from which list is unverified** until someone disassembles
+the script properly.
+
+**Everything above is written as though band 5 draws the best item on the table**, which is
+the natural reading and matches observed play. **It is not confirmed.** If the mapping turns
+out to be different, the bands table stands and only the interpretation moves.
+
+**⚠ Flag 2 — every item carries a tier, and the count in circulation is stale.** `PT-651`
+closed this: **1,385 rows across `ITEMS-01`–`08`, zero blanks** — tier 1: 634, tier 2: 427,
+tier 3: 213, tier 4: 111. **The figure of 994 still appears in places** and is the blueprint
+count, not the item count. `LOOT-01` notes the drift against itself: *"the corpus grew past
+it and the paragraph did not."*
+
+**⚠ Flag 3 — `LOOT-01` carries a duplicated paragraph with a broken cross-reference.** Its
+`§7b` states *"Procedurally generated areas are not covered by ."* — the reference is
+missing entirely — and then repeats the same paragraph immediately with the reference
+filled in as *"section 4"*. **The first copy should be deleted.** Same shape as the
+`EVENTS-01` heading defect from the Galactic Timeline: an edit that added a corrected
+version without removing the broken one. **Reported, not fixed — `LOOT-01` is a rules
+document.**
+
+**⚠ Flag 4 — the named-site count appears twice with different values.** `PT-912` records
+**45 sites across 31 worlds**; `PT-922` records **47 across 32**, hand-curated, delivered.
+**Both sit in the document.** The later supersedes under `§3b`'s later-wins rule and this
+chapter uses **47 / 32** — but a reader meeting 45 first has no way to know it is
+superseded. **Same class as the Timeline's stale `"ranking fifth"` numeral.**
+
+**⚠ Flag 5 — the world count does not match the Atlas's.** `LOOT-01` reports **288 worlds**
+carrying a `danger` value; `PT-1705` establishes that `data/extracted/worlds.json` holds
+**301 world entries** — a figure it explicitly corrected from 290 *"before it became the
+working number."* **Thirteen worlds are unaccounted for.** They may simply lack a danger
+value, in which case the fallback is party level and nothing breaks — **but the chapter
+cannot say so, because no held source states it.** Worth one check by whoever owns the
+Atlas.
+
+**Not a flag: `§7` and `§7b` state `PT-651` twice in near-identical terms.** Harmless
+duplication rather than contradiction, but it is the same edit pattern as Flag 3 and the
+two were probably introduced together.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — only 4 internal citations from 308 lines**, the lightest body load of any Armory
+chapter. **This chapter was written late and already spoke to a reader.**
+
+**⚠ But Flag 1's reader-facing half was promoted into the chapter, and that is the
+important change.** The band-to-table mapping being an inference is **not a project
+housekeeping note** — it affects how every loot roll in a campaign resolves, and a
+Gamemaster is entitled to know which part of the system is certain and which is inferred.
+
+The chapter now carries it directly, immediately after the bands table:
+
+> **One honest caveat about the bands.** The roll thresholds above — 60, 70, 80, 90 — were
+> read directly out of the game's own script and are certain. **Which band draws from which
+> list is an inference**… **If that turns out to be wrong, the bands stand and only their
+> mapping moves.**
+
+**The project-facing half stayed here:** that the reading came from constants rather than
+control flow, and that settling it means disassembling the script properly.
+
+**That is the split-by-audience default doing exactly what it was adopted for — and this is
+the case where burying the caveat would have mattered most**, because Chapter Eleven now
+defers to this chapter for the whole tier system.
+
+**⚠ And the authority Chapter Eleven handed over was preserved rather than weakened.** The
+sources section states plainly which half of this system is KOTOR 2's and which is this
+game's addition: **the roll and its bands are ported unchanged; the tier gate, the
+`Security`-DC ladder, the world-danger ceiling and the named-site override are all new.**
+The `376 sampled` evidence for KOTOR having no lock difficulty at all is kept, because it is
+what makes the authored half defensible.
+
+**Three smaller fixes.** The `Atlas` references now name the **Planetary Atlas** as a book in
+this set rather than a data source; the `danger` **field** became a **rating**; and the
+take-10 and party-level rules lost their document citations while keeping their content
+exactly.
+
+**⚠ Deliberately NOT loosened.** Every threshold, tier boundary, DC band, formula and count
+survives — including `area tier = min( max(encounter, container), world danger + 1 )`, the
+180-of-288 constraint, the 47 named sites, and both unique-item halves.

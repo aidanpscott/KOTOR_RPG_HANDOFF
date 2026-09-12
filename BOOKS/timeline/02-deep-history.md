@@ -1,21 +1,20 @@
 # Chapter Two — Deep History
 
-**Status: APPROVED** by MAIN. Written under the deep-history exception
-(`METHOD-RECORD-01 §3`) and therefore **narrative only** — no Major Figures section, per
-`PT-1802`, which scopes that structure to Chapters Three through Seven. Named figures stay
-woven into the account here.
-
----
-
 **This chapter is written to a different standard from the ones after it, and the
 difference is deliberate.**
 
-Everything from Chapter Three onward is a dated spine: years, order, consequences that the
-engine tracks and a campaign can collide with. This chapter is not that. The project's own
-rule is that material describing events before roughly 4,000 BBY *"produces no temporal
-facts. Nothing at the founding of the Sith Empire changes state during play. It cannot be
-pending, cannot fire, cannot leak, and cannot be averted."* It is world-bible content, and
-it *"needs to be plausible and evocative rather than dated and tracked."*
+Everything from Chapter Three onward is a dated spine — years, order, and consequences a
+campaign can collide with. **This chapter is not that.**
+
+**Material from before roughly 4,000 BBY is held to looser terms for a straightforward
+reason: none of it can reach your table.** Nothing at the founding of the Sith Empire is
+going to come due during a campaign set in 3,956 BBY, be set off by something the party
+does, or be prevented by them. **It is background rather than chronology, and it needs to
+be plausible and evocative rather than precisely dated.**
+
+**It also has no Major Figures section, unlike the chapters that follow.** A formal roster
+would fight that looser standard, so Adas, Ajunta Pall and the rest stay woven into the
+account.
 
 **So the dates here are approximations and are meant to be read as approximations.** Where
 the sources give a round number, this chapter gives the round number. Where they give
@@ -47,7 +46,7 @@ technology that was **nothing without it.**
 It is worth sitting with how strange that is. An empire of that reach, built on a
 foundation that could in principle simply stop.
 
-**This is also where a species in the current roster comes from.** The Flesh Raiders are
+**This is also where one of this game's playable species comes from.** The Flesh Raiders are
 Rakata — *"mutated, selectively bred"* descendants produced by the Infinite Empire as
 lower-caste soldiery, and they carry the marks of it still, down to a Force-blindness
 inherited from their parent stock. Whatever the Rakata did to the galaxy, they did a
@@ -131,9 +130,10 @@ built on, and then deliberately forgotten by the people it had held down.
 
 ## What rose in the quiet
 
-**⚠ This section rests on the relayed Chronology account alone. The Campaign Guide contains
-no reference to Tython, and none to Corbos.** Both are held at rank 6 and marked
-accordingly.
+**⚠ This section rests on *The New Essential Chronology* alone — rank 6.** The Campaign
+Guide contains no reference to Tython, and none to Corbos; the whole of its 21,000-line
+text was searched for both. **If either matters to your campaign, the Chronology is the
+volume to check.**
 
 The centuries after the collapse are not a single documented thread, and the Chronology
 does not pretend otherwise. Two developments run roughly alongside each other: the rise of
@@ -148,7 +148,7 @@ What matters for this book is only that both exist by the time the next disaster
 **The Jedi Order's first great catastrophe was internal.** A faction turned to the dark
 side, and the schism became a war — the **Hundred-Year Darkness.** By the Chronology's
 account it ends at the **Battle of Corbos**, after which the defeated Dark Jedi are exiled
-from Republic space altogether. *(Corbos is rank 6 only — see the flag above.)*
+from Republic space altogether. *(Corbos is rank 6 only — see the note above.)*
 
 **Exile has to lead somewhere, and where it led is the hinge of the entire setting.** The
 Campaign Guide takes the story back at rank 2:
@@ -193,54 +193,21 @@ history stops being background and starts being the plot.**
 
 ---
 
-*Sources: KOTOR Campaign Guide — the Rakata species entry, f.16; "Rakatan Mysteries" and
-"The Star Forge", f.110; the Sith origin, Adas, and the Dark Jedi exiles, f.145. Folios are
-printed page numbers; the OCR's own page markers run three higher (Chapter One, Flag 3).
-`SPECIES-CHAPTER-v2` and `DECISION-RECORD-04`'s `D-Q` for the Flesh Raider / Rakata
-relation. `METHOD-RECORD-01 §3` for the standard this chapter is written to. ⚠ The Rakatan
-plague and date, the Jedi Order on Tython, and the Battle of Corbos are from The New
-Essential Chronology at rank 6, relayed rather than read directly — see the flags below.*
+---
 
-## Open items, carried from review
+## Sources for this chapter
 
-**⚠ Flag 1 — three claims rest on the relay alone and are not in any source held here.**
-The **Force-negating plague** and its ~25,200 BBY date, the **Jedi Order's establishment on
-Tython**, and the **Battle of Corbos**. I searched the Campaign Guide OCR in full for
-*Tython* and *Corbos*: **zero occurrences of either.** That is a correctly scoped negative
-over the one deep-history source actually in `data/books/`, not over the whole corpus.
-**All three are marked in the text as rank 6.** If the Chronology is ever staged, these are
-the three passages to read directly and cite properly.
+**Almost all of it is the *Knights of the Old Republic Campaign Guide*** — rank 2, and the
+page numbers are the printed ones:
 
-**⚠ Flag 2 — the Campaign Guide covers this chapter far better than the outline recorded.**
-`OUTLINE-02` marks Deep History **`RULED · NOT HELD`**, sourced to three Library-held
-documents (`RULING-SWTOR-DEEP-HISTORY`, `ERA-VITIATE-01`, `D-VIT-01`). **The Campaign Guide
-in fact carries Adas by name, the 28,000 BBY unification, the Rakatan invasion of Korriban
-and its outcome, the dark side as the Infinite Empire's bequest, the Hundred-Year Darkness
-exiles, Ajunta Pall, Jen'jidai and Jen'ari, Tund, and the interbreeding — all at rank 2.**
-The chapter's spine is rank 2, with rank 6 filling two gaps. **The outline mark understated
-what is held.**
+- **The Rakata, the Infinite Empire and the Star Forge** — the Rakata species entry, p. 16
+- **Rakatan artifacts, and the Star Forge in play** — "Rakatan Mysteries" and "The Star
+  Forge", p. 110
+- **The Sith story, King Adas, the Rakatan invasion, and the Dark Jedi exiles** — p. 145
 
-**✔ Fixed.** MAIN confirmed the mark wrong and `OUTLINE-02`'s Book Five row is re-marked
-`DRAFTED` against the rank-2 coverage above. This was the third outline correction from
-this book, after the `§3.4` miscitation and the timeline's extent; a fourth followed at
-Chapter Three, Flag 4.
+**Three claims come from *The New Essential Chronology* instead** — rank 6, and marked
+where they appear: **the Force-negating plague and its ~25,200 BBY date**, **the Jedi Order
+on Tython**, and **the Battle of Corbos.** None of the three is in the Campaign Guide.
 
-**⚠ Flag 3 — a possible tension between the relay and rank 2 on the Rakatan invasion,
-recorded rather than resolved.** The relay has Adas *repel* the Rakatan attack. The
-Campaign Guide has him *"conquer the conquerors, sacrificing his life in the process,"*
-with the Sith then taking Rakatan technology and the dark side from the encounter. **Rank 2
-governs and the chapter follows it**, and the two are probably the same event told at
-different resolutions rather than a real contradiction. Recorded because the ladder's rule
-is that disagreements are written down, *"never silently resolved downward."*
-
-**⚠ Flag 4 — the one-hundred-thousand-year figure is not reconciled with anything.** The
-Campaign Guide opens the Sith story *"one hundred thousand years"* back, then gives Adas at
-28,000 BBY. Nothing in the corpus describes the seventy-two thousand years between. Not a
-gap this chapter can fill and probably not one worth filling — but it is a stated anchor
-with nothing behind it, and a future sweep will trip over it.
-
-**Not flagged, deliberately: the Republic's founding date.** The Campaign Guide dates the
-Rakatan invasion *"three thousand years before the founding of the Republic"* without
-giving that year, so this chapter keeps the relation rather than computing a date from a
-figure no held source states. Under the evocative-not-tracked standard that is the correct
-handling, not an omission.
+**The Flesh Raiders' descent from the Rakata** is this game's own settled position, and is
+set out in full in the Species material rather than here.

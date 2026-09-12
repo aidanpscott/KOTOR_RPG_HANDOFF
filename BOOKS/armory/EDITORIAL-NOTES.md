@@ -71,3 +71,75 @@ revised chapter.
 wield classes and their pairing rules, threat ranges and multipliers, the `2d6` cap, the
 sum-of-9 armour rule with both organic exceptions, the uncapped-robe rule and the Jedi
 Defence-12 example, and both droid plating tables with K2's uncapped sentinel.
+
+---
+
+# Chapter Two — Melee Weapons
+
+*`PT-1844` pass. This chapter had no "Open items" section of the usual shape; what it
+carried instead was a work-tracking section on an incomplete sweep, reproduced here.*
+
+**Chapter status: DRAFT, full-catalogue standard applied.** Eleven families, 62 entries.
+**Scope rule:** `PT-342`'s K1-overrides-on-shared-items applied where a genuine difference
+appears.
+
+## ⚠ Four weapons still carrying the pre-`PT-1747` Vibrosword die
+
+`PT-1747` moved Vibrosword from `2d6` to `1d12`. The sweep covered the nine
+`vbroswrd`-stemmed resrefs. **Four more melee weapons still read `2d6, 19–20 ×2` — the
+exact pre-ruling Vibrosword signature — and none of them carry that stem, which is why a
+stem-matched sweep would pass over them:**
+
+| Weapon | Resref | Confidence |
+|---|---|---|
+| **Vibrosword** (K2's own) | `w_melee_06` | **Certain** — same weapon, same name, same 120-credit price as K1's |
+| **Echani Vibrosword** | `w_melee_21` | **Certain** — names the family |
+| **Sith Tremor Sword** (K2's) | `w_melee_22` | **Certain** — direct counterpart of K1's `g_w_vbroswrd03` |
+| **GenoHaradan Poison Blade** | `geno_blade` | **⚠ Suspected only** — die and threat match exactly, but the name doesn't say Vibrosword and `BaseItem` could not be read from this copy |
+
+**⚠ UPDATE — three of these four are now fixed at source.** `w_melee_06`, `w_melee_21` and
+`w_melee_22` all read `1d12` in the live `ITEMS-01`. **`GenoHaradan Poison Blade` was not
+changed and still reads `2d6`** — so either it genuinely isn't a Vibrosword-family weapon,
+or it is a fifth miss. **Settling it needs a `BaseItem` read rather than a die-signature
+match.**
+
+**Two resref-versus-base-type disagreements worth noting for whoever runs that check:**
+`Raito's Gaderffii` sits at `g_w_qtrstaff03` while carrying the Gaffi Stick's `1d8` die,
+and `Baragwin Assault Blade` sits at `g1_w_vbroswrd01` with a `g1_` prefix no other weapon
+in the family uses. **Resref stem is not a reliable proxy for base weapon type in either
+direction** — the same lesson the `Energy Baton` resolution taught from the opposite side.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 5 internal citations**, and one whole section.
+
+**⚠ The proper-noun check was run deliberately this time, and it changed the outcome.**
+Following the `Soresu` lesson from Chapter One, every code-formatted term was checked
+rather than pattern-matched. **The resrefs stayed** — all 92 of them. **They are the games'
+own item identifiers, not internal project references, and a reader can look them up in the
+game files.** Stripping them would have destroyed the catalogue's usefulness.
+
+**The Vibrosword sweep section moved here in full.** It was work-tracking — a ruling
+number, a sweep's coverage, confidence ratings and what has since been fixed at source.
+**None of it is reader content.**
+
+**⚠ But it left a real residue, and that stayed in the chapter.** The `GenoHaradan Poison
+Blade`'s die is genuinely unsettled, and a reader using that weapon needs to know. **The
+note is now self-contained rather than pointing at a section that no longer exists:** it
+reads `2d6` where its family reads `1d12`, it may belong to a different family than its
+damage suggests, **and a Gamemaster is told to treat `1d12` as the working value with `2d6`
+as a defensible reading.** That is more useful than the cross-reference was.
+
+**⚠ And a dangling reference caught mid-pass.** Removing the sweep section orphaned the
+GenoHaradan entry's *"see the note at the top of this chapter"* — **the same failure mode
+caught in the Timeline's Chapter Three.** Found by re-reading the entry after the removal
+rather than by trusting the edit.
+
+**The tail section became a caution on item codes**, which is the reader-facing half of the
+resref finding: **the code is the games' own identifier and is not a reliable guide to what
+kind of weapon something is. Read the family heading, not the code.**
+
+**⚠ Deliberately NOT loosened.** All 11 families, all 62 entries, every die, threat range,
+price and property line survives. **The K1-over-K2 rule is stated in reader terms rather
+than by ruling number, and the one place a genuine divergence is called out — the Sith
+Tremor Sword's sonic value — still names both figures.**

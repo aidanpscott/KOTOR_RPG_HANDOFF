@@ -1,41 +1,18 @@
 # Chapter Two — Melee Weapons
 
-**Status: DRAFT, for review — full-catalogue standard applied.** Every melee weapon in
-both games, organised by base weapon type, split Base versus Advanced, ordered by tier
-within each. Wield classes and critical-hit resolution are taught in Chapter One and
-not restated here.
+**Every melee weapon in both games**, organised by base weapon type, split Base versus
+Advanced, and ordered by tier within each. **Wield classes and critical-hit resolution are
+taught in Chapter One and not restated here.**
 
-**Scope, confirmed before writing:** both games in full, with `PT-342`'s
-K1-overrides-on-shared-items rule applied where a genuine difference appears. Nameless
-placeholder resrefs (NPC preset gear) and creature-innate weapons are excluded — engine
-assets, not items a character finds or buys.
+**Where the two games give a shared weapon genuinely different values, KOTOR 1's are
+used** — this game is set in 3,956 BBY, and K1 is that era.
 
-**Base dice are taken from Chapter One's own corrected table, not re-imported from
-`ITEMS-01`.** Every weapon in a family shares its family's base die; what separates
-Advanced entries from Base ones is the properties layered on top.
+**Two kinds of entry are left out deliberately**: nameless placeholder items used to dress
+non-player characters, and the innate attacks of creatures. **Neither is something a
+character finds, buys or carries.**
 
----
-
-## ⚠ Four weapons still carrying the pre-`PT-1747` Vibrosword die
-
-`PT-1747` moved Vibrosword from `2d6` to `1d12`. The sweep covered the nine
-`vbroswrd`-stemmed resrefs. **Four more melee weapons still read `2d6, 19–20 ×2` — the
-exact pre-ruling Vibrosword signature — and none of them carry that stem, which is why
-a stem-matched sweep would pass over them:**
-
-| Weapon | Resref | Confidence |
-|---|---|---|
-| **Vibrosword** (K2's own) | `w_melee_06` | **Certain** — same weapon, same name, same 120-credit price as K1's |
-| **Echani Vibrosword** | `w_melee_21` | **Certain** — names the family |
-| **Sith Tremor Sword** (K2's) | `w_melee_22` | **Certain** — direct counterpart of K1's `g_w_vbroswrd03` |
-| **GenoHaradan Poison Blade** | `geno_blade` | **⚠ Suspected only** — die and threat match exactly, but the name doesn't say Vibrosword and I can't read `BaseItem` from this copy |
-
-**⚠ UPDATE — three of these four are now fixed at source.** `w_melee_06`, `w_melee_21`
-and `w_melee_22` all read `1d12` in the live `ITEMS-01`, matching what this chapter
-wrote. **`GenoHaradan Poison Blade` was not changed and still reads `2d6`** — so either
-it genuinely isn't a Vibrosword-family weapon, or it is a fifth miss. The caution was
-right to hold: it remains the one open case, and settling it needs a `BaseItem` read
-rather than a die-signature match.
+**Every weapon in a family shares its family's base die.** What separates an Advanced entry
+from a Base one is the properties layered on top of it.
 
 ---
 
@@ -244,8 +221,9 @@ cortosis-laced blades to only the most loyal underlings."*
 **Sith Tremor Sword** · `g_w_vbroswrd03` · K1 · Tier 2 · 980 credits · *+2 sonic ·
 Enhancement 2* — *"Traced to the Bladeborn, a Sith offshoot dedicated to sword mastery,
 these cortosis-laced weapons were given to 'masterblades' who survived no less than ten
-lightsaber-wielding warriors in combat."* K2's `w_melee_22` carries sonic 3 rather than
-2 — a genuine divergence, and `PT-342` takes K1's value.
+lightsaber-wielding warriors in combat."* **K2's version of this weapon carries sonic 3
+rather than 2 — a genuine difference between the games, and K1's value is the one used
+here.**
 
 **Echani Foil** · `g_w_vbroswrd04` · K1 · Tier 2 · 1,750 credits · *Enhancement 3 · Keen*
 — *"These swords were crafted to honor Raskta Fenni, the best Echani duelist of her
@@ -255,8 +233,13 @@ survive."*
 **GenoHaradan Poison Blade** · `geno_blade` · K1 · Tier 2 · 1,750 credits · *Enhancement
 3 · OnHit: Poison 14* — *"Forged by the Genoharadan for the exclusive use of their
 agents, this deadly assassin's blade contains a cannister that emits small doses of
-poison with each successful hit."* **⚠ Family membership suspected, not confirmed — see
-the note at the top of this chapter.**
+poison with each successful hit."*
+
+> **⚠ This weapon's damage die is not settled.** It reads `2d6` in the game data while
+> every other weapon in this family reads `1d12`. **It may belong to a different family
+> than its damage suggests, or it may simply be an error the games never corrected.**
+> **Until that is resolved, treat `1d12` as the working value and `2d6` as the reading a
+> Gamemaster could defend.**
 
 **Bacca's Ceremonial Blade** ⚠ unique · `g_w_vbroswrd05` · K1 · Tier 2 · 2,480 credits ·
 *+4 energy · +2d6 vs droid · Enhancement 2 (×2) · Massive Criticals 2d6* — *"The great
@@ -425,16 +408,14 @@ but has since been refined."*
 
 ---
 
-## Open items, carried from review
+## A caution on item codes
 
-Same lightsaber-damage flag as every chapter. **New and specific to this one: the four
-weapons above carrying the pre-`PT-1747` Vibrosword die.** Three are named with enough
-confidence to write as `1d12`; `GenoHaradan Poison Blade` needs a `BaseItem` check
-before its die can be stated either way.
+**The code beside each weapon is the games' own identifier**, and it is given so you can
+find the item in the game files if you want to. **It is not a reliable guide to what kind
+of weapon something is.**
 
-**Two resref-versus-base-type disagreements worth noting for whoever runs that check:**
-`Raito's Gaderffii` sits at `g_w_qtrstaff03` while carrying the Gaffi Stick's `1d8` die,
-and `Baragwin Assault Blade` sits at `g1_w_vbroswrd01` with a `g1_` prefix no other
-weapon in the family uses. **Resref stem is not a reliable proxy for base weapon type in
-either direction** — which is the same lesson the `Energy Baton` resolution taught from
-the opposite side.
+Two examples from this chapter alone: **`Raito's Gaderffii`** carries a code in the
+Quarterstaff range while using the Gaffi Stick's `1d8` die, and **`Baragwin Assault
+Blade`** uses a prefix no other weapon in its family shares.
+
+> **Read the family heading, not the code.**

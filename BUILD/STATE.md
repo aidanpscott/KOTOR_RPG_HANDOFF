@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `74bdfd0` — `PT-1136`'s follow |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `4aab474` — `§3b`, the party follows you |      ⚠ no |
+| `KOTOR-RPG-APP` | `295d268` — the sidebar reads the roster |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,16 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 705 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 572 — 1,553, all
-green.** *(`BUILD 159`.)*
+**`Lodestar` 705 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 576 — 1,557, all
+green.** *(`BUILD 160`.)*
+
+✓ **THE SIDEBAR READS THE ROSTER, NOT THE ROOM — `PT-1833`, `BUILD 160`.**
+Its exploration list was built from `_here`, the currently loaded area's
+placements, with `isParty` as a filter inside it. **The two sources could not
+disagree until `PT-1122`**, because `_bringTheParty` brought everybody — so a
+companion holding position in another room was in the party and gone from the
+panel. Members the room does not hold are resolved through the same reader and
+marked *not in this room*; they are **not** placed, so no board draws them.
 
 ✓ **SOLO MODE AND FOLLOWING ARE BOTH BUILT, AT `BUILD 158`/`159`.** *Wait
 here* and *Follow / regroup* on the sidebar, and `§3b`'s auto-follow with the

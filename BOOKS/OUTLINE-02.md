@@ -83,10 +83,10 @@ own acknowledgment in his own voice. **Mark it clearly and do not draft it.**
 | Book | Disclaimer | Bibliography | Personal note |
 |---|---|---|---|
 | **Galactic Timeline** | ✔ `timeline/00-front-matter.md` | ✔ `timeline/09-bibliography.md` | ✔ |
-| **Armory** | ✔ `armory/00-front-matter.md` | ✔ same file — **⚠ covers 11 chapters; revisit when the remaining five land** | ✔ |
+| **Armory** | ✔ `armory/00-front-matter.md` | ✔ same file — **covers all 16 chapters** | ✔ |
 | **Player's Handbook** | ✔ `phb/00-front-matter.md` | **⚠ owed** — must be scoped to what the finished book cites, and it is one chapter in | ✔ |
 
-**⚠ Owed by every book drafted from here.** **Verify the disclaimer programmatically rather
+**⚠ Owed by every book drafted from here.** **✔ The Armory's bibliography was refreshed after Chapters 12–16 landed** — a reminder that a per-book list must be revisited when the book grows, not only when it starts. **Verify the disclaimer programmatically rather
 than by eye** — copy it from an existing front-matter file and diff it. "Word for word, no
 exceptions" is not a thing to satisfy by reading it over.
 
@@ -355,7 +355,8 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | Tiers, pricing, availability | **`DRAFTED`** | `PT-308` (loot tiers — agreed in concept, character-vs-area gate undecided), `PT-327` (unique items), `PT-384` (feat remap). Currency is `STARTING-EQUIPMENT-01`, not `D-CURRENCY-01` — see note. **Text at `BOOKS/armory/11-tiers-pricing-and-availability.md`** |
 | 12 | The weapon matrix / crafting | **`DRAFTED`** | `WEAPON-MATRIX-01` (⚠ itself `DERIVED` — `STARTING-EQUIPMENT-01 §§2, 4a, 5` is the record); `CRAFTING-01`. `PT-760`, `PT-763`–`767`, `PT-692`, `PT-702`, `PT-714`, `PT-109`, `PT-567`, `PT-203`, `PT-225`, `PT-482`. **Text at `BOOKS/armory/12-the-weapon-matrix-and-crafting.md`** |
 | 13 | Loot | **`DRAFTED`** | `LOOT-01`. `PT-307` (bands, ported), `PT-308`/`309` (tier gate, authored), `PT-323`, `PT-327`, `PT-404`, `PT-651`, `PT-655`, `PT-666`, `PT-912`/`922`. **⚠ Band-to-table mapping is an inference — `PT-307` read the constants, not the control flow.** **Text at `BOOKS/armory/13-loot.md`** |
-| 15 | Starships / space combat | **`DRAFTED`** | `STARSHIPS-01` (`PT-669`, `670`, `672`, `673`, `800`, `825`); `SPACE-COMBAT-01` (`PT-791`–`808`, `819`, `820`, `879`); `MOUNTED-COMBAT-01 §§7, 9`. **⚠ Components 5–8, ship parts and specialist parts are summarised, not reproduced — Ch16 recommended.** **Text at `BOOKS/armory/15-starships-and-space-combat.md`** |
+| 15 | Starships / space combat | **`DRAFTED`** | `STARSHIPS-01` (`PT-669`, `670`, `672`, `673`, `800`, `825`); `SPACE-COMBAT-01` (`PT-791`–`808`, `819`, `820`, `879`); `MOUNTED-COMBAT-01 §§7, 9`. **Components 5–8, ship parts and specialist parts are carried in Ch16.** **Text at `BOOKS/armory/15-starships-and-space-combat.md`** |
+| 16 | Ship parts and the enemy roster | **`DRAFTED`** | `SPACE-COMBAT-01` Components 5 (`PT-797`), 7 (`PT-803`), 7a (`PT-805`), 8 (`PT-808`), Ship Parts (`PT-819`), Specialist Parts (`PT-820`), boarding resolution (`PT-1128`). **Split from Ch15 on AUTHOR's recommendation, approved.** **Text at `BOOKS/armory/16-ship-parts-and-the-enemy-roster.md`** |
 | 14 | **Droid construction and upgrade** | **`DRAFTED`** | `DROID-CONSTRUCTION-01` (`PT-572`, `607`–`613`, `225`, `558`, `594`, `598`, `599`, `609`, `953`); `DROIDS-UPGRADE-01` (`PT-274`, `316`, `323`, `577`, `616`, `654`). **⚠ Contradicts Ch12 on who may build a droid — `PT-572` extends `PT-225` to three classes; Ch12 carries `CRAFTING-01`'s older "only class" wording.** **Text at `BOOKS/armory/14-droid-construction-and-upgrade.md`** |
 
 ---

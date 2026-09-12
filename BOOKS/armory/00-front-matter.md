@@ -43,9 +43,8 @@ Relayed credits are far stronger than assumption and are not the same thing as h
 the source — the same discipline the Galactic Timeline applies to its three relayed
 deep-history claims.
 
-**⚠ This list covers the eleven chapters drafted so far** and must be revisited when
-Chapter Three's family catalogue and the four remaining chapters — the weapon matrix and
-crafting, loot, starships and space combat, and droid construction — are written.
+**✔ This list covers all sixteen chapters.** Refreshed after Chapters Twelve through
+Sixteen were drafted; Chapter Three's family catalogue is complete at 122 items.
 
 ---
 
@@ -121,6 +120,18 @@ data rather than from any secondary description:
 | `baseitems.2da`, `k1_baseitems.2da`, `k2_baseitems.2da` | Every base weapon and armour row — dice, threat range, wield class, size |
 | `iprp_acmodtype.2da` | The armour-bonus property mapping behind Chapter One's Defence table |
 | `.uti` item files | Individual item properties, names and descriptions across the catalogue chapters |
+| `k2_itemcreate.2da` · `k2_chemicalcreate.2da` · `k2_upgrade.2da` | Chapter Twelve's crafting recipes and their DC ladder, ported unchanged |
+| `k2_itemcreatemira.2da` | Named in Chapter Twelve as **deliberately deferred** — companion content |
+| `hkpart01`–`hkpart05` | Chapter Twelve identified them as not-recipes; Chapter Fourteen builds droids from them |
+| `a_give_treas` | Chapter Thirteen's loot bands — **constants read, control flow not disassembled** |
+| `k2_swoopupgrade.2da` | The upgrade grammar Chapters Fifteen and Sixteen build ship parts on |
+| `keymap.2da` | Chapter Fifteen's evidence for how little space combat the source had — two verbs |
+
+**⚠ Two of these were read incompletely and both chapters say so.** `a_give_treas` gave up
+its constants but not its control flow, so **which loot band draws from which list is an
+inference** (Chapter Thirteen, Flag 1). And `k2_baseitems.2da` needs the project's own
+binary-2DA parser rather than a text read — a fact found the hard way while checking
+Chapter Three's ranged dice.
 
 **These are BioWare's and Obsidian's design data.** Reading them is what let this book
 correct several values that secondary sources had wrong — the K1 Lightsaber's `2d8`, the
@@ -134,8 +145,14 @@ improving on them.**
 
 **Recorded so a reader does not assume otherwise: the Armory cites no published rulebook
 at any point.** No *Revised Core Rulebook*, no *Ultimate Alien Anthology*, no Saga Edition
-material, no KOTOR Campaign Guide. **Verified by search across all eleven chapters — zero
+material, no KOTOR Campaign Guide. **Verified by search across all sixteen chapters — zero
 occurrences.**
+
+**Chapters Fifteen and Sixteen do draw on out-of-game reference material** for the ship
+roster and the faction navies — hull names, service dates and doctrine, sourced through the
+project's own `STARSHIPS-01` and `SPACE-COMBAT-01` rather than read here directly. **Those
+documents cite a Legends wiki index**, which sits at the bottom of this project's source
+ladder and is **⚠ unverified from anything held on this machine.**
 
 **That is a real finding about this book's character rather than an omission.** The Galactic
 Timeline rests almost entirely on a published sourcebook; the Armory rests almost entirely
@@ -147,8 +164,11 @@ alike.**
 ## This project's own documents
 
 **Not third-party sources and not listed for credit** — recorded so the chapters' citations
-resolve: `EQUIPMENT-01`, `ITEMS-01`, `ITEMS-03`, `ITEMS-04`, `STARTING-EQUIPMENT-01`,
-`ACTION-ECONOMY-01`, `ATTACKS-01`, and the playtest ruling ledger. **The project's own
+resolve: `EQUIPMENT-01`, `ITEMS-01`–`ITEMS-09`, `STARTING-EQUIPMENT-01`,
+`ACTION-ECONOMY-01`, `ATTACKS-01`, `WEAPON-MATRIX-01`, `CRAFTING-01`, `LOOT-01`,
+`DROID-CONSTRUCTION-01`, `DROIDS-UPGRADE-01`, `STARSHIPS-01`, `SPACE-COMBAT-01`,
+`MOUNTED-COMBAT-01`, `SKILL-RESOLUTION-01`, `REST-AND-MEDITATION-01`, `CLASS-ROSTER-01`,
+and the playtest ruling ledger. **The project's own
 rulings govern this book over any source above where the two disagree.**
 
 ---

@@ -90,7 +90,15 @@ own acknowledgment in his own voice. **Mark it clearly and do not draft it.**
 than by eye** — copy it from an existing front-matter file and diff it. "Word for word, no
 exceptions" is not a thing to satisfy by reading it over.
 
-**The verified/unverified marking is standard practice for every bibliography**, ruled.
+**Bibliography confidence marking is standard practice for every book**, ruled. **Three
+levels, never blended:** **✔ verified** (read from a source held here), **◆ relayed**
+(externally researched and corroborated, not read here), **⚠ unverified** (general
+knowledge). **The middle tier is the one that matters** — relayed credit is far stronger
+than assumption and still not the same as having read the source.
+
+**One credit roll, one home.** The games' full credits live in the Armory's front matter
+and are referenced rather than copied by other books — `D-W32`'s cite-don't-restate
+reasoning applied to credits, so the lists cannot drift apart.
 
 **One practice worth carrying forward from the Timeline's bibliography:** mark each entry
 **verified** or **unverified** against a source actually held. A credit page names real

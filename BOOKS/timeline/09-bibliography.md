@@ -3,11 +3,15 @@
 **Status: per `PT-1813`.** Scoped to what **this book** actually drew on. Other books in
 this set used other sources and carry their own lists.
 
-**⚠ Every entry is marked for verification status.** A credit page is the worst place in a
-book to blur the line between what was checked and what was assumed, so entries verified
-against a source held on this machine are marked **✔ verified**, and entries taken from
-relay or general knowledge are marked **⚠ unverified** and should be checked against a
-physical copy before this book is published anywhere.
+**⚠ Every entry carries one of three confidence levels**, and they are deliberately not
+blended. A credit page is the worst place in a book to blur the line between what was
+checked and what was assumed:
+
+| Mark | Meaning |
+|---|---|
+| **✔ verified** | Read directly from a source held on this machine |
+| **◆ relayed** | Externally researched against a live search and corroborated — **not** read from anything held here |
+| **⚠ unverified** | General knowledge or assumption. Confirm before publication |
 
 ---
 
@@ -61,17 +65,24 @@ Rank 1 in this project's source hierarchy. **Chapter Five's events are this game
 and 3,956 BBY is its year — the campaign's default clock.
 
 **✔ BioWare's authorship is attested in this project's own corpus**, which cites the
-studio's internal comments in the game's data files directly. **⚠ The publisher
-(LucasArts) and individual creative credits are not attested in any source held here** and
-are not listed rather than guessed at.
+studio's internal comments in the game's data files directly. **◆ The publisher
+(LucasArts) and the game's creative credits are relayed** — researched externally and
+corroborated, not read from anything held here.
+
+**The full credit roll for both games lives in the Armory's front matter
+(`BOOKS/armory/00-front-matter.md`) and is deliberately not duplicated here.** That book's
+content is overwhelmingly these teams' design work; this one uses the games as a rank-1
+cross-check. **One list, maintained in one place** — `D-W32`'s reasoning, applied to
+credits.
 
 ### *Star Wars: Knights of the Old Republic II — The Sith Lords* (2004) — **Obsidian Entertainment**
 
 Rank 1. **Chapter Six's events are this game's story.**
 
-**⚠ Unverified from held sources.** The corpus references the game's data files extensively
-but does not name its developer or publisher anywhere I could find. **The studio
-attribution above is general knowledge, not a checked citation**, and wants confirming.
+**◆ Relayed.** The corpus reads this game's data extensively but never names its
+developer, publisher or staff. **Obsidian Entertainment, published by LucasArts**, with
+**Chris Avellone** as lead designer and lead writer — researched externally and
+corroborated. **Full credits in the Armory's front matter**, not duplicated here.
 
 ---
 
@@ -99,10 +110,9 @@ finishes this page can name them properly rather than leaving it at the publishe
 
 ### *The New Essential Chronology* (2005) — **Daniel Wallace**
 
-Rank 6. **⚠ Unverified — the book is not staged on this machine and its credits page has
-not been read.** The attribution above is as relayed by MAIN. **⚠ If the volume has a
-co-author, this entry is incomplete**, and it should be checked against a physical copy
-before publication.
+Rank 6. **◆ Relayed** — researched and relayed by MAIN; the book is not staged here and
+its credits page has not been read. **⚠ If the volume has a co-author, this entry is
+incomplete**, and the full credit should be taken from a physical copy before publication.
 
 **Three claims in this entire book rest on it**, all in Chapter Two and all marked in that
 chapter's text: the Force-negating plague that ended the Infinite Empire and its
@@ -136,11 +146,15 @@ govern this book over any source above where the two disagree.**
 
 ## ⚠ Before this book is published anywhere
 
-**One entry on this page is fully verified; the rest are not.** The Campaign Guide's credits
-were read directly from the book. **Everything else — both games' studios and publishers,
-the *Tales of the Jedi* creative team, Daniel Wallace's co-authorship if any, and both
-rank-8 titles' authors — rests on relay or general knowledge and should be confirmed
-against physical copies.**
+**✔ One entry is fully verified:** the Campaign Guide's credits, read directly from f. 3.
+
+**◆ Both games' studios, publishers and leads, and Daniel Wallace's attribution, are
+relayed** — externally researched and corroborated, which is strong but is not the same as
+having read the source.
+
+**⚠ Three things remain genuinely unverified and should be confirmed against physical
+copies:** the ***Tales of the Jedi*** creative team, **Daniel Wallace's co-authorship if
+the volume has one**, and **both rank-8 titles' authors.**
 
 **This matters more than the book's other flags.** A wrong date in Chapter Four is a
 correction; a wrong or missing name on a credit page is a discourtesy to a real person who

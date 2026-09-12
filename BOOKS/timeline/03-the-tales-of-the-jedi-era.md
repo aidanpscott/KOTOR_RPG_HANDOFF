@@ -1,6 +1,6 @@
 # Chapter Three — The Tales of the Jedi Era
 
-**Status: DRAFT, for review.** First chapter written under `PT-1802`'s three-part
+**Status: APPROVED** by MAIN. First chapter written under `PT-1802`'s three-part
 structure: framing, the events narrative, then Major Figures cross-referencing back into
 the narrative rather than re-telling it.
 
@@ -126,7 +126,7 @@ Sith War comes to an end when Republic forces liberate Empress Teta."*
 > remains under Sith control.**
 
 **The Republic won the war and could not afford to finish it.** Korriban — the world that
-trained Exar Kun, the world Adas united twenty-five thousand years earlier — stayed in Sith
+trained Exar Kun, the world Adas united twenty-four thousand years earlier — stayed in Sith
 hands. So did the survivors: *"The Sith who had fled back to Korriban bide their time and
 keep a low profile, while those who had fled to the Unknown Regions practice their dark
 arts in secret."*
@@ -235,24 +235,33 @@ The Campaign Guide divides this stretch of history into five named eras, ff. 5�
 | The Mandalorian Wars | 3,965–3,960 BBY | **Chapter Four** ✔ |
 | The Jedi Civil War | 3,959–3,956 BBY | **Chapter Five** ✔ |
 | The Dark Wars | 3,955–3,951 BBY | **Chapter Six** ✔ |
-| *(no CG era)* | 3,950 BBY onward | **Chapter Seven — "The Reconstruction"** |
+| *(no CG era exists)* | 3,950 BBY onward | **⚠ nothing — see below** |
 
-**Two consequences, and I do not think either is mine to decide.**
+**Two consequences, and neither was mine to decide. ✔ Both are now ruled.**
 
-**One: the Restoration Period is orphaned.** It is thirty years, it has its own rank-2
-narrative section, and it contains the Republic's economic rebuild, the trade-route
-redevelopment, the Sith biding their time on Korriban, and the Mandalorians secretly
-rearming. **It is the direct set-up for Chapter Four** and reads as that chapter's opening
-movement rather than as a chapter of its own. **My recommendation: it opens Chapter Four.**
+**One: the Restoration Period was orphaned.** Thirty years, its own rank-2 narrative
+section, containing the Republic's economic rebuild, the trade-route redevelopment, the
+Sith biding their time on Korriban, and the Mandalorians secretly rearming. **It is the
+direct set-up for Chapter Four** and reads as that chapter's opening movement rather than
+as a chapter of its own.
 
-**Two: "The Reconstruction" is ambiguous, and I nearly mis-sourced it.** There are **two**
+**✔ Ruled: it opens Chapter Four**, on the same principle deep history already uses — not
+every Campaign-Guide-named era needs its own chapter, and a connective buildup belongs
+folded into what it sets up.
+
+**Two: "The Reconstruction" was ambiguous, and I nearly mis-sourced it.** There are **two**
 recovery periods in this book — the Restoration Period after the Great Sith War, and the
-post-3,951 BBY aftermath. The Campaign Guide has no era section for the second, and its
-timeline stops at 3,950 BBY. **⚠ My own sourcing assessment offered the 3,985 BBY Coruscant
+post-3,951 BBY aftermath. **⚠ My own sourcing assessment offered the 3,985 BBY Coruscant
 Financial Exchange act as evidence for Chapter Seven's coverage — that act belongs to the
-*first* recovery, not the second.** Correcting that here. **Chapter Seven as the later
-reconstruction is thinner at rank 2 than I reported**, resting on the Dark Wars section's
-tail, the single 3,950 BBY entry, and KOTOR 2 at rank 1.
+*first* recovery, not the second.** Corrected here and in `OUTLINE-02`.
+
+**✔ Resolved by sweep, not by estimate.** A search of the entire Campaign Guide OCR found
+**no date later than 3,950 BBY anywhere in its 21,339 lines**, and every era-divided
+section in the book stops at the Dark Wars. So the bottom row above has no rank-2 source at
+all. **Chapter Seven is instead the reconstruction as the Republic-side view of
+3,956–3,950 BBY** — the same window as Chapter Six, from the other side — which is
+well-sourced at rank 2 and leaves the book stopping where its sources stop. **Neither
+reference book was staged.**
 
 **Not a flag, but worth recording: no rank 6 or rank 8 material was needed here.** The
 sourcing assessment predicted this chapter was covered at rank 2 and it was, with the

@@ -47,10 +47,14 @@ the end of the book:
 
 **They have not happened yet. They will not happen for four thousand years.**
 
-To measure that properly: **the distance from this campaign to the fall of the Republic is
-greater than the distance from Chapter Two's King Adas to this campaign was, plus the
-entire Great Sith War, plus everything in between, several times over.** Palpatine is as
-far from a player character in 3,956 BBY as the invention of writing is from the reader.
+**To measure it properly, compare it against this book.** Everything in Chapters Three
+through Seven — the Great Sith War, the Restoration, the Mandalorian Wars, the Jedi Civil
+War, the Dark Wars, the whole arc five chapters are spent on — **happens inside fifty
+years.** The gap between the last page of that and the rise of the Empire is **nearly four
+thousand.**
+
+Put another way: Palpatine is about as far from a player character in 3,956 BBY as
+Hammurabi's Babylon is from the reader.
 
 **Nothing in this book's future is foreshadowed by anything in its present**, and a
 Gamemaster who plants Skywalker-era seeds is not enriching the era — they are borrowing
@@ -147,7 +151,7 @@ table's.
 
 **And what the record does say is unusually generous to a Gamemaster.** It leaves a
 reunified Mandalorian nation with no stated future, a Jedi Order small enough to be
-remade by half a dozen people, a Sith tradition twenty-five thousand years old that has
+remade by half a dozen people, a Sith tradition twenty-four thousand years old that has
 survived every previous extinction, a Star Forge whose fate the table decides, and a galaxy
 full of Rakatan machinery still buried where the Infinite Empire dropped it — with the
 Campaign Guide itself calling that last one *"a blank slate."*
@@ -161,7 +165,7 @@ holds the timeline; this book explains it. Where the two disagree, the engine is
 these pages have a bug.
 
 **What this book claimed to do was smaller and, I hope, more useful:** to say what is
-actually known about the four thousand years behind this campaign, to say who says it and
+actually known about the long history behind this campaign, to say who says it and
 how much weight they carry, to record where the sources disagree rather than quietly
 picking a winner, and — here at the end — **to be equally clear about where the knowing
 stops.**
@@ -194,12 +198,18 @@ removed. **Nothing was added or reworded.** Recording it because this is the fou
 corruption found in this file and the first one this book actually prints; if the epigraph
 survives to a finished page, someone should check it against a physical copy.
 
-**⚠ Flag 2 — one claim in this chapter is mine, not the sources'.** The comparison putting
-Palpatine as far from a 3,956 BBY character *"as the invention of writing is from the
-reader"* is **my own illustration**, built from the Campaign Guide's own dating rather than
-quoted from it. It is arithmetic on rank-2 figures rather than a sourced statement, and it
-is the only rhetorical flourish in the chapter carrying a factual shape. **Flagged so it is
-not mistaken for a citation.** Everything else in the chapter is either quoted, cited, or
+**⚠ Flag 2 — two comparisons in this chapter are mine, not the sources'.** The fifty-years
+-versus-four-thousand measurement and the Hammurabi's-Babylon line are **my own
+illustrations**, arithmetic on rank-2 dates rather than sourced statements. **Flagged so
+they are not mistaken for citations.**
+
+**⚠ An earlier draft of this passage got the comparison backwards** — it claimed the
+distance from the campaign to the Republic's fall exceeded the distance from King Adas to
+the campaign. **It does not:** Adas to 3,956 BBY is roughly twenty-four thousand years, the
+campaign to the Empire roughly four. Caught in the consistency pass and replaced with the
+measurement above, which compares the book's own fifty-year span against the four-thousand
+-year gap that follows it. **Recorded rather than quietly fixed**, because it is the only
+arithmetic error the pass found that had actually reached a finished chapter. Everything else in the chapter is either quoted, cited, or
 explicitly framed as the book addressing itself.
 
 **⚠ Flag 3 — I used `CANON-01-v2 §5.1`'s tier-3 example as a thematic point, and want that

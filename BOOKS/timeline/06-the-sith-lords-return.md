@@ -1,6 +1,6 @@
 # Chapter Six — The Sith Lords' Return
 
-**Status: DRAFT, for review.** `PT-1802`'s three parts. The Campaign Guide calls this era
+**Status: APPROVED** by MAIN. `PT-1802`'s three parts. The Campaign Guide calls this era
 **the Dark Wars**, 3,955–3,951 BBY.
 
 ---
@@ -176,8 +176,9 @@ Mass Shadow Generator,"* which killed the Mandalorian navy *"as is the Republic 
 thousands of soldiers the Exile had led in battle and befriended… killed instantly."* **The
 Exile then severed themselves from the Force** to survive the backlash, returned alone *"to
 answer for herself and, by extension, Revan and his errant Jedi,"* and was exiled. *"Though
-her name is lost to history, she becomes known as the Jedi Exile."* **She saves the Jedi
-from extinction.**
+her name is lost to history, she becomes known as the Jedi Exile."* And the sentence the
+Campaign Guide opens the entry with, which is the whole of the case for them: **"She saves
+the Jedi from extinction."**
 
 **Darth Nihilus** — killed every living thing on Katarr (*see above*), leaving only Visas
 Marr. Defeated by the Exile in 3,951 BBY. **The only figure in this book who destroys a
@@ -262,12 +263,17 @@ names the battle (*Ani'la Akaan*), the agent, the mechanism, and the consequence
 the timeline's single clause. **The reconciliation is almost certainly "Revan planned it,
 the Exile executed it,"** and both sources are satisfied by that reading.
 
-**What I have done:** flagged it here and left Chapter Four's verbatim quotation intact.
-**What I recommend:** a one-sentence amendment to Chapter Four crediting the Exile with the
-activation inside Revan's plan, since as it stands Chapter Four leaves a reader thinking
-Revan pulled the trigger, and **the Exile's entire character — the severing, the exile, the
-return in 3,951 — descends from having pulled it themselves.** Say the word and I will make
-it; it is one sentence and a source line.
+**✔ Amended, approved by MAIN.** Chapter Four now records the reconciliation, and a later
+sweep of the same character section made it **three-way**: **Bao-Dur's** entry (f. 176)
+names him as the weapon's inventor, *"the invention also kills a great number of his allies
+and own forces in the process."*
+
+> **Revan planned it. Bao-Dur built it. The Exile sprang it.**
+
+Chapter Four also now carries the cost the Campaign Guide records — the Republic fleet died
+in the same crush, the Exile severed themselves from the Force to survive it, and *"the
+Council was not kind"* — because **the Exile's entire character descends from having pulled
+the trigger themselves.**
 
 **⚠ Flag 4 — my Chapter Five prediction was wrong, and the correction is worth more than the
 prediction.** I reported that the CG-narrative-versus-CG-timeline conflict pattern was

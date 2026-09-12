@@ -261,7 +261,10 @@ Correcting it here. This book's citations use printed folio.
 section.** It is *"`requires` is a predicate, not a list,"* about the canon ledger's
 requires predicate — nothing to do with how the timeline was built. The sections this
 chapter actually stands on are **§2, §2.1, §2.2, §4 and §10.0**. Same class of error as
-the `D-CURRENCY-01` currency miscitation found in the Armory. Outline mark wants updating.
+the `D-CURRENCY-01` currency miscitation found in the Armory.
+
+**✔ Fixed.** `OUTLINE-02`'s Book Five row now cites `§§2, 2.1, 2.2, 4, 10.0` and records the
+superseded citation.
 
 **Correction to my own sourcing report.** `TO-MAIN-44-AUTHOR.md` stated the Campaign Guide
 timeline runs *"4,000 BBY through 3,976 BBY."* **It runs 4,000 BBY through 3,950 BBY** —

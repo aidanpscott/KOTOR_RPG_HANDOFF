@@ -1,6 +1,6 @@
 # Chapter Five — The Jedi Civil War
 
-**Status: DRAFT, for review.** `PT-1802`'s three parts. **This is the first chapter where
+**Status: APPROVED** by MAIN. `PT-1802`'s three parts. **This is the first chapter where
 rank 1 — the games themselves — is the primary source rather than a cross-check**, and the
 first where the record branches. Both are handled explicitly below rather than silently.
 
@@ -121,7 +121,8 @@ of Rakata Prime. Revan defeats Darth Malak in a duel, the Republic defeats the S
 and the Jedi Civil War comes to an end."*
 
 **Lehon is the Rakatan homeworld.** The war ends where Chapter Two ended — at the Star
-Forge, above the planet whose empire collapsed twenty-five thousand years earlier, which
+Forge, above the planet whose empire collapsed more than twenty thousand years earlier,
+which
 Revan found with a star map from Kashyyyk. **Deep history stops being background in this
 paragraph.**
 
@@ -165,10 +166,13 @@ with it. **Chapter Six works from either ending**, which is why this chapter can
 default without that default being a verdict.
 
 **One consequence of the same principle, stated because it will otherwise read as an
-oversight:** this chapter uses **they** for Revan throughout its own prose, reserving
-*he/his* only inside direct quotations from the Campaign Guide. **Revan's gender is
-player-determined in exactly the way the ending is**, and the sources' default is a default
-rather than a fact. Quoted text is never altered.
+oversight, and it applies to the whole book rather than this chapter alone:** these pages
+use **they** for **Revan** and for **the Jedi Exile** in their own prose, reserving
+gendered pronouns to direct quotation. **Both characters' genders are player-determined in
+exactly the way the ending is**, and the sources' defaults — masculine for Revan, feminine
+for the Exile — are defaults rather than facts. **Quoted text is never altered**, which is
+why the Campaign Guide's own *he* and *she* still appear throughout, inside quotation marks
+and nowhere else.
 
 ---
 
@@ -230,15 +234,25 @@ unlike the Jedi Civil War, Malachor and the rest.
 and `EVENTS-01 §4` holds it as **Record 2**, the enumeration's only `branch`. **So the
 event is modelled, dated and branch-aware in two places and simply missing from the third**
 — the narrative spine this book reads from. **Chapter Five is one of the eleven consumers**,
-and the row would sit at 3,956 BBY beside *"KOTOR 1. OUR SETTING."* **Not mine to add.**
+and the row would sit at 3,956 BBY beside *"KOTOR 1. OUR SETTING."*
+
+**✔ Fixed.** MAIN added the spine row at 3,956 BBY with its branch note and ledger key, and
+updated the census line to match. **The gap this chapter was written around is closed.**
 
 **⚠ Flag 2 — no same-rank conflict in this chapter, which is itself worth recording.**
 Chapters Three and Four each hit a CG-narrative-versus-CG-timeline disagreement. **Here the
 two agree throughout** — dates, sequence, and outcome — with the narrative supplying Bastila
 Shan's name at the rescue and the timeline supplying the years. **The pattern from the last
-two chapters does not extend to this one**, which is useful negative evidence: those
-conflicts were about compressed summaries of long wars, and this era is short enough that
-the summary did not have to compress.
+two chapters does not extend to this one**, which is useful negative evidence.
+
+**⚠ My explanation for it was wrong, and Chapter Six disproved it.** I proposed that the
+conflicts came of *"compressed summaries of long wars"* and that this era was *"short enough
+that the summary did not have to compress"* — predicting the pattern would skip Chapter Six
+and return in Chapter Seven. **It appeared twice in Chapter Six**, an era exactly as short
+as this one, and **not at all in Chapter Seven.** The corrected rule, which has since
+predicted correctly: **what drives these conflicts is how many separate Campaign Guide
+sections describe an era**, not the era's length. This era is covered by two sections that
+agree; the Dark Wars are covered by six that do not.
 
 **⚠ Flag 3 — a spine row with no stated bound.** `EVENTS-01 §1`'s **3,962 BBY — "Revan is
 made Supreme Commander"** has an empty *"Why it is a bound"* column, where every other row

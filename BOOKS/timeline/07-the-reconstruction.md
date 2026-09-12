@@ -1,6 +1,6 @@
 # Chapter Seven — The Reconstruction
 
-**Status: DRAFT, for review.** `PT-1802`'s three parts. **⚠ This chapter's scope was
+**Status: APPROVED** by MAIN. `PT-1802`'s three parts. **⚠ This chapter's scope was
 settled by evidence rather than assumed** — see the sweep result at the foot of the chapter
 before reading it as a chronological successor to Chapter Six, because it is not one.
 
@@ -165,7 +165,7 @@ itself.
 
 *Sources: KOTOR Campaign Guide — G0-T0, f. 210; Bao-Dur, f. 176; Telos IV planet entry,
 f. 123 (⚠ known-defective, Flag 2); Atris, f. 141; the Republic and Sith faction sections
-divided by era, ff. 146 and 168; the Quartermaster-class entry, f. 100, for the Great Sith
+divided by era, f. 146 and f. 168; the Quartermaster-class entry, f. 100, for the Great Sith
 War reconstruction's completion; the dated timeline, f. 113. `EVENTS-01 §1` for the 3,955
 BBY G0-T0 row (`PT-604`). `WORLDS-REGISTER-01` `D-W33` for the Gazetteer defect. Folios are
 printed page numbers; the OCR's page markers run three higher. **No rank 6 or 8 material
@@ -196,14 +196,17 @@ corpus, and not over the Library-held documents `AUDIT-01` lists absent.
 rank-2 source at all** and would have to be written almost entirely from the Chronology at
 rank 6. A chapter about the reconstruction **as the Republic-side view of 3,956–3,950** is
 well-sourced at rank 2 and duplicates nothing in Chapter Six. **I wrote the second**, and
-flag the choice here because it is a scope decision made on evidence rather than a ruling I
-was given.
+flagged the choice because it was a scope decision made on evidence rather than a ruling I
+was given. **✔ Approved by MAIN**, on the grounds that it avoids the gap entirely rather
+than working around it.
 
-**⚠ If you want a genuinely post-3,950 chapter, it needs the Chronology and I cannot write
-it from what is held.** My recommendation is against it: the book's own honesty rule is
-better served by stopping where the sources stop and letting **Chapter Eight** be explicitly
-about that edge, than by extending the narrative on rank-6 material after six chapters
-built on rank 2.
+**A genuinely post-3,950 chapter would need the Chronology, and I recommended against it**:
+the book's own honesty rule is better served by stopping where the sources stop and letting
+**Chapter Eight** be explicitly about that edge, than by extending the narrative on rank-6
+material after six chapters built on rank 2 — at the one point where every other source
+falls silent, which is where doing so would be most visible and least defensible.
+
+**✔ Ruled: the Chronology is not staged.** The book ends at 3,950 BBY with its sources.
 
 **⚠ Flag 2 — this chapter's flagship location has a known-defective source entry, already
 ruled.** `WORLDS-REGISTER-01`'s `D-W33` records that **Cathar, Telos and Peragus are all

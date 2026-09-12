@@ -1,6 +1,6 @@
 # Chapter Four — The Mandalorian Wars
 
-**Status: DRAFT, for review.** Opens with the Restoration Period as its first movement,
+**Status: APPROVED** by MAIN. Opens with the Restoration Period as its first movement,
 per MAIN's ruling — not every Campaign Guide era needs its own chapter, and a connective
 buildup belongs folded into what it sets up. `PT-1802`'s three parts throughout.
 
@@ -290,7 +290,10 @@ the proxy skirmishes, 10198 the invasion. Meanwhile `D-W42` cites *"Timeline p.1
 **is** a printed folio. **So `p.NNN` now means two different things in the corpus**, exactly
 the shape of the rank-7 collision `PT-1800` just fixed. A human tells them apart by
 magnitude — a 200-page book has no p.10187 — but an automated sweep will not.
-**Recommend a distinct prefix for OCR line cites; not mine to rule.**
+**✔ Fixed at source.** MAIN relabelled all three instances in `EVENTS-01` as
+**`CG OCR L.NNNNN`**, adopting the distinct-prefix approach. Printed-folio citations
+elsewhere in the corpus are unaffected. **This chapter's citations are unchanged** — it
+quotes the Campaign Guide directly by folio and never used the line cites.
 
 **⚠⚠ Flag 3 — a superseded claim is still standing as an assertive heading in `EVENTS-01`,
 and it is `PT-961`'s exact shape.** `§2` records that `PT-675` said *"no faction,"* that
@@ -312,8 +315,11 @@ skimming headings gets the retracted answer.**
 
 **This chapter follows `PT-681`**, the later and correcting ruling. The practical difference
 is real: "no faction" would license playing 3,956 BBY as *no Mandalorians*, when the correct
-reading is dispersed mercenaries with a reunification already under way. **Wants fixing in
-`EVENTS-01`; not mine to edit.**
+reading is dispersed mercenaries with a reunification already under way.
+
+**✔ Fixed at source.** MAIN merged the empty heading with its content and stated plainly,
+twice, that what follows is retracted. **The chapter's reading is unchanged** — it followed
+`PT-681` before the fix and follows it now.
 
 **⚠ Flag 4 — a smaller internal wobble in `EVENTS-01`'s Neo-Crusader dates.** `§1` and `§2`
 both put the founding at **3,976 BBY**; `§3`'s era table gives the Neo-Crusaders as

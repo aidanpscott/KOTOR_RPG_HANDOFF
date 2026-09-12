@@ -25,7 +25,7 @@ than the record carries would be the error here, not the service.
 
 What this chapter is for is the **shape** of it: why there is a Star Forge orbiting a sun
 in the Unknown Regions, why Korriban is full of tombs, and why a Dark Lord in 3,956 BBY is
-the inheritor of something twenty-five thousand years older than the Republic.
+the inheritor of something that was already ancient when the Republic was founded.
 
 ## The Infinite Empire
 
@@ -159,9 +159,9 @@ Campaign Guide takes the story back at rank 2:
 > the new title **Jen'ari** or "Dark Lord" of the Sith.
 
 **Note what actually happened there, because it is almost always told wrong.** The exiles
-did not found the Sith. They *arrived* at a Sith civilisation that Adas had already united
-twenty-five thousand years earlier, that had already beaten the Infinite Empire, and that
-had held the dark side since. **They conquered it and took its name.**
+did not found the Sith. They *arrived* at a Sith civilisation that Adas had united an age
+earlier — before the Republic existed — that had already beaten the Infinite Empire, and
+that had held the dark side since. **They conquered it and took its name.**
 
 What was born at Korriban was not the Sith people — those were there first — but **the Sith
 as a Force tradition**: a fusion of exiled Jedi and an existing dark-side civilisation,
@@ -184,11 +184,12 @@ methods of power generation unparalleled by existing technology."*
 
 **And the Star Forge is still there.** *"The most influential piece of Rakatan technology
 known to exist in the Knights of the Old Republic period"* — a factory that mass-produces
-warships, orbiting a sun, waiting twenty-five thousand years for someone to find the map
-back to it.
+warships, orbiting a sun, waiting more than twenty thousand years for someone to find the
+map back to it.
 
-**Somebody does.** That is Chapter Six's business, and it is the point at which deep
-history stops being background and starts being the plot.
+**Somebody does.** Revan finds a Rakatan star map on Kashyyyk in 3,961 BBY (Chapter Four)
+and the war ends at Lehon four years later (Chapter Five) — **the point at which deep
+history stops being background and starts being the plot.**
 
 ---
 
@@ -216,9 +217,13 @@ documents (`RULING-SWTOR-DEEP-HISTORY`, `ERA-VITIATE-01`, `D-VIT-01`). **The Cam
 in fact carries Adas by name, the 28,000 BBY unification, the Rakatan invasion of Korriban
 and its outcome, the dark side as the Infinite Empire's bequest, the Hundred-Year Darkness
 exiles, Ajunta Pall, Jen'jidai and Jen'ari, Tund, and the interbreeding — all at rank 2.**
-The chapter's spine is rank 2, with rank 6 filling two gaps. **The outline mark understates
-what is held and should be re-marked.** This is the third outline correction from this book
-so far, after the `§3.4` miscitation and the timeline's extent.
+The chapter's spine is rank 2, with rank 6 filling two gaps. **The outline mark understated
+what is held.**
+
+**✔ Fixed.** MAIN confirmed the mark wrong and `OUTLINE-02`'s Book Five row is re-marked
+`DRAFTED` against the rank-2 coverage above. This was the third outline correction from
+this book, after the `§3.4` miscitation and the timeline's extent; a fourth followed at
+Chapter Three, Flag 4.
 
 **⚠ Flag 3 — a possible tension between the relay and rank 2 on the Rakatan invasion,
 recorded rather than resolved.** The relay has Adas *repel* the Rakatan attack. The

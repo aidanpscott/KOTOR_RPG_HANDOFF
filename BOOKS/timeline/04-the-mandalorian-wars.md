@@ -157,7 +157,28 @@ person.
 the Mandalorians. Revan defeats Mandalore the Ultimate, activates the superweapon known as
 the **Mass Shadow Generator**, and shatters the Mandalorian fleet."*
 
-The Campaign Guide's narrative calls it *"a devastating victory"* after which *"the
+**⚠ But the hand on the trigger was not Revan's.** The Campaign Guide's dedicated entry on
+**the Jedi Exile** (f. 140) is more specific than the timeline's single clause, and it
+matters: the battle — the *Ani'la Akaan*, the "Great Last Battle" — was *"Revan's carefully
+choreographed gambit,"* but *"when the Mandalorians are in position, **the Jedi Exile
+springs the trap, unleashing an apocalyptic weapon called the Mass Shadow Generator.**"*
+
+**And a third person built it.** The weapon was **Bao-Dur's** invention, and his own entry
+records what that cost him: *"the invention also kills a great number of his allies and own
+forces in the process,"* along with most of his left arm.
+
+**Revan planned it. Bao-Dur built it. The Exile sprang it.** All three sources are
+satisfied by that reading and none has to be discarded for it.
+
+**What the weapon actually did is why this distinction is not pedantry.** The Mandalorian
+navy died *"in a space-rending gravitational crush — **as is the Republic fleet.**
+Thousands of soldiers the Exile had led in battle and befriended are killed instantly."*
+**The Exile severed themselves from the Force** to survive the backlash, then *"returns
+alone to answer for herself and, by extension, Revan and his errant Jedi."* **The Council
+was not kind.** Everything that becomes of that person in Chapter Six — the severing, the
+exile, the return to Malachor V in 3,951 BBY — **descends from this moment.**
+
+The Campaign Guide's narrative calls the result *"a devastating victory"* after which *"the
 Mandalorian forces are nearly wiped out"* and *"the surviving Mandalorians go into
 exile."* `EVENTS-01` is more exact about the terms: **Mandalore the Ultimate is slain, the
 surrender is unconditional, and the Mandalorians are stripped of arms and scattered.**
@@ -239,7 +260,10 @@ matters: he led the *Crusaders*, lost the duel at Kuar, and died at Onderon in 3
 ---
 
 *Sources: KOTOR Campaign Guide — "The Restoration Period" and "The Mandalorian Wars", both
-f. 5; the dated timeline ff. 112–113. `EVENTS-01 §§1–3` for the Mandalorian correction
+f. 5; the dated timeline ff. 112–113; **the Jedi Exile entry, f. 140**, for the Mass Shadow
+Generator's activation, and **Bao-Dur, f. 176**, for its invention (amended per Chapter
+Six, Flag 3 — `PT-946`, the character entries being the more specific sources on that
+point). `EVENTS-01 §§1–3` for the Mandalorian correction
 (`PT-675`, `PT-681`, `PT-855`), the three-era split, and the Malachor V surrender terms.
 Folios are printed page numbers; the OCR's page markers run three higher (Chapter One,
 Flag 3). Rank 2 and the rulings on it throughout; no rank 6 or 8 material needed.*

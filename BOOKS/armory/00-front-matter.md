@@ -29,9 +29,19 @@ it.
 
 # Sources and Credits
 
-**Scoped to what this book actually used.** Entries are marked **✔ verified** against
-something held on this machine, or **⚠ unverified**, per the practice established for the
-Galactic Timeline and ruled standard.
+**Scoped to what this book actually used.** Every entry carries one of **three**
+confidence levels, and they are deliberately not blended:
+
+| Mark | Meaning |
+|---|---|
+| **✔ verified** | Read directly from a source held on this machine |
+| **◆ relayed** | Externally researched by MAIN against a live search and corroborated across multiple independent sources — **not** read from anything held here |
+| **⚠ unverified** | General knowledge or assumption. Confirm before publication |
+
+**The middle tier exists because collapsing it into either neighbour would be a lie.**
+Relayed credits are far stronger than assumption and are not the same thing as having read
+the source — the same discipline the Galactic Timeline applies to its three relayed
+deep-history claims.
 
 **⚠ This list covers the eleven chapters drafted so far** and must be revisited when
 Chapter Three's family catalogue and the four remaining chapters — the weapon matrix and
@@ -59,20 +69,47 @@ which are ours.
 
 ## Primary sources
 
-### *Star Wars: Knights of the Old Republic* (2003) — **BioWare**
+### *Star Wars: Knights of the Old Republic* (2003)
+
+**BioWare**, published by **LucasArts.**
 
 **✔ BioWare's authorship is verified** from this project's own corpus, which quotes the
-studio's internal developer comments out of the game's `.uti` files directly.
+studio's internal developer comments out of the game's `.uti` files directly. **That is the
+only credit on this page read from something held here.**
 
-**⚠ Publisher and individual creative credits are unverified** — not attested in any source
-held here — and are deliberately left blank rather than filled in from memory. **They
-should be added from a physical or storefront credit list before publication.**
+**◆ The following are relayed** — researched externally and corroborated across multiple
+independent sources, not read from any held source:
 
-### *Star Wars: Knights of the Old Republic II — The Sith Lords* (2004) — **Obsidian Entertainment**
+| Role | Credited |
+|---|---|
+| **Director · Producer · Project Director** | **Casey Hudson** |
+| **Executive Producers** | Raymond Muzyka, Greg Zeschuk |
+| **Lead Designer** | **James Ohlen** |
+| **Assistant Lead Designer** | Preston Watamaniuk |
+| **Senior Writer** | **Drew Karpyshyn** |
+| **Art Director** | Derek Watts |
+| **Composer** | Jeremy Soule |
+| **Core Game Design** | David Falkner, Steven Gilmour, Casey Hudson, Drew Karpyshyn, James Ohlen, Preston Watamaniuk, Derek Watts |
+| **Designers** | Jason Booth, David Gaider, Lukas Kristjanson, Cori May, Andrew Nobbs, Brad Prince, Aidan Scanlan, Peter Thomas, John Winski |
 
-**⚠ Unverified.** The corpus reads this game's data extensively but never names its
-developer or publisher. **The studio attribution is general knowledge, not a checked
-citation.**
+### *Star Wars: Knights of the Old Republic II — The Sith Lords* (2004)
+
+**Obsidian Entertainment**, published by **LucasArts.**
+
+**◆ Relayed**, on the same basis. The corpus reads this game's data extensively but never
+names its developer, publisher or staff:
+
+| Role | Credited |
+|---|---|
+| **Lead Designer · Lead Writer** | **Chris Avellone** — wrote the overall storyline and most of the companions directly, **including Kreia** |
+| **Producer** | Chris Parker |
+| **Composer** | Mark Griskey |
+| **Additional design and writing** | Ferret Baudoin, Michael Chu |
+
+**⚠ Both lists are the core credits, not the full ones.** Each game was built by teams far
+larger than the names above — programmers, artists, QA, audio, localisation — and a
+complete credit roll is owed before publication. **What is here is a real start rather than
+a studio name standing in for a hundred people.**
 
 ### The game data itself — **✔ verified, read directly**
 
@@ -118,11 +155,16 @@ rulings govern this book over any source above where the two disagree.**
 
 ## ⚠ Before this book is published anywhere
 
-**Only the data files and BioWare's authorship are verified.** Both studios' publisher
-credits and all individual creative credits — designers, writers, artists — **are missing,
-not merely unverified.**
+**✔ Only the data files and BioWare's authorship are read from something held here.
+Everything else on this page is ◆ relayed** — strong, corroborated, and still not the same
+as having read it.
 
-**For this book that gap is larger than it was for the Timeline.** The Armory's content is
-overwhelmingly these teams' work, and it currently credits them by studio name alone.
-**Naming the people who designed this material is the highest-priority item on this page**,
-above every factual flag in the eleven chapters.
+**The gap that mattered most is now substantially closed.** This page previously credited
+two studios by name alone for a book whose content is overwhelmingly their teams' work.
+**It now names the people**, and that was the highest-priority item on it.
+
+**What remains owed:** the **full** credit rolls. The lists above are core credits — the
+programmers, artists, QA, audio and localisation staff who also built this material are not
+on them, and a complete roll should be taken from the games themselves before publication.
+**Still the highest-priority item on this page, above every factual flag in the eleven
+chapters** — but it is now a matter of completing a real list rather than starting one.

@@ -99,21 +99,32 @@ should feel free to adjust** if it sits wrong in play.
 
 # The catalogue
 
-**Every ranged weapon in both games, by family.** Fourteen families, **123 items** —
+**Every ranged weapon in both games, by family.** Eighteen families, **162 items** —
 organised Base versus Advanced by tier, the same shape as Chapter Two's eleven melee
 families.
 
-**What is not here, and why.** The games carry 173 pistol and rifle entries between them.
-**Fifty are excluded**, because they are things that exist only to make a video game work
-rather than items a character could ever own:
+**Fourteen of those families are pistols and rifles.** The last four are the heavier and
+thrown end of the same chapter — **repeating blasters, grenades, and the wrist launcher's
+munitions** — which are weapons a character carries and uses, and which belong here rather
+than nowhere.
 
-- **40 nameless `prop*` rows** — K2 placeholder weapons with no name at all.
-- **5 `g_w_null*` rows** — engine null-items, cost 0, literally named *"Blaster Pistol:
-  Null"* and so on.
+**What is not here, and why.** The games carry **219 entries** across the weapon categories
+this chapter covers. **Fifty-six are excluded**, because they are things that exist only to
+make a video game work rather than items a character could ever own:
+
+- **45 nameless `prop*` rows** — K2 placeholder weapons with no name at all.
+- **6 `g_w_null*` rows** — engine null-items, cost 0, literally named *"Blaster Pistol:
+  Null"*, *"Light Repeating Blaster: Null"* and so on.
 - **4 Bith instruments and a pazaak deck** — `g_i_bithitem001`–`004` and `w_pazaak_01`,
   given the Blaster Pistol base type so a cantina band and a card game could put something
   in a character's hands. **Their `g_i_` prefix marks them as items rather than weapons**,
   and all five carry the generic blaster-pistol description by copy-paste.
+
+**⚠ And one row is not a weapon at all.** The games file a single entry under `mine`:
+`mineruniform`, **a 10-credit *Miner Uniform*** — *"a standard uniform worn by miners at the
+Peragus facility… can be upgraded with some underlays."* **That is clothing**, and it belongs
+with the worn gear in Chapter Five rather than in a weapons list. **Recorded here so its
+absence from this catalogue is visibly a decision rather than an oversight.**
 
 **⚠ As in Chapter Two, the item code is not a guide to the family.** `w_brifle_` alone
 spans **four different families** here. **Families are determined by a weapon's own damage,
@@ -457,5 +468,105 @@ called.
 
 **Sniper Rifle** · `a_w_snprrfl01` · AUTHORED · Tier 2 · 800 credits · *no properties* — *“A long barrel, a heavy stock and a scope rail. It hits softly and it hits from where nobody expected.”*
 
+
+## Light Repeating Blaster — base die `2d6`, threat 20 / ×2
+
+### Base
+
+**Repeating Blaster Carbine** · `w_brifle_06` · K2 · Tier 1 · 350 credits · *no properties* — *“This weapon allows the user to fire more quickly than usual, increasing his chances of survival without drastically changing the amount of equipment he would normally carry.”*
+
+**Light Repeating Blaster** · `g_w_rptnblstr01` · K1 · Tier 1 · 500 credits · *no properties* — *“This weapon allows the user to fire more quickly than usual, increasing his chances of survival without drastically changing the amount of equipment he would normally carry.”*
+
+### Advanced
+
+**Blaster Cannon** · `g_w_rptnblstr03` · K1 · Tier 2 · 600 credits · *Enhancement 2* — *“The blaster cannon is a favorite among captains wealthy enough to hire experienced, dangerous crews and who might need a way to take them out quick if things go bad.”*
+
+**Medium Repeating Blaster** · `g_w_rptnblstr02` · K1 · Tier 2 · 800 credits · *Enhancement 1* — *“Weapons such as this are not usually available for public purchase. They are best utilized during quick troop deployment and other situations where rapid suppressing fire is required.”*
+
+**Repeating Blaster Rifle** · `w_brifle_10` · K2 · Tier 2 · 1,750 credits · *no properties* — *“This weapon allows the user to fire more quickly than usual, increasing his chances of survival without drastically changing the amount of equipment he would normally carry.”*
+
+**Combat Enforcer** · `w_brifle_16` · K2 · Tier 2 · 4,825 credits · *AttackPenalty Penalty_-2 · Massive Criticals 1d6 · OnHit (AbilityDrain) 10* — *“This powerful repeating blaster inflicts incredible pain and damage upon its victim, but is difficult to use effectively. Its origin is unclear, though there are some similarities to its design and that of Mandalorian weapons.”*
+
+**⚠ *name-field corrupted*** · `g1_w_rptnblstr01` · K1 · Tier 3 · 15,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 3 · Damage (Energy) 2d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
+
+**Onderon Repeating Carbine** · `w_brifle_26` · K2 · Tier 4 · 21,775 credits · *Damage (Energy) 2d6 · Enhancement 1* — *“These weapons were employed by the elite troops of Iziz during the Battle of Onderon. The power of these carbines, combined with their high rate of fire, was believed to play a considerable role in the rout of the Mandalorian forces.”*
+
+## Heavy Repeating Blaster — base die `2d8`, threat 20 / ×2
+
+### Advanced
+
+**Ordo's Repeating Blaster** ⚠ *unique* · `g_w_hvrptbltr002` · K1 · Tier 2 · 800 credits · *AttackBonus 1 · Damage (Energy) 1 · Damage (Energy) 1 · Damage (Energy) 1 · Damage (Energy) 1* — *“This prototype heavy repeater was developed during the latter part of the Mandalorian War and never saw general production.”*
+
+**Heavy Repeating Blaster** · `g_w_hvrptbltr01` · K1 · Tier 2 · 1,500 credits · *AttackBonus 1* — *“This weapon again increases the firepower available to the foot soldier or mercenary, but it is not for the lightly armored who wish to be quick on their feet.”*
+
+**Mandalorian Heavy Repeater** · `g_w_hvrptbltr02` · K1 · Tier 2 · 2,500 credits · *AttackBonus 1 · Damage (Ion) 1d4* — *“With this weapon, the Mandalorians again demonstrate a complete lack of subtlety. The only thing better than a big blaster, apparently, is one that shoots faster.”*
+
+**Heavy Repeating Carbine** · `w_brifle_17` · K2 · Tier 3 · 6,750 credits · *Damage (Energy) 1d6* — *“This weapon again increases the firepower available to the foot soldier or mercenary, but it is not for the lightly armored who wish to be quick on their feet. As it is a carbine, it cannot be upgraded.”*
+
+**Heavy Repeating Rifle** · `w_brifle_22` · K2 · Tier 3 · 15,000 credits · *Damage (Energy) 1d6* — *“The Heavy Repeating Rifle is one of the most powerful weapons available, delivering rapid bursts of intense energy.”*
+
+**⚠ *name-field corrupted*** · `g1_w_hvrptbltr01` · K1 · Tier 3 · 19,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Energy) 2d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
+
+**Mandalorian Heavy Repeater** · `w_brifle_28` · K2 · Tier 4 · 2,500 credits ⚠ *(reconciled to the KOTOR 1 price)* · *Damage (Energy) 1d8 · Massive Criticals 1d10* — *“With this weapon, the Mandalorians again demonstrate a complete lack of subtlety. The only thing better than a big blaster, apparently, is one that shoots faster.”*
+
+## Grenades — thrown, no base die
+
+### Base
+
+**Plasma Grenade** · `g_w_flashgren001` · K1 · Tier 1 · no sale value · *no properties* — ⚠ *Recorded with no effect and no description of its own, and its resref reads `flashgren` where its name reads Plasma. Listed because it is named; treat the `g_w_firegren001` entry above as the working Plasma Grenade.*
+
+**Minor Sonic Detonator** · `g_w_sonicdet01` · K2 · Tier 1 · 50 credits · *Damage: Sonic, 6pts · Secondary:* — *“: -2 Dexterity for 30 seconds Area of Effect: 4m Range: Long Save (Will): DC15 for half damage, negates dexterity penalty Sonic detonators are used when environmental conditions make more conventional explosives too dangerous. These detonators, while small, can still cause significant physical damage and disorient those near the explosion.”*
+
+**Sonic Detonator** · `g_w_sonicdet02` · K2 · Tier 1 · 70 credits · *Damage: Sonic, 12 pts · Secondary:* — *“: -4 Dexterity for 30 seconds Area of Effect: 4m Range: Long Save (Will): DC15 for half damage, negates dexterity penalty Sonic detonators are used when environmental conditions make more conventional explosives too dangerous. These detonators, while small, can still cause significant physical damage and disorient those near the explosion.”*
+
+**Frag Grenade** · `g_w_fraggren01` · K2+K1 · Tier 1 · 100 credits · *Damage: Piercing, 20pts · Area of Effect: 4 meters · Range: Long · Save : DC15 for half damage* — *“Damage: Piercing, 20pts Area of Effect: 4 meters Range: Long Save (Reflex): DC15 for half damage Fragmentation grenades are very basic. They explode when thrown, showering the enemy in shrapnel. It's not elegant, but it's definitely effective.”*
+
+**Concussion Grenade** · `g_w_stungren01` · K2+K1 · Tier 1 · 100 credits · *Damage: None · Secondary: Stun for 9sec · Area of Effect: 4m · Range: Long · Save: DC15 for no effect* — *“Damage: None Secondary: Stun for 9sec Area of Effect: 4m Range: Long Save (Will): DC15 for no effect This type of grenade explodes in a concussive wave of force that disrupts the senses of both organic and inorganic targets in the area of effect.”*
+
+**Adhesive Grenade** · `g_w_adhsvgren001` · K2+K1 · Tier 1 · 150 credits · *Damage: None · Secondary:* — *“: Entangle for 15sec Area of Effect: 4m Range: Long These grenades cover the target area in a gooey bio-adhesive that traps anyone caught within the effect. It quickly degrades, allowing allies to soon pass unhindered.”*
+
+**CryoBan Grenade** · `g_w_cryobgren001` · K2+K1 · Tier 1 · 150 credits · *Damage: Cold, 20pts · Secondary:* — *“: Paralyzation for 6sec Area of Effect: 4m Range: Long Save (Reflex): DC15 for half damage, negates paralyzation A CryoBan grenade releases a supercooled liquid that freezes on contact, causing intense pain and damage to victims caught in the effect.”*
+
+**Ion Grenade** · `g_w_iongren01` · K2+K1 · Tier 1 · 150 credits · *Damage: Ion, 15pts* — *“Damage: Ion, 15pts (45pts vs. droids) Area of Effect: 4m Range: Long Save (Reflex): DC15 for half damage These grenades emit an extremely strong burst of energy devastating to any droids or personal shields caught in the effect.”*
+
+**Poison Grenade** · `g_w_poisngren01` · K2+K1 · Tier 1 · 150 credits · *Damage: Special · Secondary: Poison, 4 pts every 3 sec · Duration: 30sec · Area of Effect: 4m · Range: Long · Save: DC25 for no effect* — *“Damage: Special Secondary: Poison, 4 pts every 3 sec Duration: 30sec Area of Effect: 4m Range: Long Save (Reflex): DC25 for no effect This grenade unleashes a blast of poison gas that affects the nervous system, lingering in the air to ensure that the effect is not escaped easily.”*
+
+**Sonic Grenade** · `g_w_sonicgren01` · K2+K1 · Tier 1 · 150 credits · *Damage: Sonic, 20pts · Secondary:* — *“: -6 Dexterity for 30 seconds Area of Effect: 4m Range: Long Save (Will): DC15 for half damage, negates dexterity penalty These grenades explode loudly, but the majority of their effect is delivered in disorienting frequencies the ear can barely perceive, even as it is damaged.”*
+
+### Advanced
+
+**Plasma Grenade** · `g_w_firegren001` · K2+K1 · Tier 2 · 750 credits · *Damage: Heat, 36pts · Area of Effect: 4m · Range: Long · Save: DC15 for half damage* — *“Damage: Heat, 36pts Area of Effect: 4m Range: Long Save (Reflex): DC15 for half damage These grenades release a quick burst of an incendiary agent that ignites immediately, damaging all enemies within the area of effect.”*
+
+**Thermal Detonator** · `g_w_thermldet01` · K2+K1 · Tier 2 · 2,000 credits · *Damage: Energy, 60pts · Secondary: Knockdown · Area of Effect: 4m · Range: Long · Save: DC15 for half damage* — *“Damage: Energy, 60pts Secondary: Knockdown Area of Effect: 4m Range: Long Save (Reflex): DC15 for half damage This Republic device contains a baradium compound that produces a small fusion energy explosion of great force. Civilian possession of these items is outlawed almost everywhere.”*
+
+## Wrist Launcher munitions — fired, no base die
+
+### Base
+
+**Wrist Launcher** · `g_i_wristlaunch` · K2 · Tier 1 · no sale value · *no properties* — *“Mira's cunningly-designed, custom wrist launcher is actually three separate weapon systems incorporated into single unit: a wrist-rocket launcher, a dart gun, and a mag-sling for launching hand grenades.”*
+
+**Explosive Rocket** · `w_rocket_01` · K2 · Tier 1 · 75 credits · *Damage: Piercing, 10 (single target) · Secondary: Piercing, 24 (area effect) · Area of Effect: 4 meters Range: Long · Save: DC15 for half damage* — *“This deadly anti-personnel wrist rocket detonates a secondary charge on impact, showering the target and those around it with shrapnel.”*
+
+**Tranquilizer Dart** · `w_rocket_02` · K2 · Tier 1 · 125 credits · *Damage: Piercing, 1 · Secondary: Stun · Duration: 9sec · Range: Short · Save: DC20 for no effect* — *“Tranquilizer darts' non-lethal toxin can knock a target out in seconds. Equally good for tagging Bantha for research purposes, or stopping a fleeing bounty mark in his tracks.”*
+
+**Buster Rocket** · `w_rocket_03` · K2 · Tier 1 · 275 credits · *Damage: Piercing, 50 · Range: Long · Save: DC15 for half damage* — *“This wrist rocket is designed for use against vehicles and heavy droids.”*
+
+**Kyber Dart** · `w_rocket_04` · K2 · Tier 1 · 350 credits · *Damage: Piercing, 1 · Secondary: Poison, 25pts every 6sec Duration: 18sec · Range: Short · Save: DC25 for half damage* — *“Kyber darts hail from the little-known world of Kamino. The Kaminoan's intimate knowledge of genetic engineering and xenobiology allow them to develop highly virulent biotoxins that kill with frightening efficiency.”*
+
+**Plasma Rocket** · `w_rocket_05` · K2 · Tier 1 · 490 credits · *Damage: Piercing, 10 · Secondary: Heat, 36pts · Area of Effect: 4m · Range: Long · Save: DC15 for half damage* — *“Plasma wrist rockets explode in a roiling ball of super-heated gas on impact. This generally has a markedly bad effect on the target and anything in its immediate area.”*
+
+### Advanced
+
+**Poison Rocket** · `w_rocket_06` · K2 · Tier 2 · 590 credits · *Damage: Piercing, 10 · Secondary: Poison, 5pts every 6sec Duration: 12sec · Area of Effect: 4m · Range: Long · Save: DC25 for no effect* — *“This hollow-tipped wrist rocket explodes in a blast of nerve gas when it strikes. The gas lingers for some time, generally killing the target if the rocket's impact did not.”*
+
+**Piercing Dart** · `w_rocket_08` · K2 · Tier 2 · 675 credits · *Damage: Piercing, 50 · Range: Medium · Save: DC10 for no effect* — *“Though easy to evade, this dart is often deadly when it strikes true.”*
+
+**Poison Dart** · `w_rocket_07` · K2 · Tier 2 · 690 credits · *Damage: Piercing, 1 · Secondary: Poison, 10pts every 6sec Duration: 18sec · Range: Short · Save: DC25 for no effect* — *“This dart contains a highly toxic chemical agent. Though the dosage is small, the concentrated poison is no less deadly that breathing nerve gas.”*
+
+**Paralysis Dart** · `w_rocket_09` · K2 · Tier 2 · 700 credits · *Damage: Piercing, 1 · Secondary: Paralysis · Duration: 9sec · Range: Short · Save: DC20 for Slow for 3sec* — *“A favorite among bounty hunters hoping to capture rather than kill their marks. The toxin on this dart affects the nervous system, causing grogginess or outright paralysis.”*
+
+**Ion Rocket** · `w_rocket_10` · K2 · Tier 2 · 875 credits · *Damage: Piercing, 10 · Secondary: Ion, 48pts · Area of Effect: 4m · Range: Long · Save: DC15 for half damage* — *“These wrist rockets emit a burst of energy on impact, severely damaging any droids or personal shields in the area of effect.”*
+
+**Concussion Rocket** · `w_rocket_11` · K2 · Tier 2 · 1,000 credits · *Damage: 1 · Secondary: Knock Down & Stun for 9sec · Range: Long · Save: DC15 for no effect* — *“Description: This generally non-lethal wrist rocket explodes with concussive force that knocks down and disorients the target.”*
 
 ---

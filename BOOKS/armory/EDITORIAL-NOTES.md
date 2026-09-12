@@ -2091,3 +2091,67 @@ how they surfaced: they had no chapter to be missing from.
 task, and there may be a scoping decision behind the omission that is not visible from here —
 heavy weapons and grenades may have been deliberately deferred. **But nothing in either
 chapter says so**, and a reader looking for a grenade will not find one. **Worth a ruling.**
+
+---
+
+# ⚠ Chapter Three extended — the 46-item gap closed
+
+**Ruled: catalogue them as new families in Chapter Three.** Done. **39 items added, 6 more
+exclusions recorded, and one row reclassified.** The chapter goes from fourteen families and
+123 items to **eighteen families and 162 items.**
+
+## The four new families
+
+**Split by base die and threat range, exactly as the existing fourteen are** — the chapter's
+own stated rule is that *"families are determined by a weapon's own damage, threat range and
+damage type,"* and the heavy category splits cleanly in two on that test:
+
+    Light Repeating Blaster   2d6, threat 20 / ×2    8 items
+    Heavy Repeating Blaster   2d8, threat 20 / ×2    7 items
+    Grenades                  thrown, no base die   12 items
+    Wrist Launcher munitions  fired, no base die    12 items
+
+**The repeaters were not one family.** Splitting them on the die keeps the chapter's rule
+intact rather than making a special case for the new material.
+
+**Grenades and munitions have no base die at all** — they carry their effect in properties
+rather than a weapon roll — so their headings say so rather than implying a die that is not
+there.
+
+## What was excluded, and the count now reconciles exactly
+
+    source rows in scope    219
+    prop* placeholders       45   (40 already recorded + 5 in heavy)
+    g_w_null* engine rows     6   (5 already recorded + 1 in heavy)
+    Bith instruments/pazaak   5
+    ⚠ reclassified            1   — the Miner Uniform
+    catalogued              162
+
+**Verified by set comparison, not arithmetic:** every source resref is either catalogued or
+in a named exclusion, and every catalogued resref exists in the source. **Nothing missing,
+nothing invented.**
+
+## ⚠ The `mine` category holds one row and it is not a mine
+
+`mineruniform` — **a 10-credit *Miner Uniform***, described as *"a standard uniform worn by
+miners at the Peragus facility… can be upgraded with some underlays."*
+
+**That is clothing.** It is recorded in the chapter's exclusion list with its description, so
+**its absence reads as a decision rather than an oversight**, and a reader is told where that
+kind of item lives.
+
+**⚠ It was not added to Chapter Five.** Doing so would push that chapter's `clothing`
+category from 16 to 17 and break the category agreement this task spent six passes
+establishing. **Moving it is a source change, not a chapter edit** — raised rather than done.
+
+## Two smaller finds inside the new material
+
+**Two of the heavy rows are string-table casualties** — `g1_w_hvrptbltr01` and
+`g1_w_rptnblstr01`, both `g1_`-prefixed like every other one in the book. **Catalogued with
+their real dice, prices and properties, marked, not renamed.** They are why the gap surfaced
+at all: they had no chapter to be missing from.
+
+**And one grenade is a near-empty row.** `g_w_flashgren001` is named *Plasma Grenade*, costs
+nothing, and carries **no properties and no description** — while its resref reads
+`flashgren` rather than `firegren`. **Listed because it is named**, and marked so a reader
+uses `g_w_firegren001` as the working Plasma Grenade instead of wondering which is which.

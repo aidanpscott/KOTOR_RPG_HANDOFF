@@ -1,6 +1,6 @@
 # Chapter Eight — The Unwritten Future
 
-**Status: DRAFT, for review.** `PROSE`. **No Major Figures section** — `PT-1802` scopes that
+**Status: APPROVED** by MAIN. `PROSE`. **No Major Figures section** — `PT-1802` scopes that
 structure to Chapters Three through Seven, and this chapter has no fixed roster by design.
 
 ---

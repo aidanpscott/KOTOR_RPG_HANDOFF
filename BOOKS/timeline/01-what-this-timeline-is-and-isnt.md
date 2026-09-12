@@ -1,6 +1,6 @@
 # Chapter One — What This Timeline Is, And Isn't
 
-**Status: DRAFT, for review.** First chapter of the Galactic Timeline, written after the
+**Status: APPROVED** by MAIN. First chapter of the Galactic Timeline, written after the
 sourcing assessment at `TO-MAIN-44-AUTHOR.md` and the rulings that closed it.
 
 ---

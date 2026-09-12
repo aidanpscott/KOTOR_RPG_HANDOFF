@@ -1,6 +1,6 @@
 # Chapter Two — Deep History
 
-**Status: DRAFT, for review.** Written under the deep-history exception
+**Status: APPROVED** by MAIN. Written under the deep-history exception
 (`METHOD-RECORD-01 §3`) and therefore **narrative only** — no Major Figures section, per
 `PT-1802`, which scopes that structure to Chapters Three through Seven. Named figures stay
 woven into the account here.

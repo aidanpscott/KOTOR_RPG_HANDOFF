@@ -89,6 +89,25 @@ a book where that failure is least acceptable.
 
 ---
 
+# 1c · ⚠ FLAG RESOLUTION — STANDING PRACTICE, EVERY BOOK
+
+**When a flag raised in a chapter is later resolved — by a ruling, by a fix at source, or
+by the author — leave the flag where it is and APPEND how and when it resolved.** Mark it
+**✔**. **Never silently delete a flag, and never rewrite it to read as though it had never
+been raised.**
+
+**Why:** the same reason the ruling ledger preserves its corrections rather than editing
+history away. A flag that vanishes takes with it the evidence that anyone checked.
+
+**The failure this prevents was found in this project's own work.** The Galactic Timeline's
+consistency pass found **eight flags describing defects that had already been fixed** —
+several fixed at source by MAIN after the chapters were written. A reader would have been
+sent hunting bugs that no longer existed, and would have trusted the chapter over the
+corpus. **That is `PT-961`'s shape** — *"when a ruling changes a table, it does not change
+the sentences that read from it"* — **and flags turn out to be a table like any other.**
+
+---
+
 # 2 · THE EIGHT BOOKS
 
 ---

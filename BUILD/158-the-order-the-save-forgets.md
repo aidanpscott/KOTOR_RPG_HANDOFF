@@ -157,6 +157,44 @@ threat `19–20` and the two ion multipliers.
 rulings old. **Fetch, rebase, re-extract, re-verify, then push** is the loop
 that caught it.
 
+## 10 · ⚠⚠ AUTHOR'S TRUNCATION FLAG — `[:220]`, AND THREE FINDINGS UNDER IT
+
+`build_inventory.py:291` ends with `[:220]`. Every cut cell is **exactly 220
+characters**, which is what makes the population countable — and it is **436
+cells across seven documents**, not the 30 in one that was visible. `301` are
+restored.
+
+**⚠⚠ REPAIRED, NOT REGENERATED.** Re-running the builder closes all of them
+and **overwrites every hand-ruled correction in the same files** —
+`PT-1825`/`1826`'s `×3` revert, `PT-1822`'s threat ranges, the authored
+Marksman and Sniper rows. So the repair keeps the document's own 220
+characters **verbatim** and appends only what was cut.
+
+**⚠ `g_w_dblsbr006` FORCED THAT RULE.** The document reads *"the Dark Side of
+the Force"* where KOTOR's string reads *"the dark side"* — **a hand correction
+inside the truncated span.** Splicing the source wholesale would have reverted
+it silently, in a row that looked like it was merely getting longer.
+
+**⚠⚠ 182 ORPHANED DESCRIPTION ROWS — a separate and bigger defect, NOT fixed.**
+`ITEMS-07` carries **154 description rows for 20 items**. `154 − 20 = 134`,
+exactly the count `PT-781` moved into `ITEMS-09`: **the item rows moved and
+their description rows did not.** `PT-871`'s header note says the file is not
+truncated and the header was stale — both true, and neither is about these.
+Which item each belongs to is the document owner's question.
+
+**⚠ 15 CRYSTAL ROWS COMPOSE PROPERTIES WITH THE DESCRIPTION**, so the `.uti`
+string alone is shorter than the 220 that was cut and cannot be prefix-matched.
+Refused rather than guessed.
+
+**⚠ AND THE PREFIX CHECK CAUGHT MY OWN TWO BUGS.** The game column is `K2+K1`
+for the 74 items in both games and `AUTHORED` for ours; a pattern matching only
+`K\d` left the cursor on the **previous** item and attributed descriptions to
+the wrong weapon — which reads as a successful repair right up until the source
+text refuses to match. **A repair that only ever appends to text it has already
+verified cannot land a wrong answer quietly.**
+
+590 lines change on the shelf and every one is a `description` field.
+
 ---
 
 ## Tests

@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `cc780df` — `PT-1610`'s shape, and a sentence nothing read |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `0030f06` — `PT-1763` reaches the app, and `§2.4` with it |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `5ed6185` — pinned to `PT-1729`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `081ef6b` — the edge speaks, and so does the speed note |      ⚠ no |
+| `KOTOR-RPG-APP` | `7654d6c` — a droid may take Science and Survival |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,13 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 530 — 1,460, all
-green.** *(`BUILD 146`.)*
+**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 531 — 1,461, all
+green.** *(`BUILD 147`.)*
+
+⚠ **`base-rules/rules/droid_skills.toml` WAS REPLACED AT `BUILD 147`** —
+`PT-1718`'s Science and Survival, months after the ruling. The generated
+package was diffed against the installed one first: that file was the only
+difference.
 
 ⚠ **`base-rules` GAINED TWO FILES AT `BUILD 145`** — `designations.toml` (38
 rows) and `reserved.toml` (8). The generated package was diffed against the

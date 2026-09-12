@@ -56,6 +56,39 @@ was re-run this round.
 
 ---
 
+# 1b · ⚠⚠ REQUIRED IN EVERY BOOK — `PT-1813`
+
+**Three elements, every book in this set, present and future. Not optional and not
+per-book judgement.**
+
+**1 · The disclaimer**, on **page two or three, before any content**. **Reproduced word for
+word** — it may not be paraphrased, shortened, or reworded:
+
+> This is an unofficial, non-commercial fan project. It is not affiliated with, endorsed
+> by, or produced by Lucasfilm Ltd., Disney, BioWare, or any rights holder of Star Wars or
+> Knights of the Old Republic. All Star Wars trademarks, characters, and copyrighted
+> material referenced herein remain the property of their respective owners. This work is
+> created by fans, for fans, and is distributed free of charge. No part of it is sold, and
+> no revenue is generated from it in any form.
+
+**2 · A sourced bibliography**, **scoped to what that book actually used** — real author and
+publisher credit. **Per book, not one project-wide list**; each book's author writes its
+own from the sources that book drew on.
+
+**3 · A `[INSERT PERSONAL NOTE HERE]` placeholder**, left **empty**. This is the owner's
+own acknowledgment in his own voice. **Mark it clearly and do not draft it.**
+
+**Implemented for the Galactic Timeline** at `BOOKS/timeline/00-front-matter.md` (elements
+1 and 3) and `BOOKS/timeline/09-bibliography.md` (element 2). **⚠ Still owed by the Armory
+and by every book drafted from here.**
+
+**One practice worth carrying forward from the Timeline's bibliography:** mark each entry
+**verified** or **unverified** against a source actually held. A credit page names real
+people who did the work, and mixing checked and assumed credit silently is the one place in
+a book where that failure is least acceptable.
+
+---
+
 # 2 · THE EIGHT BOOKS
 
 ---

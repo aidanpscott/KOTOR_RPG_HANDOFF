@@ -481,8 +481,15 @@ from ×3 to ×2**. `EQUIPMENT-01` now carries all three.
 corrected file, zero changed stat line, and zero real rows are missing from the
 catalogue.** The membership capture held.
 
-**⚠ But the ×3 revert is partial in `ITEMS-01`, and the Bowcaster was never in scope.**
-**Nine ion variant rows still read ×3** where their own base weapons now read ×2:
+**✔ The ×3 revert is now complete** (`PT-1825`, commit `f408708`) — **all nine ion variant
+rows and all six Bowcaster rows corrected to ×2.** Verified by reading the file at that
+commit directly: **the only ×3 rows remaining are the seven nameless `prop*` placeholders**,
+which this catalogue already excludes. **The Bowcaster was extended into scope on the
+reasoning that ×3 is unsupported by either game's raw data** — K1's `Bowcaster` base row
+carries `crithitmult` 2 — **which is the same reasoning the ion revert rested on.**
+
+*Recorded for the history, since the flag-resolution convention keeps what was raised:* the
+nine ion variants were —
 
     Ion Blaster   w_blaste_10   Aratech Droid Oxidizer
                   w_blaste_21   Aratech Ionmaster
@@ -494,13 +501,10 @@ catalogue.** The membership capture held.
                   w_brifle_29   Verpine Droid Disintegrator
                   g1_w_ionrfl01 (the corrupted-name row, Flag 4)
 
-**And six Bowcaster rows read ×3**, which **K1's raw `baseitems.2da` contradicts directly —
-the `Bowcaster` base row is `crithitmult` 2.** The owner's stated reason for the ion revert
-was that ×3 is *unsupported by either game's raw data*; **that reasoning applies to the
-Bowcaster identically**, and it was simply not part of the ruling's scope.
+— **all now ×2**, along with the six Bowcaster rows.
 
-**The family headings above state the ruled and raw-data-supported ×2 throughout.**
-**Reported rather than edited** — `ITEMS-01` is a rules document.
+**The family headings above state ×2 throughout and always did**, so nothing in this
+catalogue changed when the fix landed.
 
 **⚠ Flag 2 — `ITEMS-01`'s ion rows are internally inconsistent, which is how this was
 caught.** Two base Ion Rifles (`g_w_ionrfl01`, `w_brifle_07`) already read ×2 while their

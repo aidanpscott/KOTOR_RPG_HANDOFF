@@ -51,24 +51,30 @@ properties and the item's own description.
 
 ## ⚠⚠ Two things to know before using it
 
-**⚠ 1 — Forty-nine of these 129 rows have a property the data does not fully resolve.** The
-commonest shape is a skill bonus whose *size* is known and whose *skill* is not: **`Skill
-bonus +4`, and no name attached to it.** The games store the skill as a numeric index, and
-that index was never mapped back to a name for most of these rows.
+**⚠ 1 — Forty-nine of these 129 rows had a property the data did not fully resolve, and the
+skills among them are now named.** The commonest shape was a skill bonus whose *size* was
+known and whose *skill* was not: **`Skill bonus +4`, and no name attached to it.** The games
+store the skill as a numeric index, and that index had never been mapped back to a name.
 
-> **The magnitude is real and usable. The label is missing.** A `Droid Motion Sensors Type
-> 2` grants **+4 to something**, and the item's name and description make the likely answer
-> obvious — **but likely is not the same as recorded, and nothing here guesses.**
+**⚠ IT IS MAPPED NOW, FROM THE GAMES' OWN TABLE.** `skills.2da` is eight rows —
+ComputerUse, Demolitions, Stealth, Awareness, Persuade, Repair, Security, TreatInjury — and
+**both games ship it row for row identical**, so one mapping serves the whole chapter.
+**Thirty-nine properties across thirty-three rows now carry a name.**
 
-**Each unresolved property keeps its index in the margin**, so that whoever resolves them
-can work from this page directly. **The same applies to a handful of Defence penalties and
-to the character-lock on the Named items** — the lock is real, the character it names is
-not resolved.
+> **Nothing was resolved from the page.** Each index was read back off the item's own
+> `.uti` and matched on **both** the subtype and the magnitude, so a margin that disagreed
+> with its blueprint would have been reported rather than rewritten. None disagreed.
 
-**⚠ And one row proves the mapping is recoverable.** The `Advanced Droid Interface` carries
+**Twenty-two rows still carry an unresolved property**, and each keeps its index in the
+margin so that whoever resolves them can work from this page directly: **eight saving-throw
+subtypes, ten character-locks, four racial subtypes and one Defence type.** The
+character-lock is real and the character it names is not resolved.
+
+**⚠ And one row proved the mapping was recoverable.** The `Advanced Droid Interface` carried
 its four skills by name — **Awareness, Computer Use, Demolitions, Security** — where its
-six neighbours in the same category carry bare indices. **The resolution exists. It was
-simply not applied to the rest.**
+six neighbours in the same category carried bare indices. **The resolution existed. It had
+simply not been applied to the rest.** It has been now, and that row was the check: its own
+four indices — 3, 0, 1, 6 — resolve to exactly the four names it was already printing.
 
 **⚠ 2 — This chapter's item total was wrong, and the catalogue is what corrected it.** The
 count had stood at **135**. Counting the rows gives **129**, and every one of the eight
@@ -141,13 +147,13 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 ## Interface — 15
 
-**Droid Optimized Interface** · `d_interface_01` · K2 · Tier 1 · 50 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 0)* — *“This interface is streamlined for more efficient, and thus more effective, interactions with computer terminals.”*
+**Droid Optimized Interface** · `d_interface_01` · K2 · Tier 1 · 50 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Computer Use) 2 — *“This interface is streamlined for more efficient, and thus more effective, interactions with computer terminals.”*
 
-**Droid Stabilization Subroutine** · `d_interface_02` · K2 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 1)* — *“This module provides extra computing power for the droid's motivators and actuators, allowing it to make smoother and more subtle movements... two very handy things to have when disarming a mine.”*
+**Droid Stabilization Subroutine** · `d_interface_02` · K2 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Demolitions) 4 — *“This module provides extra computing power for the droid's motivators and actuators, allowing it to make smoother and more subtle movements... two very handy things to have when disarming a mine.”*
 
-**Droid Machine Interface** · `d_interface_03` · K2 · Tier 1 · 300 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 5)* — *“This interface is designed to interact with most standard types of droids, machines, and equipment, allowing complex and detailed analysis of problems to be sent to the droid for reference.”*
+**Droid Machine Interface** · `d_interface_03` · K2 · Tier 1 · 300 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Repair) 4 — *“This interface is designed to interact with most standard types of droids, machines, and equipment, allowing complex and detailed analysis of problems to be sent to the droid for reference.”*
 
-**Droid Lockout Bypass** · `d_interface_04` · K2 · Tier 2 · 850 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 0)* · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 6)* — *“This interface is designed to bypass most standard lock-out and security measures common for mass-produced terminals and locks.”*
+**Droid Lockout Bypass** · `d_interface_04` · K2 · Tier 2 · 850 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Computer Use) 3 · Skill (Security) 3 — *“This interface is designed to bypass most standard lock-out and security measures common for mass-produced terminals and locks.”*
 
 **Droid Parabolic Guides** · `d_interface_05` · K2 · Tier 2 · 1,100 credits · Ability (Dexterity) 2 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · ImprovedSavingThrowsSpecific ⚠ *(unresolved — `iprp_savingthrow` subtype 2)* 2 — *“These modifications tie directly into the droid's sensors and provides multiple trajectory possibilities and solutions for munitions fired at the droid.”*
 
@@ -159,15 +165,15 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Droid Wisdom Upgrade** · `d_interface_09` · K2 · Tier 3 · 7,600 credits · Ability (Wisdom) 2 · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · ImprovedSavingThrowsSpecific ⚠ *(unresolved — `iprp_savingthrow` subtype 3)* 2 — *“This module increases the droid's reasoning and self-identity by removing most of the factory-installed safety restrictions put in place during its manufacture.”*
 
-**Droid Exchange Interface** · `d_interface_10` · K2 · Tier 3 · 12,000 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 0)* · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 6)* — *“This interface solves the problem of unknown access codes - if you can find it on the black market.”*
+**Droid Exchange Interface** · `d_interface_10` · K2 · Tier 3 · 12,000 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Computer Use) 3 · Skill (Security) 6 — *“This interface solves the problem of unknown access codes - if you can find it on the black market.”*
 
-**Droid Remote Interface** · `d_interface_11` · K2 · Tier 3 · 14,800 credits · DecreasedSkill ⚠ *(unresolved — `skills` subtype 3)* Penalty_-3 · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 6)* — *“This interface uses a wire-free signal to completely bypass security hardware and countermeasures. This signal takes much of the droid's power to maintain, however, and a loss of cognitive awareness is the result.”*
+**Droid Remote Interface** · `d_interface_11` · K2 · Tier 3 · 14,800 credits · DecreasedSkill (Awareness) Penalty_-3 · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Security) 10 — *“This interface uses a wire-free signal to completely bypass security hardware and countermeasures. This signal takes much of the droid's power to maintain, however, and a loss of cognitive awareness is the result.”*
 
 **Droid Anatomy Library** · `d_interface_12` · K2 · Tier 3 · 18,000 credits · AttackBonusRacialGroup ⚠ *(unresolved — `racialtypes` subtype 6)* 3 · DamageRacialGroup ⚠ *(unresolved — `racialtypes` subtype 6)* 1d10 · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“This upgrade provides the droid with numerous files and other reference material relating to the anatomy of humanoid creatures, giving the droid an intimate knowledge of their strengths and weaknesses.”*
 
-**Droid Scavenger Upgrade** · `d_interface_13` · K2 · Tier 3 · 20,000 credits · Ability (Constitution) 2 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Immunity (Critical Hits) 0 · ImprovedSavingThrowsSpecific ⚠ *(unresolved — `iprp_savingthrow` subtype 1)* 3 · Skill bonus +5 ⚠ *(which skill is unresolved — subtype 5)* — *“This upgrade enhances your droid's self-diagnostics and self-repair capability, allowing it to sustain itself by scavenging parts from the environment as well as its own non-critical systems.”*
+**Droid Scavenger Upgrade** · `d_interface_13` · K2 · Tier 3 · 20,000 credits · Ability (Constitution) 2 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Immunity (Critical Hits) 0 · ImprovedSavingThrowsSpecific ⚠ *(unresolved — `iprp_savingthrow` subtype 1)* 3 · Skill (Repair) 5 — *“This upgrade enhances your droid's self-diagnostics and self-repair capability, allowing it to sustain itself by scavenging parts from the environment as well as its own non-critical systems.”*
 
-**Droid Source Ripper** · `d_interface_14` · K2 · Tier 4 · 25,000 credits · ArmorRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 0)* — *“This interface allows the droid to see the original coding used to create a computer system, thus allowing unprecedented access to sub-systems that even the programmer might not have known to exist.”*
+**Droid Source Ripper** · `d_interface_14` · K2 · Tier 4 · 25,000 credits · ArmorRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Computer Use) 10 — *“This interface allows the droid to see the original coding used to create a computer system, thus allowing unprecedented access to sub-systems that even the programmer might not have known to exist.”*
 
 **Droid Systems Upgrade** · `d_interface_15` · K2 · Tier 4 · 28,880 credits · Ability (Constitution) 2 · Ability (Dexterity) 4 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate — *“Using higher mathematics and an advanced binary languages, this upgrade completely re-writes the droid's system software to be more efficient, more powerful, and much faster.”*
 
@@ -175,11 +181,11 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **⚠ These are character-locked in the source.** Chapter Fourteen treats them as a template for unique droid gear rather than as three specific characters, since a KOTOR-era campaign has no `HK-47`.
 
-**Droid Stealth Booster** · `d_g0t0_01` · K2 · Tier 3 · 6,000 credits · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill bonus +5 ⚠ *(which skill is unresolved — subtype 2)* — *“This unit coaxes more power out of existing stealth unit circuitry, improving its effect notably.”*
+**Droid Stealth Booster** · `d_g0t0_01` · K2 · Tier 3 · 6,000 credits · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill (Stealth) 5 — *“This unit coaxes more power out of existing stealth unit circuitry, improving its effect notably.”*
 
-**Droid Omniscience Unit** · `d_g0t0_02` · K2 · Tier 3 · 6,000 credits · AttackBonus 3 · Immunity (Critical Hits) 0 · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +5 ⚠ *(which skill is unresolved — subtype 1)* — *“This sensor array has unique technology that allows the droid to basically know what is going on around it at all times.”*
+**Droid Omniscience Unit** · `d_g0t0_02` · K2 · Tier 3 · 6,000 credits · AttackBonus 3 · Immunity (Critical Hits) 0 · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill (Awareness) 10 · Skill (Demolitions) 5 — *“This sensor array has unique technology that allows the droid to basically know what is going on around it at all times.”*
 
-**Droid Singulararity Projector** · `d_g0t0_03` · K2 · Tier 3 · 6,000 credits · BonusFeats (Cautious) · BonusFeats (Improved Caution) · BonusFeats (Master Caution) · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 2)* — *“While it is unknown where the technology came from to create such a device on such a small scale, the outcome is well worth any possible compatability dangers. This unit actually folds space around the droid, making it not only appear to be gone, but actually ripping it out of normal space... the droid *is* gone.”*
+**Droid Singulararity Projector** · `d_g0t0_03` · K2 · Tier 3 · 6,000 credits · BonusFeats (Cautious) · BonusFeats (Improved Caution) · BonusFeats (Master Caution) · ⚠ *Character-locked (which character is unresolved — subtype 9)* · Skill (Stealth) 10 — *“While it is unknown where the technology came from to create such a device on such a small scale, the outcome is well worth any possible compatability dangers. This unit actually folds space around the droid, making it not only appear to be gone, but actually ripping it out of normal space... the droid *is* gone.”*
 
 **Goto Targeting Module** · `d_g0t0_04` · K2 · Tier 2 · 4,000 credits · BonusFeats (Improved Power Blast) ⚠ attack chain · BonusFeats (Improved Rapid Shot) ⚠ attack chain · BonusFeats (Improved Sniper Shot) ⚠ attack chain · BonusFeats (Power Blast) ⚠ attack chain · BonusFeats (Rapid Shot) ⚠ attack chain · BonusFeats (Sniper Shot) ⚠ attack chain · ⚠ *Character-locked (which character is unresolved — subtype 9)* — *“This droid auxiliary processor provides exceptional ranged combat abilities.”*
 
@@ -249,17 +255,17 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 ## Sensor — 12
 
-**Droid Motion Sensors Type 1** · `g_i_drdmtnsen001` · K1 · Tier 1 · 50 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 3)* — *“These devices allow a droid to better detect creatures hidden by stealth fields. This basic model is the most inexpensive of the type, and is commonly available on many worlds.”*
+**Droid Motion Sensors Type 1** · `g_i_drdmtnsen001` · K1 · Tier 1 · 50 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Awareness) 2 — *“These devices allow a droid to better detect creatures hidden by stealth fields. This basic model is the most inexpensive of the type, and is commonly available on many worlds.”*
 
-**Droid Motion Sensors Type 2** · `g_i_drdmtnsen002` · K1 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* — *“This sensor package greatly enhances droid vision, increasing the likelihood of detecting creatures hidden by stealth fields. This model is marketed mainly to manufacturers of sentry and combat droids.”*
+**Droid Motion Sensors Type 2** · `g_i_drdmtnsen002` · K1 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Awareness) 4 — *“This sensor package greatly enhances droid vision, increasing the likelihood of detecting creatures hidden by stealth fields. This model is marketed mainly to manufacturers of sentry and combat droids.”*
 
-**Droid Motion Sensors Type 3** · `g_i_drdmtnsen003` · K1 · Tier 1 · 200 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 3)* — *“Incorporating the most sophisticated sensors available, this model of upgrade is usually purchased for special-duty droids guarding sensitive materials or galactic heads of state.”*
+**Droid Motion Sensors Type 3** · `g_i_drdmtnsen003` · K1 · Tier 1 · 200 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Awareness) 6 — *“Incorporating the most sophisticated sensors available, this model of upgrade is usually purchased for special-duty droids guarding sensitive materials or galactic heads of state.”*
 
-**Droid Sonic Sensors Type 1** · `g_i_drdsncsen001` · K1 · Tier 1 · no sale value · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 3)* — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
+**Droid Sonic Sensors Type 1** · `g_i_drdsncsen001` · K1 · Tier 1 · no sale value · Skill (Awareness) 2 — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
 
-**Droid Sonic Sensors Type 2** · `g_i_drdsncsen002` · K1 · Tier 1 · no sale value · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 3)* — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
+**Droid Sonic Sensors Type 2** · `g_i_drdsncsen002` · K1 · Tier 1 · no sale value · Skill (Awareness) 3 — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
 
-**Droid Sonic Sensors Type 3** · `g_i_drdsncsen003` · K1 · Tier 1 · no sale value · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
+**Droid Sonic Sensors Type 3** · `g_i_drdsncsen003` · K1 · Tier 1 · no sale value · Skill (Awareness) 4 — *“These devices allow detection of hidden or visually camouflaged intruders. Better quality sensors provide more sensitive background noise filtering to improve performance.”*
 
 **Basic Targeting Computer** · `g_i_drdtrgcom001` · K1 · Tier 1 · 500 credits · BonusFeats (Weapon Focus Blaster) · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“Battle droids come factory-ready for combat, but it is still wise to invest in targeting computer upgrades to optimize performance at range. Cost rises with quality, as always.”*
 
@@ -267,11 +273,11 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Superior Targeting Computer** · `g_i_drdtrgcom003` · K1 · Tier 2 · 2,000 credits · BonusFeats (Weapon Focus Blaster) · BonusFeats (Weapon Focus Blaster Rifle) · BonusFeats (Weapon Spec Blaster) · BonusFeats (Weapon Spec Blaster Rifle) · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate — *“Reserved for the highest quality battle droids, targeting units of this type are rarely seen outside of military operations.”*
 
-**Sensor Probe** · `g_i_drdtrgcom004` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 1)* — *“This basic probe improves a droid's demolitions capabilities, allowing for more sensitive adjustments of volatile substances. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
+**Sensor Probe** · `g_i_drdtrgcom004` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Demolitions) 2 — *“This basic probe improves a droid's demolitions capabilities, allowing for more sensitive adjustments of volatile substances. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
 
-**Verpine Demolitions Probe** · `g_i_drdtrgcom005` · K1 · Tier 2 · 1,000 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 1)* — *“Wartime contracts over the last forty years saw a great deal of money poured into Verpine droid modifications, particularly in the area of demolitions. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
+**Verpine Demolitions Probe** · `g_i_drdtrgcom005` · K1 · Tier 2 · 1,000 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Demolitions) 4 — *“Wartime contracts over the last forty years saw a great deal of money poured into Verpine droid modifications, particularly in the area of demolitions. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
 
-**Bothan Demolitions Probe** · `g_i_drdtrgcom006` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 1)* — *“Concerning demolitions, the Bothans prefer well-equipped droids for the task of explosives management, and invest research accordingly. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
+**Bothan Demolitions Probe** · `g_i_drdtrgcom006` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Demolitions) 6 — *“Concerning demolitions, the Bothans prefer well-equipped droids for the task of explosives management, and invest research accordingly. A droid must have basic Demolitions software (paid points into the skill) to benefit from this item.”*
 
 ## Shield — 13
 
@@ -307,37 +313,37 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Advanced Droid Interface** · `g1_i_drdcomspk01` · K1 · Tier 3 · 9,000 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Awareness) 7 · Skill (Computer Use) 7 · Skill (Demolitions) 7 · Skill (Security) 7 — *“A self-contained artificial intelligence system, this module can be equipped on droids to provide them with additional resources useful in the bypassing of computer and conventional security systems. This AI extends the current capabilities of the mounting droid to a level typically only seen on military espionage droids.”*
 
-**Computer Probe** · `g_i_drdcomspk001` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 0)* — *“This retractable probe allows droid access to the higher programming functions of any computer terminal. Better quality probes provide cleaner access, increasing functionality.”*
+**Computer Probe** · `g_i_drdcomspk001` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Computer Use) 2 — *“This retractable probe allows droid access to the higher programming functions of any computer terminal. Better quality probes provide cleaner access, increasing functionality.”*
 
-**Universal Computer Interface** · `g_i_drdcomspk002` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 0)* — *“The best and most expensive of its type available, this retractable probe allows droid access to the higher programming functions of any computer terminal.”*
+**Universal Computer Interface** · `g_i_drdcomspk002` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Computer Use) 6 — *“The best and most expensive of its type available, this retractable probe allows droid access to the higher programming functions of any computer terminal.”*
 
-**Advanced Computer Tool** · `g_i_drdcomspk003` · K1 · Tier 2 · 1,000 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 0)* — *“Like the basic unit, this retractable probe allows droid access to the higher programming functions of any computer terminal, though better interface adapters make it more effective.”*
+**Advanced Computer Tool** · `g_i_drdcomspk003` · K1 · Tier 2 · 1,000 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Computer Use) 4 — *“Like the basic unit, this retractable probe allows droid access to the higher programming functions of any computer terminal, though better interface adapters make it more effective.”*
 
-**Security Interface Tool** · `g_i_drdsecspk001` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 6)* — *“Pioneered by Toshan Gant, this is the basic droid security breaker in use across the galaxy. Gant did most of his research for the Republic military after private efforts led to his imprisonment. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
+**Security Interface Tool** · `g_i_drdsecspk001` · K1 · Tier 1 · 500 credits · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Security) 2 — *“Pioneered by Toshan Gant, this is the basic droid security breaker in use across the galaxy. Gant did most of his research for the Republic military after private efforts led to his imprisonment. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
 
-**Security Domination Interface** · `g_i_drdsecspk002` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +6 ⚠ *(which skill is unresolved — subtype 6)* — *“Modified on the aftermarket, this Toshan Gant security breaker is the best available. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
+**Security Domination Interface** · `g_i_drdsecspk002` · K1 · Tier 2 · 1,500 credits · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Security) 6 — *“Modified on the aftermarket, this Toshan Gant security breaker is the best available. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
 
-**Security Decryption Interface** · `g_i_drdsecspk003` · K1 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 6)* — *“This model of security breaker is no longer in production. It was an effective option before the factories of Toshan Gant took over the market. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
+**Security Decryption Interface** · `g_i_drdsecspk003` · K1 · Tier 1 · 100 credits · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate · Skill (Security) 4 — *“This model of security breaker is no longer in production. It was an effective option before the factories of Toshan Gant took over the market. A droid must have basic Security software (paid points into the skill) to benefit from this item.”*
 
 ## Tool — 18
 
-**Droid Motion Tracker** · `d_tool_01` · K2 · Tier 1 · 75 credits · AttackBonus 1 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 3)* — *“A droid enhancement that increases the perception and tracking of targets in combat.”*
+**Droid Motion Tracker** · `d_tool_01` · K2 · Tier 1 · 75 credits · AttackBonus 1 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Awareness) 2 — *“A droid enhancement that increases the perception and tracking of targets in combat.”*
 
 **Droid Upgrade Slot** · `d_tool_02` · K2 · Tier 1 · 200 credits · BonusFeats (Droid Upgrade 2) ⚠ bay gate · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate — *“This module reprograms a droid's systems to allow upgrades that normally would be too advanced for that droid to handle.”*
 
-**Droid Surveillance Upgrade** · `d_tool_03` · K2 · Tier 2 · 600 credits · Ability (Dexterity) 1 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +3 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +1 ⚠ *(which skill is unresolved — subtype 1)* — *“An upgrade designed for light scout droids and other listening models.”*
+**Droid Surveillance Upgrade** · `d_tool_03` · K2 · Tier 2 · 600 credits · Ability (Dexterity) 1 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Awareness) 3 · Skill (Demolitions) 1 — *“An upgrade designed for light scout droids and other listening models.”*
 
 **Droid Advanced Upgrade Slot** · `d_tool_04` · K2 · Tier 2 · 900 credits · BonusFeats (Droid Upgrade 3) ⚠ bay gate · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“This module reprograms a droid's systems to allow upgrades that normally would be too advanced for that droid to handle.”*
 
-**Droid Reference Database** · `d_tool_05` · K2 · Tier 2 · 1,300 credits · AttackBonusRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 5)* — *“This unit provides your droid with a library of schematics that it can draw upon when repairing or dismantling technology.”*
+**Droid Reference Database** · `d_tool_05` · K2 · Tier 2 · 1,300 credits · AttackBonusRacialGroup ⚠ *(unresolved — `racialtypes` subtype 5)* 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Repair) 4 — *“This unit provides your droid with a library of schematics that it can draw upon when repairing or dismantling technology.”*
 
 **Droid System Fortification** · `d_tool_06` · K2 · Tier 2 · 2,200 credits · DamageResist (Ion) Resist_10/- · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate — *“This module carefully monitors and regulates the circuitry of the droid, preventing minor spikes and fluctuations from causing disruptions.”*
 
-**Droid Fighting Upgrade** · `d_tool_07` · K2 · Tier 2 · 3,700 credits · AttackBonus 3 · Armor 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 3)* — *“This module is designed to give your droid a tactical advantage in combat by increasing its sensor range, reflexes, and logic systems.”*
+**Droid Fighting Upgrade** · `d_tool_07` · K2 · Tier 2 · 3,700 credits · AttackBonus 3 · Armor 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Awareness) 2 — *“This module is designed to give your droid a tactical advantage in combat by increasing its sensor range, reflexes, and logic systems.”*
 
-**Droid Perception Sensors** · `d_tool_08` · K2 · Tier 3 · 6,100 credits · AttackBonus 2 · Armor 1 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +8 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 1)* — *“This sensor cluster scans the entire light spectrum and audio frequencies well beyond the range of most organic beings. It is nearly impossible for something to occur within the droid's perceptive range without its knowing about it.”*
+**Droid Perception Sensors** · `d_tool_08` · K2 · Tier 3 · 6,100 credits · AttackBonus 2 · Armor 1 · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Awareness) 8 · Skill (Demolitions) 2 — *“This sensor cluster scans the entire light spectrum and audio frequencies well beyond the range of most organic beings. It is nearly impossible for something to occur within the droid's perceptive range without its knowing about it.”*
 
-**Droid Memory Upgrade** · `d_tool_09` · K2 · Tier 3 · 9,200 credits · Ability (Intelligence) 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill bonus +5 ⚠ *(which skill is unresolved — subtype 0)* — *“This upgrade provides extra memory banks and computing power that can be integrated seamlessly with its existing programming.”*
+**Droid Memory Upgrade** · `d_tool_09` · K2 · Tier 3 · 9,200 credits · Ability (Intelligence) 2 · Use Limitation Feat (Droid Upgrade 1) ⚠ bay gate · Skill (Computer Use) 5 — *“This upgrade provides extra memory banks and computing power that can be integrated seamlessly with its existing programming.”*
 
 **Droid Warfare Upgrade** · `d_tool_10` · K2 · Tier 3 · 12,800 credits · AttackBonus 2 · Ability (Constitution) 2 · BonusFeats (Weapon Focus Blaster) · BonusFeats (Weapon Focus Blaster Rifle) · BonusFeats (Weapon Prof Blaster) · BonusFeats (Weapon Prof Blaster Rifle) · BonusFeats (Weapon Spec Blaster) · BonusFeats (Weapon Spec Blaster Rifle) · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“A highly complex module with near unlimited learning capacity and highly modifiable software. Designed to be a costly alternative to training, these modules were designed to create master generals, tacticians, and assassins after only a short install time.”*
 
@@ -349,7 +355,7 @@ wrong number, and it disagreed with the table printed directly beneath it.**
 
 **Droid CEPB** · `d_tool_14` · K2 · Tier 4 · 27,200 credits · AttackBonus 1 · BonusFeats (Improved Power Blast) ⚠ attack chain · BonusFeats (Master Power Blast) ⚠ attack chain · BonusFeats (Power Blast) ⚠ attack chain · Use Limitation Feat (Droid Upgrade 2) ⚠ bay gate — *“These upgrades offer powerful new tactics to be hard-wired directly into your droid's combat algorithms. The Droid Combat Enhancement: Power Blast adds all the information necessary to your droid's databanks for it to store up energy to release in a single, powerful shot.”*
 
-**Droid Micro-Optics** · `d_tool_15` · K2 · Tier 4 · 30,000 credits · Ability (Dexterity) 5 · BonusFeats (Cautious) · BonusFeats (Improved Caution) · BonusFeats (Master Caution) · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 1)* — *“This sensor array includes several optical sensors that can see changes in substances at the molecular level, allowing the droid to more accurately identify hazardous materials.”*
+**Droid Micro-Optics** · `d_tool_15` · K2 · Tier 4 · 30,000 credits · Ability (Dexterity) 5 · BonusFeats (Cautious) · BonusFeats (Improved Caution) · BonusFeats (Master Caution) · Use Limitation Feat (Droid Upgrade 3) ⚠ bay gate · Skill (Demolitions) 10 — *“This sensor array includes several optical sensors that can see changes in substances at the molecular level, allowing the droid to more accurately identify hazardous materials.”*
 
 **Repair Kit** · `g_i_drdrepeqp001` · K2+K1 · Tier 1 · 25 credits · Included are the basic tools needed for a droid to repair itself after being damaged in combat. — *“Included are the basic tools needed to repair a droid that has been damaged in combat. Basic kits repair 15 vitality points + INT modifier + user's skill in Repair.”*
 

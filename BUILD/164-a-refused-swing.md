@@ -33,7 +33,16 @@ lifetime, without the reload.
 `_endFight` writes the `condition-expired`; the area change clears the flag,
 because **the event belongs to the fight that ended** and an arrival has none.
 
-## 3 · ⚠⚠ A PRE-EXISTING PANEL OVERFLOW, FOUND AND NOT FIXED HERE
+## 3 · ⚠⚠ A PANEL OVERFLOW — ⚠ **WITHDRAWN AT `BUILD 165`, IT WAS MY BED**
+
+> **⚠⚠ THIS SECTION WAS WRONG.** The overflow below is not a product defect.
+> `hide_test` set a `MediaQuery` of 1280×720 over `flutter_test`'s default
+> **800×600 surface** — telling the app one size and the renderer another — so
+> panels that fit in the product overflowed in the bed. With the view actually
+> sized, neither this nor a 58px casting-menu overflow occurs anywhere.
+> `BUILD 162` copied a `setUp` that sized the view; I removed it as deprecated
+> and did not replace what it **did**. Left in place rather than deleted,
+> because a withdrawn finding that vanishes is a finding nobody can check.
 
 Driving a fight to its end overflows `PartySidebar`'s column by **7.4px** at
 scale 2.8 in a short pane. With `entries=2, turnOrder=2, forceNote=null`, the

@@ -262,3 +262,84 @@ crystals are actually catalogued.
 ranges; both long rifles keep their full treatment including the perception extension's
 three properties; the 122-item catalogue is untouched; and **the 50 excluded entries are
 still listed with the reason for each exclusion.**
+
+---
+
+# Chapter Four — Lightsabers
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: DRAFT.** Split from the combined melee/ranged/lightsabers chapter per
+MAIN's ruling. **Base table checked against the raw `.2da` files directly** —
+`data/k1_baseitems.2da`, `data/k2_baseitems.2da` — **not `ITEMS-01`'s markdown copy**,
+whose merged `K2+K1` tag masks the two games' different values for these three weapons.
+**Rulings:** `PT-1472` (training sabers take crystals), `PT-345` (the crystal subsystem),
+`PT-1747` (the stale Vibrosword comparison).
+
+**⚠ The `K2+K1` tagging finding, in its internal form:** `ITEMS-01` tags all three
+lightsaber resrefs `K2+K1` and shows **only K2's numbers** under that combined tag
+(`2d8`/`2d10`/`2d12`). **A `K2+K1` tag in that catalogue does not mean the two games share
+a value — it can mean the extraction recorded only one game's number for a resref present
+in both.** Confirmed for lightsabers against the raw `.2da`; **not confirmed or ruled out
+for anything else tagged the same way.**
+
+**⚠ The stale rationale, recorded because it was deliberately not rewritten in the
+chapter:** `EQUIPMENT-01 §4b`'s reason for preferring K1's dice had two parts. *"Our
+campaign is 3956 BBY and K1 is the era"* stands. *"A Vibrosword is `2d6`, so a K1
+lightsaber sits exactly one die step above it"* **is stale twice over** — Vibrosword is
+`1d12` since `PT-1747`, and even before that the comparison ran against the *wrong*
+standard-Lightsaber die of `2d10`, which was never one step above `2d6`. **The `PT-1844`
+pass removed the sentence from the chapter entirely rather than repairing it**, since the
+era reason carries the choice alone.
+
+The lightsaber-damage-ability flag from Chapters One through Three — genuinely this
+chapter's own subject now, not just carried for continuity. `EQUIPMENT-01 §4b` itself
+raises the same caveat independently: *"lightsabers are not melee weapons,"* a
+statement the source makes about upgrades and criticals rather than damage, which is
+exactly why treating lightsabers as melee-for-damage is a working assumption rather
+than a confirmed rule. Two independent paths to the same open question, not two
+separate ones.
+
+New this chapter: the K1/K2 rationale paragraph (editorial), and the `K2+K1` tagging
+caution above, which isn't this chapter's to resolve but felt worth surfacing where it
+was found.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 12 internal citations from 103 lines**, the densest concentration in the Armory
+so far.
+
+**⚠ The raw-file citation survived, exactly as predicted, and it reads well.** The die
+correction is the chapter's centrepiece, and the approved method says a citation to the
+games' own data stays. **It does — but the framing changed from a document-versus-document
+dispute into a warning a reader can use:**
+
+> **You will find the standard Lightsaber's K1 die quoted elsewhere as `2d10`. It is
+> `2d8`.** The figure above was read out of KOTOR 1's own weapon table — row 8, label
+> `Lightsaber`, two dice of eight — **not from any summary of it.**
+
+**The internal document that had it wrong is gone; the game table that has it right
+stayed.** That is the method working as intended.
+
+**⚠ The `K2+K1` methodological note became a reader caution**, and this is the pass's best
+gain here. It was a warning to whoever next reads the item catalogue. **It is now a warning
+to whoever next builds a character:** where a weapon appears in both games it is easy to
+assume both give it the same numbers, these three prove otherwise, and **a summary listing
+a weapon once without saying which game it quotes will silently give you one game's value
+for both.** Ending with: **if a weapon matters to your table and appears in both games,
+check both.**
+
+**⚠ The Training Lightsaber got the authored-marking treatment** approved at Chapter Three.
+It read *"a fourth entry, authored rather than extracted"* — accurate and meaningless to a
+reader. **It now opens: this weapon does not exist in either game; it was written for this
+book.**
+
+**And its unsettled threat range became advice.** The old text named the two documents that
+disagreed and declined to choose. **The chapter still declines — but now tells a Gamemaster
+that `20` is the safer ruling**, which is what the old note's own reasoning implied and
+never said.
+
+**⚠ Deliberately NOT loosened.** Both games' dice for all three lightsabers survive, the
+K1-versus-K2 table is intact, the die-progression argument is unchanged, all three training
+sabers keep their dice, and the crystal subsystem still points at Chapter Six with Rubat and
+the 104-crystal count.

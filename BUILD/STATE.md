@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `f1c2cc0` — `perceptionSquares`, and a floor not a ceiling |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `7a0ca16` — pinned to `PT-1782`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `8626028` — a sniper rifle notices farther, not through |      ⚠ no |
+| `KOTOR-RPG-APP` | `01cc030` — the locked sidebar, built to it |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,16 +59,17 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 682 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 550 — 1,505, all
-green.** *(`BUILD 153`.)*
+**`Lodestar` 682 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 556 — 1,511, all
+green.** *(`BUILD 154`.)*
 
-⚠⚠ **THE PLAY SCREEN'S `RosterPanel` DOES NOT IMPLEMENT `APP-UI-VISION-01`'s
-LOCKED SIDEBAR** — answered at `BUILD 153 §1`. Right-docked where `PT-1111`
-locks left, combat-only where `PT-1124` locks exploration too, text rows where
-`PT-1132` locks a portrait, and two treatments where `PT-1132` locks one. The
-companion work is **orthogonal to that design, not in conflict with it**: it
-built the rules half, and every fact the locked portrait needs is already
-folded.
+✓ **THE LOCKED SIDEBAR IS BUILT AT `BUILD 154`** — `PartySidebar`, docked
+left, running during exploration, one portrait treatment for the player and
+every party member, the enemy inversion, and `PT-1133`'s two orderings.
+**Four things are deliberately unbuilt and each is named in the file's own
+header**: the four condition markers (no mechanic exists), the XP wing (no
+total exists), click-to-target (`PT-1443` is the ruling waiting on the first
+pointer in this screen), and `PT-1102`'s main-menu rail (a different screen,
+about multiplayer seats).
 
 ⚠ **`weapon_upgrades.toml` IS READ AT `BUILD 151`** — 35 rows from
 `WEAPON-MATRIX-01` (`PT-1780`), and the Equipment screen's second offer

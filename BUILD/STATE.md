@@ -46,9 +46,9 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `acdb477` — item durations convert at six |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `643f3fa` — K1 governs the seven mines |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `e66d44a` — `PT-1903`'s effect model and duration |     ⚠ no |
+| `Lodestar` | `67e6775` — `PT-1905`'s save channel |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `64cabe2` — pinned to `PT-1903`'s engine |        ⚠ no |
 | `KOTOR-RPG-APP` | `cb13d3c` — pinned to `PT-1903`'s engine |      ⚠ no |
@@ -59,8 +59,15 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 757 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,630, all
-green.** *(`BUILD 177`.)*
+**`Lodestar` 765 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,638, all
+green.** *(`BUILD 178`.)*
+
+⚠ `acceptance_test` failed once in the `BUILD 178` full run — `contents!` null,
+the library scan not finished when the row was read — and **passes alone in 4
+seconds.** It is one of the four already named below. ⚠ `items.toml` grew 7.7%
+this slice (633 KB → 686 KB, 625 effect blocks), which is **not** enough to
+explain a race that has already taken four different tests, but it is recorded
+because it is new load on a suite known to be load-sensitive.
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one
@@ -247,45 +254,47 @@ package. It made two tests worthless and nothing detects it.
 
 ## ⚠ What is open
 
-### ⚠⚠ THE POISON HALF OF `PT-1903` CANNOT SHIP UNTIL A POISON CAN SAVE
+### ⚠⚠ 54 DUAL-GAME ROWS STILL TAKE K2's TEXT, AND NOBODY RULED ON THEM
 
-`PT-1903` ruled the duration conversion **and** the sub-round tick folding, and
-the conversion shipped: nine adrenals carry `rounds = 20`, seconds ÷ 6 rounded
-up, mutation-checked by `check_item_durations.py`. **The tick folding did not**,
-and the reason is not the arithmetic — all four worked examples reproduce their
-source totals exactly under it.
+`PT-1905` ruled **K1 governs the seven mines** and they are repaired. The
+mechanism that produced them is untouched: `merge_source` returns **K2's file**
+wherever both games hold an item, so K2's text wins on all 61 differing rows.
+The other 54 differ **in prose only** — no numbers move — which is why they are
+recorded rather than fixed.
 
-⚠⚠ **TWELVE OF THE SEVENTEEN CONDITION ITEMS STATE A SAVE**, DC 15 to DC 100.
-A poison emitted with no save channel lands on every target unconditionally —
-**a wrong answer indistinguishable from a right one**, which is the failure the
-refusal channel exists to prevent. Better refused and counted.
+⚠⚠ **ONE OF THEM IS NOT A MERGE QUESTION AT ALL.** `g1_w_sbrcrstl21` reaches a
+**lightsaber upgrade description in K1 and a FEAT description in K2** — a
+strref pointing at unrelated text, not two readings of one item. It is the only
+numeric difference outside the mines and it needs its own look.
 
-⚠ **AND THE SAVE HAS THREE OUTCOMES, NOT ONE.** *"for no effect"* is the common
-case; the Kyber Dart is *"for half damage"*; the **Paralysis Dart is `DC20 for
-Slow for 3sec`** — a save that applies a DIFFERENT condition for a DIFFERENT
-duration. The third shape is a compound nothing in the model expresses.
+### ⚠ `paralysis` IS HELD, AND IT IS THE ONLY UNMAPPED CONDITION
 
-⚠ **AND THE VOCABULARY HAS NO WORD FOR DAMAGE OVER TIME.** The approved five are
-`heal · ability · absorb · resist · regenerate`. Minting a sixth is a format
-decision and **`RULING NUMBERS ARE MINE TO ASSIGN` is not the only thing that
-is** — reported rather than taken.
+Ruled at `PT-1905`: `stun` → Stunned and `knockdown` → Prone are clear and
+built. **`paralysis` is a real rules distinction** and was deliberately not
+forced through beside them — `§19`'s vocabulary is Stunned · Surprised ·
+Slowed · Unaware · Prone and has no member for it.
 
-### ⚠⚠ SIX ITEM ROWS STATE THEIR RULE TWICE, WITH DIFFERENT NUMBERS
+⚠ **The Paralysis Dart is therefore refused ENTIRE and counted**, which is also
+why `OnSave.instead` ships exercised by test rather than by data: the corpus's
+only *"save for a different effect"* clause (`DC20 for Slow for 3sec`) belongs
+to that dart.
 
-Found while reading the poison data. An item's `properties` column and its
-blueprint `description` are **two sources for one rule**, and six rows disagree:
+### ⚠⚠ THE POISON HALF OF `PT-1903` — CLOSED AT `PT-1905`
 
-    Average Flash Mine · Average Frag Mine · Average Plasma Mine
-    Deadly Frag Mine   · Deadly Plasma Mine          save DC differs
-    Average Gas Mine        4 pts every 3 sec / 30 sec  (properties)
-                            4 pts every 6 sec / 36 sec  (description)
+It shipped. `damage_over_time` and `condition` joined the vocabulary and every
+gated effect carries its save — **and the rule that made it safe is that an
+unreadable save refuses the WHOLE EFFECT, not just the save.** An effect that
+ships with its save dropped lands on every target unconditionally.
 
-⚠ **THE GAS MINE'S TWO READINGS ARE 40 DAMAGE AND 24.** Not a rounding gap —
-a different item. ⚠ **And the extractor reads BOTH columns**, so whichever
-matcher fires first would silently pick one. Today all six land in `_control`
-as refused, so nothing has been decided by accident. **Which column is
-authoritative is not mine to rule** — `ITEMS-06.md` carries the properties
-form, the description comes from the `.uti`.
+⚠ **THE COMPOUND CASE NEEDED NO NEW SHAPE.** *"Half damage and to negate DEX
+loss"* is **two effects**, the damage saving for half and the drain for none,
+each carrying its own save. The array the corpus forced at `PT-1903` paid for
+itself here.
+
+⚠ **61 of the 62 clauses need only `none` or `half`.** `afterSave` states the
+arms where they are read: half rounds **down** (25 saved is 12), and `instead`
+returns an effect and **no amount at all** — the success is a different effect,
+not a smaller one.
 
 
 ### ⚠⚠ A NAME WE COIN MUST NOT BE A NAME WE ALREADY USE — `PT-1547`

@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `89b79e1` — the `×3` revert re-shipped |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `8e5542f` — 118 descriptions reunited |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `3b7e038` — `PT-1122`'s standing order |     ⚠ no |
+| `Lodestar` | `74bdfd0` — `PT-1136`'s follow |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
-| `Loom` | `7ae4f07` — pinned to `PT-1122`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `8219d52` — solo mode on the sidebar |      ⚠ no |
+| `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
+| `KOTOR-RPG-APP` | `4aab474` — `§3b`, the party follows you |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,18 +59,17 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 697 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 571 — 1,544, all
-green.** *(`BUILD 158`.)*
+**`Lodestar` 705 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 572 — 1,553, all
+green.** *(`BUILD 159`.)*
 
-⚠⚠ **SOLO MODE IS BUILT AT `BUILD 158` AND DOES NOT SURVIVE A SAVE.**
-*Wait here* and *Follow / regroup* work for the whole session and across
-rooms; `_persist` then drops them, because it keeps only kinds the shelf
-declares at `campaign` lifetime and **`party.waiting` / `party.following` are
-not in `EVENT-KINDS-01`.** They are the **only two kinds this build emits that
-the vocabulary does not declare** — diffed, not assumed. `ledger.dart` proposes
-both in the document's own shape and says they are *"a reading and not a
-ruling"*; the document is the owner's. `emitted_kinds_test` pins the gap and is
-written to fail the day it is paid. **Awaiting two rows at `campaign`.**
+✓ **SOLO MODE AND FOLLOWING ARE BOTH BUILT, AT `BUILD 158`/`159`.** *Wait
+here* and *Follow / regroup* on the sidebar, and `§3b`'s auto-follow with the
+two formation rings behind them. **The standing order survives a save** since
+`PT-1832` declared `party.waiting` / `party.following` at `campaign` —
+confirmed by `Tester` at `TEST 071` across a killed-and-relaunched process.
+`Trade / give item` is shown and refuses, waiting on `§2`'s character screen.
+⚠ **The combat half of party control stays open**, which `§3b` names as
+separate rather than unbuilt.
 
 ✓ **THE LOCKED SIDEBAR IS BUILT AT `BUILD 154`** — `PartySidebar`, docked
 left, running during exploration, one portrait treatment for the player and

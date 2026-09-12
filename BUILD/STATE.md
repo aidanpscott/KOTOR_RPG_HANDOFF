@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `643f3fa` — K1 governs the seven mines |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `c7a8aac` — `PT-1851`'s Dash |     ⚠ no |
+| `Lodestar` | `67e6775` — `PT-1905`'s save channel |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
-| `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `3b57d9f` — `h` hurries |      ⚠ no |
+| `Loom` | `64cabe2` — pinned to `PT-1903`'s engine |        ⚠ no |
+| `KOTOR-RPG-APP` | `cb13d3c` — pinned to `PT-1903`'s engine |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,15 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 734 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 595 — 1,605, all
-green.** *(`BUILD 170`.)*
+**`Lodestar` 765 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,638, all
+green.** *(`BUILD 178`.)*
+
+⚠ `acceptance_test` failed once in the `BUILD 178` full run — `contents!` null,
+the library scan not finished when the row was read — and **passes alone in 4
+seconds.** It is one of the four already named below. ⚠ `items.toml` grew 7.7%
+this slice (633 KB → 686 KB, 625 effect blocks), which is **not** enough to
+explain a race that has already taken four different tests, but it is recorded
+because it is new load on a suite known to be load-sensitive.
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one
@@ -84,9 +91,11 @@ seam. **`PT-1108`'s Hide is built and pressable (`s`)**; `Scan`, `Slice`,
 `h` hurries; `PT-1108`'s *Hidden disables running* is real now that there is
 something to disable.
 
-⚠⚠ **NO ACTION KEY APPEARS IN ANY LEGEND.** `f` cast, `d` disengage, `s` hide,
-`h` hurry — four, and the screen names none of them. `PT-1443`'s reason for the
-keyboard path is that it reaches everything the pointer does.
+✓ **THE FOUR ACTION KEYS ARE ON THE SCREEN — `PT-1852`, `BUILD 171`.** All on
+the combat line, and they vanish when nothing is left to spend. ⚠ **The
+exploration legend is FULL**: one more entry wrapped it and overflowed the
+column by 57px, so the next key that belongs there has nowhere to go without
+shortening an existing one.
 
 ⚠ **THE STEALTH FIELD GENERATOR IS NOT WIRED** — `SKILL-RESOLUTION-01 §4`'s
 `−10 on Awareness only` is built and no item in the catalogue declares itself
@@ -244,6 +253,49 @@ returns in some widget harnesses and returns fine in others, on the same
 package. It made two tests worthless and nothing detects it.
 
 ## ⚠ What is open
+
+### ⚠⚠ 54 DUAL-GAME ROWS STILL TAKE K2's TEXT, AND NOBODY RULED ON THEM
+
+`PT-1905` ruled **K1 governs the seven mines** and they are repaired. The
+mechanism that produced them is untouched: `merge_source` returns **K2's file**
+wherever both games hold an item, so K2's text wins on all 61 differing rows.
+The other 54 differ **in prose only** — no numbers move — which is why they are
+recorded rather than fixed.
+
+⚠⚠ **ONE OF THEM IS NOT A MERGE QUESTION AT ALL.** `g1_w_sbrcrstl21` reaches a
+**lightsaber upgrade description in K1 and a FEAT description in K2** — a
+strref pointing at unrelated text, not two readings of one item. It is the only
+numeric difference outside the mines and it needs its own look.
+
+### ⚠ `paralysis` IS HELD, AND IT IS THE ONLY UNMAPPED CONDITION
+
+Ruled at `PT-1905`: `stun` → Stunned and `knockdown` → Prone are clear and
+built. **`paralysis` is a real rules distinction** and was deliberately not
+forced through beside them — `§19`'s vocabulary is Stunned · Surprised ·
+Slowed · Unaware · Prone and has no member for it.
+
+⚠ **The Paralysis Dart is therefore refused ENTIRE and counted**, which is also
+why `OnSave.instead` ships exercised by test rather than by data: the corpus's
+only *"save for a different effect"* clause (`DC20 for Slow for 3sec`) belongs
+to that dart.
+
+### ⚠⚠ THE POISON HALF OF `PT-1903` — CLOSED AT `PT-1905`
+
+It shipped. `damage_over_time` and `condition` joined the vocabulary and every
+gated effect carries its save — **and the rule that made it safe is that an
+unreadable save refuses the WHOLE EFFECT, not just the save.** An effect that
+ships with its save dropped lands on every target unconditionally.
+
+⚠ **THE COMPOUND CASE NEEDED NO NEW SHAPE.** *"Half damage and to negate DEX
+loss"* is **two effects**, the damage saving for half and the drain for none,
+each carrying its own save. The array the corpus forced at `PT-1903` paid for
+itself here.
+
+⚠ **61 of the 62 clauses need only `none` or `half`.** `afterSave` states the
+arms where they are read: half rounds **down** (25 saved is 12), and `instead`
+returns an effect and **no amount at all** — the success is a different effect,
+not a smaller one.
+
 
 ### ⚠⚠ A NAME WE COIN MUST NOT BE A NAME WE ALREADY USE — `PT-1547`
 

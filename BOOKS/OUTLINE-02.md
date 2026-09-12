@@ -11,7 +11,7 @@ where `MAIN_WORK` sits at
 runs to `PT-1786`, not `PT-1548`**, so every ruling this document treats as relayed-only
 (`PT-1705`, `PT-1744`, `PT-1747`, `PT-1783`) is directly readable. **And `rules/` holds
 the authoritative versions of every source this book drafts against.** Marks below that
-read `RULED · NOT HELD` were measured against `HANDOFF` alone and need re-auditing — at
+read `RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** were measured against `HANDOFF` alone and need re-auditing — at
 least 27 of those documents are present in `MAIN_WORK/rules/`.
 
 ---
@@ -48,7 +48,7 @@ was re-run this round.
 | Mark | Meaning |
 |---|---|
 | **`RULED`** | Mechanics exist **and the document is in this repository.** Ruling cited. |
-| **`RULED · NOT HELD`** | Mechanics exist per `WHERE-IS`, **document unreachable from here.** |
+| **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | Mechanics exist per `WHERE-IS`, **document unreachable from here.** |
 | **`PROSE`** | Original prose. Nothing mechanical at stake. |
 | **`DRAFTED`** | Player-facing prose **already exists** — revision and placement, not authorship. |
 | **⚠ `GAP`** | Needs a mechanic that **does not exist anywhere I can see**, held or unheld. |
@@ -66,8 +66,8 @@ was re-run this round.
 
 | # | Chapter | Mark | Source and ruling |
 |---|---|---|---|
-| — | What this game is | **`PROSE`** | Mine. Dice conventions `DICE-01` — `NOT HELD` |
-| — | Making a character — creation order | **`RULED · NOT HELD`** | `CHARACTER-CREATION-01` (`C25`) absent. Partial recovery: `SPECIES-CHAPTER-v2:131` — *"SPECIES BEFORE ANYTHING ELSE, `PT-594`"* |
+| — | What this game is | **`PROSE`** | Mine. Dice conventions `DICE-01` — **present in `MAIN_WORK/playtest/` (`AUDIT-01`)** |
+| — | Making a character — creation order | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `CHARACTER-CREATION-01` (`C25`) absent. Partial recovery: `SPECIES-CHAPTER-v2:131` — *"SPECIES BEFORE ANYTHING ELSE, `PT-594`"* |
 | — | Abilities | **`RULED`** | `EQUIPMENT-01 §6`. Primary/secondary `CLASS-ROSTER-01 §PT-717`, **⚠ superseded on saves by `PT-119` via `PT-1387`** |
 | — | **Playable species** | **`DRAFTED` — WALL 1 CLOSED** | `SPECIES-CHAPTER-v2`, 1,274 lines, as Chapter One of this book. `PT-594` order, `PT-623` size. **No renumbering — drafted against the existing spine, per the ruling** |
 | — | The standard classes — thirteen | **`DRAFTED`** | `CLASSES-STANDARD-PHB`, 1,269 lines. **⚠ Own header: eight of thirteen carry unconfirmed rulings** |
@@ -100,10 +100,10 @@ assumption.
 | # | Chapter | Mark | Source and ruling |
 |---|---|---|---|
 | — | Setting a DC | **`RULED`** | `SKILL-RESOLUTION-01` |
-| — | Influence | **`RULED · NOT HELD`** | `INFLUENCE-01` (`D-AH`); `PORT-02-v2 §5`; `RCR-REPUTATION-FINDINGS` |
-| — | Factions | **`RULED · NOT HELD`** | `FACTIONS-01` — SETTLED for both packages |
-| — | Awarding experience | **`RULED · NOT HELD`** | `EXPERIENCE-01` — SETTLED, `PT-660` |
-| — | Encounter design | **`RULED · NOT HELD` — ⚠⚠ UNPLACED, see note** | `ENCOUNTER-01` (`C22-CREATURES`). **⚠ Filed by the Library under creatures, not engine or GM tools — the same shelf as every `BEASTS-*` document — which weakly argues for Threat Database instead. Named explicitly under Holocron in the brief, so kept here, but the Library's own filing disagrees and that disagreement is worth knowing.** **⚠⚠ AND `ENCOUNTER-01 §5c` depends on an `openness` field that `PT-1051` found on ZERO of 298 swept world records — `D-OPEN-01` defines it, no world record carries it. A live defect in the source this chapter would draft against, not mine to fix, cited so it is not rediscovered.** |
+| — | Influence | **`RULED` — partly. **⚠ Present in `MAIN_WORK` except `RCR-REPUTATION-FINDINGS`, which is Library-held (`AUDIT-01`)**** | `INFLUENCE-01` (`D-AH`); `PORT-02-v2 §5`; `RCR-REPUTATION-FINDINGS` |
+| — | Factions | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `FACTIONS-01` — SETTLED for both packages |
+| — | Awarding experience | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `EXPERIENCE-01` — SETTLED, `PT-660` |
+| — | Encounter design | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** — ⚠⚠ UNPLACED, see note** | `ENCOUNTER-01` (`C22-CREATURES`). **⚠ Filed by the Library under creatures, not engine or GM tools — the same shelf as every `BEASTS-*` document — which weakly argues for Threat Database instead. Named explicitly under Holocron in the brief, so kept here, but the Library's own filing disagrees and that disagreement is worth knowing.** **⚠⚠ AND `ENCOUNTER-01 §5c` depends on an `openness` field that `PT-1051` found on ZERO of 298 swept world records — `D-OPEN-01` defines it, no world record carries it. A live defect in the source this chapter would draft against, not mine to fix, cited so it is not rediscovered.** |
 | — | Eight playtest scenarios | **`DRAFTED`** | `SCENARIOS-01`, with `PREGENS-01`/`DICE-01` |
 
 **⚠⚠ UNPLACED — not named in the brief's six, home unconfirmed:**
@@ -134,11 +134,11 @@ anywhere in the corpus** (`grep`'d for *"bounty board," "maintained registry,"
 | — | Front matter — the registry framing | **`PROSE`** | Mine. No precedent to draft against |
 | — | Humanoid adversaries | **⚠ `GAP` — see note** | **No dedicated statblock document exists anywhere, held or unheld — checked `C22-CREATURES` in full, thirteen entries, none of them this.** The coherent reading, given the corpus's general practice of reusing rather than duplicating systems, is that a humanoid adversary is built with Book One's own class rules rather than a parallel NPC system. **That is my inference, not a ruling — flagged as such, not drafted as fact.** |
 | — | Droid opponents — the seven chassis | **`RULED`** | `DROID-MODELS-01`; `§7b` LORE ONLY `PT-605`; `§9`. **New supporting citation found this round:** `docs/PLAYTEST-RULINGS-01.md:52865` — droid chassis ability scores are ruled **NPC statblocks, not player values** *("Labor averages Constitution 18 and ranges to 22; an organic PC cannot exceed 18")* — the mechanical basis for presenting them as adversaries distinct from playable chassis |
-| — | Hostile beasts — combat stats | **`RULED · NOT HELD`** | `BEASTS-ATTACKS-01`, `BEASTS-LEVELS-01`, `BEASTS-SKILLS-01`, `BEASTS-FEATS-01` |
-| — | Beast quick reference | **`RULED · NOT HELD`** | `BEASTS-REFERENCE-01` |
-| — | Beast stat entries | **`RULED · NOT HELD` — ⚠⚠ ONE SOURCE, TWO BOOKS** | `BEASTS-ENTRIES-01` — *"27 creature companions... type, size, traits and a defining ability."* **Its fields mix combat data (defining ability) with lore data (type, size, traits) in one document. The new split sends lore to Species Compendium and stats here — meaning this single source needs restructuring across two books when drafted, not a copy into either.** |
-| — | How adversaries behave — ⚠⚠ UNPLACED, see Book Two | **`RULED · NOT HELD`** | `GROUND-AI-01`, `SPACE-AI-01` — four faction doctrines, `PT-806`/`807`. Placed here as the more natural fit for a hostile-facing book; not named in either book's brief explicitly |
-| — | Running a creature — ⚠⚠ UNPLACED, see Book Two | **`RULED · NOT HELD`** | `GM-CREATURES-01`. Candidate for either this book or Holocron's procedural material; not named in either brief |
+| — | Hostile beasts — combat stats | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `BEASTS-ATTACKS-01`, `BEASTS-LEVELS-01`, `BEASTS-SKILLS-01`, `BEASTS-FEATS-01` |
+| — | Beast quick reference | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `BEASTS-REFERENCE-01` |
+| — | Beast stat entries | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** — ⚠⚠ ONE SOURCE, TWO BOOKS** | `BEASTS-ENTRIES-01` — *"27 creature companions... type, size, traits and a defining ability."* **Its fields mix combat data (defining ability) with lore data (type, size, traits) in one document. The new split sends lore to Species Compendium and stats here — meaning this single source needs restructuring across two books when drafted, not a copy into either.** |
+| — | How adversaries behave — ⚠⚠ UNPLACED, see Book Two | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `GROUND-AI-01`, `SPACE-AI-01` — four faction doctrines, `PT-806`/`807`. Placed here as the more natural fit for a hostile-facing book; not named in either book's brief explicitly |
+| — | Running a creature — ⚠⚠ UNPLACED, see Book Two | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `GM-CREATURES-01`. Candidate for either this book or Holocron's procedural material; not named in either brief |
 
 **Explicitly removed from this book by the brief:** droid construction and upgrade —
 moved to Armory. **Not a `GAP` here; it is correctly homed elsewhere.**
@@ -194,13 +194,13 @@ re-measured this round.**
 
 | # | Chapter | Mark | Source |
 |---|---|---|---|
-| — | How this timeline was built | **`PROSE`** over **`NOT HELD`** | `CANON-01-v2 §3.4`; `METHOD-RECORD-01` (**held**) |
-| — | The dated spine | **`RULED · NOT HELD`** | `EVENTS-01` |
-| — | Eras | **`RULED · NOT HELD`** | `TIMELINE-01`; `CLOCK-01`; `EVENTS-PLAN-01` (PLAN ONLY, `PT-676`) |
-| — | Deep history | **`RULED · NOT HELD`** | `RULING-SWTOR-DEEP-HISTORY`; `ERA-VITIATE-01`; `D-VIT-01` |
-| — | The Tales of the Jedi sweeps | **`RULED · NOT HELD`** | `TEMPORAL-SWEEP-TOTJ-*` (12 deep + batch); `TEMPORAL-SWEEP-LEGENDS-01`; `TEMPORAL-ENUM-01` |
-| — | Revan | **`RULED · NOT HELD`** | `D-REVAN-04` — current in the chain |
-| — | The Campaign Guide timeline | **`RULED · NOT HELD`** | `GAZETTEER-PART-D` — pp. 112–113 |
+| — | How this timeline was built | **`PROSE`** over **`RULED`** | `CANON-01-v2 §3.4` and `METHOD-RECORD-01` — **both present in `MAIN_WORK/rules/` (`AUDIT-01`)** |
+| — | The dated spine | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `EVENTS-01` |
+| — | Eras | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `TIMELINE-01`; `CLOCK-01`; `EVENTS-PLAN-01` (PLAN ONLY, `PT-676`) |
+| — | Deep history | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `RULING-SWTOR-DEEP-HISTORY`; `ERA-VITIATE-01`; `D-VIT-01` |
+| — | The Tales of the Jedi sweeps | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `TEMPORAL-SWEEP-TOTJ-*` (12 deep + batch); `TEMPORAL-SWEEP-LEGENDS-01`; `TEMPORAL-ENUM-01` |
+| — | Revan | **`RULED · NOT HELD`** — Library-held, confirmed absent from `MAIN_WORK` (`AUDIT-01`) | `D-REVAN-04` — current in the chain |
+| — | The Campaign Guide timeline | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `GAZETTEER-PART-D` — pp. 112–113 |
 
 **⚠⚠ New production note, from the brief's own instruction:** *"link the two by having
 timeline entries reference world names."* **This makes Book Five's authoring order-
@@ -219,7 +219,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | The species — lore entries | **`DRAFTED` — ⚠⚠ ONE SOURCE, TWO BOOKS** | `SPECIES-CHAPTER-v2`'s 31-entry body **already mixes lore (culture, appearance, homeworld) with mechanics (ability adjustments, size, traits).** The new split sends mechanics to Book One and lore here — the same document needs restructuring across both books, not a copy into either. Count conflict (31 vs. 32) carried forward, `§3` below |
 | — | Non-playable species | **⚠ `GAP` — confirmed, not merely unheld** | Searched `C06-SPECIES` in full (sixteen entries) — every one is about the playable roster or droids. **`DECISION-FLESH-RAIDERS` is the one name that might be relevant** — Flesh Raiders are a known KOTOR hostile-humanoid faction — but it is `NOT HELD` and its content is unconfirmed from here |
 | — | Playing a droid — seven chassis, droid skills | **`RULED`** | `DROID-MODELS-01`; `DROID-SKILLS-01`. Same sources as `OUTLINE-01`'s old Book Two, relocated here per the brief |
-| — | Beast encyclopedia — ecology, habitat | **`RULED · NOT HELD`** | `BEASTS-NATURE-01` (temperament) is the closest existing candidate; the lore-half of `BEASTS-ENTRIES-01` (see Book Three) also belongs here once split |
+| — | Beast encyclopedia — ecology, habitat | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `BEASTS-NATURE-01` (temperament) is the closest existing candidate; the lore-half of `BEASTS-ENTRIES-01` (see Book Three) also belongs here once split |
 
 ---
 
@@ -238,10 +238,10 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | Usable items | **`DRAFTED`** | `ITEMS-06` — 58 items. Medpac healing values are `PT-1`'s deliberate replacement of the source game's own WIS/skill-scaled mechanic. **Text at `BOOKS/armory/09-usable-items.md`** |
 | — | Quest and miscellaneous items | **`DRAFTED`** | `ITEMS-07` + `ITEMS-08`. Two authored categories, one (`boots`) inventing an equipment slot KOTOR never had (`PT-690`). **Text at `BOOKS/armory/10-quest-and-miscellaneous-items.md`** |
 | — | Tiers, pricing, availability | **`DRAFTED`** | `PT-308` (loot tiers — agreed in concept, character-vs-area gate undecided), `PT-327` (unique items), `PT-384` (feat remap). Currency is `STARTING-EQUIPMENT-01`, not `D-CURRENCY-01` — see note. **Text at `BOOKS/armory/11-tiers-pricing-and-availability.md`** |
-| — | The weapon matrix / crafting | **`RULED · NOT HELD`** | `WEAPON-MATRIX-01`; `CRAFTING-01` |
-| — | Loot | **`RULED · NOT HELD` — see Book Two's UNPLACED list** | `LOOT-01` |
-| — | Starships / space combat | **`RULED · NOT HELD`** | `STARSHIPS-01` — 21 hulls; `SPACE-COMBAT-01`, derives from `MOUNTED-COMBAT-01` |
-| — | **Droid construction and upgrade** | **`RULED · NOT HELD` — moved here per the brief** | `DROID-CONSTRUCTION-01`, `DROIDS-UPGRADE-01` (both `C21`). Droid *items* are held — `ITEMS-04` |
+| — | The weapon matrix / crafting | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `WEAPON-MATRIX-01`; `CRAFTING-01` |
+| — | Loot | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** — see Book Two's UNPLACED list** | `LOOT-01` |
+| — | Starships / space combat | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `STARSHIPS-01` — 21 hulls; `SPACE-COMBAT-01`, derives from `MOUNTED-COMBAT-01` |
+| — | **Droid construction and upgrade** | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** — moved here per the brief** | `DROID-CONSTRUCTION-01`, `DROIDS-UPGRADE-01` (both `C21`). Droid *items* are held — `ITEMS-04` |
 
 ---
 
@@ -251,10 +251,10 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 |---|---|---|---|
 | — | Prestige classes — nineteen | **⚠ `GAP`, unchanged** | `CLASS-ROSTER-01 §3`/`§4` for the roster; entry rules `PT-573`, droids `PT-577`. `MANIFEST`: *"no lists anywhere... do not synthesise."* Skill lists exist (`SKILLS-01 §9.2c`, `PT-1322`) — the gap is class *features*, all nineteen |
 | — | Deeper multiclassing — entry requirements | **`RULED` for 11/19, `NOT WRITTEN` for 8/19 — ⚠⚠ SOURCE CONTRADICTS ITSELF** | `CLASS-ROSTER-01 §475`: *"THREE ENTRY REQUIREMENTS TESTED... `PT-628`."* `MULTICLASS-01 §5` calls these requirements *"the real brake"*; that same document's own `§6` calls them *"NOT WRITTEN."* Eleven are: `Commando`, `Gunslinger`, `Shadow Hunter`, `Juggernaut`, and seven more per `§6`'s count. **Eight of nineteen remain genuinely unwritten — not all nineteen, as a first read of `§6` alone would suggest.** Whether Book One's *base* multiclassing ruling also moves here or stays split — flagged in Book One, not resolved here either |
-| — | Beast ownership — obedience | **`RULED · NOT HELD`** | `BEASTS-OBEDIENCE-01` — per-beast obedience DCs |
+| — | Beast ownership — obedience | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `BEASTS-OBEDIENCE-01` — per-beast obedience DCs |
 | — | Beast ownership — upkeep | **⚠ `GAP`, and a sharper one than "not held"** | The word `upkeep` returns **zero hits** anywhere in this repository's rulings ledger or the Library's own index (`WHERE-IS.md`). Every other `NOT HELD` mark in this document means *"indexed elsewhere, unreachable from here"* — this one may mean the mechanic has not been authored **anywhere**, which is a different, sharper kind of gap |
 | — | Beast Master — the class | **⚠ `GAP`, cross-references the Prestige chapter above** | `Beast Master` is one of the nineteen prestige classes with no features written. Not a second, separate gap — the same one, reached from a different chapter |
-| — | Beasts a player can take | **`RULED · NOT HELD`** | `BEASTS-PLAYER-01` |
+| — | Beasts a player can take | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `BEASTS-PLAYER-01` |
 
 ---
 

@@ -1,8 +1,8 @@
 # Chapter Four — The Mandalorian Wars
 
-**Status: APPROVED** by MAIN. Opens with the Restoration Period as its first movement,
-per MAIN's ruling — not every Campaign Guide era needs its own chapter, and a connective
-buildup belongs folded into what it sets up. `PT-1802`'s three parts throughout.
+**This chapter opens thirty years before its war.** The Campaign Guide treats the
+Restoration Period as an era of its own; here it is this chapter's first movement, because
+it is the Mandalorian Wars' run-up rather than the Great Sith War's aftermath.
 
 ---
 
@@ -64,15 +64,17 @@ chapter rather than closing the last one.
 *"Under the leadership of **Mandalore the Ultimate**, remnants of the Mandalorian clans
 begin testing the Republic's defenses by raiding Outer Rim worlds."*
 
-**⚠ This is not the Mandalorian Wars, and the distinction is ruled** (`PT-855`). It is
-twelve years of probing — raiding and *"interrupting trade routes, forcing the Republic to
+**⚠ This is not the Mandalorian Wars, and the distinction matters.** It is twelve years of
+probing — raiding and *"interrupting trade routes, forcing the Republic to
 push its resources further than they were prepared for."* A war starts later and elsewhere.
 
 **This is also when the Neo-Crusaders are founded**, and by whom matters: *"an order of
 Mandalorians sponsored by **Mandalore the Ultimate** following the end of the Great Sith
-War."* `PT-675` exists because the founding is commonly told backwards — **the Preserver
-did not found them.** The Preserver *regrouped* them in 3,951 BBY, fifteen years after they
-had ceased to exist.
+War."*
+
+**⚠ This is commonly told backwards, so it is worth stating flatly: the Preserver did not
+found the Neo-Crusaders.** Mandalore the Ultimate did, in 3,976 BBY. **The Preserver
+*regrouped* them in 3,951 BBY — fifteen years after they had ceased to exist.**
 
 **The Mandalorians of this chapter are therefore not the Mandalorians of Chapter Three.**
 Those were the Crusaders, bound to Ulic Qel-Droma at Kuar and broken at Onderon. **This is
@@ -180,8 +182,9 @@ exile, the return to Malachor V in 3,951 BBY — **descends from this moment.**
 
 The Campaign Guide's narrative calls the result *"a devastating victory"* after which *"the
 Mandalorian forces are nearly wiped out"* and *"the surviving Mandalorians go into
-exile."* `EVENTS-01` is more exact about the terms: **Mandalore the Ultimate is slain, the
-surrender is unconditional, and the Mandalorians are stripped of arms and scattered.**
+exile."* **The terms are harder than that summary suggests: Mandalore the Ultimate is
+slain, the surrender is unconditional, and the Mandalorians are stripped of arms and
+scattered.**
 
 **The Neo-Crusaders end here**, four years after the war they were rebuilt to fight began.
 
@@ -196,7 +199,9 @@ That is where this chapter stops and Chapter Five starts.
 ### What is left, and what the campaign actually meets
 
 **The Mandalorians do not reappear as a power for nine years**, and the campaign sits
-inside that gap. `EVENTS-01` divides them into three states, not two:
+inside that gap. **And they are best understood as three states rather than two** — the
+common telling compresses the Crusaders and the Neo-Crusaders into one continuous people,
+which loses the most important fact about the campaign's own date:
 
 | Era | Years | Under |
 |---|---|---|
@@ -205,9 +210,9 @@ inside that gap. `EVENTS-01` divides them into three states, not two:
 | **The gap** | **3,960 – 3,951 BBY** | **scattered — no faction. Our setting is inside it** |
 | Reformed | 3,951 BBY onward | Mandalore the Preserver, on Dxun |
 
-**⚠ But "no faction" is not "no Mandalorians," and the corpus corrected itself on exactly
-this point** (`PT-681`). At 3,956 BBY they are *"dispersed mercenaries with no command and
-no territory"* — and already re-organising. Without the **Mask** there is no Mandalore, so
+**⚠ But "no faction" is not "no Mandalorians", and the difference is the whole point.** At
+3,956 BBY they are **dispersed mercenaries with no command and no territory** — and already
+re-organising. Without the **Mask** there is no Mandalore, so
 *"the various clans fought amongst themselves for power"* while *"most of the warriors soon
 became mercenaries or bounty hunters."*
 
@@ -259,74 +264,25 @@ matters: he led the *Crusaders*, lost the duel at Kuar, and died at Onderon in 3
 
 ---
 
-*Sources: KOTOR Campaign Guide — "The Restoration Period" and "The Mandalorian Wars", both
-f. 5; the dated timeline ff. 112–113; **the Jedi Exile entry, f. 140**, for the Mass Shadow
-Generator's activation, and **Bao-Dur, f. 176**, for its invention (amended per Chapter
-Six, Flag 3 — `PT-946`, the character entries being the more specific sources on that
-point). `EVENTS-01 §§1–3` for the Mandalorian correction
-(`PT-675`, `PT-681`, `PT-855`), the three-era split, and the Malachor V surrender terms.
-Folios are printed page numbers; the OCR's page markers run three higher (Chapter One,
-Flag 3). Rank 2 and the rulings on it throughout; no rank 6 or 8 material needed.*
+## Sources for this chapter
 
-## Open items, carried from review
+**Rank 2 throughout — the *Knights of the Old Republic Campaign Guide*, at printed page
+numbers. No lower-ranked source was needed.**
 
-**⚠ Flag 1 — the Campaign Guide's era heading and its own timeline disagree on when the
-war starts, and `EVENTS-01` has already ruled it.** The era section is headed **"The
-Mandalorian Wars (3,965–3,960 BBY)"**; the dated timeline puts *"a massive invasion of
-Republic space, beginning the Mandalorian Wars"* at **3,964 BBY**, with 3,965 carrying only
-*"small proxy skirmishes."* Same source, same rank, neither superseding — so `PT-946`
-applies and the dated, itemised timeline is the more specific reading. **`EVENTS-01`
-reached the same answer independently and recorded it as `PT-855`, citing the timeline
-verbatim at rank 2.** This chapter follows 3,964 and records the heading. **No new ruling
-needed** — noting it because it is the second same-rank conflict in two chapters, both
-between a CG summary and the CG timeline, which now looks like a pattern rather than a
-coincidence.
+- **"The Restoration Period" and "The Mandalorian Wars"**, the narrative accounts — p. 5
+- **The dated timeline**, for every year given here — pp. 112–113
+- **The Jedi Exile's own entry** — p. 140, for who actually triggered the Mass Shadow
+  Generator, and what it cost them
+- **Bao-Dur's entry** — p. 176, for who built it
 
-**⚠⚠ Flag 2 — `EVENTS-01` cites Campaign Guide *line numbers* under a `p.` label, and the
-corpus also uses `p.` for printed folios.** `EVENTS-01` cites *"CG p.10187"*, *"p.10195"*
-and *"p.10198"* for the 3,976, 3,965 and 3,964 entries. **Those are OCR line numbers in
-`KOTOR-CG-OCR.txt`, not pages** — verified: line 10187 is the 3,976 raiding entry, 10195
-the proxy skirmishes, 10198 the invasion. Meanwhile `D-W42` cites *"Timeline p.113"*, which
-**is** a printed folio. **So `p.NNN` now means two different things in the corpus**, exactly
-the shape of the rank-7 collision `PT-1800` just fixed. A human tells them apart by
-magnitude — a 200-page book has no p.10187 — but an automated sweep will not.
-**✔ Fixed at source.** MAIN relabelled all three instances in `EVENTS-01` as
-**`CG OCR L.NNNNN`**, adopting the distinct-prefix approach. Printed-folio citations
-elsewhere in the corpus are unaffected. **This chapter's citations are unchanged** — it
-quotes the Campaign Guide directly by folio and never used the line cites.
+**⚠ On Malachor V, the Campaign Guide's own accounts differ in emphasis and this chapter
+prefers the character entries.** The timeline credits Revan with the weapon in a single
+clause; **the Exile's and Bao-Dur's entries name the battle, the inventor, the hand on the
+trigger and the consequence.** The fuller account wins, and the reconciliation — Revan
+planned it, Bao-Dur built it, the Exile sprang it — **satisfies all three passages without
+discarding any of them.**
 
-**⚠⚠ Flag 3 — a superseded claim is still standing as an assertive heading in `EVENTS-01`,
-and it is `PT-961`'s exact shape.** `§2` records that `PT-675` said *"no faction,"* that
-**`PT-681` corrected this as "too strong,"** and that the true position is *"clans without
-a Mandalore… not an absence."* **But further down the same section, under an empty heading
-reading `### ⚠ The superseded claim`, sits a live-looking heading: `### ⚠⚠ AND THAT MEANS
-THERE IS NO MANDALORIAN FACTION AT 3956 BBY`.**
-
-**Exact lines, so this is actionable:** `EVENTS-01:45` carries the correction (*"`PT-675`
-said 'NO FACTION.' That was too strong"*); **`:69` is the empty `The superseded claim`
-heading**; **`:71` is the superseded claim itself**, set as a level-3 heading with no
-marker that it is dead.
-
-The empty heading was evidently meant to label what follows as superseded, but **as the
-document renders, the superseded claim reads as a current conclusion** — and it directly
-contradicts the correction twenty-six lines above it. This is `PT-961` precisely: *"when a
-ruling changes a table, it does not change the sentences that read from it."* **A reader
-skimming headings gets the retracted answer.**
-
-**This chapter follows `PT-681`**, the later and correcting ruling. The practical difference
-is real: "no faction" would license playing 3,956 BBY as *no Mandalorians*, when the correct
-reading is dispersed mercenaries with a reunification already under way.
-
-**✔ Fixed at source.** MAIN merged the empty heading with its content and stated plainly,
-twice, that what follows is retracted. **The chapter's reading is unchanged** — it followed
-`PT-681` before the fix and follows it now.
-
-**⚠ Flag 4 — a smaller internal wobble in `EVENTS-01`'s Neo-Crusader dates.** `§1` and `§2`
-both put the founding at **3,976 BBY**; `§3`'s era table gives the Neo-Crusaders as
-**3,964–3,960 BBY**. Not a contradiction if the table means *the years they fought the
-Wars*, which is the natural reading — but the table is labelled as an era, and it is the
-row a sweep would read. This chapter states both: **founded 3,976, fought 3,964–3,960,
-disbanded 3,960.**
-
-**Recorded so nobody re-adds it: `PT-855` also removed the Battle of Althir** from the
-3,976 entry. It is not in the Campaign Guide and is not in this chapter.
+**The Mandalorian material beyond the Campaign Guide** — the Crusader and Neo-Crusader
+distinction, the three-state split, and what the clans are doing at 3,956 BBY — is this
+game's own settled position, arrived at by checking the sources against each other. **It is
+not a reading invented for this book.**

@@ -1,8 +1,10 @@
 # Chapter Eight — Worn Gear
 
-**Status: APPROVED.** One of the four chapters split out from a combined
-outline row, per the approved four-way split. `ITEMS-05`, another primary-source
-catalogue — no cross-check against a more-primary source needed, same footing as
+**Everything a character wears that is neither armour nor a weapon** — belts, forearm
+mounts, gauntlets, implants and masks. **The largest category in the book after weapons**,
+and mechanically its own thing: passive gear occupying a body slot.
+
+**These figures came straight from the games' own item files**, on the same footing as
 Chapters Five through Seven.
 
 ---
@@ -15,20 +17,20 @@ the other, or original to this project.
 | Category | Count | Slot |
 |---|---|---|
 | **Belt** | 47 | Waist |
-| **Forearm** | 33 | Forearm — mostly timed absorption shields, the same shape as `ITEMS-04`'s droid shields |
+| **Forearm** | 33 | Forearm — mostly timed absorption shields, the same shape as the droid shields in Chapter Seven |
 | **Gauntlets** | 42 | Hands |
 | **Implant** | 67 | Internal — the largest single category here |
 | **Mask** | 59 | Head |
 
-## ⚠ Two of these categories mix original content in with the games' own items
+## ⚠ Two items in this chapter do not exist in either game
 
-**`Sparring Gloves`** (Gauntlets, 90 credits, `Damage (Bludgeoning) 1`) and
-**`Clarity Package`** (Implant, 1,000 credits, `Ability (Wisdom) 1`) are both marked
-`⚠ AUTHORED` — not extracted from either game, made for this project. This is the
-provenance discipline from much earlier in the project working as intended: every
-asset declares whether it's ours or extracted, and nothing ships without that
-declaration. Worth stating plainly here rather than presenting an authored item next
-to an extracted one as if they came from the same place.
+**`Sparring Gloves`** — Gauntlets, 90 credits, `Damage (Bludgeoning) 1` — and **`Clarity
+Package`** — Implant, 1,000 credits, `Ability (Wisdom) 1` — **were written for this book.**
+
+**Every such item in this book is marked**, and that is deliberate: **an invented item
+should never sit beside an extracted one as though the two came from the same place.**
+Where you see the authored mark, the item is this game's own work rather than BioWare's or
+Obsidian's.
 
 ## Representative entries
 
@@ -40,23 +42,17 @@ to an extracted one as if they came from the same place.
 | **Clarity Package** | Implant | ⚠ authored | 1,000 | `Ability (Wisdom) 1` |
 | **Survey Gear** | Mask | K2 | 60 | Sonic resistance plus a skill bonus, restricted from Wookiees — the same worn-gear-restriction shape Chapter One already established for organic armour |
 
-*(`ITEMS-05`.)*
+## ⚠ Some skill bonuses do not say which skill
 
-## The unmapped-skill-subtype question — named, not resolved here
+**A number of items in this category grant a skill bonus whose target is unreadable in the
+game data.** The entry records that a skill is improved and by how much, **but the code
+identifying *which* skill does not resolve to a name.**
 
-**Several entries above carry a `Skill [subtype N — skills unmapped]` property** —
-the same shape MAIN is now aware of as a real, bounded task after resolving three
-corrupted-Name instances and finding at least 25 more candidates in `ITEMS-04` alone.
-Not attempting to resolve any of these myself in this chapter — that's the commissioned
-pass, not a chapter-by-chapter one, and duplicating effort here would waste the exact
-kind of slice this project has already named as a mistake to avoid.
+**It is a known problem with a known cause**, and it is being worked on separately — the
+same kind of broken reference that leaves one droid item with an armour upgrade's name.
+
+**Until it is resolved, treat such an item as granting a bonus a Gamemaster assigns** to
+whichever skill the item's description and slot most plausibly support. **`Safety Harness`
+in the table above is the clearest example.**
 
 ---
-
-## Open items, carried from review
-
-Same lightsaber-damage flag, unaffected. Same unmapped-subtype question as above,
-explicitly deferred rather than picked at piecemeal. Two categories (Belt beyond the
-one sample, Gauntlets and Implant beyond their authored examples) not deeply sampled —
-the same browsable-reference grain as Chapter Five's five-of-173, applied here to a
-larger catalogue.

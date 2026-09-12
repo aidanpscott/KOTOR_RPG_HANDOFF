@@ -582,3 +582,59 @@ others — by reading the raw file rather than a markdown copy.
 representative-entry tables are intact including the `Droid Desh Plating` `DecreaseAC`
 cross-reference to Chapter Five, and the Advanced Droid Interface's full specification is
 now in the book rather than in a footnote about it.
+
+---
+
+# Chapter Eight — Worn Gear
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED.** One of four chapters split out from a combined outline row.
+Source `ITEMS-05`, a primary-source catalogue on the same footing as Chapters Five through
+Seven.
+
+Same lightsaber-damage flag, unaffected. Same unmapped-subtype question as above,
+explicitly deferred rather than picked at piecemeal. Two categories (Belt beyond the
+one sample, Gauntlets and Implant beyond their authored examples) not deeply sampled —
+the same browsable-reference grain as Chapter Five's five-of-173, applied here to a
+larger catalogue.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 6 internal citations from 62 lines.**
+
+**⚠ The authored-item section got the Chapter Three treatment, and it was the most
+important change here** — this is one of only two chapters that mix invented items in with
+extracted ones.
+
+It was headed *"Two of these categories mix original content in with the games' own items"*
+and explained the `⚠ AUTHORED` mark by describing **the provenance discipline** — *"every
+asset declares whether it's ours or extracted, and nothing ships without that
+declaration."* **That is a statement about how this project works, offered to someone who
+does not know this project exists.**
+
+It is now headed **"Two items in this chapter do not exist in either game"** and says what
+the mark means in use: **an invented item should never sit beside an extracted one as though
+the two came from the same place**, and where you see the mark, **the item is this game's
+own work rather than BioWare's or Obsidian's.**
+
+**⚠ The unmapped-skill-subtype section was rewritten from a scoping note into a table
+ruling.** It previously explained why the author was *not* resolving these — that it belongs
+to a commissioned pass, and that duplicating effort would waste a slice. **All true, and all
+addressed to a colleague.**
+
+**A reader needs something else entirely: what to do when they meet one.** The section now
+explains that the entry records a bonus and its size **but not which skill**, that it is a
+known and separately-tracked problem, and that **until it is fixed a Gamemaster should
+assign the bonus to whichever skill the item's description and slot most plausibly
+support** — with `Safety Harness` named as the clearest example.
+
+**⚠ Two directional errors caught by the standing checks**, one inherited and one mine.
+The Forearm category compared itself to `ITEMS-04`'s droid shields; **it now points at
+Chapter Seven**, where a reader can actually look. And my own rewrite said `Safety Harness`
+was *"in the sample below"* **when the table sits above that section** — the same class of
+error as the Timeline's Chapter Three *"Ossus below"*. **Third time a directional reference
+has gone wrong in this task, and the third time the check caught it rather than luck.**
+
+**⚠ Deliberately NOT loosened.** All five categories and their counts survive, both authored
+items keep their full specifications, and the representative-entry table is unchanged.

@@ -327,7 +327,7 @@ called.
 
 **Zabrak Disruptor Cannon** · `g_w_dsrptrfl002` · K1 · Tier 2 · 1,500 credits · *Damage (Piercing) 5 · Enhancement 2* — *“Zabrak always command respect, especially with the aid of weapons that are even more damaging than already-outlawed standard disruptors. Unlike typical blasters, disruptors ignore most types of personal energy shields.”*
 
-**⚠ *name-field corrupted*** · `g1_w_dsrptrfl001` · K1 · Tier 3 · 16,000 credits · *AttackBonus 1 · AttackBonus 1 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d4 · Damage (Bludgeoning) 1d4 · Keen* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
+**Baragwin Disruptor-X Weapon** · `g1_w_dsrptrfl001` · K1 · Tier 3 · 16,000 credits · *AttackBonus 1 · AttackBonus 1 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d4 · Damage (Bludgeoning) 1d4 · Keen 0* — *“Using the same 'shaped-energy' concept as in his Ion-X Weapon, Suvam Tan has modified a Baragwin disruptor weapon as well, giving comparable levels of concussive force to the blast that the Ion-X Weapon”* ⚠ *(description truncated in source)*
 
 **Charric** · `w_brifle_23` · K2 · Tier 3 · 16,450 credits · *AttackBonus 4 · OnHit (Knockdown) 14* — *“The Charric is an immensely powerful disruptor rifle. Exceedingly rare, its origin is believed to be somewhere in the Unknown Regions, though what species created it is unknown. The Charric employs maser beams and easily”* ⚠ *(description truncated in source)*
 
@@ -350,7 +350,7 @@ called.
 
 **Bothan Droid Disruptor** · `w_brifle_15` · K2 · Tier 2 · ⚠⚠ **750** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d10 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. A”* ⚠ *(description truncated in source)*
 
-**⚠ *name-field corrupted*** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6 · Keen 0* — *“Mastercraft: Armor III”* ⚠ *(description truncated in source)* **⚠ This item has no usable name.** Its name field in the game data reads *"Mastercraft: Armor II"* — an armour upgrade's name sitting on an ion rifle's entry. **The weapon is real; the name is not.** It is left unnamed here rather than given an invented one.
+**Baragwin Ion-X Weapon** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6 · Keen 0* — *“This weapon is an experimental Baragwin design that has been extensively modified by Suvam Tan. He has incorporated what he describes as a 'shaped-energy' delivery system into the weapon, which allows i”* ⚠ *(description truncated in source)*
 
 **Verpine Droid Disruptor** · `w_brifle_20` · K2 · Tier 3 · ⚠⚠ **1750** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d10 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids. While ion weapons are generally less damaging”* ⚠ *(description truncated in source)*
 
@@ -493,7 +493,7 @@ called.
 
 **Combat Enforcer** · `w_brifle_16` · K2 · Tier 2 · 4,825 credits · *AttackPenalty Penalty_-2 · Massive Criticals 1d6 · OnHit (AbilityDrain) 10* — *“This powerful repeating blaster inflicts incredible pain and damage upon its victim, but is difficult to use effectively. Its origin is unclear, though there are some similarities to its design and that of Mandalorian weapons.”*
 
-**⚠ *name-field corrupted*** · `g1_w_rptnblstr01` · K1 · Tier 3 · 15,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 3 · Damage (Energy) 2d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
+**Baragwin Assault Gun** · `g1_w_rptnblstr01` · K1 · Tier 3 · 15,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 3 · Damage (Energy) 2d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6 · Damage (Sonic) 1d6* — *“This light repeating blaster is an excellent example of the Baragwin aptitude for weaponry. By taking and modifying an existing repeating blaster design, the Baragwin have managed to greatly increase th”* ⚠ *(description truncated in source)*
 
 **Onderon Repeating Carbine** · `w_brifle_26` · K2 · Tier 4 · 21,775 credits · *Damage (Energy) 2d6 · Enhancement 1* — *“These weapons were employed by the elite troops of Iziz during the Battle of Onderon. The power of these carbines, combined with their high rate of fire, was believed to play a considerable role in the rout of the Mandalorian forces.”*
 
@@ -511,7 +511,7 @@ called.
 
 **Heavy Repeating Rifle** · `w_brifle_22` · K2 · Tier 3 · 15,000 credits · *Damage (Energy) 1d6* — *“The Heavy Repeating Rifle is one of the most powerful weapons available, delivering rapid bursts of intense energy.”*
 
-**⚠ *name-field corrupted*** · `g1_w_hvrptbltr01` · K1 · Tier 3 · 19,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Energy) 2d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
+**Baragwin Heavy Repeating Blaster** · `g1_w_hvrptbltr01` · K1 · Tier 3 · 19,000 credits · *AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Energy) 2d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6 · Damage (Fire) 1d6* — *“A heavier version of the Baragwin Assault Gun, this weapon features similar improvements over its more common version. The incredible amounts of energy contained in the beam can be upgraded even further”* ⚠ *(description truncated in source)*
 
 **Mandalorian Heavy Repeater** · `w_brifle_28` · K2 · Tier 4 · 2,500 credits ⚠ *(reconciled to the KOTOR 1 price)* · *Damage (Energy) 1d8 · Massive Criticals 1d10* — *“With this weapon, the Mandalorians again demonstrate a complete lack of subtlety. The only thing better than a big blaster, apparently, is one that shoots faster.”*
 

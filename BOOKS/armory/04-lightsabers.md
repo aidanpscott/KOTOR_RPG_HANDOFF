@@ -61,9 +61,9 @@ saying which game it is quoting, **will silently give you one game's value for b
 itself** — which is why this weapon category needs a chapter of its own rather than a
 family heading in Chapter Two.
 
-**Chapter Six catalogues the crystals** — **57 distinct ones**, from Rubat at `+1` damage,
-`+1` attack and 1,000 credits up through rarer stones with larger and mixed bonuses, **plus
-the personal crystal that changes with your alignment and power.** They are not repeated
-here.
+**Chapter Six catalogues the crystals** — **59 distinct ones**, from Rubat at `+1` damage,
+`+1` attack and 1,000 credits up to the **Heart of the Guardian** and the **Mantle of the
+Force** at 20,000 and 25,000, **plus the personal crystal that changes with your alignment
+and power.** They are not repeated here.
 
 ---

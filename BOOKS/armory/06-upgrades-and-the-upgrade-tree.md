@@ -10,6 +10,107 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 ---
 
 ## Armour components
+
+Two categories, 30 items each, both requiring a workbench to install.
+
+**Armour reinforcement** (overlays) trades a flat bonus for a growing cost, and
+sometimes a growing penalty. The `Bonded Plates` line is the direct source of a claim
+already made back in Chapter One:
+
+| Tier | Cost | Grants | Costs |
+|---|---|---|---|
+| Bonded Plates Mark I | 475 | Armor 1 | — |
+| Heavy Bonded Plates Mark I | 650 | Armor 2 | −2 Dexterity |
+| Bonded Plates Mark II | 3,500 | Armor 2 | — |
+| Heavy Bonded Plates Mark II | 4,500 | Armor 3 | −3 Dexterity |
+| Bonded Plates Mark III | 5,400 | Armor 3 | — |
+| **Heavy Bonded Plates Mark III** | 6,100 | **Armor 4** | −4 attack, though it trades the Dexterity penalty for damage resistance instead |
+
+**Chapter One said this line recovers K2 heavy armour's lost Defence point, "up to +4
+Defence" — confirmed exactly, at Mark III. What wasn't said there is that every tier of
+the Heavy line before Mark III carries a Dexterity penalty, and Mark III trades that
+penalty for an attack penalty instead — the recovery isn't free at any tier, only the
+shape of what it costs changes.**
+
+**Armour underlay** works the other side of the sum-of-nine rule. The `Flexible
+Underlay` line is the other claim Chapter One made:
+
+| Tier | Cost | Grants |
+|---|---|---|
+| Flexible Underlay Mark I | 225 | Max Dex +1 |
+| Flexible Underlay Mark II | 1,475 | Dexterity +1, Max Dex +1 |
+| Flexible Underlay Mark III | 6,550 | Dexterity +1, Max Dex +2 |
+| Flexible Underlay Mark IV | 17,555 | Dexterity +2, Max Dex +2 |
+| **Flexible Underlay Mark V** | 28,950 | Dexterity +3, **Max Dex +3** |
+
+**Chapter One said this line recovers "up to +3 Max Dex" — confirmed exactly, at Mark V.
+What wasn't said there is that every tier also raises Dexterity itself, not only its
+cap** — the line is doing two things at once, and the cap alone undersold it.
+
+## Lightsaber crystals
+
+**The crystal list holds 104 rows, and they are not 104 crystals.** The arithmetic matters,
+because Chapter Four sends you here rather than listing a lightsaber's properties beside its
+die:
+
+    59   real, distinct crystals — catalogued below
+    45   one crystal in 45 states — the personal crystal, below
+    104  rows in total
+
+**A crystal determines most of what a lightsaber does beyond its base damage**, from
+`Rubat` — damage `+1`, attack `+1`, 1,000 credits — up through rarer stones carrying larger
+and mixed bonuses.
+
+## The weapon-specific upgrade tree
+
+Nine categories, keyed to weapon type: lightsaber emitters (32) and cells (3), melee
+cells (15), edges (15), and grips (12), and ranged cells (30), chambers (12), firing
+mechanisms (5), and scopes (19). **That is 143 components.** Each slot on a weapon's own wield class from Chapter
+One accepts a specific subset of these — a rifle's scope slot doesn't take a melee
+grip, and a lightsaber's emitter is a different component from its crystal, adjusting
+different properties on the same weapon.
+
+## What this resolves — the deferred unique-weapon variants
+
+**Chapters Two and Three each deferred a mechanic to this chapter: a unique weapon
+(`Bacca's Ceremonial Blade`, `Cassus Fett's Heavy Pistol`) existing as four resrefs
+rather than one, with the purchasable form carrying flat properties and the three
+cost-0 forms swapping in feat-gated ones.** Having now seen the upgrade system in full,
+this isn't an upgrade-tree mechanic — none of the four resrefs' properties come from
+slotted components the way `Bonded Plates` or a crystal do. It's closer to the "Massive
+Criticals" and "Keen" pattern already cited in earlier chapters: fixed properties
+baked into a specific resref rather than anything a player installs.
+
+**⚠ Not fully resolved, and stated as a scoped negative rather than closed:** two unique
+weapons were checked and both showed the same four-resref, feat-conditional shape.
+**⚠ Whether this holds for unique weapons generally, or only for these two, is not
+settled.** Establishing it would mean checking every unique-marked item in the book for the
+same shape — **a real piece of work, and larger than this chapter.** Until then, treat the
+pattern as demonstrated for the two weapons named and unproven elsewhere.
+
+---
+
+**⚠ And the line runs one step further than that claim needs.** `Bonded Plates Mark IV`
+exists at **28,850 credits** — **but it grants damage resistance rather than a fifth point
+of Armor**, so `+4` remains the ceiling and Chapter One's statement stands unchanged.
+
+
+---
+
+# The catalogue
+
+**307 rows in all**, with resref, which game each comes from, tier, price, properties and
+the item's own description.
+
+**⚠ Some properties are not fully resolved in the data.** A skill bonus whose size is known
+and whose skill is not, a Defence penalty without its type, an alignment or character lock
+without the alignment or character named. **Each keeps its index in the margin and none is
+guessed at.**
+
+---
+
+# Armour components
+
 ## Armour reinforcement — 30
 
 **Heat Shielding Mark I** · `u_a_over_01` · K2 · Tier 1 · 20 credits · DamageImmunity (Fire) ⚠ **DR 2** *(10%)* — *“Alloy overlays can enhance armor performance. The modifications require a workbench with adequate tools and armor of high quality marked as”* ⚠ *(description truncated in source)*
@@ -138,7 +239,11 @@ armour in Chapters Two through Five — **has slots that these components fill.*
 
 # Lightsaber crystals
 
-## The 57 real crystals
+## The 59 real crystals
+
+**Heart of the Guardian** · `g1_w_sbrcrstl20` · K2+K1 · Tier 3 · 20,000 credits — *“Though its origins have been lost, the legendary artifact known as the Heart of the Guardian was rumored to have been instrumental in the founding of the guardian order of Jedi. Nothing”* ⚠ *(description truncated in source)*
+
+**Mantle of the Force** · `g1_w_sbrcrstl21` · K2+K1 · Tier 4 · 25,000 credits — *“The Mantle of the Force is an item assembled by Suvam Tan from pieces found in the ruins of Exar Kun's temples on the fourth moon orbiting Yavin. It appears to be the remains of an even”* ⚠ *(description truncated in source)*
 
 **Crystal, Rubat** · `g_w_sbrcrstl01` · K1 · Tier 2 · 1,000 credits — *“Damage: +1 Attack: +1 Used in lightsaber construction, rubat crystal is mined on Phemis. It produces a clearly defined blade that a Jedi can easily track, making it easier to hit opponen”* ⚠ *(description truncated in source)*
 
@@ -288,20 +393,20 @@ including the tier-9 forms. **That is plainly wrong for the upper tiers** — a 
 records, and correcting it is not this catalogue's call.** The power tier is read from the
 resref, not from that column.
 
-## ⚠ Two rows in the crystal list are not crystals
+## ⚠ Two of these were catalogued under the wrong names, and they are not small items
 
-**Both are named here rather than quietly dropped**, on the same principle Chapter Three
-applies to the fifty rows it excludes.
+**`g1_w_sbrcrstl20` is the *Heart of the Guardian*. `g1_w_sbrcrstl21` is the *Mantle of the
+Force*.** They are **KOTOR 1's two endgame crystals**, and at 20,000 and 25,000 credits the
+two most expensive in the game.
 
-**`g1_w_sbrcrstl20` — *"Door Cutting"***, whose entire description is *"Door Sabering"*. It
-is the utility that lets a lightsaber open a door in a scripted scene. **It has no
-properties and is not equipment.**
+**Both previously appeared in this chapter under completely wrong identities** — one as a
+scripted door-cutting utility, the other as a feat description that had wandered onto a
+crystal's resref. **Neither was true.** The names were sitting in KOTOR 1's own string table
+the whole time; the wrong game's table was being read for KOTOR 1-only items.
 
-**`g1_w_sbrcrstl21` — *"+ dual strike"*, and it is a feat, not an item.** Its description
-reads: *"Prerequisites: None. The character has advanced training using teamwork to defeat
-enemies. When attacking an enemy that another party member is also attacking, the character
-gets a +2 bonus to hit."* **That is a feat's text sitting on a crystal's resref**, priced at
-25,000 credits. **A mis-filing in the game data, not a component anyone installs.**
+> **They were never unrecoverable. They were never re-checked.**
+
+**Both are in the catalogue above, under their real names.**
 
 ---
 

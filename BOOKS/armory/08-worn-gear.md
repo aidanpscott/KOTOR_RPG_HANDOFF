@@ -72,14 +72,22 @@ label.
 whichever skill the item's description and slot most plausibly support. **`Safety Harness`
 in the table above is the clearest example.**
 
-## ⚠ And nine rows have a corrupted name
+## ⚠ And four rows have a corrupted name
 
-**Nine entries below carry a name lifted from somewhere else in the game's string table** —
-feat descriptions, mostly, complete with *"Prerequisites:"* lines that have nothing to do
-with a belt or a mask. **The items themselves are real and their properties are their own.**
+**Four entries below carry a name lifted from somewhere else in the game's string table** —
+*"Deflect"*, *"Inner Strength I"*, *"Inner Strength III"* and *"Craft Description"*, none of
+which has anything to do with a gauntlet, an implant or a mask. **The items themselves are
+real and their properties are their own.**
 
 **They are catalogued by resref and marked. No name has been invented for any of them**, and
 they are the same family of damage found in the armour, upgrade and droid chapters.
+
+**⚠ Five more were on that list and are now named.** `g1_i_belt001` is the **Baragwin Stealth
+Unit**, `g1_i_implant303` the **Advanced Combat Implant**, `g1_i_implant304` the **Advanced
+Alacrity Impant** *(the misspelling is the game's own)*, `g1_i_mask02` the **Medical Interface
+Visor**, and `g1_i_mask03` the **Advanced Agent Interface**. **Their names were always
+recoverable** and had simply been read against the wrong game's string table. **All five are
+catalogued below under their real names.**
 
 ---
 
@@ -154,7 +162,7 @@ properties and the item's own description.
 
 **Jal Shey Mentor Belt** · `a_belt_30` · K2 · Tier 4 · 29,000 credits · Ability (Wisdom) 2 · ImprovedMagicResist Bonus_20 — *“This belt is an improvement upon the earlier efforts by the Jal Shey to protect their minds from the Dark Side. The Jal Shey concentrate on intellectual study of the Force, seeking to understand it at a mental level, rather than a spiritual one. Jal Shey are typically exceptional diplomats, but are less successful in physical pursuits.”*
 
-**⚠ Name corrupted in the source** · `g1_i_belt001` · K1 · Tier 3 · 10,000 credits · Ability (Dexterity) 3 · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 2)* — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Baragwin Stealth Unit** · `g1_i_belt001` · K1 · Tier 3 · 10,000 credits · Ability (Dexterity) 3 · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 2)* — *“Similar in concept to the Baragwin Shadow Armor, the Baragwin Stealth Unit is a quantum leap in advancement over standard stealth units. It provides much greater camouflage, as well as enhancing the mobility and situatio”* ⚠ *(description truncated in source)*
 
 **Cardio-Regulator** · `g_i_belt001` · K1 · Tier 1 · 100 credits · Saving throw +2 ⚠ *(which save is unresolved — subtype 1)* — *“This belt monitors heartbeat and breathing and releases chemicals into the body should either of these become irregular. This gives the wearer a higher fortitude than most.”*
 
@@ -436,9 +444,9 @@ properties and the item's own description.
 
 **⚠ Name corrupted in the source** · `g1_i_implant302` · K1 · Tier 2 · 3,000 credits · Immunity (MindSpells) 0 · Immunity (Poison) 0 — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
 
-**⚠ Name corrupted in the source** · `g1_i_implant303` · K1 · Tier 3 · 7,000 credits · BonusFeats (Weapon Focus Blaster) · BonusFeats (Weapon Focus Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Focus Melee Weapons) · BonusFeats (Weapon Prof Blaster) · BonusFeats (Weapon Prof Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Prof Melee Weapons) · BonusFeats (Weapon Spec Blaster) · BonusFeats (Weapon Spec Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Spec Melee Weapons) — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Combat Implant** · `g1_i_implant303` · K1 · Tier 3 · 7,000 credits · BonusFeats (Weapon Focus Blaster) · BonusFeats (Weapon Focus Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Focus Melee Weapons) · BonusFeats (Weapon Prof Blaster) · BonusFeats (Weapon Prof Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Prof Melee Weapons) · BonusFeats (Weapon Spec Blaster) · BonusFeats (Weapon Spec Blaster Rifle) · BonusFeats ⚠ cut content · BonusFeats (Weapon Spec Melee Weapons) — *“The Advanced Combat Implant is an experimental technology, designed to make computer data available to the user. Naturally, one of the first uses for this technology was combat. This implant contains weapons specificatio”* ⚠ *(description truncated in source)*
 
-**⚠ Name corrupted in the source** · `g1_i_implant304` · K1 · Tier 4 · 22,000 credits · Ability (Dexterity) 5 — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Alacrity Impant** · `g1_i_implant304` · K1 · Tier 4 · 22,000 credits · Ability (Dexterity) 5 — *“By fine-tuning the user's nervous system, this implant allows vastly improved reaction times and coordination over unmodified individuals. The success of this implant, though not in wide distribution due to its cost, has”* ⚠ *(description truncated in source)*
 
 **Cardio Package** · `g_i_implant101` · K1 · Tier 2 · 1,000 credits · Ability (Constitution) 1 — *“This implant micromanages the cardiovascular system, effectively increasing the user's constitution faster and further than hard work and exercise might.”*
 
@@ -542,9 +550,9 @@ properties and the item's own description.
 
 **⚠ Name corrupted in the source** · `g1_i_mask01` · K1 · Tier 3 · 6,000 credits · Use Limitation Feat (Armour Prof Light) · Immunity (MindSpells) 0 · Immunity (Poison) 0 · Saving throw +1 ⚠ *(which save is unresolved — subtype 0)* — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
 
-**⚠ Name corrupted in the source** · `g1_i_mask02` · K1 · Tier 2 · 5,000 credits · Use Limitation Feat (Armour Prof Light) · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 7)* — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Medical Interface Visor** · `g1_i_mask02` · K1 · Tier 2 · 5,000 credits · Use Limitation Feat (Armour Prof Light) · Skill bonus +10 ⚠ *(which skill is unresolved — subtype 7)* — *“Similar in functionality to the Bio-Stabilizer series of medical equipment, this visor is designed to assist in the care and treatment of injured individuals. By providing constant data and analysis on the condition of t”* ⚠ *(description truncated in source)*
 
-**⚠ Name corrupted in the source** · `g1_i_mask03` · K1 · Tier 3 · 10,000 credits · Use Limitation Feat (Armour Prof Light) · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 0)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 1)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 5)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 6)* — ⚠ *Its name field carries unrelated text from elsewhere in the game’s string table; the properties above are the item’s own. Recorded, not renamed.*
+**Advanced Agent Interface** · `g1_i_mask03` · K1 · Tier 3 · 10,000 credits · Use Limitation Feat (Armour Prof Light) · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 3)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 0)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 1)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 5)* · Skill bonus +7 ⚠ *(which skill is unresolved — subtype 6)* — *“A visor with an integrated computer and electronics analysis system, the Advanced Agent Interface uses a superior artificial intelligence routine to assist the wearer in all manner of covert and computer-oriented tasks.”*
 
 **Light-Scan Visor** · `g_i_mask01` · K1 · Tier 1 · 75 credits · Use Limitation Feat (Armour Prof Light) · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 3)* — *“Restricted: not useable by Wookiees These are invaluable tools that increase visual acuity by analyzing light on several frequencies above those of normal sight.”*
 

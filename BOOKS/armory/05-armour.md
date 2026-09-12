@@ -113,11 +113,16 @@ armour row.
 **All 173 items, by category**, with resref, which game each comes from, tier, price,
 properties and the item's own description.
 
-**⚠ Four rows have a corrupted name.** `g1_a_class5001`, `g1_a_class5002`, `g1_a_class6001`
-and `g1_a_class8001` are real armour with real properties, **but their name and description
-fields both carry unrelated text** — feat descriptions and upgrade labels that belong
+**⚠ Three rows have a corrupted name.** `g1_a_class5002`, `g1_a_class6001` and
+`g1_a_class8001` are real armour with real properties, **but their name and description
+fields both carry unrelated text** — feat descriptions and *"Mastercraft"* labels that belong
 somewhere else in the game's string table. **They are catalogued by resref and marked. No
 name has been invented for any of them.**
+
+**⚠ A fourth was on that list and is now named.** `g1_a_class5001` is the **Light
+Exoskeleton** — *"a relatively new type of power-assisted armor."* Its name was always
+recoverable and had simply been read against the wrong game's string table. **It is
+catalogued below under its real name.**
 
 **⚠ Many rows carry a property the data does not resolve** — a species restriction without
 the species, a Defence penalty without its type, a skill bonus without its skill. **Each
@@ -199,7 +204,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Electromesh Suit** · `a_light_x08` · K2 · Tier 2 · 5,000 credits · DamageResist (Energy) Resist_5/- · Armor 1 · DEXBonusMax 2 · ⚠ *Species-restricted (which species is unresolved)* — *“This light combat suit is used by Nagai operatives. It is highly resistant to blaster fire and is designed to allow the Nagai to fully capitalize on their naturally high dexterity. It cannot be used with overlays, however.”*
 
-**⚠ Name corrupted in the source** · `g1_a_class5001` · K1 · Tier 3 · 10,000 credits · Ability (Dexterity) 1 · Ability (Strength) 1 · Ability (Strength) 2 · Armor 2 · Armor 1 · Armor 1 — ⚠ *Its name and description fields both carry unrelated text; the properties above are the item’s own. Recorded, not renamed.*
+**Light Exoskeleton** · `g1_a_class5001` · K1 · Tier 3 · 10,000 credits · Ability (Dexterity) 1 · Ability (Strength) 1 · Ability (Strength) 2 · Armor 2 · Armor 1 · Armor 1 — *“A relatively new type of power-assisted armor, this suit mimics the major muscle movements of the wearer with mechanical impulses, resulting in greater strength and faster reaction times.”*
 
 **⚠ Name corrupted in the source** · `g1_a_class5002` · K1 · Tier 3 · 6,000 credits · Armor 2 · Armor 2 · Skill bonus +4 ⚠ *(which skill is unresolved — subtype 2)* · Skill bonus +8 ⚠ *(which skill is unresolved — subtype 2)* — ⚠ *Its name and description fields both carry unrelated text; the properties above are the item’s own. Recorded, not renamed.*
 

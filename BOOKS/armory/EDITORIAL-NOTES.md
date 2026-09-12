@@ -2175,3 +2175,77 @@ at all: they had no chapter to be missing from.
 nothing, and carries **no properties and no description** — while its resref reads
 `flashgren` rather than `firegren`. **Listed because it is named**, and marked so a reader
 uses `g_w_firegren001` as the working Plasma Grenade instead of wondering which is which.
+
+---
+
+# ⚠⚠ Twelve misnamed items corrected — including two I argued were not items at all
+
+**Ruled and routed: twelve rows were reading a strref against the wrong game's string table.
+All twelve are corrected across four chapters.**
+
+    Ch3   g1_w_hvrptbltr01    Baragwin Heavy Repeating Blaster
+          g1_w_rptnblstr01    Baragwin Assault Gun
+          g1_w_dsrptrfl001    Baragwin Disruptor-X Weapon
+          g1_w_ionrfl01       Baragwin Ion-X Weapon
+    Ch5   g1_a_class5001      Light Exoskeleton
+    Ch6   g1_w_sbrcrstl20     Heart of the Guardian
+          g1_w_sbrcrstl21     Mantle of the Force
+    Ch8   g1_i_belt001        Baragwin Stealth Unit
+          g1_i_implant303     Advanced Combat Implant
+          g1_i_implant304     Advanced Alacrity Impant  *(the game's own typo)*
+          g1_i_mask02         Medical Interface Visor
+          g1_i_mask03         Advanced Agent Interface
+
+## ⚠⚠ The Chapter Six pair is the serious one, and the reasoning was mine
+
+**I did not merely mis-transcribe these two. I examined them, concluded they were not
+crystals, argued the case, and removed them from the catalogue** — reporting *"two rows in
+the crystal list are not crystals"* and describing one as a scripted door utility and the
+other as *"a feat, not an item… a mis-filing in the game data."*
+
+**They are the Heart of the Guardian and the Mantle of the Force** — KOTOR 1's two endgame
+crystals, at 20,000 and 25,000 credits the most expensive in the game. **Two of the most
+recognisable items in the source material, cut from an equipment book on my reasoning.**
+
+**⚠ What went wrong is worth stating exactly.** The evidence was real — the name fields
+genuinely did read *"Door Cutting"* and *"+ dual strike"*, and the descriptions genuinely did
+carry feat text. **From that I concluded the rows were not items.** The available alternative
+— *that the name was being read from the wrong place* — was never tested, and **`g1_`-prefixed
+rows were something I had already noticed as a family by then.** I had the pattern and drew
+the wrong conclusion from it.
+
+**The corrected entries are in the catalogue, the crystal count moves 57 → 59, and the
+"not crystals" section is replaced by a plain statement of what happened.** Chapter Four's
+cross-reference is updated to match.
+
+## ⚠⚠ And restoring Chapter Six uncovered a second defect I had introduced
+
+**The chapter's entire prose section was missing** — the armour-components discussion, both
+the `Bonded Plates` and `Flexible Underlay` tables, the crystal arithmetic, the upgrade-tree
+description and the deferred-unique-weapon section. **Roughly ninety lines, gone since the
+`PT-1770` pass.**
+
+**Cause: the rebuild took its head as everything before `"# Armour components"`, and that
+string matched the *prose* heading `"## Armour components"` first** — thirty lines earlier
+than the catalogue divider it was aimed at. **Everything between was silently dropped.**
+
+**⚠ And no check I ran would have caught it.** Entry counts, resref uniqueness, citation
+sweeps and category reconciliation all passed, **because none of them measures whether the
+prose is still there.** The chapter was verified against every property except its own
+completeness.
+
+**Restored from the pre-`PT-1770` revision and brought forward** — the Mark I–V naming, the
+143 upgrade-tree figure, the `Bonded Plates Mark IV` note and the corrected crystal
+arithmetic all reapplied, so the restored prose matches everything ruled since.
+
+## What remains genuinely unresolved, and is not part of this fix
+
+**Seven `g1_` rows still carry wrong names** and were not among the twelve: `g1_a_class5002`,
+`g1_a_class6001`, `g1_a_class8001` in Chapter Five; `g1_i_gauntlet01`, `g1_i_implant301`,
+`g1_i_implant302`, `g1_i_mask01` in Chapter Eight. **Their chapters' notes now say three and
+four rather than four and nine**, and each is still catalogued by resref and marked.
+
+**⚠ Three more sit in Chapter Seven and were never marked at all** — `g1_i_drdhvplat01`
+reads *"Lock"*, `g1_i_drdshld001` reads *"Search"*, and `g1_i_drdutldev03` reads *"is knocked
+down"*. **Those are not plausible item names**, and on this finding's evidence they are
+likely the same fault. **Raised — they were not in the twelve and I have not touched them.**

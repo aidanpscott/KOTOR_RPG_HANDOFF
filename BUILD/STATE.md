@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `953c481` — `PT-1108`'s stealth |     ⚠ no |
+| `Lodestar` | `ce3937b` — creature skills, condition kinds |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `cbdf0ee` — the stealth gap, asserted |      ⚠ no |
+| `KOTOR-RPG-APP` | `7c3d00a` — Hide is a key you can press |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,21 +59,20 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 716 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 579 — 1,571, all
-green.** *(`BUILD 161`.)*
+**`Lodestar` 721 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 581 — 1,578, all
+green.** *(`BUILD 162`.)*
 
-⚠⚠ **A CREATURE CARRIES NO SKILLS, AND FIVE ACTIONS WAIT ON IT — `BUILD 161`.**
-`Combatant` has `dexModifier`, `strengthModifier`, `constitution`, `budgets`
-and `role`; `OpenedCharacter` has abilities, vitality, protection, equipment,
-doctrine and reactions. **Neither has a skill of any kind.** The player has
-ranked skills from chargen; the thing on the other side of an opposed roll does
-not. So `ACTION-ECONOMY-01 §1`'s **Hide, Scan, Slice, Treat and Repair** cannot
-be offered, and `PT-1123`'s catalogue cannot aim `Repair` at a droid or
-`Pick Pocket` at a person. `PT-1108`'s Hide is **built and pinned as having no
-caller**. ⚠ A format question — `AUTHORED-CHARACTER-01` is the owner's.
+✓ **A CREATURE CARRIES SKILLS — `PT-1843`, `BUILD 162`.** `[skills]` on the
+blueprint, read into `OpenedCharacter` and carried across the `combatantFrom`
+seam. **`PT-1108`'s Hide is built and pressable (`s`)**; `Scan`, `Slice`,
+`Treat` and `Repair` are unblocked and unbuilt.
 
-⚠ **`Dash` IS UNBUILT**, so `PT-1108`'s *Hidden disables running* has nothing
-to disable. Its natural key `d` is already Disengage.
+⚠ **`Dash`/Hustle IS UNBUILT**, so `PT-1108`'s *Hidden disables running* has
+nothing to disable. Key decided at `PT-1843`: `h`.
+
+⚠ **THE STEALTH FIELD GENERATOR IS NOT WIRED** — `SKILL-RESOLUTION-01 §4`'s
+`−10 on Awareness only` is built and no item in the catalogue declares itself
+one, so nothing can switch it on.
 
 ✓ **THE SIDEBAR READS THE ROSTER, NOT THE ROOM — `PT-1833`, `BUILD 160`.**
 Its exploration list was built from `_here`, the currently loaded area's

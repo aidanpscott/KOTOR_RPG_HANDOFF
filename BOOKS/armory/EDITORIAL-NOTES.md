@@ -2025,6 +2025,69 @@ reports `heavy` 21-against-20 unjoined and `rifle` 78-against-79 joined, and `IT
 `a_robe_09` still reads 700 rather than the corrected 100.** Both files are stamped hours
 before the fixes were reported.
 
-**No conclusion drawn about why** — this is the propagation gap that has appeared before, and
-there is no route from here to fetch a newer copy. **Re-verification of Chapters Two and
-Three is ready to run the moment the file lands.**
+**✔ RESOLVED, AND THE BLOCKAGE WAS MINE.** `MAIN_WORK` **is** a git repository with its own
+remote. My earlier check ran `git log` against its **parent** directory, which is not a repo,
+and I concluded from that there was no route to fetch. **Wrong subject, confidently reported.**
+A fetch and pull from `MAIN_WORK` itself works and always would have.
+
+**Both fixes are present and verified:** `a_robe_09` reads **100**, and `ITEMS-01` now holds
+**zero** malformed rows.
+
+## ✔ Chapters Two and Three re-verified against the cleaned `ITEMS-01`
+
+**Eleven of twelve categories reconcile exactly.** `rifle` states **78** and now holds **79**
+rows — **the heading is one short**, because the cleanup recovered a row the corruption had
+been swallowing. **That is a source heading to update, not a catalogue error.**
+
+**⚠ Chapter Three was short by exactly one item, and it was that row.**
+
+    source pistol + rifle rows      173   (was 172 before the fix)
+    documented exclusions            50   — 40 prop*, 5 g_w_null*,
+                                            4 Bith instruments, 1 pazaak deck
+    Chapter Three catalogued        122
+    ⚠ unaccounted                     1   — g1_w_dsrptrfl001
+
+**Every one of the fifty documented exclusions checks out exactly.** The only uncatalogued
+row was the recovered casualty. **Now catalogued** in the `Disruptor Rifle` family, whose base
+die `1d10` and threat `18–20 / ×2` it matches exactly, marked with the same
+*name-field corrupted* treatment the chapter already gives `g1_w_ionrfl01`. **Counts updated
+to 173 and 123.**
+
+**Chapter Two is unaffected.** None of the four recovered casualties is a melee row — two are
+`heavy`, two are `rifle`. **Its 59 uncatalogued melee rows are 35 `prop*` placeholders and 24
+deliberate de-duplications** — the multi-resref unique variants and the K2 twins of catalogued
+K1 weapons, which is the shape that chapter was built to. **No change needed.**
+
+---
+
+# ⚠⚠ A gap found while re-verifying: forty-six items have no chapter
+
+**Not part of `PT-1770`, and found only because the re-verification swept the whole of
+`ITEMS-01` rather than just the two categories in question.**
+
+**Chapter Three scopes itself to pistols and rifles** — its fourteen families are all one or
+the other, and its own framing says so: *"the games carry 173 pistol and rifle entries."*
+**Four other weapon categories in the same source file are catalogued nowhere in the Armory:**
+
+| Category | Rows | Examples |
+|---|---|---|
+| **heavy** | 21 | Heavy Repeating Blaster · **Ordo's Repeating Blaster** |
+| **grenade** | 12 | Adhesive · CryoBan · Plasma |
+| **ammunition** | 12 | Wrist Launcher · Explosive Rocket · Tranquilizer Dart |
+| **mine** | 1 | *(and it is miscategorised — the row is a `Miner Uniform`)* |
+
+**Checked against every chapter in the book by resref, not by assumption: none of the 46
+appears anywhere.**
+
+**⚠ Creature weapons are the one category correctly absent.** Its 37 rows are creature-innate
+attacks, which the standing exclusion covers — *assets for a video game to make things work*.
+**These four are not that.** A repeating blaster is a weapon a character carries, and a
+grenade is a thing a player throws.
+
+**Two of the three recovered string-table casualties are in the `heavy` category**, which is
+how they surfaced: they had no chapter to be missing from.
+
+**⚠ Raised as a question rather than a conclusion.** Chapters Two and Three predate this
+task, and there may be a scoping decision behind the omission that is not visible from here —
+heavy weapons and grenades may have been deliberately deferred. **But nothing in either
+chapter says so**, and a reader looking for a grenade will not find one. **Worth a ruling.**

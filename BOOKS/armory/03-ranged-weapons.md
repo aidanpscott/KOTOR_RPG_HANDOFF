@@ -99,11 +99,11 @@ should feel free to adjust** if it sits wrong in play.
 
 # The catalogue
 
-**Every ranged weapon in both games, by family.** Fourteen families, **122 items** —
+**Every ranged weapon in both games, by family.** Fourteen families, **123 items** —
 organised Base versus Advanced by tier, the same shape as Chapter Two's eleven melee
 families.
 
-**What is not here, and why.** The games carry 172 pistol and rifle entries between them.
+**What is not here, and why.** The games carry 173 pistol and rifle entries between them.
 **Fifty are excluded**, because they are things that exist only to make a video game work
 rather than items a character could ever own:
 
@@ -309,6 +309,8 @@ called.
 **Disruptor Carbine** · `w_brifle_08` · K2 · Tier 2 · 900 credits · *no properties* — *“This disruptor is even more destructive than its pistol counterpart, and is outlawed on just as many worlds. Disruptors reduce solid matter to its constituent molecules. Painfully. Unlike typical blasters, disruptors ign”* ⚠ *(description truncated in source)*
 
 **Zabrak Disruptor Cannon** · `g_w_dsrptrfl002` · K1 · Tier 2 · 1,500 credits · *Damage (Piercing) 5 · Enhancement 2* — *“Zabrak always command respect, especially with the aid of weapons that are even more damaging than already-outlawed standard disruptors. Unlike typical blasters, disruptors ignore most types of personal energy shields.”*
+
+**⚠ *name-field corrupted*** · `g1_w_dsrptrfl001` · K1 · Tier 3 · 16,000 credits · *AttackBonus 1 · AttackBonus 1 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d6 · Damage (Bludgeoning) 1d4 · Damage (Bludgeoning) 1d4 · Keen* — ⚠ *Its name and description fields both carry unrelated feat text rather than this item’s own. The weapon is real; the name is not.*
 
 **Charric** · `w_brifle_23` · K2 · Tier 3 · 16,450 credits · *AttackBonus 4 · OnHit (Knockdown) 14* — *“The Charric is an immensely powerful disruptor rifle. Exceedingly rare, its origin is believed to be somewhere in the Unknown Regions, though what species created it is unknown. The Charric employs maser beams and easily”* ⚠ *(description truncated in source)*
 

@@ -472,14 +472,35 @@ name and damage type settle it.
 **✔ The family catalogue is complete** — 122 items across fourteen families, replacing the
 placeholder this section previously carried.
 
-**⚠ Flag 1 — `ITEMS-01` on disk does not yet carry the ruled corrections.** The owner ruled
-that **K2's dice stand**, with two exceptions: **Blaster Carbine's threat moves to 19–20**
-(die stays `1d12`) and **Ion Blaster and Ion Rifle revert from ×3 to ×2**. **The family
-headings above state the ruled values.** The rows in `MAIN_WORK/rules/ITEMS-01.md` still
-read the old ones — that file was last written at 08:15 and the ruling came after. **No
-item's family membership depends on it**, because membership was captured from the
-pre-correction stat lines, which separate every family cleanly. **Nothing here needs
-redoing when the rows are updated.**
+**✔ Flag 1 — the ruled corrections have landed, and this catalogue matches the corrected
+file exactly.** The owner ruled that **K2's dice stand**, with two exceptions: **Blaster
+Carbine's threat moves to 19–20** (die stays `1d12`) and **Ion Blaster and Ion Rifle revert
+from ×3 to ×2**. `EQUIPMENT-01` now carries all three.
+
+**Re-verified after the sync:** of this catalogue's 122 entries, **zero are absent from the
+corrected file, zero changed stat line, and zero real rows are missing from the
+catalogue.** The membership capture held.
+
+**⚠ But the ×3 revert is partial in `ITEMS-01`, and the Bowcaster was never in scope.**
+**Nine ion variant rows still read ×3** where their own base weapons now read ×2:
+
+    Ion Blaster   w_blaste_10   Aratech Droid Oxidizer
+                  w_blaste_21   Aratech Ionmaster
+    Ion Rifle     g_w_ionrfl02  Bothan Droid Disruptor
+                  g_w_ionrfl03  Verpine Droid Disruptor
+                  w_brifle_02   Ion Carbine
+                  w_brifle_15   Bothan Droid Disruptor
+                  w_brifle_20   Verpine Droid Disruptor
+                  w_brifle_29   Verpine Droid Disintegrator
+                  g1_w_ionrfl01 (the corrupted-name row, Flag 4)
+
+**And six Bowcaster rows read ×3**, which **K1's raw `baseitems.2da` contradicts directly —
+the `Bowcaster` base row is `crithitmult` 2.** The owner's stated reason for the ion revert
+was that ×3 is *unsupported by either game's raw data*; **that reasoning applies to the
+Bowcaster identically**, and it was simply not part of the ruling's scope.
+
+**The family headings above state the ruled and raw-data-supported ×2 throughout.**
+**Reported rather than edited** — `ITEMS-01` is a rules document.
 
 **⚠ Flag 2 — `ITEMS-01`'s ion rows are internally inconsistent, which is how this was
 caught.** Two base Ion Rifles (`g_w_ionrfl01`, `w_brifle_07`) already read ×2 while their

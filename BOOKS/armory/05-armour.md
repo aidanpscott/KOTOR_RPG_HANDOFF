@@ -159,7 +159,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Miner Uniform** · `mineruniform` · K2 · Tier 1 · 10 credits · *no properties* — *“This is a standard uniform worn by miners at the Peragus facility. It provides minimal protection, but can be upgraded with some underlays.”* ⚠ *(the games file this row under `mine` in their weapons data; it is clothing, and it is catalogued here)*
 
-**Dancer's Outfit** ⚠ **UNIQUE** · `g_danceroutfit` · K2 · Tier 1 · no sale value · UseLimitationGender ⚠ *(unresolved — `gender` subtype 1)* 0 · UseLimitationPC (Handmaiden) 0 · UseLimitationPC (Mira) 0 · UseLimitationPC (Player) 0 · Skill (Persuade) 2 — *“This dancer's outfit leaves little to the imagination.”*
+**Dancer's Outfit** ⚠ **UNIQUE** · `g_danceroutfit` · K2 · Tier 1 · no sale value · UseLimitationGender (female) 0 · UseLimitationPC (Handmaiden) 0 · UseLimitationPC (Mira) 0 · UseLimitationPC (Player) 0 · Skill (Persuade) 2 — *“This dancer's outfit leaves little to the imagination.”*
 
 ## Disguise — 2
 

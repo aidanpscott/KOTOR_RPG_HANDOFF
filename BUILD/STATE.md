@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `17bba42` — `PT-1841`'s `positionsIn` |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `068ecfc` — casting gives you away |      ⚠ no |
+| `KOTOR-RPG-APP` | `d2d28d0` — the fallen in their own words |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 727 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 587 — 1,590, all
-green.** *(`BUILD 165`.)*
+**`Lodestar` 727 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 590 — 1,593, all
+green.** *(`BUILD 166`.)*
 
 ✓ **A ROOM IS AS YOU LEFT IT — `PT-1841`, `BUILD 163`.** Walked positions are
 written on the way out (only for what actually moved) and folded back on

@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `1407db2` — `§4a` as options, and it was never unextracted |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `79eaae8` — the matrix wins, and `§4a` is derived |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `30954f0` — `PT-1772` — a droid may not take a taken name |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `c48e909` — the Builder hands over the ban list |        ⚠ no |
-| `KOTOR-RPG-APP` | `db5b647` — the inventory gains `§4a`'s upgrades |      ⚠ no |
+| `KOTOR-RPG-APP` | `f26d62f` — the profession's weapon upgrade is applied |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,12 +59,12 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 668 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 533 — 1,474, all
-green.** *(`BUILD 150`.)*
+**`Lodestar` 668 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 546 — 1,487, all
+green.** *(`BUILD 151`.)*
 
-⚠ **`weapon_upgrades.toml` SHIPPED AT `BUILD 150`** — `§4a` as 21 structured
-rows rather than prose. **Nothing reads it yet**: the second offer on the
-Equipment screen is the other half and is not built.
+⚠ **`weapon_upgrades.toml` IS READ AT `BUILD 151`** — 35 rows from
+`WEAPON-MATRIX-01` (`PT-1780`), and the Equipment screen's second offer
+applies them. `§4a` is a **derived summary** now, not a competing source.
 
 ⚠⚠ **THE GATE NOW COMPARES THE INSTALLED SHELF AGAINST THE EXTRACTS** —
 `check_shelf.py`, `PT-1772`, blocking. Three states, one check per boundary:

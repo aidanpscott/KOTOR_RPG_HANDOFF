@@ -37,21 +37,35 @@ Chapters Two, Three and Four came from.
 ## ⚠⚠ Armour prices: where an item is in both games, KOTOR 1's price governs
 
 **This is the single most important thing to know before reading the prices below**, and it
-changes thirty-one of them.
+settles thirty-five of them.
 
 **The two games price the same armour differently — every item present in both, at a median
-of nearly twice.** This game resolves that one way: **the KOTOR 1 price is the one a
-Gamemaster charges.** KOTOR 1 is the more carefully balanced economy, and a single ladder
-beats two.
+of nearly twice.** This game resolves that one way, and it is not a compromise: **the
+KOTOR 1 price is the price.** KOTOR 1 is the more carefully balanced economy, and a single
+ladder beats two.
 
 **Thirty-one entries below are marked *reconciled to the KOTOR 1 price*.** Their KOTOR 2
 rows are kept so the difference stays visible, but the figure shown is the governing one.
 
-**One further entry is marked *KOTOR 2 only — priced equal to its light twin*.** The `Dark
-Padawan Robe` has no KOTOR 1 counterpart to defer to, so the pairing rule settles it
-instead: it costs exactly what the `Padawan Robe` costs.
+**Four more are marked *the KOTOR 1 price, which governs*, and they are the interesting
+ones**, because in each case the two games disagree sharply about what the same armour is
+worth:
 
-### The robes show why the rule exists
+| Item | KOTOR 1 — **the price** | KOTOR 2 records |
+|---|---|---|
+| **Dark Jedi Robe** | **100** | 700 |
+| **Ulic Qel Droma's Mesh Suit** | **5,000** | 30,000 |
+| **Exar Kun's Light Battle Suit** | **6,000** | 15,000 |
+| **Jamoh Hogra's Battle Armor** | **10,000** | 30,000 |
+
+**All four are mechanically identical between the two games** — same armour bonus, same
+resistances, same restrictions. **Only the price moved, and by as much as six times.**
+
+**One wrinkle worth flagging rather than hiding.** KOTOR 2's `Dark Jedi Robe` carries
+`Regeneration Force Points 1` where KOTOR 1's does not. **The price still follows KOTOR 1**,
+but a Gamemaster running the KOTOR 2 version is getting the better item at the older price.
+
+### The robes show why the rule exists at all
 
 **The robe ladder runs light and dark in pairs, and the two halves of each pair should cost
 the same** — a dark robe does not do more than its light twin. **Six of the seven pairs
@@ -67,17 +81,13 @@ already price equal:**
 | Master | 6,100 / 6,100 |
 | **KOTOR 2 base** | **100 / 700** ⚠ |
 
-> **One mismatched pair out of seven. The `Dark Jedi Robe` is mechanically identical to the
-> `Jedi Robe` — same `Armor 1`, same Force Point regeneration, same restriction — and it is
-> the only robe in the ladder that costs more than its twin.**
+> **One mismatched pair out of seven, and the `Dark Jedi Robe` was the odd one.** It is
+> mechanically identical to the `Jedi Robe` — same `Armor 1`, same restriction — and it was
+> the only robe in the ladder that cost more than its twin.
 
-**⚠ And it is the one row this catalogue could not reconcile.** Under the rule above its
-price should follow its KOTOR 1 twin at **100**. **The entry below still records 700**, and
-it is marked where it appears.
-
-**It is flagged rather than silently corrected**, because a price is a ruled value and this
-catalogue records them rather than sets them. **A Gamemaster reading this should charge 100
-and know why.**
+**Under the rule above it follows KOTOR 1 at 100**, which resolves the ladder to
+**100 · 150 · 200, light and dark equal at every tier.** The 700 is recorded and is not what
+a Gamemaster charges.
 
 ## ⚠ Some armour carries a `DecreaseAC` property, and it means exactly what it says
 
@@ -183,7 +193,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Zabrak Field Armor** · `a_light_14` · K2 · Tier 4 · 3,250 credits ⚠ *(reconciled to the KOTOR 1 price)* · DamageResist (Cold) Resist_30/- · Armor 2 · ⚠ *Species-restricted (which species is unresolved)* — *“This is a higher-quality version of the basic armor produced by the Zabrak. These were often reserved for field commanders, and meant to be easily identified on the battlefield.”*
 
-**Ulic Qel Droma's Mesh Suit** ⚠ **UNIQUE** · `a_light_15` · K2 · Tier 4 · 30,000 credits · DamageResist (Cold) Resist_20/- · DamageResist (Fire) Resist_20/- · Armor 3 · ⚠ *Species-restricted (which species is unresolved)* — *“After killing his brother during the Exar Kun war, Ulic Qel Droma abandoned this armor and all the trappings of his service to the Dark Side. It's a powerful, if tainted, item.”*
+**Ulic Qel Droma's Mesh Suit** ⚠ **UNIQUE** · `a_light_15` · K2 · Tier 4 · **5,000 credits** ⚠ *(the KOTOR 1 price, which governs; the KOTOR 2 row records 30,000)* · DamageResist (Cold) Resist_20/- · DamageResist (Fire) Resist_20/- · Armor 3 · ⚠ *Species-restricted (which species is unresolved)* — *“After killing his brother during the Exar Kun war, Ulic Qel Droma abandoned this armor and all the trappings of his service to the Dark Side. It's a powerful, if tainted, item.”*
 
 **Electromesh Suit** · `a_light_x08` · K2 · Tier 2 · 5,000 credits · DamageResist (Energy) Resist_5/- · Armor 1 · DEXBonusMax 2 · ⚠ *Species-restricted (which species is unresolved)* — *“This light combat suit is used by Nagai operatives. It is highly resistant to blaster fire and is designed to allow the Nagai to fully capitalize on their naturally high dexterity. It cannot be used with overlays, however.”*
 
@@ -257,7 +267,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Krath Holy Battle Suit** · `a_medium_10` · K2 · Tier 3 · 6,000 credits ⚠ *(reconciled to the KOTOR 1 price)* · DamageResist (Cold) Resist_15/- · DamageResist (Fire) Resist_15/- · DamageResist (Sonic) Resist_15/- · Armor 2 · ⚠ *Species-restricted (which species is unresolved)* — *“Many Krath sought to be guards of their dark temples in armor of this type. Cynics dismiss this fervor, noting that guard duty was safer than participating in military slave raids.”*
 
-**Exar Kun's Light Battle Suit** ⚠ **UNIQUE** · `a_medium_11` · K2 · Tier 3 · 15,000 credits · Armor 3 · ⚠ *Species-restricted (which species is unresolved)* — *“Attributed to Exar Kun, this armor may well have been one of those worn by the Dark Lord prior to his defeat forty years ago. He was rarely without considerable, yet flexible, personal armor.”*
+**Exar Kun's Light Battle Suit** ⚠ **UNIQUE** · `a_medium_11` · K2 · Tier 3 · **6,000 credits** ⚠ *(the KOTOR 1 price, which governs; the KOTOR 2 row records 15,000)* · Armor 3 · ⚠ *Species-restricted (which species is unresolved)* — *“Attributed to Exar Kun, this armor may well have been one of those worn by the Dark Lord prior to his defeat forty years ago. He was rarely without considerable, yet flexible, personal armor.”*
 
 **Heavy Cinnagar War Suit** · `a_medium_12` · K2 · Tier 3 · 18,500 credits · DamageResist (Sonic) Resist_20/- · Armor 3 · ⚠ *Species-restricted (which species is unresolved)* — *“After the Great Hyperspace War a thousand years ago, the heirs of Empress Teta militarized their world and industry, a legacy that produced battle armor still sought after today. This heavier variety is still as flexible as medium armor, but is as protective as heavier combat suits.”*
 
@@ -265,7 +275,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Electromesh Armor** · `a_medium_14` · K2 · Tier 4 · 25,500 credits · DamageResist (Energy) Resist_10/- · DEXBonusMax 4 · ⚠ *Species-restricted (which species is unresolved)* — *“This flexible armor is used by Nagai soldiers. It is highly resistant to blaster fire and is designed to allow the Nagai to fully capitalize on their naturally high dexterity.”*
 
-**Jamoh Hogra's Battle Armor** ⚠ **UNIQUE** · `a_medium_15` · K2 · Tier 4 · 30,000 credits · Ability (Strength) 1 · Armor 4 · Immunity (Critical Hits) 0 · ⚠ *Species-restricted (which species is unresolved)* — *“Jamoh Hogra was a Zabrak mercenary who feared for his life after a raid on a Sith dreadnaught. He spent a fortune on his personal armor, only to be killed while in the bath.”*
+**Jamoh Hogra's Battle Armor** ⚠ **UNIQUE** · `a_medium_15` · K2 · Tier 4 · **10,000 credits** ⚠ *(the KOTOR 1 price, which governs; the KOTOR 2 row records 30,000)* · Ability (Strength) 1 · Armor 4 · Immunity (Critical Hits) 0 · ⚠ *Species-restricted (which species is unresolved)* — *“Jamoh Hogra was a Zabrak mercenary who feared for his life after a raid on a Sith dreadnaught. He spent a fortune on his personal armor, only to be killed while in the bath.”*
 
 **Zeison Sha Initiate Armor** · `a_robe_06` · K2 · Tier 1 · 350 credits · Armor 1 · Saving throw +1 ⚠ *(which save is unresolved — subtype 1)* · ⚠ *Species-restricted (which species is unresolved)* — *“Does not restrict use of Force Powers. Zeison Sha initiates are known for their survival skills and resourcefulness. Their flexible armor is very durable and can be upgraded with some underlays. The Outer Rim planet Yanibar was the home of the Zeison Sha, who developed their Force powers as a means of surviving the harsh planet. Zeison Sha stress independence and survival as well as assistance to those in need.”*
 
@@ -397,7 +407,7 @@ keeps its index in the margin and none is guessed at.**
 
 **Jedi Robe** · `a_robe_08` · K2 · Tier 2 · 100 credits ⚠ *(reconciled to the KOTOR 1 price)* · Armor 1 · Regeneration Force Points 1 · ⚠ *Species-restricted (which species is unresolved)* — *“Members of the Jedi Order typically wear plain or unassuming garments.”*
 
-**Dark Jedi Robe** · `a_robe_09` · K2 · Tier 2 · 700 credits ⚠⚠ *(the one robe not reconciled — its KOTOR 1 twin is 100)* · Armor 1 · Regeneration Force Points 1 · ⚠ *Species-restricted (which species is unresolved)* — *“These are simple robes, kept modest not by a desire to appear humble, but to offer the greatest freedom of movement during battle.”*
+**Dark Jedi Robe** · `a_robe_09` · K2 · Tier 2 · **100 credits** ⚠ *(the KOTOR 1 price, which governs; the KOTOR 2 row records 700)* · Armor 1 · Regeneration Force Points 1 · ⚠ *Species-restricted (which species is unresolved)* — *“These are simple robes, kept modest not by a desire to appear humble, but to offer the greatest freedom of movement during battle.”*
 
 **Norris Robe** · `a_robe_10` · K2 · Tier 2 · 1,100 credits · DamageImmunity (Energy) ⚠ **DR 4** *(20%)* · Armor 2 · ⚠ *Species-restricted (which species is unresolved)* — *“Stained with pigments from the beautiful and rare norris root found on the planet Almar, these robes are naturally resistant to energy.”*
 

@@ -1882,8 +1882,34 @@ of them match their KOTOR 1 namesake's price exactly. One does not:** the `Dark 
 row whose mispricing prompted the rule. **The file's own text states the ladder it should
 follow, three lines above the row that disagrees with it.**
 
-**Recorded, marked in place, and not corrected.** A price is a ruled value; this catalogue
-records them rather than sets them. **The chapter tells a Gamemaster to charge 100 and why.**
+**✔ Resolved by the owner directly, the same day:** *"keep the K1 prices — that's the one
+area where K1 should always win out."* **So the chapter now prints 100 as the price**, with
+the 700 recorded beside it as what the KOTOR 2 row says.
+
+**⚠ And applying the ruling properly turned up three more rows it had never reached.**
+Checking for the same shape across every catalogue file — rather than assuming the robe was
+the only case — found **four** items priced differently between the games, all of them in
+this chapter and **none anywhere else in the book**:
+
+| Item | KOTOR 1 — the price | KOTOR 2 records | factor |
+|---|---|---|---|
+| **Dark Jedi Robe** | 100 | 700 | 7× |
+| **Ulic Qel Droma's Mesh Suit** | 5,000 | 30,000 | 6× |
+| **Exar Kun's Light Battle Suit** | 6,000 | 15,000 | 2.5× |
+| **Jamoh Hogra's Battle Armor** | 10,000 | 30,000 | 3× |
+
+**All four are mechanically identical between the two games** — same armour bonus, same
+resistances, same restrictions — which is what makes the disagreement a pricing fault rather
+than a difference in the item. **All four now print the KOTOR 1 figure.**
+
+**⚠ One wrinkle flagged rather than hidden.** KOTOR 2's `Dark Jedi Robe` carries
+`Regeneration Force Points 1` where KOTOR 1's does not, so the two are not *quite* identical
+in that one case. **The price still follows KOTOR 1 per the ruling**, and the chapter says
+plainly that a Gamemaster running the KOTOR 2 version gets the better item at the older
+price.
+
+**⚠ The source rows still record the KOTOR 2 figures.** The chapter is now right; the
+catalogue files behind it have not been touched, because they are not this pass's to edit.
 
 **A thirty-third row is marked differently and deliberately.** The `Dark Padawan Robe` is
 KOTOR 2 only, so there is no KOTOR 1 price to defer to; **the light/dark pairing rule settles

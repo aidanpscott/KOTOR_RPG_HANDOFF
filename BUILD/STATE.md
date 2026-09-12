@@ -46,7 +46,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `91f4d60` — the Armory closes |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `d25bbb0` — `PT-1855`'s Scan |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
@@ -60,7 +60,7 @@ one above it: the pins have a check and the heads have a habit.**
 ## Tests, as measured
 
 **`Lodestar` 740 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,613, all
-green.** *(`BUILD 175`.)*
+green.** *(`BUILD 176`.)*
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one

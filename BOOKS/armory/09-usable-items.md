@@ -1,7 +1,9 @@
 # Chapter Nine — Usable Items
 
-**Status: APPROVED.** Second of the four chapters split from the combined
-outline row. `ITEMS-06`, primary-source catalogue, same footing as Chapters Five
+**Things a character carries and spends.** Adrenals, medpacs, trap kits and crafting
+materials — **active consumables rather than anything worn or wielded.**
+
+**Taken straight from the games' own item files**, on the same footing as Chapters Five
 through Eight.
 
 ---
@@ -15,44 +17,38 @@ setting-specific unique gear.
 | Category | Count | What it is |
 |---|---|---|
 | **Adrenal** | 10 | Timed combat buffs |
-| **Components** | 2 | Crafting materials (`Chemicals`, and one more) — feeds `CRAFTING-01`, still `NOT HELD` from this repository |
+| **Components** | 2 | Crafting materials — `Chemicals` and one more. These feed the crafting rules in Chapter Twelve |
 | **Light-source** | 3 | — |
 | **Medical** | 8 | Healing and status-curing consumables |
 | **Spike** | 6 | Also crafting materials (`Parts`) |
 | **Trap-kit** | 29 | Placed area-effect devices — the largest category here |
 
-## Medical — where a ruling deliberately replaces the source mechanic
+## ⚠ Medical items — where this game knowingly differs from the games
 
-**This is not a contradiction to resolve — it's the source game's own mechanic, shown
-for context, next to the ruling that deliberately replaces it.** `PT-1`'s ruling
-(already cited in Chapters One and Three) gives medpacs a flat dice value: Medpac 2d8,
-Advanced Medpac 4d8, Life Support Pack 6d8. The source game's own item text describes
-a completely different mechanic:
+**This is the second place in the Armory where a value is deliberately not the source's
+own**, the first being Chapter One's cap on Massive Criticals. **You will find different
+numbers in the games, and the difference is on purpose.**
 
-| Item | Source game's own mechanic | This game's ruling |
+| Item | What the games do | **What this game does** |
 |---|---|---|
-| Medpac | 10 + Wisdom modifier + Treat Injury skill | **2d8** |
-| Advanced Medpac | 20 + Wisdom + (2 × Treat Injury) | **4d8** |
-| Life Support Pack | 30 + Wisdom + (3 × Treat Injury) | **6d8** |
+| **Medpac** | 10 + Wisdom modifier + Treat Injury skill | **`2d8`** |
+| **Advanced Medpac** | 20 + Wisdom + (2 × Treat Injury) | **`4d8`** |
+| **Life Support Pack** | 30 + Wisdom + (3 × Treat Injury) | **`6d8`** |
 
-**The ruling drops the Wisdom and skill dependency entirely — a medpac heals the same
-amount no matter who uses it — but keeps the source's own scaling shape.** The source
-triples base healing and its skill multiplier from Medpac to Life Support Pack (10→30,
-×1→×3); the ruling triples average healing across the same three items (2d8 averages 9,
-6d8 averages 27) by the same factor. Different mechanic, same proportions.
+**The change drops the Wisdom and skill dependency entirely — a medpac heals the same
+amount no matter who uses it.**
 
-**`Antidote Kit`** matches `PT-1`'s own description closely — ends a poison effect,
-restores attribute scores the poison had lowered. **`Squad Recovery Stim`** is a
-party-wide consumable (heals everyone present for 10 vitality on activation) not named
-in the earlier medpac ruling — a fifth medical item type worth knowing about
-separately from the three dice-healing tiers above.
+**But it keeps the source's own proportions exactly.** The games triple both the base
+healing and the skill multiplier from Medpac to Life Support Pack — 10 to 30, `×1` to
+`×3`. **This game triples the average healing across the same three items**: `2d8` averages
+9, `6d8` averages 27. **Different mechanic, same shape.**
 
-*(`ITEMS-06`; medpac ruling `PT-1` B3.)*
+> **A medpac is a medpac. In this game, who hands it to you does not change what it
+> does.**
+
+**Two medical items sit outside those three tiers.** **`Antidote Kit`** ends a poison
+effect and restores attribute scores the poison had lowered. **`Squad Recovery Stim`** is
+party-wide — **it heals everyone present for 10 vitality on activation**, which makes it a
+different kind of thing from a medpac rather than a stronger one.
 
 ---
-
-## Open items, carried from review
-
-Same lightsaber-damage flag, unaffected. Same unmapped-subtype deferral as Chapter
-Eight — none of this chapter's own categories happened to carry one, but the
-commissioned pass (once run) may still touch entries here.

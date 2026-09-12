@@ -638,3 +638,55 @@ has gone wrong in this task, and the third time the check caught it rather than 
 
 **⚠ Deliberately NOT loosened.** All five categories and their counts survive, both authored
 items keep their full specifications, and the representative-entry table is unchanged.
+
+---
+
+# Chapter Nine — Usable Items
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED.** Second of four chapters split from a combined outline row.
+Source `ITEMS-06`. **Medpac values are `PT-1` B3's deliberate replacement of the source
+game's WIS/skill-scaled mechanic.**
+
+Same lightsaber-damage flag, unaffected. Same unmapped-subtype deferral as Chapter
+Eight — none of this chapter's own categories happened to carry one, but the
+commissioned pass (once run) may still touch entries here.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 6 internal citations from 59 lines.**
+
+**⚠ The medical section got the Chapter One treatment**, as the second of only two places
+in the Armory where a value is knowingly not the source's own.
+
+It was headed *"Medical — where a ruling deliberately replaces the source mechanic"* and
+opened by explaining that this is *"not a contradiction to resolve"* — **which is an answer
+to a question only someone auditing the corpus would ask.** A reader meeting different
+numbers in the games does not think *contradiction*; they think **which one is right.**
+
+It is now headed **"Medical items — where this game knowingly differs from the games"** and
+opens by telling them directly: **you will find different numbers in the games, and the
+difference is on purpose.** The comparison table's columns changed from *"Source game's own
+mechanic / This game's ruling"* to **"What the games do / What this game does"**, which is
+the same distinction without the word *ruling*.
+
+**⚠ And the proportionality argument was kept in full, because it is the part that
+justifies the change.** The games triple both base healing and the skill multiplier from
+Medpac to Life Support Pack; **this game triples the average healing across the same three
+items.** Different mechanic, same shape. **That reasoning is why the replacement is
+defensible rather than arbitrary, and a reader deserves it.**
+
+**Closed with the line the section was always making and never said:** *a medpac is a
+medpac — in this game, who hands it to you does not change what it does.*
+
+**Two smaller fixes.** The `Components` row pointed at the crafting rules by document name;
+**it now points at Chapter Twelve**, where those rules actually live in this book. And the
+`Antidote Kit` / `Squad Recovery Stim` paragraph described them by reference to *"the
+earlier medpac ruling"* — **it now simply says they sit outside the three tiers**, with the
+Squad Recovery Stim correctly characterised as **a different kind of thing rather than a
+stronger medpac.**
+
+**⚠ Deliberately NOT loosened.** All six categories and counts survive, the 30-item
+cross-game overlap is kept, all three medpac tiers keep both the games' formula and this
+game's dice, and the tripling argument is unchanged.

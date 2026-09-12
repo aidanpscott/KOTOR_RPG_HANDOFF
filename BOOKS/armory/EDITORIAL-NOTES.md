@@ -690,3 +690,68 @@ stronger medpac.**
 **⚠ Deliberately NOT loosened.** All six categories and counts survive, the 30-item
 cross-game overlap is kept, all three medpac tiers keep both the games' formula and this
 game's dice, and the tripling argument is unchanged.
+
+---
+
+# Chapter Ten — Quest and Miscellaneous Items
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED.** Last of four chapters split from a combined outline row.
+Sources `ITEMS-07` (quest) and `ITEMS-08` (other). **Authored content:** `Shock-arm`
+(`PT-713`, `PT-712`, `PT-714`) and `Boots` (`PT-690`).
+
+Same lightsaber-damage flag, unaffected. The category-count question and the
+Shock-arm design are both closed above. Still open: the cross-reference worth someone
+picking up later — Pazaak's cards exist here while its rules chapter is still
+unplaced in Book Five.
+
+## ⚠ The two count-correction histories, removed from the chapter
+
+**Both were internal and both are preserved here.**
+
+**Quest items:** the header once read **"154 items"**. `PT-781` moved 134 upgrade rows out
+of the `plot` category into `ITEMS-09` — dropping `plot` from 147 to 13 — **and the header
+was not updated until `PT-871` caught it.** True count: **20.**
+
+**Miscellaneous items:** the file stated **42 items against a five-category sum of 69**.
+**The header was wrong, not the arithmetic** — corrected to 69, matching the sum exactly.
+**The same stale-header shape the quest catalogue had already shown**, in the same file
+family.
+
+**Also removed: the shock arm's redesign history** — that a free, auto-upgrading
+T3-M4-unique version existed and was deleted, leaving one purchasable line at two price
+points. **A reader needs the design that exists, not the one that did not survive.**
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 9 internal citations and two correction histories**, the heaviest combination
+in the Armory.
+
+**⚠ The authored section is the strongest ours-versus-extracted case in the book, and it
+now reads like it.** It was headed *"Two of these five categories are original content, not
+extracted from either game"* — accurate, and phrased in the project's internal vocabulary.
+
+It is now **"Two categories here do not exist in either game"**, opening: **this is the
+furthest this book goes beyond its source.**
+
+**⚠ And the Boots justification became checkable rather than asserted.** It cited the ruling
+and named the game's equipment table. **The table is game data and stayed** — but the claim
+is now framed as something a reader can verify: **"That is not an oversight on this book's
+part — it is verifiable in the games' own equipment table, which covers implant, head,
+armour, hands, arms, weapons and belt, and nothing below the waist."**
+
+**The shock arm's three consequences were pulled out of a citation-dense paragraph into
+plain statements:** it occupies no weapon slot, cannot be disarmed, dropped or sold, and a
+droid may still carry a blaster. **And the reason that matters — it is chassis hardware, the
+same category a beast's claws belong to, so it never passes through the wield classes —
+now also explains why droids being barred from melee weapons does not bar them from this.**
+**That last connection was implicit in a ruling number and is now stated.**
+
+**The pazaak note became a Gamemaster's instruction.** It described a rules chapter as
+`UNPLACED` in another book. **It now says the cards are catalogued regardless, and a
+Gamemaster who wants to run a hand has the props and will need to supply the game.**
+
+**⚠ Deliberately NOT loosened.** Both authored categories keep their full specifications
+including prices, dice and gating; all five miscellaneous categories and their counts
+survive; and the quest-item categories are unchanged.

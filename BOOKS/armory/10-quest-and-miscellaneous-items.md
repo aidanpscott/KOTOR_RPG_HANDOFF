@@ -1,76 +1,70 @@
 # Chapter Ten — Quest and Miscellaneous Items
 
-**Status: APPROVED.** Last of the four chapters split from the combined
-outline row. Two sources: `ITEMS-07` (quest) and `ITEMS-08` (other) — both small
-enough, and both genuinely miscellaneous enough, to share one chapter rather than
-stand alone the way Droid Equipment, Worn Gear, and Usable Items each did.
+**The things that do not fit anywhere else.** Story objects, currency, playing cards — and
+two categories that this game invented outright.
 
 ---
 
-## Quest items — `ITEMS-07`
+## Quest items
 
-20 items: `datapad` (2), `droid-parts` (5), `plot` (13).
+**20 items:** datapads (2), droid parts (5), and story objects (13).
 
-**This count carries its own correction history, already known from this book's own
-outline work: the header once read "154 items."** `PT-781` moved 134 upgrade rows out
-of the `plot` category and into `ITEMS-09` — dropping `plot` from 147 to 13 — and the
-header wasn't updated until `PT-871` caught it. Not a new finding; noted here because
-this is the first chapter that actually draws on this file directly rather than citing
-its count from a distance.
+**Datapads and droid parts are what they sound like** — narrative props and repair
+components. **Story objects** are flagged for a plot rather than built for combat;
+`Broken Item`, at 5 credits, is representative of the category.
 
-Datapads and droid parts are what they sound like — narrative props and droid-repair
-components. `Plot` items are story-flagged objects (`Broken Item`, 5 credits, is the
-sampled entry) rather than anything with combat properties.
+**None of these have combat properties**, and a Gamemaster should treat them as what the
+story needs them to be.
 
-## Miscellaneous items — `ITEMS-08`
+## Miscellaneous items
 
-**The category-count gap is resolved, and it was the header, not the arithmetic.** The
-file originally stated 42 items against a five-category sum of 69 — the same
-stale-header shape `ITEMS-07`'s own corrected history already showed this catalogue is
-prone to. Header corrected to **69**, matching the sum exactly.
+**69 items across five categories.**
 
-**Credits** (15 entries) are the currency itself, represented as an item for stacking
-purposes. **Misc** (3) is a small residual category — `Aesthetic Item` is the sampled
-entry, cosmetic rather than mechanical. **Pazaak** (24) are the physical playing cards
-— the item side of a game whose own rules (`PAZAAK-01`) are still `UNPLACED` from
-Book Five's Holocron discussion; the cards exist in the catalogue independent of
-whether that book ever gets the rules chapter to go with them.
+**Credits** (15 entries) are the currency itself, represented as an item so that it
+stacks. **Misc** (3) is a small residual category — `Aesthetic Item` is the example,
+cosmetic rather than mechanical. **Pazaak** (24) are the physical playing cards.
 
-**Two of these five categories are original content, not extracted from either game —
-and one of them invents an entire equipment slot that didn't exist before this
-project.**
+**⚠ The pazaak cards exist here; pazaak's own rules do not yet exist anywhere in this
+set.** The cards are catalogued regardless — **a Gamemaster who wants to run a hand of
+pazaak has the props and will need to supply the game.**
 
-`Shock-arm` (`⚠ AUTHORED`, `PT-713`) is chassis-integrated droid hardware. **Simplified
-since this chapter first drafted: the free, auto-upgrading T3-M4-unique design was
-deleted entirely.** One purchasable line remains, at two price points. **`Shock Arm`** (`a_shockarm_01`,
-120 credits, 1d6 electrical) is chassis standard — `Astromech` and `Remote` begin play
-with one, and it carries no `Droid Upgrade` prerequisite — and takes ordinary
-`melee/grip` and `melee/cell` upgrades. **`Advanced Shock Arm`** (`a_shockarm_02`, 500
-credits, 2d6 electrical) *is* gated, behind `Droid Upgrade 2`. It occupies no weapon
-slot and cannot be disarmed, dropped or sold, and a droid may still carry a blaster in
-its actual weapon slots (`PT-712`). `PT-567`'s melee bar is unaffected — nothing was
-carved out, because a shock arm was never a weapon in that sense.
-**`PT-714`, owner ruling, still stands regardless of that redesign: a shock arm is not
-a melee weapon — it's chassis hardware, the same category a beast's claws belong to.**
-Worth knowing for whoever eventually drafts the Bestiary's or Threat Database's droid
-sections, since it means a shock arm doesn't go through this book's wield-class system
-at all.
+## ⚠ Two categories here do not exist in either game
 
-`Boots` (25 items, `⚠ AUTHORED`, `PT-690`) exist because KOTOR has no foot slot at
-all — `baseitems.2da`'s equipment slots cover implant, head, armour, hands, arms,
-weapons and belt, and nothing below that. The `belt` category was used as the
-template (utility-flavoured, spread across all four tiers), and the resref pattern
-(`a_boots_NN`) is confirmed unused in either game's own item set. **This is new
-equipment, not a port** — the clearest example in this book of the project adding to
-KOTOR's own design rather than translating it.
+**This is the furthest this book goes beyond its source**, and both cases are marked
+wherever they appear.
 
-*(`ITEMS-07`, `ITEMS-08`.)*
+### The shock arm
+
+**Chassis-integrated hardware for droids**, in two versions:
+
+**`Shock Arm`** · `a_shockarm_01` · 120 credits · `1d6` electrical — **chassis standard.**
+Astromech and Remote droids **begin play with one**, it needs no upgrade prerequisite, and
+it takes ordinary melee grip and cell upgrades.
+
+**`Advanced Shock Arm`** · `a_shockarm_02` · 500 credits · `2d6` electrical — **gated
+behind `Droid Upgrade 2`.**
+
+**⚠ A shock arm is not a weapon, and that distinction carries real consequences.** It
+occupies **no weapon slot**, **cannot be disarmed, dropped or sold**, and **a droid may
+still carry a blaster in its actual weapon slots.**
+
+**It is chassis hardware — the same category a beast's claws belong to** — which means it
+does not pass through this book's wield classes at all. **It is also why droids being
+barred from melee weapons does not bar them from this.**
+
+### Boots
+
+**25 items, and they exist because KOTOR has no foot slot.**
+
+**That is not an oversight on this book's part — it is verifiable in the games' own
+equipment table**, which covers implant, head, armour, hands, arms, weapons and belt, **and
+nothing below the waist.**
+
+**The belt category was used as the template** — utility-flavoured, spread across all four
+tiers — and the item codes were checked against both games to confirm they collide with
+nothing.
+
+> **This is new equipment rather than a conversion, and it is the clearest example in this
+> book of this game adding to KOTOR's design rather than translating it.**
 
 ---
-
-## Open items, carried from review
-
-Same lightsaber-damage flag, unaffected. The category-count question and the
-Shock-arm design are both closed above. Still open: the cross-reference worth someone
-picking up later — Pazaak's cards exist here while its rules chapter is still
-unplaced in Book Five.

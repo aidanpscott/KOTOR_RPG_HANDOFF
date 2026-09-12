@@ -13,11 +13,11 @@ Chapters Two, Three and Four came from.
 
 ## The six categories
 
-**172 items in total**, nine of them appearing in both games.
+**173 items in total**, nine of them appearing in both games.
 
 | Category | Count | What it is |
 |---|---|---|
-| **Clothing** | 16 | No armour bonus by default; civilian and party-member wear, some unique (Atton's jacket, Mira's mesh jacket) that quietly matches light-armour protection despite the slot |
+| **Clothing** | 17 | No armour bonus by default; civilian and party-member wear, some unique (Atton's jacket, Mira's mesh jacket) that quietly matches light-armour protection despite the slot |
 | **Disguise** | 2 | Not combat gear at all — grants a `Disguise` property and little else, worn to pass as something you aren't rather than to take a hit |
 | **Light** | 37 | The Light armour class from Chapter One's table — armour bonus 4–5, high Dexterity cap |
 | **Medium** | 41 | Mid-range of Chapter One's table |
@@ -110,7 +110,7 @@ armour row.
 
 # The catalogue
 
-**All 172 items, by category**, with resref, which game each comes from, tier, price,
+**All 173 items, by category**, with resref, which game each comes from, tier, price,
 properties and the item's own description.
 
 **⚠ Four rows have a corrupted name.** `g1_a_class5001`, `g1_a_class5002`, `g1_a_class6001`
@@ -125,7 +125,7 @@ keeps its index in the margin and none is guessed at.**
 
 ---
 
-## Clothing — 16
+## Clothing — 17
 
 **Atton's Ribbed Jacket** ⚠ **UNIQUE** · `a_light_x02` · K2 · Tier 1 · no sale value · Armor 4 · Saving throw +2 ⚠ *(which save is unresolved — subtype 0)* · UseLimitationPC ⚠ *(unresolved — `iprp_pc` subtype 2)* 0 · ⚠ *Species-restricted (which species is unresolved)* — *“Atton's durable jacket provides protection comparable to light armor.”*
 
@@ -156,6 +156,8 @@ keeps its index in the margin and none is guessed at.**
 **Clothing {Variant 07}** · `g_a_clothes08` · K2+K1 · Tier 1 · no sale value · ⚠ *Species-restricted (which species is unresolved)* — *“These are simple garments that protect little more than the modesty of the wearer.”*
 
 **Clothing {Variant 08}** · `g_a_clothes09` · K2+K1 · Tier 1 · no sale value · ⚠ *Species-restricted (which species is unresolved)* — *“These are simple garments that protect little more than the modesty of the wearer.”*
+
+**Miner Uniform** · `mineruniform` · K2 · Tier 1 · 10 credits · *no properties* — *“This is a standard uniform worn by miners at the Peragus facility. It provides minimal protection, but can be upgraded with some underlays.”* ⚠ *(the games file this row under `mine` in their weapons data; it is clothing, and it is catalogued here)*
 
 **Dancer's Outfit** ⚠ **UNIQUE** · `g_danceroutfit` · K2 · Tier 1 · no sale value · UseLimitationGender ⚠ *(unresolved — `gender` subtype 1)* 0 · UseLimitationPC ⚠ *(unresolved — `iprp_pc` subtype 3)* 0 · UseLimitationPC ⚠ *(unresolved — `iprp_pc` subtype 8)* 0 · UseLimitationPC ⚠ *(unresolved — `iprp_pc` subtype 0)* 0 · Skill bonus +2 ⚠ *(which skill is unresolved — subtype 4)* — *“This dancer's outfit leaves little to the imagination.”*
 

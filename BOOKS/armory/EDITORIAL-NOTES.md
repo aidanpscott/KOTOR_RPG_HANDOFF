@@ -2140,9 +2140,29 @@ miners at the Peragus facility… can be upgraded with some underlays."*
 **its absence reads as a decision rather than an oversight**, and a reader is told where that
 kind of item lives.
 
-**⚠ It was not added to Chapter Five.** Doing so would push that chapter's `clothing`
-category from 16 to 17 and break the category agreement this task spent six passes
-establishing. **Moving it is a source change, not a chapter edit** — raised rather than done.
+**✔ Ruled: move it to Chapter Five's clothing.** Done. **Clothing 16 → 17, and Chapter Five's
+total 172 → 173**, with the entry marked to say the games file it under `mine` in their
+weapons data.
+
+**⚠ And the owner's reasoning is worth recording, because it corrects mine.** I had treated 16
+as an established number that moving the item would break. **It was not established — it was
+incomplete**, in exactly the same direction as every other stale header this task has caught.
+The item was always clothing; only its filing was wrong.
+
+**⚠ A coincidence worth noting and not overclaiming.** `ITEMS-02`'s header said **173** while
+its categories summed to 172 — and with the Miner Uniform correctly classified, clothing
+reaches 17 and the chapter reaches **173**. **That would explain the discrepancy neatly**: the
+item was counted as clothing when the header was written, then miscategorised into the
+weapons file. **Plausible, not proven** — the two files are separate and nothing states the
+connection. Recorded as a possibility for whoever touches the source next.
+
+**Chapter Three now points at the entry rather than describing an absence**, and its
+arithmetic is stated explicitly so the one-row difference cannot read as an error:
+
+    219   rows across that chapter's weapon categories
+     56   excluded as engine placeholders
+      1   catalogued in Chapter Five — the Miner Uniform
+    162   catalogued there
 
 ## Two smaller finds inside the new material
 

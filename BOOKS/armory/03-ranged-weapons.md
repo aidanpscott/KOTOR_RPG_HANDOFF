@@ -109,8 +109,9 @@ munitions** — which are weapons a character carries and uses, and which belong
 than nowhere.
 
 **What is not here, and why.** The games carry **219 entries** across the weapon categories
-this chapter covers. **Fifty-six are excluded**, because they are things that exist only to
-make a video game work rather than items a character could ever own:
+this chapter covers, and **162 of them are catalogued below.** Of the rest, **fifty-six are
+excluded** because they exist only to make a video game work rather than as items a character
+could ever own — **and one is real equipment that belongs in another chapter:**
 
 - **45 nameless `prop*` rows** — K2 placeholder weapons with no name at all.
 - **6 `g_w_null*` rows** — engine null-items, cost 0, literally named *"Blaster Pistol:
@@ -122,9 +123,14 @@ make a video game work rather than items a character could ever own:
 
 **⚠ And one row is not a weapon at all.** The games file a single entry under `mine`:
 `mineruniform`, **a 10-credit *Miner Uniform*** — *"a standard uniform worn by miners at the
-Peragus facility… can be upgraded with some underlays."* **That is clothing**, and it belongs
-with the worn gear in Chapter Five rather than in a weapons list. **Recorded here so its
-absence from this catalogue is visibly a decision rather than an oversight.**
+Peragus facility… can be upgraded with some underlays."* **That is clothing, not a mine**,
+and it is **the one row of the 219 that is catalogued elsewhere** — with the rest of the
+clothing in **Chapter Five**.
+
+    219   rows across this chapter's weapon categories
+     56   excluded as engine placeholders
+      1   catalogued in Chapter Five — the Miner Uniform
+    162   catalogued here
 
 **⚠ As in Chapter Two, the item code is not a guide to the family.** `w_brifle_` alone
 spans **four different families** here. **Families are determined by a weapon's own damage,

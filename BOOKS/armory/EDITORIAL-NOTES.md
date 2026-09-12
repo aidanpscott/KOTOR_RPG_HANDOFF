@@ -1815,3 +1815,106 @@ Max Dex"* — **all correct, at exactly the tiers stated.**
 28,850 credits. **It grants damage resistance rather than a fifth point of Armor**, so
 Chapter One's `+4` ceiling still stands — **but a reader who found a Mark IV and had been
 told the line stops at Mark III would reasonably wonder.** Now stated.
+
+---
+
+# ⚠ `PT-1770` — Chapter Five expanded to a full catalogue
+
+**172 items, six categories, all six agreeing after one parser repair.** 60 lines in, 472
+out. Zero internal citations. No duplicate resrefs.
+
+## ⚠ A parser fault found before it became a wrong count
+
+**The first parse returned `light` 36 against a stated 37.** The cause was not a missing row
+— **one row's NAME cell spans four physical lines**, and the naive reader dropped it. Joining
+continuation rows recovers it and all six categories then agree at 172.
+
+**⚠ I then checked every source file for the same shape rather than assuming this was the
+only one.** The result is worth recording:
+
+    ITEMS-03 · 04 · 06 · 07 · 08 · 09    0 malformed rows   ← Ch6, 7, 9, 10 SAFE
+    ITEMS-02                             1                  ← this pass, repaired
+    ITEMS-05                             5                  ← Chapter Eight, next
+    ITEMS-01                             2                  ← Chapters Two and Three
+
+**So no already-shipped catalogue lost a row** — confirmed by measurement, not by reasoning
+from the fact that their counts matched.
+
+**⚠ But `ITEMS-01` needs a look, and it is not this pass's file.** Without joining it reports
+`heavy` 21 stated against 20 rows; with joining it reports `rifle` 78 against 79. **Neither
+setting reconciles**, which means the naive join over-glues somewhere in that file.
+**Chapters Two and Three were built from it**, and their catalogues may be short or long by
+one or two. **Raised — it wants counting properly, not a quick fix.**
+
+## ⚠⚠ The chapter's price note named the wrong robe and quoted a superseded figure
+
+**It read:** *"The Dark Padawan Robe was priced down from 900 credits to 700, because it is
+mechanically identical to the standard Jedi Robe."*
+
+**Three things wrong in one sentence.**
+
+**The item is wrong.** The `Dark Padawan Robe` costs **50**, matches its light twin exactly,
+and was never mismatched. **The robe that was priced down is the `Dark Jedi Robe`.**
+
+**The figure is superseded.** 700 was an interim answer. A later ruling established that
+**where an item exists in both games the KOTOR 1 price governs** — and the source file's own
+text then says the robe ladder *"resolves to K1's: 100 · 150 · 200, light and dark equal at
+every tier."* **The governing price is 100, not 700.**
+
+**And the conclusion no longer followed.** *"Two items that do exactly the same thing now
+cost the same"* was the point — **but 700 against the `Jedi Robe`'s 100 is not the same.**
+
+**This is `PT-961`'s shape again**, and a bad case of it: a ruling changed the rule, the
+sentence reading from it was never updated, and it had drifted onto a different item
+entirely.
+
+## ⚠⚠ And the same ruling has one row still unreconciled in the source
+
+**Measured rather than asserted.** Thirty-two rows carry a double-marked price. **Thirty-one
+of them match their KOTOR 1 namesake's price exactly. One does not:** the `Dark Jedi Robe` at
+**700** against its KOTOR 1 twin's **100**.
+
+    double-marked rows      32
+    agree with the K1 price 31
+    ⚠ exception              1   — a_robe_09, Dark Jedi Robe
+
+**So the rule was applied across the whole chapter and missed exactly one row** — the very
+row whose mispricing prompted the rule. **The file's own text states the ladder it should
+follow, three lines above the row that disagrees with it.**
+
+**Recorded, marked in place, and not corrected.** A price is a ruled value; this catalogue
+records them rather than sets them. **The chapter tells a Gamemaster to charge 100 and why.**
+
+**A thirty-third row is marked differently and deliberately.** The `Dark Padawan Robe` is
+KOTOR 2 only, so there is no KOTOR 1 price to defer to; **the light/dark pairing rule settles
+it instead.** Distinguishing the two marks took reading the single-versus-double warning
+symbol in the source, which turned out to carry exactly that distinction.
+
+## ⚠ Four rows have a corrupted name — and the pattern now has a shape
+
+`g1_a_class5001`, `g1_a_class5002`, `g1_a_class6001`, `g1_a_class8001`. **All four are real
+armour with real properties** — Armor bonuses, ability bonuses, damage immunities — **whose
+name and description fields both carry unrelated text**: feat descriptions and
+*"Mastercraft: Weapons"* labels from elsewhere in the string table.
+
+**They are catalogued by resref and marked. No name was invented.**
+
+**⚠ And every string-table casualty found so far shares the `g1_` prefix** — these four, the
+crystal list's *"+ dual strike"* and *"Door Cutting"*, and Chapter Seven's corrupted-name
+`Advanced Droid Interface`. **That is a recognisable family rather than scattered damage**,
+and it would be worth resolving as a group alongside the unmapped-subtype work.
+
+## What was verified rather than assumed
+
+Prose read before generating, per standing practice. **Every claim the chapter already made
+was checked**: the `Light Combat Suit`'s `DecreaseAC` `−1` against a base 4 giving the stated
+`+3`; `Atton's Ribbed Jacket` at `Armor 4`, cost 0, Clothing; `Sith Armor` at `Armor 2` plus
+disguise; the `Padawan Robe` at `Armor 1`, 50; *"nine appearing in both games"* — **exactly
+nine.** All correct.
+
+**One was trimmed rather than corrected.** *"Cheapest armour in the game"* for the `Light
+Combat Suit` is not quite true — plain `Clothing` costs 25, and the `Combat Suit` ties at 50.
+**It now reads as the cheapest armour that actually protects you, tied with the Combat
+Suit.**
+
+**Cross-record fixed:** the live outline carried `ITEMS-02 — 173 items`.

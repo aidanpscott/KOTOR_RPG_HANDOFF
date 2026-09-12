@@ -192,3 +192,127 @@ Sith'ari, Tund, the Rakatan invasion and its outcome, the dark side as bequest, 
 25,200 BBY plague at rank 6, Tython, Corbos, the Hundred-Year Darkness, Ajunta Pall,
 Jen'jidai and Jen'ari, the interbreeding, and the Kashyyyk star map hand-off. **The rank-2
 versus rank-6 distinction on the Rakatan collapse is stated exactly as before.**
+
+---
+
+# Chapter Three — The Tales of the Jedi Era
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED by MAIN.** First chapter written under `PT-1802`'s three-part
+structure — framing, events narrative, Major Figures cross-referencing back.
+
+**⚠ Flag 1 — a same-rank conflict inside the Campaign Guide, resolved under `PT-946` and
+recorded here.** This is the book's first, and the rule fits it exactly.
+
+The **narrative** at f.5 says: *"The spirit of an ancient Sith Lord, **Marka Ragnos**,
+tempts the two Jedi and trains them in ancient teachings of the Sith"* — one tempter,
+both Jedi, named.
+
+The **dated timeline** at f.112 says something materially different: Exar Kun and Ulic
+Qel-Droma fall **by separate routes** — Kun abandoning his master for Sith lore and being
+trained on Korriban, Ulic falling while infiltrating the Krath — and are then jointly
+elevated by unnamed *"ancient Sith spirits,"* plural.
+
+**Neither supersedes the other** — same book, same printing — so `§3b`'s later-wins rule
+does not fire. `PT-946` applies instead: *"take the one that is trying harder to be
+exact,"* where *"a date beats 'around'"* and *"a direct statement beats an aside."* **The
+timeline is dated, itemised and event-by-event; the narrative is a compressed summary of
+a four-year war in five paragraphs.** The timeline is the more specific reading and this
+chapter follows it. **The narrative's version is recorded, not discarded.**
+
+**⚠ Flag 2 — I did not fix an intra-year order the sources do not jointly fix.** Five
+events are dated 3,996 BBY: Kuar, Coruscant, the Cron Cluster, Onderon, and Yavin 4, with
+the Ossus duel placed causally by the narrative but undated. The chapter presents them in
+the timeline's own order and places Ossus where the narrative puts it — *the tide turns* —
+without asserting a precise relation between Ossus and the Cron Cluster that no held source
+states. **Flagging rather than smoothing**, since a reader may reasonably expect this
+chapter to be as precise as Chapters Four onward.
+
+**⚠ Flag 3 — OCR corruption in the Campaign Guide text, two instances found in this
+chapter's range.** f.112 reads *"until lic Qel-Droma defeats Mandalore"* (**Ulic**), and
+f.113 reads *"Darth Revan and Darth Matak"* (**Malak**, in Chapter Five's range). **Both
+are transcription damage, not source claims**, and both are obvious — but they are the same
+corrupted-Name-field pattern the Armory hit three times, and a keyword search for *"Malak"*
+over this file will silently miss that line. Worth telling anyone searching this OCR.
+
+**⚠⚠ Flag 4 — the Campaign Guide has five eras, the book has five era chapters, and they
+do not line up. One period currently has no home.** Caught while writing this chapter's
+closing hand-off, which I had initially pointed at the wrong chapter.
+
+The Campaign Guide divides this stretch of history into five named eras, ff. 5–6:
+
+| Campaign Guide era | Years | Book chapter |
+|---|---|---|
+| The Great Sith War | 4,000–3,996 BBY | **Chapter Three** ✔ |
+| **The Restoration Period** | **3,995–3,966 BBY** | **⚠ none** |
+| The Mandalorian Wars | 3,965–3,960 BBY | **Chapter Four** ✔ |
+| The Jedi Civil War | 3,959–3,956 BBY | **Chapter Five** ✔ |
+| The Dark Wars | 3,955–3,951 BBY | **Chapter Six** ✔ |
+| *(no CG era exists)* | 3,950 BBY onward | **⚠ nothing — see below** |
+
+**Two consequences, and neither was mine to decide. ✔ Both are now ruled.**
+
+**One: the Restoration Period was orphaned.** Thirty years, its own rank-2 narrative
+section, containing the Republic's economic rebuild, the trade-route redevelopment, the
+Sith biding their time on Korriban, and the Mandalorians secretly rearming. **It is the
+direct set-up for Chapter Four** and reads as that chapter's opening movement rather than
+as a chapter of its own.
+
+**✔ Ruled: it opens Chapter Four**, on the same principle deep history already uses — not
+every Campaign-Guide-named era needs its own chapter, and a connective buildup belongs
+folded into what it sets up.
+
+**Two: "The Reconstruction" was ambiguous, and I nearly mis-sourced it.** There are **two**
+recovery periods in this book — the Restoration Period after the Great Sith War, and the
+post-3,951 BBY aftermath. **⚠ My own sourcing assessment offered the 3,985 BBY Coruscant
+Financial Exchange act as evidence for Chapter Seven's coverage — that act belongs to the
+*first* recovery, not the second.** Corrected here and in `OUTLINE-02`.
+
+**✔ Resolved by sweep, not by estimate.** A search of the entire Campaign Guide OCR found
+**no date later than 3,950 BBY anywhere in its 21,339 lines**, and every era-divided
+section in the book stops at the Dark Wars. So the bottom row above has no rank-2 source at
+all. **Chapter Seven is instead the reconstruction as the Republic-side view of
+3,956–3,950 BBY** — the same window as Chapter Six, from the other side — which is
+well-sourced at rank 2 and leaves the book stopping where its sources stop. **Neither
+reference book was staged.**
+
+**Not a flag, but worth recording: no rank 6 or rank 8 material was needed here.** The
+sourcing assessment predicted this chapter was covered at rank 2 and it was, with the
+Campaign Guide supplying both a narrative and a dated timeline for the same events. Neither
+reference book was consulted.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 4 internal citations**, a light load compared with Chapters One and Two,
+because this chapter was already almost entirely rank-2 Campaign Guide material with real
+printed folios. **The folios stayed; they are exactly what a reader can check.**
+
+**Rewritten rather than deleted — the Marka Ragnos entry.** It pointed at *"Flag 1 below"*,
+which a reader cannot follow and which no longer exists in the chapter. **The disagreement
+itself is real and useful**, so the entry now states it in full: the Campaign Guide's
+narrative names his spirit as the tempter of both Jedi, its own timeline says they fell by
+separate routes and were elevated by unnamed *"ancient Sith spirits"*, and **this chapter
+follows the timeline because it is the more precise of the two.** The ruling number behind
+that principle is gone; the principle is stated where it is used.
+
+**Rewritten — the Restoration Period hand-off**, which pointed at *"Flag 4"*. It now simply
+says those thirty years open Chapter Four, which is both true and what a reader needs.
+
+**Rewritten — the sources line, into a sources section** naming what each page actually
+supports, and stating the narrative-versus-timeline precedence rule in reader terms.
+
+**⚠ And a self-caught error in the pass itself.** My first draft of that section said both
+readings are reported *"see Marka Ragnos above, and the Ossus sequence below"* — **wrong
+twice.** The sources section sits at the end, so Ossus is above it, not below; and **Ossus
+is not a disagreement at all** — the duel, Cay's death and Nomi Sunrider's name appear only
+in the narrative, with the timeline silent rather than contradictory. **Corrected to
+distinguish the two cases**, which is now a better statement than the original: the sources
+conflict in one place and complement each other everywhere else.
+
+**⚠ Deliberately NOT loosened.** Every event survives: the Ketos and the Krath at 4,000 BBY,
+the Empress Teta coup, the Deneba ambush, Exar Kun on Korriban, Ulic's infiltration and
+fall, the joint elevation, Kuar and Mandalore the Indomitable, the Coruscant attack and
+Ulic's capture, the Cron Cluster, Onderon, Ossus, Yavin 4, and the Republic's inability to
+pursue. **The rank-2 attribution is unchanged and the timeline-over-narrative precedence is
+stated more plainly than before, not less.**

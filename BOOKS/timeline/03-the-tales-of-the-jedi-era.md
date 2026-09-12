@@ -1,11 +1,5 @@
 # Chapter Three — The Tales of the Jedi Era
 
-**Status: APPROVED** by MAIN. First chapter written under `PT-1802`'s three-part
-structure: framing, the events narrative, then Major Figures cross-referencing back into
-the narrative rather than re-telling it.
-
----
-
 **Forty years before this campaign begins, the galaxy nearly ended, and everyone who
 matters in 3,956 BBY is standing in the wreckage.**
 
@@ -140,7 +134,8 @@ secret for a return to the galactic stage."*
 What follows immediately is not a war but a recovery — the **Restoration Period,
 3,995–3,966 BBY** — thirty years in which the Republic rebuilt its trade routes and its
 military while *"the Mandalorians marshal their forces in secret for a return to the
-galactic stage."* **⚠ That era currently has no chapter of its own; see Flag 4.**
+galactic stage."* **Those thirty years open Chapter Four**, since they are that war's
+run-up rather than this one's aftermath.
 
 ---
 
@@ -174,96 +169,33 @@ Guide's narrative at f.5; she does not appear in its dated timeline.
 **Cay Qel-Droma** — Ulic's brother, killed by him on Ossus. The death that ended Ulic's
 war.
 
-**Marka Ragnos** — **⚠ contested at the same rank; see Flag 1 below.** The Campaign Guide's
-narrative names his spirit as the tempter of both Jedi; its own dated timeline does not,
-and this chapter follows the timeline. Regardless of that dispute he is an *ancient* Sith
-Lord — his relevance here is posthumous, which is itself the era's characteristic horror.
+**Marka Ragnos** — **⚠ the Campaign Guide contradicts itself about him, and this chapter
+does not hide it.** Its narrative account names his spirit as the tempter of *both* Jedi.
+Its own dated timeline says otherwise — Kun and Ulic fall by separate routes, and the pair
+are elevated by *"ancient Sith spirits"*, plural and unnamed. **This chapter follows the
+timeline**, which is the more precise of the two: dated, itemised, and event by event
+against a five-paragraph summary.
+
+**Either way he is an *ancient* Sith Lord**, dead long before any of this. His relevance is
+posthumous, which is the era's characteristic horror in one figure.
 
 ---
 
-*Sources: KOTOR Campaign Guide — "The Great Sith War" and "The Restoration Period"
-narrative, both f. 5; the dated timeline, ff. 112–113. Folios are printed page numbers; the
-OCR's page markers run three higher (Chapter One, Flag 3). Rank 2 throughout; no rank 6 or
-8 material was needed for this chapter.*
+## Sources for this chapter
 
-## Open items, carried from review
+**All of it is the *Knights of the Old Republic Campaign Guide*** — rank 2 throughout, and
+the page numbers are the printed ones. **No lower-ranked source was needed anywhere in this
+chapter.**
 
-**⚠ Flag 1 — a same-rank conflict inside the Campaign Guide, resolved under `PT-946` and
-recorded here.** This is the book's first, and the rule fits it exactly.
+- **"The Great Sith War" and "The Restoration Period"**, the narrative accounts — p. 5
+- **The dated timeline**, 4,000 BBY through 3,950 BBY — pp. 112–113
 
-The **narrative** at f.5 says: *"The spirit of an ancient Sith Lord, **Marka Ragnos**,
-tempts the two Jedi and trains them in ancient teachings of the Sith"* — one tempter,
-both Jedi, named.
+**⚠ Where those two disagree, this chapter follows the timeline**, on the principle that
+the more precise account wins: a dated, itemised list beats a summary compressing four
+years into five paragraphs. **Both readings are reported rather than one quietly dropped**
+— the Marka Ragnos entry above is the one place it matters.
 
-The **dated timeline** at f.112 says something materially different: Exar Kun and Ulic
-Qel-Droma fall **by separate routes** — Kun abandoning his master for Sith lore and being
-trained on Korriban, Ulic falling while infiltrating the Krath — and are then jointly
-elevated by unnamed *"ancient Sith spirits,"* plural.
-
-**Neither supersedes the other** — same book, same printing — so `§3b`'s later-wins rule
-does not fire. `PT-946` applies instead: *"take the one that is trying harder to be
-exact,"* where *"a date beats 'around'"* and *"a direct statement beats an aside."* **The
-timeline is dated, itemised and event-by-event; the narrative is a compressed summary of
-a four-year war in five paragraphs.** The timeline is the more specific reading and this
-chapter follows it. **The narrative's version is recorded, not discarded.**
-
-**⚠ Flag 2 — I did not fix an intra-year order the sources do not jointly fix.** Five
-events are dated 3,996 BBY: Kuar, Coruscant, the Cron Cluster, Onderon, and Yavin 4, with
-the Ossus duel placed causally by the narrative but undated. The chapter presents them in
-the timeline's own order and places Ossus where the narrative puts it — *the tide turns* —
-without asserting a precise relation between Ossus and the Cron Cluster that no held source
-states. **Flagging rather than smoothing**, since a reader may reasonably expect this
-chapter to be as precise as Chapters Four onward.
-
-**⚠ Flag 3 — OCR corruption in the Campaign Guide text, two instances found in this
-chapter's range.** f.112 reads *"until lic Qel-Droma defeats Mandalore"* (**Ulic**), and
-f.113 reads *"Darth Revan and Darth Matak"* (**Malak**, in Chapter Five's range). **Both
-are transcription damage, not source claims**, and both are obvious — but they are the same
-corrupted-Name-field pattern the Armory hit three times, and a keyword search for *"Malak"*
-over this file will silently miss that line. Worth telling anyone searching this OCR.
-
-**⚠⚠ Flag 4 — the Campaign Guide has five eras, the book has five era chapters, and they
-do not line up. One period currently has no home.** Caught while writing this chapter's
-closing hand-off, which I had initially pointed at the wrong chapter.
-
-The Campaign Guide divides this stretch of history into five named eras, ff. 5–6:
-
-| Campaign Guide era | Years | Book chapter |
-|---|---|---|
-| The Great Sith War | 4,000–3,996 BBY | **Chapter Three** ✔ |
-| **The Restoration Period** | **3,995–3,966 BBY** | **⚠ none** |
-| The Mandalorian Wars | 3,965–3,960 BBY | **Chapter Four** ✔ |
-| The Jedi Civil War | 3,959–3,956 BBY | **Chapter Five** ✔ |
-| The Dark Wars | 3,955–3,951 BBY | **Chapter Six** ✔ |
-| *(no CG era exists)* | 3,950 BBY onward | **⚠ nothing — see below** |
-
-**Two consequences, and neither was mine to decide. ✔ Both are now ruled.**
-
-**One: the Restoration Period was orphaned.** Thirty years, its own rank-2 narrative
-section, containing the Republic's economic rebuild, the trade-route redevelopment, the
-Sith biding their time on Korriban, and the Mandalorians secretly rearming. **It is the
-direct set-up for Chapter Four** and reads as that chapter's opening movement rather than
-as a chapter of its own.
-
-**✔ Ruled: it opens Chapter Four**, on the same principle deep history already uses — not
-every Campaign-Guide-named era needs its own chapter, and a connective buildup belongs
-folded into what it sets up.
-
-**Two: "The Reconstruction" was ambiguous, and I nearly mis-sourced it.** There are **two**
-recovery periods in this book — the Restoration Period after the Great Sith War, and the
-post-3,951 BBY aftermath. **⚠ My own sourcing assessment offered the 3,985 BBY Coruscant
-Financial Exchange act as evidence for Chapter Seven's coverage — that act belongs to the
-*first* recovery, not the second.** Corrected here and in `OUTLINE-02`.
-
-**✔ Resolved by sweep, not by estimate.** A search of the entire Campaign Guide OCR found
-**no date later than 3,950 BBY anywhere in its 21,339 lines**, and every era-divided
-section in the book stops at the Dark Wars. So the bottom row above has no rank-2 source at
-all. **Chapter Seven is instead the reconstruction as the Republic-side view of
-3,956–3,950 BBY** — the same window as Chapter Six, from the other side — which is
-well-sourced at rank 2 and leaves the book stopping where its sources stop. **Neither
-reference book was staged.**
-
-**Not a flag, but worth recording: no rank 6 or rank 8 material was needed here.** The
-sourcing assessment predicted this chapter was covered at rank 2 and it was, with the
-Campaign Guide supplying both a narrative and a dated timeline for the same events. Neither
-reference book was consulted.
+**Where they do not disagree but only one has the material, both are used.** The duel on
+Ossus, Cay Qel-Droma's death and Nomi Sunrider's name appear in the narrative and not in
+the timeline; the timeline supplies the years the narrative leaves out. **The two are
+complementary far more often than they conflict.**

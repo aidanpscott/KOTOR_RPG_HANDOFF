@@ -229,9 +229,9 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | — | Armour | **`DRAFTED`** | `ITEMS-02` — 173 items, six categories. Defence formula and droid plating taught in Chapter One, pointed back to rather than restated. **Text at `BOOKS/armory/05-armour.md`** |
 | — | Upgrades and the upgrade tree | **`DRAFTED`** | `ITEMS-03` — 164; `ITEMS-09`, refiled `PT-781`. Confirms and refines Chapter One's Bonded Plates/Flexible Underlay citations; resolves what the Bacca's/Cassus Fett's unique-weapon variants actually are. **Text at `BOOKS/armory/06-upgrades-and-the-upgrade-tree.md`** |
 | — | Droid equipment | **`DRAFTED`** | `ITEMS-04` — 135 items, eight categories. **Text at `BOOKS/armory/07-droid-equipment.md`. ⚠ Proposed split from the combined row below into four chapters — not yet confirmed** |
-| — | Worn gear | **`RULED`** | `ITEMS-05` — 241 items (belts, forearms, gauntlets, implants, masks). **⚠ Proposed as its own chapter, not yet drafted** |
-| — | Usable items | **`RULED`** | `ITEMS-06` — 58 items (adrenals, medical, trap kits). **⚠ Proposed as its own chapter, not yet drafted** |
-| — | Quest and miscellaneous items | **`RULED`** | `ITEMS-07` + `ITEMS-08` — roughly 60 combined. **⚠ Proposed as one chapter, not yet drafted** |
+| — | Worn gear | **`DRAFTED`** | `ITEMS-05` — 241 items, five categories, two mixing authored content with extracted. **Text at `BOOKS/armory/08-worn-gear.md`** |
+| — | Usable items | **`DRAFTED`** | `ITEMS-06` — 58 items. Medpac healing values are `PT-1`'s deliberate replacement of the source game's own WIS/skill-scaled mechanic. **Text at `BOOKS/armory/09-usable-items.md`** |
+| — | Quest and miscellaneous items | **`DRAFTED`** | `ITEMS-07` + `ITEMS-08`. Two authored categories, one (`boots`) inventing an equipment slot KOTOR never had (`PT-690`). **Text at `BOOKS/armory/10-quest-and-miscellaneous-items.md`** |
 | — | Tiers, pricing, availability | **`RULED`** | `PT-308`/`327`/`384`. Currency `D-CURRENCY-01` |
 | — | The weapon matrix / crafting | **`RULED · NOT HELD`** | `WEAPON-MATRIX-01`; `CRAFTING-01` |
 | — | Loot | **`RULED · NOT HELD` — see Book Two's UNPLACED list** | `LOOT-01` |

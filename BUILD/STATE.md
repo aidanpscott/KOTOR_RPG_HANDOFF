@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `0030f06` — `PT-1763` reaches the app, and `§2.4` with it |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `d726cbe` — `PT-1767`, and `§8` had been invisible to its extractor |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
 | `Loom` | `5ed6185` — pinned to `PT-1729`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `7654d6c` — a droid may take Science and Survival |      ⚠ no |
+| `KOTOR-RPG-APP` | `7de0ee2` — the shipped dice catch up with the rules |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,13 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 531 — 1,461, all
-green.** *(`BUILD 147`.)*
+**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 533 — 1,463, all
+green.** *(`BUILD 148`.)*
+
+⚠ **`equipment.toml` AND `items.toml` WERE REPLACED AT `BUILD 148`** — eight
+weapon dice and all three droid plating grades had been shipping values the
+rules had already corrected, and `equipment.toml` is what every attack's dice
+come from. `check_extracts` is at **one** stale comparison now, down from five.
 
 ⚠ **`base-rules/rules/droid_skills.toml` WAS REPLACED AT `BUILD 147`** —
 `PT-1718`'s Science and Survival, months after the ruling. The generated

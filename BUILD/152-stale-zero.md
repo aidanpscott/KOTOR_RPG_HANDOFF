@@ -129,7 +129,7 @@ for months.**
 ## Heads
 
     Lodestar        20e0565
-    Loom            c48e909   (unchanged)
+    Loom            ca0423b    engine pin upgraded to match
     Lens            e59ff95   (unchanged)
     KOTOR-RPG-APP   24b903f
     MAIN_WORK       7328920

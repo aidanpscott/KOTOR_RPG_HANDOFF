@@ -50,7 +50,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
 | `Lodestar` | `20e0565` — every projection declares what it folds |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `c48e909` — the Builder hands over the ban list |        ⚠ no |
+| `Loom` | `ca0423b` — pinned to `PT-1435`'s engine |        ⚠ no |
 | `KOTOR-RPG-APP` | `24b903f` — the check asks every projection, not `replay` |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the

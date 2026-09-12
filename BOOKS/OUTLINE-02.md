@@ -356,7 +356,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | 12 | The weapon matrix / crafting | **`DRAFTED`** | `WEAPON-MATRIX-01` (⚠ itself `DERIVED` — `STARTING-EQUIPMENT-01 §§2, 4a, 5` is the record); `CRAFTING-01`. `PT-760`, `PT-763`–`767`, `PT-692`, `PT-702`, `PT-714`, `PT-109`, `PT-567`, `PT-203`, `PT-225`, `PT-482`. **Text at `BOOKS/armory/12-the-weapon-matrix-and-crafting.md`** |
 | 13 | Loot | **`DRAFTED`** | `LOOT-01`. `PT-307` (bands, ported), `PT-308`/`309` (tier gate, authored), `PT-323`, `PT-327`, `PT-404`, `PT-651`, `PT-655`, `PT-666`, `PT-912`/`922`. **⚠ Band-to-table mapping is an inference — `PT-307` read the constants, not the control flow.** **Text at `BOOKS/armory/13-loot.md`** |
 | — | Starships / space combat | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)**** | `STARSHIPS-01` — 21 hulls; `SPACE-COMBAT-01`, derives from `MOUNTED-COMBAT-01` |
-| — | **Droid construction and upgrade** | **`RULED` — **present in `MAIN_WORK/rules/` (`AUDIT-01`)** — moved here per the brief** | `DROID-CONSTRUCTION-01`, `DROIDS-UPGRADE-01` (both `C21`). Droid *items* are held — `ITEMS-04` |
+| 14 | **Droid construction and upgrade** | **`DRAFTED`** | `DROID-CONSTRUCTION-01` (`PT-572`, `607`–`613`, `225`, `558`, `594`, `598`, `599`, `609`, `953`); `DROIDS-UPGRADE-01` (`PT-274`, `316`, `323`, `577`, `616`, `654`). **⚠ Contradicts Ch12 on who may build a droid — `PT-572` extends `PT-225` to three classes; Ch12 carries `CRAFTING-01`'s older "only class" wording.** **Text at `BOOKS/armory/14-droid-construction-and-upgrade.md`** |
 
 ---
 

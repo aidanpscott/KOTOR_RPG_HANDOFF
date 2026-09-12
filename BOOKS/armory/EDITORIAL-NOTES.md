@@ -1586,3 +1586,77 @@ tier was wrong**, and it was wrong because it was written from the absence of a
 **Chapter Fourteen now points at Chapter Ten for the entry and keeps the ruling**, and the
 Armory's front matter row was updated to match. **The two chapters now agree and neither
 loses anything.**
+
+---
+
+# ⚠ `PT-1770` — Chapter Nine expanded to a full catalogue
+
+**58 items, all six categories, every stated count agreed on the first pass.** 71 lines in,
+234 out. Zero internal citations. Resrefs unique across all 58.
+
+    adrenal 10 · components 2 · light-source 3 · medical 8
+    spike 6 · trap-kit 29                                  = 58
+
+## ⚠⚠ The finding: most of this chapter's effects are unconverted game data
+
+**The source catalogue's `Properties` column is the games' own raw text**, and for this
+chapter that is nearly all of it: **stuns lasting `9sec`, blast radii of `3.3m`, mines
+dealing `Piercing, 18pts`, saves at `DC35`.** Seconds, metres, flat damage points and the
+games' DC scale — **none of which this game runs on.**
+
+**The seven conversions the source catalogue names do not cover any of it.** They convert
+dice, Massive Criticals, tiers, uniqueness, crystals, upgradeability and the feat remap.
+**There is no conversion for adrenal durations or trap-kit effects, and none was invented
+here.**
+
+**So the chapter catalogues all 58 and marks the column for what it is.** A Gamemaster can
+read a Deadly Frag Mine's 54 points and its DC 25 and judge the shape of it; what they
+cannot do is mistake those for this game's rules. **Recorded rather than converted, and said
+plainly rather than left to look like crunch.**
+
+**⚠ This is a real conversion gap and it is the largest one the catalogue work has turned up
+so far — 39 items across two categories.** It is not this pass's to close. **Raised for a
+decision.**
+
+## ⚠ The medpacs were the trap, and they nearly went in backwards
+
+**Chapter Nine's own prose already rules that a medpac heals `2d8`, an Advanced Medpac
+`4d8`, and a Life Support Pack `6d8`, dropping the games' Wisdom-and-skill dependency.**
+**The source catalogue's properties column still carries the games' formula** — *"10 vitality
+points + WIS modifier + user's skill in Treat Injury."*
+
+**A verbatim dump would have put the superseded formula three lines under the conversion
+table that supersedes it, in the same chapter.** Caught before writing; the five affected
+rows now carry the ruled dice instead.
+
+**⚠ And the descriptions repeat the formula too**, which the properties substitution did not
+fix. The item's own description text says it as well. **The quote is left intact and marked
+in place** — *"the description states the games' formula; this game's value is the one
+above"* — because editing a quoted description silently is worse than the contradiction.
+
+**This is exactly the re-import-a-stale-value trap**, and the only reason it did not land is
+that the chapter's prose was read before the catalogue was generated rather than after.
+
+## ⚠ Two smaller conventions, both declared in the chapter
+
+**Twenty-three descriptions open by restating the identical stat block already in the Effect
+column**, then continue into real description. **The repeated opening is trimmed and the rest
+quoted**, and the chapter says so rather than letting a reader wonder why some quotes start
+mid-thought.
+
+**Three rows have no name in the source** — `ptar_rakghoulser`, `g_i_progspike003` and
+`g_i_progspike02`. **The last carries a full description and a working effect and is plainly
+a real item whose name did not resolve**; the other two carry nothing but a resref and a
+price of zero.
+
+**All three are listed, marked, and un-named.** The resrefs are suggestive — one of them
+obviously points at a specific Taris plot item — **but a resref is not a name, and guessing
+one into a catalogue is how a wrong name becomes permanent.** Worth someone resolving
+against the string table.
+
+## What matched, and what that confirms
+
+**Chapter Nine's header and its category sum both read 58 and agree** — one of the two
+chapters whose counts reconciled in the earlier survey, and the counts held when the rows
+were actually counted. **The survey's arithmetic was right here; it was the Chapter Ten
+undercount that was the outlier, not this.**

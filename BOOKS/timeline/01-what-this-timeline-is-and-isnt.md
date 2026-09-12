@@ -136,7 +136,8 @@ downward.**
 | 4 | *The Essential Atlas* |
 | 5 | *Dark Empire* |
 | 6 | *The New Essential Chronology* |
-| 7 | *Jedi vs. Sith*; *The New Essential Guide to Alien Species* — **descriptive lore only, never mechanics, nothing after 3,956 BBY** |
+| 7 | *(reserved — `D-W32`'s local Wookieepedia extension, worlds register only)* |
+| 8 | *Jedi vs. Sith*; *The New Essential Guide to Alien Species* — **descriptive lore only, never mechanics, nothing after 3,956 BBY** (`PT-1800`) |
 
 **⚠ This table is a reading, not the record.** `D-W32` in `WORLDS-REGISTER-01` rules that
 documents should **cite** the hierarchy at `METHOD-RECORD-01 §2` and `D-AB` rather than
@@ -229,17 +230,21 @@ corpus — including the one about thirty lines above it in the same document �
 argument is unaffected. Reported, not fixed; editing a rules document to correct a numeral
 is not this book's call.
 
-**⚠ Flag 2 — `D-W32` drift, instance two: "rank 7" now means two different things.**
+**✔ Flag 2 — the "rank 7" collision, raised and now closed by `PT-1800`.** Recorded here
+because the resolution is load-bearing for every citation in this book.
+
 `WORLDS-REGISTER-01`'s `D-W32` assigns **Wookieepedia** a *local* rank 7 — *"For Atlas
 purposes only… a local extension, not a change to `D-AB`"* — and that rank is live in the
 register, carrying the Bith and Glee Anselm warrants, with `D-W42` recording others
-**upgraded off rank 7 to rank 2**. The new ruling places *Jedi vs. Sith* and *The New
-Essential Guide to Alien Species* at a **global** rank 7. **These are very different
-things wearing the same label:** one is a wiki route to be escalated off as soon as an
-underlying source is named, the other is an admitted Legends reference book with a stable
-citation. A reader — or a sweep — reading "rank 7" in a warrant now cannot tell which is
-meant. **Needs disambiguating; not this book's ruling to make.** The table above is
-written with the global sense.
+**upgraded off rank 7 to rank 2**. Placing the two Essential Guides at rank 7 as well
+would have put **two very different things under one label**: a wiki route meant to be
+escalated off as soon as an underlying source is named, and an admitted Legends reference
+book with a stable citation and nothing pending. A warrant reading "rank 7" would have
+been ambiguous, and the wiki sense carries an active *needs-escalating* connotation the
+reference books should not inherit.
+
+**`PT-1800` moves them to rank 8**, leaving rank 7 to `D-W32`'s local extension. The
+labels now separate cleanly and `D-W42`'s escalation history keeps its meaning.
 
 **⚠ Flag 3 — the Campaign Guide OCR's page markers are not printed folios, and citations
 built on them will be wrong by three.** `data/books/KOTOR-CG-OCR.txt` marks pages

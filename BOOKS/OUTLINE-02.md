@@ -78,9 +78,19 @@ own from the sources that book drew on.
 **3 · A `[INSERT PERSONAL NOTE HERE]` placeholder**, left **empty**. This is the owner's
 own acknowledgment in his own voice. **Mark it clearly and do not draft it.**
 
-**Implemented for the Galactic Timeline** at `BOOKS/timeline/00-front-matter.md` (elements
-1 and 3) and `BOOKS/timeline/09-bibliography.md` (element 2). **⚠ Still owed by the Armory
-and by every book drafted from here.**
+**Implemented in all three books that exist:**
+
+| Book | Disclaimer | Bibliography | Personal note |
+|---|---|---|---|
+| **Galactic Timeline** | ✔ `timeline/00-front-matter.md` | ✔ `timeline/09-bibliography.md` | ✔ |
+| **Armory** | ✔ `armory/00-front-matter.md` | ✔ same file — **⚠ covers 11 chapters; revisit when the remaining five land** | ✔ |
+| **Player's Handbook** | ✔ `phb/00-front-matter.md` | **⚠ owed** — must be scoped to what the finished book cites, and it is one chapter in | ✔ |
+
+**⚠ Owed by every book drafted from here.** **Verify the disclaimer programmatically rather
+than by eye** — copy it from an existing front-matter file and diff it. "Word for word, no
+exceptions" is not a thing to satisfy by reading it over.
+
+**The verified/unverified marking is standard practice for every bibliography**, ruled.
 
 **One practice worth carrying forward from the Timeline's bibliography:** mark each entry
 **verified** or **unverified** against a source actually held. A credit page names real

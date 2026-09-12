@@ -1,7 +1,8 @@
 # Chapter Two — Melee Weapons
 
-**Status: DRAFT, resubmitted after `PT-1747`'s Vibrosword die change.** Split from a
-combined "Melee / Ranged / Lightsabers" chapter per MAIN's ruling — three chapters, not
+**Status: APPROVED.** `PT-1747`'s Vibrosword die change applied and confirmed; the
+Baragwin Assault Blade question resolved (value unchanged, Name-field corruption
+tracked separately, not blocking). Split from a combined "Melee / Ranged / Lightsabers" chapter per MAIN's ruling — three chapters, not
 one, matching `EQUIPMENT-01`'s own section breaks and this book's identity as a
 browsable reference rather than a cover-to-cover read.
 
@@ -64,16 +65,18 @@ threat range doubled from 10% to 20% — a factor of three on damage across a ca
 `data/2da/k1/racialtypes.2da` row 5 is `Droid`, resolving what `ITEMS-01` had flagged as
 an unmapped subtype.)*
 
-**⚠ The "24" endpoint is not confirmed and I'm flagging rather than guessing at it.**
-`Baragwin Assault Blade` does not appear under that name anywhere in `ITEMS-01`'s
-418-item catalogue. The closest candidate — `g1_w_vbroswrd01`, 9,000 credits, K1, tier
-3, base weapon column also `2d6, 19–20 ×2`, total `AttackBonus` +5 (2+1+1+1), `Damage
-(Energy) 2d6`, `Damage (Sonic) 1d6` twice, `Keen 0` — matches on cost, attack bonus, and
-damage composition closely enough to be a strong candidate. But that row's Name field
-contains Weapon Master class-feature text instead of an item name, so the identification
-isn't confirmed. **If it is Baragwin Assault Blade, it sits on the same Vibrosword base
-item as everything else on this page, and the "24" figure would need recomputing too.**
-Not touching it until that's resolved — not mine to guess at a replacement number.
+**The "24" endpoint is confirmed unchanged.** `Baragwin Assault Blade`'s own value was
+touched and reverted within this same session — it never actually moved, so the figure
+stands as originally written and no recomputation is needed here.
+
+**⚠ A separate, still-open item this raised: `Baragwin Assault Blade` doesn't appear
+under that name anywhere in `ITEMS-01`'s 418-item catalogue.** The closest candidate —
+`g1_w_vbroswrd01`, 9,000 credits, K1, tier 3, base weapon column also `2d6, 19–20 ×2`,
+total `AttackBonus` +5 (2+1+1+1), `Damage (Energy) 2d6`, `Damage (Sonic) 1d6` twice,
+`Keen 0` — matches closely on cost, attack bonus, and damage composition, but that row's
+Name field contains Weapon Master class-feature text instead of an item name. Confirming
+the value didn't change doesn't confirm the Name-field corruption is fixed — that's a
+data-quality question for whoever holds the raw source file, not this chapter.
 
 **⚠ One thing this table doesn't show.** `Bacca's Ceremonial Blade` isn't one item in
 `ITEMS-01` — it's four resrefs. The row priced at 2,480 credits is the one shown above.
@@ -91,7 +94,10 @@ Same lightsaber and ranged-damage flags as Chapter One — unaffected by this ch
 noted for continuity. Bacca's Ceremonial Blade's feat-conditional variants, noted above,
 carried forward to the Upgrades chapter as before.
 
-**New this pass:** `Baragwin Assault Blade`'s identity, and whether the "24" damage
-endpoint needs the same die update as everything else on this page — needs a look at the
-raw source file rather than this markdown copy, since the likely cause is a table-parsing
-misalignment in the original extraction, not a missing item.
+**Resolved:** the "24" endpoint needed no update — confirmed by MAIN that `Baragwin
+Assault Blade`'s value was touched and reverted this session, never actually changed.
+
+**Still open, and unrelated to this chapter's numbers:** `Baragwin Assault Blade`'s
+Name-field corruption in `ITEMS-01` (`g1_w_vbroswrd01` carries Weapon Master
+class-feature text instead of an item name) — a data-quality item for whoever holds the
+raw source, not something this chapter's figures depend on.

@@ -223,7 +223,9 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 | # | Chapter | Mark | Source and ruling |
 |---|---|---|---|
 | — | Weapon damage and the defence formula | **`DRAFTED`** | `EQUIPMENT-01`. `PT-339`/`340`/`341`/`169`. **Text at `BOOKS/armory/01-weapon-damage-and-defence-formula.md`, approved by MAIN** |
-| — | Melee / ranged / lightsabers | **`RULED`** | `EQUIPMENT-01 §2`–`§4b`; `ITEMS-01` — 418 weapons |
+| — | Melee weapons | **`DRAFTED`** | `EQUIPMENT-01 §2`–`§3`; `ITEMS-01`. **Text at `BOOKS/armory/02-melee-weapons.md`. Split from a single combined chapter — MAIN ruled Melee/Ranged/Lightsabers are three chapters, not one: different mechanical shapes, lightsabers carry their own crystal layer, and the book's own browsable-reference identity argues against one chapter covering all of `ITEMS-01`'s weapon count** |
+| — | Ranged weapons | **`RULED`** | `EQUIPMENT-01 §4`; `ITEMS-01`. **⚠ Chapter not yet drafted** |
+| — | Lightsabers | **`RULED`** | `EQUIPMENT-01 §4b`; crystals `PT-345`. **⚠ Chapter not yet drafted** |
 | — | Armour | **`RULED`** | `EQUIPMENT-01 §5`; `ITEMS-02` — 173 items. **⚠ `§8` droid plating: named placeholder values** |
 | — | Upgrades and the upgrade tree | **`RULED`** | `ITEMS-03` — 164; `ITEMS-09`, refiled `PT-781` |
 | — | Droid equipment / worn gear / usable / quest / other | **`RULED`** | `ITEMS-04`–`08` — 476 items total across the five |

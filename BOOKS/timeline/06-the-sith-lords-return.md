@@ -1,7 +1,6 @@
 # Chapter Six — The Sith Lords' Return
 
-**Status: APPROVED** by MAIN. `PT-1802`'s three parts. The Campaign Guide calls this era
-**the Dark Wars**, 3,955–3,951 BBY.
+**The Campaign Guide calls this era the Dark Wars, 3,955–3,951 BBY.**
 
 ---
 
@@ -10,8 +9,8 @@
 **Every chapter before this one described the reader's past. This one describes their
 future.**
 
-The campaign's default clock is **3,956 BBY** — `EVENTS-01`'s spine marks it *"KOTOR 1. OUR
-SETTING."* **The Dark Wars begin the year after it and end five years later.** So a
+**This game defaults to 3,956 BBY — the year KOTOR 1 takes place. The Dark Wars begin the
+year after it and end five years later.** So a
 Gamemaster running the default date is reading, here, an account of things that **have not
 happened yet** and which their table may well prevent, cause, or replace.
 
@@ -36,10 +35,8 @@ Malak's defeat does not end the Sith. It removes the only thing holding them tog
 *"Sith Lords, formerly loyal to Darth Revan and Malak, begin breaking the Sith Empire into
 smaller domains, declaring themselves sovereign warlords."*
 
-**This is the predicate from Chapter Five firing.** `sith_civil_war_begins` has the
-condition `malak_defeated == true`, and `EVENTS-01` calls it *"the event that turns Malak's
-Empire into the warlords — one row in an event table is the hinge of an entire faction
-tree."* **The chapter you are reading is what that row expands into.**
+**This is Chapter Five's hinge turning.** Malak's death is the single event that converts
+his empire into the warlords — **and everything in this chapter is what follows from it.**
 
 And for a moment it looks like good news: *"The few remaining Dark Lords of the Sith fight
 with one another over the scraps of their Empire, damaging themselves as much as the
@@ -81,14 +78,13 @@ the planet Katarr."*
 > an unholy dark-side technique, **Nihilus murders every living being on Katarr**, including
 > Master Tokare.
 
-**Every living being.** Not the Jedi — the planet. `TIMELINE-01` carries Katarr as a
-Miraluka colony *"consumed by Nihilus"* after the Jedi Civil War, and `EVENTS-01` holds
-`katarr_consumed` as an unconditional event record. **Nihilus obliterates all life on
-Katarr — all but Visas Marr**, who wakes aboard his ship afterward.
+**Every living being.** Not the Jedi — **the planet.** Katarr was a Miraluka colony, and
+Nihilus consumed all life on it — **all but Visas Marr**, who wakes aboard his ship
+afterward.
 
 **⚠ And the Campaign Guide gives a second, harder account of why the Jedi were there at
-all** — see Flag 2, because the two do not sit easily together. In the Atris entry, the
-conclave is **bait**:
+all — one that does not sit easily beside the first.** In the Atris entry, the conclave is
+**bait**:
 
 > Orchestrating an irresistible lure, **Atris** calls a Jedi conclave on Katarr, where most
 > of the one hundred remaining Jedi meet. **She then leaks knowledge of the session to bait
@@ -108,8 +104,12 @@ represent the most unified front for the Sith during this time."*
 
 The era narrative names a third: *"Three Sith Lords, **Darth Nihilus, Darth Sion, and Darth
 Traya**, decide to restore their former power by eliminating the greatest threat facing the
-Sith: the Jedi Order."* **⚠ The two accounts differ on Traya's place in this, and the
-chapter does not flatten them — Flag 1.**
+Sith: the Jedi Order."*
+
+**⚠ The two accounts differ on Traya's place, and this chapter does not flatten them.** The
+timeline is the more precise of the two — dated, itemised, and distinguishing her role from
+the other two — **so this chapter follows it**, and the narrative's flatter version is
+recorded here rather than discarded.
 
 Either way the outcome is the same: *"In the middle of the Dark Wars, **the Jedi Order
 collapses** and only a few survivors escape death at the hands of the Sith. The Sith
@@ -123,9 +123,9 @@ fight against the remnants of the Sith Empire."*
 
 **This closes the gap Chapter Four left open.** The Neo-Crusaders disbanded at Malachor V in
 3,960; the search for the Mask ran through the campaign's own year and reached *"over a
-hundred clans"* by Rekkiad in 3,954; and here it completes. `EVENTS-01` records the moment
-exactly: **Mandalore the Preserver regroups the Neo-Crusaders on Dxun, and the Preserver
-era opens.**
+hundred clans"* by Rekkiad in 3,954; and here it completes. **Canderous Ordo takes the name
+Mandalore the Preserver, regroups the Neo-Crusaders on Dxun, and the Mandalorians are a
+people again.**
 
 **The hired gun a party meets on Taris in 3,956 BBY becomes Mandalore five years later.**
 There is no better single illustration of what this chapter is for.
@@ -136,11 +136,11 @@ There is no better single illustration of what this chapter is for.
 Darth Nihilus. **Bao-Dur activates the Mass Shadow Generator on Malachor V again**,
 destroying what is left of the planet, and Traya is defeated."*
 
-**The same weapon, the same world, a second time.** `EVENTS-01` holds
-`malachor_v_second_destruction` at 3,951 as an unconditional record. Chapter Four's
+**The same weapon, the same world, a second time.** Chapter Four's
 victory and Chapter Six's are the same act performed twice, and the person at the centre of
 both is the Exile — **which is the fact the Campaign Guide's dedicated entry makes
-unavoidable, and which changes how Chapter Four should be read (Flag 3).**
+unavoidable — and which is why Chapter Four credits the Exile rather than Revan with the
+first firing.**
 
 ### 3,950 BBY — what it cost
 
@@ -209,89 +209,23 @@ destruction.
 
 ---
 
-*Sources: KOTOR Campaign Guide — "The Dark Wars" f. 6; the dated timeline f. 113; the Jedi
-Exile and Darth Nihilus entries f. 140; Vandar Tokare f. 139; Atris f. 141. `EVENTS-01 §1`
-(3,951, the Preserver era opening), `§4` (`katarr_consumed`,
-`malachor_v_second_destruction`). `TIMELINE-01` for Katarr as a Miraluka colony consumed by
-Nihilus. KOTOR 2 at rank 1. Folios are printed page numbers; the OCR's page markers run
-three higher. No rank 6 or 8 material needed.*
+## Sources for this chapter
 
-## Open items, carried from review
+**KOTOR 2 is the primary source** — rank 1, above any book. **The events of 3,955 to 3,951
+BBY are its story**, and where it and a published account differ, the game governs.
 
-**⚠ Flag 1 — same-rank conflict on Darth Traya's role, resolved under `PT-946`.** The era
-narrative (f. 6) makes Traya one of three Sith Lords who *"decide to restore their former
-power"* together and has *"a Jedi survivor slay all three members of the Sith
-Triumvirate."* The dated timeline (f. 113) instead has the Sith remnant *"largely unified by
-Darth Sion and Darth Nihilus"* — Traya absent from the unification — and then, in 3,951,
-*"under the guidance of a **disguised** Darth Traya, the Jedi Exile defeats Darth Sion and
-Darth Nihilus,"* with *"Traya is defeated"* recorded separately.
+**The *Knights of the Old Republic Campaign Guide*** supplies the rest, at printed page
+numbers — and this chapter draws on more of it than any other, because the character
+entries carry what the era narrative leaves out:
 
-**Neither supersedes; `PT-946`'s more-specific rule applies.** The timeline is dated,
-itemised, distinguishes Traya's role from the other two, and names Bao-Dur and the
-mechanism. The narrative is a five-paragraph summary. **The timeline governs and the
-narrative is recorded.** This also happens to be the reading consistent with **KOTOR 2 at
-rank 1**, which outranks both — noted as corroboration, not as the basis for the call.
+- **"The Dark Wars"**, the era account — p. 6
+- **The dated timeline**, 3,955 through 3,950 BBY — p. 113
+- **The Jedi Exile, and Darth Nihilus** — p. 140
+- **Vandar Tokare** — p. 139
+- **Atris** — p. 141
 
-**⚠ Flag 2 — a second same-rank conflict, on who convened Katarr, where `PT-946` gives no
-winner.** Two Campaign Guide character entries, comparable in specificity:
-
-- **Vandar Tokare, f. 139:** *"To divine the identities of their hunters, Master Tokare
-  meets with most of the hundred surviving Jedi on the planet Katarr."*
-- **Atris, f. 141:** *"Orchestrating an irresistible lure, Atris calls a Jedi conclave on
-  Katarr… She then leaks knowledge of the session to bait their killer into the open."*
-
-**These are not the same claim.** One is a Jedi Master convening peers to identify a threat;
-the other is a deliberate use of a hundred Jedi as bait, which the entry itself scores as
-*"at the expense of her Jedi comrades."* They can be stacked — Atris convening, Tokare
-presiding — but neither entry says so, and the difference in moral weight is the whole
-point of the episode.
-
-**`PT-946`'s third branch applies: where specificity is equal, record both and mark it
-unresolved.** *"An unresolved pair that says so is safe; a forced resolution that looks
-settled is not."* **The chapter carries both accounts and does not pick.** First use of that
-branch in this book.
-
-**⚠⚠ Flag 3 — this chapter's sources amend Chapter Four, and I have not silently rewritten
-it.** Chapter Four quotes the CG timeline verbatim: *"Revan lures the Mandalorians to
-Malachor V… activates the superweapon known as the Mass Shadow Generator."* **The Campaign
-Guide's dedicated Jedi Exile entry at f. 140 attributes the activation to the Exile** — it
-was *"Revan's carefully choreographed gambit,"* but *"the Jedi Exile springs the trap,
-unleashing an apocalyptic weapon called the Mass Shadow Generator."*
-
-**Under `PT-946` the character entry is the more specific source on this one point** — it
-names the battle (*Ani'la Akaan*), the agent, the mechanism, and the consequence, against
-the timeline's single clause. **The reconciliation is almost certainly "Revan planned it,
-the Exile executed it,"** and both sources are satisfied by that reading.
-
-**✔ Amended, approved by MAIN.** Chapter Four now records the reconciliation, and a later
-sweep of the same character section made it **three-way**: **Bao-Dur's** entry (f. 176)
-names him as the weapon's inventor, *"the invention also kills a great number of his allies
-and own forces in the process."*
-
-> **Revan planned it. Bao-Dur built it. The Exile sprang it.**
-
-Chapter Four also now carries the cost the Campaign Guide records — the Republic fleet died
-in the same crush, the Exile severed themselves from the Force to survive it, and *"the
-Council was not kind"* — because **the Exile's entire character descends from having pulled
-the trigger themselves.**
-
-**⚠ Flag 4 — my Chapter Five prediction was wrong, and the correction is worth more than the
-prediction.** I reported that the CG-narrative-versus-CG-timeline conflict pattern was
-*"bounded"* to long compressed wars and said I would *"expect it back in Chapter Seven
-rather than Chapter Six."* **It is back in Chapter Six, twice.** The bound I proposed does
-not hold: the Dark Wars are four years, the same length as the Jedi Civil War, and they
-produced two conflicts where that war produced none. **The real variable is not the era's
-length but how many separate CG sections describe it** — this era is covered by an era
-narrative, a timeline, and at least four character entries, and the conflicts are between
-those, not within any one.
-
-**Corrected expectation for Chapter Seven:** it has the *fewest* CG sections of any chapter
-in the book, so on this revised reading it should produce few conflicts and a thin chapter
-— which matches what I already flagged about its sourcing.
-
-**Worth recording for Chapter Eight — an epigraph the Campaign Guide hands us.** Closing
-the historical section at f. 6, attributed to **Jolee Bindo**: *"Look, everybody always
-figures the time they live in is the most epic, most important age to end all ages. But
-tyrants and heroes rise and fall, and historians sort out the pieces."* **That is Chapter
-Eight's thesis, written by the source material, in the voice of a KOTOR 1 character a party
-can actually meet.** Not using it here; flagging it so it is not lost.
+**⚠ The Campaign Guide disagrees with itself twice in this chapter**, and both are reported
+rather than resolved away: **Darth Traya's place in the Triumvirate**, where the dated
+timeline is the more precise account and this chapter follows it; and **who convened the
+conclave on Katarr**, where the Tokare and Atris entries are equally specific and
+**genuinely cannot be reconciled** — so both stand, above.

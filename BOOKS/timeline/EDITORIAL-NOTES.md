@@ -529,3 +529,131 @@ Exile on the grounds that both genders are player-determined exactly as the endi
 **⚠ Deliberately NOT loosened.** All 15 checked facts survive, and both load-bearing
 framings are intact: the alternative ending is still stated as *equally valid, equally
 supported*, and the default is still explicitly **not a verdict**.
+
+---
+
+# Chapter Six — The Sith Lords' Return
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED by MAIN.** `PT-1802`'s three parts. **Sources:** `EVENTS-01 §1`
+(3,951, the Preserver era opening) and `§4` (`katarr_consumed`,
+`malachor_v_second_destruction`); `TIMELINE-01` for Katarr as a Miraluka colony consumed by
+Nihilus; both same-rank conflicts resolved under `PT-946`.
+
+**⚠ Flag 1 — same-rank conflict on Darth Traya's role, resolved under `PT-946`.** The era
+narrative (f. 6) makes Traya one of three Sith Lords who *"decide to restore their former
+power"* together and has *"a Jedi survivor slay all three members of the Sith
+Triumvirate."* The dated timeline (f. 113) instead has the Sith remnant *"largely unified by
+Darth Sion and Darth Nihilus"* — Traya absent from the unification — and then, in 3,951,
+*"under the guidance of a **disguised** Darth Traya, the Jedi Exile defeats Darth Sion and
+Darth Nihilus,"* with *"Traya is defeated"* recorded separately.
+
+**Neither supersedes; `PT-946`'s more-specific rule applies.** The timeline is dated,
+itemised, distinguishes Traya's role from the other two, and names Bao-Dur and the
+mechanism. The narrative is a five-paragraph summary. **The timeline governs and the
+narrative is recorded.** This also happens to be the reading consistent with **KOTOR 2 at
+rank 1**, which outranks both — noted as corroboration, not as the basis for the call.
+
+**⚠ Flag 2 — a second same-rank conflict, on who convened Katarr, where `PT-946` gives no
+winner.** Two Campaign Guide character entries, comparable in specificity:
+
+- **Vandar Tokare, f. 139:** *"To divine the identities of their hunters, Master Tokare
+  meets with most of the hundred surviving Jedi on the planet Katarr."*
+- **Atris, f. 141:** *"Orchestrating an irresistible lure, Atris calls a Jedi conclave on
+  Katarr… She then leaks knowledge of the session to bait their killer into the open."*
+
+**These are not the same claim.** One is a Jedi Master convening peers to identify a threat;
+the other is a deliberate use of a hundred Jedi as bait, which the entry itself scores as
+*"at the expense of her Jedi comrades."* They can be stacked — Atris convening, Tokare
+presiding — but neither entry says so, and the difference in moral weight is the whole
+point of the episode.
+
+**`PT-946`'s third branch applies: where specificity is equal, record both and mark it
+unresolved.** *"An unresolved pair that says so is safe; a forced resolution that looks
+settled is not."* **The chapter carries both accounts and does not pick.** First use of that
+branch in this book.
+
+**⚠⚠ Flag 3 — this chapter's sources amend Chapter Four, and I have not silently rewritten
+it.** Chapter Four quotes the CG timeline verbatim: *"Revan lures the Mandalorians to
+Malachor V… activates the superweapon known as the Mass Shadow Generator."* **The Campaign
+Guide's dedicated Jedi Exile entry at f. 140 attributes the activation to the Exile** — it
+was *"Revan's carefully choreographed gambit,"* but *"the Jedi Exile springs the trap,
+unleashing an apocalyptic weapon called the Mass Shadow Generator."*
+
+**Under `PT-946` the character entry is the more specific source on this one point** — it
+names the battle (*Ani'la Akaan*), the agent, the mechanism, and the consequence, against
+the timeline's single clause. **The reconciliation is almost certainly "Revan planned it,
+the Exile executed it,"** and both sources are satisfied by that reading.
+
+**✔ Amended, approved by MAIN.** Chapter Four now records the reconciliation, and a later
+sweep of the same character section made it **three-way**: **Bao-Dur's** entry (f. 176)
+names him as the weapon's inventor, *"the invention also kills a great number of his allies
+and own forces in the process."*
+
+> **Revan planned it. Bao-Dur built it. The Exile sprang it.**
+
+Chapter Four also now carries the cost the Campaign Guide records — the Republic fleet died
+in the same crush, the Exile severed themselves from the Force to survive it, and *"the
+Council was not kind"* — because **the Exile's entire character descends from having pulled
+the trigger themselves.**
+
+**⚠ Flag 4 — my Chapter Five prediction was wrong, and the correction is worth more than the
+prediction.** I reported that the CG-narrative-versus-CG-timeline conflict pattern was
+*"bounded"* to long compressed wars and said I would *"expect it back in Chapter Seven
+rather than Chapter Six."* **It is back in Chapter Six, twice.** The bound I proposed does
+not hold: the Dark Wars are four years, the same length as the Jedi Civil War, and they
+produced two conflicts where that war produced none. **The real variable is not the era's
+length but how many separate CG sections describe it** — this era is covered by an era
+narrative, a timeline, and at least four character entries, and the conflicts are between
+those, not within any one.
+
+**Corrected expectation for Chapter Seven:** it has the *fewest* CG sections of any chapter
+in the book, so on this revised reading it should produce few conflicts and a thin chapter
+— which matches what I already flagged about its sourcing.
+
+**Worth recording for Chapter Eight — an epigraph the Campaign Guide hands us.** Closing
+the historical section at f. 6, attributed to **Jolee Bindo**: *"Look, everybody always
+figures the time they live in is the most epic, most important age to end all ages. But
+tyrants and heroes rise and fall, and historians sort out the pieces."* **That is Chapter
+Eight's thesis, written by the source material, in the voice of a KOTOR 1 character a party
+can actually meet.** Not using it here; flagging it so it is not lost.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 10 internal citations, the most of any chapter so far.** This chapter cited a
+ruling or a record at every structural joint: the reading-contract framing, the hinge from
+Chapter Five, both Katarr accounts, Traya's role, the second destruction of Malachor V, and
+the Preserver's return.
+
+**Rewritten — the future-tense framing**, which is the chapter's whole reason for existing
+and was explained by citing a spine entry reading *"KOTOR 1. OUR SETTING."* It now simply
+says **this game defaults to 3,956 BBY, the year KOTOR 1 takes place, and the Dark Wars
+begin the year after.** The consequence — a Gamemaster is reading their own future, and the
+chapter is **the setting's forecast rather than its record** — was always reader-facing and
+is untouched.
+
+**Rewritten — the Chapter Five hinge.** It cited `sith_civil_war_begins`, its
+`malak_defeated == true` condition, and *"one row in an event table is the hinge of an
+entire faction tree."* It now reads: **Malak's death is the single event that converts his
+empire into the warlords, and everything in this chapter is what follows from it.** Same
+causal claim, no schema.
+
+**Rewritten — both same-rank conflicts, which is the most important part of this pass.**
+Each previously pointed at a flag number. **The disagreements are genuinely useful to a
+reader and both now stand on their own terms:** Traya's role, where the dated timeline is
+the more precise account and the narrative's flatter version is recorded rather than
+discarded; and **who convened Katarr**, where the pass added something the chapter never
+said outright — the Tokare and Atris entries are **equally specific and genuinely cannot be
+reconciled**, so both stand.
+
+**Rewritten — the sources line into a sources section**, which gained the clearest statement
+of the chapter's own sourcing: **KOTOR 2 is primary and outranks any book**, and this
+chapter draws on more Campaign Guide character entries than any other **because they carry
+what the era narrative leaves out.**
+
+**⚠ Deliberately NOT loosened.** All 16 checked facts survive — Sion's assassination
+campaign, Katarr and Visas Marr, Atris's praxeum on Telos IV, the Triumvirate, the
+Preserver's return on Dxun, Bao-Dur and the second firing, and 3,950's territorial
+settlement. **Both Katarr accounts are still present in full, and the chapter still does not
+pick between them.**

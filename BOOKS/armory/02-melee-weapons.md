@@ -1,10 +1,11 @@
 # Chapter Two — Melee Weapons
 
-**Status: APPROVED.** `PT-1747`'s Vibrosword die change applied and confirmed; the
-Baragwin Assault Blade question resolved (value unchanged, Name-field corruption
-tracked separately, not blocking). Split from a combined "Melee / Ranged / Lightsabers" chapter per MAIN's ruling — three chapters, not
-one, matching `EQUIPMENT-01`'s own section breaks and this book's identity as a
-browsable reference rather than a cover-to-cover read.
+**Status: RESUBMITTED.** `PT-1747`'s Vibrosword die change applied throughout,
+including `Baragwin Assault Blade`, confirmed as `g1_w_vbroswrd01` and fully
+recomputed rather than patched. Split from a combined "Melee / Ranged / Lightsabers"
+chapter per MAIN's ruling — three chapters, not one, matching `EQUIPMENT-01`'s own
+section breaks and this book's identity as a browsable reference rather than a
+cover-to-cover read.
 
 Wield classes and how criticals resolve are taught in Chapter One and not restated
 here — every weapon below belongs to one of that chapter's six classes.
@@ -48,7 +49,7 @@ Three points on the curve, all Vibroswords, to see how far upgrades move the num
 | **Vibrosword** *(120 credits)* | **1d12** | 19–20 | — |
 | **The One's Vibrosword** *(mid)* | **1d12 +5** | 19–20 | **+5** |
 | **Bacca's Ceremonial Blade** *(2,480)* | **1d12 +4**, +4 energy, **+2d6 vs droid** | 19–20 | **+4** |
-| **Baragwin Assault Blade** *(9,000)* | **2d6 + 2d6 energy + 2d6 sonic** ⚠ | **17–20** | **+5** |
+| **Baragwin Assault Blade** *(9,000)* | **1d12 + 2d6 energy + 2d6 sonic** | **17–20** | **+5** |
 
 And the best double weapon:
 
@@ -57,7 +58,7 @@ And the best double weapon:
 | **Vibro Double-Blade** *(180)* | **2d8** | 20 | — |
 | **Yusanis' Brand** *(8,000)* | **2d8 +2**, +3 fire, **+6–9 ion vs droid** | **19–20** | **+3**, on-hit stun |
 
-Base to best is roughly 6.5 average damage to 24, plus an attack bonus of +5 and a
+Base to best is roughly 6.5 average damage to 20.5, plus an attack bonus of +5 and a
 threat range doubled from 10% to 20% — a factor of three on damage across a campaign.
 
 *(`EQUIPMENT-01 §3`, base figure updated for `PT-1747`'s Vibrosword die change (2d6 →
@@ -65,18 +66,24 @@ threat range doubled from 10% to 20% — a factor of three on damage across a ca
 `data/2da/k1/racialtypes.2da` row 5 is `Droid`, resolving what `ITEMS-01` had flagged as
 an unmapped subtype.)*
 
-**The "24" endpoint is confirmed unchanged.** `Baragwin Assault Blade`'s own value was
-touched and reverted within this same session — it never actually moved, so the figure
-stands as originally written and no recomputation is needed here.
+**The endpoint is now 20.5, recomputed from the real properties rather than adjusted
+from the old figure.** `Baragwin Assault Blade` is confirmed as `g1_w_vbroswrd01` — its
+Name field turned out to be a string-table reference (`strref 48160`) rather than inline
+text, which is why extraction never found a name to grab there in the first place.
+Resolved against `dialog.tlk`: *"Baragwin Assault Blade,"* exactly, with a matching
+description — a miniaturized vibrosword fitted with discharge capacitors. Both `ITEMS-01`
+and `EQUIPMENT-01`'s own citation of it are fixed at the source. **Its base die is
+`1d12` too** — the same Vibrosword-family item every other weapon on this page sits on,
+missed in the first sweep only because the corrupted row couldn't be found by name.
 
-**⚠ A separate, still-open item this raised: `Baragwin Assault Blade` doesn't appear
-under that name anywhere in `ITEMS-01`'s 418-item catalogue.** The closest candidate —
-`g1_w_vbroswrd01`, 9,000 credits, K1, tier 3, base weapon column also `2d6, 19–20 ×2`,
-total `AttackBonus` +5 (2+1+1+1), `Damage (Energy) 2d6`, `Damage (Sonic) 1d6` twice,
-`Keen 0` — matches closely on cost, attack bonus, and damage composition, but that row's
-Name field contains Weapon Master class-feature text instead of an item name. Confirming
-the value didn't change doesn't confirm the Name-field corruption is fixed — that's a
-data-quality question for whoever holds the raw source file, not this chapter.
+Recomputing from the confirmed properties (`1d12` base + `2d6` energy + `1d6` sonic
+twice) gives **20.5**, not the "24" this chapter carried before — a real correction, not
+a small adjustment for the die alone. The original figure never quite reconciled with
+the visible properties even before today (they summed to 21 under the old `2d6` base,
+not 24), so this isn't purely PT-1747's effect; it's the first time this line has been
+checked against the item's actual properties rather than restated from a secondary
+source. One reassurance: 20.5 against the base's 6.5 is a ratio of ×3.15 — closer to the
+"factor of three" this sentence already claims than either previous figure was.
 
 **⚠ One thing this table doesn't show.** `Bacca's Ceremonial Blade` isn't one item in
 `ITEMS-01` — it's four resrefs. The row priced at 2,480 credits is the one shown above.
@@ -94,10 +101,6 @@ Same lightsaber and ranged-damage flags as Chapter One — unaffected by this ch
 noted for continuity. Bacca's Ceremonial Blade's feat-conditional variants, noted above,
 carried forward to the Upgrades chapter as before.
 
-**Resolved:** the "24" endpoint needed no update — confirmed by MAIN that `Baragwin
-Assault Blade`'s value was touched and reverted this session, never actually changed.
-
-**Still open, and unrelated to this chapter's numbers:** `Baragwin Assault Blade`'s
-Name-field corruption in `ITEMS-01` (`g1_w_vbroswrd01` carries Weapon Master
-class-feature text instead of an item name) — a data-quality item for whoever holds the
-raw source, not something this chapter's figures depend on.
+**Closed:** `Baragwin Assault Blade`'s identity, base die, and the chapter's "base to
+best" endpoint are all resolved and fixed at the source (`ITEMS-01` and `EQUIPMENT-01`
+both corrected). Nothing outstanding from this thread.

@@ -1,18 +1,13 @@
 # Chapter Five — Armour
 
-**Status: APPROVED.** The defence formula, the sum-of-nine rule, robes, and
-droid plating are all taught in full in Chapter One and not restated here — this
-chapter is the item catalogue, the same relationship Chapter Two's melee weapons had
-to Chapter One's damage formula.
+**The defence formula, the sum-of-nine rule, robes and droid plating are all taught in
+Chapter One and not restated here.** This chapter is the catalogue — the same relationship
+Chapter Two has to Chapter One's damage rules.
 
-**⚠ A different kind of source than the last three chapters.** `ITEMS-02` isn't a
-secondary-sourced summary table the way `EQUIPMENT-01`'s weapon tables were — it's
-already the primary-source catalogue, converted from the actual game files under the
-same seven rulings cited throughout this book (`PT-339` dice, `PT-341` Massive
-Criticals, `PT-308` tiers, `PT-327` unique, `PT-345` crystals, `PT-349` Upgradeable,
-`PT-384` the feat remap). It doesn't need the same cross-check against a more primary
-source that caught real errors in Chapters Two through Four — it largely *is* that
-source.
+**⚠ One difference worth knowing, because it affects how much to trust these numbers.** The
+armour figures in this chapter were converted straight from the games' own item files.
+**They did not pass through a summary first**, which is where the errors corrected in
+Chapters Two, Three and Four came from.
 
 ---
 
@@ -39,33 +34,26 @@ source.
 | **Atton's Ribbed Jacket** ⚠ unique | Clothing | 0 (found, not bought) | `Armor 4` — matches Light armour's protection from a Clothing slot |
 | **Sith Armor** ⚠ unique | Disguise | 0 (found, not bought) | `Armor 2` plus a disguise property — one of only two items in this category |
 
-**One priced pair worth knowing about, because it's an owner ruling rather than an
-oversight:** the Dark Padawan Robe was priced down from 900 to 700 credits (`PT-980`)
-specifically because it is *mechanically identical* to the standard Jedi Robe — same
-`Armor 1`, same Force Point regeneration, same restriction. Same effect, same price,
-by ruling.
+**⚠ One price in this chapter is deliberately not the games' own.** The **Dark Padawan
+Robe** was priced down from 900 credits to **700**, because it is *mechanically identical*
+to the standard Jedi Robe — same `Armor 1`, same Force Point regeneration, same
+restriction. **Two items that do exactly the same thing now cost the same.** That is a
+change this game made on purpose, not an error in the source.
 
-**`DecreaseAC` is a real penalty against a base value that exists elsewhere, resolved
-rather than guessed at.** The property's subtype (2) resolves against
-`iprp_acmodtype.2da` to `AC_Armor` specifically — not some narrower vs-melee or
-vs-ranged distinction. `Light Combat Suit`'s own `BaseItem` reference points to
-`baseitems.2da`'s `Armor_Class_4` row (`baseac` 4, `dexbonus` 5) — an ordinary Light
-entry under Chapter One's sum-of-nine rule. So this item's true net protection is **+3
-armour**, not the category's usual +4, while keeping the full +5 Dexterity cap:
-genuinely below-average gear, not a display quirk or a separate mechanic.
+**⚠ Some armour carries a `DecreaseAC` property, and it means exactly what it says.** It is
+a real penalty, not a display quirk.
 
-**The same two-step path resolves any other `DecreaseAC`/`IncreaseAC` entry in the
-catalogue:** `iprp_acmodtype.2da` for which AC component the property touches, and the
-item's own `BaseItem` reference into `baseitems.2da` for the number being modified.
+**Worked example — the `Light Combat Suit`.** Its base row in the games' own armour table
+gives armour 4 and a Dexterity cap of +5, an ordinary Light entry under Chapter One's
+sum-of-nine rule. Its `DecreaseAC` property then reduces the armour component
+specifically — **not some narrower penalty against melee or ranged attacks.**
+
+**So its true protection is `+3` armour, not the `+4` its category suggests**, while
+keeping the full `+5` Dexterity cap. **Genuinely below-average gear, cheaply priced to
+match.**
+
+**Any other `DecreaseAC` or `IncreaseAC` entry resolves the same way:** find which part of
+Defence the property touches, then find the base value it is modifying in the item's own
+armour row.
 
 ---
-
-## Open items, carried from review
-
-Same lightsaber-damage flag, unaffected by this chapter. `DecreaseAC` closed above —
-confirmed, not a real gap. Still worth stating plainly: this chapter samples five of
-173 items rather than auditing the full catalogue line by line, the way
-the eleven-row weapon tables in Chapters Two through Four could be. A category count
-and a representative sample is the right grain for a browsable-reference chapter; a
-full 173-item transcription would belong to `ITEMS-02` itself, not to prose built on
-top of it.

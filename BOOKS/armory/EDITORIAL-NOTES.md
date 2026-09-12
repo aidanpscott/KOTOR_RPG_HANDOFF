@@ -343,3 +343,67 @@ never said.
 K1-versus-K2 table is intact, the die-progression argument is unchanged, all three training
 sabers keep their dice, and the crystal subsystem still points at Chapter Six with Rubat and
 the 104-crystal count.
+
+---
+
+# Chapter Five — Armour
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED.** Source is `ITEMS-02` — **already the primary-source
+catalogue**, converted from the game files under `PT-339` (dice), `PT-341` (Massive
+Criticals), `PT-308` (tiers), `PT-327` (unique), `PT-345` (crystals), `PT-349`
+(Upgradeable) and `PT-384` (the feat remap). **It did not need the cross-check against a
+more primary source that caught real errors in Chapters Two through Four — it largely *is*
+that source.** `PT-980` priced the Dark Padawan Robe down from 900 to 700.
+
+Same lightsaber-damage flag, unaffected by this chapter. `DecreaseAC` closed above —
+confirmed, not a real gap. Still worth stating plainly: this chapter samples five of
+173 items rather than auditing the full catalogue line by line, the way
+the eleven-row weapon tables in Chapters Two through Four could be. A category count
+and a representative sample is the right grain for a browsable-reference chapter; a
+full 173-item transcription would belong to `ITEMS-02` itself, not to prose built on
+top of it.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 11 internal citations from 71 lines**, almost all of them in a single opening
+paragraph that existed to explain this chapter's provenance to a colleague.
+
+**⚠ That paragraph is the clearest example yet of a citation load with a real point buried
+in it.** It listed seven ruling numbers and two document names to say that this chapter's
+source *"largely is"* the primary source rather than a summary of one. **A reader cannot
+use any of that — but the conclusion matters to them, because it tells them how far to
+trust the numbers.** It now reads:
+
+> **One difference worth knowing, because it affects how much to trust these numbers.** The
+> armour figures in this chapter were converted straight from the games' own item files.
+> **They did not pass through a summary first**, which is where the errors corrected in
+> Chapters Two, Three and Four came from.
+
+**Same claim, and it now earns its place** by telling a reader why this chapter is less
+likely to be wrong than the three before it.
+
+**⚠ The `DecreaseAC` explanation kept its game-data citations and lost its method
+narration.** The two `.2da` file names stayed on the approved rule — they are the games'
+own tables — **but the passage no longer walks through the resolution as a procedure.** It
+gives the worked example (`Light Combat Suit`: base armour 4, cap +5, penalty applies to the
+armour component, **true protection `+3` with the full `+5` cap kept**) and then states the
+general rule in one sentence.
+
+**⚠ The Dark Padawan Robe repricing got the authored-marking treatment.** It read *"an owner
+ruling rather than an oversight… by ruling."* **A reader does not know what an owner ruling
+is.** It now says plainly: **one price in this chapter is deliberately not the games' own**,
+because two items that do exactly the same thing now cost the same. **That is this game
+changing something on purpose, and a reader is told so.**
+
+**⚠⚠ A content gap noticed during the pass and NOT addressed by it** — reported separately
+to MAIN. **This chapter samples five of 173 items.** Chapters Two and Three carry full
+catalogues under the full-catalogue standard; this one carries a category table and five
+representative entries, with the closing paragraph defending that choice. **That predates
+`PT-1844` and is outside its scope**, but it is a real inconsistency with the standard the
+other catalogue chapters were held to.
+
+**⚠ Deliberately NOT loosened.** All six category counts, the 173 total, the nine
+both-games items, every representative entry with its armour value, the Dark Padawan Robe's
+two prices, and the `DecreaseAC` worked example's exact figures all survive.

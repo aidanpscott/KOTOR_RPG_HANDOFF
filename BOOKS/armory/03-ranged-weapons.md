@@ -1,14 +1,14 @@
 # Chapter Three — Ranged Weapons
 
-**Status: DRAFT, for review.** Split from the combined "Melee / Ranged / Lightsabers"
-chapter per MAIN's ruling. Wield classes and critical-hit resolution are taught in
-Chapter One and not restated here.
+**Status: APPROVED.** Split from the combined "Melee / Ranged / Lightsabers" chapter
+per MAIN's ruling. Wield classes and critical-hit resolution are taught in Chapter One
+and not restated here.
 
-**⚠ The base table below is corrected against `ITEMS-01` directly, not borrowed
-verbatim from `EQUIPMENT-01 §4`.** Checking it before restating it — the practice
-this whole thread has been building toward — found that six of the table's eleven rows
-don't match the game data, not just the unique-item worked examples this chapter's
-predecessors ran into.
+**The base table below is corrected against `ITEMS-01` directly, not borrowed
+verbatim from `EQUIPMENT-01 §4`.** Checking it before restating it — the practice this
+thread has been building toward — found four genuinely stale rows (two more had
+already been fixed elsewhere the same day, and one flag of my own turned out to be a
+search miss rather than a real absence — see below).
 
 ---
 
@@ -28,34 +28,41 @@ predecessors ran into.
 | **Blaster Rifle** | **1d12** | energy | 28 m | **19–20 / ×2** |
 | **Bowcaster** | **1d10** | energy | 28 m | **19–20 / ×3** |
 
-**Six rows changed from `EQUIPMENT-01`'s own table, checked against `ITEMS-01`
-directly:**
+**Four rows were genuinely stale and are corrected here for the first time; two
+(Disruptor Rifle, Ion Rifle) had already been fixed in an unrelated thread the same
+day and my checkout simply hadn't picked that up yet — my own confirmed values matched
+the document's current state exactly, not a second discovery:**
 
-| Weapon | `EQUIPMENT-01` said | `ITEMS-01` confirms |
+| Weapon | `EQUIPMENT-01` said (stale) | `ITEMS-01` confirms |
 |---|---|---|
 | Disruptor Pistol | 1d4, threat 20 | **1d6, threat 18–20** (`g_w_dsrptpstl001`, `w_blaste_05`, both games agree) |
 | Ion Blaster | 1d4, threat 20 | **1d6, threat 20/×3** (`g_w_ionblstr01`) |
-| Disruptor Rifle | 1d6, threat 20 | **1d10, threat 18–20** (`g_w_dsrptrfl001`) |
-| Ion Rifle | 1d6, no threat given | **1d10, threat 20/×3** (`g_w_ionrfl01`) |
 | Sonic Rifle | 1d6 | **1d10** (`g_w_sonicrfl01`) |
 | Blaster Carbine | 1d8, threat 19–20 | **1d12, threat 20/×2** (`g_w_blstrcrbn001` K1, `w_brifle_01` K2 — both agree) |
 
-**The pattern:** every weapon that was already correct — Sonic Pistol, Blaster Pistol,
-Blaster Rifle — is a standard blaster-family weapon. Every weapon that was wrong is one
-of the "exotic" ranged types: disruptor, ion, and (for the die, not the threat) sonic
-and carbine. `EQUIPMENT-01`'s own header cites StrategyWiki as the source and notes
-range values were cross-checked against `baseitems.2da` — the damage dice apparently
-weren't checked with the same rigor.
+**Already correct going in, checked and confirmed rather than assumed:** Disruptor
+Rifle (1d10, threat 18–20), Ion Rifle (1d10, threat 20/×3), Sonic Pistol, Blaster
+Pistol, Blaster Rifle, and (now resolved below) Hold-Out Blaster.
+
+**The pattern in the four genuine fixes:** every one is an "exotic" ranged type —
+disruptor, ion, sonic, carbine — rather than a standard blaster. `EQUIPMENT-01`'s own
+header cites StrategyWiki as the source and notes range values were cross-checked
+against `baseitems.2da`; the damage dice apparently weren't checked with the same
+rigor, at least for this cluster.
 
 **Vs-droid bonuses use K1's values**, consistent with Chapter One's own precedent
 ("our campaign is 3956 BBY and K1 is the era"). K2's Ion Blaster carries 1d12 vs droid
 rather than K1's 1d10; K2's Ion Rifle uses a different racial-group value than K1's 2d6.
 Both are era-inconsistent with this book's stated period and not used here.
 
-**⚠ `Hold-Out Blaster` could not be confirmed.** It doesn't appear under that name, or a
-resref I could identify, anywhere in `ITEMS-01`. Kept at `EQUIPMENT-01`'s stated value
-rather than dropped, same treatment `Baragwin Assault Blade` got before its identity was
-resolved — flagged, not guessed at, not silently trusted either.
+**`Hold-Out Blaster` is confirmed, and my earlier "could not be confirmed" flag was my
+own search missing it, not an absence.** It's `g_w_hldoblstr01` in `ITEMS-01`, values
+matching `EQUIPMENT-01` exactly (1d4, threat 19–20, on-hit stun). The current name is
+*"Hold Out Blaster"* — two words, no hyphen — and my search checked `hold-out` and
+`holdout` but never the space-separated form. `PT-1477`, sitting beside this same table,
+documents that this weapon's name lost a hyphen at some point; that's plausibly why the
+old form existed for a search to fail on in the first place, but the direct cause of my
+own miss was the gap in my own search pattern, not the renaming itself.
 
 *(`EQUIPMENT-01 §4`, base table corrected against `ITEMS-01`.)*
 
@@ -80,6 +87,7 @@ to the Upgrades chapter, not unpacked here.
 
 ## Open items, carried from review
 
-Same lightsaber flag as Chapters One and Two. New this chapter: the "note the ceiling"
-paragraph (needs an editorial decision, not just arithmetic) and `Hold-Out Blaster`'s
-unconfirmed stats.
+Same lightsaber flag as Chapters One and Two. `Hold-Out Blaster` closed — confirmed,
+not a real gap. Still open: the "note the ceiling" paragraph, which needs an editorial
+decision about what ranged damage's ceiling argument should say now that `PT-340`
+applies, not just an arithmetic fix.

@@ -48,10 +48,10 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 |---|---|---|
 | `KOTOR_RPG_MAIN_WORK` | `dacfb97` — the last 22 orphans close |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `17bba42` — `PT-1841`'s `positionsIn` |     ⚠ no |
+| `Lodestar` | `c7a8aac` — `PT-1851`'s Dash |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `6972961` — the fallen-companion case is unreachable |      ⚠ no |
+| `KOTOR-RPG-APP` | `3b57d9f` — `h` hurries |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 727 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 592 — 1,595, all
-green.** *(`BUILD 169`.)*
+**`Lodestar` 734 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 595 — 1,605, all
+green.** *(`BUILD 170`.)*
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one
@@ -80,8 +80,13 @@ blueprint, read into `OpenedCharacter` and carried across the `combatantFrom`
 seam. **`PT-1108`'s Hide is built and pressable (`s`)**; `Scan`, `Slice`,
 `Treat` and `Repair` are unblocked and unbuilt.
 
-⚠ **`Dash`/Hustle IS UNBUILT**, so `PT-1108`'s *Hidden disables running* has
-nothing to disable. Key decided at `PT-1843`: `h`.
+✓ **`Dash` IS BUILT AND HIDING COSTS YOU THE RUN — `PT-1851`, `BUILD 170`.**
+`h` hurries; `PT-1108`'s *Hidden disables running* is real now that there is
+something to disable.
+
+⚠⚠ **NO ACTION KEY APPEARS IN ANY LEGEND.** `f` cast, `d` disengage, `s` hide,
+`h` hurry — four, and the screen names none of them. `PT-1443`'s reason for the
+keyboard path is that it reaches everything the pointer does.
 
 ⚠ **THE STEALTH FIELD GENERATOR IS NOT WIRED** — `SKILL-RESOLUTION-01 §4`'s
 `−10 on Awareness only` is built and no item in the catalogue declares itself

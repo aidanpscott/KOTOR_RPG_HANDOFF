@@ -8,10 +8,11 @@ vocabulator and a protocol pacifist package — and said they belonged here.
 build from nothing, and the one thing that can be upgraded past the ceiling every other
 character sits under.
 
-**⚠ The fifth has no rule, and this chapter would rather say so than invent one.**
-`hkpart05`, the **HK Protocol Pacifist Package**, belongs to KOTOR 2's rebuild of one
-particular droid rather than to droid construction in general. **It has no cost, no tier and
-no place in a build here.**
+**⚠ The fifth is a real item, and it is not a construction part.** `hkpart05`, the **HK
+Protocol Pacifist Package**, is a behaviour-core download for one particular droid rather
+than a component anything is built from. **Chapter Ten catalogues it with the other quest
+items**, at 215 credits — **but nothing in this chapter is built with one, and this chapter
+invents no rule to make it buildable.**
 
 ---
 

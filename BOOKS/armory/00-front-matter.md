@@ -121,7 +121,7 @@ data rather than from any secondary description:
 | `.uti` item files | Individual item properties, names and descriptions across the catalogue chapters |
 | `k2_itemcreate.2da` · `k2_chemicalcreate.2da` · `k2_upgrade.2da` | Chapter Twelve's crafting recipes and their DC ladder, ported unchanged |
 | `k2_itemcreatemira.2da` | Named in Chapter Twelve as **deliberately deferred** — companion content |
-| `hkpart01`–`hkpart05` | Chapter Twelve identified them as not-recipes; Chapter Fourteen builds droids from four of them |
+| `hkpart01`–`hkpart05` | Chapter Twelve identified them as not-recipes; Chapter Ten catalogues all five and Chapter Fourteen builds droids from four |
 | `a_give_treas` | Chapter Thirteen's loot bands — **constants read, control flow not disassembled** |
 | `k2_swoopupgrade.2da` | The upgrade grammar Chapters Fifteen and Sixteen build ship parts on |
 | `keymap.2da` | Chapter Fifteen's evidence for how little space combat the source had — two verbs |

@@ -1519,3 +1519,70 @@ survived its own chapter's dedicated pass.
 between items is not a check on the set.** The uniform sweep at the end is what caught this,
 and it is the thing worth keeping, not the individual fixes. **All three are fixed and both
 books now return zero under a single pattern run over every file.**
+
+---
+
+# ⚠ `PT-1770` — Chapter Ten expanded to a full catalogue
+
+**89 items, every one of them now on the page.** Built programmatically from the ruled item
+catalogue rather than transcribed, on Chapter Three's method — every count read back from
+the source's own category headings and compared before anything was written.
+
+    quest   datapad 2 · droid-parts 5 · plot 13                 = 20
+    other   credits 15 · misc 3 · pazaak 24 · shock-arm 2
+            · boots 25                                          = 69
+                                                          TOTAL = 89
+
+**All eight category counts agreed with the source's own stated figures on the first pass.**
+Resrefs are unique across all 89. Six descriptions are truncated in the games' own data and
+are marked in place, on Chapter Three's convention.
+
+## ⚠⚠ The scope table below undercounted this chapter by 69 items
+
+**It recorded Chapter Ten as 20 items. It is 89.**
+
+**The cause: the chapter draws on two source files, and the count read only the first.**
+Quest items are one file, miscellaneous items another, and the scope table took the quest
+figure as the chapter's whole. **The chapter's own prose had both numbers right the whole
+time** — *"20 items"* for quest and *"69 items across five categories"* for miscellaneous —
+**so the error was in the survey, not in the book.**
+
+**⚠ And it inverts the ruled ordering.** Chapter Ten was sequenced first as the smallest at
+20 items. **At 89 it is larger than Chapter Nine's 58.** No harm done — it is finished — but
+the remaining order should be taken from verified counts rather than from this table.
+
+## ⚠ Three more count disagreements found while checking that, reported not fixed
+
+**Checking whether the same two-file mistake affected the other five chapters** turned up a
+different problem in three of them: **the source file's stated total disagrees with the sum
+of its own category headings.**
+
+    armour    header 173   categories sum 172    short by 1
+    droid     header 135   categories sum 129    short by 6
+    worn      header 241   categories sum 248    OVER by 7
+
+**The worn-gear one is the interesting case**, because the sum is *larger* than the header —
+which is the opposite of a truncation and cannot be explained by a category being dropped.
+
+**Usable items and upgrades both reconcile exactly** (58 and 164), so this is not a
+systematic fault in how the files are written.
+
+**⚠ Each is that chapter's own problem to settle when its catalogue pass comes up**, and
+settling it means counting rows rather than trusting either figure — which is what this
+chapter's pass did, and why its counts can be relied on. **Recorded here so no pass starts
+by believing a header.**
+
+## ⚠ A correction to Chapter Fourteen, caught by building this catalogue
+
+**Chapter Fourteen said `hkpart05` had *"no cost, no tier and no place in a build."*** The
+first two are wrong. **The ruled catalogue gives it Tier 1 at 215 credits**, with its own
+description — a behaviour-core download for one particular droid.
+
+**The ruled treatment is unchanged and unchallenged**: it is a real item, it is named, and
+it is explicitly not something a droid is built from. **Only the factual claim about cost and
+tier was wrong**, and it was wrong because it was written from the absence of a
+*construction* ruling and then overstated into the absence of an item.
+
+**Chapter Fourteen now points at Chapter Ten for the entry and keeps the ruling**, and the
+Armory's front matter row was updated to match. **The two chapters now agree and neither
+loses anything.**

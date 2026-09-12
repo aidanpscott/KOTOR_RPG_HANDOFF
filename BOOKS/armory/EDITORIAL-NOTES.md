@@ -1944,3 +1944,87 @@ Combat Suit` is not quite true — plain `Clothing` costs 25, and the `Combat Su
 Suit.**
 
 **Cross-record fixed:** the live outline carried `ITEMS-02 — 173 items`.
+
+---
+
+# ⚠ `PT-1770` — Chapter Eight expanded to a full catalogue · TASK COMPLETE
+
+**248 items, five categories, all five agreeing once the five broken rows were joined.**
+59 lines in, 597 out. Zero internal citations. No duplicate resrefs.
+
+**This is the sixth and last chapter. `PT-1770` is complete.**
+
+## ⚠ The total was wrong in the other direction — 248, not 241
+
+**Every previous correction found a header claiming more than the rows delivered. This one
+claimed fewer.** The five category figures were right all along and summed to 248; the
+header said 241.
+
+**The source's five malformed rows were the reason the earlier survey could not tell which
+figure was right** — a naive read returns 243, which matches neither. **Joining them gives
+248 and all five categories agree exactly.**
+
+## ⚠⚠ The chapter said two authored items. There are seven.
+
+| Item | Category | Cost | Effect |
+|---|---|---|---|
+| **Sparring Gloves** | Gauntlets | 90 | `Damage (Bludgeoning) 1` |
+| **Echani Sparring Gloves** | Gauntlets | 950 | `Damage (Bludgeoning) 2` · `AttackBonus 1` |
+| **Clarity Package** | Implant | 1,000 | `Ability (Wisdom) 1` |
+| **Motor Package** | Implant | 1,000 | `Ability (Strength) 1` |
+| **Presence Package** | Implant | 1,000 | `Ability (Charisma) 1` |
+| **Fortitude Package** | Implant | 50 | Saving throw, gated behind `Constitution 12` |
+| **Will Package** | Implant | 50 | Saving throw, gated behind `Constitution 12` |
+
+**The chapter named only the first and the third.** **Five authored items sat in the
+catalogue unannounced**, including a complete three-package ability ladder at a matched
+price.
+
+**⚠ And this understatement undercut the chapter's own argument.** The paragraph naming them
+exists to make a point of principle — *"an invented item should never sit beside an extracted
+one as though the two came from the same place."* **Declaring two when there are seven does
+exactly the thing the paragraph objects to.** The chapter now lists all seven with their
+effects, and explains what each pair or ladder is for.
+
+## ⚠ Nine rows have a corrupted name — the largest concentration yet
+
+Nine entries carry a name lifted from elsewhere in the game's string table: feat
+descriptions complete with *"Prerequisites:"* lines, on belts, gauntlets, implants and masks.
+**All nine are `g1_`-prefixed**, consistent with every other string-table casualty in the
+book. **Catalogued by resref, marked, not renamed.**
+
+## ⚠ Four more ruling numbers inside item data, caught by the generated-output check
+
+**The same `Reflex save` note found in Chapter Six**, on four rows here. **Caught because the
+citation check now runs over generated output as well as prose** — the practice adopted after
+Chapter Six, doing exactly what it was adopted for. Same treatment: the value is stated
+plainly, the ruling number is gone.
+
+## ⚠ And a final sweep found raw tooling language in Chapter Three
+
+**Twenty-one `[subtype N — … unmapped]` markers**, left in an approved chapter from before
+the readable convention existed. **Every other catalogue chapter renders these as plain
+English; Chapter Three still spoke in tool output.**
+
+**Now rendered like the rest** — *"bonus damage against one species group, which group is
+unresolved"* rather than `DamageRacialGroup [subtype 5 — racialtypes unmapped]`. **No value
+changed; only the wording a reader sees.**
+
+**Found by running the uniform sweep across both books rather than checking only the chapter
+just written** — the standing practice from the close of `PT-1844`, earning its place again.
+
+## Cross-records fixed
+
+**The live outline carried `ITEMS-05 — 241 items`.** Corrected to 248.
+
+## ⚠ Still outstanding, and not this pass's to close
+
+**`ITEMS-01`'s reconciliation, and with it the Chapter Two and Three counts.** The reported
+fix is not visible in the working copy: **the file still holds two malformed rows, still
+reports `heavy` 21-against-20 unjoined and `rifle` 78-against-79 joined, and `ITEMS-02`'s
+`a_robe_09` still reads 700 rather than the corrected 100.** Both files are stamped hours
+before the fixes were reported.
+
+**No conclusion drawn about why** — this is the propagation gap that has appeared before, and
+there is no route from here to fetch a newer copy. **Re-verification of Chapters Two and
+Three is ready to run the moment the file lands.**

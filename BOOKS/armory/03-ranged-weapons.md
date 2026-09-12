@@ -134,7 +134,7 @@ called.
 
 **Bothan Quick Draw** · `g_w_hldoblstr02` · K1 · Tier 2 · 1,000 credits · *Enhancement 1 · OnHit (Stun) 10* — *“An unconscious opponent is a quiet opponent. This weapon is a Bothan favorite, designed to "create opportunities."”*
 
-**Sith Assassin Pistol** · `g_w_hldoblstr03` · K1 · Tier 2 · 1,700 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10 · Enhancement 2 · OnHit (Stun) 10* — *“These weapons are designed to incapacitate so death may be quick or lingered upon as desired. Droids are simply dispatched, as cruelty is best rationed among the living.”*
+**Sith Assassin Pistol** · `g_w_hldoblstr03` · K1 · Tier 2 · 1,700 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10 · Enhancement 2 · OnHit (Stun) 10* — *“These weapons are designed to incapacitate so death may be quick or lingered upon as desired. Droids are simply dispatched, as cruelty is best rationed among the living.”*
 
 **Bothan Needler** · `g_w_hldoblstr04` · K1 · Tier 2 · 1,750 credits · *Enhancement 2 · OnHit (Stun) 10* — *“For serious espionage, this is the weapon of choice. Simple ownership can get you arrested in some systems, or invited to dine with royalty, depending on what it helped you learn.”*
 
@@ -191,17 +191,17 @@ called.
 
 ### Base
 
-**Ion Blaster** · `g_w_ionblstr01` · K1 · Tier 1 · 200 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10* — *“Unlike a typical blaster, this weapon fires a stream of energy very damaging to electrical systems, causing havoc on the internal components of droids.”*
+**Ion Blaster** · `g_w_ionblstr01` · K1 · Tier 1 · 200 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10* — *“Unlike a typical blaster, this weapon fires a stream of energy very damaging to electrical systems, causing havoc on the internal components of droids.”*
 
-**Ion Blaster** · `w_blaste_02` · K2 · Tier 1 · ⚠⚠ **200** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d12* — *“This standard Ion Blaster is commonly issued to Republic troops as a secondary weapon. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. Also, ion damage can penet”* ⚠ *(description truncated in source)*
+**Ion Blaster** · `w_blaste_02` · K2 · Tier 1 · ⚠⚠ **200** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d12* — *“This standard Ion Blaster is commonly issued to Republic troops as a secondary weapon. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. Also, ion damage can penet”* ⚠ *(description truncated in source)*
 
 ### Advanced
 
-**Aratech Droid Oxidizer** · `w_blaste_10` · K2 · Tier 2 · 1,099 credits · *AttackBonus 1 · Damage (Ion) 2 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10* — *“The Aratech Ion Blaster is designed to be capable against all types of opponents, replacing the need to carry a second anti-droid side arm. While ion weapons are generally less damaging against organic opponents, they ar”* ⚠ *(description truncated in source)*
+**Aratech Droid Oxidizer** · `w_blaste_10` · K2 · Tier 2 · 1,099 credits · *AttackBonus 1 · Damage (Ion) 2 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10* — *“The Aratech Ion Blaster is designed to be capable against all types of opponents, replacing the need to carry a second anti-droid side arm. While ion weapons are generally less damaging against organic opponents, they ar”* ⚠ *(description truncated in source)*
 
-**Verpine Prototype Ion Blaster** · `g_w_ionblstr02` · K1 · Tier 2 · 1,500 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10 · Enhancement 2* — *“Demonstrating this weapon, the insect-like Verpine destroyed legions of droids, doing nothing to quell the public's suspicions of what testing their stun guns must have been like.”*
+**Verpine Prototype Ion Blaster** · `g_w_ionblstr02` · K1 · Tier 2 · 1,500 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10 · Enhancement 2* — *“Demonstrating this weapon, the insect-like Verpine destroyed legions of droids, doing nothing to quell the public's suspicions of what testing their stun guns must have been like.”*
 
-**Aratech Ionmaster** · `w_blaste_21` · K2 · Tier 3 · 12,799 credits · *AttackBonus 2 · Damage (Ion) 1d8 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d8* — *“This capable side-arm is at the top of Aratech's ion blaster line. It is designed for multi-purpose use, though obviously is best against droids. While ion weapons are generally less damaging against organic opponents, t”* ⚠ *(description truncated in source)*
+**Aratech Ionmaster** · `w_blaste_21` · K2 · Tier 3 · 12,799 credits · *AttackBonus 2 · Damage (Ion) 1d8 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d8* — *“This capable side-arm is at the top of Aratech's ion blaster line. It is designed for multi-purpose use, though obviously is best against droids. While ion weapons are generally less damaging against organic opponents, t”* ⚠ *(description truncated in source)*
 
 
 ## Blaster Pistol — base die `1d8`, threat 20 / ×2
@@ -293,7 +293,7 @@ called.
 
 **Zabrak Heavy Blaster** · `w_blaste_24` · K2 · Tier 3 · 18,200 credits · *Damage (Energy) 2 · Enhancement 2 · OnHit (Stun) 18* — *“A more cumbersome, but also more damaging, blaster of Zabrak design.”*
 
-**Freedon Nadd's Blaster** ⚠ *unique* · `w_blaste_30` · K2 · Tier 4 · 29,000 credits · *UseLimitationAlignmentGroup [subtype 3 — iprp_aligngrp unmapped] 0 · UseLimitationClass [subtype 16 — classes unmapped] 0 · UseLimitationClass [subtype 15 — classes unmapped] 0 · UseLimitationClass [subtype 14 — classes unmapped] 0 · Damage (Dark Side) 2d10 · Enhancement 2* — *“A vile weapon that once belonged to Freedon Nadd, this blaster has killed more Jedi then any lightsaber.”*
+**Freedon Nadd's Blaster** ⚠ *unique* · `w_blaste_30` · K2 · Tier 4 · 29,000 credits · *⚠ *Alignment-locked (which alignment is unresolved)* · ⚠ *Class-locked (which class is unresolved — subtype 16)* · ⚠ *Class-locked (which class is unresolved — subtype 15)* · ⚠ *Class-locked (which class is unresolved — subtype 14)* · Damage (Dark Side) 2d10 · Enhancement 2* — *“A vile weapon that once belonged to Freedon Nadd, this blaster has killed more Jedi then any lightsaber.”*
 
 
 ## Disruptor Rifle — base die `1d10`, threat 18–20 / ×2
@@ -317,25 +317,25 @@ called.
 
 ### Base
 
-**Ion Rifle** · `g_w_ionrfl01` · K1 · Tier 1 · 400 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6* — *“Any well-stocked militia usually has stores of ion rifles in reserve. They aren't much use against the living, but if the enemy has battle droids these weapons become essential.”*
+**Ion Rifle** · `g_w_ionrfl01` · K1 · Tier 1 · 400 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6* — *“Any well-stocked militia usually has stores of ion rifles in reserve. They aren't much use against the living, but if the enemy has battle droids these weapons become essential.”*
 
-**Ion Rifle** · `w_brifle_07` · K2 · Tier 2 · ⚠⚠ **400** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10* — *“Unlike the less customizable carbines, rifles can be upgraded. Ion weapons cannot utilize most power pack upgrades, however. While ion weapons are generally less damaging against organic opponents, they are powerful agai”* ⚠ *(description truncated in source)*
+**Ion Rifle** · `w_brifle_07` · K2 · Tier 2 · ⚠⚠ **400** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10* — *“Unlike the less customizable carbines, rifles can be upgraded. Ion weapons cannot utilize most power pack upgrades, however. While ion weapons are generally less damaging against organic opponents, they are powerful agai”* ⚠ *(description truncated in source)*
 
 ### Advanced
 
-**Ion Carbine** · `w_brifle_02` · K2 · Tier 1 · 65 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10* — *“Ion Carbines are versatile, low-end rifles. They are sometimes given to combat droids to provide an edge against other droid armies. While ion weapons are generally less damaging against organic opponents, they are power”* ⚠ *(description truncated in source)*
+**Ion Carbine** · `w_brifle_02` · K2 · Tier 1 · 65 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10* — *“Ion Carbines are versatile, low-end rifles. They are sometimes given to combat droids to provide an edge against other droid armies. While ion weapons are generally less damaging against organic opponents, they are power”* ⚠ *(description truncated in source)*
 
-**Bothan Droid Disruptor** · `g_w_ionrfl02` · K1 · Tier 2 · 750 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them.”*
+**Bothan Droid Disruptor** · `g_w_ionrfl02` · K1 · Tier 2 · 750 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them.”*
 
-**Verpine Droid Disruptor** · `g_w_ionrfl03` · K1 · Tier 2 · 1,750 credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids.”*
+**Verpine Droid Disruptor** · `g_w_ionrfl03` · K1 · Tier 2 · 1,750 credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids.”*
 
-**Bothan Droid Disruptor** · `w_brifle_15` · K2 · Tier 2 · ⚠⚠ **750** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d10 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. A”* ⚠ *(description truncated in source)*
+**Bothan Droid Disruptor** · `w_brifle_15` · K2 · Tier 2 · ⚠⚠ **750** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d10 · Enhancement 1* — *“Droids can be difficult obstacles for a spy, but these weapons take all the guesswork out of dealing with them. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. A”* ⚠ *(description truncated in source)*
 
-**⚠ *name-field corrupted*** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d6 · Keen 0* — *“Mastercraft: Armor III”* ⚠ *(description truncated in source)* **⚠ This item has no usable name.** Its name field in the game data reads *"Mastercraft: Armor II"* — an armour upgrade's name sitting on an ion rifle's entry. **The weapon is real; the name is not.** It is left unnamed here rather than given an invented one.
+**⚠ *name-field corrupted*** · `g1_w_ionrfl01` · K1 · Tier 3 · 12,000 credits · *AttackBonus 3 · AttackBonus 1 · AttackBonus 1 · AttackBonus 1 · Damage (Ion) 1d6 · Damage (Ion) 1d6 · Damage (Piercing) 1d10 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d6 · Keen 0* — *“Mastercraft: Armor III”* ⚠ *(description truncated in source)* **⚠ This item has no usable name.** Its name field in the game data reads *"Mastercraft: Armor II"* — an armour upgrade's name sitting on an ion rifle's entry. **The weapon is real; the name is not.** It is left unnamed here rather than given an invented one.
 
-**Verpine Droid Disruptor** · `w_brifle_20` · K2 · Tier 3 · ⚠⚠ **1750** credits · *DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d10 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids. While ion weapons are generally less damaging”* ⚠ *(description truncated in source)*
+**Verpine Droid Disruptor** · `w_brifle_20` · K2 · Tier 3 · ⚠⚠ **1750** credits · *Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d10 · Enhancement 2* — *“While they may have borrowed liberally from designs the Bothans initiated, the Verpine say you can't argue with results. These weapons are simply devastating against droids. While ion weapons are generally less damaging”* ⚠ *(description truncated in source)*
 
-**Verpine Droid Disintegrator** · `w_brifle_29` · K2 · Tier 4 · 28,000 credits · *Damage (Ion) 1d10 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d10 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 2d10 · Enhancement 2* — *“This weapon is simply the most powerful anti-droid rifle available. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. Also, ion damage can penetrate some defenses”* ⚠ *(description truncated in source)*
+**Verpine Droid Disintegrator** · `w_brifle_29` · K2 · Tier 4 · 28,000 credits · *Damage (Ion) 1d10 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d10 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 2d10 · Enhancement 2* — *“This weapon is simply the most powerful anti-droid rifle available. While ion weapons are generally less damaging against organic opponents, they are powerful against droids. Also, ion damage can penetrate some defenses”* ⚠ *(description truncated in source)*
 
 
 ## Sonic Rifle — base die `1d10`, threat 20 / ×2
@@ -438,7 +438,7 @@ called.
 
 **Zabrak Battle Cannon** · `g_w_blstrrfl004` · K1 · Tier 2 · 4,000 credits · *AttackBonus 3 · Damage (Energy) 5* — *“These weapons are almost beginning to cross the line to light artillery. Armor is generally ineffective against such a weapon, unless it is of the highest quality.”*
 
-**Jurgan Kalta's Assault Rifle** ⚠ *unique* · `g_w_blstrrfl005` · K1 · Tier 3 · 8,000 credits · *AttackBonus 3 · AttackBonus 2 · Damage (Energy) 1d4 · Damage (Ion) 1d4 · Damage (Piercing) 1d4 · DamageRacialGroup [subtype 5 — racialtypes unmapped] 1d6* — *“Special: , Ranged Jurgan Kalta wanted to make a big noise in the galaxy. If it was the screams of his enemies, all the better. This weapon was his favorite because it shared his adaptability.”*
+**Jurgan Kalta's Assault Rifle** ⚠ *unique* · `g_w_blstrrfl005` · K1 · Tier 3 · 8,000 credits · *AttackBonus 3 · AttackBonus 2 · Damage (Energy) 1d4 · Damage (Ion) 1d4 · Damage (Piercing) 1d4 · Bonus damage against one species group ⚠ *(which group is unresolved — subtype 5)*: 1d6* — *“Special: , Ranged Jurgan Kalta wanted to make a big noise in the galaxy. If it was the screams of his enemies, all the better. This weapon was his favorite because it shared his adaptability.”*
 
 **Plasma Projector** · `w_brifle_18` · K2 · Tier 3 · 8,075 credits · *AttackPenalty Penalty_-1 · Damage (Energy) 1d12 · Use Limitation Feat (Weapon Focus Blaster Rifle) · Use Limitation Feat (Weapon Spec Blaster Rifle) · Keen 0* — *“This massive weapon fires a bolt of plasma energy at its target. Difficult to wield except by highly trained marksmen, the plasma projector is also unsuitable for further upgrades.”*
 

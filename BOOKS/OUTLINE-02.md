@@ -222,7 +222,7 @@ settled first. Not a blocker; a sequencing note for whoever schedules the drafti
 
 | # | Chapter | Mark | Source and ruling |
 |---|---|---|---|
-| — | Weapon damage and the defence formula | **`RULED`** | `EQUIPMENT-01`. `PT-339`/`340`/`341`/`169` |
+| — | Weapon damage and the defence formula | **`DRAFTED`** | `EQUIPMENT-01`. `PT-339`/`340`/`341`/`169`. **Text at `BOOKS/armory/01-weapon-damage-and-defence-formula.md`, approved by MAIN** |
 | — | Melee / ranged / lightsabers | **`RULED`** | `EQUIPMENT-01 §2`–`§4b`; `ITEMS-01` — 418 weapons |
 | — | Armour | **`RULED`** | `EQUIPMENT-01 §5`; `ITEMS-02` — 173 items. **⚠ `§8` droid plating: named placeholder values** |
 | — | Upgrades and the upgrade tree | **`RULED`** | `ITEMS-03` — 164; `ITEMS-09`, refiled `PT-781` |

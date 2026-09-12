@@ -29,6 +29,15 @@ the identity ruling and describe books that no longer exist under those names.
 | `OUTLINE-02.md` | **CURRENT** — eight books, five core three supplementary, chapter by chapter |
 | `OUTLINE-01.md` | **SUPERSEDED** — tombstoned in place. Retained: it is where Wall 1 and Wall 2 were first found, and `OUTLINE-02` cites it by number |
 | `HANDOFF-01.md` | **SUPERSEDED** — companion to `OUTLINE-01` |
+| `armory/` | **NEW — actual chapter prose.** One file per chapter, numbered, built and approved one at a time. First occupant: `01-weapon-damage-and-defence-formula.md` |
+
+**⚠ Convention starting with Armory: prose lives in `BOOKS/<book-slug>/NN-title.md`,
+never in the outline files.** The outline marks a chapter `DRAFTED` once its file exists
+here; it never carries the chapter's actual text.
+
+**⚠ `PT-1744`, effective this chapter onward: where a ruled source already carries good
+rulebook-voice prose, the chapter borrows it directly rather than paraphrasing around
+it.** Citation discipline is unchanged — borrowed prose is still attributed precisely.
 
 ---
 

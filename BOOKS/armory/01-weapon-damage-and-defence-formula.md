@@ -1,27 +1,25 @@
 # Chapter One — Weapon Damage and the Defence Formula
 
-**Status: APPROVED.** Checked against `EQUIPMENT-01` and `ACTION-ECONOMY-01` by MAIN
-directly, confirmed accurate. First chapter committed under the incremental,
-one-at-a-time outline process.
-
----
-
-Attack rolls are taught in full in the Player's Handbook (Attacks, §12.5) — melee and
-lightsaber use Strength, ranged uses Dexterity. This chapter doesn't re-teach that roll.
-It gives what a weapon's own stat line contributes once that roll is made.
+**Attack rolls are taught in the Player's Handbook** — melee and lightsaber use Strength,
+ranged uses Dexterity. **This chapter does not re-teach that roll. It gives what a weapon's
+own stat line contributes once the roll is made.**
 
 ## Damage, by category
 
-| Category | Formula | Source |
-|---|---|---|
-| Melee, one-handed | weapon dice + Strength | `EQUIPMENT-01 §1` |
-| Melee, two-handed | weapon dice + 1.5× Strength | `EQUIPMENT-01 §1` |
-| Ranged | weapon dice + Dexterity | `EQUIPMENT-01`, `PT-340` |
-| Lightsaber | weapon dice + Strength | `PT-1` — **⚠ provisional** |
+| Category | Damage |
+|---|---|
+| **Melee, one-handed** | weapon dice **+ Strength** |
+| **Melee, two-handed** | weapon dice **+ 1.5× Strength** |
+| **Ranged** | weapon dice **+ Dexterity** |
+| **Lightsaber** | weapon dice **+ Strength** — ⚠ *see below* |
 
-**Lightsaber note:** the source calls lightsabers "not melee weapons." Treated as
-melee-for-damage as a working assumption, flagged as worth ±3 a hit on every Jedi if
-that assumption turns out wrong.
+**⚠ The lightsaber line is a working assumption, not a settled rule, and it is worth
+knowing which.** The source material explicitly calls lightsabers *"not melee weapons"* —
+a statement it makes about upgrades and critical hits rather than about damage. **Treating
+them as melee for damage purposes is this game's reading of an ambiguous source.**
+
+**If that reading is wrong, it is worth roughly ±3 damage on every hit a Jedi lands**,
+which is why it is flagged here rather than quietly assumed.
 
 ## Wield classes
 
@@ -39,9 +37,12 @@ Every weapon is one of six classes, which sets what may be paired.
 ## Critical hits
 
 A weapon's *threat range* (e.g. 19–20) is the roll that scores a critical. Its
-*multiplier* (×2, ×3) applies to the dice, not to ability bonuses. Massive Criticals —
-bonus damage on top of the multiplier — are capped at `2d6` regardless of the source
-game's uncapped value (`PT-341`).
+*multiplier* (×2, ×3) applies to the dice, not to ability bonuses.
+
+**⚠ Massive Criticals — bonus damage on top of the multiplier — are capped at `2d6` here,
+and that is a deliberate departure.** The games leave the value uncapped. **This is one of
+the few places where this book knowingly differs from its source rather than reporting
+it.**
 
 ## Defence
 
@@ -80,18 +81,13 @@ K2's Light and Medium plating use the game's own sentinel for "no cap" rather th
 small positive number — that's why they read as uncapped rather than +6 or +3 in that
 column.
 
-**Two restrictions carry over from the source and are not otherwise stated:** armour is
-unusable by droids (they wear plating instead) and by Wookiees. And armour blocks Force
-powers — already load-bearing elsewhere (the Heavy-Armour/Soresu gate on `Well
-Guarded`), confirmed rather than assumed here.
+**Two restrictions come straight from the games and are easy to miss:** armour cannot be
+worn by **droids** — they take plating instead — or by **Wookiees.**
+
+**And armour blocks Force powers**, which carries further than it looks. It is why **heavy
+armour and the `Soresu` lightsaber form** cannot both feed the `Well Guarded` class
+feature — a character who armours up loses the defensive Force techniques a Jedi relies
+on. **The restriction is not cosmetic; it decides what kind of defence a character can
+build.**
 
 ---
-
-## Open items, carried from review
-
-**`ATTACKS-01`'s ranged-damage line is stale against `EQUIPMENT-01`'s own `PT-340`
-amendment** — reported at `TO-MAIN-30-AUTHOR.md`, not fixed here. This chapter draws its
-ranged-damage value from `EQUIPMENT-01` directly, which already has it right.
-
-**The lightsaber-damage-ability line is provisional in its own source (`PT-1`).** Carried
-through as a flag rather than smoothed into a stated fact.

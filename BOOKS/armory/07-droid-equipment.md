@@ -1,13 +1,10 @@
 # Chapter Seven — Droid Equipment
 
-**Status: APPROVED.** Split out from a combined outline row that bundled
-droid equipment with worn gear, usable items, and quest/miscellaneous items — five
-`ITEMS` files that aren't one coherent category the way Armour's six sub-categories
-were. Proposed as four chapters instead of one; see the note at the end.
+**Everything a droid can be fitted with.** Like the armour and upgrade chapters before it,
+these figures came straight from the games' own item files rather than through any summary.
 
-`ITEMS-04`, another primary-source catalogue on the same footing as `ITEMS-02` and
-`ITEMS-03` — no cross-check against a more-primary source needed here, unlike
-Chapters Two through Four.
+**Droids do not wear armour and cannot use most of what Chapters Two through Six
+catalogue.** This chapter is what they get instead.
 
 ---
 
@@ -23,7 +20,7 @@ Chapters Two through Four.
 | **Plating** | 25 | Droid armour — the item-level equivalent of Chapter One's droid-plating formula |
 | **Sensor** | 12 | Detection bonuses, including against Stealth |
 | **Shield** | 13 | Timed energy absorption — a duration and a damage cap, not a passive bonus |
-| **Spike-mount** | 7 | Computer and security bypass modules — see below |
+| **Spike-mount** | 7 | Computer and security bypass modules — see the note below |
 | **Tool** | 18 | Combat-utility bonuses (the sample entry adds an attack bonus alongside a skill bonus) |
 
 **Every device-category item, and most plating, carries a `Use Limitation Feat (Droid
@@ -54,39 +51,18 @@ requirement itself, not a separate feat purchase.
 
 ---
 
-## A scoping proposal, not yet decided
-
-**The outline currently bundles `ITEMS-04` through `08` — droid equipment, worn gear,
-usable items, and quest/miscellaneous items — into one chapter.** Having looked at all
-five, they aren't one category the way Armour's sub-categories were:
-
-- **Droid equipment** (this chapter) — its own coherent, thematically distinct set.
-- **Worn gear** (`ITEMS-05`, 241 items — belts, forearms, gauntlets, implants, masks) —
-  the single largest catalogue after weapons, and mechanically its own thing: passive
-  body-slot gear, not weapons or armour.
-- **Usable items** (`ITEMS-06`, 58 — adrenals, medical, trap kits) — active consumables,
-  a different kind of object entirely from anything worn or equipped.
-- **Quest and miscellaneous items** (`ITEMS-07` + `ITEMS-08`, roughly 60 combined) —
-  both small enough to share one chapter, and both are genuinely miscellaneous rather
-  than a coherent category in their own right.
-
-**Proposing four chapters rather than one**, same reasoning as the Melee/Ranged/
-Lightsabers split — different mechanical shapes, and a single chapter covering all
-five `ITEMS` files' combined ~500 items would strain this book's own browsable-
-reference identity. Not drafting the other three until this is confirmed.
-
 ---
 
-## Open items, carried from review
+## ⚠ One spike-mount item has a broken name in the game data
 
-Same lightsaber-damage flag, unaffected. The four-way split proposal above was
-approved and the other three chapters are drafted.
+**The best item in the Spike-mount category is hard to find, because its name field is
+corrupted.** It is the **Advanced Droid Interface** — `g1_i_drdcomspk01`, Tier 3, **9,000
+credits**, and it requires `Droid Upgrade 3`.
 
-**The `spike-mount` corrupted-Name row is resolved.** It is `Advanced Droid Interface`
-(`g1_i_drdcomspk01`, Tier 3, 9,000 credits), gated behind `Droid Upgrade 3` and granting
-skill 7 in Awareness, Computer Use, Demolitions and Security — *"a self-contained
-artificial intelligence system... to provide them with additional resources useful in
-the bypassing of computer and conventional"* security. The four skill bonuses, which had
-also been showing as unmapped subtypes, resolve cleanly and match the item's own flavour
-text. Third instance of that corruption pattern, and the third to resolve the same
-way — by reading the raw file rather than the markdown copy.
+**It grants skill 7 in Awareness, Computer Use, Demolitions and Security** — four bonuses
+at once, which is why it costs what it does. Its own description calls it *"a
+self-contained artificial intelligence system… to provide them with additional resources
+useful in the bypassing of computer and conventional"* security.
+
+> **If you are searching the game files for this item by name, you will not find it.
+> Search the code instead.**

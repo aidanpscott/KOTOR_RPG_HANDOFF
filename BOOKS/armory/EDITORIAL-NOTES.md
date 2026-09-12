@@ -471,3 +471,114 @@ catalogue. Roughly 791 items are uncatalogued.**
 **Verified by inspection, not by pattern-match** — Chapters Eight and Nine were opened
 directly to confirm they use the same category-table-plus-sample shape as Chapter Five
 rather than a format the entry count was failing to recognise.
+
+### ✔ RULED — the catalogue-completion task, scoped and sequenced
+
+**All six chapters get full catalogues. No exceptions carved out for the smaller ones**,
+and none for the larger. `PT-1770` was already decided; the size of the gap is a
+sequencing question, not a reason to revisit whether the rule applies.
+
+**Sequenced after `PT-1844` completes across all sixteen chapters**, not interleaved — so
+every new entry is born compliant with both standards and nothing is written twice.
+
+**Order within the task: smallest first**, for momentum, the same shape the original
+sixteen chapters were written in:
+
+    1.  Ten — quest and miscellaneous        20 items
+    2.  Nine — usable items                  58 items
+    3.  Seven — droid equipment             135 items
+    4.  Six — upgrades                      164 items + 118 rows
+    5.  Five — armour                       173 items
+    6.  Eight — worn gear                   241 items
+
+**~791 items total.** Comparable in size to writing the Armory's sixteen chapters in the
+first place.
+
+---
+
+# Chapter Seven — Droid Equipment
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED.** Source `ITEMS-04`, a primary-source catalogue on the same
+footing as `ITEMS-02` and `ITEMS-03` — no cross-check against a more-primary source needed,
+unlike Chapters Two through Four.
+
+Same lightsaber-damage flag, unaffected. The four-way split proposal above was
+approved and the other three chapters are drafted.
+
+**The `spike-mount` corrupted-Name row is resolved.** It is `Advanced Droid Interface`
+(`g1_i_drdcomspk01`, Tier 3, 9,000 credits), gated behind `Droid Upgrade 3` and granting
+skill 7 in Awareness, Computer Use, Demolitions and Security — *"a self-contained
+artificial intelligence system... to provide them with additional resources useful in
+the bypassing of computer and conventional"* security. The four skill bonuses, which had
+also been showing as unmapped subtypes, resolve cleanly and match the item's own flavour
+text. Third instance of that corruption pattern, and the third to resolve the same
+way — by reading the raw file rather than the markdown copy.
+
+## ⚠ The stale scoping proposal, removed from the chapter
+
+**This section sat in the chapter as an open question when it had already been answered.**
+It proposed splitting a combined outline row into four chapters and closed with *"not
+drafting the other three until this is confirmed"* — while the flags directly beneath it
+recorded **"the four-way split proposal above was approved and the other three chapters are
+drafted."**
+
+**That is `PT-961`'s shape in this project's own book**: a resolved proposal left standing
+as though still pending, with its own resolution sitting twenty lines below it. **The fifth
+instance of that pattern found during this work, and the first in something I wrote.**
+
+Preserved in full:
+
+## A scoping proposal, not yet decided
+
+**The outline currently bundles `ITEMS-04` through `08` — droid equipment, worn gear,
+usable items, and quest/miscellaneous items — into one chapter.** Having looked at all
+five, they aren't one category the way Armour's sub-categories were:
+
+- **Droid equipment** (this chapter) — its own coherent, thematically distinct set.
+- **Worn gear** (`ITEMS-05`, 241 items — belts, forearms, gauntlets, implants, masks) —
+  the single largest catalogue after weapons, and mechanically its own thing: passive
+  body-slot gear, not weapons or armour.
+- **Usable items** (`ITEMS-06`, 58 — adrenals, medical, trap kits) — active consumables,
+  a different kind of object entirely from anything worn or equipped.
+- **Quest and miscellaneous items** (`ITEMS-07` + `ITEMS-08`, roughly 60 combined) —
+  both small enough to share one chapter, and both are genuinely miscellaneous rather
+  than a coherent category in their own right.
+
+**Proposing four chapters rather than one**, same reasoning as the Melee/Ranged/
+Lightsabers split — different mechanical shapes, and a single chapter covering all
+five `ITEMS` files' combined ~500 items would strain this book's own browsable-
+reference identity. Not drafting the other three until this is confirmed.
+
+---
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 6 internal citations, and the stale proposal section above**, which was a third
+of the chapter's length.
+
+**The opening now says what the chapter is for rather than how it came to exist.** It
+explained its own split from an outline row and named three source documents. It now opens:
+**droids do not wear armour and cannot use most of what Chapters Two through Six catalogue,
+and this chapter is what they get instead.**
+
+**⚠ Removing the flags orphaned a live cross-reference, caught by the standing check.** The
+category table's Spike-mount row pointed *"see below"* at a detail that lived only in the
+flags. **That detail is genuinely reader-facing** — the best item in the category is
+effectively unfindable by name.
+
+**So it was restored into the chapter as its own section** rather than moved out: the
+**Advanced Droid Interface**, `g1_i_drdcomspk01`, Tier 3, 9,000 credits, `Droid Upgrade 3`,
+granting skill 7 in Awareness, Computer Use, Demolitions and Security — **with the practical
+warning a reader needs: if you search the game files for this item by name you will not
+find it, so search by code.**
+
+**What stayed in the notes is the part that was never reader-facing:** that this is the
+third instance of the corrupted-Name pattern, and that it resolved the same way as the
+others — by reading the raw file rather than a markdown copy.
+
+**⚠ Deliberately NOT loosened.** All eight categories and their counts survive, both
+representative-entry tables are intact including the `Droid Desh Plating` `DecreaseAC`
+cross-reference to Chapter Five, and the Advanced Droid Interface's full specification is
+now in the book rather than in a footnote about it.

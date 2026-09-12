@@ -46,12 +46,12 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `d726cbe` — `PT-1767`, and `§8` had been invisible to its extractor |      ✓ |
+| `KOTOR_RPG_MAIN_WORK` | `d0f0369` — the shelf-vs-extract gate check, and its first live catch |      ✓ |
 | `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `95bc648` — `PT-1729` — the designation rule |     ⚠ no |
+| `Lodestar` | `30954f0` — `PT-1772` — a droid may not take a taken name |     ⚠ no |
 | `Lens` | `e59ff95` — `PT-1525` — a pile on the floor, its own kind of object |  ⚠ no |
-| `Loom` | `5ed6185` — pinned to `PT-1729`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `7de0ee2` — the shipped dice catch up with the rules |      ⚠ no |
+| `Loom` | `c48e909` — the Builder hands over the ban list |        ⚠ no |
+| `KOTOR-RPG-APP` | `7497018` — pinned to `PT-1772`'s engine |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,13 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 659 · `Lens` 10 · `Loom` 261 · `KOTOR-RPG-APP` 533 — 1,463, all
-green.** *(`BUILD 148`.)*
+**`Lodestar` 668 · `Lens` 10 · `Loom` 263 · `KOTOR-RPG-APP` 533 — 1,474, all
+green.** *(`BUILD 149`.)*
+
+⚠⚠ **THE GATE NOW COMPARES THE INSTALLED SHELF AGAINST THE EXTRACTS** —
+`check_shelf.py`, `PT-1772`, blocking. Three states, one check per boundary:
+`check_extracts` is document→extract, this is extract→shelf, and **neither can
+see the other's gap.** It caught `PT-1773` on its first live case.
 
 ⚠ **`equipment.toml` AND `items.toml` WERE REPLACED AT `BUILD 148`** — eight
 weapon dice and all three droid plating grades had been shipping values the

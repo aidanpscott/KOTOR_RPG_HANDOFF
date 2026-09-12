@@ -487,7 +487,7 @@ sixteen chapters were written in:
     1.  Ten — quest and miscellaneous        20 items
     2.  Nine — usable items                  58 items
     3.  Seven — droid equipment             135 items  ⚠ WRONG — it is 129
-    4.  Six — upgrades                      164 items + 118 rows
+    4.  Six — upgrades                      164 items + 118 rows  ⚠ WRONG — it is 164 + 143
     5.  Five — armour                       173 items
     6.  Eight — worn gear                   241 items
 
@@ -1728,3 +1728,90 @@ gate and all four skill values. **All correct.**
 **The corrupted-name warning was kept and extended.** It is still true of the game files;
 the chapter now adds that the item is catalogued below under its real name, which it was not
 before.
+
+---
+
+# ⚠ `PT-1770` — Chapter Six expanded to a full catalogue
+
+**307 rows, 260 catalogue entries, every one of the twelve category counts agreed on the
+first pass.** 87 lines in, 614 out. Zero internal citations. No duplicate resrefs across
+either source file.
+
+## ⚠ The upgrade-tree total was wrong — 143, not 118
+
+**The chapter's own nine-category list already summed to 143**, exactly as Chapter Seven's
+eight categories already summed to 129. **Same shape, same cause, same fix: count the rows.**
+
+    emitters 32 · ls cells 3 · melee cells 15 · edges 15 · grips 12
+    ranged cells 30 · chambers 12 · firing 5 · scopes 19          = 143
+
+**The scope table recorded this chapter as *"164 items + 118 rows."* It is 164 + 143.**
+
+## ⚠⚠ The bigger find: the 104 crystals are not 104 crystals
+
+    57   real, distinct crystals
+    45   ONE crystal in forty-five states
+     2   rows that are not crystals at all
+    104  rows in total
+
+**Forty-five rows are `qcrystal_1_0` through `qcrystal_9_4` — KOTOR 2's personal crystal**,
+in **nine power tiers across five alignment bands.** Every one carries the same description:
+*"bound to ‹your character›. Its power reflects that of its master."* All forty-five cost
+nothing; all are marked unique, **because it is not bought and there is only ever one.**
+
+**Listing them as forty-five catalogue rows would have been actively misleading** — a reader
+comparing crystals would find forty-five near-duplicates with an unresolved string token
+where the name should be. **They now get one section that explains the item**, gives the
+three alignment characters, and shows the real span from tier 1 to tier 9. **Nothing was
+dropped; it was consolidated and explained.**
+
+**⚠ And the tier column is wrong for the upper tiers.** All forty-five rows read **Tier 1**,
+including the tier-9 forms that grant `+7` to an ability. **The chapter says so and reads the
+power tier from the resref instead**, rather than correcting the source's column, which is
+not a catalogue pass's call.
+
+**Two rows are not crystals**, and both are named rather than dropped, on Chapter Three's
+precedent:
+
+- **`g1_w_sbrcrstl20` — *"Door Cutting"***, description *"Door Sabering"*. The scripted-scene
+  door utility. No properties, not equipment.
+- **`g1_w_sbrcrstl21` — *"+ dual strike"*, which is a feat.** Its description is a feat's
+  text — *"advanced training using teamwork… +2 bonus to hit"* — sitting on a crystal resref
+  at 25,000 credits. **A mis-filing in the game data.**
+
+**⚠ Cross-record fixed:** Chapter Four told readers *"Chapter Six covers the 104 crystals."*
+It now says 57 distinct crystals plus the personal crystal. **Second chapter in this task to
+carry a stale count of another chapter's contents** — after Chapter Fourteen's 135.
+
+## ⚠ Three rows carried ruling numbers inside the source's own properties column
+
+**The first time this has appeared inside item data rather than in prose.** Three
+`Armorply Plating` rows record *"subtype 2 = `Reflex`, resolved from `k2_iprp_savingthrow.2da`
+at `PT-716`; raised from 1 to 2 at `PT-717`."*
+
+**The fact is worth keeping and the citation is not.** They now read **Reflex save +2**, with
+the substantive part stated plainly: **the game's own file records `+1` and this game sets it
+at `+2`.** A reader needs to know the value was deliberately changed; they do not need the
+ruling number that changed it.
+
+**Caught by the standing citation check running over the generated output rather than only
+over the prose** — which is the only reason it did not ship.
+
+## ⚠ Ninety-four rows carry an unresolved property
+
+Same class as Chapter Seven's forty-nine, and a larger count: **49 in crystals, 12 in
+emitters, and the rest spread across armour and the melee and ranged trees.** All keep their
+index in the margin; none is guessed at. **Also covered by the resolution work now with
+Coder.**
+
+## What was verified rather than assumed
+
+**Every value the chapter already claimed was checked against the data before the rewrite.**
+All six `Bonded Plates` rows, all five `Flexible Underlay` rows, the `Rubat` figures, and
+both Chapter One claims the chapter exists to confirm — *"up to +4 Defence"* and *"up to +3
+Max Dex"* — **all correct, at exactly the tiers stated.**
+
+**And one thing the chapter had not mentioned turned up.** `Bonded Plates Mark IV` exists at
+28,850 credits. **It grants damage resistance rather than a fifth point of Armor**, so
+Chapter One's `+4` ceiling still stands — **but a reader who found a Mark IV and had been
+told the line stops at Mark III would reasonably wonder.** Now stated.

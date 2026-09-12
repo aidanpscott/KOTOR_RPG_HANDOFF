@@ -42,8 +42,14 @@ project.**
 
 `Shock-arm` (`⚠ AUTHORED`, `PT-713`) is chassis-integrated droid hardware. **Simplified
 since this chapter first drafted: the free, auto-upgrading T3-M4-unique design was
-deleted entirely.** One purchasable line remains, at two price points (120 and 500
-credits) using this book's normal upgrade slots rather than a feat-gated special case.
+deleted entirely.** One purchasable line remains, at two price points. **`Shock Arm`** (`a_shockarm_01`,
+120 credits, 1d6 electrical) is chassis standard — `Astromech` and `Remote` begin play
+with one, and it carries no `Droid Upgrade` prerequisite — and takes ordinary
+`melee/grip` and `melee/cell` upgrades. **`Advanced Shock Arm`** (`a_shockarm_02`, 500
+credits, 2d6 electrical) *is* gated, behind `Droid Upgrade 2`. It occupies no weapon
+slot and cannot be disarmed, dropped or sold, and a droid may still carry a blaster in
+its actual weapon slots (`PT-712`). `PT-567`'s melee bar is unaffected — nothing was
+carved out, because a shock arm was never a weapon in that sense.
 **`PT-714`, owner ruling, still stands regardless of that redesign: a shock arm is not
 a melee weapon — it's chassis hardware, the same category a beast's claws belong to.**
 Worth knowing for whoever eventually drafts the Bestiary's or Threat Database's droid

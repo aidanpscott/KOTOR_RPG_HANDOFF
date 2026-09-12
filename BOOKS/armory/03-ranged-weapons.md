@@ -85,22 +85,22 @@ attack, 25% chance to stun, on top of rifle-like damage.
 
 ---
 
-## ⚠ Sniper Rifle is ruled but not catalogued
+## Sniper Rifle — ruled, and now catalogued
 
-**`PT-1783` creates `Sniper Rifle` as a base weapon type, and `EQUIPMENT-01`'s table
-carries it. `ITEMS-01` has no row for it** — no resref, no cost, no description. The
-only `Sniper Rifle` string in the catalogue is `Sith Sniper Rifle` (`g_w_blstrrfl002`),
-a different and pre-existing K1 weapon.
+**The gap this chapter flagged is closed.** `Sniper Rifle` now has its catalogue row:
+`a_w_snprrfl01`, authored, Tier 2, 800 credits, `1d12` at threat 19–20 ×2 — *"A
+precision-milled barrel and an integrated scope, built for a shot no other rifle can
+guarantee."* Note it is not to be confused with `Sith Sniper Rifle` (`g_w_blstrrfl002`),
+a different and pre-existing K1 weapon that shares part of the name.
 
-`Marksman Rifle` by contrast does have its row — `a_w_mrksmnrfl01`, authored, Tier 1,
-400 credits, with its own description: *"A long barrel, a heavy stock and a scope rail.
-It hits softly and it hits from where nobody expected."*
+The 800-credit price is a reasonable default rather than a hard derivation — it is a
+genuine two-dimension upgrade over the Marksman Rifle's 400, gaining both a die step and
+ten metres — and is open to a second look if it doesn't sit right in play.
 
-**So the Sniper Rifle currently exists as a ruled type with nothing to buy.** Naming
-this rather than inventing around it: a resref and a price are mechanical values and
-not mine to assign. The description is mine to write whenever the row is created, and
-it should sit in the same register as the Marksman Rifle's — plain, physical, and about
-what the weapon does to a fight rather than what it is made of.
+`Marksman Rifle` sits beside it at `a_w_mrksmnrfl01`, Tier 1, 400 credits — *"A long
+barrel, a heavy stock and a scope rail. It hits softly and it hits from where nobody
+expected."* Both descriptions sit in the same register: plain, physical, and about what
+the weapon does to a fight rather than what it is made of.
 
 ---
 

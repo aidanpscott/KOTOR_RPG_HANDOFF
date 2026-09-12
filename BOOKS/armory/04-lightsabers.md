@@ -19,6 +19,21 @@ values for these three weapons. Detail below.**
 | **Short Lightsaber** | **2d6** | 2d8 | 19–20 / ×2 | 2 — one-handed | Small |
 | **Lightsaber** | **2d8** | 2d10 | 19–20 / ×2 | 2 — one-handed | Medium |
 | **Double-Bladed Lightsaber** | **2d10** | 2d12 | 20 only / ×2 | 3 — two-handed staff | Large |
+| **Training Lightsaber** | **1d8** | — | see below | — | — |
+
+**The Training Lightsaber is a fourth entry, authored rather than extracted** — 150
+credits, `a_w_trnsbr01`, and it takes a colour crystal like any other lightsaber
+(`PT-1472`), the crystal supplying properties while the base supplies the die. Giving a
+padawan's practice weapon a master's dice would have been a ruling in itself, and `1d8`
+is that ruling going the other way: a step below the Short Sword's cousin and well
+below the real thing. **It is what you learn on.** Two siblings exist — Training Short
+Lightsaber at `1d6` and Training Double-Bladed at `1d10`.
+
+**⚠ Two live documents disagree on its threat range, and this chapter does not pick.**
+`EQUIPMENT-01` states threat `19–20`. `ITEMS-01` gives `20` — and gives `20` for all
+three training sabers, which makes its side internally consistent where `EQUIPMENT-01`
+states the figure once in prose. Flagged rather than resolved; the consistency argues
+for `20` but that is an argument, not a reading of the source of record.
 
 **Use K1's — our campaign is 3956 BBY and K1 is the era**, same standing choice as every
 other weapon in this book.

@@ -23,7 +23,7 @@ Chapters Two through Four.
 | **Plating** | 25 | Droid armour — the item-level equivalent of Chapter One's droid-plating formula |
 | **Sensor** | 12 | Detection bonuses, including against Stealth |
 | **Shield** | 13 | Timed energy absorption — a duration and a damage cap, not a passive bonus |
-| **Spike-mount** | 7 | ⚠ Not characterized — see note below |
+| **Spike-mount** | 7 | Computer and security bypass modules — see below |
 | **Tool** | 18 | Combat-utility bonuses (the sample entry adds an attack bonus alongside a skill bonus) |
 
 **Every device-category item, and most plating, carries a `Use Limitation Feat (Droid
@@ -79,11 +79,14 @@ reference identity. Not drafting the other three until this is confirmed.
 
 ## Open items, carried from review
 
-Same lightsaber-damage flag, unaffected. New here: the four-way split proposal above,
-and one more instance of the corrupted-Name-field pattern first found at `Baragwin
-Assault Blade` and the Weapon Master item in Chapter Two's research — `spike-mount`'s
-first row carries class-feature text ("Prerequisites: Stealth is a Cross-Class
-Skill...") instead of an item name. Third occurrence of the same shape, not something
-this chapter can resolve without the raw source and a GFF parser, same as before.
-Category left uncharacterized above rather than guessed at from a name that isn't
-really a name.
+Same lightsaber-damage flag, unaffected. The four-way split proposal above was
+approved and the other three chapters are drafted.
+
+**The `spike-mount` corrupted-Name row is resolved.** It is `Advanced Droid Interface`
+(`g1_i_drdcomspk01`, Tier 3, 9,000 credits), gated behind `Droid Upgrade 3` and granting
+skill 7 in Awareness, Computer Use, Demolitions and Security — *"a self-contained
+artificial intelligence system... to provide them with additional resources useful in
+the bypassing of computer and conventional"* security. The four skill bonuses, which had
+also been showing as unmapped subtypes, resolve cleanly and match the item's own flavour
+text. Third instance of that corruption pattern, and the third to resolve the same
+way — by reading the raw file rather than the markdown copy.

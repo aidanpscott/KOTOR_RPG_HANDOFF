@@ -30,10 +30,12 @@ a stem-matched sweep would pass over them:**
 | **Sith Tremor Sword** (K2's) | `w_melee_22` | **Certain** — direct counterpart of K1's `g_w_vbroswrd03` |
 | **GenoHaradan Poison Blade** | `geno_blade` | **⚠ Suspected only** — die and threat match exactly, but the name doesn't say Vibrosword and I can't read `BaseItem` from this copy |
 
-The three certain ones are written as `1d12` below. **`GenoHaradan Poison Blade` is left
-at its source value and flagged** — the method that resolved `Energy Baton` (check the
-item's actual `BaseItem` reference rather than matching by name) is what would settle
-it, and that needs the raw file.
+**⚠ UPDATE — three of these four are now fixed at source.** `w_melee_06`, `w_melee_21`
+and `w_melee_22` all read `1d12` in the live `ITEMS-01`, matching what this chapter
+wrote. **`GenoHaradan Poison Blade` was not changed and still reads `2d6`** — so either
+it genuinely isn't a Vibrosword-family weapon, or it is a fifth miss. The caution was
+right to hold: it remains the one open case, and settling it needs a `BaseItem` read
+rather than a die-signature match.
 
 ---
 
@@ -269,8 +271,8 @@ Enhancement 2* — the two-handed family's cold-damage treatment applied to a on
 blade.
 
 **Baragwin Assault Blade** · `g1_w_vbroswrd01` · K1 · Tier 3 · 9,000 credits · *Attack
-+5 · +2d6 energy · +2d6 sonic · Keen* — *a miniaturised vibrosword fitted with discharge
-capacitors.* Name resolved from string reference 48160; see Chapter Six for the
++5 · +2d6 energy · +2d6 sonic · Keen* — *"This advanced vibrosword is a miracle of miniaturization technology. Not only
+does it deliver increased functionality over a normal vibrosword..."* Name resolved from string reference 48160; see Chapter Six for the
 identification history.
 
 ---

@@ -32,7 +32,7 @@ Every weapon is one of six classes, which sets what may be paired.
 | 1 — one-handed light | Stun Baton | yes |
 | 2 — one-handed | Long Sword, Vibrosword, Short Sword, Vibroblade, Lightsaber, Short Lightsaber | yes |
 | 3 — two-handed staff | Quarterstaff, Gaffi Stick, Wookiee Warblade, Double-Bladed Sword, Vibro Double-Blade, Double-Bladed Lightsaber | no — it *is* the pair |
-| 4 — pistol | Blaster, Heavy Blaster, Hold-Out, Ion Blaster, Disruptor Pistol, Sonic Pistol | yes |
+| 4 — pistol | Blaster, Heavy Blaster, Hold Out, Ion Blaster, Disruptor Pistol, Sonic Pistol | yes |
 | 5 — rifle | Ion Rifle, Bowcaster, Carbine, Disruptor Rifle, Sonic Rifle, Blaster Rifle | no |
 | 6 — heavy | Repeating Blaster, Heavy Repeating Blaster | no |
 

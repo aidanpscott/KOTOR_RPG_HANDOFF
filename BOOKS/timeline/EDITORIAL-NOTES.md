@@ -424,3 +424,108 @@ reconciliation is unchanged.
 Trayus Academy in the same year, the unconditional surrender, the Mask search and Rekkiad,
 and Dxun. **The three-way Mass Shadow Generator attribution is intact and still the
 chapter's sharpest correction.**
+
+---
+
+# Chapter Five — The Jedi Civil War
+
+*Moved here from the chapter's foot, `PT-1844` pass, unchanged in substance.*
+
+**Chapter status: APPROVED by MAIN.** `PT-1802`'s three parts. First chapter where rank 1
+(the games) is primary rather than a cross-check, and the first where the record branches.
+**Sources:** `EVENTS-01 §1` (the spine, 3,959 and 3,956), `§3`'s claim census, `§4`'s event
+enumeration for the branch and the `malak_defeated` predicate; `WORLDS-REGISTER-01` for the
+Telos IV rank precedent.
+
+**⚠ Flag 1 — the Star Forge has no row in `EVENTS-01`'s spine, and eleven claims lean on
+it. Already known there; recording where the row would go.** `EVENTS-01 §3`'s own census
+marks it: **`Star Forge · 11 claims · ⚠ NO`** — meaning absent from `§1`'s dated spine,
+unlike the Jedi Civil War, Malachor and the rest.
+
+**The data exists elsewhere, which makes this a documentation gap rather than a real one.**
+`CANON-01-v2 §4` carries a worked example that is precisely this event:
+
+    event.star_forge_destroyed:
+      date: { year: -3956 }
+      precision: year
+      canon: kotor1
+      mutable: true
+      ledger_key: kotor1.starforge.outcome
+
+and `EVENTS-01 §4` holds it as **Record 2**, the enumeration's only `branch`. **So the
+event is modelled, dated and branch-aware in two places and simply missing from the third**
+— the narrative spine this book reads from. **Chapter Five is one of the eleven consumers**,
+and the row would sit at 3,956 BBY beside *"KOTOR 1. OUR SETTING."*
+
+**✔ Fixed.** MAIN added the spine row at 3,956 BBY with its branch note and ledger key, and
+updated the census line to match. **The gap this chapter was written around is closed.**
+
+**⚠ Flag 2 — no same-rank conflict in this chapter, which is itself worth recording.**
+Chapters Three and Four each hit a CG-narrative-versus-CG-timeline disagreement. **Here the
+two agree throughout** — dates, sequence, and outcome — with the narrative supplying Bastila
+Shan's name at the rescue and the timeline supplying the years. **The pattern from the last
+two chapters does not extend to this one**, which is useful negative evidence.
+
+**⚠ My explanation for it was wrong, and Chapter Six disproved it.** I proposed that the
+conflicts came of *"compressed summaries of long wars"* and that this era was *"short enough
+that the summary did not have to compress"* — predicting the pattern would skip Chapter Six
+and return in Chapter Seven. **It appeared twice in Chapter Six**, an era exactly as short
+as this one, and **not at all in Chapter Seven.** The corrected rule, which has since
+predicted correctly: **what drives these conflicts is how many separate Campaign Guide
+sections describe an era**, not the era's length. This era is covered by two sections that
+agree; the Dark Wars are covered by six that do not.
+
+**⚠ Flag 3 — a spine row with no stated bound.** `EVENTS-01 §1`'s **3,962 BBY — "Revan is
+made Supreme Commander"** has an empty *"Why it is a bound"* column, where every other row
+in the table carries one. Either the bound was never written or the row is a fact rather
+than a bound and sits in the wrong table. **Not used in this chapter** — the Campaign Guide
+does not date Revan's command — but a sweep will find it. Reported, not fixed.
+
+**On the branch, for the record:** the framing above is written to MAIN's ruling — the
+reference default stated as a default, the alternative stated as equally valid, and no
+implication that the published version outranks a table's own game. **I have not forked the
+prose** and do not intend to in Chapters Six and Seven; the engine's own `branch` record
+and the *"hinge fires either way"* note are what make that safe to do.
+
+## ⚠ What the `PT-1844` pass changed in this chapter
+
+**Removed — 6 internal citations.** The branching section carried the heaviest concentration
+of system vocabulary in the book after Chapter One's opening.
+
+**Rewritten — the branch explanation, and it is the pass's biggest single improvement.** It
+previously read *"the project's own engine already treats it this way, and more precisely
+than prose can"*, then cited `star_forge_destroyed` as **the only `branch` in the entire
+enumeration set**, `unconditional` for every other record, and `sith_civil_war_begins` with
+the predicate `malak_defeated == true`.
+
+**Every one of those is a true and important statement wearing a schema's clothes.** The
+same facts now read:
+
+> **Of everything in this book, the Star Forge's fate is the *only* event whose outcome
+> depends on how a campaign is played.** Every other date, battle and death happens the
+> same way regardless… **Malak dies at Rakata Prime and the Sith Empire fragments into
+> warlords in either version** — that is what makes Chapter Six possible at all, and it
+> happens whoever is standing on the Star Forge when the shooting stops.
+
+**Nothing was weakened.** *"The only branch in the entire enumeration set"* is a stronger
+claim than it looks, and the replacement states it at full strength — **the only event in
+four thousand years whose outcome a campaign decides.**
+
+**Rewritten — the 27-claims statistic.** It cited the census that counts them. The fact a
+reader needs is not the number but what it means, so the chapter now says **when a species
+is or is not available, when a faction has the composition it has, when a world belongs to
+whoever holds it, this war is usually the reason** — and keeps the comparative force with
+*"nothing else in four thousand years is cited half as often."*
+
+**Rewritten — the sources section**, which gained a statement the old line only implied:
+**this is the first chapter where the game outranks the book, and where they differ the
+game governs.** The Telos IV example is now credited to the worlds record in reader terms —
+two dates compared, the Campaign Guide's kept, **both still written down.**
+
+**✔ Kept unchanged — the pronoun declaration**, which explains they/them for Revan and the
+Exile on the grounds that both genders are player-determined exactly as the ending is.
+**It cites nothing internal and needed no change.**
+
+**⚠ Deliberately NOT loosened.** All 15 checked facts survive, and both load-bearing
+framings are intact: the alternative ending is still stated as *equally valid, equally
+supported*, and the default is still explicitly **not a verdict**.

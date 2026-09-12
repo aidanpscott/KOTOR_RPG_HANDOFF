@@ -1,17 +1,18 @@
 # Chapter Five — The Jedi Civil War
 
-**Status: APPROVED** by MAIN. `PT-1802`'s three parts. **This is the first chapter where
-rank 1 — the games themselves — is the primary source rather than a cross-check**, and the
-first where the record branches. Both are handled explicitly below rather than silently.
+**⚠ This is the first chapter where the games themselves are the primary source rather
+than a cross-check** — rank 1, above the Campaign Guide — **and the first where the record
+branches.** Both are handled openly below rather than quietly.
 
 ---
 
-**This is the war the campaign is inside.** `EVENTS-01`'s spine marks 3,956 BBY
-**"KOTOR 1. OUR SETTING… THE DEFAULT CLOCK,"** and the Jedi Civil War is the single event
-the rest of the corpus leans on hardest — **twenty-seven separate claims across the
-project's documents depend on it**, more than double the next most-cited event. When a
-species' availability line, a faction's composition, or a world's allegiance needs a
-reason, this war is usually the reason.
+**This is the war the campaign is inside.** 3,956 BBY, the year this game defaults to, sits
+in its last twelve months.
+
+**It is also the event the rest of this setting leans on hardest.** When a species is or
+is not available, when a faction has the composition it has, when a world belongs to
+whoever holds it — **this war is usually the reason.** Nothing else in four thousand years
+is cited half as often.
 
 **It is also a war with no villains from outside.** Every principal is a Jedi or a
 Republic officer. The fleet that attacks the Republic *is* the Republic's fleet. The Sith
@@ -138,10 +139,9 @@ claim to be the true one.**
 The Campaign Guide records a specific outcome — *"Rejecting his former self and embracing
 the way of the light, Revan retraces his steps and discovers a massive artifact known as
 the Star Forge, aboard which he duels and vanquishes his former apprentice, Malak, ending
-the Jedi Civil War"* — and `EVENTS-01`'s spine carries the same. **That is the wider
-setting's reference default: the version the published sources are written against, and
-therefore the version the rest of this book has to assume so that Chapters Six and Seven
-can say anything at all.**
+the Jedi Civil War"*. **That is the wider setting's reference default: the version the
+published sources are written against, and therefore the version the rest of this book has
+to assume so that Chapters Six and Seven can say anything at all.**
 
 **It is not a claim that this is what happened at your table.** KOTOR 1 is a game whose
 ending is chosen, and a campaign in which Revan takes the Star Forge and keeps it is not a
@@ -149,21 +149,22 @@ deviation from the setting — **it is the same setting, played.** The opposite 
 equally valid, equally supported by the source material, and nothing in this book is
 written to talk anyone out of it.
 
-**The project's own engine already treats it this way, and more precisely than prose can.**
-`EVENTS-01 §4` records `star_forge_destroyed` as **the only `branch` in the entire
-enumeration set** — every other event record is `unconditional`. And the note attached to
-it is the exact shape of the problem:
+**And the fork is far narrower than it looks**, which is what makes stating a default
+harmless rather than presumptuous.
 
-> **The branch determines *who* destroys it; the hinge fires either way.**
+**Of everything in this book, the Star Forge's fate is the *only* event whose outcome
+depends on how a campaign is played.** Every other date, battle and death happens the same
+way regardless.
 
-Downstream, `sith_civil_war_begins` has the predicate **`malak_defeated == true`** at
-**3,956 BBY**, and it is *"the event that turns Malak's Empire into the warlords — one row
-in an event table is the hinge of an entire faction tree."*
+**Even there, only half of it is in doubt.** Malak dies at Rakata Prime and the Sith Empire
+fragments into warlords **in either version** — that is what makes Chapter Six possible at
+all, and it happens whoever is standing on the Star Forge when the shooting stops.
 
-**So the fork is narrower than it looks.** Malak falls and the Sith Empire fragments in
-either version; what changes is who is holding the Star Forge afterward and what they do
-with it. **Chapter Six works from either ending**, which is why this chapter can state a
-default without that default being a verdict.
+> **What the branch decides is who destroys it. That it is destroyed, and what follows, is
+> the same either way.**
+
+**So Chapter Six works from either ending**, which is why this chapter can state a default
+without that default being a verdict.
 
 **One consequence of the same principle, stated because it will otherwise read as an
 oversight, and it applies to the whole book rather than this chapter alone:** these pages
@@ -188,8 +189,8 @@ book who appears in three consecutive chapters as three different people.**
 
 **Malak** — Revan's apprentice, then their attempted murderer, then their successor as Dark
 Lord (*see 3,957 BBY*). Devastated the Dantooine enclave; defeated at Rakata Prime. **His
-defeat is the corpus's load-bearing predicate** — `malak_defeated == true` is what starts
-Chapter Six.
+defeat is the hinge the whole next era swings on** — **everything in Chapter Six begins
+because Malak is dead.**
 
 **Bastila Shan** — the young Jedi who saved Revan aboard the flagship in 3,957 BBY and
 accompanied them through 3,956 (*both above*). **Named in the Campaign Guide's narrative
@@ -203,65 +204,23 @@ changed sides.
 **Mandalore the Indomitable · Mandalore the Ultimate** — neither appears here. **The
 Mandalorians are not a party to this war**, and a GM should resist adding them: at 3,956
 BBY they are *"dispersed mercenaries with no command and no territory"* (Chapter Four), and
-`EVENTS-01` is explicit that a faction list treating them as a standing power at this date
-would be wrong.
+**treating them as a standing power at this date would simply be wrong.**
 
 ---
 
-*Sources: KOTOR Campaign Guide — "The Jedi Civil War" f. 6; the dated timeline f. 113.
-`EVENTS-01 §1` (the spine, 3,959 and 3,956), `§3`'s claim census, and `§4`'s event
-enumeration for the branch and the `malak_defeated` predicate. `WORLDS-REGISTER-01` for the
-Telos IV rank precedent. KOTOR 1 at rank 1. Folios are printed page numbers; the OCR's page
-markers run three higher (Chapter One, Flag 3). No rank 6 or 8 material needed.*
+## Sources for this chapter
 
-## Open items, carried from review
+**This is the first chapter where the game outranks the book**, and both are used:
 
-**⚠ Flag 1 — the Star Forge has no row in `EVENTS-01`'s spine, and eleven claims lean on
-it. Already known there; recording where the row would go.** `EVENTS-01 §3`'s own census
-marks it: **`Star Forge · 11 claims · ⚠ NO`** — meaning absent from `§1`'s dated spine,
-unlike the Jedi Civil War, Malachor and the rest.
+- **KOTOR 1 itself** — rank 1. The events of 3,956 BBY are its story, and where it and any
+  published account differ, the game governs.
+- ***Knights of the Old Republic Campaign Guide*** — rank 2, at printed page numbers:
+  **"The Jedi Civil War"**, the narrative account, p. 6; **the dated timeline**, for
+  3,959 through 3,956 BBY, p. 113.
 
-**The data exists elsewhere, which makes this a documentation gap rather than a real one.**
-`CANON-01-v2 §4` carries a worked example that is precisely this event:
+**No lower-ranked source was needed anywhere in this chapter.**
 
-    event.star_forge_destroyed:
-      date: { year: -3956 }
-      precision: year
-      canon: kotor1
-      mutable: true
-      ledger_key: kotor1.starforge.outcome
-
-and `EVENTS-01 §4` holds it as **Record 2**, the enumeration's only `branch`. **So the
-event is modelled, dated and branch-aware in two places and simply missing from the third**
-— the narrative spine this book reads from. **Chapter Five is one of the eleven consumers**,
-and the row would sit at 3,956 BBY beside *"KOTOR 1. OUR SETTING."*
-
-**✔ Fixed.** MAIN added the spine row at 3,956 BBY with its branch note and ledger key, and
-updated the census line to match. **The gap this chapter was written around is closed.**
-
-**⚠ Flag 2 — no same-rank conflict in this chapter, which is itself worth recording.**
-Chapters Three and Four each hit a CG-narrative-versus-CG-timeline disagreement. **Here the
-two agree throughout** — dates, sequence, and outcome — with the narrative supplying Bastila
-Shan's name at the rescue and the timeline supplying the years. **The pattern from the last
-two chapters does not extend to this one**, which is useful negative evidence.
-
-**⚠ My explanation for it was wrong, and Chapter Six disproved it.** I proposed that the
-conflicts came of *"compressed summaries of long wars"* and that this era was *"short enough
-that the summary did not have to compress"* — predicting the pattern would skip Chapter Six
-and return in Chapter Seven. **It appeared twice in Chapter Six**, an era exactly as short
-as this one, and **not at all in Chapter Seven.** The corrected rule, which has since
-predicted correctly: **what drives these conflicts is how many separate Campaign Guide
-sections describe an era**, not the era's length. This era is covered by two sections that
-agree; the Dark Wars are covered by six that do not.
-
-**⚠ Flag 3 — a spine row with no stated bound.** `EVENTS-01 §1`'s **3,962 BBY — "Revan is
-made Supreme Commander"** has an empty *"Why it is a bound"* column, where every other row
-in the table carries one. Either the bound was never written or the row is a fact rather
-than a bound and sits in the wrong table. **Not used in this chapter** — the Campaign Guide
-does not date Revan's command — but a sweep will find it. Reported, not fixed.
-
-**On the branch, for the record:** the framing above is written to MAIN's ruling — the
-reference default stated as a default, the alternative stated as equally valid, and no
-implication that the published version outranks a table's own game. **I have not forked the
-prose** and do not intend to in Chapters Six and Seven; the engine's own `branch` record
-and the *"hinge fires either way"* note are what make that safe to do.
+**The Telos IV example** in the 3,958 BBY section is drawn from this game's own worlds
+record, where the wiki's 3,959 and the Campaign Guide's 3,958 were compared and the
+Campaign Guide's date kept. **Both are still written down there** — which is the point of
+the example.

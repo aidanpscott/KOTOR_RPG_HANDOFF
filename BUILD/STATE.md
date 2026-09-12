@@ -51,7 +51,7 @@ not set"* — earlier builds only worked because CMake had cached the compiler.
 | `Lodestar` | `d25bbb0` — `PT-1855`'s Scan |     ⚠ no |
 | `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
 | `Loom` | `4a35352` — pinned to `PT-1136`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `31c8abb` — `c` scans |      ⚠ no |
+| `KOTOR-RPG-APP` | `fcb864d` — the action keys withdraw |      ⚠ no |
 
 **All six clean and level with origin**, and `check_engine_pin.py` compares the
 four pins on every slice — **which is the difference between this row and the
@@ -59,8 +59,8 @@ one above it: the pins have a check and the heads have a habit.**
 
 ## Tests, as measured
 
-**`Lodestar` 740 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 595 — 1,611, all
-green.** *(`BUILD 173`.)*
+**`Lodestar` 740 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 596 — 1,612, all
+green.** *(`BUILD 174`.)*
 
 ⚠⚠ **THE APP SUITE IS FLAKY UNDER LOAD — `BUILD 167`, and it is not a product
 defect.** Four heavy tests have failed across four full runs and **every one

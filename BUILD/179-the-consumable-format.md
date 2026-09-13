@@ -1,4 +1,10 @@
-# BUILD 177 — the consumable format, and a number I got wrong by fifteen times
+# BUILD 179 — the consumable format, and a number I got wrong by fifteen times
+
+> ⚠ **FILED AS 177 AND RENUMBERED.** `177` and `178` were already spent — the
+> effect model and the save channel — and **neither wrote a note file**, they
+> were reported through `STATE.md`. So `ls BUILD/` stops at `176` and is not
+> the register; the register is `STATE.md`'s history. Left visible because the
+> next person to number a note will make the same check.
 
 ---
 

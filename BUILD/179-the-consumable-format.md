@@ -97,19 +97,54 @@ this file; it is the fifth precedent for a sixth section.**
 
 ### 3b · The proposal
 
-> **`equipment.toml` gains a `Consumables` section carrying four base types:**
-> **`medpac`, `adrenal`, `shield-generator`, `charge`.**
+> **`equipment.toml` gains a `Consumables` section carrying four base types**
+> — **`medpac`, `adrenal`, `shield-generator`, `charge`** — **each naming the
+> SHAPE of its effect and carrying no magnitudes.**
 >
-> **Each row carries the effect as VALUES, in `item_effects.json`'s own
-> vocabulary** — `does`, `base`, `rounds`, `terms`, `save`, `pool`, `kinds` —
-> **rather than as the prose `items.toml` carries today.**
+>     [[equipment]]
+>     id      = "medpac"
+>     name    = "Medpac"
+>     section = "Consumables"
+>     does    = "heal"
+>     takes   = ["base", "terms"]
 >
-> **An item blueprint names one, exactly as `PT-1452` already requires**, and
-> gains nothing new:
+>     [[equipment]]
+>     id      = "adrenal"
+>     does    = "ability"
+>     takes   = ["ability", "base", "rounds"]
+>
+>     [[equipment]]
+>     id      = "shield-generator"
+>     does    = "absorb"
+>     takes   = ["pool", "kinds"]
+>     worn    = true          # ⚠ §3's "activating a WORN device"
+>
+>     [[equipment]]
+>     id      = "charge"
+>     does    = ["damage_over_time", "condition"]
+>     takes   = ["base", "rounds", "kinds", "condition", "save"]
+>     aimed   = true          # ⚠ not used on yourself — see §2
+>
+> **The item blueprint names one and supplies its values**, which is the only
+> new thing in this proposal:
 >
 >     [item]
->     name = "Advanced Medpac"
->     base = "medpac-advanced"
+>     name   = "Advanced Medpac"
+>     base   = "medpac"
+>     base_healed = 20
+>     terms  = [ { from = "medicine", times = 2 } ]
+>
+>     [item]
+>     name   = "Echani Dueling Shield"
+>     base   = "shield-generator"
+>     pool   = 130
+>     kinds  = ["energy", "electrical"]
+>
+> ⚠ **`takes` is not decoration — it is the refusal.** `item_open` reads it and
+> rejects a blueprint that omits a required value or supplies one the base type
+> does not take, the same way it already refuses an item with no `base`. **A
+> consumable that opens with no magnitude would be an item that does nothing,
+> silently**, which is `PT-1452`'s own argument in the other direction.
 
 **⚠ Nothing about `PT-1452`'s one form changes.** *"`[equipment]` names a PATH
 to an item blueprint. Always. An item blueprint names a BASE TYPE from the
@@ -138,26 +173,44 @@ nothing to read it into.
 > `g_i_medeqpmnt01` would be naming KOTOR's file layout in our content, which
 > is the thing `PACKAGE-NAMING-01` exists to prevent.
 
-### 3d · ⚠ THE ONE QUESTION I CANNOT ANSWER FROM THE DOCUMENTS — yours
+### 3d · ⚠⚠ THE ONE QUESTION I CANNOT ANSWER FROM THE DOCUMENTS — yours
 
 **Is a ladder one base type or several?**
 
-    A   three base types        medpac · medpac-advanced · medpac-life-support
-        Each row carries its own base and multiplier. `PT-1452` holds
-        unchanged — the base type carries the dice, full stop. Four kinds
-        becomes about nine rows.
+> ⚠ **I ANSWERED THIS WRONG IN THE FIRST DRAFT AND THE MEASUREMENT TURNED IT
+> OVER.** I recommended *several*, and estimated *"four kinds becomes about
+> nine rows."* **Counted: 42 items carry 36 DISTINCT effect value-sets.** So
+> *several* is 36 rows for 42 items — 1.17 items per base type. Left visible
+> because the estimate is what made the recommendation look safe.
 
-    B   one base type, graded   base = "medpac", grade = 2 on the item
-        One row per KIND, and the item names a step on the curve. Matches
-        SCOPE-ITEMS-01's "the curve, not thirty entries" more literally.
-        ⚠ But it puts a NUMBER on the item blueprint, and `AuthoredItem`'s
-        own note is that an item carrying dice can disagree with its base
-        type. A grade is a small number, and that is how it would start.
+    A   one base type per distinct effect        36 rows for 42 items
+        `PT-1452` holds unchanged, literally: the base type carries the
+        dice. ⚠ And the abstraction buys nothing — a base-type table with
+        1.17 items per row is the item list wearing a different hat.
+        EQUIPMENT-01 is 1,425 items over 25 base types; this would be the
+        opposite shape in the same file.
 
-**I recommend A**, for the reason `item_open` already gives in its own
-comments, and because three rows is not a ladder of thirty. **B is the right
-answer the first time a consumable ships with twelve steps**, and nothing here
-does.
+    B   one base type per KIND, values on the item     4 rows
+        The base type says what SHAPE the effect has — `absorb` takes a
+        pool and a kinds list, `heal` takes a base and terms, `ability`
+        takes an ability and a duration, `charge` takes a base, rounds and
+        a save. The item supplies the numbers.
+
+**I now recommend B, and the reason `AuthoredItem` gives against it does not
+survive the measurement.** Its objection is that *"an item that restated them
+could disagree with it"* — **a disagreement needs two copies.** A weapon's
+base type carries dice, so an item restating them is a second copy of one
+fact. Under `B` the base type carries **no magnitudes at all**, so there is
+nothing for the item to contradict: the shape has one home and the values have
+one home.
+
+**And the measurement says the values ARE the item.** What separates one shield
+from another is `pool` 20 · 40 · 50 · 70 · 80 · 100 · 110 · 130 · 170 **and
+which damage kinds it covers** — `["energy","electrical"]` against
+`["bludgeoning","piercing","slashing"]` against `["heat"]`. That is not a
+ladder with a grade on it. `B` was the one I called *"the right answer the
+first time a consumable ships with twelve steps"* — **the shields ship with
+nine, today, and they do not even lie on one line.**
 
 ---
 
@@ -265,8 +318,8 @@ App **621** green (`+1`: the vitality band and the sidebar now agree mid-fight,
 ## Still open
 
 - ⚠ **This note is a proposal and nothing in it is a ruling.** Four base
-  types, `A` over `B` for ladders, and the heal shape in `§5` all need your
-  word.
+  types, `B` over `A` for where the magnitudes live, and the heal shape in
+  `§5` all need your word.
 - **The 583 worn effects** — `§4`. Larger than this one and unproposed.
 - **The 16 thrown-or-placed items** — Demolitions' half is `§5.2`'s mines and
   is not Gear.

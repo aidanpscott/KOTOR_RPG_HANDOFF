@@ -1,841 +1,1556 @@
-# AGENDA — current
+## ⚠ WHERE THIS STANDS — read this first
 
-**Merged from `AGENDA-UPDATED` and rebuilt.** **The two had diverged and the older one carried more.**
+**⚠ ALL EIGHT NUMBERED ITEMS ARE DONE. `PT-410` – `PT-635`.**
 
-> **⚠ `WORLDS-REGISTER-01`, `ATLAS-GEOGRAPHY-01` and `TEMPORAL-ENUM-01` are not in this repo.** **They live in `aidanpscott/kotor_rpg_library` and their status below is from the record, not verified here.**
+    ✓ 1 BEASTS          ✓ 2 MOUNTED COMBAT   ✓ 3 THE DROID MASTER
+    ✓ 4 DROID MODELS    ✓ 5 THE FEAT SPLIT   ✓ 6 THE SNIVVIAN
+    ✓ 7 THE PRESTIGE PASS                    ✓ 8 THE PERCENTAGE MECHANICS
 
----
+**⚠ NOTHING IS BLOCKED ON THIS AGENT.** **Three items wait on other agents, two are deliberately post-engine, and the tail is three small things.**
 
-# 1. Next
+> **⚠ `GAP-002` IS CLOSED — `PT-248`, and `PT-371` closed its partition question.** **`playtest/GAP-002.md` line 3 has said so the whole time.**
 
-## 1.1 Species — CLOSED
+**⚠ `PT-635` CALLED IT *"the largest open design question"*. THAT WAS WRONG — `PT-640`.** **The KOTOR branch was decided BY CONSTRUCTION: five documents implement discrete powers with a Force POINT pool, and the phrase *"skill points"* appears ZERO TIMES in `FORCE-POWERS-01`.**
 
-**⚠ This read *"one axis left — racial feats"* against a chapter where the axis was already finished. Rewritten from the tree.**
-
-**47 records. Every axis settled: abilities, skills, racial skills, languages, subraces, traits.**
-
-**Derived:** **46 of 47 carry at least one named trait.** **`Human` carries none, deliberately** — it trades traits for a bonus feat and a free racial-skill choice.
-
-**`RACIAL-FEATS-01` holds 88 distinct trait names across 99 instances**, regenerated from the chapter.
-
-> **`SPECIES-FEATS-DRAFT` is superseded.** *It was the working document for the pass that produced the chapter's trait lines.* **Nothing cites it and nothing needs to.**
-
-### What remains, and none of it is species design
-
-**Age bands for sixteen species.** **`FORCE-TRAINING-01 §6`.** *Fourteen are an extraction job from UAA or the Campaign Guide; Kaleesh and Echani must be authored.*
-
-**Vision types in prose.** **`Darkvision` and `Low-Light Vision` are statements about a species rather than feats, and belong in the description text.** *Recorded and not yet applied.*
-
-**Droid models.** **Deferred until after the Atlas.**
-
-## 1.2 Classes — thirteen written, nine to go
-
-> **⚠ Rewritten against the tree. This section has now been stale twice.**
-
-### Written — thirteen, all axes settled
-
-| Rate | Classes |
-|---|---|
-| **Combat** | **Soldier · Jedi Guardian · Marksman · Sith Warrior** |
-| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Engineer** |
-| **Specialist** | **Smuggler · Machinist · Jedi Consular · Sith Assassin · Sith Inquisitor** |
-
-**Each carries: rate, hit die, skill base, class-skill list, feat total, chain count, saves, grants, and a class feature.**
-
-**⚠ Verified by check 19 on every run** — three bands each, plus the `3N ≥ T` stranding test.
-
-### Left — nine, every one authored from nothing
-
-**Standard base, five:** **Agent · Treasure Hunter · Medic · Brawler · Duelist**
-
-**⚠ The roster is incomplete without these.** **Nothing blocks them: rates, bands, save ladders, the `PT-123` assignment rule, chain bands, skill bands and `PT-89`'s credits are all ruled.**
-
-**Prestige, four unnamed** — plus the nineteen already named, **none of which has entry requirements.**
-
-### Open on the written thirteen
-
-**`Armour Proficiency: Light` for the Sith** — **owner. `sas`, `sma` and `jwa` carry it and no base Jedi does, but it does not stratify by tier.** **`ACTION-ECONOMY-01 §18.2` withholds armour from Jedi deliberately because it blocks Force powers.**
-
-**Four classes have authored saves** — Bounty Hunter, Engineer, Machinist, Marksman. **⚠ `cls_st_techspec.2da`, `cls_st_cm_drd.2da`, `cls_st_sithmar.2da`, `cls_st_sithlord.2da` and `cls_st_sithass.2da` are not in holdings.**
-
-**⚠ Three classes sit at exactly eleven chains** — Bounty Hunter, Engineer, Sith Inquisitor. **Raising any by one silently closes it to droids. `PT-114`, `PT-132`.**
+**⚠ Sections marked `▪ CLOSED SCOPE` are HISTORICAL — the original brief for a finished item, kept for the reasoning. They are not work.**
 
 ---
 
-# 2. Large and unstarted
+## ▪ CLOSED SCOPE — SESSION S12 OPEN, where the beast workstream stood
 
-## 2.1 Items and equipment
-
-**`EQUIPMENT-01` covers weapons, armour, and the sum-of-9 rule. It does not cover the catalogue.**
-
-> **Its own words: *"several hundred items across armour, robes, weapons, upgrades, implants, belts, gloves, headgear, masks, shields, and consumables — and it is a data-extraction job, not a research job."***
-
-**Needs `baseitems.2da`, `itemprops.2da`, `iprp_*`.** **`REQUEST-2DA-PLAYTEST` is pending and asks for some of it.**
-
-**⚠ Droid plating values are placeholders** and have been since the playtest flagged them.
-
-## 2.0-sith The three Sith base classes, and the Sith prestige classes
-
-**Owner ruling: they exist and they are not the Jedi three renamed.**
-
-**⚠ `FORCE-TRAINING-01 §5` cannot close without them.** **A character taken by the Sith currently unlocks nothing.**
-
-**Wanted:** **three non-prestige Sith classes, and the prestige set above them.** **`Marauder` and `Sith Lord` already exist in `FEAT-SCHEDULE-01` and `CLASS-ATTACKS-01` as prestige — check whether they are two of the prestige set or need re-tiering.**
-
-## 2.0-warrant ⚠ The Force-Sensitive gate has no warrant
-
-**`MULTICLASS-01 §3.3`. A live rule resting on nothing.**
-
-**Cited to `GAP-002` branch A, which is dead.** **`PARTITION-01` was proposed and rejected — grepped, zero hits on `Force-Sensitive` or `multiclass`.**
-
-**⚠ RESOLVED. `FORCE-TRAINING-01` is the warrant, by owner ruling.** **Installed at `MULTICLASS-01 §3.3`.**
-
-## 2.0 Multiclass entry credit — CLOSED, and the answer was to delete it
-
-**⚠ Four versions were built. All were exploitable, unusable, or unnecessary.**
-
-> **The rates already do the work.** **Split your career and half of it pays at a slower rate — `MULTICLASS-01 §5`.**
-
-**A pure Soldier finishes twelve attack chains at level 30. An even split finishes nine.** **Nobody has to write that multiclassing costs you; it costs you by arithmetic.**
-
-**Nothing further wanted here.**
-
-## 2.0-pre A send script — DONE
-
-**`send.py`. Refuses on a file not on disk, a file differing from its committed copy, any blocking gate failure, or no arguments.**
-
-**Its only output is the manifest table.**
-
-**⚠ Its first version had the defect it was written to catch** — it watched `repo/` rather than the working file. **`PT-66`.**
-
-## 2.0a STRESS-01 — the verification programme, and the order matters
-
-**From `RESEARCH-AI-PLAYTESTING`, `RESEARCH-RULES-CLOSURE-AND-CODE` and `RESEARCH-RTST-AND-DIFFICULTY`.**
-
-> **⚠ Build the checks before the team. The research says a reading team is the wrong first instrument for this project.**
-
-**The reason, stated plainly:** **AI *"will not flag errors that happen to match the patterns to which it is trained,"* and this project is maximally pattern-matched to d20.** **`PT-36`, `PT-37` and `PT-42` were all found by arithmetic. The reading passes said fine, because it read like d20.**
-
-### Stage 1 — three checks, cheap and mechanical
-
-**`audit_triggers.py`.** **Build the trigger graph — for every rule that fires on a condition, which rules can its effect satisfy — and report cycles.** **⚠ Our graph is depth-one by luck.** **`ACTION-ECONOMY-01 §4`'s *"leaving, not entering"* asymmetry and `§95`'s *"no chain applies"* are the acyclicity guarantee, and both were written for flavour reasons.**
-
-**Metamorphic properties as the twelfth gate check.** **Monotonicity — adding a feat never lowers damage, adding a rank never lowers an outcome.** **Tier monotonicity — a tier-2 entry is never worse than its tier-1 root at the same level.** **⚠ We violated tier monotonicity once already: `PT-36`, `Ataru Flurry` strictly better than `Barrage`.**
-
-**The loop rule.** **One paragraph in `ACTION-ECONOMY-01`, on Magic's `104.4b` shape.** **A voluntary loop must be declared with a count; a mandatory loop resolves as a stalemate.** **Costs nothing and closes the class permanently.**
-
-### Stage 2 — `STRESS-01`, a protocol rather than a team
-
-**Skill-graded agents.** **Naive, competent, optimiser — reported separately.** > **The optimiser finds exploits; the middle one is the tester.** **The near-optimal Wordle solver correlated with human difficulty at `r = 0.075, p = 0.124` — not significant. `PT-40`'s ***"Round one, buff. Every round after, declare your Velocity chain. Do nothing else."*** is that configuration.** **Two independent literatures converge here: `Restricted Play` / Stratabots, and the Aion population models.**
-
-**Target win-rate bands.** **50–70% for a fair encounter, stated per scenario, explicitly higher or lower where a walkover or a wall is intended.** **`S1`–`S8` were built to exercise mechanics and hit no band.** **One sentence each turns every playtest from a demonstration into a measurement.**
-
-**RTST reviewer selection.** **Spawn several, compare hostility, keep the one that objects hardest, run three rounds rather than one.** **`RT-02` is single-shot with a finding budget; this is the addition.**
-
-**The code-world-model readiness gate.** **Hand a document to a fresh model with no context and ask for `state_transition`, `legal_moves`, `terminates`.** > **What it cannot write is what the document does not say.** **A better definition of *fully specified* than any word count, and what `RULES-01 v2 §11`'s acceptance tests are groping toward.**
-
-### Why this order
-
-**Checks are cheap, mechanical, and hit the failure mode we demonstrably have.** **The protocol is expensive, needs agents and rounds, and hits a failure mode the research says we are blind to regardless.**
-
-**And running the checks first gives the stress protocol a corpus that has already been swept — which is the only way its findings will be worth the rounds.**
-
-## 2.1a The droid installation rule — needs fleshing out
-
-**`DROID-INSTALLATION-01` establishes the route and stops.** **Four things it owes:**
-
-**Prices for twelve chains.** *Scaled by tier — a `Master Sensor Package` should be a campaign purchase, not a shopping trip.*
-
-**The slot binding.** > **⚠ Installed feats must consume `Droid Upgrade 1–4` slots, or installation is strictly better than levelling and no droid ever spends a pick again.** **This is the load-bearing constraint and it is currently a sentence rather than a rule.**
-
-**The removal rule.** **An installed feat can be destroyed or ripped out; a learned one cannot.** **What happens mid-session when the part goes needs writing.**
-
-**An `installable` flag in the feat data**, so the twelve are derivable rather than living only in prose.
-
-**And `DROID-INSTALLATION-01` ends without numbers on purpose.** **Twelve droid feat chains can be installed rather than learned; the parts need pricing, and the slot rule needs to bind to `Droid Upgrade 1–4` or installation becomes strictly better than levelling.**
-
-## 2.1b Documentation jobs — one done, two open
-
-### DONE — species communication in prose
-
-**⚠ This item said the content *"currently exists nowhere."*** **Derived: all five records carry it.**
-
-**`Weequay` and `Kaleesh` — scent, with `UAA pp.181–182`'s upwind-40 / downwind-10 figures and the detection-versus-comprehension split.** **`Verpine` — radio antennae and hive consensus.** **`Rakata, Flesh Raider` — signal fires.** **`Twi'lek` — lekku.**
-
-**⚠ The Verpine text is authored rather than recovered.** *It never existed outside a draft and the Library holds nothing to reconcile it against.*
-
-### OPEN — what each skill actually does
-
-> **`SKILLS-01` names the twenty-four and says what each consolidated, and never says what a player *does* with one.**
-
-**The D&D shape — `Sleight of Hand` picks locks, picks pockets, palms objects.** **A paragraph each.**
-
-### OPEN — vision types
-
-**`Darkvision` and `Low-Light Vision` are written as traits on individual species.**
-
-> **They are not feats. They are statements about what a species can see.**
-
-**Needs one table: who has darkvision, who has low-light, who has neither, and what each means in metres.**
-
-*Affected: Gand, Kaleesh, Sullustan, Trandoshan, Kel Dor, Mon Calamari, Bith, Miraluka.*
-
-## 2.1c ⚠ `dialog.tlk` — item names and descriptions
-
-**Blocked on the file. `PT-279` built eight item documents identified only by resref, which is unreadable to a human.**
-
-    LocalizedName    strref -> dialog.tlk    994 of 994 items carry one
-    DescIdentified   strref -> dialog.tlk    865 of 994
-
-> **⚠ Every name and description is already IN the blueprints. They are pointers into one string table.**
-
-**Needed: `dialog.tlk` from the KOTOR 2 root folder, pushed to `data/dialog_k2.tlk`.** **⚠ Around 10 MB — repo, not chat.**
-
-**⚠ Why not the wiki:** **994 lookups, many items have no page, and `PT-252` established the wiki text can diverge from what the code does.** **`dialog.tlk` is what the game displays and cannot disagree with itself.**
-
-**On arrival: write a TLK reader, re-run `build_inventory.py`, and all eight documents gain real names and descriptions in one pass.**
+**`PT-410` → `PT-525`. 116 rulings.**
 
 ---
 
-## 2.1d Item stat blocks and pricing — scoped. `SCOPE-ITEMS-01`.
+## ⚠ THE ORDER — owner ruling, `PT-508`, `PT-526`
 
-**⚠ 994 items, but 146 decisions.** **100 ladders cover 948 items; the biggest are 30 steps of one weapon.**
-
-> **A ladder is one decision. What needs deciding is the CURVE, not thirty entries.**
-
-**Phase 1 — stat blocks.** **⚠ Mostly done. What is missing is the property conversion: about a dozen KOTOR property types carry the whole corpus.**
-
-**Phase 2 — price and availability, together.** **⚠ 794 items already carry a price. Availability has NO source and must be authored as a band, derived from price.**
-
-**⚠ Batch 1 is `usable` — 45 items, median 200 credits.** **Smallest and cheapest. Proves the conversion table before it costs anything.**
-
-**⚠ Read RCR's `Craft` at f.80 before batch 2.** **`PT-287` flagged it as the strongest duplicate risk in the audit, and if RCR's item-quality system contradicts KOTOR's, the ladders are what it contradicts — 948 of the 994 items.**
+    ✓ 1. BEASTS                    done — `PT-410` – `PT-559`
+    ✓ 2. MOUNTED COMBAT            done — `PT-560` – `PT-565`
+    ✓ 3. THE DROID MASTER          done — `PT-566` – `PT-584`
+    ✓ 4. DROID MAKES AND MODELS    done — `PT-585` – `PT-613`
+    ✓ 5. THE DROID/ORGANIC FEAT SPLIT  done — `PT-614` – `PT-619`
+    ✓ 6. THE SNIVVIAN              done — `PT-623`, `PT-624`
+    ⚠ 7. THE PRESTIGE CLASS PASS   ⚠ NEXT — 32 classes, no tables
+    ⚠ 8. THE PERCENTAGE MECHANICS
 
 ---
 
-## 2.1e Loot tiers — the design is agreed, the detail is not. `PT-308`.
+## ✓ 1. BEASTS — DONE. `PT-410` – `PT-559`
 
-**⚠ Owner proposal, and it fixes what both games got wrong.**
-
-    K1   hand-placed   balanced, because a designer chose. ⚠ identical every replay
-    K2   randomised    varied. ⚠ a level-3 character can pull a top-tier crystal
-                       out of a footlocker
-
-> **One has no surprise. The other has no restraint.**
-
-### The shape
-
-**⚠ Keep K2's d100 and its five bands. Swap the TABLE by level tier.**
-
-    level 1-5     band 90-99 gives the best LEVEL 1-5 item
-    level 6-12    band 90-99 gives the best LEVEL 6-12 item
-    level 13-20   ...
-    level 21-30   ...
-
-**The roll never changes. The contents do.**
-
-**⚠ Variety survives — a 90-99 roll is still a moment.** **But it cannot break the curve, because the table's ceiling is the tier's ceiling.**
-
-### ⚠ We are adding the one constraint the source was missing
-
-**K2's tables ARE already tiered by grade — `MEDEQPMNT01 → 02 → 03`.**
-
-**⚠ It just never gated the tier by level.** **It gated by which container a designer flagged, so an early container with a high tier leaks a top item.**
-
-**Not a new system. One missing constraint.**
-
-### What still needs deciding
-
-**⚠ Does the tier follow the CHARACTER or the AREA?**
-
-**Character** — scales with you, always relevant. **⚠ But a level-20 party revisiting Taris finds level-20 loot in a starter zone.**
-
-**Area** — the world has fixed difficulty. **⚠ K1's balance with K2's variety.** **Recommended, not ruled.**
-
-**⚠ And every item needs a tier tag.** **994 items. Derivable from cost — the corpus already has 794 prices and a clean spread from 25 to 32,000.**
-
-**Which is the same derivation `PT-281` used to price beasts against the item corpus.**
+**⚠ 24 beasts complete: lore sweep, 49 chains, natures, obedience, skills, ability scores, Defence, level tables, death rules.** **⚠ AND the vitality system was replaced across 23 documents on the way — `PT-559`.**
 
 ---
 
-## 2.2 Crafting
+## ▪ CLOSED SCOPE — 1-old. THE ORIGINAL BEAST SCOPE
 
-**Not started. Nothing exists.**
+### ✓ Closed
 
-**The source tables are named and unheld:** **`upgrade.2da`, `upcrystals.2da`, `itemcreate.2da`, `chemicalcreate.2da`, `itemcreatemira.2da`.**
+**24 beasts. ⚠ THE LORE SWEEP IS COMPLETE — every beast read against Wookieepedia Legends.**
 
-**Touches `Gear Head`, the droid upgrade slots, lightsaber crystals, and the Machinist class.** **Should probably wait for 2.1.**
+    ⚠  2 CUT          Dianoga (sentient, PT-500) · Brith (not a combatant, PT-513)
+    ⚠ 11 CORRECTED    weapons, size, tags, senses, or all four
+       11 substantially right
+    ⚠  1 ADDED        Reek, to give `Ramming Charge` a horned home
 
-## 2.3 The Atlas and the world bible
+**⚠ `PT-356` built every stat line from RCR's per-type tables without opening a creature.** **Of 24 read, THIRTEEN were wrong.** **Five had `bite · claw` and no bite; THREE of those had tusks.**
 
-**`ATLAS-SEED` exists here. `WORLDS-REGISTER-01` and `ATLAS-GEOGRAPHY-01` are in the Library repo** — **41 of 44 worlds covered, per the record.**
+**Also closed: 25 racial feats · 18 shared feats · 5 poison types, all ported · 24 natures · a per-beast obedience table · nine tags, all parsing.**
 
-**Remaining:** **the last worlds, world lore records, and the skill-assignment decisions deferred until lore is complete.**
+**Six growth beasts across six distinct patterns — `K'lor'slug` · `Kath Hound` · `Nexu` · `Gundark` · `Drexl` · `Rancor`.**
 
-**And the world bible is unassembled.** > **The material exists across deep-history sweeps, Gazetteer work, and the species chapter. None of it is put together.** **The old agenda's standing risk was that the sweeps kept producing while the assembly never started.**
+### ⚠ OPEN — the chains
 
-## 2.3a Droid models — after the Atlas
+    ⚠ 7 of 24 beasts chained     ~45 chain entries remaining
+    written: Rancor(4) · Iriaz(2) · Cannok(2) · Shyrack(1) · Katarn(3) · Boma(1)
 
-**Droids have no homeworld.** **Origin world and homeworld are background fields that determine skills and background feats; a droid has neither.**
+**⚠ The architecture is SETTLED and should not be re-litigated:**
 
-> **Owner decision: droids get a *model* instead.** **A series designation determining which kind of droid of that line it is** — T3 against T1, HK-47 against HK-24, and whatever the Battle and Remote equivalents turn out to be.
+**Chains bind to the NATURAL WEAPON, and the weapon decides the AXIS, not the die — `PT-486`.** **`bite` Power·Control · `claw` Velocity·Precision · `gore` Position · `hoof` Control · `sting` Position·Precision · `tail` Spread · `tentacle` Control · `sonic` Spread·Control.**
 
-**Blocked on the Atlas** — the same machinery that turns a homeworld into skills has to exist first.
+**`1 / 4 / 8` is a DEFAULT, not a rule — `PT-487`.** **A damage chain opens at 1; a chain that removes a turn or ends in permanent loss climbs slower.**
 
-**⚠ And  is already a field on the record.** **Whatever the model does, it should reuse that slot rather than adding a parallel one.**
+**A chain's COST may not change silently; what it DOES may evolve — `PT-496`, `PT-498`.**
 
-## 2.4a The Beast Master's companion list — after the classes
+**Where the corpus already has the effect, the chain CASTS it — `PT-460`'s `Roar` is the model.**
 
-**⚠ CLOSED — `BEASTS-01`, `PT-280` to `PT-285`.** 27 companions, tiers, acquisition, scaling. Stat blocks blocked on `2.4g`.
+### ⚠ OPEN — three things that will surface mid-chain if left
 
-**Owner instruction: determine after the class workstream closes.**
+**⚠ `armoured` grants *"damage reduction"* and NO VALUE IS STATED ANYWHERE.** **FIVE holders, and the Laigrek's `Layered Armour` MULTIPLIES it.**
 
-**⚠ Blocks the Beast Master and nothing else.** **The class needs a list of acceptable companions and no bestiary exists.**
+**⚠ `g_i_crhide018` is named *"Canderous' Regen Hide"* — a DEVELOPER item.** **The Laigrek's regeneration traces to it and `PT-430`, `PT-454` and `PT-491` all rest on it.**
 
-**⚠ Contrast the Droid Master, which is not blocked:** **its droids are *species* and the list already exists — Astromech, Assassin, Battle and Remote, in `SPECIES-CHAPTER-v2`.**
+**⚠ The `terantanak` / `rulan_ter` blueprint conflict, open since `PT-434`.** **`PT-497` explains file-versus-companion gaps; it does not explain TWO FILES disagreeing.**
 
-**⚠ And `PT-153` makes them materiel rather than companions** — built, commanded, permanent until destroyed, replaceable. **`PT-152`'s difficulty modes do not apply to them.**
+### ⚠ OPEN — smaller
 
-## 2.4 Non-playable species
-
-**A bible for what players meet, as prose rather than records — a paragraph each.** **Composes with the world bible.**
-
-## 2.5 App functions
-
-**`Q-4`, the largest unpriced item, still a blank page.** **No interaction model, no session shape, and no answer to whether this is text-in-text-out or something with a sheet and a map.**
-
----
-
-## 2.9b Every combat rule needs a one-line player statement
-
-**⚠ Owner instruction. A test, and a layout task.**
-
-> **If a rule cannot be stated in one line a player would understand, it is too complex.**
-
-**Not a style preference — a design test applied before the rule is adopted, not after.**
-
-### Why it exists
-
-**The range work added five rules to the ranged attack in one session, doubling the count.** **Examined, three of the five are *reference* rules a player never consults:**
-
-    −2 per range increment      fires almost never indoors — PT-170
-    48 m hard ceiling           never binds on any map we have written
-    threat non-compounding      only a Commando with Deathstroke ever has two
-
-**⚠ They exist so the answer is written down when someone reaches the edge, not because anyone checks them each round.**
-
-**The two that cost real attention are a matched pair with one idea behind them:**
-
-> **Guns are bad up close.** *`−4` firing while adjacent, `+2` attacking an adjacent shooter.*
-
-**One new concept, not five — and one a player already expects.**
-
-### ⚠ The real risk is presentation, not rules
-
-**`ACTION-ECONOMY-01` now has two sections about range — `§6.2a` and `§13` — and a reader has to consult both.**
-
-**The fix is a player-facing box at layout: *"Shooting at range"*, six lines and one table, everything in one place.**
-
-**⚠ Not written now. Recorded so it is not discovered at layout.**
-
-### The test, going forward
-
-**Every combat rule carries a one-line statement of what a player does.** **Rules that cannot are either split, merged, or cut.**
-
-**⚠ It also sorts the two kinds apart automatically.** **A rule with a one-line statement is a table rule. A rule that needs a paragraph of conditions is a reference rule, and reference rules belong in an appendix rather than in the flow.**
+**Beast SKILLS do not exist. No aptitudes, no level-1 grants.**
+**The Shyrack's sonic attack needs a name — `Shriek` went to the Rancor at `PT-449`.**
+**`Knockdown` is engine row 6 and the Zakkeg's `Unyielding` was authored past it — `PT-446`.**
+**Five beasts whose CORPSE has stated value, and nothing in `Plunder` or the acquisition table touches it.**
+**⚠ Four beasts with a stated black-market trade — Maalraas, Kath Hound, Nexu, Gundark. The acquisition table does not reflect any of it.**
 
 ---
 
-## 2.9a A gamemaster chapter — does not exist
+## ✓ 2. MOUNTED COMBAT — DONE. `PT-560` – `PT-563`
 
-**⚠ Named by `PT-170`. Two rules have now had nowhere correct to live.**
+**`rules/MOUNTED-COMBAT-01.md`. Eleven sections.**
 
-**`DEATH-AND-DIFFICULTY-01` became its own document because it was a campaign setting rather than a class rule.** **`PT-170`'s map-size dial went into `ACTION-ECONOMY-01` because there was nowhere else.**
+**⚠ A MOUNTED PAIR IS ONE TURN — the mount contributes MOVEMENT, the rider contributes the ACTION.** **`PT-201` cost a rebuild for exactly this.**
 
-**What a GM chapter would hold:** **encounter design and the map-size dial · difficulty modes and their exceptions · the henchman modes from `PT-145` · what a campaign package may override · reading the alignment system at a table.**
+    ground · air · water — air is three altitude bands and nothing else
+    ⚠ Ride Down — a mount-only basic attack off the mount's own stats
+    ⚠ ANYONE may ride. A non-Beast-Master lacks `Beast Handling` aptitude.
+    ⚠ FOUR Force powers do nothing mounted — the three Speed powers and
+      `Force Enlightenment`. The rider has no movement of their own.
 
-**⚠ Scheduled after the classes and before the engine, alongside `§2.9`.**
-
----
-
-## 2.4b Weapon upgrades — crystals and components
-
-**⚠ CLOSED — `PT-272`.** Lightsaber upgrades extracted; `PT-184` resolved.
-
-**⚠ Named by `PT-184`. Does not exist and blocks a real balance question.**
-
-**KOTOR weapons take crystals and upgrade components. `EQUIPMENT-01` carries base damage only.**
-
-**Until it exists, unarmed at `8d4` outdamages a lightsaber at `2d8` by 2.2× and the comparison is not meaningful** — **a fully-scaled ladder against an un-upgraded weapon.**
-
-**⚠ Re-test the unarmed curve when this ships.**
+**⚠ STILL OPEN: `Shieldback` and `Break Away` are AUTHORED — only the Drexl's `Beast Rider` is ported.**
 
 ---
 
+## ✓ 3. THE DROID MASTER — DONE. `PT-566` – `PT-583`
 
+**`rules/DROID-MASTER-01.md` and `rules/DROID-CONSTRUCTION-01.md`.**
 
+> **⚠ A BEAST IS A CHARACTER. A DROID IS A TOOL THAT MOVES.** **A droid never levels, never refuses, and has no chains — that is what lets a Droid Master field three.**
 
-**⚠ `PT-213` raises its priority: the build mechanism matters to three classes, not one.**
+    ⚠ HELD unlimited · CONTROLLED 2 / 3 by Command Protocol, capped at THREE
+    ⚠ SEVEN chassis — four playable, three companion-only
+    ⚠ upgrades are the progression; the FIRST droid is free, the rest cost credits
+    ⚠ a ten-level table, and `Droid Upgrade` is the DROID'S feat while
+      `Installation` is the MASTER'S — `PT-583`
 
-**`Field Override`, `Jury Rig` and `Two Fronts` are all keyed to droids being present.** **Building your own answers the *allied droid* half for the **Machinist** and the Droid Master — `PT-225`.**
+**⚠ `Command Protocol` REBUILT THREE TIMES — `PT-201`, `PT-566`, `PT-582`.** **It is now GRANTED by the class, each droid rolls its OWN INITIATIVE, and the third tier adds CONTROL rather than a body.**
 
-**⚠ Two gaps it does not close:** **a Tech Specialist entering via `Engineer 6` has no build route, and every enemy-droid clause still depends on encounter design — `PT-170`.**
+### ⚠ STILL OPEN
 
-**⚠ And the concern is smaller than first raised.** **The classes' *skills* — Slicing, Security, Science, Repair — work on computers, doors and terminals with no droid anywhere.** **Only the *features* need one, and both campaign packages are droid-heavy.**
+**⚠ NO LEVEL TABLE FOR THE OTHER 31 PRESTIGE CLASSES — the prestige pass.**
 
-## 2.4c ⚠ The unarmed roster is one chain deep
-
-**⚠ CLOSED — `PT-228`.** Five unarmed chains, fifteen entries.
-
-**`ATTACKS-07` against the others:**
-
-    roster        axes   tier-1 chains
-    ranged           9              11
-    melee            9              11
-    lightsaber       7              14
-    unarmed          2               1
-
-**⚠ `Jab`, `Punch` and `Kick` are the same attack under three names — the document says so.** **`Echani Strike` is the only chain, it is restricted, and it gates at level 5.**
-
-> **So the `Brawler` cannot take a single unarmed chain as a starting attack.** **The class built on fists opens with `Flurry`, `Quick Attack` and `Dual Strike` — all weapon chains.**
-
-### ⚠ And `Combination` was adopted and never written
-
-**`PT-188` adopted the unarmed Velocity chain — `Combination` / `Chain Punch` / `Rain of Blows` — and it is not in `ATTACKS-07`.**
-
-**Same defect as `Quickdraw` at `PT-96` and `Field Surgery`: a decision made, its reasoning written, and the document a reader consults not having it.**
-
-### What this needs
-
-**⚠ An unarmed roster with axes, the way the other three have.** **Not all nine — a fist has no Spread and no Reaction worth the name — but Velocity, Power, Precision, Position and Control are all reachable.**
-
-**And it is the fix for `PT-226`'s other finding: six of nine *melee* tier-1 entries are gated at level 1, which forced the starting-attack table 28 ranged to 11 melee.**
-
-> **⚠ Unarmed chains are the cheapest way to widen the melee pool, because nothing gates them behind Strength.**
+**⚠ Whether a droid PLAYER CHARACTER can be a Droid Master's droid. Untouched.**
 
 ---
 
-## 2.4d Two recommended abilities per class — the 5e model
+## ✓ 4. DROID MAKES AND MODELS — DONE. `PT-585` – `PT-613`
 
-**⚠ CLOSED — `PT-246`, `PT-247`.** Two-ability model, check 22.
+**⚠ ~30 models across seven chassis, every one ATTESTED, BACKTRACKED, a SEQUENCE GAP, or the ONE named exception — and marked which.**
+**⚠ 29 MODEL FEATS — nineteen from a source sentence.**
+**⚠ FOUR PARTS from `hkpart01`–`05`, with the CHASSIS dominant.**
+**⚠ Makers: Duwani · Czerka · MerenData · Kellenech · Industrial Automaton.**
 
-**Owner instruction: adopt the D&D 5e shape where a class names two abilities that matter, not one.**
-
-**The recommendations exist and are agreed** — **`PT-227`'s table, nineteen classes, a first and a second.**
-
-**⚠ What does not exist is what the *second* one does.** **`primaryabil` is a single column in `classes.2da`, so the source has no second and nothing in the corpus reads one.**
-
-**⚠ Scheduled for the class session. It touches chargen, the point-buy, and possibly saves.**
+**⚠ STILL OPEN: `R-8009`'s manufacturer — the fetch returned 402 and it is unchecked. `ET-74`'s `Automata Galactica` also rests on the Transforminator archive.**
 
 ---
 
-## 2.4e ⚠ `k2_spells.2da` — requested, blocks a third of `PT-146`
+## ▪ CLOSED SCOPE — 4-old. THE ORIGINAL RESEARCH SCOPE — `PT-574`
 
-**⚠ CLOSED — `PT-251`.** The K2 data was already in holdings as `force_power_extract.tsv`.
+**Owner instruction. ⚠ After the Droid Master work.**
 
-**`PT-250`: the `spells.2da` we hold is KOTOR 1's and is not labelled as such.**
+> **Determine SPECIFIC MAKES AND MODELS for each chassis** — the four playable and the three companion-only from `PT-567` — **so a Droid Master buying a `Battle` frame is buying a NAMED THING rather than a category.**
 
-    88 powers in FORCE-POWERS-01
-    38 mapped to a K1 source row
-    16 tier variants inheriting from a mapped parent
-    ⚠ 34 unmapped — most are K2 exclusives
+### ⚠ SOURCE BOUNDS — owner ruling, tighter than `CANON-01`'s general rank order
 
-**⚠ For those 34 the wiki is the only route to *anything*** — **cost, range, class access and chain position, not only damage.**
+    ✓ Tales of the Jedi        ✓ the KOTOR COMICS
+    ✓ KOTOR 1                  ✓ KOTOR 2
+    ⚠ SWTOR — EXCLUDED, as everywhere on this project
 
-**On arrival: rename ours `k1_spells.2da`, so this cannot recur.**
+**⚠ NOT the general Legends corpus.** **A droid model attested only in the prequel or Imperial eras does not belong in 3956 BBY, and the Atlas pass at `PT-557` showed how far a wrong-era fact travels once embedded.**
 
-**⚠ Same shape as the `baseitems` pair, where we hold both halves and both are labelled.**
+### ⚠ THE GAME FILES ALREADY CARRY 46 NAMED DROIDS — start there
 
----
+    Assault Droid Mark I · II · IV        War Droid Mark I – V
+    Sentry Droid Mark I · Tank Droid      Mining Droid Mark I · II
+    Construction Droid Light/Medium/Boss  Foreman Droid · Mover Droid
+    Assassin Droid · Elite Assassin       Probe Droid · Protocol Droid
+    Utility Droid · Maintenance Droid     Telos Military · Telos Sentry
+    ⚠ HK-47 · HK-50 · T3-M4 · G0-T0
 
-## 2.4f ⚠ Droid permanent upgrades — the compensation for every droid restriction
+**⚠ RANK-1 EVIDENCE, ALREADY EXTRACTED, ALREADY ON DISK.** **`c_drdmkone`, `g_wardroid01`, `c_drdprobe`, `c_drdprot` and the rest carry stats as well as names.**
 
-**Owner ruling. Replaces the `hkpart` category, which was KOTOR's parts list for rebuilding HK-47 and is not a crafting recipe at all.**
+**⚠ AND THE MAPPING IS OBVIOUS FOR SOME:** ***Assault Droid* and *War Droid* are the `Battle` chassis; *Assassin Droid* is `Assassin`; *Probe Droid* is the **Probe** chassis; *Protocol Droid* is the **Protocol** chassis; *Utility* and *Maintenance* are `Astromech`; *Mining*, *Construction*, *Foreman* and *Mover* are `Labor`.**
 
-> **⚠ Single-use, permanent installations. Unlock a feat, raise an ability by one, improve a skill.**
+**⚠ `Remote` has NO file entry — Bao-Dur's Remote is a unique. That chassis needs the comics or an authored line.**
 
-**What they are for:**
+### What the pass produces
 
-**A droid cannot be a Jedi, cannot spend attack credits on melee, cannot take a Force class, cannot take a Combat-rate class, and cannot take any class whose chain count exceeds eleven** — **`PT-92`, `PT-89`, `PT-109`, `PT-114`.**
+    ⚠ three or four NAMED MODELS per chassis, each with its source
+    ⚠ a price within `PT-567`'s band, and a `PT-572` frame price
+    ⚠ what distinguishes each model MECHANICALLY, if anything —
+      and NOTHING if the sources give nothing
 
-> **⚠ That is five hard restrictions and nothing has ever paid for them.**
-
-**These do.** **A droid climbs past the ceiling every other class sits under, by installing what an organic has to be born with or train for.**
-
-> **⚠ It is how a droid becomes the equivalent of a Jedi — more powerful than the average class, with the restrictions still in place.**
-
-### What the source gives us to build on
-
-**`d_tool`, `d_interface`, `d_device`, `d_armor` — four families, fifteen tiers each, all in `data/items/k2/`.**
-
-**⚠ Every blueprint carries `Use_Limitation_Feat` 78, 79 or 80 — `DROID_UPGRADE_1`, `2` and `3`.**
-
-**Which closes `PT-210`'s open question.** **That ruling said *"allows level 1/2/3 droid upgrades"* and nobody knew what a droid upgrade was.**
-
-    d_tool_15        Dexterity +5, two bonus feats     ⚠ the shape the owner wants
-    d_interface_15   Constitution +2, Dexterity +4
-    d_armor_15       damage resistance across three types
-    d_device_15      casts a power
-
-**⚠ Tier 15 already grants bonus feats and ability scores. The source built the mechanism and used it for four slots.**
-
-### What needs deciding
-
-**⚠ Whether these are slotted or permanent.** **The source slots them — four slots, swap freely. The owner wants permanent single-use.** **That is a real departure and it changes the cost curve.**
-
-**Where they come from** — **crafted, bought, or found.** **⚠ `CRAFTING-01` makes them craftable if they go on a recipe list.**
-
-**And how many a droid may install.** **⚠ Unbounded permanent ability bonuses is the only thing here that could break.**
-
-### ⚠ And it needs the HK parts recorded as what they are
-
-    hkpart01   HK Droid Processor      ⚠ a whole droid, in parts
-    hkpart02   HK Chassis
-    hkpart03   HK Control Cluster
-    hkpart04   HK Vocabulator
-    hkpart05   HK Protocol Pacifist Package    a joke item
-
-**`PT-225` deferred droid *construction* and said the mechanism was unwritten.** **⚠ This is the mechanism, and it belongs there rather than in the crafting skill split.**
+**⚠ A model that is only a name is still worth having.** **A Droid Master saying *"I'm buying a War Droid Mark III"* is playing the setting; *"I'm buying a Battle chassis"* is playing a spreadsheet.**
 
 ---
 
-## 2.4g ⚠ RCR's creature rules — needed before a beast stat block is authored
+## ✓ 5. THE DROID / ORGANIC FEAT SPLIT — DONE. `PT-614` – `PT-619`
 
-**`PT-282`. Stopped mid-design because the book that governs mechanical questions already has this.**
+**⚠ THE SPLIT ALREADY EXISTED and NAMES CHASSIS — 17 feats are chassis-specific.** **`audit_featsplit.py` — check 28 — holds it.**
+**⚠ `Plating Proficiency` built; CLASS now grants the ladder EARLY — `PT-615`, `PT-616`.**
+**⚠ Class feats checked against droids: five body-restrictions fixed, `Weapon Specialization: Melee Weapons` was a LIVE CONTRADICTION.**
 
-**RCR's *Allies and Opponents* chapter is a mini Monster Manual — creature rules, pregenerated stats, and rules for creating your own.** **The revised edition specifically added *expanded creature design rules*.**
-
-> **⚠ The stat block format I was about to author already exists, in the book `CANON-01` says governs every mechanical question.**
-
-### What is needed
-
-**The RCR scan, or the *Allies and Opponents* pages.** **⚠ The project record says we hold a scan; it is not in uploads and not in the repo, so this session cannot read it.**
-
-### ⚠ And one thing already ruled needs checking against it
-
-**`PT-281` gave beasts familiar-style derivation — no hit dice of their own, vitality and attack from the master.**
-
-**If RCR's creature rules already carry a companion-scaling mechanism, `PT-281` may conflict with it.** **⚠ Check before building further.**
-
-### Why this was nearly a warrant error
-
-**`METHOD-RECORD-01 §1.5`: a claim requires a primary read at the point of assertion.**
-
-> **⚠ Authoring a creature format without opening the book that has one is exactly the failure that rule names — and it is the most frequently violated rule in this project.**
+**⚠ STILL OPEN: SEVEN feats say only `Class` and NAME NO CLASS — `Empathy`, `Guard Stance`, `Stealth Run`. ⚠ THEY NEED A CLASS NAMED AND IT IS AN OWNER CALL.**
 
 ---
 
-## 2.4h Aqualish — add to the playable species
+## ▪ CLOSED SCOPE — 5-orig. THE ORIGINAL SPLIT SCOPE — `PT-614`
 
-**Owner ruling. ⚠ Confirmed absent: the species chapter holds 47 records and none is Aqualish.**
+**⚠⚠ THE SPLIT ALREADY EXISTED. `feats_core.json` column 3 carries it and it NAMES CHASSIS — 16 feats are chassis-specific.**
 
-**Scheduled after the Beast Master work.**
+    ✓ the split EXISTS and is PER-CHASSIS
+    ✓ two blank feats FILLED — `Flyby Attack`, `Multiattack`
+    ✓ `audit_featsplit.py` — check 28 — now holds it
+    ⚠ WHAT REMAINS: the ARMOUR rule, and it is ONE RULE not 158.
 
-### ⚠ What makes it non-trivial
+**✓ CLOSED — `PT-615` built `Plating Proficiency`; `PT-616` made CLASS GRANT THE LADDER EARLY.**
 
-**Aqualish have three sub-species, and they differ enough to matter mechanically:**
+> **⚠ THE FEAT SPLIT IS DONE.**
 
-    Aquala    finned, aquatic, the original stock
-    Quara     walrus-like, tusked, the common spacefaring form
-    Ualaq     four-eyed, rarer, associated with violence
-
-**⚠ `PT-113` established that seven species require subrace selection at character creation. This would be an eighth, and the subraces are genuinely distinct rather than cosmetic.**
-
-### What it needs
-
-**Ability adjustments · a racial feat — one per species is the rule, `PT-104` · a racial skill slot from `SKILLS-01 §11.4` · size, speed, vision · and the subrace split.**
-
-**⚠ And the standing check: `racialtypes.2da` is a hard negative for ability adjustments — `PT-71`.** **All values are zero in both games, so the numbers are authored or come from UAA.**
-
-**⚠ Check UAA first.** **It is rank-2 source and it covers species RCR does not.**
-
-### ⚠ And read the index before authoring
-
-**`PT-287`: six of seven audited systems turned out to duplicate an RCR rule nobody had opened.**
-
-**A species entry touches abilities, skills, feats and vision types. All four have RCR chapters.**
+**⚠ WHAT REMAINS IS THE CLASS TABLES THEMSELVES — see the prestige pass. `PT-616` is the last droid-side item.**
 
 ---
 
-## 2.5b ⚠ Engine: banding a procedurally generated area
+## ▪ CLOSED SCOPE — 5-old. THE ORIGINAL SCOPE — `PT-577`
 
-**Owner instruction, for when the engine work begins. `LOOT-01 §4` assumes a human placed something.**
+**⚠ A SEPARATE FEAT STRUCTURE PER CLASS, EXCLUSIVE TO DROIDS.**
 
-> **⚠ `area tier = max( encounter level, container difficulty )` works because a GM who invents a room places an encounter in it.** **A generator does not.**
+### ⚠ Why it is bigger than it sounds
 
-### The problem
+**`FEATS-LIBRARY-01` holds ~158 rows and the droid/organic divergence is currently SCATTERED CLAUSES rather than a structure:**
 
-**`LOOT-01`'s derivation has three layers and a generated area can defeat all three:**
+    `Hardened Chassis` vs `Tenacity`     ⚠ two ladders, same effect, one per kind
+    `Emergency Reboot`                   droid-only
+    `Droid Upgrade 1–4`                  ⚠ droid-only, and now CHASSIS-CAPPED, `PT-577`
+    `DROID-SKILLS-01`'s exclusions       ⚠ Persuade, Beast Handling and others
+    the `Weapon Proficiency` ladder      ⚠ chassis-tiered as of `PT-577`
 
-    encounter level        ⚠ the generator picked the encounter FROM a tier —
-                              so deriving the tier from it is circular
-    container difficulty   ⚠ the generator picked the lock DC too. Same circle.
-    party level            ⚠ the fallback, and it reintroduces character-tier
-                              scaling, which the owner ruled against
+**⚠ A PER-CLASS DROID FEAT STRUCTURE MEANS AUDITING EVERY ONE OF THE 158.**
 
-### ⚠ What this actually needs
+### ⚠ The known case that starts it — ARMOUR
 
-**A generated area must be assigned its tier BEFORE its contents, not after.**
+**Owner ruling: *"For organics, the classes grant the character what kind of armour proficiency they already have. For droids, they ALL START AT LEVEL 1 AND WORK THEIR WAY UP AS THEY LEVEL."***
 
-**Which inverts `LOOT-01`'s direction:** **a hand-built area derives its tier FROM what is in it; a generated area derives its contents FROM its tier.**
+> **⚠ AN ORGANIC IS GRANTED ARMOUR PROFICIENCY BY CLASS. A DROID EARNS IT BY LEVEL.**
 
-> **⚠ Same rule read backwards. Worth stating in `LOOT-01` when the engine exists, so the two halves are visibly one system rather than two.**
+**⚠ AND NOTHING GRANTS `Droid Upgrade` BY CLASS TODAY — checked. It is purely LEVEL-granted at 1 / 7 / 13.** **The owner's *"Soldier gives the highest possible upgrade slot"* describes a system THAT DOES NOT EXIST YET, and this pass is where it gets built.**
 
-### Open questions for that work
+### ⚠ And it interacts with two things already ruled
 
-**⚠ What sets a generated area's tier?** **Distance from the campaign's start, position in a quest chain, the region's own tier from the Atlas, or an explicit parameter.**
+**⚠ `PT-577` capped `Astromech` and `Remote` at `Droid Upgrade 2` — SIX BAYS, permanently.** **If class begins granting upgrade levels, that cap must survive it.**
 
-**⚠ Should a generated area vary its tier internally?** **A dungeon whose depths are harder than its entrance is a real thing and one tier per area cannot express it.**
-
-**⚠ And what stops a generator producing an area whose tier the party cannot survive?** **`LOOT-01`'s self-correction — *wander somewhere too hard and the loot is too good* — assumes the party CHOSE to go there.**
+**⚠ `PT-568` gave droids FEWER ATTACK CREDITS. A per-class droid feat structure must not quietly hand them back.**
 
 ---
 
-## 2.9c ⚠ REMINDER — hiring for the test phase
+## ✓ 6. THE SNIVVIAN — DONE. `PT-623`, `PT-624`
 
-**`HIRING-QA-01` is filed in `repo/comms/`. ⚠ Do not action it yet.**
+**⚠ ALL FOUR CONVERSION PROBLEMS ANSWERED.** **`+2 Wisdom` given an authored `−2 Strength`; `Speed 4 squares` converted to 8 metres; `Small` made MECHANICAL for characters at `PT-623`; `Cold Resistance` written and MARKED as awaiting an environment system.**
 
-    1     lead rules auditor      2   mechanical reviewers
-    3     blind-test GMs          12-20 rotating players
-    1     lore auditor            1   copy editor — ⚠ LAST
-
-**⚠ Owner asked to be reminded of this when the rules stop moving.**
-
-> **⚠ REMIND THE OWNER when `2.5` app functions is reached, or when a session opens with no rules items left on the agenda — whichever comes first.**
-
-**Key points so they do not need re-deriving:** **three GMs not one · ⚠ do NOT teach them the system · a finding register, not prose feedback · the lore auditor gets a paid five-entry test · and the IP question is settled before money is spent.**
+**⚠ AND `PT-623` IS THE LARGER FINDING: size was a BARE LABEL for characters and fully mechanical for beasts. The character Defence formula had never been stated in any document — nine pregen sheets computed it and nothing wrote it down.**
 
 ---
 
-## 2.9 Difficulty modes — ⚠ DEFERRED. The last thing after everything.
+## ▪ CLOSED SCOPE — 6-old. THE ORIGINAL SNIVVIAN SCOPE
 
+**`KOTOR-CG-OCR.txt` PDF p21, folio 19. Rank 2, complete entry.** **`PT-508`.**
 
-**⚠ DEFERRED TO THE END — owner ruling.** **This was marked *"the last thing before engine work."* It is now the last thing AFTER it.**
+    Ability Modifiers   +2 Wisdom          ⚠ NO penalty at all
+    Small Size          +1 Reflex, +5 Stealth, carry 3/4
+    Speed               4 squares          ⚠ Saga grid = 6 metres
+    Observant           once per encounter, Perception in place of
+                        Deception or Persuasion
+    Cold Resistance     +5 Fortitude vs extreme cold
+    Age                 1–11 / 12–17 / 18–49 / 50–79 / 80–105 / 106+
+    Height · weight     1.4 m · 55 kg
 
-> **⚠ Build the system, test it on ONE difficulty, see how that plays. Only then add the others.**
+### ⚠ FOUR conversion problems, to solve BEFORE writing the entry
 
-**The reason is that a difficulty mode is a set of exceptions to rules that must already work.** **⚠ Writing the exceptions before the baseline is tested means tuning against a guess.**
+**⚠ `+2 Wisdom` WITH NO PENALTY.** **Every species on our roster trades.** **`PT-416` restored the Aqualish's `−2 Wisdom` precisely because a dropped penalty had gone unnoticed.** **A penalty must be AUTHORED, and the source does not supply one.**
 
-**Renumbered in intent, not in label:** **`2.9` is now back-end work, after `2.5` app functions and after playtesting.**
+**⚠ `Speed 4 squares` is SAGA's grid — 1.5 m squares, so 6 metres.** **Our baseline is 10 m and nothing on the roster is slower.** **Right for a short stocky cave-dweller, but it is not a figure to import unchecked.**
 
-**⚠ Owner instruction: this is done immediately before any engine code is written, and after everything else.**
+**⚠ `Small size` — DOES OUR PLAYER ROSTER HAVE SMALL SPECIES AT ALL?** **If not, adopting this means writing SIZE RULES FOR PLAYERS, not just a species.** **Check before starting.**
 
-**`DEATH-AND-DIFFICULTY-01` exists and gives the three modes — `PT-152`.** **What it does not give is what each mode changes beyond death.**
+**⚠ `Cold Resistance` needs an ENVIRONMENT SYSTEM WE DO NOT HAVE.** **There are no environmental hazard rules in the corpus; the trait would resist nothing.**
 
-**Why it sits here rather than earlier:** **a difficulty mode is a setting the engine reads, and settling it last means it can be written against a finished ruleset rather than a moving one.**
+**✓ `Observant` ports directly and nothing on the roster does it.**
 
-**⚠ And why it must come before the engine rather than after:** **every mode is a branch in resolution.** **Retrofitting a difficulty switch into a resolver that assumes one mode is the expensive version of this job.**
+### ⚠ The era case is STRONGER than the Reek's
 
-### What it needs to decide
+**`Marn Hierogryph` is in the Campaign Guide's own example names — GRYPH, the Snivvian who travels with Zayne Carrick in the KOTOR comics.** **A named, era-central Snivvian in our exact period.**
 
-**What each mode changes besides death.** **Encounter levels, save DCs, enemy counts, healing rates — or nothing, and death is the only axis.**
-**⚠ Where the setting lives.** **Campaign package, GM choice, or both, and which wins.**
-**How a package names its exceptions.** **`§3`'s Revan case is structural — the order of events is arranged, not a save. That needs a form an engine can read.**
+**And the Guide places the species explicitly: *"During this era, the Snivvians are still rebuilding the damage done to their society by the slavers."***
 
----
-
-# 3. Open decisions
-
-**`GAP-002` — which Force content.** **Framed, undecided, four axes.** **The middle path — RCR's structure with KOTOR's roster, 85 powers as ranked skills — is named and unpriced and should be priced before Branch A is taken.**
-
-**Which Force powers are marked Bonus.** *Deferred in `ACTION-ECONOMY-01 §6.1`.*
-
-**Odd-metre radii.** *3 m and 5 m on a 2 m square, left unruled deliberately.*
-
-**Rakata's `fatigued` mapping** — needs an ID. *`E-9` established it imports a choice between two clearing rules.*
-
-**The granularity question** — two alignment steps or eleven bands. *Deferred; the slice cannot observe the difference.*
-
-**Human's *"any two skills at +2, chosen at creation"*** — the only variable entry in the species chapter.
-
-**Whether the Zabrak subraces are far enough apart.** *One skill and zero abilities separate them.*
+> **⚠ Better attestation than the Reek, which `PT-502` adopted with NONE.**
 
 ---
 
-# 4. Species schema questions
+## ✓ 7. THE PRESTIGE CLASS PASS — DONE. `PT-625` – `PT-628`
 
-**Five of nine closed. Recorded in `AGENDA-UPDATED §2`.**
-
-**⚠ Four were closed today by side effect** — **`SKILLS-01 §5`'s five special cases all resolved when the traits were written.** **`§9.4`'s Mon Calamari predicate dissolved when Craft collapsed into Repair.**
-
-**Still open: `§9.7`** *(Bith Micro-Vision — blocked on `RULES-03`, spatial resolution)* **and `§9.1`** *(incoming effect class — blocked on `GAP-002`)*.
+**⚠ 37 CLASSES HAVE A PER-LEVEL TABLE — 18 base, 13 standard, 6 Force.** **⚠ The six Force prestige were ALREADY FULLY SPECIFIED in a fourth numbers table nobody had found.**
+**⚠ 19 entry requirements tested against `PT-554`'s question. SIXTEEN PASSED. Three tested ROUTE ONLY and were given competences.**
 
 ---
 
-# 5. Book-checks and reads outstanding
+## ▪ CLOSED SCOPE — 7-old. THE ORIGINAL PRESTIGE SCOPE
 
-**`B27`** — Tulak Hord's dating.
-**`B29`** — does the Campaign Guide say anything about Alpheridies during the Jedi Civil War?
-**`B30`** — does UAA carry a full Miraluka entry? *If so, the edition-boundary rule replaces record one.*
-**`B33`** — Jolee Bindo's Great Sith War history.
-**Power of the Jedi Sourcebook** — unacquired. *Revised-era entries for Miraluka, Nautolan, Togruta.*
-**The Campaign Guide's Force chapter, pp.48–61** — unread.
-**Six queued RCR page reads**, including p.183, carried forward from prior context limits.
+**⚠ Owner instruction, `PT-554`. Not now — recorded so it is not lost.**
 
----
+**⚠ TWO JOBS, ONE PASS — `PT-554`, `PT-565`, `PT-566`.**
 
-# 6. Things worth reading before they are rediscovered
+    1  ⚠ BUILD THE LEVEL TABLES. Thirty prestige classes and NOT ONE has a
+       table. `rules/` holds CLASS-TABLES-BASE, -JEDI and -DROID and nothing else.
+    2  check and tweak every entry requirement.
 
-**`formmask`** — sixteen composing bitmask values, the cross-product between forms and powers. **Unread.**
+**⚠ THE TABLES COME FIRST.** **An entry requirement gates access to a progression, and the progression does not exist — `PT-565` had to place a feat at *"Beast Master 5"* on an ASSUMPTION that prestige classes run ten levels, and that assumption is written nowhere.**
 
-**What else shares `exclusion: 0x02`** — 178 of 282 rows, too many for forms alone.
+### ⚠ What prompted it
 
-**⚠ *"How forms are acquired in the source"* is CLOSED.** **`PT-38` ruled forms are granted, never bought.** **The unread table it was waiting on is no longer blocking.**
+**`PT-553` found the `Beast Master` could be entered at `Scout 6` by a character who had NEVER TAKEN A RANK IN `Beast Handling`** — the skill its every mechanic rolls. **Fixed by adding aptitude and 6 ranks.**
 
----
+> **⚠ THE QUESTION IS WHETHER THE OTHER TWENTY-NINE HAVE THE SAME SHAPE OF HOLE.** **A class-level requirement says WHERE YOU CAME FROM. It does not say WHETHER YOU CAN DO THE THING.**
 
-# 7. Playtest, when it resumes
+### What the pass should ask, per class
 
-**Re-run S7.** > **Its headline — *medpacs run out before Force points* — was measured with the healing scaling switched off, because no sheet had Medicine.** **Meris is now at 11, which is +5 a medpac.**
+    ⚠ does the requirement test the COMPETENCE the class is about,
+      or only the ROUTE a character took to reach it?
+    ⚠ is there a skill, feat or ability the class ASSUMES and does not require?
+    ⚠ `PT-138`'s prestige entry grammar — does each one actually obey it?
+    ⚠ `PT-155` opened Sith prestige entry; are the Force prestige gates
+      consistent with that?
 
-**Run a non-combat suite.** **`SKILL-RESOLUTION-01` defines five resolution modes and combat exercises almost none of them.** **All sheets are now allocated, so all five can fire.**
+**⚠ `CLASS-ROSTER-01` line 832 records that `REPLY-56` and `REPLY-57` BOTH claimed seven standard prestige classes had no entry requirement, and all eleven did** — *"seven never left `from-designer/` and were never copied into the tree."* **⚠ That document has been wrong about this once already.**
 
-**A social scenario specifically.** **The NPC resistance ladder and the *who may use a skill against whom* ruling have never been touched.**
+**⚠ 32 prestige classes — `PT-578` added `Shock Trooper` and `Blademaster`. 13 standard · 8 Force · the rest.**
 
-**And targeting has never been played at any version.** **The structural questions are argued; every magnitude is chosen rather than derived.**
+### ⚠ AND THE TWO NEW CLASSES HAVE ONLY AN ENTRY REQUIREMENT — `PT-580`
 
----
+**⚠ `Shock Trooper` and `Blademaster` were created at `PT-578`/`PT-579` with a REQUIREMENT and an IDENTITY and NOTHING ELSE.**
 
-# 8. Standing checks
+    ⚠ Shock Trooper   `Alertness` 8 + `Weapon Focus`, any ranged family
+                      SPEED, CONTROL and PROTECTION — crowds and bodyguarding
+    ⚠ Blademaster     `Weapon Specialization: Melee Weapons`
+                      the MELEE class, continuing the base `Duelist`
 
-**`scripts/gate.py` — nine checks, six blocking.**
+**⚠ NEITHER HAS: a level table · an aptitude block · an attack opening · features · a hit die · a rate · skill points.** **THE SAME GAPS AS THE OTHER THIRTY, plus they are NEWER.**
 
-| | |
-|---|---|
-| `audit_sheets` | illegal picks, wrong budget, level gates, alignment |
-| `audit_refs` | every named chain resolves to a definition |
-| `audit_skills` | budgets, rank caps, class and chassis lists |
-| `audit_skillfeats` | table matches library, all 24 skills covered once |
-| `audit_source` | no count in prose that the data contradicts |
-| `audit_seed` | staggered offsets where variants compare one declaration |
-| `audit_revision` | controlled pairs ran on the same corpus |
-| `audit_preflight` *(warns)* | can each stated test actually fire |
-| `audit_ownership` *(advisory)* | one topic, one owning document |
+**⚠ THIS PASS BUILDS THEM ALONGSIDE THE REST.** **Owner ruling: stop the prestige work here and return to it whole.**
 
-**Run it before sending anything.**
+**⚠ `audit_classcoverage` checks BASE classes ONLY — check 27 will not see either of them until this pass gives them rows.**
+
+**⚠ AND THEY HAVE NO LEVEL TABLES — `PT-565`.** **`rules/` holds `CLASS-TABLES-BASE`, `-JEDI` and `-DROID`. There is NO prestige table file at all.** **⚠ `PT-552` found the Beast Master had no APTITUDE BLOCK and `PT-565` found it has no LEVEL TABLE — two structural gaps on one class in twelve rulings, and twenty-nine other classes share the second.**
+
+**⚠ `PT-565` placed a feat at Beast Master 5 assuming a TEN-LEVEL prestige class. That assumption is written nowhere and must be confirmed by this pass.**
 
 ---
 
-# 9. Named failure modes
+## ✓ 8. THE PERCENTAGE MECHANICS — DONE. `PT-629`, `PT-630`, and `PT-2125`
 
-**Counts written in prose drift.** *Five confirmed. Derive them.*
+**⚠ 320 raw hits were really 16 FAMILIES.** **103 item properties converted to `DR` with the source percentage kept beside them; feats and chains moved to flat points; `Assassin Protocols` moved to a `d20`.**
+**⚠ LEFT DELIBERATELY: Force ceiling degradation — one subtraction per cast off a figure already on the sheet — and the probability tables, which show a `d20` target WITH its odds.**
 
-**A rename applied to data does not reach prose — or scripts.** **Force Wound* → `Force Strangle` reached every document and not `audit_sheets.py`.*
-
-**A correct file can overwrite a correct fix.** *Diff against the specific corrected lines.*
-
-**Warrant-by-carriage.** *A claim acquires a citation it did not earn by moving between documents.*
-
-**The same system built twice.** *`ACTION-ECONOMY-01 §20` and `TARGETING-01` were independent, contradictory, and both live.*
-
-**A worked example that computes its sum from some of its rows.** *Three times. Standing rule: any worked example names every row it used.*
-
-**Sync one way.** *The working tree is the source; the repo is a mirror.*
-
-**Two agendas.** *This one and `AGENDA-UPDATED` diverged, and the older carried more. `AGENDA-UPDATED` is now superseded and should not be edited.*
-
-**A fabricated comparand, presented as a quotation.** > **⚠ The fifth mode, and the most dangerous, because every downstream step is sound.** *The Library invented three checksums, attributed them to a document it held, compared real files against them, and built rigorous analysis on the guaranteed mismatch. The rigour made it more convincing, not less wrong. Nothing internal to a correct method catches an invented input.*
-
-**The countermeasure is one line: grep the value out of the held copy before quoting it, and show the grep rather than describing it.** *Applies to every agent in this project, including me — I have made the same class of error twice today by asserting from session memory without deriving.*
+**⚠⚠ A SEVENTEENTH FAMILY REACHED THIS ONLY AT `PT-2125`, AND IT IS CLOSED HERE RATHER THAN OPENED AS A NEW ITEM.** **`FORMS-01` and `POWER-COSTS-01` were written AFTER this sweep and were never checked against it**, so four Force forms kept six live percentages — `PT-2124` found them. They convert in this item's own two idioms and no third: **regeneration and duration to *half again, rounded down*** (both scale with level, so a flat bonus would be trivial at 20 and oversized at 1), **both `FP cost +20%` to a flat `+1`** (a single-digit cost is exactly the rounding `PT-475` kills), and **Potency's damage `+30%` to one extra die of the power's own damage type** (106 powers of wildly different size; a die the power already rolls scales itself).
+**⚠ `FORMS-01 §6.2b` carries the table.** The source's own wording is kept beside it, unchanged — the same *"conversion sits beside it, not over it"* this item established for the 103 item properties.
+**⚠ AND THE TWO DEGRADATION CUTS STAY**, for the reason above: once per encounter, off a total already tracked. **Force Affinity** turned out to have no percentage of its own at all — its *"reduced rate"* names the universal in-combat rate `FORMS-01 §7.1` already closed, not a figure the form carries.
 
 ---
 
-# 10. Library reconciliation — CLOSED
+## ▪ CLOSED SCOPE — 8-old. THE ORIGINAL PERCENTAGE SCOPE — `PT-475`
 
-**⚠ This section described the cycle as in progress. It closed.**
+**⚠ Percentages are pervasive and they are the wrong shape for a table.**
 
-**Seven verification batches, 35 documents, content-read against a four-part standard.** **`TO-LIBRARY-CLOSEOUT` ended it and `BRIEF-LIBRARIAN-NEXT-CYCLE` set the standing instructions.**
+    ITEMS-03   Energy Shielding Mark I–IV    DamageImmunity (Energy) 10 / 15 / 20 / 30%
+    ITEMS-05   Thermal Shield Generator      DamageImmunity (Fire) 75%
+    ITEMS-05   Multishield Generator         DamageImmunity (Electrical) 50%
+    powers     Force Choke                   "2/3rds of the attacker's level"
+    mod block  Shield Boost, Force Weaken, Last Stand -- all rejected partly on this
 
-**What it produced:** **`C18-ATTACKS` created · four forks resolved · `C-43` closed by reconstruction · `SPECIES-CHAPTER-v2` filed · the `PT-` namespace split · seven new checks.**
+**⚠ A percentage requires the player to know a total, compute a fraction, and round.** **Flat points, dice and fixed steps do not.**
 
-> **⚠ And the finding worth keeping: of the fourteen defects found across both sides, none was found by reading prose and noticing it was wrong.** **Every one was reachable by derivation.**
+> **⚠ `Shield Boost` — `FEATS-LIBRARY-01`, `PT-475` — is written the way the replacement should look: `10` / `20` / `30` points, not `20%` / `40%` / `60%`.**
 
-**Standing instruction: batch, do not relay.** **One handoff per closed workstream.** **`BRIEF-LIBRARIAN-NEXT-CYCLE §0`.**
-
-**⚠ Not yet sent to the Library: everything since the closeout.** **`WORK-LOG-POST-CLOSEOUT` lists it.**
-
----
-
-# 11. Two owner rulings the Library is blocked on
-
-## 11.1 `FORCE-POOL-01-v3` — apply the split, or not
-
-**86 diff lines. The Library holds `04d76c39` and will not change it without your word.**
-
-**`§2` — the formula.** **`(Force die × Force-class levels) + ((Wis + Cha) × character level)`**, replacing *"Force die + Wis + Cha, per level"*. **`MULTICLASS-01 §2.1` is the reason: it cuts the level-banking advantage by 71%.**
-
-**`§3.1` — replaced entirely, and I had not named this.** **The removed section carried the Guardian 1 / Sentinel 2 / Consular 3 regeneration table and the every-4 Consular schedule.** **`D-AG` material; the Library holds the simulation behind it.**
-
-**⚠ The Library verified that `C-44`'s recompute and `§3.3`'s halving both survive the change.** **So the ruling is about the formula and the regeneration model, not about losing corrections already applied.**
-
-> **⚠ And one consequence neither of us had seen.** **Under the new formula a character with no Force-class level has no pool at all** — the ability half is a multiplier gated on the first Force level. **`E-11` says no sheet field is reliably cosmetic. This makes Force-class level a gate on a derived value that previously existed for every character, and the chargen schema — ownerless, never written — would have to represent it.**
-
-## 11.2 The droid language ruling — term settled, home and scope open
-
-**`Binary` stands.** **What remains is where the ruling lives, and whether a droid's five languages are *understood*, *spoken*, or *read and written* by default.**
-
-**`SPECIES-CHAPTER-v2` currently distinguishes all three per chassis. The ruling should confirm or replace that.**
+**⚠ NOT a find-and-replace.** **Some percentages are PORTED values from the game files and changing them is a departure that needs recording per item.** **Scope it as a pass over `ITEMS-03`, `ITEMS-05` and the damage-immunity vocabulary in `PROPERTY-VOCAB-01` before touching anything.**
 
 ---
 
-# 12. The delivery layer — WITHDRAWN
+## ✓ RULES-01 GAPS FOUND DURING THE BEAST WORK — ALL THREE CLOSED
 
-**⚠ This section called the delivery layer a blocking issue on the strength of three failures. One of the three did not happen.**
-
-**The Library fabricated three checksums, attributed them to a document it held, and reported the guaranteed mismatch as a defect on our side.** **It withdrew that unprompted.**
-
-**Two real failures remain — attachments not arriving, and an uploads directory returning its own residue.** **Neither is solvable from inside the work.**
-
-> **⚠ And the ten unconfirmed deliveries are unexplained again.** **A later two-thread explanation was also withdrawn.** **Not re-diagnosing from here.**
+**⚠ MOUNTED COMBAT — CLOSED at `PT-560` – `PT-565`. `Shieldback` and `Break Away` were REWRITTEN at `PT-564` because the general rules made them redundant.**
+**✓ FALLING DAMAGE and `Carried` — closed at `PT-442`.** **⚠ The square size is now stated: 2 metres — `audit_grid` verifies it every gate.**
 
 ---
 
-## 2.2-scope Crafting — scoped. `PT-273`.
+## ▪ CLOSED SCOPE — the original three gaps
 
-**⚠ K2's system is an expansion, not more crystals. Three of the five source tables are K2-only.**
+**⚠ Three systems the beast work leans on that DO NOT EXIST. None is a beast problem; all are `RULES-01`.**
 
-    upgrade.2da          which slots a weapon has        both games
-    upcrystals.2da       lightsaber crystal effects      both games
-    itemcreate.2da       ⚠ WORKBENCH recipes             K2 only
-    chemicalcreate.2da   ⚠ LAB STATION recipes           K2 only
-    itemcreatemira.2da   ⚠ character-specific recipes    K2 only
+**⚠ MOUNTED COMBAT — `PT-440`, `PT-442`.** **`Shieldback` (Wraid) and `Break Away` (Iriaz) are two racial feats resting on a system the corpus does not have.** **Nothing states who acts, whether the rider provokes, what happens when the mount dies, or how a rider's Defence relates to the mount's.** **⚠ Two feats are currently unplayable as written.**
 
-### What K2 added over K1
+**✓ FALLING DAMAGE — CLOSED at `PT-442`.** `1d6` per 4 metres, max `20d6`, prone on landing. **⚠ Carries an unconfirmed assumption that a square is 2 metres — `ACTION-ECONOMY-01` never states the square size.**
 
-**K1 had crystals and nothing else — you found them and slotted them.**
+**✓ `Carried` — CLOSED at `PT-442`.** A condition, not a grapple. **⚠ Grapple itself remains BANNED for v1 — `RULES-01-v2` line 430.**
 
-**⚠ K2 added an economy:** **two station types with separate recipe lists · components and chemicals as currency · skill gates on every recipe · character-specific lists.**
+**⚠ `Knockdown` is an ENGINE immunity category — `iprp_immunity` row 6.** **The Zakkeg's `Unyielding` was authored past it — `PT-446`. Unreconciled.**
 
-> **⚠ The skill gate is the part that matters to us.** **`Repair` and `Treat Injury` decide what you can build, which makes crafting a reason to raise a skill rather than a loot filter.**
+---
 
-### ⚠ Three things in the corpus already assume it
+## ⚠ WAITING ON OTHERS
 
-**`Gear Head` · the droid upgrade slots · the `Machinist` class, whose whole premise is building.**
+**✓ Extractor — ⚠ NOTHING OUTSTANDING. `PT-645`.** **The `Maalraas` is fully built in `BEASTS-01`; the two checks were VERIFICATION OF DONE WORK, not a dependency.**
 
-**And `PT-203`/`PT-225` deferred droid *construction* to downtime work explicitly depending on this.**
+**Atlas and Library items are in OTHER REPOSITORIES and cannot be actioned from here.**
 
-### The four phases
+**✓ CAMPAIGN GUIDE CH. XIII CREATURE ENTRIES — ⚠ THE CHAPTER DOES NOT EXIST. `PT-507`, closed here at `PT-636`.**
 
-**1 — Structure.** **Which slots each weapon and armour type has, and how many.** **Needs `upgrade.2da`.** **⚠ Nothing else can be built without this.**
+> **⚠ `PT-507` OCR'd the whole book — 226 pages, contiguous, verified against the PDF — AND FOUND NO CREATURE CHAPTER.** **`maalraas` is absent from it entirely.**
 
-**2 — Effects.** **Crystal and component effects as data.** **⚠ `PT-272` has the lightsaber half from the wiki; this replaces prose with source.**
+**⚠ IT SAT ON THIS LIST FOR 129 RULINGS AFTER BEING DISPROVED.** **`PT-507`'s own title says it: *"it CLOSES an open item by NOT CONTAINING it."* ⚠ The closure was recorded in the ruling and never reached the agenda.**
 
-**3 — Recipes and gates.** **What each station makes, and the skill DC.** **⚠ This is where it stops being extraction and becomes design — KOTOR DCs assume a video-game skill curve.**
+**✓ CREATURE PRICES — NO LONGER WAITING. `PT-635`.** **⚠ We priced the roster ourselves: `BEASTS-01`'s bond DC and price by tier, and `DROID-MODELS-01`'s frame prices from `hkpart01`–`05`.** **⚠ `ff.140–143` was an outstanding RCR read for figures we no longer need.**
 
-**4 — Economy.** **Components and chemicals: where they come from, what they are worth.** **⚠ Touches `EQUIPMENT-01`'s unwritten cost column and the campaign packages.**
+**Atlas** — **⚠ two overcorrections: `Dromund Kaas` and `Tython` at danger 1 with empty signals. I asked WHY they fell, not for a change.**
 
-### ⚠ Files needed, priority order
+**Library** — **⚠ `REPLY-LIBRARY-08` is with them: `ITEMS-*-K2` was a stale version, not a parallel set, and Phase 3 batch 1 may need re-running.**
 
-    [1] k2_upgrade.2da          the slot structure — blocks everything
-    [1] k2_upcrystals.2da       crystal effects as data
-    [2] k1_upgrade.2da          ⚠ to DIFF against K2 and see exactly what expanded
-    [2] k1_upcrystals.2da       same
-    [2] k2_itemcreate.2da       workbench recipes and DCs
-    [2] k2_chemicalcreate.2da   lab station recipes and DCs
-    [3] k2_itemcreatemira.2da   character-specific
-    [3] itempropdef.2da         what an item property IS — the vocabulary
-    [3] iprp_*.2da              the property value tables
+---
 
-**⚠ Phase 1 and 2 are extraction and can start the moment the priority-1 files land.** **Phase 3 and 4 are design and want `§2.1` items finished first.**
+## ⚠ DEFERRED BY DESIGN
 
-**⚠ And `PT-249`'s lesson applies: check the file carries what we assume before scoping on it.** **`spells.2da` did not carry Force power numbers; `upgrade.2da` may not carry slot counts.**
+**`§2.9` difficulty modes — `PT-310`. After the engine, not before.**
+**`§2.5` app functions · `§2.9c` hiring — `HIRING-QA-01` is filed and the reminder trigger is written in.**
+
+---
+
+## ▪ REMOVED — a duplicated agenda tail. `PT-634`, `PT-635`
+
+**⚠ Two documents were merged and the OLDER ONE'S TAIL SURVIVED BELOW THE NEWER ONE'S.** **It carried its own `# AGENDA — current` header, a `# 1. Next` section, and status lines hundreds of rulings old — *"Species — CLOSED"*, *"Classes — thirteen written, nine to go"*.**
+
+**⚠ `PT-634` CUT AT THE WRONG OFFSET AND LEFT IT IN PLACE. Removed here.**
+
+---
+
+## ⚠⚠ THE DOCUMENT-LEVEL OPEN ITEMS — `PT-647`, corrected at `PT-650`
+
+> **⚠ THE NUMBERED AGENDA TRACKED EIGHT WORKSTREAMS. IT NEVER TRACKED THE OPEN QUESTIONS INSIDE INDIVIDUAL DOCUMENTS — forty-plus of them.**
+
+    ✓ 1  LOOT-01               ⚠ ALREADY DONE — `PT-651`. 1,385 rows across
+                               `ITEMS-01`–`08` ALL carry a tier, zero blanks.
+                               ⚠ The paragraph's own count of 994 was stale too.
+    ✓ 2  BEASTS-PLAYER-01      ⚠ WAS ALREADY DONE — `PT-649`. 24 statted
+                               entries at `PT-366`; feats in `BEASTS-FEATS-01`.
+    ✓ 3  SKILLS-01             ⚠ MOOT — `PT-652`. The 38 was RCR'S count and we
+                               did not port RCR's list. ⚠ But a REAL stale count
+                               sat beside it: 'ten feats, 24 skills' against
+                               13 feats and 25 character skills.
+    ✓ 4  FORCE-TRAINING-01     ⚠ ALREADY DONE — `PT-653`. `SPECIES-AGES-01`
+                               holds 38 species, and BOTH named exceptions
+                               are in it, authored, with reasoning.
+    ✓ 5  CLASS-TABLES-BASE     ⚠ VITALITY PER LEVEL — STATED at `PT-648`.
+                               Level 1 = max die + Con; each level = die
+                               average rounded up + Con. ⚠ NOTHING IS ROLLED.
+    ✓ 6  DEATH-AND-DIFFICULTY  ⚠ ANSWERED BY `PT-559` — a companion dies at
+                               `−Constitution`, like everything else. The
+                               rebuild cost beside it was `PT-572`.
+    ✓ 7  DROIDS-UPGRADE-01     ⚠ ALL THREE ROUTES EXIST — `PT-654`. And the
+                               party-composition half was `PT-323`.
+    ✓ 8  SKILL-RESOLUTION-01   ⚠ SETTLED FROM `traps.2da` — `PT-654`. THREE
+                               grades, detect 20/30/40, disarm 20/25/30.
+                               ⚠ NEITHER reported number set was right.
+    ✓ 9  MULTICLASS-01         ⚠ YES, a character MAY return — `PT-648`, and
+                               `PT-159`'s rule already assumed it.
+    ✓ 10 FEATS-UNIVERSAL-01    ⚠ `Force Camouflage` IS THE POWER; the cut feat
+                               is DEAD — `PT-648`. ⚠ `Targeting 9/10` OPEN.
+
+**⚠ `RULES-01-v2 §15`, `TIMELINE-01 §7` and `CLOCK-01`'s Q2a carry their own lists beneath these.**
+
+> **⚠⚠ READ THIS BEFORE TREATING ANY OF THE ABOVE AS WORK — `PT-649`.**
+
+**⚠ FOUR OF THE TEN WERE ALREADY DONE OR WERE STALE PARAGRAPHS.** **⚠ THE CORPUS IS MORE COMPLETE THAN IT DESCRIBES ITSELF AS BEING.**
+
+**⚠ A SWEEP READS WHAT A DOCUMENT SAYS ABOUT ITSELF, and FOUR HEADER TYPES have now been caught lying: `Status:` — `PT-642` · `DRAFT` — `PT-643` · `## Open` — `PT-647` · open-item prose — `PT-649`.**
+
+**⚠ CHECK WHETHER THE WORK EXISTS BEFORE DOING IT.**
+
+---
+
+## ⚠⚠ THE FIVE MISSING SYSTEMS — `PT-660`
+
+> **⚠ FOUND BY CATALOGUING THE CORPUS: 104 documents, 3.3 MB, and FIVE THINGS A COMPLETE RPG NEEDS THAT NOTHING OWNED.**
+
+    ✓ 1  EXPERIENCE AND LEVELLING   ⚠ BUILT — `EXPERIENCE-01`, `PT-660`.
+                                    ⚠ Six mentions, no document. The missing
+                                    half of the core loop: 37 classes had
+                                    per-level tables and nothing said how you
+                                    REACH the next level.
+    ✓ 2  ENCOUNTER BUILDING         ⚠ BUILT — `ENCOUNTER-01`, `PT-665`. Five
+                                    grades as CR offsets from party level,
+                                    ported from `k2_encdifficulty.2da`.
+    ⚠ 2-old  the original note:      `LOOT-01` derives area tier
+                                    from *"the tier of the thing guarding it"*
+                                    and nothing tells a GM WHAT TO PUT IN A ROOM.
+                                    ⚠ It is what makes XP mean something.
+    ◐ 3  STARSHIPS                  ⚠ ROSTER BUILT — `STARSHIPS-01`, `PT-668`.
+                                    ⚠⚠ KOTOR HAS NO SHIP STATS AT ALL — a ship
+                                    is an AREA. The roster is ported; every
+                                    mechanic would be authored.
+                                    ⚠ RECOMMENDED: build the ship as a BASE
+                                    first. Three systems already lean on it.
+                                    ⚠ Space combat is UNRULED and KOTOR shipped
+                                    without one.
+    ⚠ 3-old  the original note:      12 mentions, no document. The Ebon Hawk is
+                                    the second-most-recognisable thing in KOTOR
+                                    after the lightsaber. Travel, space combat,
+                                    ⚠ and the SHIP AS A BASE — `CRAFTING-01`
+                                    already says *"a base: your ship."*
+    ⚠ 4  SWOOP RACING               ⚠ 10 mentions, no document. `pazaak` got 74
+                                    hits and a home in `ITEMS-08`; swoop got
+                                    nothing.
+                                    ⚠⚠ STILL OPEN AT `PT-781`. ⚠ IT IS ITEM 4
+                                    ON THE ORDER FROM HERE.
+    ⚠ 5  THE GM'S BOOK              ⚠ SEPARATE FROM THIS REPO — owner ruling,
+                                    like the engine and the code work.
+                                    `PT-658` wrote table arithmetic *"for our DM
+                                    guide book"* and that book lives elsewhere.
+
+**⚠ ORDER: ① done · ② next, because it is what makes XP mean something · ③ is a CHAPTER not a rule · ④ is polish · ⑤ is not ours.**
+
+
+---
+
+## ⚠⚠ QUEUED — CHARACTER CREATION ADDITIONS. After the five systems.
+
+**⚠ Owner has more to add. ⚠ ONE IS NAMED ALREADY: A BACKSTORY THAT GRANTS A SPECIAL STARTING ITEM.**
+
+    ⚠ acolyte · convict · courtesan · doctor · artisan · exile · hunter
+    ⚠ mechanic · merchant · mysterious stranger · nomad · politician
+    ⚠ scavenger · veteran
+
+**⚠ FOURTEEN, *"for now"*. ⚠ EACH DETERMINES A SPECIAL STARTING ITEM.**
+
+> **⚠ `SKILLS-01` ALREADY HAS A BACKGROUND SYSTEM — *"background grants two aptitudes: homeworld and profession"*, and homeworld also grants a `+2` skill bonus.** **⚠ WHETHER THIS IS THE SAME `profession` FIELD OR A THIRD ONE IS THE FIRST QUESTION TO ASK.**
+
+**⚠ AND `PT-594` SET THE CREATION ORDER — SPECIES FIRST, THEN SEX. ⚠ WHERE BACKSTORY SITS IN THAT ORDER IS THE SECOND.**
+
+
+---
+
+## ✓ FACTIONS — BUILT FOR BOTH PACKAGES. `PT-680` – `PT-685`
+
+    ✓ a faction is a property of the CAMPAIGN, not the character
+    ✓ ⚠ IT IS NOT ALIGNMENT — a Republic campaign can run dark
+    ✓ ⚠ FACTIONS NEST — the Jedi are Republic, `PT-683`
+    ✓ UNIVERSAL vs ERA-LOCKED — ⚠ the universal four are all criminal
+      or commercial, `PT-682`
+    ✓ ⚠ THE SITH ARE THREE ENTITIES: Malak's Empire (3959–3956), the
+      warlords (3955+), ⚠ THE TRIUMVIRATE (3954–3951)
+    ✓ the KOTOR 1 and KOTOR 2 trees, `PT-684`
+
+---
+
+## ⚠ THE FACTION EXPANSION PASS — QUEUED, BLOCKING NOTHING. `PT-685`
+
+    ⚠ 1  may a PARTY split its faction in multiplayer?
+    ⚠ 2  ⚠ CZERKA — a faction, or a business model? `PT-603` found it
+         supplied BOTH sides.
+    ⚠ 3  ⚠ THE MANDALORIAN WARS TREE — 3976–3960. ⚠ Same phase-3 gap
+         `EVENTS-PLAN-01` names.
+    ⚠ 4  the TALES OF THE JEDI tree — the Krath, Exar Kun's Sith
+    ⚠ 5  ⚠ MINOR AND LOCAL — Black Vulkars, Hidden Beks, Onderon.
+         ⚠ THE ATLAS WILL SURFACE MOST OF THESE.
+
+**⚠ NONE OF THE FIVE BLOCKS A CAMPAIGN AT EITHER SHIPPED DATE.**
+
+---
+
+## ▪ CLOSED SCOPE — the original faction build. `PT-680`
+
+**⚠ A FACTION IS A PROPERTY OF THE CAMPAIGN, NOT THE CHARACTER.** **⚠ IT SETS THREE THINGS — what a merchant sells, who starts hostile, and how the backstories read — AND NOTHING ELSE.**
+
+**⚠⚠ IT DOES NOT GATE CLASSES, SET ALIGNMENT, OR GATE SPECIES.** **⚠ A `Sith Warrior` in a Republic campaign is a DEFECTOR, A SPY OR A PRISONER, and closing the class would delete those stories.**
+
+---
+
+## ▪ CLOSED SCOPE — the original faction note. `PT-670`
+
+> **⚠ EVERY CAMPAIGN PACKAGE IS WRITTEN WITH A FACTION IN MIND. ⚠ KOTOR 1 AND KOTOR 2 ARE BOTH REPUBLIC.**
+
+**⚠⚠ `EVENTS-01` CORRECTS THE MANDALORIAN ENTRY — `PT-675`.** **⚠ THREE ERAS, NOT TWO, AND ONE OF THEM IS AN ABSENCE: the `Neo-Crusaders` DISBANDED IN 3960 AND DO NOT REFORM UNTIL 3951.** **⚠ AT OUR SETTING THEY ARE SCATTERED MERCENARIES WITH NO COMMAND AND NO TERRITORY.**
+
+**⚠ OWNER'S LIST SO FAR:**
+
+    ⚠ the Republic · the Sith · the Exchange · the Hutt Cartel
+    ⚠ the Mandalorian Crusaders / Neo-Crusaders — ⚠ WHICH ONE DEPENDS
+      ON THE TIME PERIOD
+    ⚠ *"etc."* — the list is not closed
+
+**⚠⚠ `repute.2da` DOES NOT HELP. It holds 24 rows and they are COMBAT AI — `Predator`, `Prey`, `Trap`, `Gizka_1`, `Zone_Controller`.** **⚠ THE REPUBLIC AND THE SITH ARE NOT IN IT. FACTIONS WILL BE AUTHORED.**
+
+**⚠ FIRST CONSUMER ALREADY EXISTS: `STARSHIPS-01 §2a` — ⚠ *"not sold"* IS A PROPERTY OF WHO YOU ARE, NOT OF THE SHIP.**
+
+**⚠ AND THE CRUSADER/NEO-CRUSADER SPLIT IS A `TIMELINE-01` QUESTION, NOT A FACTION ONE — the same faction at two dates.**
+
+---
+
+## ⚠⚠ THE TIMELINE QUESTION — QUEUED AFTER STARSHIPS. `PT-671`
+
+> **⚠ OWNER: *"the timeline question is an important one as well."*** **⚠ IT COMES BEFORE FACTIONS, BECAUSE FACTIONS DEPEND ON IT.**
+
+**⚠ `TIMELINE-01` READS `Status: scoping. Nothing decided.` ⚠ IT IS ONE OF ONLY THREE NON-SETTLED DOCUMENTS IN THE CORPUS — `PT-644`.**
+
+> **⚠⚠ SUPERSEDED — `PT-941`. ⚠ THE DOCUMENT NOW READS ⚠ *"`Q1` ANSWERED — `PT-674`."* ⚠⚠ THIS LINE QUOTES A STATUS THAT NO LONGER EXISTS, AND IT IS THE ONLY ONE OF THE ELEVEN `ATLAS-CORRECTIONS-01` ENTRIES THAT WAS **MAIN'S TO FIX**.**
+
+    ⚠ THE SHAPE OF THE PROBLEM: the SAME FACTION at TWO DATES is not
+      two factions. ⚠ `Crusaders` → `Neo-Crusaders` is one entity that
+      CHANGED, and `Republic` at 3956 BBY is not `Republic` at 3951.
+    ⚠ `PT-574`'s ERA BOUNDS already handle model availability by date.
+    ⚠ `CLOCK-01` tracks NARRATIVE time and its `Q2a` is unanswered.
+    ⚠ `TIMELINE-01 §7` carries its own list of open questions.
+
+**⚠ THREE DOCUMENTS TOUCH TIME AND NONE OF THEM OWNS IT.**
+
+**⚠ ORDER: ✓ ③ STARSHIPS → ◐ TIMELINE → FACTIONS → CHARACTER CREATION.**
+
+    ✓ `Q1` ANSWERED — `PT-674`. The unification holds.
+    ✓ `EVENTS-01` — the dated spine, 14 rows. `PT-675`.
+    ✓ `EVENTS-PLAN-01` — ⚠ FOUR PHASES, `PT-676`.
+    ✓ `EVENTS-PLAN-01` REWRITTEN — ⚠ `PT-678`. THE WORK WAS DONE.
+      ⚠ 17 records already sorted in `comms/NEAR-TERM-ITEMS.md`.
+    ⚠ WHAT REMAINS: normalise 4 records · reconcile 17 against the spine ·
+      ⚠ RECOVER `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01` (owner) ·
+      ⚠ THE MANDALORIAN WARS, the only untouched phase.
+
+
+---
+
+## ⚠⚠ THE ORDER FROM HERE — owner ruling, `PT-686`
+
+    ⚠ 1  THE TIMELINE TAIL       ⚠ NEXT
+    ⚠ 2  CHARACTER CREATION      the 14 backstories
+    ⚠ 3  THE FACTION EXPANSION   `FACTIONS-01 §6` — ⚠ five items, and
+                                 THREE ARE ALREADY QUEUED ELSEWHERE
+    ⚠ 4  SWOOP RACING            item ④ of the five missing systems
+    ⚠ 5  ⚠ THE HANDOFF PAT       ⚠ LAST, by owner ruling — after everything
+                                 on the agenda except the engine work
+
+**⚠ THE TIMELINE TAIL IS FIVE THINGS AND TWO ARE THE OWNER'S:**
+
+    ⚠ normalise records 14–17 to the `ENUM-01` schema — FOUR ROWS
+    ⚠ reconcile all 17 against `EVENTS-01 §1`'s spine
+    ⚠⚠ RECOVER `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01` — ⚠ OWNER
+    ⚠ THE MANDALORIAN WARS — ⚠ AND IT ALSO CLOSES `FACTIONS-01 §6`'s ITEM 3
+    ⚠ 48 of 55 species carry no availability block
+
+
+---
+
+## ⚠⚠ BOOTS — A NEW WEARABLE SLOT. `PT-689`
+
+> **⚠ NOTHING IN 1,364 ITEMS GOES ON FEET. ⚠ AND `baseitems.2da` HAS NO FOOT SLOT — KOTOR'S MASKS COVER IMPLANT, HEAD, ARMOUR, HANDS, ARMS, WEAPONS AND BELT.**
+
+**⚠ THE `Nomad` LIFESTYLE GRANTS FOOTWEAR AND THERE IS NOTHING TO GRANT.**
+
+    ⚠ 1  ADD `boots` AS A WEARABLE SLOT — ⚠ AUTHORED. There is no port.
+    ⚠ 2  ⚠ GENERATE FIFTEEN BOOT ITEMS, FULLY RENDERED, using the existing
+         `belt` and `gauntlets` entries as TEMPLATES for statline shape,
+         tier spread and property language.
+    ⚠ 3  ⚠ FILE THEM INTO THE K1 ITEM TABLES — `ITEMS-0*`, tiered per
+         `LOOT-01 §3`.
+
+**⚠ THE `belt` CATEGORY IS THE RIGHT MODEL: 47 ENTRIES, UTILITY-FLAVOURED, SPREAD ACROSS ALL FOUR TIERS.**
+
+**⚠ AND `PT-623` DEFERRED REACH AND WEAPON SIZING WHILE `PT-656` KILLED CARRYING CAPACITY. ⚠ BOOTS MUST NOT REVIVE EITHER — they are a SLOT WITH BONUSES, not a movement system.**
+
+
+---
+
+## ✓ LIFESTYLES — BUILT. `PROFESSIONS-01`, `PT-689` – `PT-693`
+
+    ✓ ⚠ 22 LIFESTYLES · 20 OFFERED IN THE CYCLE
+      ⚠ `Augmented` appears only with `Cybernetic Implantation` at level 1
+      ⚠ `Pilot` is GM-LOCKED, never offered
+    ✓ ⚠ DROIDS GET NONE — `PT-692`. A droid has a MANUFACTURER, not a
+      homeworld; a PRODUCTION RUN, not a childhood.
+    ✓ ⚠ 25 BOOTS AUTHORED — a slot KOTOR never had. `PT-690`, `PT-691`.
+    ✓ ⚠ THE HERMIT is the only grant that COSTS something — one item, no
+      credits. `PT-693`.
+
+**⚠ STILL OPEN INSIDE IT: ⚠ THE PROSE. `lifestyle × homeworld × species → a few lines`, and it is unwritten for all 22.** **⚠ AND DEFAULT STARTING ITEMS PER CLASS — nothing says what a level-1 `Soldier` owns.**
+
+---
+
+## ✓ UPBRINGING — BUILT. `UPBRINGING-01`, `PT-694`
+
+**⚠⚠ IT FILLED A FIELD THAT HAD BEEN EMPTY AND FLAGGED SINCE `SKILLS-01` WAS WRITTEN — `§11.3`, titled *"Profession is not yet designed."***
+
+    ⚠ HOMEWORLD   aptitude #1 + a `+2` bonus
+    ⚠ UPBRINGING      ⚠ APTITUDE #2 — the slot, filled
+    ⚠ LIFESTYLE   ⚠ an item and nothing else
+
+**⚠ EIGHT UPBRINGING. SEVEN FIX A SKILL; ⚠ `Unknown` LETS THE PLAYER CHOOSE.** **⚠ AND DROIDS **DO** TAKE UPBRINGING — six of eight — which is the OPPOSITE of lifestyles.**
+
+**⚠ OPEN: more origins (eight is thin beside 22 lifestyles) · whether `Noble` grants credits.**
+
+---
+
+## ▪ CLOSED SCOPE — the original origins note
+
+> **⚠ OWNER: *"what were the conditions of your upbringing."*** **⚠ IT INTRODUCES THE SECOND BACKSTORY SKILL BONUS, AND EVERY UPBRINGING TIES TO A SKILL.**
+
+    ⚠ Noble · Orphan · Outcast · Peasant · Slave · Street Urchin · Unknown
+
+**⚠ `SKILLS-01` ALREADY SAYS *"background grants two aptitudes: HOMEWORLD and PROFESSION"*, and homeworld also grants a `+2` skill bonus.** **⚠ WHETHER `origin` IS THAT SECOND APTITUDE OR A THIRD FIELD IS THE FIRST QUESTION.**
+
+**⚠ OPEN: whether a SKILL MENU sits between each origin, or each origin FIXES its skill.**
+
+
+---
+
+## ⚠⚠ THE `plot` CATEGORY IS A DUMPING GROUND — `PT-699`
+
+> **⚠ `plot` HOLDS 147 ROWS AND ⚠ 109 OF THEM ARE WEAPON UPGRADES.**
+
+    ⚠ 49  RANGED  — `Scope` · `Improved Energy Cell` · `Beam Splitter` ·
+                    `Hair Trigger` · `Lightsaber Energy Cell Fixture`
+    ⚠ 60  MELEE   — `Vibration Cell` · `Lightsaber Emitter Fixture` ·
+                    `Deflection Emitter` · `Disrupting Emitter`
+    ⚠ 38  ⚠ GENUINELY PLOT
+
+**⚠ THE ENTIRE WEAPON-UPGRADE SYSTEM IS FILED UNDER *"quest items"* AND NOTHING CAN REACH IT.**
+
+    ⚠ 1  ⚠ REFILE 291 ITEMS INTO `UPGRADES-01`'s TREE — `PT-700`.
+         ⚠ Two branches, thirteen leaves. `plot` drops 147 → ~38.
+    ⚠ 2  ⚠ RE-TIER THE 109 — they inherit `plot`'s tiers, which were
+         assigned when they were thought to be quest items
+    ⚠ 3  ⚠ CHECK `CRAFTING-01` AND `DROIDS-UPGRADE-01` — both may already
+         reference upgrades that live in the wrong category
+
+**⚠ `PROFESSIONS-01`'s `Antiquarian` AND `Fixer` NOW GRANT FROM THESE TWO CATEGORIES, ⚠ WHICH IS WHY THE DEFECT SURFACED.**
+
+
+---
+
+## ⚠⚠ THE PROSE GENERATOR — ENGINE WORK, NOT RULES WORK. `PT-704`
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+> **⚠ OWNER RULING: THE SETUP FOR THE PROSE IS BUILT WHEN THE CODE AND ENGINE ARE BUILT. ⚠ NOT BEFORE.**
+
+**⚠ `PROFESSIONS-01 §3a` SPECIFIES IT AS A FUNCTION:**
+
+    ⚠ profession × homeworld × species  →  a few lines
+
+**⚠ AND `UPBRINGING-01` ADDS A FOURTH INPUT. ⚠ A `Convict` FROM TARIS IS A DIFFERENT SENTENCE FROM A `Convict` FROM KORRIBAN, AND AN `Orphan Convict` IS DIFFERENT AGAIN.**
+
+### ⚠ Why it waits
+
+**⚠ 28 PROFESSIONS × 8 UPBRINGING × 292 WORLDS × 52 SPECIES IS NOT A WRITING TASK. ⚠ IT IS A TEMPLATE SYSTEM, AND A TEMPLATE SYSTEM IS CODE.**
+
+**⚠ WRITING PROSE BY HAND NOW WOULD PRODUCE A FEW HUNDRED PARAGRAPHS AND A COMBINATORIAL HOLE BEHIND THEM.**
+
+### ⚠ What the rules side already supplies, and it is everything
+
+    ✓ THE INPUTS      28 professions · 8 origins · the Atlas's 292 worlds ·
+                      52 species entries
+    ✓ THE GRANTS      every profession's item or non-item grant is FIXED
+    ✓ THE SKILLS      every origin's aptitude is FIXED
+    ✓ ⚠ THE COLOUR    `FACTIONS-01` — an `Acolyte` in a Sith campaign is not
+                      an `Acolyte` in a Republic one
+    ✓ ⚠ THE DATES     `EVENTS-01` — a `Cathar` character IS A SURVIVOR
+
+> **⚠⚠ NOTHING ON THE RULES SIDE BLOCKS THE GENERATOR. ⚠ IT IS WAITING ON THE ENGINE AND ONLY ON THE ENGINE.**
+
+**⚠ FILED UNDER THE ENGINE WORK ALONGSIDE `§2.5` APP FUNCTIONS, `§2.9` DIFFICULTY MODES AND `§2.9c` HIRING.**
+
+
+---
+
+## ✓ CHARACTER CREATION — CLOSED. `PT-689` – `PT-707`
+
+    ✓ SPECIES       52 entries · ⚠ 17 with availability blocks
+    ✓ HOMEWORLD     aptitude #1 + a `+2` bonus · the Atlas supplies 292
+    ✓ UPBRINGING    ⚠ 9 options · ⚠ PURE FLAVOUR, no grant · ⚠ NOT FOR DROIDS
+    ✓ PROFESSION    ⚠ 28 options · the grant OR aptitude #2 · ⚠ NOT FOR DROIDS
+    ✓ CLASS         37, all tabled
+    ✓ ⚠ 25 BOOTS AUTHORED — a slot KOTOR never had
+
+**⚠⚠ THE TWO SHEETS DIVERGE: ⚠ AN ORGANIC IS BUILT FROM WHAT HAPPENED TO IT; ⚠ A DROID FROM WHAT IT IS — chassis, model, and `PT-609`'s `junk droid`.**
+
+**⚠ DEFERRED TO THE ENGINE — `PT-704`: ⚠ THE PROSE GENERATOR. `profession × upbringing × homeworld × species`, and a SEPARATE INPUT SET FOR DROIDS.**
+
+**⚠ STILL OPEN AND NOT DEFERRED: ⚠ DEFAULT STARTING ITEMS PER CLASS. ⚠ Every item grant in `PROFESSIONS-01` sits on top of a baseline nothing defines.**
+
+---
+
+## ⚠⚠ THE ORDER FROM HERE — updated at `PT-708`
+
+    ⚠ 1  DEFAULT STARTING ITEMS PER CLASS   ⚠ NEXT. Organics and droids
+         separately; a campaign package may override.
+    ⚠ 2  ⚠ THE UPGRADE REFILE — `UPGRADES-01`. 291 items, thirteen leaves,
+         ⚠ AND A RE-TIER, because `plot`'s tiers were assigned when they
+         were thought to be quest items.
+    ⚠ 3  THE FACTION EXPANSION — `FACTIONS-01 §6`, ⚠ 3 of 5 queued elsewhere
+    ⚠ 4  SWOOP RACING
+    ⚠ 5  ⚠ THE HANDOFF PAT — LAST, by owner ruling
+
+**⚠ AND THE TIMELINE TAIL STILL HOLDS TWO OWNER ITEMS: ⚠ RECOVER `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01`, AND THE MANDALORIAN WARS PHASE.**
+
+
+---
+
+## ⚠⚠ THE CHARACTER BRAIN — PRE-ENGINE WORK. `PT-710`
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+> **⚠ OWNER: *"we need to determine what individual characters, whether created or generated, have as a body of knowledge… there has to be things they know and things they don't know."***
+
+**⚠ THE PROBLEM: ⚠ A CHARACTER MUST NOT KNOW ALL THE LORE AND RECITE IT ON DEMAND.**
+
+### ⚠⚠ WHY IT IS AN APP PROBLEM AND NOT A GAME-DESIGN ONE
+
+**⚠ OWNER RULING: ⚠ THIS IS NOT AN ASPECT OF THE TABLETOP DESIGN.**
+
+    ⚠ AT A TABLE   ⚠ A GM SIMPLY DOES NOT SAY THE THING. The problem
+                   does not arise.
+    ⚠ IN AN APP    ⚠ THE MODEL HOLDS THE WHOLE WORLD BIBLE AND WILL
+                   ANSWER ANYTHING IT IS ASKED.
+
+**⚠ THE GM'S DISCRETION IS THE MECHANISM, AND AN APP HAS NO DISCRETION UNLESS IT IS BUILT ONE.**
+
+### ⚠⚠ AND THE AXIS ALREADY EXISTS
+
+**⚠ `TIMELINE-01 §6` IS TITLED *"the third axis, which is ALREADY BUILT and easy to forget."***
+
+| Axis | Question | Where it lives |
+|---|---|---|
+| **Schedule** | Has it happened yet? | `TIMELINE-01` · `EVENTS-01` |
+| **Truth** | Did it happen at all? | the ledger |
+| **⚠⚠ Knowledge** | ⚠ **WHO KNOWS?** | ⚠ **THE CHARACTER BRAIN** |
+
+**⚠ THE WORKED EXAMPLE IS ALREADY WRITTEN: ⚠ *"Cathar's massacre happened in 3973 and THE REPUBLIC SUPPRESSED THE NEWS. At the campaign date it is PAST, TRUE, and NOT KNOWN to most of the galaxy."***
+
+> **⚠ AND `EVENTS-PLAN-01 §2` ALREADY LISTS `VISIBILITY` AS ONE OF FOUR FIELDS PER EVENT — ⚠ *"the fourth is the one every other project forgets."***
+
+### ⚠ What the corpus already supplies as inputs
+
+    ⚠ SPECIES        a Cathar KNOWS about 3973. A Duros may not.
+    ⚠ HOMEWORLD      292 worlds, each with a dated state
+    ⚠ PROFESSION     ⚠ `Antiquarian` — `Archaeology`. `Diplomat` — `Xenology`.
+    ⚠ SKILLS         ⚠ `Archaeology`, `Xenology`, `Mysticism`, `Streetwise`
+                     ARE ALREADY KNOWLEDGE SKILLS
+    ⚠ FACTION        `FACTIONS-01` — what your side believes
+    ⚠ THE FRAGMENT   ⚠ `PT-702` — the `Antiquarian` starts knowing ONE
+                     puzzling thing, and NEVER SOMETHING ON THE CRITICAL PATH
+
+**⚠⚠ SIX INPUTS EXIST. ⚠ WHAT IS MISSING IS THE RULE THAT TURNS THEM INTO A BOUNDED SET.**
+
+### ⚠⚠ IT IS PRIMARILY FOR NPCs — `PT-711`, owner ruling
+
+> **⚠ THE PLAYER FINDS SOMEBODY IN THE WORLD AND TALKS TO THEM. ⚠ THAT NPC IS THE PROBLEM CASE.**
+
+**⚠ A CANTINA PATRON ON TARIS SHOULD NOT BE ABLE TO EXPLAIN THE MANDALORIAN NEO-CRUSADER SUCCESSION. ⚠ AN APP WILL LET THEM.**
+
+    ⚠ NPC BRAIN     ⚠ THE PRIMARY CASE. What does THIS PERSON know?
+    ⚠ PLAYER BRAIN  ⚠ AND THE PLAYER HAS ONE TOO — owner ruling.
+                    ⚠ A player character does not know everything either.
+
+**⚠⚠ THE PLAYER BRAIN IS THE MORE INTERESTING HALF. ⚠ IT MEANS ASKING THE APP *"what do I know about Korriban?"* RETURNS THIS CHARACTER'S ANSWER, NOT THE WIKI'S.**
+
+**⚠ AND IT MAKES `Archaeology`, `Xenology`, `Mysticism` AND `Streetwise` LOAD-BEARING — ⚠ THEY STOP BEING CHECK MODIFIERS AND BECOME **WHAT YOUR CHARACTER CAN TELL YOU**.**
+
+### ⚠ Scheduled BEFORE the engine, not during
+
+**⚠ OWNER RULING. ⚠ IT CONSTRAINS WHAT THE ENGINE IS BUILT TO DO, SO IT CANNOT BE DECIDED INSIDE IT.**
+
+
+---
+
+## ⚠⚠ `CastSpell — subtype dropped` — AN EXTRACTION DEFECT. `PT-712`
+
+**⚠ EVERY DROID UTILITY DEVICE AND MANY OTHER ITEMS CARRY THE PROPERTY `CastSpell ⚠ subtype dropped`. ⚠ 22 OCCURRENCES IN `ITEMS-01` ALONE.**
+
+> **⚠ WE KNOW THE `Stun Ray` COSTS 300 AND FILLS A UTILITY SLOT. ⚠ WE DO NOT KNOW WHAT IT DOES.**
+
+    ⚠ 1  RECOVER THE SUBTYPE — ⚠ it names the effect, and 59 `iprp_*`
+         tables sit in `data/2da/k2/`
+    ⚠ 2  ⚠ RE-READ EVERY AFFECTED ROW once the mapping exists
+    ⚠ 3  ⚠ CHECK WHETHER ANY RULE ALREADY CITES ONE OF THESE ITEMS AS
+         IF ITS EFFECT WERE KNOWN
+
+**⚠ SAME SHAPE AS `PT-249`'s *"script pointers ≠ data."***
+
+
+---
+
+## ⚠⚠ THE PERSONAL DATAPAD — ENGINE WORK. `PT-736`
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+> **⚠ OWNER: EACH PLAYER IS ISSUED A PERSONAL DATAPAD IN THE APP — ⚠ A JOURNAL THEY WRITE IN OVER THE COURSE OF THE CAMPAIGN.**
+
+**⚠⚠ AND WHEN A PLAYER DIES ON A DIFFICULTY THAT PERMITS IT, ⚠ THE OTHER PLAYERS TAKE THE INVENTORY **AND THE DATAPAD**, AND READ IT.**
+
+    ⚠ IT IS NOT STARTING EQUIPMENT — `PT-735` RULED A DATAPAD IS A
+      QUEST OBJECT AND ⚠ THIS IS A DIFFERENT THING ENTIRELY
+    ⚠ IT IS AN ⚠ INTERFACE FEATURE with a ⚠ DEATH CONSEQUENCE attached
+
+### ⚠ Why it is engine work and not a rule
+
+**⚠ AT A TABLE A PLAYER ALREADY HAS A NOTEBOOK, AND THE OTHERS CAN ALREADY ASK TO READ IT. ⚠ THE MECHANIC DOES NOT ARISE.**
+
+> **⚠ IN AN APP THE NOTES ARE PRIVATE BY DEFAULT, AND ⚠ MAKING THEM INHERITABLE ON DEATH IS A DELIBERATE BUILD.**
+
+**⚠ SAME SHAPE AS `PT-710`'s CHARACTER BRAIN AND `PT-704`'s PROSE GENERATOR — ⚠ A GM SUPPLIES IT FOR FREE AND AN ENGINE MUST BE MADE TO.**
+
+### ⚠ What it depends on
+
+    ⚠ `DEATH-AND-DIFFICULTY-01` — ⚠ WHICH DIFFICULTIES PERMIT PERMANENT
+      DEATH. `PT-558` makes beasts and droids die on Normal; the player
+      case is the one that matters here.
+    ⚠ `PARTY-01 §6` — ⚠ ALREADY RULES THAT A DEPARTING COMPANION
+      **TAKES THEIR EQUIPMENT**. ⚠ A DEAD PLAYER'S DOES NOT LEAVE, WHICH
+      IS THE OPPOSITE CASE AND IS UNWRITTEN.
+
+**⚠ AND IT IS A GOOD SMALL MECHANIC BECAUSE ⚠ IT MAKES A DEATH LEAVE SOMETHING BEHIND THAT IS NOT LOOT.**
+
+
+---
+
+## ⚠⚠ PROFESSION GRANTS — THE UPGRADE RULE. `PT-738`, owner note
+
+> **⚠ IF A PLAYER WOULD ALREADY POSSESS THE ITEM A PROFESSION OFFERS, ⚠ THE GRANT REPLACES IT WITH A BETTER ONE.**
+
+**⚠ THE ARRAYS AND THE GRANTS OVERLAP IN AT LEAST ONE KNOWN PLACE — ⚠ `PT-736` FLAGGED `Artisan` (gauntlets) AGAINST THE `Brawler`'s ARRAY.**
+
+    ⚠ WITHOUT THE RULE   ⚠ A `Brawler Artisan` GETS TWO PAIRS OF GLOVES
+    ⚠ WITH IT            ⚠ THEY GET THE NEXT RUNG UP THE LADDER
+
+**⚠ AND `PT-737` PROVED THE LADDERS EXIST TO CLIMB: ⚠ `Padded Handwraps` → `Gamorrean Gauntlets` → `Unarmed Accuracy Gloves`.**
+
+**⚠ TO BE RULED IN THE `STARTING-EQUIPMENT-01 §5` GRANT PASS, AFTER ALL EIGHTEEN ARRAYS ARE SETTLED.**
+
+
+---
+
+## ⚠⚠ THE `Saboteur` — A NINETEENTH BASE CLASS. `PT-770`
+
+> **⚠ OWNER: A CLASS THAT UTILISES ⚠ DEMOLITIONS — MINES AND GRENADES.**
+
+**⚠ TO BE DEVELOPED WITH EVERYTHING EVERY OTHER CLASS HAS:**
+
+    ⚠ 1  ⚠ THE PREMISE — a one-line hook, like every entry in
+         `CLASSES-STANDARD-PHB`
+    ⚠ 2  RATE · HIT DIE · ⚠ KEY ABILITIES · SAVES AT 20 · SKILL POINTS ·
+         CLASS SKILLS
+    ⚠ 3  ⚠ THE PER-LEVEL TABLE — `CLASS-TABLES-AUTHORED`
+    ⚠ 4  ⚠ A CLASS FEAT — `FEATS-LIBRARY-01`, three tiers
+    ⚠ 5  OPENING ATTACK CHAINS — `CLASS-ATTACKS-01`
+    ⚠ 6  ⚠ A STARTING ARRAY — `STARTING-EQUIPMENT-01`, organic AND droid
+    ⚠ 7  ⚠ A `Two-Weapon Fighting` ROW — `WEAPON-MATRIX-01`
+    ⚠ 8  ⚠ A `Key abilities` PAIR IN `audit_abilities.py` — check 22
+         WILL FAIL WITHOUT ONE
+
+### ⚠ What already exists for it to use
+
+**⚠ `Demolitions` IS ALREADY A SKILL, AND ⚠ `PROFESSIONS-01`'s `Demolitionist` ALREADY GRANTS GRENADES.**
+
+    ⚠ trap-kit  29 items — ⚠ MINES. `PT-654` SETTLED THREE GRADES:
+                MINOR · AVERAGE · DEADLY, detect 20/30/40, disarm 20/25/30
+    ⚠ grenade   12 items
+    ⚠ mine       1 item
+
+> **⚠⚠ `PT-698` NOTED `trap-kit` HAS ⚠ 29 ITEMS AND NO ROUTE TO THEM. ⚠ THE `Survivor` PROFESSION REACHES ONE; ⚠ A `Saboteur` CLASS WOULD REACH ALL OF THEM.**
+
+### ⚠ And one thing to decide early
+
+**⚠ THE `Demolitionist` PROFESSION AND A `Saboteur` CLASS WOULD OVERLAP. ⚠ `PT-738`'s UPGRADE RULE HANDLES THE ITEM, BUT ⚠ THE **IDENTITY** OVERLAP IS A DESIGN QUESTION.**
+
+**⚠ COMPARE `Medic` THE CLASS AGAINST `Doctor` THE PROFESSION — ⚠ `PT-720` RULED THAT COLLISION HARMLESS. ⚠ THIS ONE MAY BE TOO.**
+
+
+---
+
+## ✓ STARTING EQUIPMENT — CLOSED. `PT-724` – `PT-779`
+
+    ✓ 18 ORGANIC ARRAYS · ⚠ 9 DROID ARRAYS
+    ✓ 18 `Two-Weapon Fighting` ROWS · ⚠ MELEE CHOICE ON ALL OF THEM
+    ✓ 28 PROFESSION GRANTS · ⚠ THE UPGRADE RULE · ⚠ THE RANDOM RULE
+    ✓ ⚠ 17 PROGRAMMINGS — the droid equivalent, with grants and upgrades
+    ✓ ⚠ 25 BOOTS · 3 TRAINING SABERS · 2 SPARRING GLOVES ·
+      2 SAVE IMPLANTS · 3 ABILITY IMPLANTS · A MARKSMAN RIFLE ·
+      A SHOCK ARM LADDER — ⚠ ALL AUTHORED, NONE PORTED
+
+**⚠ NEW DOCUMENTS: `STARTING-EQUIPMENT-01` · `WEAPON-MATRIX-01` · `PROGRAMMINGS-01`.**
+
+**⚠ NEW CHECKS: ⚠ 35 `audit_itemnames` · ⚠ 36 `audit_dupnames`.**
+
+**⚠ DEFERRED, NOT OPEN: ⚠ THE PROSE GENERATOR — `PT-704`, ENGINE WORK.**
+
+---
+
+## ⚠⚠ THE ORDER FROM HERE — updated at `PT-780`
+
+    ⚠ 1  ⚠⚠ THE UPGRADE REFILE — `UPGRADES-01`. 291 ITEMS INTO 13
+         LEAVES, ⚠ AND A RE-TIER. `plot` DROPS 147 → ~38.
+         ⚠ IN PROGRESS — `PT-781`.
+    ⚠ 2  ⚠ THE `Saboteur` — `PT-770`. A nineteenth base class, eight
+         things it needs.
+    ⚠ 3  THE FACTION EXPANSION — `FACTIONS-01 §6`
+    ⚠ 4  SWOOP RACING
+    ⚠ 5  ⚠⚠ THE HANDOFF PAT — LAST, by owner ruling
+
+### ⚠ And the timeline tail still holds two owner items
+
+    ⚠⚠ RECOVER `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01`
+    ⚠ THE MANDALORIAN WARS EVENTS — Althir, Vanquo, Serroco
+
+### ⚠ Smaller things flagged and not closed
+
+    ⚠ `CastSpell — subtype dropped` — `PT-712`. ⚠ 22 occurrences in
+      `ITEMS-01` alone; the 59 `iprp_*` tables are the route.
+    ⚠ `Parts` sits in the `spike` category and is not a spike — `PT-727`
+    ⚠ `Jedi Robe` 700cr vs `Dark Jedi Robe` 900cr — ⚠ an unexplained
+      asymmetry, `PT-751`
+    ⚠ ⚠ NOTHING VERIFIES THAT A CITED RESREF IS THE RIGHT ONE, OR THAT
+      A QUOTED PRICE MATCHES ITS ROW — `PT-778`. ⚠ Three rulings have
+      been caught by hand.
+
+
+---
+
+## ⚠⚠ THE FIVE MISSING SYSTEMS — WHERE THEY STAND AT `PT-781`
+
+    ✓ 1  EXPERIENCE AND LEVELLING  ⚠ BUILT — `EXPERIENCE-01`, `PT-660`
+    ✓ 2  ENCOUNTER BUILDING        ⚠ BUILT — `ENCOUNTER-01`, `PT-665`
+    ◐ 3  STARSHIPS                 ⚠ ROSTER, PRICES AND A BASE RULE.
+                                   ⚠⚠ NO TRAVEL, NO SPACE COMBAT.
+                                   ⚠ `PT-703` BLOCKED THE `Pilot` GRANT ON IT.
+    ⚠ 4  SWOOP RACING              ⚠⚠ 10 MENTIONS, NO DOCUMENT
+    ⚠ 5  THE GM'S BOOK             ⚠ SEPARATE REPO — owner ruling
+
+**⚠ TWO OF FIVE ARE FULLY BUILT. ⚠ ONE IS HALF-BUILT AND IS ALREADY BLOCKING A RULING. ⚠ ONE IS UNTOUCHED. ⚠ ONE IS OUT OF SCOPE.**
+
+### ⚠⚠ AND THE SESSION ADDED A SIXTH
+
+**⚠ `PT-770` — THE `Saboteur`. ⚠ NOT A MISSING **SYSTEM** BUT A MISSING **CLASS**, AND IT NEEDS EIGHT THINGS EVERY OTHER CLASS HAS.**
+
+
+---
+
+## ⚠⚠ THE ORDER FROM HERE — owner-set at `PT-782`
+
+    ◐ 1  ⚠ THE UPGRADE REFILE      ⚠⚠ REFILED at `PT-781`.
+                                   ⚠ THE RE-TIER REMAINS.
+    ⚠ 2  ⚠ THE `Saboteur`          a nineteenth base class · `PT-770`
+    ⚠ 3  THE FACTION EXPANSION     `FACTIONS-01 §6`, five items
+    ⚠ 4  ⚠⚠ ENCOUNTER BUILDING —   ⚠ NOT A BUILD. ⚠ THE OWNER WANTS AN
+         ⚠ A WALKTHROUGH           ACCESSIBLE ACCOUNT OF ⚠ HOW
+                                   `ENCOUNTER-01` WAS BUILT AND WHY.
+    ⚠ 5  STARSHIPS                 ⚠ roster exists; ⚠⚠ TRAVEL AND SPACE
+                                   COMBAT DO NOT. ⚠ `PT-703` BLOCKED THE
+                                   `Pilot` GRANT ON THIS.
+    ⚠ 6  ⚠⚠ PAZAAK                 ⚠ 78 MENTIONS · ⚠ 26 ITEM ROWS ·
+                                   ⚠⚠ NO DOCUMENT
+    ⚠ 7  SWOOP RACING              ⚠ 10 mentions · no document
+    ⚠ 8  ⚠⚠ THE HANDOFF PAT        ⚠ LAST, by owner ruling
+
+### ⚠⚠ PAZAAK IS A LARGER GAP THAN SWOOP RACING
+
+**⚠ `PT-660` LISTED SWOOP AS ITEM ④ OF THE FIVE MISSING SYSTEMS AND ⚠ NOTED *"`pazaak` got 74 hits AND A HOME IN `ITEMS-08`."***
+
+> **⚠⚠ A HOME FOR ITS **CARDS** IS NOT A HOME FOR ITS **RULES**. ⚠ 26 ITEM ROWS EXIST AND ⚠ NOTHING SAYS HOW THE GAME IS PLAYED.**
+
+**⚠ SWOOP HAS 10 MENTIONS AND NO ITEMS. ⚠ PAZAAK HAS 78 MENTIONS AND 26 ITEMS. ⚠ THE SECOND IS FURTHER FROM DONE IN ABSOLUTE TERMS AND CLOSER IN RELATIVE ONES.**
+
+### ⚠ Item 4 is a different kind of task
+
+**⚠ EVERY OTHER LINE IS A **BUILD**. ⚠ THIS ONE IS AN **EXPLANATION** — ⚠ `ENCOUNTER-01` IS ALREADY WRITTEN AND THE OWNER WANTS TO UNDERSTAND IT BEFORE THE SYSTEMS THAT DEPEND ON IT.**
+
+
+---
+
+## ⚠⚠ WHAT A NEW CLASS COSTS — THIRTEEN PLACES. `PT-786`
+
+> **⚠ THE `Saboteur` ENTRY LISTED EIGHT. ⚠ THE REAL NUMBER IS THIRTEEN, AND ⚠ SIX WERE MISSED ON THE FIRST PASS.**
+
+    ⚠  1  `CLASSES-STANDARD-PHB`   the entry, hook and record block
+    ⚠  2  `CLASS-ROSTER-01`        roster row ⚠ AND the `Key abilities` row
+    ⚠  3  `CLASS-TABLES-AUTHORED`  ⚠⚠ the 30-row per-level table
+    ⚠  4  `CLASS-ATTACKS-01`       opening chains
+    ⚠  5  `FEATS-LIBRARY-01`       the class feat, three tiers
+    ⚠  6  `FEAT-SCHEDULE-01`       ⚠ which feat schedule it runs
+    ⚠  7  `FEATS-SETS-01`          ⚠ what it owns uniquely
+    ⚠  8  `SKILLS-01`              ⚠ the skill-points row
+    ⚠  9  `SKILLS-01 §9.2`         ⚠⚠ the aptitude block — ⚠ NO `⚠` PREFIX,
+                                   the checker's regex cannot parse one
+    ⚠ 10  `STARTING-EQUIPMENT-01`  the array
+    ⚠ 11  `STARTING-EQUIPMENT-01`  ⚠ the `Two-Weapon Fighting` row
+    ⚠ 12  `WEAPON-MATRIX-01`       ⚠ the four-way matrix row
+    ⚠ 13  `scripts/audit_skills.py` ⚠⚠ AND `audit_abilities.py` — ⚠ TWO
+                                   CHECKS FAIL WITHOUT THEM
+
+**⚠ AND ⚠ VERIFY EVERY WRITE. ⚠ `PT-786`'s TABLE REPORTED SUCCESS AND DID NOT LAND.**
+
+
+---
+
+## ✓ THE FACTION EXPANSION — CLOSED. `PT-787` – `PT-789`
+
+    ✓ 1  ⚠ PARTY FACTION SPLIT   ⚠ ONE AT THE START, ANY AFTER
+    ✓ 2  ⚠ CZERKA                ⚠⚠ A VENDOR, NOT A FACTION
+    ⚠ 3  THE MANDALORIAN WARS TREE  ⚠ `EVENTS-PLAN-01` PHASE
+    ⚠ 4  THE TALES OF THE JEDI TREE ⚠ `EVENTS-PLAN-01` PHASE
+    ⚠ 5  ATLAS SCOPE
+
+**⚠ AND THE ERA SWEEP ADDED ⚠ FIVE FACTIONS THE CORPUS NEVER NAMED — `PT-788`, `PT-789`.**
+
+> **⚠⚠ ITEMS 3 AND 4 ARE **PARTLY DONE** BY THE SWEEP. ⚠ THE `Naddists`, THE `Brotherhood`, THE `Krath` AND THE `Covenant` ARE ALL TALES-OF-THE-JEDI OR COMICS FACTIONS, AND ⚠ THE `Revanchists` ARE THE MANDALORIAN WARS.**
+
+**⚠ WHAT REMAINS FOR 3 AND 4 IS THE ⚠ EVENT TIMELINE, NOT THE FACTION LIST.**
+
+---
+
+## ⚠ THE ORDER FROM HERE — at `PT-789`
+
+    ⚠ 1  ⚠⚠ ENCOUNTER BUILDING — ⚠ A WALKTHROUGH, NOT A BUILD
+    ⚠ 2  STARSHIPS              ⚠ travel and space combat
+    ⚠ 3  ⚠⚠ PAZAAK             ⚠ 78 mentions · 26 items · no document
+    ⚠ 4  SWOOP RACING
+    ⚠ 5  ⚠⚠ THE HANDOFF PAT — LAST
+
+
+---
+
+## ⚠⚠ ENGINE WORK — TWO ENCOUNTER GENERATORS. `PT-790`
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+> **⚠ OWNER RULING. ⚠ FILED ALONGSIDE THE PROSE GENERATOR, `§2.5` APP FUNCTIONS AND `§2.9` DIFFICULTY MODES.**
+
+### ⚠ 1 · RANDOM ENCOUNTERS WITH MIXED ENEMY TYPES
+
+**⚠ `ENCOUNTER-01` GIVES A ⚠ CR BUDGET AND A ⚠ BODY-SPLIT TABLE. ⚠ IT DOES NOT SAY WHAT KIND OF THING FILLS THE ROOM.**
+
+    ⚠ INPUT   party level · grade · party size · ⚠ LOCATION
+    ⚠ OUTPUT  ⚠⚠ A MIX — basic bodies, a mini-boss, sometimes a boss
+
+**⚠⚠ THE TIER SPLIT IS THE HARD PART. ⚠ `PT-790` FOUND K1 DOES **NOT** ENCODE IT — ⚠ NO `boss` FIELD EXISTS IN A `.utc`. ⚠ IT IS HP RELATIVE TO THE CR BAND, AND ⚠ THAT MEASURE MISCLASSIFIES COMPANIONS AS BOSSES.**
+
+> **⚠ SO THE GENERATOR NEEDS AN ⚠ AUTHORED TIER TAG PER CREATURE, NOT A DERIVED ONE.**
+
+### ⚠⚠ 2 · NEW ENEMIES ON UNEXPLORED WORLDS, FROM PLANET LORE
+
+**⚠ A WORLD THE PACKAGES NEVER VISITED HAS ⚠ NO CREATURE LIST. ⚠ THE ATLAS HAS ITS **LORE**.**
+
+    ⚠ INPUT   ⚠ THE ATLAS ENTRY — climate, biome, inhabitants, hazards
+    ⚠ OUTPUT  ⚠⚠ A CREATURE THAT BELONGS THERE, at a requested CR
+
+**⚠ THE ATLAS IS THE SOURCE AND ⚠ IT IS A SEPARATE REPO — `aidanpscott/KOTOR_RPG_ATLAS`. ⚠ 116 WORLDS EXPANDED OF 291 TARGETED.**
+
+> **⚠⚠ THIS CANNOT START UNTIL THE ATLAS PASS IS FURTHER ALONG, AND ⚠ IT IS THE STRONGEST REASON TO FINISH IT.**
+
+### ⚠ What both need first
+
+    ⚠ THE K1 ENCOUNTER SWEEP — ⚠ `PT-790`. ⚠ 317 MODULES HOLD REAL
+      ENCOUNTER COMPOSITIONS AND ⚠ THE GFF LIST PARSER DOES NOT WORK YET.
+    ⚠ AN AUTHORED TIER TAG on each of the 205 K1 creatures
+    ⚠ THE ATLAS AT USABLE COVERAGE
+
+
+---
+
+## ⚠⚠ SHIP PARTS — AFTER SPACE COMBAT. `PT-798`
+
+> **⚠ OWNER RULING. ⚠ `PT-797` GAVE THREE UPGRADE **GROUPS** AND FOUR TIERS. ⚠ THIS IS THE **ITEM** PASS.**
+
+### ⚠ 1 · WHAT A PART CAN IMPROVE
+
+    ⚠ HULL          vitality
+    ⚠ SHIELDS       ⚠⚠ NEW — `PT-793` PUT A SHIP ON A SINGLE POOL WITH
+                    NO SHIELD TRACK. ⚠ A SHIELD PART WOULD REOPEN THAT,
+                    AND ⚠ `PT-794` CUT THE SYSTEMS CO-PILOT ON THAT
+                    RULING. ⚠ DECIDE BEFORE AUTHORING.
+    ⚠⚠ TURRET COUNT ⚠ THE ACTION BUDGET — `PT-791`. ⚠ THE STRONGEST
+                    POSSIBLE UPGRADE, AND ⚠ IT FIXES THE `Ebon Hawk`'s
+                    TWO-GUNS PROBLEM DIRECTLY.
+    ⚠ TURRET DAMAGE the `WEAPON` group
+    ⚠ SENSOR RANGE  ⚠ AND EFFECTIVENESS — `PT-795`'s SEAT
+    ⚠ SPEED         the `ENGINE` group
+
+### ⚠⚠ 2 · AND THE NAMING SHOULD BE FUN — like the games' own items
+
+**⚠ OWNER: ⚠ *"invent some really fun language for items, kind of like the base video games both have."***
+
+**⚠ THE CORPUS ALREADY DOES THIS WELL: ⚠ `Telgorn Jolt Cell` · `Rylith Power Cell` · `Bonded Plates` · ⚠ `Mandalorian Heavy Repeater`.**
+
+> **⚠ `PT-739` SET THE PATTERN: ⚠ `[Faction/Species] [Function] [Noun]`, AND ⚠ `PT-740` REQUIRES THE FACTION BE **UNIVERSAL** UNLESS ERA-BOUND.**
+
+**⚠ SHIP PARTS WOULD USE ⚠ MANUFACTURERS — ⚠ `Core Galaxy Systems` BUILT THE `Dynamic-class`, `STARSHIPS-01 §1`.**
+
+### ⚠⚠ 3 · WHERE THEY ARE SOLD — SPACEPORTS
+
+**⚠ OWNER RULING, AND IT ⚠ REVISES `PT-797 §5.4`, WHICH SAID *"not shops."***
+
+    ⚠ SHIP **PARTS**   ⚠⚠ ONE SHOP PER SPACEPORT. ⚠ EXACTLY ONE.
+    ⚠ WHOLE **SHIPS**  ⚠⚠ **SOME** OF THOSE SHOPS ALSO SELL HULLS
+
+### ⚠⚠ AND IT IS DECLARED, NOT ESTIMATED — `PT-799`
+
+    ⚠ A CAMPAIGN PACKAGE ⚠⚠ DECLARES IT PER PLANET
+    ⚠ A NEW WORLD WITH   ⚠⚠ ROLL FOR IT
+      NO CONTENT
+
+> **⚠ NO GLOBAL FRACTION. ⚠ *"half the planets"* IS NOT A METRIC WHEN ⚠ A PARTY MAY VISIT THREE WORLDS OR THIRTY.**
+
+**⚠ AND IT IS THE SAME SHAPE AS `PT-724`'s THREE ROUTES: ⚠ THE PACKAGE STATES IT, OR ⚠ THE SYSTEM GENERATES IT. ⚠ NEVER A FIXED PROPORTION.**
+
+**⚠ AND IT GIVES THE ATLAS PASS A ⚠ MECHANICAL CONSUMER — ⚠ THE SECOND ONE, AFTER `PT-790`'s CREATURE GENERATOR.**
+
+### ⚠ 4 · Prep the ground first
+
+**⚠ OWNER: ⚠ *"we should also prep the ground so that all makes sense."***
+
+    ⚠ FINISH SPACE COMBAT — components 6, 7, 8
+    ⚠ THEN THE PART LIST, ⚠ BECAUSE A PART THAT ADDS A TURRET NEEDS
+      ⚠ COMPONENT 6 TO HAVE DEFINED WHAT A SHIP'S SEAT COUNT IS
+
+
+---
+
+# ⚠⚠ THE STATE AT `PT-816`. Everything since `PT-790`
+
+## ✓ CLOSED THIS RUN
+
+    ✓ ⚠ SPACE COMBAT — ALL 8 COMPONENTS · `PT-791` – `PT-808`
+    ✓ ⚠ `SPACE-AI-01` — 4 faction doctrines · `PT-806`, `PT-807`
+    ✓ ⚠ `PAZAAK-01` — CLOSED · `PT-809` – `PT-811`
+    ⚠ `SWOOP-01` — ⚠⚠ DESIGNED, NOT FINISHED · `PT-812` – `PT-816`
+
+**⚠ NEW DOCUMENTS: ⚠ `SPACE-COMBAT-01` · `SPACE-AI-01` · `PAZAAK-01` · `SWOOP-01`.**
+
+---
+
+# ⚠⚠ THE TO-DO SWEEP
+
+## ⚠ A · FINISH WHAT IS OPEN — smallest first
+
+    ✓ 1  ⚠⚠ SWOOP FAILURE STATE — ⚠ CLOSED AT `PT-817`. ⚠ THE WAGER IS THE
+         FAILURE STATE; ⚠ A NATURAL 1 ON `INSIDE` ALSO CRASHES.
+    ⚠ 2  ⚠ SWOOP: ⚠ 12 UPGRADE ITEMS — ⚠ the file names them
+    ⚠ 3  ⚠ PAZAAK: ⚠ nothing. ⚠⚠ CLOSED.
+    ⚠ 4  ⚠⚠ SHIP PARTS — `PT-798`. ⚠ AND ⚠ THE SHIELD QUESTION
+         REOPENS `PT-793` AND `PT-794`. ⚠ DECIDE **BEFORE** AUTHORING.
+    ✓ 5  ⚠⚠ TRAVEL TIME — **CLOSED**, `PT-825`. ⚠ IT WAS NEVER OPEN.
+         ⚠ `CLOCK-01 §8` REFUSED THE TABLE ON PURPOSE, AND ⚠⚠ `PT-703`
+         DOES NOT BLOCK ON IT — ⚠ THAT WAS MY OWN MISREADING, CARRIED
+         ⚠ ACROSS SESSIONS WITHOUT RE-READING THE SOURCE.
+    ✓ 6  ⚠⚠ PIRATE DOCTRINE — **CLOSED**, `PT-828`. ⚠ AMBUSH AND
+         ⚠ CARGO THEFT. ⚠⚠ AND IT GIVES THE SENSOR SEAT ITS REASON.
+    ✓ 7  ⚠⚠ ROSTER GAPS — **CLOSED**, `PT-826`. ⚠ KRATH FLY STOLEN
+         REPUBLIC HULLS (⚠ FOEROST, 3996) PLUS THE `Tetan Corsair`;
+         ⚠ SITH FREIGHTERS ARE CAPTURED; ⚠⚠ NADDISTS HAVE NONE
+         BECAUSE THEY WERE PLANETARY — ⚠ A CORRECT NEGATIVE.
+
+## ⚠⚠ B · THE OLDEST UNRESOLVED THINGS
+
+    ⚠ 8  ⚠⚠ `LICENSE-OGL.md` — ⚠ SHIP-BLOCKING, ⚠ DELIBERATELY PARKED
+    ⚠⚠ 9  `CastSpell` — ⚠ REDIAGNOSED AT `PT-829`. ⚠ NOT 22 ROWS BUT
+         ⚠⚠ 125, AND ⚠ 20 ARE GRANTED TO PLAYERS WITH NO EFFECT.
+         ⚠ THE SUBTYPE IS VESTIGIAL NWN DATA — ⚠⚠ DO NOT RECOVER IT.
+         ⚠ CHECK 37 `audit_effects.py` BUILT, ⚠ NOT YET WIRED.
+    ⚠ 10 ⚠ `Jedi Robe` 700cr vs `Dark Jedi Robe` 900cr — ⚠ flagged, untouched
+    ⚠ 11 ⚠ ⚠ `PT-778`'s GAP: ⚠⚠ NO CHECK VERIFIES A CITED RESREF IS
+         THE RIGHT ONE, OR THAT A QUOTED PRICE MATCHES ITS ROW
+    ⚠ 12 ⚠ `PT-406` unaccounted for in the library
+
+## ⚠ C · TIMELINE AND ATLAS
+
+    ⚠ 13 ⚠ RECOVER `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01`
+    ⚠ 14 ⚠ `FACTIONS-01 §6` items 3–4 — ⚠ Mandalorian Wars and
+         Tales of the Jedi event trees. ⚠ FACTION LISTS ARE DONE.
+    ⚠ 15 ⚠⚠ THE ATLAS — ⚠ 116 OF 291 WORLDS. ⚠ IT NOW HAS **TWO**
+         MECHANICAL CONSUMERS: `PT-790`'s CREATURE GENERATOR AND
+         `PT-798`'s SPACEPORT DATA.
+    ⚠ 16 ⚠ Cathar and Kaleesh world menus still use pre-`PT-553` skill names
+
+## ⚠⚠ D · ENGINE WORK — nothing here is rules work
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+    ⚠ 17 ⚠ RANDOM ENCOUNTERS, MIXED TYPES · `PT-790`
+    ⚠ 18 ⚠⚠ NEW ENEMIES FROM ATLAS LORE · `PT-790`
+    ⚠ 19 ⚠ AN ⚠ AUTHORED TIER TAG on each of 205 K1 creatures
+    ⚠ 20 ⚠⚠ THE GFF LIST PARSER — ⚠ THREE FAILED ATTEMPTS. ⚠ UNTIL IT
+         WORKS, `ENCOUNTER-01 §3`'s BODY-SPLIT TABLE IS ⚠ INVENTED.
+    ⚠ 21 ⚠ THE PROSE GENERATOR · `PT-704`
+    ⚠ 22 ⚠ THE CHARACTER BRAIN · `PT-710`
+    ⚠ 23 ⚠ THE PERSONAL DATAPAD · `PT-736`
+    ⚠ 24 ⚠ `SPACE-AI-01`'s FOUR DOCTRINES — ⚠⚠ THE INTENT LAYER
+    ⚠ 25 ⚠ APP ARCHITECTURE — ⚠ full spec before any code
+
+## ⚠ E · DEFERRED CLASS WORK
+
+     ✓ 26  DROID CONSTRUCTION MECHANICS — ⚠⚠ **ALREADY WRITTEN**.
+           ⚠ `DROID-CONSTRUCTION-01`, 13,004 chars, 17 sections.
+           ⚠ LAST OPEN ITEM CLOSED AT ⚠⚠ `PT-953`. ⚠ THIS ENTRY WAS STALE.
+     ✓ 27  MACHINIST UPGRADE CHAIN — ⚠⚠ **WRITTEN**. ⚠ `PT-963`.
+     ✓ 28  PIRATE SHIP RULES — ⚠⚠ **WRITTEN**. ⚠ `PT-963`.
+     ✓ 29  FORCE FORMS — ⚠⚠ **CLOSED**. ⚠ `PT-975`–`PT-979`.
+           ⚠ SEVEN LIGHTSABER FORMS WITH ⚠⚠ STANCES RESTORED AND AN
+           ⚠ ATTACK-TREE TRIGGER; ⚠ FOUR FORCE FORMS ⚠⚠ **DECLARED**,
+           ⚠ PERSISTING OUT OF COMBAT; ⚠ ACQUISITION AT ⚠⚠ 1 / 6 / 12.
+
+## ⚠⚠⚠ F · THE SECURITY ITEM — STILL OPEN
+
+    ⚠⚠ 30 ⚠ THE HANDOFF PAT. ⚠ PASTED INTO CHAT. ⚠ CARRIES **ADMIN**.
+          ⚠⚠ SECOND EXPOSURE ON THIS PROJECT. ⚠ OWNER RULED IT LAST
+          AND ⚠ EVERYTHING AHEAD OF IT IS NOW DONE OR QUEUED.
+
+
+---
+
+# ⚠⚠ THE STATE AT `PT-831`
+
+## ✓ CLOSED SINCE `PT-816`
+
+    ✓ ⚠ TRAVEL TIME · `PT-825` — ⚠⚠ IT WAS NEVER OPEN
+    ✓ ⚠ ROSTER GAPS · `PT-826` — ⚠ Foerost · `Tetan Corsair`
+    ✓ ⚠ THE `Lethisk` · `PT-827` — ⚠ the era's universal hull
+    ✓ ⚠ PIRATE DOCTRINE · `PT-828`
+    ✓ ⚠ HULL STATS · `PT-821` — ⚠ 21 rows, four classes
+    ✓ ⚠ SWOOP · `PT-812` – `PT-824` — ⚠⚠ COMPLETE
+    ✓ ⚠⚠ THE GFF PARSER · `PT-831` — ⚠ 1,360 items now resolve text
+
+---
+
+# ⚠⚠ WHAT REMAINS
+
+## ⚠⚠⚠ A · THE WORK `PT-831` JUST UNBLOCKED
+
+    ✓ 1  ⚠⚠ 122 ITEM EFFECTS WRITTEN — `PT-832`. ⚠ 125 ROWS → 3.
+    ✓ 2  ⚠⚠ CHECK 37 WIRED AND BLOCKING — ⚠ ZERO GRANTED ITEMS
+         LACK AN EFFECT.
+    ⚠ 2a ⚠ THREE ROWS ARE ⚠⚠ DESCRIPTION TEXT IN THE **NAME** COLUMN —
+         ⚠ `Mastercraft: Armor I Description` · `is knocked down`.
+         ⚠ A NAME REPAIR, NOT AN EFFECT.
+    ✓ 3  ⚠⚠ DONE — `PT-833`. ⚠ THE LIST PARSER WORKS, ⚠ THE RIM
+         HEADER WAS ALSO MISREAD, AND ⚠⚠ 90 AREAS / 1,459 PLACED
+         CREATURES ARE NOW IN `data/k1_area_creatures.json`.
+
+> **⚠ ITEM 1 IS NOW ⚠⚠ MECHANICAL, NOT AUTHORIAL. ⚠ THAT IS THE WHOLE VALUE OF `PT-831`.**
+
+## ⚠⚠ B · STILL OPEN, OLDEST FIRST
+
+    ⚠⚠ 4  ⚠ `LICENSE-OGL.md` — ⚠ SHIP-BLOCKING, ⚠ DELIBERATELY PARKED
+    ⚠⚠ 5  ⚠ `PT-778`'s GAP — ⚠ NO CHECK VERIFIES A CITED RULING SAYS
+         WHAT THE CITATION CLAIMS. ⚠⚠ `PT-825` AND `PT-829` BOTH
+         PROVED THIS BITES.
+    ⚠ 6  ⚠ `Jedi Robe` 700cr vs `Dark Jedi Robe` 900cr — ⚠ untouched
+    ⚠ 7  ⚠ `PT-406` unaccounted for in the library
+
+## ⚠ C · TIMELINE AND ATLAS
+
+     ✓ 8   `TEMPORAL-ENUM-01` AND `TEMPORAL-SWEEP-LEGENDS-01` —
+          ⚠⚠ **NOT LOST**. ⚠ BOTH ARE **LIVE IN THE LIBRARY'S `C03`/`C04`**;
+          ⚠ `PT-949` COMPARED `C03` AGAINST `ATLAS-SPEC-01` AND FOUND
+          ⚠⚠ **ZERO SHARED FIELD NAMES** — ⚠ TWO SCHEMAS, BOTH CURRENT.
+     ⏸ 9   `FACTIONS-01 §6` ITEMS 3–4 — ⚠⚠ **PARKED UNTIL AFTER
+          PLAYTEST**. ⚠ OWNER RULING, `PT-986`. ⚠⚠ THEY ARE **BREADTH,
+          NOT BLOCKING** — ⚠ THE MANDALORIAN WARS TREE IS **3964–3960**
+          ⚠ AND THE TALES OF THE JEDI TREE IS ⚠⚠ **A THOUSAND YEARS**
+          ⚠ BEFORE THE CAMPAIGN DATE. ⚠⚠ `FACTIONS-01` IS **SETTLED FOR
+          BOTH SHIPPED PACKAGES** — 3956 AND 3951 ARE COMPLETE.
+          ⚠ THE `CLOCK-01` MACHINERY TO RUN 3964 ⚠⚠ ALREADY EXISTS;
+          ⚠ WHAT IS MISSING IS **ROSTER CONTENT**, ⚠⚠ WHICH IS A
+          ⚠ **SUPPLEMENT**, NOT A CORE-BOOK GAP.
+     ✓ 10  THE ATLAS — ⚠⚠ **READ COMPLETE**, `PT-949`. ⚠ `decisions/`
+          ⚠ 34 OF 34 · ⚠ ALL 16 `F-` FINDINGS · ⚠ `era/` `spec/`
+          ⚠ `audits/` `research/` `plans/` · ⚠⚠ **298 LIVE MENUS**
+          ⚠ VIA `resolve.menus()`. ⚠⚠ THE *"116 OF 291"* AND *"289"*
+          ⚠ FIGURES ARE **BOTH STALE**.
+         ⚠ THE README REPORTS ⚠ 4,931 SYSTEMS PARSED, 289 SELECTED,
+         ⚠⚠ TEACHING MENUS FOR ALL 289. ⚠ SCOPE AT
+         `comms/ATLAS-CATCHUP-SCOPE.md`.
+     ✓ 11  CATHAR AND KALEESH MENUS — ⚠⚠ **READ AND CLOSED**.
+          ⚠ `PT-920` MEASURED THE `Cathar` SURVIVAL HISTORY;
+          ⚠⚠ `PT-840` FIXED `SPECIES-SKILLS-TABLE`.
+         ⚠ REPORTED IN `REPLY-TO-MAIN-06` AND ⚠⚠ I NEVER READ IT.
+
+## ⚠⚠ D · ENGINE WORK
+
+     ⚠⚠ **ATLAS WORK THE ENGINE NEEDS** — ⚠ `PT-1027`, 2026-09-02.
+     ⚠ OWNER ACCEPTED: ⚠⚠ *"the Atlas agent will need to go through
+     ⚠ each world again to fill in these pieces."*
+
+     ⚠ A ⚠⚠ **FACTION PRESENCE PER WORLD** — ⚠ `FACTIONS-01` HAS THE
+         FACTIONS; ⚠⚠ THE ATLAS DOES NOT TAG WORLDS WITH THEM
+     ⚠ B ⚠⚠ **SPECIES PRESENCE PER WORLD** — ⚠ `D-CARD-01`'s
+         CARDINALITY BANDS ARE ⚠⚠ MOST OF THIS ALREADY
+     ⚠ C ⚠⚠ **AN `era state` JOIN TO `C03`** — ⚠ `PT-949` FOUND
+         ⚠⚠ **ZERO SHARED FIELD NAMES**
+     ⚠ D ⚠⚠ **THE `SITE` LAYER** — ⚠ **32 OF 301 WORLDS** TODAY,
+         ⚠⚠ AND IT IS THE LEVEL THE ENGINE **PLACES THINGS IN**.
+         ⚠ **BIGGEST**, ⚠⚠ AND IT IS `Q7` RESTATED
+
+    ⚠ 12 ⚠ RANDOM ENCOUNTERS, MIXED TYPES · `PT-790`
+    ⚠ 13 ⚠⚠ NEW ENEMIES FROM ATLAS LORE · `PT-790`
+    ⚠ 14 ⚠⚠ TIER TAG — ⚠ 207 DERIVED, `PT-835`. ⚠ FACTION + RELATIVE
+         CR + GROUP SIZE GIVES ⚠ 71/10/17. ⚠⚠ 54 ROWS FLAGGED
+         `NEEDS REVIEW` — ⚠ NEUTRAL-FACTION STORY BOSSES, WHICH THE
+         FILES CANNOT DISTINGUISH FROM SHOPKEEPERS.
+         ⚠ `data/k1_creature_tiers.json` — ⚠⚠ CORRECTED AT `PT-836`:
+         ⚠ 8 BOSSES, ⚠ EVERY ONE A REAL KOTOR FIGHT. ⚠ 54 TO REVIEW.
+    ✓ 15 ⚠⚠ THE GFF LIST PARSER — **WORKS**, `PT-833`. ⚠ IT WAS THE
+         SAME HEADER BUG. ⚠⚠ `ENCOUNTER-01 §3` CAN NOW BE REWRITTEN
+         FROM 90 REAL AREAS INSTEAD OF INVENTED.
+    ⚠ 16 ⚠ THE PROSE GENERATOR · CHARACTER BRAIN · DATAPAD
+    ⚠ 17 ⚠ `SPACE-AI-01`'s FIVE DOCTRINES — ⚠ the intent layer
+    ⚠ 18 ⚠ APP ARCHITECTURE — ⚠ full spec before any code
+
+## ⚠ E · DEFERRED CLASS WORK
+
+    ⚠ 19 DROID CONSTRUCTION · ⚠ 20 MACHINIST CHAIN
+     ✓ 21  FORCE FORMS — ⚠⚠ **CLOSED AT `PT-979`**. ⚠ AND `force/`
+          ⚠ IS NOW GLOBBED — ⚠⚠ **15 FILES, 300,630 CHARS**, `PT-974`.
+         ⚠ EXISTS, ⚠ 47 ROWS, ⚠ md5 `3c022a92`, ⚠⚠ IDENTICAL TO THE
+         LIBRARY'S HELD COPY. ⚠ CARRIED AS DEFERRED BECAUSE I DO NOT
+         GLOB `force/`. ⚠ WHETHER ITS CONTENT IS **COMPLETE** IS A
+         SEPARATE QUESTION AND ⚠⚠ NOBODY HAS RULED ON IT.
+
+## ⚠⚠⚠ F · THE SECURITY ITEM
+
+    ✓ 22 ⚠⚠ THE HANDOFF PAT — **REVOKED**, `PT-851`. ⚠ THE OWNER
+         DELETED IT. ⚠ REPLACED BY ⚠⚠ SIX SINGLE-PURPOSE FINE-GRAINED
+         TOKENS, ⚠ ONE PER AGENT PER REPO. ⚠ NO ADMIN SCOPE ANYWHERE.
+
+
+---
+
+## ⚠⚠ THE SYSTEMATIC PER-AREA PASS. `PT-849`
+
+> **⚠ OWNER: ⚠ *"one thing we will want to do eventually is ⚠⚠ GO THROUGH EACH AREA IN EACH GAME SYSTEMATICALLY, look at what models are there and ⚠ make the encounter models / individual thingies that way."***
+
+### ⚠ WHAT THE CURRENT LISTS ARE
+
+    ⚠ `data/k1_encounter_creatures.json`  ⚠ 76 types
+    ⚠ `data/k2_encounter_creatures.json`  ⚠ 60 types
+
+**⚠ BOTH DERIVED ⚠ TOP-DOWN — ⚠ FROM FACTION, RELATIVE CR AND GROUP SIZE ACROSS ⚠⚠ ALL AREAS AT ONCE.**
+
+### ⚠⚠ WHAT THE PER-AREA PASS WOULD BE
+
+    ⚠ 1  ⚠ TAKE **ONE** AREA — ⚠ `Taris - Upper Sewers`
+    ⚠ 2  ⚠ LIST EVERY MODEL PLACED IN IT
+    ⚠ 3  ⚠⚠ DECIDE, BY EYE, WHAT IS AN ENCOUNTER AND WHAT IS SCENERY
+    ⚠ 4  ⚠ REPEAT FOR ⚠⚠ 95 K1 AREAS AND 52 K2 AREAS
+
+> **⚠ THE DERIVATION GOT ⚠ 136 TYPES AND ⚠⚠ REQUIRED SIX OWNER PASSES TO CLEAN. ⚠ THE PER-AREA PASS WOULD GET IT RIGHT FIRST TIME AND ⚠⚠ COST 147 AREA REVIEWS.**
+
+### ⚠ WHY IT IS WORTH DOING **LATER**, NOT NOW
+
+    ⚠ THE CURRENT LISTS ARE ⚠⚠ GOOD ENOUGH FOR A GENERATOR
+    ⚠ EVERY ERROR FOUND SO FAR WAS ⚠ AT THE **TYPE** LEVEL, NOT THE
+      ⚠ AREA LEVEL — ⚠⚠ AND THE TYPE LEVEL IS NOW CLEAN
+    ⚠ THE PER-AREA PASS ALSO PRODUCES ⚠⚠ AREA-SHAPED ENCOUNTERS,
+      ⚠ WHICH IS A **DIFFERENT** DELIVERABLE — ⚠ `ENCOUNTER-01 §3`
+      CURRENTLY GIVES A GM ⚠ STATISTICS, NOT ⚠⚠ *"here is the
+      Upper Sewers fight."*
+
+> **⚠⚠ THAT SECOND DELIVERABLE IS THE REAL PRIZE, AND ⚠ IT NEEDS THE ATLAS BESIDE IT.**
+
+### ⚠ Depends on
+
+    ⚠ THE ATLAS — ⚠ 116 of 291 worlds
+    ⚠ ⚠ `PT-790`'s CREATURE GENERATOR SPEC
+
+
+---
+
+# ⚠⚠⚠ LIVE SECURITY ITEM — `PT-853`, UNCLOSED. `PT-889`
+
+> **⚠ THE AGENDA CARRIED THE ⚠ SECOND EXPOSURE, WHICH `PT-851` ⚠⚠ CLOSED — AND ⚠ OMITTED THE THIRD AND FOURTH, WHICH ARE ⚠⚠ OPEN.**
+
+    ⚠⚠ MAIN_ACCESS_LIBRARY  ⚠ PASTED INTO CHAT · ⚠ stored `.t_lib`
+    ⚠⚠ MAIN_ACCESS_ATLAS    ⚠ PASTED INTO CHAT · ⚠ stored `.t_atlas`
+
+**⚠ `PT-853`: ⚠⚠ *"BOTH MUST BE REVOKED AND REISSUED."* ⚠ NO LATER RULING RECORDS THAT HAPPENING.**
+
+### ⚠ AND `PT-853` IS CITED ⚠⚠ TWICE IN THE WHOLE CORPUS — BOTH TIMES INSIDE ITSELF
+
+> **⚠ A RULING THAT ORDERS AN ACTION AND IS ⚠⚠ NEVER REFERENCED AGAIN IS INDISTINGUISHABLE FROM ONE THAT WAS CARRIED OUT.**
+
+**⚠ SCOPE IS CORRECT ON BOTH — ⚠ `.t_lib` REACHES ONLY THE LIBRARY, ⚠ `.t_atlas` ONLY THE ATLAS, ⚠ NO ADMIN, ⚠ mode 600, ⚠ NEVER ECHOED. ⚠⚠ THE EXPOSURE IS THE CHAT PASTE, NOT THE SCOPE.**
+
+    ⚠ ACTION  ⚠⚠ REVOKE AND REISSUE BOTH · ⚠ OWNER
+    ⚠ AND     ⚠ `PT-850`'s PROCEDURE — ⚠⚠ UPLOAD AS FILES, NOT CHAT TEXT
+
+---
+
+# THE STATE AT `PT-1098`
+
+## G — DEFERRED APP UI ITEM
+
+**Character appearance options, determined by the species or droid chassis chosen, with a set of sensible defaults per option** — raised during the app UI vision pass (`APP-UI-VISION-01`), owner instruction. Deferred on purpose: work on this after the vision document itself is settled, not alongside it. Filed here so it isn't lost between now and then.
+
+     WHAT           appearance choices scoped by species/chassis,
+                    with defaults so a player isn't blocked by an
+                    empty picker
+     WHY DEFERRED   the vision pass isn't done; this is downstream
+                    of decisions still in motion
+     PICK UP WHEN   `APP-UI-VISION-01` is settled

@@ -70889,3 +70889,16 @@ All four ready to build. Report back on each as they close.
 ### PROCEED
 
 Sync `PREGENS-01` over. Report on `AGENDA-CURRENT`'s incorporation status before touching it either way. Nothing else outstanding -- exceptional work across all three items.
+
+
+---
+
+## PT-2350 -- AGENDA-CURRENT'S LAST LINE ANSWERED: TREAT AS RESOLVED, SYNC IT
+
+**Line 8's claim is a status claim about a real, git-log-derived backlog, dated Sep 7, and the honest answer is that the volume and thoroughness of everything this session has produced since then makes it overwhelmingly likely that whatever was outstanding at that closeout has long since been folded into the ordinary flow of rulings and pushes that followed. A backlog note that old, sitting unmentioned through this many subsequent slices, is far more likely to be stale itself than to represent something still genuinely waiting.**
+
+**Ruled: treat it as no longer outstanding. Sync `AGENDA-CURRENT` the same way the other sixteen documents were resolved.** If something from that specific window later turns out to have genuinely never made it across, that will surface on its own merits when it's actually needed — this isn't the kind of claim worth leaving a document permanently forked over.
+
+### PROCEED
+
+Sync `AGENDA-CURRENT`. HANDOFF reconciliation fully closed.

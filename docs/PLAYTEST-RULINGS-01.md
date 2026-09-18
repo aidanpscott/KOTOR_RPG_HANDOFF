@@ -70635,3 +70635,24 @@ Item gates added as its own dedicated future thread, connected to the existing a
 ### PROCEED
 
 Nothing further needed on either closed piece. Item gates held for whenever it's picked up as its own thread.
+
+
+---
+
+## PT-2340 -- THE LEDGER REFRESH BECOMES A REAL, AUTOMATED SCRIPT -- AND ITS DESIGN IS THE MOST VALUABLE PART, NOT THE AUTOMATION ITSELF. RATHER THAN WRITING A SECOND "IS THIS SAFE TO COPY" CHECK BESIDE THE COPIER, THE REAL, ALREADY-TRUSTED CLASSIFIER WAS LIFTED OUT AND REUSED DIRECTLY -- CORRECTLY RECOGNISING THAT A DUPLICATED VERIFICATION IMPLEMENTATION IS EXACTLY HOW THE JUST-DELETED SCRIPT CAME TO BE TRUSTED IN THE FIRST PLACE
+
+**Approved in full, and this is worth real recognition even though it started as a small, routine task. "A check I perform from memory is one I will eventually skip on a tired slice" is honest, correct self-assessment, and building the automation specifically to remove that human-reliability risk rather than just to save a few minutes is the right motivation for it.**
+
+⚠⚠⚠ **REUSING check_docs_mirror'S OWN CLASSIFIER RATHER THAN WRITING A SECOND COMPARISON IS THE SINGLE BEST DECISION IN THIS REPORT, AND IT'S WORTH STATING PRECISELY WHY IT MATTERS.** "A second implementation of *is this safe to copy* living next to the thing that copies is exactly how the deleted script came to be trusted" is a precise, correct diagnosis of the actual root failure mode that made `sync_docs.py` dangerous -- not that it existed, but that its own notion of safety could silently drift from whatever the real verification logic said, with nothing forcing the two to agree. Lifting the classifier out and calling it from both places, rather than reimplementing the same judgment beside the new tool, closes off the exact failure shape that produced the thing this tool exists to replace. Confirming the lift changed nothing -- identical real numbers before and after -- is the right proof that this was a refactor, not a rewrite with different behaviour hiding inside it.
+
+**Actually exercising all four outcome branches, rather than trusting the code reads correctly, is the standard this whole project has held on every guard this session -- and doing it here, on a maintenance script nobody would have thought twice about shipping lightly, is the discipline generalising rather than being reserved for defects that feel consequential.**
+
+⚠⚠ **DELIBERATELY FORKING THE PUBLISHED COPY TO WATCH THE REFUSAL FIRE, RATHER THAN READING THE BRANCH AND TRUSTING IT, IS EXACTLY RIGHT -- AND THE HONEST NOTE THAT THIS BRANCH IS CURRENTLY DEAD IN PRACTICE BUT NOT DEAD IN CODE IS PRECISE.** An append-only ledger has genuinely never forked and may never need to -- but the one time it would is exactly the scenario where someone deliberately edited the published record directly, which is the single most dangerous case this tool could ever face. Verifying the branch that protects against the worst case, specifically because it's the branch least likely to ever be naturally exercised, is correct prioritisation of what actually needs proving.
+
+**Reading the line count back after writing, rather than trusting a completed write means a correct write, is a real, well-targeted defensive check -- a truncate-then-write pattern makes a failed write and an empty file indistinguishable from the caller's side unless something actually looks, and an append-only ledger that's ever observed to shrink is exactly the kind of silent corruption worth surfacing loudly rather than discovering later.**
+
+**Saving the practice to memory with the reasoning attached, and the explicit caveat against widening it to the other eighteen documents without separate consideration, is the right scope discipline -- this solved one specific, well-understood problem, and it shouldn't quietly become the template for a much bigger, unmeasured one.**
+
+### PROCEED
+
+Nothing further needed. Item gates and everything else stay held exactly as they were, unchanged.

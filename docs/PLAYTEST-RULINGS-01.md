@@ -70733,3 +70733,53 @@ Document the OR/AND rule. Scope out alignment tracking and the Personal Crystal 
 ### PROCEED
 
 Nothing further needed on the stacking-fix thread -- decisively confirmed across every angle tested. The lower-tier-as-no-op case, Crush Opposition, and Battle Meditation remain open for whenever a suitable character or fixture makes them reachable.
+
+
+---
+
+## PT-2344 -- THE DOCUMENT AND THE PREDICATE ARE BUILT, WITH GENUINELY HONEST MUTATION-TESTING DISCLOSURE -- ONE TEST CASE HAD ACCIDENTALLY MADE THE SAFETY CHECK ITSELF NOT LOAD-BEARING. AND A GENUINELY DISCIPLINED REFUSAL TO WIRE THE IMPLANT ENFORCEMENT HALF-CORRECTLY: NO CHARACTER IN THE PRODUCT CURRENTLY WEARS ONE, AND THE TWO GATES STRUCTURALLY LIVE AT TWO DIFFERENT SEAMS BECAUSE AUTHORED CREATURES HAVE NO FEATS FIELD AT ALL. THREE REAL QUESTIONS, ALL RULED
+
+**A real mechanism that had existed since an earlier ruling, with a working extractor and a passing check, and never once had its actual rule written down anywhere -- "the only statement of the rule was the output" -- is exactly the kind of gap worth closing before building further on top of it. §17 is the right home for it, and covering the equip-time semantics, all six categories, which game expresses each, and the decisive OR/AND proof together in one place means the next reader doesn't have to reconstruct any of it from the extract.**
+
+⚠⚠ **BOTH SURVIVING MUTATIONS ARE GENUINELY VALUABLE CATCHES, AND THE SECOND ONE IS THE MORE IMPORTANT OF THE TWO.** Finding that no test case happened to carry two simultaneously-failing categories, so reporting only the first failure passed everything, is a real gap in coverage. But discovering that deleting the entire honoured-check safety mechanism killed nothing -- because one specific alignment gate happened to describe itself as nothing and fell through the check without ever exercising it -- means the safety mechanism wasn't actually protecting anything in that test, regardless of how correct its logic looked. Fixing it so every category genuinely describes itself, so removing the check produces a visible, detectable difference, is the right response: a safety check that can be silently deleted without consequence isn't a safety check, it's a comment shaped like one.
+
+**Promoting `requires_feat` from a sentence in a Note cell to a real column, expressed as the actual list-and-OR semantics rather than an implicit tier order nothing declares, is the right correction -- a rule that has to be read rather than consulted is a rule waiting to be misread. Auditing every extract field against HEAD and confirming only the intended changes moved is exactly the verification a schema change like this deserves.**
+
+### THE RESTRAINT ON WIRING -- APPROVED IN FULL, EXACTLY RIGHT
+
+⚠⚠⚠ **Framing the decision not to wire enforcement yet as itself consistent with the thread's own reason for existing -- "a predicate with no caller is the exact defect class this thread is about" -- rather than treating the restraint as separate from the finding, is precise self-application. Both measured facts are real, concrete reasons, not hesitation: nothing in the product currently equips an implant at all, and the two gates genuinely cannot both be checked in one place for one population, because an authored creature has no feats field to check against. Wiring only the CON half at the seam where that's all that's available would let an authored implant pass a gate it should fail, which is precisely the half-a-feature shape `PT-2240` already named as worse than building nothing.**
+
+**Finding a belt sitting in the implant slot, and that nothing anywhere compares a blueprint's base type against the slot it's equipped in, is a genuinely useful incidental catch -- unrelated to gates specifically, but real.**
+
+### RULED, ALL THREE
+
+**(a) Enforce both gates fully at the player seam, where both are actually checkable. Hold the authored-creature question -- whether that format should ever gain a feats field at all -- as its own separate, genuinely bigger decision, unforced by any current urgency.** Given no real content anywhere currently equips an implant on anything, there's no live case demanding an answer to the harder question right now, and answering it under that pressure would risk a worse decision than answering it later with a real reason to.
+
+**(b) A blueprint's base type disagreeing with the slot it's placed into is a real fault, and it's bigger than implants.** This isn't scoped to the implant slot specifically -- build a general check comparing a blueprint's base type against its assigned slot, catching the belt-in-implant-slot case as one instance of a class rather than a one-off patch. The same discipline held everywhere else this session: fix the shape, not the symptom.
+
+**(c) The seventeen named-character gates stay correctly unrepresentable, held, not urgent.** The reason is structural, not a data gap -- this format has no concept of a canonical named companion at all, by design, and inventing one specifically to satisfy seventeen item gates would be building a whole modelling decision backwards from a small corner of it. If this project's data model ever gains that concept for some other, real reason, these seventeen become answerable for free; forcing it now, for this alone, would be the wrong order of operations.
+
+### AGENDA
+
+Base-type-versus-slot validation added as its own real item, connected to but broader than the implant thread. Authored-creature feats as a format question held separately, unforced.
+
+### PROCEED
+
+Wire both implant gates at the player seam. Build the base-type-versus-slot check as a general validation, not implant-scoped. Everything else stays held exactly as ruled.
+
+
+---
+
+## PT-2345 -- TEST 109 CONFIRMS THE TWO-HANDED STRENGTH FIX DECISIVELY. A GENUINELY COUNTER-INTUITIVE, CORRECTLY-IDENTIFIED FACT FIRST: THE VIBROSWORD IS MECHANICALLY TWO-HANDED AND THE DOUBLE-BLADE ISN'T. AND THE KEY CONTROL -- RECOGNISING THE NEGATIVE READING ALONE WOULD HAVE PASSED WITH THE ENTIRE MECHANISM DELETED, AND CLOSING THAT GAP WITH A SECOND, POSITIVE-STRENGTH RUN ON THE IDENTICAL SETUP
+
+**Approved in full. Correctly identifying which weapon is actually two-handed by the code's own logic -- a single-attack weapon with an empty off-hand, not the one that sounds two-handed by name -- before building any test around it is exactly the kind of groundwork that prevents a whole report from testing the wrong thing convincingly. The negative reading itself closes decisively: the exact unmultiplied `-3`, cross-checked independently against both the die roll and the actual vitality change, with both competing readings' alternative numbers shown and neither matching.**
+
+⚠⚠⚠ **THE CONTROL IS THE BEST PIECE OF REASONING IN THIS REPORT, AND IT'S WORTH STATING PRECISELY WHY IT WAS NECESSARY.** "On its own the negative reading is a test that passes with the rule deleted" is exactly correct -- `lifts` requires both two-handed *and* a positive modifier, so a negative modifier prints identically whether the entire two-handed mechanism exists or not. A passing negative-case result alone proves nothing about whether the fix is actually engaged; it's equally consistent with the fix working and with there being no fix to engage at all. Running the identical blueprint and equipment shape with a positive Strength instead, and watching the same weapon correctly lift this time, is what turns the negative confirmation from a coincidence into a proof -- the same weapon, same code path, demonstrably capable of applying the multiplier, simply not doing so when the modifier is negative. That's the shape of evidence this specific claim needed, and it's exactly what was built.
+
+**Getting the positive confirmation on both the player's own attack and a placed creature's, when only one was asked for, is useful bonus coverage rather than scope creep -- it directly strengthens the control's own claim by showing the same mechanism behaves consistently across both populations that use it.**
+
+**The honest scope accounting is precise throughout: correctly substituting a creature blueprint for the originally-suggested species route once record_validate's bought-score floor and droid's separate no-bought-abilities rule made the direct species path unnecessarily complicated, rather than forcing the exact suggested method past a real structural obstacle. And correctly distinguishing "both paths agree on the positive half, and the underlying expression has no player/creature branch to disagree across" -- a real, structural reason to expect the negative case holds on the player path too -- from actually having observed it, rather than quietly treating the strong inference as equivalent to direct confirmation.**
+
+### PROCEED
+
+Nothing further needed on this thread -- decisively confirmed. The player-path-specifically-negative case and the occupied-off-hand-disables-the-multiplier case remain open for whenever a suitable fixture makes them directly reachable.

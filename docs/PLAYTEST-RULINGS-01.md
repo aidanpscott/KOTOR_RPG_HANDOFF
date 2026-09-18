@@ -70656,3 +70656,80 @@ Nothing further needed on either closed piece. Item gates held for whenever it's
 ### PROCEED
 
 Nothing further needed. Item gates and everything else stay held exactly as they were, unchanged.
+
+
+---
+
+## PT-2341 -- OWNER OPENS ITEM GATES AS THE NEXT DEDICATED BIG-SYSTEM THREAD. SAME TREATMENT AS SHIELDS AND GRENADES -- MEASURE FIRST, ALL SIX CATEGORIES TOGETHER, DROID SHIELDS FOLDED IN RATHER THAN LEADING
+
+**Opens the same way perception, Shields, and Grenades each did -- a genuine, dedicated arc rather than a quick patch to the one visible symptom that surfaced it.**
+
+### DIRECTED
+
+**Measure all six categories together before proposing or building anything:**
+
+  · feat (217) · alignment (73) · character (63) · attribute (42) · class (5) · gender (1)
+
+For each category, establish: what the gate actually means mechanically (a hard refusal to equip/use, a penalty for using it anyway, something else — don't assume all six work the same way just because they share one field), which real items carry it, and whether the already-identified three-part channel gap (catalogue doesn't reach `consumableAt`, `ItemRecord` drops `gates` at parse) is the whole story or whether any category needs something further once the channel itself is fixed.
+
+**Alignment gates specifically connect to the already-held target-alignment tracking item** — measure whether closing this thread requires that tracking to exist first, or whether alignment gates can be read against the wielder alone without needing to track a target's alignment at all. Report which before assuming they're the same piece of work.
+
+**Droid shields fold in as one instance of the feat category, not the thread's starting point** — the original finding, but not the frame to build the rest around.
+
+Report the complete picture before proposing anything. Given the scale (302 items, six genuinely different categories), expect this to surface real sub-questions needing individual rulings, the same shape every other big-system thread this session has taken.
+
+### PROCEED
+
+New thread opened. Awaiting the measurement.
+
+
+---
+
+## PT-2342 -- ITEM GATES MEASURED: ONE UNIFIED MECHANISM (EQUIP-TIME REFUSAL), OR WITHIN A CATEGORY PROVEN DECISIVELY BY TWO ITEMS THAT WOULD OTHERWISE BE UNEQUIPPABLE BY ANYONE. THE PERSONAL CRYSTAL (57 OF 73 ALIGNMENT GATES) TURNS OUT TO BE A DIFFERENT MECHANIC ENTIRELY -- VARIANT SELECTION, NOT PERMISSION. ATTRIBUTE GATES COLLIDE WITH AN EXISTING RULED FEAT CHAIN, CARRYING A DISTINCTION THE FEAT CHAIN STRUCTURALLY CANNOT EXPRESS. SIX RULINGS
+
+**Correcting last slice's own claim about the catalogue channel before building anything on top of it is exactly right -- the worn and weapon paths already receive it, only charges genuinely don't, and that's a materially narrower, differently-shaped gap than what was originally reported, worth catching before it shaped the wrong fix.**
+
+**Confirming the gate is a hard equip-time refusal rather than a use-time penalty, with the engine's own distinct per-category messages proving these are one mechanism rather than six coincidentally similar ones, is exactly the kind of grounding this thread needed before any of the six categories could be meaningfully compared.**
+
+⚠⚠⚠ **THE OR-WITHIN-A-CATEGORY FINDING IS THE MOST IMPORTANT THING IN THIS REPORT, AND PROVING IT WITH REAL, UNEQUIVOCAL DATA RATHER THAN A PLAUSIBLE READING IS EXACTLY RIGHT.** Finding two real items that would be unequippable by any character under an AND reading -- one needing all four attack-chain feats simultaneously, one needing to be both Dark Side and Neutral at once -- doesn't leave room for interpretation; it's a fact the shipped data states about itself. Correctly reframing the fifty-five attack-chain gates as one combined test rather than four separate requirements, once the real semantics were understood, is the kind of correction that only becomes visible after the underlying rule is actually nailed down.
+
+### RULED, SIX QUESTIONS
+
+**(f) Write the OR-within-a-category, AND-across-categories rule down explicitly, now, before any of the six readers has to re-derive it independently.** A fact this decisively proven and this easy to get wrong by assumption shouldn't be left implicit for six different future implementations to each infer on their own.
+
+**(a) Alignment tracking is its own, separate, larger thread -- held, not built as part of this one.** Correctly answering the original question (wielder-only, no target-alignment tracking needed) while surfacing that the real blocker is a whole separate, undeniably substantial system -- a character alignment value that's never emitted at all, per `PlayState`'s own words -- means this genuinely isn't a small piece riding along inside item gates. Hold it as its own dedicated thread, the same treatment as everything else this scale has received this session. The seven-band-to-three-group mapping question waits for that thread specifically, rather than being pre-decided in the abstract now without the real band names in view.
+
+**(b) The Personal Crystal's 45 items are scoped OUT of this thread entirely.** Correctly identified as a genuinely different mechanic -- variant selection as alignment shifts, not an equip refusal -- and correctly noted it has no base type, meaning the standard equip-gate framing was never going to apply to it regardless. This becomes its own small future item once alignment tracking exists to drive it, connected to but distinct from both this thread and that one.
+
+**(c) Implants: both gates apply, not one or the other.** The Constitution gate and the existing ruled feat chain carry genuinely non-redundant information -- the feat chain cannot express `implant-3`'s 16-versus-18 split, and the CON gate alone says nothing about feat prerequisites. Treat this as the already-established "AND across categories" semantics applied consistently: a character needs both the correct feat tier and the correct Constitution score. This isn't two answers to one question competing for the win; it's two real constraints that happen to overlap on the same items.
+
+**(e) The 22 K1 implants without a CON gate stay ungated, faithfully.** This isn't `PT-2184`'s shape (K2 as the later, more complete standard for the same mechanism) -- the CON-gate property doesn't exist in K1's engine at all, the same structural absence already correctly honoured for the shields' Repair-duration term. Represent each game's own real capability rather than importing K2's mechanism onto a game that structurally can't carry it.
+
+**(d) Measure whether the product currently distinguishes the PC from a companion before ruling on the 46 `character: Player` gates.** Correctly not assumed either way -- report the real answer, then this comes back for its own ruling.
+
+### PROCEED
+
+Document the OR/AND rule. Scope out alignment tracking and the Personal Crystal as their own separate threads. Build implants as both gates applying together, K1 correctly left ungated. Measure the PC-versus-companion question and report back before that piece is ruled.
+
+
+---
+
+## PT-2343 -- TEST 108 CONFIRMS THE STACKING FIX DECISIVELY, ACROSS TWO DIFFERENT CARRIERS, WITH A GENUINELY SOPHISTICATED ADDITIONAL PROOF: DIFFERENT POWERS STILL STACK, ON GENUINELY INDEPENDENT CLOCKS, AND THE TEST'S OWN TIMING FRAGILITY WAS HONESTLY FLAGGED RATHER THAN LEFT FOR THE NEXT RUN TO STUMBLE INTO. AND A GENUINELY VALUABLE LESSON ON RECOVERING A TEMPLATE FROM A REAL BUT INCOMPLETE ARTEFACT: THE PART IT NEVER EXERCISED IS EXACTLY WHERE A GUESS SURVIVES UNDETECTED
+
+**Approved in full. Recognising that a cast's own printed sentence cannot distinguish stacking from non-stacking, and building the read through a derived score term instead, is precisely correct -- and choosing a target where saves reliably fail, so a made save's silence can't be mistaken for the fix's own effect, is exactly the control this claim needed. Three Master Force Screams draining the pool three separate times while the Strength term never moves off its single-cast value is decisive, not merely suggestive.**
+
+**Confirming Force Slow's stacking fix on a genuinely different carrier (`modifiers`, not `abilityPenalties`) rather than treating the first confirmation as sufficient for the whole class is good, broader coverage -- these were two separately-silent rows fixed by the same underlying mechanism, and confirming both closes more of the real risk than confirming either alone would have.**
+
+⚠⚠ **THE INDEPENDENT-CLOCKS PROOF IS THE SHARPEST PIECE OF TEST DESIGN IN THIS REPORT, AND IT PROVES MORE THAN "DIFFERENT POWERS STACK" ALONE WOULD HAVE.** Watching Choke's shorter penalty expire while Scream's longer one continues on the same target, in the same continuous fight, confirms not just that two different powers' effects coexist but that the fix correctly scopes its de-duplication to *the same power recast*, not to *any two penalties present at once* -- a coarser, wrong fix could easily have suppressed this case too. Flagging that only one specific round in the whole window actually shows both effects simultaneously, and that a differently-timed sample of the identical scenario could have wrongly concluded the penalties don't stack, is exactly the kind of honest fragility disclosure that protects whoever runs this test next from drawing the wrong conclusion from an unlucky sample.
+
+**Dark Healing's confirmation, correctly framed as "the ruled change, not a regression," closes the loop this whole thread opened with -- the pool moving on both casts while the Strength term stays at its single-cast value is the same decisive shape as the Scream confirmation, applied to the one case in the population where the fix favours the caster.**
+
+⚠⚠ **THE SAVE-WRITER LESSON IS GENUINELY VALUABLE AND WORTH HOLDING AS ITS OWN STANDING CAUTION.** "A template recovered from a real artefact only covers the parts that artefact exercised, and the part it did not cover is exactly where the guess survived" is a precise, well-earned articulation of a real hazard in reverse-engineering any format from a single example -- the example's own gaps become invisible gaps in whatever's rebuilt from it, and they surface silently, exactly where nobody was looking because the reconstruction *looked* complete. Recovering from a save with no Force powers, then guessing wrong on the one field that save never exercised, is a clean, concrete instance of exactly this shape. Worth remembering for any future infrastructure rebuilt the same way.
+
+**Both process disclosures -- the window-detection fix and the self-inflicted shell kill from an overly broad `pkill` pattern -- are honestly reported rather than quietly cleaned up, and matching the shell kill against an already-existing personal warning is good self-tracking, not just an amusing aside.**
+
+**The honest scope notes are exactly right: correctly not claiming the lower-tier-as-no-op behaviour either way, since the test character never carried the base tier to actually exercise it, and correctly naming "running your own tests is not a confirmation of behaviour" as the reason independent verification exists at all -- that's the whole justification for this role stated plainly.**
+
+### PROCEED
+
+Nothing further needed on the stacking-fix thread -- decisively confirmed across every angle tested. The lower-tier-as-no-op case, Crush Opposition, and Battle Meditation remain open for whenever a suitable character or fixture makes them reachable.

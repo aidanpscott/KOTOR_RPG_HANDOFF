@@ -1151,7 +1151,19 @@ The most remarkable thing about Togruta is what happens when they are blinded. W
 - **Ability Adjustments:** +2 Dexterity, −2 Constitution, +2 Wisdom.
 - **Size:** Medium.
 - **Speed:** 10 metres.
-- **Spatial Awareness:** **When blinded, a Togruta may attempt an Alertness check at DC 13.** **On success they avoid the reduction of effective Dexterity to 3.** **All four remaining penalties of the blinded condition still apply:** **−4 on Strength-based and Dexterity-based checks**, **−4 on Awareness checks**, **the Togruta still cannot see**, and **the 50% miss chance remains** — **montrals do not let a blinded Togruta unerringly locate a foe.** *UAA p.163.*
+- **Spatial Awareness:** **When blinded, a Togruta may attempt an `Alertness` check at DC 13. On success they KEEP their Dexterity bonus to Defence**, which `blinded` otherwise takes from everyone. ⚠ **`PT-2150`.** **Every other penalty of `blinded` still applies in full** — the further `−2` Defence, the `−4` on their own attacks, naming a SQUARE rather than a creature, and sight-based checks failing automatically. **Montrals do not let a blinded Togruta unerringly locate a foe.**
+
+> **The trait as `UAA p.163` writes it:** *“When blinded, a Togruta may attempt an Alertness check at DC 13. On success they avoid the reduction of effective Dexterity to 3. All four remaining penalties of the blinded condition still apply: −4 on Strength-based and Dexterity-based checks, −4 on Awareness checks, the Togruta still cannot see, and the 50% miss chance remains.”* **Quoted intact — it is an accurate record of a real ruleset and is not edited to fit ours.**
+
+> **⚠⚠ WHY IT HAD TO CHANGE — `PT-2149` FOUND IT, `PT-2150` RULED IT.** The quotation above is an accurate quotation of `UAA p.163` and is left intact. **Four of its five clauses name a condition this project does not implement.** `RULES-01-v2`'s `blinded` (`PT-470`) instead reads:
+>
+>     effective Dexterity reduced to 3   → we remove the Dex BONUS TO DEFENCE, not the score
+>     −4 on Str- and Dex-based checks   → we carry no ability-based check penalty at all
+>     −4 on Awareness checks            → we make sight-based checks fail AUTOMATICALLY
+>     the Togruta still cannot see       → ours says exactly this
+>     the 50% miss chance remains        → `PT-471` replaced it: name a SQUARE, auto-miss if wrong
+>
+> **⚠⚠ AND THE BENEFIT WAS ONE OF THE FOUR.** The trait's whole effect was to *avoid the reduction of effective Dexterity to 3* — a reduction our `blinded` never applies — so **until `PT-2150` this trait granted nothing at all.** `PT-2150` ruled the faithful parallel: our `blinded` takes the Dexterity bonus to Defence, and that is the one place this system creates the Dexterity-driven vulnerability the original trait existed to defend against. **The two rejected candidates are recorded too:** immunity to the automatic sight-check failure would cancel most of what blindness means for a Togruta, far past what `UAA` ever granted; and nothing about the name-a-square targeting rule maps to spatial awareness at all.
 - **Montral Echo:** **You detect any moving creature within 5 squares, through walls, whether or not you can see it.** *Passive sonar. It is what montrals are for.*
 - **Skill Bonuses:** +2 Stealth, +2 Acrobatics.
 - **Languages:** Speak and read/write Togruti and Basic.
@@ -1263,18 +1275,67 @@ Wookiees understand Basic but cannot speak it — their vocal apparatus produces
 
 **Wookiee Species Traits**
 
-- **Ability Adjustments:** +4 Strength, −2 Dexterity, −2 Wisdom, −2 Charisma.
+- **Ability Adjustments:** +4 Strength, +4 Constitution, −2 Wisdom, −2 Charisma.
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Wookiee Rage:** **Once per day a Wookiee may enter a rage.** **While raging: +4 Strength, +2 vitality per character level, and +2 on Will saves.**
 - **Extraordinary Recuperation:** **A Wookiee regains vitality at twice the normal rate — ⚠ 2 vitality per hour of rest, and `PT-559` removed the second pool it also doubled
+- **Nothing Worn On The Body:** **A Wookiee never wears anything on the torso — no armour, no robe, no clothing, no Zeison Sha.** ⚠⚠ **`PT-2144`. This is `KOTOR`'s own rule, not ours**: `baseitems.2da`'s `denysubrace` column sets bit 1 — `Wookiee` — on every `Armor_Class` row, on `Armor_Zeison_Sha`, on all three Jedi Robe tiers, on `Basic_Clothing` and `Slave_Outfit`, and on `Disguise_Item`. **It is what Zaalbar does for an entire game.** ⚠ **One exception, and it is the source's, not ours:** `Revan_Armor` sets no deny bit at all, so it is the single body item a Wookiee may wear.
+- **No Headgear:** **A Wookiee cannot wear headgear — masks, visors, helmets, neural bands.** **⚠ Every other worn slot is unaffected:** gauntlets, forearm bands, belts, boots and implants all fit a Wookiee and all remain available.
+- **Natural Armour:** *Racial feat — learned on level-up, maximum level 4.* **`+1` natural armour bonus to Defence, rising to `+2` at 8th level and `+3` at 12th.** *A pelt thickens with age and hard use.* ⚠⚠ **`PT-2145` — IT IS EARNED, AND THAT IS WHY IT MAY PASS `Weequay`'s `+2`.** Every other species' natural armour is free at creation; a Wookiee spends a level-up pick on this one, and a trait you pay for should out-scale a trait you are given. ⚠ **The ceiling is `+3` — `Zeison Sha`, the lightest armour in either game.** At full growth a Wookiee's hide is worth the lightest suit and no more, so it never stands in for the armour line's `+4` to `+9`, which `PT-2144` put permanently out of reach.
 - **Skill Bonuses:** +4 Intimidate, +2 Beast Handling.
 
 - **Languages:** Read/write Shyriiwook and Basic; speak Shyriiwook; understand Basic. Wookiees cannot speak Basic or any language other than Shyriiwook.
 **Availability:** **Present at 3956 BBY.** ⚠ **Kashyyyk was overrun by the Mandalorians in 3963 BBY and is under Czerka slaving operations at the campaign date.** ⚠ **`kashyyyk_liberated` is `superseded` — `PT-678`'s record 7.**
 
 
-*Source: Revised Core Rulebook, pp.32–33.*
+**⚠⚠ A note on the ability line — `PT-2146`, owner-ruled.** The old line read *“+4 Strength, −2 Dexterity, −2 Wisdom, −2 Charisma”*. **The Dexterity penalty is dropped, not kept beside the new Constitution bonus:** a Wookiee is unremarkable in Dexterity rather than clumsy, and the Wisdom and Charisma penalties already carry the species' cost. The Constitution bonus is what makes the archetype real — the old line bought offence with `+4` Strength and gave nothing toward the durability a Wookiee is actually known for.
+
+> **⚠ THIS PARAGRAPH IS PROSE AND THE BULLET IS THE VALUE, DELIBERATELY — `PT-1467`.** Chargen parses the `Ability Adjustments` cell with a pattern that matches any signed number before an ability name. Leaving the words *“the old −2 Dexterity”* inside that cell would have handed every Wookiee the very penalty this ruling removes. It was written there first and caught by parsing the extract.
+
+**A note on provenance — and the three traits do not share one.** `PT-2137`.
+
+**`No Chest Armour` and `Natural Armour` are AUTHORED for this setting.** Neither is in the *Revised Core Rulebook*, and `PT-2130` checked every held d20 source — RCR, the *Ultimate Alien Anthology*, the Campaign Guide — before either was written and found nothing. **The absence runs to the game as well:** no armour, robe or any other non-`Mask` base type in either game restricts a Wookiee anywhere, which is positive confirmation that the chest-armour rule has no game-side precedent rather than merely an unsearched gap. They exist as a trade: the Wookiee record carries `+4` Strength, `Wookiee Rage` and `Extraordinary Recuperation` with no mechanical cost attached to any of it, and `PT-2131` made the lost armour that cost, with a small innate defence offsetting part of it. **It offsets and does not repay** — the armour line runs `+4` to `+9` Defence, so `+1` leaves the restriction biting, which is what it is for.
+
+**`No Headgear` is PORTED. It is `KOTOR`'s own rule, in `KOTOR`'s own words.** `PT-2137`. The game's `dialog.tlk` opens the description of **53 of the 59 Masks across both games** with *“Restricted: not useable by Wookiees”*:
+
+    K2   31 of 31 Masks — every one
+    K1   22 of 28 Masks — and the six that do NOT are ordinary content:
+         `g1_i_mask01`, `g1_i_mask02`, `g1_i_mask03`, sold by Suvam Tan
+         on Yavin Station, and `g_i_mask14` (Sith Mask), `g_i_mask23`
+         and `g_i_mask24` (targeting optics), placed on Korriban,
+         Manaan and the Unknown World
+
+*Source: `KOTOR` and `KOTOR II`, `dialog.tlk`, `Mask` base-type item descriptions.*
+
+> **⚠⚠ A CORRECTION, AND IT IS MINE.** This note first read *“the six that do
+> not are unused `g1_` debug items”*. **Both halves were false.** Only three of
+> the six are `g1_`, and the `g1_` family is not unused — a placement sweep of
+> all 310 `KOTOR` module archives finds every one of them in `liv_m99aa`, Yavin
+> Station, which is Suvam Tan's shop: the Baragwin late-game stock a player buys
+> with credits. The other three are plain `g_i_` masks placed on three worlds.
+> The only genuinely unplaced resref in this whole thread is `g_i_frarmbnds16`,
+> and it is not a Mask. **The count 22 of 28 was right; the reason given for the
+> six was invented.**
+>
+> **It does not overturn the rule, and it does weaken the claim, so both are
+> stated.** 53 of 59 Masks across both games carry the sentence and all 31 of
+> `KOTOR II`'s do, so the rule is real and ported. But it is not *universal with
+> six pieces of debris excepted* — it is **universal in `KOTOR II` and near-universal
+> in `KOTOR`, with six live exceptions the first game simply did not annotate**.
+> Reading the exceptions as debris made the source look tidier than it is.
+
+> **⚠ `PT-2130` DID NOT MISS THIS; IT WAS ANSWERING A DIFFERENT QUESTION.** Its sweep was of item PROPERTY data, and this restriction was never encoded as a property — there is no racial property on any head item in either game. It lives entirely in description prose: a sentence a player reads, not a field the engine checks.
+
+> **⚠⚠ AND WE DO NOT COPY THE MECHANISM, ONLY THE RULE — `PT-2137`.** `KOTOR` enforces this by asking the player to read a sentence and police themselves. **This project enforces it at character creation**, where the offer is withheld rather than made and refused. The find changes the citation. It does not change the code.
+
+**The `+1` is the corpus standard, and `+2` was considered and refused.** `PT-2132` read Zaalbar's own creature files in both games and found `NaturalAC = 0`, identical — real, and not an answer, because the source game never restricted his armour and so never needed to compensate for it. The case for `+2` rested on Weequay's `Leathery Hide`, and it does not carry: every species already at `+1` has a hard integument — Gand exoskeleton, Trandoshan scales, Verpine chitin — and fur ranks below all three, so `+2` would rate Wookiee fur above Verpine chitin. **Size does not enter it:** this ruleset gives size its own term in Defence, and the Wookiee record is `Medium`, the same class as Weequay.
+
+**⚠⚠ `Armour Proficiency` IS NOT LOST.** A Wookiee takes and keeps every `Armour Proficiency` feat normally. The two restrictions are about what fits the body, not about training, and the feats still gate real equipment a Wookiee does use — gauntlets among it. **Neither restriction is a reason to withhold the proficiency.**
+
+**⚠⚠ AND IT REACHES CHARACTER CREATION AS AN OFFER THAT IS NOT MADE.** Two professions grant gear a Wookiee cannot wear — **`Exile`**, whose grant is a head item, and **`Conscript`**, whose grant is *"the best armour the character's `Armour Proficiency` allows"*. **A Wookiee taking either is not offered the item half at all** and takes the profession's aptitude instead. The offer is withheld rather than made and then refused, so a player is never handed a choice that resolves to nothing.
+
+*Source: Revised Core Rulebook, pp.32–33 — except `Nothing Worn On The Body` and `No Headgear`, ported from `KOTOR` itself (`PT-2141`, `PT-2144`); `Natural Armour`, authored for this setting; and the ability line, owner-ruled at `PT-2146`.*
 
 ---
 

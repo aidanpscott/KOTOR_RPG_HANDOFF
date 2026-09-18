@@ -491,7 +491,7 @@
 
 > **`weapon dice + ability modifier + Weapon Specialization + declaration modifier`**
 
-**Melee adds Strength. Ranged adds nothing** — `EQUIPMENT-01 §1`. **A two-handed weapon adds 1.5× Strength.**
+**Melee adds Strength. Ranged adds Dexterity** — `EQUIPMENT-01 §1`, amended by `PT-340`. **A two-handed weapon adds 1.5× Strength.**
 
 **⚠ Lightsabers add Strength for this playtest.** **`EQUIPMENT-01 §4b` quotes the source saying *"lightsabers are not melee weapons,"* which is a statement about upgrade rules and critical behaviour rather than a damage rule.** **Provisional and flagged: it is ±3 a hit on every Jedi.**
 
@@ -502,6 +502,14 @@
 **Nothing in the corpus stated it and every pregen omitted it.**
 
 ### 12.7 The reaction pool exists without a reaction chain
+
+> **⚠⚠ BUILT AT `PT-1675`, AND THE CODE HAD `§10`'s SENTENCE IN IT INSTEAD.**
+> `reactionPool` computed `min(allowance, highestReactionTier)` — `§10` read as
+> the pool — with the tier hardcoded to zero because no chain is acquirable
+> anywhere. **So every character in the product was the Consular**, including
+> for opportunity attacks, and `PT-1664`'s Interrupt was built, tested and
+> unreachable for eleven slices. **This section is what says which reading is
+> right, and nothing had read it.**
 
 **`§10`'s *lower of tier and allowance* caps how many times a **chain** may fire. It does not gate the pool itself.**
 

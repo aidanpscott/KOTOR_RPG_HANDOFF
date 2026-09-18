@@ -126,7 +126,7 @@
 
 ### 5.1 The reduction curve
 
-**Thresholds at 4, 9, 16, and 25. One fewer consumable at each. Minimum one.**
+**Thresholds at 4, 9, 16, 25 and 36. One fewer consumable at each. Minimum one.**
 
 | Skill total | Reduction | A 5-part job costs |
 |---|---|---|
@@ -134,13 +134,16 @@
 | 4–8 | −1 | 4 |
 | 9–15 | −2 | 3 |
 | 16–24 | −3 | 2 |
-| 25+ | −4 | **1** |
+| 25–35 | −4 | **1** |
+| 36+ | −5 | **1** |
 
-> **The bands widen on their own — 5 points, then 7, then 9.** Diminishing returns without anyone doing arithmetic, **and the four numbers are memorable because they are the perfect squares.**
+> **The bands widen on their own — 5 points, then 7, then 9, then 11.** Diminishing returns without anyone doing arithmetic, **and the five numbers are memorable because they are the perfect squares.**
 
 **A first-level specialist already saves one.** They reach the floor on a five-part job around level 20 — **the whole campaign, and never wasted.**
 
-**Hard jobs stay expensive.** An eight-part job still costs 3 at level 30. **The lever for keeping high-level characters spending is raising the base cost, not the rate.**
+**Hard jobs stay expensive.** An eight-part job still costs 3 at level 30.
+
+> **⚠ THE `36` ROW WAS MISSING AND THE SENTENCE ABOVE IS WHAT FOUND IT — `PT-1916`.** The table stopped at `25+ | −4`, which floors an eight-part job at **4**, not 3. **Two sequences land on 36 independently** — the perfect squares, and the widening gaps at 5, 7, 9, **11** — so it was a dropped row rather than an arithmetic slip. ⚠ **And `level` is not `skill total`**, which is what made the prose look impossible: a **first**-level specialist already totals around 4, so a level-30 character reaching 36 is ordinary investment. ⚠ **A five-part job is already floored by band four, so the missing row showed nowhere in this table's own example column** — it was invisible until something asked an eight-part question. **The lever for keeping high-level characters spending is raising the base cost, not the rate.**
 
 ### 5.2 The six
 

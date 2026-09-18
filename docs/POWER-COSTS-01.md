@@ -333,13 +333,25 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 ---
 
+## ⚠⚠ 5a · The base rate is settled — `PT-1697`, owner ruling
+
+**2 Force powers at level 1, +1 per level after, for BOTH tracks.**
+
+**⚠ The number is extracted, not invented.** `MULTICLASS-01 §2.2a` reads it off `cls_spgn_jedi.2da`. `PT-1697` extends it to the Sith track, and is explicit about why that is an extension rather than a resolution between competing sources: **no separate Sith table exists anywhere in the document to contradict it.**
+
+**⚠ And it is not a contradiction resolved by recency.** `MULTICLASS-01` and this document were last touched in the SAME commit (`PT-1407`), so *"the later one wins"* separates nothing here — **the disagreement was written in one sitting**, not by one document going stale after the other moved.
+
+> **⚠ WHAT THIS DOES NOT SETTLE**, in the ruling's own words: *"whether individual classes WITHIN each track (Guardian vs Sentinel vs Consular, and their Sith mirrors) differ from each other."* `§6`'s row is narrowed, not struck.
+
+**⚠ The `+1 per level` half has a home and no caller.** `powersKnownAt` carries the whole rule; **nothing levels a character up yet**, so creation asks it for level 1 and that is all. The day something does, it reads this rather than a second literal.
+
 ## 6. Still open
 
 | Item | Status |
 |---|---|
 | **Class gates** | **Deferred to the class workstream**, as ruled. KOTOR restricts some powers to Sith Lord, Sith Marauder, or any prestige class. Recorded, not applied. |
 | **Character gates** | **Resolved.** *Kreia* cut. *Jedi Watchman* and *Sith Assassin* are classes and fold into class gates. |
-| **Acquisition** | **Open.** Feat chains with class-differentiated picks are settled; **how many picks per level per class is not.** `classpowergain.2da` holds KOTOR's schedule, unported. |
+| **Acquisition** | **⚠ NARROWED at `PT-1697`.** The BASE RATE is settled for both tracks — **2 at level 1, +1 per level after, Jedi and Sith alike** — see below. What stays open is finer: **whether individual classes WITHIN a track differ from each other.** `classpowergain.2da` holds KOTOR's per-class schedule, unported. |
 | **Forms** | **Eleven, deferred.** Persistent exclusive-group conditions under D-AE, not powers. |
 | **Force Sight** | **Possible duplicate** of the Miraluka species trait. |
 
@@ -457,7 +469,22 @@ Every light power is heal, buff, defend, or control. **That is correct rather th
 
 **Per-cast application does not work.** Degradation values run 1 to 9; **rounded up both cuts vanish, and rounded down they become identical**, since no integer sits between −5% and −10% at that scale. **At the aggregate they separate: 6 points saved against 3, across a fourteen-cast day.**
 
-**Force Potency reduces nothing** and carries FP cost +20%. It is the raw-power form and pays full attrition.
+**Force Potency reduces nothing** and carries an FP cost surcharge. It is the raw-power form and pays full attrition.
+
+**⚠⚠ AND THAT SURCHARGE IS `+1 FP`, FLAT — `PT-2125`.** The source states it as
+`+20%`, and `FORMS-01 §6.2b` converts it: **FP cost is a single digit on most
+powers, and a percentage of a single digit is exactly the rounding problem
+`PT-475` exists to kill.** Force Mastery's identical `+20%` converts the same
+way. Potency's damage `+30%` becomes *one extra die of the power's own damage
+type*, which is this document's business only insofar as it does not touch
+cost.
+
+**⚠ THE TWO DEGRADATION CUTS ABOVE ARE DELIBERATELY NOT CONVERTED**, and
+`PT-2125` says so by name: they are applied once per encounter against a total
+already tracked, which is the exception `PT-475` carved out. The reasoning in
+this section reached that on first principles before anyone checked it against
+the rule — **converting them now would not fix a violation, it would break
+something already right.**
 
 ---
 

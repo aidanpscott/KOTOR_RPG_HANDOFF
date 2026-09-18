@@ -8,6 +8,31 @@
 
 ---
 
+## ⚠⚠ 0a · A line offers at most NINE replies — `PT-1696 §5`
+
+**Seven is the FLOOR.** `STUDY 18` found source nodes offering exactly seven, so the panel must support that many without breaking. **Nine is the ceiling**, and two independent constraints arrive at it:
+
+| | |
+|---|---|
+| **layout** | measured, not guessed — at the panel's real box on a 1280×720 screen (**480 × 683.2**) nine lay out and **ten overflow by 19 pixels** |
+| **input** | `PT-1303` picks a reply by **digit**, and the digits are 1–9. **There is no key for a tenth.** |
+
+**⚠ Refusing at authoring time is the only option this project's own rules leave.**
+
+    scroll    BUILD/34: "anything you can click must be laid out where it can
+              be seen, and a scroll view is only safe for things you READ."
+              The NPC's line is read; the options are clicked.
+    truncate  §4c hides a failed option rather than greying it, which assumes
+              THE LIST YOU SEE IS THE LIST. An option that exists and is not
+              drawn is absence-versus-error on the one surface where absence
+              already means *gated*.
+    refuse    what is left — and PT-1379's shape: the Builder must not be able
+              to author the fault its own validator detects.
+
+**⚠ It counts what is AUTHORED, not what will show.** `§4c` hides an option whose gate fails, so the drawn list is never longer than the authored one — and **the worst case is every gate passing**, which is the case a validator has to hold.
+
+**⚠ `then` is NOT capped.** `PT-1432` makes it **pick one**: the runtime walks it and shows the first whose gate passes, so a long `then` is a fallback chain and **nothing about it reaches the panel.**
+
 ## 1 · A conversation is three lists and nothing else
 
 > **NPC lines, player lines, and the ways in. A link carries a target and a gate. Walk links in order and take the first that passes.**
@@ -26,7 +51,6 @@ That is `§2` verbatim, and `STUDY 18 R18.02` confirms it is what the shipped fi
 ```toml
 [conversation]
 id    = "trooper-challenge"
-owner = "sith-trooper.command-deck.07"     # whose conversation this is
 start = ["challenge"]                      # the ways in, in order
 ```
 
@@ -45,7 +69,13 @@ start = ["challenge"]                      # the ways in, in order
 
 **⚠ This is a contradiction between `§2` and `§4c` and only the owner closes it.** The reader and validator take the reading that makes `§4c` possible; **run `§2` literally and every multi-option node in both shipped games is broken**, which is how it surfaced.
 
-**`owner` is a placement tag, not a blueprint path** — `PT-1331`, a tag names ONE placed thing. **It is the default speaker for every NPC line and the only thing the file says about who you are talking to.**
+> **⚠⚠ `owner` IS GONE — `PT-1607`.** It said *"a placement tag, not a blueprint path — the default speaker for every NPC line and the only thing the file says about who you are talking to."*
+>
+> **THE SPEAKER IS THE PLACEMENT YOU WALKED INTO, AND THE FILE DOES NOT NAME ANYONE.** The link already ran the other way and was already right: a blueprint names its conversation, and the app opens the conversation the placement you TOUCHED names. `owner` was a second answer to a question already answered — **a template naming one of its own instances** — and it was the one the player read.
+>
+> **⚠ AND IT COULD NOT BE MADE CORRECT.** `conversation` is on the BLUEPRINT and `owner` was a PLACEMENT tag, so a template placed three times had three tags and one owner: **right for at most one, by construction.**
+>
+> **⚠ MIGRATION COSTS NOTHING.** `[conversation]` is not a closed grammar — only `§4`'s GATE keys are — so a file that still carries `owner` loads unchanged and one written without it loads too. **A field being REMOVED is not a field being WRONG**: `PT-1433` refuses an empty `say` because a node with nothing to say is not a node; a head key nobody consults is not a defect in an author's file.
 
 ---
 
@@ -167,7 +197,8 @@ replies = [ { to = "push", gate = { skill = "persuade", dc = 14 } } ]
 | term | reads | renders as `§4c` |
 |---|---|---|
 | `skill` + `dc` | a check against the eight of `§4c` | **amber** — it rolls |
-| `skill` + `opposed = true` | `RULES-02 §3`'s opposed form | **amber** |
+| `skill` + `opposed = true` | `RULES-02 §3`'s opposed form — **the line's speaker rolls back**, `PT-1607` | **amber** |
+| `opposed_by` | which skill the OTHER side rolls. Optional; **defaults to the same skill**. Persuade against Persuade is a contest, and Persuade against Awareness is how most opposed rolls in the rules actually read | of its `skill` |
 | `flag` | `quest.flag-set`, projected | invisible — it is not a check |
 | `quest` + `status` | `quest.concluded` | invisible |
 | `attitude` | `RULES-02 §5`'s five | invisible |
@@ -176,6 +207,10 @@ replies = [ { to = "push", gate = { skill = "persuade", dc = 14 } } ]
 | `species`, `background` | who the character **is** | **teal** |
 | `alignment` | the band, derived per `ALIGNMENT-01-v2` | **teal** |
 | `all_of`, `any_of` | composition, nesting arbitrarily deep — `§4b.1` | of its parts |
+
+**⚠⚠ AND `opposed` WAS DECLARED AND READ BY NOTHING UNTIL `TEST`.** The row above has been in this table since it was written, `GateTerm.isOpposed` has been in the reader, and `resolve()` has supported `CheckType.opposed` — **and nothing ever joined them up.** Both places the runtime rolls a check built a flat `skill` check `against: dc ?? 10`, so an authored opposed gate silently became a check against 10. No package had ever authored one, which is why nobody saw it.
+
+**⚠ WHO ROLLS BACK IS NOT THE AUTHOR'S TO CHOOSE, AND THAT IS WHY THERE IS NO FIELD FOR IT.** `PT-1607` makes the speaker the placement you walked into, so the opposition is already decided by where the conversation is happening — a real creature with real ranks, which cannot dangle. A field naming the opponent would be a second answer to a question the world has already answered. A check with no speaker is **unanswerable** and says so; rolling against nobody at +0 would be a silent gift.
 
 **⚠ AND THE RENDER COLUMN IS PRESENTATION OVER THIS DATA, WHICH IS WHY `PT-1429` COSTS THE FORMAT NOTHING.** `PT-1429` keeps `PT-1307`'s *no numbers* as the answer **for now** and keeps `PT-1306`'s `[Persuade DC 14]` as **a live alternative** — *"not wrong, unchosen, and the choice is provisional."*
 
@@ -256,7 +291,7 @@ then   = ["dismissed"]
 
 **`STUDY 18` named this as a gap in our documents:** `Speaker` is set on **23.1% of K1 NPC lines and 25.5% of K2's**, and in `bastila.dlg` three of 26 NPC lines are spoken by Carth.
 
-**What it is for, before proposing a field: a conversation has one owner and more than one participant.** A companion interjects; a second guard answers for the first; a prisoner speaks over their captor. **Without it, every multi-party scene has to be split into separate conversations that cannot see each other's state**, which is the shape their writers avoided by using the field a quarter of the time.
+**What it is for, before proposing a field: a conversation has one SPEAKER and more than one participant.** A companion interjects; a second guard answers for the first; a prisoner speaks over their captor. **Without it, every multi-party scene has to be split into separate conversations that cannot see each other's state**, which is the shape their writers avoided by using the field a quarter of the time.
 
 ```toml
 [[npc]]
@@ -265,7 +300,7 @@ by  = "carth"                 # a placement tag in the current area
 say = "Don't. He's baiting you."
 ```
 
-**⚠ `by` names a placement tag and defaults to `conversation.owner`.** It does **not** name a blueprint — `PT-1331` again: the tag is the instance's identity.
+**⚠ `by` names a placement tag and defaults to THE PLACEMENT YOU WALKED INTO** — `PT-1607`. It said *"defaults to `conversation.owner`"*, which was the same second answer one line down. It does **not** name a blueprint — `PT-1331` again: the tag is the instance's identity.
 
 **⚠ And the format cannot say who is PRESENT.** If `by` names a tag that is not in the area, that is `PACKAGE-FORMAT-01 §6a`'s question and this document does not answer it. **Named in `§11`.**
 
@@ -323,7 +358,6 @@ IsChild on a link into a
 ```toml
 [conversation]
 id    = "trooper-challenge"
-owner = "sith-trooper.command-deck.07"
 start = ["challenge"]
 
 [[npc]]

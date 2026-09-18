@@ -31,7 +31,7 @@
 | **Beast Handling** | Cha |  | Ride + Handle Animal |
 | **Botany** | Int |  | **new** — plant and soil analysis. *Astromechs run samples; Ithorians read a forest.* |
 | **Demolitions** | Int |  |  |
-| **Intimidate** | Cha |  |  |
+| **Intimidate** | Str |  | ⚠ **`PT-2148` — owner-ruled, was `Cha`.** Intimidation here is evident size and the threat of force, not force of personality. |
 | **Medicine** | Wis |  |  |
 | **Mysticism** | Wis |  | **new** |
 | **Persuade** | Cha |  | Bluff + Diplomacy |

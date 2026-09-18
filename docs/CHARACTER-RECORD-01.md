@@ -9,11 +9,21 @@
 **This record is a PROJECTION of the event log, not the store.** Creation writes *events* — a species chosen, a point spent, a feat taken. The record is what you get by replaying them. It is the shape every screen reads and every rule computes against, and it is worth specifying precisely because so much depends on its shape — but **the log is what persists.**
 
 
-## ⚠ WHAT THE RE-LOCK WRITES IS UNRULED — `PT-1411`
+## ⚠⚠ WHAT THE RE-LOCK WRITES — RULED AT `PT-1699`, AND THIS SECTION WAS STALE
 
-**Re-opening a completed chargen step discards everything after it — six fields today, by assignment.**
+**Re-opening a completed chargen step discards that step and everything after it — NINE steps, by name.**
 
-**⚠ Under an append-only log that discard is ITSELF an event**, and this document's own rule — **a correction is a new event, not an edit** — says **it cannot be a deletion.** **Nothing has ruled what it writes.**
+**⚠ Under an append-only log that discard is ITSELF an event**, and this document's own rule — **a correction is a new event, not an edit** — says **it cannot be a deletion.**
+
+> **⚠⚠ THIS SECTION READ *"six fields today, by assignment… Nothing has ruled what it writes"* UNTIL `PT-1699`, AND BOTH HALVES WERE WRONG.** `EVENT-KINDS-01` had described the payload since `PT-1418` — *"it carries the list of steps it discarded, so replay can clear exactly those slices"* — the writer had been writing it, and `replay` had been honouring it. **One document called it unruled while another documented it and the code implemented it**, and the count was stale besides: `clear` handles **nine steps**, not six fields.
+
+**What it writes:** `discards`, a list of **step NAMES** — the reopened step first, then every step after it. Names rather than indices, for `CHARGEN-DATA-01 §90`'s reason: *"a consumer keying on rank silently drops feats."* **A thing is named by its stable identity, not its position.**
+
+**⚠⚠ AND A NAME THIS BUILD DOES NOT HAVE DISCARDS EVERYTHING — `PT-1699`.** *"If the current build does not recognise a step, it cannot know what that step did or what later steps depended on, so the safe assumption is that nothing forward of it can be trusted."*
+
+> **There is no smaller safe bound.** The list is ordered, so every step forward of an unknown name is already behind it in the list and is cleared anyway. **The case that bound misses is the one the ruling is for — a RENAMED step**, whose slice is the unknown name's own and sits EARLIER than the names that follow. An unplaceable name has no position, so everything is forward of it.
+
+**⚠ Loud, and not a refusal to load** — `PT-1526`'s shape a second time. The record comes back **short rather than not at all**; `ReplayOutcome.unknownDiscards` carries the fault. **The pre-hub choices are untouched**: species, variant, model and class are chosen before the hub, `clear` has never had a case for them, and a re-lock has never claimed to reach them.
 
 **It is not urgent and it is not optional.** The hub does it by assignment today because nothing persists; **the first thing that persists makes it a design question**, and it is the shape the whole ledger turns on.
 

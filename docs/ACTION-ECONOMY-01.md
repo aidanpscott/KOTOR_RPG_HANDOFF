@@ -14,6 +14,14 @@
 | **Melee reach** | 2 | **1** |
 | **Point-blank band** | 5 | **2–3** |
 
+> **⚠ METRES ARE THE SOURCE'S UNIT; SQUARES ARE THE BOARD'S — `PT-1587`.** RCR speaks in metres and every attested number arrives that way: `PT-1568`'s light radii, `PT-1571`'s perception ranges, the scent bands. **Rules and documents keep metres where the source gave metres, so a citation still matches its folio.**
+>
+> **⚠ The engine and the screen work in SQUARES ONLY.** Nothing on screen counts metres — `PT-1581` chose Chebyshev *precisely so a player counting squares gets the engine's answer*, and `PT-1519`'s remainder shows squares.
+>
+> **⚠ And the conversion is exact, which is why it holds.** 20 m darkvision → **10 squares**. 10 m scent → **5**. `PT-1568`'s pinpoint-within-2 m → **exactly one square**, the first RCR distance to land on our grid without a remainder.
+>
+> **⚠⚠ AND A RULE AUTHORED NATIVELY IN SQUARES MUST SAY SO.** `PT-1576`'s `range = 10` is squares and was never a metre value — **and a number that does not say which it is will be halved by somebody who assumes it was doubled.**
+
 ---
 
 ## The five budgets
@@ -62,7 +70,11 @@
 | **Repair** | **A Repair check** on a droid within reach. |
 | **Improvise** | **Anything else the GM allows.** Kick a console, cut a cable, shove someone off a ledge. |
 
-> **⚠ Throwing a grenade is an Attack, not Gear.** **It is a ranged attack roll with an area effect** — treating it as Gear would let a character grenade *and* declare an attack in the same round.
+> **⚠ Throwing a grenade is an Attack, not Gear.** **It spends the Attack because treating it as Gear would let a character grenade *and* declare an attack in the same round** — the economy is the whole reason it sits here.
+>
+> **⚠⚠⚠ AND IT IS NOT AN ATTACK ROLL — `PT-2317`, corrected against the source.** This line read *"it is a ranged attack roll with an area effect"*, and **there is no roll to hit anywhere in either game.** `k_sup_grenade` is the one script every grenade in both K1 and K2 runs, and it does exactly this: place the blast at a LOCATION, take everyone inside a **4-metre — two-square — sphere**, and have each of them roll a save on their own. **TouchAttackRanged** and **GetAttackTarget** — nwscript's only two ways to roll to hit — appear nowhere in it. **A grenade cannot miss; it can only be dodged**, and it is dodged one target at a time.
+>
+> **⚠ The Attack-versus-Gear classification above is untouched by that correction.** What it costs is an economy decision this document makes; whether it rolls to hit is a fact about the source, and only the second was wrong.
 
 ---
 
@@ -260,8 +272,12 @@
 
 **The increments, in squares:**
 
-    pistol   11 squares   no penalty   |  to 23   −2  |  to 34   −4
-    rifle    14 squares   no penalty   |  to 28   −2  |  to 42   −4
+    pistol   12 squares   no penalty   |  to 24  −2  |  ⚠ ceiling first
+    rifle    14 squares   no penalty   |  to 28  −2  |  ⚠ ceiling first
+
+> **⚠⚠ CORRECTED at `PT-1599`.** This table restated `§13.1`'s bands **in the same section that says `§13.1` is the authority and "this section does not restate them"** — and restated them **wrong.** `11` was the RAW `maxattackrange`, not the snapped 24; and `23`/`34` were **halved tier by tier rather than once.** `PT-1589`'s defect, surviving in the corpus rather than in the code.
+>
+> **⚠ AND THE THIRD RUNG IS UNREACHABLE.** `§:297`'s **24-square ceiling** bites before three increments do for everything but a short-band weapon, where they tie exactly. **The ladder is written as three rungs and is, in squares, two.**
 
 **⚠ 11 and 14 squares against a map that `§551` says is ten to fifteen across.** **One increment covers a typical encounter, which is why the penalty tiers only fire outdoors or across a hangar — and that is correct.**
 
@@ -460,6 +476,26 @@
 ## 7.4 Two-handed weapons
 
 **A two-handed weapon adds **1.5× your Strength modifier** to damage, rounded down.**
+
+**⚠⚠⚠ A PENALTY IS NOT MULTIPLIED — `PT-2338`.** **The grip amplifies a bonus
+and leaves a negative modifier at its own value**: a Strength modifier of `−3`
+is `−3` on a two-handed swing, not `−4` and not `−5`.
+
+> **⚠⚠ THE SENTENCE ABOVE WAS WRITTEN WITH THE BONUS CASE IN VIEW and was read
+> literally against the other one.** *"A two-handed grip making someone's own
+> weakness worse by 50% has no clear rationale the way amplifying a strength
+> does."* 3.5 multiplies the bonus and is silent on the penalty, and the
+> silence was inherited rather than decided.
+
+**⚠ AND IT IS LIVE, NOT HYPOTHETICAL.** `droid-remote` carries `−4 Strength`
+and four species carry `−2`, so a bought `11` lands on `9` — the same ordinary
+case `abilityModifier`'s own note names.
+
+**⚠⚠ THE THREE READINGS AGREE AT `−1` AND NOWHERE ELSE BELOW IT**, which is
+why this needed stating rather than leaving to whoever next read the line:
+
+    modifier −1    truncate −1 · round down −2 · bonus only −1
+    modifier −3    truncate −4 · round down −5 · bonus only −3
 
 > **Without this a two-handed vibrosword is strictly worse than two blades** — fewer attacks, no second damage profile, and no compensating benefit. **The 1.5× is 3.5's own answer and RCR inherits it.**
 

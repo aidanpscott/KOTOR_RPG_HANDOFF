@@ -80,6 +80,7 @@ name       = "Sith Trooper"
 handle     = "sith-trooper"          # §2 — a package authors against this
 class      = "soldier"               # §2 — people take our real classes
 level      = 3
+challenge  = 3                       # ⚠⚠ §2b — what beating it is worth
 faction     = "sith"                 # §2
 
 [abilities]
@@ -93,6 +94,13 @@ cha = 8
 [vitality]
 die = "d10"                          # §1 — a die per level, from the beast model
 override   = 0                       # ⚠ §3's escape hatch. 0 = derive normally
+
+[skills]                             # ⚠⚠ §1's own beast field, generalised here — PT-1843
+points_per_level = 2                 # matches the Cannok example exactly
+# ranks per skill are authored explicitly below when a specific check matters
+# against this creature; left at 0 otherwise — an authored NPC needs only
+# the skills a scripted check will actually roll against, not every skill filled in
+awareness  = 4
 
 [protection]                         # ⚠ §2 — KOTOR's three, copied as-is
 plot       = false                   # cannot be harmed at all
@@ -109,6 +117,23 @@ reaction   = [                                  # ⚠ PT-1441 — INLINE, no fil
   { on = "alarm_raised", then = "doctrine.rally" },
 ]
 ```
+
+### ⚠⚠ 2b · `challenge` — WHAT BEATING IT IS WORTH. `PT-2233`
+
+> **⚠ A CHALLENGE RATING, AUTHORED PER CREATURE, AND NOT DERIVED FROM LEVEL.**
+
+**⚠⚠ `EXPERIENCE-01 §2` LOOKS UP `k2_xptable.2da` BY THE KILLER'S LEVEL AND THE CREATURE'S CR**, and until `PT-2233` nothing in this file said what a creature's CR was. A blueprint named a class, a level, abilities, vitality and protection — **and nothing said what beating it was worth.**
+
+**⚠ RULED AUTHORED RATHER THAN DERIVED — `PT-2233`.** Deriving CR from level would be inventing a formula the genre has never used that way, and **the games' own 506 creatures prove it is not one**: they carry sane, non-formulaic values — ordinary mooks at `1`, Revan, Malak, the Rancor and the Krayt Dragon all at `20` on wildly different levels and vitality. A `Sith Trooper` is `CR 3` and a `Sith Assault Trooper` is `CR 12`; both are troopers.
+
+**⚠ THE FIXTURE'S `3` IS THE GAME'S OWN NUMBER**, read out of `g_sithtroop01.utc` in both K1 and K2 — not chosen to look right.
+
+    Sith Trooper           CR 3     Sith Heavy Trooper     CR 8
+    Sith Elite Trooper     CR 5     Sith Assault Trooper   CR 12
+
+**⚠ A NUMBER, AND FRACTIONS ARE LEGAL.** The games express a weak creature as `0.5` and `NWN` ships a whole `fractionalcr.2da` for the halves and thirds. `k2_xptable`'s columns are whole numbers, so **a fractional CR indexes the column below it** — `0.5` reads column `0`, which is the floor row and pays the floor.
+
+**⚠⚠ ABSENT IS NOT ZERO — it is *this creature is worth nothing yet*, and it is said out loud.** A blueprint with no `challenge` awards nothing and the log says so, rather than quietly paying the `CR 0` column. `PT-2233` ruled the field authored; a default would be the derivation the ruling refused, wearing a different hat.
 
 ### ⚠ A CHARACTER BLUEPRINT NAMES ITS SPECIES — `PT-1490`
 
@@ -221,6 +246,83 @@ authored  from this document — a template, declared
 ```
 
 **A companion is the interesting case.** Authored at first meeting, then levels up like a player. **Ruling: a companion is authored, and the log applies to it from the moment it joins.** One character can be declared *and then* accumulate a log; it cannot be built by creation and then re-declared.
+
+---
+
+## ⚠⚠ 5a · A droid may not hold a melee weapon — `PT-1713`
+
+**Melee is closed to every droid chassis**, and three documents say it independently:
+
+| | |
+|---|---|
+| `ACTION-ECONOMY-01 §4` | *"An opportunity attack is one `Strike`. `Strike` is melee. **Melee is closed to every droid chassis.**"* |
+| `CLASS-ATTACKS-01` | Battle · Assassin · Astromech · Remote — **RANGED ONLY**; *"`Power Attack` and `Strike` are melee and closed to it"* |
+| `SPECIES-CHAPTER-v2` | Fixed Armature — *"a chassis reaches eleven ranged attack chains and **no melee at all**"* |
+
+So a blueprint whose `species` is a droid, or which names a `chassis`, and whose `[equipment]` resolves to a melee or lightsaber base type **has no legal attack at all.** That is `PackageProblem.droidHoldsMelee`, and it fires for a placed creature and for one authored and never placed alike.
+
+**⚠ A LIGHTSABER IS CLOSED TOO, AND NOT BECAUSE IT IS MELEE.** `ATTACKS-01 §12.5` keeps it its own kind; `FEATS-UNIVERSAL-01` closes it separately — *"lightsaber proficiency is not universal — it is Force-class only, and **droids cannot take it at all**."* **Two rules, one answer.**
+
+**⚠⚠ THE VALIDATOR IS THE LAYER THAT MATTERS, AND THE RUNTIME GATE IS THE SECOND.** Enforcing this only in play *"would mean a droid holding a melee weapon simply never acts, discovered by a player watching it stand inert turn after turn rather than by an author before the package ships."* `PT-1379`'s family: **the Builder must not create a fault its own validator cannot detect.** The gate still ships, so a droid that reaches play still-equipped is refused **with a sentence** rather than acting incorrectly.
+
+**⚠⚠ AND THE SAME RULE REACHES A PLAYER CHARACTER — `PT-1715`.** A blueprint is one door into the game and **chargen is the other**; `PT-1713` closed the first and nothing checked the second. `equipmentPayload` refuses to arm a droid with a non-ranged weapon and records why, in `weapon_unresolved`'s own vocabulary — *"a save that cannot arm you should be able to say so years later."*
+
+> **⚠ THE SHIPPED DATA IS ALREADY CLEAN, AND THAT IS THE FINDING RATHER THAN THE FIX.** All nine droid arrays name a ranged weapon, no profession grant is a weapon at all, and `arrayFor` has no organic fallback for a droid — so a droid could not have been handed a blade today. **These are guards over a gap that is not currently reachable.**
+
+**⚠ AND THE RULES DATA ITSELF IS HELD, because a starting array is neither a blueprint nor a character.** If `droid_arrays.toml` ever names a melee weapon the guard disarms the droid correctly and **an entire class ships with no weapon at all** — a worse silence than the one it prevents. A test over the real shelf fails with the array's own name in the sentence.
+
+**⚠ AND THE CHECK NEEDS THE SHELF, WHICH IS SAID RATHER THAN IMPLIED.** Which section is melee lives in `base-rules`' `equipment.toml` — a **sibling** package — and `ENGINE-INTERFACE-01 §4` bars the engine from going to find it. `validatePackage` takes `weaponSections` from its caller; **an empty map disables exactly this check and nothing on screen would say so**, which is why `Loom` passes it and a test holds that it does.
+
+---
+
+## ⚠⚠ 5b · A class's stock weapon must exist in the package — `PT-1730`
+
+Chargen writes `weapon_r_1` as a **path** — `items/weapons/<base id>` — into the package the character is made in. The name comes from a **class array in `base-rules`**, so **nothing in the package names that path** and `equipmentMissing` cannot see it: that check walks what a *blueprint* equips.
+
+**⚠ IT IS LIVE ON THE SHELF.** `taris-undercity` carries **zero** item blueprints; `endar-spire` carries eleven. `TEST 063` met the consequence as *"equips `items/weapons/blaster-carbine`, which will not open: There is no item here"* — **with a player already mid-fight.**
+
+`PackageProblem.startingWeaponMissing` fires once per class, naming the class a player would pick and the path they would be holding. **Only for a package with an entry area** — `base-rules` has none, `PT-1380`, and a package nobody can make a character in cannot strand one.
+
+**⚠ AND IT IS ITS OWN VALIDATOR, WHICH WAS FOUND BY GETTING IT WRONG.** Placed inside `validateBlueprints` it sat behind that function's early return for a package with **no `blueprints/characters` folder** — a correct gate for character blueprints and the wrong one here, since **a package with no characters is exactly the one most likely to carry no items either.** A check aimed at the wrong subject.
+
+### ⚠ And `taris-undercity` is closed — the eleven items copied, one line dropped
+
+`endar-spire`'s eleven weapon blueprints cover all eighteen classes' stock weapons between them, so they are what `taris-undercity` needed. Copied verbatim **except one**: `blaster-rifle`'s description read *"Republic-issue, and standard issue to Sith boarding parties"*, which is `endar-spire`'s own fiction and not the Undercity's. **The line is dropped rather than rewritten** — `description` is optional, absence is honest, and writing new flavour in somebody else's package is authoring rather than repair.
+
+Measured after: **both packages report zero stock-weapon faults across eighteen classes.**
+
+### ⚠ The profession's melee upgrade is declared and not applied
+
+`STARTING-EQUIPMENT-01 §4a` gives nineteen classes a per-profession upgrade, and **most rows are a choice** — *"Long Sword + Short Sword **or** a Double-Bladed Sword"*. The log has recorded `item_unresolved: "nothing applies it yet"` since it was written; **the Equipment screen said nothing**, and a player reading *"an upgrade on the gear you already have"* takes it and finds their weapon unchanged. The screen says it plainly now.
+
+**What it needs is `§4a` extracted and a second offer on that screen** — not a line of code, which is why it is named here rather than half-built.
+
+### ⚠⚠ AND `§4a` IS NOT THE RIGHT SOURCE — `WEAPON-MATRIX-01` ANSWERS THE SAME QUESTION IN FOUR COLUMNS
+
+`PT-1777` extracted `§4a` into options and **the screen was about to be built on it.** It must not be. `WEAPON-MATRIX-01` carries the same nineteen classes with its columns **labelled and separated**:
+
+    Class · DEFAULT · + TWO-WEAPON FIGHTING · + PROFESSION · + BOTH
+
+**⚠⚠ `§4a` HAS ONE COLUMN WHERE THAT HAS TWO, AND IT CONFLATES THEM.** Where a `§4a` cell carries a `Hunter:`/`Veteran:` prefix the two can be told apart; **where it does not, the cell is the `+ BOTH` value and the profession-only value is simply absent.**
+
+| | `§4a`'s single column | `WM + PROFESSION` | `WM + BOTH` |
+|---|---|---|---|
+| **⚠ Soldier** | Long Sword + Short Sword *or* a Double-Bladed Sword | **Hunter: Long Sword** | Long Sword + Short Sword *or* a Double-Bladed Sword |
+| **⚠ Scout** | Double-Bladed Sword | **Hunter: Long Sword** | Double-Bladed Sword |
+| **⚠ Bounty Hunter** | two Heavy Blasters | **Veteran: Heavy Blaster** | two Heavy Blasters |
+| **⚠⚠ Agent** | **—** | Hunter: Long Sword · Veteran: Blaster Pistol | two Blaster Pistols *and* Long Sword + Short Sword |
+| **⚠⚠ Treasure Hunter** | **—** | Hunter: Long Sword · Veteran: Heavy Blaster | two Heavy Blasters *and* Long Sword + Short Sword |
+| **⚠ Saboteur** | Hunter: Long Sword · Veteran: Heavy Blaster | *(same)* | **two Heavy Blasters *or* Long + Short *or* a Double-Bladed Sword** |
+| **⚠ Duelist** | Hunter: Vibrosword · BOTH: Vibrosword + Vibroblade | *(same)* | *(plus)* **or a Vibro Double-Blade** |
+| **⚠ Smuggler** | … BOTH: two Heavy Blasters *or* Long + Short | *(same)* | *(plus)* **or a Double-Bladed Sword** |
+
+**Three classes mis-conditioned, two classes missing their grant entirely, three alternatives missing.** A screen built on `§4a` offers a `Soldier` who took the Hunter profession and **not** the feat a pair of weapons the matrix says they do not get.
+
+**⚠ AND `WEAPON-MATRIX-01` SETTLES `BOTH` IN ITS OWN PROSE**, which `PT-1777` had to argue from two indirect grounds: *"`PT-744` put 'two Heavy Blasters' in the `Two-Weapon Fighting` column alone. **That was wrong: the feat gives TWO, and `Veteran` gives BETTER**"* — followed by `PROFESSION ONLY: one Heavy Blaster` and `BOTH: TWO Heavy Blasters`. **Same reading, stated outright, in a document that was already reconciling these two effects.**
+
+> **⚠⚠ WHICH DOCUMENT WINS IS NOT `Coder`'s TO DECIDE** — it changes what a `Soldier` is handed. Reported rather than mapped silently, which is the standing `SKILLS-01` set: *"report it as a gap rather than mapping it silently."* `weapon_upgrades.toml` as shipped at `PT-1777` is a faithful read of `§4a`; **the question is whether `§4a` is the thing to read.**
+
+**⚠ AND ONE THING IS A GAP UNDER EITHER ANSWER.** Both documents grant a **`Heavy Blaster`** to four classes, and `EQUIPMENT-01`'s base-type table **has no such row** — `§4c` lists six pistols in the `Pistol` wield class and the table carries five. `§2c` resolves the name to a catalogue item (`g_w_hvyblstr01`, 200cr), so it exists as an ITEM and not as a BASE TYPE — and `resolveStartingWeapon` needs a base type to produce dice. **A `Veteran` grant cannot resolve to a weapon today no matter which table it is read from.**
 
 ---
 

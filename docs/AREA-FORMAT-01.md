@@ -443,7 +443,7 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **⚠ TWO INDEPENDENT SOURCES ARRIVE AT TEN SQUARES:**
 
-    KOTOR's effective distances   10 m · 20 m · 35 m, 97.8% on the 20 m default
+    KOTOR's effective distances   10 m · 20 m · 35 m — THEIRS, NOT OURS
     RCR darkvision                20 m, flat
     RCR scent                     10 m
 
@@ -451,7 +451,17 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **⚠ ONE DEFAULT AND AN OVERRIDE ON THE PLACEMENT, NEVER A TABLE — `PT-1571`, and ruled on DATA.** 4,397 blueprints, two races, non-default rates of **2.4% against 2.1%**: *KOTOR had the field, had the two races, had 4,397 chances, and used it to separate droids from organics **zero times.***
 
-**⚠ And a `range` follows `stealth`'s rules**: hidden only, a whole number, and **above zero** — a range of zero is a creature nothing can ever notice, and that is not what `hidden` means.
+**⚠ And a `range` is a whole number and **above zero** — a range of zero is a creature nothing can ever notice, and that is not what `hidden` means.
+
+### ⚠⚠ AND IT IS NO LONGER HIDDEN-ONLY — `PT-1686`'s second reader corrects this section
+
+**This read *"a `range` follows `stealth`'s rules: hidden only"*, and the reader refused one in plain sight.** That was **right for the one reader it had**: `range` existed for `PT-1573`'s find-on-approach, which only ever asks about a creature that is hiding.
+
+**⚠ `PT-1686` gave it a second reader.** Detection at range is about **unhidden** creatures — the ones that were simply too far away to have joined a fight yet — so *hidden only* stopped being a rule and became a limitation: **an author could not give one creature sharper eyes than another.**
+
+> **One number, read from whichever side is deciding.** *How far off it can be noticed* and *how far off it notices* are the same distance, and `§3c`'s own argument for one default and no table applies to both.
+
+**⚠ `stealth` IS STILL HIDDEN-ONLY.** A hiding total on something in plain sight is two statements that cannot both be true — `PT-1379` — and nothing about detection touches it.
 
 ### ⚠ HOW IT IS FOUND — ruled at `PT-1569`/`PT-1573`, and BUILT
 
@@ -463,7 +473,7 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **⚠⚠ AND A DISTANCE IS THE GREATER OF THE TWO AXES — `PT-1581`, and it was ALREADY RULED BEFORE THAT.**
 
-**`PLAYTEST-RULINGS-01:238`:** *"**Grid diagonals** — Ruled here: **diagonal costs 1 square**, diagonally touching is adjacent, and diagonal adjacency satisfies both melee reach and flanking."* **One sentence carrying three rulings**, and `PT-4` at line 117 rules flanking geometry consistently with it.
+**`PT-1588` — `PLAYTEST-RULINGS-01:238`:** *"**Grid diagonals** — Ruled here: **diagonal costs 1 square**, diagonally touching is adjacent, and diagonal adjacency satisfies both melee reach and flanking."* **One sentence carrying three rulings**, and `PT-4` at line 117 rules flanking geometry consistently with it.
 
 > **⚠⚠ AND THIS PARAGRAPH USED TO ASSERT THE OPPOSITE.** It said *"nothing in the corpus says whether a diagonal counts as one square or more"* and called the number mine. **It does say, and it had said all along.**
 >
@@ -476,6 +486,18 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 **⚠ RULED AT `PT-1573`: FIND ON APPROACH**, against find-on-notice. **And the reason it needed a ruling is that at KOTOR's 250 m the two are the same rule wearing different words** — 125 squares is the whole area, so *"on approach"* and *"on entering"* would have been indistinguishable and a hidden creature would never have been a surprise.
 
 **⚠ SO THE DISTANCE HAD TO BE OURS BEFORE THE RULE COULD RUN**, and `§3c` is where it came from.
+
+### ⚠⚠ `3d` · Detection needs a LINE, not just a distance — `PT-1686`, owner's follow-up
+
+**`TileType.blocksSight` has been on the vocabulary since `§2·0a` was written and was read by nothing.** `PT-1550`'s own note records the non-use as deliberate: *"`wall.blocksSight` stays true and stays unread"*, because `hidden` is an author's flag rather than a perception system.
+
+**⚠⚠ `PT-1686` MADE THE ABSENCE A DEFECT.** Detection at range compared a DISTANCE and nothing else, so **a creature noticed the player through solid rock** at any range under the radius — the right number and the wrong geometry.
+
+**⚠ Symmetric, and that is a decision.** A single Bresenham walk is not: for some diagonal pairs it clears A→B and blocks B→A, so *can I see you* and *can you see me* get different answers about the same wall — **and the creature would detect the player from a square the player could not be detected from.** A line is clear when *either* traversal is, which also makes a corner permissive: two walls meeting at a diagonal do not seal it.
+
+**⚠ The endpoints are never asked about.** A creature standing in a doorway can see out of it.
+
+**⚠ And contact needs no line.** `PT-1678`'s adjacency join is *already touching*; sight is what distance needs and touching does not.
 
 ### ⚠ And what is NOT here — `PT-1550`
 
@@ -575,6 +597,33 @@ from  = "doors/blast-door"        # ⚠ OPTIONAL — omit it and it is a doorway
 **So picking a lock is `skill: security, dc: N`** — one mechanism, not two. **And it already renders**: `PT-1307` gives it `[Security]` on a dialogue option, and a door is the same gate in a different place.
 
 **⚠ Attitude and payment fall out for free and are not nonsense** — a door someone opens *for* you, or a bribe to the guard holding the key.
+
+---
+
+### ⚠⚠ `4b` · `save_on_use` — autosave is the DOOR's decision, `PT-1666`
+
+```toml
+[[connections]]
+tag         = "door.command-deck.aft"
+at          = [23, 9]
+to          = "a02-taris-hideout"
+lands       = "north"
+save_on_use = true              # ⚠ OPTIONAL — omit it and crossing saves nothing
+```
+
+**`PT-1665` shipped autosave on door use UNCONDITIONALLY, and `PT-1666` revised it the same day.** Every crossing wrote and every crossing said so.
+
+**⚠ The revision is the GATE, not the mechanism.** The write, the status-line word and append-not-assign all stand — `PT-1663` and `PT-1665` are untouched. What changed is **who decides**: the door, not the crossing.
+
+> **⚠ The owner's reason, quoted because the cost is the argument:** *"a door mid-dungeon before a boss fight is a natural save point; a door between two rooms in a tutorial corridor is not, and firing on every one trains players to ignore the word on the status line the way a fire alarm that goes off daily gets ignored."*
+
+**⚠⚠ ABSENT IS FALSE, AND THAT IS THE WHOLE POINT OF THE DEFAULT.** *"An author opts a door INTO autosave rather than opting doors out of it, so existing shipped packages do not silently start autosaving everywhere the day this lands."* **Every area file written before this ruling is correct without migration** — the same shape `§3a` gives `hidden`.
+
+**⚠ So `save_on_use = false` is never WRITTEN.** Absent and `false` are the same fact, and writing the longer one would make every area diff on a default — `§3a`'s rule, applied to the next field rather than to one.
+
+**⚠ And an UNCHECKED crossing is not a suppressed save; it is the load's case.** The arrival still reaches the log in memory, so nothing is lost and the next thing worth writing carries it — `PT-1658`'s shape, where *"the same log yields the same bytes"* is what the structure protects.
+
+**⚠ It is author judgement, and that is deliberate** — the same way `PT-1442` lets an author set a doctrine's `want_range` rather than deriving one.
 
 ---
 

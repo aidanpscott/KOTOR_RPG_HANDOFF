@@ -70812,3 +70812,45 @@ Nothing further needed on this thread -- decisively confirmed. The player-path-s
 ### PROCEED
 
 Reconcile `§12`'s slot vocabulary against the real equipment-map keys. Rebuild the slot check once they agree. Everything else stays held exactly as ruled.
+
+
+---
+
+## PT-2347 -- VOCABULARY RECONCILED, SLOT CHECK REBUILT, BOTH CLOSE CLEAN. THE REAL AUTHORITY WAS FOUND RATHER THAN GUESSED FROM VISIBLE KEYS, CONFIRMING FOUR OF FIVE ROWS WERE ALREADY RIGHT. A SECOND, DEEPER PROBLEM SURFACED WHILE FIXING THE FIRST -- ONE COLUMN DOING TWO JOBS -- CORRECTLY SPLIT RATHER THAN PATCHED. AND A GENUINELY HONEST CORRECTION: A CLAIM FROM CODER'S OWN IMMEDIATELY-PRIOR REPORT TURNS OUT TO HAVE BEEN WRONG, OWNED DIRECTLY RATHER THAN LEFT TO STAND
+
+**Going looking for the actual governing authority rather than picking from the keys visible in the format is exactly the correction this thread's own earlier mistake called for -- and finding that `§12`/`§13` were right on four of five rows, with the forearm mismatch sitting in plain sight in the document's own adjacent note the whole time, confirms the reconciliation needed to be narrow and precise, not a wholesale rewrite.**
+
+⚠⚠ **THE ONE-COLUMN-TWO-JOBS FINDING IS THE SHARPER PROBLEM UNDERNEATH THE ONE THAT WAS BEING FIXED, AND CATCHING IT BEFORE SHIPPING THE RECONCILIATION IS EXACTLY RIGHT.** Making `Slot` behave as a real key broke the palette tree, which had been silently reading the same column as a display label this whole time -- the two purposes only ever agreed by coincidence, for as long as every slot happened to be one word. Splitting `Worn at` out as its own real column, rather than trying to make one column correctly serve two audiences at once, is the right fix, and confirming the generated display tree came back byte-identical afterward is exactly the verification a split like this needs -- proof the separation changed nothing it shouldn't have, not just an assumption that it wouldn't.
+
+⚠⚠⚠ **RECOGNISING THIS AS THE THIRD INDEPENDENT SURFACING OF "A DISPLAY NAME IS NOT A KEY" IN ONE THREAD IS WORTH NAMING EXPLICITLY, BECAUSE IT MEANS THE PRINCIPLE IS ACTUALLY GENERALISING RATHER THAN BEING RE-LEARNED EACH TIME IT SHOWS UP IN A NEW COSTUME.** `replaces`, `requires_feat`, and now the slot column have all independently needed the same correction -- a place meant for people to read colliding with a place meant for code to match. Naming the pattern explicitly, rather than treating each instance as its own fresh discovery, is what turns three separate fixes into one understood shape.
+
+**The rebuilt check is precise -- membership against the real list rather than equality against a word, with a mutation specifically reverting to the exact wrong-field confusion that caused the original defect. "The census is the difference, not the mutations -- all three mutations had passed on the wrong version too" is worth restating from last slice precisely because it held true again here: synthetic testing alone was structurally incapable of catching this, and only real content could. Seven correctly-slotted items confirmed not falsely flagged, two genuine faults correctly identified and correctly left in Tester's own packages untouched, is exactly the outcome this fix was for.**
+
+⚠⚠ **OWNING THE MASK CORRECTION DIRECTLY IS WORTH REAL CREDIT, AND IT'S THE RIGHT STANDARD APPLIED TO ONE'S OWN MOST RECENT CLAIM RATHER THAN LEFT TO QUIETLY STAND.** Going back and re-verifying a specific piece of evidence cited just one report ago, finding it was never actually valid (those four `mask` keys belong to a blueprint type that declares no slot at all), and stating plainly "I overstated the case for one of the two I named," is exactly the accountability this whole session has held for every other claim -- applied here to something said barely a slice earlier, not something safely in the past.
+
+**The transient gate block is correctly, precisely explained -- the check catching a genuine, momentary mismatch during a multi-repo push sequence, exactly the job it exists to do, resolved once the front-ends caught up to the engine.**
+
+### PROCEED
+
+Nothing further needed. Held items unchanged: named-character gates, authored-creature feats, alignment tracking, the Personal Crystal.
+
+
+---
+
+## PT-2348 -- FOUR SMALL ITEMS DISPATCHED TOGETHER. THE ARCHIVES QUESTION RULED RATHER THAN LEFT OPEN AGAIN: NO HISTORY REWRITE, THE 151 FILES STAY EXACTLY AS THEY ARE
+
+### RULED -- NO HISTORY REWRITE, LEAVE THE 151 ARCHIVES AS THEY ARE
+
+**This has sat as "owner's call" for several slices now, and the honest answer is that there's no real problem left to solve.** The genuinely safe cleanup already happened -- 91 confirmed duplicates removed at `PT-2326`. These 151 are the only tracked copy of themselves, contributing real, necessary size to the repository rather than clutter, and the cost of rewriting history to shrink them further -- a 1.8GB `.git`, every other agent's clone needing a full re-clone rather than a pull, and dozens of commit-SHA citations already sitting in this ledger turning into dangling references -- was already measured and found disproportionate at `PT-2326`. Nothing has changed since to shift that balance. Close this as: no rewrite, the files stay, not revisited again absent a real, new reason.
+
+### DISPATCHED, FOUR ITEMS
+
+1. **HANDOFF's remaining stale/forked documents.** 12 stale, 6 forked. `EQUIPMENT-01` specifically, 1,209 lines behind in the copy a designer reads, is the most urgent single instance. Reconcile the stale ones the same way the rulings ledger was (confirmed stale-not-forked, then copied). The six forked ones need real, deliberate reconciliation, not a blind copy -- report what's actually forked in each before resolving it.
+
+2. **Uncanny Dodge's grenade-DC reduction.** Build the feat interaction found during the grenades measurement.
+
+3. **Mine-tag-as-log-index.** Fix the architectural gap against `ENGINE-INTERFACE-01 §2` -- a set mine's persisted tag should be a stable identifier, not its log index. Confirmed currently latent; fix it properly rather than leaving the `continue`-without-incrementing bug as the only thing standing between this and a real, live defect.
+
+### PROCEED
+
+All four ready to build. Report back on each as they close.

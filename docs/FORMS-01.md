@@ -501,6 +501,45 @@
 | **Force Affinity** | **FP regenerate during combat**, at a reduced rate against the non-combat rate |
 | **Force Mastery** | Force power duration +50%; opponents' saves vs. Force −2; **your** saves vs. Force −4; **FP cost +20%** |
 
+### ⚠⚠ 6.2b The converted values — `PT-2125`. **The table above is the SOURCE's; these are OURS.**
+
+**⚠⚠ `PT-629`–`632` closed the percentage sweep and this family was written
+after it and never checked against it — `PT-2124` found six live percentages
+still here.** `PT-475` bars a percentage a player has to compute at the table.
+The table above is kept exactly as the game states it, because it is the
+source; **what a player actually uses is below.**
+
+| Form | The source says | ⚠⚠ We use |
+|---|---|---|
+| **Force Focus** | FP regeneration **+50%** out of combat | **half again, rounded down** |
+| **Force Mastery** | Force power duration **+50%** | **half again, rounded down** |
+| **Force Potency** | Force power damage **+30%** | **roll one extra die of the power's own damage type** |
+| **Force Potency** | FP cost **+20%** | **+1 FP, flat** |
+| **Force Mastery** | FP cost **+20%** | **+1 FP, flat** |
+| **Force Mastery** | saves vs Force ±2 / ±4 | **unchanged — already flat** |
+| **Mastery · Affinity** | degradation −10% / −5% | **unchanged — see `§7.2`** |
+
+**⚠ THE DIVIDING LINE IS WHETHER THE MODIFIED QUANTITY ALREADY SCALES.**
+Regeneration and duration grow with level and power, so a flat bonus would be
+trivial at 20 and oversized at 1 — both stay proportional, in the corpus's own
+*half again* idiom. **FP cost is a single digit on most powers**, and a
+percentage of a single digit is exactly the rounding problem `PT-475` exists to
+kill — both flatten to `+1`.
+
+**⚠⚠ AND POTENCY'S DAMAGE BORROWS THE POWER'S OWN DIE**, because it spans 106
+powers of wildly different size: neither a flat percentage nor one fixed die
+fits all of them, and a die the power already rolls scales itself with no
+lookup and no arithmetic at the table.
+
+**⚠ THE TWO DEGRADATION CUTS ARE DELIBERATELY NOT CONVERTED.**
+`POWER-COSTS-01` applies them once per encounter against a total already being
+tracked — not per cast, not recomputed per roll. That is the exception
+`PT-475` carved out, and `§7.2` reached it on first principles before anyone
+checked it against the rule by name. **Converting them would not fix a
+violation; it would break something already right.**
+
+---
+
 ### 6.3 Forms do interact with powers — globally, not per power
 
 **F-3 was looking for a per-power table and there is none. But Force forms modify Force powers wholesale:** damage, duration, cost, regeneration, and save DCs.
@@ -530,6 +569,20 @@
 **`FORCE-POOL-01 v3 §3.3` treated in-combat regeneration as universal. Force Affinity's entire stated effect is *FP regenerate during combat*.** That looked like a contradiction and is not.
 
 > **Both are true. In combat, Force points regenerate at 50% of the normal rate, rounded up. Force Affinity removes the halving.**
+
+**⚠⚠ AND THAT ANSWERS `PT-2125`'s OPEN QUESTION: **Force Affinity** HAS NO
+PERCENTAGE OF ITS OWN.** Its description's *"reduced rate"* is not a figure the
+form carries — it is naming the UNIVERSAL in-combat rate above, which `§7.1`
+closed, and Affinity's whole effect is to remove it. **There is nothing of
+Affinity's to convert**, and it does not take Focus's treatment because it has
+no number to treat.
+
+**⚠ THE `50%` IN THE LINE ABOVE IS REAL AND IS NOT ONE OF `PT-2124`'s SIX.** It
+belongs to in-combat regeneration generally rather than to any form, and it
+already states its own rounding — *half, rounded up*, which is the same idiom
+read the other way. Recorded here rather than converted, because `PT-2125` did
+not rule on it and it is not a form's value.
+
 
 **So in-combat regeneration is universal, and the form buys the full rate rather than the ability itself.** `regeneration.2da`'s `incombatfpbase: 0.1` is a rate parameter and was never evidence of a gate.
 
@@ -584,7 +637,7 @@
 | Roster, partition, drift tiers | **Closed** — D-AK |
 | Per-power costs and degradation | **Closed** — D-AL |
 | `formmask`, forms as feats, `exclusion: 0x02` | **Closed** — D-AM |
-| Form effects | **Closed** — §6 |
+| Form effects | **Closed** — §6, and the percentages converted at `PT-2125` · §6.2b |
 | In-combat regeneration | **Closed** — 50% of normal, rounded up. Force Affinity removes the halving. §7.1 |
 | Form degradation modifiers | **Closed** — Mastery −10%, Affinity −5%, applied per encounter to the accumulated total. §7.2 |
 | Moderation's effects | **Closed** — §6.1, `hybrid_authored`, drafted to the Legends description |

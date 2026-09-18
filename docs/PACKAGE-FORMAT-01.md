@@ -121,6 +121,7 @@ version     = "1.2.0"
 authors     = ["..."]                # ⚠ REQUIRED from PT-1358
 summary     = "..."                  # ⚠ NEW — one line, required
 cover       = "cover.png"            # ⚠ NEW — optional
+faction     = "republic"             # ⚠ NEW at PT-1687 — optional, FACTIONS-01 §4b
 
 [requires]
 engine      = ">=1.0"
@@ -129,7 +130,7 @@ packages    = [
 ]
 
 [continues]
-chain       = "my-first-campaign"    # ⚠ cross-campaign carry
+chain       = "my-first-campaign"      # ⚠ cross-campaign carry
 
 [order]
 areas       = ["a01-endar-spire", "a02-taris-hideout"]
@@ -137,6 +138,17 @@ areas       = ["a01-endar-spire", "a02-taris-hideout"]
 [entry]
 area        = "a01-endar-spire"
 ```
+
+### ⚠⚠ `faction` — whose campaign this is, `PT-1687`, `FACTIONS-01 §4b`
+
+**A faction is a property of the CAMPAIGN** — `PT-680`, `PT-685` — so it is declared here and not on a character. `§4b`: *"a faction declaration says who starts hostile. What happens after is the GM's and the package's."* **Not a reputation track**; `INFLUENCE-01` owns earned standing and it is for companions.
+
+**⚠⚠ AND IT WAS NEW, WHICH THE RULING DID NOT EXPECT.** `PT-1687` reads *"a static campaign-level fact already on every shipped package."* **No package declared one, no creature blueprint declared one, and this format had no field.** The reader for `[character] faction` has existed since `AUTHORED-CHARACTER-01 §2a` was written **with nothing anywhere filling it in.**
+
+**⚠ SO ABSENT IS *UNDECLARED*, NEVER *NOT HOSTILE*.** A creature joins a fight on contact or range unless its faction is declared and matches the campaign's — because reading absence as peace would mean **nothing could ever attack a player again.** Absence-versus-error, in the one place where getting it wrong empties the game.
+
+**⚠ A character may defect.** `character.faction-changed` is already `campaign` lifetime and already folded by `projectPlayState`, so the campaign's declaration is the default and an event overrides it. Nothing new was needed for that.
+
 
 ### ⚠ `[requires].packages` is ordered, and that IS the precedence
 
@@ -380,6 +392,21 @@ classes_closed = ["sith-warrior"]
 >
 > **An item blueprint names a BASE TYPE from the rules, and the base type carries the dice.**
 
+**⚠⚠ AND THE BASE TYPE IS A DEFAULT, NOT A CEILING — owner ruling.** An item blueprint may state its own `damage`, and where it does, **that value wins**; where it does not, the base type's stands. The field is optional and a blank one writes no line at all, so *absence is not a claim* — an item that says nothing about its dice is using its base type's, which remains the normal case.
+
+```toml
+[item]
+name   = "Krath War Blade"
+base   = "long-sword"
+damage = "1d12"        # this blade, not every long sword
+```
+
+**⚠ WHY THIS HAD TO EXIST.** The earlier reading was *"a second copy of a number is a second answer"*, and the worry was real and aimed at the wrong case. **Eleven catalogue weapons inherit from `long-sword` and the dearest is 18,000 credits** — the family had a 720× price spread and one die between them, because the format gave no weapon any way to differ from its base. An item stating its own damage is not a second copy of the base's number; it is a **different** number, deliberately, and this is the only place it can live.
+
+**⚠ NO CAP, RULED.** Capping an override would move the flattening problem down one layer rather than solving it. **A value that cannot be read is refused**, at rest by `validate` and at the seam by `weaponFromBase` — `PT-1564`'s rule that a malformed number is a refusal rather than a silent zero.
+
+**⚠ THE OVERRIDE IS PER FIELD.** An item overriding `damage` and not `threat` still takes its base type's threat range. There is one resolver — `itemOrBase` — so the app, the Builder and the validator cannot disagree about which value wins.
+
 **⚠ One form, because two would be ambiguous** — a path resolving to *either* a blueprint or a base record puts the reader in the business of guessing which. **And it matches the source: a `.utc` references a `.uti`, always. There is no creature carrying a raw baseitem.**
 
 **⚠ AND THE POSITIONAL ARRAY IS A DEFECT IN THE EXTRACTION, NOT AN INTERFACE.** `equipment.json` stores `values` positionally because that is how the table reads; **it must be re-extracted with NAMED fields per section.** Nothing should ever infer a schema from a prose column order — that is `TRACE-83`'s position-as-identity, in our own data.
@@ -460,7 +487,7 @@ classes_closed = ["sith-warrior"]
 [[requires.packages]]
 id       = "base-rules"
 version  = ">=2.0"
-digest   = "sha256:…"      # ⚠ what was actually depended on
+digest   = "sha256:…"        # ⚠ what was actually depended on
 ```
 
 **⚠ The digest is what makes a dependency verifiable rather than merely named.** Two packages claiming `base-rules 2.1` may differ; **a digest says which one this package was built against.** And a copy found anywhere — a friend, an archive, a backup — **can be checked rather than trusted.**

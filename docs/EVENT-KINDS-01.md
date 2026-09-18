@@ -91,14 +91,61 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 >
 > **⚠ And `step-reopened` is permanent too, which looks wrong and is not.** It carries **the list of steps it discarded**, so replay can clear exactly those slices — **the discard is a fact about the character's history, not a scratch value.** `PT-1415`: *a correction is a new event, not an edit.*
 >
-> **⚠ A ROW IS NOT A KIND.** Six rows name two or three in `a.b / .c` shorthand — **24 rows carry 36 kinds, and a reader counting rows is twelve short.**
+> **⚠⚠ `character.xp-awarded` — `PT-2233`, AND THE NAME AND PAYLOAD ARE `Coder`'s, delegated.**
+>
+> **⚠ `permanent`, FOR THE REASON `character.levelled` IS.** XP earned is a fact about a character's history, not a scratch value, and a save that forgot it would have the character level up twice for one fight. The two travel together and must not have different lifetimes.
+>
+> **⚠ `xp-awarded` RATHER THAN `xp-gained` OR `experience-awarded`.** *Awarded* is what `EXPERIENCE-01` itself says — *"XP IS AWARDED FOR THE CREATURE'S CHALLENGE RATING"* — and the vocabulary's own style is `character.<past participle>`: `created`, `levelled`, `damaged`, `downed`, `revived`. `xp` rather than `experience` because `progress.xp` is already the field's name and two spellings of one quantity is how a reader comes to miss half of it.
+>
+> **⚠⚠ AND IT IS AN INCREMENT, WHERE `character.levelled` CARRIES A TOTAL.** That is a real difference and it is stated rather than left to be discovered: `levelled.xp` is *the total at the moment of levelling* — a snapshot, which is what lets an authored character state where it starts — and `xp-awarded.amount` is *what this fight paid*. Replay adds the second and SETS from the first, in log order, so a character made at level 20 and then played accumulates from its stated total rather than from zero.
+>
+>     subject   who earned it
+>     amount    ⚠ the increment, after §3's split — not the encounter's total
+>     from      what was beaten, by handle, for the line that says so
+>     cr        the challenge rating that was looked up
+>     level     the level it was looked up against
+>
+> **⚠ `cr` AND `level` RIDE THE EVENT BECAUSE THE DERIVATION IS THE ANSWER — `PT-1326`.** A player reading *"+250 — sith-trooper.command-deck.39, CR 3 at level 5"* can check it; one reading *"+250"* cannot. And a log that carries only the total cannot be re-derived the day the table is retuned.
+
+> **⚠ A ROW IS NOT A KIND.** Rows name one, two or three in `a.b / .c` shorthand — **39 rows carry 50 kinds, and a reader counting rows is eleven short.** ⚠ `PT-1612` — this said *24 rows carry 36* and the extract's own note said *24 carry 33*; **three numbers for one fact, in a sentence whose subject is that counting rows misleads.** The extract computes it now.
+| `character.xp-awarded` | permanent | ⚠⚠ `PT-2233` — **NEW.** |
 | `character.levelled` | permanent |
 | `character.damaged` / `.healed` | transient — *until the encounter ends* |
 | `character.downed` / `.died` / `.revived` | campaign |
+| `character.dying` | **transient — *until the encounter ends*** ⚠ `PT-1618` — newly declared |
 | `character.condition-applied` / `.condition-expired` | transient — *until its own duration* |
 | `character.moved` | **campaign** ⚠ `PT-1417` — was `session` |
 | `character.alignment-shifted` | **permanent** — `PT-1279`, alignment history is not compactable |
 | `character.faction-changed` | campaign |
+
+> **⚠⚠ `PT-1618` — `dying` IS THE ORDINARY FAILURE STATE AND IT HAD NO KIND.**
+> `Tester` counted twenty saves: **125 crossings at or below zero, of which 40
+> are exactly zero and 85 are negative.** `down` is reached only at exactly
+> zero; **`dying` is 85 of 125 and there was no kind for it in the ledger or in
+> the shipped rules.**
+>
+> **⚠ AND IT IS `transient`, FOR THE RULE `PT-1612` JUST USED.** `PT-1427`:
+> *a fight is not a fact; its outcome is.* Dying is a state INSIDE a fight and
+> **the fight resolves it** — you stand at 1 when combat ends, you are healed,
+> or you die. **Whatever survives is already recorded**, by `encounter.ended`,
+> `character.died` or `character.revived`.
+>
+> **⚠ AND ITS NEIGHBOUR ALREADY SAYS IT.** `character.damaged / .healed` is
+> *transient — until the encounter ends*, and dying is a consequence of damage
+> in the same band, ending at the same boundary.
+>
+> **⚠ AND A `campaign` ONE WOULD BE FOLDED BY NOTHING.** `projectPlayState`
+> folds `died` and `revived`; a third unfolded campaign kind is `PT-1606`'s
+> fifth state again. **And 85 of 125 is a frequency argument FOR transient**:
+> a kind firing in two thirds of crossings and read by nobody would be the
+> largest thing in the save, which is the case `SAVE-LOAD-01 §4` gives
+> lifetimes their job for.
+>
+> **⚠⚠ AND THE TENSION IS NAMED RATHER THAN SMOOTHED: `character.downed` is
+> `campaign` and is the same shape** — a crossing inside a fight that the
+> fight resolves — **and it is folded by nothing either.** If `dying` is
+> transient then `downed`'s lifetime is the anomaly, not this one. `PT-1618`
+> preserved `downed` explicitly, so it stands; the question is recorded here.
 
 ### Equipment and items
 
@@ -109,6 +156,10 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `item.used` | transient |
 
 **⚠ `item.*` events exist even though KOTOR gave items zero hooks.** An item that cannot react is an item that cannot be a trap, a cursed blade, or a thing that reacts to being drawn.
+
+**⚠⚠ `item.acquired` HAS A PRODUCER AND A CONSUMER NOW — `PT-1525`.** Looting a dead creature writes one per item, carrying `subject`, `item` (a blueprint path — `PT-1452` makes `[equipment]` a path always), `from` (the pile's placement **tag**) and `area`. `remainsIn` folds it back, and `carriedBy` is what the player reads.
+
+**⚠ `item.lost` still has neither, and that is deliberate rather than forgotten.** Nothing takes an item away yet. A fold for a kind nobody writes is exactly `PT-1523`'s `character.moved` — declared, folded, emitted by nothing, **zero occurrences across seventeen saves** — and `check_event_producers` exists to see that shape. Its first producer will be `DIALOGUE-FORMAT-01 §9`'s effect, and the fold arrives with it.
 
 ### Quest — `QUEST-MODEL-01`
 
@@ -123,17 +174,38 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 |---|---|
 | `area.entered` / `.left` | **campaign** ⚠ `PT-1417` — was `session` |
 | `party.joined` / `.left` | campaign |
+| `party.waiting` / `.following` | ⚠⚠ campaign — `PT-1832`. Standing orders (Wait here / Follow-regroup) did not survive a save until declared: `_persist` keeps only what `campaignKinds` names, and neither kind was in it. Confirmed as the only two undeclared kinds in the build by diffing every `CharacterEventKind` constant against the shelf. |
 | `door.opened` / `.locked` / `.unlocked` | campaign |
 | `container.opened` | campaign |
+| `hazard.set` | ⚠⚠ campaign — `PT-1957`. A mine the PLAYER put down. Authored content is read-only at runtime, so a set mine cannot join the `[[hazards]]` an author wrote: the room's hazards become *authored + set − sprung − disarmed*, which is the shape `door.unlocked` already gives a door. **Campaign because a mine you set and walked away from is still there when you come back** — that is the whole point of setting one. Payload: the area, the square, the item it was set from, and the two DCs, which the setter's own Demolitions decides at the point of placement and the event then remembers. |
+| `hazard.disarmed` / `.sprung` | ⚠⚠ campaign — `TEST`. **The other two terms of the formula the row above states.** `hazard.set` has said *authored + set − sprung − disarmed* since it was ruled, and neither subtraction had a kind: both were sets in the play screen that started empty on every load. So a defused mine came back live, a spent one came back armed, and a mine with a `recovers` handed out its item again every visit while the copies already carried were remembered — **an unlimited supply of a unique item, and no authored hazard that could ever be permanently cleared.** Campaign for the reason a picked lock is (`BUILD 182`). Two kinds rather than one because a mine that fired and a mine somebody defused are different facts about the same square; they are folded together only where the question is *is it still here*. Payload: the hazard's tag as `subject`, and the area. |
 
 ### Encounter
 
 | Kind | Lifetime |
 |---|---|
-| `encounter.began` / `.ended` | campaign |
+| `encounter.began` | **transient — *until the encounter ends*** ⚠ `PT-1612` — was `campaign` |
+| `encounter.ended` | campaign |
 | `turn.began` / `.ended` | transient — *until the encounter ends* |
 | `attack.resolved` | transient |
 | `check.resolved` | transient |
+
+> **⚠⚠ `PT-1612` — A FIGHT IS NOT A FACT; ITS OUTCOME IS.** `PT-1427`'s own
+> sentence decides it. **`encounter.ended` is `campaign` because a wound
+> outlives the fight**; `encounter.began` describes a moment that is over the
+> instant the fight resolves, and `PT-1606` confirmed **its single consumer
+> reads the in-memory beat and never the log.**
+>
+> **⚠ And `§5` forbidding an author from NAMING it is not an argument for
+> PERSISTING it.** That rule stops an author faking a fight; it does not make
+> the fight a durable fact.
+>
+> **⚠⚠ AND THIS IS ONE CELL RATHER THAN A CODE CHANGE, WHICH IS THE REAL
+> FINDING.** `PT-1603` made the app filter what it writes **by the declared
+> lifetime** instead of by a hand-picked list — so **the lifetime is now the
+> only thing that decides, a lifetime question is answered in this document,
+> and the product follows.** The two rows above were one row until now, and a
+> combined row is a cell that cannot be changed for one of its kinds.
 
 **⚠ `check.resolved` carries its whole derivation**, which is `PLAY-STATE-01 §5`: KOTOR persisted *"Defense Breakdown: 18 = base 10 + dex mod 4 + class 4"*. **Every modifier named.** That is what makes a derived system honest, and turn-based gives us more room to show it, not less.
 
@@ -167,7 +239,12 @@ effect = [ { kind = "quest.flag-set" } ]
 |---|---|---|
 | **`quest.flag-set`** | **`flag`** — a string | `DialogueView.flagsFrom` |
 | **`quest.concluded`** | **`quest`, `conclusion`** — both strings | `DialogueView.questsFrom` |
-| **`encounter.began`** | **nothing.** The kind alone is the whole effect | `PT-1437`, `Beat.endsInFight` |
+| **`encounter.began`** | **AN AUTHOR'S carries nothing.** The kind alone is the whole effect | `PT-1437`, `Beat.endsInFight` |
+| **`encounter.began`** ⚠ ENGINE | **`subject`, `encounter`** — `PT-1672`, the same payload `encounter.ended` carries | `combatRoster` |
+
+**⚠⚠ TWO PRODUCERS, ONE KIND, AND THE PAYLOAD IS WHAT SEPARATES THEM — `PT-1672`.** An author's is a **request to start a fight**; the engine's is the **record that somebody is in one.** Began and ended are the two halves of one membership, so they carry the same payload, and a matched pair is the only shape a fold can close.
+
+**⚠ So `combatRoster` requires a `subject`, and a `began` that names nobody joins nobody.** A fold that fell back to a placeholder would put a row on the panel with a health bar for a creature that does not exist — and `PT-1672`'s whole reason is that **an absence has to mean one thing.**
 
 **`validateConversation` requires exactly those fields and nothing else**, and `PT-1379` means `Loom` therefore cannot author one that is missing them.
 
@@ -209,7 +286,7 @@ effect = [ { kind = "quest.flag-set" } ]
 
 **Check A** wants *emitted and undeclared*. **Check B** wants *declared and replay ignores it*. **`check_event_producers`** wants *a fold with no producer*. **A kind with neither end is invisible to all three.**
 
-**⚠ AND IT IS NOT ADDED TO THE CHECK, DELIBERATELY.** *Declared and unimplemented* describes most of this vocabulary — `door.opened`, `container.opened`, `party.joined`, `item.used` — and that is **a roadmap, not a defect.** A check that flags a roadmap is a check somebody switches off, which is `TEST 016 F3`'s lesson applied before the fact.
+**⚠ AND IT IS NOT ADDED TO THE CHECK, DELIBERATELY.** *Declared and unimplemented* describes most of this vocabulary — `door.opened`, `container.opened`, `party.joined`, `item.used` — and that is **a roadmap, not a defect.** (`item.acquired` left that list at `PT-1525`; `encounter.began` gained an engine producer at `PT-1672`.) A check that flags a roadmap is a check somebody switches off, which is `TEST 016 F3`'s lesson applied before the fact.
 
 **⚠⚠ IT WAS A DEFECT HERE ONLY BECAUSE A RULING LEANED ON IT.** `PT-1509` calls the map *"nearly free"* **because `area.entered` is campaign lifetime** — a premise that reads as *the event is there* and is not. The map folds `character.moved` instead, which carries `area` and has been written at every arrival since `PT-1523`.
 

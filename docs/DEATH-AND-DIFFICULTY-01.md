@@ -54,6 +54,18 @@
 >
 > **⚠ And that makes `PT-1511`'s vacated square reachable for the first time.** Tester could not construct it *because nothing dies* — it will exist the moment this lands, and the wall-under-a-creature question stops being hypothetical.
 
+> **⚠⚠ ONLY A WIPE KILLS — `PT-1633`, owner ruling, and it governs EASY AND NORMAL BOTH.**
+>
+> **If the whole party goes down, everybody dies.** Otherwise **you are DOWN, and if the party wins, everybody gets back up.** *There is no individual death threshold on either difficulty.*
+>
+> **⚠ AND IT DISSOLVES THE OBJECTION THE AMENDMENT BELOW WAS MADE FOR.** That amendment removed a companion's recovery because it *"made the two companion classes the only ones playing without a stake at the default difficulty."* **⚠ The asymmetry was the complaint — and this rule is symmetric.** Nobody has an individual stake; **the party has one, and it is the whole of it.**
+>
+> **⚠ WHAT STILL SEPARATES EASY FROM NORMAL is the negative band, unchanged.** `PT-559`: on Easy it **does not exist** and damage below 0 is not tracked. On Normal it does — **you can be at −5 and need helping** — and `−Constitution` is where an ally can no longer bring you up mid-fight. ⚠ **My reading, and it keeps the band meaning something without it killing anyone.**
+>
+> **⚠ AND IT IS WHAT THE GAMES DO.** `STUDY 23` found `NoPermDeath` on **all nine recruitable party members and no enemy**, and `PT-1524` found KOTOR has **no dying band at all**. *A party that loses is the loss.*
+
+---
+
 ### Normal
 
 > **Players can die. ⚠ So do BEAST and DROID companions. Henchmen get up.**
@@ -221,7 +233,7 @@
 
 ## 6. Open
 
-**✓ ⚠ CLOSED — `PT-572`, recorded here at `PT-653`.** **⚠ PARTS AND TIME, NOT A LEVEL: the CHASSIS FRAME SURVIVES and the motivator, processor and cell are replaced — `DROID-CONSTRUCTION-01`.** **⚠ `PT-608` tiered the part prices: 700 / 1,400 / 2,800 by chassis tier.**
+**✓ ⚠ CLOSED — `PT-572`, recorded here at `PT-653`.** **⚠ PARTS AND TIME, NOT A LEVEL: the CHASSIS FRAME SURVIVES — wreckage is repairable — and the Processor, Control Cluster and Vocabulator are replaced — `DROID-CONSTRUCTION-01`.** **⚠ `PT-608` tiered the part prices: 700 / 1,400 / 2,800 by chassis tier — so a destroyed Assassin droid (Heavy) costs `2,800` rather than `6,900`, and a destroyed Remote (Light) costs `700`.** **⚠ EVERY BAY INSTALLATION IS LOST, and that is the real cost.**
 
 **✓ ⚠ CLOSED — `PT-559`, recorded here at `PT-653`.** **⚠ A COMPANION DIES AT `−Constitution`, LIKE EVERYTHING ELSE.**
 
@@ -229,6 +241,6 @@
 
 **⚠ `E-2`'s flat `−10` is superseded. The threshold SCALES with Constitution, so a beast with `Con 18` and a character with `Con 10` are handled by ONE RULE at their own scales — which is exactly what this item worried could not be done.**
 
-**✓ CLOSED — `PT-572`. `2,800` credits and one day: the MOTIVATOR, PROCESSOR CORE and POWER CELL.** **⚠ THE CHASSIS FRAME SURVIVES — wreckage is repairable — so a destroyed Assassin droid costs `2,800` rather than `6,900`.** **⚠ EVERY BAY INSTALLATION IS LOST, and that is the real cost.**
+**⚠⚠ The paragraph previously here duplicated the one above with a stale flat cost and retired part names — removed rather than left to drift again. See the PT-572 paragraph above for the current, tiered rule.**
 
 **⚠ Whether `Easy` mode's *"whole party dies"* means simultaneously or cumulatively.** **In KOTOR it is simultaneous — a wipe. Stated here so it is not read as attrition.**

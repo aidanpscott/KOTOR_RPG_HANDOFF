@@ -26,7 +26,7 @@
 | `SKILL-RESOLUTION-01.md` | The DC ladder |
 | `FEATS-LIBRARY-01.md` | The feats |
 | `PREGENS-01.md` | Nine worked characters |
-| `PLAYTEST-RULINGS-01.md` | **`PT-1` through `PT-85`.** Every ruling, why it was made, and what it superseded |
+| `PLAYTEST-RULINGS-01.md` | **Every ruling the working tree has issued, up to whatever `sync_docs` last copied.** Why each was made and what it superseded. ⚠ The count is deliberately not written here — it was `PT-1 through PT-85` while the file held 1,547, and a number in prose beside a file that grows is a claim nobody re-reads. `check_docs_mirror` is what says whether this copy is behind |
 
 ### `data/` — the KOTOR source tables
 
@@ -69,4 +69,6 @@
 
 **⚠ `PLAYTEST-RULINGS-01` was listed here as held back. It was not** — it was in the upload and the designer used it. **Corrected: it is in `docs/` and it is in play.**
 
-**Eighty-five rulings, roughly 127KB.** **It is the reason any number is what it is. Read it when a number looks wrong.**
+**It is the reason any number is what it is. Read it when a number looks wrong.**
+
+**⚠ This said *"Eighty-five rulings, roughly 127KB"* against a file that had reached 1,547 and 3.4MB — a count written once beside a document that only ever grows.** **`check_docs_mirror` in the working tree reports whether this copy is behind, and it distinguishes STALE from FORKED: a stale file is a copy, a forked one is a decision.**

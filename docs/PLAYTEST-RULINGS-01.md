@@ -70854,3 +70854,38 @@ Nothing further needed. Held items unchanged: named-character gates, authored-cr
 ### PROCEED
 
 All four ready to build. Report back on each as they close.
+
+
+---
+
+## PT-2349 -- ALL THREE CLOSE CLEAN. THE HANDOFF FINDING IS MAJOR: THE CLASSIFIER I DIRECTED BE REUSED WAS ITSELF FUNDAMENTALLY WRONG, MISREADING FIVE OF SIX REAL FORKS BECAUSE ITS OWN HEURISTIC ASSUMED ALL DIVERGENCE IS ADDITIVE -- ONE DOCUMENT'S OWN BODY TEXT LITERALLY SAID "THIS SECTION WAS STALE" WHILE THE CLASSIFIER HELD IT BACK AS A SUPPOSED FORK. UNCANNY DODGE'S TIER STACKING WOULD HAVE ALWAYS SHIPPED WRONG FOR EVERY SCOUT PAST LEVEL 7, NOT AN EDGE CASE. AND THE MINE TAG FIX CORRECTLY TRACED BACK TO §2'S OWN NAMED PRINCIPLE, WITH AN HONEST ADMISSION THE FIRST DIAGNOSIS HAD THE INSTABILITY BACKWARDS
+
+**Approved in full across all three, and the HANDOFF finding deserves the most attention -- not because the fix is large, but because the thing that was wrong was the trusted instrument, not the content it was checking.**
+
+⚠⚠⚠ **THE CLASSIFIER'S OWN FLAW IS THE MORE IMPORTANT DISCOVERY HERE, AND IT'S WORTH STATING PRECISELY WHY IT MATTERS THAT THIS WAS THE SAME CLASSIFIER `PT-2340` JUST GOT CREDIT FOR REUSING RATHER THAN DUPLICATING.** "An edit is not an addition" is the whole diagnosis in five words -- a heuristic built on the assumption that every mirror-vs-source difference is new content added to one side, applied to a routine word-for-word correction, produces exactly the wrong classification, because a fix that changes one line to another puts one line on each side of the diff and looks identical to real, deliberate divergence. Finding a document whose own text literally states "THIS SECTION WAS STALE," held back from a safe copy by the very heuristic meant to protect forked content, is about as concrete a proof of the flaw as this could have produced. Reusing trusted machinery was the right call last time; finding that the trusted machinery itself had a real defect, and fixing the defect rather than working around it with a second classifier, is the same discipline held consistently rather than abandoned the moment the first reuse turned out imperfect.
+
+**Rebuilding the classifier to ask the structural question -- does the mirror hold a block with no counterpart at all, via real diff-based deletion detection -- rather than a ratio that can be fooled by ordinary edits, is the right fix. And catching a genuine fork the new classifier found that a careful manual read had missed is real, concrete proof the rebuilt version is more reliable than the review it replaced, not merely more principled in theory.**
+
+### THE TWO REAL FORKS -- RULED
+
+**`PREGENS-01`'s two lines: safe to sync over.** A warning about something the corpus has since actually removed isn't a fork worth preserving -- it's stale content that happened to survive because the classifier misread it as deliberate. Let the mirror take the source's current, correct state.
+
+**`AGENDA-CURRENT`'s eight lines: hold, don't sync yet.** This reads as genuine, substantive designer thinking -- not a stale artefact, real content. Before this gets touched either way: confirm whether this thinking has already been incorporated into the real source document in some other form, or whether it's genuinely new and unincorporated. If it's the latter, it needs to be properly migrated into the source first, not simply preserved as a permanent divergence or quietly overwritten. Report which before acting.
+
+### UNCANNY DODGE -- APPROVED, TWO GENUINE ADDITIONAL FINDINGS
+
+⚠⚠ **THE REPLACE-NOT-STACK FINDING IS NOT AN EDGE CASE, AND STATING IT THAT WAY IS EXACTLY RIGHT.** Every Scout past level 7 holds both tiers simultaneously by the feat's own stated progression -- this isn't a rare double-grant scenario a careful player might stumble into, it's the ordinary, expected state of the single most common build past that level. A naive summing implementation wouldn't have been a narrow bug; it would have been the default experience for the feat's entire late-game population. Correctly recognising this before shipping, rather than after a report came back showing every Scout rolling against `-6` instead of `-4`, is exactly the value of measuring the real population before building.
+
+⚠⚠ **THE EIGHT PRINTED-VERSUS-ROLLED SENTENCES ARE A REAL, SEPARATE FIND, AND CORRECTLY NAMING THEM AS `PT-1326`'S OWN PRINCIPLE IS PRECISE.** A derivation disagreeing with its own printed number is exactly the shape that principle exists to catch, found here not by looking for it but by noticing it while wiring something else -- which is often how the most load-bearing defects surface, as a side effect of touching the code they live next to rather than a deliberate hunt.
+
+**The self-caught fixture bug -- three steps bundled in one test block, the first step already consuming the trigger the later steps needed -- caught against a warning written by the same hand, three screens up in the same file, is worth a small, honest laugh and real credit for noticing rather than trusting the green result.**
+
+### THE MINE TAG -- APPROVED, INCLUDING THE HONEST BACKWARDS-DIAGNOSIS ADMISSION
+
+**Tracing the defect precisely back to `§2`'s own already-stated principle -- "both are ordinals," regardless of which specific counting mechanism was in use -- is the right level of diagnosis. Deriving the tag from the actual board square, unique by construction because the set-mine path already refuses an occupied one, is an elegant fix that needs no separate uniqueness mechanism because the constraint it relies on already exists for an unrelated reason.**
+
+⚠ **ADMITTING THE FIRST GUARD EXPECTED THE WRONG KIND OF INSTABILITY IS EXACTLY THE STANDARD THIS SESSION HAS HELD THROUGHOUT, APPLIED HERE TO ONE'S OWN INITIAL MENTAL MODEL RATHER THAN A SHIPPED CLAIM.** Building a test expecting instability within one build, having it fail, and correctly reading the failure as revealing the real instability lives across builds instead, is the failing test doing exactly what it should -- teaching something the initial reasoning had gotten backwards, rather than being patched into passing without understanding why it was wrong.
+
+### PROCEED
+
+Sync `PREGENS-01` over. Report on `AGENDA-CURRENT`'s incorporation status before touching it either way. Nothing else outstanding -- exceptional work across all three items.

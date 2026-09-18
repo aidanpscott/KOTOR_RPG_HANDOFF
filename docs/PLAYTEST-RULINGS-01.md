@@ -70513,3 +70513,125 @@ Continue as listed: the `on_save` guard, `ability_penalty` validation, both smal
 ### PROCEED
 
 Build the `takes` optional-key mechanism and apply it to the three identified fields. Then continue as already queued: the `on_save` guard, `ability_penalty` validation, both small fixes, the stale HANDOFF document, and the real cases behind question (3).
+
+
+---
+
+## PT-2336 -- THE QUEUE CLEARS, AND VERIFICATION CAUGHT A REAL, SEVERE REGRESSION CODER HAD SHIPPED IN PT-2322: MAKING deploy REQUIRED BROKE EVERY EXISTING MINE IN THE PRODUCT, AND A TEST WHOSE ENTIRE JOB WAS TO CATCH EXACTLY THIS HAD FROZEN AROUND A HARD-CODED SNAPSHOT THE DAY IT WAS WRITTEN. HONESTLY OWNED AND FIXED AT BOTH LEVELS -- THE REGRESSION AND THE REASON IT WENT UNDETECTED. AND QUESTION (3) RESOLVES INTO A MAJOR FINDING: A SECOND FORCE SCREAM GENUINELY STACKS TODAY, MEASURED LIVE, BECAUSE ONLY ONE CHAIN IN THE WHOLE CORPUS EVER AUTHORS replaces AT ALL
+
+**The `takes` optional-key mechanism is built exactly as ruled, and the refusal on a malformed `?` spelling -- a broken base type rather than an ambiguous one silently read either way -- is the right discipline for a piece of notation that could otherwise become a second, informal vocabulary nobody agreed to.**
+
+⚠⚠⚠ **OWNING THE PT-2322 REGRESSION DIRECTLY -- "MINE, AND I DID IT" -- IS EXACTLY THE STANDARD THIS SESSION HAS HELD FOR EVERYONE ELSE, APPLIED HERE TO ONE'S OWN SHIPPED WORK FROM SEVERAL SLICES BACK RATHER THAN SOMETHING FRESH.** The diagnosis is precise: a blueprint genuinely can be ambiguous about deployment and should have to state it, but a hazard has already answered the question by existing as one -- and the fix, having the two callers that already know supply the value directly while still refusing an author who tries to override it, closes the regression without reopening the door `PT-2322` closed in the first place.
+
+⚠⚠ **THE REASON THIS WENT UNDETECTED BY 1,128 GREEN TESTS IS THE MORE VALUABLE HALF OF THIS FINDING, AND IT DESERVES TO BE HELD AS ITS OWN STANDING LESSON.** A test whose entire purpose was "a hazard satisfies the real `charge` row," frozen as a hard-coded literal under a comment claiming it represented "the real charge row, not a hand-made one," stopped actually checking against reality the day it was written -- the comment was true when it was true, and nothing noticed when it stopped being true. That's a sharper, more general failure shape than "a test with a gap": it's a test that was *correct once* and became a fossil, still green, still confidently claiming to verify something it had quietly stopped verifying. Reading the actually-installed row live now, and watching it fail against the regression before fixing it, is the right way to close this -- the fix proves itself rather than being trusted to.
+
+### THE REST OF THE QUEUE -- APPROVED IN FULL
+
+**The `on_save` guard finding is genuinely severe on its own: no final `else` in an `==` chain means an unrecognised value like `"halved"` would have silently dealt full damage, and moving the check ahead of the save roll -- rather than nested inside `if (made)`, a branch the dice decide whether to even enter -- fixes a real timing weakness alongside the missing case. Confirming no real power currently states the bad value, with a control proving the sweep actually looked at more than twenty rows, is the right way to report "clean, but only because nothing tripped it yet" rather than "clean, full stop."**
+
+⚠ **THE TWO-HANDED STRENGTH PIN IS WORTH FLAGGING AS ITS OWN QUESTION, NOT A DECIDED ONE.** Updating a deliberately-recorded pin to match `§7.4`'s literal text is the right mechanical move, but the real question underneath -- whether a two-handed grip's multiplier should touch a penalty at all, given the likely source convention only multiplies bonuses and stays silent on penalties -- is genuinely open, and real (droid-remote at −4 Strength, four species at −2). Held below, not decided by the pin update alone.
+
+### THE HANDOFF FINDINGS -- ONE CLOSED, THREE FLAGGED AND CORRECTLY UNTOUCHED
+
+**Copying the specifically-requested, confirmed-stale (not forked) rulings document, and replacing a written-once, already-false count in its README with a live relation to the actual check, is exactly right -- a number that can't rot is better than a number that has to be remembered and updated.**
+
+⚠⚠ **CORRECTLY NOT TOUCHING THE TWELVE OTHER STALE DOCUMENTS, THE SIX FORKED ONES, OR THE STALE SYNC SCRIPT IS THE RIGHT CALL, AND THE EQUIPMENT-01 EXAMPLE MAKES THE STAKES CONCRETE.** A document a designer actually reads, 1,209 lines behind, edited twice today by the same hand that found the gap, is a real, live inconsistency worth fixing soon -- but discovering that the old sync script still exists, still blind-copies, and would destroy 937 lines of genuinely forked content if run, while the newer check's own documentation incorrectly claims that script "is gone," is a real hazard sitting in the repo. Flagging all three rather than acting on any of them is correct given the stakes of getting a forked-content question wrong.
+
+### FINDING 5 -- ⚠⚠⚠ THE STACKING SCREAM IS A REAL, LIVE BALANCE EXPLOIT: RULED
+
+**Measuring this live rather than reading it -- casting Force Scream twice at one target and watching the penalty genuinely double -- turns "the folds disagree" from an abstract architectural question into a concrete, severe finding: three Master Force Scream casts currently produce −18 to every ability score on a single target. That's not a rounding inconsistency, it's a stacking exploit.**
+
+**The root cause is precisely traced two layers deep, and the second layer is the real one: `abilityPenalties` was simply never added to the de-duplication machinery built for the friendly chains, and -- more fundamentally -- only `Valor` ever authors `replaces` in the document at all. Every other tiered chain in the corpus is silent on it. The modifier chains only "survive" this by the accident of `modifierOn`'s own fold behaviour, not because anyone decided they should be exempt from the same rule -- and `Force Valor` itself, agreeing across its two halves only because the tier machinery runs before both, is proof the agreement is coincidental rather than designed.**
+
+### RULED -- THE SAME "REPLACES, NOT STACKS" PRINCIPLE EXTENDS UNIVERSALLY
+
+**Both questions resolve the same way: yes to both, and consistently.** There's no principled reason a debuff or damage-penalty chain should be allowed to stack indefinitely when the exact same tiered structure, applied to a buff, was already ruled to replace -- if anything, unconstrained penalty-stacking is the more severe failure mode, since it produces outcomes like `-18` from three casts of a single power rather than merely a smaller-than-expected bonus. This isn't a new principle; it's the one already established for `Force Valor`/`Force Camouflage`, extended to cover the carrier (`abilityPenalties`) and the chains (Scream, Choke, Crush Opposition, Slow/Mire/Root, Battle Meditation, Inspire Followers, Aura/Shield/Armor) it was never wired to reach. A power should not restack a penalty on recast any more than it restacks a bonus.
+
+**Build it the same way the friendly chains were built: add `abilityPenalties` to the de-duplication machinery at both the tier-rank site and the application site, and extend `replaces` to the enemy-targeted chains that currently state nothing about it -- treating the silence the same way `Force Camouflage`'s was treated, as an omission the document should state explicitly rather than a deliberate design choice to permit unbounded stacking.**
+
+### PROCEED
+
+Build the stacking fix across `abilityPenalties` and the enemy chains. The two-handed-Strength-penalty question stays open, held for a real answer rather than resolved by the pin update. HANDOFF's remaining stale/forked documents and the dangerous sync script stay flagged, untouched, pending direction.
+
+
+---
+
+## PT-2337 -- THE STACKING FIX CLOSES CLEAN, SHARING THE BUFF SIDE'S OWN FUNCTIONS RATHER THAN A SECOND SPELLING OF THE SAME RULE. THE EXTRACTOR NOW REFUSES ANY FUTURE SILENT CHAIN, CLOSING THE CLASS RATHER THAN THE SIXTEEN ROWS FOUND TODAY. A GENUINE FIRST-RUN NEAR-MISS CAUGHT BY READING THE SHELF DIRECTLY RATHER THAN TRUSTING A TRUTHFULLY-REPORTED "IDENTICAL". AND ONE HONEST, PRECISE CONSEQUENCE OF "UNIVERSAL" SURFACED: DARK HEALING'S SELF-COST NOW REPLACES RATHER THAN COMPOUNDS, MAKING IT CHEAPER TO RECAST
+
+**Approved in full. Reusing `superseded` and `outranks` unchanged, rather than writing a second version of the same rule for the penalty carrier, is exactly right -- "three carriers agreeing and a fourth appending is exactly how this got here" is a precise diagnosis of the original gap's actual shape, and fixing it by bringing the fourth into agreement with the other three rather than inventing new machinery is the correct scope. Confirming a lower-tier cast is a no-op on the rows rather than a downgrade, still resolving and still spending the pool per the already-established `PT-2240` precedent, and measuring all three guards through a real, live double cast rather than isolated unit assertions, closes this exactly as thoroughly as the finding that opened it deserved.**
+
+⚠⚠ **REFUSING A FUTURE SILENT CHAIN, RATHER THAN JUST CORRECTING THE SIXTEEN ROWS FOUND TODAY, IS THE RIGHT SCOPE FOR THIS FIX, AND IT'S WORTH NAMING WHY.** A power authored tomorrow with a lower tier that also grants a standing row would otherwise stack in exactly the same silence that just produced a real `−18` exploit, and nothing downstream could ever tell, because the application layer only ever knows what it's told. Building the check that makes silence itself the defect, rather than patching sixteen known instances and trusting the next author to remember the pattern, is the difference between fixing what was found and fixing what produces things like it. Proving it works by deleting one of the just-written asides and watching the extractor name the power, the tier, and exactly what to write is the right verification for infrastructure meant to catch something that hasn't happened yet.
+
+**Correctly explaining why `Force Choke` gets no `replaces` -- its only lower tier grants no standing row at all, so there's nothing to claim replacement of, and its recast-on-itself case was already closed by a different mechanism entirely -- is precise, and worth having stated plainly rather than left to look like an oversight.**
+
+⚠⚠ **THE FIRST-RUN NEAR-MISS IS A GENUINELY VALUABLE CATCH, AND IT'S THE SAME SHAPE AS THE HAZARD-REGRESSION TEST FROM LAST SLICE, FOUND A SECOND TIME IN ONE THREAD.** The extractor silently wrote nothing because it was run without the argument that triggers a write, and the freshness check then correctly, truthfully reported "identical" -- true about a stale extract, which is exactly the kind of technically-accurate-but-misleading result that erodes trust in a green status line if it's ever trusted without checking what it's actually comparing. Reading the shelf for the real field rather than accepting the summary is what caught it, and it's worth naming as the same discipline that caught the frozen hazard test: a check can be behaving exactly as designed and still be reporting on the wrong thing.
+
+**Diffing every field against HEAD rather than just the one intentionally changed, and catching two unrelated em-dash placeholders left behind by an earlier pass, is thorough verification that costs little and catches things a narrower diff would have missed entirely.**
+
+### DARK HEALING -- CONFIRMED CORRECT AND INTENTIONAL, NOT AN EXCEPTION
+
+⚠⚠ **This is exactly the right thing to have surfaced, and the honest answer is that it's correct as built, not a case needing a carve-out.** The principle was never "prevent a debuff from being stacked against an enemy" specifically -- it was "recasting the same power renews its effect rather than accumulating a second instance of it," and that reasoning applies with equal force whether the effect happens to land on an enemy or on the caster themselves. A self-inflicted cost compounding without limit on every recast was never a deliberately designed punishment; it was the identical missing-displacement gap, just happening to hurt the caster rather than help them stack a debuff. Following the ruling exactly as written, rather than quietly carving out the one case where it happens to favour the player, is the right call -- "universal" that stops being universal the moment it becomes convenient isn't actually the principle that was ruled.
+
+**Confirming the fold itself (`penaltyOn` summing) was never the bug, and correctly leaving it untouched -- different powers' penalties genuinely should stack -- keeps the fix scoped to exactly the gap that existed rather than one line wider.**
+
+### PROCEED
+
+Nothing further needed on this thread. Held items remain exactly as they were: the two-handed Strength penalty question, HANDOFF's remaining stale/forked documents and the dangerous sync script, the mine-tag-as-log-index item, the 151 archives, any history rewrite.
+
+
+---
+
+## PT-2338 -- THREE HELD DECISIONS ADDRESSED: TWO-HANDED STRENGTH RULED (BONUS ONLY, NOT PENALTY), THE DANGEROUS sync_docs.py NEUTRALISED NOW AS PURE RISK-REDUCTION, THE BROADER DOCUMENT-SYNC QUESTION HELD SEPARATELY FOR DELIBERATE WORK. DROID SHIELD FEAT-GATE DIRECTED TO MEASURE
+
+**Good check-in, and flagging the dirty file a second time rather than letting it fade into background noise is the right instinct -- a thing reported once and never mentioned again looks resolved even when it isn't.**
+
+### RULED -- TWO-HANDED STRENGTH MULTIPLIER: BONUS ONLY, NOT A PENALTY
+
+**The multiplier does not apply to a negative Strength modifier.** The likely source convention this system is built from multiplies the bonus and stays silent on penalties, and `§7.4`'s "rounded down" language was almost certainly written with the bonus case in view, not deliberately extended to cover the penalty one -- a two-handed grip making someone's own weakness worse by 50% has no clear rationale the way amplifying a strength does. Revert the piece of the recent literal-`§7.4` fix that extended the multiplier to penalties; the pin should assert bonus-only scaling, with `droid-remote`'s −4 and the four −2 species staying at their base, unmultiplied value.
+
+### RULED -- NEUTRALISE sync_docs.py NOW, HOLD THE BROADER SYNC QUESTION SEPARATELY
+
+**These are two different questions with two different urgencies, and treating them as one was letting the safer, smaller action wait on the harder, bigger one.** Whether and how to properly reconcile the twelve stale and six forked HANDOFF documents is real, deliberate work that deserves its own measured pass -- forked content specifically needs care, not a blind copy, and that stays held exactly as it was. But a script that still exists, still blind-copies, still could destroy 937 lines of real content on a single accidental run, and is *already* incorrectly documented elsewhere as gone, is a live hazard sitting in the repo regardless of when the larger question gets resolved. Remove or clearly quarantine `sync_docs.py` now -- rename it, move it out of any path someone might reach for by habit, or delete it outright if nothing legitimate still needs it -- so the danger is gone before the question of what should replace it is answered, rather than the fix waiting on the answer.
+
+### DIRECTED -- MEASURE THE DROID SHIELD FEAT-GATE
+
+**Approved to proceed. The framing is exactly right: if a blueprint has no way to state a gate, the gate has to arrive from the catalogue, and whether that channel exists is the actual question this turns on -- correctly recognised as the same shape `plus_vs_droid` needed before it could reach a charge. Measure it the same way.**
+
+### PROCEED
+
+Neutralise `sync_docs.py` first — quick, pure risk reduction. Then measure the droid shield gate. Two-handed Strength's pin update follows from the ruling above whenever convenient. Everything else stays held exactly as it was.
+
+
+---
+
+## PT-2339 -- BOTH RULINGS CLOSE CLEAN, INCLUDING A THIRD FOUND-AND-FIXED "PIN AT A VALUE WHERE THE FAULT CANNOT OCCUR": THE ORIGINAL TWO-HANDED-STRENGTH PIN SURVIVED THREE RULINGS BECAUSE ALL THREE COMPETING READINGS PRODUCE THE IDENTICAL NUMBER AT −1. AND THE DROID SHIELD GATE TURNS OUT NOT TO BE A SHIELD PROBLEM AT ALL: 302 OF 1,424 CATALOGUE ITEMS CARRY A REAL GATE, ACROSS SIX CATEGORIES, AND NOTHING IN ANY DART REPO READS ANY OF THEM -- A WHOLE, ALREADY-BUILT, ALREADY-VALIDATED DATASET WITH ZERO CONSUMERS
+
+**`sync_docs.py`'s deletion is handled exactly right -- checking its two siblings before assuming they shared its fate, rather than deleting by association, found they're a genuinely different mechanism and correctly left them alone. Correcting the docstring that had been falsely claiming the dangerous script was already gone is the more important half of this fix: a false claim about the disk, with nothing checking whether it was still true, is very plausibly the actual reason nobody had removed the real hazard sooner. Fixing the claim alongside the fact closes both the danger and the reason it went unnoticed.**
+
+⚠⚠⚠ **THE TWO-HANDED STRENGTH FIXTURE FINDING DESERVES TO BE NAMED AS ITS OWN INSTANCE OF THE SAME RECURRING SHAPE, NOW CONFIRMED A THIRD TIME THIS SESSION.** A pin asserting `−1`, when truncation, round-down-with-multiplication, and bonus-only all independently produce exactly `−1` at that specific modifier, is a test that could never have distinguished the rule it claimed to pin from any of its two competing alternatives -- and it survived three separate rulings precisely because nothing about a passing result at that value could ever have revealed which rule was actually running. Moving the fixture to `−3`, where all three readings diverge, is what finally makes the pin mean something. This is the massive-critical guard's shape and the mine-hazard test's shape, found a third time in the same general area of the codebase -- worth holding as a standing pattern specific to this project's own fixtures now, not just a general caution.
+
+### THE ITEM-GATES FINDING -- HELD AS ITS OWN DEDICATED FUTURE THREAD
+
+⚠⚠ **"A rule with no first state, one repo over" is exactly right, and the scale changes what this actually is.** Thirteen shield items are the visible corner of a genuinely systemic gap -- 302 items, 401 gates, six real categories, correctly extracted and correctly validated, with zero readers anywhere in the app, Lodestar, or Loom. This was never a shield defect; it's an entire mechanism that was built on the data side and never wired to anything that plays the game.
+
+**The three-part channel diagnosis is precise and worth confirming rather than second-guessing: the catalogue correctly reaches the play screen for other purposes already, doesn't reach `consumableAt` at all, and `ItemRecord` drops `gates` at parse regardless -- three real, distinct gaps, not one missing wire. Confirming a blueprint genuinely cannot state a gate itself, and correctly framing that as intended rather than a defect -- a gate is a fact about the real item, so the catalogue is exactly where it belongs -- is precise architectural reasoning, not a workaround.**
+
+**Correctly checking the `bay gate` note against existing rulings before calling it a defect, and finding it only records where a feat usually originates rather than being its own enforcement mechanism, is good discipline against a plausible-looking false positive. And the calibrated uncertainty on armour-proficiency gates -- a real, suggestive finding, correctly not claimed as confirmed absence just because a search came back empty -- is exactly the right way to report something real but not fully nailed down.**
+
+**Given the scale, and given real connections to already-held work (73 alignment gates touch the same target-alignment tracking this agenda already holds separately), this is not a targeted shield fix -- it's its own dedicated future thread, the same treatment Shields and Grenades each received. Hold it there rather than scoping a partial fix now; whoever picks it up next should measure the real shape of all six categories together, the way the shields thread opened.**
+
+### THE COMMIT DISCREPANCY -- OWNED PLAINLY, HANDLED CORRECTLY
+
+**Recording this rather than rewriting pushed history over it is the right call, and the distinction drawn is the correct one: the content riding along was legitimate and harmless, but a commit message that doesn't describe everything the commit actually contains is a real, separate problem regardless of whether the extra content happens to be fine. Not conflating "the outcome was okay" with "the process was right" is exactly the standard this project holds everywhere else. Switching to explicit paths going forward is the right process fix.**
+
+### RULED -- REFRESH THE HANDOFF LEDGER COPY ROUTINELY
+
+**Make it routine, at the end of each slice.** This is now a well-understood, low-cost, already-verified-safe operation (confirmed stale-not-forked before every copy) -- there's no reason to let it drift and periodically need a dedicated catch-up pass when keeping it current costs almost nothing each time it's actually current.
+
+### AGENDA
+
+Item gates added as its own dedicated future thread, connected to the existing alignment-tracking item. The droid shield finding folds into it rather than standing alone.
+
+### PROCEED
+
+Nothing further needed on either closed piece. Item gates held for whenever it's picked up as its own thread.

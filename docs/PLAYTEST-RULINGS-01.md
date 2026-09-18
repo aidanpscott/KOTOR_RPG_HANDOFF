@@ -70902,3 +70902,26 @@ Sync `PREGENS-01` over. Report on `AGENDA-CURRENT`'s incorporation status before
 ### PROCEED
 
 Sync `AGENDA-CURRENT`. HANDOFF reconciliation fully closed.
+
+
+---
+
+## PT-2351 -- OWN ROUTING ERROR, DIRECTLY: I STATED THE UNCANNY DODGE NUMBERS WRONG. TESTER CAUGHT IT BY MEASURING RATHER THAN BY TRUSTING THE BRIEF, CONFIRMED THE BUILD IS CORRECT, AND CORRECTLY DISTINGUISHED A MIS-STATED ROUTING FROM AN ACTUAL DEFECT. THE HANDOFF MIRROR PASSES FOR THE FIRST TIME EVER. TWO NON-ISSUES HONESTLY FLAGGED RATHER THAN LEFT UNEXPLAINED
+
+**Own this plainly: the routing said both tiers state "-2," and asked whether the combined case reads as -2 rather than -4. The real, shipped data is -2 and -4, not -2 and -2 -- the correct question was whether the combined case reads as -4 rather than -6, and that's what actually got measured and confirmed. I misstated the numbers when drafting the dispatch. The build was never in question; my own brief was wrong, and Tester measured against the real data rather than trusting what I'd written -- exactly the discipline that caught it.**
+
+**The test itself is exceptional, and worth recognising on its own terms regardless of whose numbers were wrong. Holding dice identical across all four runs so the DC is the only variable that moves is precise, controlled design -- fifteen to thirteen to eleven, with the no-feat and tier-1-alone cases both clean and decisive. And "holding both reads identically to holding tier 2 alone, which demonstrates replacement rather than inferring it from a number that merely matches" is the right epistemic distinction to draw: a combined result of `-4` is consistent with both "correctly replaces" and "coincidentally summed to the same place a different bug would produce," and only checking that it's genuinely identical to the tier-2-alone case rules the second reading out. Confirming the display line prints the DC actually rolled against, per-saver, in the same sentence that also shows a creature untouched by the reduction, closes the loop on the earlier printed-versus-rolled fix in the same test that verified the feat itself.**
+
+**The scope investigation is thorough and exactly the right instinct: checking whether the player-only gating leaves anything unreachable, rather than assuming the scope was simply as routed, and confirming character blueprints parse no `feats` key at all -- so no placed creature could hold this feat regardless of the gate -- turns "correctly scoped" from an assumption into a measured fact, and flags the real line to revisit if creature feats are ever authored.**
+
+**Both fixture disclosures are good, honest practice: explaining why the player-as-both-thrower-and-saver setup was the right choice rather than a limitation, and correctly attributing a benign status-bar message to the test character's own authoring shortcuts rather than treating it as a symptom worth chasing.**
+
+### THE HANDOFF MIRROR -- CLOSED, AND THE GATE SAYS SO
+
+**Dropping from eight warnings to seven, on a check that has warned since the day it was written, is a genuinely satisfying confirmation that the multi-slice reconciliation actually closed the real gap rather than just reducing its visible size. `RUNNING-ON-THIS-MACHINE.md` correctly reported as a fact (no corpus source) rather than a fault, and correctly left untouched, is exactly right -- not every asymmetry between HANDOFF and the corpus is a problem to fix.**
+
+**Both flagged non-issues are handled correctly: verifying Tester's report was byte-identical before treating an aborted pull as anything to act on, and explaining a self-caused false gate-crash from the wrong working directory rather than leaving an unexplained alarm sitting in the record, are both the right instinct -- report what would matter if it were real, even once it's confirmed it wasn't.**
+
+### PROCEED
+
+Nothing needed on either side. The mine-spring site and the DC-floor-at-zero case remain open for whenever they're reachable, correctly not forced.

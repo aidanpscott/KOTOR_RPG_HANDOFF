@@ -26,7 +26,7 @@
 | `SKILL-RESOLUTION-01.md` | The DC ladder |
 | `FEATS-LIBRARY-01.md` | The feats |
 | `PREGENS-01.md` | Nine worked characters |
-| `PLAYTEST-RULINGS-01.md` | **Every ruling the working tree has issued, up to whatever `sync_docs` last copied.** Why each was made and what it superseded. ⚠ The count is deliberately not written here — it was `PT-1 through PT-85` while the file held 1,547, and a number in prose beside a file that grows is a claim nobody re-reads. `check_docs_mirror` is what says whether this copy is behind |
+| `PLAYTEST-RULINGS-01.md` | **Every ruling the working tree has issued, as of the last time somebody copied it across.** Why each was made and what it superseded. ⚠ The count is deliberately not written here — it was `PT-1 through PT-85` while the file held 1,547, and a number in prose beside a file that grows is a claim nobody re-reads. `check_docs_mirror` is what says whether this copy is behind |
 
 ### `data/` — the KOTOR source tables
 

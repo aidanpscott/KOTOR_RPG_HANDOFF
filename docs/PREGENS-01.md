@@ -264,7 +264,7 @@
 | **Vitality** | **43** *(Engineer d8, Con +0)* · ⚠ **dies at −10** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** *(`CLS_ATK_2` — Engineer, per `CLASS-TABLES-DROID`)* |
 | **Saves** | Fort **+2** · Ref **+8** · Will **+6** *(Engineer: Reflex strong, plus ability)* |
-| **Defence** | **10 + 4 (Light Droid Plating) + 2 (Dex, uncapped)** = **16** ⚠ |
+| **Defence** | **10 + 3 (Light Droid Plating) + 2 (Dex, uncapped)** = **15** |
 | **Reactions** | **2** *(BAB +6)* |
 | **Skills** | **77** — **Slicing 11 · Security 11 · Science 11 · Awareness 11 · Pilot 11 · Appraise 11 · Repair 11** |
 
@@ -272,7 +272,7 @@
 
 > **⚠ `Medicine` → `Scavenging`.** **`PT-77` cut `Medicine` from the `Engineer` list; the sheet was built against the old one.**
 
-**Equipment.** **Blaster Pistol** *(integrated — `Blaster Integration`, racial)* · **Light Droid Plating** ⚠ · repair kits
+**Equipment.** **Blaster Pistol** *(integrated — `Blaster Integration`, racial)* · **Light Droid Plating** · repair kits
 
 **Attacks — 7 picks.** ⚠ **Engineer is unassigned to an attack rate. Using Middle for this test.**
 
@@ -281,8 +281,6 @@
 **Feats — 4 picks + 4 grants.** **`Environmental Sealing`, `Blaster Integration`, `Droid Upgrade 1` and `Droid Upgrade 2` are all granted and cost nothing.** **Picks: Sensor Package · Improved Sensor Package · Self-Diagnostic · Improved Self-Diagnostic**
 
 > **⚠ Astromech ranged access is a temporary ruling.** **Five chains only — Rapid Fire, Staggering Shot, Covering Fire, Snap Shot, Overwatch.** **Precision, Power, Position, and Spread stay closed.** **Melee is closed to every droid.**
->
-> **⚠ Droid plating Defence is a placeholder** — `EQUIPMENT-01 §8`.
 
 ---
 
@@ -366,13 +364,13 @@
 | **Abilities** | STR 14 · DEX 14 · **CON 17** · WIS 8 · INT 8 · CHA 8 |
 | **Vitality** | **59** · ⚠ **dies at −17** *(Constitution — `PT-559`)* |
 | **BAB** | **+6** · **Saves** Fort **+8** · Ref **+4** · Will **+1** |
-| **Defence** | **10 + 6 (Medium Droid Plating) + 2 (Dex, uncapped)** = **18** ⚠ |
+| **Defence** | **10 + 4 (Medium Droid Plating) + 2 (Dex, capped +3)** = **16** |
 | **Reactions** | **2** *(BAB +6)* — **and he now holds `Snap Shot → Reflex Fire`, so they are spendable** |
 | **Skills** | **27** — **Awareness 9 · Scavenging 9 · Athletics 9** |
 
 > **⚠ Budget was 9 and is now 27.** **`PT-77` raised the `Marksman` skill base from 2 to 4** — *most in the `Combat` tier, per the owner ruling.* **The sheet was built against base 2.**
 
-**Blaster Rifle · Medium Droid Plating** ⚠
+**Blaster Rifle · Medium Droid Plating**
 
 **Attacks — 8 picks, all ranged, all level-legal.** **Rapid Fire → Open Fire** · **Precise Shot → Sniper Shot** · **Charged Shot → Power Shot** · **Snap Shot → Reflex Fire**
 

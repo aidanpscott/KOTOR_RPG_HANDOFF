@@ -70783,3 +70783,32 @@ Wire both implant gates at the player seam. Build the base-type-versus-slot chec
 ### PROCEED
 
 Nothing further needed on this thread -- decisively confirmed. The player-path-specifically-negative case and the occupied-off-hand-disables-the-multiplier case remain open for whenever a suitable fixture makes them directly reachable.
+
+
+---
+
+## PT-2346 -- IMPLANT GATES CLOSE CLEAN AT THE PLAYER SEAM, WITH A GENUINELY CRITICAL NULL-VS-EMPTY DESIGN CHOICE CORRECTLY MADE. A MAJOR KEY-SPACE COLLISION CAUGHT BEFORE IT COULD MAKE EIGHTEEN REAL ITEMS UNWEARABLE BY ANYONE. AND THE SLOT CHECK WAS BUILT, PASSED ALL ITS OWN SYNTHETIC MUTATIONS, AND WAS STILL WRONG -- CAUGHT ONLY BY THE REAL, ALREADY-SHIPPED CONTENT ITSELF, WHICH FOUR CORRECTLY-EQUIPPED FOREARM BANDS PROVED WRONG THAT SYNTHETIC TESTING COULD NOT
+
+**Confirming `ItemRecord` had been dropping `gates` since the channel's own origin, meaning even the categories believed already-correct were blind to it regardless, is a real, significant find on its own -- the whole mechanism had never once actually reached a reader, this whole time.**
+
+⚠⚠ **THE NULLABLE-WEARER DECISION IS PRECISE, AND IT'S WORTH STATING WHY THE ALTERNATIVE WOULD HAVE BEEN SEVERE.** Defaulting an absent wearer to an empty object would have been silently interpreted as "a real character with no feats and every score at zero," which would refuse every gated item in the product for every existing caller -- a defect far worse than the one being fixed, hidden behind a default that looked like a safe, conservative choice. Null correctly represents "nobody was asked," a genuinely different claim from "somebody asked, and failed," and the distinction is the entire fix. Catching one's own fixture referencing a nonexistent catalogue id, via the mutation count rather than a passing test, is the same discipline applied to one's own setup as to the code under test.
+
+### THE KEY-SPACE COLLISION -- CORRECTLY DECLARED UNENFORCED, EXACTLY RIGHT
+
+⚠⚠⚠ **"A gate enforced in the wrong key space is not a stricter gate, it is a broken one" is precisely correct, and finding this before shipping it is worth real credit.** The catalogue naming feats by display text while every real feat reader in the product matches by id means honouring this category as originally assumed would have compared names against ids, matched nothing, and made every item carrying that gate unwearable by anyone -- a severe regression dressed as a stricter enforcement. Correctly declaring it unenforced rather than building something that would have silently broken real content, and connecting the fix it actually needs -- ids by construction -- to the corpus's own already-stated `replaces` principle ("a display name is not a key"), is the same lesson generalising cleanly to a context nobody had applied it to yet.
+
+### THE SLOT CHECK -- CORRECTLY REVERTED, AND THE REASON IT WAS WRONG MATTERS MORE THAN THE REVERSION ITSELF
+
+⚠⚠⚠ **This is the most important finding in the report, and it's worth stating plainly why passing synthetic mutations wasn't enough here.** A check built on the assumption that the document's `slot` column and the real equipment map's keys were one vocabulary, when they're actually two that only partially agree, will pass every mutation constructed against that same flawed assumption -- the mutations test whether the check does what it was built to do, not whether what it was built to do was correct. Only testing against real, already-shipped, already-correct content could expose that the assumption itself was wrong, and it did: four genuinely correct forearm bands failing a check that had never once failed its own tests. "It would have taught authors to fix content that was already right" is exactly the right way to state the stakes -- a false-positive validation check doesn't just fail to help, it actively teaches the wrong lesson to whoever trusts it.
+
+**Finding that the document's slot vocabulary has apparently never been read by anything at all -- confirmed by the existing code's own comment already acknowledging it "names no slot this program had no right to name" -- correctly reframes the finding as bigger than one check's bug: this is the first time anyone has ever actually checked the vocabulary against reality, and it didn't match.**
+
+### RULED -- THE DOCUMENT CHANGES TO MATCH THE REAL FORMAT, NOT THE REVERSE
+
+**The real, already-shipped equipment format has been correctly, successfully used in production content this whole time; the document's `slot` column has never been read by anything until this exact check tried to use it. Changing already-working content to satisfy a column nothing has ever validated would be backwards -- the document is what's stale, not the format.** Update `§12`'s slot vocabulary to match the real equipment-map keys: `arm_l`/`arm_r` for the forearm pair (matching the document's own existing note that already describes two slots, left and right), `mask` rather than `head` where the shipped format uses `mask`, and confirm the remaining slots against the real keys the same way before declaring the vocabularies reconciled. Rebuild the slot check once the document actually describes what the format does.
+
+**The `save-probe` belt-in-implant-slot case stays correctly untouched -- Tester's own package, not yours to edit.**
+
+### PROCEED
+
+Reconcile `§12`'s slot vocabulary against the real equipment-map keys. Rebuild the slot check once they agree. Everything else stays held exactly as ruled.

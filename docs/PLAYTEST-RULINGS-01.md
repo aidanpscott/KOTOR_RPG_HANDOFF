@@ -70925,3 +70925,64 @@ Sync `AGENDA-CURRENT`. HANDOFF reconciliation fully closed.
 ### PROCEED
 
 Nothing needed on either side. The mine-spring site and the DC-floor-at-zero case remain open for whenever they're reachable, correctly not forced.
+
+
+---
+
+## PT-2352 -- THE MIRROR STAYED CLOSED THROUGH A REAL RULING LANDING, WITHOUT ANYONE DECIDING ANYTHING. THAT IS THE ACTUAL PROOF THE RECONCILIATION HELD RATHER THAN A ONE-OFF TIDY-UP. GATE'S 7 CONFIRMED AS THE NEW BASELINE
+
+**This is exactly the right thing to have watched for, and worth confirming as the standard going forward: `PT-2351` landing, the ledger drifting 23 lines behind, and the routine automatically closing that gap without anyone touching it, is the actual test of whether the reconciliation was infrastructure or a one-time cleanup. It was infrastructure. The mirror doing its job silently, on the next ordinary ruling, is a stronger confirmation than any amount of re-checking the original fix could have been.**
+
+**Gate's 7 is confirmed as the new baseline going forward, replacing the 8 that held for as long as `check_docs_mirror` has existed.**
+
+### PROCEED
+
+Nothing in flight, confirmed. Standing held items unchanged. Ready for the next piece whenever there's direction.
+
+
+---
+
+## PT-2353 -- OWNER OPENS BonusFeats AS THE NEXT DEDICATED BIG-SYSTEM THREAD. SAME TREATMENT AS SHIELDS, GRENADES, AND ITEM GATES -- MEASURE FIRST
+
+**Opens the same way every other thread at this scale has. The prior framing stands and is worth restating before measurement starts: this grants a feat, not a score, and never touches the ability-derivation graph at all -- it was deferred alongside `Ability`/`DecreaseAbilityScore` originally for scheduling convenience, but it was never architecturally the same problem as those, and should not be designed as though it were.**
+
+### DIRECTED
+
+**Measure before proposing or building anything:**
+
+  · Which real items actually carry a feat-granting property, how many, across both games -- the same scale-and-shape survey every other big-system thread opened with.
+  · Whether `Combatant` carries any feat list at fight time at all today -- this was flagged previously as a currently-nonexistent question (does a feat list even reach live combat), not assumed either way. Answer it directly.
+  · The old `BonusFeats 0` defect -- an 83-times-repeated case where a failed table lookup printed as a property with value zero rather than surfacing as an error. Confirm whether this specific failure mode still exists anywhere, or whether it was already closed by other work since it was first found.
+  · Real overlap with the just-closed item-gates thread -- feat *gates* (does a wearer need a feat to equip something) and feat *grants* (does wearing something give a feat) are adjacent but distinct concepts touching the same underlying feat-id vocabulary. Confirm whether anything from that thread's infrastructure (the id-not-name discipline especially) is directly reusable here, or whether this needs its own channel entirely.
+  · Whether an item granting a feat the wearer already has should be a no-op, an error, or something else -- likely has real precedent already in how this project handles other item-side redundant grants; check there before designing from scratch.
+
+Report the complete picture before proposing anything.
+
+### PROCEED
+
+New thread opened. Awaiting the measurement.
+
+
+---
+
+## PT-2354 -- BONUSFEATS MEASURED: THIS THREAD AND ITEM GATES SHARE ONE UNBUILT PIECE. COMBATANT CARRIES NO FEATS AT FIGHT TIME AT ALL, ANSWERED DIRECTLY. THE OLD SILENT-ZERO DEFECT IS FULLY GONE AND STRUCTURALLY PREVENTED, NOT JUST CURRENTLY ABSENT. AND THIS TURNS OUT NOT TO BE A DESIGN QUESTION AT ALL -- THE CORPUS ALREADY FULLY RULES ITEM-GRANTED FEATS, NOBODY HAS BUILT IT. FOUR RULINGS
+
+**Confirming `Combatant` carries no feats at fight time whatsoever -- zero occurrences, not a thin list -- is exactly the kind of direct, unambiguous answer this question needed rather than an inference from adjacent behaviour. Confirming the old silent-zero defect and its NWN-leakage sibling are both fully gone, and further that the current lookup mechanism can no longer produce a bare zero at all (every failure is annotated), is the stronger of the two claims worth having -- not "we haven't seen it lately" but "the mechanism that produced it no longer can."**
+
+⚠⚠⚠ **THE SHARED-BLOCKER FINDING IS THE MOST VALUABLE THING IN THIS REPORT, AND IT'S WORTH STATING WHY IT CHANGES THE SHAPE OF WHAT GETS BUILT.** Both channels drawing their feat names from the same title-casing function, both failing against the same corpus for the same two mechanical reasons -- abbreviation mismatch and the seventeen attack-chain names that were never feats to begin with -- means this was never two separate gaps that happened to look similar. It's one gap, examined from two directions. Recognising that `PT-2344`'s "the catalogue names feats by display name and every reader matches an id" is literally this same join, currently blocking both ninety-two gates and fifty-six grants, turns one small piece of work into the thing that unblocks two threads at once rather than one.
+
+**And finding that this isn't an unruled design problem at all -- `FEATS-LIBRARY-01`'s hard rule already fully specifies item-granted feats down to the droid-bay exception -- reframes the whole thread correctly: there is nothing left to decide here, only something to build against a specification that already exists.**
+
+### RULED, FOUR QUESTIONS
+
+**(a) Build the feat-name join now, as one shared function, not duplicated between gates and grants.** The same discipline already proven this session -- lift the classifier once, call it from both places, rather than writing a second comparison beside the first (the ledger-refresh script's own lesson, `PT-2340`). Where it lives is a reasonable implementation call; the requirement is one function, two callers.
+
+**(b) The seventeen attack-chain names are refused, not granted as chain access.** This ruleset has no such feats to grant, and `PT-315` already, explicitly says an item may not consume chain access -- treating a grant of "Flurry" as somehow purchasing chain access would directly contradict a rule already on the books, not merely stretch it. Refuse these names as ones this ruleset does not carry, the same shape the gate side's own `⚠ attack chain` annotation already treats them.
+
+**(c) Where a granted feat lands needs its own real shape, not a field added to `Combatant` by default -- measure it before building.** The ruled semantics are the constraint: doesn't survive unequipping, doesn't persist independent of the item. That points toward something derived from currently-equipped items at read time rather than a stored, standalone list that could outlive the item or get confused with a permanently-held feat -- but confirm the real shape rather than assuming the architecture from here. Report whether this needs any new field on `Combatant` at all, or whether it can be computed on demand the same way the screen currently reads `widget.character.feats`, before committing to an implementation.
+
+**(d) The nine cut-content grants stay dropped, correctly.** Already-annotated intentional removals; nothing to reconsider.
+
+### PROCEED
+
+Build the shared feat-name join first -- it's the one piece both this thread and the deferred item-gate categories are actually waiting on. Measure the where-it-lands question and report back before building that piece specifically.

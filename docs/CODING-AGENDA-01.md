@@ -6,9 +6,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: Deflection stops draining after its first successful use in an encounter
+- **Ruled, investigate now (PT-2421).** Of five shots beating Defence 21 in one encounter, only the first deflected. Both obvious explanations ruled out: reaction pips still showed 2 of 3 available, and the Force pool never moved again — since `_deflectFor` pays for the attempt regardless of outcome, an unmoved pool means no second attempt was ever made, not that one happened and failed. Directly contradicts the mechanism's own stated design intent (sustained fire should drain a Jedi continuously). Something returns early on subsequent eligible shots within the same encounter — find where and why. Reporting blind spot noted: a failed deflection prints nothing, so "attempted and failed" and "never attempted" look identical except for the pool.
+
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **Deflection-alone follow-up — small, real, not urgent.** TEST 115's caster knew both Deflection and Redirection, so the engine consistently chose the stronger behavior — Deflection alone (stop, no reflect) was never separately isolated. Route with a tier-1-only caster whenever convenient.
 - **Force Body's latent replaces/stacks divergence — small, held.** The app's single-element `_me!.forceBody` assignment (renamed from `caster.forceBody` since first found — don't rely on the old string in a future grep) and Lodestar's smallest-percentage-wins fold only currently agree because the list structurally can't hold more than one entry. If a future change ever appended instead of replaced, the fold would silently keep the wrong tier. Not a live defect — found proactively during TEST 114, re-confirmed still held at `PT-2399` against the current engine state, worth a note for whoever next touches either side.
 - **Healing-economy question — small, held, own future item.** How cheaply vitality recovers between fights isn't measured. If ever looked at for its own reasons, revisit whether Master Force Body's pricing (`15/20/25`, ruled to hold at `PT-2402`) still holds under real numbers, since the "leave it alone" recommendation partly depended on vitality being a genuine governor.
 - **`blinded` — closed, 8 of 21 conditions enforced (PT-2395).** Two of four ruled clauses remain unbuilt: Dexterity loss (needs term-removal from the defence derivation, nothing currently supports it), sight-based auto-fail (needs a whole new check-categorization concept). Named plainly, not treated as done.
@@ -44,6 +46,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Deflection-alone confirmed in real play — TEST 117. Redirection genuinely removed from the power list (not just unused), so the engine had no stronger tier to reach for. Term-by-term match against TEST 115 confirms Redirection's own `+3` correctly absent and the outcome correctly stopping at "deflected" with nothing sent back — PT-2421
 
 - Eight-item unsavable-penalty defect closed (5 Sonic Mines, 3 grenades/detonators). Naive fix correctly avoided: the same save clause means two different things to its two sibling effects (damage halves, penalty negates) — adding the category alone would have shipped a "halved penalty" no row states and the rules have no meaning for. Outcome read from each item's own prose instead. Second gap surfaced (unspecified save type) resolved by borrowing from a sibling family whose own text states it outright, honestly graded as stronger evidence than the reasoning used for the mines themselves. Guard correctly prioritized: confirming damage stays halved, since a shallow fix could have set every save to `none` and passed every penalty-only assertion while silently making the damage un-halvable — PT-2420
 

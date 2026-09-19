@@ -70986,3 +70986,30 @@ New thread opened. Awaiting the measurement.
 ### PROCEED
 
 Build the shared feat-name join first -- it's the one piece both this thread and the deferred item-gate categories are actually waiting on. Measure the where-it-lands question and report back before building that piece specifically.
+
+
+---
+
+## PT-2355 -- THE SHARED FEAT-NAME JOIN CLOSES CLEAN, REOPENING 161 GATES AND 68 GRANTS FROM A SINGLE PIECE OF WORK, WITH A GENUINELY IMPORTANT SAFETY PROPERTY: AN UNWIRED VOCABULARY LOSES NOTHING RATHER THAN BECOMING MORE RESTRICTIVE. AND A GENUINELY CRITICAL FIND: A REAL, PREVIOUSLY-INVISIBLE CIRCULAR DEPENDENCY WHERE A SINGLE GRANTED FEAT COULD HAVE UNLOCKED FORTY-ONE UNRELATED ITEMS, CAUGHT BEFORE IT WAS EVER BUILT RATHER THAN DISCOVERED AS A LIVE EXPLOIT
+
+**Approved in full. Naming the two-weapon exception explicitly rather than forcing it through a transformation rule that doesn't actually apply -- both the word order and the noun change simultaneously, and no single rule covers that -- is honest engineering: a guess dressed as a mapping would have been worse than an acknowledged exception, even a small one.**
+
+⚠⚠ **THE EMPTY-VOCABULARY-LOSES-NOTHING SAFETY PROPERTY IS EXACTLY THE RIGHT THING TO HAVE BUILT IN DELIBERATELY, AND IT'S WORTH NAMING WHY IT MATTERS BEYOND THIS ONE FEATURE.** A predicate that fails safe when its inputs aren't yet wired -- rather than failing restrictive -- means every intermediate state between "the join exists" and "the screen supplies real feats" is still a correct, harmless state, not a half-shipped feature quietly refusing things it shouldn't. That's the same shape as the nullable-wearer decision from the implant gates work: choosing the failure direction that costs nothing when something hasn't been wired yet, rather than the one that looks safer but silently breaks real content.
+
+**Correctly treating the unjoinable attack-chain gate names as declared rather than refused -- since refusing an item for want of a feat this ruleset simply doesn't have would permanently bar it for everyone -- and doing the check per item rather than per category, so one resolvable requirement is enough to judge an item even when a sibling requirement doesn't join, is precise, careful handling of a genuinely awkward edge.**
+
+**Stopping rather than bolting a narrow constructor parameter onto the screen just for the gate side, recognising the grant side will need the identical plumbing shortly, is the right instinct -- building shared infrastructure once, in its real final shape, rather than twice in two slightly different ones that would need reconciling later.**
+
+### THE CIRCULAR DEPENDENCY -- THE MOST IMPORTANT FIND IN THIS REPORT
+
+⚠⚠⚠ **This is genuinely one of the sharper catches this session has produced, precisely because it was caught by measurement before anything was built, not discovered afterward as a live exploit.** Thirteen feats that are simultaneously granted by an item and used to gate other items is exactly the kind of interaction "until now there was only one kind of feat" would hide -- nothing in the existing code had ever needed to distinguish a permanent feat from a temporary, item-granted one, because until this thread there was no such thing as the second kind. A droid equipping one tool and thereby qualifying for forty-one unrelated devices it couldn't otherwise wear isn't a hypothetical edge case; it's the literal, concrete consequence of not making this distinction, on real, counted content. Tracing it directly back to `PT-351`'s own already-stated principle -- "an item you can take off has taught you nothing" -- confirms this was never a new design question, only a real implementation risk of silently violating an already-decided rule.
+
+### RULED -- BUILD THE SPLIT EXACTLY AS PROPOSED
+
+**Permanent feats to the gate reader. Permanent ∪ granted to the resolution-time readers. One derived getter, no new field, the split stated plainly where `_myFeats` is declared.** This is precise, correctly scoped, and follows directly from `PT-351` rather than inventing new policy -- approved exactly as described.
+
+**`Combatant` needing no new field, with the derivation following the same on-demand pattern `_armour` already uses, is the right architecture -- satisfying "doesn't survive unequipping" by construction rather than by a discipline someone has to remember to maintain.**
+
+### PROCEED
+
+Build the shared screen-level feat parameter both the gate and grant sides need. Build the permanent-versus-granted split exactly as proposed. Report back once both close.

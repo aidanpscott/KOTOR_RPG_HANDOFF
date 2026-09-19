@@ -72926,3 +72926,26 @@ Add `ability_penalty` to `SAVE_GATED`, fix all eight affected items, verify agai
 ### PROCEED
 
 Nothing further needed -- all eight closed cleanly, verified against real prose throughout. Block (B) stays correctly held, unchanged.
+
+
+---
+
+## PT-2421 -- TEST 117 CONFIRMS DEFLECTION-ALONE CLEANLY. AND A REAL, PRECISELY-BOUNDED ANOMALY FOUND ALONG THE WAY: OF FIVE SHOTS THAT ALL BEAT DEFENCE, ONLY THE FIRST DEFLECTED -- WITH BOTH OBVIOUS EXPLANATIONS CORRECTLY RULED OUT BEFORE FLAGGING IT. THE REACTION PIPS AND THE POOL BOTH SHOW A SECOND ATTEMPT NEVER HAPPENED, MEANING SOMETHING IS RETURNING EARLY FOR REASONS TESTER CORRECTLY COULD NOT DIAGNOSE FROM OUTSIDE
+
+**Deflection-alone confirmed exactly as needed -- Redirection genuinely removed from the power list rather than merely unused, so the engine had no stronger tier available to reach for even by accident. The term-by-term comparison against TEST 115 (Redirection's own `+3` correctly absent, the outcome correctly stopping at "deflected" rather than continuing to "sent back") is precise, and pricing confirmed at tier 1's real cost and degradation closes this cleanly.**
+
+### ⚠⚠⚠ THE FLAGGED ANOMALY -- REAL, WORTH INVESTIGATING NOW
+
+**This is careful, disciplined reporting of something genuinely strange, and ruling out both obvious explanations before flagging it -- rather than either diagnosing blind or reporting a raw symptom without narrowing it -- is exactly the right division of labour. The reaction pips still showing availability, and the pool sitting completely still through four more eligible shots, together rule out both resource exhaustion and a paid-but-failed attempt: `_deflectFor` pays for the attempt regardless of outcome, so an unmoved pool means no attempt happened at all, not that one happened and lost.**
+
+**Naming the reporting blind spot -- a failed deflection prints nothing, so "attempted and failed" and "never attempted" are visually identical from outside, with only the pool able to distinguish them -- is a genuinely useful observation in its own right, independent of this specific bug. Worth keeping in mind for future diagnosis of anything similar: a mechanism that only reports success can hide its own failures behind apparent silence.**
+
+**The fixture detail -- a level-12, Dexterity-16 gunner specifically because a level-1 shooter could never reach Defence 21, meaning no shot would ever be a real would-hit and the reaction could never be provoked at all -- is exactly the kind of careful setup this whole thread has needed throughout.**
+
+### RULED -- INVESTIGATE THE EARLY RETURN
+
+**This directly contradicts the mechanism's own stated design intent -- a Jedi under sustained fire is supposed to drain, and this one didn't, after the very first deflection. That's a real defect, not a curiosity, and it deserves the same priority as any other confirmed-live gap this session has found. Find where the early return happens on subsequent eligible shots within the same encounter, and why -- something is short-circuiting after a first successful deflection, and Tester's own observation (pool and pips both showing no second attempt was ever made) is precise enough to start from directly.**
+
+### PROCEED
+
+Investigate and report back on the early-return anomaly. Nothing further needed on the deflection-alone confirmation itself -- closed cleanly.

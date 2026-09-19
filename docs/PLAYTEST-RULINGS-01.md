@@ -71430,3 +71430,220 @@ Correct the shelf's `force_sleep` row and the condition it applies. `helpless` c
 ### PROCEED
 
 Nothing further needed. Condition enforcement closes with the honest tally confirmed and structurally protected against future drift.
+
+
+---
+
+## PT-2371 -- OWNER OPENS TARGET-SELECTION INFRASTRUCTURE AS THE NEXT DEDICATED THREAD. SAME TREATMENT AS EVERY OTHER BIG-SYSTEM ITEM THIS SESSION -- MEASURE FIRST
+
+**Opens the same way Shields, Grenades, Item Gates, BonusFeats, Force Push, Droid Trick, and Condition Enforcement all did. This is the one piece several already-held items have been waiting on: `blinded`'s three blocked effects, enemy-targeting generally, and part of Force Push's own held viability question all point at the same underlying gap -- the play screen currently has no way for the player to choose which specific enemy a power or attack targets when more than one is present.**
+
+⚠ **A CITATION CORRECTION WORTH FLAGGING BEFORE THIS STARTS.** Several recent rulings (including `PT-2368`'s `blinded` entry) cited `PT-1638` as the source for "zero tap infrastructure." Checking the real ruling: `PT-1638` is about diagonal movement keybindings, not target selection -- a different, unrelated gap that happened to get attached to this claim informally. The underlying claim (no current tap/selection infrastructure exists) may well still be true, but it needs its own real citation, not a borrowed one. Confirm the actual current state directly rather than trusting the inherited reference.
+
+### DIRECTED
+
+**Measure before proposing or building anything:**
+
+  · What currently happens today when a power or attack could hit more than one valid enemy -- is a target ever chosen at all, or is there some existing default/implicit selection (nearest, first-found, etc.)? Confirm the real current behavior rather than assuming there's nothing.
+  · What UI/input machinery already exists on the play screen that a selection step could build from -- anything used for movement, item interaction, or existing single-target actions that already involves the player choosing a square or a creature.
+  · The real shape of what's needed: does this need to be a generic "player picks a target" primitive usable by any power/attack that requires it, or does each consumer (blinded's effects, Force Push's viability gate, ordinary attacks) have different enough requirements that one primitive won't fit all of them?
+  · The ordering constraint already noted when this was scoped as a future thread: a selection step has to sit between the pick and the gate, since both the refusal message and the "nothing spent" guarantee depend on that sequence. Confirm this is still accurate against the real current code.
+  · Scale: how many places in the current product would actually consume a real selection primitive once it exists (not just the three items currently held on it, but anything else that would benefit).
+
+Report the complete picture before proposing anything.
+
+### PROCEED
+
+New thread opened. Awaiting the measurement.
+
+
+---
+
+## PT-2372 -- OWNER REQUEST: A FULL AUDIT OF EVERY DESIGN DOCUMENT'S OWN "OPEN" SECTION, TO FIND REAL, GENUINELY OUTSTANDING WORK THAT THE CODING AGENDA HAS NEVER TRACKED. TWO DOCUMENTS (BUILDER-VISION-01, BUILDER-CONTRACT-01) READ IN FULL ALREADY. THE REMAINING ~20 DOCUMENTS' OPEN SECTIONS EXTRACTED AND COMPILED HERE. DISPATCHED TO CODER FOR THE ONE THING I CANNOT DO FROM MAIN_WORK ALONE: VERIFY AGAINST THE REAL, LIVE CODEBASE WHICH OF THESE ARE STILL GENUINELY OPEN VERSUS ALREADY QUIETLY RESOLVED
+
+**This started from one specific question -- what happened to the palette UI item -- and the honest answer led somewhere bigger: the coding agenda this whole session has run against (`CODING-AGENDA-01.md`) only ever tracked rules-engine work. Roughly forty separate design documents, most with their own formal "Open" section, have never been cross-referenced against it at all. Some of what they list may well be closed by now; some almost certainly isn't. Sorting the two apart needs the live codebase, which this checkout doesn't have.**
+
+### WHAT'S ALREADY CONFIRMED (read in full, not extracted)
+
+`BUILDER-VISION-01.md`: the package schema (unwritten, larger than `CHARACTER-RECORD-01`), the art-pack boundary's real contents, the palette UI itself (designed, never screen-mocked), freeform mode's structural guardrails, author-created rules content (feats/powers/skills, blocked on whether an authored power needs a real effect system), the character-brain authoring question (`§7a`), the community exchange (`§7b`, discovery/versioning/trust/moderation/video-hosting all unsolved), and the `rules` surface with no precedent either way.
+
+`BUILDER-CONTRACT-01.md`: comment-attachment forms, whether the app should report a malformed Builder field, Builder version compatibility, whether compiled forms ship alongside source.
+
+### THE REMAINING DOCUMENTS -- RAW EXTRACT, EACH DOCUMENT'S OWN OPEN LIST, STRUCK-THROUGH/CLOSED ITEMS ALREADY REMOVED
+
+**`DIALOGUE-FORMAT-01`:** whether a conversation may attach to something other than a creature (door, terminal, placeable); whether a failed check may be retried (a real rule the worked example's own divergence from the test bed surfaced, owner's call); the pre-conversion example values in `RULES-02 §3` (shape adopted, values stale, document change needed).
+
+**`DOCTRINE-FORMAT-01`:** `goal` is inert (needs a vocabulary or a ruling it's narration only); `want_range` has no caller (movement toward a band unbuilt); whether an instance may override its template's doctrine (no field says which attachments are overridable).
+
+**`EMBODIMENT-01`:** the droid slot map (which slots each chassis has, unspecified); whether encumbrance exists at all; whether appearance varies by equipment or only species.
+
+**`ENGINE-INTERFACE-01`:** error shape (structure unspecified); async boundaries (which calls may block); multiplayer (per-player vs per-table engine, undecided); whether the Builder's subprocess call shares this interface exactly or a serialized subset (untested).
+
+**`EVENT-KINDS-01`:** payload shapes (deliberately unspecified, follows from emitting systems); filtering expression syntax unspecified; whether a package may declare its own event kinds; ordering within a turn (undefined).
+
+**`PACKAGE-FORMAT-01`:** content file format (TOML/JSON/other undecided); asset handling (waits on presentation-layer decision); versioning/compatibility semantics (what a version number means, unruled); discovery and search (deferred, needs content to exist first); trust and moderation (needs a platform that doesn't exist); partial package loading; how a quest chain is actually read (`[continues]` names it, mechanism unspecified).
+
+**`PACKAGE-NAMING-01`:** whether a `misc/` catch-all exists at all (BioWare's own absorbed 55.9% of items -- real risk if built carelessly); whether `tag` is required on every instance or only referenced ones; reserved path segments; case/character rules beyond lowercase-and-hyphens.
+
+**`PLAY-STATE-01`:** faction (deferred to cluster B); compaction triggers unspecified (when offered, whether ever automatic).
+
+**`QUEST-MODEL-01`:** who writes a flag (dialogue/script/reaction/all three, needs `ATTACHMENT-01`'s event vocabulary); journal presentation needs revisiting against a flag model; conclusion granularity (one conclusion or several firing).
+
+**`SAVE-LOAD-01`:** snapshot granularity (per-character/per-party/per-campaign, untested for speed); whether the player ever sees compression/snapshot mechanics; multiplayer log authority (whose log is authoritative across players).
+
+**`SHELL-FLOW-MAP-01`:** Options screen unscoped; the inventory sort control's visibility unconfirmed; combat explicitly out of this document's scope (locked elsewhere).
+
+**`TESTING-01`:** test language/runner undecided (blocked on the engine itself being unwritten); how a spec check cites its ruling (comment/decorator/registry); whether the document gate and code gate stay one command; replay-determinism check performance on a long log.
+
+**`UI-ASSETS-01`:** no art style guide (placements/sizes only, no visual direction); feat icon cell geometry unmeasured against the mockups' square assumption; typeface unresolved.
+
+**`UI-STYLE-VALUES-01`:** typeface not settled (K2's is a baked image, not a font file); sizes are mockup-scale ratios, not final pixel values; no dark/light variants.
+
+**`APP-UI-VISION-01`:** (in addition to the package schema, already named above) loading-screen/concept-art triggers deferred pending owner-provided mod reference files; whether to build a real animated background scene layer; a full combat-code audit never started (one real gap already found while logging this: nothing says what tapping an enemy *before* picking an action does); a real Settings screen never actually designed; a broader "pregame settings" category deliberately unscoped.
+
+**`UI-REFERENCE-ABACUS-DEMO-01`:** four open design questions carried forward for later discussion (persistent sidebar card, whether all rolls should be automatic-with-opt-out, whether a genre/tone picker makes sense for authored-package campaigns, where "show the dice" lives in the UI).
+
+**NOT YET CHECKED AT ALL -- genuinely unexamined in this pass:** `AGENDA-DRAFTING-01`, `AGENDA-RECORD-01`, `AREA-FORMAT-01` (partially seen, has real open items on tile types and elevation/Undercity), `ASSET-REPLACEMENT-01` (partially seen -- art recreation unassigned), `ATTACHMENT-01` (partially seen -- reaction event vocabulary, script sandbox), `AUTHORED-CHARACTER-01` (partially seen -- behaviour attachment deferred to cluster C), `BUILD-ORDER-01`, `CHARACTER-RECORD-01` (partially seen -- `story_origin`, multiplayer record ownership), `CHARGEN-DATA-01` (partially seen -- genuinely large amount of real, recent, granular content: droid ability scores, world menu skill counts, class table extraction gaps, and several already-closed items mixed in with them), `CHARGEN-FLOW-MAP-01` (partially seen -- icon geometry, Scavenger component count, species senses coverage), `CONSTRAINTS-01`, `RECORD-GAPS-01`, `ROADMAP-01`, `ROADMAP-02`, `README.md`, `TABLETOP-OR-ENGINE-01`, and the six `ENGINE-SPEC` documents (01 through 06).
+
+### DIRECTED
+
+**Two things, in order:**
+
+1. **Verify every item listed above against the real, current codebase.** For each, confirm: still genuinely open, or quietly resolved by something built since the document was last touched (and if resolved, where/how). Don't trust the document's own age as a proxy for staleness -- check directly, the same discipline this whole session has held for every other claim.
+
+2. **Read and extract the remaining, not-yet-checked documents the same way**, especially the six `ENGINE-SPEC` files and `CHARGEN-DATA-01`'s full remaining content, which is large enough that it may be worth its own careful pass rather than a quick skim.
+
+**Cross-reference the final, verified list against `CODING-AGENDA-01.md`** so nothing gets double-tracked, and report back a clean, accurate, complete picture -- genuinely open, genuinely closed, and (where relevant) genuinely already tracked -- so the agenda can be updated once, correctly, rather than accumulating duplicate or stale entries.
+
+### PROCEED
+
+Report back the verified, complete picture. Nothing added to the agenda yet -- this dispatch is measurement only, matching every other big-system thread's opening move.
+
+
+---
+
+## PT-2373 -- TARGET-SELECTION MEASURED: THE INFRASTRUCTURE LARGELY ALREADY EXISTS AND HAS SHIPPED FOR THREE VERBS. THE REAL GAP IS NARROW -- THE CANDIDATE BUILDER, NOT THE PICKER ITSELF. THREE ITEMS HELD ON THIS TURN OUT TO NEED THREE DIFFERENT THINGS: ONE UNBLOCKED BY A GENERALISED CREATURE PICKER, ONE NEEDING A GENUINELY DIFFERENT SQUARE PICKER, ONE NEVER ACTUALLY BLOCKED ON SELECTION AT ALL. AND MY OWN CITATION CORRECTION WAS ALSO WRONG -- PT-1638 HAS NOW DRIFTED ACROSS THREE DIFFERENT CLAIMS
+
+**Own this plainly before anything else: I corrected the original "zero tap infrastructure" citation as pointing at diagonal movement keybindings. That was also wrong -- the real `PT-1638` is a save-header race, unrelated to either claim. The number has now drifted across three separate things in three separate documents, and my own attempted correction added a second wrong attribution rather than fixing the first. Tracing exactly how it compounded, and confirming the existing citation-audit tooling is structurally blind to this specific class of error -- a citation to a real, existing ruling, just about the wrong subject -- is genuinely valuable, and it's worth fixing all three wrong attributions properly, not just noting them.**
+
+⚠⚠⚠ **THE HEADLINE FINDING CHANGES THE SHAPE OF THIS WHOLE THREAD, AND IT'S WORTH STATING PLAINLY HOW MUCH IT CHANGES.** A complete, shipped, already-proven picker -- number-key selection, inline refusal reasons rather than hidden candidates, auto-resolve on a single option, a refused pick that doesn't close the menu -- already exists and is already trusted for three real verbs. This was never a "build target selection from scratch" thread. It's "generalise one hardcoded filter." That's a fraction of the originally-assumed scope, found by measuring before assuming the premise was as stated.
+
+**Confirming attacks need no selection at all -- one creature per square, no ambiguity possible -- and that casts and grenades both currently take an arbitrary placement-file-ordered first candidate rather than anything meaningful, with the correct connection back to `PT-1847`'s already-known instance of the identical defect on the ally side, is precise, grounded measurement.**
+
+### THE THREE-WAY SPLIT -- CONFIRMED, AND IT'S THE RIGHT WAY TO SCOPE THIS
+
+⚠⚠⚠ **Recognising that "target selection" was never one problem is the second major correction this measurement makes, and it's decisive.** A creature picker and a square picker are not two implementations of one idea -- `blinded`'s entire ruled point is that the player must *not* be able to pick a creature directly, so a creature picker is precisely the wrong tool handed to the wrong condition. And confirming Force Push's size gate was never blocked on selection at all -- it gates on creature size, a concept selection has nothing to do with -- means one of the three items held on this thread should never have been held on it in the first place. "One unblocked by the creature picker, one needs a second primitive nothing else wants, one was never actually blocked here" is exactly the right way to have re-scoped three items that had been lumped together on a shared, partially-wrong premise.
+
+**The real-scale measurement -- 52 powers, split precisely by what they actually need (35 single-target enemy, 17 ally already partially working, 22 area needing no picker, 26 self already correct since `PT-2240`) -- turns "target selection" from a vague, large-sounding gap into a concrete, bounded piece of work with a known population on the other side of it.**
+
+**Confirming the ordering constraint already holds in the real code, seventy-six lines before the spend, with exact line numbers rather than an assumption that the constraint transfers, is the right level of verification before building on top of it. And catching the stale comment sitting three lines above a comment that correctly acknowledges the same change -- describing a state the code no longer has -- is a small, real catch worth fixing alongside everything else.**
+
+### RULED
+
+**Build the general creature-picker candidate builder first.** This is the piece that unblocks the most real content by a wide margin -- 35 single-target enemy powers, generalising the 17 ally powers' existing narrower version, plus grenades. Extend `_candidatesFor` beyond its current hardcoded `isParty`/one-square case to take a real filter and range, reusing the picker's own already-proven mechanics (inline refusal reasons, auto-resolve, non-closing refusal) rather than building anything new there. Fix the number-key cap while it's open, if nine is genuinely a real limit anywhere in the affected population.
+
+**The square picker for `blinded` is its own, later, separate piece.** Genuinely different primitive, one consumer. Build it once the creature picker is done and there's a reason to prioritise the one condition that needs it.
+
+**Fix all three wrong `PT-1638` citations properly** -- the diagonal-key attribution in `PT-1706` and wherever it landed in `PLAY-STATE-01`, and this thread's own now-corrected-twice reference. Point each at what actually happened, or remove the citation if the underlying claim doesn't need one.
+
+**Force Push's size gate stays exactly where it already was** -- held on creature size not existing as a concept, unaffected by anything in this thread.
+
+### PROCEED
+
+Build the creature-picker generalisation. Correct the three `PT-1638` citations. Square picker and Force Push's size gate stay held, correctly, for their own separate reasons.
+
+
+---
+
+## PT-2374 -- THE DESIGN-DOCUMENT AUDIT CLOSES ITS FIRST PASS, AND THE LARGEST FIND IS THE BESTIARY: TEN FULL DESIGN DOCUMENTS AND TWO REAL SCRIPTS, WITH ZERO EXTRACT, ZERO SHELF FILE, AND ZERO READERS ANYWHERE. A WHOLE SUBSYSTEM DESIGNED IN FULL AND NEVER ONCE CONNECTED TO ANYTHING REAL. AND A GENUINE BLIND SPOT IN MY OWN COMPILED LIST: AN ENTIRE 486-LINE DOCUMENT OF OPEN QUESTIONS THAT NEVER MADE IT INTO WHAT I HANDED OFF
+
+**Approved and recognised in full. Catching that the first sweep's own case-sensitive regex silently skipped every ENGINE-SPEC document, because their headers read `OPEN` in caps rather than `Open`, is exactly the kind of self-inspection this session has held for every other tool built this session -- "a check shaped by its examples" is a precise, quotable name for the failure, and it's worth remembering as its own standing caution: any keyword sweep built from a handful of observed examples risks missing the shapes that don't happen to match the pattern that was noticed first.**
+
+### SECTION A -- QUIETLY RESOLVED, EACH VERIFIED RATHER THAN ASSUMED
+
+**Confirming that `TESTING-01`'s stated reason for an undecided runner -- the engine being unwritten -- has expired, without treating that as automatically closing the decision itself, is a precise distinction. A reason expiring and a question being answered are not the same event, and keeping them separate here is correct.**
+
+⚠⚠ **THE SPECIES-SENSES FINDING IS GENUINELY VALUABLE BEYOND JUST ANSWERING THE ORIGINAL QUESTION.** The real species count grew from 47 to 57, and confirming none of them carry a clean `senses` field at all -- with sense traits scattered under inconsistent, sometimes malformed per-species names (a trailing period on one, no less) -- turns "is this established" into "this was never established, and what exists instead is an inconsistency nobody has been tracking." That's a more useful and more honest answer than either "yes" or "no" alone would have been.
+
+**Correctly flagging `want_range`'s stale comment sitting forty lines above the code that contradicts it, rather than just confirming the caller exists and moving on, is the kind of thoroughness that prevents the next person from reading the comment and believing something the code no longer does.**
+
+**And the `QUESTIONS-01 Q13` finding -- a later ruling superseding the original question in a way that produces a genuinely different result, correctly read as superseded rather than silently declared answered -- is exactly right to flag for review rather than resolve unilaterally. Noted for later attention; not urgent enough to resolve in this same pass.**
+
+### SECTION B -- ⚠⚠⚠ THE BESTIARY IS THE MOST IMPORTANT FINDING IN THIS ENTIRE AUDIT
+
+**Ten documents, two real scripts, and a complete, structural absence everywhere that matters -- no extract among the thirty, no shelf file, no reader anywhere in the generator. This is not a partially-built system with a gap in it; it's a fully-designed system that was never once wired to anything real. `ENGINE-SPEC-04`'s own claim that ground doctrine "already exists" via `BEASTS-01`'s behavioural tags is confirmed true only as a design statement -- the tags themselves appear in no data and no code anywhere.**
+
+**Catching the own false-positive grep hit -- `Scavenger` as a profession name and `Predators` inside a world note, not the bestiary concept at all -- before reporting the bestiary as reachable, and explicitly naming "checked the subject, not the match" as the reason it didn't ship as a wrong finding, is exactly the discipline this whole session has held on every claim. Applied here to one's own search results before they became the report.**
+
+**Confirming `ENGINE-SPEC-02` and `ENGINE-SPEC-03` are entirely unbuilt -- not gapped, genuinely nonexistent -- and finding the quest-chain field that's fully wired through the Builder, parseable and editable, with literally nothing downstream ever reading it, are both real, concrete findings worth having precisely located rather than left as vague design-document prose.**
+
+### SECTION C -- THE BLIND SPOT IN MY OWN COMPILED LIST
+
+⚠⚠ **Finding that `QUESTIONS-01` -- an entire 486-line document with roughly two dozen live open questions -- never made it into what I handed off is a real gap in my own first pass, and it's worth owning rather than letting the correction pass by quietly. My sweep looked for "Open" section headers specifically; a document that's nothing but open questions, with no section header to match, was invisible to that method. Good catch, and a useful lesson for any future sweep of this kind: the search method itself needs to account for a document whose entire structure is the thing being searched for, not just a section within it.**
+
+**Correctly identifying the eight governance documents as not needing this treatment at all is useful scoping -- confirms the audit's actual surface is smaller than "every document in the folder," without pretending they were checked when they didn't need to be.**
+
+### SECTION D -- THE CROSS-REFERENCE
+
+⚠⚠⚠ **Confirming zero real overlap with the rules-engine agenda, verified directly rather than assumed from the fact that the two tracks feel unrelated, is exactly right -- and the false-friend check (every apparent "beast" or "cover" or "quest" hit turning out to be an unrelated use of the same word) is the correct level of rigor for a claim this consequential. This isn't a deduplication problem. It's confirmation that an entire second body of real work has never been tracked anywhere at all.**
+
+### SECTION E -- HONEST SCOPE, ACCEPTED
+
+**The distinction between "every Open section read and verified" and "all 42 documents read end to end" is exactly the right thing to have stated plainly rather than let the report's thoroughness imply more coverage than it actually has.**
+
+### RULED
+
+**Yes, take the remaining full read as its own slice.** The six ENGINE-SPECs, `CHARGEN-DATA-01`'s complete remaining content, and `QUESTIONS-01` worked through question by question, rather than surveyed. Given the scale already found in the partial pass, a genuinely complete picture is worth the additional slice rather than working from a survey.
+
+**This confirmed second body of work needs its own tracked surface, separate from `CODING-AGENDA-01.md`.** Given zero overlap and a genuinely different domain (Builder, generator, package platform, bestiary, engine specs), propose the shape of that second surface once the remaining full read is done -- whether that's a new agenda document, a section appended to an existing one, or something else. Don't build it piecemeal against a partial picture.
+
+### PROCEED
+
+Take the full read of the six ENGINE-SPECs, `CHARGEN-DATA-01`, and `QUESTIONS-01` as its own slice. Propose the second tracked surface once that's complete. Nothing added to any agenda yet -- still measurement.
+
+
+---
+
+## PT-2375 -- THE CITATION RULING IS WITHDRAWN: CODER'S OWN EARLIER CORRECTION WAS WRONG, CAUGHT BY CODER'S OWN LATER, MORE THOROUGH READ. PT-1638 IS A MULTI-FINDING REPORT CONTAINING ALL THREE SUBJECTS, AND ALL 26 REAL CITATIONS ACROSS FIVE REPOS ARE CORRECT. AND A GENUINE DELIVERY GAP FOUND: PT-2373/2374 WERE PUSHED BUT NEVER REACHED CODER UNTIL JUST NOW
+
+**Withdrawing the citation-fix ruling from `PT-2373` in full. Coder's own account of how this happened is exactly the right way to report a self-caught error: reading a heading that names only the first of three findings in a twenty-three-line entry, generalising from eight lines, and then stating the wrong conclusion with three warning marks rather than one -- confident phrasing built on a partial read. Explicitly naming this as the identical failure shape already being watched for in everyone else's claims all session, and catching it in one's own work rather than someone else's, is worth real credit rather than being treated as an embarrassing footnote to an otherwise-fine report.**
+
+**Confirming this at real scale -- 26 citations across five repos, every one independently checked and every one correct -- rather than trusting the correction once it was found, is exactly the standard this deserved. Editing those 26 to match a wrong belief would have introduced 26 real errors into a ledger that had none. The instinct to sweep for scale before touching anything is what caught it.**
+
+**And the one thing worth keeping from the whole episode -- a heading naming only the first of several findings is a real, general trap, and nothing currently audits whether a citation actually matches the specific part of an entry it points at -- is a genuine, useful lesson distinct from the specific error it came from. Worth remembering the next time a long, multi-finding report gets cited by its heading alone.**
+
+### RULED
+
+**Withdrawn: the three-citation-fix instruction from `PT-2373`. Nothing needs changing.** `PT-1638` correctly covers the save-header race, the complete absence of pointer/tap input (`"zero tap infrastructure"` is the ruling's own measured phrase), and the diagonal-key stranding, all in one entry -- all 26 existing citations stand as correct.
+
+**Everything else from `PT-2371`/`PT-2373` is confirmed unaffected and stands exactly as ruled** -- the general creature-picker build, the square picker held for `blinded`, and Force Push's size gate held where it was. Both facts Coder names are genuinely compatible: a keyboard picker exists and ships; pointer input does not exist at all. Neither contradicts the other.
+
+**The delivery gap is noted, not alarming.** The ledger itself is the durable source of truth and nothing in it was lost -- `PT-2373`/`PT-2374` sat correctly pushed and were read the moment the gap was noticed. Worth being aware the dispatch channel and the ledger can drift out of sync, but the ledger held.
+
+### PROCEED
+
+Build the creature-picker generalisation as already ruled. `PT-2374`'s full read stays queued behind it, correctly, unless there's a reason to reorder.
+
+
+---
+
+## PT-2376 -- OWNER RULING: SINGLE-TARGET POWERS GET AN EXPLICITLY CHOSEN TARGET, MATCHING THE GAMES. AREA/RADIUS POWERS ARE THIS PROJECT'S OWN ADDITION AND STAY EXACTLY AS THEY ARE, NO PICKER NEEDED. AND A REAL QUESTION SURFACED FOR MEASUREMENT: DOES A CHOSEN TARGET PERSIST ROUND TO ROUND, OR GET ASKED FRESH ON EVERY CAST
+
+**Adds to the target-selection thread rather than replacing anything already ruled. The split is clean and correctly grounded in what each power actually is, not a uniform rule applied regardless of shape:**
+
+    single-target     explicit chosen target -- follows the games' own behaviour
+    area / radius     everyone in the radius -- this project's own addition, unaffected, no picker
+    self              already correct, unchanged
+    ordinary attacks  positional, no selection, unchanged
+
+**Confirming the area powers' current behaviour is correct and deliberately not a gap is worth stating plainly: the games never had a radius on things like Force Valor or Master Heal, so there's no source behaviour to match there, and adding a selection step to something that's supposed to hit everyone in range would be building a picker nobody asked for.**
+
+**Everything already ruled on this thread stands unchanged: build the general creature-picker candidate builder first, reusing the existing picker's own proven mechanics; the square picker for `blinded` stays its own later piece; Force Push's size gate stays held where it was.**
+
+### DIRECTED -- MEASURE BEFORE PROPOSING
+
+**A real, cheap-to-answer question before the picker's actual interaction shape gets built: do the source games keep a selected target persistent (picked once, reused round to round until changed) or ask fresh on every cast?** This is felt every round if built wrong, and it's exactly the kind of thing this whole session has held to "measure the source, don't assume" -- report which shape the games actually use and what each would cost to build here, then it gets ruled.
+
+### PROCEED
+
+Continue the creature-picker build as already directed. Measure the persistent-vs-per-cast question and report back before that specific piece of the interaction is finalized.

@@ -72409,3 +72409,42 @@ Propose the concrete shape. Once approved, wire Deflection's already-built, alre
 ### PROCEED
 
 Build Deflection as a reaction, option A. Build Camouflage's ten-round duration. Correct both documents -- `§4.3`'s duration figure and `FORCE-POWERS-01`'s stale "always in effect" line. Re-examine the 15/20/25 Force Body costs against the corrected ten-round window and report before assuming they still hold.
+
+
+---
+
+## PT-2402 -- ALL FOUR ITEMS CLOSE CLEAN. DEFLECTION'S CALLBACK PLACEMENT IS PRECISE (AFTER THE ROLL, BEFORE DAMAGE -- AN ALTERNATIVE TO BEING HIT, NOT TO BEING AIMED AT). CAMOUFLAGE CORRECTLY LEAVES ITS BASE TIER INERT RATHER THAN BUILDING A CLOCK ON A PERMISSION NOTHING GATES. AND THE PRICING RE-EXAMINATION IS GENUINELY SOPHISTICATED WORK: THE BREAK-EVEN NEVER MOVED, WHAT ACTUALLY CHANGED IS THE CEILING, AND THE CEILING IS TIGHTER OVERALL BECAUSE A SEPARATE, ALREADY-CLOSED FIX (CASTING COSTING THE ACTION) BOUNDS IT HARDER THAN THE DOUBLED WINDOW LOOSENS IT
+
+**No defensiveness needed on either side is exactly right, and it's worth confirming that plainly -- checking a prior instruction against reality and reporting the collision honestly is the job working as intended, not a failure on anyone's part.**
+
+### DEFLECTION -- APPROVED, THE PLACEMENT REASONING IS EXACTLY RIGHT
+
+⚠⚠ **Asking after the roll and before damage, rather than before the roll, is the correct placement, and the reasoning is precise: deflection is an alternative to being hit, not to being aimed at, and the source's own distinct outcomes (`ATTACK_RESULT_DEFLECTED` versus `MISS`) directly confirm this rather than being merely consistent with it. Building it as a callback, the same shape already used for `resists`/`immune`/`saveFor`, correctly keeps the actual resource-spending decision at the screen level rather than letting the attack-math function reach into a budget it has no business touching.**
+
+⚠⚠ **PAYING FOR THE ATTEMPT RATHER THAN THE SUCCESS IS THE DETAIL THAT ACTUALLY MAKES THIS A REACTION AND NOT THE REFUSED PASSIVE IN DISGUISE.** A reaction that costs nothing on a failed roll is a free re-roll on every shot, which is precisely the unpriced, unlimited shape `POWER-COSTS-01 §4` already ruled out -- catching this before it could quietly reintroduce the exact thing the reaction framing was chosen to avoid is the whole point of that earlier ruling actually being honoured, not just cited.
+
+**Wiring every `strike` caller through one rule rather than one rule per site, with the opportunity-attack exception applying by construction (melee is forced, `deflect` already refuses melee first) rather than needing a separate carve-out, is clean, minimal-surface-area design. The Dexterity-3 fixture, explicitly cross-referenced against Force Body's own opposite-extreme choice for the opposite reason, is good practice -- two tests that could otherwise look like arbitrary, unrelated choices are now each other's explanation.**
+
+### CAMOUFLAGE -- APPROVED, INCLUDING THE CORRECT RESTRAINT ON THE BASE TIER
+
+**Finding that an existing document had already, correctly named this exact gap -- "nothing in the product can deactivate a power yet" -- and had been treating it as a limitation to live with rather than a ruling already waiting to be wired in, is a genuinely useful reframing. And catching a test pinned to the *opposite* of the correct answer, "right about the data, and the data was wrong," is a precise distinction worth holding onto: a passing test proves the code matches the data, never that the data is correct.**
+
+**Correctly leaving base Camouflage inert, rather than building a clock on a permission nothing currently gates, is exactly the discipline held everywhere else this session -- a rule with no first state stays unbuilt until it has one, even when building it would have been easy and would have made the feature look more complete than it actually is.**
+
+### ⚠⚠⚠ THE PRICING RE-EXAMINATION -- GENUINELY SOPHISTICATED, APPROVED IN FULL
+
+**This is careful, real analytical work, not a defensive justification for leaving the numbers alone, and it deserves to be recognised as such. Demonstrating that break-even, measured in casts rather than rounds, is completely untouched by the window's length closes the actual question that mattered -- the decision a player faces at the moment of casting never moved.**
+
+⚠⚠ **THE CASTING-COST INTERACTION IS THE SHARPEST INSIGHT IN THIS WHOLE REPORT, AND IT'S WORTH STATING WHY IT MATTERS BEYOND THIS ONE POWER.** Recognising that `§4.3`'s original pricing was written against a world where casting was still free -- no cap on casts per round at all -- and that `PT-2397`'s later, separately-motivated fix bounds this power far harder than the doubled window loosens it, means the two corrections interact in a way that makes the net result *tighter* than what was ever priced against, not looser. That's a genuinely non-obvious conclusion, and reaching it required actually tracing how two unrelated-looking fixes compound rather than evaluating either one in isolation. This is exactly the kind of cross-thread awareness worth having as a standing habit whenever two separately-ruled changes touch the same underlying mechanic.
+
+**Deriving vitality as the real governing constraint from the actual numbers -- Master Force Body spending roughly half a typical Consular's vitality pool to reach its own ceiling -- rather than asserting it, is the right way to support a "leave it alone" recommendation. A recommendation to not change something is exactly as much a claim as a recommendation to change it, and it deserves the same evidentiary standard.**
+
+### RULED -- KEEP 15/20/25, TRACK THE HEALING-ECONOMY QUESTION SEPARATELY
+
+**Approved: leave the existing costs unchanged.** The analysis is thorough enough to trust, and the recommendation follows from real numbers rather than an assumption that nothing needed re-checking.
+
+⚠ **Correctly not chasing the healing-economy question inside this slice.** Whether vitality recovers cheaply enough between fights to soften the governor this analysis found is a real, separate question about a broader system, not something Force Body's own pricing should be re-litigated around speculatively. Track it as its own held item -- if the healing economy is ever measured for its own reasons, revisit whether Master Force Body's pricing still holds under real numbers rather than the current, reasonable assumption.
+
+### PROCEED
+
+Nothing further needed -- all four items closed cleanly. The healing-economy question is tracked, held, not urgent.

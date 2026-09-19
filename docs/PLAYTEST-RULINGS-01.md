@@ -72758,3 +72758,28 @@ Same underlying fix as `PT-2411`, corrected mechanics. `a_blast_stops_at_a_wall_
 ### PROCEED
 
 `a_blast_stops_at_a_wall_test`'s hang comes off the held list, correctly diagnosed and confirmed resolved. Build the numbered-timeout-message version of the amplifier fix. This closes the last item that had been sitting held from this whole run of work.
+
+
+---
+
+## PT-2415 -- THE NUMBERED-MESSAGE FIX CLOSES CLEAN. AND BUILDING IT SURFACED A SECOND, GENUINELY MORE DANGEROUS MECHANISM: OUTSIDE runAsync, pumpUntil DOESN'T TIMEOUT AT ALL -- IT HANGS TRULY AND SILENTLY, BECAUSE THE FAKE TEST CLOCK NEVER ADVANCES AND THE WALL-CLOCK CHECK IS NEVER EVEN REACHED. CODER CORRECTLY, DIRECTLY NARROWED THEIR OWN RECENT "IT WAS NEVER A HANG" CLAIM RATHER THAN LETTING IT STAND AS MORE GENERAL THAN IT ACTUALLY WAS. CONFIRMED LATENT, NOT LIVE, ACROSS ALL 26 REAL CALLERS
+
+**The numbered-message build is exactly right -- per-file scope matching the real isolate boundary, a message that states precisely what it knows and nothing more, and confirmed actually firing across three real probes with the running total climbing, rather than trusted to work because it compiled.**
+
+### ⚠⚠⚠ THE SECOND MECHANISM -- GENUINELY VALUABLE, AND THE SELF-CORRECTION IS THE MORE IMPORTANT HALF
+
+**Recognising that a probe hanging outright, rather than producing the expected numbered message, was itself a finding rather than a broken probe, is the instinct that turned a verification step into a real discovery. Tracing it precisely -- real time inside `runAsync`, a fake clock that never advances outside it, so the delay this session's whole diagnosis depended on simply never resolves and the safety check behind it is never reached -- is a complete, correct causal account of a genuinely different failure shape from the one just closed.**
+
+⚠⚠ **DIRECTLY NARROWING "IT WAS NEVER A HANG" RATHER THAN LETTING IT STAND AS A GENERAL CLAIM IT NEVER ACTUALLY SUPPORTED IS EXACTLY THE STANDARD THIS SESSION HAS HELD THROUGHOUT, APPLIED HERE TO SOMETHING SAID CONFIDENTLY JUST ONE SLICE AGO.** The original claim was true of the specific file measured and true of the specific mechanism found there -- generalising it to "hangs in this test suite are never real" was an overreach the new evidence caught before it could mislead anyone reading it later. Correcting one's own recent, confident conclusion the moment it turns out narrower than stated is worth exactly as much credit as catching someone else's overreach would be.
+
+**Checking all 26 real callers rather than assuming the discovery was alarming by default, and confirming every one already uses the safe wrapper, is precisely right -- this is a real, armed trap for a future mistake, not a live defect sitting in the current suite, and the two claims deserve to be kept as distinct as they're being kept here.**
+
+**Correctly declining to fold the obvious full repair into the already-approved fix, on the grounds that it's the identical timing-behaviour change just declined an hour earlier for reasons that haven't changed, is exactly the right boundary to hold -- two different problems that happen to share a root function still deserve two separate decisions, not one ruling stretched to cover both because they're adjacent in the code.**
+
+### RULED -- THE ASSERT, NOT THE TIMING CHANGE
+
+**Approved as recommended: a one-line assertion at the top of `pumpUntil` confirming it's running under `runAsync`, no timing change.** This converts the true hang into a loud, immediately legible failure -- a sentence instead of a silent wall -- without touching any timing behaviour in a suite this large, and without reopening the exact flakiness tradeoff already declined for the other fix. "Nothing" leaves a real, if currently dormant, trap armed for the next person who forgets the wrapper; "change the stepping" reopens a timing risk for a problem the assertion solves just as completely at a fraction of the cost. The assert is the right size for what's actually needed here.
+
+### PROCEED
+
+Build the assertion. This closes the last remaining piece of the held list in full.

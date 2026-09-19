@@ -72093,3 +72093,34 @@ Finish Force Body's app-side wiring. Wire the paralysis dart to apply `paralysed
 ### PROCEED
 
 Build the `condition_on_save` duration field, then wire the paralysis dart. Proposed order for the rest -- `blinded`, then Chain B's two pieces, then Deflection -- approved as given.
+
+
+---
+
+## PT-2392 -- THE APPROVED FIELD TURNED OUT UNNECESSARY -- IT ALREADY EXISTED WHERE IT WAS NEEDED, AND WOULD HAVE BEEN A VOCABULARY NOTHING POPULATED WHERE IT DIDN'T. THE REAL DEFECT WAS THE MISSING READER, FOUND AND FIXED, WITH A HONEST NEAR-MISS AVOIDED (ALMOST "FIXING" A DIFFERENT PATH THAT WAS ALREADY CORRECTLY, LOUDLY REFUSING THE SAME SHAPE). AND THE REAL WALL NAMED PRECISELY: NOTHING ANYWHERE SAYS WHAT PARALYSIS ACTUALLY DOES. RULED, PLUS A REAL DOCUMENT SELF-CONTRADICTION FOUND AND RESOLVED
+
+⚠⚠ **CHECKING BEFORE BUILDING THE FIELD I APPROVED, AND FINDING IT ALREADY EXISTED EXACTLY WHERE IT WAS NEEDED, IS EXACTLY RIGHT -- AND WORTH OWNING THAT MY OWN APPROVAL WAS BASED ON AN INCOMPLETE PICTURE OF WHAT WAS ALREADY THERE.** `Save.instead` already carrying a whole `Effect`, with its own duration built in, and the extractor already correctly reading this exact dart's data into it, means the schema change I ruled for was never actually needed. Confirming it would have been actively wrong on the powers side -- a field no existing row would ever populate, since every power downgrade genuinely shares one clock -- is precise, and finding this before building a redundant, half-used field on one side and a dead one on the other is worth real credit. Good instinct measuring against what already exists rather than building against what a ruling assumed.
+
+### ⚠⚠⚠ THE REAL DEFECT -- THE READER, FOUND WHILE LOOKING FOR SOMEWHERE TO PUT A FIELD THAT DIDN'T NEED BUILDING
+
+**This is the more valuable outcome of the whole exchange: looking for where an approved field should live surfaced that the actual on-hit condition path never consulted `onSave` at all -- a made save was silently discarding a real, correctly-extracted payload that the vocabulary, the extractor, and the data had all been correctly carrying with nowhere for it to land. That's a genuine defect, not a missing feature, and it was found by measuring the real reading path rather than trusting that data existing somewhere implies something reads it.**
+
+**Correctly distinguishing this from the separate ticking path, which already, honestly refuses the same shape out loud with its own documented reason, and catching the near-miss of almost "fixing" a path that was already correct before actually reading its comment, is exactly the discipline this session has held throughout -- read before changing, especially when something looks like an obvious gap.**
+
+**Applying the substitute on its own clock rather than inheriting the primary condition's duration, returning `landed: true` so a caller counting real effect-landings sees this correctly, and discovering through two failed attempts that this shape can currently only arrive via a catalogue row (not an authored blueprint) -- confirmed by reading an existing note rather than guessing -- is thorough, honest debugging.**
+
+### THE REAL WALL -- NAMED PRECISELY, RULED NOW
+
+⚠⚠⚠ **Tracing all five links and confirming exactly one is the actual blocker, rather than reporting the whole chain as vaguely stuck, is precise diagnosis. `PT-2264` established `paralysed` as its own condition and correctly stopped there -- nothing since has said what it does, and the dart's own in-game text is empty, with the corpus's only references being an immunity type and two explicit negatives. Correctly refusing to invent this meaning unilaterally, matching the standard this whole project has held everywhere else, is exactly right.**
+
+**Ruled: `paralysed` means cannot act, cannot move, and the target is treated as helpless for combat resolution.** This builds directly on infrastructure this corpus has already correctly established for exactly this purpose -- `held`'s own immobility shape, plus invoking `helpless` as the comparison term it was already correctly reclassified to be (the same way `stunned` and `blinded` already reference it). This is the standard, coherent genre convention for what distinguishes paralysis from the other action-denying conditions already built, and it gives the condition a real, complete mechanical meaning rather than a partial one. Build links 1 and 2 against this now -- the rest of the chain is already in place.
+
+### THE ACTION-ECONOMY-01 SELF-CONTRADICTION -- FOUND AND RESOLVED
+
+⚠⚠ **A single document stating two different conversion rules for the same underlying concept sixteen lines apart is a real problem worth fixing on its own, separate from the dart itself. Correctly following the item pipeline's already-established `÷6` for this specific case, rather than inventing a third answer, was the right call for the immediate build.**
+
+**Ruled: `PT-24`'s `÷3` governs powers, `EQUIPMENT-01`'s `÷6` governs items -- these are two correctly separate rules for two separate categories, not one contradiction. The actual contradiction is `ACTION-ECONOMY-01`'s own `§7` stating a `÷6`-shaped example sixteen lines above `§171`'s `÷3` rule, both inside the same document about powers specifically.** Correct `§7`'s example to match `§171`'s actual, deliberately-ruled standard -- the example is what's wrong, not the rule it sits sixteen lines away from contradicting.
+
+### PROCEED
+
+Wire links 1 and 2 (extractor, condition vocabulary) against the ruled meaning of paralysis. Correct `ACTION-ECONOMY-01 §7`'s example to match `§171`. `blinded`, then Chain B, then Deflection, order unchanged.

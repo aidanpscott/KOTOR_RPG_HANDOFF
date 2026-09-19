@@ -4,7 +4,7 @@
 
 **Settled.** **Items marked ⚠ are noted for playtest or belong to another workstream; none of them blocks play.**
 
-**Round length: 6 seconds.** *RCR is d20 and uses the same. KOTOR's real-time rounds are 3 seconds, which is why a 6-second stun there is one round here.*
+**Round length: 6 seconds.** *RCR is d20 and uses the same. KOTOR's real-time rounds are 3 seconds, which is why a 6-second stun there is **two rounds** here. ⚠⚠ **CORRECTED AT `PT-2392`** — *this read* “one round” *and contradicted `§171`'s own rule sixteen lines below it: **divide printed seconds by 3**. One sentence divided by six and the other by three, in the same document, about the same quantity.**
 
 **Square size: 2 metres.** *RCR's own unit — d20's 5-foot square converted to metric, which is why every species record reads Speed 10 metres. Every distance in the corpus is already in metres and lands on a clean square count without conversion.*
 

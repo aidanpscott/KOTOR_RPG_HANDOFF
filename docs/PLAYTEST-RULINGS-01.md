@@ -72467,3 +72467,61 @@ Nothing further needed -- all four items closed cleanly. The healing-economy que
 ### PROCEED
 
 Measure the real remaining scope of the thirteen unenforced conditions. Fix `_reach`'s range-as-radius defect (Shutdown, Overload) alongside it or immediately after.
+
+
+---
+
+## PT-2404 -- THE `_reach` FIX IS A GENUINELY FASCINATING ROOT CAUSE: THE WARNING DOCUMENTING THE DEFECT CREATED THE DEFECT, BECAUSE A REGEX CANNOT DISTINGUISH AN ASSERTION FROM ITS OWN NEGATION. CAUGHT AGAIN, MID-FIX, BY THE IDENTICAL TRAP. AND A GENUINELY MATURE, HONEST WITHDRAWAL: MEASURED AGAINST REAL DATA, CONDITION ENFORCEMENT TURNS OUT ALREADY COMPLETE -- TWELVE OF THIRTEEN REMAINING CONDITIONS ARE APPLIED BY NOTHING AT ALL, AND CODER SAYS SO PLAINLY RATHER THAN BUILDING TOWARD THEIR OWN PRIOR RECOMMENDATION REGARDLESS
+
+⚠⚠⚠ **THE ROOT CAUSE IS WORTH DWELLING ON, BECAUSE IT'S A GENUINELY ELEGANT FAILURE SHAPE.** A note correctly, explicitly warning "this is a range, not a radius" contains both the quoted phrase and the word "radius" close enough together to satisfy the very pattern it was written to warn against -- a regex has no concept of negation, so a sentence asserting a claim and a sentence denying the identical claim look identical to a matcher that only checks for co-occurrence. The defect wasn't introduced by careless data; it was introduced by someone correctly documenting a problem, in language precise enough to accidentally recreate it.
+
+**Censusing before reaching for the obvious fix -- stripping notes from consideration entirely -- and finding thirteen powers that would have silently lost their only source of geometry is exactly the discipline that turns a plausible-looking repair into a real regression, caught before it shipped rather than after. Stripping quoted spans specifically, rather than notes generally, is the more precise fix a careful census made possible.**
+
+⚠ **GETTING CAUGHT BY THE SAME TRAP A SECOND TIME, WHILE ACTIVELY FIXING THE FIRST INSTANCE, IS WORTH NAMING RATHER THAN QUIETLY CORRECTING.** Writing a replacement note that spelled out the exact field name and value being removed, and watching the reader pick it back up as real data, is almost too on-the-nose an illustration of the lesson -- and reporting it rather than letting the fix's own success speak for itself is exactly the honesty this session has held throughout.
+
+**Flagging the same vulnerability in the other four note-reading fields, rather than either ignoring it or trying to sweep all four in the same slice, is the right scope discipline -- this defect is now understood well enough to fix properly, and doing that properly needs its own census the same way this one did, not a rushed generalization riding on momentum.**
+
+### THE WITHDRAWAL -- ACCEPTED, EXACTLY RIGHT
+
+⚠⚠⚠ **Recommending a thread, then measuring it and finding the recommendation doesn't survive contact with the real data, and saying so plainly rather than building toward what was already suggested, is precisely the standard this whole session has held for every other claim -- applied here to one's own prior advice rather than someone else's. Twelve of thirteen conditions carrying zero applications anywhere in the shipped corpus, with the thirteenth already tracked under a different, already-held thread, means this genuinely is complete for what exists today. Building the other twelve would be exactly the defect class this project has spent this entire session hunting -- deliberately, this time, which is worth noting as the discipline actually working as intended rather than being avoided by luck.**
+
+**The honest caveat -- this measures today's content, and authoring is the right trigger for tomorrow's, not a scheduled slice -- is precise, and confirming the tracking set already holds what's needed means nothing is actually lost by not building ahead of a real use.**
+
+### PROCEED
+
+Given this withdrawal and the severity of what Tester just found in the same batch (see the companion ruling), condition enforcement stays correctly closed. Priority shifts to the Paralyze defects found in play -- see the next entry.
+
+
+---
+
+## PT-2405 -- TEST 115 CONFIRMS FIVE OF SIX THREADS DECISIVELY. AND A SEVERE FINDING: PARALYZE IS ENTIRELY UNREACHABLE IN ACTUAL PLAY, FOR TWO INDEPENDENT REASONS -- THE WHOLE ROCKET/LAUNCHER DELIVERY CONCEPT DOESN'T EXIST ANYWHERE IN THE CODE, AND EVEN WIELDED DIRECTLY, THE ON-HIT PATH HARDCODES AWAY THE EXACT DATA THE EFFECT NEEDS. SILENT FROM THE RECEIVING END -- FIVE HITS LANDED ON AN ENEMY WITH NO VISIBLE CONSEQUENCE AT ALL. AND MY OWN ROUTING WAS WRONG: PARALYSIS GENUINELY EXPIRES, THAT CLAIM BELONGED TO prone
+
+**Own the routing error directly: I said paralysis never expires. It does -- a real, stated duration, correctly enforced and correctly clocked. That claim belonged to `prone`, which is genuinely durationless and needed the stand-up mechanism precisely because it never naturally ends; paralysis carries a number and correctly doesn't need that mechanism at all. Tracing the confusion to its actual source, rather than just noting the number disagreed, is exactly the kind of correction this session has held throughout, applied here to my own instructions.**
+
+### THE FIVE CONFIRMED THREADS -- ALL APPROVED
+
+**Casting-costs-the-Action confirmed on both halves, including the free refusal for a paralysed caster with the pool genuinely untouched. The menu-still-opening-after-the-spend detail is small and worth a note, not urgent.**
+
+**Overload confirmed decisively both directions -- the weapon-disable effect correctly following whichever creature is actually aimed at, not a fixed target, with the bystander caught only in the blast correctly keeping their own weapon. Confirming the disarmed creature's fallback to unarmed on its next attack is good, thorough follow-through beyond what was strictly asked.**
+
+**Blinded confirmed cleanly, with a small, real UI gap named (the new aim-by-square verb isn't listed in the verb line) rather than left unmentioned because the underlying mechanic worked.**
+
+⚠ **Deflection confirmed, with the right honesty about what wasn't isolated -- a caster knowing both Deflection and Redirection meant the engine consistently chose the stronger behaviour every time, so Deflection alone (stop the bolt, no reflection) was never actually, separately observed. Flagging this rather than treating "a deflection happened" as confirming both powers individually is precise. Worth a follow-up with a tier-1-only caster whenever convenient -- not urgent, but a real gap in what's actually been confirmed.**
+
+**Force Camouflage confirmed decisively, the matched-pair design isolating the exact `+4` difference and the expiration timing both in one clean setup.**
+
+### ⚠⚠⚠ PARALYZE -- SEVERE, RULED
+
+**Two independent failures, both real, both traced precisely. The delivery gap -- the whole rocket/launcher weapon concept appearing nowhere in the codebase, making all eleven related items undeliverable by any means -- is the larger, structural one. The on-hit gap is smaller and precisely scoped: the consuming function is confirmed correct in isolation, and dead in practice, because both of its real producers hardcode the exact field it needs to null regardless of what the row actually states.**
+
+**The silence from the receiving end is the sharper problem of the two failures, and worth treating as the more urgent half.** Five hits landing on an enemy with no clause, no note, and no visible consequence at all means a player using this item would have no way to know anything had gone wrong -- not a confusing result, no result. A refusal that only prints on the wielder's side, for an effect that's supposed to happen to the target, is functionally silent to the one person who'd need to notice.
+
+### RULED -- FIX THE ON-HIT GAP NOW. MEASURE THE DELIVERY GAP AS ITS OWN QUESTION
+
+**Fix `_onHitFrom` and its producers now -- pass the real `instead` data instead of hardcoding null.** This is precisely diagnosed, narrowly scoped, and the consumer is already correct and waiting; closing this makes the effect actually reachable the moment delivery exists, and removes the silent-failure risk regardless of how the delivery question resolves.
+
+**The rocket/launcher delivery gap is bigger than this one item -- eleven items affected, a whole weapon-category concept missing entirely.** Measure its real scope the same way every other gap at this size has been measured this session: what the source actually specifies for this weapon category, what would be needed to make it deliverable, and how many of the eleven affected items are otherwise complete and simply waiting on this. Report before proposing a build.
+
+### PROCEED
+
+Fix the on-hit hardcoded-null gap now. Measure the rocket/launcher delivery gap as its own question, report before proposing. Deflection-alone follow-up stays a real but non-urgent item for whenever a tier-1-only caster is convenient to route.

@@ -72591,3 +72591,38 @@ Build the `deploy` field and the launcher-worn gate for the eleven rockets. Fix 
 ### PROCEED
 
 Delivery build is next, taken with the room it needs. Nothing further needed on the seven-item fix -- closed cleanly.
+
+
+---
+
+## PT-2408 -- THE DELIVERY GAP WAS NEVER A MISSING SYSTEM: THE REAL DATA HAD ALREADY, CORRECTLY SAID deploy = thrown FOR ALL ELEVEN ROCKETS SINCE THE EXTRACT'S OWN ORIGIN, AND A NARROW FILTER WRITTEN WHEN ONLY ONE BASE TYPE NEEDED IT THREW THE ANSWER AWAY BEFORE IT COULD REACH A ROW. THE THIRD INSTANCE THIS SESSION OF THE SAME SHAPE -- A CORRECT VALUE, DESTROYED BY A GATE THAT WAS RIGHT WHEN WRITTEN AND STOPPED BEING RIGHT AS THE DATA GREW. AND GENUINELY EXCELLENT JUDGMENT: CORRECTLY REFUSING TO WIDEN A WORDING FIX INTO A SUBSTANTIVE, UNRELATED MODELLING CLAIM AFFECTING THIRTY OTHER ITEMS
+
+**Own the corrected picture directly: this was ruled as a missing field needing to be built. It wasn't missing at all -- it was already correct and already there, and the actual defect was one line discarding it. That's a better outcome than the ruling anticipated, and it's worth updating the record to say so plainly rather than letting "we built the deploy field" stand as the description of what actually happened.**
+
+⚠⚠⚠ **NAMING THIS AS THE THIRD INSTANCE OF THE SAME SHAPE THIS SESSION -- AFTER FORCE BODY'S DEAD ASSIGNMENT AND SHUTDOWN'S PHANTOM RADIUS -- IS THE MOST VALUABLE OBSERVATION IN THIS REPORT, AND IT'S WORTH TAKING SERIOUSLY AS A PATTERN RATHER THAN THREE SEPARATE COINCIDENCES.** A narrow filter or allow-list, correct at the moment it was written because it only ever needed to cover one case, silently discarding a genuinely correct value the moment a second case arrives that the filter was never told about, is a real, recurring architectural failure shape in this codebase specifically -- not a general caution, a pattern with three concrete instances now on record in one session. Widening this one to a tuple rather than a single value, so the next base type that needs this distinction is a visible addition rather than a silent gap, closes this instance properly. Worth keeping this pattern in mind the next time something correctly-measured seems to be silently vanishing -- the value is very possibly fine, and the gate is very possibly the thing that's stale.
+
+### THE LAUNCHER GATE -- APPROVED, INCLUDING THE HONEST SIMPLIFICATION
+
+⚠ **Correctly reusing the shield's existing worn-as-carried precedent rather than inventing a real slot model just for this delivery slice is the right scope discipline -- building a whole new worn-item system inside what should be a narrower fix would have been real, unnecessary scope creep, and documenting the simplification plainly, with a clear note for when real slots exist, is honest about exactly what was simplified and why.**
+
+⚠⚠ **DISTINGUISHING "THE BAG IS EMPTY" FROM "THE LAUNCHER IS MISSING" IS EXACTLY THE DISCIPLINE THIS WHOLE SESSION HAS HELD ABOUT SILENCE, APPLIED HERE TO A MESSAGE THAT WAS TECHNICALLY TRUE BUT ACTIONABLY USELESS.** A player holding six rockets and no launcher, told the bag is empty, would have no idea what's actually missing or how to fix it. Naming the real, specific cause rather than a generic catch-all refusal is a small change with real value to whoever actually hits it.
+
+### ⚠ SIX OF ELEVEN, NOT ELEVEN -- EXACTLY THE RIGHT JUDGMENT, APPROVED AS BUILT
+
+**This is genuinely excellent restraint, and it deserves to be recognised as a real decision correctly made rather than an incomplete fix. Widening the burst-damage pattern to cover the five remaining rockets would have quietly decided that a rocket's primary damage is an area effect -- a real modelling claim reaching roughly thirty other items that happen to share the same wording shape, several of which (a dart doing a single point of piercing damage) clearly shouldn't be read that way. Recognising that a wording fix and a modelling decision can look identical from the outside, and refusing to let one smuggle in the other just because they'd use the same regex, is precisely the distinction this session has drawn correctly at every scale it's come up.**
+
+**Naming the six deliverable items explicitly in a guard, so the count can't silently drift upward to eleven later, is the right way to leave this correctly incomplete without it quietly becoming complete by accident.**
+
+**And the test design catching that the widened predicate governs every thrown and placed item in the corpus, not just rockets, with grenades and mines counted separately specifically so a broader regression couldn't hide behind a rocket-only assertion, is exactly the right scope for a change to something this load-bearing.**
+
+### THE PARALYSIS DART -- CLOSES THE WHOLE ARC
+
+**Three separately-worked slices meeting on one row -- delivery, the paralysed condition itself, and the on-hit substitute effect -- with `TEST 115`'s item now doing the complete thing its own text describes, is worth acknowledging as a real, satisfying close to a thread that opened as a severe, silent, completely unreachable defect.**
+
+### RULED -- SYNC THE MIRROR FROM SOURCE
+
+**Approved, explicitly, as the one-time exception to the standing never-overwrite-forked practice this holding was correctly waiting for.** The source is confirmed correct; overwrite the mirror to match it now.
+
+### PROCEED
+
+Sync the agenda mirror from source. Nothing else outstanding on this thread -- Paralyze closes completely.

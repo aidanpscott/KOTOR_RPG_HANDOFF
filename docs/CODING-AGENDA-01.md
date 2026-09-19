@@ -6,9 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: eight items impose an unsavable Dexterity penalty their own text says can be saved against
-- **Ruled, fix now (PT-2419).** Neither original hypothesis was right — the schema is correct, the extractor's `SAVE_GATED` set is simply missing `ability_penalty` as a category, so the save gets extracted correctly and attaches to the wrong sibling effect (damage) instead of the penalty it's meant to gate. Both Sonic Mine and Sonic Grenade prose explicitly state the save negates the Dexterity penalty. Affects 5 mines + 3 grenades/detonators. Fix: add `ability_penalty` to `SAVE_GATED`, verify against each item's real prose.
-
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
 - **Deflection-alone follow-up — small, real, not urgent.** TEST 115's caster knew both Deflection and Redirection, so the engine consistently chose the stronger behavior — Deflection alone (stop, no reflect) was never separately isolated. Route with a tier-1-only caster whenever convenient.
@@ -47,6 +44,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Eight-item unsavable-penalty defect closed (5 Sonic Mines, 3 grenades/detonators). Naive fix correctly avoided: the same save clause means two different things to its two sibling effects (damage halves, penalty negates) — adding the category alone would have shipped a "halved penalty" no row states and the rules have no meaning for. Outcome read from each item's own prose instead. Second gap surfaced (unspecified save type) resolved by borrowing from a sibling family whose own text states it outright, honestly graded as stronger evidence than the reasoning used for the mines themselves. Guard correctly prioritized: confirming damage stays halved, since a shallow fix could have set every save to `none` and passed every penalty-only assertion while silently making the damage un-halvable — PT-2420
 
 - Rocket/launcher delivery genuinely closes this time — confirmed end to end through the real throw path, not just a corpus diff. Rocket schema was missing both `deploy` and (found while fixing it) the `damage` verb — the second gap would have silently blocked `PT-2409`'s own burst ruling for ten of eleven rockets. Modelled on Charge's proven schema, deliberately excluding two fields after checking no rocket row states them. Launcher gate fixed to match by catalogue id, not filename. Confirmed with three real cases through the throw bed — critically, both refusal cases would have passed on the broken build; only the positive case (a real successful throw) could have caught the original defect, the same shape that felt sufficient at the original wrong closure. Building the positive case found two more real bugs: a package-relative path making every rocket invisible, and an unhandled read exception capable of silently emptying a whole bag over one unreadable file — PT-2419
 

@@ -72525,3 +72525,40 @@ Given this withdrawal and the severity of what Tester just found in the same bat
 ### PROCEED
 
 Fix the on-hit hardcoded-null gap now. Measure the rocket/launcher delivery gap as its own question, report before proposing. Deflection-alone follow-up stays a real but non-urgent item for whenever a tier-1-only caster is convenient to route.
+
+
+---
+
+## PT-2406 -- THE ON-HIT GAP CLOSES CLEAN, WORSE THAN RULED (THREE HAND-ROLLED PRODUCERS, NOT TWO) AND FIXED PROPERLY -- ONE SHARED READER RATHER THAN A THIRD PATCH, WITH THE SILENT FAILURE MADE STRUCTURALLY IMPOSSIBLE TO RECREATE. THE DELIVERY GAP MEASURED AND FOUND NARROW -- ONE MISSING FIELD, NOT A MISSING SYSTEM. AND A MAJOR, PROACTIVE FIND: SWEEPING THE WHOLE CATALOGUE RATHER THAN STOPPING AT THE ONE BROKEN ITEM FOUND SEVEN TOTAL, TWO OF THEM ALREADY LIVE AND SILENTLY BROKEN IN REAL PLAY TODAY
+
+### THE ON-HIT GAP -- APPROVED, EXACTLY RIGHT TO FIX PROPERLY RATHER THAN NARROWLY
+
+⚠⚠ **Finding three hand-rolled producers instead of the two named, and correctly diagnosing the real defect as "three readers beside a real one" rather than three separate wrong-value bugs, is the right level of root-cause analysis. Consolidating onto one shared reader rather than patching three copies is the same discipline proven repeatedly this session -- the parser is the authority, and every caller should defer to it rather than maintaining its own, driftable copy of the same logic.**
+
+⚠⚠ **MAKING THE REFUSAL SYMMETRIC IS THE MORE IMPORTANT HALF OF THIS FIX, AND IT'S WORTH STATING WHY.** An `instead` clause with nothing behind it, and an `instead` block sitting somewhere it shouldn't, both refusing loudly now, means the exact silent failure `TEST 115` found -- a save correctly gating while the substitute effect vanished, with nothing anywhere saying so -- can no longer be reconstructed by any combination of malformed data. That's a stronger guarantee than fixing the one instance found; it closes the whole shape of the defect, not just its most recent occurrence.
+
+**Guarding against the real shipped Paralysis Dart row rather than an artificial literal, and sweeping every save in the catalogue to confirm nothing else silently broke in the consolidation, is exactly the rigor a change touching every save-reading call site deserves. Catching that the condition surviving while its duration silently vanished was the more dangerous mutation to guard -- a reader that looks functional while being subtly wrong -- rather than treating all mutants as equally important, is precise prioritisation.**
+
+⚠ **CATCHING THAT THE FIRST MUTATION TEST PROVED NOTHING -- MUTATING LODESTAR'S SOURCE BUT RUNNING THE APP'S SUITE, WHICH COMPILES AGAINST A PINNED SNAPSHOT RATHER THAN THE LIVE WORKING COPY -- BEFORE TRUSTING THE RESULT, IS A GENUINELY VALUABLE INFRASTRUCTURE CATCH.** A test that runs clean against code it never actually saw is a false negative wearing a passing result, and re-running against the right suite rather than accepting a convenient green is exactly the standard held throughout this session.
+
+### THE DELIVERY GAP -- MEASURED, NARROWER THAN FEARED, RULED
+
+**Confirming the launcher already exists on the shelf and the delivery machinery is already built and tested (reused directly from grenades) reframes this correctly: not a missing system, one missing field on eleven items, correctly isolated to the exact predicate that already gates deliverability. Ten of eleven confirmed otherwise complete is a good, concrete scope bound before any building starts.**
+
+### RULED -- FIRING REQUIRES THE WRIST LAUNCHER WORN
+
+**The source's own description states the launcher's purpose directly -- built for launching exactly this ammunition -- and that's decisive enough to rule rather than treat as genuinely open. Build the `deploy` field for the eleven rockets, and gate firing on the Wrist Launcher being worn.** This is correctly noted as this product's first item-gated action rather than an item-gated equip -- worth building carefully as the first real instance of that shape, since whatever pattern gets established here is likely to be the one future item-gated actions follow.
+
+### ⚠⚠⚠ THE SEVEN-ITEM SWEEP -- THE MOST VALUABLE FIND IN THIS REPORT, RULED URGENT
+
+**Sweeping the whole catalogue rather than stopping at the one item that happened to surface the pattern is exactly the discipline this session has asked for at every scale, applied here without being asked. Finding that the same underlying effect, phrased with a minor wording difference across subtypes of the same item family, determines whether an item functions at all -- "Knock Down" against the reader's single-word "Knockdown," "-2 Dexterity" against "DEX -2" -- is a precise, well-diagnosed root cause, not a vague pattern-matching complaint.**
+
+**Confirming two of the seven are already deliverable in live play today, correctly distinguished from the other five (including the rockets) which are merely latent, is the right triage -- these two are not "waiting to be tested," they are currently, silently wrong for any player who has already reached them.**
+
+**Correctly not touching any of it, given it sits adjacent to rather than inside what was actually ruled, and honestly naming a real, specific caution about the mines category from a prior incident rather than either hiding the hesitation or plowing ahead regardless, is exactly right.**
+
+**Ruled: fix all seven now, as one properly-scoped piece -- both the single-condition-capture limitation and the multi-word vocabulary mismatch, verified against a real corpus sweep the same way the on-hit fix was, not patched item by item.** Given two are confirmed live and silently broken, this is urgent -- the same weight as the on-hit gap itself, not a lower-priority adjacent finding.
+
+### PROCEED
+
+Build the `deploy` field and the launcher-worn gate for the eleven rockets. Fix all seven multi-word/multi-condition catalogue gaps now, verified against a full corpus sweep. Report back on both before considering this closed.

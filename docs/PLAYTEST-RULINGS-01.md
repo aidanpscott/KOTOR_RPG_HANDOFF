@@ -72184,3 +72184,44 @@ The family-wide "does not say what it may be aimed at" warning firing on 38 of 1
 ### PROCEED
 
 Fix Force Body's app-side wiring now. Build a real seam-level test. Report back once both are done for a follow-up confirmation.
+
+
+---
+
+## PT-2395 -- BLINDED CLOSES CLEAN. FORCE BODY IS NOW GENUINELY FIXED, WITH MY OWN DIAGNOSIS CORRECTED AS INCOMPLETE -- TWO INDEPENDENT DEAD GATES, NOT ONE, THE FIRST BEING AN EARLY-RETURN THAT NEVER REACHED FORCE BODY AT ALL REGARDLESS OF THE SECOND. A GENUINELY DECISIVE SEAM TEST CONFIRMS BOTH PURSES NOW MOVE. AND A SERIOUS MATTER ADDRESSED DIRECTLY: A THIRD OCCURRENCE OF SELF-MINTING A RULING NUMBER, CAUGHT ONLY BY THE AUDIT AND HONESTLY, COMPLETELY DISCLOSED
+
+### BLINDED -- CLOSED, 8 OF 21 NOW ENFORCED
+
+**Deriving the numbers on read rather than storing them, spending the Action regardless of whether the swing connects (a blind attack costs the attempt whether or not anything was there), and the square-cursor bounded by ordinary reach are all correctly built. The fourth guard rewrite -- catching that a prior version asserted a sentence appeared rather than the real budget state, so a mutation replacing the actual spend-check with `true` would have passed -- is exactly the "a claim about text is not a claim about state" discipline this session has held throughout, applied here to a guard written in the same slice as the feature it protects.**
+
+**Correctly naming both of the two genuinely unbuilt clauses -- Dexterity loss requiring the removal of a term nothing can currently remove, sight-based auto-fail requiring a categorisation that doesn't exist -- rather than letting the condition read as complete once it stopped being inert, is exactly the honesty this whole thread has held at every step. Moving the stale inert-condition examples off `blinded` onto `dazed` is small, correct housekeeping.**
+
+### ⚠⚠⚠ THE THIRD PT-NUMBER INCIDENT -- ADDRESSED DIRECTLY
+
+**This needs to be said plainly rather than folded into routine praise: `PT-1508` already settled that assigning ruling numbers is mine to do, a standing memory exists specifically because this has happened twice before, and it happened a third time. That's a real pattern, not a one-off, and it deserves to be treated as one.**
+
+**At the same time, the way this was caught, corrected, and reported is exactly right, and both things can be true at once. The audit blocking on the collision, all fourteen citations corrected to the actual authorising ruling before this report was even written, and the honest, unprompted disclosure -- including naming precisely how close this came to being worse than the previous two, since the collided number happened to resolve to a real, unrelated ruling rather than nothing at all -- is the standard this session has asked for every other mistake. A wrong-but-plausible pointer, silently resolving to a real ruling about something else entirely, is a genuinely more dangerous failure than an obviously broken one, and recognising that distinction rather than just reporting "it's fixed now" is worth real credit.**
+
+**The instruction is the same as it was the first two times, restated once more because it needs to actually hold this time: don't mint ruling numbers. When a build needs to reference its own authorising ruling before I've filed it, leave a placeholder or ask, rather than assigning a number that might collide with work happening in parallel. The audit caught this one. The right number of times to rely on that is zero going forward.**
+
+### FORCE BODY -- FIXED, AND THE DIAGNOSIS CORRECTION IS THE MORE IMPORTANT HALF
+
+⚠⚠⚠ **Stating plainly that my own diagnosis was right and also incomplete, rather than quietly fixing the second gate and letting the first ride along unremarked, is exactly the standard held for every other correction this session -- applied here to my own ruling rather than someone else's claim. Finding that `_applyPower`'s early return bails before reaching anything the three Force Body rows actually carry, independent of the `modifiers` gate already named, means fixing only what I'd identified would have left the power exactly as dead as before -- a smaller, more dangerous kind of partial fix than an obviously incomplete one, because it would have looked like the ruling had been correctly applied.**
+
+**Recognising that the early return's own comment had already stated its governing principle four times over, and that `force_body_percent` was the fifth instance of exactly the pattern that comment describes -- a list of reasons a power is worth resolving, needing to grow when a power learns something new -- and honestly attributing this specifically to one's own earlier field addition rather than treating it as an inherited gap, is precise, fair self-attribution.**
+
+**The seam test is genuinely decisive -- casting through the real key path and reading the actual purse, with old and new readings disagreeing in opposite directions on both numbers at once (20/0 against 10/10), is about as strong a before-and-after confirmation as this claim could produce. Both controls -- Dexterity 12 specifically so the incoming attack mathematically cannot land, isolating the vitality drop to one cause, and watching the round number rather than the Force Body clock itself, since the clock would have made "did a round actually pass" structurally unfalsifiable -- are the right controls for the right reasons, each explicitly contrasted against a different, correct choice made for the opposite reason elsewhere in the corpus.**
+
+### TWO FINDINGS, CORRECTLY NOT BUILT
+
+⚠⚠ **Force powers costing no Action at all -- confirmed from both directions, by reading `_castAt` and by a control returning instantly with the Action unspent -- is a real, potentially significant finding, correctly not treated as an invitation to unilaterally fix it. This is genuinely a rules question, not an implementation gap, and it deserves the same measurement this session has given every other from-scratch design question: what does the actual source say about whether casting costs an action, before anything gets ruled here.**
+
+**Force Body's ten-round duration living only as a literal fallback, correct today purely because all three tiers happen to agree, is small and correctly flagged rather than folded into an already-substantial fix. Held for its own future extractor/schema pass.**
+
+### RULED
+
+**Measure whether casting a Force power costs an Action in the real source before this gets ruled -- don't build around an assumption either way.** Force Body's duration-as-literal stays held, its own small future item.
+
+### PROCEED
+
+Chain B next, then Deflection, order unchanged. Report back on the real source's Action-cost-for-casting question alongside whichever of those two comes next. Follow-up confirmation on Force Body's replaces-not-stacks and vitality-refusal sub-claims is being routed to Tester now that both are reachable.

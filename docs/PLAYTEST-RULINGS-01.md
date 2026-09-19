@@ -71248,3 +71248,30 @@ Fix `force_confusion`/`beast_confusion`'s live defect now, confirmed against eac
 ### PROCEED
 
 Live defect closed. Faction change, the combat Mind Trick, and the newly-found perception gap all stay held as separate future work. Nothing further needed this slice.
+
+
+---
+
+## PT-2365 -- CONDITION ENFORCEMENT MEASURED UNASKED, AND IT'S SEVERE: ONE OF TWENTY CONDITIONS IS ACTUALLY ENFORCED, AND THIS IS NOT DORMANT VOCABULARY -- 53 REAL, SHIPPED APPLICATIONS CURRENTLY PRINT A CONDITION AND RESTRICT NOTHING, THE SAME "SOMETHING HAPPENED AND NOTHING DID" SHAPE AS THE PAID NO-OP, ONE RUNG DOWN. THREE REAL ARCHITECTURAL QUESTIONS CORRECTLY STOPPED THE BUILD RATHER THAN FORCING A HALF-FIT
+
+**Good instinct measuring the agenda's own stated prerequisite rather than leaving "the rest has to come first" sitting as an assumption nobody had actually checked. And confirming the massive-critical closure was genuinely closed -- reaching the branch, not trusting the note -- before reporting it, is exactly right: a closed item deserves the same verification standard as an open one when it resurfaces looking like a question.**
+
+⚠⚠⚠ **THIS IS A GENUINELY SEVERE FINDING, AND IT DESERVES THE SAME WEIGHT AS THE MASSIVE-CRITICAL AND EVASION DEFECTS EARLIER THIS SESSION.** One case in `legalityOf`, nineteen falling through to a default that forbids nothing, would be a real gap even if it were purely theoretical. It isn't. Fifty-three real applications on shipped `base-rules` content, confirmed live end to end and separated from Tester's own probe packages before being reported, means real players are seeing a condition name print on a real hit and experiencing no restriction whatsoever. Connecting this to `PT-2363`'s "paid no-op" as the same shape one rung down -- nobody charged, but the same core deception, a line stating something happened while nothing did -- is the right way to size this: not identical in severity, but identical in kind, and that kind has already been named this session as something worth fixing on sight.
+
+### THE THREE SHAPE QUESTIONS -- RULED
+
+**(a) `slowed` builds whole, both halves together, not the Legality piece alone.** Half of `slowed`'s ruled effect fits the existing `Legality` struct; half is a numeric modifier bundle at a different seam entirely. Building only the half that fits would be exactly `PT-2240`'s already-named half-a-feature — build the modifier-bundle channel alongside the Legality piece as one complete feature, not deferred to a later slice. This is also the largest population by a factor of six and the condition whose complete build forces the modifier-seam question to be answered rather than assumed, which every later condition needing it will benefit from.
+
+**(b) `held` gets a sentinel, not a divisor abuse.** `moveDivisor` was named for halving, and `held`'s own ruling is explicitly zero, not halved -- forcing zero through a field named for division risks exactly the kind of silent semantic confusion this project has caught and corrected repeatedly this session (`ShieldUp.standing` meaning something different from every other `standing`, most recently). Add a real sentinel value distinct from any numeric divisor, so "immobilized entirely" and "movement halved" can never be mistaken for degrees of the same thing.
+
+**(c) `entangled`/`require_check` stays held, separate from this build.** Its own source spec is genuinely ambiguous -- "forbid: move # or halve, per source" is not a specification, it's an open question written down. One real application, low urgency; resolve the source ambiguity as its own small piece whenever there's reason to, rather than guessing an answer to populate a field for the first time.
+
+**`cowering` builds alongside `slowed`.** Confirmed a clean, zero-new-vocabulary fit -- `action = false`, one case, four real applications, fully ruled. Worth taking as a second win in the same slice given how little it costs once the seam exists.
+
+### `prone` -- NOT TOUCHED YET, AND CORRECTLY SO. MEASURE IT NEXT.
+
+⚠⚠ **Right call declining to touch this without a real ruling. Seventeen shipped items applying a condition this corpus has never ruled at all is a rule with no first state, and guessing one to unblock a build would be exactly the kind of thing this project has consistently refused to do elsewhere.** Before I can rule it, measure `prone` the same way every other condition in this sweep got measured: what the source actually specifies it should do mechanically (movement, attack rolls, Defence, anything else), and whether any of the existing `Legality`/modifier-bundle machinery being built for `slowed` would already cover it once it exists, or whether it needs something the other conditions haven't required. Report that, then it gets ruled.
+
+### PROCEED
+
+Build `slowed` whole (both halves) and `cowering` alongside it. Add the sentinel for `held`. `entangled` stays held on its own source ambiguity. Measure `prone` and report back before it's built.

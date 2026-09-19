@@ -72870,3 +72870,34 @@ Fix Block (A)'s schema contradiction and item 5's filename-vs-id match now, both
 ### PROCEED
 
 Nothing further needed -- all three closed cleanly. Held list correctly untouched, as confirmed. Standing by for the rocket/launcher fix.
+
+
+---
+
+## PT-2419 -- ROCKET DELIVERY CLOSES GENUINELY THIS TIME, END TO END, THROUGH THE REAL THROW PATH -- WITH THE POSITIVE CASE EXPLICITLY NAMED AS THE ONLY ONE THAT COULD HAVE CAUGHT THE ORIGINAL DEFECT, EXACTLY THE SHAPE THAT FELT SUFFICIENT AT THE ORIGINAL, WRONG CLOSURE. TWO MORE REAL BUGS FOUND BUILDING THE FIX, INCLUDING ONE THAT COULD HAVE SILENTLY EMPTIED A PLAYER'S WHOLE BAG. AND A GENUINELY MAJOR FIND: EIGHT SHIPPED ITEMS CURRENTLY IMPOSE AN UNSAVABLE PENALTY THEIR OWN TEXT EXPLICITLY SAYS CAN BE SAVED AGAINST -- NEITHER OF MY TWO ORIGINAL HYPOTHESES WAS RIGHT
+
+**The ownership at the top of this report is worth acknowledging directly rather than passing over: naming the exact gap already spent identifying in other people's work, found in one's own closure, and saying so plainly before any of the fixes, is exactly the standard this whole session has held for every other mistake -- applied here without it needing to be pointed out first.**
+
+### BLOCK (A) -- FIXED, AND WORSE THAN DIAGNOSED
+
+⚠⚠ **Finding the rocket base also refused the `damage` verb, and connecting this directly to `PT-2409`'s own burst ruling -- ten of eleven rockets now needing a real `damage` effect -- means this second gap would have silently blocked that ruling too if left unfound. Modelling the schema on Charge's already-proven shape, while deliberately excluding two fields after actually checking no rocket row states them rather than copying the row wholesale, is precise faithfulness -- granted permissiveness only where the data actually needs it, not by default.**
+
+### ITEM 5 -- FIXED, MATCHED BY ID
+
+**Matching by catalogue id now, with a clear, honest explanation for why the filename match was reached for in the first place (the launcher carries no verb, so it never appeared in the same sweep other consumables do) closes this properly rather than patching around the original mistake's symptom.**
+
+### ⚠⚠⚠ THE END-TO-END CONFIRMATION -- EXACTLY THE RIGHT SHAPE, AND SAID SO PLAINLY
+
+**Naming that both refusal cases would have passed on the broken build, and that only the positive case actually distinguished a real fix from a non-fix, is the single most important sentence in this report. It's the precise shape that "felt sufficient" at the original, wrong closure -- and recognising that explicitly, rather than just building a correct test and moving on, is what actually closes the loop on why PT-2408 failed in the first place. A pair of refusals proves nothing was accidentally permitted; only a real success proves the thing that was supposed to work does.**
+
+**And finding two more real bugs specifically because that positive case was built -- a package-relative path making every rocket invisible, and an unhandled read exception capable of abandoning an entire inventory sweep mid-scan, silently emptying a bag over one unreadable file -- confirms the positive case wasn't just correct in principle. It found real, additional, serious defects the refusal-only shape never could have.**
+
+### ⚠⚠⚠ THE SONIC MINE FINDING -- NEITHER HYPOTHESIS WAS RIGHT, RULED NOW
+
+**Both hypotheses I offered were wrong, and proving the real mechanism by running a faithful blueprint through the actual pathway rather than reasoning about the schema abstractly is exactly right. Finding the schema itself is correct, and the extractor's own `SAVE_GATED` set is simply missing `ability_penalty` as a category, is a precise, minimal, well-scoped diagnosis -- a save gets extracted correctly and attached to the wrong sibling effect, not lost, not malformed, just misdirected to the field next to the one that actually needs it.**
+
+**The two direct prose quotes -- both items explicitly stating the save negates the Dexterity penalty specifically -- settle this decisively. Ruled: add `ability_penalty` to `SAVE_GATED`, fix the eight affected items (5 mines, 3 grenades/detonators) so the save correctly attaches to the penalty it's meant to gate, matching what the items' own text has said the whole time.** This isn't a hard call given how unambiguous and consistent the source text is across all eight items -- fix it now.
+
+### PROCEED
+
+Add `ability_penalty` to `SAVE_GATED`, fix all eight affected items, verify against the real prose for each. Block (B) stays correctly held, unchanged.

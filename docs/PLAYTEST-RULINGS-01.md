@@ -71674,3 +71674,59 @@ Continue the creature-picker build as already directed. Measure the persistent-v
 ### PROCEED
 
 Wire the candidate list into `_cast` per-cast, with last-target-remembered as the default. Square picker for `blinded` and Force Push's size gate stay held exactly as they were.
+
+
+---
+
+## PT-2378 -- SINGLE-TARGET POWERS NOW AIM AT A CHOSEN TARGET, CLOSING THE THREAD'S CORE PIECE. THE CHOICE LANDS EXACTLY WHERE A COMMENT WRITTEN AT PT-1488 SAID IT EVENTUALLY WOULD. A GENUINELY SEVERE, COMPLETELY INVISIBLE DEFECT FOUND ON THE WAY -- THE TARGET MENU DREW CORRECTLY WHILE EVERY KEYSTROKE SILENTLY RE-TRIGGERED THE SAME CAST -- CAUGHT ONLY BY A TEST MESSAGE CONTRADICTING WHAT THE SCREEN VISIBLY SHOWED. AND A THIRD INSTANCE THIS SESSION OF A GUARD THAT HAPPENED TO PASS FOR A REASON UNRELATED TO WHAT IT CLAIMED TO VERIFY, SELF-CAUGHT AND REBUILT PROPERLY
+
+**Approved in full. Landing the choice exactly where a comment written four hundred rulings ago predicted it would arrive is a small, satisfying confirmation that the architecture was reasoned about correctly well before this specific piece was ever built. Keeping the change to one block of a 240-line function, rather than letting a targeting fix ripple through the whole cast path, is disciplined scoping. The three-way behaviour -- picker for genuine multi-candidate single-target casts, no menu at all for area powers since inventing a "centre on whom" decision the rule doesn't have would be worse than the current behaviour, self-aimed trivially single-candidate -- is exactly the shape already ruled, built faithfully.**
+
+**Recording the last-aimed target only on a successful pick, never on a refusal, is the right, careful detail -- remembering someone you were just told you can't target would silently offer them first forever afterward, which is a real, subtle defect this specific care avoided before it could ever ship.**
+
+### ⚠⚠⚠ THE INVISIBLE DEFECT -- GENUINELY SEVERE, WORTH NAMING PLAINLY
+
+**A screen that renders exactly right while every input silently does the wrong thing is one of the harder classes of defect to catch by inspection, precisely because looking at it confirms nothing is wrong. The key handler asking the wrong state flag first meant the target menu was correct in every visible respect while consuming no real input at all -- every keypress routed back into re-opening the same cast. Catching this because three migrated tests reported "the cast never resolved" against a perfectly-rendered menu, rather than trusting the visual correctness, is exactly the right instinct: a test's failure message describing behaviour that contradicts what a screenshot would show is a signal worth chasing immediately, not a confusing anomaly to explain away.**
+
+### THE SELF-CAUGHT DEGENERATE GUARDS -- THIRD INSTANCE THIS SESSION, RECOGNISED AND FIXED PROPERLY
+
+⚠⚠ **Both mutants surviving the first default-target guard because the chosen test candidate happened to sit in the same position whether the sort worked or was entirely absent is the identical "fixture at a value where the fault cannot occur" shape already named multiple times this session -- caught here, honestly, in a guard written in the same slice as the feature it was meant to protect. Rebuilding against a candidate that is deliberately not first in placement order, so the two orderings can actually disagree, is the correct fix.**
+
+**And catching the same shape one layer down -- a test that merely survived a large refactor unchanged, which looks like proof of correct behaviour but is actually just an absence of any real assertion -- with the sharp, quotable framing "an implicit pass is not a guard," is worth taking as seriously as the first catch. Building an explicit check against a real state accessor rather than fragile screen text, specifically because the ambiguous strings involved could coincidentally match unrelated UI elements, closes this properly rather than papering over it with a slightly stricter string match.**
+
+**Reframing what the three migrated test beds' own assertions now mean -- claims that were true by placement-order coincidence before, and are genuine claims about a real player choice now -- with `Revitalize`'s fallen-ally case as the sharp, concrete example of exactly that shift, is precise, honest accounting of how a fix changes the meaning of everything built on top of it, not just its own behaviour.**
+
+### RULED -- SWEEP THE 17 ALLY POWERS BEFORE THIS COUNTS AS FULLY CLOSED
+
+**Yes, this is worth checking before treating the ally arm as done.** A generic "any ally" picker is the right default, but it's exactly the kind of place a specific power might carry its own narrower rule (excludes the caster, requires the target already be wounded, some other real restriction this session has found examples of elsewhere) that a uniform picker would silently ignore. Sweep the 17 for any power-specific targeting rule beyond plain "an ally," and report what's found before this piece is called complete.
+
+### PROCEED
+
+Sweep the 17 ally powers for any power-specific targeting restrictions. Square picker for `blinded` and Force Push's size gate stay held exactly as they were.
+
+
+---
+
+## PT-2379 -- THE ALLY-POWER SWEEP FOUND THE REAL AFFECTED POPULATION IS TWO, NOT SEVENTEEN -- AND BOTH OF THEM CARRY A NARROWER RULE THE GENERIC PICKER MISSES. THE DROID EXCLUSION IS A REAL, CURRENTLY-UNREACHABLE UX GAP, HONESTLY OWNED. AND Revitalize'S OWN PROSE DIRECTLY CONTRADICTS A FREE-CHOICE MENU: IT NAMES ITS TARGET AS "THE SINGLE CLOSEST FALLEN ALLY," NOT A PLAYER'S CHOICE AT ALL
+
+**Confirming fifteen of seventeen are already correctly exempt as area powers, leaving exactly two single-target ally powers to actually check, is exactly the right way to answer "sweep the seventeen" -- the real population was always smaller than the number suggested, and finding that precisely rather than treating all seventeen as needing individual review is efficient, correct triage.**
+
+### THE DROID EXCLUSION -- REAL GAP, HONESTLY SCOPED, RULED
+
+⚠⚠ **Recognising that the newly-built cast picker left behind a discipline the existing, proven verb picker already has -- inline refusal reasons, so a player learns a target is out of reach without spending the attempt to find out -- and owning it directly as "I carried the mechanics across and left that discipline behind," is exactly the standard held throughout this session applied to one's own very recent work. Confirming this is a free refusal rather than a paid no-op (the gate sits well before the spend) correctly distinguishes it from the more severe anti-pattern, and confirming it's currently unreachable in shipped content -- zero droid blueprints in the relevant early areas -- rather than either overstating it as live or dismissing it as theoretical, is precisely the honest framing this project has held for every "correct but unexercised" finding so far.**
+
+**Ruled: build the "why" column for the cast picker now.** This closes the droid case for both current powers and every future single-target power that gains an exclusion, and it's the smaller half of a pattern already proven and trusted elsewhere. No reason to wait on content that doesn't exist yet to fix a real, if currently dormant, gap.
+
+### ⚠⚠⚠ Revitalize -- THE REAL FIND, RULED AS A TARGETING RULE
+
+**This is the sharper of the two findings, and the distinction drawn between it and the already-guarded `only_if_fallen` check is precise and correct: an effect that declines once cast is a different question from a menu that shouldn't have offered the choice at all. The power's own prose states its target in the same sentence it states its effect -- "the single closest fallen ally" reads as a mechanical description of what the power does, not incidental colour around it, and this project has consistently favoured the literal, faithful reading of explicit mechanical prose over dismissing it as convenience language.**
+
+**Ruled: `Revitalize` (tier 1) selects the nearest fallen ally automatically. No menu.** This is the same shape as an area power's automatic everyone-in-radius selection, just narrowed to one -- the chain's actual structure is tier 1 auto-picks the nearest, the higher tiers auto-pick the room, and neither ever asks the player to choose. Option (c) is moot given this ruling; there is no menu left to annotate.
+
+### `heal`'S SILENCE -- HELD, NOT GUESSED AT
+
+**Correctly not inventing an answer where the row and the prose both say nothing about whether a fallen ally may be healed by it.** This is a real, separate, small open question -- hold it rather than assuming either direction. It doesn't block anything else in this sweep from closing.
+
+### PROCEED
+
+Build the "why" column for the cast picker. Build `Revitalize` (tier 1) as automatic nearest-fallen-ally selection, no menu. `heal`'s silence on fallen targets stays held as its own small open question. Square picker for `blinded` and Force Push's size gate remain held exactly as they were.

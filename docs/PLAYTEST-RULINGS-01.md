@@ -72810,3 +72810,36 @@ Build the assertion. This closes the last remaining piece of the held list in fu
 ### PROCEED
 
 Nothing further needed. The held list is genuinely, fully clear. Standing by for the next direction.
+
+
+---
+
+## PT-2417 -- SEVERE: THE ROCKET/LAUNCHER DELIVERY RULED CLOSED AT PT-2408 IS CONFIRMED COMPLETELY NON-FUNCTIONAL IN REAL PLAY. NO ROCKET CAN BE BOTH A VALID BLUEPRINT AND A DELIVERABLE ONE -- THE SCHEMA REFUSES deploy, AND OMITTING IT MEANS AN UNRELATED FILTER DISCARDS THE ITEM BEFORE ROCKET-SPECIFIC LOGIC EVER RUNS. THE EXISTING TEST ONLY CHECKED THAT CATALOGUE ROWS STATE THE RIGHT VALUE, NEVER THAT A BLUEPRINT COULD ACTUALLY OPEN OR THROW. AND A SECOND, CLEANLY-PROVEN DEFECT: THE LAUNCHER GATE MATCHES BY FILENAME, DIRECTLY CONTRADICTING ITS OWN CODE COMMENT STATING IT SHOULD MATCH BY ID
+
+**Own this directly: PT-2408 closed this thread on the strength of a corpus diff and a passing test suite, and neither actually proved a rocket could be opened or thrown. The data was correct; nothing had verified the pathway that data was supposed to feed. That's exactly the gap this whole session has repeatedly found between "the check passed" and "the thing actually works" -- found here in a ruling I made, not caught before I made it.**
+
+### ITEM 3 -- SONIC MINE CONFIRMED, DECISIVE
+
+**Round-by-round Defence tracking across the full five-round clock, with the exact `+1` a `-2` Dexterity penalty produces both during and correctly reverting after, is clean, decisive confirmation. The missing `save` field across all five shipped rows, against a schema that requires one for `ability_penalty`, is a real observation worth Coder's direct attention -- either the schema requirement doesn't actually apply the way it looks like it should, or something else is quietly satisfying it. Flagged rather than assumed either way, correctly.**
+
+### ⚠⚠⚠ ITEMS 1/2/4 -- SEVERE, RULED, FIX NOW
+
+**Block (A) is the real defect, and it's a genuine structural contradiction, not a missing field: a faithful rocket blueprint stating `deploy` is refused by a schema that doesn't admit the field, and omitting it to satisfy the schema means an entirely separate filter discards the item before the rocket branch is ever reached. No rocket blueprint can currently satisfy both halves at once. This is precisely why the existing test stayed green through all of this -- it verified the catalogue states the correct value, and never once verified a blueprint could actually be opened or thrown with it. A test that checks the data is correct is not the same claim as a test that checks the data does anything.**
+
+**Ruled: add `deploy` to the rocket's `condition` schema (matching what the damage verb's schema already correctly admits, since this exact shape was already solved once for that side), and confirm end to end -- a real blueprint opens, a real rocket throws, through the actual key path, not just through a catalogue-row assertion.**
+
+**Block (B), CryoBan and the broader thrown-non-damage gap, is confirmed unchanged and correctly stays exactly where it already was -- held, not part of this regression, already tracked since TEST 106. Good, honest confirmation that CryoBan has never actually been observed thrown, traced precisely to its one prior appearance being purely tabular.**
+
+### ⚠⚠ ITEM 5 -- A SECOND REAL DEFECT, CLEANLY PROVEN, FIX NOW
+
+**"The gate works, the door does not open" is a precise, sharp way to frame this. Matching a launcher by filename, when the code's own comment explicitly states the principle should be matching by id specifically to survive a rename -- and the implementation directly contradicting that stated intent -- is worth ruling as its own real defect, not a footnote to item 1. The matched-pair proof, the identical catalogue item passing or failing purely on which arbitrary filename its file happens to use, is exactly the kind of clean, minimal demonstration this session has held up as the standard throughout.**
+
+**Ruled: fix the launcher match to use the catalogue id, matching the comment's own already-correct stated intent. This is a small, precisely diagnosed fix -- the comment already says what the code should do, it just doesn't do it.**
+
+### THE PT-2405 CONFIRMATION -- WORTH NAMING
+
+**Confirming the nested substitute-effect data survives intact end to end through the real consumable-opening path, with only delivery missing, is a genuinely useful, positive control -- it isolates exactly how much of Paralyze's arc is real and working versus how much is still blocked, rather than leaving the whole thread's status ambiguous.**
+
+### PROCEED
+
+Fix Block (A)'s schema contradiction and item 5's filename-vs-id match now, both urgent. Investigate the sonic mine's missing `save` field and report. Block (B) stays correctly held, unchanged.

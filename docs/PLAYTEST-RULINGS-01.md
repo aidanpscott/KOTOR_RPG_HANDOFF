@@ -71374,3 +71374,32 @@ Nothing further needed on this thread. `entangled` stays held. Fifteen condition
 ### PROCEED
 
 Fix the fear residual now. Build `shaken` whole, including the wildcard. Investigate `helpless` at the source. `blinded` and `entangled` stay held, correctly unbuilt. Report back on `helpless` before it's ruled.
+
+
+---
+
+## PT-2369 -- FEAR RESIDUAL AND shaken BOTH CLOSE CLEAN, EACH WITH GENUINELY PRECISE ARCHITECTURE. AND THE helpless INVESTIGATION FOUND THE SHELF'S OWN DATA IS WRONG: THE WORD IS A COMPARISON, EXACTLY LIKE flat-footed, NEVER A STATE Force Sleep ACTUALLY APPLIES -- THE REAL EFFECT IS SIMPLY "CANNOT ACT". THREE QUESTIONS, ALL RULED
+
+**Matching each row's own literal sentence rather than inferring the residual from the broader "this is a fear effect" category is exactly the right scope, and the reasoning is precise: inference would have given `Fear` a residual its own explicit exception already forbids. Two rows state it, two rows get it -- nothing broader, nothing narrower. Refusing a row that states both an `instead` and a residual is the right defensive posture for a genuine internal contradiction, and spelling the affected-powers list out explicitly rather than counting it is exactly what caught the wrong guess (`stasis_field` instead of the real `force_stun`) before it could ship silently as a miscounted total.**
+
+### shaken -- APPROVED, EVERY ARCHITECTURAL CALL IS RIGHT
+
+⚠⚠ **Building the skill-check wildcard as a modifier rather than the existing `SkillBonus` channel is precisely correct, and the reasoning is the same stacking discipline this session has now applied repeatedly: `SkillBonus` sums because two separate grants genuinely should help twice, but a condition must not -- two simultaneous instances of `shaken` answering "how bad off is this creature" with two different numbers is exactly the shape already fixed for Force Scream, recognised here before it could become a second instance of the same exploit.**
+
+**Keeping skills deliberately out of `Modifies.named` is the right call for the right reason -- a skill check genuinely isn't a saving throw, and folding them together would make `Force Valor`'s saving-throw bonus quietly reach into Persuade, a silent scope violation nobody asked for. And catching that `shaken` and `slowed` genuinely differ in which saves they touch -- all saves versus Reflex specifically -- rather than assuming a shared shape, is precise reading of what the documents actually say rather than what would be convenient to build uniformly.**
+
+⚠⚠⚠ **MUTATING BOTH SKILL PATHS SEPARATELY, RATHER THAN TRUSTING ONE TEST TO COVER BOTH, IS EXACTLY WHAT `PT-2294` ALREADY WARNED THIS SHAPE NEEDS.** A fix that works for every companion and silently fails for the one character actually casting the power is precisely the asymmetry that ruling named, and verifying both paths independently rather than assuming symmetry is the right response to a known risk rather than a general precaution.
+
+⚠ **AND THE SELF-CAUGHT FIXTURE ERROR IS THE SAME PATTERN THIS SESSION HAS NOW NAMED SEVERAL TIMES, FOUND AGAIN IN A FRESH INSTANCE.** A guard asserting `−2` on two skills, where one skill's real rank happened to make the fault invisible, is a fixture sitting at a value where the thing it claims to test cannot fail -- and reaching for that skill first, rather than one that would have exposed the gap, is worth naming honestly as what almost let it through. Pinning both real ranks with a stated control closes it properly.
+
+### helpless -- ALL THREE QUESTIONS RULED
+
+⚠⚠⚠ **The core finding is decisive and matches the shelf's own row text exactly: `helpless` is a comparison, parallel to how `flat-footed` is already correctly used elsewhere -- "attacks against them are made as against a helpless target" is the same grammatical shape as `flat-footed`'s own sentence, and the state the power actually applies is simply cannot act. The shelf's data is wrong for a precise, understood reason -- the extractor took the only recognised condition-word in the sentence without recognising it was being used as a comparison rather than a direct application, the same shape already named at `PT-2265`.**
+
+**Ruled: correct the shelf. `force_sleep` applies `Legality.action` (cannot act) directly, not a `helpless` condition tag. `helpless` joins `flat-footed` as a comparison term other conditions are written in terms of, never itself an applicable state -- remove it from the set of conditions still needing enforcement entirely, since it was never a real one to begin with.**
+
+**Ruled: the wake-by-damage and wake-by-ally endings stay held, built later if ever.** These are two genuinely new mechanism shapes -- damage ending a condition as a reaction, and one creature spending their own action to end another's condition -- currently needed by exactly one power. This is `PT-2189`'s reasoning again: dedicated infrastructure for a single power's unique quirk isn't worth its cost built in isolation. `force_sleep` uses the existing duration mechanism (its own stated ten rounds) for now, with the early-ending conditions explicitly, honestly unmodelled rather than silently dropped -- documented as a known limitation, the same way `entangled` and `blinded` are currently held.
+
+### PROCEED
+
+Correct the shelf's `force_sleep` row and the condition it applies. `helpless` closes as a non-condition, matching `flat-footed`. The two special endings stay held. Where this leaves the set: with `helpless` reclassified, the honest count is likely close to finished for what's actually reachable -- confirm the final tally once this lands.

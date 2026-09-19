@@ -72843,3 +72843,30 @@ Nothing further needed. The held list is genuinely, fully clear. Standing by for
 ### PROCEED
 
 Fix Block (A)'s schema contradiction and item 5's filename-vs-id match now, both urgent. Investigate the sonic mine's missing `save` field and report. Block (B) stays correctly held, unchanged.
+
+
+---
+
+## PT-2418 -- ALL THREE SMALL FIXES CLOSE CLEAN. AND FIXING THE CAST MENU EXPOSED THAT AN EXISTING, ALREADY-APPROVED GUARD (PT-2360'S DROID PUSH-NOT-STUN TEST) COULD NEVER HAVE ACTUALLY FAILED: THE FIXTURE'S OWN SETUP HAD ALREADY SPENT THE ACTION BEFORE THE CAST EVER RAN, SO ALL THREE ASSERTIONS WERE TRIVIALLY TRUE OF A BUILD THAT CAST NOTHING AT ALL
+
+### ITEM 1 -- THE CAST MENU, WITH A GENUINELY VALUABLE SELF-CAUGHT FALSE GUARD
+
+**Gating `_openCasting` on `canAct` before the list is drawn, while correctly keeping `_castAt`'s own check intact for the aim-picker path that bypasses the menu entirely, is precise -- recognising the rule needs checking at both points because a chosen target can arrive by a route the menu never sees, rather than assuming one gate covers both paths, is exactly the kind of completeness this session has asked for throughout.**
+
+⚠⚠⚠ **THE EXPOSED GUARD IS THE MORE VALUABLE FIND, AND IT'S WORTH NAMING PRECISELY WHY.** `PT-2360`'s droid test walking into the enemy to start the fight was itself the player's attack, spending the Action before the cast ever ran -- so the refusal that followed happened to contain the literal string "Force Push," satisfying one assertion, while the other two ("in the fight," "not stunned") were trivially true of a scenario where nothing was cast at all. This is the exact "absent refusal is not a positive signal" shape already named several times this session, found here in a guard that had been silently passing for the wrong reason since it was approved -- not a stale fixture, a guard that was never actually exercising the thing it claimed to protect. Fixing it to advance a round first and assert the pool genuinely moved, a positive no refusal can satisfy, closes this properly rather than patching the symptom that happened to surface it.
+
+**Correctly connecting this to "the bag asked before the throw verb opens" as the same shape rather than a fresh, unrelated pattern is good architectural memory -- recognising a recurring principle rather than re-deriving it each time it appears in a new corner of the codebase.**
+
+### ITEM 2 -- THE AIM VERB, CORRECTLY BLIND-ONLY
+
+**Only listing the verb when it's genuinely usable, rather than always showing a key that would answer sighted players with a refusal, is exactly right -- "the lie that line is gated to avoid" is a precise way to name why an always-visible verb would have been worse than a conditionally-visible one, not just less tidy. Asserting both directions in one run, rather than only the case that happens to matter today, is the same discipline held for every other guard this session.**
+
+### ITEM 3 -- FORCE MIRE'S targets, WITH A GENUINELY SHARP VERIFICATION TECHNIQUE
+
+**Borrowing the value from Force Slow, which Mire's own prose explicitly says it's built "as," rather than independently re-judging it, is the right faithfulness -- this was never an open question, just an unfilled field.**
+
+⚠ **THE PAIRED-CENSUS CHECK IS A GENUINELY VALUABLE VERIFICATION INSTINCT, WORTH HOLDING AS ITS OWN STANDING TECHNIQUE.** Recognising that a single row crossing one classification boundary must move the counts on both sides of it together, and that a count moving alone would signal something else entirely needing investigation, turns four numbers into a structural cross-check rather than four independent facts to eyeball. This is a precise, generalisable instinct for verifying any change that reclassifies something between two mutually exclusive buckets -- the pairing itself is evidence, not just the individual counts.
+
+### PROCEED
+
+Nothing further needed -- all three closed cleanly. Held list correctly untouched, as confirmed. Standing by for the rocket/launcher fix.

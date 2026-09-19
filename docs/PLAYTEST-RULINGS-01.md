@@ -72031,3 +72031,40 @@ Five new threads opened. Report back on each measurement individually before any
 ### PROCEED
 
 Build `blinded`'s attack-naming mode plus keyboard cursor. Build `paralysed` against the already-proven `condition_on_save` shape. Build Force Body as a cost modifier. Propose (don't build) concrete design options for Chain B's two pieces and Deflection's roll integration -- report back before either gets built.
+
+
+---
+
+## PT-2390 -- FORCE BODY'S ENGINE HALF CLOSES CLEAN, HONESTLY REPORTED AS HALF-WIRED RATHER THAN CLAIMED DONE. PARALYZE CORRECTLY STOPPED BEFORE BUILDING A CONDITION NOTHING COULD EVER APPLY -- RULED: WIRE THE PARALYSIS DART. BOTH DESIGN PROPOSALS APPROVED, WITH THE MORE EXPENSIVE, MORE FAITHFUL OPTION CHOSEN OVER THE CHEAPER ONE IN BOTH CASES
+
+### FORCE BODY -- APPROVED, FINISH THE APP-SIDE WIRING
+
+**The fold-direction catch is precise and worth taking seriously: a quantity whose better value is the smaller number genuinely cannot go through a fold built for signed bonuses and penalties, and recognising this before forcing it through the wrong vocabulary -- rather than discovering later that "best" had silently picked the weakest tier -- is exactly the discipline this session has held for every fold built so far. Rounding each half up, matching the only existing rounding convention in the file and specifically avoiding a direction that could make the power cheaper than its tier promises, is the right default for a genuinely unspecified detail.**
+
+**Correctly reporting the engine half as complete and the app-side wiring as not yet connected, rather than letting "built" imply "live," is exactly right -- finish the `_cast` wiring so this actually reaches a real player, then it's genuinely done.**
+
+### PARALYZE -- CORRECTLY STOPPED. RULED: WIRE THE PARALYSIS DART
+
+⚠⚠⚠ **Checking before building, and finding `paralysed` would be a rule with no first state -- every occurrence in the whole corpus either an immunity reference or an explicit negative, nothing anywhere that grants it -- is exactly the standard `prone` was held to before it was measured, applied here to catch the same shape before it could produce an unreachable twenty-first condition. This was the right call to stop rather than build a technically-correct mechanism serving nothing.**
+
+**Ruled: the paralysis dart applies it.** The item concept already exists in the real source (`ITEM_ABILITY_DART_PARALYSIS`), it's the obvious faithful candidate already named, and wiring it against the already-proven `condition_on_save` shape closes this cleanly rather than leaving a proven mechanism permanently unreachable. Build the applier.
+
+### `blinded` -- CONFIRMED NEXT
+
+**Correctly not starting a mode-plus-cursor build at the tail of a slice rather than shipping something shallow. Confirmed as next.**
+
+### CHAIN B -- BOTH PIECES RULED
+
+**(a) Option B -- the additive `saveAlso` field.** Approved for the reason given: migrating 106 rows for a feature exactly two powers currently want is disproportionate, and the honest flag that this becomes debt if a third power ever wants the same shape is accepted as a real, known tradeoff rather than a hidden one. If that third case ever arrives, revisit toward option A then, with a concrete third case to justify the migration rather than a hypothetical one now.
+
+**(b) Option B -- a genuine timed flag on the item.** ⚠ **Approved as the more expensive, more faithful choice, and it's worth being direct about why the cheaper option loses here despite the real infrastructure cost.** The document's own words are "the weapon is inert," not the wielder -- option A would be a lie about the subject, one where a second weapon should keep working but silently wouldn't under a wielder-scoped condition. This project has consistently chosen faithfulness over convenience throughout this session; the fact that no item instance has ever carried a clock before is a real cost, not a reason to substitute a cheaper mechanism that describes something different from what the source actually states. Build the item-level clock as genuinely new infrastructure.
+
+### DEFLECTION -- APPROVED, OPTION A
+
+⚠⚠⚠ **Approved, and the reasoning against option C is exactly right -- worth naming this as the fourth confirmed instance of the same half-a-feature shape this session has repeatedly refused to ship, now recognised and avoided in advance rather than built and found wanting later.** A flat Defence bonus cannot express Redirection's reflect-back mechanic at all; building only what tier 1 needs while silently dropping what tier 2 exists for would be exactly `PT-2240`'s named anti-pattern, arrived at by choosing the cheap option without checking whether it can express the whole feature. Build the real roll in `combat.dart`, matching the source's own framing exactly.
+
+**The reflected-bolt-needs-a-real-target dependency is correctly flagged rather than assumed solved by the player-facing target-selection work already closed -- that closed thread answered "who does the player choose," not "who does a reflected attack return to." Confirm this specifically before or alongside building the roll itself; it's a real, separate question even though it rhymes with one already closed.**
+
+### PROCEED
+
+Finish Force Body's app-side wiring. Wire the paralysis dart to apply `paralysed`. Build `blinded` next. Build Chain B's two pieces per the approved options. Build Deflection's roll, confirming the reflected-target question specifically before or alongside it.

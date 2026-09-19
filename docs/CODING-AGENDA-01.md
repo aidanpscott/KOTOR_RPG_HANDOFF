@@ -6,8 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: two currently-live silent effect failures, plus the rocket/launcher delivery build
-- **On-hit gap — closed (PT-2406).** Was three hand-rolled producers, not two — consolidated onto one shared reader (`saveFromShelf`), same discipline as every other reader unification this session. Refusal made symmetric: an `instead` with nothing behind it, or one appearing where it shouldn't, both refuse loudly now — the silent failure shape is structurally unreconstructable.
+### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
 - **Deflection-alone follow-up — small, real, not urgent.** TEST 115's caster knew both Deflection and Redirection, so the engine consistently chose the stronger behavior — Deflection alone (stop, no reflect) was never separately isolated. Route with a tier-1-only caster whenever convenient.
 - **Cast menu still opens after the Action is spent — small, held.** Found during TEST 115's casting-cost confirmation.
@@ -31,7 +30,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Held, deliberately, with real reasons
 - **`heal`'s silence on fallen allies — small, held.** Neither its row nor its prose says whether it may target a fallen ally. Correctly not guessed at during the ally-power targeting sweep (`PT-2379`). Doesn't block anything.
-- **`blinded` — confirmed next (PT-2390).** "Zero tap infrastructure" confirmed no longer true — 10 real pointer sites already wired, pixel-to-square conversion already owned by one place. The real gap is a mode (naming a square for an attack) plus a keyboard cursor equivalent (`PT-1443`'s standing accessibility principle).
 - **Force Camouflage's deactivation affordance — general mechanism still genuinely absent, but no longer blocking Camouflage itself.** `§4.2`'s ten-round bound now reaches the table, closing Camouflage's own need for it. A real, standing toggle/sustained-state mechanism still doesn't exist anywhere in the product; any future power stating "until deactivated" still meets this same gap.
 - **Dark Fury's kill-driven ramping bonus** — a third distinct "ramp clock" shape, held deliberately per `PT-2189`'s reasoning against building new infrastructure for one power.
 - **`Pinning Fire`** — the entire `ATTACKS-04` tree has no code at all. Would collide with the already-existing `Overwatch` and is the middle rung of a three-tier chain that needs rethinking alongside it. Not urgent — none of the tree is implemented regardless.

@@ -71647,3 +71647,30 @@ Build the creature-picker generalisation as already ruled. `PT-2374`'s full read
 ### PROCEED
 
 Continue the creature-picker build as already directed. Measure the persistent-vs-per-cast question and report back before that specific piece of the interaction is finalized.
+
+
+---
+
+## PT-2377 -- THE CANDIDATE BUILDER CLOSES CLEAN, WITH A GENUINE ARCHITECTURAL SHARPENING FOUND WHILE BUILDING: THE PROBLEM WAS NEVER JUST HARDCODED VALUES, IT WAS TWO DIFFERENT QUESTIONS (WHO MAY BE OFFERED, WHAT IS THEIR ELIGIBILITY LABEL) FUSED INSIDE ONE FUNCTION. CORRECTLY NOT WIRED INTO CAST, SINCE THE INTERACTION SHAPE WAS STILL OPEN. AND THE PERSISTENCE MEASUREMENT CONVERGES FROM A COMPLETELY INDEPENDENT DIRECTION ON THE SAME SPLIT MY OWN RULING HAD ALREADY DRAWN: ATTACKS HOLD A PERSISTENT TARGET, POWERS RECORD FRESH EVERY CAST
+
+**The candidate-builder split is precise, and the diagnosis is the more valuable half of it. Recognising that eligibility ("is this one wounded, is this one a droid") and offerability ("is this one on my side, within range") were never the same question, just answered by the same function in the same breath, is exactly the kind of correction that makes a fix generalise properly rather than merely widen the original hardcoding into a slightly bigger hardcoding. Preserving the three existing verbs' exact prior behaviour as defaults, so nothing about Treat, Repair, or Gear moves, is the right way to generalise something already trusted in production.**
+
+⚠⚠⚠ **CORRECTLY NOT WIRING THIS INTO `_cast` IS EXACTLY RIGHT, AND IT'S WORTH STATING WHY THIS MATTERS AS MUCH AS THE BUILD ITSELF.** `PT-2376` explicitly left the interaction shape open pending measurement -- wiring the candidate list in now, ahead of that ruling, would have shipped a picker that looked complete while its actual behaviour was still undecided underneath it. "I would rather say that plainly than report a picker that half exists" is exactly the standard this whole session has held for every half-built feature, applied here to one's own work in progress rather than something already shipped.
+
+**Asking the same builder both opposite questions against the same board, with non-intersection as the actual proof rather than either list's mere non-emptiness, is precise test design -- a name appearing in both lists would be the specific, decisive signal that the side predicate isn't being read at all, which a simple "the list isn't empty" check could never catch.**
+
+⚠ **AND THE SELF-CAUGHT FIXTURE ERROR IS THE SAME SHAPE FOUND SEVERAL TIMES ALREADY THIS SESSION, HONESTLY NAMED AGAIN.** "The half I was least interested in was the half that was missing" is a genuinely sharp, self-aware way to describe how attention bias hides exactly the blind spot -- a test bed defaulting to enemies-only made the ally list's emptiness look like confirmation when it was actually just an unrelated artefact of the fixture. Worth holding as its own small lesson: the least-interesting half of a test is often the half most worth double-checking.
+
+### THE PERSISTENCE MEASUREMENT -- DECISIVE, CONVERGING EVIDENCE. RULED
+
+⚠⚠⚠ **This is genuinely satisfying, and it's worth naming exactly why it's stronger evidence than either direction would have been alone.** The source engine's own API splits attacks from powers -- `GetAttackTarget` as genuine persistent creature state for the whole fight, `GetAttemptedSpellTarget` recorded fresh on every cast -- and that split lands on exactly the same line `PT-2376`'s ruling already drew, arrived at from a completely independent direction: measuring what the engine actually holds, rather than reasoning about game-design intent. Two independent paths converging on the same answer is a stronger confirmation than either alone, and confirming real, active use across 638 shipped scripts (including the AI master script itself) rather than treating unused API surface as evidence is exactly the right level of rigor before trusting what an interface declares.
+
+**The honest limit -- this proves what the engine holds, not what the player experienced at the client/UI level, and the script layer genuinely cannot settle whether a click created some sticky interface-level selection -- is precisely the right place to stop rather than infer past what was actually measured. Offering the `.gui` files as the concrete next step if the question needs chasing further, rather than guessing an answer to close the gap, is exactly right.**
+
+### RULED -- PER-CAST AIMING FOR POWERS, DEFAULTING TO THE LAST TARGET
+
+**Per-cast, matching the source's own spell hook exactly as measured, with the menu defaulting to the last-used target as a convenience rather than a persistent binding.** This is decisive enough on the script-level evidence alone, converging with the already-drawn single-target/area split, that the remaining client-level uncertainty doesn't need to block it -- if the `.gui` investigation ever turns up something that genuinely contradicts this, it can be revisited then, on its own merits, rather than held up now on a question that may never need chasing.
+
+### PROCEED
+
+Wire the candidate list into `_cast` per-cast, with last-target-remembered as the default. Square picker for `blinded` and Force Push's size gate stay held exactly as they were.

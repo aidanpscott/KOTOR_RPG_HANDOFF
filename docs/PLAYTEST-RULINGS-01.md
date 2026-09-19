@@ -71312,3 +71312,38 @@ Build `slowed` whole (both halves) and `cowering` alongside it. Add the sentinel
 ### PROCEED
 
 Remove movement-halving from `force_slow` specifically. Build `prone` per both rulings above, including the generic action-to-end-condition mechanism. Correct `§7`'s dependents sentence to name the three real powers accurately. `entangled` stays held. Sixteen conditions remain, correctly unbuilt.
+
+
+---
+
+## PT-2367 -- MY OWN TWO RULINGS CONTRADICTED EACH OTHER, AND CODER CAUGHT IT BEFORE IT SHIPPED: A CONDITION THAT FORBIDS THE ACTION, PAIRED WITH A MECHANISM THAT NEEDS THE ACTION TO END IT, IS A HARD DEADLOCK -- NOTHING KNOCKED DOWN COULD EVER STAND BACK UP. RESOLVED BY SEPARATING "HAVE I SPENT IT" FROM "MAY I ACT". AND THEN CAUGHT SOMETHING WORSE: THE MECHANISM HAD NO CALLER AT ALL, WHICH MEANS BUILDING EXACTLY WHAT WAS RULED, AND NOTHING MORE, WOULD HAVE PERMANENTLY DISABLED A PLAYER HIT BY ANY OF SEVENTEEN REAL SHIPPED ITEMS FOR THE REST OF THE GAME
+
+**`prone` built exactly as ruled, and the guard explaining why it carries no rows -- rather than leaving a future reader to assume an oversight and add the `−4` every other d20 ruleset would expect -- is good, considerate documentation for a rule that genuinely differs from a strong, common convention.**
+
+⚠⚠⚠ **CATCHING THAT MY OWN TWO RULINGS PRODUCED A GENUINE DEADLOCK, BEFORE BUILDING EITHER ONE IN A WAY THAT WOULD HAVE SHIPPED IT, IS EXACTLY THE STANDARD THIS WHOLE PROJECT HAS HELD FOR EVERY OTHER CLAIM -- APPLIED HERE TO INSTRUCTIONS THAT CAME FROM ME.** `prone` forbidding the Action and never expiring, combined with a payment mechanism that asks permission to act before it can proceed, is not a subtle interaction -- it's a hard, unrecoverable lock, and it would have been built exactly as instructed if the two rulings had been taken at face value without checking whether they could coexist. Separating "have I spent it" from "may I act" into two fields, so the payment consumes the resource directly rather than asking permission the condition would correctly refuse, resolves the contradiction without weakening either original ruling -- `prone` still genuinely forbids acting normally, and standing up is still genuinely the thing that ends that restriction, rather than something exempted from it by a special case.
+
+**Finding the `anythingLeft` bug as a direct consequence of this split -- a stunned creature would have been told its turn wasn't finished, because a field that used to mean "has an Action" quietly stopped meaning that -- is exactly the kind of collateral defect a careful split goes looking for rather than discovers later from a bug report. Correctly moving the fold up to `Combatant`, since `Budgets` has no visibility into conditions and folding the payment in at that level would have told an unconditioned creature it could pay to stand up from nothing, is precise layering. And scoping `endableConditions` to exactly `{prone}` rather than treating "generic" as "any condition" is the right caution -- you don't stand out of being stunned, and the mechanism being reusable doesn't mean every condition should be allowed to use it yet.**
+
+### THE NO-CALLER FINDING -- THE MOST IMPORTANT THING IN THIS ENTIRE THREAD
+
+⚠⚠⚠ **This deserves to be named plainly: building exactly what I ruled, and stopping there, would have shipped something strictly worse than the defect this whole thread exists to fix.** Seventeen real, shipped items applying a condition that forbids every action and every square of movement, permanently, with nothing anywhere able to invoke the mechanism that ends it, is not an incomplete feature -- it's a new, severe defect wearing the shape of a closed ruling. "I would have been reporting a closed ruling while shipping it" is exactly the right way to describe the risk, and checking for a caller before reporting done, rather than trusting that a mechanism existing means it's reachable, is precisely the discipline that caught it.
+
+**Building both halves -- the player's own input and the enemy AI's turn-spending equivalent -- rather than just enough to satisfy the letter of the ruling, is the right call, and the reasoning for why both were necessary together is precise: a rule applied to one path and not the other is its own asymmetric defect, distinguishable from the one being fixed but no less real. Correctly identifying the player's half as the one that must not break, and routing it through the exact same code the enemy-side tests already cover, is the right way to spend the available test coverage on the higher-stakes path rather than treating both as equally low-risk.**
+
+**The proposed key (`u`) is approved -- consistent with the existing single-letter convention, and correctly flagged as a one-line change if it's not the right choice.**
+
+### FORCE SLOW -- APPROVED, INCLUDING THE CAREFUL TREATMENT OF THE PRIOR RULING
+
+⚠⚠ **Preserving `PT-2229`'s tag rather than removing it, on the reasoning that the tag itself was a prior, separately-justified owner decision rather than something this newer ruling implicitly overrides, is exactly the right instinct -- a new ruling correcting one specific consequence of an old one shouldn't be read as license to also undo the parts of the old ruling that were never in question. Suppressing the movement clause per-application rather than untagging the power preserves both decisions intact.**
+
+**`condition_spares` as the third field in a family that now answers three genuinely distinct questions -- may the power reach you, does the condition take hold on this kind of target, which of its clauses land -- is a clean, well-differentiated addition, and keying it per-instance rather than per-name is the detail that actually makes it work: `Force Slow` and `Force Mire` sharing a condition name would make a name-keyed exception unable to tell them apart at all.**
+
+### MUTATION -- TWO SURVIVORS, BOTH GENUINELY VALUABLE
+
+⚠⚠ **"A reason that is really a snapshot" is a precise, quotable name for a real failure shape: a comment stating why something matters, with nothing anywhere actually checking that the thing it claims matters still does. Catching that dropping `spares` from `next()` killed nothing -- meaning a power could spend nine of ten rounds under a clause it was supposed to have spared -- before that silently shipped is exactly why comments explaining importance need a test standing behind the claim, not just the claim itself.**
+
+**And catching your own first test testing an adjacent, easier claim -- constructing a `Condition` from raw fields rather than the real cast path -- is the same shape this project has now caught in its own testing culture several times this session, applied here to a test written in the same slice rather than discovered as an inherited gap. Moving the construction to one real, canonical site and testing the line the screen actually runs is the right fix, and finding two fixture bugs the same way (passing for reasons unrelated to what they claimed to check) in the same pass is thorough follow-through rather than stopping at the first catch.**
+
+### PROCEED
+
+Nothing further needed on this thread. `entangled` stays held. Fifteen conditions remain, correctly unbuilt. Mire's unmodelled second-move restriction stays exactly as ruled -- unbuilt.

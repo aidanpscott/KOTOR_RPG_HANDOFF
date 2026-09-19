@@ -71192,3 +71192,32 @@ Both threads fully confirmed in real play. Nothing further needed. The observabi
 ### PROCEED
 
 Force Push's real, ruled pieces are closed. Size gate stays held, correctly unbuilt. Nothing further needed this slice.
+
+
+---
+
+## PT-2363 -- MIND TRICK/DROID TRICK MEASURED: ALL FOUR RECORDED DIVERGENCES CONFIRMED, ONE SHARPENED (RESISTANCE ISN'T MISSING, IT'S DELIBERATELY SKIPPED). A FIFTH FOUND: DROID CONFUSION IS A GAME-WIDE-SINGLETON FACTION-CHANGE, NOT A TIER OF DROID TRICK AT ALL -- TWO DIFFERENT MECHANICS SHARING A NAME. AND A REAL, CURRENTLY-LIVE DEFECT FOUND ALONGSIDE THE DESIGN WORK: TWO SHIPPED POWERS ROLL A WILL SAVE THAT GATES NOTHING
+
+**All four recorded divergences confirmed, and the resistance correction is worth taking as the more precise finding it is: "doesn't exist as a concept" and "exists but is deliberately hard-coded to zero for this family" are different claims, and the second one is what the source actually shows. The caster-Intelligence DC finding -- the only power in the family not keyed on the standard formula -- is a real, additional precision worth having on record before anything gets built against an assumed-uniform DC derivation.**
+
+⚠⚠⚠ **THE FIFTH DIVERGENCE IS THE MOST IMPORTANT FIND IN THIS REPORT, AND IT CHANGES THE SHAPE OF THE WHOLE THREAD.** A campaign-wide singleton gate and a full faction change -- the droid becomes friendly and fights for the caster -- is not a stronger tier of Droid Trick's scramble effect; it's a structurally different mechanic that happens to share a family name. Treating these as two tiers of one power, which is what the original framing assumed, would have meant designing the wrong shape entirely. Finding this before any building started is exactly the value of measuring the real source rather than extrapolating from a name.
+
+### ⚠⚠ THE LIVE DEFECT -- SEPARATE, SMALL, RULED NOW
+
+**`force_confusion` and `beast_confusion` rolling a Will save that gates nothing, regardless of the outcome, is a real, currently-shipping defect independent of everything else in this measurement -- a player is being asked to roll dice for a result that cannot change anything.** This doesn't need to wait on the bigger droid-family questions. Ruled: fix this now, as its own small, separable piece. Before building a condition to attach to it, confirm what each power's own document prose actually says the save should gate -- the condition needs to match the documented effect, not be invented to fill the gap. If the prose already describes what should happen on a failed save (as `beast_confusion`'s "cause a beast to fight for you" suggests it might, at least partially), build against that rather than guessing.
+
+### THE FACTION-CHANGE MECHANISM -- HELD, ITS OWN SEPARATE FUTURE THREAD
+
+**This is bigger than one power and deserves its own dedicated measurement, not a decision folded into this already-large report.** A "turn hostile, make it fight for you" effect is needed by both `Droid Confusion` and, per its own prose, `beast_confusion` — real, reusable infrastructure, not a one-off. Hold it the same way Force Push's forced-movement piece got its own real design pass rather than being decided as a side effect of a larger measurement. Not urgent; nothing currently depends on it existing.
+
+### (c) THE COMBAT MIND TRICK MUST COME FIRST -- CONFIRMED, HELD AS ITS OWN SUBSTANTIAL BUILD
+
+**The measurement settles this decisively: the droid variants cannot be authored as variant rows of a power that has no mechanical model and no condition vocabulary to draw from.** Building the real combat Mind Trick — including a genuine mind-trick condition, since the current six-condition vocabulary (`stunned`, `cowering`, `blinded`, `held`, `helpless`, `slowed`) has no name for what this family of powers actually does — is confirmed as the correct first step, not a droid-specific shortcut. This is real, substantial work in its own right and stays held as its own piece rather than started inside this response.
+
+### (d) THE COST DISCREPANCY -- LEFT UNTOUCHED, CONSISTENT WITH STANDING PRECEDENT
+
+**Correctly not treated as an error. `PT-2305`'s own precedent already covers exactly this shape -- costs left as ruled, no prior context found for the divergence. Leave the 10-versus-20 split exactly as it stands unless a future pass specifically finds real context that justifies changing it; this measurement isn't that pass.**
+
+### PROCEED
+
+Fix `force_confusion`/`beast_confusion`'s live defect now, confirmed against each power's own prose first. Everything else -- the combat Mind Trick, the faction-change mechanism, and the droid variants themselves -- stays held as real, separate future work, correctly not attempted as a side effect of this measurement.

@@ -71730,3 +71730,122 @@ Sweep the 17 ally powers for any power-specific targeting restrictions. Square p
 ### PROCEED
 
 Build the "why" column for the cast picker. Build `Revitalize` (tier 1) as automatic nearest-fallen-ally selection, no menu. `heal`'s silence on fallen targets stays held as its own small open question. Square picker for `blinded` and Force Push's size gate remain held exactly as they were.
+
+
+---
+
+## PT-2380 -- THE WHY-COLUMN AND Revitalize'S AUTO-SELECTION BOTH CLOSE CLEAN. THREE MORE SELF-CAUGHT DEGENERATE GUARDS -- ALL THREE MUTATION-CAUGHT, NONE OF THEM WOULD HAVE BEEN FOUND BY READING. AND A TEST BED FOUND TO BE LYING ABOUT ITS OWN DROID -- A "PROBE DROID" WRITTEN AS SPECIES human, MEANING THE NAME WAS THE ONLY DROID THING ABOUT IT. AN UNEXPLAINED HANG HONESTLY FLAGGED RATHER THAN QUIETLY WORKED AROUND
+
+**Both pieces close exactly as ruled. Reusing the real `mayTarget` per candidate for the why-column, rather than a second opinion built just for the menu, is precisely the discipline this session has held throughout -- a separate check would answer the same question twice and the menu's copy would be the one nobody actually verified. Correctly marking only genuine `excluded` refusals and not `silent` (unrecorded species, true of nearly every placement in the game) is the right restraint -- a column that warned about almost everyone would teach players to ignore it.**
+
+**Keying `Revitalize`'s auto-selection on both `only_if_fallen` and single-target, rather than hardcoding the one power by name, is the right generalisation -- it picks out exactly what exists today and stays correct if a second power with the same shape is ever authored, without needing to be revisited. And the ally-heal test's assertion becoming the absence of the keypress that used to be there is a clean, honest way to prove a menu no longer opens -- the test changed shape along with the feature rather than being patched to still pass.**
+
+### ⚠⚠⚠ THREE MORE DEGENERATE GUARDS -- WORTH NAMING AS A STANDING PATTERN OF THIS CODEBASE'S TESTING CULTURE NOW
+
+**This is at least the fourth or fifth time this exact shape has surfaced this session, and it's worth stating plainly: a guard that passes for a reason unrelated to what it claims to verify is not a rare accident here, it's a recurring failure mode this project has learned to specifically hunt for. All three caught by mutation, none by reading, is itself the point -- a test can look completely reasonable on inspection and still be structurally incapable of failing for the reason that matters.**
+
+**"With one candidate, `<` and `>` are the same answer" is a precise, quotable diagnosis of the nearest-selection guard's flaw -- a test bed with exactly one fallen ally can never distinguish "picks the nearest" from "picks whichever one exists," and the fix (giving the bed a genuine choice to make) is the same shape as every other degenerate-guard fix this session: change the fixture so the two readings can actually disagree.**
+
+**The `Civilian`-distance guard is a sharper version of the same lesson: asserting against a creature "guessed to be far" rather than the actual measured distances meant the test's own premise was never verified, only assumed. Asserting against the real distances themselves is the correct fix, and it's a good general instinct worth carrying forward -- when a test's correctness depends on a spatial or numeric relationship, assert the relationship directly rather than trusting an assumption about which fixture element happens to satisfy it.**
+
+### THE LYING TEST BED -- GOOD CATCH, HANDLED RIGHT
+
+**A "Probe Droid" that was `species = "human"` the whole time, with nothing in the actual data making it a real droid to any gate that checks kind, is a genuinely good find -- the name alone had been carrying the entire weight of the test's premise. Making this a real, flagged droid off a default-off toggle, so every existing case keeps its current board unchanged, is the right way to fix a lying fixture without disturbing everything already built on top of the old, wrong one.**
+
+### RULED -- TAKE THE HANG AS ITS OWN SLICE
+
+⚠ **Correctly not chasing this inside an unrelated change, and correctly not claiming it's benign just because nothing is currently red. An unexplained ten-minute hang the moment a target menu opens in that specific bed is worth understanding on its own terms -- take it as its own slice when there's room for it. Not urgent, since nothing currently triggers it, but real and worth resolving rather than leaving as a known, unexplained landmine in that test file.**
+
+### PROCEED
+
+Take the `a_blast_stops_at_a_wall_test` hang as its own slice whenever convenient. Square picker for `blinded` and Force Push's size gate remain held.
+
+
+---
+
+## PT-2381 -- OWNER-DIRECTED RESEARCH: A REAL, SOURCE-LEVEL SURVEY OF HOW TARGET SELECTION AND EFFECT SPREAD ACTUALLY WORK ACROSS TEN VARIED FORCE POWERS, PLUS A THIRD COMPARISON POINT -- NEVERWINTER NIGHTS, THE ENGINE KOTOR'S OWN SCRIPTING LAYER IS BUILT ON
+
+**Not tied to any currently-open thread. A standalone research pass, source-first, the same discipline every other measurement this session has held.**
+
+### DIRECTED
+
+**Part 1 -- ten Force powers, chosen for maximum variety of targeting shape.** Deliberately pick across single-target, area/radius, cone, chain, and anything else the source actually expresses, rather than ten powers that happen to work the same way. For each, from the real shipped source (script, 2DA rows, whatever actually governs it):
+
+  · How target/creature selection actually works mechanically -- what the caster picks, what the engine resolves, any distance/line-of-sight/eligibility logic involved.
+  · What happens after selection resolves -- especially any case where a single chosen creature is the nominal target but the actual effect reaches or affects more than one creature (a blast radius centred on the target, a chain that jumps, an aura, anything of that shape). This is the specific case worth the most attention: single-target selection with multi-creature effect.
+  · Whether K1 and K2 handle the same power identically, where both exist -- note any divergence found along the way, don't assume uniformity.
+
+**Part 2 -- the same question against Neverwinter Nights itself.** KOTOR's own scripting layer is NWScript, inherited from NWN's engine lineage -- worth checking directly whether NWN's own targeting/effect-spread model for its own spells is the same shape KOTOR inherited, changed, or diverged from. If NWN's source is available to check the same way K1/K2's has been throughout this session, use it the same way; if it isn't reachable from what's on hand, say so plainly rather than guessing at NWN's behaviour from general knowledge of the system.
+
+**Report the real, measured findings.** No conclusions about what this project's own rules should do -- this is pure source research, not a ruling or a proposal. What gets built or ruled from it, if anything, comes after and separately.
+
+### PROCEED
+
+New, standalone research task. Take it as its own slice.
+
+
+---
+
+## PT-2382 -- THE RESEARCH CLOSES WITH A GENUINELY IMPORTANT STRUCTURAL FINDING: SIX OF THE TEN POWERS PICK ONE CREATURE AND SWEEP A SHAPE ANCHORED ON THAT CREATURE, NOT THE CASTER -- FORCE LIGHTNING'S TARGET IS AN ANCHOR, NOT A VICTIM. THIS IS THE NORMAL CASE IN THE SOURCE, NOT AN EXCEPTION. OWNER DIRECTS A REAL CROSS-COMPARISON AGAINST THIS PROJECT'S OWN CURRENT IMPLEMENTATION TO FIND WHERE IT MATCHES, DIVERGES, OR IS MISSING THIS PATTERN ENTIRELY
+
+**Confirming Neverwinter Nights was directly reachable and reading its real 282 spell scripts, rather than treating it as out of scope for lack of an obvious source, turned Part 2 from a plausible inference into measured fact. Finding the shape vocabulary identical across all three (SPHERE, SPELLCONE, SPELLCYLINDER, nothing else anywhere) settles the inheritance question cleanly, and the point-versus-creature targeting divergence -- NWN asking the engine where the player clicked 150 times against KOTOR asking twice in its entire library -- is a real, well-measured piece of engine history, not a guess about design intent.**
+
+⚠⚠⚠ **THE PART 1 FINDING IS THE MORE CONSEQUENTIAL ONE FOR THIS PROJECT SPECIFICALLY, AND IT'S WORTH STATING WHY.** Six of ten measured powers -- Force Lightning chief among them, the one specifically named when this research was requested -- select a single creature not as the victim but as the *anchor point* for a shape swept around them, catching everyone else inside it. "The chosen creature is the anchor, not the victim" is the precise, correct framing, and confirming this is the *normal* case rather than a rare exception changes what "single-target" actually means across a meaningful fraction of this power family.
+
+**The Force Scream tier oddity -- the master tier changing shape, changing anchor, and covering less ground than the two tiers beneath it -- is a genuinely interesting find, correctly reported as observed rather than diagnosed as a bug, since it's real, shipped behaviour regardless of whether it was intended.**
+
+**The K1/K2 divergence finding is clean and valuable on its own: the targeting model itself didn't change between the games at all, only the catalogue grew, with K2's entire Force Scream chain arriving as new content bringing `SHAPE_SPELLCONE` with it rather than any existing power being reworked. That's useful, load-bearing context for anything built against either game's version of a shared power.**
+
+### RULED -- CROSS-COMPARE AGAINST THIS PROJECT'S OWN CURRENT IMPLEMENTATION
+
+**This is a real, necessary next step, and it's worth being specific about what actually needs checking.** The target-selection thread just closed built single-target powers as "player picks a creature, that creature is affected" and area/radius powers as "no menu, everyone in a radius" -- with no confirmed concept, anywhere in what was built, of a creature being *chosen* and then having a shape *swept around them*. If that pattern genuinely doesn't exist in the current build, then Force Lightning and its five siblings may currently be modelled as either pure single-target damage (missing the sweep entirely) or as area powers with no real target choice (missing the chosen-anchor entirely) -- either would be a real, meaningful divergence from the source this research just measured.
+
+**Check, specifically:**
+
+  · Does the current implementation distinguish "area centred on the caster" from "area centred on a creature the player chose"? Confirm directly rather than assuming either shape covers the other.
+  · For each of the ten measured powers that exist in this project's own corpus, does its current build match the real anchor (caster vs. chosen creature), the real shape, and the real size measured in this research? Report each one individually, not just as a pass/fail summary.
+  · Whether the newly-closed target-selection picker, as built, is even capable of expressing "pick a creature, then compute everyone within N metres of them" -- or whether this is a genuinely new shape the current architecture has no path for yet.
+  · The Force Scream tier oddity specifically -- does this project's own version already faithfully replicate the master tier's smaller, differently-anchored coverage, or was it built assuming uniformity across the chain (which the real source doesn't have)?
+
+**Report the real, measured gap before proposing anything.** This is comparison and measurement, not a ruling -- what to do about any divergence found gets decided once the actual gap is known, the same discipline held for every other finding this session.
+
+### PROCEED
+
+New comparison task, its own slice. Report the measured gap against the real current build before proposing any fix.
+
+
+---
+
+## PT-2383 -- MY OWN PREMISE FOR THIS COMPARISON WAS WRONG, CAUGHT BEFORE ANYTHING WAS BUILT AROUND IT: THE ARCHITECTURE ALREADY DISTINGUISHES CASTER-ANCHORED FROM TARGET-ANCHORED AREAS. THE REAL DEFECT IS NARROWER AND MORE SEVERE THAN EITHER OF US ASKED ABOUT -- THE PICKER NEVER OPENS FOR AREA POWERS AT ALL, SO EVERY TARGET-ANCHORED SWEEP CENTRES ON WHOEVER THE AUTHOR TYPED FIRST. SEVEN OF TEN SAMPLED POWERS HAVE A REAL DEFECT, INCLUDING FORCE LIGHTNING -- THE POWER NAMED AS THE REFERENCE CASE -- MISSING ITS SWEEP ENTIRELY. AND A GENUINELY FASCINATING FIND: THE FORCE SCREAM TIER-SHIFT WAS CORRECTLY NOTICED BY WHOEVER BUILT THIS, JUST INVERTED IN BOTH DIRECTIONS AT ONCE
+
+**Own this directly: PT-2382 asked whether the build distinguishes the two anchor types, on the assumption it might not. It already did, and had for some time, with its own comment stating the distinction outright. My framing was wrong before Coder ever touched the real question -- and correcting it before building anything around a false premise is exactly right.**
+
+⚠⚠ **RENAMING THE ACTUAL DEFECT IS THE MORE VALUABLE CORRECTION HERE.** "`cone` and `radius` are not shapes at all -- they are anchors wearing shape names" is precise and worth taking seriously as its own finding: a field whose name describes something other than what it controls is a standing invitation for exactly the kind of confusion this whole comparison started from. Worth a naming fix on its own merits, separate from the correctness defects below.
+
+### THE REAL DEFECT -- narrower, and it's the same shape already fixed once
+
+⚠⚠⚠ **"One clause away" is the right diagnosis, and connecting it directly to `PT-2376`'s already-closed single-target defect -- the exact same "choosing never reaches the picker" shape, recurring one field over -- is precise pattern recognition rather than treating this as a fresh, unrelated problem.** Area powers being excluded from `mustAsk` means the picker never opens for them, so every target-anchored sweep silently centres on placement-order chance rather than a real choice. This is worth fixing with the same urgency and the same mechanism already proven for single-target powers.
+
+### THE TEN, INDIVIDUALLY -- SEVERE, AND WORTH TREATING WITH REAL WEIGHT
+
+⚠⚠⚠ **Five of ten with the anchor backwards, two sweeping in the source but single-target here, two missing from the data entirely -- seven of ten with some real defect is not a sampling curiosity, it's a strong signal about the population underneath it.** Force Lightning specifically being confirmed strictly single-target here, when the source builds a seventeen-metre cylinder on the chosen creature and damages every enemy inside it, is the sharpest possible confirmation this needed measuring -- it's the power that was named as the reference case for "do it the way the games did," and it currently does not do that at all.
+
+### ⚠⚠⚠ THE FORCE SCREAM INVERSION -- GENUINELY THE MOST INTERESTING FIND IN THIS REPORT
+
+**Whoever built this correctly noticed the master tier does something different -- that's real insight, not an oversight -- and got both the shape and the anchor backwards relative to the actual source. Finding that the build's own justifying comment cites the power's prose ("in front of the attacking character") while the real script reads the chosen target's location, is a precise, sympathetic diagnosis of exactly how this happened: reasoning correctly from one true document while a second, equally authoritative document said something different, and nobody cross-checked both. That's a forgivable, understandable error, not carelessness -- and it's exactly why measuring against the actual script, not just the prose, matters.**
+
+### THE SIZE DISCREPANCIES -- CORRECTLY NOT TOUCHED, RULED NOW
+
+**Refusing to unilaterally "fix" a number that disagrees between two legitimate sources, and correctly connecting this to `PT-2284`'s already-established transcription-discrepancy shape, is exactly right restraint.**
+
+**Ruled: the script governs for actual gameplay numbers, the prose gets corrected to match where the two disagree, unless a specific case has a real reason to prefer the prose instead.** This project's whole practice this session has trusted the executing code as the more reliable record of true intended behaviour over a human-transcribed, possibly-rounded description of it -- apply that same default here. Flag any of these ten specifically if there's a real reason to think the prose, not the script, is the one that should win for that particular case; otherwise proceed on the script.
+
+### RULED -- FIX ALL OF IT, AND SWEEP THE REMAINING 96
+
+**Fix the real defect (wire the picker open for target-anchored area powers, same mechanism as the single-target fix). Correct all seven of the ten confirmed-wrong powers to match the real source -- anchor, shape, and the two entirely missing from the data. Correct the Force Scream tier inversion in both directions at once, matching what the source actually does. Rename the `cone`/`radius` fields (or their handling) to actually communicate anchor rather than implying shape, since that's what's misleading the next reader.**
+
+**Given the hit rate on this sample, sweep the remaining 96 powers for the same anchor question before this counts as closed.** Seven of ten is not a rate anyone should assume doesn't generalise -- confirm the real scope before treating this as a ten-power fix.
+
+### PROCEED
+
+Fix the picker-never-opens defect. Correct all confirmed-wrong powers against the real source, script governing over prose for numbers. Sweep the remaining 96 for the same anchor question and report the real, complete scope.

@@ -72068,3 +72068,28 @@ Build `blinded`'s attack-naming mode plus keyboard cursor. Build `paralysed` aga
 ### PROCEED
 
 Finish Force Body's app-side wiring. Wire the paralysis dart to apply `paralysed`. Build `blinded` next. Build Chain B's two pieces per the approved options. Build Deflection's roll, confirming the reflected-target question specifically before or alongside it.
+
+
+---
+
+## PT-2391 -- FORCE BODY CLOSES END TO END, WITH A GENUINELY VALUABLE SELF-CAUGHT CONTRADICTION: THE FATIGUE TOLL WOULD HAVE QUIETLY SHRUNK ALONGSIDE THE FORCE COST, MAKING THE TOP TIER SILENTLY BETTER AT SOMETHING NOBODY RULED ON. THE PARALYSIS DART ANSWERS ALL THREE ORIGINAL PARALYZE QUESTIONS AT ONCE, AND SURFACES A REAL SCHEMA GAP -- THE DOWNGRADE OUTCOME NEEDS ITS OWN DURATION, WHICH condition_on_save CANNOT CURRENTLY CARRY. AND A DIRECT ANSWER TO CODER'S OWN HONEST PACING CONCERN: THIS IS NOT UNDER-DELIVERING
+
+**Force Body approved in full, end to end. Reading the percentage from the row's own prose rather than hardcoding it, so a future tier or a rename can't silently break, is exactly the durability this session has built into every other extraction this slice. Computing the split before the affordability check, rather than checking the whole cost first, is the correct order for the same reason a refusal must never depend on a number the power itself is about to change.**
+
+⚠⚠⚠ **THE SELF-CAUGHT DEGRADATION CONTRADICTION IS THE MOST VALUABLE FIND IN THIS REPORT, AND IT DESERVES TO BE NAMED PLAINLY.** Writing a comment stating degradation must not shrink with the payment, then passing the reduced cost straight into the function that prices the toll off whatever it's given, is precisely the kind of contradiction between stated intent and actual code that's easy to write and easy to miss -- the comment was true when it was written and false one line later, and nothing would have caught it without deliberately checking the claim against the behaviour. Master Force Body quietly tiring its caster more slowly, on top of the intended discount, would have been a real, unruled second benefit riding along with the ruled one. Separating `spend` from `cost`, with `spend` defaulting to `cost` so every existing caller stays unchanged, closes it cleanly.**
+
+**Refusing rather than allowing a cast that would kill the caster on an unaffordable vitality half is the right safety default -- "a power that kills its own caster with no ruling behind it is worse than a refusal" is exactly the right ordering of costs, and clearing sibling tiers on cast, so a Jedi can't watch a power get stronger as an earlier tier's clock runs out, closes a genuinely strange edge case before it could ever surface in play.**
+
+### THE PARALYSIS DART -- APPROVED, INCLUDING THE NEW FIELD
+
+⚠⚠⚠ **This is precise, decisive measurement -- one real item answering all three of Paralyze's original open questions at once, with the exact numbers converting cleanly under `PT-24`. And catching that the downgrade outcome has genuinely its own, shorter duration, where every case built so far has shared one clock between the condition and its downgrade, is a real, substantive schema finding, not a minor gap. Stopping to name the schema change explicitly rather than letting it arrive quietly in a diff is exactly right for the fourth instance of this exact addition pattern this session -- each one has been small, but "small and unremarked four times" is a worse habit than "small and named every time."**
+
+**Approved: give `condition_on_save` an optional duration field, defaulting to the primary condition's own clock when absent so every existing case (the whole Stasis family) is unaffected. Build it, then wire the paralysis dart against it -- this is what finally makes `paralysed` reachable, closing the loop the original ruling opened.**
+
+### ON THE PACING -- THIS IS NOT UNDER-DELIVERING, AND IT'S WORTH SAYING SO DIRECTLY
+
+**Stating plainly that four builds in one turn wasn't realistic at the standard this session has held, rather than quietly delivering less and letting it pass as a footnote, is exactly the honesty this whole project has asked for from every report -- and it deserves a direct answer, not just an acknowledgement.** Force Body alone needed a new schema field, a new Lodestar type, two integration seams, and caught a real, otherwise-invisible contradiction along the way. That's not a small item that happened to take a while -- it's a genuinely substantial piece of work that got the same care as everything else this session, including a self-correction that would have shipped a real, unruled defect if it had been rushed. Slower and correct is the standard; faster and short of it never was. Keep working at this pace.
+
+### PROCEED
+
+Build the `condition_on_save` duration field, then wire the paralysis dart. Proposed order for the rest -- `blinded`, then Chain B's two pieces, then Deflection -- approved as given.

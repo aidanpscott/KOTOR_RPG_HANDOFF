@@ -72225,3 +72225,28 @@ Fix Force Body's app-side wiring now. Build a real seam-level test. Report back 
 ### PROCEED
 
 Chain B next, then Deflection, order unchanged. Report back on the real source's Action-cost-for-casting question alongside whichever of those two comes next. Follow-up confirmation on Force Body's replaces-not-stacks and vitality-refusal sub-claims is being routed to Tester now that both are reachable.
+
+
+---
+
+## PT-2396 -- TEST 114 CONFIRMS FORCE BODY DECISIVELY ACROSS ALL THREE ITEMS. AND A GENUINELY VALUABLE PROACTIVE FIND: THE CURRENTLY-CORRECT REPLACES-NOT-STACKS BEHAVIOUR IS PRODUCED BY TWO MECHANISMS THAT ONLY AGREE BY STRUCTURAL ACCIDENT -- IF SOME FUTURE CHANGE EVER APPENDED RATHER THAN REPLACED, THE FOLD WOULD SILENTLY KEEP THE WRONG TIER. PLUS A GRACIOUS, HONEST CORRECTION OF CREDIT: TESTER'S OWN PRIOR REPORT ONLY NAMED ONE OF THE TWO REAL GATES, AND SAYS SO PLAINLY
+
+**All three items confirmed decisively. Reading vitality deltas within one continuous turn specifically to rule out an enemy's own attack being mistaken for the payment is a precise control, and the exact-to-the-point figures across the whole run confirm it held. Every number matching `ceil(cost × pct/100)` per purse, independently rounded, closes the arithmetic claim as cleanly as this kind of confirmation can.**
+
+### ⚠⚠ THE LATENT-DIVERGENCE FIND -- GENUINELY VALUABLE, WORTH TRACKING
+
+**This is exactly the kind of thing worth surfacing even though nothing is currently broken. Confirming replaces-not-stacks is real today, then going further to identify that the app's single-element assignment and Lodestar's smallest-wins fold only ever agree because the list structurally cannot hold more than one entry, is precise architectural reading rather than stopping at "the behaviour is correct." If a future change ever appended instead of replaced, the fold would silently keep the wrong tier's percentage while the assignment intended a different one -- and this report is exactly where that would first become visible, which makes it worth having on record now rather than rediscovering it as a live defect later.**
+
+**Ruled: track this as its own small, held item -- not urgent, nothing to fix today, but a real, specific risk worth a note for whoever next touches either side of this mechanism.**
+
+### THE REFUSAL -- CONFIRMED WITH THE BOUNDARY CASE NAMED
+
+**Draining vitality across successive casts down to the exact refusal point, then explicitly confirming both purses read identically immediately before and after the refused attempt, is decisive rather than merely suggestive. Noting the guard uses `<=`, so an exactly-sufficient amount also refuses, is a small, precise detail worth having stated rather than left to be assumed from the pass/fail result alone.**
+
+### THE CREDIT CORRECTION -- WORTH RECOGNISING ON ITS OWN TERMS
+
+**Going back to re-read one's own prior report and honestly recognising it only identified one of the two real gates, then explicitly, plainly attributing the second, more upstream one to Coder's own finding rather than letting an ambiguous "TEST 113 found this" stand, is genuinely admirable professional conduct. "Same observable; my report would have bought half the fix" is a precise, honest acknowledgement that a correct symptom-level observation doesn't automatically claim credit for the full, correct root-cause diagnosis underneath it. Worth recognising as its own kind of rigor -- not just applied to claims about the code, but to claims about who found what.**
+
+### PROCEED
+
+Nothing further needed on Force Body -- fully confirmed. The latent-divergence risk stays tracked, not urgent.

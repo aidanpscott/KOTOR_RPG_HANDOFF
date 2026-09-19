@@ -71347,3 +71347,30 @@ Remove movement-halving from `force_slow` specifically. Build `prone` per both r
 ### PROCEED
 
 Nothing further needed on this thread. `entangled` stays held. Fifteen conditions remain, correctly unbuilt. Mire's unmodelled second-move restriction stays exactly as ruled -- unbuilt.
+
+
+---
+
+## PT-2368 -- "FIFTEEN UNBUILT" REFRAMED: ELEVEN ARE APPLIED BY NOTHING AT ALL, A REAL RULE WITH NO FIRST STATE. THE ACTUAL REMAINING SURFACE IS FOUR CONDITIONS AND FIVE APPLICATIONS. AND A LIVE DEFECT FOUND AGAINST THE CORPUS'S OWN CATEGORICAL RULE: A TARGET WHO SAVES AGAINST HORROR OR INSANITY CURRENTLY GETS NOTHING, WHEN THE DOCUMENT SAYS FEAR THAT MISSES STILL LANDS
+
+**Reframing eleven of fifteen as unreachable rather than unbuilt is the right correction, and it's worth taking seriously as changing the actual shape of what's left rather than treating it as a rounding note -- a rule enforced against data that doesn't exist anywhere in the shipped corpus isn't a smaller version of the work, it's work with no reason to exist yet. Correctly confirming `disabled` is mapped, not missing (`PT-2167`'s droid-family ruling already covers it), and correctly identifying `flat-footed` as a comparison other conditions reference rather than a state anything inflicts, are both precise -- the second one especially changes whether it should count as "unbuilt" at all, and it's worth confirming here: it doesn't. Nothing applies it, and nothing should be expected to.**
+
+### THE FEAR RESIDUAL -- LIVE DEFECT, RULED, FIX NOW
+
+⚠⚠⚠ **A categorical rule stated in the document's own words, with two powers whose own rows repeat it, silently discarded by a parser pattern that only recognises one specific phrasing of a made-save outcome, is a real, live defect worth fixing on sight regardless of anything else in this measurement.** Correctly isolating `Fear` itself as the deliberate exception (`PT-449`'s own explicit ruling) rather than assuming all three powers share the bug, and finding the precise mechanical cause -- "is shaken anyway" simply doesn't match the `_INSTEAD` pattern the reader recognises -- turns this from a hunt into a small, confined fix. Fix it now: extend the made-save pattern recognition to carry the residual, confirmed against both `Horror` and `Insanity`'s rows.
+
+### shaken -- RULED, BUILD WHOLE, INCLUDING THE WILDCARD
+
+**Build the skill-check wildcard mechanism, and build `shaken` complete, not two-thirds.** A general "-N to every skill check" shape is common enough in a d20-style system that it's very likely to be needed again by something other than this one condition, and `PT-2240`'s principle applies exactly as it has everywhere else this session: two correct pieces and a silently-missing third would look like a working condition while actually being an incomplete one, which is worse than not building it yet. This is also, as noted, a genuinely useful first proof that the seam can carry a condition whose entire effect is numeric with no `legalityOf` case at all -- worth having that proof on record once it's built.
+
+### blinded -- HELD WHOLE, NOT PARTIALLY BUILT
+
+**Do not build just the `-4` attack penalty in isolation.** Three of blinded's four real, ruled effects are genuinely blocked on target-selection infrastructure that doesn't exist (`PT-1638`'s zero tap infrastructure) -- building the one piece that happens to be currently reachable would produce exactly the misleading-partial shape `PT-2240` warns against: a condition that looks like it's doing its job while silently missing the Dexterity loss, the auto-fail sight checks, and the flat-footed treatment. Hold the whole condition until the target-selection work exists to support the rest of it, the same as `blinded` has been held all along -- this measurement doesn't change that, it just confirms precisely why.
+
+### helpless -- GO TO SOURCE, THE SAME TREATMENT prone GOT
+
+**Correctly identified as needing a ruling, not a build -- the same shape `prone` was in before `PT-2366`, and it deserves the same rigor.** Go to the actual game source, the way Knockdown was investigated for `prone`: what `helpless` actually means mechanically in either game, any numbers or restrictions the source states, and whether the corpus's circular "against a helpless target" phrasing across `Force Sleep` and elsewhere points at something the source can actually resolve. Report back and this gets ruled properly rather than guessed at.
+
+### PROCEED
+
+Fix the fear residual now. Build `shaken` whole, including the wildcard. Investigate `helpless` at the source. `blinded` and `entangled` stay held, correctly unbuilt. Report back on `helpless` before it's ruled.

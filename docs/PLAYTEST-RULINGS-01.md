@@ -71221,3 +71221,30 @@ Force Push's real, ruled pieces are closed. Size gate stays held, correctly unbu
 ### PROCEED
 
 Fix `force_confusion`/`beast_confusion`'s live defect now, confirmed against each power's own prose first. Everything else -- the combat Mind Trick, the faction-change mechanism, and the droid variants themselves -- stays held as real, separate future work, correctly not attempted as a side effect of this measurement.
+
+
+---
+
+## PT-2364 -- CHECKING THE PROSE FIRST WORKED EXACTLY AS INTENDED: IT CONFIRMED BOTH POWERS ARE FACTION CHANGES, THE EFFECT JUST RULED OUT OF SCOPE, SO NO CONDITION WAS INVENTED TO PAPER OVER IT. INSTEAD, A REAL "PAID NO-OP" WAS FOUND AND FIXED -- A PLAYER WAS BEING CHARGED 22 FORCE POINTS AND TOLD THE OPPOSITE OF THE TRUTH FOR A CAST THAT DID NOTHING. AND THE REAL SCOPE WAS FIVE TIMES LARGER THAN NAMED: TEN POWERS ROLL A SAVE FOR NOTHING, ACROSS FOUR DISTINCT UNBUILT MECHANISMS, WITH ONE GENUINELY NEW GAP FOUND ALONGSIDE THIRTY-FIVE POWERS THAT APPLY NOTHING AT ALL AND CORRECTLY WEREN'T TOUCHED
+
+**This is exactly the outcome "check the prose before building a condition" was meant to produce, and it's worth stating plainly that the instruction did its job -- both powers' prose independently confirmed they're faction changes, the same effect just ruled held as separate future work in the same response that asked for the check. Not inventing a condition this ruleset doesn't name to stand in for something already ruled out of scope is precisely the discipline that instruction was trying to protect against.**
+
+⚠⚠ **THE PIVOT TO "STOP CHARGING FOR IT" IS THE RIGHT RESPONSE ONCE THE INTENDED FIX WASN'T AVAILABLE, AND CONNECTING IT DIRECTLY TO `PT-2240`'S ALREADY-NAMED ANTI-PATTERN RATHER THAN TREATING IT AS A FRESH JUDGMENT CALL IS EXACTLY RIGHT.** A player being charged 22 Force points, rolling a Will save, and having nothing happen regardless of the outcome -- while the UI actively states the opposite of what's true about the transaction -- is precisely the "paid no-op" shape that ruling already named as strictly worse than a free refusal. This wasn't a new defect needing a new principle; it was an existing principle finding a new instance of itself, and applying it without re-litigating the underlying question is the right use of a standing ruling.
+
+**Tying the refusal predicate structurally to the exact same carrier list `_applyPower` reads, so the two cannot silently name different populations, is the same discipline already proven for the ability-modifier gate check and the Timed interface -- a guard that shares its source of truth with the thing it's guarding rather than maintaining a parallel, driftable copy of the same knowledge.**
+
+### THE SCOPE -- FIVE TIMES LARGER, HANDLED WITH REAL PROPORTION
+
+⚠⚠⚠ **Finding ten rather than two, and correctly scoping the actual refusal to exactly those ten rather than the full thirty-five that apply nothing, is the right-sized response to a much bigger discovery than the original ruling anticipated.** The distinction drawn -- a power that rolls a save and does nothing is telling the player a lie about what just happened; a power that does nothing and never asked them to roll is a known, honestly-silent state -- is precise and correct, and it's the reason refusing all thirty-five would have been the wrong fix even though it would have been the more sweeping one. Taking a third of the power list out of the product in one slice to fix ten real lies would have been proportionate to nothing; scoping precisely to the shape that's actually dishonest is the right triage.
+
+**Asserting the 35 in the guard itself, so the count can't drift unnoticed in either direction, is good instinct -- a number stated once in a report is a fact that can go stale silently; a number a test checks every run is a fact that stays true or announces that it stopped being true.**
+
+**Categorising the ten into four distinct mechanisms rather than treating them as one undifferentiated pile, and correctly recognising that three of the four already map onto existing held agenda items while the fourth -- perception, keyed on a `distracted` condition this ruleset has no name for -- is genuinely new, is precise, useful triage. Flagging it as a gap rather than proposing a fix for it, given the pattern already established this session for exactly this situation, is correct restraint.**
+
+### AGENDA
+
+`beast_control`/`force_distraction`'s perception mechanism added as its own new, genuinely unheld gap — the only one of the four categories not already covered by existing held work.
+
+### PROCEED
+
+Live defect closed. Faction change, the combat Mind Trick, and the newly-found perception gap all stay held as separate future work. Nothing further needed this slice.

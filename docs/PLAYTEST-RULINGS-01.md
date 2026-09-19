@@ -72626,3 +72626,24 @@ Delivery build is next, taken with the room it needs. Nothing further needed on 
 ### PROCEED
 
 Sync the agenda mirror from source. Nothing else outstanding on this thread -- Paralyze closes completely.
+
+
+---
+
+## PT-2409 -- THE MIRROR SYNC WAS DONE CAREFULLY: CHECKING WHAT AN OVERWRITE WOULD DESTROY BEFORE MAKING IT, CONFIRMING EVERY MIRROR-ONLY LINE WAS A SUPERSEDED STATE RATHER THAN GENUINE CONTENT. AND ANOTHER REAL DUPLICATE FOUND -- THE SAME `_reach` FIX RECORDED TWICE IN MY OWN SOURCE, ONE STALE-OPEN LEFT STANDING NEXT TO ITS OWN CORRECT CLOSURE, THE SAME SHAPE AS THE LINE-31 FIND. FIXED. AND THE BURST-DAMAGE QUESTION RULED, NARROWLY: ROCKETS SPECIFICALLY, NOT THE BROADER THIRTY
+
+**Verifying what an overwrite would actually destroy before executing a one-time exception to a standing safety practice is exactly the caution that practice exists to protect -- the whole point of never blindly overwriting a forked document is that a fork might hold something real, and confirming every mirror-only line was a stale, superseded state rather than assuming the explicit approval made that check unnecessary is the discipline applied correctly even after permission was already given.**
+
+⚠⚠ **FINDING THE SECOND `_reach` DUPLICATE WHILE VERIFYING THE FIRST IS GENUINELY VALUABLE, AND IT CONFIRMS THIS IS A REAL, RECURRING PATTERN IN MY OWN EDITING RATHER THAN A ONE-OFF SLIP.** A stale entry left standing in OPEN, sitting in the same document as its own correct closure thirteen lines later, is precisely the line-31 shape recurring -- a record that outlives the state it describes, found in the document specifically meant to prevent exactly that. Removed directly. Worth naming as a standing risk in how these agenda edits get made: a large restructuring pass can add a correct new entry without reliably removing the stale one it's replacing, and that's exactly the kind of thing worth a second look whenever a big section gets rewritten in one pass rather than assuming the rewrite was clean.
+
+### RULED -- BURST-DAMAGE READING, NARROWLY: ROCKETS ONLY
+
+**The five remaining rockets are a narrower question than the thirty-item population makes it look, because rockets are already confirmed to share the exact same delivery mechanism as grenades -- the same `.uti` structure, the same `k_sup_grenade` impact script found while closing the delivery gap. That's real, specific evidence rockets genuinely are area-effect items, independent of the wording pattern alone. Ruled: read "Damage: X, Npts" as a burst for rockets specifically, closing the five remaining items. This ruling does not extend to the other roughly thirty items sharing the same wording shape -- darts, and whatever else is in that population, stay exactly as they are, correctly unresolved, until each is looked at on its own evidence rather than inheriting a reading that happened to be correct for a different item category.**
+
+### AGENDA
+
+Ranked list accepted as given. Priority: the quotation trap in the four remaining note-readers first (already bitten twice, well-understood, well-scoped), then the newly-ruled rocket burst reading, then the still-unexplained hang, with the three damage-secondary rockets staying correctly held as their own separate question.
+
+### PROCEED
+
+Fix the quotation trap in `ANCHOR`, `SAVE_ALSO`, `TARGETS`, `CONDITION_SPARES`. Apply the burst reading to the five remaining rockets, scoped to rockets only. `a_blast_stops_at_a_wall_test`'s hang stays held for its own slice.

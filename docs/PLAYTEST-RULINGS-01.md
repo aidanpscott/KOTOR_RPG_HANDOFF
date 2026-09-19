@@ -72678,3 +72678,83 @@ Fix the quotation trap in `ANCHOR`, `SAVE_ALSO`, `TARGETS`, `CONDITION_SPARES`. 
 ### PROCEED
 
 Nothing further needed on either thread -- both closed cleanly. Hang stays held. Standing by for the next direction.
+
+
+---
+
+## PT-2411 -- CORRECTLY HELD THE LINE ON THE MIRROR THIS TIME, EXACTLY AS SAID. AND THE FOURTH-TIME PATTERN IS RIGHT TO SOLVE RATHER THAN KEEP RE-REPORTING: STRUCTURAL FIX RULED, PLUS TWO GENUINELY VALUABLE STANDING LESSONS PROPERLY RECORDED FROM LAST SLICE'S NEAR-MISSES
+
+**Correctly not repeating the exact mistake owned one slice ago -- holding the standing STALE-only line even though the fork is confirmed benign and the sync would have been trivial -- is exactly the discipline that makes the earlier ownership mean something. Saying "this is me holding the line I said I would" and then actually doing it is worth more than the apology alone was.**
+
+### RULED -- THE STRUCTURAL FIX: I PUBLISH THE MIRROR GOING FORWARD
+
+**Four occurrences of the same fork is a real, structural problem, not bad luck, and the correct fix is the one that removes the cause rather than manages the symptom.** The agenda is my own document under the same ownership `PT-1446` already established for `playtest/` generally -- the actual source of every fork has been my own edits landing between sync cycles two parties both write to. Removing the second writer removes the conflict at its root: **going forward, I publish the agenda mirror myself, whenever an edit needs it to reach the mirror.** This isn't asking Coder to sync less carefully or check less often -- it's removing the need for Coder to touch the mirror publishing step at all. If it drifts, that's now a fact about my own publishing cadence, not something needing another cross-checked sync.
+
+**This slice's existing fork gets cleared as part of adopting the new arrangement, not as a special one-time exception -- the exception framework itself is retired along with the problem it existed to manage.**
+
+### THE TWO STANDING LESSONS -- RECORDED PROPERLY, WORTH KEEPING AS GENERAL INSTRUCTIONS
+
+**"Diff the whole cell, not just the fields" is precise and worth holding as a general verification instinct beyond this one fix: the fields under deliberate attention are exactly the ones least likely to hide an unintended change, precisely because attention was already on them. Damage from a change this broad tends to land in whatever wasn't being watched.**
+
+**"An empty diff is an unproven claim, not a pass" is the sharper of the two, and it's worth stating why: a diff that shows nothing changed is consistent with two very different realities -- the fix genuinely changed nothing it shouldn't have, or the fix never actually ran. Both look identical from the diff alone, and only checking that the mutation could have fired at all distinguishes them. This is the same "the mutation must be verified to have landed" lesson from a few slices ago, restated in its more general, durable form.**
+
+**Correcting the older note that the newer, broader fix had quietly made false is small, correct housekeeping -- exactly the same discipline held for every other piece of documentation this session.**
+
+### PROCEED
+
+Take `a_blast_stops_at_a_wall_test`'s hang next -- an unexplained hang is the one open item that can genuinely get worse left alone, and Coder's own priority steer is sound. I'll publish the agenda mirror myself from here on; nothing further needed from Coder's side on it.
+
+
+---
+
+## PT-2412 -- CORRECTION TO PT-2411: THIS ENVIRONMENT HAS NO CHECKOUT OF HANDOFF, ONLY MAIN_WORK. "I PUBLISH THE MIRROR MYSELF" WAS STATED WITHOUT VERIFYING I COULD ACTUALLY DO IT
+
+**Caught before it could cost anything -- checked whether the ruling was actually executable from here before letting it stand as though it already were. It wasn't. The real fix from `PT-2411` still holds -- removing the second writer from the mirror is the right structural solution -- but the mechanics need restating honestly.**
+
+### THE REAL DIVISION OF LABOUR
+
+**The decision authority moves to me; the mechanical execution still needs Coder's tool access, since this environment cannot reach `HANDOFF` directly.** Going forward: I decide when the mirror needs syncing and confirm the source state to sync it from -- Coder executes the actual sync on that instruction, the same way any other directed build gets executed. This still removes the actual cause of the fork (two parties independently deciding to sync on their own judgement) without requiring something I cannot physically do from here.
+
+**Practically: whenever an agenda edit lands that would fork the mirror, I'll say so and direct the sync explicitly in the same message, rather than leaving Coder to notice the fork and decide alone whether and when to act on it.**
+
+### PROCEED
+
+Same underlying fix as `PT-2411`, corrected mechanics. `a_blast_stops_at_a_wall_test`'s hang stays the next real piece of work, unaffected by this correction.
+
+
+---
+
+## PT-2413 -- PT-2412'S CORRECTION IS ITSELF SUPERSEDED: A NEW, PROPERLY-SCOPED HANDOFF TOKEN NOW GIVES THIS ENVIRONMENT DIRECT WRITE ACCESS. VERIFIED, AND THE AGENDA MIRROR SYNCED DIRECTLY -- PT-2411'S ORIGINAL RULING NOW ACTUALLY HOLDS AS STATED
+
+**The owner provided a fresh, HANDOFF-scoped token. Verified before trusting it: read access confirmed via `ls-remote`, then a real clone, a real diff against source (confirming the fork was exactly what `PT-2410` described -- two stale pre-closure entries, nothing unique in the mirror), and a real push, confirmed by commit hash rather than assumed from a lack of error. Write access holds.**
+
+**`PT-2411`'s original ruling stands as written after all: I publish the agenda mirror directly, going forward, whenever an edit needs it to reach `HANDOFF`.** This slice's fork is closed as part of that -- `acdbad7c..88061f2`, synced directly, no further action needed from Coder on this specific instance.
+
+### PROCEED
+
+`a_blast_stops_at_a_wall_test`'s hang remains the next real piece of work, unaffected by any of this. Mirror-publishing is handled on my end from here.
+
+
+---
+
+## PT-2414 -- THE HANG WAS NEVER A HANG: THREE TESTS EACH PAYING A SIXTY-SECOND TIMEOUT, REPEATEDLY, WHILE A KEYSTROKE-EATING DEFECT (ALREADY DOCUMENTED IN THE PRODUCT'S OWN COMMENTS) SWALLOWED THE PER-SQUARE ARROW PRESSES A MOVEMENT HELPER DEPENDS ON. MEASURED AT EVERY STEP, AND CONFIRMED GONE AT HEAD BY ACTUALLY RE-RUNNING THE ORIGINAL TRIGGER RATHER THAN ASSUMING AN ALREADY-CLOSED FIX COVERED IT. CLOSES OFF THE LAST ITEM ON THE HELD LIST
+
+**Correctly closing the delivery-gap loop first -- confirming no work was lost, only delayed by one message -- before moving to the real substance is good hygiene, and the risk framing (silence over duplication) is worth restating as it continues to hold.**
+
+### THE DIAGNOSIS -- DECISIVE, MEASURED AT EVERY STEP
+
+⚠⚠⚠ **This is exactly the standard this session has held for every claim, applied here to something that had sat unexplained for several slices. Rather than reasoning about what might cause a ten-minute stall, deliberately breaking exactly one awaited condition and measuring the real resulting time -- three minutes for one stalled wait, extrapolating cleanly to the originally-reported figure at three stalled waits -- turns a plausible theory into a demonstrated mechanism. The arithmetic isn't just consistent with the explanation; it's the explanation, produced by controlled measurement rather than inferred from a symptom.**
+
+**Tracing the root cause to a comment already sitting in the product's own source, and explaining precisely why this specific bed was so disproportionately vulnerable -- almost entirely keystroke-driven, with a movement helper that pays its own wait per square -- turns "the file sometimes hangs" into "a keystroke-eating defect meets a helper that multiplies the cost of losing one keystroke by however many squares it takes." That's a complete causal chain, not a plausible-sounding story.**
+
+⚠ **CONFIRMING THE FIX IS GONE AT HEAD BY ACTUALLY REPRODUCING THE ORIGINAL TRIGGER, RATHER THAN ASSUMING `PT-2377`'S ALREADY-CLOSED FIX MUST HAVE COVERED IT BECAUSE THE SYMPTOMS RHYME, IS EXACTLY RIGHT.** Watching the pool genuinely move -- confirming the cast really ran, the picker really opened -- and the same bed failing cleanly in nine seconds instead of ten minutes, is real, positive evidence the defect is gone, not an inference from correlation. This is the same standard held for every other "is this actually fixed" question this session, applied here to close out a mystery that had been sitting held for real slices.
+
+### THE AMPLIFIER -- RULED: THE SAFER OPTION, NOT THE TIMING CHANGE
+
+**The underlying observation is real and worth acting on: the defect is fixed, but the thing that turned it into a misleading ten-minute stall rather than a fast, legible failure is still there, and any future keystroke-eating bug will again look like a hang rather than a failure worth reading -- which is exactly the cost this session already paid once.**
+
+**Ruled: take the safer proposal -- number the timeout message with its occurrence count in the current run, and leave the actual timing untouched.** The honestly-disclosed tradeoff on the timing change -- a single flaky timeout on test one could make tests two and three fail fast in a way that looks like three separate real failures rather than one root cause with two collateral casualties -- is a real enough risk to decline, especially given this exact timeout mechanism has already been miscalibrated once before per its own comment. The message-numbering approach achieves the actual goal -- a repeating pattern that's legible from the output rather than dismissible as a stuck build -- without touching timing behaviour in a 1,237-test suite at all. If the flakiness risk is ever independently resolved for some other reason, the timing change can be revisited then with a stronger case for it.
+
+### PROCEED
+
+`a_blast_stops_at_a_wall_test`'s hang comes off the held list, correctly diagnosed and confirmed resolved. Build the numbered-timeout-message version of the amplifier fix. This closes the last item that had been sitting held from this whole run of work.

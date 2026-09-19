@@ -71849,3 +71849,38 @@ New comparison task, its own slice. Report the measured gap against the real cur
 ### PROCEED
 
 Fix the picker-never-opens defect. Correct all confirmed-wrong powers against the real source, script governing over prose for numbers. Sweep the remaining 96 for the same anchor question and report the real, complete scope.
+
+
+---
+
+## PT-2384 -- THE PICKER FIX CLOSES CLEAN, WITH ANOTHER HONEST SELF-CORRECTION OF A WRONG ASSERTION FROM CODER'S OWN LAST REPORT. THE FULL SWEEP FINDS 14 WRONG OF 18, WORSE THAN THE SAMPLE SUGGESTED -- AND ANOTHER HONEST CATCH: force_sleep WAS NEVER PART OF THE ORIGINAL TEN, A STALE-NWN-NAME TRAP CODER HAD ALREADY DOCUMENTED AND WALKED INTO ANYWAY. AND THE REAL REASON NONE OF THE 14 GOT FIXED: THE DATA SCHEMA CANNOT EXPRESS A CASTER-CENTRED SPHERE AT ALL, AND THE PROSE ALREADY HAD THE RIGHT ANCHOR -- THE EXTRACTOR THREW IT AWAY. PROSE AND SCRIPT AGREE; ONLY THE REPRESENTATION IS WRONG
+
+**The picker fix is precise -- gating on `coneSquares == null` rather than the broader `areaPower` correctly distinguishes "nobody to ask" from "somebody genuinely needs asking," and six beds needing a real keypress, whose old assertions about blast placement were true by coincidence rather than by a real choice, is the same reframing already seen on the single-target side: a claim that was accidentally true becomes a claim that's actually tested.**
+
+⚠⚠ **CORRECTING THE OWN WRONG ASSERTION FROM `PT-2377` IN PLACE, WITH THE REASON STATED, IS EXACTLY THE STANDARD THIS SESSION HAS HELD THROUGHOUT -- APPLIED HERE TO SOMETHING WRITTEN JUST TWO RULINGS AGO RATHER THAN LEFT TO QUIETLY STAND.** "No target menu opens for an area power" conflating exactly what `areaPower` itself conflates is a precise diagnosis of how a wrong claim and the code it described shared the same blind spot -- worth naming as its own small lesson: an assertion written to describe a boundary is only as correct as the boundary it's describing.
+
+**Ruling out one specific hypothesis for the still-unexplained hang -- confirming the same bed now opens a menu and fails cleanly, zero timeouts -- is useful, honest narrowing even though the real cause remains open. Progress on a mystery doesn't require solving it outright.**
+
+### THE FULL SWEEP -- WORSE THAN THE SAMPLE, AND ANOTHER HONEST SELF-CATCH
+
+⚠⚠⚠ **Fourteen of eighteen wrong, against a real population of only twenty-one sweeping powers total, confirms the seven-of-ten sample wasn't an unlucky draw -- it was a fair preview of a genuinely widespread problem. Good, precise categorisation into wrong-anchor, missing-entirely, size-only, and not-in-catalogue, rather than one undifferentiated pile of "wrong."**
+
+**And catching that `force_sleep` was never actually a real member of the original ten -- `FORCE_POWER_SLEEP` names Mass Stasis, not this project's authored `force_sleep` -- immediately after naming the exact trap that caused it in an earlier report, is worth real credit rather than embarrassment. Recognising one's own documented lesson and still walking into it is more honest, and more useful to have on record, than never mentioning it would have been.**
+
+### ⚠⚠⚠ THE SCHEMA FINDING -- THE MOST IMPORTANT THING IN THIS REPORT, AND THE RIGHT RESPONSE TO IT
+
+**Discovering that `radius`/`cone` can express only two of the three anchors the real source actually needs -- with the caster-centred sphere case having nowhere to live at all -- reframes this from "fourteen powers with wrong data" to "one missing concept those fourteen all happen to need." That's a better diagnosis, because fixing the concept fixes all fourteen at once rather than patching each individually against a schema that still can't hold the answer.**
+
+**And finding that the prose already states the correct anchor -- `Force Wave`'s own row saying "around the Jedi," matching the script exactly -- while the extraction pipeline discards the phrase and keeps only the metres, is a genuinely important correction to my own earlier ruling. "Script governs over prose" was never needed here, because the two sources were never in conflict; only the internal representation lost information the source already had settled. Good, disciplined refusal to either falsify the prose or leave it wrong to work around a schema gap -- both would have been the wrong kind of shortcut, and stopping to report the real cause instead is exactly right.**
+
+### RULED -- BUILD THE anchor FIELD
+
+**Approved exactly as proposed.** Add a real `anchor` field (`caster`/`target`) to the power schema, read from the phrases the document already uses, carried through extract → shelf → `PowerRecord`, consulted at the centre-computation site instead of the current `coneSquares != null` proxy. Same shape as `condition_spares`, already proven twice -- reuse it rather than inventing a new pattern for a problem this one already fits.
+
+**Then the fourteen corrections become mechanical, and the Force Scream inversion resolves as a consequence of the field existing, not a separate fix.** Sizes stay untouched until the anchor is settled, exactly as reasoned -- correcting a number on a sweep centred in the wrong place isn't worth doing twice.
+
+**Approved to open the schema change now, across all four repos.** This is real, cross-cutting work, correctly not started without asking first -- but the case for it is made, and there's no reason to hold it at the end of a slice rather than begin it.
+
+### PROCEED
+
+Build the `anchor` field across all four repos. Apply the fourteen corrections once it exists. Resolve the Force Scream inversion as part of the same fix. Sizes wait until the anchor is settled.

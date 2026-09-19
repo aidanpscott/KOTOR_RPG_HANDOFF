@@ -72153,3 +72153,34 @@ Wire links 1 and 2 (extractor, condition vocabulary) against the ruled meaning o
 ### PROCEED
 
 Nothing further needed. `blinded` next, then Chain B, then Deflection -- order unchanged.
+
+
+---
+
+## PT-2394 -- TEST 113 CONFIRMS THE ANCHORING FIX DECISIVELY, AND CORRECTS THREE REAL INACCURACIES IN MY OWN ROUTING ALONG THE WAY -- FORCE LIGHTNING IS CASTER-ANCHORED (NOT TARGET), THE SCREAM TIER SHIFT IS INVISIBLE IN PLAY (SHAPE HAS NO ANGULAR COMPONENT AT ALL), AND THE PICKER CORRECTLY SHOULD NOT OPEN FOR ANY OF THE SIX NAMED POWERS. AND A SEVERE FINDING: FORCE BODY IS ENTIRELY INERT IN ACTUAL PLAY, ALL THREE TIERS, DESPITE BEING REPORTED CLOSED -- THE ONE LINE THAT ASSIGNS THE MECHANISM NEVER RUNS, BECAUSE IT GATES ON A FIELD NONE OF THE THREE REAL ROWS CARRY
+
+**Own the routing errors directly before anything else: I described Force Lightning as target-anchored, asked to confirm a tier-shape shift that has no observable expression in the actual implementation, and asked to verify the picker opens for a family where it correctly, deliberately does not. All three caught and corrected rather than either silently worked around or reported as confusion -- exactly the standard held for every other claim this session, applied here to my own instructions rather than someone else's work.**
+
+**The anchoring confirmation itself is decisive test design. Death Field's opposite-side, six-apart marks -- both caught, neither able to be explained by a target-centred reading -- is the kind of setup where only one explanation fits both results at once. And sitting the player at distance zero inside four caster-anchored blasts, finishing untouched every time, is a genuinely harder enemy-only confirmation than the one originally suggested, needing no party-join event to demonstrate.**
+
+⚠ **CORRECTING FORCE LIGHTNING'S ANCHOR, AND FLAGGING THAT THE TEST AS ROUTED WOULD HAVE PASSED EITHER WAY, IS THE MORE VALUABLE HALF OF THIS FINDING.** A test that confirms a true claim for the wrong reason is a test that hasn't actually distinguished anything -- noting this explicitly, rather than letting a passing result stand in for a correct routing, is precisely the discipline this whole session has held against exactly this shape of false confidence.
+
+⚠ **AND THE SCREAM TIER FINDING IS GENUINELY IMPORTANT: THE UNDERLYING DATA IS CORRECT AND THE PLAYER WILL NEVER SEE IT DIFFER, BECAUSE CONE AND RADIUS RESOLVE THROUGH THE IDENTICAL PLAIN-DISTANCE PREDICATE IN THIS IMPLEMENTATION.** Confirming this with an identical cast from an identical position, catching an identical set on both tiers, is exactly the control needed to distinguish "the fix is invisible because it's correct and the two shapes happen to coincide here" from "the fix never actually landed." It's the former, and it's worth knowing that in general for any future power whose tiers differ in shape but not in reach.
+
+### FORCE BODY -- SEVERE. TREATED WITH THE SAME URGENCY AS THE MASSIVE-CRITICAL AND EVASION DEFECTS
+
+⚠⚠⚠ **This is a genuinely severe finding and deserves to be named as such rather than folded quietly alongside the anchoring confirmation.** A power reported closed end to end, with its engine half correctly built and unit-tested, currently does nothing in actual play across all three tiers -- full cost from the pool, zero vitality ever spent, regardless of which tier is active. "The unit is right and the seam is empty" is a precise, valuable diagnosis: the existing test proved the arithmetic correct by calling it directly, never once exercising the real cast path that's supposed to reach it. That's the same shape this session has named before -- a test that confirms a calculation without confirming anything calls it -- found here on a feature that had just been reported complete.
+
+**The root cause is precisely isolated: the one block that ever assigns `caster.forceBody` gates on a `modifiers` field none of the three real rows carry, so it never runs, `forceBodyPercent` returns null, and `splitCost` silently falls back to charging the full cost from the pool. Confirming both sub-claims (replaces-not-stacks, the vitality-refusal) are structurally unreachable rather than merely unconfirmed -- both trace to the same dead assignment -- is precise, not just thorough.**
+
+### RULED -- FIX NOW
+
+**Wire the app-side trigger to read from `force_body_percent` directly, the field the real rows actually carry, rather than gating on `modifiers`, which they don't. Build a real test that exercises the cast seam itself -- casting a power while Force Body is active and observing the actual split -- not just `splitCost` called in isolation, so this class of gap can't recur silently. Once fixed, the replaces-not-stacks and refusal sub-claims become reachable and worth a real follow-up confirmation.**
+
+### AGENDA
+
+The family-wide "does not say what it may be aimed at" warning firing on 38 of 106 powers, not just Force Mire, is useful scale confirmation -- noted, not urgent, matches the already-correct pattern of the product announcing a real gap rather than guessing.
+
+### PROCEED
+
+Fix Force Body's app-side wiring now. Build a real seam-level test. Report back once both are done for a follow-up confirmation.

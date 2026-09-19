@@ -301,7 +301,9 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 ### 4.3 Force Body — a normal power, priced against what it saves
 
-**It already has a duration — 30 seconds, five rounds. The structure was never the problem.**
+**It already has a duration — 30 seconds, which is TEN rounds. The structure was never the problem.**
+
+> ⚠⚠⚠ **CORRECTED AT `PT-2401`** — this read *"30 seconds, five rounds"* and divided by the wrong number. `ACTION-ECONOMY-01 §7`: *"Round length: 6 seconds. KOTOR's real-time rounds are 3 seconds, which is why a 6-second stun there is two rounds here."* **Our rounds are source seconds ÷ 3**, so 30 seconds is ten rounds, not five. Five applied the ÷6 used for ITEM durations. `FORCE-POWERS-01` has said ten all along and `force_body_rounds` is extracted from it; this section was the outlier.
 
 **The problem is that it is a discount on everything else**, and the tiers do more than shift the ratio:
 
@@ -313,9 +315,9 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 **Worked: four 20-cost powers inside the window.** Without it, 80 Force points. **With Master Force Body, 48 total — 24 Force and 24 vitality. It saves 56 Force points for 24 vitality.**
 
-**Priced at 15 / 20 / 25.** At Master you break even at roughly two powers in the window and profit at three — **a commitment before a hard fight, not something left running.**
+**Priced at 15 / 20 / 25.** At Master you break even at roughly two powers in the window and profit at three — **a commitment before a hard fight, not something left running.** ⚠ The break-even arithmetic below was worked against the five-round figure; `PT-2401` re-examines it against ten.
 
-> **And it reaches our layer model deliberately.** `FORCE-POOL-01` already spills overreach into vitality. **Force Body makes that spill voluntary** — choosing to bleed to conserve, five rounds at a time.
+> **And it reaches our layer model deliberately.** `FORCE-POOL-01` already spills overreach into vitality. **Force Body makes that spill voluntary** — choosing to bleed to conserve, ten rounds at a time.
 
 ---
 

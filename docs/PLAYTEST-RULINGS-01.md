@@ -72339,3 +72339,73 @@ Build the Action-cost fix, the duration field, and the better-power refusal, per
 ### PROCEED
 
 Nothing to rule -- confirmed still held, correctly, with the rename noted so nobody closes this off a failed text search later.
+
+
+---
+
+## PT-2400 -- ALL THREE FORCE BODY FIXES CLOSE CLEAN. THE DURATION FIELD'S GUARD NEARLY LIED TWICE, IN THE INVERSE OF AN ALREADY-CARRIED LESSON -- A MUTATION MUST BE VERIFIED TO HAVE ACTUALLY LANDED BEFORE ITS RESULT MEANS ANYTHING, EITHER WAY. AND THE ALWAYS-ON MEASUREMENT IS DECISIVE AND COMPLETE: THE SOURCE HAS EXACTLY ONE COLUMN FOR THIS WHOLE CONCEPT, IT NAMES THE EXACT THREE HELD THREADS PLUS A FOURTH NOT PREVIOUSLY IDENTIFIED, AND EVERY ONE OF THE FOUR QUESTIONS DIRECTED IS ANSWERED OUTRIGHT
+
+### THE THREE FIXES -- ALL APPROVED
+
+**Asking `canAct` rather than a second, narrower copy of the same readiness question means a stunned, prone, or paralysed caster is refused by one shared line rather than a duplicate that could silently drift from it -- exactly the "one definition, not two that must agree" discipline this session has held throughout, applied here before it could ever become two.**
+
+⚠⚠ **FIXING THE FOUR BROKEN TESTS AS FIXTURES RATHER THAN WEAKENING THE RULE IS EXACTLY RIGHT, AND THE HANDLING OF THE TWO THAT COULDN'T ADVANCE A REAL ROUND IS THE MORE VALUABLE HALF.** `giveBackActionForTest` existing with zero production callers, visibly marked at each use site rather than hidden in a helper, and guarded by its own test that dies if the real spend is ever removed, is precisely how a deliberate, narrow test-only exception should be built -- honest about exactly what it bypasses and why, impossible to mistake for a real code path, and structurally prevented from silently becoming one.
+
+⚠⚠⚠ **THE DURATION FIELD'S GUARD STORY IS GENUINELY VALUABLE, AND IT'S WORTH STATING THE GENERAL LESSON PLAINLY.** Two mutations that each looked like they should have triggered the refusal, and didn't -- one from a markup mismatch, one from editing the wrong occurrence of a shared sentence -- both read exactly like "the guard doesn't fire," when the real problem was that neither mutation had actually landed as intended. This is the precise inverse of "a mutation that kills nothing may mean the guard never fired": here, a mutation that changes nothing observable may mean the mutation itself never happened. Both readings collapse to the same symptom and need the same response -- verify the change actually applied before trusting either conclusion -- and checking the document was still whole against git before trusting any of the three attempts is exactly that verification, done properly.
+
+**Reusing `forceBodyPercent` as the single shared definition of "better" for both the fold and the new refusal, rather than writing a second comparison that would need to agree with the first forever, and correctly spending the pool on a refused worse-tier cast because the source's own sequencing does the removal before the check, are both precise, faithful choices.**
+
+### ⚠⚠⚠ THE ALWAYS-ON MEASUREMENT -- DECISIVE, ONE OF THE STRONGEST SINGLE MEASUREMENTS THIS SESSION HAS PRODUCED
+
+**Finding that the source has exactly one column for this entire concept, and that it names precisely the three threads already independently held for this reason -- plus a fourth, Precognition and Battle Precognition, not previously connected to this pattern at all -- is genuinely satisfying convergence between reasoning done from this side and hard data found on the other. That K1 leaves the column entirely unused while K2 populates exactly nine rows, with a zero on every genuinely cast power, closes any doubt about what it actually selects.**
+
+**Correctly checking and ruling out the two more obvious readings -- a simple boolean, a chain identifier -- before accepting the real answer (a selector for which specific passive behaviour applies, tiers of one behaviour sharing a value, unrelated passives each getting their own) is exactly the discipline that prevents a measurement from stopping at the first plausible-looking interpretation.**
+
+**The independent re-confirmation of the `FORCE_POWER_FORCE_REPULSION` stale-label finding, via matching prerequisite character-level numbers against this project's own already-written document rather than re-deriving the same evidence a second time, is good practice -- a second, unrelated line of evidence agreeing with a prior finding is worth more than repeating the first one more carefully.**
+
+**All four directed questions answered outright, not partially: switched on by being known, the same ordinary grant mechanism as any other power, no separate activation step; consulted by nothing in the script layer at all, purely internal to the engine, the same way it already handles an existing feat; and the structural signature that distinguishes a passive row -- zero cost, zero cast time, and the telling empty impact script, meaning there is structurally nothing that could ever fire because it's never cast at all -- is precise and complete. This is a standing fact about a character, consulted at the moment it matters, not a mechanism that needs a clock, a cost, or an application step of its own.**
+
+### RULED -- PROPOSE NOW
+
+**The measurement is decisive enough to move to a real proposal.** Given the confirmed shape -- known equals active, nothing more, no cost, no duration, no clock, consulted directly at the point of relevance -- propose building this as a minimal flag on the character's own record, granted the same way any other power is learned, read directly at the specific combat-resolution points that need it (Deflection's roll, Camouflage's own held deactivation question, Precognition/Battle Precognition once those are looked at). This should not need anything resembling the existing timed-condition machinery at all -- the measurement rules that out directly, not just by omission.
+
+### PROCEED
+
+Propose the concrete shape. Once approved, wire Deflection's already-built, already-guarded roll to it -- that closes the loop this whole sub-thread opened.
+
+
+---
+
+## PT-2401 -- MY OWN INSTRUCTION TO PROPOSE AN ALWAYS-ON MECHANISM CONTRADICTED A REAL, EXISTING, WELL-REASONED RULING I HAD ALREADY MADE -- CORRECTLY CAUGHT BY CHECKING RATHER THAN COMPLYING. AND A GENUINELY URGENT FIND: MY OWN TWO DOCUMENTS DISAGREE ON FORCE BODY'S DURATION IN A WAY THAT DOUBLES THE WINDOW A REAL, ALREADY-SHIPPED COST WAS PRICED AGAINST -- SURFACED ONLY BECAUSE IT COLLIDED WITH SOMETHING I HAD JUST APPROVED LAST SLICE
+
+**Own this plainly, first: I directed a proposal for a mechanism I had already, separately, explicitly ruled out -- with real reasoning, across eight powers, resolved three different ways -- in a document that already existed. Correctly checking before proposing, rather than treating my most recent instruction as automatically superseding an earlier ruling I may simply have forgotten was there, is exactly what "measure before proposing" is for. This wasn't a case of a measurement disagreeing with an instruction; it was a case of two of my own rulings disagreeing with each other, and only one of us had read both.**
+
+### THE ALWAYS-ON REFUSAL -- CORRECT, WITH REAL REASONING ALREADY ON RECORD
+
+**`POWER-COSTS-01 §4`'s own resolution stands as the correct one, and it's worth restating why rather than just accepting the citation: an unpriced, unlimited passive that scales with how often a Jedi is shot at genuinely cannot be balanced the way a normal power can, and converting Deflection and Redirection into reactions gives them a real, sensible economic pressure the passive framing never could. Camouflage's bounded duration replacing an indefinite toggle, specifically because a turn-based game makes an indefinite toggle effectively free (a rational player would simply never turn it off), is the same insight applied to a different mechanic. Force Body already correctly resolved as an ordinary power. There is genuinely nothing left in this corpus wanting the mechanism I directed -- confirmed, not assumed.**
+
+**Confirming the real blocker for Deflection was `on_reaction` -- a hook with zero acceptance coverage, already named in the same document before this measurement re-derived the identical conclusion independently -- is satisfying convergence, and it correctly reframes the actual gap as bigger than Deflection alone, exactly as recognised the prior slice from the other direction.**
+
+### ⚠⚠⚠ THE FORCE BODY WINDOW -- URGENT, RULED
+
+**This deserves to be treated with real seriousness: two of my own documents state two different numbers for the same 30-second source value, and the difference isn't cosmetic -- it changes which side of a stated balance threshold the power sits on. Tracing the discrepancy to the already-known ÷3/÷6 conflict, and showing the arithmetic rather than asserting the conclusion, is exactly right, and the arithmetic is correct: `PT-24`'s already-established ÷3 for powers gives ten rounds from thirty seconds, and `§4.3`'s five-round figure used the items-specific ÷6 instead.**
+
+**Ruled: ten rounds is correct. `§4.3`'s "five rounds" and "thirty seconds, five rounds" language gets corrected to match.** The already-built field stands as it is -- it was right, the older document was wrong, and this is a documentation correction, not a code reversion.
+
+**But the balance consequence does not get resolved by that correction alone, and it needs its own real attention rather than being silently absorbed.** If the 15/20/25 costs were genuinely priced against a five-round window and the true window is ten, a Jedi is currently getting roughly double the value those costs were calibrated for. Re-examine `§4.3`'s own stated break-even reasoning against the corrected ten-round window and report whether 15/20/25 still holds or needs its own adjustment -- don't assume the existing numbers survive the correction just because nothing else about them changed.
+
+### DEFLECTION AS A REACTION -- OPTION A APPROVED, AS A DELIBERATE FIRST STEP
+
+**Approved. Reusing `Budgets`' already-existing, already-tested `reactionsLeft` at the defence seam is the right shape to start with -- smallest change, built on machinery this session has already proven, and it gets the mechanism reachable without inventing new infrastructure for its first version. Correctly naming the real cost -- the defender never chooses, which matters if a player wants to save the reaction for something else -- rather than treating A as free of tradeoffs, is honest scoping. Building it so the decision point is one function, with B as a later addition rather than a rewrite, is the right way to leave the door open without paying for it now.**
+
+**This is ruled as the deliberate starting shape, not the final word -- if a real reason to offer the choice (option B) surfaces later, that's a genuine extension of this design, not a correction of it.**
+
+### THE TWO SMALLER FINDINGS -- BOTH RULED
+
+**Camouflage's ten-round duration: build it now.** The deactivation question this was held on is already answered by `§4.2` -- it simply hasn't been built yet. This closes a real, already-held item rather than opening a new question.
+
+**Correct `FORCE-POWERS-01`'s "always in effect" prose to match `§4.1`'s already-ruled reaction framing.** A reader of the power table alone currently gets the wrong rule; `§4.1` already knows it's departing from the source's own language and says so -- the table needs to say so too.
+
+### PROCEED
+
+Build Deflection as a reaction, option A. Build Camouflage's ten-round duration. Correct both documents -- `§4.3`'s duration figure and `FORCE-POWERS-01`'s stale "always in effect" line. Re-examine the 15/20/25 Force Body costs against the corrected ten-round window and report before assuming they still hold.

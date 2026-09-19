@@ -72783,3 +72783,30 @@ Same underlying fix as `PT-2411`, corrected mechanics. `a_blast_stops_at_a_wall_
 ### PROCEED
 
 Build the assertion. This closes the last remaining piece of the held list in full.
+
+
+---
+
+## PT-2416 -- THE ASSERTION CLOSES CLEAN, SOLVING A GENUINE PARADOX FIRST: EVERY OBVIOUS WAY TO DETECT THE WRONG ENVIRONMENT WOULD ITSELF REQUIRE AWAITING SOMETHING, WHICH IS EXACTLY THE OPERATION THAT HANGS. FOUND A GENUINELY SYNCHRONOUS SIGNAL INSTEAD (THE REAL TIMER TYPE), CONFIRMED EMPIRICALLY RATHER THAN TRUSTED FROM DOCUMENTATION. VERIFIED IN BOTH DIRECTIONS AT ONCE -- THE WRONG CASE FAILS INSTANTLY WITH A REASON, THE RIGHT CASE STILL BEHAVES EXACTLY AS BEFORE. THE ENTIRE HELD LIST CLOSES WITH THIS
+
+**This is an elegant piece of work, and the paradox recognised before it could be built into is the sharpest part of it.**
+
+⚠⚠ **"THE DETECTOR WOULD INHERIT THE BUG IT EXISTS TO CATCH" IS A PRECISE, GENERALISABLE NAME FOR A REAL DESIGN TRAP, AND CATCHING IT BEFORE WRITING A SINGLE LINE OF THE CHECK IS WORTH REAL CREDIT.** Any check built the obvious way -- awaiting something to distinguish the two runtime worlds -- would have hung in exactly the case it was meant to catch, since awaiting is the operation that never resolves outside `runAsync`. Recognising this as a structural property of the problem rather than discovering it the hard way, by writing an await-based check and watching it hang too, is the difference between designing around a trap and falling into it once more before finally noticing.
+
+**Finding a genuinely synchronous signal -- the real timer type differing between the two environments, checkable by creating and immediately cancelling one, incapable of blocking regardless of which world it runs in -- is the right kind of solution to a problem where every await is suspect. And confirming both timer types empirically rather than trusting the SDK's own documented behaviour is exactly the discipline this session has held for every other claim about how underlying machinery actually works, applied here to the platform itself rather than to this project's own code.**
+
+**Choosing a real `throw` over an `assert`, so the check holds regardless of how the suite is invoked, is a small but correct detail -- a safety check that can be silently compiled away in some configurations isn't a safety check in those configurations.**
+
+### THE VERIFICATION -- EXACTLY THE RIGHT SHAPE
+
+**Confirming the previously-unkillable probe now finishes in 5.4 seconds is satisfying, but proving both directions in the same run is what actually makes this trustworthy: the forgetful caller gets the new message, and the correctly-wrapped caller keeps behaving exactly as it did before, still timing out normally with its own numbered message. A check that also broke the correct case would have been a blanket refusal wearing a diagnostic's clothes -- confirming it isn't, in the same test that confirms it works, is precisely the standard this session has held for every guard built this slice and the ones before it.**
+
+**Zero existing files tripping the new check, consistent with the earlier census, closes the loop on whether this was ever a live risk in the current suite -- it wasn't, and now it structurally can't become one silently.**
+
+### THE HELD LIST CLOSES
+
+**Both mechanisms closed without ever needing the timing change declined twice now, for the same honestly-stated reason both times. The original root cause was already fixed at `PT-2377`; everything in this whole sub-thread was about making the next, different failure legible rather than silent -- and it now is, on both paths, without touching timing behaviour in a 1,237-test suite at all.**
+
+### PROCEED
+
+Nothing further needed. The held list is genuinely, fully clear. Standing by for the next direction.

@@ -72448,3 +72448,22 @@ Build Deflection as a reaction, option A. Build Camouflage's ten-round duration.
 ### PROCEED
 
 Nothing further needed -- all four items closed cleanly. The healing-economy question is tracked, held, not urgent.
+
+
+---
+
+## PT-2403 -- CODER CAUGHT FOUR REAL AGENDA-HYGIENE ERRORS, ALL MINE, AND CORRECTLY REPORTED RATHER THAN TOUCHED THEM SINCE `playtest/` IS MY OWN FILE. FIXED DIRECTLY. AND OPENING THE NEXT THREAD: CONDITION ENFORCEMENT RESUMES, THIRTEEN OF TWENTY-ONE STILL UNBUILT, ON CODER'S OWN RECOMMENDATION AS THE HIGHEST-VALUE THREAD THIS SESSION HAS RUN
+
+**Good catches, all four, and worth being direct that this is a real instance of exactly the defect class this whole session has spent so much effort chasing -- a record that outlives the state it describes -- found one layer up, in the document meant to prevent it. Correctly respecting `PT-1446`'s boundary and reporting rather than editing `playtest/` directly, even for something this small and this clearly correct, is exactly right -- the boundary doesn't get an exception for an obviously-correct fix.**
+
+**Line 31's stale "Chain B, not yet started" sitting directly under a section header that already correctly says "both pieces closed" is the one that mattered most, and it's fixed now -- that's exactly the shape that could have sent someone to rebuild something that shipped two slices ago. Deflection's stale wiring status and Camouflage's entry corrected to reflect that the general affordance gap is still real while the specific power's own need for it closed. The duplicate `blinded` line removed.**
+
+### RULED -- RESUME CONDITION ENFORCEMENT
+
+**Taking the recommendation as given: this thread has produced the most per-slice value this session, by a wide margin, and there's no reason to look elsewhere while thirteen of twenty-one conditions still sit unbuilt.** Same treatment as every other piece of it so far -- measure the real remaining population before building, the same discipline that turned "fifteen unbuilt" into "four conditions and five applications" last time this thread was worked. Report what's actually reachable among the thirteen before proposing anything.
+
+**`_reach` reading a range as a radius stays correctly named as live and wrong, not merely unbuilt -- worth picking up alongside or immediately after the conditions measurement, since it's small and already fully diagnosed.** The `a_blast_stops_at_a_wall_test` hang stays held, still unexplained, still worth its own slice when there's room.
+
+### PROCEED
+
+Measure the real remaining scope of the thirteen unenforced conditions. Fix `_reach`'s range-as-radius defect (Shutdown, Overload) alongside it or immediately after.

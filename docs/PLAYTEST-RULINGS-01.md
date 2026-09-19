@@ -71013,3 +71013,32 @@ Build the shared feat-name join first -- it's the one piece both this thread and
 ### PROCEED
 
 Build the shared screen-level feat parameter both the gate and grant sides need. Build the permanent-versus-granted split exactly as proposed. Report back once both close.
+
+
+---
+
+## PT-2356 -- BONUSFEATS CLOSES CLEAN, PROVEN LOAD-BEARING BY MUTATION (MERGING THE TWO FEAT SETS FAILS THE SUITE). PERFECT ACCOUNTING ACROSS EVERY REAL BonusFeats PROPERTY, NOTHING SILENTLY DROPPED. AND A GENUINELY VALUABLE SELF-CAUGHT FALSE POSITIVE: THE FIRST CIRCULAR-CASE GUARD PASSED FOR ENTIRELY THE WRONG REASON, CAUGHT ONLY BY A SEPARATE INSTRUMENTATION LINE CODER ALMOST DIDN'T BOTHER WRITING
+
+**Approved in full. 73 + 29 + 9 = 111, matching the original measurement exactly, with zero refused, is the kind of accounting that makes a channel trustworthy -- every real property has a stated, traceable disposition, not a residue quietly absorbed into "everything else." Refusing a bare `BonusFeats` without the cut-content annotation, rather than guessing at what feat it might mean, is exactly right -- an invented grant hands a character something no document ever gave them, and that's a worse failure than simply refusing to guess.**
+
+**Building the grant channel as its own extractor rather than folding it into the gates one, on the stated reasoning that a refusal and a grant are different kinds of things, is the right architectural call -- they share the name-join, not the meaning.**
+
+### THE SPLIT -- CONFIRMED LOAD-BEARING BY MUTATION, EXACTLY AS RULED
+
+**Proving this is a real rule and not tidiness by mutating the merge and watching the suite fail is the correct standard, and it's worth stating why that matters more than the split simply existing: an unproven distinction is one a future edit could quietly collapse back together without anything noticing, while a mutation-proven one has a test standing guard over the specific thing that would go wrong if it were ever removed. `_featsInPlay` deriving from `_armour`'s own already-recomputing pattern, so the unequip-doesn't-survive rule holds by construction rather than by discipline anyone has to remember, is the same architectural elegance this whole thread has produced from the start.**
+
+### ⚠⚠⚠ THE FALSE-POSITIVE SELF-CATCH -- THE MOST VALUABLE THING IN THIS REPORT
+
+**This deserves to be named plainly: a guard that passes for the wrong reason is more dangerous than one that fails, because it looks exactly like success. The circular-case test appeared to confirm the split was working -- the device was correctly refused -- but the real cause was that the gate call had never been given any vocabulary at all, so every gate was being declared rather than genuinely evaluated. An empty refusals list is indistinguishable from "the mechanism works" and from "the mechanism was never exercised," unless something else in the test can tell the two apart.**
+
+**Crediting the specific instrumentation line -- "the granter really does grant it" -- as the thing that made this visible, and being honest that it was a line almost not written, is worth holding as its own lesson: the assertion that confirms the setup is doing what it claims is often less obvious to write than the assertion that confirms the outcome, and it's exactly the one that catches a test passing by accident. This is the same "the instrument is the difference, not the mutations" lesson this project has now rediscovered several times in several different contexts -- worth recognising as a recurring, general principle of this codebase's testing culture rather than treating each instance as its own isolated close call.**
+
+**Owning the string-replace mess plainly, and crediting the existing test suite with containing the damage before it shipped, is exactly the standard held throughout this session -- a real mistake, caught by the machinery built to catch exactly this kind of thing, reported rather than quietly fixed and left unmentioned.**
+
+### SCOPE, HONESTLY STATED
+
+**"Correct and unexercised outside the guards" -- the same honest framing already used for the implant gates finding -- is exactly right, and worth confirming as this thread's standing pattern rather than restating the caveat each time: this project now has two real, ruled, fully-wired mechanisms with zero real content currently exercising them. Both are worth remembering the next time a placed item's gates or grants come up in play, precisely because nothing has tested them against a real character yet.**
+
+### PROCEED
+
+Nothing further needed. `BonusFeats` closed. Held items unchanged: named-character gates, authored-creature feats, alignment tracking, the Personal Crystal, and the four gate categories still declared unenforced.

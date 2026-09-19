@@ -72901,3 +72901,28 @@ Nothing further needed -- all three closed cleanly. Held list correctly untouche
 ### PROCEED
 
 Add `ability_penalty` to `SAVE_GATED`, fix all eight affected items, verify against the real prose for each. Block (B) stays correctly held, unchanged.
+
+
+---
+
+## PT-2420 -- ALL EIGHT CLOSE CLEAN, AND THE NAIVE FIX WAS CORRECTLY AVOIDED: THE SAME SAVE CLAUSE MEANS TWO DIFFERENT THINGS TO ITS TWO SIBLING EFFECTS -- DAMAGE HALVES, THE PENALTY NEGATES -- AND SIMPLY ADDING THE CATEGORY WITHOUT READING EACH PROSE WOULD HAVE SHIPPED A "HALVED PENALTY" NO ROW STATES AND THE RULES HAVE NO MEANING FOR. THE FIX ALSO SURFACED A GENUINE SECOND GAP (AN UNSPECIFIED SAVE TYPE), RESOLVED BY BORROWING FROM A SIBLING FAMILY WHOSE OWN TEXT STATES IT OUTRIGHT -- HONESTLY DISTINGUISHED AS STRONGER EVIDENCE THAN THE REASONING USED FOR THE MINES THEMSELVES
+
+**This is precise, careful work, and the thing that makes it precise rather than merely correct is catching what the obvious fix would have done wrong before building it that way.**
+
+⚠⚠⚠ **RECOGNISING THAT ONE `on_save` ACROSS BOTH SIBLING EFFECTS WOULD HAVE PRODUCED A VALUE NO ROW STATES AND THE RULES SYSTEM HAS NO DEFINED MEANING FOR IS THE MOST IMPORTANT CATCH IN THIS REPORT.** "Add `ability_penalty` to `SAVE_GATED`" reads like a complete instruction, and it would have shipped as one -- present on every row, passing a narrow test that only checked the save's presence -- while silently inventing a "halved penalty" outcome that exists nowhere in the source and has no rules meaning at all. Reading the actual outcome from each item's own prose instead, and building it so a future row stating something else produces a visible anomaly rather than a silently-guessed default, is exactly the difference between a fix that looks complete and one that actually is.
+
+**Verifying each DC individually against its own prose, with a guard confirming the mines' climbing values are read correctly rather than one DC applied uniformly, closes the loop on a fix that could otherwise have looked identical whether it read five real numbers or copied one five times.**
+
+### THE SECOND GAP -- RESOLVED WITH HONESTLY-GRADED EVIDENCE
+
+⚠ **Borrowing the save type from the sibling grenade/detonator family, rather than guessing or reasoning it out independently, is the right call given the identical underlying effect shape -- and explicitly noting in the record that this evidence (an item stating its save type outright) is stronger than the argument-from-substance the mines themselves were authored on, rather than letting both look equally certain, is exactly the epistemic honesty this session has asked for throughout.** A borrowed value with its confidence level stated plainly is worth more than the same value presented as though it were independently derived.
+
+### THE GUARDS -- CORRECTLY PRIORITISED
+
+⚠⚠ **Identifying the damage-stays-halved guard as the one that matters most is sharp test design, not just thorough coverage.** A shallow fix that set every save on these eight items to `none` would have passed every assertion checking the penalty alone while silently making three real sonic bursts un-halvable -- a genuinely different, unrelated-looking failure hiding behind a fix that appeared complete from one angle. Only a test that reads both outcomes of the same clause catches a fix that flattens one while fixing the other, and building that test before trusting the fix is precisely right.
+
+**The population sweep -- every current `ability_penalty` effect asserted to carry a save, so a ninth item arriving later without one fails here rather than landing unresistable in play -- is durable protection built from the same discipline as this whole thread's other extraction guards.**
+
+### PROCEED
+
+Nothing further needed -- all eight closed cleanly, verified against real prose throughout. Block (B) stays correctly held, unchanged.

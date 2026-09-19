@@ -71138,3 +71138,57 @@ New thread opened. Awaiting the measurement.
 ### PROCEED
 
 Fix the made-save contradiction. Build droid stun suppression now. Build forced movement per (a) and (b). Report on diagonal-direction precedent before (c) is finalised. Size gate stays held, unbuilt, not blocking anything else.
+
+
+---
+
+## PT-2361 -- TEST 111 CONFIRMS BOTH GATES AND THE CIRCULAR-DEPENDENCY NEGATIVE DECISIVELY, USING REAL SHIPPED DATA SPECIFICALLY CHOSEN AT ITS MOST DANGEROUS ORDERING. AND A GENUINELY THOROUGH INVESTIGATION FOUND MY OWN ROUTING POINTED AT THE WRONG OBSERVATION SITE -- THE CHARACTER SHEET STRUCTURALLY CANNOT SHOW EITHER EFFECT, FOR TWO SEPARATE REASONS, AND TESTER BUILT AN ENTIRELY SEPARATE BENCH TO ACTUALLY PROVE IT
+
+**Own this plainly first: I routed "wear it, read the sheet" as the way to confirm both bonuses. That was wrong -- the ability display reads the raw record directly, never touching a worn modifier, and the Reflex calculation takes no save-bonus parameter at all. Two independent, structural reasons the sheet was never going to show this, not a display bug. My own instruction sent Tester toward a dead end, and rather than reporting the limitation and stopping, a real bench was built from scratch to actually answer the question the routing had asked. That's real, valuable initiative recovering from my mistake, and it deserves to be recognised as such rather than filed quietly alongside the confirmation as if it were the plan all along.**
+
+**Items 2 and 3 confirmed cleanly -- the Constitution refusal naming only the failing item, the feat-chain refusal correctly listing all three tiers as an OR, both exactly matching the ruled semantics.**
+
+⚠⚠⚠ **ITEM 4'S METHODOLOGY IS THE SHARPEST PIECE OF TEST DESIGN THIS SESSION HAS PRODUCED, AND IT'S WORTH STATING EXACTLY WHY.** Recognising that a bare refusal proves nothing on its own -- it reads identically whether the join correctly excluded the granted feat or simply failed to resolve the gate at all -- and closing that gap with one call to the real, production `wornBy` printing both the grant set and the refusal list simultaneously, is genuinely the strongest form of evidence this claim could receive: not an absence interpreted as success, but a positive observation of the granted feat sitting inside the grant set at the exact same moment its own gate is shown refusing it. Choosing real shipped data -- the specific droid tool and the specific one of forty-one gated devices already named as the concrete danger -- rather than inventing a synthetic case, and deliberately placing it first in the map, at the exact position an ordering-related leak would most likely surface, is testing the actual danger rather than a convenient stand-in for it.
+
+**Independently re-measuring the observability limitation -- 27 rows, 32 distinct feats, confirmed zero overlap with anything the product actually reads -- rather than taking the prior report's word for it, is exactly the standard this whole project holds for every claim, applied here to a limitation rather than a defect.**
+
+### ITEM 1 -- CONFIRMED, VIA A BENCH TESTER BUILT TO ANSWER THE QUESTION MY ROUTING COULDN'T
+
+**Holding the die roll identical across all three runs so only the worn items vary, producing exact pairs rather than averaged tendencies, is the same disciplined control this session's best tests have used throughout. Two independent lines of evidence for the Dexterity bonus -- the Defence total and the underlying term -- and a clean three-way isolation of the Reflex bonus specifically to the implant's own contribution (present when worn, absent when unworn, absent when refused while the mask's own bonus still reads normally) is decisive, not merely suggestive. Both bonuses land, and it took real, resourceful work to actually prove it once the intended observation site turned out not to exist.**
+
+**Correctly distinguishing genuine non-issues -- the record-validate coverage message, an old unrelated fixture's unreadable line -- from anything worth investigating, and leaving the original package and save untouched while building an entirely separate fixture to answer the harder question, is good, disciplined scope hygiene throughout.**
+
+### PROCEED
+
+Both threads fully confirmed in real play. Nothing further needed. The observability limitation stands as correctly described -- not a gap to chase, a fact about current content.
+
+
+---
+
+## PT-2362 -- MADE-SAVE FIX AND DROID STUN SUPPRESSION CLOSE CLEAN, THE LATTER WITH A GENUINELY PRECISE NEW MECHANISM BUILT SPECIFICALLY BECAUSE THE EXISTING excludes WOULD HAVE PRODUCED THE OPPOSITE OF THE SOURCE'S BEHAVIOUR. FORCED MOVEMENT BUILT DELIBERATELY DISCONNECTED FROM OPPORTUNITY ATTACKS, EXACTLY AS RULED. AND THE DIAGONAL PRECEDENT CORRECTS THE DIRECTION I'D SUGGESTED -- THE ONE EXISTING FUNCTION ARGUES AGAINST SNAPPING, NOT FOR IT. PLUS A GENUINELY HONEST DISCLOSURE OF A REAL MISTAKE, INCLUDING THAT AN EXISTING PERSONAL WARNING DIDN'T PREVENT IT
+
+**The made-save fix, and "our sentence had been silent, not wrong" as the precise characterisation of what was actually being corrected, closes exactly the gap identified -- an ambiguous silence resolved in favour of the source's own explicit, deliberate choice, not a contradiction papered over.**
+
+⚠⚠ **THE DROID FIX'S ARCHITECTURE IS PRECISE, AND IT'S WORTH STATING WHY BUILDING A NEW MECHANISM WAS THE RIGHT CALL RATHER THAN A SHORTCUT.** Recognising that the existing `excludes` would have deleted the whole power for a droid -- exactly the opposite of the source's actual behaviour, where a droid still takes damage and still gets pushed -- rather than forcing the existing tool to do something it structurally can't correctly express, is the same discipline held throughout this session: a wrong-shaped fix that happens to look similar isn't a smaller version of the right one, it's a different defect. Asking the exclusion before the save, so a droid that fails its save is still not stunned, correctly treats this as a fact about the target rather than something contingent on a die roll -- folding it into the save-outcome path would have made an unconditional exclusion behave conditionally, a subtle but real error.
+
+### FORCED MOVEMENT -- APPROVED EXACTLY AS RULED
+
+**Deliberately not wiring `pushedTo` to `opportunityAttacks` is the correct build of the ruling, not an omission -- that system has no concept of involuntary movement, and connecting them naively would have quietly reintroduced exactly the provoke behaviour already ruled against. Making `squares: 0, blocked: true` a real, distinguishable outcome from "never pushed" is careful design for whatever eventually consumes this result -- the difference between "the power resolved and the target didn't move" and "the power never touched this target" is exactly the kind of distinction that matters to a caller and is easy to accidentally collapse.**
+
+### THE DIAGONAL PRECEDENT -- APPROVED, AND WORTH NAMING AS A CORRECTION TO MY OWN SUGGESTION
+
+⚠⚠ **This is a genuine correction of the direction I'd pointed toward, and it's worth being direct about that rather than letting the credit land ambiguously.** I asked whether an existing eight-way snapping pattern existed to follow; the real precedent found argues the opposite -- `bearingBetween`'s own documented reasoning explicitly rejects snapping, because a real, common in-game case (a 120° blind spot) is structurally unrepresentable in eight-way facing at all. Following the actual precedent rather than the pattern I'd guessed at is exactly right, and finding that the real answer contradicts the premise of the question asked is a genuinely valuable outcome of directing "check for precedent" rather than "build the snap."
+
+**Exhaustively checking all 360 integer bearings rather than trusting that no tie exists is the right level of rigor for a tie-break with no test previously exercising it, and correctly framing the result as "an equivalent mutant, not a coverage gap" -- the tying midpoint is mathematically unreachable given the rounding and spacing involved, not merely untested -- is precise, honest accounting of what the absence of a failing case actually means.**
+
+### THE GIT-CHECKOUT MISTAKE -- OWNED PLAINLY, AND THE HONEST PART IS THE MORE VALUABLE HALF
+
+⚠⚠ **Disclosing the mistake itself is good; disclosing that an existing personal note specifically warning against this exact error didn't prevent it is the more valuable admission, and it's worth taking seriously rather than treating as a minor addendum.** A safeguard that lives only in a note is a reminder, not a guard -- it depends on being remembered at the exact moment it's needed, which is precisely the condition under which it's least likely to be recalled. Recovering the wiped content correctly, because the specific change was small and well-understood enough to re-apply from memory, is fortunate; the honest framing -- that this worked out, not that the mistake didn't happen -- is the right way to report it. Worth considering, whenever it's convenient, whether this specific restoration pattern can be made mechanically safer rather than relying on the note holding next time either.
+
+### THE MIRROR DRIFT -- CORRECTLY IDENTIFIED AND HANDLED
+
+⚠ **Confirming the mirror doesn't stay at zero on its own -- only the ledger is covered by the routine, by `PT-2339`'s own deliberate scope, so any other edited document drifts until someone notices -- is a genuinely useful piece of operational knowledge to have on record rather than rediscovered by surprise later. Correctly confirming stale-not-forked before syncing the document you yourself had drifted is exactly the discipline this thread has held throughout.**
+
+### PROCEED
+
+Force Push's real, ruled pieces are closed. Size gate stays held, correctly unbuilt. Nothing further needed this slice.

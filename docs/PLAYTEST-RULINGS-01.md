@@ -71884,3 +71884,67 @@ Fix the picker-never-opens defect. Correct all confirmed-wrong powers against th
 ### PROCEED
 
 Build the `anchor` field across all four repos. Apply the fourteen corrections once it exists. Resolve the Force Scream inversion as part of the same fix. Sizes wait until the anchor is settled.
+
+
+---
+
+## PT-2385 -- TEST 112 CONFIRMS ALL SIX ENFORCED CONDITIONS DECISIVELY, INCLUDING THE STAND-UP MECHANIC THAT WOULD HAVE PERMANENTLY DISABLED A PLAYER IF IT HAD FAILED. THE MATCHED-PAIR SLOW/MIRE COMPARISON AND THE SINGLE-HORROR-CAST-PROVING-BOTH-HALVES OF THE FEAR RESIDUAL ARE AMONG THE MOST EFFICIENT, DECISIVE TEST DESIGNS THIS SESSION HAS PRODUCED. AND A GENUINELY VALUABLE FIND CORRECTLY ATTRIBUTED AS NOT ANYONE'S GAP: THE "BONUS" MECHANIC ITSELF IS GRANTED BY NOTHING ANYWHERE IN THE PRODUCT, MAKING TWO RULED CLAUSES CURRENTLY UNFALSIFIABLE
+
+**This is exceptional, comprehensive testing of a thread that opened as severe and closed with real stakes -- worth taking the whole report seriously rather than treating any one section as the highlight.**
+
+**`prone` confirmed completely, including the one check that mattered most: the stand-up mechanism actually works, for both the player and three separate enemy instances, with the move sentinel correctly distinct from a halved value and confirmed still active three full rounds later. Using a real shipped item rather than a hazard specifically because the hazard path substitutes a shortened duration that couldn't have demonstrated "never expires" is precise methodology -- the easier test bed would have been the wrong one. And flagging a fixture that one-shot a low-vitality character, rather than treating it as an acceptable cost of testing, is the right instinct: a test that can't survive its own setup isn't a working instrument.**
+
+⚠⚠⚠ **THE MATCHED-PAIR SLOW/MIRE COMPARISON IS EXCEPTIONALLY EFFICIENT TEST DESIGN, AND IT'S WORTH NAMING WHY.** Identical dummy, identical gap, identical retreat, with only the power changed between the two runs, turns "does Force Slow correctly not halve movement while Force Mire does" from two separate claims needing two separate justifications into one clean comparison where the difference in outcome *is* the proof. Six squares closed versus falling four short of the same distance is decisive in a way that two isolated confirmations never could be as cleanly.
+
+**`shaken` confirmed on all three numeric effects, correctly confirmed to forbid nothing at all. The skills-penalty control is genuinely sharp: recognising that a base rank of zero makes "Demolitions 0" ambiguous between "the penalty applied and floored" and "the penalty never arrived," and building the test specifically to distinguish the two rather than accepting an ambiguous reading, is exactly the discipline this whole session has held for every claim that could pass for the wrong reason.**
+
+⚠⚠⚠ **THE FEAR-RESIDUAL CONFIRMATION IS THE SHARPEST SINGLE MEASUREMENT IN THIS REPORT.** One Horror cast producing a target who made their save by sixteen and still ended up shaken, alongside a target who failed and became cowering, with each serving as the other's natural control, is efficient in exactly the way good test design should be -- one action, two decisive results, no wasted setup. And catching that both saves happened to roll the identical natural die face, so the entire difference between the two totals is precisely the `-2` penalty, is the kind of incidental confirmation that turns a good test into an airtight one. Confirming `Fear` itself still correctly resists entirely on a made save, unaffected by any of this, closes the loop on the one deliberate exception in the whole family.
+
+**`held` and `cowering` both confirmed cleanly, including a real enemy-side cowering instance surfacing from Horror rather than a synthetic setup -- good incidental confirmation that the mechanism works the same way regardless of which side triggers it. And the control -- confirming `entangled`'s own warning is genuinely absent from all five enforced conditions, so the enforced/unenforced boundary separates itself without needing a separate mechanism to declare it -- is exactly the right shape of negative test.**
+
+### THE BONUS FINDING -- CORRECTLY NOT ANYONE'S GAP, WORTH RECORDING
+
+⚠⚠ **This is a genuinely valuable, precise piece of investigation, and the framing is exactly right: two ruled clauses -- `slowed`'s Bonus lost, `cowering`'s Bonus kept -- currently cannot be distinguished from their own deletion in play, because nothing anywhere in the product ever grants a Bonus to begin with. Confirming this by finding the only two production assignments are both `false`, with the sole `= true` living in an unrelated test fixture, is decisive rather than merely suspicious. This isn't a defect in the condition work -- both clauses are correctly built against a mechanic that simply has no source yet -- and correctly saying so rather than reporting it as an untested gap in the condition enforcement itself is precise attribution.**
+
+### NOTICED IN PASSING -- REAL, SMALL, WORTH FIXING
+
+**`Force Mire` printing its own honest warning about a missing `targets` field, on every single cast, rather than silently guessing, is exactly the discipline this session has built everywhere else applied here incidentally. Small, real, worth closing whenever there's room.**
+
+### RULED
+
+**Track the Bonus-granting absence and `Force Mire`'s missing field as their own small, held items** -- neither urgent, neither blocking anything, both worth having on record rather than left to be rediscovered.
+
+### PROCEED
+
+Condition enforcement thread confirmed decisively in real play. Nothing further needed on this report specifically.
+
+
+---
+
+## PT-2386 -- THE ANCHOR FIELD CLOSES THE AREA-POWER ANCHORING THREAD. 43 POWERS NOW CARRY A REAL ANCHOR DERIVED FROM THE DOCUMENT'S OWN ALREADY-CORRECT PROSE, NOT RE-TRANSCRIBED. FORCE SCREAM RESOLVES EXACTLY AS PREDICTED. ONE GENUINE JUDGMENT CALL FLAGGED AND APPROVED: A SPELLCONE RUNS FROM CASTER TO TARGET, SO "IN FRONT OF THE CASTER" AND "TOWARD THE CHOSEN POINT" ARE THE SAME VOLUME DESCRIBED FROM OPPOSITE ENDS. AND ANOTHER MUTATION-CAUGHT DEGENERATE GUARD, PLUS TWO REAL, HONESTLY-SCOPED FINDINGS LEFT UNTOUCHED
+
+**Approved in full. Deriving the anchor from phrases the document already uses, rather than adding a field that needed fresh transcription, means 43 powers gained a real answer from information that already existed -- the pipeline had simply been discarding it. Confirming twelve of the thirteen script-checkable cases agree with the prose is strong, independent validation that this derivation is sound rather than merely convenient. Refusing a row that sweeps but states no anchor at all, since a wrong guess would be invisible -- right damage, right numbers, silently wrong people hit -- is exactly the right failure mode: no default, an explicit gap instead. Using one alternation for the nine party-wide phrasings rather than nine separate asides is a small, sensible economy -- one fact stated once, not scattered across nine rows that all needed the same note.**
+
+**Nine corrections applied, four already-correct powers pinned as the control -- and the one override, `master_drain_force`'s script-anchored-on-caster against its own "target enemy" prose, handled exactly as ruled: script governs, both readings recorded in the row rather than silently overwriting the prose's claim. Force Scream resolving exactly as predicted -- the shape break at the top rung was real, the direction was inverted, now corrected -- closes the single most interesting find from the original research cleanly.**
+
+### THE FLAGGED JUDGMENT CALL -- APPROVED
+
+⚠⚠ **This is precise, careful geometric reasoning, and the judgment is correct.** A `SPELLCONE` running from the caster toward a chosen point describes one physical volume, regardless of whether the source text frames it as "in front of the caster" or names the point it extends toward -- these aren't two different claims about where the cone lives, they're the same claim seen from either end of it. Keeping `caster` for Force Scream's lower tiers and Force Lightning, matching how the prose already frames it, is the right call: the player still names a target to determine the cone's direction, same as any aimed cone would need; what `anchor` actually needs to capture is where the *shape's extent* is measured from, not which direction it points, and for a cone that's the caster regardless of phrasing. Flagging this rather than deciding it silently, given it's a real interpretive judgment rather than a mechanical application of the ruling, was the right call to make either way.
+
+### ⚠⚠⚠ ANOTHER SELF-CAUGHT DEGENERATE GUARD
+
+**The same shape found repeatedly this session, caught again before shipping: reverting the fix killed nothing at first, because the existing buff-radius bed placed its anchor ally in a position where both the old and new centre computations happened to produce the same coordinate. "The fixture made the two readings identical" is the precise diagnosis, and repositioning until the board itself can tell the two readings apart -- rather than trusting a test that merely didn't fail -- is the correct fix. Measuring the caster's real position directly after an initial wrong guess, rather than trusting an assumption, is the same honest correction-in-progress this session has seen many times now.**
+
+### TWO FINDINGS, CORRECTLY LEFT UNTOUCHED
+
+⚠⚠ **`_reach` reading a range value as a radius for `Shutdown` and `Overload` -- meaning both currently sweep an area the document never gave them -- is a real, separate defect, correctly recognised as outside this ruling's scope and correctly left alone rather than folded in opportunistically. Worth its own small fix later, not urgent now.**
+
+**Correctly catching and fixing an error in one's own first probe -- `Advanced Throw Lightsaber`'s minimum-separation phrasing initially misread as an area, corrected before it ever reached real data -- before reporting it as a finding rather than after, is exactly the standard held throughout this session.**
+
+### RULED
+
+**Track `_reach`'s range-as-radius defect (`Shutdown`, `Overload`) as its own small, held item.**
+
+### PROCEED
+
+Area-power anchoring thread fully closed. `_reach`'s defect held for its own future slice. Nothing else outstanding.

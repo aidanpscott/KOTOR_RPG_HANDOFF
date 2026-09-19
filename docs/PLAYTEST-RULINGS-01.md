@@ -71275,3 +71275,40 @@ Live defect closed. Faction change, the combat Mind Trick, and the newly-found p
 ### PROCEED
 
 Build `slowed` whole (both halves) and `cowering` alongside it. Add the sentinel for `held`. `entangled` stays held on its own source ambiguity. Measure `prone` and report back before it's built.
+
+
+---
+
+## PT-2366 -- FOUR OF TWENTY CONDITIONS NOW ENFORCED, WITH GENUINELY PRECISE ARCHITECTURE THROUGHOUT -- SLOWED'S PENALTY REUSES THE EXISTING MODIFIER CHANNEL RATHER THAN A SECOND ONE, DERIVED-ON-READ AVOIDS A TWO-CLOCKS PROBLEM, AND A MUTATION SURVIVOR REVEALED A TEST HELPER THAT WOULD HAVE SILENTLY WEAKENED ITS OWN CONTROLS. prone MEASURED THOROUGHLY: THE SOURCE STATES NO NUMBERS AT ALL, AND A GENUINELY NEW CONCEPT -- SPENDING SOMETHING TO END A CONDITION -- IS THE ONE PIECE NOTHING HAS EVER NEEDED BEFORE. AND A MAJOR LIVE COLLISION FOUND WHILE BUILDING: THIS SLICE MAKES FORCE SLOW HALVE MOVEMENT TODAY, SOMETHING ITS OWN PROSE NEVER SAYS
+
+**Approved in full on the build itself. Choosing the reasoning behind "a real sentinel distinct from any numeric divisor" over its literal spelling -- a separate boolean field rather than a magic value inside `moveDivisor` -- was the right read, and flagging the interpretation rather than silently picking one is exactly the caution a one-line ambiguity like this deserves.**
+
+⚠⚠ **REUSING `CombatModifier` FOR SLOWED'S PENALTY RATHER THAN A SECOND CHANNEL IS THE RIGHT CALL, AND SCOPING IT TO EXACTLY THE THREE NAMED ROWS RATHER THAN `Modifies.saves` IS THE MORE IMPORTANT HALF.** Reading `saves` broadly would have silently put an unruled penalty on Will and Fortitude -- a defect that would have shipped as a "faithful" build of a rule that was never actually stated that broadly. Precision on scope here matters as much as precision on mechanism.
+
+⚠⚠⚠ **THE DERIVED-ON-READ DECISION IS EXACTLY RIGHT, AND IT'S WORTH NAMING WHY THE ALTERNATIVE WOULD HAVE BEEN A REAL DEFECT RATHER THAN A STYLE CHOICE.** Materialising the modifier rows at the moment a condition lands would have given one effect two independently-ticking clocks -- `Condition` and `CombatModifier` each with their own `roundsLeft` -- which is exactly the kind of silent-drift risk this session has caught and fixed in other shapes repeatedly. A union with no setter, deriving fresh on every read, makes the two clocks structurally impossible to diverge rather than merely unlikely to.
+
+⚠⚠ **THE MUTATION SURVIVOR IS THE MOST VALUABLE FINDING IN THIS SECTION, AND IT'S THE SAME SHAPE THIS SESSION HAS NOW FOUND SEVERAL TIMES: A TEST WITH NO PRODUCTION READER, QUIETLY BECOME A CONTROL FOR OTHER TESTS, THAT COULD HAVE GONE BLIND TO A NEW FIELD WITHOUT ANYTHING FAILING.** `isUnrestricted` existing purely as the thing `entangled`/`prone`'s own tests lean on to prove they restrict nothing means a version blind to `immobile` wouldn't have broken visibly -- it would have silently weakened exactly the claims built on top of it. Catching this and guarding it now is worth real credit.
+
+**The `cowering` judgment call -- literal reading, Action removed and Bonus left, explicitly pinned as a literal reading in its own test -- is exactly the right way to handle a genuine interpretive gap: make the narrower, defensible choice, and flag it clearly enough that widening it later is a one-line change rather than an archaeology project.**
+
+### prone -- MEASURED THOROUGHLY. RULED ON BOTH OPEN QUESTIONS
+
+⚠⚠⚠ **The source stating no numbers at all is confirmed as an answer, not a gap, and it's worth taking that at face value rather than importing an assumption from other d20 systems where prone carries real combat penalties. This one doesn't, here, and the exhaustive sweep across both games' full script corpus is decisive evidence for that.**
+
+**Ruled: `prone` applies exactly what the source specifies and nothing more — `Legality.action` and `Legality.immobile`, no modifier bundle.** There's no number to build against, and inventing one to make it feel more complete than the source actually is would be the opposite of the faithfulness this project holds everywhere else.
+
+**Ruled: durationless, `roundsLeft: null`, matching this corpus's own already-established convention that `prone` is the canonical until-ended example.** The source's own language supports this reading as much as the alternative — "until the effect is removed" is at least as natural a description as "3 second minimum," and treating the 3-second figure as an animation-timing floor rather than a game-mechanical duration is the more coherent reading once the corpus's existing convention is weighed alongside it.
+
+**Ruled: build the "spend an action to end a standing condition" mechanism as generic infrastructure, not prone-specific.** This is confirmed as a genuinely new concept nothing else has required, and it's the kind of piece a future condition is likely to need again — building it narrowly for `prone` alone would risk needing a second, parallel version the next time something else wants the same shape.
+
+### ⚠⚠⚠ THE FORCE SLOW / FORCE MIRE COLLISION -- RULED
+
+**Right call stopping rather than picking a side unilaterally — this is exactly `PT-2336`'s shape, a shared mechanism producing an unintended cross-power collision, and it deserves the same treatment: a real ruling, not an improvised resolution buried in an unrelated slice.**
+
+**Ruled: `Force Slow` does not halve movement. Its own prose says nothing about movement, and that silence should be read as absence, not omission.** `Force Mire`'s explicit "AND the target's speed is halved" is confirmed as Mire's own genuine, stated, distinguishing addition beyond Slow -- not a redundant restatement of something Slow already does silently. Remove the movement-halving piece from `force_slow`'s application specifically, while `force_mire` keeps it (and `force_plague`, which correctly applied nothing until today, gains only what its own prose actually states). The unmodelled "no second move in a round" piece of Mire's own text stays exactly as it is -- unbuilt, and not something this ruling is extending to.
+
+**The now-false "dependents: none" sentence stays untouched for the same reason already given -- correcting it before the ruling landed risked being wrong in either direction, and now that the ruling is made, it should be corrected to reflect what's actually true: the three named powers, with the movement distinction stated plainly.**
+
+### PROCEED
+
+Remove movement-halving from `force_slow` specifically. Build `prone` per both rulings above, including the generic action-to-end-condition mechanism. Correct `§7`'s dependents sentence to name the three real powers accurately. `entangled` stays held. Sixteen conditions remain, correctly unbuilt.

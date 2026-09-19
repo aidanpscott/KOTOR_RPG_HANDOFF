@@ -71965,3 +71965,69 @@ Area-power anchoring thread fully closed. `_reach`'s defect held for its own fut
 ### PROCEED
 
 Nothing in flight. Lesson recorded for future reference.
+
+
+---
+
+## PT-2388 -- OWNER OPENS FIVE ITEMS FROM THE HELD LIST AT ONCE. SAME TREATMENT AS EVERY OTHER THREAD THIS SESSION -- MEASURE FIRST, EACH ONE, BEFORE PROPOSING OR BUILDING ANYTHING
+
+**Five separate threads, dispatched together. Each stands on its own -- report back on each individually, not as one combined finding.**
+
+### 1. `blinded` -- THE SQUARE PICKER
+
+**Unblocked by the just-closed target-selection thread.** `PT-471`: the player must name a square, not a creature -- the whole point is that a blinded character cannot be handed a creature picker. Measure what UI infrastructure exists for naming a square directly (the board/cursor system, anything already used for placement or movement targeting) before building anything new. Once the picker exists, the three currently-blocked effects (Dexterity loss, auto-fail sight checks, flat-footed treatment) become buildable alongside the already-live `-4` attack penalty.
+
+### 2. PARALYZE -- THE REAL PREREQUISITE IS NOW DONE
+
+**Held originally because condition enforcement for the other conditions "has to come first" -- that thread closed.** Re-measure the three real, still-open questions from the original ruling: the save-downgrade shape, seconds-to-rounds rounding, and the percentage-plus-save interaction. Confirm `paralysed` as its own condition (already ruled, not `helpless` reached by a different door) can now actually be built against the real enforcement machinery, and report what each of the three open questions actually requires before proposing anything.
+
+### 3. CHAIN B -- OVERLOAD / SHUTDOWN
+
+**Larger than Mire/Root was.** Needs `PowerRecord.saveKind` widened to carry two simultaneous saves, plus an entirely unmodelled weapon-inert mechanic. Measure the real source behaviour for both powers, what the two-save shape actually requires structurally, and what "weapon-inert" means mechanically (duration, what it disables, how it interacts with an unarmed fallback if one exists) before proposing a build.
+
+### 4. FORCE BODY
+
+**A different resource-spending paradigm -- paying Force costs with health instead of the pool.** Measure the real source mechanic (three instances of it exist per the earlier framing) and how this project's current cost-spending machinery would need to change to support a power that spends a different resource than every other power in the corpus. This is architecturally unlike anything built so far -- confirm the real shape before assuming it's a small variant.
+
+### 5. DEFLECTION
+
+**Entirely unbuilt mechanic.** `Force Deflection` and `Force Redirection` both depend on it; zero consumption points exist anywhere in the current codebase. Measure what the source actually specifies deflection does mechanically (redirects an attack, negates it, something else), whether K1 and K2 diverge, and what in the current combat-resolution pipeline would need a new hook to support it.
+
+### PROCEED
+
+Five new threads opened. Report back on each measurement individually before any proposals or builds.
+
+
+---
+
+## PT-2389 -- FIVE MEASUREMENTS PROCESSED. TWO GENUINE CORRECTIONS TO THE AGENDA'S OWN FRAMING (BLINDED'S REAL GAP IS A MODE NOT A MECHANISM; FORCE BODY IS A COST MODIFIER, NOT A DIFFERENT PAYMENT PARADIGM). ONE HONEST SELF-CATCH OF THE SAME STALE-LABEL TRAP FALLEN INTO TWO SLICES AGO, THIS TIME CAUGHT BEFORE IT MISLED ANYTHING. AND TWO THREADS (CHAIN B, DEFLECTION) CONFIRMED AS GENUINE DESIGN QUESTIONS WITH NO SOURCE TO MEASURE AT ALL
+
+### 1. `blinded` -- APPROVED TO BUILD
+
+**"Zero tap infrastructure" being confirmed no longer true, with the pixel-to-square conversion already correctly owned by one place and ten real pointer sites already wired, means this is a much smaller, better-de-risked piece of work than the original framing suggested.** Build the attack-naming mode on top of what already exists, plus the keyboard cursor equivalent per `PT-1443`'s standing accessibility principle. Proceed.
+
+### 2. PARALYZE -- APPROVED TO BUILD, SMALLER THAN FRAMED
+
+**Confirming `paralysed` is authored rather than sourced, with the Stasis family as the nearest real analog, and finding the save-downgrade shape is not just answered but already shipping (`condition_on_save`, proven since `PT-2229`, and our own Stasis data already matches the source description exactly) closes the most important of the three original questions before any building starts.** Percentage-plus-save confirmed already built and guarded (`PT-2170`). Build `paralysed` now using the same, already-proven `condition_on_save` shape the Stasis family already demonstrates works correctly.
+
+**The non-dividing-duration question stays open but correctly deferred -- not resolved, but honestly reported as having nothing concrete to test against right now.** No case was found where it would actually bite; hold it until a real instance surfaces rather than inventing a hypothetical to resolve preemptively.
+
+### 3. CHAIN B -- NOT A MEASUREMENT QUESTION. REDIRECTED TO A DESIGN PROPOSAL
+
+⚠ **Confirming neither `Overload` nor `Shutdown` exists in either game's source at all, extending `PT-2213`'s own already-recorded observation, correctly reframes this: there is nothing to be faithful to, so continuing to ask "what does the measurement say" would be asking the wrong question of this thread specifically.** This needs a real design decision, not more research.
+
+**Propose, don't build yet: two or three concrete shapes for the two-simultaneous-saves structure, and two or three concrete shapes for what "weapon-inert" actually means mechanically -- duration, what it disables, how it interacts with any unarmed fallback that exists.** Bring genuine options with their real tradeoffs stated, not a single default -- this is being decided from nothing, and it deserves the same care as any other from-scratch design choice this session has made.
+
+### 4. FORCE BODY -- CORRECTED AND APPROVED TO BUILD
+
+⚠⚠ **The agenda's own framing was wrong, and the correction is worth taking seriously rather than shrugging off as a labelling error.** This was never "a different resource-spending paradigm" -- it's a cost modifier with a second sink: a genuine split payment between two resources at tier 1, and a real, decreasing total-cost discount at higher tiers, stated explicitly in the source's own words. That's architecturally much closer to machinery already built this session than a novel paradigm would have been. Build it as exactly that: a cost modifier consulted at the same site every other cost calculation already goes through, not a parallel spending mechanism. Proceed.
+
+### 5. DEFLECTION -- NOT A MEASUREMENT QUESTION EITHER. REDIRECTED TO A DESIGN PROPOSAL
+
+⚠⚠⚠ **Catching the `FORCE_POWER_FORCE_REPULSION` label trap before it could mislead the analysis -- the same shape as the `FORCE_POWER_SLEEP`/Mass Stasis trap fallen into two slices ago, this time caught in advance rather than walked into -- is worth real credit. Recognising and avoiding a mistake already made once, in a fresh instance of the same pattern, is a better outcome than never having made the mistake at all -- it proves the earlier lesson actually generalised.**
+
+**Confirming both powers are permanent, always-on passives rather than cast effects, and that "Deflection" is a roll the combat system doesn't yet have rather than an effect needing a consumption point, correctly reframes the whole thread.** This needs the same treatment as Chain B: a real design proposal for how a Deflection roll would integrate into the existing combat-resolution pipeline (where it's checked, what it modifies, how Redirection's `+3` layers onto it), not further measurement -- there's nothing more in the source to find.
+
+### PROCEED
+
+Build `blinded`'s attack-naming mode plus keyboard cursor. Build `paralysed` against the already-proven `condition_on_save` shape. Build Force Body as a cost modifier. Propose (don't build) concrete design options for Chain B's two pieces and Deflection's roll integration -- report back before either gets built.

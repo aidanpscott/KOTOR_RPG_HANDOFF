@@ -71042,3 +71042,99 @@ Build the shared screen-level feat parameter both the gate and grant sides need.
 ### PROCEED
 
 Nothing further needed. `BonusFeats` closed. Held items unchanged: named-character gates, authored-creature feats, alignment tracking, the Personal Crystal, and the four gate categories still declared unenforced.
+
+
+---
+
+## PT-2357 -- APPROVED: AUTHOR REAL TEST CONTENT SO ITEM GATES AND BONUSFEATS GET THE SAME PROVED-TO-SEEN STEP EVERY OTHER SYSTEM THIS SESSION HAS RECEIVED
+
+**Exactly right, and worth acting on rather than leaving both threads sitting at "correct and unexercised" indefinitely. Every other system this session -- Shields, Grenades, Uncanny Dodge, the stacking fix -- got confirmed in real play, not just by its own guards. These two are the only ones that haven't, purely because nothing in the shipped content happens to exercise them, not because anything about the fix is in doubt.**
+
+### RULED -- AUTHOR ONE CHARACTER, TWO ITEMS
+
+**Author a test character wearing one gated implant (exercising the player-seam Constitution-and-feat enforcement from the implant gates thread) and one feat-granting item (exercising the permanent/granted split from BonusFeats).** One character, two items, chosen to cover as much of both mechanisms as a single fixture reasonably can -- the implant for the gate side, a mask or tool-slot item for the grant side, matching the categories already measured as the largest real populations in each thread.
+
+Once authored, route Tester at it the same way every other piece of real content got its play-tested confirmation this session.
+
+### PROCEED
+
+Author the content. Report back once it exists so a real test can be routed.
+
+
+---
+
+## PT-2358 -- THE TEST BED CLOSES CLEAN, DELIBERATELY PROVING BOTH DATA PATHS AT ONCE AND ALL THREE GATE STATES BEFORE BEING CALLED DONE. AND A GENUINELY MATURE FINDING, CORRECTLY NOT WORKED AROUND: THE GRANT MECHANISM IS EXERCISED BUT ITS EFFECT HAS NOWHERE TO LAND, BECAUSE NO CATALOGUE ITEM GRANTS ANY FEAT THIS PRODUCT ACTUALLY READS -- AND INVENTING ONE TO FIX THAT WOULD BE CONTENT, NOT A FIXTURE
+
+**Approved in full, and this is careful fixture design worth real recognition on its own terms. Gating the implant by two independent mechanisms specifically so each can be verified separately, and confirming all three states -- authored, Constitution-lowered, feat-removed -- each failing on the correct, distinct reason before calling it done, is exactly the rigor a fixture meant to stand in for future rulings deserves. Committing the generator alongside the save, rather than leaving the save as a one-off hand-edited artefact, means this bed survives the next time a number in either thread moves.**
+
+⚠ **DELIBERATELY MAKING BOTH DATA PATHS PROVE THEMSELVES AGAINST THE SAME VALUE IS PRECISE TEST DESIGN.** The mask's bonus from the catalogue and the implant's from the blueprint's own save table, both stated as the identical `+2 reflex`, means a future divergence between the two paths becomes visible by disagreement rather than needing a separate check built to look for it. That's the same instinct behind the Uncanny Dodge test holding dice identical across runs -- controlling for everything except the one variable actually under test.
+
+### THE OBSERVABILITY LIMIT -- CORRECTLY FOUND, CORRECTLY NOT WORKED AROUND
+
+⚠⚠⚠ **This is exactly the right instinct, and it's worth stating plainly why inventing a catalogue row to fix it would have been the wrong move even though it would have made the test more complete.** A test fixture exercises what already exists; a new catalogue item granting `uncanny_dodge_1` would be a real design decision about what content this product ships, made unilaterally to satisfy a test rather than because it was ruled or asked for. Correctly distinguishing "the mechanism is exercised, its effect has nowhere to land" as a coverage fact rather than a defect, and correctly declining to blur the line between testing infrastructure and content authorship, is the same discipline this project has held everywhere else applied to a genuinely tempting shortcut -- the fixture would have looked more impressive with an invented item in it, and it's better honest and limited than impressive and overstepping.
+
+**Confirming `wornBy` genuinely returns the granted feats directly, rather than inferring the grant works from the absence of an error, closes the loop on what actually can be claimed here -- the mechanism is proven exercised, the limit on what's observable is proven real, not merely likely.**
+
+### RULED -- ROUTE EXACTLY AS PROPOSED, PLUS THE CIRCULAR-DEPENDENCY NEGATIVE
+
+**Coder's own scoped list is exactly right and needs no adjustment. The addition of the circular-dependency negative check is the most valuable single item on it -- `PT-2355`'s guard against a granted feat opening an unrelated item's gate has only ever been verified by synthetic mutation testing; this is its first chance to be confirmed in real play, on a fixture built specifically to be able to show it either way.**
+
+### PROCEED
+
+Routing Tester now with the four checks as scoped: both bonuses landing on wear, the Constitution-specific refusal, the feat-chain-specific refusal, and the circular-dependency negative.
+
+
+---
+
+## PT-2359 -- FORCE PUSH OPENED AS THE NEXT DEDICATED BIG-SYSTEM THREAD. SAME TREATMENT AS SHIELDS, GRENADES, ITEM GATES, AND BONUSFEATS -- MEASURE FIRST, ALL THREE GAPS TOGETHER
+
+**Opens the same way every other thread at this scale has. The prior framing stands: Force Push currently ships identically for every target regardless of kind -- stunned, 1 round, `1d6` per two Force levels capped at `12d6`, Reflex save -- and was correctly held rather than patched piecemeal, since the droid-suppression gap is the smallest of three real restrictions and building it alone would model the narrowest slice while the power's actual core mechanic stayed prose.**
+
+### DIRECTED
+
+**Measure all three together before proposing or building anything:**
+
+  · **Forced movement on a failed save** — the power's actual central effect, currently entirely unmodelled. What does the source actually specify (distance, direction, any interaction with terrain or other creatures in the push's path, whether a creature pushed into another creature or an obstacle takes anything extra)? This is the real mechanic Force Push is supposed to be, not a secondary feature.
+  · **The size-based viability gate** — what size classes are affected or excluded, and how is size currently represented (or not) anywhere a power's targeting could consult it?
+  · **The droid distinction** — pushed but not stunned for droids, organics get both. Confirm this is still accurately described, and whether it's purely a suppress-the-stun question or whether the push distance/magnitude itself differs by target kind too.
+
+Also confirm: is `_applyPower` (where the prior ruling correctly placed this power's real verdict, not `mayTarget`) the only site that needs to change, or does modelling actual forced movement touch anything else already built (positioning, opportunity attacks, terrain checks) that doesn't currently exist for any other power either?
+
+Report the complete picture before proposing anything. Given three genuinely different kinds of gaps, expect this to surface real sub-questions needing individual rulings, the same shape every other big-system thread has taken.
+
+### PROCEED
+
+New thread opened. Awaiting the measurement.
+
+
+---
+
+## PT-2360 -- FORCE PUSH MEASURED: THE DISTANCE WAS ALREADY AUTHORED, JUST MISSING A COLUMN. THE SIZE GATE IS FOUR CONDITIONS OVER A WHOLLY UNMODELLED CONCEPT, WHICH IS WHY mayTarget WAS CORRECTLY PERMISSIVE ALL ALONG. THE DROID QUESTION IS FULLY SETTLED -- PURELY THE STUN, NOTHING ELSE DIFFERS. AND A REAL CONTRADICTION FOUND: THE SOURCE EXPLICITLY REMOVES THE PUSH ON A MADE SAVE, AND OUR OWN PROSE IS SILENT ON IT
+
+**Every finding here is precise and worth taking at face value. Confirming the push distance is already stated in `FORCE-POWERS-01`'s own prose, and the gap is a missing structured column rather than an unauthored value, correctly separates "needs a ruling" from "needs a field" -- these are different kinds of work and this measurement kept them apart. Confirming the engine itself provides nothing beyond "2 squares, directly away" -- `EffectForcePushed()` takes no parameters at all -- draws the honest line between what's measurable from source and what would be a new ruling with no source to appeal to.**
+
+⚠⚠⚠ **THE MADE-SAVE CONTRADICTION IS THE MOST IMPORTANT FIND IN THIS REPORT.** A developer's own comment, preserved in the shipped script, explicitly stating the push was deliberately removed on a successful save is about as direct a source statement as this corpus ever gets, and our own prose being silent on exactly this point -- rather than contradicting it outright -- is the quieter, more dangerous kind of gap: not wrong, just unresolved, and easy to build around incorrectly without anyone noticing the silence was ever there. Correctly connecting this to `PT-2220` having already handled the damage half of the same clause narrows this to exactly the one piece still open.
+
+### RULED -- NO PUSH ON A MADE SAVE
+
+**Match the source exactly: on a made save, half damage only (already built), no push. This isn't a new design call -- it's resolving our own prose's silence in favour of what the developer explicitly, deliberately did, with their own stated reason on record. Update the sentence so it states this rather than leaving it open to be read either way.**
+
+### THE SIZE GATE -- HELD, CORRECTLY, AS ITS OWN SEPARATE QUESTION
+
+⚠⚠ **Reframing this as four conditions over a concept that doesn't exist anywhere in the corpus, rather than one small check, is the right correction, and it changes the shape of the decision.** Three of the four conditions are appearance or movement-type facts modelled in no form at all -- this was never "should Force Push gain a size check," it's "should creature size become a represented concept in this product," which is a much bigger question than one power's viability gate and shouldn't be answered as a side effect of fixing Force Push. **Hold it, unbuilt, the same way named-character gates were held** -- `mayTarget` stays correctly permissive, since there's genuinely no fact anywhere to refuse on, and this doesn't block anything else in this thread from closing.
+
+### RULED -- DROID STUN SUPPRESSION: BUILD NOW
+
+**Fully settled by the source, exactly as measured: identical push, identical damage, the stun alone suppressed for droids. This is the one piece that's small, live, and independent of everything else here -- build it now, adding the exclusion so `force_push`'s `stunned` condition doesn't apply to a droid target.**
+
+### THE THREE RULES QUESTIONS
+
+**(a) Forced movement does not provoke.** A creature that didn't choose to move shouldn't be punished by a mechanic built to punish the choice to move -- `§10`'s opportunity-attack machinery already models a voluntary decision to expose oneself, and a push is the opposite of that. Extend `§10`'s existing preventer logic (or the equivalent point) to recognise involuntary movement as its own, separate category rather than something indistinguishable from walking away.
+
+**(b) A blocked path stops the creature at the last open square, not the full nominal distance.** If the very first square is already occupied or impassable, the creature simply doesn't move -- but the rest of the power (damage, stun for an organic target) still resolves normally regardless. This is the simplest, most common convention for involuntary displacement and needs no new mechanism beyond what already exists to check occupancy.
+
+**(c) Diagonal direction — check for existing precedent before ruling.** Report whether anything else in this codebase already computes a direction between two squares and snaps it to one of the eight compass directions (`PT-1588`'s own four-keys-versus-eight-offsets note suggests something adjacent may already exist). If a pattern already exists, follow it rather than inventing a second one; if nothing does, this needs its own small ruling and I'll make it once I know what's actually available to build against.
+
+### PROCEED
+
+Fix the made-save contradiction. Build droid stun suppression now. Build forced movement per (a) and (b). Report on diagonal-direction precedent before (c) is finalised. Size gate stays held, unbuilt, not blocking anything else.

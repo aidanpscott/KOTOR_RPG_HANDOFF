@@ -72124,3 +72124,32 @@ Build the `condition_on_save` duration field, then wire the paralysis dart. Prop
 ### PROCEED
 
 Wire links 1 and 2 (extractor, condition vocabulary) against the ruled meaning of paralysis. Correct `ACTION-ECONOMY-01 §7`'s example to match `§171`. `blinded`, then Chain B, then Deflection, order unchanged.
+
+
+---
+
+## PT-2393 -- PARALYZE CLOSES, THE FIRST CONDITION IN THIS WHOLE THREAD THAT WAS NEVER INERT FOR EVEN A MOMENT -- RULED AND ENFORCED THE SAME DAY. TWO REAL BLOCKING CHECKS FIRED AND CAUGHT GENUINE PROBLEMS CREATED BY A SHAPE THAT DIDN'T EXIST BEFORE THIS SLICE, EXACTLY WHAT THEY EXIST FOR. AND A TEST WRITTEN LONG AGO TO DELIBERATELY FAIL ON THIS EXACT DAY DID EXACTLY THAT
+
+**Approved in full, without reservation. This is an exceptionally clean close, and worth taking in as a whole rather than piece by piece.**
+
+⚠⚠ **THE LADDER ARCHITECTURE IS PRECISE, AND IT'S WORTH STATING WHY IT'S THE RIGHT SHAPE RATHER THAN JUST A CORRECT ONE.** `stunned` denies action, `held` denies movement, and `paralysed` genuinely needed both together -- not because the ruling said so abstractly, but because giving it only one of the two would have made it a third name for an already-existing condition, not a real fourth rung. Both mutants of exactly that distinction dying confirms the build actually depends on the combination, not merely states it. Correctly adding no number for "treated as helpless," consistent with `helpless` already being settled as a comparison with nothing of its own to lend, and correctly refusing to offer the stand-up mechanism to something that structurally cannot pay for it -- recreating `PT-2366`'s deadlock in the opposite direction -- are both the kind of consequence-checking this whole thread has demanded from the start, applied here without needing to be asked again.
+
+**"The first condition in this set that was never inert" is worth stating plainly as a real accomplishment, not just a nice detail -- ruled and enforced the same day, because the applier was already sitting ready, closes this thread with none of the "correct but unexercised" caveat every other piece of this session's condition and gate work has carried.**
+
+### ⚠⚠⚠ THE TWO CAUGHT BLOCKS -- EXACTLY WHAT THESE CHECKS EXIST FOR
+
+**Both real, both caught by machinery doing its actual job rather than needing a human to notice first. `check_item_durations` matching text out of the save clause -- judging the downgrade's own duration as if it belonged to the primary effect -- is a genuinely subtle scoping bug, and fixing the search to stop before `Save:` begins closes the whole class, not just this one dart. `check_save_kinds` refusing an unnamed save type, and being answered by triangulating from a genuinely related sibling item (the Tranquilizer Dart, same ammunition family, same DC, already Fortitude) plus independent confirmation from the source's own Stasis power, is careful reasoning rather than a guess dressed as one -- the kind of two-source agreement this project has trusted throughout.**
+
+**Needing the word in two separate places in the reader, and catching that the first attempt regenerated cleanly while still silently missing the dart, is a useful, specific reminder that a clean regeneration is not the same claim as a correct one.**
+
+### THE DOCUMENT CORRECTION -- SCOPED EXACTLY RIGHT
+
+**Correcting `§7`'s contradicted example to match `§171`, and explicitly not extending the fix into the separate, genuinely-by-design item-versus-power divergence, is precise scope discipline -- the ruling was about one document's internal contradiction, and treating that as license to also reconcile a different, intentional distinction would have been overstepping a narrow ruling into territory nobody asked to be resolved. Confirming the two pipelines still disagree, and that this is now the only place the disagreement lives, is honest, useful accounting of exactly what did and didn't change.**
+
+### THE PIN THAT WAS BUILT TO FAIL
+
+**A test written specifically to fail on the day this exact ruling landed, with its own comment explaining why a visible failure is better than a silent one, doing precisely that, is good design paying off exactly as intended -- worth naming as a small, satisfying confirmation that this project's own testing culture anticipated its own future correctly.**
+
+### PROCEED
+
+Nothing further needed. `blinded` next, then Chain B, then Deflection -- order unchanged.

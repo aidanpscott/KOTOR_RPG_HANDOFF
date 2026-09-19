@@ -72250,3 +72250,92 @@ Chain B next, then Deflection, order unchanged. Report back on the real source's
 ### PROCEED
 
 Nothing further needed on Force Body -- fully confirmed. The latent-divergence risk stays tracked, not urgent.
+
+
+---
+
+## PT-2397 -- CASTING COSTS THE WHOLE ROUND: DECISIVE, CONVERGING SOURCE EVIDENCE ACROSS SIX INDEPENDENT SIGNALS, WITH THE HONEST LIMIT NAMED PLAINLY (AI PATH ONLY, PLAYER BUDGET NEEDS LIVE OBSERVATION). CHAIN B CLOSES, BOTH PIECES, WITH GENUINELY CAREFUL ARCHITECTURE. AND CODER PROACTIVELY FOUND A REAL DEFECT IN THEIR OWN JUST-APPROVED FORCE BODY WORK -- INSIDE THE EXACT CLAIM ALREADY ROUTED TO TESTER -- AND FLAGGED IT BEFORE ANYONE COULD BE SENT TO TEST SOMETHING ALREADY KNOWN WRONG
+
+### THE ACTION-COST MEASUREMENT -- DECISIVE, RULED
+
+**Six independently converging signals -- the single-decision-per-round event, the universal `ClearAllActions()` opening every path through it, the strictly exclusive talent-or-attack structure repeated across the grenade, Jedi-support and boss routines in both games, the complete absence of any action-cost column or passive-power exception in `spells.2da`, K2's identical structure, and `bInstantSpell`'s own existence implying an ordinary non-instant case -- is about as strong a case as source measurement produces. Correctly resolving the one apparent counter-example (Malak's queued-then-attacking reaction) by tracing it to the same `ClearAllActions()` that opens every other decision, rather than treating it as a genuine exception, closes the loop properly.**
+
+⚠⚠ **THE HONEST LIMIT IS EXACTLY RIGHT, AND IT'S WORTH TAKING SERIOUSLY RATHER THAN TREATING THE OVERALL CONFIDENCE AS COVERING IT.** All six signals are the AI's own decision path; the player's input goes through a compiled queue this source can't read, and correctly saying so -- rather than letting six strong AI-side signals imply a seventh, unmeasured claim about the player -- is precisely the discipline this whole project has held everywhere else. The stand-down-on-pending-player-action evidence is genuinely the strongest indirect signal available, and naming it as indirect rather than as closing the question is the right call.
+
+### RULED -- CASTING COSTS THE ACTION, CONFIRM THE PLAYER SIDE IN PLAY
+
+**Build it: casting a Force power spends the Action, the same way an ordinary attack does.** This directly corrects the live defect already found (a Jedi currently able to cast unlimited powers per turn, limited only by the pool) against decisive, converging source evidence. Since the player-specific claim genuinely can't be closed from source alone, route this to Tester once built -- confirm in the running game that a cast actually consumes the Action the same way an attack does, closing the one gap measurement couldn't reach.
+
+### THE FORCE BODY DURATION -- CLOSES THE HELD ITEM
+
+**A single, clean base value (30 seconds) shared identically by all three tiers, converting exactly to the already-known 10-round figure under `PT-24`, closes the duration-as-literal item properly -- it now has a real source number to become a real field from, rather than needing one authored from nothing.** Build the field.
+
+### ⚠⚠⚠ THE SELF-FOUND FORCE BODY DEFECT -- EXACTLY RIGHT TO FLAG BEFORE ROUTING
+
+**This is worth real, direct credit: finding that the source explicitly refuses to apply a weaker related power over a better standing one, confirming the just-approved build only implements half of that (unconditional replacement, in both directions), and catching this specifically because it sits inside the exact claim already routed to Tester, is proactive quality control of the highest order. Flagging it before Tester could be sent to confirm a claim already known to be wrong is precisely the discipline that protects everyone's time, not just the code's correctness.**
+
+**Ruled: fix it now, faithfully -- a cast that would install a worse (higher-percentage) tier over an already-standing better (lower-percentage) one should be refused, not silently accepted as a replacement.** This is the second half of the source's own stated mechanism, not a new design question.
+
+### CHAIN B -- BOTH PIECES APPROVED
+
+**`save_also` correctly refusing a duplicate save-type or a save on a power with no primary save at all is the right defensive posture for a field that can't be validated any other way, and correctly scoping the weapon-silencing outcome to only the creature actually aimed at -- not everyone caught in the broader area sweep -- avoids silencing bystanders' weapons the source never intended to touch.**
+
+**`WeaponInert` as the first clock whose real subject isn't the creature storing it is careful, correct architecture -- matching by weapon name so a second weapon genuinely keeps working, and distinguishing a real temporary clock from a permanently-destroyed record with no clock at all, both follow directly from the earlier faithfulness ruling on this exact power rather than reinterpreting it. Honestly documenting the name-only identity limitation in the class comment itself, rather than hiding an edge case that can't currently arise, is exactly right -- a limitation that's currently unreachable is still worth writing down where the next person will find it.**
+
+**Routing both real strike-callers through one shared check, explicitly naming the alternative as this corpus's most-counted defect, is applying an already-hard-won lesson without needing to be reminded of it.**
+
+### ⚠⚠⚠ TWO MORE HONEST SELF-CATCHES, BOTH WORTH NAMING
+
+**Finding that `PowerRecord.appliesNothing` was a second, parallel copy of the same allow-list `PT-2394`'s fix had only touched once, and that this second copy was independently missing the same field, is a genuinely valuable catch -- and the recorded lesson is worth keeping as its own standing heuristic: when a thing learns a new capability, grep for the other field names, not the new one. That's a precise, reusable instruction for exactly this recurring shape (parallel lists that must be updated together), not just a description of what happened this time.**
+
+**And catching that `working()`'s real consumer had no guard at all -- replacing its entire body with a hardcoded pass killing nothing across 1,209 tests -- before it could ship as `PT-2240`'s exact paid no-op (spend the cost, announce the weapon is inert, watch it fire anyway) is the same discipline that's now caught this shape many times this session, applied here to a brand-new mechanism before it ever reached a player.**
+
+### PROCEED
+
+Wire casting to spend the Action; route the player-side confirmation to Tester once built. Build the Force Body duration field from the real 30-second base. Fix the better-power refusal now, before Tester's Force Body follow-up proceeds. Chain B fully approved, nothing further needed. Deflection next, per `PT-2390`.
+
+
+---
+
+## PT-2398 -- DEFLECTION'S ROLL CLOSES CLEAN, DECISIVELY SETTLED FROM SOURCE INCLUDING A GENUINE DESIGN JUDGMENT CORRECTLY FLAGGED (THE ATTACKER'S D20 IS ALREADY SPENT, SO DEFLECTION CANNOT BE A LITERAL SECOND OPPOSED ROLL). BUT IT HAS NO CALLER, AND THE REASON IS A REAL, BROADER GAP: THIS PRODUCT HAS NO CONCEPT OF AN ALWAYS-ON POWER AT ALL, AFFECTING AT LEAST THREE HELD THREADS, NOT JUST THIS ONE. AND CONFIRMATION THAT PT-2397'S RULINGS (ACTION COST, DURATION, THE BETTER-POWER DEFECT) HAD NOT YET REACHED CODER WHEN THIS WAS WRITTEN -- RESTATED HERE CLEARLY
+
+**Confirmed: PT-2397's rulings on the Action-cost measurement, Force Body's duration field, and the better-power refusal defect were already issued and stand exactly as written there -- this report crossed with that one. Restating plainly so nothing sits ambiguous: casting costs the Action, build the duration field from the real 30-second source value, and fix the better-power refusal now. Confirming item 4 specifically -- `Sp_BetterRelatedPowerExists` still unimplemented, correctly distinguished from `PT-2396`'s separate latent-divergence item -- is exactly the same defect `PT-2397` already ruled to fix; build it as already directed.**
+
+### THE ROUTING-DUPLICATE OBSERVATION -- CORRECT, AND WORTH ACTING ON
+
+**Proceeding with the already-started work rather than stalling or duplicating it, and flagging the pattern plainly rather than just working around it silently, is right. And the risk-prioritisation is exactly correct: a duplicate costs a few wasted words; a message that arrives zero times, the way `PT-2373`/`PT-2374` nearly did, costs real work sitting unseen. Worth keeping in mind going forward -- when in doubt about whether something landed, the safer failure to guard against is silence, not repetition.**
+
+### DEFLECTION -- DECISIVE SOURCE MEASUREMENT, EXACTLY THE STANDARD THIS THREAD DESERVED
+
+**The reflected-target question settled outright by two independent sources agreeing exactly -- the engine's own function description and this project's own prior ruling -- with no picker needed since the target is fixed by the mechanic itself, not chosen, is a clean, complete answer to what was asked.**
+
+⚠⚠ **THE OPPOSED-ROLL DESIGN JUDGMENT IS PRECISE, AND IT'S WORTH CONFIRMING IT'S RIGHT RATHER THAN JUST NOTING IT WAS FLAGGED.** The source says "opposed roll," but by the time a bolt can be deflected the attacker's own d20 has already been spent on the original shot -- rolling a fresh second d20 and comparing it against a number that was never actually fired with would be a real, if subtle, departure from what "opposed" means here. Resolving against the attacker's existing, already-rolled total, and giving this its own check type rather than mislabelling it `save`, is correct: the source's language and the source's own timing constraint pull in different directions, and following the timing rather than the literal word is the faithful choice once the two are in tension. Approved exactly as built.
+
+**The empty-terms control -- confirming a creature with no relevant bonuses rolls a bare, unmodified d20 rather than something silently favourable -- is precisely the right thing to have guarded first: an unguarded flaw here wouldn't be a cosmetic error, it would make an ordinary trooper occasionally succeed at something meant to be Jedi-specific.**
+
+### ⚠⚠⚠ THE REAL GAP -- ITS OWN THREAD, NOT A DECISION TO MAKE INSIDE THIS ONE
+
+**Correctly refusing to invent an always-on power mechanism to make Deflection reachable is exactly right, and the reason it's the correct call is bigger than this one power: the same gap is already independently named in the app's own existing comment alongside `Force Camouflage`, which means at least three separately-held threads -- Deflection, Redirection, and Camouflage's deactivation -- are all quietly waiting on the same missing piece of infrastructure. Building a narrow, single-purpose gating mechanism just to unblock Deflection would very likely need rebuilding again for the next power that hits the same wall.**
+
+**Open this as its own dedicated thread: what does it mean for a power to be granted, active, and consulted without ever being cast -- how it's switched on (character creation? a feat? something else the source specifies?), what consults it, and how it differs from the timed-condition machinery already built for everything else. Measure the real source shape first, the same treatment every other thread at this scale has received this session.**
+
+### THE STALE-COMMENT CORRECTION -- SMALL, RIGHT
+
+**Updating the inert-power comment's count and named list in place, with the reason recorded, is exactly right -- a comment naming a power as inert outlives the day it stopped being true unless someone moves it, and this is the same discipline already held for every other piece of documentation this session.**
+
+### PROCEED
+
+Build the Action-cost fix, the duration field, and the better-power refusal, per `PT-2397`. Open the always-on-power mechanism as its own dedicated thread, measured before anything is proposed. Deflection's roll stays built and guarded, correctly unwired until that thread resolves.
+
+
+---
+
+## PT-2399 -- TESTER CAUGHT A REAL FALSE-CLOSURE HAZARD BEFORE IT COULD HAPPEN: THE FORCE BODY DIVERGENCE FINDING'S ORIGINAL LINE HAS SINCE BEEN RENAMED, SO A NAIVE FUTURE GREP FOR THE EXACT QUOTED STRING WOULD RETURN NOTHING AND LOOK LIKE THE RISK WAS RESOLVED. IT WASN'T -- ONLY THE RECEIVER'S NAME CHANGED
+
+**Re-checking the divergence against the current engine state rather than resting on the original checkout is exactly right, and confirming it's unchanged on both sides -- Lodestar's fold, the app's single-element assignment -- keeps the held disposition correctly justified rather than assumed still valid.**
+
+⚠ **THE RENAME CATCH IS THE MORE VALUABLE PART OF THIS MESSAGE, AND IT'S WORTH NAMING WHY.** A held item that's tracked by quoting a specific line of code is only as durable as that line staying unchanged -- and code gets renamed for reasons that have nothing to do with the risk it happens to be sitting in. Flagging that a future grep for the exact original string would come back empty, and that empty would misleadingly read as "resolved" rather than "moved," is precisely the kind of anti-false-closure thinking this project has needed at several points this session. A held item closing itself by accident, because the evidence for it happened to get refactored, would be a genuinely quiet way to lose track of a real risk.
+
+### PROCEED
+
+Nothing to rule -- confirmed still held, correctly, with the rename noted so nobody closes this off a failed text search later.

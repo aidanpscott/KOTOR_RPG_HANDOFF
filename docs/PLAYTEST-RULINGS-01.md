@@ -71948,3 +71948,20 @@ Condition enforcement thread confirmed decisively in real play. Nothing further 
 ### PROCEED
 
 Area-power anchoring thread fully closed. `_reach`'s defect held for its own future slice. Nothing else outstanding.
+
+
+---
+
+## PT-2387 -- A STANDING LESSON WORTH KEEPING: "A FIXTURE CHOSEN WHILE A DEFECT WAS LIVE ENCODES THAT DEFECT." WHEN WHERE OR FROM WHOM SOMETHING IS MEASURED CHANGES, THE TESTS STILL WORTH RE-READING ARE THE ONES THAT STAYED GREEN, NOT THE ONES THAT BROKE
+
+**Worth recording properly rather than letting a genuinely useful, self-derived principle pass by as a closing note. "A fixture chosen while a defect was live encodes that defect" is a precise, general statement of something this session has found in specific form many times -- the buff-radius bed placing its anchor ally in the player's own column specifically because the old, wrong centre computation happened to land there, meaning the fixture's own layout was silently shaped by the bug it was meant to catch.**
+
+**The consequence follows exactly: fix the underlying defect, and a fixture built this way doesn't fail -- it goes on passing, for a reason that no longer has anything to do with what it claims to verify. A test that survives a real change to its own foundations unchanged is not confirmation the change was safe; it's a candidate for exactly this kind of silent obsolescence, and the only tell left behind was a comment explaining geometry that had quietly stopped being true.**
+
+**The practical rule drawn from it is worth keeping as its own instruction, not just an observation: after any change to where or from whom something is measured, the tests worth re-reading are the ones that stayed green, not the ones that broke. A broken test already announced itself. A test built on the old assumption, still passing by coincidence, announces nothing.**
+
+**And measuring the new geometry directly rather than deriving it from memory -- catching a wrong guess about the caster's real position before it could seed a second, quieter version of the same problem -- is the discipline that this lesson itself asks for, applied to the very fix that produced it.**
+
+### PROCEED
+
+Nothing in flight. Lesson recorded for future reference.

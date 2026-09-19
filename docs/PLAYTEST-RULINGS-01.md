@@ -71403,3 +71403,30 @@ Fix the fear residual now. Build `shaken` whole, including the wildcard. Investi
 ### PROCEED
 
 Correct the shelf's `force_sleep` row and the condition it applies. `helpless` closes as a non-condition, matching `flat-footed`. The two special endings stay held. Where this leaves the set: with `helpless` reclassified, the honest count is likely close to finished for what's actually reachable -- confirm the final tally once this lands.
+
+
+---
+
+## PT-2370 -- CONDITION ENFORCEMENT CLOSES: THE FINAL, STRUCTURALLY-VERIFIED TALLY IS SIX ENFORCED, TWO COMPARISONS, AND OF THE REMAINING TWELVE NAMED CONDITIONS, TEN ARE APPLIED BY NOTHING SHIPPED AT ALL. THE TWO THAT REMAIN REACHABLE ARE BOTH ALREADY HELD BY EXISTING RULINGS. THERE IS NO UNBUILT, REACHABLE, UNHELD CONDITION LEFT. helpless CORRECTLY MAPPED TO stunned VIA THE POWER'S OWN COMPARISON TO Force Stasis, WITH AN HONEST FLAG ON THE ONE ODD CONSEQUENCE THAT FOLLOWS FAITHFULLY FROM IT
+
+**This closes a thread that opened as a severe, live defect and ends with a structurally-verified, honest accounting of exactly where it stands -- worth taking a moment to recognise the arc of it, since it started at "one of twenty enforced" and ends at "nothing reachable is left unbuilt or unheld."**
+
+⚠⚠ **DERIVING THE AWAITING SET RATHER THAN LISTING IT, WITH A TEST ASSERTING THE THREE SETS GENUINELY PARTITION ALL TWENTY NAMES, IS EXACTLY THE RIGHT WAY TO MAKE A TALLY LIKE THIS TRUSTWORTHY.** A count that's asserted this way can't silently drift the way a narrated one could -- a name missing from all three sets, or counted in two, fails a real check rather than waiting to be noticed by inspection. "The tally is asserted, not narrated" is a good, quotable way to describe the difference, and it's the same discipline held everywhere else this session applied to a number that matters.
+
+### helpless -- CORRECTLY MAPPED, ODDITY NOTED AND ACCEPTED
+
+⚠⚠ **The reasoning behind choosing `stunned` is precise, and it's worth confirming it's the right call rather than just noting it was made carefully.** Recognising that "applies `Legality.action` directly" with no condition name at all would have quietly recreated `PT-2363`'s paid no-op, and finding the power's own text explicitly comparing itself to `Force Stasis` -- already correctly `stunned` since `PT-2229` -- as the thing that actually settles which existing name to use, is exactly the right way to resolve genuine ambiguity in a prior ruling's literal wording: go back to what the source itself says, rather than either inventing something new or leaving the gap unresolved.
+
+**The movement oddity is accepted as faithful rather than wrong.** A sleeping creature retaining the ability to walk is a slightly strange-sounding outcome, but it's the correct, faithful delivery of what was actually ruled -- cannot act, nothing about movement -- and flagging it for review rather than quietly deciding it needed fixing is exactly right. It stands as ruled.
+
+**Sweeping every power and every item, separately, for the parser-shaped defect rather than guarding only the one known-bad row is the correct generalisation -- a parser that got one row wrong will get others wrong the same way, and three of four tests failing on a reversion confirms this guard is genuinely load-bearing across more than the single case that surfaced it.**
+
+**The documentation is thorough and exactly right: a real "Comparisons, not states" section carrying the actual source evidence, and the two held Force Sleep endings recorded as explicitly unmodelled with the governing reasoning cited beside them, rather than silently dropped or left as an unexplained gap.**
+
+### RULED -- THE LADDER LANGUAGE STAYS AS IT IS
+
+**Leave `§7`'s ladder sentence untouched. "Helpless" used there is ordinary, evocative English describing a severity, not a claim that it's a mechanically-applicable state -- the two uses of the word are different in kind, and the prose one doesn't need correcting just because the mechanical one was just clarified. No new top rung needed; the ladder can keep describing severity in plain language without implying a separately-enforceable game state at its end.**
+
+### PROCEED
+
+Nothing further needed. Condition enforcement closes with the honest tally confirmed and structurally protected against future drift.

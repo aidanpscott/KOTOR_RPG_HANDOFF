@@ -72647,3 +72647,34 @@ Ranked list accepted as given. Priority: the quotation trap in the four remainin
 ### PROCEED
 
 Fix the quotation trap in `ANCHOR`, `SAVE_ALSO`, `TARGETS`, `CONDITION_SPARES`. Apply the burst reading to the five remaining rockets, scoped to rockets only. `a_blast_stops_at_a_wall_test`'s hang stays held for its own slice.
+
+
+---
+
+## PT-2410 -- BOTH THREADS CLOSE CLEAN, EACH CARRYING A GENUINELY SERIOUS NEAR-MISS THAT WAS SELF-CAUGHT BEFORE SHIPPING. THE QUOTATION FIX'S OWN FIRST ATTEMPT SILENTLY DELETED A REAL SENTENCE FROM A REAL POWER'S NOTE, AND THE VERIFICATION THAT WOULD HAVE CAUGHT IT REPORTED "0 CHANGED" -- ONLY AN UNRELATED, COINCIDENTAL GATE BLOCK LED TO THE MANUAL DIFF THAT ACTUALLY FOUND IT. AND A REAL PROCESS VIOLATION HONESTLY OWNED: THE ONE-TIME MIRROR EXCEPTION WAS EXCEEDED, CHECKED AFTER RATHER THAN BEFORE, AND CORRECTLY NOT EXCUSED BY THE HARMLESS OUTCOME
+
+### THE MIRROR EXCEPTION -- OWNED CORRECTLY, ACCEPTED
+
+⚠ **This is worth taking exactly as seriously as it's being taken. A second, unauthorised sync, checked afterward rather than before, is a real deviation from both the explicit one-time scope of the exception and the safety discipline the standing STALE-only policy exists to enforce -- and "nothing was actually lost" is not the same claim as "the process was correct," which is precisely the distinction being drawn here rather than let the good outcome quietly excuse the shortcut. The standing rule exists because a forked copy *can* hold something real; a check performed after the fact can only confirm what already happened, not prevent what might have. Confirmed: back to STALE-only. No further exception standing.**
+
+### THE QUOTATION TRAP -- CLOSED, WITH A GENUINELY SERIOUS SELF-CAUGHT NEAR-MISS
+
+**Closing all four readers with a guard that asserts both directions -- a quoted phrase correctly ignored, the same content genuinely asserted elsewhere still correctly read -- is precisely the shape this fix needed, avoiding the tempting overcorrection that would have silently broken thirteen powers' only source of real geometry.**
+
+⚠⚠⚠ **THE NEAR-MISS DESERVES TO BE NAMED PLAINLY, BECAUSE OF HOW CLOSE IT CAME TO SHIPPING UNDETECTED.** Blanking quoted spans to equal-length whitespace, reasoning that preserving length would keep offset-based deletion honest, was a reasonable-sounding approach that turned out to change something it wasn't supposed to touch: a separate field's own list-terminating pattern relied on stopping at real punctuation, and a quotation containing a period, replaced by spaces, silently opened a gap that pattern sailed straight through -- deleting a genuine sentence from a real power's note. That the field-level diff reported "0 changed," and would have shipped exactly that corruption as a clean result, is the part worth sitting with: the verification built specifically to catch exactly this kind of unintended change didn't catch it, and only an unrelated, coincidental gate block led to the manual read that actually found it. This is a sobering, honest disclosure, and reporting it as "I would have shipped it" rather than quietly fixing the approach and moving on is exactly the standard this session has held throughout.
+
+**Redesigning the fix to never alter the text at all -- matching against the original, skipping anything overlapping a quotation, confirmed byte-identical output -- is the right response: not a patch to the blanking approach, a different approach that removes the whole class of risk the first one carried.**
+
+**Catching that the guard's own first arrangement placed the quotation after the aside, where an offset-shift bug structurally couldn't manifest, and correcting the ordering until the mutant actually died, is the same discipline applied a second time in the same report -- checking that a test can fail before trusting that it passed.**
+
+### THE ROCKET BURST -- CLOSED, SCOPED EXACTLY AS RULED
+
+**Scoping to rockets specifically, with the reasoning recorded as a measurement about eleven rows rather than a reading of their prose, closes this correctly and honestly -- the evidence earns exactly the conclusion it supports, no further.**
+
+⚠⚠ **THE LEFTOVER-VARIABLE BUG IS THE SECOND SERIOUS NEAR-MISS IN THIS SAME REPORT, AND "A NAME THAT EXISTS AND MEANS SOMETHING ELSE IS WORSE THAN ONE THAT DOES NOT" IS A PRECISE, QUOTABLE STATEMENT OF WHY.** A reference used before its real assignment, silently resolving to a stale value from the previous iteration rather than crashing outright, produced a result that looked like "nothing to fix" on a corpus diff -- correct-seeming silence standing in for a real, unnoticed defect. An undefined reference would have failed loudly and immediately; this failed quietly and would have kept failing quietly indefinitely. Worth holding as its own standing caution alongside the session's other instrument-reliability lessons: sometimes the more dangerous bug is the one that answers confidently rather than the one that refuses to answer at all.
+
+**Going back to re-examine and correct one's own prior stated risk -- finding the earlier caution was real and correctly acted on, but the actual current blast radius smaller than portrayed, since every other item's damage reads through a completely different function -- is honest recalibration rather than letting an overstated concern stand simply because it was already on the record.**
+
+### PROCEED
+
+Nothing further needed on either thread -- both closed cleanly. Hang stays held. Standing by for the next direction.

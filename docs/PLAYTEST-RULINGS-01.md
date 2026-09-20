@@ -73956,3 +73956,71 @@ Nothing further needed — closed cleanly. TEST 120's remaining confirmation (Fo
 ### PROCEED
 
 Nothing in flight. Both lessons recorded for future reference.
+
+
+---
+
+## PT-2459 -- THE DROID FIX FULLY VERIFIED THROUGH THE REAL GATE (mayTarget, NOT JUST THE CLASSIFIER), WITH A SENTIENT CONTROL PROVING THE SWEEP COULDN'T PASS AGAINST AN OVERLY-BROAD REFUSAL. THE EMPTY-PARTY LOAD'S REAL CAUSE FOUND PRECISELY: THE SAME RECORD IS LEGAL TO PLAY AND ILLEGAL TO LOAD, BECAUSE CHARGEN'S HANDOFF NEVER CALLS THE SAME VALIDATION THE LOAD PATH DOES. AND A THIRD DUPLICATE DROID CLASSIFIER FOUND -- IN A FILE THAT ALREADY CARRIES ITS OWN COMMENT WARNING ABOUT EXACTLY THIS PATTERN
+
+**The re-verification is exactly right -- testing through `mayTarget` rather than the classifier alone confirms the real user-facing behaviour, not just the internal answer, and the sentient control is precisely the discipline that distinguishes "refuses these four correctly" from "refuses everything, including what it shouldn't." Closing the chassis-only gap the same mutation found is thorough, not just responsive.**
+
+### THE EMPTY-PARTY LOAD -- PRECISELY DIAGNOSED, RULED
+
+**"The same record is legal to play and illegal to load" is a sharp, precise way to frame a real inconsistency, and tracing it to one specific handoff site among four real `replay` calls, with only one `validateRecord`, is exactly the kind of complete entry-point sweep this deserved. Confirming the validation logic itself is sound -- refusing a genuinely empty record correctly -- isolates this cleanly as a coverage gap, not a defect in the check.**
+
+**Ruled: measure first, exactly as proposed.** Confirm whether every legitimate chargen exit currently produces a record `validateRecord` would accept, before gating the handoff. This is the right order -- adding the gate without that measurement risks a refusal landing on a real player for a path that was always legitimate, which would be a worse outcome than the silent load it replaces. Run the sweep, then gate line 611 with the same `validateRecord` once the sweep confirms it's safe.
+
+### THE THIRD DUPLICATE CLASSIFIER -- RULED, MEASURE THEN FIX
+
+⚠⚠ **Finding a third copy of the same narrow droid test, in a file that already carries its own comment naming this exact pattern by number, is worth taking seriously as confirmation that the underlying discipline is correct even when it's inconvenient to apply a third time. Correctly not touching it, since widening it has a real authoring consequence -- droid-specific restrictions newly applying to characters that currently escape them -- rather than being a pure bug fix, is exactly right restraint.**
+
+**Ruled: this should be unified too, matching the other two — but measure the real consequence first.** Confirm how many currently-valid packages would newly fail validation if this copy is corrected to use the same `is_droid` set as the other two. If the number is small or zero, fix it the same way. If it's substantial, report back with the real scope before changing anything — a real authoring-policy shift affecting existing content deserves to be seen before it lands, not discovered afterward.
+
+### PROCEED
+
+Measure the chargen-exit sweep and the package-validation consequence, both before building either fix. Report back on both.
+
+
+---
+
+## PT-2460 -- BALANCE RULING: FORCE DISTRACTION AND FORCE CONFUSION'S DURATION CHANGES FROM 10 ROUNDS TO 5 ROUNDS. A DEVIATION FROM THE SOURCE'S OWN STATED NUMBER, MADE DELIBERATELY
+
+**Ruled: both `Force Distraction` (tier 1, cost 8) and `Force Confusion` (tier 2, cost 20) change from 10 rounds to 5 rounds. This is a deliberate departure from the source's own stated duration, not a correction of a measurement error — the source genuinely says 10, and the change is being made anyway, on balance grounds.**
+
+Both powers are fully built and confirmed working in real play at the 10-round figure (`TEST 119`, `TEST 120`), including the round-count itself as part of what was verified. This ruling doesn't reopen any of that confirmation — the mechanism, the refusals, the targeting, the classifier fixes all stand exactly as closed. Only the duration constant changes.
+
+### WHAT THIS TOUCHES
+
+- `force_distraction`'s `distraction_rounds` field (currently `10`)
+- `force_confusion`'s `confusion_rounds` field (currently `10`)
+
+Both are read directly by the engine at cast time — this should be a small, contained data change, not a mechanism change. Confirm nothing else derives a value from the old constant before treating this as complete (the one-of-each-kind refusal reads the active instance's own remaining rounds, which should follow the new figure automatically without needing separate treatment, but worth confirming rather than assuming).
+
+### PROCEED
+
+Change both fields to 5. Confirm the change is reflected correctly wherever duration is read or displayed (the refusal message naming rounds remaining, in particular). Re-run the existing test suites to confirm nothing hardcoded the old figure independently. Report back once done — no re-proposal needed, this is a direct data change.
+
+
+---
+
+## PT-2461 -- BOTH MEASUREMENTS APPROVED. THE ORIGINAL EMPTY-PARTY DEFECT IS CONFIRMED STRUCTURALLY UNREACHABLE THROUGH THE REAL CHARGEN EXIT -- CLASS/SPECIES DATA COMES FROM A REQUIRED, NON-NULL EARLIER STAGE, CONFIRMING TESTER'S OWN HONEST CAVEAT WAS RIGHT: THEIR WRITER'S CHARGEN-BYPASS WAS THE ACTUAL CAUSE. AND THE HONEST DISTINCTION BETWEEN STRUCTURAL PROOF AND EMPIRICAL COVERAGE IS EXACTLY RIGHT -- THE RIGHT NEXT STEP IS A REAL TEST, NOT A CONFIDENT CONCLUSION
+
+**Confirming there's genuinely one real exit, and tracing why the specific empty-class defect Tester found cannot arise from it -- the data comes from a required, non-null earlier stage that structurally guarantees population before the hub can even exist -- is precise, complete reasoning. This directly validates Tester's own honestly-flagged caveat about their writer bypassing chargen; the defect was real, and it was exactly what they suspected it might be.**
+
+**Checking representative completion sites line by line rather than assuming the pattern holds uniformly, and separately flagging that chargen genuinely branches into different shapes for droid and organic characters -- meaning any real coverage sweep has to cover both, not just the more common path -- are both precise, thorough measurement.**
+
+### ⚠⚠⚠ THE STRUCTURAL-VERSUS-EMPIRICAL DISTINCTION -- EXACTLY RIGHT, WORTH NAMING
+
+**Stating plainly that this measurement is structural reasoning about the code's own guarantees, not an empirical test that has actually driven chargen to completion and checked the result, is precise epistemic honesty. "I can say the specific defect is unreachable, and I cannot yet say no other rule is" is the correct scope for what tracing the code proves versus what only running it proves -- and recommending the real test as the next step, rather than treating structural confidence as equivalent to a passing test, is exactly the standard this session has held for every other claim about what's actually been verified.**
+
+### RULED -- APPROVED, BOTH, IN THE PROPOSED ORDER
+
+**Item 2 first, exactly as recommended.** Unify `_isDroid`, confirmed zero present-day impact across all eleven shipped blueprints — pure correctness, no risk, guards the day a droid is actually authored by hand. Build it now.
+
+**Item 1 as sequenced: the real two-shape chargen sweep test first, then `validateRecord` at line 611 behind it.** This is the right order regardless of the structural finding -- the gate should still go in as real defense in depth, but it ships with genuine empirical evidence it refuses nothing legitimate, not just a structural argument that it shouldn't. Cover both the organic and droid shapes explicitly, matching the branching correctly identified.
+
+**Correctly naming the fourth variant (`record_validate.dart:95`) without folding it in as a bug is right -- it answers a genuinely different question and is correct for what chargen actually produces. Noted for the count, not touched.**
+
+### PROCEED
+
+Build in the proposed order: `_isDroid` unification first, then the two-shape chargen sweep test, then the `validateRecord` gate behind it.

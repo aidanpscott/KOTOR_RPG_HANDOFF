@@ -8,8 +8,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
 - **Prestige class skill points missing across the board — held, needs design-intent research before ruling (PT-2490).** Every prestige class carries no `skill_points` data. Uniform absence across an entire category could be a genuine oversight or a deliberate, undocumented choice — different evidence than Gap 1's three specific classes missing something their siblings have. Research source material / existing design docs before ruling. Safeguard in place: audit asserts no current base class shares this gap, so any future regression fails loudly.
-- **Multiclassing invisible in the player-facing UI — real, held.** Correct in the log (`class: "soldier"`); header, party card, and Character Info all still show the original class after a multiclass level.
-- **Literal "null" string in Powers cost column — small, held.** For unpriced powers (Crush Opposition II, III, IV).
+- **Multiclassing UI-display fix, plus three small items — all ruled, building (PT-2491).** Multiclassing: header, party card, and Character Info to show the full breakdown ("Soldier 3 / Consular 1") instead of `classes.first` — the underlying data is already correct in the log. Coder's own recommendation, correctly prioritized as visibly wrong in front of a player rather than merely absent. Also clearing: literal "null" in the Powers cost column, the placeholder credits value, and — correcting a stale duplicate entry — the Continue/New Game timing trap (already closed at `PT-2465`, mistakenly re-listed here).
+- **Literal "null" string in Powers cost column — small, building alongside multiclass fix.** For unpriced powers (Crush Opposition II, III, IV).
 
 - **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
@@ -22,10 +22,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Equip's slot-count discrepancy — held, needs owner's own review.** Two governing documents both state "eleven slots"; the actual diagram shows more distinct positions than that. Built to the diagram, count correctly reported rather than silently resolved. Needs direct review of the diagram geometry before ruling.
 - **Shared shell — held, deliberately, pending the map/grid view.** Building persistent nav bar/title bar/footer furniture around an undesigned play surface risks real rework. Revisit once the map/grid view has a locked design, or a real case emerges to build it sooner.
 - **Options/Settings — held, explicitly a first pass not a lock.** `PT-1255`'s own words, pending `PT-1140`/`PT-1148`, both still deferred. Building it now would be building against something not yet finalized.
-- **Fake placeholder credits value — small, held.** `_placeholderCredits = 120`, hardcoded. Inventory, Equip, and Store all need a real one.
 
 
-- **Continue/New Game timing trap — small, held.** A brief window where Continue is greyed during save-scanning; a click landing in that window silently opens New Game instead of the intended save.
 
 - **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
 

@@ -6,9 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: a won fight writes no outcome at all — no XP, no event
-- **Ruled, investigate and fix now (PT-2474).** Confirmed via direct raw-save-byte decoding: no `encounter.ended`, no `character.died`, no `character.xp-awarded` for a genuinely won fight. `_writeOutcome` never ran. Decisive control: six real prior saves correctly carry XP awards, one showing the exact shape this fight should have produced — not the whole reward table broken, a specific narrower gap. Scope narrowed but not fully diagnosed: a power kill, on the player's turn, no weapon held. Find which of `_writeOutcome`'s two call sites (`play_screen.dart:8457`, `:9733`) should have fired and why it didn't.
-- **Auto Level Up leaves pools stale until reload — real, ruled, fix.** Grant confirmed correct and persisted (reload shows right numbers); live Vitality/Force display doesn't refresh immediately. A refresh gap, not a missing grant.
+- **Fight-outcome fix landing, four fixture repairs in progress (PT-2476).** Cause found: the cast path never calls the fight-ending logic the weapon-strike path already has — a third site that simply doesn't exist, not either of the two originally-suspected call sites. Tester's "no weapon held" was the whole diagnosis. Existing test found built around the defect (pressed escape before asserting, own comment said so). Ruled: land the fix and properly repair all four affected fixtures now, not deferred — the work is confirmed not hard and the defect stays live until it lands.
 - **Disabled Level Up button leaks its tap to the dismiss barrier — small, held.** Same underlying shape as the greyed-Continue defect (`PT-2465`), from the other side — a disabled element not absorbing its own tap.
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
@@ -70,6 +68,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Auto Level Up's stale-pools defect closed, confirmed wider than originally understood. Not just a display gap — the handed-in record was frozen at board-open time, so ~10 real derivations (base attack, saves, DCs, the sheet, Force pool's true maximum) all silently computed against the pre-level-up character. Fixed by folding record and log together, reusing an existing pairing rather than inventing a parallel mechanism. Force pool correctly re-derives its true maximum from the now-current class while preserving the log's own real projection for current/ceiling — a level-up raises the ceiling, doesn't silently refill what's spent — PT-2476
 
 - Package-fault sentence plumbing closed — the whole silent-failure investigation now fully closed. Summary tile correctly kept unchanged (still just the count, no invented category, citing the standing ruling that already bars exactly that). Real sentences surfaced below the row, scrolling, one per fault. The real substance correctly identified: showing every fault rather than the first — the obvious "copy the nearby pattern" move would have reproduced the same original defect in a new shape. Proven against the real bench's own actual fault order (four benign, then one real). Honestly stopped at the real limit: nothing in the data distinguishes benign from severe, and building an automatic split would itself be the barred mechanical category. Methodological lesson merged into Tester's own existing note rather than duplicated, with a real complementary addition (the false cause and the true lead had to be separated before either could be discarded or kept) — PT-2469
 

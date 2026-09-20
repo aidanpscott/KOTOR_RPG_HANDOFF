@@ -29,7 +29,8 @@ depended on it.
 nothing.** The power charges 20 Force and 4 of ceiling, prints its prose, and
 returns before it reaches its own effect. Item 1 holds on four clauses,
 carries **one real defect** (the droid exclusion fails on four of the five
-droid species), and has two clauses with no code behind them.
+droid species), and carries a **second** one: the distraction's face-away
+turn fires and is overwritten by the hear-turn before it can ever matter.
 
 ---
 

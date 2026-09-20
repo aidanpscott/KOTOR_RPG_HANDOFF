@@ -6,8 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: manual level-up path leaves both pools stale, Force pool worse than stale
-- **Ruled, fix now (PT-2486).** `PT-2474`'s pool-refresh fix evidently never reached the manual flow built afterward. Vitality never refreshes on either tested run (7 short both times). Force is worse than stale — displays a different wrong number that matches neither the pre-level value nor the correct post-reload value, indistinguishable from a genuinely correct grant. Find why the manual commit doesn't route through PT-2474's refresh mechanism; confirm both paths land on the identical correct live value.
+### ⚠⚠⚠ SEVERE: manual level-up path applies a hardcoded constant instead of recomputing pools
+- **Root cause fully characterized (PT-2487).** Not staleness, not partial recompute — a fixed constant applied regardless of the actual correct gain: Force always +8, Vitality always +0, decisively confirmed across three transitions with three different correct answers (+8, +13, +13) via a single elegant run (16→17, no ability point, class merely confirmed) holding both class and ability constant. Fix now: find where these constants are applied instead of a real recompute from the new level.
 - **Full grant-schedule audit — ruled, needed before this thread is broadly verified (PT-2486).** Only 2-3 class/level combinations directly spot-tested so far (Consular gets Powers at 13, Soldier gets Feats — confirmed correct and class-aware). Audit `grantsAtLevel`'s actual output against the real documented schedule for all 19 base classes across the full level range before trusting this beyond what's been spot-checked.
 - **Multiclassing invisible in the player-facing UI — real, held.** Correct in the log (`class: "soldier"`); header, party card, and Character Info all still show the original class after a multiclass level.
 - **Literal "null" string in Powers cost column — small, held.** For unpriced powers (Crush Opposition II, III, IV).

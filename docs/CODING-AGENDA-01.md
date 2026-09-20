@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Inventory — opened, building (PT-2493).** Third of seven shell-locked screens (after Character Sheet, Equip). Natural next pick: most-referenced screen in already-completed work, real locked design (`PT-1251`), not waiting on the shell or map view. Building to spec, checking real K2 source files (`inventory.gui`, `inventory_x.gui`, `inventory_p.gui`) alongside the design text, same render-and-look process as every prior screen.
+
 - **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
 - **Prestige class skill points missing across the board — held, needs design-intent research before ruling (PT-2490).** Every prestige class carries no `skill_points` data. Uniform absence across an entire category could be a genuine oversight or a deliberate, undocumented choice — different evidence than Gap 1's three specific classes missing something their siblings have. Research source material / existing design docs before ruling. Safeguard in place: audit asserts no current base class shares this gap, so any future regression fails loudly.
 

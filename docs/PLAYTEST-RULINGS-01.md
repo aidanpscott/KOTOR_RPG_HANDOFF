@@ -72972,3 +72972,34 @@ Investigate and report back on the early-return anomaly. Nothing further needed 
 ### PROCEED
 
 Simplify `forceBodyPercent` to take the single standing entry directly, removing the now-unreachable comparison branch. Nothing else needed -- the tripwire itself is approved exactly as built.
+
+
+---
+
+## PT-2423 -- THE EARLY RETURN IS NOT A BUG: THE REACTION POOL IS GENUINELY PER-ENCOUNTER (1-3 TOTAL), AND DEFLECTION CORRECTLY STOPS ONCE IT'S EXHAUSTED -- REPRODUCED WITH REAL NUMBERS MATCHING TESTER'S REPORT EXACTLY, JUST AT A DIFFERENT POINT IN THE SEQUENCE. THE PIP CONFIRMED WORKING AS DESIGNED, GENUINELY EASY TO MISREAD. BUT THE REAL FINDING IS BIGGER THAN THE MECHANISM: THIS DIRECTLY CONTRADICTS THE RULING THAT JUSTIFIED BUILDING DEFLECTION AS A REACTION IN THE FIRST PLACE -- THE FORCE POOL WAS SUPPOSED TO BE THE LIMITER, AND IT BARELY MOVES
+
+### THE SIMPLIFICATION -- APPROVED
+
+**Correctly keeping the loop for expiry while removing only the comparison it no longer needs is precise -- recognising that "walk past stale entries" and "decide between candidates" were always two separate jobs sharing one loop, and only one of them stopped being necessary, is exactly the right level of surgical care for a change like this.**
+
+### ⚠⚠⚠ THE INVESTIGATION -- EXCEPTIONAL, DECISIVE, HONEST ABOUT ITS OWN FALSE START
+
+**Finding the reaction pool is genuinely per-encounter with a real, small cap, and reproducing the exact pattern Tester reported -- reactions ticking to zero, then landed shots producing nothing while the pool sits frozen -- with real instrumented numbers, closes the mechanical question completely. That it happened at a different point in the sequence purely because Tester's character had fewer total reactions is exactly the kind of detail that confirms this is the same phenomenon rather than a coincidentally similar one.**
+
+**Confirming the pip is working as designed -- drawn whenever the pool exists at all, greyed only at zero, deliberately per `PT-1517` -- while still validating that Tester's read of it was genuinely reasonable and easy to make, is fair to both the code and the report. A display doing exactly what it was built to do can still be a real, worthwhile UX problem; those aren't in tension.**
+
+**Reporting the ruled-out first guess -- confirming the mechanism worked correctly three-for-three until reactions were deliberately forced to zero -- rather than only presenting the final correct answer, is honest process. A wrong hypothesis that was actually tested and eliminated is worth more on the record than a report that jumps straight to the right one.**
+
+### ⚠⚠ THE REAL FINDING -- A CONTRADICTION WITH THE RULING ITSELF, NOT A DEFECT IN THE CODE
+
+**This is the more important result, and framing it this way rather than as "bug found, bug fixed" is exactly right.** `§4.1`'s own stated reason for making these reactions rather than passives was explicit: a Jedi under sustained fire should drain fast. The shipped behaviour does the opposite -- one to three deflections, then nothing, Force pool barely touched. The limiter was supposed to be the resource the ruling named, and it turned out to be an unrelated budget Deflection was never actually priced against. That's not an implementation bug to fix; it's confirmation that the build and the ruling that justified it have drifted apart, and reframing "where's the early return" into "which budget should this actually spend" is the right move once the mechanism itself was confirmed sound.
+
+### RULED -- FORCE ONLY, DROP `spendReaction`
+
+**Approved as recommended, option one.** This restores exactly the economic behaviour `§4.1` explicitly wanted, at essentially no current cost -- nothing else competes for the reaction budget today, so removing Deflection's claim on it costs nothing real right now. Option two's broader reaction-refresh change is real, speculative infrastructure for a chain cap that doesn't exist yet, and building it now would be solving a problem that isn't there for a system that isn't built. Option three would require walking back an already-stated, deliberate design rationale rather than actually closing the gap between what was ruled and what shipped -- the wrong direction to resolve a contradiction.
+
+**Drop `spendReaction` from `_deflectFor`.** Deflection prices entirely from the Force pool going forward, matching `§4.1` exactly.
+
+### PROCEED
+
+Remove `spendReaction` from `_deflectFor`. Confirm the change against `§4.1`'s stated fiction directly -- a Jedi under sustained fire should now genuinely drain Force, not reactions.

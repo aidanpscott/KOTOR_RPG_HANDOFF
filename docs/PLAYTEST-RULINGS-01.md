@@ -73736,3 +73736,63 @@ Write the `container.opened` guard, mirroring `door.unlocked`'s existing two ass
 ### PROCEED
 
 Fix the Confusion early-return gate, wire the confusion-tracking write, and fix the shared droid classifier — all three urgent, same priority as the session's other severe defects. Investigate and rebuild the facing regression. Hold hearing's missing range as its own small item.
+
+
+---
+
+## PT-2451 -- URGENT WITHDRAWAL: THE FACING REGRESSION WAS NEVER REAL. TESTER CAUGHT THEIR OWN METHODOLOGY ERROR (GREPPED THE FIELD, NOT THE WRITER, MISSING A THIRD CALLER) AND FLAGGED IT IMMEDIATELY, BEFORE CODER COULD ACT ON IT. SLICE 4 IS BUILT, WIRED, AND FIRES CORRECTLY -- UNOBSERVABLE ONLY BECAUSE THE TEST GUARD HAD NO AUTHORED BLIND SPOT FOR THE TURN TO MATTER AGAINST. EVERYTHING ELSE IN TEST 119 STANDS, EXPLICITLY RECONFIRMED
+
+**This is exemplary, and worth saying so plainly before anything else: catching a real mistake in one's own already-filed, already-routed report, and flagging it urgently rather than letting it sit until Coder had already spent time on it, is exactly the standard this whole session has held for every kind of self-correction. The specific trigger -- "PT-2450's facing item should be withdrawn now rather than after Coder has looked" -- is precisely the right instinct: a correction has more value the earlier it lands, and this one landed before any wasted work happened at all.**
+
+**The methodology lesson is genuinely worth keeping as a standing practice: when confirming whether something is wired, grep the writer's name, not the field's. A field with one writer can still have that writer called from multiple sites, and tracing only the field misses exactly this shape -- a real mechanism reachable through a caller that never touches the field directly by name. Noted as standing practice now, which is the right way to close out a mistake that's been precisely diagnosed rather than just apologized for.**
+
+**The root-cause explanation for why a real, correctly-firing mechanism produced zero observable effect is precise and important in its own right: facing is only ever consulted by a creature with an authored blind spot, and the test fixture simply never gave its guard one. That's a fixture limitation, correctly and immediately distinguished from a code defect -- the turn happened, it just had nothing to act against on that specific bench.**
+
+### RULED -- WITHDRAWN
+
+**The facing item is withdrawn from `PT-2450` in full. Nothing to investigate, nothing to rebuild. Slice 4 stands exactly as `PT-2436` approved and reported it.**
+
+**Everything else from `PT-2450` stands, explicitly reconfirmed and unaffected: Force Confusion's complete inertness, the silent full-price overcharge, the never-firing same-kind refusal, and the shared droid-classifier defect on four of five species. All four stay exactly as urgent as before.**
+
+### THE HEARING RE-EXAMINATION -- NOTED, AWAITING RESULT
+
+**Applying the same newly-learned lesson to re-check the hearing claim before fully trusting the original conclusion, rather than assuming the correction only applies to the one finding that happened to be caught, is the right level of caution. Awaiting the result before treating that item as settled either way.**
+
+### THE PROOF IN PROGRESS -- GOOD DESIGN, AWAITING THE READING
+
+**Building a real matched pair specifically to convert this correction into positive confirmation -- the same guard, the same opening conditions, differing only in whether a blind spot is authored -- is exactly the right way to turn a caught mistake into decisive evidence rather than just a retraction. Awaiting the reading.**
+
+### PROCEED
+
+Facing withdrawn from Coder's urgent list. The three remaining severe items (Confusion's gate, the confusion-tracking write, the shared droid classifier) stay exactly as urgent as ruled. Awaiting the hearing re-check and the blind-spot confirmation.
+
+
+---
+
+## PT-2452 -- BOTH FOLLOW-UPS DONE, AND THEY ARE THE SAME FINDING: SLICE 4'S FACING TURN IS BUILT, WIRED, AND FIRES CORRECTLY -- THEN SILENTLY UNDONE WITHIN ONE ENEMY TURN BY A SEPARATE, ALSO-CORRECT MECHANISM (ANY SENSE RE-AIMS AT TURN START), BECAUSE HEARING IS STRUCTURALLY IDENTICAL TO SIGHT-RANGE EVERYWHERE IN THIS CODEBASE. CONFIRMED WITH A GENUINELY ELEGANT THREE-ARM TEST INCLUDING A REAL POSITIVE CONTROL. NOT A BUG IN EITHER MECHANISM -- A GENUINE ORDERING QUESTION BETWEEN TWO CORRECT FEATURES, RULED NOW
+
+**This is precise, honest, exceptional work, and it's worth saying plainly that catching a second self-correction in the same session, using the exact lesson learned from the first, is a better outcome than either mistake alone -- the correction methodology is now demonstrably generalizing rather than being a one-time fix.**
+
+### THE HEARING RE-CHECK -- A REAL, SECOND MISSED READER
+
+**Finding the turn-start "any sense re-aims toward the true position" logic, with its own comment explicitly stating either sense turns a creature, closes the loop on why the original hearing claim needed re-examining. The same grep-the-writer discipline that caught the facing miss caught this one too -- applying a newly-learned lesson to one's own other claims, rather than treating the correction as a one-off exception, is exactly the rigor this deserved.**
+
+### ⚠⚠⚠ THE THREE-ARM CONFIRMATION -- GENUINELY EXCEPTIONAL TEST DESIGN
+
+**The 360-degree arm as a positive control is the sharpest piece of design in this whole report, and it's worth naming precisely why. Without it, two identical readings at absent and 180 degrees would have been ambiguous between "the facing turn was overwritten" and "the authored field was never read at all" -- two very different claims that would call for very different responses. Confirming behaviour genuinely changes at 360, where the arc check is known to refuse outright, proves the field is live and reaches the mechanism, which is exactly the distinction needed to trust the negative result at 180 as a real finding rather than a fixture artifact. This is the same rigor the empty-window and no-marker findings needed earlier in this thread, applied here to a case built specifically to rule out the ambiguity in advance rather than discovered afterward.**
+
+**Ruling out the movement-turn writer by confirming the guard never moved while distracted, leaving the hear-turn as the only remaining candidate, is precise elimination rather than an assumed conclusion.**
+
+### THE FINDING -- REAL, HONESTLY SCOPED AS AN INTERACTION, NOT A DEFECT IN EITHER FEATURE
+
+**Characterising this as one ordering defect between two individually correct mechanisms, rather than either as a broken facing turn or a broken hear-turn, is exactly right, and it's the correct reason the withdrawal to Coder was right -- nothing here needed rebuilding, because nothing here was ever wrong on its own terms. The genuine defect is that the two correct behaviours, run in the order they currently run, silently erase the design intent stated in the facing turn's own comment: it claims to outlast the distraction's ten rounds, and confirmed here not to survive even one enemy turn.**
+
+### RULED -- PROPOSE THE RESOLUTION, DON'T BUILD YET
+
+**This touches a shared, general-purpose mechanism (the turn-start re-aim) that likely has consequences beyond this one interaction, so it deserves a real proposal rather than a unilateral fix either from me or from Coder. The design intent to preserve is explicit and already stated in the code's own comment: the forced facing should be a genuine, lasting tactical consequence, not something erased by the target's own routine, no-new-information turn-start check.**
+
+**Propose 2-3 concrete shapes for how the facing turn should survive the hear-turn's normal re-aim -- whether the re-aim should skip a creature turned this same round, whether the forced facing should be treated as sticky until some genuinely new perception event occurs, or another shape entirely. State the real tradeoffs of each, the same way the Chain B and Deflection design questions were handled earlier in this session.**
+
+### PROCEED
+
+Report updated and confirmed correctly reflects both findings. Propose the resolution shape for the facing/hear-turn interaction before building anything. Everything else in `TEST 119` stands exactly as already ruled at `PT-2450` — Confusion's inertness, the silent overcharge, the never-firing same-kind refusal, and the shared droid classifier, all still urgent.

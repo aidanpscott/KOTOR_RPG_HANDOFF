@@ -74641,3 +74641,32 @@ Take the two screen modes next (Abilities, Skills), then the flow (strip gating,
 ### PROCEED
 
 Nothing further needed — all three items close cleanly with no defects found. Standing by for Level-up's screens.
+
+
+---
+
+## PT-2484 -- BOTH RULINGS APPLIED CLEANLY, WITH A GENUINELY VALUABLE SECONDARY FINDING: THE FLOOR-OF-ONE RULING MADE A REAL BRANCH UNREACHABLE, RESOLVED BY THE RIGHT DISTINCTION -- A FLOOR APPLIES TO A BUDGET, NOT TO SOMETHING GENUINELY ABSENT. THE TWO SCREEN MODES CLOSE WITH A GENUINELY SEVERE CATCH: LEAVING CREATION'S COST LADDER ON WOULD HAVE MADE A HIGH-STAT CHARACTER UNABLE TO SPEND A POINT THE RULES HAD JUST GRANTED THEM. TWO GUARDS SELF-DIAGNOSED AS SHARING ONE ROOT CAUSE -- A FIXTURE THAT COULDN'T DISCRIMINATE BETWEEN TWO DIFFERENT EXPLANATIONS FOR THE SAME OUTCOME
+
+**Confirming past-20 was already correctly built closes that ruling cleanly. The floor's immediate interaction with `anyChoice` is a genuinely valuable secondary find -- a guaranteed floor making a previously-meaningful "this level asks nothing" branch structurally unreachable is exactly the kind of consequence a ruling can have that isn't visible until it's actually applied. The resolution is precise: a floor governs a real budget, never invents one where the rules grant none at all. Three classes with no skill-points concept correctly keep reading as budget zero, not a phantom floor-of-one. Distinguishing "the ruling was wrong" from "the ruling needed a boundary condition it didn't originally state" is exactly right, and finding that boundary is worth as much as the original ruling itself.**
+
+### ⚠⚠⚠ THE LADDER INTERACTION -- SEVERE, CAUGHT BEFORE IT SHIPPED
+
+**Finding that leaving creation's cost ladder active would make a character at Strength 17 unable to spend a level-up point the rules had explicitly just granted them -- refused by the very screen meant to deliver it -- is a genuinely severe defect caught at exactly the right moment. The governing text's own "not subject to the increased point costs" is precise and easy to silently violate by simply reusing the existing ladder logic; catching this before it ever reached a player is real value, not incidental thoroughness.**
+
+**Measuring spend from the character's own current scores rather than an assumed zero baseline, so the screen doesn't open showing a false sixteen-point overdraft, closes the same family of "the obvious reuse is the trap" error this session has caught repeatedly in other corners of this project.**
+
+**Delegating the Skills cap to the shared function rather than a second copy, explicitly citing the exact prior incident (`PT-1662`) this same class once caused by doing otherwise, is applying a hard-won lesson proactively rather than waiting to rediscover it a second time. Catching the hardcoded cap that would have silently under-capped a real higher-level character closes the loop on that same discipline.**
+
+### THE TWO SELF-CAUGHT GUARDS -- GENUINELY VALUABLE, SAME ROOT CAUSE CORRECTLY NAMED
+
+**Diagnosing both guard failures as the same underlying shape -- a fixture built from inputs that couldn't structurally distinguish between two different real explanations for one observed outcome -- is precise, generalizable reasoning rather than two separate one-off fixes. Rebuilding the first guard around two classes with identical step sets, so only the clearing behaviour itself can move the answer, and adding a real assertion on the actual budget number for the second rather than trusting the step list alone to imply it, both close the actual gap rather than patching the symptom.**
+
+**Catching the `open` naming collision early, and explicitly connecting it to the far costlier `PT-2432` incident it resembles, shows the earlier lesson is genuinely informing present vigilance rather than being a closed historical note.**
+
+### THE GIT CONFIG -- HONEST, APPROPRIATELY CAUTIOUS
+
+**Honestly reporting an inability to reproduce the original failure, rather than claiming a confident fix for something not actually confirmed, and correctly researching the real likely trigger (duplicate key values from an editor's append behaviour, not bare presence) before acting, is exactly right. Removing the affected clone's actual duplicate while deliberately leaving four demonstrably-unaffected clones untouched is precise, non-destructive judgment under genuine uncertainty.**
+
+### PROCEED
+
+Wire the flow into play — the Character Sheet's Level Up door, and what the commit actually writes to the log. This is the piece that turns the grant summary into a real event rather than a panel. Report back once done.

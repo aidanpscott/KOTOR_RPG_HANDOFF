@@ -74113,3 +74113,28 @@ Silent unreadable-save shape tracked as its own held item. Duration and droid-ga
 ### PROCEED
 
 Build the router addition for all three overlays. This closes the escape investigation in full.
+
+
+---
+
+## PT-2466 -- THE ROUTER ADDITION CLOSES CLEAN, WITH A GENUINELY GOOD INTERPRETIVE JUDGMENT CORRECTLY FLAGGED RATHER THAN SILENTLY DECIDED. AND TESTER PROACTIVELY CONNECTS THREE SEPARATE SILENT-FAILURE INSTANCES INTO ONE PRECISE, ACTIONABLE INSIGHT: THE PRODUCT ALREADY KNOWS HOW TO REPORT THIS KIND OF FAILURE WELL (THE DAMAGED-SAVE CASE), AND THE OTHER TWO SHOULD LIKELY ROUTE THROUGH THE SAME MECHANISM RATHER THAN EACH GETTING ITS OWN NEW DESIGN
+
+**Choosing to take "matching every other mode's treatment" narrowly rather than literally -- these three overlays stay genuinely actionable underneath, unlike the fully modal screens above them that correctly swallow the whole keyboard -- is exactly the right read, and flagging the choice explicitly rather than deciding it silently is the correct level of transparency for a real interpretive judgment. Nothing reported asked for arrow keys to stop working while the map is open, and taking that away would have been a genuinely larger, unrequested change riding along with a narrower fix. Confirmed correct as scoped.**
+
+**One press closing exactly one overlay, rather than all three at once, is the right design -- a single keystroke shouldn't undo three separate, deliberate choices simultaneously. Confirming the original deliberate leave-when-nothing-is-open behaviour stays fully intact and guarded closes the loop properly.**
+
+⚠ **Catching that the third mutation needed a test specifically constructed to distinguish "closes only the open overlay" from "closes everything," since a single open overlay can't tell the two apart on its own, is precise verification thinking -- the same discipline this session has held throughout, applied correctly to a case genuinely easy to under-test by accident.**
+
+### ⚠⚠ TESTER'S CROSS-CASE OBSERVATION -- GENUINELY VALUABLE, WORTH ACTING ON DIRECTLY
+
+**This is precise, proactive analysis, and framing it honestly as "not a finding, worth ten minutes" rather than overclaiming certainty about unread code is exactly right. Cataloguing three real silent-or-near-silent load failures and noticing one of them -- the damaged-save case -- already reports itself well, naming both byte counts and the likely cause in one clear sentence, while the other two fall back to a blank, is a genuinely useful comparison most people wouldn't have thought to make across three separately-filed reports.**
+
+**The proposed direction is sound: rather than designing two new reporting mechanisms for the other two cases, check whether they can route through the mechanism that already works. And noticing that the tag/handle mismatch case already, evidently, computes a real problem count somewhere -- since the UI card visibly shows one -- meaning the underlying information likely already exists and simply isn't surfaced anywhere the player can see it, is a sharp, specific lead worth following before assuming anything needs building from scratch.**
+
+### RULED
+
+**Spend the ten minutes Tester suggested: check whether the empty-party load and the tag/handle mismatch can route through the same reporting path the damaged-save case already uses, before designing anything new.** If the shape closes the way Tester's observation suggests, that's the fix for both at once. Report back either way -- whether it's a clean fit, a partial one, or genuinely two separate problems that only looked similar from outside.
+
+### PROCEED
+
+Investigate the shared-reporting-path question for both silent-failure cases. Report before proposing or building anything.

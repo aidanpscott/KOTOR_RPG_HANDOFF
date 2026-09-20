@@ -73214,3 +73214,30 @@ Build session-scoped alignment accounting as a ledger fold between markers. Buil
 ### PROCEED
 
 Alignment slice is next: design and build the cast-logging event (power id, tier, side), then the drift fold over the now-ready session window. Nothing further needed on the foundation itself -- closed cleanly.
+
+
+---
+
+## PT-2432 -- ALIGNMENT DRIFT CLOSES CLEAN, VERIFIED AGAINST THE REAL DOCUMENT DIRECTLY (NOT JUST THE REPORT): BANDS, HYSTERESIS, PER-ENCOUNTER DRIFT, THE NEUTRAL REDUCTION, AND WISDOM RESISTANCE ALL MATCH `ALIGNMENT-01 v2` EXACTLY. THE ONE INTERPRETIVE CALL (RECOVERY REQUIRES A COMPLETED SESSION WINDOW) CONFIRMED SOUND -- THE DOCUMENT STATES THE CONDITION BUT NOT THE OPERATIONAL BOUNDARY, AND CODER'S REASONING (YOU CANNOT KNOW A SESSION WAS ENTIRELY QUIET UNTIL IT'S OVER) IS THE ONLY LOGICALLY COHERENT READING. TWO MORE GENUINELY VALUABLE FIXTURE-FOUND DEFECTS, PLUS A REAL CROSS-REPO NAMING LESSON
+
+**Read `ALIGNMENT-01 v2` directly against this report before confirming it, rather than trusting the summary — worth stating plainly since it's exactly the discipline this whole thread has needed at every step. Everything checks out. The seven bands and their multipliers, the directional hysteresis stated exactly as `§1.2` requires it (immediate away from Neutral, three points past toward it), the per-encounter drift at highest tier, the Neutral band reduction, and Wisdom resistance's precise wording — "subtracted from total session drift," minimum 1 if any dark power was used — all match the source exactly, with no discrepancy found anywhere.**
+
+### THE TRAILING-MARKER RULING -- CONFIRMED SOUND
+
+**Checked specifically because it was flagged as an interpretation rather than a stated fact, and the check holds: `§2.6` states the qualifying condition ("no dark powers used for an entire session") without ever operationally defining what counts as that session's boundary. Requiring a completed window is the only logically coherent reading — a session cannot be confirmed to have passed entirely quiet until it has actually ended, and evaluating an open, in-progress window as though it were already complete would be a real logical error, not a stricter-than-necessary interpretation. Confirmed correct. Drift still applying to the in-progress window (a resolved encounter is resolved, whenever it happened) while recovery alone waits for closure is the right asymmetry — the two questions genuinely aren't the same.**
+
+### TWO MORE FIXTURE-FOUND DEFECTS -- BOTH REAL, BOTH CORRECTLY FIXED
+
+**An unclosed encounter still costing drift, an empty bounded window correctly paying nothing, and Wisdom's minimum-1 floor surviving a +1 modifier's rounding-to-zero — three branches that were already built and already commented, invisible to twelve passing tests until mutated. This is the same "an instrument that agrees with itself proves nothing" pattern this session has found repeatedly, and it keeps earning its place as a standing discipline rather than becoming routine to skip.**
+
+### THE FOURTH MUTANT -- CORRECTLY LEFT OPEN, NOT FORCED CLOSED
+
+**Reporting a genuinely undetectable mutant as exactly that, rather than writing a test that would only pass by coincidence, is right. The below-50 recovery gate is structurally untestable today because nothing in the current build can push the score above 50 at all — story shifts, the only thing that would, are already deferred. A guard that can't currently be proven wrong stays noted rather than faked into looking proven.**
+
+### THE ALIGNMENT/FLUTTER COLLISION -- WORTH KEEPING AS A STANDING LESSON
+
+⚠⚠ **A pure-Dart engine's fully green suite saying nothing about a name colliding in its own consumers is a genuinely useful, generalisable observation, and naming it as its own class is worth doing.** 1,583 passing engine tests provided zero signal about a naming collision that broke three other repos outright — the only thing that surfaced it was actually pushing the pin and running the consumer suites, not trusting that a clean engine build implies a clean ecosystem. Worth remembering the next time a type or function name feels obviously safe within one repo's own tests.
+
+### PROCEED
+
+Rest-and-Meditation's real build is next — its own dependency on the band-boundary rule is now satisfied. Cost multipliers, `§2.4` story shifts, and Combat Mind Trick remain correctly deferred, in that order after Rest-and-Meditation closes.

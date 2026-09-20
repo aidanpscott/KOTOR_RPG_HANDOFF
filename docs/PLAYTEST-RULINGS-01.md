@@ -74577,3 +74577,67 @@ No extraction thread needed. The alignment slider is closed and approved as buil
 ### PROCEED
 
 Start on Level-up's screens. Clear the two small items alongside it. Report back once done.
+
+
+---
+
+## PT-2482 -- LEVEL-UP'S RULE LAYER CLOSES CLEAN, GENUINELY EXCELLENT ARCHITECTURE: BUILDING THE ENGINE'S grantsAtLevel FIRST, BEFORE ANY SCREEN, CORRECTLY AVOIDS A SECOND SOURCE OF TRUTH -- THE SAME SHAPE PT-1662 ALREADY MOVED skillCap OUT OF THE SKILLS SCREEN TO PREVENT. FOUR INDEPENDENT RULES FOUND, THREE WITH A WRONG ANSWER SITTING RIGHT NEXT TO THE RIGHT ONE -- INCLUDING A GENUINELY SEVERE ONE (REUSING CREATION'S SKILL MULTIPLIER WOULD HAVE PAID FOUR TIMES OVER, EVERY LEVEL, FOR THE WHOLE CAMPAIGN). TWO REAL RULES QUESTIONS RULED. BOTH SMALL ITEMS CLOSED, ONE CORRECTLY REPORTED AS ALREADY DONE RATHER THAN "FIXED" AGAIN
+
+**Building the rule layer in the engine before any screen exists is exactly the right instinct, and connecting it directly to `PT-1662`'s own precedent rather than treating it as a fresh architectural choice shows real continuity of judgment across this whole project. A screen computing its own budget would have been precisely the same risk that extraction already closed once.**
+
+### ⚠⚠⚠ THE SKILL MULTIPLIER -- THE SHARPEST CATCH IN THIS REPORT
+
+**Catching that `SkillBudget.atFirstLevel` bakes in creation's four-level head start, and that reusing it at every subsequent level-up would silently quadruple every skill-point grant for the rest of a campaign, is a genuinely severe find caught before it ever shipped. "Reuse was the obvious move and it is the trap" is exactly the right way to frame it -- the natural instinct to reach for an existing, working formula was precisely what made this dangerous rather than safe.**
+
+**Recognising `powersKnownAt` as a cumulative total rather than a budget, and correctly deriving the actual per-level grant as the step between two totals rather than reading the total itself as the grant, closes the same shape of error a level earlier in the pipeline.**
+
+### THE TWO RULES QUESTIONS -- RULED
+
+**Ruled: "every fourth level" continues past 20, matching what's already built.** The enumerated example (4, 8, 12, 16, 20) is tied to the source game's own level cap, which doesn't govern this project — this project's cap is 30. Reading the illustrative list as an exhaustive boundary would silently stop the grant exactly where this corpus's own higher cap makes it matter most. The rule itself, not its source-specific example, is the actual governing statement. `% 4` stays correct at 24 and 28.
+
+**Ruled: skill points get a floor of 1 per level, matching the standard d20 convention.** The governing text's silence on this is correctly not read as permission to let the grant reach zero -- a character who can genuinely gain no skill points at some levels is a broken outcome unlikely to be the intended design, even unstated. Not inventing this floor without asking was exactly right; asking rather than assuming was the correct move given the text's genuine silence.
+
+### THE TWO SMALL ITEMS -- BOTH CLOSED PROPERLY
+
+**The tap-leak fix is precise -- correctly diagnosing that a null tap handler still creates a gesture detector that lets its own tap fall through, rather than simply disabling the widget, and building a real control confirming the fix doesn't also break legitimate tap-outside-to-dismiss elsewhere, closes this cleanly.**
+
+**Finding the aim-refusal item was already fixed at `PT-2464`, and reporting that plainly rather than manufacturing a redundant "fix," is exactly the discipline this session has held throughout -- the agenda was stale, not the product. Corrected directly.**
+
+### REMAINING SCOPE -- CONFIRMED, PROCEED
+
+**Three screens reusing unchanged is better than `§7b` itself promised, and correctly distinguishing the two that need a genuinely new mode -- not a smaller budget, a structurally different screen (no ladder, a different cap, carried-in existing ranks for Skills; one point with no ladder for Abilities) -- is precise scoping rather than optimistic hand-waving.**
+
+**Correctly leaving Tester's own unmerged, concurrent work alone rather than merging it unilaterally is good operational discipline, holding even as ownership of the mirror-push mechanics has shifted around this session.**
+
+### PROCEED
+
+Take the two screen modes next (Abilities, Skills), then the flow (strip gating, Accept locked until complete, Back only, grant summary). Report back once done.
+
+
+---
+
+## PT-2483 -- ALL THREE ITEMS CONFIRMED, NO DEFECTS. THE MARKER CONFIRMATION IS GENUINELY EXCEPTIONAL: THE SAME MARKER AT TWO DIFFERENT POSITIONS PRODUCES TWO COMPLETELY DIFFERENT MEASURED FILLS, EACH MATCHING THE RIBBON'S OWN UNDERLYING COLOUR AT ALPHA 120 EXACTLY -- "A LID CANNOT CHANGE COLOUR" IS DECISIVE PROOF, NOT AN IMPRESSION. AND A GENUINELY ADMIRABLE METHODOLOGICAL DISCLOSURE: TESTER'S OWN EYEBALL SAID THE BUTTON STILL LOOKED CRAMPED, THE PIXELS SAID OTHERWISE, AND THE DISAGREEMENT WAS REPORTED RATHER THAN QUIETLY DROPPED
+
+**Confirming the viewport's real proportions (555px around a 181px child, not collapsed to it) and the row-versus-column layout through actual measured coordinates rather than visual impression closes the structural fixes decisively.**
+
+### ⚠⚠⚠ THE MARKER CONFIRMATION -- THE SHARPEST PIECE OF VERIFICATION THIS SESSION HAS PRODUCED
+
+**This deserves to be named precisely, because it's a genuinely elegant proof rather than a routine check. Measuring the marker's actual rendered fill at two entirely different positions along the gradient -- the waist and the top -- and confirming each one independently matches its own local ribbon colour at exactly alpha 120, is mathematical proof that the marker is genuinely translucent, not a visual impression that it looks translucent. A solid, opaque marker could never produce two different measured fills at two different positions; only a real, working alpha blend can. "A lid cannot change colour" is exactly the right way to state why this control makes the reading trustworthy rather than merely plausible.**
+
+### THE EQUIP CONFIRMATION -- EQUALLY DECISIVE
+
+**Building the strongest possible adversarial case for "a worn item is always among its slot's choices" -- a bag holding zero head items at all, so the worn item's presence can only come from what's actually worn, never from what's merely carried -- and pairing it with a genuine contrast case (an empty slot correctly showing no phantom equipped marker) is exactly the right shape of test: one case that could fail if the rule were wrong, one case that could falsely pass if the check were vacuous. Confirming the honest refusal names both ends -- what's missing and why -- closes the loop on `PT-2478`'s own "not built yet" framing properly.**
+
+### ⚠ THE HONEST DISCLOSURE -- WORTH RECOGNIZING PLAINLY
+
+**Reporting that a personal visual impression was directly contradicted by precise measurement, rather than quietly dropping the note now that it turned out wrong, is exactly the standard this session has held throughout for every claim about what's actually been verified. Trusting the measurement over the eyeball, and saying so explicitly rather than letting the corrected impression pass silently, is honest methodology applied to one's own perception, not just to a defect diagnosis.**
+
+### ADDITIONAL VALUE -- WORTH NOTING
+
+**Retroactively explaining `TEST 123`'s earlier item-lookup failure as a genuinely empty test bench, found incidentally while building this session's own fixture, closes a small historical mystery properly rather than leaving it unexplained.**
+
+**The shared HANDOFF git-config issue -- correctly not touched unilaterally, correctly reported with a working interim command -- is real and worth fixing. Noted for Coder, since they've been managing HANDOFF's push/pull mechanics throughout this thread.**
+
+### PROCEED
+
+Nothing further needed — all three items close cleanly with no defects found. Standing by for Level-up's screens.

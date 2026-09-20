@@ -73187,3 +73187,30 @@ Build the shared session/day time-tracking foundation first. Then alignment's sc
 ### PROCEED
 
 Build session-scoped alignment accounting as a ledger fold between markers. Build meditation's two tiers as discrete event kinds, capped by count rather than elapsed time. Both stay within `CLOCK-01`'s settled day-only granularity.
+
+
+---
+
+## PT-2431 -- BOTH PIECES CLOSE CLEAN. A GENUINELY DANGEROUS EDGE CASE CAUGHT ON THE SESSION WINDOW -- NO MARKER MUST MEAN THE WHOLE LOG, NOT AN EMPTY ONE, OR THE PASSIVE-RECOVERY RULE WOULD HAVE SILENTLY GRANTED ITSELF TO ANY CHARACTER WHO USED DARK POWERS ALL DAY BEFORE THEIR FIRST SESSION MARKER EVER EXISTED. AND PRECISE NUMERICAL REASONING ON MEDITATION: TWO PLAUSIBLE READINGS OF "75% OF LOST" ARE BOTH WRONG, AND THE CORRECT ONE IS VERIFIED BY SHOWING IT'S THE ONLY READING THAT KEEPS THE GOVERNING DOCUMENT'S OWN STATED CLAIM TRUE
+
+### THE SESSION WINDOW -- APPROVED, THE EDGE CASE IS THE REAL FIND
+
+⚠⚠ **Catching that an absent marker must default to the whole log rather than an empty window is the kind of thing that's easy to get backwards in exactly the direction that fails silently and generously.** An empty-window reading would have been the more "obviously correct"-looking default to reach for, and it would have quietly handed the passive-recovery bonus to a character who spent an entire day burning through dark powers, simply because no session boundary had been logged yet to bound the fold. Building a named guard for exactly this case, rather than trusting the general test suite to happen to cover it, is precise anticipation of a failure mode that a reader skimming the fold's logic could easily miss entirely.
+
+**Storing nothing on the marker itself, so a running total can never disagree with the events that actually produced it, is the same discipline held for the day clock -- derive, don't cache, especially when the two could drift apart silently if they ever did.**
+
+### MEDITATION'S TIERS -- APPROVED, THE VERIFICATION IS THE SHARPER HALF
+
+⚠⚠ **Identifying two wrong-but-plausible readings of "75% of lost" before landing on the correct one is precise, careful arithmetic -- both wrong readings would have lowered the ceiling rather than restoring it, which is exactly the kind of error that could pass a shallow test checking only that a number changed, without checking that it changed in the right direction.**
+
+**Verifying the chosen reading by showing it's the only one that keeps `§4.4`'s own stated claim true -- that short meditation never fully undoes the damage -- is exactly the right kind of confirmation. A reading that happened to produce a plausible-looking number would not have been enough; this one is confirmed correct because the alternative would have silently erased the entire distinction the two-tier system exists to preserve. That's verification against the document's actual intent, not just against its numbers.**
+
+**Flagging the rounding direction as a reading rather than letting it pass as settled fact, with the reasoning stated (down can never over-restore), is honest about exactly how much of this was decided versus derived.**
+
+### ⚠ THE ALIGNMENT ACCOUNTING -- CORRECTLY DEFERRED, NOT BUILT AROUND A GUESS
+
+**Recognising that the drift computation itself has no event to fold from yet -- nothing in the ledger currently logs a power being cast -- and correctly refusing to invent that event's shape as a side effect of finishing this slice, is exactly the right boundary to hold. The cast event's real payload is a design decision belonging to the alignment slice itself, not something that should get silently decided here just to make this piece feel more complete. Leaving the foundation genuinely finished and testable on its own, with the fold stated as "one line once the event exists," is the correct handoff -- nothing speculative, nothing half-built pretending to be whole.**
+
+### PROCEED
+
+Alignment slice is next: design and build the cast-logging event (power id, tier, side), then the drift fold over the now-ready session window. Nothing further needed on the foundation itself -- closed cleanly.

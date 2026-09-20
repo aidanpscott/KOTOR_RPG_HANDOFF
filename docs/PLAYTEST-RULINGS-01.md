@@ -74520,3 +74520,60 @@ Nothing further on Defect 1 — closed cleanly. Stop searching for the mockup fi
 ### PROCEED
 
 Awaiting Aaron's answer on the recreate-versus-extraction question below.
+
+
+---
+
+## PT-2479 -- THE MARKER FIX CLOSES CLEAN: TWO SEPARATE, INDEPENDENT DEFECTS, EITHER ONE ALONE SUFFICIENT TO PRODUCE THE SAME SYMPTOM, CORRECTLY SEPARATED RATHER THAN TREATED AS ONE. AND ⚠⚠⚠ A GENUINELY VALUABLE PATTERN NOW CONFIRMED TWICE IN TWO CONSECUTIVE SLICES, WORTH RECORDING AS ITS OWN STANDING LESSON: A NUMBER MEASURED OFF THE RIGHT OBJECT AND DIVIDED BY THE WRONG ONE -- SOURCED, AND THAT IS EXACTLY WHAT MADE IT LOOK TRUSTWORTHY WHILE BEING WRONG
+
+**"I divided a measurement of one thing by a measurement of another" is a precise, sharp diagnosis of the first defect, and correctly identifying the second as a fixed pixel value coincidentally colliding with a separately-derived gap -- two hairlines meeting in the middle and closing over the whole band -- rather than assuming one fix would address both, is exactly the discipline that kept this from shipping as a half-fix.**
+
+### ⚠⚠⚠ THE RECURRING PATTERN -- WORTH RECORDING NOW THAT IT'S CONFIRMED TWICE
+
+**Naming this explicitly as the same shape as the grey-waist colour error -- a value sampled or measured correctly from the real source, then combined or applied in a way that made the combination meaningless, while the individual inputs stayed genuinely sourced -- is valuable pattern recognition at exactly the right moment: the second occurrence is what confirms it's a pattern rather than an isolated slip. "Both times the value was sourced, which is exactly what made it look trustworthy" is the precise, memorable version of why this specific error shape is more dangerous than an ordinary mistake -- it doesn't look like a guess, so it doesn't get double-checked the way a guess would.**
+
+**Ruled: record this as its own standing lesson.** Before trusting a derived value (a ratio, a divided measurement, a combined dimension), confirm both inputs are measurements of the *same* thing, or genuinely compatible units — not just that each one was individually sourced correctly. A number can be honestly measured and still be meaningless once combined with the wrong partner.
+
+### THE FIX -- PRINCIPLED, CLOSES THE DRIFT RISK STRUCTURALLY
+
+**Re-deriving every relevant thickness and spacing value from the same texture's own row count, rather than patching the two specific numbers that happened to collide this time, means the gap and the outlines are now structurally the same unit and cannot independently drift apart again — closing the actual risk, not just this instance of it. Changing the fill from an opaque cover to a measured, genuine wash is precisely the change that lets the gradient read through, directly answering the original visual complaint.**
+
+### ⚠ THE THREE-ASSERTION GUARD -- EXACTLY RIGHT
+
+**Building one assertion per distinct root cause, rather than a single combined "is it translucent" check, is precise verification design — correctly reasoning that a combined check would have gone green the moment the alpha alone was fixed, while the separate outline-overlap defect stayed silently present. This is the same "assert on the actual cause, not a proxy for it" discipline this whole session has held throughout, applied here to a case where a shortcut check would have looked identical to the real fix.**
+
+### PROCEED
+
+Nothing further needed on the marker — closed cleanly. Still awaiting Aaron's answer on the recreate-vs-extraction policy question; nothing else is blocking in the meantime.
+
+
+---
+
+## PT-2480 -- OWNER RULING: RECREATE STAYS THE APPROACH, NOT BIT-EXACT EXTRACTION. THE ALIGNMENT SLIDER AS BUILT IS APPROVED AS-IS
+
+**Owner reviewed the rebuilt alignment slider directly and confirmed it looks good. This settles the flagged policy question from `PT-2478`: `ASSET-REPLACEMENT-01`'s existing rule (recreate close to the pixel, never ship the extracted source file) stays the governing approach. The recent "extract the assets perfectly" request is resolved as describing the standard already being met — recreated faithfully enough that the result reads as correct — not a request to switch to shipping bit-exact extracted files.**
+
+### PROCEED
+
+No extraction thread needed. The alignment slider is closed and approved as built. Nothing further on this specific question — the standing rule from `ASSET-REPLACEMENT-01` continues to govern any future asset work in this thread without needing to be re-asked.
+
+
+---
+
+## PT-2481 -- APPROVED: LEVEL-UP'S SCREENS (§7b) NEXT, NOT ANOTHER §7c SCREEN. THE SEVERITY CLASSIFICATION IS THE RIGHT WAY TO PRIORITIZE -- THE ONLY GENUINELY SEVERE ITEM ON THE HELD LIST, AND GENUINELY UNBLOCKED IN A WAY THE SHARED SHELL ISN'T. TWO SMALL ITEMS APPROVED ALONGSIDE IT
+
+**Correctly identifying this as the one severe item on the list, and reasoning that severity should govern the next slice rather than simple proximity to what was just finished, is exactly the discipline this whole session has held for prioritization throughout. Confirming it reuses four already-built, already-tested chargen screens rather than starting from a blank slate, and needs neither the nav bar nor the map view the way the shell does, is precise scoping that makes the recommendation concrete rather than just directionally reasonable.**
+
+**Noting the Character Sheet already has a real door into this thread -- the inert Level Up button, whose own stated reason is exactly this gap -- ties the work to something already visible rather than opening a fresh, disconnected thread.**
+
+### RULED -- APPROVED
+
+**Build Level-up's screens (§7b) next.** The Class step at position 1 and the grant-summary on commit, both against the already-built Abilities/Skills/Feats/Powers screens with level-up budgets substituted for creation budgets.
+
+**Approved alongside it: both small items.** The disabled Level Up tap-leak (the same `IgnorePointer` shape already proven on the package menu) and the mis-worded aim-outside-a-fight refusal. Both small, both already diagnosed, worth clearing in the same slice without meaningfully distracting from the main work.
+
+**Equip's slot-count discrepancy stays correctly held.** I still don't have the direct diagram context needed to responsibly resolve this — genuinely need to look at the actual geometry before ruling rather than guess. Held until I can review it properly.
+
+### PROCEED
+
+Start on Level-up's screens. Clear the two small items alongside it. Report back once done.

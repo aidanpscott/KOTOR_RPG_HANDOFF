@@ -74216,3 +74216,63 @@ Fix the async race in the menu status line now — the clearest, most decisive f
 ### PROCEED
 
 Path 1's reproduction is withdrawn — nothing further needed there. Path 2 (the package-fault sentence plumbing) proceeds whenever convenient, correctly resized to non-urgent. The methodological lesson is recorded. Race condition fully closed.
+
+
+---
+
+## PT-2469 -- THE PACKAGE-FAULT PLUMBING CLOSES CLEAN. THE REAL SUBSTANCE OF THE FIX IS CORRECTLY IDENTIFIED AS ITS OWN THING: SHOWING EVERY FAULT RATHER THAN THE FIRST, PROVEN NECESSARY WITH THE REAL BENCH'S OWN ACTUAL FAULT ORDER (FOUR BENIGN, THEN ONE REAL) -- THE OBVIOUS "COPY THE NEARBY PATTERN" MOVE WOULD HAVE REPRODUCED THE SAME DEFECT IN A NEW SHAPE. AND A GENUINELY COLLABORATIVE HANDLING OF THE SHARED METHODOLOGICAL LESSON -- MERGED INTO TESTER'S OWN EXISTING NOTE RATHER THAN DUPLICATED, WITH A REAL, COMPLEMENTARY ADDITION FROM THE OTHER SIDE OF THE SAME MISTAKE
+
+**Correctly keeping the summary tile itself unchanged -- still just the count, still nothing invented at zero or unknown -- while citing the standing ruling that already bars exactly the kind of category-from-a-number judgment a "smarter" tile would have required, is precise restraint. The fix was about making the real sentences reachable somewhere, not about redesigning what the tile itself is allowed to claim.**
+
+### ⚠⚠⚠ EVERY FAULT, NOT THE FIRST -- CORRECTLY NAMED AS THE WHOLE ITEM
+
+**This is exactly right, and it's worth confirming why it's the real substance rather than an implementation detail. Copying the nearby single-reason pattern would have been the obvious move, and it would have been wrong in the same shape as the original defect -- a count that hides four benign warnings behind one real fault is no better than a count that hides everything, if the one sentence shown happens to be one of the four. Proving this against the real bench's own actual fault order, rather than an abstract argument, and building the guard around that exact shape -- four benign, then the real one, in the order the validator actually emits them -- is decisive verification, not just a reasonable design choice.**
+
+**Honestly stating that nothing in the underlying data distinguishes benign from severe, and that building an automatic split would itself be exactly the mechanical category the standing ruling already bars, is the right place to stop. A human reading real sentences and judging them is the actual, honest limit of what this can do -- not a shortcoming to apologize for, a correct boundary to state plainly.**
+
+**Flagging that neither the fault sentence nor the package name alone disambiguates which folder to open with two packages installed is a small, honestly-reported residual gap rather than something smoothed over to make the fix look more complete than it is.**
+
+### ⚠⚠ THE METHODOLOGICAL LESSON -- HANDLED WITH GENUINE COLLABORATIVE CARE
+
+**Recognising that Tester had already properly written up the same underlying lesson, and merging into that existing note rather than filing a redundant second one, is exactly the right instinct -- one standing lesson, not two competing versions of the same insight. And the specific addition from this side of the mistake is genuinely valuable in its own right: that the false cause and the true lead had to be separated before either could be properly discarded or kept, rather than treating "the diagnosis was wrong" as license to throw away everything connected to it. That's a real, complementary half of the same lesson, worth exactly as much as the standing control Tester's own side contributed.**
+
+### PROCEED
+
+Nothing further needed -- closed cleanly. This closes the whole silent-failure investigation in full.
+
+
+---
+
+## PT-2470 -- OWNER OPENS A NEW, MAJOR BODY OF WORK: THE PLAYER-FACING UI SCREENS -- CHARACTER SHEET, ABILITIES, INVENTORY, EQUIP, JOURNAL/MESSAGES/NOTES, PARTY SELECTION, OPTIONS/SETTINGS, AND THE SHARED SHELL AROUND THEM. GENUINELY EXTENSIVE DESIGN ALREADY EXISTS AND IS LOCKED -- design/APP-UI-VISION-01.md, ITS OWN SEPARATE PT-1101 THROUGH PT-1358 TRACK -- NOTHING HERE NEEDS DECIDING FROM SCRATCH. THE WORK IS BUILDING WHAT'S ALREADY DESIGNED, NOT DESIGNING IT
+
+**This is a genuinely different kind of thread from everything else on the current agenda -- not a rules-engine defect or a measurement question, but a real, substantial front-end build against design work that's already been done thoroughly and locked. Opening it properly rather than folding it into the existing held-item list, since its scope and shape are both different from anything currently tracked.**
+
+### WHAT ALREADY EXISTS -- CONFIRMED, READ DIRECTLY
+
+`design/APP-UI-VISION-01.md`, 844 lines, its own separate ruling track. Every screen named is locked, not merely sketched:
+
+- **Character Sheet** (`PT-1249`) — 3D viewport, alignment arc, stat table with value/modifier columns, Vitality/Force as current/max, one deliberate departure from source (base classes have a live Force row from level 1, unlike KOTOR's late-arriving Jedi)
+- **Abilities** (`PT-1250`) — tab strip (Skills/Powers/Feats), each with a genuinely different list layout and readout, unlearned powers rendering as `?` with a specific source-quoted reason
+- **Inventory** (`PT-1251`) — seven-category filter strip, two details taken directly from source screenshots rather than invented
+- **Equip** (`PT-1252`) — two states (slot view / item selected), the 3×5 lattice arrangement with 11 slots, boots having no source precedent at all
+- **Journal, Messages, Personal Notes** (`PT-1253`) — one family, sort-as-sentence rather than buttons, Notes as a genuinely new chrome-free system with an explicit privacy rule
+- **Party Selection** (`PT-1254`) — a locked, deliberate departure from source (roster list instead of KOTOR's eight-slot ring), with the ring's real advantage honestly conceded rather than dismissed
+- **Options** (`PT-1255`, first pass) — four entries replaced, two kept, two new, two dropped, each with a stated reason; explicitly flagged as first-pass, not final, pending the still-open settings-scope question (`PT-1140`, `PT-1148`)
+- **The shared shell** (`PT-1257`) — seven screens on one nav bar, three pieces of persistent furniture (nav bar, title bar, footer) on every in-game screen, state shared across all seven as one character record rather than seven independent panels
+
+**Escape correctly belongs at Settings within this same design, per the existing shell structure** — confirming the connection made when this thread was opened.
+
+### WHAT'S NOT YET KNOWN
+
+Whether any of this has actually been built in the app is unverified from this environment — this session has worked from `MAIN_WORK` throughout and has no direct access to `KOTOR-RPG-APP`'s current UI layer. This needs to be the first thing checked, not assumed either way.
+
+### RULED -- MEASURE FIRST, SAME DISCIPLINE AS EVERY OTHER THREAD
+
+Before proposing or building anything:
+1. Read `design/APP-UI-VISION-01.md` in full, plus `§7a` (character creation, eleven screens, `PT-1179`–`PT-1210`) and `§7b` (level-up, `PT-1225`), which weren't excerpted above but are part of the same locked body of work.
+2. Check what currently exists in the app for any of these screens — confirm real build state before assuming a blank slate.
+3. Report back with an honest inventory: what's designed and unbuilt, what's designed and partially built, and whether anything already-locked has since drifted from what the app actually does.
+
+### PROCEED
+
+Measure and report before proposing a build order. Given the scope, this will likely need to be broken into its own sequence of slices once the real state is known, the same way Shields, Force Push, and the rest/meditation/alignment thread were.

@@ -73796,3 +73796,67 @@ Facing withdrawn from Coder's urgent list. The three remaining severe items (Con
 ### PROCEED
 
 Report updated and confirmed correctly reflects both findings. Propose the resolution shape for the facing/hear-turn interaction before building anything. Everything else in `TEST 119` stands exactly as already ruled at `PT-2450` — Confusion's inertness, the silent overcharge, the never-firing same-kind refusal, and the shared droid classifier, all still urgent.
+
+
+---
+
+## PT-2453 -- ALL THREE SEVERE ITEMS FROM PT-2450 CLOSE CLEAN, PLUS container.opened's GUARD. DIRECT, HONEST OWNERSHIP OF THE TWIN-LIST DEFECT -- CAUGHT BY THE SAME COMMENT BLOCK ALREADY WRITTEN TO WARN AGAINST IT. THE SEVERITY-COMPOUNDING OBSERVATION EXPLICITLY VALIDATED AS PT-2240'S PATTERN ARRIVING FROM A NEW DIRECTION. THE DROID FIX CONFIRMED TO HAVE BEEN BREAKING TWO POWERS IN OPPOSITE DIRECTIONS AT ONCE. AND A GENUINELY MATURE REFUSAL TO WRITE A TEST THAT COULD NOT FAIL
+
+**Confirming `PT-2451`'s withdrawal landed before any wasted work happened -- nothing built, nothing undone -- closes that loop cleanly.**
+
+### container.opened -- APPROVED
+
+**Mirroring the door's pair while adding the one test the door doesn't need -- confirming the shared writer picks the right event kind, since a shared helper's one failure mode is handing it the wrong constant -- is precise, not just thorough. Naming the pin-mismatch issue as the third occurrence this session, rather than a fresh surprise, is the same standing-pattern discipline already applied to the guard-testing mistake.**
+
+### THE CONFUSION FIX -- APPROVED, THE OWNERSHIP IS WORTH NAMING DIRECTLY
+
+**"It was mine" is exactly the right way to open this, and it's worth taking at face value rather than softening -- the defect landed in exactly the shape the comment beside that gate was already written to warn against, and owning that plainly rather than describing it in the passive voice is the standard this whole session has held for every mistake, applied here to a genuinely severe one.**
+
+⚠⚠⚠ **Validating the severity-compounding point directly -- confirming that half-fixing this made it strictly worse, turning a loud refusal into a silent overcharge, and recognising this as `PT-2240`'s already-known pattern arriving from a direction not previously considered -- is precise, honest analysis of one's own mistake rather than a minimizing account of it. A partial fix that makes the symptom quieter is a real, distinct failure mode worth naming every time it recurs, not just this once.**
+
+**Confirming the tracking-write defect shares the identical root cause, so one fix closes both rather than needing two separate corrections, is the right level of diagnosis -- treating two symptoms as one cause rather than patching each independently.**
+
+### THE DROID CLASSIFIER -- APPROVED, WORSE THAN ORIGINALLY SCOPED
+
+**Confirming four real droid species were being misclassified in both directions at once -- an existing power wrongly refusing them, Force Confusion wrongly accepting them -- is a sharper, more complete picture of the actual damage than the original finding suggested. Requiring the real `is_droid` set rather than defaulting to it is exactly right: a default of `{'droid'}` would have been the original bug wearing a fallback's clothes. Correctly refusing the prefix-match shortcut, even though it would work today, because it describes the current data rather than a real rule, is precise architectural discipline under a genuine temptation to take the easier path.**
+
+### THE GUARDS -- APPROVED, INCLUDING THE HONEST GAP
+
+**Asserting three independent, genuinely meaningful signals -- the spend, the tracking write, and the actual targeting change -- rather than resting on the absence of a refusal message, mirrors exactly the proof this whole thread was built on.**
+
+⚠ **"A guard that cannot fail is worse than a named gap" is worth keeping as its own standing principle, and the reasoning behind it here is exactly right -- the power's own cost structure makes a genuine made-save scenario currently unreachable by any available fixture, and writing a test that could only ever pass regardless of the underlying code's correctness would be worse than honestly reporting the gap. Naming what would actually close it, rather than settling for a hollow pass, is the correct response to a real testing limitation.**
+
+**Reconfirming Beast Confusion's target gap as already known and correctly not touched closes this cleanly, with nothing left unattributed.**
+
+### PROCEED
+
+Nothing further needed — this closes all four items from `PT-2450` in full. Standing by for the facing/hear-turn interaction proposal whenever ready.
+
+
+---
+
+## PT-2454 -- THE MEASUREMENT REFRAMES THE WHOLE QUESTION: THE FACING/HEAR-TURN MECHANISM WAS ALWAYS CORRECT. WHAT WAS MISSING WAS PURELY OBSERVABILITY, ACROSS TWO PRECISELY IDENTIFIED GAPS -- HEARING HAS A FIELD FOR ITS OWN RANGE THAT NOTHING EVER POPULATES DIFFERENTLY FROM SIGHT, DESPITE THE CORPUS ALREADY AUTHORING TWO REAL HEARING ABILITIES IN PROSE, AND ZERO OF THE ELEVEN SHIPPED CREATURES AUTHOR A BLIND SPOT -- WHICH IS PT-2451'S ROOT CAUSE STATED AS A NUMBER. BOTH SLICES APPROVED
+
+**Confirming the facing turn already correctly consults hearing, and hearing already correctly ignores walls, closes the question of whether anything needs fixing in the mechanism itself -- it doesn't. This is a genuinely satisfying result: two features that were each individually correct, and an interaction that was never actually broken, just impossible to observe with the content that currently exists.**
+
+### GAP 1 -- APPROVED, THE PROSE-ALREADY-EXISTS FIND IS SATISFYING
+
+⚠⚠⚠ **Finding that the corpus already authors two real, distinct hearing-range abilities in prose, with zero readers for either, is the same shape as the Togruta's blindness trait before `PT-2446` -- content that was already written correctly and simply never connected to anything. This isn't new scope being invented; it's existing, already-approved-by-implication content finally getting the reader it was always going to need.**
+
+**Ruled: build Slice A as proposed.** `Senses.standard` stays the ruled default, and a creature's hearing comes from its own authored trait where one exists, structured beside the prose the same way `keeps_dex_when_blinded` already works — read from the sentence, never duplicated.
+
+**Correctly refusing to invent a noise or movement model just to honour two qualifiers ("moving," "makes a sound") that don't exist as concepts anywhere in this build, and instead reading both abilities as unconditional detection within range while flagging the simplification plainly, is exactly the right call. A flagged simplification that's honest about what it isn't modelling is worth more than an invented mechanic built to justify two words in two ability descriptions.**
+
+### GAP 2 -- APPROVED, SITH TROOPER AT 120°
+
+**Correctly recognising this is a content decision rather than a code one, and proposing rather than quietly deciding it, is the right instinct -- this needed a call, not an assumption.**
+
+**Ruled: approved as suggested. The Sith Trooper gains a `blind_spot` of 120°**, matching the real source's own most common authored value. This is small, sensible, and gives the already-correctly-firing facing turn something real to act against — closing `PT-2451`'s root cause with actual content rather than leaving the mechanism permanently unobservable.
+
+### WHAT'S CORRECTLY NOT PROPOSED
+
+**No noise model, no per-action loudness, no new roll -- confirming Alertness already covers the hearing half of perception in the existing skill-resolution rules, with none of the three slices needing anything new there, is exactly the right scope. Building only what closes the two identified gaps, not a broader system nobody asked for.**
+
+### PROCEED
+
+Build both slices. Slice A: hearing range read from authored traits, structured beside the prose. Slice B: the Sith Trooper's `blind_spot` at 120°.

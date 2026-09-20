@@ -73241,3 +73241,32 @@ Alignment slice is next: design and build the cast-logging event (power id, tier
 ### PROCEED
 
 Rest-and-Meditation's real build is next — its own dependency on the band-boundary rule is now satisfied. Cost multipliers, `§2.4` story shifts, and Combat Mind Trick remain correctly deferred, in that order after Rest-and-Meditation closes.
+
+
+---
+
+## PT-2433 -- REST-AND-MEDITATION-01 CLOSES THE BUILD, WITH GENUINELY EXCELLENT VERIFICATION (REPRODUCING THE SOURCE'S OWN WORKED EXAMPLES, ALL 34 MUTATION BRANCHES KILLED, FOUR HONEST FIXTURE CORRECTIONS). AND TWO REAL STRUCTURAL BLOCKERS CORRECTLY FOUND AND REPORTED RATHER THAN WORKED AROUND: FIVE UNDECLARED EVENT KINDS MAKE THE WHOLE ALIGNMENT ENGINE CURRENTLY UNREACHABLE IN SAVED PLAY, AND THE CHARACTER RECORD HAS NO CHOSEN SIDE AT ALL. BOTH RULED NOW -- NARROW, NECESSARY COMPLETIONS OF ALREADY-APPROVED WORK, NOT NEW SCOPE
+
+**The engine half is precise throughout. Reproducing the document's own worked prices -- two hours costing a level-15 character exactly 30 vitality, a full night exactly 120 -- rather than only deriving the formula independently, is real verification against the source's own stated results, not just internal consistency. The negative-band recovery correctly using the unified vitality currency rather than the wound-point scale `PT-559` removed, and downtime correctly refusing an over-spend by name rather than silently capping it, both match what was actually ruled.**
+
+⚠ **THE DEGRADED-CEILING SILENT-FEEDBACK CATCH IS A GENUINELY GOOD FIND.** A character sitting exactly at their own degraded ceiling receiving no message at all about the one distinction the whole rest-versus-meditation choice depends on is precisely the kind of edge case that's easy to miss because the "normal" path works fine -- catching it and fixing it so the player is always told something meaningful is exactly the completeness this session has asked for throughout.
+
+**All 34 mutation branches killed, with the four initial survivors honestly and precisely attributed to fixtures rather than the code -- a downtime test that only ever spent exactly the full duration, a counter that happened to start at the rule's own output, a healing rate measured through a cap that hid one hour of eight, a meditation event missing its side entirely -- is thorough, honest verification. Four wrong fixtures found and fixed is exactly as valuable a result as four confirmed-correct branches.**
+
+### ⚠⚠⚠ THE TWO BLOCKERS -- BOTH RULED, BOTH NARROW COMPLETIONS OF ALREADY-APPROVED WORK
+
+**Correctly recognising both as real decisions rather than implementation details, and correctly not making either unilaterally, is exactly right -- an event-kind declaration is permanent save-format surface, and a new character field is the same kind of lasting commitment. Neither should be guessed at.**
+
+**Ruled: declare all five event kinds now (`power.cast`, `session.started`, `time.advanced`, `meditation.short`, `meditation.long`).** This isn't new, speculative infrastructure -- it's the direct continuation of work already approved and already built across multiple prior rulings this session. Leaving them undeclared would mean the entire alignment and meditation engine, built faithfully and correctly, stays permanently inert in real saved play for no reason connected to whether it should exist. Declare them the same way `_tookALevel`'s xp kind precedent establishes.
+
+**Ruled: add a chosen-side field to the character record now.** Every Force-using character in this setting canonically has a side; this isn't a speculative or contested addition, it's completing a field the already-approved `§4` mechanic explicitly depends on. Correctly refusing to derive it from current standing rather than storing it explicitly was the right instinct — that would have invented a rule the document never states — and the fix is to add the field properly, not to infer around its absence. Follow whatever pattern already exists for comparable enum-like character attributes.
+
+**Once both land, the reload-resettable two-per-day meditation cap closes on its own, exactly as reported it would.**
+
+### THE THREE FLAGGED DECISIONS -- ALL APPROVED
+
+**Meditation's shift applying after the session's drift settles, caught by a fixture that demonstrated the wrong order producing a nonsensical result (a character who fell during the session appearing to climb before paying for the fall), is the correct sequencing — approved. Same-day negative-band recovery and gain both landing on the day the roll succeeds is a sensible default. Assisted healing and Extraordinary Recuperation multiplying rather than adding, based on each being stated independently as "double" with no stacking language, is the correct reading — approved. Reading the numeric band rather than the hysteresis-carrying stored one for `§4`'s worked boundaries, since the document's own stated numbers are the plain numeric edges, is correct and worth having stated explicitly rather than left as an unexamined default.**
+
+### PROCEED
+
+Declare the five event kinds. Add the chosen-side field to the character record. Once both land, confirm the reload-resettable cap is genuinely closed. Combat Mind Trick is next in the queue after this closes fully.

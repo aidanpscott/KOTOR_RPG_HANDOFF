@@ -116,7 +116,14 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `character.condition-applied` / `.condition-expired` | transient — *until its own duration* |
 | `character.moved` | **campaign** ⚠ `PT-1417` — was `session` |
 | `character.alignment-shifted` | **permanent** — `PT-1279`, alignment history is not compactable |
+| `character.side-chosen` | **permanent** — `PT-2433`, and see below |
 | `character.faction-changed` | campaign |
+
+> **⚠⚠⚠ `character.side-chosen` IS THE ONE KIND HERE I INFERRED RATHER THAN WAS TOLD, AND IT IS FLAGGED AS SUCH.** `PT-2433` ruled *"add the chosen-side field to the character record the same way"*, and a record field with **no writer** is the exact defect `replay`'s own comment names about `progress`: *"a declared field on a record nothing ever set — declared-and-read-by-nothing from the writing side — while sixteen readers asked for it and every one got the default."* The field cannot be real without a kind to set it, so this is the minimum the ruling requires. **Rename or reject it freely; nothing else depends on the spelling.**
+>
+> **⚠⚠ `permanent`, FOR THE REASON EVERY OTHER CHARACTER *CHOICE* IS.** `species-set`, `origin-set`, `feat-taken` and the other fifteen creation kinds are all permanent, and a chosen side is the same kind of fact: a declaration about who the character is, not a state a fight or a session resolves.
+>
+> **⚠⚠ AND IT IS NOT `character.alignment-shifted`, WHICH ALREADY EXISTS AND WHICH THIS MUST NOT QUIETLY BECOME.** That kind records a **shift** — a movement of the score — and `PT-1279` keeps it permanent because *"alignment history is not compactable."* Nothing emits it yet; `play_state.dart` says so in place. A chosen side is not a shift and does not move the score at all: it is the direction meditation is allowed to push in. Folding one into the other would be **one capability kept in two places**, and the drift mechanism `PT-2431` built is a third thing again — it folds `power.cast`, the deed, and derives the movement rather than recording it. When `§2.4`'s story shifts land, `character.alignment-shifted` is the kind they belong to, and the fold should read it alongside the deeds.
 
 > **⚠⚠ `PT-1618` — `dying` IS THE ORDINARY FAILURE STATE AND IT HAD NO KIND.**
 > `Tester` counted twenty saves: **125 crossings at or below zero, of which 40
@@ -208,6 +215,24 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 > combined row is a cell that cannot be changed for one of its kinds.
 
 **⚠ `check.resolved` carries its whole derivation**, which is `PLAY-STATE-01 §5`: KOTOR persisted *"Defense Breakdown: 18 = base 10 + dex mod 4 + class 4"*. **Every modifier named.** That is what makes a derived system honest, and turn-based gives us more room to show it, not less.
+
+### Time, meditation and alignment — `PT-2433`
+
+| Kind | Lifetime |
+|---|---|
+| `time.advanced` | campaign |
+| `session.started` | campaign |
+| `power.cast` | campaign |
+| `meditation.short` | campaign |
+| `meditation.long` | campaign |
+
+> **⚠⚠⚠ ALL FIVE ARE `campaign`, AND THE REASON IS ONE REASON.** `ALIGNMENT-01 v2` is path-dependent by design — a character's standing is not a stored number but **a fold over what they actually did**, which `PT-2429` confirmed the ledger already satisfies for free. A fold can only be recomputed from events the save still holds. `PLAY-STATE-01 §2`'s `session` lifetime does not survive to disk, so any of these five written as `session` would be **written and dropped**, and the fold would answer 50 for every character forever.
+>
+> **⚠⚠ `power.cast` IS `campaign` FOR `encounter.ended`'s OWN REASON — `PT-1612`, `PT-1427`: *a fight is not a fact; its outcome is.*** Reaching for the dark side is not a moment inside a fight that the fight resolves; it is the outcome, and `§2.1` says so outright — *"the moral event is reaching for the dark side, not the number of times the trigger is pulled after."* It travels with `encounter.ended`, which is already `campaign`, and the two must not have different lifetimes for the same reason `character.levelled` and an xp award must not.
+>
+> **⚠⚠ `meditation.short` LOOKS LIKE THE WEAKEST OF THE FIVE AND IS NOT.** Its only reader is `§3`'s *"maximum two per day"* cap, which never looks further back than today — so `transient` reads as the honest answer. It is the wrong one: **a cap that does not survive a save is not a cap.** `PT-2432` shipped that hole knowingly, holding the count in screen state, and recorded it as a real one a player could walk through by reloading. The lifetime is what closes it.
+>
+> **⚠ `time.advanced` AND `session.started` ARE THE TWO BOUNDARIES THE OTHER THREE ARE COUNTED AGAINST** — `CLOCK-01 §5`'s elapsed clock and `PT-2430`'s accounting window. A boundary with a shorter lifetime than the things it separates would leave the fold unable to say which day or which sitting anything happened in, which is `§4`'s *"once per day"* and `§2.6`'s *"an entire session"* both unanswerable.
 
 ### Authoring and social
 

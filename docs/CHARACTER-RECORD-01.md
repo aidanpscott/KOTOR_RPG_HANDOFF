@@ -105,7 +105,9 @@
     "credits": 100
   },
 
-  "progress": { "level": 1, "xp": 0 }
+  "progress": { "level": 1, "xp": 0 },
+
+  "chosen_side": "light"
 }
 ```
 
@@ -126,6 +128,12 @@
 **`abilities`** — ⚠ **CORRECTED at `PT-1415`: the BOUGHT scores, not the final ones.** This line said *"the final scores"* and **`§5`'s `PT-1260` closure says the opposite** — the species modifier applies **on read**, and `§3` lists ability adjustments as derived. **`§1`'s own first principle settles it: store the choice, derive the consequence.** Floor 8, ceiling 18 at level 1 (`PT-1227`).
 
 **`skills`** — ranks only, and **only skills with a rank above zero appear**. An absent skill is rank 0. Aptitude is *not* stored — it is derived, and §3 says how.
+
+**`chosen_side`** — `"light"` or `"dark"`, and **absent entirely** for a character who has not declared one (`PT-2433`). `REST-AND-MEDITATION-01 §4` grants meditation ±1 *"toward the character's CHOSEN side"*, and that is a choice, so it is stored — `§1`'s first principle. **It is not the alignment score**, which `§3` would call derived and which `ALIGNMENT-01 v2` folds out of the log rather than storing at all.
+
+> **⚠⚠⚠ ABSENT, NOT `"neutral"` — `§1`'s second principle.** A character who has never declared a side is not a character who chose the middle, and the difference is mechanical rather than cosmetic: an absent side means **meditation shifts nothing**, while a stored `"neutral"` would be a third value every reader has to know about and no rule describes. `§2`'s own `origin` precedent is the same shape — *absent entirely*, not null and not empty.
+>
+> **⚠⚠ AND IT IS NOT DERIVED FROM WHICH WAY THEY CURRENTLY LEAN.** That reading was available and is wrong: `§4`'s whole mechanism is that a fallen character *"can always meditate their way back"*, which requires the side they are reflecting toward to be independent of the side they currently sit on. Deriving it would make recovery impossible by construction — a Deep Dark character could only ever meditate deeper, into a boundary that already refuses them.
 
 **`feats`** — `source` distinguishes `granted` (automatic, from the class schedule) from `chosen` (spent a slot). This matters: a granted feat cannot be removed, and the distinction is what the grant popup reports (`PT-1228`, `TRACE-76`).
 

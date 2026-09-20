@@ -19,7 +19,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **`blinded`'s two remaining clauses — proposal approved in full, building (PT-2446).** Dexterity loss built as a separate function taking the more-restrictive of two independent limits (armour, blindness), sign preserved unchanged. Togruta exception (`PT-2150`) approved to ship together, not deferred — a narrow single-purpose extracted field, checked first before the standard limit applies. Sight-based built per call site (10 enumerated: Search, Examine, `scanCheck`, `hideDefence`'s Awareness arm fail automatically; Security, Slicing, Demolitions, the verb checks, `hideCheck`'s own roll do not). Hide-contest interaction needs no new rule — the existing "better of Awareness or Alertness" mechanism already falls back correctly once Awareness is unavailable.
 
 
 
@@ -48,6 +47,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- `blinded` fully closed — all four ruled clauses now built (attack penalty, square-naming cursor, Dexterity loss, sight-based auto-fail). Dexterity threaded through one shared function both the attack roll and the sheet read, avoiding `PT-1468`'s exact prior defect shape. Togruta's exception rolled once per encounter and remembered, not per-frame (would have flickered). Hide-contest needed no new rule — the existing "better of Awareness or Alertness" mechanism already falls back correctly. Honest equivalent-mutant disclosure, correctly reported rather than forced or hidden. Third recorded instance of the same guard mistake (testing the ingredient, not the site) — recorded as a standing check: confirm a new guard calls the real production entry point, not the helper underneath it — PT-2447
 
 - Faction-change mechanism fully closed — `force_confusion`, `beast_confusion` both built, `Role` never touched, all 25 call sites individually classified. Genuine correction to Coder's own already-approved proposal found by re-reading: refusal is per caster AND per kind (one sentient plus one beast simultaneously), not one instance total — the row's own text already said so, and K2 really does carry three separate globals. Wipe check confirmed the two-predicate design's real value by forcing the override into it and watching it correctly fail. Another self-caught degenerate guard, explicitly recognized as the same shape as an earlier one this session (tested a reimplementation rather than the real production function). One small, genuinely unreachable edge case (a hypothetical confused companion) correctly reported rather than decided — held until something actually makes it reachable — PT-2443
 

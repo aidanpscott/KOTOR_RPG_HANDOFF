@@ -74462,3 +74462,36 @@ Waiting on the mockup image path from Aaron directly. Take `PT-2474` (the missin
 ### PROCEED
 
 Land Defect 1's fix and repair all four affected fixtures now. Defect 2 closes as reported. The disabled Level Up tap-leak stays correctly held. Still waiting on the mockup path for the alignment arc colours — I've asked Aaron directly.
+
+
+---
+
+## PT-2477 -- THE FIX LANDS CLEAN, ALL FOUR FIXTURES PROPERLY REPAIRED. "FOUR GUARDS WERE ASSERTING AGAINST CORPSES AND NONE OF THEM KNEW" IS EXACTLY RIGHT. THE WRONG-FIRST-ATTEMPT DISCLOSURE (COPYING THE STRIKE PATH'S SWEEP CALL, THEN CORRECTLY DIAGNOSING THE REAL GAP WAS PURELY THE MISSING END) IS PRECISE METHODOLOGY. AND A GENUINELY HONEST SELF-CAUGHT MISTAKE: DESTROYED OWN UNCOMMITTED REPAIR VIA THE EXACT GIT BEHAVIOR ALREADY NAMED IN A PRIOR STANDING NOTE -- CAUGHT IMMEDIATELY, NAMED PLAINLY. THE MOCKUP SEARCH IS NOW GENUINELY EXHAUSTED, AND THE REAL EXPLANATION HAS BEEN FOUND: THEY WERE RENDERED LIVE BY A VISUALIZATION TOOL IN A PAST CONVERSATION, NEVER SAVED AS A FILE -- STOP SEARCHING FOR ONE
+
+**Confirming the fix is genuinely one line, matching the strike path's own existing pattern exactly, closes this cleanly. The wrong-attempt disclosure is worth naming specifically: trying the sweep-call copy first, finding it broke the same four fixtures for a different reason (removing creatures a cast can legitimately still need, which a strike never touches), and correctly isolating the real gap as purely the missing end call, is precise elimination reasoning laid out honestly rather than presented as a clean first guess.**
+
+### THE FOUR FIXTURES -- READING THEM WAS WORTH IT
+
+**"Four guards were asserting against corpses and none of them knew" is exactly the right summary, and it's worth confirming why the repair approach was correct: using the existing copied-shelf infrastructure precisely as its own documentation describes, boosting vitality directly rather than adding a second creature that would confound the comparison the fixture exists to make, and leaving the caster's level untouched so the save stays exactly as unreachable as it always was — deterministic, not a coin toss. All three choices were the right ones for the right stated reasons.**
+
+**Building both repairs to loudly fail if the survival guarantee ever moves is the correct safety margin — a fixture that silently reverts to asserting on a corpse the moment something else changes is exactly the failure mode this whole thread has spent its effort closing everywhere else it's been found.**
+
+### ⚠ THE GIT SLIP -- HONEST DISCLOSURE, WORTH RECOGNIZING AS SUCH
+
+**Destroying one's own uncommitted work via the exact behavior a prior standing note already named, catching it immediately, and reporting it plainly rather than quietly recovering and saying nothing, is exactly the standard this session has held for every mistake, self-inflicted or otherwise. "That is the exact thing my own standing note says not to do, and I did it anyway" is honest in a way that costs something to say -- worth recognizing as such rather than letting it pass as an incidental aside.**
+
+### THE MOCKUP SEARCH -- STOP, THE REAL ANSWER IS FOUND
+
+**Confirmed exhausted, and confirmed correctly: MAIN_WORK's full git history has never held an image or office file, and every plausible local and sized-based lead has come back empty. This search was never going to succeed, because the premise was wrong -- not lost, not hidden, never a file in the first place.**
+
+**The actual explanation, found by checking the original conversation transcript directly: those mockups were built using a live visualization tool that renders inline within a chat message. They were never saved as separate files anywhere, which is exactly why no search of any repo or filesystem location could ever find them. They still exist, viewable, inside that original conversation itself -- Aaron is locating it now. Stop searching MAIN_WORK or any repo for this; it was never going to be there.**
+
+**Once that conversation is found, the path forward is: screenshot the actual rendered mockups from within it, get those images into a location this repo or Coder's environment can reach, and only then run the real comparison.**
+
+### THE FONT FIND -- GENUINELY VALUABLE, APPROVED
+
+**Finding the existing `capture_test.dart` mechanism, which correctly renders with the bundled font, and honestly recognizing the earlier `PT-2473` golden harness had a real flaw (text rendering as blank boxes with no font) is a good catch made as a side effect of an otherwise-unsuccessful search. Approved: move the Character Sheet and Equip renders onto this better mechanism before the real mockup comparison happens, so the comparison itself isn't undermined by illegible text.**
+
+### PROCEED
+
+Nothing further on Defect 1 — closed cleanly. Stop searching for the mockup file; wait for the actual image once Aaron locates and screenshots the original conversation. Move the existing renders onto the font-correct capture mechanism in the meantime. Disabled Level Up tap-leak stays held.

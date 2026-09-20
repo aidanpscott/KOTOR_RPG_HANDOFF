@@ -18,6 +18,13 @@ uncommitted `species.toml` addition giving Togruta
 out of the built copy** before writing it down; the line numbers moved by
 ~57, which is exactly how much the wrong copy would have cost.
 
+⚠ **CORRECTED AFTER FILING — see the facing section.** As first filed this
+report claimed the distraction's face-away turn did not exist. It does; I
+grepped a field and stopped at its one writer instead of grepping that
+writer's callers. PT-2451 carries the correction, and the section now
+carries the three-arm reading that replaced it. Nothing else in the report
+depended on it.
+
 **Verdict.** Item 2 is **not testable at all: Force Confusion applies
 nothing.** The power charges 20 Force and 4 of ceiling, prints its prose, and
 returns before it reaches its own effect. Item 1 holds on four clauses,
@@ -218,24 +225,78 @@ costs nothing. The whole fault is in the classifier. And it is the **same
 classifier Force Confusion's droid refusal uses**, so the same four species
 will walk through that one too the moment confusion starts working.
 
-### Two clauses with no code behind them
+### Facing and hearing — corrected, and the real finding is worse
 
-**"Still reacts to sound if you're noisy nearby" — not observable, and the
-code says why.** `Senses.standard` sets `sight == hearing` from a single
-number (Lodestar `perception.dart:53`) because no placement authors a
-hearing range, so *heard farther than seen* cannot exist. And hearing does
-not redirect a pursuer: `_knownPositionOf` gives the true position only when
-`seen`. Hearing's only effect is that `known.any` is true, so the creature
-does not fall back to omniscience. In play the guard sat within hearing at 4
-and 5 squares across five consecutive turns and never moved once.
+⚠ **This section replaces what I first filed, which was wrong on both
+clauses.** I claimed nothing turns a distracted creature and that hearing
+does nothing but prevent an omniscience fallback. Both came from grepping
+**fields** — `_facing`, `.heard` — and stopping at the one writer each
+returned. The features live in the writers' **callers**, and both exist.
+PT-2451 carries the correction; this is the measurement behind it.
 
-**"The target ends up facing away from you specifically" — nothing turns
-it.** `_facing` has exactly **one writer**, `_faceFrom` at
-`play_screen.dart:6246`, which takes the bearing of a step. Distraction
-writes no facing, and facing is read at all only for a creature with an
-authored `blindSpot`. A distracted guard that does not move does not turn.
-This is not a gap in my fixture — there is no code that could make the claim
-true.
+**The face-away turn is built and fires.** Inside the `if (p.distracts &&
+!made)` block, three lines below `distract()`:
+
+```dart
+11269  _faceFrom(c.handle, w.x, w.y, w.x + (w.x - me.x), w.y + (w.y - me.y));
+```
+
+— the point diametrically opposite the caster. Its comment says it *"is not
+decoration … and unlike the distraction it persists after the ten rounds
+run out."*
+
+**"Reacts to sound" is also built** — and it is the thing that breaks the
+turn above. At the head of every enemy turn:
+
+```dart
+8534   if (_perception.of(acting, me.handle).any) {
+8535     if (_at case final here?) _faceToward(acting, here);
+```
+
+`any` is `seen || heard`, and the comment is explicit: *"EITHER SENSE TURNS
+IT. A creature that hears you round a corner turns toward the noise."* It
+aims at the player's **true current position**.
+
+### DEFECT — the face-away turn is overwritten before it can ever matter
+
+Three arms, the same fresh save, the same opening roll (`d20 20`, 84 left),
+the same keystrokes — distract, withdraw 4, an inert Force Confusion, then
+Force Scream to end the distraction. The only variable is the guard's
+authored `blind_spot`:
+
+| `blind_spot` | the guard's turn after the Scream |
+|---|---|
+| absent | `closes 3 squares — 4 to 1 · rolled 4 … miss` |
+| **180** | `closes 3 squares — 4 to 1 · rolled 4 … miss` — **identical** |
+| **360** | **`out of reach — unarmed reaches 1 square and Whisper is 4 away`** |
+
+Force `123 of 153` and guard `387 of 400` in all three, so the same sequence
+ran each time.
+
+**The 360 arm is the positive control and it is why this is a reading rather
+than a guess.** `seesToward` returns false outright once `blindSpot >= 360`
+(Lodestar `perception.dart:380`), so that arm proves the authored
+`blind_spot` is parsed (`character_open.dart:370`), reaches the arc check,
+and changes behaviour. The field is live.
+
+Therefore the 180 arm's result means the guard's **facing was pointing at
+me, not away** — `seesToward` at 180° admits anything within ±90° of facing,
+and it saw me. The face-away turn had already been undone. The only writer
+that could have done it is `8534`: the guard never moved while distracted
+(0 squares, two turns), so `8433`'s movement turn cannot be it, leaving the
+hear-turn, which fires every enemy turn because hearing is untouched by the
+distraction and sits at the same radius as sight.
+
+**So Slice 4 is built, wired, fires, and is inert.** It does not persist ten
+rounds; it does not survive one enemy turn. And the two radii make it
+unfixable by positioning: `Senses.standard` sets `sight == hearing` from one
+number (`perception.dart:53`) at `defaultPerceptionSquares = 10`, so there
+is no distance at which a creature can see you but not hear you — no
+distance at which the blind spot the distraction just gave you is allowed to
+stand.
+
+⚠ The honest scope: this is one ordering defect between two correct
+features, not a missing one. Nothing needs rebuilding.
 
 ## Also noticed
 
@@ -256,6 +317,12 @@ true.
 carousel can reach it (four cards, no scroll). Boards `m01-guard` (one
 sentient guard, one droid, 14 wide so the guard can be left behind) and
 `m02-confuse` (two sentients and a droid).
+
+⚠ **`guard.toml` carries no `blind_spot`, and that is why the facing clause
+looked unreachable.** Add `blind_spot = 180` to see the face-away turn's
+intended effect, and `blind_spot = 360` as the positive control that proves
+the field is read at all — the three-arm table above is those two values
+against its absence.
 
 ⚠ **`blueprints/characters/droid.toml`'s `species` is the control field** —
 flip it between `droid` and `droid-battle` to switch the two arms of the

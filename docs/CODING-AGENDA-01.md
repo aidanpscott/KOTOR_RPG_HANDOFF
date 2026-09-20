@@ -6,8 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: droid-classifier fix went to the wrong function — real defect fully live
-- **Ruled, fix now (PT-2456).** `PT-2453`'s fix corrected `kindOf` (one caller, only classifies the player's own record) but the actual combat-determining classifier, `Present.placed` in `attack.dart`, still carries the original untouched `== 'droid'` string test. Confirmed: 4 of 5 real droid species remain fully mind-affectable in real combat — including Force Confusion confirmed working on an actual droid, directly contradicting the power's own text ("only works on sentients; beasts and droids are immune"). Fix `Present.placed` to use the same corrected `is_droid` set. Re-confirm against all five species individually.
 - **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
 - **Silent empty-party load — investigate.** A save loads into a broken, empty-party state with no error at all, distinct from the correctly-visible "unreadable" rejection case. Honest caveat: the writer bypasses chargen, so this may be specific to test tooling rather than reachable through normal play.
 
@@ -59,6 +57,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Droid classifier defect closed properly — the duplicate `Present.placed` copy deleted entirely rather than repaired, so there's structurally one answer to "what kind is this" now, not two that could drift apart again. Correctly proceeded without waiting for a fresh ruling, same severe class already established. New guard sweeps placements specifically (the half the original guard couldn't see), with a second self-caught gap closed (a chassis-only droid case, matching `PT-1490`'s documented blueprint shape). Honest self-diagnosis recorded as a standing lesson: count what does the job, not what calls the function — the fourth confirmed instance of one answer kept in two places this session, explicitly connected to `PT-2451`'s writer-not-field lesson as the same principle from a different angle — PT-2457
 
 - Force Confusion fully confirmed in real play — TEST 120, every routed clause. Both fighting-for-you directions confirmed with careful staging to overcome the AI's own targeting-preference bias. One-of-each-kind confirmed as the active instance (a second cast succeeds once the first genuinely expires), no stand-at-1 (confirmed going negative), returns to its side, and the win-condition test solved with genuinely inventive terrain engineering (an impassable-but-sight-permeable water pocket isolating a confused creature so the real party-wipe condition could be cleanly tested) — PT-2456
 

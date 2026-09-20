@@ -73879,3 +73879,80 @@ Build both slices. Slice A: hearing range read from authored traits, structured 
 ### PROCEED
 
 Nothing further needed -- both slices closed cleanly, three real test breaks correctly diagnosed and fixed. The two authored hearing ranges (Gundark, Montral Echo) correctly held as their own separate content decision, with the mechanism now ready whenever a creature carries either value.
+
+
+---
+
+## PT-2456 -- FORCE CONFUSION FULLY CONFIRMED, EVERY ROUTED CLAUSE, WITH EXCEPTIONAL TEST DESIGN THROUGHOUT -- INCLUDING A GENUINELY CREATIVE SOLUTION TO "CONFUSION WORKS TOO WELL TO TEST NAIVELY" USING AN IMPASSABLE-BUT-SIGHT-PERMEABLE TERRAIN FEATURE TO CLEANLY ISOLATE THE WIN-CONDITION TEST. BUT ⚠⚠⚠ SEVERE: THE DROID FIX WENT TO THE WRONG CLASSIFIER ENTIRELY -- THE REAL, COMBAT-DETERMINING KIND COMES FROM A SEPARATE FUNCTION STILL CARRYING THE ORIGINAL BUG, UNTOUCHED. FORCE CONFUSION CONFIRMED WORKING ON AN ACTUAL DROID, DIRECTLY CONTRADICTING THE POWER'S OWN TEXT
+
+**Correcting the ledger's own SHA first: the routing cited a commit that exists in none of the three repos; `a384154` is the real one carrying the fixes, confirmed as what was actually tested. Noted for the record so nothing downstream points at a phantom commit.**
+
+### FORCE CONFUSION -- FULLY CONFIRMED, EXCEPTIONAL WORK
+
+**Every single routed clause confirmed decisively, and several of the confirmations required genuinely difficult staging to actually isolate. Recognising that a naive setup hides the "allies attack the confused creature" half -- because the AI's own targeting doctrine prefers an adjacent player over anything else -- and correctly re-staging with the player five squares clear to isolate the real signal, with Whisper's own vitality held constant across four rounds specifically to prove the damage wasn't landing on the player, is careful, deliberate elimination of a real confound.**
+
+⚠⚠⚠ **THE "NOT A WIN" TEST IS THE SHARPEST PIECE OF DESIGN IN THIS WHOLE REPORT.** Recognising that confusion working correctly makes the naive test setup structurally impossible -- two heavies just trade blows and leave the player untouched, a frail one dies before the real condition can be observed -- and solving this by sealing a creature into an impassable-but-sight-permeable terrain pocket, so it stays standing and reachable by the power while being removed from the fight entirely, is genuinely inventive test engineering. This is exactly the kind of problem-solving that turns "I couldn't stage this" into a decisive confirmation instead.**
+
+**Confirming the one-of-each-kind refusal is the active instance rather than a latched flag, by watching a second cast on a different sentient succeed once the first genuinely expired, closes the loop on `PT-2443`'s own correction precisely -- this is observable proof of exactly the distinction that correction was about.**
+
+### ⚠⚠⚠ THE DROID FIX -- SEVERE, WORSE THAN UNDERSTOOD, RULED FIX NOW
+
+**This is a critical finding and needs to be treated with full urgency. The fix itself was correct in isolation -- `kindOf` was genuinely repaired exactly as ruled -- but it was applied to a function with exactly one caller, used only for a specific, narrow purpose (classifying the player's own record). The function that actually determines a creature's kind in real combat, `Present.placed` in `attack.dart`, still carries the identical, untouched `== 'droid'` string test. The fix reached the one place that was never the problem and missed every place that was.**
+
+**Measuring all five real droid species individually and confirming four remain fully mind-affectable in actual combat, with the picker's own warning icon sitting exclusively on the one species that happens to be correctly classified, is decisive, not merely suggestive — and confirming this separately and explicitly for Force Confusion specifically, rather than assuming the pattern transfers, is exactly right given the severity: a droid genuinely turning on its own side, directly contradicting the power's own stated text that droids are immune, is worse than the original Distraction-only version of this defect ever was.**
+
+**Ruled: fix `Present.placed` in `attack.dart` to use the same corrected `is_droid` set `kindOf` was already given, not the narrow string test. This is urgent — the same priority as the original PT-2450 defects. Confirm against all five species individually once fixed, the same way this was measured.**
+
+### TWO SMALLER FINDINGS -- HELD
+
+**Force Confusion's missing range limit (reachable at 9-10 squares, with the row itself silent on any cap) is a real, small gap — held for its own attention.**
+
+⚠ **The silent empty-party load is worth investigating, with the honest caveat about the writer bypassing chargen taken seriously — the rejection case working correctly (visibly "unreadable") makes the silent, no-error load into a broken state the genuinely concerning half. Investigate whether this is reachable through normal play or specific to the test tooling's own bypass.**
+
+### PROCEED
+
+Fix `Present.placed`'s droid classification to match `kindOf`'s corrected set, urgent. Re-confirm against all five species. Investigate the silent empty-party load. Range limit stays held as a small, separate item.
+
+
+---
+
+## PT-2457 -- THE DROID DEFECT CLOSES CLEAN, AND CORRECTLY PROCEEDING WITHOUT WAITING FOR A RULING WAS THE RIGHT CALL -- THE SAME SEVERE CLASS ALREADY RULED, WITH AN UNAMBIGUOUS MEASUREMENT. THE DUPLICATE CLASSIFIER WAS DELETED RATHER THAN REPAIRED, LEAVING STRUCTURALLY ONE ANSWER TO "WHAT KIND IS THIS" INSTEAD OF TWO THAT COULD DRIFT AGAIN. AND A GENUINELY VALUABLE, HONEST SELF-DIAGNOSIS RECORDED PROPERLY AS ITS OWN STANDING LESSON: COUNT WHAT DOES THE JOB, NOT WHAT CALLS THE FUNCTION -- THE FOURTH CONFIRMED INSTANCE OF ONE ANSWER KEPT IN TWO PLACES THIS SESSION
+
+**Proceeding without waiting for a fresh ruling was exactly right, and worth confirming so plainly -- this was already the same severe class as `PT-2450`'s own defects, with a measurement precise enough to leave nothing genuinely in question. Waiting would have cost real time on something already correctly understood.**
+
+### THE FIX -- DELETED, NOT REPAIRED
+
+**Deleting the duplicate classifier rather than patching it in place is the stronger fix, and it's worth naming why: repairing the inline copy would have left two independent implementations that happen to agree today, with nothing structurally preventing them from drifting apart again the next time either one is touched. Requiring `Present.placed` to call `kindOf` directly, with the droid set required rather than defaulted, means there is now genuinely one answer to this question in the whole codebase, not two that were merely reconciled.**
+
+### ⚠⚠ THE SELF-DIAGNOSIS -- WORTH RECORDING AS ITS OWN STANDING LESSON
+
+**This is precise, honest, and genuinely useful beyond this one defect. Counting a function's callers and concluding the fix is complete without ever asking what else independently answers the same question is a real, specific reasoning error -- checking the subject correctly while checking the wrong subject entirely. Naming this as the fourth confirmed instance of "one answer kept in two places" this session (`PT-2390`, `PT-2436`, `PT-2450`, now this) is valuable pattern-recognition, and connecting it explicitly to `PT-2451`'s "grep the writer, not the field" as the same underlying principle from a different angle shows the lesson is actually generalising rather than being relearned separately each time it recurs.**
+
+**Ruled: record "count what does the job, not what calls the function" as its own standing instruction, paired with `PT-2451`'s.** Before treating a fix as complete because one function's callers are all correct, check whether anything else in the codebase independently computes the same answer -- a function can be perfectly fixed and still leave the real defect untouched if it was never the only place doing that job.
+
+### THE GUARD -- APPROVED, INCLUDING THE SECOND SELF-CAUGHT GAP
+
+**Building the new guard around placements specifically, the exact half the original guard structurally couldn't see, closes the real gap properly rather than just adding coverage near it. And catching that every test case specified a droid by species, so removing the separate chassis-based branch went undetected, then closing it against `PT-1490`'s own documented chassis-only blueprint shape, is thorough verification of the verification itself -- not stopping at the first mutation result that looked complete.**
+
+**The required-parameter consequence -- forcing every real caller to be individually revisited, the same shape as `_offerable`'s widening at `PT-2442` -- is the parameter doing exactly its job, not a cost to be minimised.**
+
+### PROCEED
+
+Nothing further needed — closed cleanly. TEST 120's remaining confirmation (Force Confusion end to end, including the wipe) stands as already recorded. This closes the whole severe thread.
+
+
+---
+
+## PT-2458 -- TWO STANDING LESSONS WORTH KEEPING FROM TEST 120: "SUBTRACTIVE, NOT ADDITIVE" AS THE GENERAL PRINCIPLE BEHIND THE WATER-POCKET SOLUTION -- WHEN TESTING A MECHANIC THAT REDIRECTS AI ROUTING, ADDING CREATURES LETS THE ENGINE ROUTE AROUND THE OBSERVATION POINT, SO REMOVE THE PLAYER'S OWN PRESENCE FROM THE CHOICE INSTEAD OF ADDING MORE TO FORCE IT. AND A REAL UI TIMING TRAP: A BRIEF SAVE-SCANNING WINDOW WHERE CONTINUE IS GREYED, AND A CLICK IN THAT WINDOW SILENTLY OPENS NEW GAME INSTEAD
+
+**Worth recording properly rather than letting either pass as incidental notes on an already-closed thread — both are genuinely reusable beyond the specific defect that produced them.**
+
+**"Subtractive, not additive" is a precise generalisation of what actually made the water-pocket solution work, correctly distinguishing the reusable principle from the one-off trick. The insight: when the mechanism under test is fundamentally about redirecting an AI's own targeting or routing behaviour, adding more creatures to force an observation doesn't create the needed pressure -- it gives the engine's existing routing logic more paths to route around the exact point being tested. Two heavies in reach of each other simply fight each other and ignore the player; a fragile creature dies before the real condition can be observed. What worked instead was removing the player from having any real choice in the matter, and physically isolating the one creature that needed to survive somewhere nothing else could reach. Worth keeping as a standing instinct for any future test of AI-routing or targeting-redirection behaviour specifically: when naive staging keeps getting routed around, the fix is usually to subtract options, not add pressure.**
+
+**The re-check guidance for the droid classifier -- cosmetic-marker-versus-actual-refusal being exactly what separated "looks fixed" from "is fixed" this time, and both powers needing to be re-verified together since they share the same underlying classification -- is precise, useful routing guidance for whoever next touches this area, correctly folded into the record rather than left only in the closed report.**
+
+**The save-scan timing trap is small but real and worth keeping as its own standing note: Continue being greyed for a brief window while saves are scanned, with a click landing in that window silently opening New Game instead of the intended save, is exactly the kind of thing that costs real navigation time without ever announcing itself as the cause.**
+
+### PROCEED
+
+Nothing in flight. Both lessons recorded for future reference.

@@ -73534,3 +73534,101 @@ Nothing further needed — both gaps closed cleanly. This closes the rest/medita
 ### PROCEED
 
 Build in the proposed order, with attacks of opportunity included in the CHANGE bucket per this ruling.
+
+
+---
+
+## PT-2443 -- FORCE CONFUSION CLOSES CLEAN, ALL FOUR SLICES. A GENUINELY IMPORTANT, HONEST CORRECTION TO CODER'S OWN ALREADY-APPROVED PROPOSAL: THE REFUSAL SHOULD BE PER CASTER AND PER KIND, NOT ONE SINGLE ACTIVE INSTANCE -- THE ROW'S OWN TEXT ALREADY SAID SO, AND K2 REALLY DOES CARRY THREE SEPARATE GLOBALS. FOUND BY RE-READING MORE CAREFULLY, NOT BY EXTERNAL PRESSURE. AND ANOTHER SELF-CAUGHT DEGENERATE GUARD, THIS TIME EXPLICITLY RECOGNIZED AS THE SAME SHAPE AS AN EARLIER ONE THIS SESSION
+
+**Widening `_offerable`'s predicate from `Role` to `Combatant` is precise, and the reasoning is exactly right: a predicate over the bare role literally cannot see a confusion, since confusion is deliberately a fact about the creature rather than the never-touched role field. That widening being what forced every call site to be individually revisited, rather than silently inheriting a default, is the two-predicate design's real payoff arriving exactly where it was meant to.**
+
+### ⚠ THE PER-CASTER-AND-PER-KIND CORRECTION -- WORTH REAL RECOGNITION
+
+**This is a genuinely valuable, honest correction to work already approved, and it deserves to be treated as such rather than as a minor addendum. The row's own text already stated one opponent of each kind could be held at once, and K2's real source confirms three separate globals rather than one -- this was available the whole time, in the same measurement that produced the original, now-corrected proposal. Saying "I had read past it" plainly, rather than quietly folding the fix in without comment, is exactly the honesty this session has held throughout, applied here to catching one's own earlier miss rather than someone else's. A caster holding one sentient and one beast confusion simultaneously is now correctly buildable, matching both the row's own words and the real source behaviour.**
+
+### MUTATION -- 9/9, WITH A THIRD INSTANCE OF A NOW-RECOGNIZED PATTERN
+
+⚠ **Catching that the wipe guard was written against a reimplementation of the classification logic inside the test itself, rather than against the real production function it was meant to protect, and explicitly naming it as the same shape as the quoted-aside guard from earlier this session, is genuinely good pattern recognition. A test that spells out its own ingredients rather than calling the thing being tested can pass no matter what the real code does -- and recognizing this as a recurring shape, not a fresh surprise each time, means the lesson is actually generalizing rather than needing to be relearned per occurrence. Fixing it to go through the real `Fight.partyWiped` closes this properly.**
+
+**Forcing the override directly into the protected wipe-check site and confirming it correctly fails is exactly the decisive proof this design's whole value depends on -- the classification isn't just documented as correct, it's demonstrated to matter.**
+
+### THE UNREACHABLE BRANCH -- CORRECTLY REPORTED, HELD
+
+**Recognising that the walk-into-an-ally refusal would theoretically interact with a confused companion, confirming nothing currently makes that scenario reachable, and correctly refusing to change an unreachable branch on personal judgement rather than reporting it, is exactly the discipline already established this session. Held as a small, genuinely moot question until something actually confuses a companion — no ruling needed while it stays unreachable.**
+
+**Correcting the stale note explaining why these two powers stayed in the applies-nothing list -- the faction-change thread turned out to need no actual faction mechanism at all -- is small, honest housekeeping, closing a piece of documentation that had quietly become wrong.**
+
+### PROCEED
+
+Nothing further needed — closed cleanly. This closes the faction-change thread in full.
+
+
+---
+
+## PT-2444 -- ANOTHER REAL STALE AGENDA ENTRY FOUND AND CORRECTLY FLAGGED RATHER THAN EDITED. FIXED. OWNER OPENS blinded'S TWO UNBUILT CLAUSES, CODER'S OWN RECOMMENDATION -- THE LARGEST REMAINING ITEM AND THE ONLY ONE BUILDING REAL, REUSABLE INFRASTRUCTURE
+
+**Confirmed and fixed: the perception-mechanism entry was closed by `PT-2436` and stayed listed as held. Correctly reported rather than touched, matching `playtest/`'s standing ownership boundary — good, consistent discipline holding even after the mirror-publishing arrangement changed who does the actual editing.**
+
+### RULED -- OPEN blinded'S TWO CLAUSES
+
+**Ruled: item 1, exactly as recommended.** Both are real infrastructure other effects would reuse, not narrow one-off work — Dexterity loss (removing a term from the defence derivation) is explicitly the same shape any future "lose a term you already have" effect would need, and sight-based auto-fail needs a check-categorization concept with no other obvious near-term consumer, but is still real, named-and-deferred work rather than speculative scope. `PT-2395` already did the precise diagnostic work naming exactly what's missing from each.
+
+Measure before proposing anything:
+- What the real source specifies for how a term gets removed from a derivation, and whether anything in the current architecture already handles a comparable "conditionally absent" term elsewhere.
+- What "sight-based" actually needs to mean as a check-categorization concept — which existing checks would need marking, and whether this is a small, closed set or something that grows.
+
+### PROCEED
+
+Measure both pieces. Report before proposing. Item 2 (the two orphaned producers) and everything else on the menu stays correctly held.
+
+
+---
+
+## PT-2445 -- BOTH CLAUSES MEASURED, GENUINELY EXCELLENT -- EACH TURNS OUT SMALLER THAN FRAMED, WITH A CLOSE OR EXACT PRECEDENT ALREADY IN THE BUILD. THE DEXTERITY-LOSS MECHANISM ALREADY EXISTS, DOWN TO THE SIGN, IN ARMOUR'S OWN CAP FUNCTION -- AND ITS OWN COMMENT ALREADY STATES BLINDNESS'S RULE WITHOUT EVER HAVING BEEN ASKED. SIGHT-BASED SHRINKS FROM "A TAXONOMY OVER 26 SKILLS" TO TEN ENUMERABLE CALL SITES, WITH THE CORPUS ALREADY DRAWING THE EXACT DISTINCTION NEEDED IN STEALTH.DART. TWO COMPOSITION QUESTIONS RULED
+
+**Finding `usableDex` already implements the exact structural behaviour blindness needs -- a negative modifier passing through untouched, because the rule is losing a bonus rather than being floored -- and that its own comment already states the distinction correctly without ever being written with blindness in mind, is genuinely satisfying convergence. This is precisely the value of checking what already exists before assuming something needs inventing.**
+
+**Flagging that the flat-footed half of the same original bullet is already correctly handled via the existing comparison-condition machinery, specifically to prevent building it twice, is exactly the discipline this session has held throughout -- checking what's already covered before scoping new work, not just what's missing.**
+
+### CLAUSE 1 -- RULED: SEPARATE LIMITS, MORE RESTRICTIVE WINS; THE SPECIES TRAIT CHECKS FIRST
+
+**Ruled: armour's cap and blindness's removal are two independent computations, not one field made to mean two things. Compose them by taking whichever result is more restrictive for the character.** Collapsing them into a single value, as flagged, would make that value simultaneously a limit and an identifying key -- correctly avoided. Blindness logically should never let a character do better than they'd otherwise be limited to by their armour; the two constraints stack toward whichever is stricter, never overriding each other in the generous direction.
+
+**Ruled: the Togruta's Alertness-check exception is checked first, before the standard removal applies.** If the trait's condition is met, the character keeps their Dexterity bonus as normal despite being blind; only when that check fails (or the character lacks the trait) does the standard removal take effect. This is what keeps `PT-2150`'s trait meaningful rather than redundant -- the whole reason that parallel was drawn in the first place.
+
+### CLAUSE 2 -- RULED: PER-CALL-SITE, NOT A STORED FIELD, MATCHING THE STEALTH PRECEDENT
+
+⚠⚠⚠ **Finding the corpus already draws exactly this distinction, already wired, in `stealth.dart`'s Awareness-versus-Alertness asymmetry is decisive rather than merely suggestive -- the concept isn't missing from this codebase, it simply hasn't been generalised past its one existing instance. Correctly ruling out modelling this as a skill-level property, since the same skill (Awareness) is genuinely sight-based in one use and not uniquely so in another, avoids a false generalisation that would have been wrong the moment a second use of the same skill needed different treatment.**
+
+**Ruled: sight-based-ness is identified at each call site directly, the same way the existing stealth asymmetry already works, not stored as a field on `Check` or `Skill`.** Ten enumerable sites is small and closed enough that a per-site marking is the right size of solution -- inventing a generic taxonomy for a ten-item, non-growing population would be building more than the problem needs, and would diverge from the one pattern this exact distinction already follows successfully elsewhere in the same codebase.
+
+### PROCEED
+
+Propose the concrete build for both clauses now that the composition questions are settled.
+
+
+---
+
+## PT-2446 -- THE CONCRETE BUILD IS APPROVED IN FULL. THE HIDE-CONTEST FINDING IS GENUINELY ELEGANT -- THE EXISTING "BETTER OF AWARENESS OR ALERTNESS" MECHANISM ALREADY PRODUCES THE CORRECT ANSWER ONCE AWARENESS IS SIMPLY UNAVAILABLE TO A BLINDED DEFENDER, NEEDING NO NEW RULE AT ALL. TOGRUTA EXCEPTION APPROVED TO SHIP TOGETHER WITH THE DEX LOSS, NOT DEFERRED -- THE ADDITIONAL SCOPE IS SMALL AND THE REASON TO AVOID SHIPPING SEPARATELY IS SOUND
+
+**Slice 1a is exactly right: a genuinely separate function taking the more restrictive of two independent limits, rather than overloading the existing cap parameter to mean two different rules at once. The sign discipline carrying over unchanged -- a negative modifier still passes through untouched, since the rule is losing a bonus, not being floored -- means the two limits can never disagree about the case that actually matters most.**
+
+### SLICE 1b -- APPROVED, SHIP TOGETHER WITH THE DEX LOSS
+
+**Ruled: build the Togruta exception now, not deferred. Approved as recommended.** The additional scope is genuinely small -- one narrow, single-purpose field, extracted through the same quotation-guarded reader pattern already proven elsewhere -- and the reason to avoid shipping without it is sound and specific, not merely cautious by default: this exact trait has already, once, silently granted nothing at all for the same underlying reason, and `PT-2150`'s own record exists specifically because that failure was found and fixed once already. Shipping the Dex loss alone now would recreate the identical gap on the very mechanism `PT-2150` was written to close. Checked first, before the standard limit applies, exactly as ruled.
+
+**Correctly refusing a general trait system in favour of the narrowest field that answers this one ruled exception is the right scope -- built for what was actually decided, not for a category of future traits that haven't been ruled on yet.**
+
+### SLICE 1c AND CLAUSE 2 -- BOTH APPROVED
+
+**Threading the new parameter through exactly the four real call sites, and correctly naming flat-footed as already handled rather than rebuilding it, closes clause 1 properly.**
+
+**The full ten-site enumeration for clause 2, each one individually reasoned rather than pattern-matched in bulk, is precise. And the hide-contest finding is worth calling out specifically: recognising that a blinded defender simply losing access to the Awareness arm means the existing "better of the two" mechanism already falls back to Alertness correctly, with no new rule needed at all, is the kind of result that only comes from actually tracing how an existing mechanism behaves under a new condition rather than assuming a new condition always needs new logic. That's the same instinct that found the Perception reuse for distraction and the stealth precedent itself — recognizing when the existing architecture already does the job.**
+
+### THE TESTS -- APPROVED, THE CONTROLS ARE PRECISE
+
+**The three-point armour/blindness composition test, specifically constructed so two limits producing the same fixture value can't hide a swapped composition rule, and the hide-contest control confirming a blinded defender still defends via Alertness rather than losing the ability to defend at all, are both exactly the shape of control this whole thread has needed throughout. The sign-preservation test (Dex −1 staying −1 while blinded) is the detail most implementations would get wrong by taking the easy "remove the whole term" reading rather than the correct "remove only the bonus" one.**
+
+### PROCEED
+
+Build in the proposed order, both clauses together.

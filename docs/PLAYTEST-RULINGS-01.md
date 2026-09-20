@@ -74175,3 +74175,44 @@ Investigate the shared-reporting-path question for both silent-failure cases. Re
 ### PROCEED
 
 Fix the async race in the menu status line now — the clearest, most decisive finding. Build a reproduction for the empty-party load's class-lookup null-default before fixing it. Build the package-fault-sentence plumbing as its own real piece of work. Tester's offer to trace the empty-party load's actual divergence point is approved — that reading will help scope Coder's reproduction directly.
+
+
+---
+
+## PT-2468 -- TESTER'S SELF-CORRECTION IS EXEMPLARY: BOTH ORIGINAL CLAIMS (EMPTY-PARTY LOAD, TAG/HANDLE MISMATCH) NOW CONFIRMED TO NOT REPRODUCE AT ALL, TRACED TO ATTRIBUTING AN OBSERVED SYMPTOM TO WHATEVER HAD JUST BEEN CHANGED RATHER THAN THE ALREADY-DIAGNOSED ASYNC-TIMING TRAP THAT WAS THE REAL CAUSE ALL ALONG. THE THIRD CLAIM HONESTLY REPORTED AS UNREPRODUCIBLE AND WITHDRAWN RATHER THAN LEFT AS A ROUTED ITEM. A REAL, GENERALIZABLE METHODOLOGICAL LESSON EXTRACTED: ROUTED ITEMS GOT MATCHED PAIRS AND CONTROLS; ASIDES GOT ONE READING AND A PLAUSIBLE CAUSE. AND CODER'S RACE-CONDITION FIX CLOSES CLEAN, FINDING A REAL SECOND LEAK DEFECT WHILE BUILDING THE FIRST FIX
+
+**Stop Coder's reproduction work -- confirmed, and acted on before this entry was even filed. This whole correction deserves to be treated as a genuine model of how a mistake should be caught and handled, not just accepted and moved past.**
+
+### ⚠⚠⚠ THE SELF-CORRECTION -- WORTH THE FULLEST RECOGNITION
+
+**Directly re-testing both original claims against the actual current build, rather than trusting the earlier reports because they'd already been filed and acted on, and finding both genuinely load without issue, is decisive rather than merely suggestive -- and doing this specifically because the approved trace surfaced a case that didn't exist, rather than closing the trace with a shrug, is exactly the instinct that catches a cascading error before it compounds further.**
+
+**The root-cause diagnosis is precise: attributing a greyed Continue button to whatever had just been changed at the time -- Constitution, then a new area -- rather than recognising it as the same already-diagnosed timing trap recurring independently, is a real, specific, nameable reasoning error, and naming it plainly rather than describing the correction only in terms of its conclusion is exactly the honesty this session has held throughout.**
+
+**Correctly refusing to invent a mechanism for the one screen that genuinely cannot be placed, stating plainly "it should not carry a routed work item" rather than letting an unreproduced claim continue occupying real priority, is disciplined restraint under real uncertainty.**
+
+### ⚠⚠⚠ THE METHODOLOGICAL LESSON -- WORTH RECORDING AS ITS OWN STANDING PRACTICE
+
+**This is the single most valuable thing in this report, and it deserves to be treated as such rather than folded into the correction's details. Every routed, formally-tested item this whole session received matched pairs and real controls; these three asides each got one reading and a plausible-sounding cause, and that asymmetry -- not carelessness in any single observation -- is the actual root of the whole cascading error. The fix that was never applied is simple and was already the standard everywhere else: reload the same, unchanged save and see if the symptom recurs identically, before attributing it to whatever was just changed.**
+
+**Ruled: record this as its own standing instruction, alongside the other reasoning-pattern lessons already kept this session.** An aside noted in passing deserves the same discipline as a formally routed finding before it gets treated as evidence of anything -- a plausible cause attached to an unreplicated symptom is not yet a finding, however reasonable it sounds in the moment.
+
+### WHAT SURVIVES, CORRECTLY DOWNGRADED
+
+**The one structural fact -- record-validation failures build real wording, the library card carries only a count -- remains genuinely true and independently verified by reading `eebd977` directly. Ruled: this is correctly a tidiness item now, not the severe one it was filed as, since there is currently no observed failure needing it closed. Stays queued as real, low-urgency work -- not withdrawn, just correctly resized.**
+
+**Amending `TEST 120` and `TEST 121` in place with explicit retracted notes, rather than leaving the original false claims standing, is exactly right -- and explicitly reconfirming everything in both reports that was properly matched-paired and controlled remains fully valid (the five-round durations, all ten droid refusals with their sentient controls, the whole Force Confusion battery, the `Present.placed` classifier finding) keeps the genuinely solid work from being caught in the retraction's blast radius.**
+
+### THE RACE-CONDITION FIX -- APPROVED, THE SECOND DEFECT IS A GENUINE BONUS FIND
+
+**Building three real states instead of one blank one, with the pending state honestly saying what it is, closes `PT-2467` Path 3 exactly as ruled.**
+
+⚠⚠⚠ **FINDING THE TIMER LEAK WHILE BUILDING THE FIX IS A GENUINE, VALUABLE SECOND DEFECT, AND THE DIAGNOSIS IS PRECISE.** Recognising that the obvious timeout utility schedules a timer it can't hand back, so every screen closed mid-listing left an uncancellable background timer running, and catching it through an entirely unrelated test failing for what looked like an unrelated reason, is exactly the kind of cross-cutting vigilance this session has valued throughout. Building the guard against the real, shipped duration rather than a fast fixture value, specifically because the fast value would let the guard pass even against the leaking build it exists to catch, is precise test design.**
+
+**The architectural nuance -- a genuinely in-flight read can't actually be cancelled, so the timeout controls only the message's silence, and a late-arriving real result correctly replaces the "timed out" sentence rather than being silently discarded beneath it -- is careful, honest engineering. Leaving the timed-out message showing over a screen now holding real data would have been a second false statement layered on the first; avoiding that is exactly right.**
+
+**Correctly not building a retry button, recognising the natural leave-and-re-enter flow already provides one, and correctly flagging that dedicated retry UI is a real design surface deserving its own ruling rather than something to invent silently, is the right boundary.**
+
+### PROCEED
+
+Path 1's reproduction is withdrawn — nothing further needed there. Path 2 (the package-fault sentence plumbing) proceeds whenever convenient, correctly resized to non-urgent. The methodological lesson is recorded. Race condition fully closed.

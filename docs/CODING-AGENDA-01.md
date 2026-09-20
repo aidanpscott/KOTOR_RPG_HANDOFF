@@ -6,8 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### Deflection resource fix — ruled, building
-- **Ruled: Force only, drop `spendReaction` (PT-2423).** Investigation found no bug — the reaction pool is genuinely per-encounter (1-3 total), and Deflection correctly stopped once it was exhausted, reproduced with real numbers matching TEST 117 exactly. The real finding: this contradicts `POWER-COSTS-01 §4.1`'s own stated reason for building Deflection as a reaction (a Jedi under sustained fire should drain fast — it doesn't, the Force pool barely moves). Ruled to restore the original intent: drop the reaction cost, price entirely from Force. Building.
+### `§10`'s reaction chain (Parry, Snap Shot, Overwatch) — small, held, own future question
+- **Reaction refresh cadence — not yet a question, will become one.** Deflection was the only thing ever spending the per-encounter reaction pool; now that it's Force-only, nothing does. The day `§10`'s chain is built, whether its members refresh per round or share the same per-encounter pool is the identical question just resolved for Deflection — flagged now so it isn't rediscovered from scratch later. Nothing broken today.
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
@@ -45,6 +45,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Deflection resource fix closed — Force only, confirmed decisively. More than three deflections across a 40-round fight, with two mutants confirming both directions (old reaction cap no longer binds; new Force cost genuinely charges). The free-deflection control specifically caught that "more deflections than before" alone could be satisfied by a broken, unpriced build recreating the exact passive shape `§4.1` originally refused. Genuinely honest self-caught mistake: Coder's own first assertion assumed every attempt succeeds, walking directly into the blind spot `TEST 117` had already named — corrected, with the mistake recorded rather than silently fixed — PT-2424
 
 - Force Body's latent replaces/stacks divergence closed with a tripwire, not a fix (nothing was broken). A real throw rather than `assert`, since the defect it guards against is silent and correct-looking — a strippable guard would protect nothing where it mattered. Counts what's standing, not the raw list, since a mid-turn list of two expired-plus-active entries is normal and correct. Consequence honestly reported and ruled: the fold's own comparison logic is now structurally unreachable (at most one entry can ever legitimately stand) — removed rather than left as dead scaffolding — PT-2422
 

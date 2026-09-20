@@ -74495,3 +74495,28 @@ Land Defect 1's fix and repair all four affected fixtures now. Defect 2 closes a
 ### PROCEED
 
 Nothing further on Defect 1 — closed cleanly. Stop searching for the mockup file; wait for the actual image once Aaron locates and screenshots the original conversation. Move the existing renders onto the font-correct capture mechanism in the meantime. Disabled Level Up tap-leak stays held.
+
+
+---
+
+## PT-2478 -- OWNER WAS RIGHT TWICE. THE COLOR WAS A GENUINE MEASUREMENT ERROR, NOT A TASTE NOTE -- SAMPLED DOWN A FIXED COLUMN WHILE THE RIBBON ITSELF CURVES AWAY, DRIFTING THE SAMPLE ONTO A BLENDED EDGE. "A WRONG MEASUREMENT IS WORSE THAN A GUESS BECAUSE IT LOOKED SOURCED" IS EXACTLY RIGHT. THE ARROW WAS DESCRIBED FROM MEMORY, NOT LOOKED AT -- HONESTLY ADMITTED, AND THE REAL ASSET IS NEITHER AN ARC NOR AN ARROW. AND RENDER-AND-LOOK FOUND TWO MORE REAL DEFECTS -- INCLUDING A GENUINELY INVERTED SLOT/ITEM STATE MAPPING -- THAT 28 GREEN TESTS COULD NOT. ONE REAL POLICY QUESTION FLAGGED: RECREATE VERSUS BIT-EXACT EXTRACTION, CORRECTLY NOT DECIDED UNILATERALLY
+
+**Both corrections closed properly, and it's worth distinguishing them precisely rather than treating them as the same kind of miss. The color was a real measurement error with a real, traceable cause -- a sampling column that made sense for a straight ribbon and silently stopped making sense once the actual art curved away from it. Honestly naming a measured-and-wrong number as worse than an honest guess, because it carries false authority, is exactly the right severity to assign it.**
+
+**The arrow admission is the more important one methodologically. Describing an asset from memory rather than from having actually looked at it, and being straightforward about that once the owner's correction prompted a real check, is the right response to being caught -- and finding the real asset is neither the arc the governing text described nor the arrow the code's own name implied is a genuinely valuable correction to the record. Confirmed as recreated to the pixel, sourced to the exact texture file and coordinates for anyone who wants to check it directly.**
+
+### THE POLICY QUESTION -- HELD FOR OWNER, NOT DECIDED
+
+**Correctly flagged rather than assumed. `ASSET-REPLACEMENT-01`'s existing rule (recreate close, never ship the source file) and Aaron's own recent "extract the assets perfectly" request point in different directions, and this deserved a real answer rather than a silent pick either way. Asked directly.**
+
+### THE CAPTURE MOVE AND THE TWO NEW DEFECTS -- BOTH APPROVED
+
+**Moving onto the font-correct capture mechanism, and correctly capturing both of Equip's two states specifically because one shot would only show half of `PT-1252`'s ruling, is precise follow-through.**
+
+⚠⚠⚠ **REAL TEXT FINDING TWO MORE DEFECTS THAT TWENTY-EIGHT GREEN TESTS MISSED CONFIRMS RENDER-AND-LOOK'S VALUE AGAIN, AND THE SLOT/ITEM INVERSION IS A GENUINELY SEVERE ONE, NOT COSMETIC.** The slot view showing no current selection when it should have one, because a state-collapse bug had inverted which view carried which subtitle behaviour, is exactly the kind of structural defect no text assertion could express. Fixing it and adding the guard that should have caught it originally closes this properly.**
+
+**Moving the "worn item is always among its slot's choices" rule from the caller into the widget itself, once found being separately re-implemented at the call site, is the same single-source-of-truth discipline this session has applied everywhere else it's recurred -- a rule enforced by one caller is a rule the next caller silently lacks.**
+
+### PROCEED
+
+Awaiting Aaron's answer on the recreate-versus-extraction question below.

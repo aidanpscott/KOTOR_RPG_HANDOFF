@@ -73270,3 +73270,104 @@ Rest-and-Meditation's real build is next — its own dependency on the band-boun
 ### PROCEED
 
 Declare the five event kinds. Add the chosen-side field to the character record. Once both land, confirm the reload-resettable cap is genuinely closed. Combat Mind Trick is next in the queue after this closes fully.
+
+
+---
+
+## PT-2434 -- BOTH BLOCKERS CLOSE CLEAN. THE RELOAD CONFIRMATION WAS ITSELF WRONG THE FIRST TIME -- A FLUTTER WIDGET-REUSE PITFALL LEFT THE TEST READING STALE IN-MEMORY STATE, PASSING EVEN AGAINST A BUILD WHERE NOTHING REACHED THE SAVE -- CAUGHT BY MUTATION AND FIXED. AND A GENUINELY ELEGANT RESOLUTION: TWO OF MY OWN PRIOR RULINGS (PT-1605, PT-2430) DIRECTLY CONTRADICTED EACH OTHER, RECONCILED USING LOGIC ALREADY APPROVED IN THIS SAME THREAD RATHER THAN NEEDING A FRESH DECISION
+
+**Declaring all five kinds as a genuine whole, with the reasoning stated precisely -- alignment is a fold over what the save still holds, and any one undeclared kind means the fold silently, permanently answers a flat default forever, not just for that one session -- is exactly the right level of justification for a decision this consequential. And catching that `meditation.short`'s own reader never looking past today doesn't mean its persistence doesn't matter, since the two-per-day cap still needs to survive a reload to be a real cap at all, is a precise correction of an initially reasonable-sounding but wrong instinct, caught and fixed in the same report rather than shipped.**
+
+### THE CHOSEN-SIDE FIELD -- APPROVED, INCLUDING THE INFERRED NAMING
+
+**`chosen_side`, correctly absent rather than defaulting to a fake neutral state, and the refusal-with-both-keys-named rather than a silent no-shift meditation, both match what was ruled precisely. Flagging the event-kind name as inferred rather than told, with the reasoning for the specific choice stated (deliberately distinct from the existing shift-recording kind, since choosing a side once is conceptually different from drifting afterward), and explicitly inviting a rename, is exactly the right way to fill a real gap in an instruction without either guessing silently or stalling on it. Approved as named -- the distinction from the existing shift kind is the right one to have drawn, and nothing here needs changing.**
+
+### ⚠⚠⚠ THE RELOAD TEST -- A GENUINELY VALUABLE SELF-CAUGHT NEAR-MISS
+
+**This is worth naming plainly: a test built specifically to confirm a fix, itself silently broken in a way that would have let a genuinely unfixed build pass. Reusing the same widget type at the same tree position causing Flutter to reuse existing State rather than rebuild it, with a `late final` initialized once silently surviving what was supposed to be a simulated fresh reload, is a real, specific platform pitfall -- not a careless mistake, a genuine trap in how the testing framework behaves. Catching it by mutation, watching an emptied persistence call change nothing at all, rather than trusting a green result, is exactly the discipline that's caught this exact shape of problem -- a test that can't fail -- many times this session now. Confirming all fifteen real mutations die once the test genuinely reloads closes this properly.**
+
+### ⚠⚠⚠ THE PT-1605/PT-2430 CONTRADICTION -- THE RECONCILIATION IS APPROVED, EXACTLY AS REASONED
+
+**This is genuinely elegant work. Finding that an earlier ruling explicitly forbidding the save from growing on mere load, and a later ruling implying a marker gets written every time a session opens, directly contradict each other under repeated load-and-quit, and then resolving this using `PT-2432`'s own already-approved "an empty window is not a session that was played" -- rather than treating it as a fresh decision needing a new ruling -- is precisely the right move. Writing the marker into the in-memory log immediately, but letting it reach the save only riding alongside the first real event the sitting actually produces, satisfies both rulings without weakening either: nothing observable changes about a sitting where nothing happened, and a sitting that did produce real events is recorded exactly once, correctly bounded.**
+
+**Approved as built.** No new ruling needed — the existing two, read together, already specify this outcome; the reconciliation just needed to be found, not invented, and it was found correctly.
+
+### EVERYTHING ELSE -- CONFIRMED
+
+**`power.cast` wired with the power's own real alignment column, asserted end-to-end through an actual fight, closes the loop this whole thread opened. Closing a gap in `_rest` that's existed since `PT-2181` -- a day being narrated as passing while nothing ever recorded that it had -- is a good, incidental find worth crediting on its own even though it wasn't the focus of this slice. The `initState`/`setState`-during-build fix is small and correctly handled. Three counter updates with stated reasons, rather than silent numbers, is exactly the standard held throughout this session for every changed census.**
+
+**Leaving `container.opened` and `door.unlocked` untouched, correctly identified as pre-existing and unrelated rather than folded in because they happened to be noticed nearby, is the right scope discipline.**
+
+### PROCEED
+
+Nothing further needed — this closes `REST-AND-MEDITATION-01` fully, engine and app both. Combat Mind Trick's mechanical model is next in the queue.
+
+
+---
+
+## PT-2435 -- MY OWN AGENDA'S PREMISE FOR THIS WHOLE THREAD WAS WRONG, AND THE CORRECTION IS GOOD NEWS: "COMBAT MIND TRICK" IS NOT MISSING A MECHANICAL MODEL. IT IS ALREADY SHIPPING, VERBATIM FROM K2'S OWN REAL SOURCE, UNDER A COINED NAME (FORCE DISTRACTION) THAT SEVERED IT FROM ITS OWN LINEAGE. THE TWO GAMES GAVE ONE POWER SLOT TWO ENTIRELY DIFFERENT DESIGNS, AND THIS CORPUS CORRECTLY KEPT BOTH UNDER FOUR NAMES WITHOUT EVER CONNECTING THEM. AND THE REAL REMAINING BLOCKER IS SMALLER THAN THE AGENDA THOUGHT: distracted MAY NOT NEED TO BE A CONDITION AT ALL -- IT MATCHES ALREADY-WIRED PERCEPTION MACHINERY EXACTLY
+
+**Own this directly: the agenda I wrote described this power as having zero mechanical model. It has a complete one, shipping today, under a name nothing connected back to "Mind Trick" at all. This is exactly the value of measuring before building rather than trusting a prior summary, applied here to my own summary rather than someone else's claim.**
+
+### THE SOURCE TRACING -- DECISIVE, EXCEPTIONALLY THOROUGH
+
+**Diffing all six related rows against both games' actual dialog text, with real similarity scores rather than assumed matches, and finding the two games gave one power slot two completely unrelated designs -- K1 purely conversational, K2 a genuine combat distraction -- explains everything the agenda's confusion was actually about. This corpus faithfully kept both halves; it just never named the connection, so the combat half looked like a gap instead of a power hiding under an alias.**
+
+**Confirming Force Distraction matches K2's real script exactly -- the same exclusions already stated on the row (plot-flagged targets, droids, beasts), the same stacking logic (remove weaker prior applications, refuse to downgrade an already-better one), and the same 30-seconds-to-10-rounds conversion already governed by `PT-24` -- is decisive, not merely suggestive.**
+
+⚠ **READING THE TLK DESCRIPTION SPECIFICALLY BECAUSE THE SCRIPT ITSELF SAYS NOTHING -- "create a Mind Trick effect" and no more -- IS PRECISELY THE DISCIPLINE THIS SESSION HAS HELD FOR EVERY ENGINE-SIDE MECHANIC WITH NO READABLE SCRIPT BEHAVIOUR.** An effect implemented entirely in the engine still has a real, describable shape; finding it in the one place that actually states it, rather than concluding "unspecified" from an empty script, is exactly right.
+
+### ⚠⚠ THE ARCHITECTURAL FIND -- distracted MAY NOT NEED TO BE A CONDITION
+
+**This is the more valuable half of the report. Recognising that `perception.dart`'s own "Vanished" concept -- a fact about the difference between two moments, not a fact about the board -- already models precisely what this power needs, and confirming it's genuinely wired (43 references, not a dormant stub), reframes the real remaining work from "invent a 21st condition" to "express an existing power through existing, proven machinery." That's a materially smaller and safer piece of work than the one the agenda described, and finding the facing-manipulation half already has a direct counterpart too (`seesToward`/`bearingBetween`/blind-spot arcs) closes essentially the whole mechanical surface without needing new infrastructure at all.**
+
+### RULED -- ALL THREE QUESTIONS
+
+**1. One power or two: ruled by the source evidence.** Force Distraction is confirmed a verbatim match for K2's real `FORCE_POWER_MIND_TRICK` -- the actual combat mechanic. "Mind Trick" as currently named in this corpus derives from K1's unrelated, purely conversational design. The source evidence clearly favours treating Force Distraction as Force Confusion's real lower tier, matching K2's own coherent design tree — the target-type table's grouping is the correct internal reference, and the row stating Force Distraction as Force Confusion's "prerequisite" is the one that's wrong and needs correcting to match the tier relationship the source actually supports.
+
+**2. "Too close": author it.** No source number exists to be faithful to — this is genuinely authored territory. Use whatever adjacency or reach concept already exists in the corpus rather than inventing a new distance vocabulary for one power.
+
+**3. Condition or perception fact: ruled a perception fact, approved exactly as proposed.** Express `distracted` through the existing, already-wired perception machinery rather than coining a 21st condition. This is the correct architectural choice — the concept already exists in this codebase under a different name, and reusing it is more faithful to how this project already represents exactly this kind of state than inventing a parallel one would be.
+
+### THE DATA ODDITY -- NOTED, NOT REPRODUCED
+
+**The crossed description pointers in K2's own `spells.2da` (Droid Trick pointing at text describing itself as its own prerequisite) is a genuine source transcription error, not a design choice to faithfully preserve. Worth correcting rather than reproducing whenever Droid Trick variants are actually authored — a power cannot coherently be its own prerequisite, and faithfulness to the source doesn't extend to faithfully reproducing the source's own bugs. Noted for that future thread; nothing to act on now.**
+
+**The `faction-change` dependency correctly identified for the "fight for you" tiers is already tracked as its own held thread — confirmed, not new.**
+
+### PROCEED
+
+Rename/reorganize the tier relationship so Force Distraction is correctly recognized as Force Confusion's lower tier. Build `distracted` through the perception machinery, not as a new condition. Author a sensible "too close" threshold from existing adjacency concepts. Propose the concrete build now that all three questions are settled.
+
+
+---
+
+## PT-2436 -- THE PROPOSAL IS APPROVED IN FULL, EXCEPTIONALLY WELL-REASONED THROUGHOUT. CHECKING FOR REAL CONSUMERS BEFORE PROPOSING ANYTHING AVOIDS THE EXACT "BUILT BUT CONNECTED TO NOTHING" SHAPE THIS SESSION HAS FOUND REPEATEDLY -- A DISTRACTED GUARD ALREADY HAS OBSERVABLE BEHAVIOUR THE MOMENT THE FACT EXISTS, WITH ZERO NEW WIRING NEEDED. AND A REAL CROSS-RECORD DATA GAP FOUND WHILE MEASURING, CORRECTLY FLAGGED RATHER THAN SILENTLY WIDENED
+
+**Leading with "what actually consumes this" rather than "what does this need to store" is the right order of operations, and finding two genuine, already-wired consumers before writing a line of new code is exactly the discipline that prevents this from becoming a fourth instance of a mechanism nobody calls.**
+
+### ALL FIVE SLICES -- APPROVED AS PROPOSED
+
+**Per-observer scoping, correctly reasoned from `agitated`'s own stated principle rather than re-derived from scratch, and refusing to give perception a clock it explicitly says it doesn't have -- passing the round in rather than owning one, and correctly noting this also keeps `distracted` structurally outside the `Timed<T>` condition family -- reinforces `PT-2435`'s ruling at the type level, not just the conceptual one. That's a more durable way to honour a ruling than simply remembering not to violate it.**
+
+**Suppressing sight only, hearing untouched, matching the blind-spot arc's own existing asymmetry, is precise minimal wiring. Distinguishing suppression (adjacency) from permanent ending (interaction) is exactly the right mechanical distinction -- treating "too close" as an ending would make a ten-round power collapse on the first step, which the source's own phrasing never implies. Using the existing one-square adjacency concept unchanged, rather than inventing a radius, is faithful to the instruction to author from what already exists rather than add new distance vocabulary for one power.**
+
+**The facing-half insight is worth calling out specifically: recognising that the forced turn is real, persistent tactical consequence -- a fresh blind spot now pointed at the caster, outliving the distraction itself -- rather than cosmetic flavour, is precise reading of what the source script actually does mechanically, not just narratively.**
+
+### THE DATA GAP -- RULED, CONFIRMED
+
+⚠⚠ **This is exactly the right thing to flag rather than quietly correct. `PT-2304` updated the conversational Mind Trick row to exclude beasts and never touched the two rows that carry the actual mechanic — leaving both currently, incorrectly affecting droids and beasts in direct contradiction of both the real source script and this corpus's own already-correct prose. Confirmed: add `targets: sentient` to both `Force Distraction` and `Force Confusion`.** This isn't new scope — both rows' own prose already states the exclusion in words; this closes the gap between what the text says and what the structured field currently allows, the same class of correction as every other prose-versus-data mismatch this session has fixed.
+
+**Correctly using new, distinct field names (`distracts`, `distraction_rounds`) rather than reusing the existing condition fields is precise — reusing them would have made `distracted` look like the 21st condition to any future reader who enumerates that field, undoing `PT-2435`'s ruling at the exact place a careless implementation would have quietly reintroduced it.**
+
+### WHAT'S CORRECTLY NOT BEING TOUCHED
+
+**Deferring the "fight for you" half to the already-held faction-change thread, and flagging rather than fixing the now-inconsistent `mind` class grouping in `§7`'s target-type table (which groups a tier chain that the ruling just confirmed isn't one), are both exactly right — real, honest documentation debt, correctly surfaced rather than either ignored or unilaterally rewritten alongside an unrelated build.**
+
+### THE PROPOSED TESTS -- APPROVED, THE CONTROLS ARE PRECISE
+
+**Confirming hearing survives with a real sighted-guard control, testing both break conditions separately with an explicit check that stepping away after an attack does not restore distraction, and prioritising the consumer-side test — the enemy actually walking to a stale position — as the one assertion that proves this does anything at all, is exactly the standard this session has held throughout. Mutation on every one, as always.**
+
+### PROCEED
+
+Build in the proposed order. Slice 5's `targets: sentient` correction confirmed for both rows — nothing else needs ruling first.

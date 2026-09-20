@@ -6,6 +6,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: droid-classifier fix went to the wrong function — real defect fully live
+- **Ruled, fix now (PT-2456).** `PT-2453`'s fix corrected `kindOf` (one caller, only classifies the player's own record) but the actual combat-determining classifier, `Present.placed` in `attack.dart`, still carries the original untouched `== 'droid'` string test. Confirmed: 4 of 5 real droid species remain fully mind-affectable in real combat — including Force Confusion confirmed working on an actual droid, directly contradicting the power's own text ("only works on sentients; beasts and droids are immune"). Fix `Present.placed` to use the same corrected `is_droid` set. Re-confirm against all five species individually.
+- **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
+- **Silent empty-party load — investigate.** A save loads into a broken, empty-party state with no error at all, distinct from the correctly-visible "unreadable" rejection case. Honest caveat: the writer bypasses chargen, so this may be specific to test tooling rather than reachable through normal play.
+
 - **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
 - **Mis-worded refusal when aiming outside a fight — small, held.** Refuses with "there is nothing here you can see to aim it at" when the real reason is no encounter is running — confirmed with both enemies visible one square away.
 - **Escape with no menu open leaves the board — small, held.** Cost Tester two reloads during TEST 119.
@@ -54,6 +59,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Force Confusion fully confirmed in real play — TEST 120, every routed clause. Both fighting-for-you directions confirmed with careful staging to overcome the AI's own targeting-preference bias. One-of-each-kind confirmed as the active instance (a second cast succeeds once the first genuinely expires), no stand-at-1 (confirmed going negative), returns to its side, and the win-condition test solved with genuinely inventive terrain engineering (an impassable-but-sight-permeable water pocket isolating a confused creature so the real party-wipe condition could be cleanly tested) — PT-2456
 
 - Facing/hear-turn observability fully closed — hearing gained its own range field (absent means as-far-as-sight, never exceeding it), the Sith Trooper gained the project's first shipped `blind_spot` (120°). Three real tests broke on the new content, all correctly diagnosed: a duplicate TOML key silently failing character load (the same trap Tester hit, caught in Coder's own new content before shipping), an existing control that had only ever been true by accident (no blind spots existed anywhere to be absent from), and a baked-in "adjacent therefore seen" assumption that stops holding once a real blind spot can put an adjacent player behind a creature — PT-2455
 

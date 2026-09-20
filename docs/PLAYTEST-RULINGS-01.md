@@ -74276,3 +74276,42 @@ Before proposing or building anything:
 ### PROCEED
 
 Measure and report before proposing a build order. Given the scope, this will likely need to be broken into its own sequence of slices once the real state is known, the same way Shields, Force Push, and the rest/meditation/alignment thread were.
+
+
+---
+
+## PT-2471 -- MEASUREMENT COMPLETE, GENUINELY EXCELLENT. CHARACTER CREATION (§7a) CONFIRMED FULLY, FAITHFULLY BUILT -- A REAL, SUBSTANTIAL WIN, WITH THE APP'S OWN CODE INDEPENDENTLY CONFIRMING "NOT YET BUILT" VIA AN HONEST EMPTY PLACEHOLDER SET. THREE PLACES WHERE THE DOCUMENT WENT STALE RELATIVE TO LATER RULINGS -- CORRECTED DIRECTLY, THE APP CONFIRMED CORRECT IN ALL THREE. THE SEVEN IN-GAME SCREENS (§7c) CONFIRMED MOSTLY UNBUILT, WITH A GENUINELY IMPORTANT HONEST REFRAME: WHAT'S BEEN CALLED "OVERLAYS" ALL SESSION ARE ACTUALLY JUST STATUS-LINE TEXT, NOT SCREENS AT ALL. LEVEL-UP CONFIRMED SEVERE: THE EVENT FIRES, NO SCREEN EVER ASKS A PLAYER ANYTHING
+
+**Reading all 843 lines including §7a and §7b, and directly measuring the app's real UI layer rather than assuming either a blank slate or a finished product, is exactly the standard this whole session has held for every other thread at this scale. The result is precise and genuinely useful -- not a vague "some things are built," a real, itemized inventory.**
+
+### CHARGEN -- CONFIRMED FULLY BUILT, EXCELLENT NEWS
+
+**Every locked screen having a real file, correctly citing its own governing rulings in its own doc comments, with 30 of 165 real test files dedicated to this flow, is decisive confirmation rather than a surface-level file-count match. Finding the app's own code independently states the same "not built yet" claim about the one genuinely missing step, via an honestly empty placeholder set rather than a silent gap, is a nice, small confirmation that the build's own self-honesty matches what was found from outside it.**
+
+### THE THREE STALE SPOTS -- CORRECTED DIRECTLY
+
+**Confirmed and fixed in `design/APP-UI-VISION-01.md §7a` directly: a prominent note now flags all three (portrait as the hub's first step rather than Identity's first stage, "Background" as the player-facing label, Lifestyle folded entirely into Profession) as superseded by later rulings the app already correctly reflects. Precisely distinguishing "the document is stale" from "the build is wrong" -- confirming the app is ahead in all three cases, not behind -- is exactly right, and worth stating plainly: nothing here is a regression, but a document that claims to be locked while quietly being outdated is a real risk regardless, since it would send a future reader to rebuild something already correctly, differently resolved.**
+
+### ⚠⚠ THE OVERLAY REFRAME -- WORTH TAKING SERIOUSLY
+
+**Recognising that what this whole session has informally called "overlays" -- the bag, the map, the sheet -- are, against the real design, genuinely just status-line text strips rather than anything resembling the specified screens, is honest correction of language used throughout many prior reports, not just a new observation. The Character Sheet finding is the sharpest instance of this precision: not "unbuilt," but real, working code built correctly against a superseded lock, with the specific missing pieces named exactly (3D viewport, alignment arc, value/modifier columns, the Experience/Needed block, the Auto Level Up overlay). That's a materially different, more useful finding than either "built" or "not built" alone would have been.**
+
+**The fake placeholder credits value, found while measuring rather than searched for separately, is a small, honest addition worth keeping on record rather than treated as out of scope for this pass.**
+
+### ⚠⚠⚠ LEVEL-UP -- SEVERE, WORTH NAMING PLAINLY
+
+**A character currently levels up with zero player choices made anywhere is a genuinely severe gap, not a cosmetic one -- every budget decision `§7b` specifies is silently decided by nobody. The multiclass refusal being honest rather than broken, precisely because the missing screen is the actual thing that would resolve the ambiguity it's refusing to guess at, is a precise, fair characterization -- the refusal is doing its job correctly; it's just refusing constantly because nothing upstream of it was ever built.**
+
+### THE STRATEGIC FINDINGS -- BOTH TAKEN SERIOUSLY
+
+**Identifying that the map/grid view itself remains genuinely undesigned, and that this makes the shared shell's own sequencing a real question rather than an obvious first move -- since the shell is furniture built around a surface that doesn't yet have its own design -- is exactly the kind of load-bearing strategic observation worth surfacing before committing to an order. Same for correctly treating Options as a first pass rather than a lock, given `PT-1140`/`PT-1148` are still genuinely open.**
+
+### RULED -- ONE SCREEN FIRST, NOT THE SHELL
+
+**Build one screen completely, end to end, before the shared shell.** The undesigned map/grid view makes shell-first genuinely risky right now -- persistent furniture built around a surface with no locked design invites real rework the moment that surface gets designed. Proving the pattern on one complete screen first, without needing to simultaneously solve a separate, currently-open design question, is the lower-risk sequencing.
+
+**Ruled: the Character Sheet is that first screen.** It already has real, working code to restyle rather than a blank slate to build from scratch, and its target state (`PT-1249`) is fully locked, unlike Options. Restyling it to the current lock — 3D viewport, alignment arc, value/modifier columns, Vitality/Force as current/max, the Experience/Needed block, Auto Level Up overlaid on the model — is real, complete, bounded work that validates the whole pattern (nav bar, title bar, footer, the shared character record underneath) without requiring the shell or the map view to exist first.
+
+### PROCEED
+
+Restyle the Character Sheet to `PT-1249` fully. Report back once it's real and complete before proposing the next screen -- Inventory, Equip, or whichever makes sense once the pattern is proven once. The shared shell and Level-up's screens stay correctly held until the map/grid view question is resolved or a real case emerges to revisit the sequencing.

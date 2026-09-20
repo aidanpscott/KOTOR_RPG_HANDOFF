@@ -73371,3 +73371,52 @@ Rename/reorganize the tier relationship so Force Distraction is correctly recogn
 ### PROCEED
 
 Build in the proposed order. Slice 5's `targets: sentient` correction confirmed for both rows — nothing else needs ruling first.
+
+
+---
+
+## PT-2437 -- FORCE DISTRACTION CLOSES CLEAN, ALL FIVE SLICES, WITH ZERO NEW CONSUMER CODE NEEDED -- EXACTLY AS THE PROPOSAL'S OWN CONSUMER-FIRST CHECK PREDICTED. TWO MORE GENUINELY VALUABLE SELF-CAUGHT TEST FAILURES: A FIXTURE THAT NEVER ACTUALLY EXERCISED A MADE SAVE, AND ONE WHERE "NOTHING WAS DISTRACTED" WAS EQUALLY TRUE OF A REFUSED CAST, A MADE SAVE, AND A BROKEN BUILD. AND A GENUINELY MATURE HANDLING OF AN UN-TESTABLE CLAIM -- HONESTLY EXPLAINED WHY IT COULDN'T BE DIRECTLY SHOWN, WITH REAL INDIRECT EVIDENCE OFFERED RATHER THAN EITHER OVERCLAIMING OR QUIETLY DROPPING IT
+
+**Confirming the consumer-first measurement was worth doing -- a distracted guard behaving correctly with zero new consumer code, because `_knownPositionOf` and `_faceToward` already read perception -- closes the loop on why that check mattered before any code was written. Suppression via adjacency rather than a permanent end, and interaction ending it before the roll so even a missed attack counts as the trigger, both match exactly what was proposed and ruled. The facing change outliving the distraction's own duration, correctly built as real mechanical consequence rather than cosmetic flavour, closes precisely as described.**
+
+### ⚠⚠⚠ TWO MORE GENUINELY VALUABLE SELF-CAUGHT TEST FAILURES
+
+**The made-save gap is worth naming precisely: every fixture stacked high enough stats that the target could never actually fail to resist, so a genuine "made save" branch was never once exercised despite the suite reporting green. And the second attempt at fixing it produced an equally misleading pass for a completely different reason — a refused cast, for insufficient cost, rolling no save at all. "Nothing was distracted" is true of three entirely different situations, and a test that can't distinguish a refusal from a resistance from a broken build isn't testing the claim it appears to test. Asserting the pool genuinely moved before asserting the negative outcome is exactly the fix this needed — proving an attempt happened before claiming it failed.**
+
+**The facing assertion checking only "something is non-null," passing against a build that turned the target nowhere because the fixture's own setup happened to already face the right way by coincidence, is the same shape one level over — a check that can be satisfied by an accident of setup rather than by the thing it claims to verify. Computing the real expected bearing and asserting the exact opposite of it closes this properly.**
+
+**The two fixture traps -- a walk-in helper leaving the player adjacent by construction, and walking back into contact triggering an attack that ends distraction by an entirely different rule -- are both honestly recorded rather than silently worked around, which is exactly right: a future reader hitting the same trap benefits from knowing it's a known shape, not a fresh mystery.**
+
+### ⚠ THE UNTESTABLE CLAIM -- HANDLED EXACTLY RIGHT
+
+**This deserves real recognition as its own kind of rigor. Rather than forcing a fragile, misleading test or quietly dropping the claim, explaining precisely why it can't be directly demonstrated (a sighted trooper actively pursues, so the fixture cannot hold the separation the test would need), and then offering genuine indirect evidence that the underlying claim still holds -- the distraction reading true again on re-approach is logically equivalent to "it did not end," and the guard's own duration handling has no board-position dependency to begin with -- is honest, careful reasoning about what can and cannot actually be shown. This is a better outcome than either overclaiming a test that doesn't prove what it appears to, or silently leaving a real claim unverified with no explanation.**
+
+### THE DATA FIX AND THE GUARD-QUALITY CATCH -- BOTH APPROVED
+
+**`targets: sentient` on both rows, closing the gap between what the prose already said and what the field allowed, exactly as ruled.**
+
+⚠ **Catching that a new guard called the underlying helper directly rather than the actual reader meant to use it -- so a real regression in the reader's own integration would have gone completely undetected -- is a genuinely valuable catch in its own right, separate from the feature it was meant to protect. A guard that tests a helper in isolation rather than its real caller proves less than it appears to, and fixing it to call the actual reader closes that gap properly.**
+
+### PROCEED
+
+Nothing further needed — closed cleanly. Force Confusion and Beast Confusion correctly stay in the applies-nothing list, held on the separate faction-change thread. The flagged `§7` inconsistency stays flagged, correctly untouched.
+
+
+---
+
+## PT-2438 -- OWNER OPENS FACTION CHANGE, CODER'S OWN RECOMMENDATION, MEASURE FIRST -- FACTIONS-01 §4b SPECIFICALLY, SINCE IT MAY ALREADY RULE AGAINST THE EXACT THING TWO SHIPPED POWERS NEED. PLUS A CHEAP ADD-ON: CORRECT §7'S STALE TIER-CHAIN GROUPING
+
+**Ruled: item 1, exactly as recommended.** Two real, already-shipped powers (`force_confusion`, `beast_confusion`) are blocked on this, and `character.faction-changed`'s own gate note already hints at a real conflict worth resolving before anything else — "no engine producer, BY DESIGN" is precisely the kind of standing decision that could directly contradict what these two powers need, the same shape as the wound-point and session/hour conflicts this exact discipline has caught cleanly on the last three threads.
+
+Measure `FACTIONS-01 §4b` specifically before proposing anything:
+- What the document actually says about engine-driven faction changes, and why it currently declares no producer by design.
+- Whether that design decision was made without these two powers in view, or explicitly considered and excluded them.
+- What K2's real script shape (`EffectFactionModifier`) actually specifies, the same way every other mechanic this session has been measured against its real source.
+
+### ALSO -- SMALL, CHEAP, ALREADY FLAGGED TWICE
+
+**Correct `§7`'s target-type table now.** Its `mind` class still lists "Mind Trick · Dominate Mind · Force Confusion" together as though they form a tier chain, which `PT-2435` already ruled they don't. A name that outlives its rule, flagged twice already — cheap enough to close alongside the faction-change measurement rather than let it sit a third time.
+
+### PROCEED
+
+Measure `FACTIONS-01 §4b` and the real K2 script shape. Report before proposing anything. Correct `§7`'s stale grouping. Everything else on the menu (the two orphaned producers, `blinded`'s two clauses, cost multipliers, story shifts) stays exactly where it is — held, correctly not picked up.

@@ -356,11 +356,15 @@ v1 condition set — **twenty**: *shaken, panicked, cowering, sickened, nauseate
 
 | Class | Targets | Example |
 |---|---|---|
-| **`mind`** | **`sentient` only** | `Mind Trick` · `Dominate Mind` · `Force Confusion` |
+| **`mind`** | **`sentient` only** | `Force Distraction` · `Force Confusion` · `Mind Trick` · `Dominate Mind` |
 | **`fear`** | **`sentient` · `beast`** | `Fear` · `Horror` · `Insanity` · a beast's `Roar` |
 | **`life`** | **`sentient` · `beast`** | **healing — `Heal`, `Improved Heal`, `Master Heal`, all three `Revitalize`** · draining · **all five poison types** |
 | **`system`** | **`droid` only** | ion · slicing · `Stun Droid` · `Disable Droid` · `Destroy Droid` |
 | **`physical`** | **all three** | every weapon attack |
+
+> **⚠⚠ THE EXAMPLES WERE A TIER CHAIN AND TWO OF THEM ARE NOT IN IT — `PT-2435`, `PT-2438`.** This cell read *`Mind Trick` · `Dominate Mind` · `Force Confusion`*, which reads as one ladder and is two. **`Force Confusion`'s lower tier is `Force Distraction`**, not `Mind Trick`: they are K2's `FORCE_POWER_CONFUSION` and `FORCE_POWER_MIND_TRICK`, and `Force Distraction` is that second power's description **verbatim** — diffed against `dialog.tlk`, the only differences being the name and 30 seconds read as 10 rounds.
+>
+> **⚠ `Mind Trick` AND `Dominate Mind` ARE THE OTHER GAME'S LINEAGE** — K1's `FORCE_POWER_AFFECT_MIND` and `FORCE_POWER_DOMINATE`, both conversation-only, both carrying no combat mechanic at all. They stay in this class because they are still `mind` and still `sentient`-only; they are listed after the pair that IS a chain rather than interleaved with it. **A name that outlives its rule** — the class was right, the worked example had stopped being one.
 
 **⚠ This is not new. It was written 36 separate times.** **`force/FORCE-POWERS-01` carries a target clause on 36 of its 92 rows** — *"This power does not affect droids"* twenty-six times, plus the `Battle Meditation`, `Heal` and `Revitalize` variants. **`Force Confusion` already reads *"only works on sentients; beasts and droids are immune."***
 

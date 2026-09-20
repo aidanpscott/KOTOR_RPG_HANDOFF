@@ -178,13 +178,13 @@ and does **not** read as a win. Confirmed.
 * ⚠ **Force Confusion can be aimed at nine or ten squares** — the far pocket
   Bruiser was targetable from across the board. No range limit beyond sight,
   which is worth knowing and is not stated on the row.
-* ⚠ **A save the app will not accept loads into an empty party, silently.**
-  Building the caster with Constitution 3 produced a save the menu counted as
-  `1 unreadable` (Continue greyed); Constitution 8 produced one that *loaded*
-  — board drawn, area named `m04-wipe` — with `your party · nobody else` and
-  no character, no message, no error. My save writer bypasses chargen so the
-  record may well be invalid input; **the silence is the part worth a look**,
-  not the rejection.
+* ⚠⚠ **RETRACTED — see TEST 122.** I reported here that Constitution 3
+  produced an unreadable save and Constitution 8 a silent empty-party load.
+  **Both attributions are wrong.** Re-run deliberately at `bf2a9b2`:
+  Constitution 3 loads to `2 of 2`, Constitution 8 loads to `38 of 38`, and
+  neither produces a refusal or an empty party. The screens I saw were real
+  and I cannot reproduce either of them; Constitution was not the cause.
+  Nothing else in this report depended on it.
 * The library carousel still shows four cards and does not scroll.
 
 ## Fixture

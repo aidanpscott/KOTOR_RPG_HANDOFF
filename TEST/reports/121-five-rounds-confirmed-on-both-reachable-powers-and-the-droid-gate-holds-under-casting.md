@@ -151,13 +151,14 @@ And the cause is properly closed rather than patched: the inline copy in
   menu, which silently re-runs the previous power at a different creature.
   Two of my early readings were wrong for exactly that reason before I
   caught it.
-* ⚠ **An area whose content `tag` does not match its blueprint's `handle`
-  makes the whole package's saves unreadable, with no message.** I authored
-  `tag = "drx.on.02"` for a blueprint with `handle = "dr-x"`; the package
-  loaded, the card showed a problem count, and **Continue and Load Game were
-  simply greyed out for ever** with no save-count line and nothing naming
-  the cause. Renaming the tag to `dr-x.on.02` fixed it immediately. The
-  refusal is probably correct; the silence is what cost the time.
+* ⚠⚠ **RETRACTED — see TEST 122.** I reported here that a content `tag`
+  not matching its blueprint's `handle` makes a package's saves unreadable.
+  **That is wrong.** Deliberately breaking the ENTRY area's tag
+  (`frail.wp.01` → `frailwp.01`) at `bf2a9b2` loads normally: the board
+  draws, every creature including the mis-tagged one is placed, and the
+  party is intact. Renaming the tag was not what fixed `m05-one`; the
+  reload was. The greyed Continue I saw is the disabled-while-scanning
+  window described below, not a package fault.
 
 ## Fixture
 

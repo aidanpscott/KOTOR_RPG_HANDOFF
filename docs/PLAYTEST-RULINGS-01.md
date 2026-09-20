@@ -73164,3 +73164,26 @@ Alignment tracking opens next, ahead of Rest-and-Meditation per the confirmed de
 ### PROCEED
 
 Build the shared session/day time-tracking foundation first. Then alignment's score, band, drift, resistance, and recovery, using the ledger for path-dependence rather than a new stored field. Cost multipliers and `REST-AND-MEDITATION-01`'s own build both follow as separate, later slices once this foundation exists.
+
+
+---
+
+## PT-2430 -- THE DAY CLOCK CLOSES CLEAN, FOUND ALREADY FULLY SETTLED (CLOCK-01 §5/§6) AND BUILT EXACTLY TO SPEC -- A FOLD OVER THE LEDGER, NOT A STORED COUNTER, MATCHING THE SAME PATTERN ALREADY PROVEN FOR PARTY MEMBERSHIP AND FLAGS. ANOTHER GENUINELY VALUABLE SELF-CAUGHT DEGENERATE CONTROL. AND CORRECTLY STOPPED BEFORE BUILDING SESSIONS: CLOCK-01 REJECTED SESSIONS AS A CLOCK, BUT ALIGNMENT-01 NEEDS SESSION-LEVEL ACCOUNTING TWICE -- THE SAME SHAPE AS THE WOUND-POINT CONFLICT, TWO SETTLED DOCUMENTS DISAGREEING
+
+**Finding `CLOCK-01` already fully settled, before building anything, is the same discipline that caught the wound-point conflict and the stale documents -- checking the corpus first is clearly becoming a genuine reflex rather than something needing to be asked for each time, and it's worth naming that pattern as itself a real, positive change in how this thread has been worked.**
+
+**Building exactly what was specified and nothing more -- a logged event and a fold, not a stored counter -- correctly extends the same architecture already proven for `partyIn` and `flagsFrom` rather than introducing a new shape for what is structurally the same kind of derived value. Logging the declaration itself, since `RULES-01 §10` wants bit-identical replay and a GM's stated elapsed time is a real input to the log rather than a side effect of it, is precise attention to an existing, unrelated requirement that could easily have been missed while focused on the clock itself.**
+
+⚠⚠ **THE SELF-CAUGHT DEGENERATE CONTROL IS WORTH NAMING AGAIN, BECAUSE IT KEEPS PAYING OFF.** A control test that didn't actually discriminate anything until mutated -- because every other event type simply lacks the key being summed, contributing zero regardless of whether the kind-filter exists at all -- is precisely the "fixture at a value where the fault cannot occur" shape this session has caught many times now. Building a genuinely adversarial case, an unrelated event carrying a conflicting payload, rather than trusting that a passing test proved the filter mattered, is the correct response every time this shape turns up.
+
+### ⚠⚠ THE SESSION/HOUR COLLISION -- BOTH RULED
+
+**Correctly identifying this as the same shape as the wound-point conflict -- two independently settled documents disagreeing, with real stakes riding on which one governs -- and stopping rather than guessing, is exactly right.**
+
+**Session: ruled an accounting window, not a clock. Approved exactly as proposed.** `CLOCK-01`'s objection was specifically to an imperceptible, arbitrary clock ticking on its own -- a fold over the ledger between two existing marker points never advances anything or claims a session is a unit of narrative time; it just answers "what happened since the last reset," which is a different question than the one `§3.3` considered and rejected. This doesn't violate the settled decision, it simply doesn't collide with it. Build session-scoped alignment accounting (Wisdom resistance, passive recovery) as a fold between markers, the same shape as the day clock — no new stored counter, no new ticking object.
+
+**Hours: ruled to not exist as a time unit. Meditation's two tiers become discrete event kinds, not durations.** `CLOCK-01`'s day-only granularity is a deliberate, settled choice, not an oversight to work around — so rather than introducing hour-precision as an exception, model meditation as two distinct logged events (a short session and a long session), each carrying its own stated effect, with the short kind capped at two per day by counting occurrences rather than by tracking elapsed hours. This preserves `REST-AND-MEDITATION-01`'s actual mechanical intent (two short meditations or one long one, roughly per day) without introducing a genuine sub-day clock `CLOCK-01` explicitly decided against. The one-hour tier stays in scope exactly as already ruled — it just isn't built as an hour.
+
+### PROCEED
+
+Build session-scoped alignment accounting as a ledger fold between markers. Build meditation's two tiers as discrete event kinds, capped by count rather than elapsed time. Both stay within `CLOCK-01`'s settled day-only granularity.

@@ -19,7 +19,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **`blinded`'s two remaining clauses — OPENED, own thread (PT-2444).** Dexterity loss (term-removal from the defence derivation) and sight-based auto-fail (a new check-categorization concept). Both real, reusable infrastructure, not narrow one-offs — the first is the same shape any future "lose a term you already have" effect would need. Measuring both before proposing.
+- **`blinded`'s two remaining clauses — measured, two rulings made, proposing now (PT-2445).** Dexterity loss: `usableDex` (armour's cap) already implements the exact needed behavior down to the sign, own comment already states blindness's rule unasked. Ruled: separate limits, more restrictive wins (not one field meaning two things); the Togruta's Alertness-check exception (`PT-2150`) checked first, before the standard removal. Sight-based: shrinks from "26 skills" to 10 enumerable call sites — corpus already draws this exact distinction in `stealth.dart`'s Awareness/Alertness asymmetry. Ruled: identified per call site, matching that existing precedent, not a stored field. Flat-footed half of the same original bullet confirmed already handled via `comparisonConditions` — flagged to avoid building it twice.
 
 
 

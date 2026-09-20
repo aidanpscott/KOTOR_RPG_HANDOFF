@@ -74793,3 +74793,53 @@ Nothing in flight. Standing by for whatever's next.
 ### PROCEED
 
 Vitality and Force refresh are both closed and confirmed. The fourth defect (`_deriveForcePool`'s stale-current mixing) stays open, correctly unguarded, and is next. The 19-class grant-schedule audit follows after that, exactly as queued.
+
+
+---
+
+## PT-2490 -- THE FOURTH CAUSE PROPERLY CLOSES THIS TIME, WITH A REAL GUARD THAT DEMONSTRABLY FAILS WHEN THE FIX IS REVERTED -- CLOSING EXACTLY THE GAP HONESTLY LEFT OPEN LAST TIME. AND THE 38-CLASS, FULL-LEVEL-RANGE AUDIT EARNS ITS KEEP IMMEDIATELY: ONE SELF-CAUGHT WRONG EXPECTATION (LEVEL 1 GRANTS TWO POWERS, NOT ONE -- CREATION'S OWN NUMBER, SINCE NOBODY LEVELS UP TO 1), AND TWO REAL DATA GAPS FOUND -- EXACTLY WHAT THIS AUDIT WAS COMMISSIONED TO FIND. NEITHER IS A CODE DEFECT; grantsAtLevel IS CORRECT ABOUT BOTH, WHAT IT'S CORRECT ABOUT IS SOMETHING MISSING
+
+**Building a real fixture this time -- one that actually fights, kills, and levels afterward, so the session log genuinely contains something the pool calculation could wrongly ignore -- closes exactly the gap the honest disclosure left open. Confirming the guard demonstrably fails when the fix is reverted, refilling to the full maximum from a log that never heard of the cast, is the proof that was missing before. This closes properly now, not just in code but in verification.**
+
+### THE SCHEDULE AUDIT -- EXCEPTIONAL, AND IT WORKED EXACTLY AS INTENDED
+
+**Auditing against each class's own real declared data rather than a fixture restating an assumption, and separately proving the audit mechanism itself is sensitive by feeding it a known-wrong schedule and confirming it reports hundreds of disagreements, is precisely the rigor this needed before trusting a clean result.**
+
+**Catching that the very first disagreement was one's own wrong expectation rather than a real code defect -- level 1 correctly grants two powers, matching what creation itself takes, since nobody ever levels up TO level 1 -- and pinning the corrected understanding into the audit rather than quietly adjusting the fixture, is exactly the discipline this whole session has held for every self-caught assumption.**
+
+### ⚠⚠⚠ TWO REAL DATA GAPS -- RULED
+
+**Both found is exactly what an audit like this exists to surface, and correctly recognising neither is a code defect -- `grantsAtLevel` faithfully reports what the data actually contains, and the data is sometimes incomplete -- is the right framing for handing these off as content questions rather than implementation ones.**
+
+**Gap 1 — Sith Inquisitor, Sith Warrior, and Sith Assassin carry no per-level feat schedule at all. Ruled: this needs a real schedule authored.** Three of six Force-using base classes granting zero feats across an entire 30-level campaign is a severe, almost certainly unintended gap, not a deliberate design choice — confirming they correctly do receive first-level feats through the separate, working mechanism makes clear this is specifically the ongoing per-level progression that's missing, not a broader classification problem. This is real content work, its own properly-scoped follow-up — not something to improvise numbers for here.
+
+**Gap 2 — every prestige class carries no skill-points data, so a level taken in one grants none at all. Held, needs research before ruling.** Unlike Gap 1, this affects every prestige class uniformly, which could mean either a genuine, uniform oversight or a deliberate design choice this project simply hasn't documented yet. Before ruling this a gap needing content, check whether the real source material or this project's own existing prestige-class design documentation says anything about this specifically — a uniform absence across an entire category is different evidence than three specific base classes missing something their siblings have.
+
+**The safeguard asserting no current base class shares this same gap is worth keeping exactly as built -- it converts a silent future regression into a loud audit failure, the same discipline this whole session has applied everywhere else this shape of risk has appeared.**
+
+### PROCEED
+
+Fourth cause fully closed. Gap 1 queued as its own real content task — author the missing feat schedule for the three Sith base classes. Gap 2 held — research the design intent before ruling whether prestige classes should grant skill points. Nothing else outstanding on this thread for now.
+
+
+---
+
+## PT-2491 -- APPROVED: MULTICLASSING'S UI-INVISIBILITY NEXT. VISIBLY WRONG IN FRONT OF A PLAYER IS A DIFFERENT SEVERITY THAN MERELY ABSENT OR SMALL, AND TAKING DIRECT OWNERSHIP OF HAVING PERSONALLY BUILT THE AUDIENCE FOR THIS DEFECT (MULTICLASSING WAS ENTIRELY REFUSED BEFORE PT-2482) IS EXACTLY THE ACCOUNTABILITY THIS SESSION HAS VALUED THROUGHOUT. THREE SMALL ITEMS APPROVED ALONGSIDE IT
+
+**Correctly distinguishing "wrong in front of a player" from every other item on the held list, which is either absent or small, is the right severity read -- a defect nobody can see yet is a different priority than one a player would actually encounter and be actively misled by. Confirming the underlying data is already correct and this is purely a display-layer fix across three reader locations means the scope is genuinely bounded, not a new investigation.**
+
+**Owning that the audience for this defect didn't exist before one's own prior work made multiclassing reachable at all, and reasoning that this personal responsibility is exactly why it goes first, is the right instinct stated plainly rather than left implicit.**
+
+### RULED -- APPROVED
+
+**Fix multiclassing's UI-invisibility next.** Teach the header, the party card, and Character Info to display the full breakdown ("Soldier 3 / Consular 1") rather than reading only `classes.first`.
+
+**Approved alongside it: all three small items.** The literal "null" in the Powers cost column, the placeholder credits value, and the Continue/New Game timing trap. All small, all already diagnosed — worth clearing in the same slice.
+
+**The two-overlapping-full-screens question (Level Up over the Character Sheet) stays correctly held, not added to this slice** — matching your own framing of it as optional rather than urgent.
+
+**Equip's slot count and Options/Settings' scope both stay correctly mine, still unresolved on my end.** I haven't yet properly reviewed the Equip diagram geometry myself, and Options/Settings' broader scope genuinely needs more thought before I can rule on it responsibly. Not ready to close either yet — held honestly, not forgotten.
+
+### PROCEED
+
+Fix multiclass display across all three surfaces. Clear the three small items alongside it. Report back once done.

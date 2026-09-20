@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Continue/New Game timing trap — small, held.** A brief window where Continue is greyed during save-scanning; a click landing in that window silently opens New Game instead of the intended save.
+
 - **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
 - **Silent empty-party load — investigate.** A save loads into a broken, empty-party state with no error at all, distinct from the correctly-visible "unreadable" rejection case. Honest caveat: the writer bypasses chargen, so this may be specific to test tooling rather than reachable through normal play.
 

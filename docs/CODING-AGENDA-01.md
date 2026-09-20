@@ -6,6 +6,10 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### Rest/meditation: two real gaps confirmed in play, both ruled fix-now
+- **Ceiling-degradation reload asymmetry — real, ruled, fix now (PT-2440).** The meditation cap correctly survives a reload, but the Force ceiling degradation it's spent against does not — reverts to full for free, while spent meditation attempts stay spent. Vitality already correctly persists across reload; this needs the same treatment.
+- **Alignment has no player-facing readout — ruled, fix now (PT-2440).** `alignmentFrom` has zero callers in the app. Mechanism confirmed thoroughly correct at the engine level (real logged inputs, direct production-function testing across hysteresis, resistance, and the band-boundary cap in both directions) — purely an observability gap. Add band and score to the character sheet's existing info section, alongside Species.
+
 ### ⚠⚠⚠ SEVERE: alignment tracking opens first, `REST-AND-MEDITATION-01` follows (real dependency confirmed)
 - **Day clock — closed (PT-2430).** Found already fully settled (`CLOCK-01 §5/§6`): day-only granularity, GM-declared elapsed time, no separate "narrative clock" object. Built as a logged event + a ledger fold (`elapsedDays`), matching the same pattern as `partyIn`/`flagsFrom` — no stored counter.
 - **Session window and meditation's two tiers — closed (PT-2431).** Session built as `sinceSessionStart` fold, with a genuinely dangerous edge case caught: no marker yet must mean the whole log, not an empty window, or passive recovery would silently self-grant to a character who used dark powers all day before any session boundary existed. Meditation built as two discrete event kinds (`meditation.short`/`.long`), capped by count not duration. "75% of lost" verified as the only reading that keeps `§4.4`'s own claim true (short meditation never fully restores) — two plausible wrong readings would have lowered the ceiling instead. Rounds down, flagged as a reading not a stated fact.

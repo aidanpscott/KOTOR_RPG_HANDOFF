@@ -13,7 +13,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
 - **Mis-worded refusal when aiming outside a fight — small, held.** Refuses with "there is nothing here you can see to aim it at" when the real reason is no encounter is running — confirmed with both enemies visible one square away.
-- **Escape with no menu open leaves the board — small, held.** Cost Tester two reloads during TEST 119.
+- **Escape/overlay router gap — measured, ruled, building (PT-2465).** Escape-leaves-the-board is partly deliberate by original design (`BUILD 41`, so walking away persists correctly). The real gap: the character sheet, inventory bag, and map are three real overlays absent from the router's list of modes escape should close first — escape falls straight through to leaving the board whenever any is open. Explains Tester's "with no menu open" precisely — literally true from the player's side. No data-loss risk confirmed either way. Ruled: add all three to the router, matching every other mode's existing treatment.
+- **Silent unreadable-save from a tag/handle mismatch — severe, held, own investigation.** A content tag not matching its blueprint's handle makes an entire save system permanently unreadable with zero error message. Same silent-failure shape as TEST 120's empty-party load, found twice now.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.
 
 
@@ -58,6 +59,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Duration change and droid gate both confirmed decisively in real play — TEST 121. Duration confirmed on both reachable powers via two independent methods converging on the same number; beast variants' duration correctly reported as inherited, not observed (nothing can currently be classified as beast). Droid gate re-confirmed through real casting with the Force pool itself as an independent witness the refusals cost nothing — PT-2464
+- Continue/New Game timing trap and the mis-worded outside-fight refusal both closed. Pointer system didn't respect visual disabling at all — fixed to genuinely ignore pointers on disabled rows, keyboard guard preserved. Refusal fix found the codebase's own pre-existing comment already naming the exact defect before anyone set out to fix it — PT-2465
 
 - Duration balance ruling fully closed — all four mind-affecting powers (Force Distraction, Force Confusion, Beast Control, Beast Confusion) now state five rounds. One-slice asymmetry correctly reported rather than unilaterally tidied before the ruling landed — PT-2463
 

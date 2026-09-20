@@ -73030,3 +73030,38 @@ Remove `spendReaction` from `_deflectFor`. Confirm the change against `§4.1`'s 
 ### PROCEED
 
 Nothing further needed -- closed cleanly. The `§10` reaction-refresh question is noted as a small, held item for whenever that chain is actually built.
+
+
+---
+
+## PT-2425 -- A STANDING LESSON WORTH KEEPING, RECORDED PROPERLY: "A MECHANISM THAT ONLY REPORTS SUCCESS MAKES 'TRIED AND FAILED' AND 'NEVER TRIED' THE SAME OBSERVATION. ONLY A SPENT RESOURCE SEPARATES THEM -- SO ASSERT ON THE ATTEMPT, NOT THE OUTCOME." AND THE HONEST REASON IT EARNED ITS OWN NOTE: HAVING BEEN TOLD THIS DIRECTLY, IN WRITING, AND STILL WALKING PAST IT AN HOUR LATER
+
+**Worth recording properly rather than letting this pass as a footnote to an already-closed thread. The lesson itself is precise and reusable well beyond Deflection: any mechanism that only announces its wins is one where a failed attempt and a skipped attempt are indistinguishable from outside, and the only way to tell them apart is by checking whatever resource the attempt itself must have consumed -- never the announced result.**
+
+**The specific, actionable trigger extracted from it -- never assert an outcome always happens when the mechanism is a roll -- is exactly the right level of concreteness for a standing instruction. General caution ("be careful with silent failures") is easy to nod at and hard to apply in the moment; a rule tied to a recognisable feature of the code ("is this a roll?") is the kind of thing that actually surfaces at the point of writing the next assertion.**
+
+**And the honesty about how this specific lesson was learned is worth keeping alongside the lesson itself. Tester had already written the exact principle down and sent it over, and it was walked past anyway an hour later while writing a fresh assertion under real pressure to close out a fix. "A blind spot you have been told about is still a blind spot" is a precise, humbling, and true observation -- knowing a fact intellectually and having it actually govern behaviour in the moment are different things, and the gap between them is exactly what this note is for. Recording that gap rather than only the corrected conclusion is what makes this worth keeping as a standing lesson rather than filing it as a one-off mistake.**
+
+### THE §10 REACTION-CHAIN QUESTION -- ALREADY TRACKED
+
+**Confirmed already on the agenda as its own small, held item since `PT-2424` -- the same question raised here. Nothing further needed; it stays there for whenever that chain is actually built.**
+
+### PROCEED
+
+Nothing in flight. Lesson recorded for future reference.
+
+
+---
+
+## PT-2426 -- OWNER OPENS THE HEALING-ECONOMY QUESTION AS ITS OWN THREAD, FIRST OF THREE TO BE TAKEN ONE AT A TIME (ALIGNMENT TRACKING AND COMBAT MIND TRICK'S MECHANICAL MODEL NEXT, IN THAT ORDER). SAME TREATMENT AS EVERY OTHER THREAD THIS SESSION -- MEASURE FIRST
+
+**Held since `PT-2402`: whether Master Force Body's pricing (`15/20/25`) still holds depended partly on vitality being a genuine governor, and how cheaply vitality actually recovers between fights was never measured. Opening it now on its own merits, not just as a check on that one ruling -- the healing economy is a real, standing gap worth understanding regardless of what it does or doesn't change about Force Body specifically.**
+
+Measure before proposing anything:
+- What actually restores vitality between fights in the real source -- rest, an item, a skill, time-based, some combination -- and at what real rate.
+- What this project's own build currently does with vitality recovery, if anything, and whether it's even reachable today.
+- Whether the answer changes Master Force Body's pricing conclusion at `PT-2402`, or any other ruling that assumed vitality is a meaningfully scarce resource.
+
+### PROCEED
+
+Measure the real healing economy — source and current build both. Report before proposing anything. Alignment tracking and Combat Mind Trick's mechanical model follow after this closes, one at a time, in that order.

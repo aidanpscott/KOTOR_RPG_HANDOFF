@@ -73135,3 +73135,32 @@ Read `force/REST-AND-MEDITATION-01.md` directly. Measure what building it would 
 ### PROCEED
 
 Alignment tracking opens next, ahead of Rest-and-Meditation per the confirmed dependency. Measure first, same discipline as everything else — what the real source specifies for alignment tracking and the band-boundary rule specifically, and what `CharacterRecord`'s missing field actually needs to become. Combat Mind Trick's mechanical model still follows after both.
+
+
+---
+
+## PT-2429 -- ALIGNMENT MEASUREMENT COMPLETE, EXCEPTIONALLY THOROUGH -- INCLUDING VERIFYING THE COST-MULTIPLIER CLAIM AGAINST REAL SOURCE ROWS RATHER THAN TRUSTING IT, AND FINDING THE SAME LEDGER MECHANISM THAT ALREADY PROJECTS VITALITY CAN SATISFY THE DOCUMENT'S OWN PATH-DEPENDENCE REQUIREMENT FOR FREE. TWO STALE DOCUMENTS FOUND AND CORRECTED DIRECTLY -- BOTH ALIGNMENT-01 v2 AND FORCE-POOL-01 STILL DESCRIBED THEMSELVES AS BLOCKED ON A QUESTION REST-AND-MEDITATION-01 HAD ALREADY ANSWERED. ALL THREE QUESTIONS RULED
+
+**This is exceptionally thorough measurement, and two things stand out as worth naming beyond the questions themselves.**
+
+⚠⚠⚠ **THE HYSTERESIS WARNING IS WORTH TAKING AS SERIOUSLY AS THE DOCUMENT ITSELF DOES.** A symmetric-deadband misreading producing zero band flips in testing, which looks exactly like success, is a genuinely dangerous shape -- a test suite that passes because the feature silently doesn't work is worse than one that fails loudly, and this is precisely the kind of thing this session has caught repeatedly in smaller forms. Flagging this before any building starts, rather than discovering it the way the document's own history apparently did once already, is exactly right.
+
+⚠⚠ **THE LEDGER-DERIVED PATH-DEPENDENCE FIND IS THE MOST VALUABLE ARCHITECTURAL INSIGHT IN THIS REPORT.** Recognising that the document's own stated requirement -- band is path-dependent stored state -- is already satisfied by the exact mechanism this project uses for vitality, without needing a new field or a further exception to the general derive-don't-store principle, is precise reuse of proven machinery rather than inventing a parallel system. This is worth remembering as a template: when a document calls for path-dependent state, check the ledger before reaching for a new stored field.
+
+**Verifying the cost-multiplier claim against real `forceadjust.2da` rows -- confirming the stated extremes and a middle value exactly -- rather than trusting the document's own transcription, is the same discipline held for every other source claim this session. And confirming no script ties alignment drift to power use directly, so the tiered 2/3/4 system is genuinely this project's own RCR-sourced addition rather than a KOTOR mechanic being misdescribed, closes any doubt about where that number actually comes from.**
+
+### THE STALE DOCUMENTS -- FOUND AND CORRECTED DIRECTLY
+
+⚠ **A genuinely valuable catch: two documents, `ALIGNMENT-01 v2 §2.5` and `FORCE-POOL-01 §4.5`, both still described themselves as blocked on a question `REST-AND-MEDITATION-01` had already, explicitly answered -- correcting not just the "blocked" status but the actual misattributed claim underneath it (the opportunity cost was never what stopped the grind; the band-boundary rule was). Both corrected directly now, in place, with the real mechanism and the governing document named -- the same discipline held for every other piece of stale documentation this session, applied here to design documents rather than the ledger.**
+
+### RULED -- ALL THREE QUESTIONS
+
+**1. Time units: build the shared foundation once, not twice.** Session and day tracking are confirmed as the same missing axis blocking both this thread and `REST-AND-MEDITATION-01`. This is real, foundational infrastructure work that both threads depend on -- treat it as the actual first deliverable, with alignment's score/band tracking and rest-and-meditation both building on top of it afterward, rather than each thread inventing its own partial version.
+
+**2. Cost multipliers: deferred, not in this first slice.** Build the alignment score, band, drift, resistance, and recovery system first, fully testable and correct on its own terms, without simultaneously wiring the cost-multiplier consequences into every Force-cost site in the product. The multiplier change is real and touches too much at once to bundle into the same slice as the foundational tracking system itself -- once alignment tracking is solid and confirmed, wiring the multipliers into `_castAt`, the affordability marking, Force Body's split, and degradation pricing becomes its own, separately-scoped follow-up. Yes, this means Force Body's pricing conclusion gets revisited a third time when that follow-up lands -- correctly anticipated, not avoided.
+
+**3. The stale documents: corrected above, both of them.**
+
+### PROCEED
+
+Build the shared session/day time-tracking foundation first. Then alignment's score, band, drift, resistance, and recovery, using the ledger for path-dependence rather than a new stored field. Cost multipliers and `REST-AND-MEDITATION-01`'s own build both follow as separate, later slices once this foundation exists.

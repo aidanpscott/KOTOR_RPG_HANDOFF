@@ -6,7 +6,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Level-up's rule layer, both screen modes, and the flow all closed — wiring into play next (PT-2484).** Floor-of-one correctly resolved to apply only to a real budget, never inventing one for the three classes with no skill-points concept at all. Severe catch: leaving creation's cost ladder active would have made a Strength-17 character unable to spend a level-up point the rules had just granted — the governing text's "not subject to the increased point costs" was easy to silently violate by reusing existing ladder logic. Skills cap delegated to the shared function rather than a second copy, explicitly citing the prior `PT-1662` incident this same class once caused. Two guards self-diagnosed as sharing one root cause (a fixture that couldn't distinguish two different explanations for one outcome) and rebuilt properly. `open` naming collision caught early, connected to the costlier `PT-2432` precedent. Git-config issue honestly reported as unreproduced in MAIN_WORK, real trigger researched (duplicate values, not bare presence), fixed only in the affected clone. Remaining: wire the flow into play (Character Sheet's Level Up door) and what the commit writes to the log.
+- **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
+- **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
+- **Two overlapping full-screen states when Level Up opens over the Character Sheet — small, held.** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
+- **Chargen re-entry would discard a level-up's feat — genuinely unreachable today, correctly not defended against.** A step-scoped clear actually clears the whole field; the hub is entered from New Game only and a levelled character never returns there. Named rather than patched — building a defence for an input nothing can produce would be worse than recording the gap.
+
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
@@ -65,6 +69,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Level-up reaches play, end to end — the whole thread closed for this slice. All five commit events reuse existing chargen kinds, correctly anticipated by the data model's own comment. Honest near-miss: suspected a real gap (an unread field), verified before acting, found the multiclass upsert logic was already correctly built — "I nearly 'fixed' it," reported rather than quietly moved past. Two guards self-caught: the end-to-end test had bypassed real choice-making entirely (proved only the level was written, never the choices), rebuilt to drive through the real screen; a test that wrote nothing was an incomplete fixture, not a broken commit, verified directly and turned into a standing precondition — PT-2485
 
 - Recreate-vs-extraction policy question closed — owner reviewed the rebuilt alignment slider directly, confirmed it looks good. `ASSET-REPLACEMENT-01`'s recreate-close standing rule stays governing; "extract the assets perfectly" resolved as describing that standard already met, not a request to switch to bit-exact extraction — PT-2480
 

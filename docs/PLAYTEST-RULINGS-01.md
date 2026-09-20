@@ -73474,3 +73474,63 @@ Propose the concrete shape for the scoped attack-targeting override, the ten-rou
 ### PROCEED
 
 Fix the ceiling-degradation reload asymmetry. Add the alignment band/score readout to the character sheet. Both close real, confirmed gaps rather than open new design questions.
+
+
+---
+
+## PT-2441 -- BOTH GAPS CLOSE CLEAN. THE RELOAD ASYMMETRY'S ROOT CAUSE WAS PRECISE: ONLY ONE EVENT KIND HAD EVER CARRIED FORCE STATE, SO EVERYTHING OUTSIDE A FIGHT HAD NOWHERE TO PERSIST. A GENUINELY SUBTLE BUG CAUGHT AND EXPLAINED PRECISELY -- READING before RATHER THAN after WOULD HAVE SILENTLY MADE EVERY POWER LOOK FREE. AND A GENUINELY HUMBLE, HONEST SELF-ATTRIBUTION: AN EXISTING GUARD CAUGHT A REAL OVERSIGHT, AND CODER SAID SO PLAINLY RATHER THAN FRAMING IT AS THEIR OWN CATCH
+
+**Tracing the reload asymmetry to its actual root -- only `encounter.ended` had ever carried Force state, so a cast, either meditation tier, or a night's rest all had nowhere to persist outside a fight -- is precise diagnosis rather than a patch aimed at the symptom. Seeding the screen from the real log instead of trusting a derivation function that has no knowledge of what's actually been spent closes the gap at its source.**
+
+**Both flagged design decisions are exactly right. The true maximum correctly staying derived rather than snapshotted, so a level taken between sittings still raises it properly, and an absent field correctly leaving the pool untouched rather than reading as zero, specifically protecting every save made before this fix from having its Force pool catastrophically emptied — both show real consideration for what already exists, not just what's being built.**
+
+⚠⚠ **THE after-VERSUS-before DETAIL IS THE SHARPEST CATCH IN THIS REPORT, AND IT'S WORTH NAMING WHY.** A spend landing in a `setState` positioned after the line that writes the event is exactly the kind of ordering that's easy to get backward without noticing, because reading the pre-spend value would still compile, still run, and still look plausible in casual testing — it would only reveal itself as wrong once someone actually reconstructed a pool from the log and found every power had silently cost nothing. Catching this before it shipped, and explaining precisely why the wrong order would have reproduced the exact degradation this whole fix exists to close, is careful, exact reasoning under a detail most implementations would get right by accident or wrong by accident with equal probability.
+
+### ALIGNMENT ON THE SHEET -- APPROVED, THE REASONING IS EXACTLY RIGHT
+
+**Showing both band and score together, rather than either alone, is correctly justified by the hysteresis rule itself -- the same numeric score can genuinely sit in two different bands depending on which direction it was reached from, so a score without its band can't be checked against the rule, and a band without its score gives no sense of proximity to an edge. Folding it from the log at read time rather than caching it is the same discipline held throughout this whole thread: one place for the directional rule to live, not two that could quietly disagree.**
+
+### THE TWO FIXTURE CORRECTIONS -- BOTH GOOD CATCHES
+
+**A reload fixture sitting exactly at its own ceiling, where seeding from the log and not seeding at all produce the identical number, and every reload assertion routing through the same verb so the night-rest case could have done nothing at all undetected, are both the same shape this session has caught repeatedly now — a passing test that never actually distinguished the thing it claimed to. Both caught and fixed before trusting the result.**
+
+### ⚠⚠ THE GUARD THAT CAUGHT IT -- WORTH NAMING FOR THE HONESTY ALONE
+
+**"That check did its job on me, not for me" is exactly the right way to report this, and it's worth recognising as its own kind of integrity. Crediting the safety net for catching a real oversight — forgetting to register the four new event kinds in a separate, related declaration — rather than presenting the fix as a personal catch, is honest attribution of exactly the kind this session has valued throughout. A guard doing its job on someone is not a smaller success than a guard someone used to catch their own mistake in advance; it's the same protection working as designed, and saying so plainly rather than blurring the distinction is worth real credit.**
+
+### THE PIN-ORDER LESSON -- WORTH KEEPING PAIRED WITH ITS EARLIER COUNTERPART
+
+**Correctly connecting this to the Alignment/Flutter naming collision as the same lesson from the opposite direction -- there, a clean engine suite hid a real problem in its consumers; here, a stale pinned dependency made a correct engine look broken in the app -- is a useful pairing. Push the engine, upgrade the pin, then test: worth keeping as a standing two-line reminder alongside the earlier one.**
+
+### PROCEED
+
+Nothing further needed — both gaps closed cleanly. This closes the rest/meditation/alignment thread's remaining open items in full.
+
+
+---
+
+## PT-2442 -- THE CONCRETE SHAPE FOR FACTION CHANGE IS APPROVED IN FULL, EXCEPTIONALLY WELL-ARCHITECTED. THE TWO-PREDICATE DESIGN SPECIFICALLY TO PREVENT A DEFAULTED-PARAMETER LEAK AT AN UNCONSIDERED CALL SITE IS PRECISE, CAREFUL THINKING -- THE SAME FAILURE SHAPE THIS SESSION HAS CAUGHT REPEATEDLY, HEADED OFF BY DESIGN RATHER THAN BY LATER VIGILANCE. ONE QUESTION RULED: ATTACKS OF OPPORTUNITY FOLLOW THE SAME TARGETING OVERRIDE AS EVERYTHING ELSE
+
+**Exhaustively classifying all 25 real call sites into "changes with the temporary side" and "the durable fact, untouched" is exactly the rigor this design needs, and correctly identifying the party-wipe check as the one site that validates the whole two-name approach's actual value is precise self-awareness about what the design is really protecting against.**
+
+⚠⚠ **TWO NAMES RATHER THAN ONE PREDICATE WITH A FLAG IS THE RIGHT CALL, AND THE REASONING IS EXACTLY RIGHT.** A defaulted boolean parameter at a call site nobody specifically thought about is precisely how the stand-at-1 rule would silently acquire a confused enemy by accident -- this session has found that shape of leak more than once, and designing it out structurally, so every site requires an explicit choice rather than inheriting a default, is a stronger guarantee than remembering to be careful at each of twenty-five sites individually.
+
+**The `Confusions` window scoped like `Perception`, with no clock of its own and the round passed in by the caller, is consistent with `distracted`'s own design for exactly the same reason -- neither concept should own time it has no principled way to track.**
+
+### THE ONE RULED QUESTION -- AoO FOLLOWS THE OVERRIDE
+
+**Ruled: attacks of opportunity move to the CHANGE bucket, using the same override as the rest of targeting.** The alternative -- a confused creature freely attackable as an enemy in every other respect, yet somehow still treated as an ally specifically for provoking a free attack while walking away -- is a harder, more arbitrary inconsistency to justify than simply extending the same targeting logic uniformly. For the full duration of the confusion, the creature is functionally hostile to its former side in every combat-facing sense; opportunity attacks are a targeting decision like the others in that bucket, not a durable, structural fact like party membership or the wipe check. `§10`'s silence on a temporary side isn't a reason to carve out an exception here -- it's a gap this ruling fills, the same way every other targeting site in Slice 2 already does.
+
+### RULED -- CASTER-SCOPED "ONLY ONE AT A TIME," APPROVED
+
+**Scoping the restriction per caster rather than globally, with the reasoning that a single-Force-user reading of the description stops meaning anything once a second Jedi exists, is the right call — flagged correctly as an interpretation rather than a stated fact, and the interpretation is sound.**
+
+### DATA AND TESTS -- APPROVED AS PROPOSED
+
+**New, distinct fields rather than reusing the condition vocabulary, added to both halves of the capability list so both powers leave the applies-nothing list properly, matches exactly the discipline `Force Distraction` already established.**
+
+**The proposed test suite is precise, and the wipe test specifically -- a party of one, downed, with a confused enemy standing, still counting as a wipe -- being named as the one to write first is exactly right: it's the single assertion that validates the entire two-predicate design's reason for existing. Mutating the override directly into the four sites that must never see it, and confirming the wipe test is what catches it, is the correct way to prove the classification itself is load-bearing, not just documented.**
+
+### PROCEED
+
+Build in the proposed order, with attacks of opportunity included in the CHANGE bucket per this ruling.

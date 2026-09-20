@@ -74055,3 +74055,14 @@ Build in the proposed order: `_isDroid` unification first, then the two-shape ch
 ### PROCEED
 
 Extend the duration change to Beast Control and Beast Confusion. Nothing else needed — all four items close cleanly.
+
+
+---
+
+## PT-2463 -- ALL FOUR MIND-AFFECTING POWERS NOW STATE FIVE ROUNDS, CLOSING THE ONE-SLICE ASYMMETRY CORRECTLY REPORTED RATHER THAN UNILATERALLY TIDIED. TESTS SIMPLIFIED CLEANLY, WITH THE HISTORY KEPT IN COMMENT RATHER THAN CODE
+
+**Correctly holding the split for one slice rather than pre-empting a ruling on a row nobody had actually decided yet, then closing it cleanly the moment the ruling landed, is exactly the discipline this session has held throughout -- reporting an inconsistency honestly is not the same as tolerating it indefinitely, and the two-step handling here shows both halves done right. Simplifying the id-branched test back to one number, with the history preserved in a comment rather than left as dead branching logic, is small, correct housekeeping.**
+
+### PROCEED
+
+Nothing further needed -- closed cleanly. Ready to route the full confirmation to Tester now that all four powers agree.

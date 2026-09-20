@@ -10,7 +10,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Recreate vs. bit-exact asset extraction — held, needs owner's ruling.** `ASSET-REPLACEMENT-01` (recreate close, never ship the source file) and Aaron's recent "extract the assets perfectly" request point different directions. Asked directly.
 - **Equip's slot-count discrepancy — held, needs owner's own review.** Two governing documents both state "eleven slots"; the actual diagram shows more distinct positions than that. Built to the diagram, count correctly reported rather than silently resolved. Needs direct review of the diagram geometry before ruling.
 - **Level-up screens — held, severe, own future thread once the pattern is proven.** No Class/Abilities/Skills/Feats/Powers spend screen exists anywhere; every level-up decision is currently taken by nobody.
 - **Shared shell — held, deliberately, pending the map/grid view.** Building persistent nav bar/title bar/footer furniture around an undesigned play surface risks real rework. Revisit once the map/grid view has a locked design, or a real case emerges to build it sooner.
@@ -68,6 +67,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Recreate-vs-extraction policy question closed — owner reviewed the rebuilt alignment slider directly, confirmed it looks good. `ASSET-REPLACEMENT-01`'s recreate-close standing rule stays governing; "extract the assets perfectly" resolved as describing that standard already met, not a request to switch to bit-exact extraction — PT-2480
 
 - Alignment marker fixed — two independent defects, either alone sufficient (a measurement divided by an unrelated dimension; fixed-pixel hairlines coincidentally matching a derived gap, closing over the whole band). Fixed by re-deriving all thicknesses from the same texture's own row count, so the gap and outlines can't drift apart again — structurally the same unit. Fill changed from opaque to a measured wash, letting the gradient read through. Three assertions, one per cause, deliberately separate. Standing lesson recorded: a number measured off the right object and divided by the wrong one — confirmed twice in two slices (the same shape as the grey-waist colour error) — sourced, which is exactly what makes it look trustworthy while being wrong — PT-2479
 

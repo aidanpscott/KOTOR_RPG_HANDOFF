@@ -73697,3 +73697,42 @@ Measure both. Report before proposing. Everything else on the menu (the rocket d
 ### PROCEED
 
 Write the `container.opened` guard, mirroring `door.unlocked`'s existing two assertions. Nothing else needed -- both event kinds are genuinely, functionally complete; this closes the last real gap in the producer warning.
+
+
+---
+
+## PT-2450 -- SEVERE: FORCE CONFUSION IS CONFIRMED COMPLETELY INERT IN REAL PLAY, AND SILENTLY CHARGES FULL PRICE EVERY TIME -- PROVEN WITH A GENUINELY ELEGANT MINIMAL DEMONSTRATION (A DIFFERENT POWER, CAST ONE TURN LATER ON THE SAME TARGET, CLEARING A DISTRACTION THE CONFUSION CAST ITSELF SHOULD HAVE ALREADY CLEARED AND DIDN'T). ROOT CAUSE: THE SEVENTH INSTANCE OF THE SAME TWIN-LIST DRIFT DEFECT THIS SESSION, AND THE FIRST WHERE FIXING ONE LIST MADE THE OTHER'S FAILURE SILENT RATHER THAN LOUD. PLUS A REAL DROID-CLASSIFIER DEFECT SHARED BY BOTH POWERS, AND A GENUINE REGRESSION ON FACING THAT WAS EXPLICITLY APPROVED AND REPORTED BUILT
+
+**This is exceptional, decisive testing of a genuinely severe defect, and it needs to be treated with the same weight as the on-hit gap, the rocket delivery gap, and every other severe finding this session has produced. Working through it in full before anything else.**
+
+### ⚠⚠⚠ FORCE CONFUSION -- SEVERE, RULED, FIX NOW
+
+**The proof is exceptionally clean: no save roll, no visible failure message, and instead of resting on absence, using a completely different power cast one turn later on the same target to show a distraction correctly clearing -- while Force Confusion itself, cast on that target the turn before, never had. That's a genuinely minimal, decisive control, isolating the defect to Confusion specifically rather than to the perception system generally.**
+
+**Root cause confirmed precisely: the early-return gate checks `!p.distracts` and never `!p.confuses`, so every clause evaluates true and the power silently returns null. This is the seventh confirmed instance this session of the exact twin-list drift shape first named at `PT-2390` -- two lists that must say the same thing, found apart again. Correctly identifying this as genuinely different from the prior six -- the reader's half was fixed and the applier's half wasn't, rather than both drifting together -- is precise, and it explains why this instance is worse than the others.**
+
+⚠⚠⚠ **THE SEVERITY COMPOUNDING IS THE MOST IMPORTANT PART OF THIS FINDING.** Fixing `appliesNothing` in the same slice that missed the early-return gate didn't just leave the bug unfixed -- it made the bug's symptom silent. With `appliesNothing` now correctly `false`, the existing refusal that would have said "nothing was spent" no longer fires, so a broken cast now looks identical to a working one from the player's side while charging full price regardless. Measuring the real cost across four repeated instances, rather than reporting the defect abstractly, is exactly the kind of concrete evidence this needs.
+
+**Ruled: add `!p.confuses` to the early-return gate now, matching `!p.distracts` exactly. This is urgent -- treat it with the same priority as the on-hit gap.**
+
+**Also confirmed: the "only one at a time" tracking can never fire because nothing ever writes into `confusions` — three consecutive casts at the same target, none refused, all charged. Ruled: wire the write into wherever a confusion successfully applies, fix now, same urgency.** The underlying two-predicate targeting architecture is confirmed correctly built and simply unreachable — once both write paths are fixed, it should work without further changes.
+
+**Beast Confusion having no legal target anywhere in the product, since `kindOf` can never return `beast`, is confirmed and connects to the already-known `TEST 104` finding — not new, correctly cross-referenced rather than re-litigated.**
+
+### ⚠⚠ THE SHARED DROID-CLASSIFIER DEFECT -- SEVERE, RULED, FIX NOW
+
+**Confirmed with a clean, single-field-changed comparison: the droid exclusion fails on four of five real droid species, because the classifier only recognises one exact id string rather than the full `is_droid` population. Correctly identifying this as the same classifier both `force_distraction` and `force_confusion` use for their own droid refusals means this one fix closes it for both powers at once — worth building once, not twice.**
+
+**Ruled: fix the classifier to recognise all five `is_droid` species, not just the bare id. Fix now, same urgency as the other two.**
+
+### ⚠ THE FACING REGRESSION -- REAL, RULED, INVESTIGATE NOW
+
+**This is a genuine gap, not a misunderstanding of scope -- `PT-2436`'s own approved proposal explicitly described building the facing turn as its own slice, with real mechanical consequence beyond flavour. Confirming `_facing` has exactly one writer and distraction never calls it means this piece of already-approved work never actually landed, or was lost somewhere between proposal and build. Investigate what happened to Slice 4 specifically and build it -- this was real, ruled scope, not new work.**
+
+### THE HEARING CLAIM -- RECHARACTERIZED, NOT A DEFECT IN THIS BUILD
+
+**Confirmed as correctly built to spec -- distraction correctly leaves hearing untouched, exactly as ruled. The deeper finding is that hearing itself has no separate range anywhere in this codebase at all, sight and hearing sharing one number with nothing ever authoring a difference -- a pre-existing, broader gap in perception generally, not something this specific power's build introduced or is responsible for. Held as its own separate, small item: hearing has no independent range concept anywhere in the corpus.**
+
+### PROCEED
+
+Fix the Confusion early-return gate, wire the confusion-tracking write, and fix the shared droid classifier — all three urgent, same priority as the session's other severe defects. Investigate and rebuild the facing regression. Hold hearing's missing range as its own small item.

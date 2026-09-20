@@ -74138,3 +74138,40 @@ Build the router addition for all three overlays. This closes the escape investi
 ### PROCEED
 
 Investigate the shared-reporting-path question for both silent-failure cases. Report before proposing or building anything.
+
+
+---
+
+## PT-2467 -- MEASUREMENT DECISIVELY CONFIRMS THREE SEPARATE SITUATIONS, NOT ONE. THE TAG/HANDLE CAUSE ORIGINALLY DIAGNOSED IS CONFIRMED WRONG -- COMPLETELY REBUILT AND SHOWN NOT TO REPRODUCE -- BUT THE UNDERLYING LEAD SURVIVES AND POINTS AT A GENUINE PACKAGE-LEVEL REPORTING GAP. AND A THIRD, SEPARATE FIND PRECISELY MATCHES TESTER'S EXACT REPORTED SYMPTOM WORD FOR WORD: A REAL ASYNC RACE WITH NO TIMEOUT, THE SAME "ABSENCE READS AS NON-EXISTENCE" DEFECT ALREADY FIXED ONCE ELSEWHERE BUT NOT HERE. AND TESTER PROACTIVELY CAUGHT AND CORRECTED THEIR OWN EARLIER CLAIM BEFORE IT COULD MISLEAD THE BUILD
+
+**Own the shape of this plainly before ruling: what looked like one shared reporting gap is genuinely three separate things, and both reports converge on that independently -- Coder's measurement and Tester's own proactive re-check arrived at compatible, mutually-refining conclusions rather than needing reconciliation. That's a good sign the underlying picture is now actually correct.**
+
+### ⚠⚠ TESTER'S SELF-CORRECTION -- WORTH NAMING DIRECTLY
+
+**Running the grep oneself rather than leaving an unverified claim for someone else to discover, and correcting it plainly the moment it turned out half wrong, is exactly the standard this session has held throughout applied to one's own prior words. The record-validation wording genuinely exists and is genuinely wired; the library card genuinely has nothing computed for it at all -- two different situations wearing what looked like one shape from outside. Splitting the routed item into two differently-sized pieces rather than let a single wrong premise size both together is precise, and flagging the grep-versus-trace distinction honestly, with a specific ten-minute offer to close it, is exactly right about what's actually been verified.**
+
+### PATH 1 -- THE EMPTY-PARTY LOAD: DETECTION MISSING, NOT REPORTING
+
+**Confirming the reporting panel is already fully wired for record-level failures, and that Tester's own Constitution-8 save must have passed validation and lost its character somewhere after that point, correctly narrows this from "the panel needs building" to "something upstream needs to actually notice." Refusing to guess at an unreproducible save from a tool outside all seven repos, rather than inventing a plausible-sounding cause, is exactly right.**
+
+⚠⚠⚠ **FINDING THE CLASS-LOOKUP NULL-DEFAULT PATTERN, REPEATED ACROSS A DOZEN SIMILAR SITES, IS THE MORE VALUABLE HALF OF THIS PATH -- A REAL, CONCRETE, INDEPENDENTLY-DISCOVERED RISK RATHER THAN A GUESS AT TESTER'S SPECIFIC CASE.** A record whose class resolves to nothing degrading silently to an empty board, with the class carrying the hit die and nothing anywhere reporting the failure, is exactly the shape of defect this whole silent-failure thread has been hunting. This is worth fixing on its own merits regardless of whether it's confirmed as Tester's exact original cause.
+
+**Ruled: build a real reproduction — either Tester's own writer or a purpose-built save with a genuinely unresolvable class — and confirm this specific null-default is the actual mechanism before building the detection check. The reporting mechanism needs no new design once detection exists; that part is already proven.**
+
+### PATH 2 -- THE TAG/HANDLE CLAIM: WRONG CAUSE, RIGHT LEAD
+
+**Rebuilding Tester's exact fixture and directly demonstrating Continue would have been enabled, plus confirming no code anywhere actually relates a tag to a handle, is decisive, not merely suggestive -- the original fix was a real correlation that happened to coincide with an unrelated change, not a demonstrated mechanism. Correctly reporting this rather than letting an unverified diagnosis stand because the symptom happened to go away is exactly right.**
+
+⚠⚠ **BUT CONFIRMING THE UNDERLYING LEAD SURVIVES ITS OWN WRONG DIAGNOSIS IS THE IMPORTANT PART.** Finding that `console_home.dart`'s own fault-count computation discards a fully-written, person-readable sentence -- one that already names both the area and the tag -- on the exact line that computes it, is precisely the shape Tester's instinct pointed at, just in the correct location rather than the originally-suspected one. And noting the raw count alone actively misleads, since expected benign warnings and one real severe fault produce an identical tile, is a real, additional finding worth acting on together with the missing text.**
+
+**Ruled: this is genuinely real work, not a quick reroute, exactly as Tester's own follow-up correctly sized it. Build the plumbing to carry the fault sentences through to wherever the count is currently shown, so a real problem is distinguishable from an expected benign one.**
+
+### ⚠⚠⚠ PATH 3 -- THE ASYNC RACE: THE MOST DECISIVE FIND, RULED FIX NOW
+
+**This is the sharpest diagnosis in the whole report. Matching Tester's exact reported symptom word for word -- including "for ever" -- rather than a plausible-sounding approximation, and connecting it to an already-documented, already-fixed instance of the identical underlying principle elsewhere in the codebase, is precise, complete reasoning: a pending state with no timeout and no retry, permanently blank if the load never completes or completes after teardown, is "absence reads as non-existence" recurring in the one place that fix never reached.**
+
+**Ruled: fix now.** This is the single most likely explanation for what Tester actually observed, independent of whichever of the other two paths also turns out to be real. Apply the same fix this defect already received elsewhere -- a timeout, a retry, or both -- to this menu's status line.
+
+### PROCEED
+
+Fix the async race in the menu status line now — the clearest, most decisive finding. Build a reproduction for the empty-party load's class-lookup null-default before fixing it. Build the package-fault-sentence plumbing as its own real piece of work. Tester's offer to trace the empty-party load's actual divergence point is approved — that reading will help scope Coder's reproduction directly.

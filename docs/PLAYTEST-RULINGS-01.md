@@ -72949,3 +72949,26 @@ Nothing further needed -- all eight closed cleanly, verified against real prose 
 ### PROCEED
 
 Investigate and report back on the early-return anomaly. Nothing further needed on the deflection-alone confirmation itself -- closed cleanly.
+
+
+---
+
+## PT-2422 -- THE TRIPWIRE CLOSES CLEAN, WITH TWO GENUINELY PRECISE DESIGN DECISIONS: A THROW RATHER THAN assert, SPECIFICALLY BECAUSE THE DEFECT IT GUARDS AGAINST IS SILENT AND CORRECT-LOOKING, SO A STRIPPABLE GUARD WOULD PROTECT NOTHING WHERE IT MATTERS MOST. AND COUNTING WHAT'S STANDING RATHER THAN THE RAW LIST, SINCE A NORMAL MID-TURN STATE CAN LEGITIMATELY HOLD TWO EXPIRED ENTRIES -- A NAIVE COUNT WOULD HAVE FIRED CONSTANTLY ON A WORKING BUILD. AND A REAL CONSEQUENCE HONESTLY REPORTED RATHER THAN RESOLVED: THE FOLD'S OWN COMPARISON LOGIC IS NOW STRUCTURALLY UNREACHABLE
+
+**Both design choices here are precise, and worth confirming as exactly right rather than just noting they were made.**
+
+⚠ **CHOOSING A THROW OVER assert BECAUSE THE DEFECT IS SILENT AND CORRECT-LOOKING IS THE RIGHT REASONING FOR THIS SPECIFIC CASE.** A guard that can be stripped from a release build is fine for catching things that would otherwise be loud anyway; it's the wrong choice for a guard whose entire purpose is catching something that would otherwise look completely fine. An assertion here would have been a tripwire installed only in the rooms nobody was going to walk through with anything dangerous.
+
+⚠⚠ **COUNTING WHAT'S STANDING RATHER THAN THE LIST'S RAW LENGTH IS THE MORE IMPORTANT OF THE TWO DECISIONS, AND THE REASONING IS EXACTLY RIGHT.** A list holding two entries mid-turn, before the boundary sweep clears the expired one, is ordinary and correct -- and a tripwire that can't tell the difference between "temporarily two, about to become one" and "genuinely and permanently two, which should never happen" would fire on completely healthy traffic. A safety check indistinguishable from a false alarm trains everyone to ignore it, which is worse than not having the check at all. Confirming this distinction is load-bearing with a mutant that specifically counts the list and dies is exactly the verification this needed.
+
+### THE UNREACHABLE FOLD LOGIC -- RULED: REMOVE IT
+
+⚠⚠ **Reporting this rather than silently resolving it either way is exactly right -- deleting code made unreachable by a new invariant is a real decision about what the codebase should look like going forward, not a cleanup task, and it deserved to be surfaced rather than assumed.**
+
+**Ruled: remove the now-dead comparison branch.** With the tripwire itself now enforcing that at most one Force Body effect can ever legitimately stand, the fold's job simplifies to taking the single standing entry's value directly -- there's nothing left for a comparison to decide between, and the tripwire is now what actually protects against the multiple-entries case, not the fold's own logic. Keeping unreachable comparison code around serves no purpose here and risks confusing a future reader into thinking there's still a real choice being made where there structurally cannot be one. Simplify it.
+
+**Renaming the test group once its own name stopped describing what it tests, caught in the same change that made the rename necessary, is small, correct housekeeping -- the same discipline held for every other piece of documentation and naming this session.**
+
+### PROCEED
+
+Simplify `forceBodyPercent` to take the single standing entry directly, removing the now-unreachable comparison branch. Nothing else needed -- the tripwire itself is approved exactly as built.

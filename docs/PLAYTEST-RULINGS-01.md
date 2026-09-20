@@ -74024,3 +74024,34 @@ Change both fields to 5. Confirm the change is reflected correctly wherever dura
 ### PROCEED
 
 Build in the proposed order: `_isDroid` unification first, then the two-shape chargen sweep test, then the `validateRecord` gate behind it.
+
+
+---
+
+## PT-2462 -- ALL FOUR ITEMS CLOSE CLEAN. THE DURATION FIX CAUGHT A SILENT DUPLICATE DEFAULT IN THE APP ITSELF, CONVERTING A FUTURE MISSING-FIELD INTO A LOUD FAULT RATHER THAN A SILENT OLD NUMBER. THE THIRD CLASSIFIER FIX CORRECTLY CHOSE A DIFFERENT MECHANICAL SHAPE (DEFAULT, NOT REQUIRED) FOR CONTEXT-SENSITIVE REASONS, THEN CAUGHT A REAL FORWARDING GAP BY MUTATION. AND THE CHARGEN SWEEP CARRIES A GENUINELY ELEGANT ARGUMENT FOR WHY THE GATE IS SAFE REGARDLESS OF THE SWEEP'S OWN HONESTLY-DISCLOSED INCOMPLETENESS -- IT CALLS THE IDENTICAL CHECK THE LOAD PATH ALREADY MAKES, SO IT CANNOT REFUSE ANYTHING THAT WASN'T GOING TO BE REFUSED EVENTUALLY ANYWAY. BEAST VARIANTS RULED TO MATCH
+
+**Reading the new duration from the row's prose, with the refusal message following automatically through the stored expiry rather than needing a separate edit, closes `PT-2460` cleanly.**
+
+⚠ **CATCHING THE SILENT `?? 10` DUPLICATE IN THE APP ITSELF IS A GENUINELY VALUABLE FIND, AND WORTH NAMING WHY IT MATTERS BEYOND THIS ONE CHANGE.** A fallback that duplicates a ruled value is a live risk the moment that value is ever ruled again -- a row that lost its field would have silently kept handing out the old number forever, with nothing anywhere indicating the data was missing. Removing both and letting an absent field become a loud fault instead is exactly the right response: better a visible defect than a silent wrong number.
+
+### THE BEAST VARIANTS -- RULED TO MATCH
+
+**Correctly following the literal scope of the ruling while honestly reporting the resulting asymmetry, rather than quietly extending the change beyond what was actually said, is exactly right restraint.** Ruled now: Beast Control and Beast Confusion move to 5 rounds too, matching the sentient-targeting pair. The balance intent was about the mechanic itself, not specifically its sentient-only half -- extend the change to both beast variants.
+
+### THE THIRD CLASSIFIER -- APPROVED, INCLUDING THE ARCHITECTURAL JUDGMENT
+
+**Choosing a default over a required parameter here, for reasons specific to this validator family's own API convention -- empty already means "disabled" throughout, so requiring the parameter would break every other caller while a narrow default would silently weaken a check already running -- is good, context-sensitive judgment. The same underlying principle (avoid a dangerous silent default) doesn't always resolve to the same mechanical choice, and recognising that rather than applying the prior fix's exact shape by habit is precise thinking, not inconsistency.**
+
+**Catching the forwarding gap by mutation -- one real validation path reached, the other silently left on the old rule -- is the same "verify the guard can actually fail" discipline this whole session has held throughout, applied here to confirm the fix reached both real consumers, not just the one that happened to be checked first.**
+
+### ⚠⚠⚠ THE CHARGEN SWEEP AND GATE -- BOTH APPROVED, THE GATE'S JUSTIFICATION IS EXCEPTIONAL
+
+**Catching that the first fixture attempt under-populated the test data relative to what the real app actually constructs, producing a false pass and a false failure in the same run, and fixing it by copying the real construction logic term for term rather than approximating it, is exactly the rigor this needed.**
+
+**Honestly identifying, by mutation, that the sweep proves only the minimum legal chargen output passes -- not every fuller character -- and correctly scoping a full combinatorial sweep as its own separate future slice rather than forcing it into this one, is precise, disciplined honesty about what was actually proven.**
+
+**The argument for why the gate is safe regardless of that incompleteness is the best piece of reasoning in this report, and it's worth stating plainly why it's watertight: the gate calls the identical `validateRecord` function on the identical record the load path already calls. It is structurally impossible for this gate to refuse anything that wouldn't already have been refused the next time the player tried to reload the same save -- its only real effect is moving when a genuinely inevitable refusal becomes visible, from a confusing later moment to an immediate, contextual one. That argument doesn't depend on the sweep's exhaustiveness at all, and recognising that distinction -- what the sweep proves versus what makes the gate itself safe -- is exactly the kind of precise reasoning this session has asked for throughout.**
+
+### PROCEED
+
+Extend the duration change to Beast Control and Beast Confusion. Nothing else needed — all four items close cleanly.

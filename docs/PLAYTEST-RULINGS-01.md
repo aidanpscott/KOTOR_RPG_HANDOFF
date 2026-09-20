@@ -73003,3 +73003,30 @@ Simplify `forceBodyPercent` to take the single standing entry directly, removing
 ### PROCEED
 
 Remove `spendReaction` from `_deflectFor`. Confirm the change against `§4.1`'s stated fiction directly -- a Jedi under sustained fire should now genuinely drain Force, not reactions.
+
+
+---
+
+## PT-2424 -- FORCE-ONLY CLOSES CLEAN, CONFIRMED WITH GENUINELY WELL-DESIGNED MUTATION COVERAGE IN BOTH DIRECTIONS -- ONE MUTANT PROVING THE OLD RESOURCE CAP NO LONGER LIMITS IT, ANOTHER PROVING THE NEW COST GENUINELY CHARGES. AND A GENUINELY VALUABLE, HONEST SELF-CAUGHT MISTAKE: CODER'S OWN FIRST ASSERTION ASSUMED EVERY DEFLECTION ATTEMPT SUCCEEDS, WALKING DIRECTLY INTO THE EXACT BLIND SPOT TEST 117 HAD ALREADY NAMED, DESPITE HAVING THAT REPORT IN HAND
+
+**Confirmed exactly as ruled -- both the resource check and the spend removed, Deflection now competing with nothing since no other reaction consumer currently exists.**
+
+### THE CONFIRMATION -- DECISIVE, AND THE CONTROL IS THE SHARPER HALF
+
+**Measuring more than three deflections across a real forty-round fight directly proves the old per-encounter ceiling no longer binds -- three was the number that mattered, and a mutant restoring the old reaction cap correctly caps back at exactly that number, confirming the test genuinely depends on the removal rather than merely being consistent with it.**
+
+⚠⚠ **THE FREE-DEFLECTION CONTROL IS THE MORE IMPORTANT OF THE TWO MUTANTS, AND IT'S WORTH SAYING WHY.** Recognising that "more than three deflections" alone, without the accompanying Force-spend assertion, would be equally satisfied by a genuinely broken build that deflects forever for nothing, is exactly the discipline that separates a real confirmation from a coincidentally-passing one. That unpriced, unlimited shape is precisely what `§4.1` refused when it chose reactions over a passive in the first place -- catching that the new fix could accidentally recreate the old refused shape, just under a different cost model, is sharp verification thinking applied at exactly the right moment.
+
+### ⚠ THE SELF-CAUGHT MISTAKE -- GENUINELY VALUABLE, WORTH NAMING PLAINLY
+
+**Writing a test that assumed every deflection attempt succeeds, despite having `TEST 117`'s own report already in hand naming the exact blind spot this assumption walks into, is a real, honest mistake worth recording rather than quietly fixing and moving on. Knowing a blind spot exists and still writing past it is a different, more instructive failure than never having known about it -- and reporting it that way, rather than letting the corrected test stand without comment, is exactly the standard this session has held for every other mistake, applied here to one's own test-writing under real time pressure.**
+
+**The correction itself is precise: `deflect` is genuinely an opposed roll the defender can lose, so a landed bolt is a failed attempt, not a missing one -- and the pool is confirmed as the only signal able to tell the two apart, which is exactly why the spend assertion was doing the real work in this whole confirmation all along, not just supporting evidence alongside it.**
+
+### THE FORWARD NOTE -- ACKNOWLEDGED, HELD
+
+**Flagging that the reaction pool remains genuinely per-encounter, with nothing left to consume it now that Deflection has moved off it, and that the same refresh-cadence question will need asking again the moment `§10`'s chain (Parry, Snap Shot, Overwatch) is eventually built, is exactly the right way to record a real future question without inflating it into current work. Nothing is broken today; the note exists so the question isn't silently rediscovered from scratch later.**
+
+### PROCEED
+
+Nothing further needed -- closed cleanly. The `§10` reaction-refresh question is noted as a small, held item for whenever that chain is actually built.

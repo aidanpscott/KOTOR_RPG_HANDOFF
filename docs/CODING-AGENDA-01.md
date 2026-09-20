@@ -6,9 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### Facing/hear-turn observability — measured in full, two slices approved, building (PT-2454)
-- **Mechanism confirmed always correct — the gap was purely observability.** Facing turn already correctly consults hearing (any sense, not just sight); hearing already correctly ignores walls. Two real gaps: `Senses` only ever constructed with sight == hearing, despite the corpus already authoring two real hearing-range abilities in prose (Gundark's Acute Hearing, Togruta's Montral Echo) with zero readers — the same "prose with no reader" shape as the Togruta blindness trait before `PT-2446`. Zero of 11 shipped creatures author a `blind_spot` — `PT-2451`'s root cause stated as a number. Ruled: build hearing range read from authored traits (structured beside the prose, same shape as `keeps_dex_when_blinded`), reading both abilities' "moving"/"makes a sound" qualifiers as unconditional range detection rather than inventing a noise model — flagged simplification, not silently decided. Ruled: the Sith Trooper gains `blind_spot: 120°`, matching the source's own most common value — gives the correctly-firing facing turn something real to act against.
-
+- **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
 - **Mis-worded refusal when aiming outside a fight — small, held.** Refuses with "there is nothing here you can see to aim it at" when the real reason is no encounter is running — confirmed with both enemies visible one square away.
 - **Escape with no menu open leaves the board — small, held.** Cost Tester two reloads during TEST 119.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.
@@ -56,6 +54,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Facing/hear-turn observability fully closed — hearing gained its own range field (absent means as-far-as-sight, never exceeding it), the Sith Trooper gained the project's first shipped `blind_spot` (120°). Three real tests broke on the new content, all correctly diagnosed: a duplicate TOML key silently failing character load (the same trap Tester hit, caught in Coder's own new content before shipping), an existing control that had only ever been true by accident (no blind spots existed anywhere to be absent from), and a baked-in "adjacent therefore seen" assumption that stops holding once a real blind spot can put an adjacent player behind a creature — PT-2455
 
 - All three severe items from `PT-2450` closed, plus `container.opened`'s missing guard. Confusion's early-return gate fixed (missing `!p.confuses`), the confusion-tracking write closes with the same fix (same root cause, one gate firing first blocked both). Direct, honest ownership of the mistake — the exact twin-list shape the nearby comment already warned against. Severity-compounding explicitly validated as `PT-2240`'s pattern arriving from a new direction. Droid classifier fixed to require the real `is_droid` set rather than default to it (a default of `{'droid'}` would have been the bug itself) — confirmed to have been breaking two powers in opposite directions at once (Stun Droid wrongly refusing, Confusion wrongly accepting the same four species). Guards assert three independent signals (spend, tracking write, targeting change), not an absent message. A genuine made-save scenario honestly reported as currently untestable given the fixture population, rather than faked with a guard that couldn't fail — PT-2453
 

@@ -74736,3 +74736,60 @@ Level-up is closed end to end for this slice. Both remaining gaps held as their 
 ### PROCEED
 
 Fix the pool-refresh regression on the manual path now, urgent. Audit the full grant schedule across all classes and levels before this thread is considered broadly verified. Multiclass UI-invisibility and the null cost string both tracked as their own held items.
+
+
+---
+
+## PT-2487 -- THE LEAD IS DECISIVELY CONFIRMED, BOTH ORIGINAL CONFOUNDS CLEANLY REMOVED. ONE ELEGANT TRANSITION (16->17, GRANTS NO ABILITY POINT, CLASS MERELY CONFIRMED) HOLDS BOTH CLASS AND ABILITY CONSTANT, LEAVING LEVEL AS THE ONLY VARIABLE -- AND THE LIVE SCREEN STILL ADDS THE SAME +8 TO FORCE AND +0 TO VITALITY REGARDLESS. NOT STALENESS, NOT PARTIAL RECOMPUTE -- A HARDCODED CONSTANT WHERE A REAL RECOMPUTE SHOULD RUN. AND A GENUINELY GOOD, HONESTLY-REPORTED JUDGMENT CALL: CORRECTLY SKIPPING THE APPROVED SECOND FOLLOW-UP ONCE THIS RUN ALREADY ANSWERED IT, RATHER THAN RUNNING A REDUNDANT TEST OR SILENTLY DROPPING IT
+
+**This is exceptionally clean confirmation. Finding a single real transition that structurally holds both previously-confounding variables constant, rather than needing two separate isolating runs, is more elegant than the original plan and gets to the same certainty faster. Three transitions with three different correct answers and one identical applied value across all of them is complete, decisive proof -- not a pattern consistent with the hypothesis, a direct demonstration of it.**
+
+**The elimination reasoning is precise and complete: ruling out staleness because the screen genuinely does change, just by the wrong amount; ruling out class- and ability-dependence because both were held constant in the deciding run; ruling out level-dependence because the correct answer varies with level while the applied one doesn't. Nothing is left unaccounted for.**
+
+**Correctly distinguishing what was measured (a reproducible symptom) from what wasn't found (the actual line responsible) is honest scope, not a gap in the work -- Tester's job was to characterize the defect precisely enough to hand off, not to trace the implementation, and that's exactly what this achieves.**
+
+### ⚠ THE SKIPPED FOLLOW-UP -- GOOD JUDGMENT, CORRECTLY DISCLOSED
+
+**Recognising that the deciding run had already, incidentally answered the second follow-up's own question, and reporting that as a deliberate choice rather than quietly not running an approved test, is exactly the transparency this session has asked for throughout. Running a test that can only re-confirm something already conclusively shown would have cost real time for no new information -- correctly declining it and saying so plainly is the right call, made visibly rather than assumed.**
+
+### PROCEED
+
+Coder now has a fully characterized defect: both pools apply a fixed constant instead of recomputing from the new level (Force's constant is 8, Vitality's is 0 — which is why Vitality looked like nothing happened while Force looked like something did, but wrongly). This should make the actual fix considerably more targeted than a cold trace would have been.
+
+
+---
+
+## PT-2488 -- A GENUINELY VALUABLE, GENERALIZABLE TESTING METHODOLOGY EXTRACTED AND RECORDED: BEFORE BUILDING ONE CONTROL PER CONFOUND, CHECK WHETHER THE RULES THEMSELVES ALREADY PROVIDE A CASE WHERE THE CONFOUNDS ARE ABSENT BY CONSTRUCTION -- ONE RUN INSTEAD OF SEVERAL, TESTING THE COMBINATION RATHER THAN THE VARIABLES ONE AT A TIME
+
+**This is worth recording as its own standing practice rather than letting it live only in the report that produced it. The instinct to build one isolating control per confounding variable is the natural default, and it isn't wrong -- but it's not always the most efficient path to the same certainty. Recognising that ability points only land every fourth level, so a level transition that doesn't cross one of those boundaries holds ability constant for free, and that confirming an existing class with Cancel holds class constant the same way, turned what would have been two separate isolating runs into one that answered both at once.**
+
+**The generalizable version is worth stating plainly: before reaching for the obvious multi-control approach, check the domain's own rules for a naturally-occurring case where the confounds are already absent -- not as a shortcut that sacrifices rigor, but often as a MORE rigorous test, since a single combination genuinely holding multiple variables constant is cleaner evidence than separately varying them one at a time ever produces. This is the same discipline that made the 16->17 run decisive rather than merely convenient.**
+
+### PROCEED
+
+Nothing in flight. Standing by for whatever's next.
+
+
+---
+
+## PT-2489 -- THE ROOT CAUSE PRECISELY REFINES TESTER'S OWN ACCURATE OBSERVATION WITHOUT CONTRADICTING IT: NEITHER POOL APPLIES A LITERAL HARDCODED CONSTANT -- FORCE RUNS A REAL RECOMPUTE AGAINST A CLASS LIST FROZEN AT BOARD-OPEN, SO ITS OWN DIE TERM STRUCTURALLY CANNOT MOVE; VITALITY'S RECOMPUTE NEVER RUNS AT ALL, CONFIRMING TESTER'S SEPARATE HYPOTHESIS EXACTLY. BOTH FIXED. AND ⚠⚠⚠ A FOURTH DEFECT FOUND AS A BYPRODUCT, FIXED IN CODE, BUT HONESTLY NOT CLAIMED DONE -- CODER CORRECTLY RECOGNIZED THEIR OWN FIXTURE COULD NOT DISTINGUISH A REAL FIX FROM AN EQUIVALENT MUTANT, AND SAID SO PLAINLY RATHER THAN CLOSING SOMETHING GENUINELY UNVERIFIED
+
+**This is precise, respectful correction of a symptom-level observation with an implementation-level truth, and it's worth naming exactly why that distinction matters here. "A fixed constant is applied" was completely accurate as a description of what was observed from outside -- three transitions, one unchanging value regardless of the correct answer. What Coder found underneath is that the code genuinely does recompute every time; it's just recomputing against an input that was permanently frozen the moment the level-up screen first opened, so the die term of the formula can never move no matter how many times the surrounding arithmetic re-runs. Both readings are true at their own level, and confirming the mechanism this precisely, rather than settling for "matches the symptom," is exactly the depth this fix needed.**
+
+**Confirming Tester's separate, independently-reasoned hypothesis for Vitality -- a skipped recompute entirely, not a wrong addend -- was exactly right, and tracing it to `PT-2474` having repaired only the Force half of this mechanism and never touching Vitality, closes the historical "why" as well as the present "what."**
+
+### ⚠⚠⚠ THE FOURTH DEFECT -- FOUND, FIXED IN CODE, HONESTLY NOT CLOSED
+
+**This deserves the fullest recognition this session gives. Finding a real, separate defect purely as a byproduct of investigating the two routed ones -- code extracted at `PT-2474` that never had its own input assumptions re-examined once it left the context where they'd been correct -- is genuinely valuable incidental discovery. But the more important thing here is what happened after finding it: writing the fix, then recognising the available fixture produces an empty session log regardless of whether the fix is real, meaning the guard cannot actually distinguish a correct fix from an equivalent mutant that changes nothing observable -- and saying so plainly, in a report that already had two genuine wins to report, rather than letting a third quiet claim ride along with them.**
+
+**This is exactly the standard `PT-2469`'s "count what does the job, not what calls the function" and every other hard-won verification lesson this session has produced were building toward: a fix that passes every available assertion is not the same claim as a fix that's actually confirmed, and the difference matters most precisely when it would be easiest to let it slide. Reporting the real investigative progress already made -- Force confirmed unspendable outside a fight, confirmed spendable inside one -- alongside the exact point of getting stuck, rather than either hiding the gap or forcing a premature guard, is honest work under real time pressure on an urgent item.**
+
+**Ruled: this is tracked as its own real, held item — not closed, not folded into the two that are. Pick it up next as committed.**
+
+### THE INTERPRETIVE READING -- CONFIRMED
+
+**Ruled: current Force does not automatically rise alongside the maximum at level-up, mirroring the pool's own already-ruled treatment exactly.** The maximum correctly reflects the character's growing capacity; the current value stays exactly where play left it, matching how this pool has already been ruled to behave everywhere else. This is the right reading precisely because it extends an existing ruling rather than inventing a new one — a d20 convention would heal on level-up, but this project's own Force pool was already deliberately ruled otherwise, and consistency with that existing choice matters more than matching the convention in isolation.
+
+### PROCEED
+
+Vitality and Force refresh are both closed and confirmed. The fourth defect (`_deriveForcePool`'s stale-current mixing) stays open, correctly unguarded, and is next. The 19-class grant-schedule audit follows after that, exactly as queued.

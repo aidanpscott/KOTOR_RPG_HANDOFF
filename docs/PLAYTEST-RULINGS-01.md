@@ -74315,3 +74315,36 @@ Measure and report before proposing a build order. Given the scope, this will li
 ### PROCEED
 
 Restyle the Character Sheet to `PT-1249` fully. Report back once it's real and complete before proposing the next screen -- Inventory, Equip, or whichever makes sense once the pattern is proven once. The shared shell and Level-up's screens stay correctly held until the map/grid view question is resolved or a real case emerges to revisit the sequencing.
+
+
+---
+
+## PT-2472 -- THE CHARACTER SHEET RESTYLE CLOSES CLEAN, WITH A FOURTH REAL STALE SPOT FOUND AND CORRECTLY HANDLED WITHOUT STOPPING TO ASK -- PT-1319, LATER THAN PT-1249, STRUCK THE WHOLE MODEL CONCEPT FROM THE PRODUCT, AND "THERE IS NO READING UNDER WHICH I SHOULD BUILD A MODEL SYSTEM" IS EXACTLY RIGHT GIVEN BOTH THE ASSETS AND THE LATER RULING POINT THE SAME DIRECTION. PRECISE WORK THROUGHOUT: THE MODIFIER-COLUMN FIX, THE "NEEDED" SEMANTICS, AND ROUTING AUTO LEVEL UP THROUGH THE SAME EVENT A REST ALREADY USES
+
+**Correctly identifying that "3D model in a rounded viewport" is stale in its first two words and current in the rest, rather than either building the model literally or quietly substituting something without saying so, is exactly the discipline this whole thread has needed. Citing `PT-1319`'s own words directly, confirming `UI-ASSETS-01 §7` independently struck the same asset for the same reason, and finding `APP-UI-VISION-01 §0b` exists specifically to state this ruling, is thorough triangulation before treating something this consequential as settled -- not a single citation, three independent confirmations converging.**
+
+**Correctly not stopping to ask is the right call here, and worth confirming explicitly: when the assets don't exist and a later, explicit ruling says they never will, asking would have been procedural friction over a question that was never actually open. Flagging it plainly in the report, rather than either silently substituting or silently building the wrong thing, is exactly the right way to handle a genuinely unambiguous case.**
+
+### THE FOUR SPECIFIC PIECES -- ALL PRECISE
+
+**The modifier-column fix correctly diagnosed as the real work, not a cosmetic detail -- a suffix riding inside the value cell breaks alignment down the whole table, and reserving the cell's width regardless of whether a given row has a modifier is the right fix, not a partial one.**
+
+**"Needed" correctly reading as what's left rather than the raw threshold is precise semantic reasoning -- a number that never changes after a fight isn't functioning as a readout regardless of how accurate it is, and handling both edges deliberately (zero once passed, absent at the cap rather than naming a level that can't be taken) closes the detail properly rather than leaving an edge case to surprise someone later.**
+
+**Routing Auto Level Up through the identical event a rest already triggers, rather than a second parallel path, is the correct architectural choice for the same reason this session has insisted on one classifier and one answer throughout -- a level gained from the sheet and one gained from a bedroll are the same fact about the character, and treating them as anything else would be inviting exactly the kind of drift this whole session has spent its effort closing elsewhere. Building Level Up as honestly inert, with its own stated reason visible in the UI rather than just disabled with no explanation, is exactly right.**
+
+### THE ALIGNMENT PLACEMENT -- APPROVED AS MOVED
+
+**The reasoning holds. The original placement buried alignment one tab deep, and the caption placement is visible on every page while still carrying the same band-and-score pair the original ruling actually specified -- this is closer to what the underlying complaint was actually about than the letter of where it was first placed. Approved: alignment stays on the arc's caption. No revert needed.**
+
+### THE VERIFICATION -- EXACTLY RIGHT
+
+**Building one of the thirteen cases through the real, only door into this screen, rather than testing the widget purely in isolation, is the same discipline that's caught the "beautiful widget, wrong caller" shape more than once this session. Correctly distinguishing a compile error from a genuine mutation kill, and re-running it live rather than letting the accidental failure count as a real result, is honest counting under exactly the kind of pressure that makes an accidental pass tempting to accept.**
+
+### RULED -- EQUIP NEXT
+
+**Approved as recommended.** Locked geometry, data that already exists elsewhere in the record, and a footer pattern that's the closest thing to shell furniture without needing the shell -- this is exactly the right next screen for the same reason the Character Sheet was the right first one: real, bounded work that doesn't depend on anything still undesigned.
+
+### PROCEED
+
+Build Equip next, restyled fully to `PT-1252`. Report back before proposing the screen after that.

@@ -16,7 +16,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Escape with no menu open leaves the board — small, held.** Cost Tester two reloads during TEST 119.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.
 
-- **`container.opened`'s missing test coverage — ruled, building (PT-2449).** Original premise wrong, corrected: both kinds already have complete producers via a shared helper. Gate's warning is a technically-true answer to its own narrow question (does the kind appear named at a literal construction site), not a real defect — the checker's own documented policy correctly refuses to credit dynamic sites. `door.unlocked` confirmed complete with two real guards. `container.opened` has a working producer but zero test coverage anywhere — building the missing guard, mirroring the door's shape exactly.
 
 - **Walking into a confused companion — small, held, genuinely unreachable today.** Under the faction-change override, walking into a confused ally would theoretically hit the existing walk-into-a-party-member refusal. Nothing in the corpus currently confuses a companion, so this branch is unreachable — held until something actually authors a companion-confusing effect.
 

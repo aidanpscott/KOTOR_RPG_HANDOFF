@@ -6,7 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Beast Control / Beast Confusion duration — ruled to match, extending PT-2460 (PT-2462).** Sentient-targeting variants correctly moved to 5 rounds; the beast variants (same mechanics, different target) were left at 10 by the literal scope of the original ruling, honestly reported as a new asymmetry rather than quietly fixed. Extending the change to both beast variants — the balance intent was about the mechanic, not just its sentient half.
 
 - **Continue/New Game timing trap — small, held.** A brief window where Continue is greyed during save-scanning; a click landing in that window silently opens New Game instead of the intended save.
 
@@ -60,6 +59,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Duration balance ruling fully closed — all four mind-affecting powers (Force Distraction, Force Confusion, Beast Control, Beast Confusion) now state five rounds. One-slice asymmetry correctly reported rather than unilaterally tidied before the ruling landed — PT-2463
 
 - Force Distraction/Confusion's duration change, the third droid classifier, and the chargen validation gate all closed. Duration change caught a silent duplicate `?? 10` default in the app itself, removed — an absent field now fails loudly instead of silently handing out the old number. Third classifier unified with a default (not required) parameter, correctly chosen for this validator family's own "empty means disabled" convention rather than copying the prior fix's exact shape; a real forwarding gap caught by mutation (one validation path reached, the other silently left on the old rule). Chargen sweep's first fixture under-populated relative to the real app's own construction, caught and fixed. Sweep honestly proven to cover only the minimum legal output, not every full character — a full combinatorial sweep held as its own future slice. Gate approved regardless: it calls the identical validateRecord call the load path already makes, so it structurally cannot refuse anything that wouldn't already be refused later — only moves when an inevitable refusal becomes visible — PT-2462
 

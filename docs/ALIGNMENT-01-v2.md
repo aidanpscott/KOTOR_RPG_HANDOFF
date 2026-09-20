@@ -159,7 +159,7 @@ Without it, dark power use generates constant downward pressure that light story
 
 **Movement toward Neutral is exempt** — you can always meditate your way back, you just cannot meditate your way deeper. The asymmetry says something true: falling requires action, recovery permits reflection.
 
-**The opportunity cost is unsettled and is what stops the grind.** A 20-session campaign holds enough long rests that +1 each would dominate every other input. The intended shape: meditating instead of resting normally costs some or all of the rest's physical recovery, so a wounded party cannot afford it. **Blocked on RCR's rest and natural-healing rules — extractor.**
+**The opportunity cost is settled, and the attribution above was wrong. `REST-AND-MEDITATION-01 §4` corrects it: the anti-grind mechanism is the band-boundary rule two paragraphs above (meditation cannot cross a boundary away from Neutral), not the opportunity cost.** Meditation and rest do draw on the same shared time resource — real, and priced in `REST-AND-MEDITATION-01` — but that opportunity cost was never what capped the grind; the band boundary was, and does the job on its own. Meditation grants no physical healing at all, full stop, independent of any rest forgone.
 
 ### 2.6 Passive recovery — below 50 only
 

@@ -73420,3 +73420,57 @@ Measure `FACTIONS-01 §4b` specifically before proposing anything:
 ### PROCEED
 
 Measure `FACTIONS-01 §4b` and the real K2 script shape. Report before proposing anything. Correct `§7`'s stale grouping. Everything else on the menu (the two orphaned producers, `blinded`'s two clauses, cost multipliers, story shifts) stays exactly where it is — held, correctly not picked up.
+
+
+---
+
+## PT-2439 -- THE FLAGGED CONFLICT RESOLVES CLEAN: FACTIONS-01 §4b IS A CAMPAIGN-LEVEL POLITICAL DECLARATION, ENTIRELY DIFFERENT FROM WHAT THESE TWO COMBAT POWERS NEED -- THEY MERELY SHARE A WORD BY COINCIDENCE OF K2'S OWN ENGINE-FUNCTION NAMING. BUT A FAR MORE SERIOUS, PREVIOUSLY INVISIBLE CONSEQUENCE FOUND IN THE OBVIOUS IMPLEMENTATION: Combatant.role IS READ BY 35+ CALL SITES, AND FLIPPING IT WOULD SILENTLY GRANT A CONFUSED ENEMY THE PARTY-ONLY STAND-AT-1 RULE. AND K2's OWN SHIPPED SCRIPT IS CONFIRMED PERMANENTLY BROKEN -- THE FIRST SUCCESSFUL CAST LATCHES A GLOBAL THAT NOTHING EVER CLEARS, SILENTLY RUINING THE POWER FOR THE REST OF THE PLAYTHROUGH. ALL THREE QUESTIONS RULED
+
+**Confirming these two powers cannot have been in view when `§4b` was written -- a stranger's initial hostility and a creature already mid-fight switching targets for ten rounds are simply different concepts that happen to share a word -- resolves the flagged conflict decisively rather than leaving it ambiguous. This is exactly the value of measuring the actual document before building around an assumed collision: the collision turns out not to exist at all, once the document's real scope is read rather than inferred from its title.**
+
+### ⚠⚠⚠ THE HIDDEN CONSEQUENCE -- THE MOST VALUABLE FIND IN THIS REPORT
+
+**Finding the project's own established "side" concept (`isParty`, keyed off `Role`) before reaching for anything new, and taking its own comment's warning against a second, competing notion of sides seriously, is exactly right instinct. And discovering that `Role.henchman` already exists and already counts as party -- so the vocabulary a confused creature would need is already there -- makes the obvious implementation look free.**
+
+**It isn't, and finding out why before building it is the real value here. `Combatant.role` being read by thirty-five call sites, including the party-exclusive stand-at-1 rule and total-defeat detection, means flipping it would silently grant a temporarily confused enemy a protection nowhere stated or implied by the power's own description -- a bizarre, unintended consequence that would only surface once a player noticed an enemy refusing to die the way party members do. This is precisely the kind of collateral effect that's invisible until someone actually traces every reader of the field being changed, and doing that before proposing rather than after shipping it is what makes this measurement worth what it cost.**
+
+### K2's REAL SCRIPT -- CONFIRMED SHIPPED BROKEN, CORRECTLY NOT FAITHFULLY PORTED
+
+⚠⚠⚠ **Sweeping all 638 shipped scripts and confirming the latching global is set once and read once, nowhere ever cleared, is decisive rather than merely suspicious -- and the conclusion is exactly right: the power's own description clearly implies a temporary, repeatable limit, and K2's actual implementation of that limit is a permanent, playthrough-wide lockout on the very first successful cast. That's the source's own bug, not its design intent, and faithfulness to a design doesn't extend to faithfully reproducing an implementation defect the description itself contradicts. Correctly flagging the one honest limit on this claim -- a compiled-only file could in principle differ, unverified -- rather than overstating the certainty, is exactly right.**
+
+### RULED -- ALL THREE QUESTIONS
+
+**1. Leave `Role` alone. Build a narrower, targeted mechanism.** Do not flip `Combatant.role` for a confused creature under any circumstances -- the collateral effect on the stand-at-1 rule and party-defeat detection is unstated and almost certainly unintended by the power's own description, which only promises a change in who the creature attacks, nothing about its underlying allegiance or the protections that come with it. Build a scoped override that affects attack-targeting specifically, read wherever targeting currently checks `isParty`, without touching the stored role itself.
+
+**2. "Only one at a time" scopes to currently-active duration, not the playthrough.** A caster should be refused from confusing a second creature while an existing confusion they caused is still active, and the restriction lifts naturally once that instance's ten rounds expire -- matching what the description actually implies (a real, repeatable limit) rather than K2's broken, permanent version. Author the refusal against the currently-active instance, not a persistent flag.
+
+**3. The stand-at-1 question resolves itself.** Since the role is never actually touched, no party-exclusive mechanic ever triggers for a confused creature in the first place -- there's nothing further to carve out.
+
+### PROCEED
+
+Propose the concrete shape for the scoped attack-targeting override, the ten-round confusion window, and the currently-active refusal. Report before building.
+
+
+---
+
+## PT-2440 -- REST, SHORT AND LONG MEDITATION ALL CONFIRMED DECISIVELY IN REAL PLAY, WITH GENUINELY EXCELLENT ENGINEERING TO MAKE AN OTHERWISE-INVISIBLE RATE OBSERVABLE. ALIGNMENT HAS NO PLAYER-FACING READOUT AT ALL -- BUT TESTER RIGOROUSLY CONFIRMED BOTH HALVES OF THE PIPELINE SEPARATELY (REAL LOGGED INPUTS, DIRECT PRODUCTION-FUNCTION TESTING ACROSS HYSTERESIS, RESISTANCE, AND THE BAND-BOUNDARY CAP IN BOTH DIRECTIONS), SO THE MECHANISM ITSELF IS THOROUGHLY CONFIRMED CORRECT EVEN WITHOUT A SURFACE TO OBSERVE IT THROUGH. AND A REAL, GENUINE ASYMMETRY FOUND: THE MEDITATION CAP SURVIVES A RELOAD, BUT THE CEILING DEGRADATION IT'S SPENT AGAINST DOES NOT
+
+**Rest, short meditation, and long meditation all confirmed exactly as specified. The engineering behind confirming rest's rate deserves specific credit: recognising that level × 8 exceeds any ordinary character's vitality cap, meaning the claim would normally hide silently behind the ceiling, and deliberately constructing a level-20, Constitution-18 character plus a specific, substantial prior injury just to make the number observable at all, is precise, deliberate test design rather than settling for a case that happened to pass. Short meditation's exact 75% of lost, confirmed across two separate real instances, and the cap correctly surviving a reload, both close cleanly. Long meditation's no-side refusal naming both options rather than meditating to no effect matches exactly what was ruled.**
+
+### ⚠ THE RELOAD ASYMMETRY -- REAL, RULED, FIX NOW
+
+**This is a genuine defect, not a design question. Vitality already correctly persists across a reload — this session established that discipline explicitly. A degraded Force ceiling reverting to full on reload, while the meditation attempts already spent against that now-vanished degradation stay spent, is an inconsistency in the same category: state that should be reconstructed from the persisted log the same way everything else is, currently isn't. Ruled: fix the ceiling-degradation persistence so it survives a reload the same way vitality, the meditation cap, and everything else in this thread already correctly does.**
+
+### ⚠⚠⚠ ALIGNMENT'S MISSING READOUT -- HANDLED EXACTLY RIGHT
+
+**Finding zero callers for `alignmentFrom` anywhere in the app, and correctly recognising this as an observability gap rather than treating it as proof the mechanism itself is untrustworthy, is the right distinction to draw. Pivoting to confirm both halves of the pipeline independently -- the real inputs genuinely being logged during actual play, and the fold producing the correct result when run directly against that real captured log -- is rigorous verification of a mechanism that currently has nowhere to surface, which is a harder and more valuable thing to do than simply reporting "untestable."**
+
+**Going further and testing the production functions directly against a real battery of hand-constructed scenarios -- the per-encounter highest-tier-only rule, the resistance floor that never fully cancels drift, both directions of the hysteresis rule confirmed with real boundary numbers, and the band-boundary cap confirmed in both directions (a dark-ward shift correctly stopping at the edge, a light-ward shift toward Neutral moving freely) -- is exhaustive, decisive confirmation of the mechanism's actual correctness. This closes essentially every open question about whether the engine half works; what's genuinely missing is purely the surface to see it through.**
+
+### RULED -- ADD THE READOUT
+
+**Approved exactly as suggested: add band and score to the character sheet's existing info section, alongside where Species already lives.** This is the smallest possible fix that closes the observability gap for both items 4 and 5 at once, and given the underlying mechanism is now this thoroughly confirmed correct at the engine level, there's no reason to hold this back — it's display work on top of something already proven sound, not a new design question.
+
+### PROCEED
+
+Fix the ceiling-degradation reload asymmetry. Add the alignment band/score readout to the character sheet. Both close real, confirmed gaps rather than open new design questions.

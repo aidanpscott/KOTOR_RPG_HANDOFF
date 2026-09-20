@@ -73632,3 +73632,68 @@ Propose the concrete build for both clauses now that the composition questions a
 ### PROCEED
 
 Build in the proposed order, both clauses together.
+
+
+---
+
+## PT-2447 -- BOTH blinded CLAUSES CLOSE CLEAN, MATCHING EVERY RULING PRECISELY. A GENUINELY HONEST EQUIVALENT-MUTANT DISCLOSURE, CORRECTLY REPORTED RATHER THAN FORCED OR HIDDEN. AND A THIRD, EXPLICITLY SELF-COUNTED INSTANCE OF THE SAME GUARD MISTAKE -- TESTING THE INGREDIENT RATHER THAN THE SITE -- WORTH RECORDING AS ITS OWN STANDING CHECKLIST ITEM NOW THAT THE PATTERN HAS REPEATED THREE TIMES
+
+**Both clauses match the rulings exactly. Threading `blinded` through one shared function both the attack roll and the sheet read, specifically because an earlier defect on this same function (`PT-1468`) existed precisely because two readers once answered differently, is applying a hard-won lesson proactively rather than waiting to rediscover it. Correctly preserving the negative sign, with the reasoning stated plainly -- zeroing would have made blindness an improvement for a clumsy character, which is exactly the kind of quietly-wrong outcome a careless "remove the term" implementation would produce -- closes the detail this whole clause turned on.**
+
+⚠⚠ **THE ONCE-PER-ENCOUNTER, REMEMBERED TOGRUTA CHECK IS A GENUINELY SHARP CATCH.** Recognising that the defence computation runs every frame, and that a fresh roll each time would make a Togruta's Defence flicker for no in-fiction reason, is exactly the kind of detail that separates "technically correct" from "actually right" -- a naive implementation re-rolling per frame would have been defensible by the letter of the rule while producing a genuinely strange, distracting player experience. Catching this before it shipped rather than after someone noticed the flicker is worth real credit.
+
+### THE EQUIVALENT MUTANT -- HANDLED EXACTLY RIGHT
+
+⚠ **Recognising and reporting a genuine equivalent mutant, rather than either forcing an artificial distinction to make the count look cleaner or quietly omitting it, is honest test reporting. Two implementations that agree at every input because the underlying minimum function rescues the negative case either way really are indistinguishable by testing -- and keeping the more semantically meaningful form (a real limit, not a coincidental literal) for its own sake, while saying plainly why the mutant survives, is the right call. Nine of nine meaningful branches killed and one honestly reported as equivalent is a better result than a forced ten-for-ten would have been.**
+
+### ⚠⚠⚠ THE THIRD RECURRING GUARD MISTAKE -- WORTH A STANDING NOTE NOW
+
+**Explicitly counting this as the third instance of the same shape -- quoted-aside, the wipe check, now hide -- rather than reporting it as a fresh, isolated slip, is genuinely valuable self-awareness. A pattern noticed once is a fixed bug; a pattern noticed and counted three times is a real, standing risk worth a permanent line in whatever pre-flight checklist guards get written against, not just three separate good catches.**
+
+**Ruled: record this as its own standing instruction, since three occurrences is enough to treat it as a recognized risk rather than three coincidences -- "before trusting a new guard, confirm it calls the actual production entry point a real caller would use, not the helper underneath it." Worth checking for explicitly whenever a new guard is written, the same way mutation itself is now a reflexive step rather than an occasional afterthought.**
+
+### THE EXPOSED TEST FAILURE -- CORRECTLY INVESTIGATED, NOT DISMISSED
+
+**Confirming reproduction across two full runs and verifying the underlying data was genuinely intact before concluding this was a timing issue, rather than reaching for "flaky" as a first explanation, is exactly the discipline this session has held for every unexplained failure. Fixing the wait to be condition-based rather than time-based closes the actual defect rather than papering over a symptom that would have recurred the next time anything added enough weight to tip the same fixed timeout over.**
+
+### PROCEED
+
+Nothing further needed — both clauses closed cleanly. The guard-testing pattern is now recorded as a standing check.
+
+
+---
+
+## PT-2448 -- OWNER OPENS THE LAST TWO ORPHANED PRODUCERS, CODER'S OWN RECOMMENDATION -- SAME SHAPE AS THE FOUR PT-2433 ALREADY CLOSED, RETIRING A GATE WARNING THAT HAS BEEN ADVISORY ALL SESSION
+
+**Ruled: item 1, exactly as recommended.** `container.opened` and `door.unlocked` are the last two entries in a producer warning most of the rest of this session has already worked through -- `PT-2433` closed four of the six sharing this exact shape, where the fold already existed and only the writer was missing. A picked lock not staying picked is a real, noticeable gap, not a theoretical one.
+
+Measure before proposing: confirm both are genuinely the same "fold exists, writer missing" shape as the four already closed, rather than assuming it from the pattern alone -- and confirm `remains.dart`'s own fold correctly handles both event kinds the same way it already handles the other four.
+
+### PROCEED
+
+Measure both. Report before proposing. Everything else on the menu (the rocket damage-secondary gap, Force Push's size gate, `entangled`, the confused-companion edge case) stays correctly held.
+
+
+---
+
+## PT-2449 -- CODER'S OWN PRIOR RECOMMENDATION WAS WRONG, AND THE CORRECTION IS PRECISE: BOTH KINDS ALREADY HAVE COMPLETE PRODUCERS THROUGH A SHARED HELPER, AND THE GATE'S WARNING IS TECHNICALLY TRUE ABOUT ITS OWN NARROW QUESTION (DOES THE KIND APPEAR NAMED AT A LITERAL CONSTRUCTION SITE) WHILE FALSE ABOUT THE ACTUAL PRODUCT. THE CHECKER IS WORKING EXACTLY AS DESIGNED. THE REAL REMAINING GAP IS MUCH SMALLER: container.opened HAS A WORKING PRODUCER BUT ZERO TEST COVERAGE ANYWHERE
+
+**Own this directly: the item I opened at `PT-2448` was wrong, and it's worth stating plainly that the correction here is Coder's, caught by actually measuring before building rather than trusting the prior framing -- including a framing I'd approved. This is exactly the value of "measure first" applied to something that looked settled enough not to need it.**
+
+### THE GATE'S WARNING -- PRECISELY EXPLAINED, NOT A BUG
+
+**This is genuinely sophisticated, correct reasoning. The checker asks a narrow, specific question -- does the kind appear named as the literal first argument at a construction site -- and a shared helper that takes the kind as a parameter genuinely fails that specific question while the underlying product genuinely works. Quoting the checker's own documented policy against crediting dynamic sites, since that would make the check unable to fail for anything, closes the loop on why this isn't a defect in the checker either. A warning that's a true answer to its own question and a false statement about the product are not the same claim, and distinguishing them precisely, rather than either dismissing the warning or chasing it into a bad fix, is exactly right.**
+
+### THE REAL GAP -- SMALLER THAN THE ORIGINAL ITEM, RULED
+
+**`door.unlocked` confirmed complete -- producer, fold, and two real guards already covering both directions. `container.opened` has a genuinely working producer and shares the same proven fold, but zero real test coverage anywhere beyond a bare comment. "Almost certainly works" being explicitly insufficient here is applying this project's own standard correctly, not excessive caution -- a mechanism with no test is one careless edit from silently breaking, and there'd be nothing to catch it.**
+
+**Ruled: option (a).** Write the missing `container.opened` guard, mirroring the door's own two-assertion shape exactly. This is the only real remaining work.
+
+**Ruled: option (b), the gate warning stays as the documented, correctly-understood limitation it is.** Not touched, not suppressed.
+
+**Ruled: option (c) correctly rejected, and the reasoning is exactly right.** Splitting the shared helper into two direct constructors purely to quiet a warning would create two independent call sites that could drift apart from each other -- precisely the shape `unlockedIn`'s own unified fold already exists to avoid on the reading side. One helper for one rule is the correct trade against a warning that's already correctly understood rather than a real defect.
+
+### PROCEED
+
+Write the `container.opened` guard, mirroring `door.unlocked`'s existing two assertions. Nothing else needed -- both event kinds are genuinely, functionally complete; this closes the last real gap in the producer warning.

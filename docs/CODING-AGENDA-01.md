@@ -6,8 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: Deflection stops draining after its first successful use in an encounter
-- **Ruled, investigate now (PT-2421).** Of five shots beating Defence 21 in one encounter, only the first deflected. Both obvious explanations ruled out: reaction pips still showed 2 of 3 available, and the Force pool never moved again — since `_deflectFor` pays for the attempt regardless of outcome, an unmoved pool means no second attempt was ever made, not that one happened and failed. Directly contradicts the mechanism's own stated design intent (sustained fire should drain a Jedi continuously). Something returns early on subsequent eligible shots within the same encounter — find where and why. Reporting blind spot noted: a failed deflection prints nothing, so "attempted and failed" and "never attempted" look identical except for the pool.
+### Deflection resource fix — ruled, building
+- **Ruled: Force only, drop `spendReaction` (PT-2423).** Investigation found no bug — the reaction pool is genuinely per-encounter (1-3 total), and Deflection correctly stopped once it was exhausted, reproduced with real numbers matching TEST 117 exactly. The real finding: this contradicts `POWER-COSTS-01 §4.1`'s own stated reason for building Deflection as a reaction (a Jedi under sustained fire should drain fast — it doesn't, the Force pool barely moves). Ruled to restore the original intent: drop the reaction cost, price entirely from Force. Building.
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.

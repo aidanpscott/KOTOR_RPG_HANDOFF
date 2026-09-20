@@ -6,6 +6,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### Facing/hear-turn interaction — real, ruled, propose before building
+- **Ruled, propose the resolution (PT-2452).** Slice 4's facing turn is built, wired, and fires correctly, then silently undone within one enemy turn by a separate, also-correct mechanism (any sense re-aims at turn start) — since hearing is structurally identical to sight-range everywhere in this codebase. Confirmed with a genuinely elegant three-arm test including a real positive control (360° arm proving the field is live). Not a bug in either mechanism — one ordering question between two correct features. Propose 2-3 concrete shapes for how the facing turn should survive the hear-turn's normal re-aim, preserving the design intent already stated in the code's own comment (should outlast the distraction's own duration).
+
 ### ⚠⚠⚠ SEVERE: Force Confusion confirmed completely inert, silently charges full price
 - **Ruled, fix now (PT-2450).** Early-return gate checks `!p.distracts`, never `!p.confuses` — the seventh confirmed instance of the twin-list drift defect (`PT-2390`), the first where fixing one list made the other's failure silent instead of loud. Proven decisively: a different power cast one turn later correctly cleared a distraction Confusion itself should have already cleared. Fix: add `!p.confuses` to the gate.
 - **"Only one at a time" tracking never fires — ruled, fix now (PT-2450).** Nothing ever writes into `confusions`; three consecutive casts on the same target, none refused. Wire the write wherever a confusion successfully applies. The underlying targeting architecture is correctly built and simply unreachable — should work once both writes land.

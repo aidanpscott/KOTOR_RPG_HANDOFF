@@ -6,6 +6,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ NEW MAJOR THREAD: player-facing UI screens — measuring, own substantial future sequence
+- **Opened, measuring first (PT-2470).** Character Sheet, Abilities, Inventory, Equip, Journal/Messages/Notes, Party Selection, Options/Settings, and the shared shell — all extensively designed and locked in `design/APP-UI-VISION-01.md` (its own separate `PT-1101`–`PT-1358` track), nothing here needs deciding from scratch. Real build state against this design is unverified from this environment (no direct access to `KOTOR-RPG-APP`'s current UI layer). Measuring before proposing: full document read (including `§7a` character creation, `§7b` level-up), current app state, and where the two have drifted if at all.
+
 
 - **Continue/New Game timing trap — small, held.** A brief window where Continue is greyed during save-scanning; a click landing in that window silently opens New Game instead of the intended save.
 

@@ -74348,3 +74348,117 @@ Restyle the Character Sheet to `PT-1249` fully. Report back once it's real and c
 ### PROCEED
 
 Build Equip next, restyled fully to `PT-1252`. Report back before proposing the screen after that.
+
+
+---
+
+## PT-2473 -- STANDING PROCESS RULED FOR THE WHOLE UI THREAD: A REAL VISUAL CROSS-COMPARISON AGAINST THE ACTUAL MOCKUP IMAGE, NOT JUST THE TEXT SPECIFICATION, BEFORE ANY SCREEN COUNTS AS DONE. THE OWNER FOUND A REAL MISMATCH BETWEEN THE CHARACTER SHEET AS BUILT AND THE MOCKUP -- THIS ENVIRONMENT HAS NO ACCESS TO THE ACTUAL IMAGES (CONFIRMED, NO IMAGE FILES EXIST ANYWHERE IN MAIN_WORK), CODER'S DOES
+
+**A real gap found: the built Character Sheet doesn't match the actual mockup image, and this ruling exists to catch that class of gap going forward, not just this one instance. Confirmed no image files exist anywhere in this repo -- the mockups live somewhere reachable from Coder's own environment but not this one, so this needs to be a process Coder runs directly, not something routed through here.**
+
+### RULED -- THE CROSS-COMPARISON PROCESS, FOR EVERY SCREEN IN THIS THREAD
+
+**Before any screen in this UI thread counts as done, not just "the text requirements are met":**
+
+1. **Locate the actual mockup image for the screen being built** -- not just the text description in `APP-UI-VISION-01.md`, the real visual reference itself, wherever it actually lives.
+2. **Take or generate a real screenshot of the screen as actually built and rendered.**
+3. **Compare the two directly, side by side** -- layout, spacing, what's present versus absent, proportions, not just "does the text checklist match."
+4. **Iterate against the real visual gap, not the text gap, until they genuinely align** -- a build that satisfies every bullet point in the document but still doesn't look like the mockup hasn't actually finished the screen.
+5. **Report the comparison itself, not just the result** -- what was checked against what, and what (if anything) still doesn't match and why, the same way every other verification this session has been reported.
+
+**This applies retroactively to the Character Sheet already built, and to Equip and everything after it going forward.** Re-check the Character Sheet against its actual mockup image using this process, report the real gaps found, and fix them before treating that screen as closed.
+
+### PROCEED
+
+Run the cross-comparison on the Character Sheet now, against its real mockup image. Report the actual visual gaps found. This process governs every subsequent screen in this thread — Equip included, before it's reported as done.
+
+
+---
+
+## PT-2474 -- ALL SEVEN ROUTED ITEMS CONFIRMED, WITH THE "NEEDED" VERIFICATION GENUINELY EXCEPTIONAL -- ALL FOUR SEMANTIC CLAUSES TESTED INDIVIDUALLY, EACH PRECISELY DISTINGUISHED FROM WHAT A NAIVE, WRONG IMPLEMENTATION WOULD HAVE SHOWN INSTEAD. AND ⚠⚠⚠ SEVERE: A WON FIGHT WRITES NO OUTCOME AT ALL -- NO XP, NO EVENT, CONFIRMED BY DECODING THE RAW SAVE BYTES DIRECTLY, WITH A DECISIVE CONTROL PROVING THIS ISN'T THE WHOLE REWARD TABLE BROKEN. PLUS A REAL REFRESH GAP AND A GENUINE NEAR-MISS CORRECTLY CAUGHT AND NOT FILED
+
+**All seven confirmed decisively. The portrait caveat -- correctly recognising the fixture's own missing asset means only the absence of a model was confirmed, not a rendered portrait -- is honest scoping rather than overclaiming a clean pass. The alignment arc and column-separation confirmations are clean and decisive.**
+
+### THE "NEEDED" VERIFICATION -- GENUINELY EXCEPTIONAL, WORTH NAMING WHY
+
+**Testing all four semantic clauses individually -- real remainder rather than a threshold, moving correctly with XP gain, correctly flooring at zero rather than going negative, and correctly becoming absent entirely at the cap with the level buttons disappearing alongside it -- and precisely stating what a naive, wrong implementation would have printed at each step (78000 in the first two rows, for a fixed threshold) is exactly the standard this whole session has held for every numeric claim. This isn't four checkboxes ticked; it's four distinct ways this specific field could have been subtly wrong, each ruled out individually.**
+
+### ⚠⚠⚠ DEFECT 1 -- SEVERE, RULED, INVESTIGATE AND FIX NOW
+
+**This is decisive, not merely suggestive. Confirming via direct raw-byte decoding that a won fight produces no XP award and no event at all -- not a wrong number, a complete absence -- and then finding six real prior saves that do carry correct awards, including one showing the exact shape this fight should have produced, is precisely the control that separates "this specific path is broken" from "the whole reward system is broken." That distinction matters enormously for how urgently and how narrowly this gets fixed.**
+
+**Correctly narrowing the scope to a specific scenario (a power kill, on the player's turn, no weapon held) without overclaiming certainty about which of two call sites is responsible, and correctly adapting to close the blocked "Needed changes with earned XP" clause using controlled fixture manipulation instead of leaving it unconfirmed, is exactly the resourcefulness this session has valued throughout.**
+
+**Ruled: investigate and fix now, same priority as this session's other severe defects.** A won fight silently paying nothing is a real, live gap in the core reward loop, not a UI polish item — find which of `_writeOutcome`'s two call sites should have fired for this scenario and why it didn't, then confirm against the same real scenario Tester used.
+
+### DEFECT 2 -- REAL, RULED FIX
+
+**A confirmed grant that's correctly persisted but not reflected live -- proven by the reload showing correct numbers -- is precisely diagnosed as a refresh gap, not a missing grant. Ruled: fix the live refresh so Vitality and Force pools update immediately on an Auto Level Up, not only after a reload. Real but smaller than Defect 1 -- fix it, not urgently ahead of the reward-outcome gap.**
+
+### THE SMALLER FINDING -- HELD, CORRECTLY CONNECTED
+
+**A disabled element failing to absorb its own tap, letting it leak through to whatever's behind it, correctly identified as the same underlying shape as the greyed-Continue defect from the other side, is precise pattern recognition. Held as its own small item -- worth fixing, not urgent.**
+
+### THE NEAR-MISS -- WORTH REAL RECOGNITION
+
+**Correctly catching one's own near-mistake before filing it, running the actual control (removing the item, confirming the screen handles its absence gracefully with a specific, honest reason) rather than trusting the first reading, and stating plainly that this session's earlier retraction is exactly why the control got run this time, is precisely the standard this whole thread of self-correction has been building toward. The screen declining to print a rating it can't compute, and saying so specifically, is confirmed as correct behaviour -- a pass, not a defect, and confirmed as one rather than assumed.**
+
+### PROCEED
+
+Investigate and fix Defect 1 now, urgent. Fix Defect 2's refresh gap. Hold the disabled-button tap-absorption gap as its own small item. Nothing else needed — the rest of TEST 123 stands confirmed.
+
+
+---
+
+## PT-2475 -- THE MOCKUP IMAGES GENUINELY CANNOT BE FOUND ANYWHERE CODER HAS ACCESS TO -- EXHAUSTIVELY SEARCHED, CONFIRMED ABSENT FROM ALL SIX REPOS AND EVERY PLAUSIBLE LOCAL LOCATION. OWNER TO SUPPLY THE PATH DIRECTLY. AND ⚠⚠⚠ THE RENDER-AND-LOOK APPROACH ALONE, WITHOUT THE MOCKUP, FOUND TWO REAL STRUCTURAL DEFECTS THAT THIRTEEN GREEN, TEXT-ONLY TESTS COULD NOT -- WORTH MAKING A PERMANENT PART OF THE STANDING PROCESS REGARDLESS OF WHETHER THE MOCKUP GETS FOUND
+
+**The search was genuinely thorough -- all six repos, the specific location that does hold real mockups (confirmed as chargen-only, nothing for any `§7c` screen), and every plausible local directory and filename pattern. This is a real, confirmed absence, not a gap in the search. The path needs to come from me directly, since neither of us can locate it independently.**
+
+**Owner note: I don't have the path either. Asking Aaron directly for wherever he was actually looking when he compared the build against the mockup -- until that's supplied, treat the images as genuinely unavailable rather than continuing to search for them.**
+
+### ⚠⚠⚠ THE RENDER-AND-LOOK APPROACH -- GENUINELY VALUABLE ON ITS OWN, WORTH KEEPING PERMANENTLY
+
+**This is the most important finding in the whole report, and it stands independent of whether the mockup images are ever located. Rendering both screens and actually looking at the result, rather than trusting that thirteen passing text-only assertions meant the layout was correct, found two real structural defects neither could have caught by construction -- every existing guard checked text content, and both defects were about boxes.**
+
+**A container taking its child's width rather than the width it was actually given, and an arc built as a column when the governing text said "beside it" -- a genuine misreading of ambiguous prose that only the rendered picture actually revealed -- are both exactly the kind of layout-structure defect no text assertion is even capable of expressing, let alone catching. Naming this explicitly -- "both defects predate Aaron's find and neither was findable by reading" -- is precise, and it's the right conclusion to draw: the render-and-look step isn't a workaround for the missing mockup, it's independently worth doing regardless.**
+
+**Ruled: render-and-look is now a permanent part of the standing process from `PT-2473`, not contingent on having the actual mockup image.** When the real mockup path arrives, compare against it too -- but don't wait for that comparison to also just look at what got rendered. Both defects found here confirm that step catches real things on its own.
+
+### EQUIP -- APPROVED, INCLUDING THE THREE HONESTLY-INERT STATES
+
+**Finding `worn_at` already on the shelf with zero readers, and recognising it as exactly the item-to-slot resolver this screen needed, is the same "prose with no reader" pattern this session has found and closed multiple times now, in a completely different corner of the corpus. Good, faithful use of what already existed rather than inventing a parallel resolver.**
+
+**All three honestly-inert states are correctly distinguished from bugs, and each for the right reason: equip cost is genuinely unruled, not missing; the second weapon configuration genuinely doesn't exist in any real data; and boots exist as a slot with a real reference claiming twenty-five real pairs, but zero of them actually present on the shelf. Building the screen to honestly say why it does nothing in each case, rather than either hiding the gap or inventing an answer to a genuinely unruled question, is exactly right.**
+
+### THE SLOT-COUNT DISCREPANCY -- HELD, NEEDS MY OWN REVIEW
+
+**Correctly not resolving this unilaterally -- a real inconsistency between two governing documents (both stating eleven slots, the actual diagram showing more distinct positions than that) is a document question, not an implementation one, and building to the diagram while reporting the count rather than picking a number is the right way to surface it. Held until I can review the actual diagram geometry directly rather than guess at a resolution without confidence.**
+
+### PROCEED
+
+Waiting on the mockup image path from Aaron directly. Take `PT-2474` (the missing fight-outcome write) next, as proposed — this is the higher-priority item regardless of the mockup question.
+
+
+---
+
+## PT-2476 -- DEFECT 1'S CAUSE FOUND PRECISELY: A THIRD SITE THAT SIMPLY DOESN'T EXIST -- THE CAST PATH NEVER CALLS THE FIGHT-ENDING LOGIC THE STRIKE PATH ALREADY HAS. TESTER'S "NO WEAPON HELD" WAS THE WHOLE DIAGNOSIS. AN EXISTING TEST FOUND BUILT AROUND THE DEFECT, ITS OWN COMMENT HONESTLY DOCUMENTING IT. AND A GENUINELY MATURE JUDGMENT CALL, CORRECTLY BROUGHT FOR CONFIRMATION RATHER THAN DECIDED ALONE: HOLD THE REAL FIX RATHER THAN RUSH FOUR FIXTURE REPAIRS AT THE END OF A LONG SLICE. RULED: LAND IT ALL NOW -- THE WORK IS CONFIRMED NOT HARD, AND THE DEFECT STAYS LIVE UNTIL IT DOES
+
+**"A rule applied to one path and not the next" is exactly the right, concise diagnosis, and tracing all five real checks to confirm the cast path genuinely contains none of them, rather than stopping at the first plausible-looking gap, is thorough elimination. Confirming Tester's "no weapon held" scope note was the entire diagnosis -- a weapon-holding character eventually strikes, and that path correctly ends the fight, so the defect only ever surfaces for a pure power-cast kill -- closes the loop between the two reports precisely.**
+
+### ⚠⚠⚠ THE TEST BUILT AROUND THE DEFECT -- FOUND AND CORRECTLY HANDLED
+
+**Finding `a_kill_pays_test` pressing escape before asserting, with its own comment already stating outright that this makes it pass regardless of whether the last-blow path works, is the same shape this session has caught repeatedly now -- a test that coincidentally passes against a real defect rather than actually exercising the thing it claims to verify. Writing the same fixture with the escape removed, watching it fail on the correct assertion before the fix and pass after, is exactly the right way to confirm a defect is real and a fix actually closes it, rather than trusting the diagnosis alone.**
+
+### ⚠⚠⚠ HOLDING THE FIX -- EXACTLY THE RIGHT INSTINCT, RULED TO PROCEED NOW
+
+**This is genuinely mature judgment, and it deserves to be named as such rather than just approved in passing. Recognising that four other fixtures were unknowingly built on the same defect -- asserting conditions on creatures in the same breath as those creatures being killed, only working because a won fight was incorrectly still lingering -- and refusing to repair all four at speed under end-of-session pressure, because that's precisely how assertions get quietly weakened rather than properly fixed, is exactly the self-awareness this session has valued throughout. Choosing the safest interim state -- fix written and preserved, guards honestly skipped with the real reason, cause recorded in the code itself -- rather than either rushing the repairs or silently shipping the defect, was the right call to bring for confirmation rather than decide alone.**
+
+**Ruled: proceed now. Land the fix and properly repair all four fixtures.** The reasoning for holding was sound, but the repairs are confirmed not hard, and there's no genuine deadline pressure here that the original caution was protecting against -- leaving a confirmed, precisely-diagnosed live defect and four skipped guards sitting unresolved has its own real cost the longer it sits. Take the time to repair each of the four properly, each needing a target that survives the cast, exactly as scoped.
+
+### DEFECT 2 -- CONFIRMED WIDER, CORRECTLY FIXED AT THE RIGHT DEPTH
+
+**Finding this was never just a display staleness issue -- the handed-in record was frozen at board-open time, so roughly ten separate real derivations (base attack, saves, DCs, the sheet, the Force pool's true maximum) were all silently computing against the smaller, pre-level-up character -- is a materially more complete diagnosis than "the pools don't refresh." Folding record and log together, reusing the exact pairing an existing piece of code already uses for the same purpose, rather than inventing a parallel mechanism, is the right architectural choice. Correctly re-deriving the Force pool's true maximum from the now-current class while preserving the log's own real projection for current and ceiling, rather than naively refilling the pool outright, is precise -- a level-up should raise the ceiling, not silently restore what's already been spent.**
+
+### PROCEED
+
+Land Defect 1's fix and repair all four affected fixtures now. Defect 2 closes as reported. The disabled Level Up tap-leak stays correctly held. Still waiting on the mockup path for the alignment arc colours — I've asked Aaron directly.

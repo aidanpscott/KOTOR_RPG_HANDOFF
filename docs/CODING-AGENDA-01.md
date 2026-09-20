@@ -6,12 +6,14 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: `REST-AND-MEDITATION-01` is a complete, settled ruling with zero implementation
+- **Ruled, measuring build scope (PT-2427).** The healing-economy question wasn't actually open — a real, already-SETTLED document (sourced from RCR, not the KOTOR video game) fully specifies rest and meditation as distinct mechanics: rest gives 1 vitality/level/hour plus wound and ability recovery; meditation gives none of that but refills and restores the Force ceiling, plus a band-boundary-capped alignment shift. Both draw from one shared time resource with crafting and droid construction. Verified the current build implements none of it. Measuring what a real build would require before proposing anything. Overlaps with the still-queued alignment tracking thread (band-boundary rule, the alignment shift) — likely needs coordinating rather than fully separate.
+
 ### `§10`'s reaction chain (Parry, Snap Shot, Overwatch) — small, held, own future question
 - **Reaction refresh cadence — not yet a question, will become one.** Deflection was the only thing ever spending the per-encounter reaction pool; now that it's Force-only, nothing does. The day `§10`'s chain is built, whether its members refresh per round or share the same per-encounter pool is the identical question just resolved for Deflection — flagged now so it isn't rediscovered from scratch later. Nothing broken today.
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **Healing-economy question — OPENED, own thread (PT-2426).** How cheaply vitality recovers between fights isn't measured. Measuring the real source's actual mechanism and rate, what the current build does (if anything), and whether it changes Master Force Body's pricing conclusion (`15/20/25`, `PT-2402`) or any other ruling that assumed vitality is meaningfully scarce. Next in queue after this closes: alignment tracking, then Combat Mind Trick's mechanical model.
 - **`blinded` — closed, 8 of 21 conditions enforced (PT-2395).** Two of four ruled clauses remain unbuilt: Dexterity loss (needs term-removal from the defence derivation, nothing currently supports it), sight-based auto-fail (needs a whole new check-categorization concept). Named plainly, not treated as done.
 
 

@@ -73860,3 +73860,22 @@ Nothing further needed — this closes all four items from `PT-2450` in full. St
 ### PROCEED
 
 Build both slices. Slice A: hearing range read from authored traits, structured beside the prose. Slice B: the Sith Trooper's `blind_spot` at 120°.
+
+
+---
+
+## PT-2455 -- BOTH SLICES CLOSE CLEAN. SLICE B'S NEW CONTENT BROKE THREE REAL TESTS, ALL CORRECTLY DIAGNOSED -- INCLUDING THE EXACT SAME TRAP TESTER HIT DAYS AGO: A DUPLICATE TOML KEY SILENTLY FAILING CHARACTER LOAD, MAKING THE TEST LOOK LIKE THE FEATURE WAS WORKING WHEN NOTHING WAS BEING TESTED AT ALL. AND A GENUINELY VALUABLE FIND: AN EXISTING CONTROL HAD ONLY EVER BEEN TRUE BY ACCIDENT, BECAUSE THE PRODUCT PREVIOUSLY HAD NO BLIND SPOTS TO BE ABSENT FROM
+
+**Slice A's absent-means-as-far-as-it-sees rule, matching `blind_spot`'s own precedent exactly, and the explicit guard against hearing ever exceeding sight, are both precise -- a helper that let hearing widen effective sight would have quietly undone the whole point of giving it its own field.**
+
+### ⚠⚠⚠ THE THREE BROKEN TESTS -- ALL GENUINE, ALL WORTH NAMING
+
+**Recognising the duplicate-key failure as the same shape Tester hit -- a test that looks like it's confirming the feature works while actually never reaching the code path being tested at all, because the character failed to load entirely -- is sharp, and catching it in one's own new content before it shipped is exactly the value of taking that earlier lesson seriously rather than filing it away as someone else's mistake.**
+
+**Finding that an existing "no blind spot" control had only ever been true by coincidence -- because nothing in the whole product previously had one -- and correctly recognising this needed to become an explicit, deliberate absence now that a real one exists, is a genuinely valuable catch. A control that's accidentally correct is a control that was never actually tested, the same shape as every other coincidentally-passing test this session has caught.**
+
+**And catching that a third test had baked in "adjacent therefore seen" as an unstated assumption, which stops being true the moment a real blind spot can put an adjacent player behind a creature rather than in front of it, while correctly preserving the actual claim that test existed to verify (suppression, not ending), shows real care about removing exactly the faulty premise and nothing more.**
+
+### PROCEED
+
+Nothing further needed -- both slices closed cleanly, three real test breaks correctly diagnosed and fixed. The two authored hearing ranges (Gundark, Montral Echo) correctly held as their own separate content decision, with the mechanism now ready whenever a creature carries either value.

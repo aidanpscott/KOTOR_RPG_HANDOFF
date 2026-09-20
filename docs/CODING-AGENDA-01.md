@@ -6,12 +6,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Disabled Level Up button leaks its tap to the dismiss barrier — small, held.** Same underlying shape as the greyed-Continue defect (`PT-2465`), from the other side — a disabled element not absorbing its own tap.
+- **Level-up screens (§7b), disabled Level Up tap-leak, and the mis-worded aim refusal — all ruled, building (PT-2481).** Level-up: the only severe item on the held list, genuinely unblocked (reuses four already-built chargen screens — Abilities, Skills, Feats, Powers — with level-up budgets substituted for creation budgets; needs a Class step at position 1 and a grant-summary on commit). Tap-leak: same `IgnorePointer` shape already proven on the package menu. Both small items approved alongside the main work.
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
 - **Equip's slot-count discrepancy — held, needs owner's own review.** Two governing documents both state "eleven slots"; the actual diagram shows more distinct positions than that. Built to the diagram, count correctly reported rather than silently resolved. Needs direct review of the diagram geometry before ruling.
-- **Level-up screens — held, severe, own future thread once the pattern is proven.** No Class/Abilities/Skills/Feats/Powers spend screen exists anywhere; every level-up decision is currently taken by nobody.
 - **Shared shell — held, deliberately, pending the map/grid view.** Building persistent nav bar/title bar/footer furniture around an undesigned play surface risks real rework. Revisit once the map/grid view has a locked design, or a real case emerges to build it sooner.
 - **Options/Settings — held, explicitly a first pass not a lock.** `PT-1255`'s own words, pending `PT-1140`/`PT-1148`, both still deferred. Building it now would be building against something not yet finalized.
 - **Fake placeholder credits value — small, held.** `_placeholderCredits = 120`, hardcoded. Inventory, Equip, and Store all need a real one.
@@ -22,7 +21,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
 
 - **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
-- **Mis-worded refusal when aiming outside a fight — small, held.** Refuses with "there is nothing here you can see to aim it at" when the real reason is no encounter is running — confirmed with both enemies visible one square away.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.
 
 

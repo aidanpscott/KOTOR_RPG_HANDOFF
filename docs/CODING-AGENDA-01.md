@@ -6,8 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: manual level-up path applies a hardcoded constant instead of recomputing pools
-- **Root cause fully characterized (PT-2487).** Not staleness, not partial recompute — a fixed constant applied regardless of the actual correct gain: Force always +8, Vitality always +0, decisively confirmed across three transitions with three different correct answers (+8, +13, +13) via a single elegant run (16→17, no ability point, class merely confirmed) holding both class and ability constant. Fix now: find where these constants are applied instead of a real recompute from the new level.
+### ⚠⚠⚠ SEVERE: _deriveForcePool mixes a fresh maximum with a stale current
+- **Found as a byproduct, fixed in code, honestly not claimed closed (PT-2489).** Extracted at `PT-2474`, never had its own input re-examined after leaving the context where its assumptions were correct — every later call mixes a fresh max with a stale current. Coder's own fixture produces an empty session log regardless of whether the fix is real, so the guard cannot distinguish a correct fix from an equivalent mutant. Correctly not called done. Coder's own next priority.
 - **Full grant-schedule audit — ruled, needed before this thread is broadly verified (PT-2486).** Only 2-3 class/level combinations directly spot-tested so far (Consular gets Powers at 13, Soldier gets Feats — confirmed correct and class-aware). Audit `grantsAtLevel`'s actual output against the real documented schedule for all 19 base classes across the full level range before trusting this beyond what's been spot-checked.
 - **Multiclassing invisible in the player-facing UI — real, held.** Correct in the log (`class: "soldier"`); header, party card, and Character Info all still show the original class after a multiclass level.
 - **Literal "null" string in Powers cost column — small, held.** For unpriced powers (Crush Opposition II, III, IV).
@@ -75,6 +75,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Vitality and Force pool refresh both closed, both paths. Root cause precisely refined Tester's own accurate symptom-level observation: not a literal hardcoded constant, but a real recompute running against a class list frozen at board-open, so Force's die term structurally couldn't move. Vitality confirmed as a genuinely skipped recompute (guarded to run once ever), tracing to PT-2474 having repaired only the Force half of this mechanism. Both now share one `_refreshForLevel`, called by both paths. Ruled: current Force does not automatically heal alongside the rising maximum at level-up — mirrors the pool's own already-ruled treatment rather than inventing new healing behavior — PT-2489
 
 - Level-up reaches play, end to end — the whole thread closed for this slice. All five commit events reuse existing chargen kinds, correctly anticipated by the data model's own comment. Honest near-miss: suspected a real gap (an unread field), verified before acting, found the multiclass upsert logic was already correctly built — "I nearly 'fixed' it," reported rather than quietly moved past. Two guards self-caught: the end-to-end test had bypassed real choice-making entirely (proved only the level was written, never the choices), rebuilt to drive through the real screen; a test that wrote nothing was an incomplete fixture, not a broken commit, verified directly and turned into a standing precondition — PT-2485
 

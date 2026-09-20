@@ -11,7 +11,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **Healing-economy question — small, held, own future item.** How cheaply vitality recovers between fights isn't measured. If ever looked at for its own reasons, revisit whether Master Force Body's pricing (`15/20/25`, ruled to hold at `PT-2402`) still holds under real numbers, since the "leave it alone" recommendation partly depended on vitality being a genuine governor.
+- **Healing-economy question — OPENED, own thread (PT-2426).** How cheaply vitality recovers between fights isn't measured. Measuring the real source's actual mechanism and rate, what the current build does (if anything), and whether it changes Master Force Body's pricing conclusion (`15/20/25`, `PT-2402`) or any other ruling that assumed vitality is meaningfully scarce. Next in queue after this closes: alignment tracking, then Combat Mind Trick's mechanical model.
 - **`blinded` — closed, 8 of 21 conditions enforced (PT-2395).** Two of four ruled clauses remain unbuilt: Dexterity loss (needs term-removal from the defence derivation, nothing currently supports it), sight-based auto-fail (needs a whole new check-categorization concept). Named plainly, not treated as done.
 
 

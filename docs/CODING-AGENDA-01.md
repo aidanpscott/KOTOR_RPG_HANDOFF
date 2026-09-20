@@ -6,7 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **`container.opened` and `door.unlocked` have no producer — OPENED, own thread (PT-2448).** Last two entries in the gate's producer warning; `PT-2433` closed four of six sharing this exact shape (fold already exists, writer missing). A picked lock doesn't currently stay picked. Measuring before proposing.
+- **`container.opened`'s missing test coverage — ruled, building (PT-2449).** Original premise wrong, corrected: both kinds already have complete producers via a shared helper. Gate's warning is a technically-true answer to its own narrow question (does the kind appear named at a literal construction site), not a real defect — the checker's own documented policy correctly refuses to credit dynamic sites. `door.unlocked` confirmed complete with two real guards. `container.opened` has a working producer but zero test coverage anywhere — building the missing guard, mirroring the door's shape exactly.
 
 - **Walking into a confused companion — small, held, genuinely unreachable today.** Under the faction-change override, walking into a confused ally would theoretically hit the existing walk-into-a-party-member refusal. Nothing in the corpus currently confuses a companion, so this branch is unreachable — held until something actually authors a companion-confusing effect.
 

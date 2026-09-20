@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **`container.opened` and `door.unlocked` have no producer — OPENED, own thread (PT-2448).** Last two entries in the gate's producer warning; `PT-2433` closed four of six sharing this exact shape (fold already exists, writer missing). A picked lock doesn't currently stay picked. Measuring before proposing.
+
 - **Walking into a confused companion — small, held, genuinely unreachable today.** Under the faction-change override, walking into a confused ally would theoretically hit the existing walk-into-a-party-member refusal. Nothing in the corpus currently confuses a companion, so this branch is unreachable — held until something actually authors a companion-confusing effect.
 
 ### ⚠⚠⚠ SEVERE: alignment tracking opens first, `REST-AND-MEDITATION-01` follows (real dependency confirmed)

@@ -74670,3 +74670,69 @@ Nothing further needed — all three items close cleanly with no defects found. 
 ### PROCEED
 
 Wire the flow into play — the Character Sheet's Level Up door, and what the commit actually writes to the log. This is the piece that turns the grant summary into a real event rather than a panel. Report back once done.
+
+
+---
+
+## PT-2485 -- LEVEL-UP REACHES PLAY, END TO END. GENUINELY ONE OF THE MOST IMPRESSIVE INDIVIDUAL REPORTS THIS SESSION HAS PRODUCED. "I NEARLY 'FIXED' IT" -- CORRECTLY VERIFYING A SUSPECTED GAP BEFORE ACTING AND FINDING THE MULTICLASS LOGIC WAS ALREADY CORRECTLY BUILT -- AND THE DISCIPLINED REFUSAL TO DEFEND AGAINST A GENUINELY UNREACHABLE CASE ("BUILDING A DEFENCE FOR A CASE NO INPUT CAN REACH WOULD BE WORSE THAN NAMING IT") ARE BOTH EXACTLY THE JUDGMENT THIS WHOLE THREAD HAS BEEN BUILT ON. TWO GUARDS SELF-CAUGHT AND CORRECTLY REBUILT, ONE OF THEM FINDING THE TEST HAD NEVER ACTUALLY EXERCISED THE REAL CHOICE-MAKING PATH AT ALL
+
+**Reusing all five existing chargen event kinds rather than inventing new ones, and finding the underlying data model's own comment had already anticipated this exact reuse case, is a genuinely satisfying architectural confirmation -- the foundation built earlier in this thread was designed correctly enough that level-up simply slots into it.**
+
+### ⚠⚠ "I NEARLY 'FIXED' IT" -- WORTH NAMING AS ITS OWN KIND OF DISCIPLINE
+
+**This deserves real, direct credit. Suspecting a genuine gap -- a field written and seemingly never read -- and then actually verifying that suspicion before acting on it, rather than confidently "fixing" something based on a first grep, found the multiclass upsert logic was already correctly built with its own comment explaining why the alternative approach couldn't do the job. This is exactly the discipline that separates a genuine fix from a confident, unnecessary, and potentially harmful change to something that was never broken. Reporting the near-miss honestly, rather than quietly moving on once the suspicion proved wrong, is what makes this trustworthy.**
+
+### ⚠⚠⚠ THE RECORDED-NOT-PATCHED GAP -- EXACTLY RIGHT JUDGMENT
+
+**Finding that a chargen re-open would discard a level-up's feat, tracing exactly why (a step-scoped clear that actually clears an entire field), and then correctly reasoning that the path producing this is genuinely unreachable given the real navigation structure -- rather than building speculative defensive code against an input nothing can produce -- is precise engineering judgment. "Building a defence for a case no input can reach would be worse than naming it" is exactly the right principle, stated plainly, and it's the same restraint this whole session has valued in every other place unreachable machinery was correctly left unbuilt rather than added just in case.**
+
+### THE TWO SELF-CAUGHT GUARDS -- GENUINELY VALUABLE FINDS
+
+⚠⚠⚠ **Finding that the end-to-end test drove completion through a shortcut that bypassed real choice-making entirely -- proving only that a level was written, never that a player's actual choices were -- is a severe and important catch. The join between a screen's own accept action and the commit was genuinely the untested part, and it was the part just written; catching that before trusting the test's own green result is exactly the vigilance this session has asked for throughout. Rebuilding it to drive through the real screen -- open it, press the button, confirm, assert the value survives a full replay -- closes the actual gap rather than the appearance of one.**
+
+**The second catch is equally honest: a test that initially wrote nothing looked exactly like a broken commit and was actually an incomplete fixture. Verifying the real declaration status directly, rather than assuming, and then adding that verification as the test's own permanent precondition, means this exact silent-failure shape can never recur unnoticed again -- turning a one-time catch into a standing guarantee.**
+
+**Correctly distinguishing a genuine no-op mutation and an accidental compile error from real mutation kills, and re-running both properly rather than letting either inflate the count, is honest verification under no real pressure to inflate anything -- worth noting as consistent practice, not just correctness under scrutiny.**
+
+### THE TWO REMAINING GAPS -- BOTH CORRECTLY SCOPED OUT, HELD
+
+**The thin `chargenData` fallback and the missing "what can this character buy at level N" catalogue answer are both honestly reported rather than smoothed over. The second is correctly identified as real content work, not wiring -- properly scoped as its own future item rather than something to patch hastily now.**
+
+### PROCEED
+
+Level-up is closed end to end for this slice. Both remaining gaps held as their own future items. Ready to route Tester's combined pass — the level-up screens at both ends, the pool-refresh re-confirmation, and PT-2476's fight-outcome fight on m06-xp — against this build.
+
+
+---
+
+## PT-2486 -- ITEM 1 CONFIRMED DECISIVELY ON EVERY CLAUSE, INCLUDING A CASCADING SECOND-ORDER EFFECT (CLASS SWITCH RESHAPES WHICH SKILLS COUNT AS CLASS SKILLS, NOT JUST THE STEP SET). ITEM 3 CLOSES THE XP CLAUSE PROPERLY, BY EARNING IT. BUT ⚠⚠⚠ ITEM 2 IS SEVERE AND NOT FIXED: THE MANUAL LEVEL-UP PATH LEAVES BOTH POOLS STALE, AND THE FORCE POOL IS WORSE THAN STALE -- IT DISPLAYS A DIFFERENT WRONG NUMBER A PLAYER HAS NO REASON TO DISTRUST. AND OWNER'S OWN OBSERVATION ABOUT MISSING POWERS/FEATS DESERVES A REAL, SYSTEMATIC CHECK -- NOT A REASSURANCE FROM THE ONE CLASS/LEVEL COMBINATION ALREADY TESTED
+
+**Confirming the class-switch behaviour down to the class-skill reshaping -- Archaeology moving from 1/rank cap 4 to 2/rank cap 2 the moment Soldier replaces Consular -- is exactly the kind of second-order effect that's easy to miss when only checking the step list itself. Decoding the actual commit from the raw save, confirming every discarded choice leaves genuinely no trace, and confirming the cap boundary shows buttons as absent rather than merely disabled, closes item 1 completely.**
+
+**Item 3 finally closing the "Needed changes after gaining XP" clause by earning the XP directly, with the exact predicted floor of 25 confirmed before the fight even ran, is the proper close this clause has been owed since it was first blocked.**
+
+### ⚠⚠⚠ ITEM 2 -- SEVERE, RULED FIX NOW, WORSE THAN THE ORIGINAL DEFECT
+
+**This needs to be treated with real urgency. `PT-2474`'s fix closed the staleness for Auto Level Up specifically; the manual flow built afterward evidently never inherited it, and the two paths have diverged in a way that leaves the newer, more central path broken.**
+
+**The Force pool's behaviour is the more severe half, and it's worth stating precisely why: a stale number that matches the old, correct value is at least internally consistent and a careful player might notice the pool didn't move. A live number that's neither the old value nor the new correct one is actively misleading -- it looks like a fresh, working result, and nothing distinguishes it from a genuinely correct grant. This is a worse failure mode than the one already fixed, not a milder recurrence of it.**
+
+**Ruled: fix now, same priority as this thread's other severe items. Find why the manual flow's commit doesn't route through the same refresh mechanism `PT-2474` built for Auto Level Up, and confirm both paths land on the identical, correct live value -- not just that each independently reaches the right number after a reload.**
+
+### THE ADDITIONAL FINDINGS -- BOTH REAL, TRACKED
+
+**Investigating the Jedi-multiclass-out trap and decisively proving it isn't one, rather than assuming safety from the presence of Cancel and Back, is exactly the right level of rigor for something that looked like it could have been a real problem.**
+
+⚠⚠ **Multiclassing being genuinely invisible anywhere in the player-facing UI -- correct in the log, unreflected on the header, the party card, or Character Info -- is a real gap worth its own item.** Held for its own attention.
+
+**The literal "null" string in the Powers cost column for unpriced powers is small and real. Held.**
+
+### OWNER'S OBSERVATION -- REAL QUESTION, NOT ANSWERED YET BY WHAT'S BEEN TESTED
+
+**Tester's own report does show Powers appearing correctly for the Jedi Consular at level 13 (`Class · Skills · POWERS`), and Feats correctly appearing for Soldier instead -- so the one specific case tested is confirmed correct, and the class-specific step sets are demonstrably not identical, which is itself evidence the underlying schedule is doing something real and class-aware rather than nothing. But that's two classes at two or three levels, not a systematic check against what every class should actually grant at every level. The underlying question -- does `grantsAtLevel` correctly match the real, intended schedule for all 19 starting classes across the full level range, not just the ones spot-tested so far -- hasn't actually been verified at that scope, and it deserves to be before this thread is trusted broadly.**
+
+**Ruled: audit `grantsAtLevel`'s actual output against the real documented grant schedule for every base class, across the full level range, before this is considered fully verified rather than spot-checked.** This is exactly the kind of systematic verification this session has repeatedly found value in doing once a spot check raises the right question. Report back with the real scope -- confirmed correct across the board, or specific discrepancies found.
+
+### PROCEED
+
+Fix the pool-refresh regression on the manual path now, urgent. Audit the full grant schedule across all classes and levels before this thread is considered broadly verified. Multiclass UI-invisibility and the null cost string both tracked as their own held items.

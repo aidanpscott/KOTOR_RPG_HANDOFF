@@ -19,13 +19,12 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Small items found along the way
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
-- **`blinded` — closed, 8 of 21 conditions enforced (PT-2395).** Two of four ruled clauses remain unbuilt: Dexterity loss (needs term-removal from the defence derivation, nothing currently supports it), sight-based auto-fail (needs a whole new check-categorization concept). Named plainly, not treated as done.
+- **`blinded`'s two remaining clauses — OPENED, own thread (PT-2444).** Dexterity loss (term-removal from the defence derivation) and sight-based auto-fail (a new check-categorization concept). Both real, reusable infrastructure, not narrow one-offs — the first is the same shape any future "lose a term you already have" effect would need. Measuring both before proposing.
 
 
 
 ### Unrepresentable-concept spinoffs — held, deliberately
 - **`entangled` — held, own source ambiguity.** `require_check`, the third `§7` field, deliberately left unbuilt. Its own spec states `forbid: move # or halve, per source` — the source itself doesn't commit to one behavior. One real application (Adhesive Grenade).
-- **Perception mechanism (`beast_control`/`force_distraction`) — held, genuinely new gap.** Keyed on a `distracted` condition with no name in this ruleset. The one of four unbuilt-mechanism categories not already covered by existing held work.
 - **Force Push's size-viability gate — held, own separate question.** Four real conditions (size, not-turret, not-a-specific-droid-shield-exception, not-immobile), over creature size — a concept that doesn't exist anywhere in the corpus at all, not just for this one power. Same treatment as named-character gates. `mayTarget` stays correctly permissive; not urgent, doesn't block anything.
 - **Named-character gates (17 items)** — correctly unrepresentable, this format has no canonical-named-companion concept.
 - **Authored-creature feats** — own separate unforced format question, no urgency.

@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Force Distraction / Force Confusion duration — balance ruling, 10 rounds → 5 (PT-2460).** Deliberate departure from the source's own stated number, made on balance grounds. Both powers already fully confirmed working at 10 rounds (`TEST 119`, `TEST 120`) — only the duration constant changes, mechanism and refusals unaffected. Change both `distraction_rounds` and `confusion_rounds` fields.
+
 - **Continue/New Game timing trap — small, held.** A brief window where Continue is greyed during save-scanning; a click landing in that window silently opens New Game instead of the intended save.
 
 - **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.

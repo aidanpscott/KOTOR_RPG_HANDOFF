@@ -74066,3 +74066,50 @@ Extend the duration change to Beast Control and Beast Confusion. Nothing else ne
 ### PROCEED
 
 Nothing further needed -- closed cleanly. Ready to route the full confirmation to Tester now that all four powers agree.
+
+
+---
+
+## PT-2464 -- TEST 121 CONFIRMS THE DURATION CHANGE DECISIVELY ON BOTH REACHABLE POWERS, WITH A GENUINELY ELEGANT MATHEMATICAL CONFIRMATION (SOLVING FOR THE ACTUAL EXPIRY ROUND FROM TWO READINGS OF THE REFUSAL MESSAGE'S OWN COUNTDOWN). HONEST LIMIT CORRECTLY DRAWN: BEAST VARIANTS' DURATION IS INHERITED, NOT OBSERVED, SINCE NOTHING CAN CURRENTLY BE CLASSIFIED AS BEAST. THE DROID GATE RE-VERIFIED THROUGH REAL CASTING WITH THE FORCE POOL ITSELF AS AN INDEPENDENT WITNESS. AND A SEVERE NEW FIND: A TAG/HANDLE MISMATCH MAKES A WHOLE SAVE SYSTEM PERMANENTLY UNREADABLE WITH ZERO ERROR MESSAGE -- THE SAME SILENT-FAILURE SHAPE AS TEST 120's EMPTY-PARTY LOAD
+
+**Both confirmations are decisive. The pursuit-return-on-round-five observation and the countdown-solving-for-expiry approach are two independent methods converging on the same number, which is stronger evidence than either alone -- and confirming ten would have produced a visibly different result in both (standing still four more rounds; opening at 8 rather than 3) makes this a real discrimination between the old and new values, not just a check that a number changed.**
+
+**Correctly distinguishing "I can stand behind two" from claiming all four were tested is exactly the honesty this session has held throughout -- the beast variants' duration is a reasonable inference from a shared code path, not an independent observation, and saying so plainly rather than letting the confirmation read as more complete than it is matters.**
+
+### THE DROID GATE -- RE-CONFIRMED DECISIVELY
+
+**Testing through real casting rather than the picker's cosmetic marker, with sentient controls proving the gate isn't simply refusing everything, and the Force pool itself serving as an independent witness that all ten refusals genuinely cost nothing, is exactly the standard this defect's history has demanded. This closes the whole thread properly.**
+
+### ⚠⚠ THE SILENT UNREADABLE-SAVE FIND -- SEVERE, WORTH TRACKING
+
+**A tag not matching its own blueprint's handle making an entire save system permanently unreadable, with no error, no save-count line, and nothing naming the cause, is a real, severe silent-failure shape -- and correctly connecting it to the empty-party load from `TEST 120` as the same recurring pattern is precise. The refusal itself is probably correct; the silence around it is what actually costs time, exactly as flagged.**
+
+**Held as its own tracked item -- worth its own investigation the same way the empty-party load got one, given the same underlying shape has now surfaced twice.**
+
+### PROCEED
+
+Silent unreadable-save shape tracked as its own held item. Duration and droid-gate confirmations both closed. Continuing to `PT-2464`'s own report below.
+
+---
+
+## PT-2465 -- ITEMS 1 AND 2 CLOSE CLEAN. AND ⚠⚠⚠ A GENUINELY SIGNIFICANT FIND ON ITEM 3: THE CHARACTER SHEET, INVENTORY BAG, AND MAP ARE THREE SEPARATE OVERLAY SCREENS THE ESCAPE-KEY ROUTER DOESN'T KNOW ABOUT AT ALL -- CONFIRMING TESTER'S "WITH NO MENU OPEN" WAS LITERALLY TRUE FROM THE PLAYER'S SIDE, EVEN THOUGH ONE OF THESE THREE WAS ACTUALLY OPEN THE WHOLE TIME. RULED TO FIX
+
+**Item 1's root cause -- a pointer system that doesn't respect visual disabling at all, moving focus before the action guard ever gets a chance to refuse -- is precisely diagnosed, and keeping the existing guard rather than replacing it, since the keyboard path still needs it with no pointer involved, is the right minimal fix.**
+
+**Item 2's fix closes cleanly, and finding the codebase's own pre-existing comment already naming this exact defect -- "a true sentence about the wrong thing," written before anyone set out to fix it -- is a genuinely satisfying confirmation that this was a real, previously-recognised gap rather than a fresh discovery. Updating both halves of the comparison test rather than just the one that changed, so the untouched half doesn't end up asserting the absence of a string that can no longer appear, is careful, complete follow-through.**
+
+### ⚠⚠⚠ ITEM 3 -- THE REAL ANSWER TO "WHICH CHARACTER MENUS ARE ON THE LIST"
+
+**This is a genuinely valuable investigation, and it resolves a real ambiguity precisely. Confirming escape-leaves-the-board is partly deliberate by original design -- `BUILD 41`'s own choice, so that walking away from a fight persists correctly -- while separately identifying the actual, unintended cause of the reported confusion is exactly the right way to handle a bug report that turns out to be half-feature, half-defect. Conflating the two would have either dismissed a real problem as intentional or "fixed" something that was working as designed.**
+
+**Finding that three real overlay screens -- the character sheet, the inventory bag, and the map -- are structurally absent from the router's list of modes escape should close first, so escape falls straight through to leaving the board whenever any of them is open, precisely explains Tester's own "with no menu open" observation. It was true from the player's side: nothing the router recognises as a menu was open, even though a real, different overlay was. That's a precise, complete explanation, not a guess at one.**
+
+**Correctly not fixing this unilaterally, given every other mode in that router list arrived via an explicit ruling and this changes what a bound key does while three specific screens are open, is exactly the right instinct -- and confirming separately that no actual progress or data is lost through this path either way, since `_leaveScreen` persists correctly before departing, means the whole cost of this gap has been inconvenience and confusion, not anything worse.**
+
+### RULED -- ADD ALL THREE
+
+**Add the character sheet, inventory bag, and map to the router, so escape closes whichever of the three is open rather than falling through to leaving the board.** This matches the same treatment every other mode in that list already received, and the confirmed absence of any real data-loss risk means there's no reason to hold this back for further deliberation -- it's a small, correctly-scoped, low-risk fix closing a real, precisely-diagnosed gap.
+
+### PROCEED
+
+Build the router addition for all three overlays. This closes the escape investigation in full.

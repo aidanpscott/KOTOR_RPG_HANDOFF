@@ -6,10 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### Rest/meditation: two real gaps confirmed in play, both ruled fix-now
-- **Ceiling-degradation reload asymmetry — real, ruled, fix now (PT-2440).** The meditation cap correctly survives a reload, but the Force ceiling degradation it's spent against does not — reverts to full for free, while spent meditation attempts stay spent. Vitality already correctly persists across reload; this needs the same treatment.
-- **Alignment has no player-facing readout — ruled, fix now (PT-2440).** `alignmentFrom` has zero callers in the app. Mechanism confirmed thoroughly correct at the engine level (real logged inputs, direct production-function testing across hysteresis, resistance, and the band-boundary cap in both directions) — purely an observability gap. Add band and score to the character sheet's existing info section, alongside Species.
-
 ### ⚠⚠⚠ SEVERE: alignment tracking opens first, `REST-AND-MEDITATION-01` follows (real dependency confirmed)
 - **Day clock — closed (PT-2430).** Found already fully settled (`CLOCK-01 §5/§6`): day-only granularity, GM-declared elapsed time, no separate "narrative clock" object. Built as a logged event + a ledger fold (`elapsedDays`), matching the same pattern as `partyIn`/`flagsFrom` — no stored counter.
 - **Session window and meditation's two tiers — closed (PT-2431).** Session built as `sinceSessionStart` fold, with a genuinely dangerous edge case caught: no marker yet must mean the whole log, not an empty window, or passive recovery would silently self-grant to a character who used dark powers all day before any session boundary existed. Meditation built as two discrete event kinds (`meditation.short`/`.long`), capped by count not duration. "75% of lost" verified as the only reading that keeps `§4.4`'s own claim true (short meditation never fully restores) — two plausible wrong readings would have lowered the ceiling instead. Rounds down, flagged as a reading not a stated fact.
@@ -52,6 +48,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Rest/meditation's two real play-confirmed gaps both closed. Reload asymmetry traced to its root: only `encounter.ended` had ever carried Force state, so a cast, either meditation tier, or a rest had nowhere to persist outside a fight — all four events now carry it. A subtle, easy-to-get-backward bug caught and explained precisely: recording what an action left (`after`) rather than what it found, since a naive `before` read would have silently made every power look free. Absent field correctly means "leave the pool alone," specifically protecting every pre-existing save from a catastrophic empty-pool misread. Alignment readout added (band and score together, since the hysteresis rule means the same score can sit in two different bands — neither number alone is checkable). A guard caught a real oversight (four new event kinds not registered in a related declaration set) — honestly credited to the guard, not claimed as a personal catch — PT-2441
 
 - Force Distraction (Combat Mind Trick) closed — all five slices, zero new consumer code needed, confirming the consumer-first check was worth doing. Two more genuinely valuable self-caught test failures: a fixture that never exercised a genuine made save, and a case where "nothing was distracted" was equally true of a refused cast, a made save, and a broken build. One claim honestly reported as untestable given the fixture's own limitations, with real indirect evidence offered rather than overclaiming or dropping it. `targets: sentient` closed on both rows per PT-2436's ruling. A new guard's own quality catch: it called the underlying helper directly rather than the actual reader meant to use it — fixed to call the real reader — PT-2437
 

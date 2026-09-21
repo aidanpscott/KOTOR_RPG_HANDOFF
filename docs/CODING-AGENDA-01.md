@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Party Selection — opened, building, the seventh and last (PT-2533).** Checking the mockup and real K2 source files first, same discipline as every screen so far, despite `PT-1254` already deliberately departing from K2's ring shape for a roster list — every prior departed-from-source screen has still turned up real corrections by checking.
+
 - **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
 - **Good Effects column will render permanently empty on current data — noted, not a defect.** No beneficial condition exists anywhere in the current rules (all 19 condition-applying powers affect enemies only). Architecturally correct, derived from the roster's own `affects` field — will populate correctly the day a beneficial condition exists.
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.

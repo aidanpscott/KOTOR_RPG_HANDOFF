@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Abilities' Powers tab may need real chaining — opened, investigate before building (PT-2506).** Owner suspects Powers should chain by tier the same way Feats already correctly does. Tester's TEST 127 description supports this — Powers rendered as "a nine-column icon grid," structurally different from Feats' "chains of boxes joined by arrows." Investigate: chargen's own `PowersScreen` (already confirmed working, reused unchanged for level-up) first, then any Powers-specific mockup, then the real K2 source files. Report before building.
+
 ### ⚠⚠⚠ Four real defects from TEST 127 and the Equip-lattice close — all ruled fix-now
 - **Double-border defect — ruled fix now (PT-2504).** Three of four panels (Inventory, Equip, Abilities) draw their own inner frame on top of the shell's outer frame; the Character Sheet is the sole correctly-behaving one. Fix: suppress the three panels' inner frames using `PT-2500`'s own `_FrameScope` mechanism, matching the Character Sheet's already-correct behavior.
 - **Empty-bag state structurally unreachable — severe, ruled fix now (PT-2504).** A routing key (`'route': 'standard'`) written into every character's equipment payload renders as a real worn item called "standard (Equipped)." Proven decisively: dropping the key reproduces the honest-empty message immediately. No character the app can currently produce ever sees the empty-bag messaging built at `PT-2494`.

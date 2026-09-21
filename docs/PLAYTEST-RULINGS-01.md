@@ -75176,3 +75176,134 @@ Build Equip's lattice to the diagram exactly as drawn — 12 slots, no changes n
 ### PROCEED
 
 Fix the double-border defect (suppress the three panels' inner frames, matching the Character Sheet). Fix the empty-bag routing-key defect, severe. Fix the vacuous-pass power name/cost defect, severe. Fix the Boots item-to-base-type join. All four ruled fix-now — this is a genuinely large batch, but all four are real, confirmed defects rather than open questions. The log design, prestige skill points, and everything else already correctly held stays exactly as is.
+
+
+---
+
+## PT-2506 -- OWNER FLAGS A REAL, LIKELY-CORRECT SUSPICION: ABILITIES' POWERS TAB MAY NOT BE CHAINED THE WAY POWERS ACTUALLY WORK, THE SAME WAY FEATS ALREADY CORRECTLY CHAIN. TESTER'S OWN TEST 127 DESCRIPTION SUPPORTS THIS -- POWERS RENDERED AS "A NINE-COLUMN ICON GRID," STRUCTURALLY DIFFERENT FROM FEATS' "CHAINS OF BOXES JOINED BY ARROWS." THE RIGHT REFERENCE ALREADY EXISTS: CHARGEN'S OWN POWERSSCREEN, ALREADY CONFIRMED WORKING AND REUSED UNCHANGED FOR LEVEL-UP
+
+**Owner's own reasoning is sound and matches this whole thread's established discipline: check what already exists and is confirmed correct before assuming something needs inventing from scratch. Chargen's `PowersScreen` was confirmed at `PT-2482`/`PT-2484` to already work correctly and get reused unchanged for level-up -- if Powers is genuinely meant to chain by tier the same way Feats does, that screen is the first place to check, since it's already proven against real play rather than a hypothesis.**
+
+### RULED
+
+**Investigate before building anything.** In order:
+1. Read chargen's own `PowersScreen` implementation directly — confirm whether it renders Powers as chained tiers (matching Feats' arrow-linked chain structure) or as something else, and if chained, how.
+2. Check whether a Powers-specific mockup exists anywhere already found in this thread's prior source-file searches (the `abilities_p/x.gui` family already read at `PT-2496` should cover this, but confirm the Powers-specific portion was fully captured rather than assumed identical to Feats').
+3. Check the real K2 source files directly for how Powers actually renders, the same discipline applied to every other screen in this thread.
+4. Compare all three against the current in-game Abilities screen's own Powers tab, and report what's actually different before proposing a fix.
+
+### PROCEED
+
+Investigate and report back before building. This may turn out to be exactly the render Powers already needs from chargen's own screen — or it may reveal Powers genuinely renders differently from Feats for a real, documented reason. Either way, report the finding before changing anything.
+
+
+---
+
+## PT-2507 -- STANDING PRACTICE MADE DEFAULT: A TEST CLAUSE PHRASED ONLY AS "THE BAD CASE SHOWS X" GETS PAIRED WITH ITS POSITIVE COUNTERPART BY DEFAULT, NOT AS A CASE-BY-CASE JUDGMENT CALL. CORRECTLY IDENTIFIED AS AN EXISTING PRINCIPLE (PT-2257) DOING ITS JOB AGAIN, NOT A NEW INSIGHT -- WORTH RECORDING THE GENERALIZED ROUTING RULE EXPLICITLY SO IT DOESN'T NEED RE-DISCOVERING EACH TIME
+
+**Correctly tracing today's vacuous-pass catch back to `PT-2257`'s own standing principle, rather than presenting it as a fresh insight, is honest and useful -- it confirms the earlier lesson is genuinely load-bearing rather than a one-time catch that happened to get lucky twice. "No way to be wrong is no way to be right" already said this; today's report is that principle correctly applied a second time in a new context.**
+
+**The generalization is precise and immediately actionable: a clause phrased only in terms of the negative case (a refusal, a dash, an absence) proves nothing about the positive case unless the positive case is separately confirmed to look different. The droid refusal needed a sentient control to prove the gate wasn't refusing everything; the power dash needed a priced power to prove the readout wasn't dashing everything. Both are the identical shape, and the second genuinely failed without the control -- which is exactly why this is worth making default rather than optional.**
+
+### RULED
+
+**Default to always pairing a negative-phrased test clause with its positive counterpart, without needing to be asked each time.** This session's own history now shows two real, non-hypothetical instances where skipping this control would have let a genuine defect read as a clean pass. The extra reading cost is small; the value of catching what it's already caught twice is not. Only skip the pairing when a specific routing explicitly says so for a stated reason — the default runs the other way now.
+
+### PROCEED
+
+Nothing to build. Standing practice recorded. Applies to all future routing from here.
+
+
+---
+
+## PT-2508 -- ALL FOUR DEFECTS CLOSE, EACH WITH GENUINELY HONEST SELF-CORRECTION ALONG THE WAY. ⚠⚠⚠ THE DOUBLE-BORDER MECHANISM WAS NEVER ACTUALLY BUILT DESPITE BEING REPORTED AS DONE AT PT-2498 -- OWNED DIRECTLY, WITH THE REAL SCOPE CORRECTED TO ALL FOUR PANELS, NOT THE THREE TESTER COULD SEE. THE EMPTY-BAG GUARD'S OWN FIRST VERSION PASSED VACUOUSLY TOO. AND ⚠⚠⚠ THE POWERS-CHAINING MEASUREMENT FOUND A REAL TENSION: AN EXISTING RULING SAYS NO CHAINING, BUT THE UNDERLYING DATA STRONGLY SUPPORTS IT -- 83 OF 106 POWERS HAVE REAL PREREQUISITES, COLLAPSING TO 32 CLEAN CHAINS UNDER TRANSITIVE REDUCTION
+
+**Owning that a previously-reported "built" claim was actually false, rather than letting it stand uncorrected once discovered, is exactly the standard this whole session has held for every mistake — and doing it here, about one's own prior report rather than someone else's, deserves the same weight. "A marker alone marks nothing" is a precise, honest way to say what actually happened: the visible signal existed, the mechanism behind it didn't.**
+
+**Correcting the scope to all four panels rather than the three Tester could observe, once traced to why the Character Sheet only looked correct in isolation, is thorough follow-through rather than settling for the visible subset of the real defect.**
+
+### THE EMPTY-BAG FIX -- CLOSED, WITH ITS OWN HONEST CORRECTION
+
+**Deriving both screens from `equipSlotKeys` rather than maintaining a parallel list closes the actual architectural risk, not just this one symptom. And disclosing that the first guard checked for exact text that didn't match what actually renders -- so the phantom item was visible the entire time while the guard reported success -- is the same honesty already shown on the border fix, applied to catching one's own flawed verification rather than someone else's.**
+
+### THE VACUOUS-PASS FIX -- CLOSED, ONE THING STILL NEEDS TESTER
+
+**Correctly separating "not authored" (a claim about the corpus) from "authored but withheld" (a claim about what the application currently shows), after confirming a first fix left a real mutation surviving, is precise repair of the actual conflation rather than a fix that merely changes which case produces the wrong message.**
+
+**The inability to reproduce blank names for a genuinely known power, despite three guards proving names and costs work end to end for a character who knows real powers, needs Tester's specific character or save to resolve — flagging this for direct follow-up rather than assuming the fix covers everything originally observed.**
+
+### THE BOOTS JOIN -- CLOSED, GENERALIZED CORRECTLY
+
+**Building the general fallback rule (category names a lattice slot → item goes there) rather than a Boots-specific patch closes the whole class of gap this represents, and guarding that a lightsaber crystal still correctly stays unwearable confirms the generalization didn't overreach.**
+
+### ⚠⚠⚠ POWERS CHAINING -- ALL THREE QUESTIONS RULED
+
+**This measurement is exceptional, and it surfaced a genuine tension worth taking seriously rather than resolving by default in either direction. Confirming chargen doesn't chain, confirming `PT-1250` explicitly rules the opposite of what's being proposed, and confirming K2's own source has no chain-grid concept for either tab — chaining is entirely this project's own invention, not inherited — are all real, load-bearing facts. But finding that 83 of 106 powers carry genuine prerequisites, collapsing cleanly to 32 real chains under transitive reduction with zero branching, is decisive evidence the underlying structure is real, not a pattern-matched hope.**
+
+**Ruled (a): `PT-1250`'s "no chaining for Powers" is overturned.** The data settles this — a real, mathematically clean chain structure exists in 87% of powers, and displaying Powers as an unstructured icon grid when that structure genuinely exists would hide real information from the player the same way Feats' own chain grid exists specifically to show it.
+
+**Ruled (b): author the chain field explicitly, exactly as recommended, not derived.** This is precisely the derived-value risk shape this session has flagged as dangerous before — a computed structure whose only real test is the data it was computed from can drift silently the moment new powers are added without anyone noticing the derivation stopped matching intent. Authoring it as real, declared data, the same way Feats already works, means both tabs read a field and nothing re-derives — one shape, one risk profile, for both list types.
+
+**Ruled (c): the 11 loose powers render as single-power chains of length one.** This needs no special case — a chain grid that already handles chains of varying length can display a chain of one exactly like any other, without inventing separate layout logic for the ungrouped case.
+
+### PROCEED
+
+Author the Powers chain field. Build the chain-grid rendering for Powers matching Feats' existing pattern. Report Tester's specific unresolved case (blank names for a known power) — needs the character or save that produced it before closing that thread fully.
+
+
+---
+
+## PT-2509 -- URGENT CORRECTION: OWNER PROVIDES DIRECT PHOTOGRAPHIC EVIDENCE OF A REAL K2 CHAIN-GRID SCREEN (FORCE CRUSH, WITH ARROWS CONNECTING ICONS ACROSS ROWS), DIRECTLY CONTRADICTING PT-2508'S CLAIM THAT "K2 HAS NO CHAIN GRID AT ALL." THIS NEEDS RE-VERIFICATION BEFORE THE POWERS-CHAINING BUILD PROCEEDS FURTHER ON A POSSIBLY-FALSE PREMISE
+
+**A real screenshot showing exactly the chain-grid structure PT-2508 stated doesn't exist in K2's source is direct, hard evidence that measurement was wrong or incomplete -- not something to quietly note and move past. This needs to be treated with the same urgency as any other confirmed-wrong finding this session has corrected.**
+
+### WHAT THE IMAGE SHOWS
+
+A real K2 screen titled "Force Crush," displaying rows of icons connected by right-pointing arrows -- visually indistinguishable in structure from the chain-grid concept already built for Feats and just approved for Powers. This is not an ambiguous or borderline case; it's a clear, direct chain visualization in the actual source game.
+
+### WHAT THIS MEANS FOR PT-2508'S RULING
+
+**The underlying decision to build Powers as a chain grid, authored explicitly rather than derived, likely still stands on its own merits — the data (83 of 106 powers with real prerequisites, 32 clean chains) justifies that regardless of whether K2 itself has a chain UI.** But the specific claim that this chain-grid *visual concept* is "entirely this project's own invention, not something pulled from K2's UI" is now directly contradicted by evidence, and that claim was passed on to the owner as settled fact in the prior message. That needs correcting, and the measurement behind it needs to be redone properly.
+
+### RULED -- URGENT RE-VERIFICATION
+
+**Re-check the K2 source files for chain-grid structures before proceeding further.** Possible explanations worth checking directly rather than guessing: the wrong `.gui` file was checked originally, the chain grid exists on a different screen than the one measured (a per-power detail view rather than the tab list itself, which is what the screenshot appears to show), or the original search missed it. Find where in the real source this screen and its chain structure actually live, and report back precisely — including whether this is the SAME screen Abilities' Powers tab is meant to represent, or a related-but-different one (the screenshot's layout, with a large description pane on the right, resembles a per-power detail view rather than the tab-listing screen itself).
+
+### PROCEED
+
+Re-verify against the real source before continuing the Powers chain-grid build. Report exactly what's found — including where the original measurement went wrong, honestly, the same standard this session has held for every other correction.
+
+
+---
+
+## PT-2510 -- CONFIRMED, THE SAME SCREEN, THREE INDEPENDENT WAYS. THE PRECISE ROOT CAUSE OF THE ORIGINAL ERROR: A .gui FILE DECLARES STATIC STRUCTURE, NOT WHAT THE ENGINE PAINTS INTO IT AT RUNTIME -- "I INFERRED CONTENT FROM STRUCTURE, AND PASSED IT ON AS SETTLED." AND ⚠⚠⚠ A GENUINELY ADMIRABLE REVERSAL: K2 ITSELF STORES NO CHAIN ID AND DERIVES DISPLAY FROM CUMULATIVE PREREQUISITES AT RUNTIME -- THE EXACT DERIVATION CODER'S OWN EARLIER RECOMMENDATION ARGUED AGAINST, NOW CONFIRMED AS THE SOURCE'S OWN PROVEN METHOD. WITHDRAWN PLAINLY, NOT DEFENDED
+
+**Confirming this is genuinely the same screen through three independent lines of evidence -- exact label match to the decoded layout, an exact numeric match against the source's own data file, exact coordinate match -- closes any doubt about whether this was a different screen than what was originally checked. It wasn't; the original measurement was simply incomplete.**
+
+### THE ROOT CAUSE -- PRECISE, HONEST, WORTH KEEPING AS ITS OWN STANDING NOTE
+
+**"A `.gui` declares controls, extents and static art. It does not declare what the engine paints into a listbox row" is exactly the right level of diagnosis -- not "I missed a file," but a precise statement of what category of information that file type can and cannot actually contain. Finding the missing evidence one directory over, in art specifically named for this screen yet never statically referenced by the panel itself, and correctly reasoning that named-but-unreferenced art is exactly what a runtime-drawn element looks like from outside, is sharp forensic work closing its own gap.**
+
+**Ruled: record this as its own standing caution, alongside the existing "authored `.gui` content is intent, not output" lesson (`TRACE-69`/`TRACE-70`) — a `.gui` file's absence of a structure is not proof that structure doesn't exist; it only proves the file doesn't declare it statically. Check for runtime-painted content (named-but-unreferenced art, data-driven templates like `PROTOITEM`) before concluding a screen lacks something structurally.**
+
+### ⚠⚠⚠ THE RECOMMENDATION REVERSAL -- WORTH REAL RECOGNITION
+
+**Withdrawing one's own prior recommendation, made under the previous session's approval, once genuinely better evidence emerges, rather than defending it or quietly letting the old advice stand alongside the new finding, is exactly the standard this whole session has held for every correction — applied here to one's own already-accepted advice, which is a harder thing to reverse than an untested guess.**
+
+### ALL FOUR QUESTIONS RULED
+
+**(a) `PT-1250`'s "icon column with no names at all" falls completely — confirmed now with direct photographic evidence on top of the data-driven reasoning already settled at `PT-2508`.**
+
+**(b) Derive from prerequisites, matching K2's own proven method — ruling reversed from `PT-2508`, and worth stating plainly why.** The earlier "author explicitly, avoid derivation" ruling was sound given what was known at the time — a general caution against an unproven, untested derivation shape. That caution is now substantially weakened by direct evidence that this exact derivation is the source's own shipped, working approach, applied to data with the same proven property (zero true branches) already confirmed in our own corpus. Deriving now has real precedent rather than being a novel risk — build it from `prerequisites`, matching K2's own method, needing no new content authoring.
+
+**(c) The five-versus-six tier gap — held as its own small content question.** Genuinely undetermined whether this is a missing tier or a deliberate cap; investigate separately from the chain-grid build itself, and don't let it block the build while it's resolved.
+
+**(d) The 11 unchained powers — unchanged, single-power chains of length one, exactly as ruled at `PT-2508`.**
+
+### THE PARSER NOTE -- SMALL, HONEST, WORTH A QUICK STANDING REMINDER
+
+**Two failed attempts at hand-rolling a parser before checking for and finding an already-working one is a small, honestly-reported inefficiency — worth a quick "check `MAIN_WORK/scripts` first" reminder before building new tooling from scratch, though not something needing its own formal entry given it cost time rather than correctness.**
+
+### PROCEED
+
+Build the Powers chain grid deriving from `prerequisites`, matching K2's own method. Investigate the five-versus-six tier gap as its own small question, not blocking the main build. Everything else proceeds exactly as scoped.

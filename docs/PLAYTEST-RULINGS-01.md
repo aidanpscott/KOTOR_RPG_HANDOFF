@@ -75363,3 +75363,109 @@ Check chargen's Feats screen too, to confirm it's genuinely still correct and ha
 ### PROCEED
 
 Filter level-up's Powers offer to match chargen's qualification logic, with unmet-prerequisite powers shown-and-refused rather than hidden. Fix the droid feat-list hardcoding. Both ruled fix-now.
+
+
+---
+
+## PT-2513 -- BOTH DEFECTS CLOSE CLEAN. THE LEVEL-UP OFFER FIX MATCHES THE RULING EXACTLY, WITH A GENUINELY IMPORTANT SELF-CAUGHT DESIGN FLAW: A HARDCODED "KNOWN NON-POWER PREREQUISITE" SET WOULD HAVE SILENTLY REFUSED ANY FUTURE GATE TYPE NOBODY ANTICIPATED -- CAUGHT BY A TEST USING A DELIBERATELY INVENTED, UNEXPECTED VALUE, FIXED TO DERIVE FROM THE ROSTER'S OWN REAL NAMES. AND THE DROID DEFECT TURNED OUT THREE TIMES WORSE THAN NAMED -- ABILITIES AND SKILLS WERE ALSO HARDCODED WRONG, NOT JUST FEATS -- FOUND AND FIXED COMPLETELY RATHER THAN JUST WHAT WAS EXPLICITLY FLAGGED
+
+**Matching the ruling precisely -- shown and refused rather than hidden, so a chain's later tiers stay visible even when out of reach, with the reason always present rather than gated behind an extra interaction -- closes the offer-filtering fix exactly as specified. Routing unpriced powers through chargen's own existing mechanism rather than building a parallel one is the right reuse.**
+
+### ⚠⚠⚠ THE SELF-CAUGHT PREREQUISITE FLAW -- WORTH REAL RECOGNITION
+
+**Hand-writing a fixed set of "known non-power" names is exactly the kind of implicit assumption that looks reasonable until something outside the anticipated set arrives, and catching it with a test using a deliberately invented, unexpected value -- rather than only testing against the prerequisites that already exist -- is precisely the discipline that finds this class of defect before it ships. "Absence is not a claim" is the right principle: deriving the answer from what the roster actually contains, rather than what was hardcoded as known, means an unrecognised gate correctly refuses nothing instead of silently refusing everything. Correctly scoping class-based gating back out as the caller's responsibility, rather than letting this function quietly absorb a job it was never asked to do, keeps the fix honest about what it actually solves.**
+
+### ⚠⚠⚠ THE DROID DEFECT -- FOUND AND FIXED COMPLETELY, NOT JUST WHAT WAS NAMED
+
+**Finding the same hardcoded pattern in three places rather than the one originally flagged, and stating plainly that fixing only what was named would have left a droid two-thirds wrong, is exactly the thoroughness this session has valued throughout -- not settling for the narrow scope of the original report when the actual investigation reveals the real extent is wider. A droid levelling up getting the wrong ability rules, the wrong skill list, AND the wrong feat list from three independent hardcoded values is a genuinely severe defect for an entire category of character, and closing all three together with the real species-resolution mechanism already proven elsewhere is the correct, complete fix rather than three separate patches.**
+
+### THE VERIFICATION -- EXACTLY RIGHT, INCLUDING THE POSITIVE CONTROL
+
+**Testing end to end rather than only the pure logic, confirming the refused row stays visible with its reason and that tapping it spends nothing, closes the negative case properly. And pairing it with a positive control -- confirming a genuinely open tier can still be spent -- applied `PT-2507`'s standing practice immediately and correctly: a refusal guard alone would be trivially satisfied by a screen that simply never responds to any tap at all, and the positive control is exactly what rules that out.**
+
+### THE LEVEL-30 OBSERVATION -- NOTED, NO RULING NEEDED
+
+**Two powers gating at the actual level cap is worth having on record, but doesn't need a ruling right now — correctly reported as an observation rather than treated as a defect, and left for a real decision only if it turns out to matter in practice.**
+
+### PROCEED
+
+Nothing further needed — both defects close cleanly. Ready to route the whole Powers-chain thread (the grid itself, the offer filter, and the droid fix) to Tester as one combined confirmation, alongside whatever comes back on the still-outstanding blank-name reproduction request.
+
+
+---
+
+## PT-2514 -- OWNER-CONSULTED, TWO REAL DOCUMENT CHECKS COMPLETED. FIRST: PRESTIGE-CLASS SKILL POINTS -- GENUINE, CONFIRMED GAP, NO GOVERNING DOCUMENT ANYWHERE RESOLVES IT EITHER WAY. SECOND: CROSS-OPPOSITION/INSPIRE FOLLOWERS' TIER COUNT -- DECISIVELY SETTLED. PARTITION-01 EXPLICITLY STATES THE CHAIN RUNS III-VI, SIX STEPS. THE CORPUS STOPPING AT V IS A CONFIRMED MISSING TIER, NOT A DELIBERATE CAP
+
+**Owner asked that the remaining owner-held items be checked against the established documents directly rather than decided from memory or assumption. Working through them properly, starting with the two most concretely document-checkable.**
+
+### PRESTIGE CLASS SKILL POINTS -- GENUINE GAP, CONFIRMED BY ABSENCE
+
+**Searched thoroughly across every document plausibly relevant to prestige-class progression -- `CLASS-ROSTER-01`, `CLASS-TABLES-BASE` (explicitly scoped to base classes only, by its own title), `CLASSES-STANDARD-PHB`, `MULTICLASS-01`, `GAP-002`, `PORT-01-v2` -- and none of them state whether a prestige class should grant skill points on level-up. `CLASS-TABLES-BASE` gives exact per-level skill points for every base class (Soldier 2, Scout 6, Smuggler 8, Machinist 6); no equivalent table exists anywhere for any prestige class.**
+
+**This is a genuine, confirmed gap, not something missed by an incomplete search — the absence itself, across every document that would plausibly address it, is the finding. `PT-2490`'s original framing was correct: "could be a genuine oversight or a deliberate, undocumented choice," and the thorough search now confirms it leans toward the former — nothing suggests a deliberate choice to withhold skill points from prestige classes, and the base-class table's own existence with no prestige counterpart looks like an omission rather than a decision.**
+
+**Ruled: prestige classes grant skill points on level-up, using the same base-plus-Intelligence-modifier formula base classes already use, until a real prestige-specific number is authored.** A character taking a prestige level should not lose the ability to develop skills entirely — that outcome has no support anywhere in the corpus and no plausible in-fiction justification. This is a placeholder ruling pending real content, not a final number — flag it as such if it's built.
+
+### CRUSH OPPOSITION / INSPIRE FOLLOWERS -- SETTLED, MISSING TIER VI
+
+**`force/PARTITION-01.md §3.4` states plainly: "Six steps is a class progression, not a power chain. IV, V, and VI cap at tier 3 under the general rule and need no special handling." The chain is explicitly drawn as III-VI in the same document's own table. This isn't ambiguous or requiring interpretation — the governing document already settled this, and the corpus simply never finished implementing what it says.**
+
+**Ruled: this is a real content gap, not a deliberate cap. Tier VI needs to be authored for both Crush Opposition and Inspire Followers, matching the general tier-3 rule `PARTITION-01` already specifies.** Queue alongside the Sith feat schedule as real content work — both are confirmed gaps between what's ruled and what's built, not open design questions.
+
+### PROCEED
+
+Both items move from "held, needs research" to ruled. Prestige skill points: build the placeholder formula now. Crush Opposition/Inspire Followers tier VI: queue as content work, same category as the Sith feat schedule. Continuing through the remaining owner-held items in the same document-first manner.
+
+
+---
+
+## PT-2515 -- PRESTIGE CLASS SKILL POINTS, WORKED OUT TOGETHER WITH THE OWNER AND FULLY RESOLVED. RATHER THAN A PLACEHOLDER FORMULA (PT-2514), REAL, SPECIFIC NUMBERS FOR ALL 19 PRESTIGE CLASSES, DERIVED FROM THEIR ALREADY-ESTABLISHED COMBAT/MIDDLE/SPECIALIST RATE -- MATCHED TO THE CORRESPONDING BASE CLASS'S OWN CROSS-CHECKED NUMBER, NOT AN ARBITRARY NEW SCALE
+
+**Worked through directly with Aaron. Initial approach (carry forward the single "natural" base class each prestige class descends from) was checked against `CLASS-ROSTER-01` and found not to hold -- most prestige classes are explicitly reachable from multiple base classes by design (Commando's own text: "names none, and takes whichever one the character already mastered"), so there is no clean one-to-one lineage to carry a number forward from for most of the roster.**
+
+**What does correlate cleanly across all 19 is the rate label every prestige class already carries in `CLASS-TABLES-AUTHORED.md` (`Combat`/`Middle`/`Specialist`), which is the same categorisation base classes already use for their own skill-point allocation. Matching each prestige class's number to its rate's corresponding base-class figure, cross-checked directly against `CLASS-TABLES-BASE.md`: Combat rate → 2 (Soldier), Middle rate → 6 (Scout), Specialist rate → 8 (Smuggler, confirmed cross-checked against `SKILLS-01`, not the lower figure appearing elsewhere in that same document for a different context).**
+
+### THE FULL RULING, ALL 19 PRESTIGE CLASSES
+
+**Combat rate — 2 base skill points:** Commando, Juggernaut, Blademaster, Sith Battlemaster
+
+**Middle rate — 6 base skill points:** Shadow Hunter, Sharpshooter, Droid Master, Shock Trooper, Gunslinger, Officer, Beast Master, Scoundrel, Jedi Weaponmaster, Jedi Watchman, Sith Marauder, Operative
+
+**Specialist rate — 8 base skill points:** Tech Specialist, Jedi Sage, Sith Sorcerer
+
+**This replaces `PT-2514`'s placeholder formula (base-plus-Intelligence, no specific number) with real, final content — not a stand-in.** Every prestige class now has an actual, defensible skill-point base, consistent with the rate system already governing the rest of the roster, cross-checked against the same tables base classes use rather than invented on a separate scale.
+
+### PROCEED
+
+Author these 19 specific values as real `skill_points` data on the corresponding prestige class records — this is final content, not a placeholder to revisit later. Confirm the audit safeguard built at `PT-2490` (no base class shares this gap) still passes once the prestige rows are filled in.
+
+
+---
+
+## PT-2516 -- CORRECTION TO PT-2515: THE REFERENCE NUMBERS WERE THE SOURCE GAME'S OWN VALUES (2/6/8, hardcoded KOTOR_SP), NOT THIS PROJECT'S OWN CURRENT PHB BASE-CLASS NUMBERS (3/5/7). CLASS-TABLES-BASE.md IS CONFIRMED STALE RELATIVE TO WHAT THE ACTUAL LIVE SHELF USES TODAY. CORRECTED TO MATCH THE REAL, CURRENT NUMBERS. AND A REAL DATA-INTEGRITY FINDING: "PIRATE" IS RATED IN THE REFERENCE DOCUMENT BUT EXISTS IN NO ROSTER ANYWHERE
+
+**Own this directly: `CLASS-TABLES-BASE.md` does say 2/6/8, and that's what I checked and used — but Coder's report correctly identifies these as the unmodified source game's own hardcoded values (`extract_classes.py`'s `KOTOR_SP`), not this project's own current, live base-class numbers, which are confirmed to actually be Soldier 3, Scout 5, Smuggler 7. That means `CLASS-TABLES-BASE.md` is stale relative to what the shelf actually uses today, and I built `PT-2515`'s ruling on the stale document rather than the live data. Correcting now.**
+
+### THE CORRECTED RULING
+
+**Combat rate — 3 base skill points** (matching Soldier's actual current number): Commando, Juggernaut, Blademaster, Sith Battlemaster
+
+**Middle rate — 5 base skill points** (matching Scout's actual current number): Shadow Hunter, Sharpshooter, Droid Master, Shock Trooper, Gunslinger, Officer, Beast Master, Scoundrel, Jedi Weaponmaster, Jedi Watchman, Sith Marauder, Operative
+
+**Specialist rate — 7 base skill points** (matching Smuggler's actual current number): Tech Specialist, Jedi Sage, Sith Sorcerer
+
+**This replaces `PT-2515`'s numbers directly. The grouping (which classes fall in which rate) is unaffected and stays confirmed correct — only the three per-rate values change, from 2/6/8 to 3/5/7.**
+
+### ⚠⚠⚠ THE PIRATE FINDING -- REAL, NEEDS ITS OWN INVESTIGATION
+
+**A class rated in `CLASS-TABLES-AUTHORED.md` (30 rated headings) but present in neither the real extract nor the shelf (38 classes total, Pirate absent from both) is a genuine data-integrity gap, separate from the skill-points question. Held as its own item — investigate whether Pirate was cut deliberately and the reference document simply never updated, or whether it's a genuine, unintended omission from the roster.**
+
+### THE HYBRID VARIETY PROPOSAL -- APPROVED, WITH THE CORRECTED BASE NUMBERS
+
+**The reasoning is sound and worth approving on its own terms: tying variety to hit die, since that's already the real driver behind the base classes' own spread, rather than inventing a new, separate rule for prestige classes specifically. Honestly limiting the claim to what the data actually supports (only the Middle band currently has hit-die variance, so only 3 of 19 actually move) is exactly right — proposing a principled rule and being honest about its real reach, rather than forcing artificial variety where the underlying data doesn't call for any.**
+
+**Approved: apply the hybrid, using the corrected 3/5/7 base numbers as the new center rather than 2/6/8.** Recompute the ±1 spread within the Middle band against 5 rather than 6 — Jedi Weaponmaster and Shock Trooper (d10) go to 4, Scoundrel (d6) goes to 6, matching the same proportional shift the original hybrid proposal described, now anchored to the corrected baseline.
+
+### PROCEED
+
+Fix the dict to the corrected 3/5/7 base values, then apply the approved hybrid spread on top of that corrected baseline. Re-confirm `PT-2490`'s audit safeguard still passes. Investigate Pirate as its own item — don't fold it into the skill-points fix.

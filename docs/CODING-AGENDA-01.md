@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Journal/Messages/Notes — opened, building (PT-2528).** Sixth of seven shell-locked screens. Checking the mockup and real K2 source files first, same discipline as every prior screen. Confirm Personal Notes' privacy rule (no scripted content can read them) is actually enforceable, not just statable.
+
 - **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
 - **Whisper's Powers grid shows all "?" (unlearned) despite earlier confirmed casting — real, unresolved, needs Tester's context.** Mechanism traced and confirmed correct (namespaces match, "?" genuinely means no `powerTaken` events). Contradicts TEST 119-122's confirmed casting for the same character. Not called a defect on one reading — possible explanation: character authored directly into the save rather than through chargen's event pipeline. Needs Tester's own knowledge of which applies.
 

@@ -75911,3 +75911,26 @@ Nothing to build. Standing practice recorded. Ready for the next item.
 ### PROCEED
 
 Nothing further needed — all four ruled items close cleanly, both TEST 128 defects fixed properly. Party Selection is now genuinely the last of the seven shell-locked screens. The nav-bar pattern (confirm the positive alongside the negative) is worth keeping in mind for the next guard built anywhere in this thread.
+
+
+---
+
+## PT-2533 -- BOTH STANDING PRACTICES CONFIRMED ALREADY PAYING OFF IN REAL, MEASURABLE WAYS. THE END-OF-SLICE LEDGER REFRESH (PT-2527) CAUGHT A REAL 64-LINE STALENESS GAP THE OLD SINGLE-REFRESH HABIT WOULD HAVE MISSED. THE CONFIRM-THE-POSITIVE-ALONGSIDE-THE-NEGATIVE PATTERN, NOW ADOPTED AS STANDING RATHER THAN A ONE-OFF NOTE, CAUGHT TWO SEPARATE REAL DEFECTS IN A SINGLE SLICE. OWNER OPENS PARTY SELECTION -- THE SEVENTH AND LAST SHELL-LOCKED SCREEN
+
+**Both worth confirming explicitly rather than letting the value pass as assumed. A standing practice that only ever gets cited without ever demonstrably catching anything is a hope, not a discipline -- these two have each now caught something real, and it's worth saying so plainly rather than letting the confirmation go unremarked.**
+
+**The ledger-refresh timing fix catching real staleness specifically because of the half added after `PT-2527`'s own diagnosis is a clean, direct validation of that diagnosis being correct -- the old habit really would have shipped stale again, and the new one demonstrably didn't.**
+
+**Adopting the confirm-both-halves pattern as standing, and confirming it already caught two separate real defects in one slice (a refusal that neither navigated nor spoke; a geometry check whose "not too far inside" half was symmetric and structurally could never fail), is exactly the right way to treat a lesson that's proven itself more than once -- not just remembered, but actively applied and already earning its keep.**
+
+### RULED -- PARTY SELECTION NEXT
+
+**The seventh and last shell-locked screen. Confirmed correctly: less to cross-check against the real K2 source than any prior screen, since `PT-1254` already deliberately departed from K2's own ring shape in favor of a roster list — the same reasoning that put Journal ahead of Party in the first place still holds, and there's no other screen left to choose between now.**
+
+**Build Party Selection to `PT-1254`'s locked design.** Given how much every prior screen in this thread has found by checking the real source anyway — even screens that departed from K2's shape (Equip's lattice, Character Sheet's viewport) still turned up real corrections from checking — check the real K2 source files regardless, the same discipline as every screen before it, even knowing the departure means less direct correspondence to find.
+
+**The Good Effects column's permanent emptiness on current data is confirmed correctly not a defect and correctly not mine to rule — it's accurately reporting the real state of the rules, not a bug in the screen.**
+
+### PROCEED
+
+Build Party Selection, checking the mockup and the real K2 source files first. Report back before or alongside the build, same as every screen in this thread. PT-1249's footer furniture stays flagged, still not started, picked up whenever there's room for it.

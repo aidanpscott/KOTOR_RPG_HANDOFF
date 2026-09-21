@@ -75469,3 +75469,38 @@ Author these 19 specific values as real `skill_points` data on the corresponding
 ### PROCEED
 
 Fix the dict to the corrected 3/5/7 base values, then apply the approved hybrid spread on top of that corrected baseline. Re-confirm `PT-2490`'s audit safeguard still passes. Investigate Pirate as its own item — don't fold it into the skill-points fix.
+
+
+---
+
+## PT-2517 -- CORRECTED VALUES AND HYBRID CLOSE CLEAN. ⚠⚠⚠ A GENUINELY IMPORTANT PROACTIVE FIND: THE HIT DIE THE HYBRID DERIVES FROM DOESN'T REACH THE EXTRACT FOR ANY PRESTIGE CLASS -- THE SAME GAP SHAPE JUST CLOSED FOR SKILL POINTS, NOW FOUND IN THE SAME NINETEEN CLASSES FOR A DIFFERENT FIELD, WITH A REAL, SEVERE CONSEQUENCE: A PRESTIGE LEVEL-UP CURRENTLY SHOWS THE PLAYER NOTHING ABOUT VITALITY AT ALL. CORRECTLY PINNED, NOT FIXED UNASKED. THREE OWNER DECISIONS RULED: THE GUNSLINGER NARROWING NUMBER, THE HIT-DIE EXTRACT FIX, AND PIRATE SHIPS
+
+**The corrected 3/5/7 baseline and the hybrid spread both close exactly as ruled -- five distinct values where the original had three, base classes correctly untouched, `PT-2490`'s safeguard re-confirmed still passing.**
+
+### ⚠⚠⚠ THE MISSING HIT DIE -- SEVERE, RULED FIX NOW
+
+**Finding this while implementing an unrelated, already-approved fix, rather than needing a separate report to surface it, is exactly the kind of proactive vigilance this session has valued throughout. The diagnosis is precise: the hit die is genuinely authored in the source document for every prestige class, but the extractor simply never carries it across -- the same shape of gap as the skill-points issue, in the same nineteen classes, just a different field. And the consequence is real and severe, not theoretical: a level-up screen that only prints its vitality grant when the die is present means a prestige level-up currently tells a player nothing about their own vitality at all.**
+
+**Correctly pinning this with a real, failing test rather than quietly fixing it unasked is exactly the right discipline for something this consequential -- the fix touches the extraction pipeline, not just a display detail, and deserved a real decision rather than an assumed one.**
+
+**Ruled: fix now, same urgency as any other severe player-facing gap. Carry the authored hit die across the extraction pipeline for all nineteen prestige classes, the same way skill points were just carried across.**
+
+### THE GUNSLINGER NARROWING -- NUMBER ASSIGNED
+
+**Confirmed this document shares the same numbering pool as this ledger (cross-checked the highest reference in `rules/` against this ledger's own sequence) rather than an isolated track like `APP-UI-VISION-01`'s. Assigning `PT-2517` — this entry — as the number for Aaron's own ruling: the Gunslinger moves from `PT-217`'s open tier to locked, entered from Bounty Hunter 6 or Smuggler 6 (Pirate 6 correctly noted as a currently-dead route, per the honest disclosure below).**
+
+**The correction to the prior report -- that the Gunslinger's entry was never actually blocked by Pirate's absence, because the "Smuggler 6 or Pirate 6" line was a superseded draft the very next paragraph already ruled against -- is honestly and plainly stated, including naming the exact reading mistake (the table, not the paragraph beneath it). This is worth recognizing on its own: retracting one's own immediately-prior claim, with the precise cause named, rather than letting it stand uncorrected once the real picture became clear.**
+
+### PIRATE -- RULED TO SHIP
+
+**The investigation is decisive: a complete numbers row with an archetype justification, a complete skills entry sourced to `SKILLS-01.md`, and the sole missing piece is one row in the specific table the extractor actually builds from. This reads as an omission, not a deliberate cut -- nothing anywhere indicates Pirate was intentionally withheld, and the content itself is fully realized.**
+
+**Ruled: Pirate ships. Add the missing `Class | State` row so it reaches `classes.json` and the shelf, matching content that already fully exists everywhere else.** This also resolves the Gunslinger's dead third route, since Pirate becomes a real, playable class once this lands — worth re-confirming Pirate 6 is a legitimate route at that point, since it may become live rather than staying dead.
+
+### THE MIRROR FORK CHECK -- GOOD DISCIPLINE, NO ACTION NEEDED
+
+**Verifying the actual cause of a flagged fork before either blindly following the "never copy" standing rule or dismissing the warning is exactly right — confirming the only unique content in the published copy was precisely the table row this change correctly removes means the fork flag was a true but benign artifact of the change itself, not a sign of genuinely divergent, conflicting edits. Proceeding on that verified evidence rather than an assumption in either direction is good judgment under a rule that exists to prevent a different, real failure mode.**
+
+### PROCEED
+
+Fix the hit-die extraction gap for all 19 prestige classes, severe priority. Add Pirate's missing extractor row so it ships. Gunslinger's narrowing is ruled and numbered — confirm the third route (Pirate 6) becomes legitimate once Pirate ships, rather than staying dead.

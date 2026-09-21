@@ -95,9 +95,11 @@
 
 **Three per side, and the naming asymmetry is deliberate.** **Jedi take role-nouns — Guardian, Sentinel, Consular. Sith take rank-nouns — Warrior, Inquisitor, Assassin.** *That is what the two orders are.*
 
-## 3. Standard prestige — ⚠ 13
+## 3. Standard prestige — ⚠ 14
 
-**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Juggernaut · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative · ⚠ Shock Trooper · ⚠ Blademaster**
+**⚠ Was "13" — `Pirate` added at `PT-2517`.** **`PT-720` ruled it a PRESTIGE class and `CLASSES-STANDARD-PHB` carries it as reference only, *"NOT a standard base class and may not be taken at level 1"* — but it was in no `Class | State` table and no tier list, so it reached neither `classes.json` nor the shelf.** **Its numbers row in this file sits with no header above it, which is why the extractor never saw it and `gen_class_tables` — which scans for the row shape — always did.**
+
+**Commando · Droid Master · Gunslinger · Officer · Shadow Hunter · Juggernaut · Beast Master · Scoundrel · Tech Specialist · Sharpshooter · Operative · ⚠ Shock Trooper · ⚠ Blademaster · ⚠ Pirate**
 
 **⚠ THIRTEEN — `PT-578` added `Shock Trooper` and `Blademaster`.**
 
@@ -958,17 +960,17 @@
 | | From | Holdings |
 |---|---|---|
 | **Officer** | **Soldier 6 or Agent 6** | `Alertness` 8 |
-| **⚠ Gunslinger** | **Bounty Hunter 6, Smuggler 6 or Pirate 6** | `Master Two-Weapon Fighting` — ⚠ **owner ruling, NUMBER PENDING** |
+| **⚠ Gunslinger** | **Bounty Hunter 6, Smuggler 6 or Pirate 6** | `Master Two-Weapon Fighting` — `PT-2517` |
 | **Operative** | **Agent 6** | `Stealth` 8 + `Slicing` 8 |
 | **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 **or** `Slicing` 8 — `PT-225` |
 | **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
 | **Beast Master** | **Scout 6 or Treasure Hunter 6** | `Beast Handling` 8 — `PT-237` |
 
-**⚠⚠⚠ THE `Gunslinger` MOVED FROM OPEN TO LOCKED — owner ruling, NUMBER PENDING.** **`PT-217` put it in the open tier at *"any base class 6"*, and the owner has narrowed it to three named routes: `Bounty Hunter 6`, `Smuggler 6` or `Pirate 6`.**
+**⚠⚠⚠ THE `Gunslinger` MOVED FROM OPEN TO LOCKED — `PT-2517`.** **`PT-217` put it in the open tier at *"any base class 6"*, and the owner has narrowed it to three named routes: `Bounty Hunter 6`, `Smuggler 6` or `Pirate 6`.**
 
 **⚠ It follows this section's own line — *"Open when the prestige is a technique. Locked when it is a background."*** **Two guns and a fast draw is not a technique anyone picks up with the work; it is where you came up. The three named classes are the lives that produce it.**
 
-**⚠⚠ AND ONE OF THE THREE CANNOT BE TAKEN TODAY.** **`Pirate` has a full numbers row in §4 and an authored skill list in `class-skills.json`, and it is in NO `Class | State` table — so it reaches neither `classes.json` nor the shelf.** **Until it does, this entry has two live routes and not three; the third is written against a class a player cannot be.**
+**⚠⚠ ALL THREE ROUTES ARE LIVE — `PT-2517` shipped `Pirate`.** **It was in no `Class | State` table and no tier list, so it reached neither `classes.json` nor the shelf, and `Pirate 6` was written against a class a player could not be.** **⚠ `Pirate` is itself PRESTIGE (`PT-720`), so that route is prestige-to-prestige where the other two are base classes — worth a reading if entry is meant to come from a base class only.**
 
 #### ⚠ A holding only sorts if the intended parents can reach it
 

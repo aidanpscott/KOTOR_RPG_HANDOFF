@@ -75038,3 +75038,96 @@ Fix the scale/fit overlap issue first, across all three already-built screens. M
 ### PROCEED
 
 Wire the shell. Report back once done.
+
+
+---
+
+## PT-2499 -- OWNER FLAGS A REAL FUTURE ITEM: THE CURRENT RECREATED PAUSE-MENU FRAME IS EXPLICITLY A PLACEHOLDER. EVENTUALLY WANTS AN AI-DEVELOPED, ANIMATED DATAPAD-STYLE FRAME -- GLOWING ACCENTS, A LIVING FEEL RATHER THAN STATIC ART -- POSSIBLY WITH ONE OR TWO INTERACTIVE EASTER-EGG BUTTONS. FOR LATER, NOT NOW
+
+**Recorded for the standing list, explicitly not for immediate action -- owner's own framing is "something to discuss for later."**
+
+### THE ITEM
+
+The frame built at `PT-2497`/`PT-2498` (recreated from `pnl_pause_pc` per `ASSET-REPLACEMENT-01`, no source bytes shipped) is explicitly a placeholder, not the intended final art. At some future point, the owner wants an AI-developed animated frame in a Star Wars datapad aesthetic — glowing light accents at the edges, a sense of the frame being alive rather than static — and is open to one or two small interactive elements built in as an Easter egg, something a player could click that does something small and unexpected.
+
+### PROCEED
+
+Held. No action now — this is a future design and asset-generation task, not a current build item. Revisit when the owner is ready to discuss it properly.
+
+
+---
+
+## PT-2500 -- THE SHELL WIRES INTO PLAY CLEANLY. GENUINELY PRECISE ROOT-CAUSE DIAGNOSIS: THE SOURCE CANVAS AND DESIGN DIMENSIONS WERE COINCIDENTALLY, EXACTLY 4:3, SO A FRAME PRESERVING THAT RATIO ALWAYS COST A 16:9 PLAY SCREEN A QUARTER OF ITS OWN WORKING MEASURE, REGARDLESS OF VIEWPORT SIZE. RESOLVED NON-DESTRUCTIVELY -- THE CHROME, CORRECTLY IDENTIFIED AS NOT AT FAULT, WASN'T TOUCHED; THE NEW CONSTRAINT (THE FRAME) YIELDED INSTEAD. AND A GENUINELY ELEGANT SELF-CAUGHT SECOND BUG: "A FRAME IS A PHYSICAL OBJECT; STRETCHING THE PANEL IT SURROUNDS DOES NOT THICKEN ITS RAILS"
+
+**This is the two-hundredth entry in this ledger's own numbering, and it's a fitting one to land on -- genuinely careful, honest, technically precise work is exactly what this whole discipline has been built to recognize and record.**
+
+**Finding that the source canvas and both design dimensions were coincidentally, exactly 4:3, and correctly reasoning that a frame preserving that ratio would always cost a wider viewport real working measure no matter how large the viewport actually grew, is precise diagnosis of a structural mismatch rather than a symptom-level patch. Quantifying the real severity -- a full quarter of the play area's own measure, 133 pixels of real chrome overflow, fifteen tests down -- makes the finding concrete rather than a vague sense that something was off.**
+
+**The resolution is exactly right: correctly identifying the chrome as blameless, since it had always been developed against 16:9, and correctly recognizing the frame itself was the new constraint that needed to give, not the thing built around it. Letting the four page panels keep their real 4:3 shape, since their coordinates genuinely come from `.gui` files authored at that ratio, while letting the board fill freely since it has no equivalent authored constraint, is the correct distinction rather than a blanket rule applied without regard for which elements actually have a real source geometry to honour.**
+
+### ⚠⚠ THE SECOND SELF-CAUGHT BUG -- GENUINELY ELEGANT DIAGNOSIS
+
+**Catching that stretching scaled the frame's own decorative rails proportionally, so wider viewports paradoxically produced fatter borders that ate into the usable play area, and stating the underlying principle as plainly as this report does, is worth quoting on its own merits: a frame is a physical object, and stretching what it surrounds should never thicken the frame itself. Fixing this to use the smaller scaling factor, and confirming the final result is genuinely better than even the unframed baseline -- more usable measure, not merely equal to what existed before the frame was added -- closes this properly rather than settling for "no worse than before."**
+
+### THE TWO ADDITIONAL CATCHES -- BOTH HONEST, BOTH REAL
+
+**Plainly owning a self-introduced crash from an unsafe widget-lookup pattern, and explaining precisely why the simpler, safe alternative is architecturally correct -- nesting is fixed for any given subtree, so there was never a real dependency to track in the first place -- is honest disclosure of a genuine regression, not just a list of wins.**
+
+**Preventing the double-border render by making the inner, panel-specific frame yield to the outer, persistent shell frame, and explicitly connecting this to the already-rejected option C from the original layout decision, shows the earlier design conversation is actively informing this implementation rather than being a closed historical note. A panel that suppressed the shell's own border every time it opened would have been exactly the flicker that option was rejected to avoid.**
+
+**Re-shooting the two renders that had captured a state the app doesn't actually produce, rather than leaving stale, misleading artifacts in place, is small but correct housekeeping.**
+
+### PROCEED
+
+Nothing further needed — the shell is wired and closed. The five remaining items (the log's design, Equip's slot count, the Sith feat schedule, prestige skill points, Abilities' deferred scorecard items) all stay correctly held, mine to pick up.
+
+
+---
+
+## PT-2501 -- REPO STATE CONFIRMED CLEAN. A GENUINELY VALUABLE, GENERALIZABLE LESSON PROPERLY EXTRACTED FROM THE 728-PIXEL CATCH: A TUNED THRESHOLD CAN ONLY EVER DETECT DEFECTS OF ONE SIGN. PREFER A DIFFERENTIAL AGAINST A KNOWN-GOOD REFERENCE OVER ANY CONSTANT TUNED TO TODAY'S PALETTE OR CONDITIONS. QUEUE REVIEWED AND CONFIRMED ACCURATE
+
+**Correctly recognizing this lesson deserved to be recorded as a standing principle rather than left as a detail inside the closed report it came from -- proactively generalizing a hard-won catch, without being asked to, is exactly the instinct that makes a lesson actually reusable instead of merely remembered once.**
+
+### THE LESSON -- WORTH RECORDING PROPERLY
+
+**Stating precisely why the brightness-threshold guard was wrong in a specific, structural way -- tuned to catch bright overlap, therefore blind by construction to any dark one -- rather than just "it was imprecise," is the right level of diagnosis. The generalization is sound and worth keeping as its own standing instruction: a check carrying a tuned constant can only see defects that push in the direction the constant was tuned against; a differential against a known-good reference has no such blind side, because it isn't asking "is this too bright/dark/big/small," it's asking "does this match what it should." Prefer the differential wherever a known-good reference is available.**
+
+### THE QUEUE -- REVIEWED, ACCURATE
+
+**The three-way split (needing my ruling, ready content work, still Coder's own held items) is correctly organized and matches the actual state of everything outstanding. Nothing here needs correction.**
+
+### PROCEED
+
+Nothing to build right now. The log's design, Equip's slot count, and the prestige skill-points research all stay correctly mine and still genuinely unresolved — not forgotten, not ready yet. Will pick these up as they're ready rather than force a premature ruling on any of them.
+
+
+---
+
+## PT-2502 -- A GENUINELY VALUABLE CAVEAT ADDED TO PT-2501'S STANDING LESSON: A DIFFERENTIAL ONLY WORKS AGAINST A REFERENCE THAT IS GENUINELY INDEPENDENT. DIFFING AGAINST SOMETHING DERIVED FROM THE THING UNDER TEST IS THE GUARD-COMPUTES-ITS-OWN-CONTROL FAILURE WEARING NEW CLOTHES
+
+**This closes an important gap in the newly-recorded principle before it could become a new version of an already-known mistake. "Prefer a differential over a tuned threshold" is correct as far as it goes, but it needs exactly this boundary: the reference has to be independent of the subject, or the check has quietly become the same failure this session has caught under a different name -- a guard whose control is itself derived from what it's meant to verify, and so cannot actually fail.**
+
+**Confirming precisely why the bare-frame render avoided this trap -- it's painted with zero reference to any screen's content, so it can never accidentally encode an assumption from the thing being measured against it -- grounds the caveat in a concrete, already-proven example rather than leaving it abstract.**
+
+**Ruled: both halves stand together as one standing lesson.** Prefer a differential against a known-good reference over a tuned constant, which can only ever see defects of one sign — and confirm that reference is genuinely independent of the subject before trusting the comparison, or the differential inherits the same blind spot a self-referential guard always has.
+
+### PROCEED
+
+Nothing to build. Queue stays as confirmed. Standing by.
+
+
+---
+
+## PT-2503 -- CORRECTED IN FULL: EQUIP'S SLOT COUNT IS 12, MATCHING THE DIAGRAM EXACTLY AS ALREADY DRAWN. NO NEW SLOT NEEDS INVENTING -- BOOTS (THE GENUINELY NEW FEET SLOT WITH NO SOURCE PRECEDENT) WAS ALREADY ONE OF THE DIAGRAM'S 12 FILLED CELLS. THE "ELEVEN" STATED IN THE SURROUNDING PROSE IS SIMPLY STALE AND SHOULD BE DISREGARDED
+
+**This entry required two corrections before landing right, and both are worth recording honestly rather than smoothing over. The first draft invented an unnecessary "feat slot" concept, then mis-heard it as "feet." Neither survives contact with what was actually being said: there is no new slot being added at all.**
+
+**The diagram already shows 12 filled cells exactly as originally drawn — implant, head, hands, right arm, body, left arm, weapon R (primary), belt, weapon L (primary), boots, weapon R (secondary), weapon L (secondary). Boots is already one of those twelve, and Boots is precisely the slot with no KOTOR source precedent (`ITEMS-08`, `PT-690` — the source games have no foot slot at all). That's the whole explanation: the diagram correctly counts 12 because it already includes the genuinely new addition, while the "eleven slots" stated in the surrounding prose was simply never updated to match once Boots was added to the design. There is nothing further to build, invent, or place — the diagram as originally drawn was already correct.**
+
+### RULED
+
+**12 slots, exactly as the lattice diagram already shows it. No changes to the diagram's arrangement. The "eleven" in the prose is stale and should be corrected or disregarded wherever it appears in the design document.**
+
+### PROCEED
+
+Build Equip's lattice to the diagram exactly as drawn — 12 slots, no changes needed to its arrangement. Nothing further required.

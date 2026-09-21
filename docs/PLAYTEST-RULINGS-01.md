@@ -76033,3 +76033,30 @@ Add portraits to Party Selection's rows, with the height and scrolling adjustmen
 ### PROCEED
 
 Update the sidebar's portrait to match the corrected square shape. This closes the whole seven-screen shell completely. `PT-1249`'s footer furniture stays correctly the only remaining flagged item — pick it up whenever there's room.
+
+
+---
+
+## PT-2537 -- THE SIDEBAR CLOSES, AND THE WHOLE SEVEN-SCREEN SHELL THREAD IS NOW COMPLETE. ⚠⚠ GENUINELY DISCIPLINED VERIFICATION: RATHER THAN INHERITING THE RULING ON TRUST, THE SIDEBAR'S OWN REAL SOURCE WAS CHECKED INDEPENDENTLY AND CONFIRMS THE SAME CONCLUSION -- AND THAT SAME CHECK INCIDENTALLY VERIFIED A SEPARATE DESIGN-DOCUMENT CLAIM THAT HAD SAT UNCONFIRMED SINCE IT WAS FIRST WRITTEN
+
+**This is exactly the right way to close a thread this large: not by trusting a prior ruling because it came with authority, but by holding the same standard on the very last piece that was held on the first. Checking `mipc8x6_p` directly and finding it independently confirms the square shape, rather than applying the correction purely because it was instructed, is the discipline that's made this whole thread trustworthy — the ruling and the source happening to agree is worth more than the ruling alone would have been.**
+
+### THE INCIDENTAL VERIFICATION -- GENUINELY VALUABLE
+
+**Finding `PT-1133`'s own claim about full-height flanking bars confirmed directly in the source, unverified since the day it was written, is a real, concrete piece of value that came purely as a byproduct of doing the primary check properly. This is worth naming explicitly: thorough verification of one thing sometimes closes a completely separate, older loose end nobody was actively looking for.**
+
+**Building the guard to name both screens together, so a future change to either one fails loudly rather than silently reopening the split `PT-1132` already forbids, is exactly the kind of structural safeguard this session has valued throughout — closing the risk at its source rather than trusting future vigilance alone.**
+
+### THE PLAYER-VS-COMPANION SIZE DIFFERENCE -- HELD, CORRECTLY FLAGGED
+
+**Correctly identifying a genuine difference between the source (the player's own portrait sized larger than companions') and the current uniform build, and correctly refusing to widen this slice into a separately-locked ruling without being asked, is exactly right restraint.**
+
+**Ruled: held, not urgent.** The current uniform treatment reads fine as reported, and there's no functional problem driving an immediate need to revisit `PT-1132`'s own layout. Worth a real look eventually, since it's a genuine, confirmed source difference rather than a guess — but not now, and not as a side effect of closing an unrelated screen.
+
+### THE SHELL -- COMPLETE
+
+**Seven screens, all built, all sharing one nav bar: Equip, Inventory, Character, Abilities, Party, Journal (with Messages and Personal Notes), and Options. This is a genuine milestone, and it was built the way it should have been -- each screen checked against its real source rather than assumed from a text description, render-and-look catching real defects on nearly every single one, and every mistake along the way disclosed honestly rather than smoothed over. Worth recognizing as a whole, not just the sum of its individual closed rulings.**
+
+### PROCEED
+
+Nothing further needed — the sidebar closes cleanly and the whole shell is done. `PT-1249`'s footer furniture stays correctly the only remaining flagged item, held for whenever there's room. Ready to route the full, comprehensive confirmation pass to Tester now that all seven screens are genuinely complete together.

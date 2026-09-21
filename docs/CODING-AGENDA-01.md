@@ -6,7 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Powers chaining — measured, all three questions ruled, building (PT-2508).** `PT-1250`'s "no chaining for Powers" overturned — 83 of 106 powers carry real prerequisites, collapsing cleanly to 32 chains under transitive reduction with zero branching. Chain field to be authored explicitly (not derived) matching Feats' own proven shape — avoids the derived-value risk this session has flagged before. The 11 loose powers render as single-power chains of length one, no special case needed. Building now.
+- **Powers chaining — the data/authoring ruling stands, but "no K2 precedent" claim urgently needs re-verification (PT-2509).** Owner provided direct photographic evidence of a real K2 chain-grid screen (Force Crush, arrows connecting icons), contradicting PT-2508's claim that K2 has no chain grid at all. The overturn of `PT-1250` and the explicit-authoring decision likely still stand on the data's own merits — but re-verify the source files before continuing the build. Check whether this is the same screen as Abilities' Powers tab or a different one (a per-power detail view, given the screenshot's large description pane).
 - **Vacuous-pass power fix — closed, one loose end needs Tester (PT-2508).** Fixed the conflation of "not authored" with "authored but withheld." Three guards now prove names/costs reach the screen for a character who knows real powers — but Coder couldn't reproduce Tester's original blank-name observation for a genuinely known power. Needs Tester's specific character or save before this closes fully.
 - **Placeholder slot icon (not real art) and unlabelled feat chain tiles — both small, held.**
 

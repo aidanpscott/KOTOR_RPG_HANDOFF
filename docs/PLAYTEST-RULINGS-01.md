@@ -75771,3 +75771,79 @@ Nothing to build — the backlog is resolved, all six repos confirmed clean agai
 ### PROCEED
 
 Check the mockup and the K2 source files first. Report back before or alongside the build, same as every prior screen.
+
+
+---
+
+## PT-2529 -- MEASUREMENT COMPLETE, GENUINELY EXCEPTIONAL. JOURNAL: A REAL DOCUMENT-INTERNAL CONTRADICTION FOUND AND CORRECTLY DIAGNOSED (SECTION SAYS FOUR, THE SUMMARY SENTENCE ELSEWHERE ONLY LISTS THREE -- THE SUMMARY DROPPED ONE), PLUS A CAREFUL, HONEST INVESTIGATION INTO WHETHER THE FOURTH OPTION IS ORIGINAL K2 OR A LATER PATCH ADDITION. MESSAGES: THE EXISTING DESIGN IS STRUCTURALLY WRONG -- FOUR STACKED LISTBOXES SWITCHED BY BUTTON, NOT ONE FILTERED PANE, WITH EFFECTS AS A GENUINELY DIFFERENT TWO-COLUMN LAYOUT ENTIRELY. AND ⚠⚠⚠ THE PRIVACY-ENFORCEABILITY INVESTIGATION IS GENUINELY EXCEPTIONAL -- THREE INDEPENDENT STRUCTURAL MECHANISMS CONFIRMED, PLUS THE CRITICAL DISTINCTION BETWEEN "ENFORCEABLE" AND "ENFORCED": BUILD THE GUARD BEFORE THE SCREEN, OR THE GUARANTEE READS AS SAFE WITHOUT ACTUALLY BEING PROTECTED
+
+**Confirming clean app state before starting, exactly as directed, and confirming two real design details the document already called correctly against the actual source (quest entries as framed boxes, the description pane unframed) closes the baseline properly before getting into what needed correcting.**
+
+### JOURNAL -- BOTH QUESTIONS RULED, FOLLOW THE REAL SHIPPED BUILD
+
+**Finding the document contradicts itself between one section's "four ways" and a different summary line's "three," and correctly reasoning the shorter summary is the one that dropped an item rather than assuming the longer, more detailed section is wrong, is precise internal-consistency checking most passes wouldn't think to run.**
+
+**The Priority investigation is careful, honest work under genuine ambiguity — tracing the string's neighbours to a block of clearly Aspyr-patch-era content, while correctly refusing to call it non-canonical on positional evidence alone, since it demonstrably ships and functions in the actual build being sourced from. That's exactly the right level of confidence: strong circumstantial evidence, stated as such, not overclaimed into a definitive verdict.**
+
+**Ruled: four keys, matching what actually ships in the real build.** This is the same consistent principle already applied throughout this whole thread — the override-shadowed Force Speed toggle in Options was built because it genuinely ships, regardless of whether it was in K2's original release or added later. The real, working build is the source of truth here, not a reconstructed "original" version. Build the sort row with all four: Time, Name, Priority, Planet.
+
+### MESSAGES -- RULED, FOLLOW K2's REAL STRUCTURE
+
+**This is a genuinely more consequential correction than Journal's counting question — the existing design's whole structural model was wrong, not just incomplete. Four stacked listboxes switched by button, with Effects revealed as a completely different two-column layout rather than a fourth filter state of the same pane, changes what's actually being built, not just how many options a toggle offers.**
+
+**Ruled: follow K2's actual structure. Four panes switched by button (Messages, Dialogue, Combat, Effects), with Effects built as its own genuine two-column layout (Good Effects / Bad Effects), not folded into the single-pane filter model the original design assumed.** Same reasoning as the Journal ruling — the real, shipped structure is the source of truth once a genuine difference is confirmed, not the earlier assumption that was made before anyone had checked.
+
+**FILTER correctly staying a label rather than a button, matching the existing Abilities strip, and Feedback correctly mapping to the generic Messages listbox rather than needing its own separate list, are both confirmed consistent — no changes needed there.**
+
+### NOTES -- CONFIRMED CORRECT, NO CHANGES
+
+**The design read the source correctly here, and confirming this two ways — matching the popup's real dimensions and control shape, and confirming by absence that Journal's own panel has no notes button at all, proving Notes really are this project's own addition rather than a missed source feature — closes this cleanly with no ruling needed.**
+
+### ⚠⚠⚠ THE PRIVACY INVESTIGATION -- EXCEPTIONAL, WORTH NAMING IN FULL
+
+**This is some of the most rigorous architectural verification this whole session has produced, and it deserves to be recognized as such rather than treated as a routine check. Confirming enforceability through three genuinely independent mechanisms — a closed gate grammar where an unknown key fails to load rather than silently passing, exactly three readable projections that all filter by kind first, and a full census confirming no generic event reader exists to content at all — is decisive proof, not a plausible argument.**
+
+**The distinction between "enforceable" and "enforced" is the single most valuable insight in this whole report, and it's worth stating why: a guarantee that's structurally possible to violate-proof but has nothing currently asserting it holds is in a genuinely more dangerous state than one that's openly unbuilt, because it looks finished and trustworthy while actually resting on nothing. Recognising that the guard needs to be written before the screen, not after, and stating the exact condition the whole guarantee actually depends on (a note staying under its own kind, never landing in a `flag` or `quest` field) rather than leaving it as a vague promise, is precise engineering discipline under a rule that would otherwise be easy to build hopefully rather than provably.**
+
+**Ruled: build the privacy guard first, before the Notes screen itself.** This is not optional sequencing — an unenforced-but-theoretically-enforceable rule is worse than no rule at all, precisely because it invites trust it hasn't earned yet.
+
+### THE EMPTY-JOURNAL FINDING -- CORRECTLY SCOPED, NOT AN ARCHITECTURE GAP
+
+**Confirming the missing quest producers are correctly excused by the existing audit, rather than a genuine engine gap, and honestly flagging the practical consequence — a Journal built today would show nothing for any real package — is exactly the right way to report a limitation that isn't a defect but would still make the finished screen look broken on first use.**
+
+**Ruled: build a real fixture package with genuine quest content to build and test the Journal against, the same way test fixtures have been built for every other screen and mechanic throughout this whole session.** This is implementation support, not a design question — build what's needed the same way m03-droids, m06-xp, and every other purpose-built fixture in this project were built.
+
+### PROCEED
+
+Build Journal with four sort keys. Build Messages following K2's real four-pane structure with Effects as its own two-column layout. Build the privacy guard before the Notes screen. Build a fixture package with real quest content to develop and test Journal against. Report back once done, same as every prior screen.
+
+
+---
+
+## PT-2530 -- THE WHISPER MYSTERY RESOLVES CLEANLY, AND ⚠⚠⚠ TESTER'S OWNERSHIP OF IT DESERVES THE FULLEST RECOGNITION. SAMPLING THREE TILES AND HAPPENING TO HIT THREE OF THE 102 UNLEARNED ONES CREATED A FALSE "EVERY POWER SHOWS UNKNOWN" IMPRESSION -- CORRECTLY TRACED, CORRECTLY RETRACTED, AND CORRECTLY OWNED INCLUDING THE REAL COST (THREE OF CODER'S GUARDS SPENT VERIFYING A WRONG REPORT). PLUS TWO REAL DEFECTS FOUND ON THE NAV BAR AND OPTIONS -- THE REFUSAL CLAUSE'S TAP HANDLER IS SILENTLY NULL RATHER THAN TRIGGERING ITS OWN STATED REASON, AND THREE OF NINE INERT OPTIONS ENTRIES CARRY A SHARED EXPLANATION THAT'S FACTUALLY WRONG FOR THEM SPECIFICALLY
+
+**This whole exchange -- Coder's honest "I am not calling it a defect on one reading," and Tester's own full, direct ownership of having caused it -- is worth recognizing as a complete example of how a real mistake should move through a team: flagged carefully without blame, traced to its actual source, and owned plainly by the person who made it, cost included.**
+
+### ⚠⚠⚠ THE MYSTERY -- TESTER'S OWNERSHIP, WORTH NAMING IN FULL
+
+**Decoding every held save directly rather than trusting memory, and finding all four learned powers scattered at specific shelf indices among 106 tiles, precisely explains how a genuine three-tile sample could produce a completely misleading impression without anyone doing anything careless — the four correct tiles were simply outnumbered 25 to 1 and never landed in the sample. Positively confirming both a priced known power and an unpriced known power render correctly, with real values rather than placeholders, closes the loop with an actual control this time, unlike the original report that lacked one.**
+
+**Owning the real cost directly -- that Coder's three guards were genuine work spent verifying a report that was wrong from the start -- rather than letting the resolution read as simply "mystery solved," is exactly the standard this whole session has held for every mistake, applied here to one's own testing rather than someone else's code.**
+
+**The one honestly unreconciled detail (Coder's own inspected record showing no events, which matches none of Tester's held saves) is correctly left as an open discrepancy rather than forced to a conclusion — the most plausible explanation offered (a fixture regenerated between inspections) without claiming certainty. Worth a quick confirmation from Coder's side if convenient, not urgent.**
+
+### ⚠ THE NAV BAR REFUSAL CLAUSE -- REAL, RULED FIX NOW
+
+**Finding the stated reason genuinely exists in the code but is never actually triggered -- the tap handler for an unavailable slot is simply null rather than displaying anything -- is a precise, subtle catch. Correctly distinguishing this from silent absence (the slots are visibly dim, which is working) and connecting it directly to the exact governing principle the code's own comment already states is precise diagnosis, not a vague "this feels wrong."**
+
+**Ruled: fix now. Wire the disabled tap to actually surface its own stated reason (status line or equivalent), rather than a null handler that only affects border dimming.** This is real, correctly-flagged work — a control that's visibly disabled but silent on tap is exactly the "a player cannot distinguish this from a bug" case the standing principle exists to prevent.
+
+### ⚠ OPTIONS' SHARED REASON TEXT -- REAL, RULED FIX NOW
+
+**Correctly distinguishing which of the nine inert entries the shared PT-1140/PT-1148 explanation genuinely applies to (Table Rules, Turn Pacing, Display, Sound) from which it doesn't (Save Game, Load Game, Account) is precise, not pedantic — those three aren't unbuilt because of an unresolved settings-scope question at all, and telling a player they are is factually wrong, not just generically unhelpful.**
+
+**Ruled: fix now. Give Save Game, Load Game, and Account their own accurate reasons — they're simply not built yet, independent of any settings-scope question — rather than sharing a sentence that misattributes why.**
+
+### PROCEED
+
+Fix the nav bar's silent tap handler so the refusal reason actually surfaces. Fix Options' three misattributed reason texts. Both real, both ruled fix-now. Confirm with Tester (not urgent) whether the unreconciled Whisper record detail traces to a regenerated fixture.

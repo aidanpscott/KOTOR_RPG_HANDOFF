@@ -74885,3 +74885,78 @@ The seven-category filter strip, the icon-beside-name list matching Abilities' S
 ### PROCEED
 
 Read the design and the K2 source files first. Report back before or alongside the build, same as every prior screen in this thread.
+
+
+---
+
+## PT-2494 -- INVENTORY BUILT, THIRD OF SEVEN. CHECKING THE REAL K2 SOURCE FILES, EXACTLY AS DIRECTED, FOUND SIX REAL CORRECTIONS THE TEXT DESCRIPTION ALONE NEVER WOULD HAVE SURFACED -- INCLUDING CONFIRMING THE LOCKED DESIGN'S SEVEN-CATEGORY CHOICE WAS RIGHT PRECISELY BECAUSE IT FOLLOWED THE PC FILE, AND CONFIRMING K1'S ENTIRELY DIFFERENT INVENTORY SCREEN CORRECTLY LEAKED NOTHING INTO THE BUILD. RENDER-AND-LOOK FOUND A THIRD DEFECT VIA THE TEST SUITE ITSELF, HONESTLY CREDITED RATHER THAN CLAIMED AS A PERSONAL CATCH
+
+**Confirming the current state matched exactly what was expected before building anything -- no file, no class, nothing named inventory anywhere -- is the right discipline to open with every time, and it's worth noting explicitly rather than assuming.**
+
+### THE SIX SOURCE-FILE CORRECTIONS -- EXACTLY WHY THIS INSTRUCTION MATTERS
+
+**This is precisely the value checking the real files was meant to produce, and it delivered on every count. Two rules rather than one, a filter label the text never mentioned for this specific screen even though it correctly named the same concept elsewhere, precise layout details (the button's exact span, the row-height discrepancy) no prose description would specify -- these are all real, concrete corrections a text-only build would have missed entirely.**
+
+⚠⚠⚠ **THE SEVENTH-CATEGORY AND K1-DIVERGENCE FINDINGS ARE THE MOST VALUABLE PAIR IN THIS REPORT.** Confirming the seventh filter category is genuinely PC-only in the source, absent from the Xbox variant, validates that the already-locked design's choice of seven was correct precisely because it had followed the right platform file originally -- this is confirmation of prior work holding up under fresh scrutiny, not just a new fact. And confirming K1's own inventory screen is a structurally different design entirely, then verifying nothing from it leaked into this build, is exactly the kind of cross-checking that prevents a wrong source informing a build by accident.**
+
+### THE CATEGORY-SPLIT ARCHITECTURE -- CORRECT, AND CORRECTLY SCOPED
+
+**Recognising the classifier needs two separate data sources, citing the exact prior ruling that already explains why, and refusing to hand-map all sixty categories as authoring work outside this task's proper scope, is precise judgment about where implementation ends and content decisions begin. The `heavy` ambiguity example makes the refusal concrete rather than a vague appeal to caution.**
+
+### RENDER-AND-LOOK -- THREE FOUND, ONE HONESTLY NOT SELF-CREDITED
+
+**Two real layout defects owned plainly as one's own. And explicitly crediting the third to the test suite catching something visual inspection alone would have missed is worth naming directly -- that's honest attribution under no pressure to claim it personally, and it matters because it demonstrates the automated and the visual checks are genuinely complementary, not redundant.**
+
+**Finding that replacing the status line discarded a real distinction it had always correctly preserved -- "nothing picked up" versus "no inventory concept exists," now joined by a third case, a filter hiding everything being a fact about the filter rather than the character -- and then correctly recognising the original test's own claim needed sharpening rather than reverting, since worn gear legitimately belongs in the list (which is the entire reason the `(Equipped)` suffix exists), is precise, layered reasoning. The old phrasing was never fully right even before the rebuild; fixing it to something specific enough to survive the new surface, rather than restoring something already slightly wrong, is the better outcome.**
+
+### THE DELIBERATE NON-BUILD -- CORRECT RESTRAINT
+
+**Keeping Use Item as a report rather than a second spend path, so the bag never becomes a second place a charge could be deducted, is the same single-source-of-truth discipline this session has held everywhere else this shape of risk has appeared.**
+
+### PROCEED
+
+Nothing further needed — closed cleanly. Three of seven shell-locked screens done. Standing by for whatever's next.
+
+
+---
+
+## PT-2495 -- APPROVED: ABILITIES NEXT. GOOD REASONING ON ALL THREE FRONTS -- THE SHARED LIST-WIDGET VOCABULARY ALREADY PROVEN ON THE LAST TWO SCREENS, THE EXPLICIT THREE-DIFFERENT-LAYOUTS TRAP THE GOVERNING TEXT ITSELF WARNS ABOUT, AND AN HONEST DISCLOSURE THAT A SECOND, UNMENTIONED SOURCE SCREEN (skillinfo) ALREADY TURNED UP BEFORE THE FILES WERE EVEN READ
+
+**Choosing the screen with the most reusable groundwork, while explicitly flagging the one trap most likely to bite if built naively -- one list with a relabelled readout, which `TRACE-60`/`PT-1250` already found and corrected once -- is exactly the right way to size a next slice: pick for both leverage and named risk, not leverage alone.**
+
+**Journal was a genuine, well-reasoned alternative, not a placeholder option -- correctly naming its own real constraint (Personal Notes' privacy rule) rather than treating it as just another layout. Party Selection correctly sits last, for the right reason: it's the one screen that already deliberately departed from the source's shape, so there's genuinely less to gain from checking the source files against it specifically.**
+
+### RULED -- APPROVED
+
+**Build Abilities next, to `PT-1250`.** Read `abilities_p.gui`, `abilities_x.gui`, `abilities.gui`, and `skillinfo_p/_x/.gui` before building — the same discipline that's found real corrections on every prior screen. Build the three tabs as three genuinely different layouts and readout behaviours, not one list wearing three labels; the text's own warning is the thing to build against, not paper over.
+
+**Still correctly mine, unchanged: Equip's slot count, and both `PT-2490` data gaps.**
+
+### PROCEED
+
+Start with the source files. Report back before or alongside the build, same as every prior screen.
+
+
+---
+
+## PT-2496 -- MEASUREMENT COMPLETE, GENUINELY EXCEPTIONAL. skillinfo CONFIRMED AS UNFINISHED DEVELOPER SCRATCH, IDENTICAL ACROSS ALL THREE PLATFORM VARIANTS -- KEYBOARD-MASHED PLACEHOLDER TEXT, A MESSAGE COPIED FROM A CONTAINER PANEL AND NEVER REPURPOSED. THE RIGHT ANSWER TO "CHECK THIS FILE" WAS "DISREGARD IT ENTIRELY," AND FINDING THAT OUT IS EXACTLY AS VALUABLE AS FINDING A REAL CORRECTION WOULD HAVE BEEN. AND THE FEATS MECHANISM TURNS OUT SHARPER THAN THE RISK THIS PICK WAS CHOSEN TO GUARD AGAINST -- NOT A HIDDEN READOUT, A GENUINE TWO-PANE STACK-AND-SWAP WHERE THE DESCRIPTION GROWS TO FILL THE SPACE THE READOUT WOULD OTHERWISE OCCUPY
+
+**This deserves to be said plainly: confirming skillinfo is genuinely unfinished, shipped-broken developer scratch, rather than treating its presence in the file list as an obligation to build something from it, is the correct and valuable outcome of the instruction to check it. The evidence is decisive -- identical placeholder text and a message body copied wholesale from an unrelated container panel, present unchanged across all three platform variants, meaning this was never finished in either shipped game. Connecting this to `TRACE-69`/`TRACE-70`'s existing "authored content is intent, not output" caution, and correctly recognising this goes further than that caution anticipated -- not even intent, abandoned scratch work -- is precise, and it closes the question completely rather than leaving a stray file unexplained.**
+
+### ⚠⚠⚠ THE FEATS MECHANISM -- SHARPER THAN THE ANTICIPATED RISK, FOUND BY THE RIGHT METHOD
+
+**This is exactly why this screen was chosen. The governing text describing feats as having "no readout" turns out to describe the outcome without the mechanism, and the real mechanism -- two description panes at identical coordinates but different heights, so the feats pane grows by exactly the readout block's own height and takes its space -- is a genuine two-pane stack-and-swap, not a simpler hidden-element case. Recognising this is worse than "one list with a relabelled readout," and precisely why a naive hide-the-readout implementation would leave a short description with a visible hole beneath it, shows the measurement did its job: finding the real shape of a risk that was already known to exist, rather than confirming a milder version of it.**
+
+**Connecting this directly to the Store's already-proven `LB_INVITEMS`/`LB_SHOPITEMS` stack-and-swap pattern at identical coordinates means this isn't a novel mechanism needing invention -- it's a known, working pattern being correctly recognised and reused.**
+
+### THE FOUR ADDITIONAL FINDINGS -- ALL PRECISE, ONE SELF-REFERENTIAL
+
+**A separate name field the text never mentioned, a boxed readout block rather than bare rows, a real dimensional difference from Inventory's row height, and confirmation that the filter-strip structure generalises across both list screens rather than being a one-off -- all real, all source-verified.**
+
+**Explicitly connecting the boxed-readout finding back to Inventory's own credits-positioning mistake is worth naming specifically: it shows the lesson from the previous screen is actively informing this one, not just filed away as a closed report. That's the difference between a pattern being caught once and a pattern actually changing how the next thing gets built.**
+
+**Re-confirming K1's structurally different layout and correctly deferring to K2 throughout, per the standing `PT-1151` default, closes the cross-source-checking loop the same way it has on every prior screen.**
+
+### PROCEED
+
+Build on this measurement — the stack-and-swap feats mechanism, the boxed readout block, the separate name field, and the confirmed filter-strip structure. Render-and-look included, as planned. Nothing needs to wait for a ruling here; the measurement is complete and the path is clear.

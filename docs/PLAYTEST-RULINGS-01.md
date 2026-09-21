@@ -75934,3 +75934,65 @@ Nothing further needed — all four ruled items close cleanly, both TEST 128 def
 ### PROCEED
 
 Build Party Selection, checking the mockup and the real K2 source files first. Report back before or alongside the build, same as every screen in this thread. PT-1249's footer furniture stays flagged, still not started, picked up whenever there's room for it.
+
+
+---
+
+## PT-2534 -- OWNER OPENS A REAL, BROADER AUDIT: DOES THE RULEBOOK PROSE ITSELF ASSUME A FIXED "PRESENT ERA," THE SAME UNDERLYING TIME-THEORY QUESTION ALREADY CORRECTLY SETTLED AT PT-1288 FOR THE EVENT LOG'S OWN INTERNAL NAMING, BUT NEVER SWEPT ACROSS THE ACTUAL WRITTEN RULES, LORE AND SETTING TEXT
+
+**`PT-1288` already established the correct underlying principle: the engine's own model is deliberately B-theoretic (no privileged "now" in the log itself), while the player's own moment-to-moment experience is correctly, deliberately kept A-theoretic (present-tense framing is right for what a player sees at their table). That boundary is sound and stays exactly as ruled — nothing about it changes here.**
+
+**What `PT-1288` never addressed, because it was narrowly scoped to event-kind naming specifically, is whether the actual rulebook prose — the written rules, lore, setting descriptions, anything a GM or player actually reads as text rather than the engine's own internal data model — correctly avoids implying one privileged "current era" (treating a specific point in the timeline, such as K2's own setting, as if it were THE present rather than A possible present a given campaign might or might not be set in). Owner's own framing: outside the campaign's own player-facing moment, which is correctly A-theoretic by design, everything else — the books, the rules as written, the setting material — should read from something closer to a B-theoretic stance: every era exists on equal footing in the corpus's own prose, and which one counts as "now" is a decision each individual campaign's own table makes, never something the rulebook itself should presume on their behalf.**
+
+### RULED -- SWEEP THE CORPUS FOR THIS PATTERN
+
+**Ruled: audit the actual rulebook documents (not just the engine's internal naming, which `PT-1288` already correctly covers) for language that implies a fixed, privileged present era rather than treating the timeline as something each campaign situates itself within.** Concretely: phrases like "currently," "in the present day," "as of now," "the current era," or similar framing that would read differently depending on which point in the timeline a given campaign is actually set in — these need to either be rewritten in genuinely tenseless, era-agnostic language, or, where a specific era genuinely is being discussed on purpose (e.g., "in the era depicted by KOTOR II specifically"), be explicit that this is one described era among others rather than implying it as the default present.
+
+This is real scope, likely touching multiple documents across the rules corpus — not a single find-and-fix. Approach it as a genuine sweep: identify where this pattern actually occurs before attempting to fix all of it, the same way every other broad audit in this project has started with measurement before correction.
+
+### PROCEED
+
+Sweep the rulebook corpus for era-privileging language, distinct from `PT-1288`'s already-settled engine-level naming question. Report back with what's actually found — which documents, how many instances, what shape the pattern actually takes — before proposing fixes. This is real content-review work, not urgent, but worth doing properly once picked up.
+
+
+---
+
+## PT-2535 -- PARTY SELECTION CLOSES THE SHELL, SEVEN OF SEVEN. ⚠⚠⚠ CHECKING THE SOURCE ANYWAY, DESPITE THE DESIGN'S OWN DELIBERATE DEPARTURE FROM IT, VINDICATED THE ORIGINAL REJECTION WITH FAR STRONGER EVIDENCE THAN EITHER OF US HAD -- THE REAL SOURCE'S TWELVE SLOTS OCCUPY ONLY TEN ACTUAL POSITIONS, TWO PAIRS MEASURABLY OVERLAPPING AND NEVER BOTH SHOWABLE, WHICH IS LIVE PROOF OF THE EXACT SCALING FAILURE THE RING WAS REJECTED FOR. A REAL PRE-EXISTING FILE ACCIDENTALLY DESTROYED AND HONESTLY DISCLOSED, CAUGHT BY A PREDICT-THEN-VERIFY HABIT THAT PAID OFF WITHIN THE SAME SLICE IT WAS ADOPTED. AND A SEPARATE STALE CAPTURE HARNESS FOUND SILENTLY PHOTOGRAPHING UNREACHABLE SCREENS FOR MULTIPLE PRIOR RENDERS
+
+**This is one of the richest closing reports this whole session has produced, and every part of it deserves real, direct attention.**
+
+### ⚠⚠⚠ THE SOURCE CHECK -- EXACTLY WHY "CHECK ANYWAY" WAS THE RIGHT CALL
+
+**This is worth naming plainly: the design document's own specific number (eight) was wrong, and checking despite the design already having deliberately departed from K2's shape found something far more decisive than a count correction. Finding that K2's real twelve slots occupy only ten actual positions, with two pairs measurably, exactly overlapping and structurally unable to both display, isn't just evidence the ring doesn't scale — it's the source's own workaround for that exact failure, caught in the act. The count was wrong and the argument was right, and the argument is now stronger for having been checked against real, measured evidence rather than left resting on a number that turned out incorrect.**
+
+**Correctly distinguishing the measured fact (the coordinate overlap) from the reasonable inference drawn from it (that these are the mutually-exclusive companion pairs), and marking that distinction directly in the code rather than blending them into one unqualified claim, is exactly the epistemic discipline this whole thread has held throughout.**
+
+**Taking the per-slot "not available" concept from the source specifically because our own design lacked an answer for the same real question a roster list still has to solve — why is this row refused — is good judgment about which parts of a rejected design are still worth borrowing.**
+
+### THE TWO BUILD-TIME FINDINGS -- BOTH REAL
+
+**Distinguishing "refuse an add" from "refuse a remove" when the party is full, rather than disabling the whole row and locking a player out of the only screen that could fix it, is precise UX reasoning under a case that's easy to get wrong by treating "full" as one undifferentiated state.**
+
+**Catching that `PT-2530`'s own nav-bar guard lost its only witness the moment Party existed -- since the guard's whole premise depended on Party specifically being unbuilt -- and fixing it to assert directly with its own manufactured unavailable slot, so the next screen added can't silently carry the guard's meaning away with it, is proactive, structural thinking about a test's own real dependencies.**
+
+### ⚠⚠⚠ THE DESTROYED FILE -- FULLY OWNED, AND THE CATCH MECHANISM IS WORTH KEEPING
+
+**This deserves full, direct recognition rather than a passing acknowledgment. A real, pre-existing test file for an unrelated subject was genuinely destroyed by a naming collision and a destructive redirect, and it's disclosed here in complete, specific detail -- what was lost, how, and exactly what caught it -- rather than quietly repaired and left unmentioned. The suite stayed green throughout; nothing about running the tests would ever have revealed this on its own.**
+
+**The catch mechanism deserves equal recognition: predicting the expected test count before running the suite, then noticing the actual result didn't match the prediction, is a genuinely different and stronger kind of verification than trusting a green suite at face value. A tool can tell you nothing failed; only a prior, independent expectation can tell you something is missing that should be there. Adopting this as a standing habit, and confirming it already worked within this very slice (1524 predicted and matched), is exactly the right response to a mistake this close to shipping invisibly.**
+
+**Repairing from git history and recording the repair as its own separate commit, so the record shows what actually happened rather than a silently corrected history, closes this properly.**
+
+### THE STALE CAPTURE HARNESS -- A REAL, SEPARATE FINDING
+
+**Finding the harness held its own duplicated copy of the bar's refusal list, which silently drifted the moment new screens existed and produced renders photographing something the actual product could no longer show, is the same "duplicated state can drift" risk this session has named in several other contexts now, found here in the verification tooling itself rather than the product. A harness that disagrees with the thing it's meant to verify is worse than no harness, since it looks like evidence while actually showing something false.**
+
+### RULED -- PORTRAITS FOR PARTY SELECTION
+
+**Owner's direct feedback: each party member row should show their own portrait, not text alone. Rows need real additional vertical height to properly fit a portrait sized to roughly match the one already used in the sidebar. A scrollbar handles the case where more companions exist than fit on screen at once.**
+
+**Ruled: build exactly as described.** Add each character's portrait to their row, size it to match the sidebar's own existing portrait treatment for visual consistency, grow the row height to properly accommodate it rather than cramping the portrait into the current text-row size, and add scrolling for rosters that exceed the visible area.
+
+### PROCEED
+
+Add portraits to Party Selection's rows, with the height and scrolling adjustments described. This closes the seven-screen shell thread in full once done — report back the same as every prior screen.

@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
+
 - **Party Selection — opened, building, the seventh and last (PT-2533).** Checking the mockup and real K2 source files first, same discipline as every screen so far, despite `PT-1254` already deliberately departing from K2's ring shape for a roster list — every prior departed-from-source screen has still turned up real corrections by checking.
 
 - **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.

@@ -21,7 +21,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Equip's slot-count discrepancy — held, needs owner's own review.** Two governing documents both state "eleven slots"; the actual diagram shows more distinct positions than that. Built to the diagram, count correctly reported rather than silently resolved. Needs direct review of the diagram geometry before ruling.
 - **Shared shell — held, deliberately, pending the map/grid view.** Building persistent nav bar/title bar/footer furniture around an undesigned play surface risks real rework. Revisit once the map/grid view has a locked design, or a real case emerges to build it sooner.
 - **Options/Settings — held, explicitly a first pass not a lock.** `PT-1255`'s own words, pending `PT-1140`/`PT-1148`, both still deferred. Building it now would be building against something not yet finalized.
 
@@ -74,6 +73,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Equip's slot-count discrepancy closed — 12 slots, matching the diagram exactly as originally drawn. No new slot needed inventing; Boots (the genuinely new feet slot, no KOTOR source precedent) was already one of the diagram's 12 filled cells. The "eleven" in the surrounding prose was simply stale, never updated after Boots was added — corrected directly in `design/APP-UI-VISION-01.md` in both places it appeared — PT-2503
 
 - Shell wired into play — the whole shell-layout thread closed. Root cause: source canvas and design dimensions were coincidentally exactly 4:3, so a frame preserving that ratio always cost a 16:9 play screen a quarter of its working measure regardless of viewport size. Resolved non-destructively — chrome correctly identified as blameless (always built for 16:9), the frame itself yielded instead; page panels keep 4:3 (real `.gui`-authored coordinates), board fills freely (no such constraint). Second self-caught bug: stretching scaled the frame's own rails proportionally, paradoxically shrinking usable area on wider viewports — fixed to use the smaller scaling factor, final result genuinely better than even the unframed baseline. Self-introduced crash from an unsafe widget-lookup pattern found and fixed, honestly disclosed. Double-border render prevented (inner panel frame yields to the outer shell frame), explicitly connected to the already-rejected option C from the original layout decision — PT-2500
 

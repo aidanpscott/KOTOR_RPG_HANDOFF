@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Abilities — opened, building (PT-2495).** Fourth of seven shell-locked screens. Reuses the same list-widget vocabulary already proven on Inventory/Equip. Named risk to build against: the three tabs (Skills/Powers/Feats) are genuinely different layouts and readouts, not one list wearing three labels — `TRACE-60`/`PT-1250` already caught this once. Reading `abilities_p/x.gui`, `abilities.gui`, and `skillinfo_p/x.gui` (a second screen the design text never mentions) before building.
+
 
 - **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
 - **Prestige class skill points missing across the board — held, needs design-intent research before ruling (PT-2490).** Every prestige class carries no `skill_points` data. Uniform absence across an entire category could be a genuine oversight or a deliberate, undocumented choice — different evidence than Gap 1's three specific classes missing something their siblings have. Research source material / existing design docs before ruling. Safeguard in place: audit asserts no current base class shares this gap, so any future regression fails loudly.

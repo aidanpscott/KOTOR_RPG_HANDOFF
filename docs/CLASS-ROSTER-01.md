@@ -944,7 +944,6 @@
 | **Commando** | any base class 6 | ⚠ `Weapon Specialization` in **ANY ONE RANGED FAMILY** — `PT-578`, narrowed by `PT-579` |
 | **⚠ Shock Trooper** | any base class 6 | ⚠ `Alertness` 8 + `Weapon Focus` in any RANGED family — **SPEED, CONTROL and PROTECTION. `PT-579`.** ⚠ **COMPETENCE — `PT-628`.** |
 | **⚠ Blademaster** | any base class 6 | ⚠ `Weapon Specialization: Melee Weapons` — **the MELEE class, `PT-578`.** ⚠ **COMPETENCE — `PT-628`.** |
-| **Gunslinger** | any base class 6 | `Master Two-Weapon Fighting` |
 | **Sharpshooter** | any base class 6 | `Weapon Specialization: Blaster Rifle` |
 | **Shadow Hunter** | any base class 6 | `Stealth` 8 + a melee chain at tier 2 |
 | **Scoundrel** | any base class 6 | `Stealth` 8 + `Sneak Attack` tier 2 |
@@ -959,10 +958,17 @@
 | | From | Holdings |
 |---|---|---|
 | **Officer** | **Soldier 6 or Agent 6** | `Alertness` 8 |
+| **⚠ Gunslinger** | **Bounty Hunter 6, Smuggler 6 or Pirate 6** | `Master Two-Weapon Fighting` — ⚠ **owner ruling, NUMBER PENDING** |
 | **Operative** | **Agent 6** | `Stealth` 8 + `Slicing` 8 |
 | **Droid Master** | **Engineer 6 or Machinist 6** | `Repair` 8 **or** `Slicing` 8 — `PT-225` |
 | **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
 | **Beast Master** | **Scout 6 or Treasure Hunter 6** | `Beast Handling` 8 — `PT-237` |
+
+**⚠⚠⚠ THE `Gunslinger` MOVED FROM OPEN TO LOCKED — owner ruling, NUMBER PENDING.** **`PT-217` put it in the open tier at *"any base class 6"*, and the owner has narrowed it to three named routes: `Bounty Hunter 6`, `Smuggler 6` or `Pirate 6`.**
+
+**⚠ It follows this section's own line — *"Open when the prestige is a technique. Locked when it is a background."*** **Two guns and a fast draw is not a technique anyone picks up with the work; it is where you came up. The three named classes are the lives that produce it.**
+
+**⚠⚠ AND ONE OF THE THREE CANNOT BE TAKEN TODAY.** **`Pirate` has a full numbers row in §4 and an authored skill list in `class-skills.json`, and it is in NO `Class | State` table — so it reaches neither `classes.json` nor the shelf.** **Until it does, this entry has two live routes and not three; the third is written against a class a player cannot be.**
 
 #### ⚠ A holding only sorts if the intended parents can reach it
 

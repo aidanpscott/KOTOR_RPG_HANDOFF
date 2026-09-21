@@ -9,10 +9,13 @@ files and 65 standard blueprints.
 **Verdict.** The shell itself is right — containment, divider and board
 width all measured and confirmed. **Three of the four panels draw their own
 sculpted frame inside it**, which is the one clause you asked me to check
-and it fails. Inventory and Abilities are otherwise good, with two findings
-where a clause passes for the wrong reason: the empty-bag state is
-unreachable, and the Powers readout is blank for *every* power rather than
-only unpriced ones.
+and it fails. One further real finding: the empty-bag state is unreachable
+for any character the app creates.
+
+⚠ **CORRECTED AFTER FILING.** This report originally claimed the Powers
+readout was blank for every power. That was wrong — see the retraction in
+§3. The blanks were correct behaviour for unlearned powers, and my
+"control" shared the same property as the cases under test.
 
 ---
 
@@ -149,24 +152,41 @@ name twice.
 **An unpriced power shows a dash** — `BASE COST --`, `ADJUSTMENT --`,
 `COST PER USE --`. No `null`, no `0`.
 
-### ✗ But that clause passes for the wrong reason
+### ⚠⚠ RETRACTED — the clause passes, and properly
 
-**Every power reads `--`, and every power is called `UNKNOWN FORCE POWER`.**
+**As first filed this section claimed every power reads `--` and every
+power is titled `UNKNOWN FORCE POWER`. That is wrong, and Coder was right
+not to be able to reproduce it.**
 
-I sampled three tiles: two priced (Advanced Throw Lightsaber at 15, Arrow
-of White Dawn at 30 — the level-up screen prices both) and one unpriced.
-All three showed the same blank title and the same three dashes.
+`UNKNOWN FORCE POWER` is the **deliberate label for a power the character
+has not learned** — `abilities_screen.dart:534` documents it and `:542`
+implements it as `p.known ? p.name : 'UNKNOWN FORCE POWER'`, with `:604`
+dashing the costs on the same condition. The grid shows the **whole
+106-power roster in shelf order** (`PT-1250`: *"an unlearned power is
+present and anonymous"*), and the character in my fixture knew four. All
+three tiles I sampled were unlearned, so all three were correct.
 
-The selection itself works and the **descriptions resolve correctly and
-differ** — Advanced Throw Lightsaber's text is its own, the unpriced one's
-is its own. So the grid, the selection and the description are all fine;
-only the name and all three cost rows never populate.
+Re-run on the same build with the tiles located by pixel rather than by my
+own arithmetic, which is what went wrong:
 
-`Unknown Force Power` is not a row on the shelf. The nine genuinely
-unpriced powers are Crush Opposition II, III and IV, Dominate Mind and five
-others; the other 97 carry a cost. So the dash is not distinguishing
-unpriced from priced — nothing on this screen is priced, and the clause
-would read as a pass however the unpriced case behaved.
+| power | known? | priced? | title | costs |
+|---|---|---|---|---|
+| Force Scream (#46) | yes | yes | **Force Scream** | **8 · 0 · 8** |
+| Crush Opposition II (#8) | yes | no | **Crush Opposition II** | `--` · `--` · `--` |
+| any unlearned | no | either | `UNKNOWN FORCE POWER` | `--` · `--` · `--` |
+
+So the routed clause — *an unpriced power shows a dash, not `null` or
+`0`* — **passes, and not vacuously**: a known priced power shows real
+numbers, a known unpriced one shows dashes, and the two are distinguishable
+on screen.
+
+⚠ **Why I got it wrong, since it is the same shape twice.** I did pair the
+negative with a positive, as the standing practice says — I deliberately
+sampled two *priced* powers as the control. But both controls were
+**unlearned**, so they shared the property that actually caused the blank.
+A control that shares the defect's cause is not a control. The property I
+needed to vary was `known`, and I never checked which powers the fixture
+had learned.
 
 ⚠ **And the feat chain tiles carry no label and no icon** — they are empty
 red-bordered boxes joined by arrows, so a chain cannot be read until each

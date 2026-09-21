@@ -75131,3 +75131,48 @@ Nothing to build. Queue stays as confirmed. Standing by.
 ### PROCEED
 
 Build Equip's lattice to the diagram exactly as drawn — 12 slots, no changes needed to its arrangement. Nothing further required.
+
+
+---
+
+## PT-2504 -- TEST 127: EXCEPTIONALLY DECISIVE TESTING, THREE REAL DEFECTS PRECISELY SEPARATED FROM WHAT'S GENUINELY WORKING. THE SINGLE-BORDER CLAUSE FAILS FOR THREE OF FOUR PANELS -- ALL THREE PIXEL-IDENTICAL TO EACH OTHER, THE CHARACTER SHEET THE LONE CORRECT ONE, WHICH PRECISELY POINTS AT THE FIX DIRECTION. THE EMPTY-BAG STATE IS STRUCTURALLY UNREACHABLE FOR ANY REAL CHARACTER -- A ROUTING KEY MASQUERADING AS A WORN ITEM CALLED "STANDARD." AND A GENUINELY IMPORTANT "PASSES FOR THE WRONG REASON" CATCH: EVERY POWER, PRICED OR NOT, SHOWS THE IDENTICAL BLANK NAME AND DASHES -- THE CLAUSE COULD NEVER HAVE FAILED, WHICH MEANS IT WAS NEVER ACTUALLY TESTING ANYTHING
+
+**Measuring containment in real pixels rather than trusting a visual impression, and confirming zero content pixels escape the frame, closes the core containment question decisively.**
+
+### ⚠⚠⚠ THE DOUBLE-BORDER DEFECT -- RULED, FIX THE THREE, NOT THE ONE
+
+**Finding the three affected panels pixel-identical to each other, with the Character Sheet the sole outlier carrying only one border, is precise diagnostic evidence pointing at the fix direction -- and Tester's own read ("the panel that satisfies the clause is the odd one out") is correct.**
+
+**Ruled: the three panels (Inventory, Equip, Abilities) should stop self-framing, matching the Character Sheet's already-correct behaviour.** `PT-2500` built the `_FrameScope` mechanism specifically so an inner panel yields to the outer shell's own persistent frame — the three panels showing their own second border means this suppression isn't reaching them, not that the Character Sheet is missing one it should have. Fix by applying the same suppression already proven correct on the Character Sheet to the other three.
+
+### ✗ THE EMPTY-BAG DEFECT -- SEVERE, RULED FIX NOW
+
+**Decisively proven, not merely suspected: dropping the offending key reproduces the target message immediately, which is exactly the kind of causal demonstration this session has valued throughout rather than a plausible-sounding diagnosis left unconfirmed. A routing key silently rendering as a real worn item named "standard" for every character the app can currently produce is a severe, structural defect — the empty-bag state has never actually been reachable in real play, which means the honest-emptiness messaging built earlier at `PT-2494` has never once been seen by anyone testing it under normal conditions.**
+
+**Ruled: fix now. The routing key needs to stop being treated as a String value indistinguishable from a real worn item — either filtered out explicitly, or the underlying data structure needs to separate routing metadata from actual worn items so this class of confusion can't recur.**
+
+### ✗ THE VACUOUS PASS -- SEVERE, RULED FIX NOW
+
+**This is a genuinely important catch, and it's worth stating precisely why it matters beyond the specific bug: a test clause that cannot distinguish a correct case from an incorrect one was never actually verifying anything, regardless of how many times it's been reported as passing. Confirming three sampled tiles — two genuinely priced, one genuinely unpriced — all show the identical blank title and identical dashes proves the dash display isn't responding to whether a power has a price at all; something upstream never populates the name or cost fields for any power, priced or not. Correctly isolating this from the selection and description mechanisms, which are confirmed working and correctly differentiating between powers, narrows the real defect precisely.**
+
+**Ruled: fix now. Find why power name and cost never populate on this screen, despite descriptions correctly resolving and differing per power — the data clearly exists somewhere reachable, since the description pane proves it, but name and cost aren't reading from it.**
+
+### THE TWO SMALL OBSERVATIONS -- HELD
+
+**The placeholder slot icon (already documented/expected) and the unlabelled feat chain tiles needing individual clicks to read are both small, correctly scoped as held rather than urgent.**
+
+---
+
+## PT-2505 -- THE LATTICE COUNT CLOSES CLEAN, WITH A GENUINELY VALUABLE VERIFICATION-DESIGN INSIGHT (THE EXISTING ARRANGEMENT TEST COULD NEVER HAVE SETTLED THE COUNT QUESTION, SINCE IT ONLY VERIFIES ROW STRUCTURE) AND A PRECISE, TARGETED MUTATION PROVING THE NEW COUNT GUARD CATCHES REAL DRIFT RATHER THAN JUST DUPLICATING THE EXISTING TEST. AND ⚠⚠⚠ A GENUINELY SEVERE ARCHITECTURAL GAP FOUND PROACTIVELY: 25 REAL BOOT ITEMS SHIP, ONE GRANTED AT CHARACTER CREATION AND VISIBLY SHOWN ON THE CHARGEN SCREEN, AND NONE CAN EVER BE EQUIPPED -- A DATA JOIN THAT SIMPLY DOESN'T CONNECT, THE SAME "ROW WITH NO READER" SHAPE THIS CORPUS HAS BEEN BITTEN BY BEFORE
+
+**Confirming the arrangement never needed changing, and that the count guard is the genuinely new, previously-missing piece, closes `PT-2503` properly. Recognising that a naive mutation (simply removing Boots) would prove nothing about the new guard's own worth, since it breaks the pre-existing arrangement test regardless, and constructing the precise mutation that actually isolates drift -- removing Boots while silently updating the arrangement expectation to match -- is exactly the rigor this session has asked for from every new guard.**
+
+### ⚠⚠⚠ BOOTS UNREACHABILITY -- SEVERE, RULED, APPROVED AS RECOMMENDED
+
+**Measuring the real scale against the actual shelf, rather than reporting this abstractly, makes the severity concrete: 25 real items exist, one is granted automatically at character creation and displayed on the chargen screen itself, and the Equip screen can place none of them. A slot that draws correctly and can never be filled by anything the game ships is a genuine, severe gap, not a minor content omission.**
+
+**Approved: fix the item-to-base-type join, exactly as recommended.** Correctly diagnosing this as a join problem rather than a missing content row — boot items carry their own category directly, with no corresponding base-type entry for the resolver to read at all — and connecting it to an already-recognized recurring corpus pattern, is precise root-cause work. Fixing the join is the right choice over authoring redundant boots base-type entries or declaring the slot deliberately empty, since — as flagged — the same underlying gap will limit every other worn slot's offer list the same way, not just this one.
+
+### PROCEED
+
+Fix the double-border defect (suppress the three panels' inner frames, matching the Character Sheet). Fix the empty-bag routing-key defect, severe. Fix the vacuous-pass power name/cost defect, severe. Fix the Boots item-to-base-type join. All four ruled fix-now — this is a genuinely large batch, but all four are real, confirmed defects rather than open questions. The log design, prestige skill points, and everything else already correctly held stays exactly as is.

@@ -74960,3 +74960,46 @@ Start with the source files. Report back before or alongside the build, same as 
 ### PROCEED
 
 Build on this measurement — the stack-and-swap feats mechanism, the boxed readout block, the separate name field, and the confirmed filter-strip structure. Render-and-look included, as planned. Nothing needs to wait for a ruling here; the measurement is complete and the path is clear.
+
+
+---
+
+## PT-2497 -- ABILITIES CLOSES CLEAN, WITH GENUINELY SEVERE RENDER-AND-LOOK CATCHES (TWO DIFFERENT FEATS RENDERING IDENTICALLY AS A SINGLE LETTER; A BASE-COST-0 DISPLAY DIRECTLY CONTRADICTING THE RULES ENGINE'S OWN EXPLICIT REFUSAL TO STATE A PRICE). SHELL LAYOUT DECIDED THIS SESSION -- TWO PANES, NOT THREE, LOG DELIBERATELY DEFERRED RATHER THAN MOCKED PREMATURELY. TWO REAL MOCK ERRORS CAUGHT DIRECTLY BY THE OWNER. ⚠⚠⚠ RULED: THE SCREENS' SCALE/FIT WITHIN THE FRAME MUST BE PROPERLY RESOLVED BEFORE THIS THREAD PROCEEDS FURTHER -- OWNER'S OWN DIRECT OBSERVATION OF OVERLAPPING ELEMENTS CONFIRMS CODER'S OWN FLAGGED OPEN QUESTION #1 IS REAL AND NEEDS FIXING, NOT JUST NOTING
+
+**This is a dense, substantial report covering real design decisions, genuine mistakes caught and corrected, and a properly-built fourth screen. Working through all of it.**
+
+### SHELL LAYOUT -- CONFIRMED AS DECIDED
+
+**Two panes rather than three, party rail held at its current real width rather than re-proportioned, and the log deliberately left undrawn rather than mocked prematurely -- correctly recognising that a drawn log would itself read as a decision not yet actually made -- are all sound. Preserving the owner's stated condition (the left window's real size, unchanged) by laying the render out at the app's actual 1280 width and letting the frame scale the arrangement in, rather than re-deriving proportions, is the right way to honour a "keep this exactly as it is" instruction precisely rather than approximately.**
+
+**Both mock corrections caught directly by the owner -- the party rail's side, and its real proportion against the frame's opening -- are honestly reported as this session's own mistakes, not attributed to the source. Good.**
+
+### ABILITIES -- CLOSED, GENUINELY SEVERE CATCHES
+
+**Rebuilding after correctly recognising the first pass had accidentally translated the source into Inventory's own column idiom rather than the actual Abilities layout, and owning that the cause was the build, not the source, is honest course-correction rather than a defended first attempt.**
+
+⚠⚠⚠ **THE FEAT-RENDERING AND BASE-COST DEFECTS ARE GENUINELY SEVERE, AND FINDING BOTH THROUGH RENDER-AND-LOOK RATHER THAN A GREEN SUITE CONFIRMS THIS PROCESS'S VALUE AGAIN.** Two different feats rendering as the identical single letter, and a null cost printing as a stated price of zero -- directly contradicting the cast path's own explicit refusal to state one -- are both exactly the kind of defect no text assertion would ever catch, and both would have shipped invisibly without someone actually looking at the rendered result.**
+
+**Prefixing the import rather than renaming, with an explicit citation of `PT-2432`'s own costly precedent, is applying a hard-won lesson proactively rather than waiting to rediscover it a third time.**
+
+**Five mutants surviving first, each a real gap rather than a false alarm, and properly fixed, is thorough verification under the standard this whole thread has held throughout.**
+
+### THE FRAME -- SUBSTANTIAL, CORRECTLY SCOPED
+
+**Writing real TPC and ERF decoders from scratch, since none existed anywhere in the project, and correctly following the standing recreate-not-ship policy so no source bytes ship, is real infrastructure work done properly. The moved test assertion is worth confirming: a click landing on the frame's own border correctly not being treated as equivalent to a click on empty space is the right distinction, and flagging a moved assertion for review rather than letting it pass silently is exactly right.**
+
+### ⚠⚠⚠ RULED -- SCALE AND FIT MUST BE RESOLVED NOW, NOT DEFERRED
+
+**Owner's direct observation: UI elements from the already-built screens are overlapping the frame, particularly on the left and right sides, and every element needs to render fully within the frame's actual bounds. This confirms Coder's own flagged open question #1 is a real, live problem, not a hypothetical to defer.**
+
+**Ruled: port Character Sheet, Equip, and Inventory onto their own proper canvases sized to the frame's real proportions, rather than leaving them full-bleed at their original scale.** Nothing should render outside the frame's bounds or overlap its edges, on any side. This takes priority over adding the fourth-screen scorecard's remaining items or wiring the shell into play — a frame that clips or overlaps its own contents isn't ready to have more content added to it.
+
+### THE OTHER TWO OPEN QUESTIONS
+
+**TPC/ERF readers going to `MAIN_WORK/scripts` — approved, so this real infrastructure work isn't left stranded in a scratchpad.**
+
+**When to wire the shell into play — held until the scale/fit work above is actually done. Wiring an unfit frame into real play would just move the same problem somewhere more visible.**
+
+### PROCEED
+
+Fix the scale/fit overlap issue first, across all three already-built screens. Move the TPC/ERF readers into `MAIN_WORK/scripts`. Wiring into play stays held until the fit is confirmed correct. Equip's slot count and both `PT-2490` data gaps stay correctly mine, still unresolved.

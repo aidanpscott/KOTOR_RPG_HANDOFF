@@ -6,13 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: five real defects from TEST 129 — all ruled fix-now
-- **Messages' condition classification defaults to "good" instead of "bad" — the most severe finding, ruled fix now (PT-2538, fix shape ruled at PT-2540).** 16 of 21 real conditions (including paralysed, helpless, staggered) currently read as beneficial. Root cause: only builds the bad set from powers explicitly flagged enemy-targeting, defaults everything else to good. Proven by matched pair (identical hazard, differing only by condition name — shaken reads good, slowed reads bad). Ruled: invert the default (unrecognized → bad), not a hand-maintained list patch — the two fixes test identically today but a list patch would silently reopen the same hole the next time a condition is added.
-- **Notes cannot be written at all, by any method — severe, ruled fix now (PT-2538).** A bare text input structurally never receives focus (zero `requestFocus` calls in the file). Privacy guarantee itself confirmed working three ways on the one note that landed once, unreproduced across six attempts.
-- **Party Selection: dismissed companion shows raw internal tag instead of a name — real, ruled fix now (PT-2538).** Name resolver has no fallback source for someone neither placed nor fielded.
-- **Party Selection: re-adding a dismissed companion creates a broken phantom state until next reload — real, ruled fix now (PT-2538).** Impossible 0/0 vitality, false "in the fight" status with no fight running, removal incorrectly refused. Needs the same re-derivation a room load already correctly performs, triggered on re-add.
-- **Escape does nothing on four of seven screens — real, ruled fix now (PT-2538).** Journal, Messages, Notes, Party Selection all sit outside the existing escape-closing chain `PT-2465` built for the other three. Add them to the same chain.
-
 ### Smaller TEST 129 findings — real, held, less urgent batch
 - **Board has no nav bar; four of seven screens reachable only via another screen first.**
 - **`_navBar`'s own doc comment still says "three of seven not built," eight lines above its own correction.**
@@ -101,6 +94,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- All five severe TEST 129 defects closed. Condition classifier: a real defect caught in Coder's own already-written first attempt (a positive "bad" list — structurally the exact shape ruled against, wearing a different disguise) before shipping, honestly disclosed and rebuilt correctly — default is now bad, good requires its own positive source, currently empty. Notes' focus, the dismissed-companion name, the phantom re-add state, and the four-screen escape gap all fixed with precise root causes. Two more self-caught vacuous guards (a resolver bypassed by a pre-computed test value; a phantom-fix with zero coverage until mutation proved it) — both attributed directly to disciplined mutation testing rather than suspicion, second slice running with this exact shape. Phantom fix reproduces Tester's exact reported symptom through the real board — PT-2542
 
 - Sidebar portrait fix closes the whole seven-screen shell thread completely. Verified independently against the sidebar's own real source (mipc8x6_p) rather than inherited on trust — confirms the same square-shape conclusion. Incidentally verified a separate, previously-unconfirmed design claim (PT-1133's flanking vitality/force bars) as a byproduct of the same check. Guard built to name both screens together, so either one changing can't silently reopen the split PT-1132 forbids — PT-2537
 

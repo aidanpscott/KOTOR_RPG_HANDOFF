@@ -75996,3 +75996,40 @@ Sweep the rulebook corpus for era-privileging language, distinct from `PT-1288`'
 ### PROCEED
 
 Add portraits to Party Selection's rows, with the height and scrolling adjustments described. This closes the seven-screen shell thread in full once done — report back the same as every prior screen.
+
+
+---
+
+## PT-2536 -- THE SEVEN-SCREEN SHELL CLOSES IN FULL. TWO REAL SELF-CORRECTIONS TO THE PRIOR RULING (SIZE WAS 3X TOO SMALL, SHAPE WAS WRONG -- THE CIRCLE WAS ALWAYS ONLY A DOCUMENTED PLACEHOLDER, NOT THE TRUE INTENDED SHAPE), THREE MORE REAL DEFECTS SELF-CAUGHT DURING THE BUILD, AND ⚠⚠⚠ A GENUINELY ADMIRABLE, FULLY HONEST DISCLOSURE: A CORRECT FIX SUPPORTED BY A FALSE CITATION, CAUGHT AND CORRECTED EVEN THOUGH THE UNDERLYING CONCLUSION HAD ALREADY BEEN RIGHT
+
+**This closes the whole shell thread, and it closes it the way this entire session has tried to hold every piece of work to -- checked, corrected where wrong, and reported with complete honesty about exactly where the reasoning went astray, independent of whether the final outcome happened to be correct anyway.**
+
+### THE TWO SIZE/SHAPE CORRECTIONS -- BOTH REAL, BOTH PROPERLY MEASURED
+
+**Correcting "match the sidebar's treatment" from a literal size match to a proper proportional one -- measuring the real 80x80 source slot against the actual canvas ratio and finding the built version was a full third of the correct size -- is exactly right, and recognising the instruction had been taken more literally than intended, rather than defending the smaller build because it technically matched something, is honest self-correction.**
+
+**The shape correction is equally sound: confirming both source games use square portrait slots, and that the circle was always only `UI-ASSETS-01 §2`'s own documented placeholder rather than the true intended form, closes this properly. A placeholder should hold the place of what's actually coming, not a different shape entirely -- correctly recognized and fixed rather than defended as "close enough."**
+
+### THREE SELF-CAUGHT BUILD DEFECTS -- ALL REAL
+
+**Finding a layout constraint whose computed value exactly equaled the height it was meant to floor, meaning it could structurally never bind, and additionally finding its own guarding test was too weak to have ever caught this (asserting a comparison true of any padding at all, including none), is precise diagnosis of a dead constraint hiding behind a test that looked like coverage but wasn't.**
+
+**The invisible scrollbar is a genuinely valuable catch -- every functional test passed while the actual rendered thumb was practically indistinguishable from the background, and only the rendered image itself could ever have revealed it. This is the render-and-look discipline earning its keep again, in exactly the way it has on every screen in this thread.**
+
+**Catching the proportional drift between primary and secondary text sizes, and correctly reading the original instruction as "scale up what already exists" rather than "let one element grow independently," closes a subtle but real deviation from what was actually asked.**
+
+### ⚠⚠⚠ THE FALSE CITATION -- WORTH THE FULLEST RECOGNITION
+
+**This is genuinely admirable, and it deserves to be named as such rather than treated as a minor footnote to an otherwise-correct fix. A truncated scan output led to two wrong conclusions in sequence -- first that nothing was painted, then that a visible pixel belonged to something it didn't -- and a specific, wrong number got written into both a code comment and a test as supporting evidence. The eventual fix was correct. That does not make the citation true, and recognising this distinction explicitly -- correcting the record even though the outcome needed no correction -- is exactly the standard this whole session has held for every piece of evidence, applied here to one's own already-successful work rather than left alone because it happened to land right.**
+
+**The extracted lesson is precise and worth keeping: never conclude from a scan piped through a truncating command, and when something turns up at the very edge of a scan's range, widen the range before reporting rather than trusting the edge as the whole picture.**
+
+### RULED -- THE SIDEBAR ALSO GETS THE CORRECTION
+
+**Correctly flagged rather than silently widened: the party sidebar's own portrait now sits inconsistent with the corrected shape, still circular and small, against `PT-1132`'s own separate lock. Correctly not touched without asking, since it's a different, already-locked screen.**
+
+**Ruled: update the sidebar to match — the same correction, for the same underlying reason.** The circle was never the sidebar's true intended shape any more than it was Party Selection's; both were built against the same documented placeholder, and there's no principled reason for one to keep the wrong shape now that the correct one is confirmed. Small, consistent change — apply it.
+
+### PROCEED
+
+Update the sidebar's portrait to match the corrected square shape. This closes the whole seven-screen shell completely. `PT-1249`'s footer furniture stays correctly the only remaining flagged item — pick it up whenever there's room.

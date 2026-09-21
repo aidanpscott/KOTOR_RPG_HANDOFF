@@ -75847,3 +75847,67 @@ Build Journal with four sort keys. Build Messages following K2's real four-pane 
 ### PROCEED
 
 Fix the nav bar's silent tap handler so the refusal reason actually surfaces. Fix Options' three misattributed reason texts. Both real, both ruled fix-now. Confirm with Tester (not urgent) whether the unreconciled Whisper record detail traces to a regenerated fixture.
+
+
+---
+
+## PT-2531 -- THE ONE SMALL UNRECONCILED DETAIL FROM PT-2530 EXPLAINED, AND A GENUINELY VALUABLE STANDING PRACTICE EXTRACTED FROM IT: A FILENAME FROM A DELETE-AND-RECREATE GENERATOR IS A SLOT, NOT AN IDENTIFIER. "THE SAME SAVE" READ AN HOUR APART CAN BE A DIFFERENT FILE ENTIRELY -- LIKELY EXACTLY WHY CODER AND TESTER HONESTLY READ DIFFERENT ANSWERS FROM WHAT BOTH CALLED "WHISPER'S SAVE"
+
+**This closes the one loose thread from `PT-2530` with a precise, plausible mechanism rather than leaving it as an unexplained discrepancy. Generators that delete every existing save under a name before writing a fresh one mean the filename identifies a slot in a sequence, not a stable file -- two people reading "the same save" an hour apart may genuinely be reading two different sets of bytes that happen to share a name, and both readings can be completely honest and still disagree.**
+
+### THE STANDING PRACTICE -- WORTH RECORDING
+
+**Ruled: record the concrete process change as its own standing practice.** When handing over a save as evidence, provide the decoded contents directly — event counts, specific lines — rather than a path alone. If the actual file itself matters beyond what it currently contains, copy it aside under a name the generators don't touch and say so explicitly. And when a reading of one's own save contradicts one's own expectation, suspect two different files sharing a name before suspecting either reading was simply wrong.
+
+**This is the same shape of lesson this session has recorded several times now in different domains — a shared name is not proof of a shared identity, whether the name belongs to a file, a field, or a class. Worth keeping alongside those, since the underlying trap (trusting a label to mean the same thing across two different moments or two different observers) recurs in more places than any single instance of it suggests.**
+
+**Confirming the screenshot's own discriminator was the reliable signal all along — four blank tiles among 106 means a save with four known powers, every tile blank means a record with none — and that a filename would not have been reliable evidence either way, closes the loop precisely: the right answer was reachable from the content the whole time, independent of which specific file anyone happened to be looking at.**
+
+### PROCEED
+
+Nothing to build. Standing practice recorded. Ready for the next item.
+
+
+---
+
+## PT-2532 -- THE JOURNAL FAMILY CLOSES, ALL FOUR RULED ITEMS DONE, WITH GENUINELY EXCEPTIONAL WORK THROUGHOUT. ⚠⚠⚠ THE QUEST DATA INDEPENDENTLY CONFIRMS THE FOUR-KEY RULING FOR A COMPLETELY DIFFERENT REASON THAN EITHER OF US HAD -- PRIORITY IS A REAL, FIRST-CLASS FIELD ACROSS ALL 117 CATEGORIES, NOT JUST A STRING THAT HAPPENED TO SHIP. THE PRIVACY GUARANTEE TURNED OUT STRONGER THAN REPORTED -- TEXT NEVER ENTERS THE LOG AT ALL, NOT MERELY "NEVER REACHES A GATE." AND ⚠⚠⚠ A PRECISE, WELCOME CORRECTION TO MY OWN PRIOR QUESTION: THERE WAS NEVER ANY CONFLICT TO RECONCILE ON WHISPER -- CODER'S REPORT WAS ABOUT THE MECHANISM, NEVER A CLAIM ABOUT INSPECTING A SPECIFIC SAVE
+
+**Working through this in full, because there's a lot of real substance here and every piece deserves its own recognition.**
+
+### THE PRIVACY GUARD -- EXCEPTIONAL, THE STRONGER GUARANTEE IS THE RIGHT ONE
+
+**Building two genuinely separate guards for two genuinely separate claims, rather than one body covering both, is precise -- and the specific control for clause (a), writing the fixture save uncompressed so an absence-based check can't accidentally pass because compression hid the text rather than architecture protecting it, is exactly the kind of control that distinguishes a real proof from a coincidental one.**
+
+⚠⚠⚠ **HONESTLY DOWNGRADING ONE'S OWN EARLIER DESCRIPTION OF THE GUARANTEE, ONCE A STRONGER TRUE VERSION WAS FOUND, DESERVES REAL RECOGNITION.** "The text never reaches a gate" and "the text never enters the log at all" are meaningfully different claims, and the second is strictly stronger. Rebuilding the storage interface to accept only a length, with no parameter through which text could ever physically pass, doesn't just document the stronger guarantee -- it makes the weaker version structurally impossible to accidentally reintroduce. That's the right response to discovering a rule was understated: don't just correct the description, close the gap the understatement left open.**
+
+### ⚠⚠⚠ THE QUEST FORMAT -- INDEPENDENT CONFIRMATION IS THE BEST KIND
+
+**Reading K2's real `global.jrl` directly rather than inventing a shape for a format that had sat declared-but-unwritable since `PACKAGE-FORMAT-01` is exactly the right instinct for closing a gap that's been open a long time.**
+
+**Finding that Priority is a genuine, structured, first-class field across all 117 real categories -- not just a string that happened to ship in a button -- confirms the four-key ruling for a completely independent reason than either of us had going in. My reasoning was "match what actually ships"; the data itself says there's something real to sort by regardless of provenance. Two separate paths reaching the same answer is stronger confirmation than either alone, and worth stating plainly as such.**
+
+**The two additional data-driven findings -- worldless entries sorting last rather than first, and quests correctly modeled with multiple possible endings per entry rather than one -- are exactly the kind of detail that only surfaces from reading the real data structure, not from a text description. And correctly scoping "by time" to mean log order, since `CharacterEvent` genuinely has no timestamp, rather than implying a clock the system doesn't have, is honest restraint under a label that could easily have overclaimed.**
+
+### MESSAGES -- THE MISSING HISTORY CORRECTLY BUILT AS A FOLD
+
+**Finding no message history had ever existed anywhere in this app before, and building it as a fold over the real event log rather than inventing new storage, is the same architectural discipline this whole project has held everywhere else derived state needed a home.**
+
+### ⚠⚠⚠ THE TWO HONEST DISCLOSURES -- BOTH WORTH NAMING
+
+**Building the Good Effects column architecturally correctly, deriving the split from the roster's own real `affects` field rather than a hand-written list, and then honestly disclosing it will render permanently empty because no beneficial condition currently exists anywhere in the rules, is exactly the right way to handle a structurally sound piece of work that happens to have nothing to show yet. Flagging that an earlier render's populated example was invented and cannot actually occur in play, rather than letting a misleading screenshot stand uncorrected, is honest transparency under no real pressure to disclose it.**
+
+**Confirming the Options reason-text fix with a real control -- verifying the six genuinely scope-blocked entries still correctly cite the ruling, not just that the three wrongly-blamed entries got fixed -- closes this properly rather than leaving the other half of the fix unverified.**
+
+### ⚠⚠⚠ THE NAV BAR SELF-DIAGNOSIS -- WORTH NAMING AS ITS OWN PATTERN NOW
+
+**Recognising the original guard only confirmed navigation was blocked, never that anything was actually said, and explicitly naming this as the same shape as the arc guard from a prior slice, is genuinely valuable self-awareness -- "I checked the half that was easy to see" is a precise, honest description of a real recurring blind spot, not a vague admission. Making the callback required rather than optional, specifically because an optional parameter defaulting to null recreates the exact defect the moment any future caller forgets it, closes this at the structural level rather than just at this one call site.**
+
+**This is now a confirmed recurring pattern worth its own explicit standing note: when building a guard for "X doesn't happen," separately confirm "Y does happen instead" — the negative half is not the whole claim.**
+
+### ⚠⚠⚠ THE WHISPER CORRECTION -- ACCEPTED DIRECTLY
+
+**This is a precise, welcome correction to my own prior question's premise, and it should be accepted plainly rather than glossed over. The original report was a trace of the code path -- what "?" means, and that the namespaces match -- never a claim about having inspected any specific save. There was never a conflict between the two reports to begin with; they were answering different questions that happened to look adjacent. Confirmed: nothing needs reconciling, and no fixture-regeneration theory needs ruling in or out. Tester's own account fully explains the original observation on its own.**
+
+### PROCEED
+
+Nothing further needed — all four ruled items close cleanly, both TEST 128 defects fixed properly. Party Selection is now genuinely the last of the seven shell-locked screens. The nav-bar pattern (confirm the positive alongside the negative) is worth keeping in mind for the next guard built anywhere in this thread.

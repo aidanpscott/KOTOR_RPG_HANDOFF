@@ -26,7 +26,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Options/Settings — held, explicitly a first pass not a lock.** `PT-1255`'s own words, pending `PT-1140`/`PT-1148`, both still deferred. Building it now would be building against something not yet finalized.
+- **Options/Settings — opened, scoped to shell/navigation, building (PT-2522).** `PT-1140`/`PT-1148` (which individual settings are universal/per-campaign/per-session) stays correctly held — a separate content-population question. Owner's ruling: escape's current close-the-game behavior replaced with opening Settings; same top nav bar as every other menu; exit-game becomes an explicit action from within it. Populated now with the already-locked occupants (colour theme `§0b`, companion AI preset `PT-1143`) — not waiting on the full scope question. Checking the mockup and real K2 source files first, same discipline as every prior screen.
 
 
 

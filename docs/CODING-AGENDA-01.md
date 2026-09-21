@@ -17,8 +17,10 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 - **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
-- **Prestige class skill points — corrected and final, all 19 classes, building (PT-2516).** Corrects `PT-2515`: reference numbers were the unmodified source game's own values (2/6/8), not this project's actual current base-class numbers (3/5/7) — `CLASS-TABLES-BASE.md` confirmed stale relative to the live shelf. Grouping unaffected, only the per-rate values change: Combat → 3, Middle → 5, Specialist → 8→7. Hybrid variety (tied to hit die, matching the driver base classes already use) approved on top of the corrected baseline — Jedi Weaponmaster/Shock Trooper (d10) → 4, Scoundrel (d6) → 6.
-- **"Pirate" rated but absent from every roster — real, held, own investigation.** 30 rated headings in `CLASS-TABLES-AUTHORED.md`, 38 classes total; Pirate in neither the extract nor the shelf. Deliberate cut with a stale reference doc, or genuine omission — needs checking.
+### ⚠⚠⚠ SEVERE: prestige hit die doesn't reach the extract — prestige level-up shows no vitality info
+- **Ruled fix now (PT-2517).** Authored for all 19 prestige classes in the source document; the extractor never carries it across — same gap shape as skill points, same classes, different field. Real consequence: the level-up screen only prints its vitality grant when the die is present, so a prestige level-up currently shows a player nothing about vitality at all. Found proactively while implementing the already-approved hybrid fix, correctly pinned rather than fixed unasked.
+- **Pirate — ruled to ship (PT-2517).** Complete numbers row, archetype justification, complete skills entry — the sole gap is one missing row in the table the extractor actually builds from. Reads as omission, not a deliberate cut. Add the row so it reaches classes.json and the shelf.
+- **Gunslinger entry narrowing — number assigned, PT-2517.** Owner's own ruling: moves from `PT-217`'s open tier to locked, entered from Bounty Hunter 6 or Smuggler 6. Pirate 6 (the third named route) is currently dead since Pirate doesn't exist yet — re-confirm it becomes legitimate once Pirate ships above.
 
 - **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
@@ -80,6 +82,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Prestige class skill points closed for real, corrected values (3/5/7 baseline, not the stale 2/6/8) with the approved hybrid spread — five distinct values across 19 classes. `PT-2490`'s audit safeguard re-confirmed passing — PT-2517
 
 - Level-up Powers offer filter and the droid hardcoding both closed — the whole Powers-chaining thread now complete. Offer fix matches the ruling exactly (shown-and-refused, reason always visible, unpriced routed through chargen's own mechanism). Self-caught design flaw: a hardcoded "known non-power prerequisite" set would have silently refused any future unanticipated gate type — caught by a test using a deliberately invented value, fixed to derive from the roster's own real names instead. Droid defect found three times worse than named (Abilities and Skills also hardcoded wrong, not just Feats) — fixed completely, not just the narrow scope originally flagged. Verification includes a positive control (a genuinely open tier can still be spent), applying `PT-2507`'s standing practice immediately — PT-2513
 

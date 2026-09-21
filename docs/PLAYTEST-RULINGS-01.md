@@ -75700,3 +75700,38 @@ Land item 2 (the default-screen fix) now, independent of Options/Settings. Conti
 ### PROCEED
 
 Build `PT-1257`'s nav bar now, as part of the current Options/Settings work. This gives the Character Sheet its real door, resolves both red tests properly, and unblocks item 2 (the portrait default-screen fix) to ship safely alongside it rather than being held separately.
+
+
+---
+
+## PT-2526 -- THE NAV BAR CLOSES CLEAN, WITH GENUINELY PRECISE ARCHITECTURE (ONE SHARED IMPLEMENTATION ON THE SHELL, NOT FIVE COPIES, SPECIFICALLY BECAUSE THE RULING REQUIRES IDENTICAL POSITIONING EVERYWHERE). THREE SEPARATE SELF-CAUGHT ISSUES IN ONE SLICE: A STATUS LINE ASSERTING A REPEALED RULE, A VISUAL CLIPPING BUG INVISIBLE TO EVERY AUTOMATED CHECK AND CAUGHT ONLY BY THE MANDATORY RENDER, AND A VACUOUS FIRST GUARD FOR THAT SAME BUG CORRECTLY DIAGNOSED AND REBUILT AGAINST FLUTTER'S OWN REAL GEOMETRY RATHER THAN A RE-DERIVED FORMULA. PLUS A GENUINELY HONEST INVESTIGATION CORRECTLY NOT CALLED A DEFECT ON ONE READING -- ROUTED TO TESTER
+
+**Building the nav bar once, on the shared shell, rather than once per screen, is precisely the right call for exactly the reason given -- a ruling requiring identical positioning everywhere is only actually guaranteed by one implementation, not five that happen to agree today. Showing Party and Journal with a stated reason rather than hiding them entirely, matching the same discipline already applied everywhere else a control can't yet do its job, closes this correctly.**
+
+**Confirming the escape-to-Options split matches K2's own two separate controls, rather than inventing new behaviour, closes the loop precisely on why this was the right design in the first place.**
+
+### THREE SELF-CAUGHT ISSUES -- EACH WORTH NAMING
+
+⚠ **Catching that the status line still asserted a repealed rule after the binding changed underneath it is exactly the kind of gap that's easy to miss because nothing about it looks broken -- the key press is correct, the label is just wrong. Building the guard to hold wording and binding in one body, specifically because two separate tests could both stay green through this exact defect, is precise test design informed by understanding how the bug could actually hide.**
+
+⚠⚠ **THE CLIPPING BUG IS THE SHARPEST FIND IN THIS REPORT.** A misalignment that lays out correctly, takes taps correctly, and leaves every existing test green, with the only possible witness being the mandatory render, is as strong a validation as this whole render-and-look discipline has produced. This is worth stating plainly: without that process being mandatory rather than optional, this specific defect would have shipped invisibly, with nothing in the automated suite ever able to catch it.
+
+⚠⚠⚠ **AND THE VACUOUS FIRST GUARD FOR THAT SAME BUG IS EQUALLY VALUABLE.** Diagnosing precisely why a symmetric distance check couldn't distinguish "correctly touching the edge" from "moved thirty units in the wrong direction entirely," and rebuilding against Flutter's own real geometry primitive rather than re-deriving the same formula the code itself uses, closes exactly the "guard computes its own control" failure shape this session has named and caught multiple times now -- recognized immediately here rather than needing rediscovery.**
+
+### THE SIX RED TESTS -- HANDLED WITH REAL DISCIPLINE
+
+**Rebuilding all six to walk the real player path rather than patching around the old shortcut, and explicitly checking rather than assuming the two other escape-pressing tests were genuinely unaffected, is thorough verification under a change that touched a lot of surface area at once.**
+
+### THE WHISPER OBSERVATION -- CORRECTLY NOT CALLED A DEFECT, ROUTED PROPERLY
+
+**Tracing the mechanism precisely -- confirming "?" genuinely means no `powerTaken` events, confirming the namespaces genuinely match -- before concluding anything, and then correctly recognising this contradicts earlier confirmed reports of the same character successfully casting, rather than picking one side to believe, is exactly the right way to handle a genuine, unresolved contradiction. Refusing to call it a defect on one reading, with a plausible alternative (the character may have been authored directly into the save rather than through chargen's own event pipeline) honestly offered rather than asserted, is the correct level of confidence for what's actually been established.**
+
+**Routing this to Tester directly, since they have the context to know which explanation actually applies.**
+
+### THE TWO REMAINING ITEMS -- CORRECTLY LEFT UNSTYLED
+
+**Both the footer's right-side furniture and whether an unbuilt Options entry should visually signal its own state are correctly left alone rather than guessed at -- the first because it's simply not started yet, the second because it's explicitly `PT-1140`/`PT-1148`'s own scope, and styling around an unresolved question would be deciding it by default rather than waiting for the real answer.**
+
+### PROCEED
+
+Nothing further needed on the nav bar or the three self-caught fixes — all close cleanly. Routing the Whisper investigation to Tester now.

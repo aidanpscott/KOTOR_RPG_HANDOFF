@@ -75539,3 +75539,164 @@ Fix the hit-die extraction gap for all 19 prestige classes, severe priority. Add
 ### PROCEED
 
 Nothing further needed on the three closed items. Fix Pirate's save table to match the standard complete 1-to-30 shape every other prestige class receives — small, real, own follow-up. Confirm the third Gunslinger entry route (Pirate 6) is now genuinely live rather than dead, now that Pirate ships.
+
+
+---
+
+## PT-2519 -- PIRATE'S SAVE TABLE CLOSES CLEAN, WITH A GENUINELY PRECISE DISTINCTION CORRECTLY DRAWN: A CLASS WITH NO PRINTED SOURCE OF ITS OWN TAKES THE AUTHORED TABLE'S FULL LEVEL RANGE, WHILE THE TWELVE REAL BASE CLASSES CORRECTLY KEEP THEIR OWN GAPPED SHAPE PER THE ALREADY-STANDING PT-2163 -- AVOIDING AN OVERCORRECTION THAT WOULD HAVE QUIETLY UNDONE A SEPARATE, SETTLED RULE. AND THE THIRD GUNSLINGER ROUTE VERIFIED PROPERLY -- NOT JUST PIRATE'S EXISTENCE, BUT REAL, COMPLETE, FUNCTIONAL DATA AT THE SPECIFIC LEVEL IN QUESTION
+
+**Adopting the numbering-safety fix by removing self-titled numbers from reports entirely, rather than just being more careful with them, closes off a whole category of the risk rather than mitigating one instance of it — worth confirming this is exactly the right response to a small operational note.**
+
+### THE SAVE-TABLE FIX -- PRECISE, CORRECTLY SCOPED
+
+**Diagnosing the merge mechanism's real asymmetry -- fields get added to existing rows, but rows themselves never get created -- explains precisely why Pirate alone kept a smaller shape while gaining new field data. Tracing this to Pirate being the one prestige class still carrying a PHB-sourced table, because an earlier ruling reclassified it as prestige while a separate document still treats it as pure reference, is exactly the kind of "dual nature" root cause this whole thread has been circling since the entry-route question first came up.**
+
+**The real precision here is refusing to generalize the fix. Recognising that "add missing levels" as a blanket rule would have quietly reversed `PT-2163`'s own standing decision -- that the twelve real base classes correctly keep their gapped tables, with a separate reader responsible for filling them at read time, backed by its own dedicated test file -- and instead finding the narrow, correct distinguishing line (no printed source of its own means the full authored range applies; a real base class does not) is exactly the discipline that prevents one correct fix from accidentally breaking a different, already-settled one. This is worth naming as its own small standing instinct: before generalizing a fix, check whether the general version would collide with something already ruled.**
+
+**Result confirmed clean: Pirate complete at 1-30, no prestige class left gapped, the twelve real base classes correctly untouched, the gapped-tables count back to its original twelve.**
+
+### THE THIRD ROUTE -- VERIFIED PROPERLY, NOT JUST CONFIRMED PRESENT
+
+**Going past "Pirate exists in the roster" to confirm real, complete data at the specific level a player would actually reach -- hit die, skill base, class skills, and a full level-6 stat readout -- is exactly the right depth of confirmation. "What 'Pirate 6' has to mean to be a route rather than a sentence" is a precise way to state why mere presence in a roster isn't the same claim as a genuinely playable route, and closing the gap between those two claims properly is what makes this confirmation trustworthy rather than superficial.**
+
+### PROCEED
+
+Nothing further needed — the whole Pirate/prestige thread closes completely. Standing by for whatever's next.
+
+
+---
+
+## PT-2520 -- TWO GENUINELY VALUABLE LESSONS PROPERLY RECORDED. THE FIRST NAMES THE REAL TRAP PRECISELY: A PLAUSIBLE NEARBY EXPLANATION (THE GIT STASH) LET A WRONG DIAGNOSIS SURVIVE UNCHALLENGED, NOT SIMPLY "FAILED TO READ A HEADER." THE CONCRETE FIX IS WORTH KEEPING: REGENERATE A SUSPECT FILE TWICE AND DIFF -- A HAND EDIT SURVIVES ONE RUN AND DIES ON THE NEXT, REGARDLESS OF WHETHER ANYONE EVER READS THE WARNING
+
+**Both lessons are worth recording as standing practice, not left inside a closed thread's own report.**
+
+### LESSON 1 -- THE REAL TRAP, NAMED PRECISELY
+
+**"The durable half is not 'read headers'" is exactly the right correction to make to the lesson's own first, more obvious framing. The actual failure mode was that a plausible-sounding nearby explanation — a `git stash` that happened to be running near the first loss — gave the investigation somewhere to land that wasn't the real cause, and a wrong diagnosis survived precisely because it didn't need to be defended against anything better. The second loss, with no git operation nearby to blame, only got properly investigated because there was no other plausible story available. That's a real, generalizable trap: an incorrect explanation is hardest to catch not when it's implausible, but when something adjacent and genuinely plausible is sitting right there to absorb the blame instead.**
+
+**Ruled: record the concrete verification method as its own standing check.** Before trusting a diagnosis for unexpected data loss or corruption in a generated file, regenerate it twice and diff the results — a hand edit survives exactly one regeneration and disappears on the second, which catches the real cause mechanically regardless of whether anyone reads a warning, remembers a header, or has a plausible alternate story sitting nearby.
+
+### LESSON 2 -- ALREADY APPLIED, PROPERLY GENERALIZED
+
+**Recording "reports name the ruling they answer and claim no number of their own" as the complete, general form of the fix, rather than a one-off correction to a single instance, closes this properly. Minting isn't the only way to collide with a shared sequence — anything that writes a number into a heading is a collision risk, and removing the practice entirely is a stronger fix than being more careful with it.**
+
+### PROCEED
+
+Both lessons recorded. Nothing to build. Queue reviewed and confirmed accurate — the two content items (Crush Opposition/Inspire Followers tier VI, the Sith feat schedule) stay ready, the log design stays correctly mine and still unresolved, and the three items still flagged as Coder's own stay exactly as held.
+
+
+---
+
+## PT-2521 -- A REAL BOUNDARY ADDED TO PT-2520'S CHECK, PREVENTING IT FROM BEING OVER-TRUSTED: REGENERATE-TWICE-AND-DIFF ONLY CATCHES AN EDIT A GENERATOR OVERWRITES. IT SAYS NOTHING ABOUT AN EDIT TO SOMETHING NO GENERATOR OR EXTRACTOR EVER ACTUALLY READS -- A DIFFERENT FAILURE IN THE SAME FAMILY, NEEDING ITS OWN COMPLEMENTARY CHECK: CONFIRM THE VALUE MOVED IN THE REAL EXTRACT, NOT JUST THE DOCUMENT
+
+**This closes an important gap in the just-recorded lesson before it could be applied beyond what it actually proves. "A plausible nearby suspect is how a wrong diagnosis survives" generalizing correctly to name the `git stash` as genuinely innocent, merely close enough to the symptom to absorb blame for a round, confirms the lesson is being held at the right level rather than tied to its one originating instance.**
+
+**The honest limit is precise and worth keeping exactly as stated: the mechanical check proves a generated file resisted a hand edit, which is a real and useful thing to know, but it proves nothing about a value that was edited somewhere a generator never reads from at all — a document change with no functional consequence anywhere downstream. That's a genuinely different failure shape wearing the same surface appearance (an edit that "didn't take"), and conflating the two would mean trusting a check that never actually looked at the case that mattered.**
+
+**Ruled: record the complementary check alongside the original.** After editing a value meant to reach a real pipeline, confirm it actually moved in the extract or output the pipeline produces — not only that the source document now says something different. The two checks together cover both real failure modes: regenerate-and-diff for values a generator might silently overwrite, extract-verification for values nothing downstream was ever wired to read in the first place.
+
+### PROCEED
+
+Nothing to build. Both halves of the lesson now recorded together. Queue stays as confirmed. Standing by.
+
+
+---
+
+## PT-2522 -- OWNER OPENS OPTIONS/SETTINGS, SCOPED TO SHELL AND NAVIGATION ONLY. THE GENUINELY UNRESOLVED PIECE (PT-1140/PT-1148 -- WHICH INDIVIDUAL SETTINGS BELONG WHERE) STAYS CORRECTLY HELD; OWNER'S DIRECT INSTRUCTION RESOLVES A SEPARATE, REAL QUESTION: ESCAPE'S CURRENT BEHAVIOR (CLOSING THE GAME OUTRIGHT) IS REPLACED BY OPENING SETTINGS, WITH THE SAME TOP NAV BAR AS EVERY OTHER MENU AND AN EXPLICIT EXIT-GAME OPTION FROM WITHIN IT
+
+**Checked directly: `PT-1140`/`PT-1148` are specifically about which individual settings are universal versus per-campaign versus per-session -- a content-population question, correctly still unresolved and correctly staying held. Owner's direction here is a different, separable question: the screen's own shell behavior and navigation, not what settings eventually populate it. This can be built now without needing the content-scope question answered first.**
+
+### THE RULING
+
+**Escape's current behavior -- closing the game outright -- is replaced. Escape now opens Settings.** Settings carries the same top nav bar every other screen in the shell already has, linking to the other menus (Character Sheet, Abilities, Inventory, Equip, Journal, Party). Exiting the game becomes an explicit action taken from within Settings, not an accidental consequence of a single keypress.
+
+**This is a real, meaningful behavior change worth stating plainly: a player can no longer lose their session to one misplaced escape press. That was never a deliberate design goal of the old behavior -- it was simply what escape did before this screen existed to catch it.**
+
+### WHAT TO BUILD
+
+**Before building: check the mockup for this specific screen, and check the real K2 source files for Options/Settings directly** -- same discipline as every other screen in this thread, which has found a real correction on every single prior screen it's been applied to. Confirm the nav bar's own real layout against what K2 actually uses, the same way Inventory and Abilities both found real structural details the text description alone had missed.
+
+**Scope explicitly: the shell (nav bar, escape routing, the exit-game action) and whatever settings are already confirmed occupants regardless of the scope question — the colour theme toggle (`§0b`) and the companion AI control preset picker (`PT-1143`) are both already locked and can populate the screen now.** Anything whose universal/per-campaign/per-session status is still genuinely undetermined stays out of this pass — build the screen real and navigable, not empty, using what's already confirmed rather than waiting for every possible occupant to be resolved first.
+
+### PROCEED
+
+Check the mockup and the real K2 source files. Build Options/Settings with escape routing, the nav bar, and the exit-game action, populated with the already-locked settings (colour theme, AI preset). Report back with whatever the source files reveal, same as every other screen.
+
+
+---
+
+## PT-2523 -- MEASUREMENT CONFIRMS THE RULING MATCHES K2's OWN DESIGN EXACTLY: EXIT IS A LISTED ENTRY, THE FOOTER ONLY CLOSES THE SCREEN. AND ⚠⚠⚠ BOTH NAMED OCCUPANTS TURN OUT TO HAVE REAL PROBLEMS -- THE PRESET PICKER CONTRADICTS AN EARLIER, WELL-REASONED RULING (PT-1143) THAT PLACES IT ON THE CHARACTER SHEET INSTEAD; THE COLOUR TOGGLE CAN'T ACTUALLY BE FUNCTIONAL WITHOUT A REAL REARCHITECTURE. BOTH RULED, RECOMMENDATION (c) APPROVED
+
+**Confirming the source game already does precisely what was ruled -- Exit as a listed entry, not the footer's dismiss action -- is genuinely satisfying independent validation, not just a structural match. And catching that the override version of this screen adds a real control (Force Speed Effects) the base file never shows extends the override-shadowing lesson from game modules to `.gui` files specifically, which is worth having confirmed rather than assumed to generalize.**
+
+### THE PRESET PICKER -- RULED, PT-1143 STANDS
+
+**This is a genuine contradiction between two existing rulings, and it deserves a real resolution rather than defaulting to whichever one happens to be more recent. `PT-1143`'s own stated reasoning is specific and sound: per-companion scoping comes free from the Character Sheet's own existing context, since that screen already knows whose data is being viewed. The later line calling this a Settings occupant doesn't carry any comparable reasoning of its own -- it's an unexplained restatement, not a considered alternative.**
+
+**Ruled: `PT-1143` stands. The companion AI preset picker belongs on the Character Sheet, not Settings.** The later contradicting line is the stale one and should be corrected wherever it appears. This feature stays correctly unbuilt for now regardless of which screen it eventually lands on -- confirming it's built nowhere is useful scoping information, not something to fix as part of this pass.
+
+### THE COLOUR THEME TOGGLE -- RULED, DEFERRED
+
+**Correctly recognising that a control which exists but changes nothing is exactly the shape `PT-1380` already rules against, rather than building it anyway because the ruling named it as an occupant, is the right instinct. A compile-time-constant token layer becoming a genuine runtime switch is real rearchitecture work, not a row to add to this screen.**
+
+**Ruled: defer. Do not build the toggle as part of this pass, functional or inert.** Leave it as an explicitly stated gap, the same way other genuinely bigger pieces of work have been correctly scoped out of smaller slices throughout this thread. It can become its own real item once there's a reason to actually rearchitect the token layer, not before.
+
+### RULED -- APPROVED, OPTION (c)
+
+**Build the real content this pass genuinely supports: the shell, the nav bar, escape's new door, Save Game, Load Game, Exit Game, and the description pane.** Both named occupants correctly deferred with real, stated reasons rather than forced in. This matches exactly what `PT-2522` actually scoped -- shell and navigation -- and doesn't depend on either contested occupant being resolved first.
+
+**The inert package-menu Options entry is worth noting for whenever wiring priorities are next reviewed, but doesn't need action now.**
+
+### PROCEED
+
+Build Options/Settings: shell, nav bar, escape routing, Save/Load/Exit Game entries, the description pane. Preset picker and colour toggle both correctly excluded from this pass, with the stale Settings-occupant line corrected to match PT-1143.
+
+
+---
+
+## PT-2524 -- FIRST, RECONFIRMING WHAT'S ALREADY RULED: THE PRESET-PICKER AND THEME-TOGGLE QUESTIONS FROM THE PRIOR REPORT WERE ALREADY ANSWERED AT PT-2523 (PT-1143 STANDS, TOGGLE DEFERRED) -- THIS MESSAGE CROSSED WITH THAT DISPATCH. SEPARATELY: THE PORTRAIT-BEHAVIOUR INVESTIGATION FOUND A GENUINE, PRECISE ARCHITECTURAL COLLISION -- TWO ALREADY-LOCKED RULINGS (PT-1957's BOARD-TARGETING MODEL, PT-1134/PT-1142's ACTIVE/INACTIVE CONTROL MODEL) BOTH CLAIM THE SAME TAP GESTURE, AND ONLY ONE WAS EVER BUILT. NEITHER RULING IS STALE -- THEY ANSWER DIFFERENT QUESTIONS THAT HAPPEN TO WANT THE SAME GESTURE
+
+**Confirming first, since this report crossed with `PT-2523`: both questions from the prior report are already answered. `PT-1143` stands — the companion AI preset picker stays on the Character Sheet, not Settings, and the stale contradicting line was corrected in the design document. The colour theme toggle is deferred, correctly not built inert. Nothing new needed on either.**
+
+### THE PORTRAIT COLLISION -- GENUINE, PRECISELY DIAGNOSED
+
+**This is exactly the kind of gap worth surfacing rather than quietly building around. Confirming control-switching doesn't exist as a concept anywhere in the codebase, distinct from the existing shared board-targeting marker it superficially resembles, and confirming the default screen and the active/inactive distinction are both genuinely absent, gives a precise, complete picture of what's actually missing rather than a vague "the sheet always opens."**
+
+**The root-cause framing is exactly right: `PT-1957` isn't stale, and `PT-1134`/`PT-1142` aren't wrong — they're two real, independently correct rulings that happen to claim the same physical tap, with only one of them ever actually built. Naming this as a collision to resolve, rather than treating one ruling as automatically superseding the other, is the correct way to handle two rules that were never actually in conflict until implementation forced them to share a gesture.**
+
+### RULED -- SPLIT BY TAP, LAND THE SMALL PIECE NOW
+
+**The primary/secondary split already partially built is the right shape to resolve this on. `PT-1957`'s board-targeting model keeps the primary tap exactly as it already works — that rule is unaffected and correctly stays where it is. The full `PT-1134`/`PT-1142` active/inactive logic belongs on the secondary tap, replacing the current always-opens-the-sheet behaviour once it's properly built.**
+
+**Ruled: land item 2 now — Equipment by default, Character Sheet only when a level-up is pending — since it's genuinely small, independent, and immediately correct regardless of the larger control-switching question.** `_hasLevelWaiting` already exists and Equip is already built, so this closes real, standing incorrectness with no new architecture needed.
+
+**Items 1 and 3 (the active/inactive control-switching concept itself) are correctly not a portrait fix — they're a real, new piece of control-model state that doesn't exist yet. Held as its own properly-scoped future thread, not folded into the current Options/Settings work or built as an afterthought to a sidebar tweak.** This deserves its own measurement and proposal when picked up, the same discipline as every other substantial piece of new architecture in this project.
+
+### PROCEED
+
+Land item 2 (the default-screen fix) now, independent of Options/Settings. Continue Options/Settings, unaffected. The full control-switching concept (items 1+3) stays held as its own future thread — flag it properly when ready to open rather than building it as a side effect of something else.
+
+
+---
+
+## PT-2525 -- GENUINELY IMPORTANT CATCH: LANDING PT-1134 CORRECTLY MADE THE CHARACTER SHEET STRUCTURALLY UNREACHABLE, SINCE THE PORTRAIT WAS ITS ONLY DOOR AND THAT DOOR NOW DEFAULTS AWAY FROM IT. CORRECTLY DIAGNOSED AS NEITHER THE RULING NOR THE IMPLEMENTATION BEING WRONG -- A REAL COLLISION BETWEEN A RULING THAT ASSUMES THE NAV BAR EXISTS AND THE NAV BAR STILL BEING DEFERRED. TWO ADDITIONAL REAL SIDE FINDINGS, BOTH PROACTIVELY CAUGHT: A COMPANION'S EQUIP SCREEN WOULD HAVE SILENTLY SHOWN THE PLAYER'S OWN GEAR MISLABELED, AND THE PENDING-LEVEL SHEET HAD NEVER ONCE BEEN RENDERED BEFORE, OVERFLOWING ITS OWN TAB STRIP THE FIRST TIME IT WAS
+
+**This is precise, disciplined work under real pressure -- a change built correctly to spec breaking two tests is exactly the moment it's tempting to either force the tests to pass or ship anyway and hope. Neither happened. Confirming both tests are catching something real, rather than assuming they're simply stale, and refusing to adapt them by contriving artificial pending-level states just to make green return, is the right response to red tests that are correctly pointing at something true.**
+
+**The root-cause framing deserves real credit on its own: `PT-1134` isn't flawed, and the implementation isn't wrong — the ruling was written assuming a door (the nav bar) that doesn't exist yet, and the collision is between two pieces of correctly-scoped work landing out of order, not a defect in either one. That's a materially more useful diagnosis than "this test needs updating," because it identifies exactly what has to land before the fix is safe, rather than treating the redness as something to paper over.**
+
+### THE TWO SIDE FINDINGS -- BOTH GENUINELY VALUABLE
+
+**Catching that Equip had no real subject concept, so a companion's portrait would have silently shown the player's own gear under the wrong name, is a severe defect caught specifically because this fix finally exercised a path nothing had exercised before. This is exactly why default-behaviour changes are worth building carefully rather than assumed safe just because the individual pieces already exist.**
+
+**Finding the pending-level sheet had literally never been rendered on the board before, and that it genuinely overflows its own tab strip the first time anyone actually looked, is the same "render and look" value this whole UI thread has produced repeatedly — a path that existed in code but had never actually been exercised, quietly wrong until something finally forced it to run.**
+
+### RULED -- APPROVED, BUILD THE NAV BAR NOW
+
+**Approved as proposed, and correctly recognized as already in scope: `PT-2522`'s own ruling explicitly said Settings carries the same top nav bar every other screen has, linking to the other menus. This isn't new scope being pulled forward opportunistically — it's the same work, just sequenced to land first because the portrait fix genuinely depends on it existing.**
+
+**Correctly preferring the real, permanent door over a provisional key specifically because the real door is being built this same week is exactly the right call — a throwaway scaffold with a lifespan measured in days isn't worth building when the actual thing it would stand in for is already in flight.**
+
+### PROCEED
+
+Build `PT-1257`'s nav bar now, as part of the current Options/Settings work. This gives the Character Sheet its real door, resolves both red tests properly, and unblocks item 2 (the portrait default-screen fix) to ship safely alongside it rather than being held separately.

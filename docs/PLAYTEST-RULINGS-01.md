@@ -75735,3 +75735,39 @@ Build `PT-1257`'s nav bar now, as part of the current Options/Settings work. Thi
 ### PROCEED
 
 Nothing further needed on the nav bar or the three self-caught fixes — all close cleanly. Routing the Whisper investigation to Tester now.
+
+
+---
+
+## PT-2527 -- A REAL, SIGNIFICANT OPERATIONAL GAP FOUND AND HONESTLY OWNED: FIVE COMPLETED, CORRECT PIECES OF WORK (PT-2497, PT-2515-2518) SAT UNPUSHED FOR FOUR ENTIRE SLICES. EVERY RULING FROM PT-2516 THROUGH PT-2519 WAS CLOSED DESCRIBING WORK THAT EXISTED ONLY ON ONE MACHINE, WITH NO CONFLICT ONCE FOUND -- CLEANLY REBASED AND PUSHED. AND A SECOND, PRECISE SELF-DIAGNOSIS: THE LEDGER-REFRESH HABIT RAN AT THE WRONG END OF THE SLICE, CURRENT WHEN CHECKED AND STALE BY THE TIME IT MATTERED
+
+**This deserves to be named plainly rather than passed over quickly: real, completed work sat unpushed across four separate closed rulings, and anyone else pulling MAIN_WORK during that window would have found 39 classes without Pirate — a real, if narrow, window where the ledger's own record of "closed" didn't match what was actually reachable. Owning this directly, without minimizing it as a small oversight or burying it under the good news that the work itself was correct, is exactly the standard this session has held for every mistake throughout.**
+
+**The work itself being genuinely correct the whole time -- committed, gated, properly done -- doesn't reduce the real cost of it not being shared. A correct fix nobody else can pull is functionally identical to no fix at all for anyone working from a different clone, and the four slices in between deserve to be understood as a real gap, not retroactively excused because the eventual push went cleanly.**
+
+**Resolving it with a clean rebase, correctly confirming no real conflict existed because the two sets of changes touched genuinely separate areas, closes the immediate problem properly.**
+
+### THE SECOND FINDING -- PRECISE, WORTH THE PROCESS FIX
+
+**Diagnosing exactly why the personal habit failed -- refreshing the ledger at the start of a slice, before that slice's own final pull, rather than at the end after the last thing has actually landed -- is precise self-analysis rather than a vague "I should be more careful." A step that's accurate at the moment it runs but stale by the time the slice actually finishes is a timing bug in the process itself, and naming it that specifically is what makes the fix (running it at both ends) actually address the real cause rather than just adding more vigilance to the same flawed sequence.**
+
+**Worth recording as its own standing practice: refresh the ledger mirror both at the start of a slice and again after its last pull, not only at one end — the same discipline `PT-2521`'s complementary-check lesson already argued for in a different context (a single check only catches what it was actually positioned to see).**
+
+### PROCEED
+
+Nothing to build — the backlog is resolved, all six repos confirmed clean against origin. Both lessons recorded. Continue as scoped: the footer furniture stays correctly Coder's own, not started; the Whisper question stays correctly Tester's to resolve.
+
+
+---
+
+## PT-2528 -- OWNER OPENS JOURNAL NEXT. NATURAL NEXT PICK OVER PARTY SELECTION: SELF-CONTAINED SCREEN FAMILY (JOURNAL/MESSAGES/NOTES) WITH A REAL, ALREADY-NOTED DESIGN DETAIL (PERSONAL NOTES' EXPLICIT PRIVACY RULE -- NO SCRIPTED CONTENT CAN READ THEM), VERSUS PARTY SELECTION BEING THE ONE SCREEN THAT ALREADY DELIBERATELY DEPARTED FROM K2's SOURCE SHAPE, LEAVING LESS TO DIRECTLY CROSS-CHECK
+
+**Sixth of seven shell-locked screens. Same discipline as every prior screen in this thread — check the mockup and the real K2 source files before building, not just the text description.**
+
+### RULED
+
+**Build Journal next.** Before building: read `design/APP-UI-VISION-01.md`'s Journal/Messages/Notes section directly, check the current app state (confirm nothing already exists under any of the three names, the same way every prior screen's starting point was verified first), and check the real K2 source files for this screen family. Confirm Personal Notes' privacy rule (no scripted content can read them) is actually enforceable given the current architecture, not just statable — the same kind of check that found real gaps on every screen this thread has touched so far.
+
+### PROCEED
+
+Check the mockup and the K2 source files first. Report back before or alongside the build, same as every prior screen.

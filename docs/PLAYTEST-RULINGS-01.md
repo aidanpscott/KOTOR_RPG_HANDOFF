@@ -75307,3 +75307,59 @@ Re-verify against the real source before continuing the Powers chain-grid build.
 ### PROCEED
 
 Build the Powers chain grid deriving from `prerequisites`, matching K2's own method. Investigate the five-versus-six tier gap as its own small question, not blocking the main build. Everything else proceeds exactly as scoped.
+
+
+---
+
+## PT-2511 -- POWERS CHAIN CLOSES CLEAN, DERIVED EXACTLY AS RULED. A GENUINELY THOUGHTFUL DESIGN CHOICE CORRECTLY SURFACED RATHER THAN SILENTLY DECIDED (THREE POWERS FORK WITH NO K2 PRECEDENT -- SHARED-PREFIX REPETITION CHOSEN SO A CHAIN ROW NEVER LIES ABOUT WHAT IT ACTUALLY REQUIRES). VERIFIED AGAINST ALL 106 REAL POWERS WITH FOUR GENUINE STRUCTURAL INVARIANTS, DIRECTLY ANSWERING THE EXACT OBJECTION RAISED AGAINST DERIVATION AT PT-2508. AND A GENUINELY VALUABLE NEAR-MISS: NEARLY FILED WORKING CODE AS BROKEN BECAUSE OF A STALE TEST-FIXTURE COPY -- CAUGHT BY MEASURING THE RENDERED PIXELS RATHER THAN TRUSTING THE EYE. OWNER ASKS A REAL, IMPORTANT FOLLOW-UP: DOES CHARGEN'S OWN POWERS SCREEN ALSO NEED THIS SAME CHAINING
+
+**Matching K2's own proven method precisely -- deriving from cumulative prerequisites rather than any stored chain identifier, since the source itself stores none -- closes this exactly as ruled at `PT-2510`.**
+
+### THE FORK DECISION -- GOOD DEFAULT, CORRECTLY SURFACED
+
+**Finding three powers that genuinely fork with zero K2 precedent to draw from, and choosing to repeat the shared prefix across each full path rather than silently break it out, is a sound default with real reasoning behind it -- a chain row exists specifically to state what's required, and dropping the shared head from a second path would make that row misleading by omission. Correctly offering this as reconsiderable rather than treating the absence of precedent as license to decide it alone and move on is exactly right.**
+
+**Approved as built. No change needed -- the reasoning holds and the alternative (breaking the fork out visually) would need its own real justification to be worth the added complexity.**
+
+### THE FOUR-INVARIANT VERIFICATION -- EXACTLY ANSWERS THE ORIGINAL OBJECTION
+
+**This is precisely what `PT-2508`'s concern about derivation called for, and it's worth confirming it was actually met rather than just asserted. Testing against all 106 real powers rather than hand-written fixtures, and checking structural properties (every power reachable, no chain exceeding the real row capacity, prerequisites always ordered correctly, the grid never silently degenerating to one row per power) rather than specific expected outputs, is a genuinely different and stronger kind of confidence than a derivation tested only against the data it was built from. The original caution is answered on its own terms, not sidestepped.**
+
+### ⚠⚠ THE NEAR-MISS -- WORTH KEEPING AS ITS OWN REMINDER
+
+**Nearly reporting working code as broken because of a stale copy in a multi-fixture test file, then catching it by measuring the rendered pixels rather than trusting a visual impression, is a genuinely valuable demonstration of why render-and-look needs measurement paired with it, not just a look. "Measuring the PNG's cell positions... is what separated 'the code is wrong' from 'the fixture is wrong'" is worth keeping in mind the next time a render looks wrong at first glance — check what's actually being looked at before concluding the code is the problem.**
+
+### ⚠⚠⚠ OWNER'S FOLLOW-UP -- REAL, OPENING AS ITS OWN ITEM
+
+**A genuinely important question. Chargen's Feats screen was already confirmed chained (the same pattern level-up reuses), but chargen's own Powers screen was specifically confirmed as a flat, unchained list at `PT-2508`/`PT-2510` — separate from the in-game Abilities work that just closed. There's a real, live risk of chargen and the in-game screen now disagreeing about how Powers are shown, for no reason other than one got the fix and the other didn't yet.**
+
+**Ruled: check chargen's Powers screen against the same standard just applied to Abilities' Powers tab.** If it's still the flat list, it needs the same chain-grid treatment, deriving from the same `prerequisites` data, so a player sees the identical structure whether picking Powers at character creation or at level-up (which itself reuses chargen's screen). Report what's actually there before building — same discipline as every other screen in this thread.
+
+### PROCEED
+
+Check chargen's Feats screen too, to confirm it's genuinely still correct and hasn't drifted, while checking Powers specifically. Fix chargen's Powers screen to match if it's still flat. The five-vs-six tier gap, the log design, prestige skill points, and everything else already correctly held stays exactly as is.
+
+
+---
+
+## PT-2512 -- THE QUESTION INVERTS CLEANLY: CHARGEN'S FLAT POWERS RENDERING IS CORRECT, NOT DRIFT -- ALL 22 POWERS OFFERED AT CREATION GENUINELY HAVE NO PREREQUISITES, SO THERE ARE NO CHAINS TO DRAW. ⚠⚠⚠ THE REAL DEFECT IS SEVERE AND ELSEWHERE: LEVEL-UP OFFERS ALL 106 POWERS REGARDLESS OF PREREQUISITES OR PRICING, MEANING A LEVEL-2 CHARACTER CAN BE OFFERED TOP-TIER CHAINS AND UNPRICED POWERS THAT LATER FAIL AT THE CAST PATH WITH A DISCONNECTED ERROR. "THE TWO SCREENS DO NOT DISAGREE ABOUT CHAINING. THEY DISAGREE ABOUT WHAT A LEVEL-UP MAY OFFER, AND CHARGEN IS THE ONE THAT IS RIGHT." PLUS A SEPARATE, REAL DEFECT FOUND INCIDENTALLY: LEVEL-UP FEATS HARDCODE isDroid: false, HANDING A DROID THE ORGANIC FEAT LIST
+
+**This is precise, valuable investigation that correctly overturned the premise it was sent to check -- rather than confirming or denying drift, it found chargen was never wrong and the real gap was hiding one layer away, in what level-up actually offers rather than how it renders. "The screen is fine; it is being fed the wrong list" is the right diagnosis, and building on that distinction rather than teaching the screen a new chaining behaviour it doesn't need is the correct scope for the fix.**
+
+### ⚠⚠⚠ THE LEVEL-UP OFFER DEFECT -- SEVERE, RULED FIX NOW
+
+**A level-2 character being able to select Crush Opposition IV or V, or an unpriced power that later refuses at the cast path with a reason disconnected from the moment the player actually made the choice, is a real, severe gap in the core level-up experience -- not a display inconsistency, a genuine ability to make an invalid, confusing choice the game will only reject much later.**
+
+**Ruled on the one real question: show the full chain, matching what's already built, but refuse the specific powers whose prerequisites aren't yet met -- with the reason stated, exactly the same "shown but withheld, with a reason" shape chargen already uses for unpriced powers.** Hiding unqualified powers entirely, chargen's own choice for that specific case, would work against the whole reason the chain grid exists here: a player levelling up benefits from seeing where a chain leads, not just what's immediately available. Consistency with the chain grid's own purpose matters more here than matching chargen's exact behaviour for a different situation — chargen hides because there's no visual chain to show what's coming; level-up has that visual precisely so a player can see it.
+
+**Unpriced powers stay withheld with a reason, matching chargen exactly — no change needed there, since that part of chargen's precedent transfers directly.**
+
+**Ruled: filter the level-up offer to require prerequisites met (shown-but-refused, not hidden, when unmet) and separate unpriced powers into the withheld category, exactly as recommended. Fix now, same priority as this thread's other severe defects.**
+
+### THE DROID FEAT DEFECT -- REAL, RULED FIX NOW
+
+**A hardcoded `isDroid: false` silently handing every droid character the organic feat list at level-up is a real, separate defect, found as a genuine byproduct of re-checking Feats rather than something that needed its own separate investigation. Fix now alongside the Powers offer filter — both are real, both are severe in their own way (one lets an invalid choice through, the other shows the wrong choices entirely for a whole category of character).**
+
+### PROCEED
+
+Filter level-up's Powers offer to match chargen's qualification logic, with unmet-prerequisite powers shown-and-refused rather than hidden. Fix the droid feat-list hardcoding. Both ruled fix-now.

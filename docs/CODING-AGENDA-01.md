@@ -17,8 +17,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 - **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
-- **Pirate's save table — real, small, held, own follow-up.** Currently wears an incomplete, reference-only save table inherited from a different document, not the full 1-to-30 table every other properly-generated prestige class gets. Same "dual nature" theme as the entry-route question.
-- **Third Gunslinger route (Pirate 6) — needs re-confirmation now that Pirate ships.** Was dead when Pirate didn't exist; now that it does, confirm it's a genuinely live route.
 
 - **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
@@ -80,6 +78,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Pirate's save table and the third Gunslinger route both closed — whole Pirate/prestige thread now complete. Merge mechanism's real asymmetry diagnosed (adds fields to existing rows, never adds rows) — Pirate alone kept a gapped PHB shape since it's the only prestige class still carrying a printed-source table. Fix correctly scoped narrow: no printed source of its own → full authored range; the twelve real base classes correctly untouched, keeping their gaps per the already-standing `PT-2163`. Third route verified with real, complete data at level 6 specifically, not just Pirate's bare presence in the roster — PT-2519
 
 - Hit-die extraction fix, Pirate shipping, and the Gunslinger entry-route questions all closed. Hit die was authored in the source the whole time, matched by a recognition pattern that threw the value away — set only where nothing else already answers. Pirate's orphaned row (missing header broke the extractor's row-shape scan) fixed; 39 classes, 20 prestige. Pirate keeps its already-authored skill base of 4 rather than the hybrid's computed 5, correctly respecting existing content over overwriting it with a formula — independently cross-verified against class-skills.json. An existing audit had been silently reporting "20 classes" against a 19-class roster the whole time; Pirate was the missing one. Prestige-to-prestige entry ruled intended, not a gap — PT-2518
 

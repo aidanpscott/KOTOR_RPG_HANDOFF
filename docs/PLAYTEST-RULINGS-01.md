@@ -76168,3 +76168,34 @@ Build the inverted default, not a list patch. Tester's five pre-staged re-confir
 ### PROCEED
 
 Nothing to build. Both the two-reading confirmation plan and the provenance-redeclaration commitment are approved as described. Ready the moment Coder reports the five severe fixes done.
+
+
+---
+
+## PT-2542 -- ALL FIVE SEVERE DEFECTS CLOSE. ⚠⚠⚠ A REAL DEFECT CAUGHT IN CODER'S OWN ALREADY-WRITTEN FIX BEFORE IT SHIPPED, HONESTLY DISCLOSED IN FULL: THE FIRST ATTEMPT WAS A POSITIVE LIST OF WHAT'S BAD -- STRUCTURALLY THE EXACT SHAPE PT-2540 RULED AGAINST, WEARING A DIFFERENT DISGUISE. REBUILT CORRECTLY: DEFAULT IS BAD, GOOD REQUIRES ITS OWN POSITIVE SOURCE, CURRENTLY EMPTY BECAUSE NOTHING BENEFICIAL EXISTS YET. AND ⚠⚠ TWO MORE SELF-CAUGHT VACUOUS GUARDS, BOTH ATTRIBUTED DIRECTLY TO DISCIPLINED MUTATION TESTING RATHER THAN SUSPICION -- THE SECOND SLICE RUNNING WHERE THIS EXACT HABIT HAS CAUGHT A GAP IN A JUST-WRITTEN, ALREADY-TRUSTED GUARD
+
+**This is genuinely exceptional work, and every part of it deserves direct, full recognition.**
+
+### ⚠⚠⚠ THE CAUGHT-BEFORE-SHIPPING DEFECT -- THE MOST IMPORTANT THING IN THIS REPORT
+
+**Disclosing that the first implementation attempt was itself wrong, in exactly the shape the ruling existed to prevent, and explaining precisely why -- a positive membership check against a named list answers identically to a hand-maintained "bad" list today, and fails the same way the moment a condition exists that the list doesn't name -- is complete, honest accountability for a mistake caught before it could cause any real harm. The correction is exactly right: the default itself is now bad, and "good" requires its own positive source that's currently, correctly, empty. Building the discriminating test around a condition name deliberately absent from the current roster, standing in for whatever gets added next, is precisely the right way to prove the fix closes the risk class rather than just today's sixteen instances.**
+
+**"The sixteen wrong names were never sixteen oversights. They were one default." is worth keeping as its own clean statement of the whole lesson.**
+
+### THE OTHER FOUR FIXES -- ALL PRECISE
+
+**Notes' broken focus, the dismissed companion's raw-tag display, the phantom re-add state, and the incomplete escape chain all close with precise, correctly-scoped fixes -- reusing `_bringTheParty` rather than writing a second path beside it, and looping the escape guard over all seven screens specifically because a guard naming individual screens would have passed the whole time four were genuinely missing, are both the right shape of fix rather than a patch that happens to work today.**
+
+### ⚠⚠ TWO MORE SELF-CAUGHT VACUOUS GUARDS -- WORTH NAMING AS A PATTERN NOW
+
+**Finding that the name-resolution guard bypassed the real resolver entirely by handing the screen an already-correct value, and that the phantom re-add fix had no guard at all until mutation proved it, are both genuinely valuable catches — but the more important thing is what caught them. Neither was found through suspicion of a specific test; both were found because mutation testing is now applied to every fix as a matter of course, not as an occasional afterthought. This is the second slice explicitly reporting this exact shape (a freshly-written, genuinely-trusted guard failing its own mutation), and it's worth stating plainly: the discipline is demonstrably earning its keep at a rate that justifies treating it as mandatory rather than optional, which is exactly how it's already being treated.**
+
+**Reproducing Tester's exact reported symptom (vitality 0 where it was 60) through the real board, rather than settling for a synthetic assertion that merely exercises the code path, closes the loop precisely on what was actually reported.**
+
+### READY FOR TESTER -- CONFIRMED
+
+**Confirming all five pre-staged confirmations should run, and explicitly acknowledging Tester's own correct prediction about the shaken/slowed pair losing its discriminating power, with an internal test already built around a pair chosen specifically to keep discriminating regardless, closes the loop between both sides of this thread properly.**
+
+### PROCEED
+
+Nothing further needed — all five severe defects close cleanly, with real, honest disclosure throughout. Route Tester's two-reading confirmation now that both are ready.

@@ -6,12 +6,25 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: five real defects from TEST 129 — all ruled fix-now
+- **Messages' condition classification defaults to "good" instead of "bad" — the most severe finding, ruled fix now (PT-2538).** 16 of 21 real conditions (including paralysed, helpless, staggered) currently read as beneficial. Root cause: only builds the bad set from powers explicitly flagged enemy-targeting, defaults everything else to good. Proven by matched pair (identical hazard, differing only by condition name — shaken reads good, slowed reads bad). Fix: default to bad/flagged-for-review, not good.
+- **Notes cannot be written at all, by any method — severe, ruled fix now (PT-2538).** A bare text input structurally never receives focus (zero `requestFocus` calls in the file). Privacy guarantee itself confirmed working three ways on the one note that landed once, unreproduced across six attempts.
+- **Party Selection: dismissed companion shows raw internal tag instead of a name — real, ruled fix now (PT-2538).** Name resolver has no fallback source for someone neither placed nor fielded.
+- **Party Selection: re-adding a dismissed companion creates a broken phantom state until next reload — real, ruled fix now (PT-2538).** Impossible 0/0 vitality, false "in the fight" status with no fight running, removal incorrectly refused. Needs the same re-derivation a room load already correctly performs, triggered on re-add.
+- **Escape does nothing on four of seven screens — real, ruled fix now (PT-2538).** Journal, Messages, Notes, Party Selection all sit outside the existing escape-closing chain `PT-2465` built for the other three. Add them to the same chain.
+
+### Smaller TEST 129 findings — real, held, less urgent batch
+- **Board has no nav bar; four of seven screens reachable only via another screen first.**
+- **`_navBar`'s own doc comment still says "three of seven not built," eight lines above its own correction.**
+- **Messages pane labels read FEEDBACK/DIALOG rather than the intended friendlier names.**
+- **Level-up label stuck on "waiting" for an already-taken level** — a level-6 character with nothing pending shows "A level is waiting — 5."
+- **Misplaced note-privacy gate loads silently wrong** — authored under a table `_gate` never reads from; no error, does nothing.
+
 - **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
 - **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
 
 - **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
-- **Good Effects column will render permanently empty on current data — noted, not a defect.** No beneficial condition exists anywhere in the current rules (all 19 condition-applying powers affect enemies only). Architecturally correct, derived from the roster's own `affects` field — will populate correctly the day a beneficial condition exists.
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.
 
 - **Full active/inactive control-switching concept — real gap, held, own future thread.** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.

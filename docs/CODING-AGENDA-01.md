@@ -26,7 +26,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Shared shell — held, deliberately, pending the map/grid view.** Building persistent nav bar/title bar/footer furniture around an undesigned play surface risks real rework. Revisit once the map/grid view has a locked design, or a real case emerges to build it sooner.
 - **Options/Settings — held, explicitly a first pass not a lock.** `PT-1255`'s own words, pending `PT-1140`/`PT-1148`, both still deferred. Building it now would be building against something not yet finalized.
 
 

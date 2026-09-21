@@ -74843,3 +74843,45 @@ Fourth cause fully closed. Gap 1 queued as its own real content task — author 
 ### PROCEED
 
 Fix multiclass display across all three surfaces. Clear the three small items alongside it. Report back once done.
+
+
+---
+
+## PT-2492 -- MULTICLASS DISPLAY CLOSES CLEAN ACROSS ALL THREE SURFACES, WITH A GENUINELY VALUABLE SELF-CAUGHT MUTATION FIND (THE FIRST GUARD ONLY FORBADE THE SEPARATOR, PASSING A BUILD THAT WOULD HAVE WRONGLY REFORMATTED EVERY SINGLE-CLASS CHARACTER) AND A PRECISE FIXTURE-BLINDSPOT CATCH ("THE FIXTURE COULD NOT TELL THE PAGE FROM THE CHROME ABOVE IT"). BOTH REAL SMALL ITEMS CLOSE CLEANLY, WITH GENUINELY CAREFUL HANDLING OF ONE GENUINE EDGE CASE -- INVESTIGATING THE REAL CONSEQUENCE OF A NAIVE DEFAULT BEFORE CHOOSING THE SAFEST OPTION, RATHER THAN ASSUMING IT WOULD BE HARMLESS
+
+**Reusing the same difference-computation logic an existing function already relies on, so the two paths cannot independently disagree, is exactly the discipline this session has held for every shared piece of derived state throughout this whole project.**
+
+**Catching that the first mutation-tested guard only forbade the separator character -- meaning a wrong implementation reformatting every single-class character into the multiclass shape would have quietly passed -- and rebuilding it to assert the exact single-class format instead, is precise self-correction under mutation testing working exactly as intended. A guard that can't distinguish "the feature works" from "the feature over-applies to everyone" isn't yet confirming the thing it claims to.**
+
+**Finding that a persistent header element let an assertion pass before the actual content existed on the right page -- "the fixture could not tell the page from the chrome above it" -- is a sharp, precise diagnosis of exactly why the original test gave false confidence, and adding the label that makes the row genuinely belong to its page closes the real gap rather than the apparent one.**
+
+### THE SMALL ITEMS -- BOTH REAL, ONE GENUINELY CAREFUL EDGE CASE
+
+**The null-to-string interpolation fix and tracing credits to the record chargen already writes are both clean, small, correct fixes.**
+
+⚠⚠ **THE PLACEHOLDER'S SURVIVING SCOPE IS THE MOST VALUABLE PART OF THIS REPORT, AND IT'S WORTH NAMING WHY.** Actually investigating what defaulting to null or zero would do in the one configuration with no real character record, rather than assuming a number is just a number, and discovering it would genuinely change which dialogue options exist -- altering the actual conversation path, not just a displayed figure -- is exactly the kind of care that catches a real behavioural regression before it ships disguised as a harmless cleanup. Choosing to scope the old value narrowly and name it for what it actually is, rather than either leaving a confusing fake purse on every real character or silently rewriting an unrelated, pre-existing governing test, is the correct response to a genuine edge case rather than a shortcut around one.**
+
+**Confirming rather than re-fixing the already-closed timing trap, matching exactly what the corrected agenda entry said, is honest verification under no pressure to manufacture work.**
+
+### PROCEED
+
+Nothing further needed — all four items close cleanly. Standing by for whatever's next.
+
+
+---
+
+## PT-2493 -- OWNER OPENS INVENTORY AS THE NEXT SCREEN. THE NATURAL PICK: MOST-REFERENCED SCREEN IN WORK ALREADY DONE (EQUIP'S OWN ITEM RESOLVER TOUCHES THE SAME DATA), REAL LOCKED DESIGN (PT-1251), NOT WAITING ON ANYTHING ELSE TO EXIST FIRST -- UNLIKE PARTY OR JOURNAL
+
+**Two of the seven shell-locked screens are done (Character Sheet, Equip). Inventory is next, for concrete reasons rather than simply being next on a list: it's the screen most directly connected to what's already built (Equip's `worn_at` resolver and the shared item data both bear directly on it), it has a genuinely locked design rather than a first pass, and building it doesn't require the shared shell or the map view to exist first.**
+
+**Owner's specific request: have Coder look at both the real mockup (once the path is available) and the actual K2 game files directly, not just the text description, before building — matching the same discipline this whole thread has held for every screen so far.**
+
+### RULED
+
+**Build Inventory next, to `PT-1251`.** Before building: read the locked design section directly, check the current app state (confirm the two-line status strip is genuinely the full extent of what exists), and check the real K2 source files the design document itself cites (`inventory.gui`, `inventory_x.gui`, `inventory_p.gui` — already found and referenced during the original design work) for anything the text description alone doesn't fully capture. Apply the same render-and-look standing process from `PT-2473` before calling it done — this has already caught real structural defects on every prior screen that skipped it.
+
+The seven-category filter strip, the icon-beside-name list matching Abilities' Skills tab, `(Equipped)` as a name suffix rather than a separate badge, and `CREDITS` as a label-value row beneath the description are all already specified in the locked design — build to those, and flag anything the real source files suggest that the text missed, the same way prior screens have surfaced real corrections.
+
+### PROCEED
+
+Read the design and the K2 source files first. Report back before or alongside the build, same as every prior screen in this thread.

@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Animated datapad-style frame — future item, held, not started (PT-2499).** Current recreated frame is an explicit placeholder. Eventually wants an AI-developed replacement in a Star Wars datapad aesthetic — glowing edge accents, a living feel rather than static art — possibly with one or two small interactive Easter-egg elements. For later discussion, not a current build item.
+
 - **Wiring the shell into play — approved, building (PT-2498).** The fit issue is now properly closed. Wrap play_screen's top-level Row in ScreenFrame, bronze divider between rail and board, rail held at its real current width. Same double-scaling treatment already proven on the three ported screens applies to the board too — flagged proactively as the same defect would otherwise recur here.
 
 

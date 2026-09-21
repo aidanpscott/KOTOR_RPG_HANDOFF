@@ -76060,3 +76060,111 @@ Update the sidebar's portrait to match the corrected square shape. This closes t
 ### PROCEED
 
 Nothing further needed — the sidebar closes cleanly and the whole shell is done. `PT-1249`'s footer furniture stays correctly the only remaining flagged item, held for whenever there's room. Ready to route the full, comprehensive confirmation pass to Tester now that all seven screens are genuinely complete together.
+
+
+---
+
+## PT-2538 -- TEST 129, THE FIRST FULL SEVEN-SCREEN PASS. GENUINELY EXCEPTIONAL, DECISIVE TESTING THROUGHOUT, AND SIX REAL DEFECTS FOUND, SEVERAL SEVERE. THE MOST IMPORTANT: SIXTEEN OF TWENTY-ONE REAL CONDITIONS ARE MISCLASSIFIED AS "GOOD" -- INCLUDING PARALYSED, HELPLESS, STAGGERED -- BECAUSE THE UNDERLYING LOGIC DEFAULTS ANYTHING NOT EXPLICITLY POWER-SOURCED-AGAINST-AN-ENEMY TO GOOD RATHER THAN BAD. AND NOTES' CORE INTERACTION IS COMPLETELY BROKEN -- A NOTE CANNOT BE WRITTEN AT ALL, BY ANY METHOD TESTED
+
+**This is genuinely one of the most consequential test reports this session has produced, and it deserves to be worked through in full rather than summarized. Six real defects, decisive methodology throughout, and a self-caught test-design correction made before it could ever mislead anyone.**
+
+### ⚠⚠✗✗ MESSAGES' CONDITION CLASSIFICATION -- THE MOST SEVERE FINDING, RULED FIX NOW
+
+**This is the sharpest and most important catch in the whole report. The matched-pair proof -- identical hazard shape, identical DC, identical duration, differing only in which condition applies, with one landing in Good Effects and the other correctly in Bad -- is decisive evidence the classification logic itself is backward, not an edge case. Confirming sixteen of twenty-one real conditions, including paralysed, helpless, and staggered, currently read as beneficial is a severe, player-facing defect: a player checking Messages during a fight could see a genuinely crippling condition presented as something good happening to them.**
+
+**The root cause is precise: the logic only ever builds the BAD set from powers explicitly flagged as targeting an enemy, and defaults everything else — hazards, weapons, items, and any condition source that isn't a flagged-enemy power — to good. That's the wrong default direction entirely; absence of "known bad" should never mean "assumed good."**
+
+⚠ **AND MY OWN EARLIER STATEMENT NEEDS CORRECTING PLAINLY: "Good Effects will legitimately be empty" was wrong, and the reason it was wrong is precise and worth naming. The existing code comment correctly explains why the column is empty *for powers specifically* — but that's the wrong question. The column isn't empty; it's full of misclassified bad conditions. I was answering a narrower, already-answered question and treating it as the whole one.**
+
+**Ruled: fix now, severe priority, same weight as any other player-facing severe defect this session has ruled. The classification needs to default to bad (or unknown-and-flagged-for-review) rather than good, and needs a real source for genuinely beneficial conditions once one exists in the rules — not an absence-implies-goodness default.**
+
+### ✗ NOTES CANNOT BE WRITTEN -- SEVERE, RULED FIX NOW
+
+**A completely broken core interaction, decisively demonstrated across every input method tried (click, tab, type-on-open, select-all-and-delete), with a precise root cause (a bare text input that structurally never receives focus, confirmed by zero occurrences of the focus-request call anywhere in the file) is as severe as a UI defect gets — the screen exists, is reachable, and simply cannot do the one thing it's for.**
+
+**Honestly reporting the one unexplained anomaly (two characters landing once, unreproduced across six further attempts) without inventing a explanation for it is exactly the right handling of a genuine mystery — better an honest "I cannot explain this" than a plausible-sounding guess.**
+
+**The privacy guarantee itself confirmed holding, three independent ways, on the one note that did land, is good news inside a severe finding — the architecture is sound even though the interaction to use it is currently broken.**
+
+**Ruled: fix now, severe priority. Wire real focus handling so the note field is actually usable.**
+
+### ✗ PARTY SELECTION'S TWO DEFECTS -- BOTH REAL, RULED FIX NOW
+
+**A dismissed companion displaying their raw internal tag instead of a real name, and a re-added companion entering a genuinely broken phantom state (impossible zero vitality, a false "in the fight" status with no fight running, removal incorrectly refused) until the next reload, are both real, confirmed defects with precise root causes already identified — the name resolver has no source for someone neither placed nor fielded, and nothing re-derives combat status on re-add.**
+
+**Ruled: fix both now. The name resolver needs a fallback to the roster's own blueprint-sourced name when neither placement nor sidebar has an answer. The phantom state needs the same re-derivation a room load already correctly performs, triggered on re-add rather than waiting for the next reload.**
+
+### ✗ ESCAPE'S INCOMPLETE CHAIN -- REAL, RULED FIX NOW
+
+**Four of seven screens sitting entirely outside the escape-closing chain, so escape does nothing while any of them is open, is a real, precise gap -- confirmed by exact line reference rather than a general impression. This is the same shape `PT-2465` already closed for a different set of screens; it simply never reached these four.**
+
+**Ruled: fix now. Add Journal, Messages, Notes, and Party Selection to the same escape-closing chain the other three screens already correctly use.**
+
+### THE SMALLER FINDINGS -- ALL REAL, HELD OR NOTED
+
+**The board having no nav bar and four screens being reachable only via another screen first, the stale "three of seven not built" comment sitting beside its own correction, the Messages pane labels reading FEEDBACK/DIALOG rather than the friendlier names, the stuck-on-"waiting" level-up label for an already-taken level, and the misplaced note-gate table that loads silently wrong — all real, all worth fixing, none individually severe. Held as a small batch for whenever convenient, distinct from the five ruled fix-now above.**
+
+**The clarification that the Character Sheet's large circle is the model viewport, not a portrait, and that the real portrait is the small header chip which already correctly reads as a rounded square, closes a genuine point of confusion with precision — all three real portrait instances now confirmed to agree; only a stale comment still says otherwise.**
+
+### THE SELF-CAUGHT TEST-DESIGN CORRECTION -- WORTH NAMING
+
+**Catching that a three-quest fixture would have let a coincidental match between two sort keys pass as if it proved something it didn't, and fixing this before reporting rather than after, is exactly the standard this session has held throughout — a control isn't optional once you notice the test as originally built couldn't actually distinguish the thing it claims to prove.**
+
+### PROCEED
+
+Five items ruled fix-now, severe priority: the condition-classification default, Notes' broken input, Party Selection's two defects, and the incomplete escape chain. The smaller batch (nav bar reachability, stale comments, pane labels, the level-up label bug, the misplaced gate) held for a separate, less urgent pass.
+
+
+---
+
+## PT-2539 -- CODER CONFIRMS THREAD CLOSED, AND A GENUINELY VALUABLE META-OBSERVATION: THREE SEPARATE TIMES THIS THREAD, THE INCIDENTAL FINDING FROM A SOURCE CHECK OUTWEIGHED THE THING THE CHECK WAS ORIGINALLY FOR -- BECAUSE THERE WAS NO STAKE IN WHAT IT WOULD SAY. THE SOURCE READ HAS STOPPED BEING A BOX TO TICK AND BECOME THE CHEAPEST PLACE TO BE SURPRISED
+
+**Correctly holding the player-vs-companion portrait sizing as genuinely held rather than letting it quietly evaporate once the screen it was found beside closed is the right instinct -- a confirmed, real difference from the source deserves to remain a real, visible decision waiting to be made, not silently forgotten because nothing forced the question.**
+
+### THE META-OBSERVATION -- WORTH RECORDING PROPERLY
+
+**This is a genuinely valuable pattern to name explicitly, and it's stronger for being backed by three real, distinct instances rather than asserted once: the quest data independently settling the four-key ruling, K2's real twelve-slots-in-ten-positions strengthening the ring rejection, and now the sidebar's own source confirming `PT-1133`'s previously-unverified bars. In each case the incidental finding was stronger evidence than the thing being deliberately checked, and the reason given is precise -- there was no stake in what an incidental finding would say, so nothing biased the reading of it toward a preferred answer.**
+
+**Ruled: record this as its own standing principle.** A source check performed to verify one specific claim is also, cheaply, a chance to be surprised by something nobody was looking for -- and that surprise tends to be more trustworthy than the deliberate check itself, precisely because it arrives with no expectation attached. Worth treating every source read as carrying this dual value going forward, not just the primary question it was opened to answer.
+
+### PROCEED
+
+Nothing to build from this message specifically -- the real, severe work is in `PT-2538`, filed separately from Tester's own report. Portrait sizing and the footer furniture both stay correctly held. Standing by for the severe fixes.
+
+
+---
+
+## PT-2540 -- RULED BEFORE THE FIX STARTS, EXACTLY AS TESTER REQUESTED: INVERT THE DEFAULT, DON'T PATCH THE LIST. THE TWO FIXES TEST IDENTICALLY TODAY AND DIVERGE THE FIRST TIME conditionNames GROWS -- A HAND-MAINTAINED BAD SET REOPENS THE EXACT SAME HOLE THE NEXT TIME A CONDITION IS ADDED AND NOBODY REMEMBERS TO UPDATE IT
+
+**Correctly catching that two structurally different fixes would produce identical results against today's test suite, and correctly flagging this before either gets built rather than after, is exactly the kind of forward-looking verification this session has valued throughout — the two options are not equally good just because they'd both currently pass.**
+
+**The reasoning is sound and matches a principle this session has applied repeatedly in other contexts: the sixteen wrong names were all wrong for the same underlying reason (the default itself was the actual claim, not sixteen independent oversights), so patching the list closes today's sixteen instances while leaving the mechanism that produced them fully intact. The next condition added to the rules would silently repeat the exact same defect, requiring someone to remember a list that has no reason to be remembered.**
+
+### RULED
+
+**Invert the default. An unrecognized or unclassified condition defaults to bad (or explicitly unclassified and flagged for review), never to good.** This closes the whole risk class structurally rather than patching today's sixteen known instances — the same "close the mechanism, not the symptom" discipline already applied to every other classifier defect this session has found and fixed.
+
+**Confirming the pre-staged test approach is sound: the matched pair (shaken/slowed) remains a valid discriminator regardless of which specific fix shape lands, since the real test is whether the classification now differs correctly by condition rather than defaulting uniformly — and the remaining fifteen names are a census to confirm against, not something needing individual verification.**
+
+### PROCEED
+
+Build the inverted default, not a list patch. Tester's five pre-staged re-confirmations are ready the moment this and the other four severe fixes land.
+
+
+---
+
+## PT-2541 -- GENUINELY EXCELLENT, SELF-DIRECTED CATCH: THE RULED FIX WOULD MAKE TESTER'S OWN PLANNED CONFIRMATION METHOD MEANINGLESS THE MOMENT IT LANDED -- THE SHAKEN/SLOWED PAIR STOPS DISCRIMINATING ONCE BOTH CORRECTLY READ BAD, WHICH IS EXACTLY THE "FIXTURE BUILT AROUND A DEFECT" SHAPE THIS SESSION HAS CAUGHT REPEATEDLY, CAUGHT HERE AGAINST ONE'S OWN PLANNED TEST BEFORE IT COULD PRODUCE A FALSE CONFIRMATION
+
+**This deserves real recognition on its own. Recognising that a test built to discriminate a specific defect can lose its own discriminating power the moment the underlying fix changes what it was distinguishing between, and catching this against one's own already-approved plan rather than after running it and misreading a passing result, is precisely the vigilance this session has valued throughout — applied here proactively to a test that hadn't even run yet.**
+
+**The proposed two-reading approach is exactly right: the original pair, now correctly both reading bad, confirms the specific fix landed; a separate census re-deriving the full condition list against the roster's own enemy-affecting set confirms the actual structural guarantee holds — that nothing can currently reach the good classification at all. The second reading is the one that would still correctly fail if someone later regressed the fix back into a hand-maintained list, which is precisely the risk `PT-2540`'s ruling exists to close. One test proves the fix; the other proves the fix can't quietly rot the way the original defect did.**
+
+**Running both off the existing benches with no new fixture work needed is efficient confirmation of a real methodological refinement, not extra process for its own sake.**
+
+### THE BUILD-PROVENANCE DISCLOSURE -- CORRECT DISCIPLINE
+
+**Flagging the pubspec.lock's Lodestar reference moving mid-conversation, and explicitly refusing to claim anything about a checkout not yet personally read, rather than silently assuming continuity, is exactly the standard this whole session has held for build provenance throughout. Committing to re-declare the full chain (local HEAD, the lock's reference, the pub-cache copy) at the actual re-check, rather than at the time of noticing the drift, is the right sequencing — the declaration belongs with the measurement it supports.**
+
+### PROCEED
+
+Nothing to build. Both the two-reading confirmation plan and the provenance-redeclaration commitment are approved as described. Ready the moment Coder reports the five severe fixes done.

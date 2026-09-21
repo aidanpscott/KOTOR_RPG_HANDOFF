@@ -75003,3 +75003,38 @@ Build on this measurement — the stack-and-swap feats mechanism, the boxed read
 ### PROCEED
 
 Fix the scale/fit overlap issue first, across all three already-built screens. Move the TPC/ERF readers into `MAIN_WORK/scripts`. Wiring into play stays held until the fit is confirmed correct. Equip's slot count and both `PT-2490` data gaps stay correctly mine, still unresolved.
+
+
+---
+
+## PT-2498 -- THE FIT IS PROPERLY CLOSED, AND THE ACTUAL DIAGNOSIS DIFFERS FROM WHAT THE RULING NAMED: ABILITIES WAS THE REAL OFFENDER (510 PIXELS), THE THREE NAMED SCREENS PUT ZERO PIXELS OUTSIDE THE FRAME. CODER CORRECTLY OVERTURNED THEIR OWN EARLIER DECISION TO DELIBERATELY ALLOW THE OVERHANG -- "IT IS THE SOURCE'S DOING, AND IT STILL READS AS A DEFECT." SEPARATELY DIAGNOSED AND FIXED A COMPLETELY DIFFERENT SECOND DEFECT (DOUBLE SCALING -- A FULL LAYOUT PASS FOLLOWED BY A BITMAP SQUEEZE). AND ⚠⚠ A GENUINELY SHARP SELF-CAUGHT MEASUREMENT ERROR: A SUSPICIOUS IDENTICAL NUMBER ACROSS THREE DIFFERENT LAYOUTS CORRECTLY READ AS A SIGN OF A SYSTEMATIC BUG IN THE MEASUREMENT ITSELF, NOT THREE COINCIDENTAL REAL DEFECTS
+
+**Measuring each screen individually against an actual rendered baseline of the bare frame, rather than trusting the ruling's own assumption about which screens were affected, is exactly the right instinct -- the ruling named three screens because that's where the observation happened to land, and the measurement correctly went and found where the real defect actually was instead of confirming the assumption.**
+
+### ⚠⚠⚠ OVERTURNING THE EARLIER DECISION -- EXACTLY RIGHT, WORTH NAMING WHY
+
+**Finding that an earlier, deliberate choice to permit the overhang -- reasoning it was "the source's own doing" and "meant to tuck under the bevel" -- was itself the actual defect, and reversing that decision plainly rather than defending it, is honest engineering under real self-scrutiny. "It is the source's doing, and it still reads as a defect" is exactly the right standard: where a line came from doesn't change whether it's correct for this product, and a plausible-sounding justification for permitting something doesn't make the permission right.**
+
+### THE DOUBLE-SCALING DEFECT -- A GENUINELY SEPARATE ROOT CAUSE, CORRECTLY DISTINGUISHED
+
+**Recognising "renders small" as a structurally different problem from the overlap -- a full layout pass against the wrong viewport, then a bitmap resample squeezed into the frame's actual opening -- rather than assuming both symptoms shared one cause, is precise diagnostic separation. Removing the scale parameter entirely rather than just changing its default, specifically because a caller could otherwise still pass a value computed against a viewport these screens no longer fill and fail silently at every call site, is the same "close the risk structurally, not just the instance" discipline this session has valued throughout.**
+
+### THE THREE GUARDS -- EACH WITH REAL, SPECIFIC REASONING
+
+**Comparing against an actual rendered frame rather than a brightness threshold that would be shaped by today's palette, measuring the bars in layout rather than trusting pixels that can't distinguish a clipped bar from a properly-ended one, and testing the clip's own contract with a deliberately overflowing child so the guard isn't rendered meaningless once the real margins are fixed -- all three show real thought about what each specific check can and cannot actually prove.**
+
+### ⚠⚠ THE SELF-CAUGHT MEASUREMENT ERROR -- GENUINELY SHARP CATCH
+
+**This is the most valuable single catch in the report. Noticing that a corrected measurement approach still produced the identical number, 728 pixels, across three structurally different layouts, and reading that repetition as evidence of a systematic bug in the measurement itself rather than three coincidentally identical real defects, is exactly the instinct that separates trustworthy verification from verification that merely looks rigorous. Tracing it to a genuinely subtle sub-pixel boundary question -- a row the frame's edge only partially covers, correctly resolved as counting toward "inside" -- and confirming this correction has zero practical consequence where it actually matters (the two sides in question land on exact pixel boundaries) closes the loop properly rather than leaving the fix unverified against its own tool.**
+
+**The field-name collision caught during the sweep -- two genuinely different elements sharing the name "scale" needing genuinely different treatment -- and correctly reverting the over-applied change with an explanatory comment, is a small, real catch worth keeping on record.**
+
+**Verifying the promoted TPC/ERF decoders against real known content, not merely self-consistency, is the right, higher standard for infrastructure other work will depend on.**
+
+### RULED -- PROCEED TO WIRING THE SHELL
+
+**Approved. Wire the shell into play_screen as proposed: wrap the top-level Row in ScreenFrame, the bronze divider between rail and board, the rail held at its real current width.** The fit issue this was correctly held behind is now properly closed. Apply the same scale treatment already proven on the three ported screens to play_screen's own board, exactly as flagged — the same double-scaling defect would otherwise recur here for the identical reason.
+
+### PROCEED
+
+Wire the shell. Report back once done.

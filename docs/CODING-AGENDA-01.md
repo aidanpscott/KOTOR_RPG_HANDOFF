@@ -8,7 +8,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
-- **Sidebar portrait shape — ruled to match Party Selection's correction, building (PT-2536).** Same underlying correction (circle was always only a documented placeholder, square is the true intended shape) applied consistently — sidebar was correctly flagged, not silently widened into.
+- **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
 
 - **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
 - **Good Effects column will render permanently empty on current data — noted, not a defect.** No beneficial condition exists anywhere in the current rules (all 19 condition-applying powers affect enemies only). Architecturally correct, derived from the roster's own `affects` field — will populate correctly the day a beneficial condition exists.
@@ -88,6 +88,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Sidebar portrait fix closes the whole seven-screen shell thread completely. Verified independently against the sidebar's own real source (mipc8x6_p) rather than inherited on trust — confirms the same square-shape conclusion. Incidentally verified a separate, previously-unconfirmed design claim (PT-1133's flanking vitality/force bars) as a byproduct of the same check. Guard built to name both screens together, so either one changing can't silently reopen the split PT-1132 forbids — PT-2537
 
 - ⚠⚠⚠ THE SEVEN-SCREEN SHELL IS COMPLETE. Character Sheet, Equip, Inventory, Abilities, Options/Settings, Journal/Messages/Notes, and Party Selection all built and closed. Party Selection's own close corrected two real errors in the portrait ruling (size was 3x too small; shape was wrong — circle was always only a documented placeholder, square is the true intended shape in both source games), caught three more self-found defects (a dead layout constraint whose test was too weak to catch it, an invisible scrollbar thumb painted in the wrong token, a proportional drift between text sizes), and honestly disclosed a false citation in a comment/test even though the underlying fix had already been correct — the standard this whole thread has held throughout. Sidebar portrait ruled to match the same correction — PT-2536
 

@@ -75504,3 +75504,38 @@ Fix the dict to the corrected 3/5/7 base values, then apply the approved hybrid 
 ### PROCEED
 
 Fix the hit-die extraction gap for all 19 prestige classes, severe priority. Add Pirate's missing extractor row so it ships. Gunslinger's narrowing is ruled and numbered — confirm the third route (Pirate 6) becomes legitimate once Pirate ships, rather than staying dead.
+
+
+---
+
+## PT-2518 -- OPERATIONAL NOTE FIRST: CODER'S REPORT TITLED ITSELF "PT-2517," WHICH IS ALREADY TAKEN BY THE RULING THIS REPORT IS RESPONDING TO -- CORRECTED TO 2518. ALL THREE ITEMS CLOSE CLEAN. GENUINELY VALUABLE JUDGMENT ON PIRATE'S SKILL BASE: FOUND ALREADY-AUTHORED CONTENT (4) RATHER THAN OVERWRITING IT WITH THE HYBRID'S COMPUTED VALUE (5), CORRECTLY REASONING THE RULE EXISTS TO FILL GAPS, NOT ERASE EXISTING CONTENT -- INDEPENDENTLY CROSS-VERIFIED, NOT ASSUMED. AND A GENUINELY SATISFYING CLOSE: AN EXISTING AUDIT HAD BEEN SILENTLY REPORTING "20 CLASSES" AGAINST A ROSTER OF 19 THIS WHOLE TIME -- PIRATE WAS THE MISSING ONE, THE AUDIT WAS RIGHT BEFORE ANYONE LOOKED
+
+**Noting the numbering collision for the record, not as a rebuke -- easy to happen when responding directly to a just-received ruling, and worth a quick habit going forward: check the ledger's own tail before titling a report, the same discipline already applied to routing numbers elsewhere in this session.**
+
+### THE HIT-DIE FIX -- CLOSED CLEAN
+
+**Precisely matching the original diagnosis — the number was in the document the whole time, matched by a heading pattern that only used it for recognition and threw the value away — and correctly setting it only where nothing else already answers, avoiding the exact "two competing authorities" risk skill points already sidestepped at `PT-2515`. Closed exactly as ruled.**
+
+### PIRATE SHIPS -- CLOSED, WITH GENUINELY GOOD JUDGMENT ON THE SKILL BASE
+
+**Finding the row was orphaned specifically because it lacked a header the extractor's row-shape scan depends on is precise root-cause work, not a guess at why the class was missing.**
+
+⚠⚠⚠ **KEEPING THE ALREADY-AUTHORED 4 RATHER THAN THE HYBRID'S COMPUTED 5 IS EXACTLY RIGHT, AND THE REASONING DESERVES REAL CREDIT.** The hybrid rule exists to fill genuine gaps -- classes with no figure at all -- not to overwrite content that was already there. Recognising this distinction, rather than mechanically applying the formula to every class in its band regardless of what already exists, is precise respect for existing authored work. Independently cross-verifying the 4 against a separate data source (matching Pirate's seven class skills to `class-skills.json`) rather than trusting the row's own number alone closes this properly.**
+
+**Ruled: approved, Pirate keeps its authored 4. No change.**
+
+**The audit having silently reported "20 classes" against a 19-class roster this whole time, with nobody connecting it to Pirate's absence until now, is worth stating plainly: the safeguard was correct and unheeded, not silent. That's a good argument for treating an unexplained audit discrepancy as worth chasing down on its own, not just when it happens to align with something else already being investigated.**
+
+### THE GUNSLINGER NUMBER AND THE PRESTIGE-TO-PRESTIGE QUESTION -- RULED
+
+**Verifying the PT number against the shared pool before assigning it, and correctly distinguishing that Pirate's entry route is genuinely different in kind from the other two (prestige-to-prestige, not base-to-prestige), rather than silently normalizing the difference away, is precise and honest scoping.**
+
+**Ruled: prestige-to-prestige entry is intended, not a gap needing correction.** Now that Pirate is a real, playable prestige class in its own right, there's no principled reason a character couldn't progress from one prestige class into a related one -- this is a reasonable, defensible d20 convention, not an oversight in the reference table. The table naming only base classes elsewhere reflects that no prestige-to-prestige route existed before Pirate shipped, not a rule against one existing.
+
+### THE SAVE-TABLE GAP -- REAL, SMALL, HELD
+
+**Finding Pirate currently wears an incomplete, reference-only save table inherited from a different document, rather than the full 1-to-30 table every other properly-generated prestige class gets, is a real, small finding worth its own follow-up — the same "dual nature" theme showing through a second time, as correctly noted. Held as its own small item: give Pirate the same complete save-table treatment its now-shipped status entitles it to.**
+
+### PROCEED
+
+Nothing further needed on the three closed items. Fix Pirate's save table to match the standard complete 1-to-30 shape every other prestige class receives — small, real, own follow-up. Confirm the third Gunslinger entry route (Pirate 6) is now genuinely live rather than dead, now that Pirate ships.

@@ -6,6 +6,13 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ Four real defects from TEST 127 and the Equip-lattice close — all ruled fix-now
+- **Double-border defect — ruled fix now (PT-2504).** Three of four panels (Inventory, Equip, Abilities) draw their own inner frame on top of the shell's outer frame; the Character Sheet is the sole correctly-behaving one. Fix: suppress the three panels' inner frames using `PT-2500`'s own `_FrameScope` mechanism, matching the Character Sheet's already-correct behavior.
+- **Empty-bag state structurally unreachable — severe, ruled fix now (PT-2504).** A routing key (`'route': 'standard'`) written into every character's equipment payload renders as a real worn item called "standard (Equipped)." Proven decisively: dropping the key reproduces the honest-empty message immediately. No character the app can currently produce ever sees the empty-bag messaging built at `PT-2494`.
+- **Power name/cost never populate — severe, ruled fix now (PT-2504).** Every power (priced or not) shows the identical blank title and dashes — the unpriced-power dash clause passes vacuously, since it could never fail. Selection and descriptions confirmed working and correctly differentiating; only name and cost never populate.
+- **Boots item-to-base-type join missing — severe, ruled fix now, approved as recommended (PT-2505).** 25 real boot items ship, one granted at character creation and shown on the chargen screen, none equippable — a data join that doesn't connect (items carry `category: "boots"` directly; no corresponding base-type row exists for the resolver to read). Same "row with no reader" shape this corpus has been bitten by before. Fix the join, not a redundant content author or a deliberately-empty slot — the same gap limits every other worn slot's offer list.
+- **Placeholder slot icon (not real art) and unlabelled feat chain tiles — both small, held.**
+
 - **Animated datapad-style frame — future item, held, not started (PT-2499).** Current recreated frame is an explicit placeholder. Eventually wants an AI-developed replacement in a Star Wars datapad aesthetic — glowing edge accents, a living feel rather than static art — possibly with one or two small interactive Easter-egg elements. For later discussion, not a current build item.
 
 
@@ -73,6 +80,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Equip lattice now guarded as 12, not just arranged as 12 — the arrangement never needed changing; the missing piece was a count guard, since the existing row-by-row test could never have settled the eleven-vs-twelve question on its own. Precise, targeted mutation (removing Boots while silently updating the arrangement expectation to match) proves the new guard catches real drift rather than duplicating existing coverage — PT-2505
 
 - Equip's slot-count discrepancy closed — 12 slots, matching the diagram exactly as originally drawn. No new slot needed inventing; Boots (the genuinely new feet slot, no KOTOR source precedent) was already one of the diagram's 12 filled cells. The "eleven" in the surrounding prose was simply stale, never updated after Boots was added — corrected directly in `design/APP-UI-VISION-01.md` in both places it appeared — PT-2503
 

@@ -76268,3 +76268,38 @@ Add the keyboard-shortcuts entry under Options. Continue to `PT-1249`'s footer f
 ### PROCEED
 
 Check Store's actual current build state before scoping further work on it. Begin design-to-build work on the Terminal/Computer Use and Repair screen using the source's own directly-portable control data. Awaiting clarification on the third item before opening it.
+
+
+---
+
+## PT-2546 -- ALL THREE APPROVED ITEMS CLOSE, THE SHELL THREAD FULLY COMPLETE INCLUDING ITS LAST PIECE OF FURNITURE. GENUINELY CAREFUL SYNTHESIS WORK WHERE NO SINGLE SOURCE DIRECTLY ANSWERED THE FOOTER PORTRAIT'S DESIGN, CORRECTLY DEFERRING TO THE RULING'S OWN WORDS WHERE A REAL PRECEDENT DISAGREED WITH IT. ⚠⚠⚠ AND A GENUINELY SEVERE, PRE-EXISTING GAP HONESTLY SURFACED WHILE WRITING AN UNRELATED TEST: A COMPANION'S OWN CHARACTER SHEET IS CURRENTLY UNREACHABLE THROUGH ANY PLAYER ACTION AT ALL
+
+**All three approved items close cleanly, and it's worth naming the whole arc: this thread opened with a single questioned slot count and closes here having built and confirmed an entire seven-screen shell, its shared furniture, and every real inconsistency found along the way. Genuinely well done across its full length.**
+
+### KEYBOARD SHORTCUTS -- CLEAN, PROPERLY SOURCED
+
+**Censusing the real keys directly from the actual key router rather than reconstructing a list from memory closes this correctly — a shortcuts reference that's wrong about its own shortcuts would be worse than no reference at all.**
+
+### THE FOOTER PORTRAIT -- CAREFUL SYNTHESIS UNDER GENUINE AMBIGUITY
+
+**Finding no single source file directly draws this specific piece of chrome, and precisely identifying the three points where the closest real precedent disagrees with the design ruling's own words, rather than picking one source and ignoring the conflict, is exactly the right way to handle a genuine gap in the source material. Building to the ruling's own words as the higher authority, while keeping the precedent's treatment wherever it didn't actually conflict, respects both without pretending the disagreement doesn't exist.**
+
+**The integration-only overflow catch is a valuable, precise finding on its own — a defect that only real data at a tight width could surface, invisible to widget-level tests using synthetic data. This is the same value the mandatory render-and-look process has produced repeatedly, here showing up in an integration test rather than a visual one, but the same underlying principle: synthetic test data can hide real-world constraints that only actual data exercises.**
+
+### PORTRAIT SIZING -- ASKED, NOT GUESSED, AND GENERALIZED CORRECTLY
+
+**Recognising a purely visual decision with no functional bug behind it as exactly the kind of thing worth asking about rather than guessing, and then keying the resulting distinction on `self`/`isPlayer` rather than a specific identity, so it generalises correctly to a multiplayer context where each human controls their own character, is precise architectural judgment.**
+
+**Both things the work itself turned up — the sidebar's hard-coded vitality wing height, and the footer chip's own completely untested size, caught by mutation reverting it to the old constant with the whole suite staying green — are real, valuable catches from doing the work carefully rather than mechanically.**
+
+### ⚠⚠⚠ THE COMPANION-SHEET GAP -- SEVERE, RULED FIX NOW
+
+**This is a genuinely important, honest find, and refusing to build a test that would prove nothing real around a gap discovered while writing something else entirely is exactly the right instinct — a test that passes by accident of never exercising the broken path is worse than no test, since it would have manufactured false confidence in the middle of fixing something unrelated.**
+
+**A companion's own Character Sheet being completely unreachable through any player action is a real, severe gap — it means a companion's own level-up state, ability details, and everything else the sheet shows is currently invisible to a player for every character except themselves. This isn't a small polish item; it's a whole category of information about half the party being structurally inaccessible.**
+
+**Ruled: fix now, severe priority.** Secondary-tapping a companion's portrait needs to route to their Character Sheet under the same conditions the player's own portrait already correctly uses (Equipment by default, Character Sheet specifically when a level-up is pending) — the `isPlayer` split already exists on the screen itself; what's missing is the routing that would ever actually reach it for anyone but the player.
+
+### PROCEED
+
+Fix the companion-sheet routing gap, severe priority. Nothing else remains held from this whole thread — nothing further needed on the shortcuts, footer, or sizing work, all three close cleanly.

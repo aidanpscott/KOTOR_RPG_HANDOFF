@@ -76842,3 +76842,41 @@ Fix the credits-reading defect in Inventory and Dialogue, severe priority — bo
 ### PROCEED
 
 Build both together. Report back once done, same discipline as every other screen in this thread.
+
+
+---
+
+## PT-2568 -- APPROVED: BUILD THE PAYMENT-GATED FIXTURE. TESTER CORRECTLY ANTICIPATES THE SAME RISK SHAPE AS BEFORE (A FIX LANDING ON ONE READER ALONE WOULD FALSELY GREEN THE ORIGINAL COMPARISON WHILE THE DIALOGUE READER, THE WORSE HALF, STAYS UNFIXED) AND PROACTIVELY PROPOSES UPGRADING THAT HALF FROM A SOURCE READING TO A REAL PLAY READING
+
+**Good instinct correctly repeated from last time: re-running the one comparison that originally caught a defect only proves that specific instance is fixed, not that the underlying shared data is fixed everywhere it's read. Committing to grep every reader of `equipment['credits']` after the fix, rather than trusting the original comparison alone, closes the actual risk rather than the one symptom that was first noticed.**
+
+**The dialogue half was already flagged as the more severe part of this defect, since it feeds a real gating mechanism rather than just a display. Confirming it only as a source reading, with no fixture able to exercise it in real play, leaves the more severe half resting on inference rather than demonstration — worth closing properly rather than accepting as good enough.**
+
+### RULED
+
+**Approved: build the payment-gated fixture.** A reply gated on `payment` above the starting purse, reachable only after a sale, turns the dialogue half from an argued source reading into a genuinely demonstrated play reading — exactly the confidence level the more severe half of this defect deserves. Small, low-cost effort for real, upgraded confirmation on the part that matters most.
+
+### PROCEED
+
+Build the fixture alongside the re-check once Coder reports the credits fix done. Check every reader, not just the original comparison.
+
+
+---
+
+## PT-2569 -- TEST 133: THE PAYMENT-GATED FIXTURE, VALIDATED AGAINST THE UNFIXED BUILD BEFORE MEANING ANYTHING. ⚠⚠⚠ "A BED THAT DOES NOT DISCRIMINATE BEFORE THE FIX CANNOT MEAN ANYTHING AFTER IT" -- THE SAME DISCIPLINE THIS SESSION HAS VALUED THROUGHOUT, APPLIED HERE AT THE FIXTURE-DESIGN LEVEL RATHER THAN THE ASSERTION LEVEL. THREE READERS OF ONE NUMBER, ONE SAVE, ONE MOMENT -- STORE READS 600, INVENTORY READS 500, THE DIALOGUE GATE READS 500 -- DECISIVELY REPRODUCED WITH A REAL, SURVIVING CONTROL PROVING THE FIXTURE ITSELF WORKS
+
+**Running this fixture against the deliberately unfixed build first, specifically to confirm the bed itself discriminates before trusting anything it says after a fix lands, is exactly the right sequencing -- and worth naming as its own instance of a principle this session has already applied at the assertion level (pairing a negative with a positive, confirming a guard can actually fail) now correctly applied one level earlier, to the fixture's own validity before any assertion is even written against it.**
+
+**The control reply (the 400-credit bribe, priced below the starting purse and passing throughout) is precisely what turns this from "nothing happened" into "something specific and diagnosable happened" -- if the gated reply had stayed hidden with no control to compare against, the honest conclusion would have been ambiguous between a real defect and a broken fixture. Building that ambiguity out of the test from the start, rather than discovering it was needed after an inconclusive first run, is careful fixture design.**
+
+**The reproduction itself is decisive: the same real credit total producing three different, contradictory answers depending on which reader is asked, with the save correctly carrying both halves of the real transaction, closes any doubt about whether this defect is real. Finding the engine's own existing documentation already explicitly names the exact connection this defect breaks -- `creditsAfter` described as reading the same field `DialogueView.credits` uses for a payment gate -- confirms this isn't a subtle architectural gap; it's a documented intention the dialogue reader simply never honored.**
+
+**Pre-specifying the exact three observable outcomes expected once the fix lands, before the fix exists, is genuinely disciplined test design -- the criteria for success are fixed in advance, not adjusted after seeing what the fix actually does.**
+
+### THE HOUSEKEEPING -- HANDLED EXACTLY RIGHT, AGAIN
+
+**The same careful handling of someone else's uncommitted work as every prior instance -- stashed, restored untouched, reported plainly rather than reversed or assumed safe to discard.**
+
+### PROCEED
+
+Nothing new to rule — this is preparatory confirmation work, ready for Coder's fix. The commitment to check every reader of `equipment['credits']` rather than re-running the one original comparison stays correctly in place.

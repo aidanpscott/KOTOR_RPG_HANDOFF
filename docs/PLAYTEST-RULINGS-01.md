@@ -76909,3 +76909,90 @@ Nothing new to rule — this is preparatory confirmation work, ready for Coder's
 ### PROCEED
 
 Fix the credits-reading defect across all three readers (Store, Inventory, Dialogue), checking every reader of `equipment['credits']` rather than only the original comparison, exactly as `PT-2566` ruled and `PT-2568`/`PT-2569` prepared for.
+
+
+---
+
+## PT-2571 -- ALL FOUR ITEMS CLOSE, THE CREDITS DEFECT FULLY RESOLVED ACROSS ALL THREE READERS. ⚠⚠⚠ GENUINELY EXCELLENT: THE REPRODUCTION WAS BUILT DIRECTLY AGAINST TESTER'S OWN REAL FIXTURE, REPLAYING PT-2569's EXACT SEQUENCE, WITH TWO REAL FIXTURE PROBLEMS FOUND AND PROPERLY FIXED RATHER THAN ROUTED AROUND -- EACH GIVEN THE RIGHT-SCOPED FIX RATHER THAN A CONVENIENT WORKAROUND TOUCHING SHARED INFRASTRUCTURE
+
+**All four items close cleanly, and building the verification directly against the exact fixture Tester designed for this purpose, rather than a separate proxy, deserves real recognition on its own — it means the confirmation that follows is checking the actual claim Tester made, not a reasonable approximation of it.**
+
+### THE THREE READERS AND THE SHORTFALL WARNING -- BOTH PRECISE
+
+**Routing Inventory and the dialogue gate through the same fold Store already correctly used closes the actual shared-data defect at its source, not at one more call site. Correctly identifying the dialogue half as the one that mattered most — since a stale total there gates real player choices, not just a display — matches exactly the severity assessment this whole thread has already made.**
+
+**Fixing the shortfall warning to use the same quantity logic the cost calculation itself already relies on, and catching that an existing test fixture had been silently authoring the identical contradiction the real bug produced (a claimed quantity of zero beside a readout declaring two), closes both the defect and a piece of coverage that had been quietly wrong the whole time.**
+
+### ⚠⚠⚠ THE REPRODUCTION -- EXACTLY RIGHT, WORTH THE FULLEST RECOGNITION
+
+**Building this directly against `tester-purse`, replaying the exact sequence `PT-2569` specified rather than a new, separately-designed proxy scenario, means this reproduction actually answers the question Tester's own fixture was built to ask — not a similar one. Confirming all three readers now agree at 600, and that the gated reply correctly opens, closes the loop on the specific claim rather than a general approximation of it.**
+
+**Finding two real problems while building this, and fixing each with the scope it actually needed — pinning the specific package's own explicit entry point rather than touching a shared helper used elsewhere, and correctly accounting for where closing the store actually returns to — rather than working around either with a shortcut, is exactly the discipline this whole session has valued: disclose what's found, fix it properly, don't let a convenient patch quietly change shared behavior other things depend on.**
+
+**Confirming every mutated location genuinely fails without the fix closes the verification properly rather than trusting the reproduction's own passing state alone.**
+
+### THE UNRELATED FLAKE -- HANDLED CORRECTLY
+
+**Investigating the surfaced failure in isolation before concluding anything about it, and correctly confirming it's a pre-existing timing flake unrelated to this work rather than assuming either way, is exactly the right response to an unexpected result appearing mid-run.**
+
+### THE PROCESS CHANGE -- APPROVED
+
+**Reserving the full suite for one pass before committing, with targeted single-file runs during iteration, is a sensible efficiency gain that doesn't compromise the coverage that actually matters — approved.**
+
+### PROCEED
+
+Nothing further needed — all four items close cleanly. Ready for Tester's own independent confirmation against the same fixture.
+
+
+---
+
+## PT-2572 -- CORRECTION TO PT-2562's OWN PREMISE, CAUGHT BEFORE BUILDING ON IT. INSPIRE FOLLOWERS: NOTHING TO AUTHOR -- ALREADY RECLASSIFIED AWAY FROM BEING A POWER ENTIRELY (PT-220/221/224), SHIPPED AS A REAL THREE-STEP FEAT CHAIN. THE AGENDA WAS CARRYING FORWARD A STALE LINE FROM FEATS-UNIVERSAL-01 §4.1. CRUSH OPPOSITION: A REAL, UNRESOLVED CONTRADICTION BETWEEN TWO GOVERNING DOCUMENTS -- ONE CALLS IT A FEAT, ONE TREATS IT AS A POWER. THE SHIPPED DATA AND AN ALREADY-BUILT, ALREADY-LIVE ALIGNMENT SYSTEM BOTH AGREE WITH THE POWER FRAMING
+
+**Stopping to check what a ruling's own citation actually requires before building on it, rather than proceeding on the agenda's own summary, is exactly right — and it found real, substantive problems with the premise on both halves of a single combined item.**
+
+### INSPIRE FOLLOWERS -- CONFIRMED CLOSED, NOTHING TO BUILD
+
+**Finding the later correcting ruling (`PT-220`/`PT-221`/`PT-224`) that already moved this mechanic entirely out of the power system and into a real, shipped three-step feat chain, and confirming this directly against the actual feat data with no "Inspire Followers" entry anywhere in the shipped power or feat tables, closes this cleanly. Correctly identifying `FEATS-UNIVERSAL-01 §4.1` as the specific document carrying the stale framing forward — the actual source of the agenda's own incorrect premise — rather than just noting the confusion existed, makes the correction traceable rather than just asserted.**
+
+**Ruled: confirmed. Drop Inspire Followers from this item entirely. It already has its real ending, already built and shipped.**
+
+### CRUSH OPPOSITION -- RULED, POWER FRAMING STANDS
+
+**A genuine contradiction between two governing documents, resolved by checking what actually shipped and what a live, already-built system already depends on, rather than picking a side arbitrarily. The evidence converges cleanly: the real data has Crush Opposition only in `powers.json`, never `feats.json`, and the alignment-drift mechanism `PT-2432` already ships reads power-cast events with tiers — meaning the live game already structurally assumes this stays a power. `FEATS-UNIVERSAL-01`'s move was ruled once but never actually executed, and `PARTITION-01` reads as the operative, later ruling once the actual shipped state is checked against both.**
+
+**Ruled: Crush Opposition stays a power. Author tier VI in `FORCE-POWERS-01.md`, extending tier V's own real effect curve exactly — the same -6 penalty and duration/radius pattern, Sith Lord gate, tier 3 per `PARTITION-01 §3.4`'s own "need no special handling" — and wire it into `powers.json` and the shelf through the same pipeline the Sith feat schedules already used.**
+
+**`FEATS-UNIVERSAL-01 §4.1`'s stale line is real and worth correcting, but genuinely separate, smaller scope — held for its own future pass, not blocking this work.**
+
+### PROCEED
+
+Author Crush Opposition tier VI as a power, exactly as proposed. Nothing further needed on Inspire Followers — already closed. The stale `FEATS-UNIVERSAL-01` line stays correctly held as its own small future correction.
+
+
+---
+
+## PT-2573 -- TEST 134: GENUINELY EXCEPTIONAL METHODOLOGY ON EVERY FRONT. INDEPENDENT CONFIRMATION RUN FROM A CLEAN, SEPARATE CHECKOUT RATHER THAN TRUSTING CODER'S OWN REPORT -- READ THE TEST FIRST, CONFIRMED IT EXERCISES REAL SAVE DATA, RAN IT PERSONALLY, HEADLESSLY. AND ⚠⚠⚠ A REAL ENVIRONMENTAL FAILURE DISCLOSED WITH THE FULLEST TRANSPARENCY: A WINDOW STOPPED TAKING ANY INPUT, METHODICALLY DIAGNOSED THROUGH A FULL SEQUENCE OF RULED-OUT CAUSES, ISOLATED WITH A DECISIVE CONTROL EXPERIMENT (THE SAME TOOLING WORKED PERFECTLY AGAINST A FRESH WINDOW IN THE SAME MOMENT), AND THE JUDGMENT TO STOP RATHER THAN ESCALATE RETRIES AGAINST A SHARED, BUSY DISPLAY. THE PRECISE STATEMENT OF WHAT THIS DOES AND DOESN'T PROVE IS THE MOST VALUABLE SENTENCE IN THE REPORT
+
+**This deserves to be worked through in full, because every part of it -- the independent verification, the environmental failure, and the honest characterization of what actually got proven -- is exemplary in its own right, and deserves to be recognized as such rather than folded into a routine confirmation summary.**
+
+### THE STATIC SWEEP AND INDEPENDENT CONFIRMATION -- EXACTLY RIGHT
+
+**Confirming no fourth reader exists anywhere outside the file already checked closes the sweep properly. Reading Coder's new test before running it, confirming it genuinely exercises real save data through the actual sandboxing mechanism rather than a hand-typed mock, and then deliberately building and running it from a clean, separate checkout instead of Coder's own live working copy, is real independent verification — not re-reading someone else's result and agreeing with it, but reproducing the actual claim from scratch, personally, against the real production code. Confirming both the exact TEST 133 sequence and the exact TEST 132 shortfall wording pass, headlessly and directly, closes the automated half of this decisively.**
+
+### ⚠⚠⚠ THE ENVIRONMENTAL FAILURE -- EXEMPLARY DIAGNOSTIC DISCIPLINE
+
+**Stating this plainly up front, rather than burying a genuine limitation inside an otherwise-positive report, is exactly the right instinct. The methodical sequence of ruled-out causes -- pointer position, window stacking, WM hints, X11 session presence, stuck modifiers, a deliberate wait for repaint delay -- shows real diagnostic rigor rather than a quick guess followed by giving up. The decisive control experiment is the sharpest single piece of this whole report: testing the identical tooling, in the identical shell, at the identical moment, against a freshly spawned window, and confirming it worked perfectly there, is precisely the kind of isolating evidence that turns "something's wrong" into "this specific window, not my tooling, not the display server, not the moment." That's genuinely excellent fault isolation.**
+
+**Providing full, honest context about the shared, busy display -- a concurrent gdb capture, Coder's own active test run -- without using that context to excuse the finding or claim certainty about causation it doesn't have, and choosing to stop rather than keep escalating retries against a window someone else's work was actively sharing, is exactly the right judgment call. Respecting a shared resource under genuine uncertainty is worth as much as the diagnostic work itself.**
+
+### ⚠⚠⚠ THE PRECISE CHARACTERIZATION -- THE MOST VALUABLE SENTENCE HERE
+
+**"What I did do is run the actual production code, against my own real fixture files, through the real automated test harness, myself, independently of Coder's report. That's genuine software verification — just not the instrument I usually reach for, and I'm saying so rather than presenting it as the same thing." This deserves to be quoted back in full, because it's exactly right: automated, independently-reproduced test verification and a hands-on visual walkthrough are both genuinely valid, but they're not interchangeable, and claiming one accomplished the other would have been the actual failure here — not the environmental issue itself. Precisely naming what was and wasn't done, rather than letting a strong automated result imply a visual confirmation that never happened, is honest reporting under no pressure to inflate it.**
+
+### RULED
+
+**The credits fix and the shortfall-wording fix are both confirmed independently at the automated level — genuinely solid confirmation, properly earned.** The hands-on, pixel-verified walkthrough stays correctly open, not closed by proxy. Retry when the display is quieter, or the owner is welcome to eyeball it directly in the meantime if that's more convenient than waiting.
+
+### PROCEED
+
+Nothing further needed right now. The automated confirmation stands on its own merits. Hands-on confirmation resumes whenever the environment allows it, no urgency imposed on top of a genuine, well-diagnosed environmental limitation.

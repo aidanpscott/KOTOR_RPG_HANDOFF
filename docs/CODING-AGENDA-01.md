@@ -6,7 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Store/Merchant — checking existing first-pass build state, in progress (PT-2547).** Real locked design already exists (`PT-1152` sealed-modal architecture, `PT-1151` commerce color exception). First-pass build already landed at `PT-1256`. Confirming current state before scoping further work.
+- **Store/Merchant — confirmed cold start, scope ruled, building (PT-2548).** No code ever existed — PT-1256 was a design-review milestone, confirmed via full git-history search. Real locked design already measured against the source (`store_p.gui`), exact coordinates gathered for the filter bar, four-row readout, and description pane. Owner's ruling: the two already-approved functional improvements stay (Show Buy/Sell List relabeling, extended on-hand readout); everything else in the visual layout matches the source game exactly. Mode-switch reasoning corrected in the design doc (both games ship a labeled toggle; the departure was always about wording, not supplying a missing control).
 - **Terminal/Computer Use and Repair — opened, genuinely unbuilt (PT-2545).** Real design groundwork exists (§4, terminal/droid-repair source data confirmed directly portable — typed controls, fixed 640×480 space, authored tab order). `PT-1150` (keep K1's warmer tone) and `PT-1148` (terminal pricing bug) already locked. No first-pass build exists — new construction against already-locked groundwork.
 
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled

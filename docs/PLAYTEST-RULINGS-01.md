@@ -76220,3 +76220,24 @@ Nothing further needed — all five severe defects close cleanly, with real, hon
 ### PROCEED
 
 Take the smaller batch, stale comment first. Then the footer furniture. Then the portrait sizing question. Standing by for Tester's confirmation in the meantime.
+
+
+---
+
+## PT-2544 -- THE SMALLER BATCH, FOUR CLOSED CLEANLY. THE FIFTH FINDING IS GENUINELY IMPORTANT AND HONEST: THE KEYS ARE BOUND AND WORK, THE STATUS LINE CANNOT FIT ALL FIVE, AND A BRIEF, HONESTLY-DISCLOSED BELIEF THAT ONE PASSING TEST AT ONE SIZE MEANT THE LAYOUT FIT -- THE SAME ONE-READING MISTAKE AS THE TRUNCATED SCAN LAST SLICE, CAUGHT BY THE FULL SUITE RATHER THAN A PERSONAL CHECK
+
+**The four closed items are all precise, correctly-scoped fixes. Explaining the model-viewport confusion in place, rather than just deleting the wrong word, means the next person reading that comment understands why the mistake was plausible in the first place, not just that it was wrong. Generalizing the misplaced-gate fix to close the same hole in both readers, since the finding came from one line but the gap existed in both, and improving the error message to actually name where a gate belongs rather than leaving an author equally stuck with a bare "unknown key," are both the right shape of fix — closing the mechanism, not just the one instance found.**
+
+### ⚠⚠⚠ THE REACHABILITY FINDING -- HONEST, AND THE RIGHT INSTINCT THROUGHOUT
+
+**Confirming the keys themselves work while honestly reporting the status line genuinely cannot advertise them at any tested size or wording is exactly the right way to report a real constraint rather than force a fit that doesn't exist. And catching one's own brief false belief that a single passing test meant the layout worked, before the full suite corrected it, deserves the same recognition the truncated-scan catch got last slice — this is the identical shape of mistake, caught the same way, and reported with the same honesty.**
+
+**Refusing to quietly drop the advertising requirement because it's currently hard to satisfy, and correctly building the guard to assert only what's actually true rather than claim a hint that doesn't exist, is exactly right — a new player genuinely benefits from discoverable shortcuts, and silently abandoning that because the status line ran out of room would be a real, quiet regression in usability dressed up as acceptance of a constraint.**
+
+### RULED -- A KEYS ENTRY UNDER OPTIONS
+
+**Ruled: option (b). Add a keyboard-shortcuts reference entry under Options, rather than a second status line or leaving it unadvertised.** A second permanent line costs real, ongoing space on every screen to solve what's fundamentally a discoverability problem, not something that needs constant visibility once a player has found it once. Options is already the natural, expected place a player looks for exactly this kind of reference material — the reachability keys become one more real, functional entry in a screen that already, correctly names what it can and can't yet do.
+
+### PROCEED
+
+Add the keyboard-shortcuts entry under Options. Continue to `PT-1249`'s footer furniture next, per the already-approved order, then `PT-1132`'s portrait sizing.

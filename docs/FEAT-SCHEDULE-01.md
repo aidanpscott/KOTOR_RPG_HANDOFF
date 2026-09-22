@@ -21,6 +21,7 @@
 | **Sith Warrior** | 14 | **20** | | | | |
 | **Sith Assassin** | 8 | **12** | | | | |
 | **Sith Inquisitor** | 7 | **11** | | | | |
+| **Sith Battlemaster** | 11 | **16** | | | | |
 | **Agent** | 10 | **15** | | | | |
 | **Treasure Hunter** | 11 | **16** | | | | |
 | **Medic** | 7 | **11** | | | | |
@@ -48,44 +49,44 @@
 
 **Bold marks a level where a feat is gained. The number is the running total.**
 
-| Lv | Soldier | Scout | Smuggler | Guardian | Consular | Sentinel | Marksman | Engineer | Tech Spec | Weaponmstr | Jedi Master | Watchman | Marauder | Sith Lord | Assassin | Sith Warrior | Sith Assassin | Sith Inquisitor |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** |
-| **2** | **2** | **2** | **2** | **1** | 1 | 1 | 1 | 1 | **2** | **2** | 1 | 1 | **2** | 1 | 1 | **2** | 1 | 1 |
-| **3** | **3** | **3** | 2 | **2** | **2** | **2** | **2** | **2** | 2 | **3** | **2** | **2** | **3** | **2** | 1 | 2 | **2** | **2** |
-| **4** | **4** | 3 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 3 | 2 | 2 | 3 | 2 | **2** | **3** | 2 | 2 |
-| **5** | **5** | **4** | **3** | **3** | 2 | 2 | 3 | **3** | **3** | **4** | 2 | 2 | **4** | 2 | 2 | **4** | 2 | 2 |
-| **6** | **6** | 4 | 3 | 4 | **3** | **3** | **4** | **4** | 3 | 4 | **3** | **3** | 4 | **3** | 2 | 4 | **3** | **3** |
-| **7** | **7** | **5** | 3 | **5** | 3 | **4** | 4 | 4 | 3 | **5** | 3 | **4** | **5** | 3 | **3** | **5** | 3 | 3 |
-| **8** | **8** | 5 | **4** | 5 | 3 | 4 | 5 | 4 | **4** | 5 | 3 | 4 | 5 | 3 | 3 | **6** | **4** | 3 |
-| **9** | **9** | **6** | 4 | **6** | **4** | **5** | **5** | **5** | 4 | **6** | **4** | **5** | **6** | **4** | 3 | 6 | 4 | **4** |
-| **10** | **10** | 6 | 4 | 7 | 4 | 5 | 6 | 5 | 4 | 6 | 4 | 5 | 6 | 4 | **4** | **7** | 4 | 4 |
-| **11** | **11** | **7** | **5** | **7** | 4 | 5 | 7 | **6** | **5** | **7** | 4 | 5 | **7** | 4 | 4 | **8** | **5** | 4 |
-| **12** | **12** | 7 | 5 | 8 | **5** | **6** | **7** | **7** | 5 | 7 | **5** | **6** | 7 | **5** | 4 | 8 | 5 | **5** |
-| **13** | **13** | **8** | 5 | **9** | 5 | **7** | 8 | 7 | 5 | **8** | 5 | **7** | **8** | 5 | **5** | **9** | **6** | 5 |
-| **14** | **14** | 8 | **6** | 9 | 5 | 7 | 8 | 7 | **6** | 8 | 5 | 7 | 8 | 5 | 5 | **10** | 6 | 5 |
-| **15** | **15** | **9** | 6 | **10** | **6** | **8** | **9** | **8** | 6 | **9** | **6** | **8** | **9** | **6** | 5 | 10 | 6 | **6** |
-| **16** | **16** | 9 | 6 | 11 | 6 | 8 | 10 | 8 | 6 | 9 | 6 | 8 | 9 | 6 | **6** | **11** | **7** | 6 |
-| **17** | 16 | **10** | **7** | **11** | 6 | 8 | 10 | **9** | **7** | **10** | 6 | 8 | **10** | 6 | 6 | **12** | 7 | 6 |
-| **18** | **17** | 10 | 7 | 12 | **7** | **9** | **11** | **10** | 7 | 10 | **7** | **9** | 10 | **7** | 6 | 12 | **8** | **7** |
-| **19** | 17 | **11** | 7 | **13** | 7 | **10** | 11 | 10 | 7 | **11** | 7 | **10** | **11** | 7 | **7** | **13** | 8 | 7 |
-| **20** | **18** | 11 | **8** | 13 | 7 | 10 | 12 | 10 | **8** | 11 | 7 | 10 | 11 | 7 | 7 | **14** | 8 | 7 |
-| **21** | 18 | **12** | 8 | **14** | **8** | **11** | **13** | **11** | 8 | **12** | **8** | **11** | **12** | **8** | 7 | 14 | **9** | **8** |
-| **22** | **19** | 12 | 8 | 15 | 8 | 11 | 13 | 11 | 8 | 12 | 8 | 11 | 12 | 8 | **8** | **15** | 9 | 8 |
-| **23** | 19 | **13** | **9** | **15** | 8 | 11 | 14 | **12** | **9** | **13** | 8 | 11 | **13** | 8 | 8 | **16** | **10** | 8 |
-| **24** | **20** | 13 | 9 | 16 | **9** | **12** | **14** | **13** | 9 | 13 | **9** | **12** | 13 | **9** | 8 | 16 | 10 | **9** |
-| **25** | 20 | **14** | 9 | **17** | 9 | **13** | 15 | 13 | 9 | **14** | 9 | **13** | **14** | 9 | **9** | **17** | 10 | 9 |
-| **26** | **21** | 14 | **10** | 17 | 9 | 13 | 16 | 13 | **10** | 14 | 9 | 13 | 14 | 9 | 9 | **18** | **11** | 9 |
-| **27** | 21 | **15** | 10 | **18** | **10** | **14** | **16** | **14** | 10 | **15** | **10** | **14** | **15** | **10** | 9 | 18 | 11 | **10** |
-| **28** | **22** | 15 | 10 | 19 | 10 | 14 | 17 | 14 | 10 | 15 | 10 | 14 | 15 | 10 | **10** | **19** | **12** | 10 |
-| **29** | 22 | **16** | **11** | **19** | 10 | 14 | 17 | **15** | **11** | **16** | 10 | 14 | **16** | 10 | 10 | **20** | 12 | 10 |
-| **30** | **23** | 16 | 11 | 20 | **11** | **15** | **18** | **16** | 11 | 16 | **11** | **15** | 16 | **11** | 10 | 20 | 12 | **11** |
+| Lv | Soldier | Scout | Smuggler | Guardian | Consular | Sentinel | Marksman | Engineer | Tech Spec | Weaponmstr | Jedi Master | Watchman | Marauder | Sith Lord | Assassin | Sith Warrior | Sith Assassin | Sith Inquisitor | Sith Battlemaster |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** |
+| **2** | **2** | **2** | **2** | **1** | 1 | 1 | 1 | 1 | **2** | **2** | 1 | 1 | **2** | 1 | 1 | **2** | 1 | 1 | **2** |
+| **3** | **3** | **3** | 2 | **2** | **2** | **2** | **2** | **2** | 2 | **3** | **2** | **2** | **3** | **2** | 1 | 2 | **2** | **2** | **3** |
+| **4** | **4** | 3 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 3 | 2 | 2 | 3 | 2 | **2** | **3** | 2 | 2 | 3 |
+| **5** | **5** | **4** | **3** | **3** | 2 | 2 | 3 | **3** | **3** | **4** | 2 | 2 | **4** | 2 | 2 | **4** | 2 | 2 | **4** |
+| **6** | **6** | 4 | 3 | 4 | **3** | **3** | **4** | **4** | 3 | 4 | **3** | **3** | 4 | **3** | 2 | 4 | **3** | **3** | 4 |
+| **7** | **7** | **5** | 3 | **5** | 3 | **4** | 4 | 4 | 3 | **5** | 3 | **4** | **5** | 3 | **3** | **5** | 3 | 3 | **5** |
+| **8** | **8** | 5 | **4** | 5 | 3 | 4 | 5 | 4 | **4** | 5 | 3 | 4 | 5 | 3 | 3 | **6** | **4** | 3 | 5 |
+| **9** | **9** | **6** | 4 | **6** | **4** | **5** | **5** | **5** | 4 | **6** | **4** | **5** | **6** | **4** | 3 | 6 | 4 | **4** | **6** |
+| **10** | **10** | 6 | 4 | 7 | 4 | 5 | 6 | 5 | 4 | 6 | 4 | 5 | 6 | 4 | **4** | **7** | 4 | 4 | 6 |
+| **11** | **11** | **7** | **5** | **7** | 4 | 5 | 7 | **6** | **5** | **7** | 4 | 5 | **7** | 4 | 4 | **8** | **5** | 4 | **7** |
+| **12** | **12** | 7 | 5 | 8 | **5** | **6** | **7** | **7** | 5 | 7 | **5** | **6** | 7 | **5** | 4 | 8 | 5 | **5** | 7 |
+| **13** | **13** | **8** | 5 | **9** | 5 | **7** | 8 | 7 | 5 | **8** | 5 | **7** | **8** | 5 | **5** | **9** | **6** | 5 | **8** |
+| **14** | **14** | 8 | **6** | 9 | 5 | 7 | 8 | 7 | **6** | 8 | 5 | 7 | 8 | 5 | 5 | **10** | 6 | 5 | 8 |
+| **15** | **15** | **9** | 6 | **10** | **6** | **8** | **9** | **8** | 6 | **9** | **6** | **8** | **9** | **6** | 5 | 10 | 6 | **6** | **9** |
+| **16** | **16** | 9 | 6 | 11 | 6 | 8 | 10 | 8 | 6 | 9 | 6 | 8 | 9 | 6 | **6** | **11** | **7** | 6 | 9 |
+| **17** | 16 | **10** | **7** | **11** | 6 | 8 | 10 | **9** | **7** | **10** | 6 | 8 | **10** | 6 | 6 | **12** | 7 | 6 | **10** |
+| **18** | **17** | 10 | 7 | 12 | **7** | **9** | **11** | **10** | 7 | 10 | **7** | **9** | 10 | **7** | 6 | 12 | **8** | **7** | 10 |
+| **19** | 17 | **11** | 7 | **13** | 7 | **10** | 11 | 10 | 7 | **11** | 7 | **10** | **11** | 7 | **7** | **13** | 8 | 7 | **11** |
+| **20** | **18** | 11 | **8** | 13 | 7 | 10 | 12 | 10 | **8** | 11 | 7 | 10 | 11 | 7 | 7 | **14** | 8 | 7 | 11 |
+| **21** | 18 | **12** | 8 | **14** | **8** | **11** | **13** | **11** | 8 | **12** | **8** | **11** | **12** | **8** | 7 | 14 | **9** | **8** | **12** |
+| **22** | **19** | 12 | 8 | 15 | 8 | 11 | 13 | 11 | 8 | 12 | 8 | 11 | 12 | 8 | **8** | **15** | 9 | 8 | 12 |
+| **23** | 19 | **13** | **9** | **15** | 8 | 11 | 14 | **12** | **9** | **13** | 8 | 11 | **13** | 8 | 8 | **16** | **10** | 8 | **13** |
+| **24** | **20** | 13 | 9 | 16 | **9** | **12** | **14** | **13** | 9 | 13 | **9** | **12** | 13 | **9** | 8 | 16 | 10 | **9** | 13 |
+| **25** | 20 | **14** | 9 | **17** | 9 | **13** | 15 | 13 | 9 | **14** | 9 | **13** | **14** | 9 | **9** | **17** | 10 | 9 | **14** |
+| **26** | **21** | 14 | **10** | 17 | 9 | 13 | 16 | 13 | **10** | 14 | 9 | 13 | 14 | 9 | 9 | **18** | **11** | 9 | 14 |
+| **27** | 21 | **15** | 10 | **18** | **10** | **14** | **16** | **14** | 10 | **15** | **10** | **14** | **15** | **10** | 9 | 18 | 11 | **10** | **15** |
+| **28** | **22** | 15 | 10 | 19 | 10 | 14 | 17 | 14 | 10 | 15 | 10 | 14 | 15 | 10 | **10** | **19** | **12** | 10 | 15 |
+| **29** | 22 | **16** | **11** | **19** | 10 | 14 | 17 | **15** | **11** | **16** | 10 | 14 | **16** | 10 | 10 | **20** | 12 | 10 | **16** |
+| **30** | **23** | 16 | 11 | 20 | **11** | **15** | **18** | **16** | 11 | 16 | **11** | **15** | 16 | **11** | 10 | 20 | 12 | **11** | 16 |
 
 ---
 
-## Three more columns, authored rather than read — `PT-2490`, `PT-2553`
+## Four more columns, authored rather than read — `PT-2490`, `PT-2553`, `PT-2560`
 
-**Sith Warrior, Sith Assassin and Sith Inquisitor carry no column in the real K2 table above them, and never will** — they're this project's own base-class roster (`CLASS-ROSTER-01 §2`), not playable classes in the source game at all. **Their L20/L30 totals were already ruled** (the summary table near the top of this document: 14/20, 8/12, 7/11) — what was genuinely missing was the level-by-level breakdown, not the totals themselves. Each column is derived rather than invented outright:
+**Sith Warrior, Sith Assassin, Sith Inquisitor and Sith Battlemaster carry no column in the real K2 table above them, and never will** — the first three are this project's own base-class roster (`CLASS-ROSTER-01 §2`), not playable classes in the source game at all, and the fourth is `CLASS-ROSTER-01`'s own renamed prestige slot (`§4`: *"Sith Harbinger renamed Sith Battlemaster"*), not a straight rename of any real K2 class either. **The first three's L20/L30 totals were already ruled** (the summary table near the top of this document: 14/20, 8/12, 7/11); Battlemaster's was not — genuinely open, not merely unbroken-down. Each column is derived rather than invented outright:
 
     Sith Inquisitor    an EXACT mirror of Jedi Consular's own real cadence —
                         same rate (Specialist), same hit die (d6), and the
@@ -103,6 +104,14 @@
                         exactly, the documented target.
 
 **Not a literal Jedi mirror for two of the three**, because the documented totals genuinely differ from any rate-matched Jedi sibling's own total. Constructed from the SAME cadence grammar this whole table already uses (small alternating integer steps from level 1) rather than an arbitrary new shape, and calibrated to hit numbers this document had already ruled rather than inventing new ones.
+
+### Sith Battlemaster — the fourth, and genuinely different in kind
+
+**No ruled total existed anywhere to calibrate against, unlike the other three — the real open question `PT-2560` named.** Two candidate real-data mirrors were checked and one was ruled out by measurement rather than assumed:
+
+**⚠ RULED OUT: K2's own real prestige `Assassin` column.** `CLASS-ROSTER-01 §4` traces Battlemaster's NAME to `Sith Harbinger`, and the real featgain.2da `Assassin` column (`d8`, three-quarters BAB per `k2_classes.2da`) sat unrouted after `PT-2551`'s asset sweep — a tempting fit by elimination (five of K2's six real prestige names already map 1:1 onto this project's roster; Assassin is the one left over). **Checked directly against `classes.json` rather than assumed: Battlemaster's own authored stat block is `d10`, full BAB, Combat rate — the real Assassin's `d8`, three-quarters BAB profile does not match at all.** The naming lineage and the mechanical shape point two different directions; the mechanical shape is what a feat schedule has to agree with.
+
+**⚠ USED INSTEAD: Sith Battlemaster's own true mechanical twins, already in this table.** `d10`, full BAB, Combat rate is EXACTLY Jedi Weaponmaster's and Sith Marauder's own shape (`classes.json`: both `d10`) — and this document already states, in its own words, that classes of this shape share one cadence: *"Weaponmaster and Marauder run the Guardian's rhythm"* (`§ Seven schedules`). Sith Battlemaster gets that same real, already-extracted K2 cadence exactly — `[1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]`, 11/16 — not phase-shifted or otherwise altered, because nothing about its profile differs from the two classes that already carry it.
 
 ---
 

@@ -76646,3 +76646,22 @@ Identify every remaining visual asset this screen references beyond the two alre
 ### PROCEED
 
 Nothing further needed — both severe defects and the full asset-parity scope close cleanly. Terminal is now in genuinely strong shape: structurally correct, functionally complete, and visually matched to the real source wherever that source actually renders on this platform.
+
+
+---
+
+## PT-2560 -- PRIORITY RULED: THE THREE SMALL TEST 131 LEFTOVERS FIRST, THEN THE SITH BATTLEMASTER FEAT SCHEDULE. THE LOOM WIZARD STAYS CORRECTLY DEPRIORITIZED AS NON-URGENT TOOLING
+
+**Another same-shape false fork correctly resolved the same way as `PT-2552`'s — worth continuing to treat as the checker's known blind spot rather than re-investigating from scratch each time it recurs.**
+
+### RULED
+
+**Clear the three small, quick, low-risk items first: the stale duplicate comment, Store's display-name mismatch, and Notes' autofocus.** These are fast wins that clear real, if minor, standing findings before moving to more substantial work.
+
+**Then the Sith Battlemaster feat schedule.** Genuine authoring work this time, correctly flagged as having no ready-made cadence to mirror the way the other three classes did — take the time it needs rather than forcing a mechanical match to a pattern that doesn't actually exist for this class.
+
+**The Loom wizard stays held, non-urgent.** Consistent with how it's been scoped every time it's come up — real, valuable tooling, but never competing with actual content or defect work for priority.
+
+### PROCEED
+
+Clear the three small items, then begin the Sith Battlemaster schedule.

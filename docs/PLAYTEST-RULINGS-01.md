@@ -76617,3 +76617,32 @@ Fix the readout's real 2×2 grid layout, severe priority. Fix the content-modeli
 ### PROCEED
 
 Identify every remaining visual asset this screen references beyond the two already ported. Port each through the existing decoder. Track each with its own row and AI-recreation debt. This takes priority alongside the two already-ruled fixes (the 2×2 grid layout, the free-option wiring gap) — get the whole screen right together.
+
+
+---
+
+## PT-2559 -- BOTH SEVERE DEFECTS AND FULL ASSET PARITY CLOSE. THE READOUT REBUILD SOLVED A REAL SECONDARY GEOMETRY CONFLICT ELEGANTLY -- GENERALIZING THE BORDER RENDERER TO A CONFIGURABLE CORNER SIZE, WHICH NATURALLY PRODUCES THE EXACT ROUNDED PILL SHAPE THE LIVE SCREENSHOT SHOWS. THE CONTENT-MODELING FIX CAUGHT A REAL SECONDARY BUG IN THE ROW-WIDTH VALIDATOR ALONG THE WAY. AND ⚠⚠⚠ GENUINELY EXCELLENT JUDGMENT ON THE ASSET SWEEP: A FOURTH REFERENCED CONTROL WAS DELIBERATELY NOT PORTED, CONFIRMED AGAINST THE LIVE SCREENSHOT THAT IT NEVER ACTUALLY RENDERS ON THIS PLATFORM -- CORRECTLY RECOGNIZING THAT PORTING EVERYTHING REFERENCED ISN'T THE SAME GOAL AS MATCHING WHAT'S ACTUALLY VISIBLE
+
+**This closes both severe defects and the expanded asset-parity scope together, and it's worth recognizing the full precision throughout rather than just confirming the headline outcome.**
+
+### THE 2×2 GRID -- PRECISE, WITH A REAL SECONDARY PROBLEM ELEGANTLY SOLVED
+
+**Rebuilding from data that was already correctly extracted and simply unused closes the primary defect cleanly. The real value here is the secondary problem found and solved along the way: recognising that the smaller stat boxes genuinely conflict with the border art's fixed native texel size, and generalising the border renderer to accept a configurable corner size rather than special-casing this one instance, is the right level of fix. Confirming this generalization naturally produces the exact rounded pill shape the live screenshot shows — because a small enough quarter-circle arc simply reads as a round cap — is elegant: the fix wasn't aimed at matching the screenshot's shape directly, it fell out correctly from getting the underlying geometry right.**
+
+### THE CONTENT-MODELING FIX -- PRECISE, WITH A REAL CAUGHT SECONDARY BUG
+
+**Making the relevant fields properly nullable and rendering the bare sentence for a free option closes the primary gap. Catching that the row-width validator was padding free replies with the costed format's own overhead before measuring — which would have incorrectly refused perfectly valid text — while fixing something else entirely is exactly the kind of adjacent defect that only surfaces from actually exercising the new code path, not from reasoning about it in the abstract.**
+
+### ⚠⚠⚠ THE ASSET SWEEP -- GENUINELY EXCELLENT JUDGMENT ON WHAT NOT TO PORT
+
+**This is the most valuable single decision in this report, and it deserves to be named as such. Finding a fourth referenced control in the source files and confirming directly against the live screenshot that it never actually renders on this platform, then choosing not to port it, shows real understanding of what the actual goal is — visual match to what a player genuinely sees, not mechanical completeness against everything a `.gui` file happens to reference. Porting an asset that doesn't appear would have moved this screen away from exact parity while looking, on paper, like more thorough work. Recognising that distinction and acting on it is exactly the judgment this instruction needed, not just faithful execution of its literal wording.**
+
+**Confirming the third texture as a pure alpha mask before porting, matching the same discipline already proven twice, closes the actual porting work cleanly.**
+
+### THE RENDER FIX -- SMALL, HONEST, WORTH NAMING
+
+**Finding and fixing an earlier capture that had been scaled past the visible viewport — meaning it couldn't have actually shown the very thing it claimed to demonstrate — before presenting it as evidence, rather than after, is a small but real instance of the same "verify the evidence, not just the fix" discipline this whole thread has held throughout.**
+
+### PROCEED
+
+Nothing further needed — both severe defects and the full asset-parity scope close cleanly. Terminal is now in genuinely strong shape: structurally correct, functionally complete, and visually matched to the real source wherever that source actually renders on this platform.

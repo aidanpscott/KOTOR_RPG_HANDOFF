@@ -77046,3 +77046,33 @@ Nothing further needed — Crush Opposition VI closes cleanly on both fronts. St
 ### PROCEED
 
 Correct §4.1 as described. Everything else on the agenda stays correctly held or waiting on its own measurement pass, as assessed.
+
+
+---
+
+## PT-2576 -- FEATS-UNIVERSAL-01 §4.1 CORRECTED CLEANLY, EXACTLY AS APPROVED. BOTH HALVES NOW STATE WHAT ACTUALLY HAPPENED RATHER THAN WHAT WAS ONCE PLANNED, PROPERLY CITED, WITH THE STALE COUNT TABLE DROPPED ENTIRELY RATHER THAN RESTATED FOR EITHER OUTCOME
+
+**Closed exactly as ruled — Inspire Followers correctly cites the real Rally section, Crush Opposition correctly notes the move was ruled but superseded, and the stale table is gone rather than left inaccurate for a different reason. Small, well-scoped documentation work closed cleanly with no surprises.**
+
+**The docs-mirror sync handled the same false-fork shape already recognized from `PT-2552`/`PT-2553` — a same-file edit reads as a fork to the line-count checker, verified as no independent content before resolving. Continuing to treat this as the checker's known limitation rather than re-investigating it each time is the right call.**
+
+### PROCEED
+
+Nothing further needed — closed cleanly, entirely within the two repos currently accessible. Standing by for whatever's next, or for the sibling-repo tokens whenever they're convenient to provide.
+
+
+---
+
+## PT-2577 -- OWNER OPENS THE FIRST OF THREE READY ITEMS, IN ORDER: SITH FEAT SCHEDULE FIRST. RESTATES A STANDING PRINCIPLE ALREADY GIVEN EARLIER THIS SESSION -- BASE SITH CLASSES SHOULD MIRROR THEIR JEDI COUNTERPARTS. STATE UNVERIFIABLE FROM MAIN_WORK ALONE: NO SCHEDULE DATA FOUND IN THIS REPO'S OWN DOCUMENTS, AND THE ACTUAL AUTHORED DATA LIVES IN THE SHELF REPO, NOT CURRENTLY ACCESSIBLE
+
+**Owner's own standing instruction, restated for the record since it governs this work directly: base Sith classes should mirror their Jedi counterparts. This is a real, load-bearing design principle for how the Force base-class roster is meant to relate structurally, not a one-off preference — worth keeping explicit here so it's available to whoever actually checks and builds this.**
+
+**A genuine access limitation, stated plainly rather than worked around: `sith_inquisitor`/`sith_warrior`/`sith_assassin` do not appear anywhere in this repo's own rules documents under a feat schedule, and the actual authored data (`classes.toml`) lives in the shelf repo, which isn't currently accessible without its own token. This session's own history shows this work being closed once already (Inquisitor mirroring Jedi Consular, Warrior and Assassin as phase-shifted variants of their rate-matched Jedi siblings, Battlemaster mirroring Jedi Weaponmaster/Sith Marauder) — but that can't be independently re-confirmed from here right now, so it's not being assumed either way.**
+
+### RULED
+
+**Check the real, current state directly before building or re-building anything.** If the three classes already carry real, correct schedules mirroring their Jedi counterparts as this session's own history indicates, confirm this plainly and close — no rework needed. If anything is genuinely missing or doesn't actually mirror its Jedi counterpart correctly, fix it now, with the mirroring principle above as the explicit standard to check against.
+
+### PROCEED
+
+Confirm the real current state of the Sith feat schedules first. Report back with what's actually found before assuming either "already done" or "needs building" — this genuinely can't be verified from MAIN_WORK alone right now.

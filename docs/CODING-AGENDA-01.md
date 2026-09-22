@@ -6,6 +6,18 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠ Five real defects from TEST 131 — all ruled fix-now
+- **Terminal: two readout rows unreachable at any window size — severe, ruled fix now (PT-2554).** Panel scales against the whole window instead of its own pane. Fix: scale from the actual pane.
+- **Terminal: unaffordable option renders identically to affordable — severe, ruled fix now (PT-2554).** Hardcoded `affordable: true` sitting three lines from the real supply count that would give the correct answer.
+- **Store: phantom "credits" row in the bag after every sale — ruled fix now (PT-2554).** Same risk family as TEST 127's "standard (Equipped)" — a generic value folding into inventory display logic never meant to treat it as an item. Worth watching for at any future call site using the same map for a non-item purpose.
+- **Store: "In Stock" shows a stale count disconnected from the actual filtered list — ruled fix now (PT-2554).**
+- **Store: "In Inventory" never shows a real count — ruled fix now (PT-2554).** Field answers "what would this replace" instead of "how many do I hold," despite `PT-1152`'s own "also names" wording implying a count.
+
+### Smaller TEST 131 findings — held, less urgent
+- **Terminal's stale "not wired yet" comment, duplicated twice.**
+- **Store's display-name mismatch** (blueprint "Stim Pack" vs. store "Medpac").
+- **Notes' autofocus still doesn't take — small, real.** Field works correctly once manually clicked; only the automatic focus-on-open is missing.
+
 - **Loom store-creation wizard — opened, held until Store's screen lands (PT-2549).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.
 
 - **AI-recreation debt for the two extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.

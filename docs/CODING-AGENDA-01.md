@@ -6,6 +6,10 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ Two severe defects from TEST 132 — ruled fix-now
+- **Inventory and Dialogue read stale starting credits instead of the real current total — severe, ruled fix now (PT-2566).** Store's readout correctly uses `creditsAfter`'s fold; Inventory (:2280) and Dialogue (:5688) both bypass it, reading the stale starting field directly. The dialogue half is worse — `payment` is a real gate term, so a player can be gated against a purse they no longer have. Fix: route both through the same fold.
+- **Terminal's "you have none" warning is a fixed string, fires for any shortfall — real, ruled fix now (PT-2566).** Prints even while the readout correctly shows a nonzero held quantity two rows below. Fix: reflect the real held amount, not an assumed zero.
+
 - **Store description-pane header — checking the real source, not the screenshot alone (PT-2564).** Geometry confirmed already exact against `store_p.gui`. One genuine open question: does the pane's header show the item's name (current build) or a category tag ("Single Use," per the screenshot)? Screenshot resolution too low to confirm — checking the real `.gui` control and string table directly instead of acting on an uncertain read.
 - **Store: unnamed real visual gap, investigating color/typography/spacing (PT-2565).** Owner can perceive a real difference from K2's screenshot but can't precisely name it. Geometry already confirmed exact, so likely not positional — checking color/tone, typography, spacing nuance, and overall visual weight against the real screenshot. Check existing mockup documentation first for any already-resolved guidance.
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
@@ -98,6 +102,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- TEST 132 confirms the whole prior round of Terminal/Store fixes: the 2×2 grid (measured pixel-smooth, no step artifacts), free options, the third texture (confirmed via a genuine mutation test on the real asset file after recognizing a plain circle's shape can't carry provenance information via similarity score alone), and all three small closures (In Stock, In Inventory, display name, Notes autofocus). Panel overflow re-confirmed fixed at both anticipated window sizes. Phantom credits row confirmed gone — PT-2566
 
 - All four items from PT-2560's priority ruling closed. Display-name mismatch correctly diagnosed as fixture-authoring error, not app code — the join was always right; fixture renamed, on-hand text and In Stock count hardened as additional real improvements. Notes' autofocus traced to a real race condition (persistent, never-unmounting parent stack) invisible to isolated widget tests — fixed with explicit postFrameCallback focus request. Self-caught vacuous first regression test (removed the sibling widget instead of keeping it mounted, would have passed regardless of the fix) rebuilt correctly. Sith Battlemaster feat schedule authored — a tempting lineage hypothesis ruled out by actual K2 stat measurement before the true mechanical match (Jedi Weaponmaster/Sith Marauder) was found and mirrored; independent audit guard extended, mutation-confirmed it can actually fail — PT-2561
 

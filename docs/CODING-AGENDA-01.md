@@ -6,7 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Store screenshot cross-check — opened, real screenshot provided for comparison (PT-2563).** Owner provided a real K2 Store screenshot (Buying Items mode). Do a deliberate visual comparison against the already-built screen, same purpose the live K2 session served for Terminal — check filter strip spacing/active-state, list layout, description formatting, readout label wording and alignment. Report anything the screenshot reveals that the coordinate-based build missed.
+- **Store description-pane header — checking the real source, not the screenshot alone (PT-2564).** Geometry confirmed already exact against `store_p.gui`. One genuine open question: does the pane's header show the item's name (current build) or a category tag ("Single Use," per the screenshot)? Screenshot resolution too low to confirm — checking the real `.gui` control and string table directly instead of acting on an uncertain read.
+- **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 

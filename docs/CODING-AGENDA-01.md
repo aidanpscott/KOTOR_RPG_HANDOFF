@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Store screenshot cross-check — opened, real screenshot provided for comparison (PT-2563).** Owner provided a real K2 Store screenshot (Buying Items mode). Do a deliberate visual comparison against the already-built screen, same purpose the live K2 session served for Terminal — check filter strip spacing/active-state, list layout, description formatting, readout label wording and alignment. Report anything the screenshot reveals that the coordinate-based build missed.
+
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 
 - **Loom store-creation wizard — opened, held until Store's screen lands (PT-2549).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.

@@ -6,12 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠ Five real defects from TEST 131 — all ruled fix-now
-- **Terminal: two readout rows unreachable at any window size — severe, ruled fix now (PT-2554).** Panel scales against the whole window instead of its own pane. Fix: scale from the actual pane.
-- **Terminal: unaffordable option renders identically to affordable — severe, ruled fix now (PT-2554).** Hardcoded `affordable: true` sitting three lines from the real supply count that would give the correct answer.
-- **Store: phantom "credits" row in the bag after every sale — ruled fix now (PT-2554).** Same risk family as TEST 127's "standard (Equipped)" — a generic value folding into inventory display logic never meant to treat it as an item. Worth watching for at any future call site using the same map for a non-item purpose.
-- **Store: "In Stock" shows a stale count disconnected from the actual filtered list — ruled fix now (PT-2554).**
-- **Store: "In Inventory" never shows a real count — ruled fix now (PT-2554).** Field answers "what would this replace" instead of "how many do I hold," despite `PT-1152`'s own "also names" wording implying a count.
+- **Live K2 comparison for Terminal, then the character menus — in progress (PT-2556).** Confirm Terminal's fixed panel against a live K2 session (readout layout at multiple sizes, the affordable/unaffordable distinction). Then, same session, check Character Sheet/Equip/Inventory/Abilities against what's built before logging out.
+- **Sith Battlemaster's zero feat schedule — real, held, same shape as the three just closed.** Found while authoring the Inquisitor/Warrior/Assassin schedules; correctly not silently fixed alongside them.
 
 ### Smaller TEST 131 findings — held, less urgent
 - **Terminal's stale "not wired yet" comment, duplicated twice.**
@@ -104,6 +100,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- All five TEST 131 severe defects closed, exactly addressing both anticipated failure modes. Terminal's panel-scale fix inverted an existing test that had been asserting the bug as correct behavior. Genuinely valuable self-caught false negative on the credits-row fix — first test exercised the wrong transaction direction, would have passed clean against unfixed code, caught before being reported done. Store's In Inventory fix found a second root cause (forSaleBack's own deduplication had already discarded the count). Sith feat schedule (Inquisitor/Warrior/Assassin) closed, calibrated against already-ruled totals; a fourth zero-schedule class found and correctly held rather than silently fixed; a tautological audit clause caught and replaced with a real independent guard — PT-2556
 
 - Terminal border art ported and wired, first real game texture this product has ever embedded. Both textures confirmed as pure alpha masks before wiring, matching the existing tint-at-runtime pattern. Deep rendering bug found and fixed: standard Image widgets never painted within a test's pump cycle, traced precisely to real asset I/O never resolving outside runAsync — fixed with a CustomPainter approach that also enables per-tile rotation the original approach couldn't support. Mutation-tested by removing a texture file (build itself refuses to bundle). Backdrop question correctly not decided unilaterally, ruled at PT-2552: PT-1150 stands unchanged, the console backdrop stays a synthesized original (K2's structure, K1's warmth), not a direct port — genuinely different in kind from the two generic alpha-mask textures just ported — PT-2552
 

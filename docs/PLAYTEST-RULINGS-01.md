@@ -76528,3 +76528,92 @@ Fix Terminal's two severe defects (off-screen readout rows, the affordability di
 ### PROCEED
 
 Nothing further needed from Tester right now. Coder builds both fixes accounting for the anticipated failure modes above.
+
+
+---
+
+## PT-2556 -- ALL FIVE PT-2554 DEFECTS CLOSE, EXACTLY ADDRESSING BOTH ANTICIPATED FAILURE MODES FROM PT-2555. GENUINELY IMPORTANT: THE PANEL-SCALE FIX INVERTED AN EXISTING TEST THAT HAD BEEN LITERALLY ASSERTING THE BUG AS CORRECT BEHAVIOR, ITS OWN COMMENT ADMITTING THE FLAW. AND ⚠⚠⚠ A GENUINELY VALUABLE SELF-CAUGHT FALSE NEGATIVE: THE FIRST CREDITS-ROW TEST EXERCISED THE WRONG TRANSACTION DIRECTION, WOULD HAVE PASSED CLEAN AGAINST UNFIXED CODE, AND WAS CAUGHT BEFORE BEING REPORTED AS DONE. PLUS THE SITH FEAT SCHEDULE CLOSED WITH DISCIPLINED CALIBRATION AGAINST ALREADY-RULED TOTALS, A SECOND ZERO-SCHEDULE CLASS FOUND AND CORRECTLY HELD RATHER THAN SILENTLY FIXED, AND A TAUTOLOGICAL AUDIT CLAUSE CAUGHT AND REPLACED WITH A REAL INDEPENDENT GUARD
+
+**All five severe defects close exactly addressing what Tester anticipated could go wrong — the panel now derives its scale from its real constraints via `LayoutBuilder` rather than the whole window, and the credits fix closed the shared `carriedBy` data centrally rather than at one call site, precisely as requested.**
+
+### TERMINAL -- BOTH FIXES PRECISE
+
+**Finding and inverting an existing test that had been asserting the defect itself as correct behavior — with its own comment admitting the value was "off the window" — is a genuinely valuable catch on its own, separate from the fix itself. A test that documents a bug as expected behavior is worse than no test, since it actively defends the defect against being noticed. Replacing it with an assertion on the real painted positions of all four labels closes this properly rather than trusting a derived number to imply correct placement.**
+
+### ⚠⚠⚠ THE SELF-CAUGHT FALSE NEGATIVE -- WORTH THE FULLEST RECOGNITION
+
+**This deserves to be named in full. The first test exercised a buy, which writes the same event shape but as a no-op removal from a list the credits string was never actually added to — meaning it would have passed cleanly against completely unfixed code, reporting success for a fix that didn't work. Catching this before reporting completion, rather than after Tester's own re-check would have caught it, is exactly the standard this whole session has held throughout: verify the test actually exercises the failure mode, not just that it passes. Confirming a sale specifically triggers the real defect, and building the fix at the central `_carriedItems` level rather than the one call site originally reported, closes the actual shared-data issue Tester flagged rather than the one instance of it.**
+
+### THE OTHER TWO STORE FIXES -- CLEAN, WITH A REAL SECOND ROOT CAUSE FOUND
+
+**Finding that `forSaleBack`'s own deduplication had already discarded the count before Store's screen ever saw it, rather than assuming the screen itself was the only place the count was lost, closes the actual full chain rather than patching a symptom one layer too late.**
+
+### THE SITH FEAT SCHEDULE -- DISCIPLINED CONTENT WORK
+
+**Calibrating the three schedules against already-locked sibling cadences and ruled totals, rather than inventing new numbers, is the right approach to content that needs to feel consistent with what's already there. Finding a fourth class with the exact same zero-schedule gap and correctly holding it as its own follow-up, rather than quietly fixing it as a bonus alongside the three that were actually ruled, respects the boundary of what was asked without either ignoring the finding or overstepping the ruling's own scope.**
+
+**Catching that the existing audit's feat-agreement clause checks a field against its own definition — structurally guaranteed to pass regardless of whether the underlying data is correct — and replacing it with an independent guard pinning the literal arrays directly, is precise recognition that a passing test isn't automatically a meaningful one. A tautological check is a particularly quiet kind of vacuous guard, since nothing about running it ever looks wrong.**
+
+### NEW INSTRUCTION -- LIVE K2 COMPARISON
+
+**Owner has a live K2 session available. Once the Terminal fixes above are confirmed, use it as a direct comparison for the panel's actual on-screen behavior — particularly the readout layout at different window sizes and the affordable/unaffordable visual distinction — beyond what the static `.gui` files and pixel measurements alone can confirm. Then, logged into the same session, do the same live comparison for the character menus (Character Sheet, Equip, Inventory, Abilities) against what's already built.**
+
+### PROCEED
+
+Confirm the Terminal panel against the live K2 session. Then check the character menus against the same session before logging out. Report back with anything the live comparison reveals that the static source checks didn't catch.
+
+
+---
+
+## PT-2557 -- LIVE K2 COMPARISON SURFACES THREE REAL FINDINGS, NONE VISIBLE FROM STATIC MEASUREMENT ALONE. ⚠⚠⚠ A REAL LAYOUT DEFECT: THE BUILT WIDGET USES K1's SINGLE-COLUMN GEOMETRY, DIRECTLY CONTRADICTING PT-1150's OWN "K2's STRUCTURE" PREFERENCE ALREADY APPLIED TO EVERY OTHER PART OF THIS SAME PANEL -- FIXABLE FROM DATA ALREADY EXTRACTED. A GENUINE PRODUCT QUESTION, CORRECTLY NOT DECIDED UNILATERALLY: K2 GIVES NO COLOR SIGNAL FOR AFFORDABILITY AT ALL. AND ⚠⚠⚠ A SEVERE CONTENT-MODELING GAP: REAL K2 MIXES FREE AND COSTED OPTIONS IN ONE LIST, BUT THE CURRENT WIRING SILENTLY DROPS EVERY UNCOSTED REPLY ENTIRELY. HANDLED WITH GENUINE CARE: STOPPED IMMEDIATELY AND RESPECTFULLY WHEN THE ENVIRONMENT REFUSED INPUT, VERIFIED THE LIVE SESSION WAS LEFT UNTOUCHED
+
+**This is exactly what the live comparison instruction was for, and it delivered precisely the kind of finding static measurement structurally cannot produce — not because the earlier work was careless, but because some defects only become visible against real, organically-occurring content rather than a purpose-built fixture.**
+
+### ⚠⚠⚠ THE LAYOUT DEFECT -- REAL, RULED FIX NOW
+
+**Tracing the wrong-column layout directly to constants sourced from K1's geometry specifically, in a panel whose every other part already correctly follows K2's structure per `PT-1150`, is precise root-cause work -- this isn't a new design question, it's an internal inconsistency within a single already-ruled screen. Confirming the correct 2×2 grid data has been sitting in the already-extracted `terminal_panel.json` the whole time means this closes without needing any new measurement.**
+
+**Ruled: fix now. Rebuild the readout as the real 2×2 grid (Computer Use/Spikes left, Repair Skill/Parts right), with each stat's own individual bordered box rather than one shared plate, matching what the extracted data has always correctly shown for K2.**
+
+### THE AFFORDABILITY COLOR QUESTION -- RULED, KEEP THE CURRENT CONVENTION
+
+**Correctly flagging this as a genuine product question rather than silently picking a side is exactly right — this isn't a defect, it's a real divergence between the source's own behavior and this app's own established pattern, and both readings deserve a considered answer rather than an assumption.**
+
+**Ruled: keep the current dimming behavior.** K2's own approach — relying solely on a small bracketed number with no visual distinction at all — is a weaker signal than what this app has already consistently built across Store, Feats, and now Terminal. Consistency with this project's own established affordability convention across every screen that has one matters more here than exact fidelity to one screen's particular source behavior, especially where the source's own approach is arguably the less accessible choice. This is the same shape of decision already made for the Show Buy/Sell List relabeling — a deliberate, reasoned improvement over the literal source, not a departure made carelessly.
+
+### ⚠⚠⚠ THE CONTENT-MODELING GAP -- SEVERE, RULED FIX NOW
+
+**A terminal that can only ever show costed options, silently dropping every free navigational reply, is a real, substantial gap — not cosmetic, since it means a genuine category of real terminal content (the majority of options in the actual screenshot, five of seven) simply cannot be represented at all today. Finding this specifically because real, organically-occurring mixed content was in front of the reviewer, rather than a fixture built to exercise only the costed case, is exactly the value a live comparison adds that a purpose-built test bed structurally cannot.**
+
+**Ruled: fix now, severe priority. The wiring needs to build a `TerminalOption` from any reply on the terminal conversation, not only those carrying costs — a free option renders with no cost/skill tag at all, a costed one renders exactly as it does today.**
+
+### THE PERMISSION BOUNDARY -- HANDLED EXACTLY RIGHT
+
+**Attempting the safest available exit specifically, stopping immediately and completely once the environment refused rather than attempting to route around it, and verifying via a follow-up screenshot that nothing was left partial or garbled, is careful, respectful handling of a real boundary. This is worth stating plainly: the refusal was respected in full, not worked around, and the live session was confirmed untouched rather than assumed safe.**
+
+**Ruled: the character-menu comparison needs Aaron's own direct involvement — either navigating there himself while Coder only screenshots, or an explicit permission grant if Aaron is comfortable with that. Not something to decide unilaterally; genuinely his call.**
+
+### PROCEED
+
+Fix the readout's real 2×2 grid layout, severe priority. Fix the content-modeling gap so free options can render, severe priority. Affordability color convention stays as-is, no change needed. Character-menu comparison held pending Aaron's own direction on how to proceed.
+
+
+---
+
+## PT-2558 -- OWNER RULES: TERMINAL GETS FULL VISUAL PARITY WITH THE REAL SOURCE. NOT JUST THE TWO BORDER TEXTURES ALREADY PORTED -- EVERY VISUAL ASSET THIS SCREEN ACTUALLY USES GETS IMPORTED DIRECTLY FROM THE GAME, THE SAME DECODER AND PROVENANCE DISCIPLINE ALREADY PROVEN, WITH EACH ONE TRACKED FOR EVENTUAL AI RECREATION PER ASSET-REPLACEMENT-01's STANDING MECHANISM
+
+**Owner's direction: before anything else on Terminal, get the whole screen visually matching K2 exactly — not just structurally correct (the layout and content-modeling fixes already ruled at `PT-2557`), but pixel-for-pixel matching in every asset it actually uses.**
+
+### THE RULING
+
+**Expand the asset-porting scope beyond the two border textures already ported (`uibit_brdr_16we`/`16wc`). Identify every remaining visual asset `computer.gui`/`computer_x.gui` actually references — any additional fill textures, corner pieces, or decorative elements beyond what's already been found — and port each one through the existing verified TPC decoder, the same discipline already proven on the first two. Every ported asset gets its own row in `ASSET-REPLACEMENT-01`, marked `extracted` with the AI-recreation replacement owed, matching the per-asset tracking convention already established there.**
+
+**The goal is exact visual match to the source, asset by asset, not a close approximation built from the theme's own palette. Where an asset is confirmed to be a pure alpha mask (as both border textures were), it gets tinted at runtime per this app's own established convention; where it carries real pictorial content of its own, it's embedded as-is with clear provenance.**
+
+### SCOPE NOTE
+
+**This is specifically about Terminal's own visual assets — not a broader project-wide asset-porting initiative. The console backdrop (`pnl_computer_x`/`pnl_computer_pc`) stays correctly excluded, per `PT-1150`/`PT-2552`'s already-settled ruling to synthesize rather than port that specific piece — that decision isn't reopened by this instruction, which is about completing what's genuinely missing from the border/UI-chrome layer, not revisiting the backdrop question again.**
+
+### PROCEED
+
+Identify every remaining visual asset this screen references beyond the two already ported. Port each through the existing decoder. Track each with its own row and AI-recreation debt. This takes priority alongside the two already-ruled fixes (the 2×2 grid layout, the free-option wiring gap) — get the whole screen right together.

@@ -76996,3 +76996,53 @@ Author Crush Opposition tier VI as a power, exactly as proposed. Nothing further
 ### PROCEED
 
 Nothing further needed right now. The automated confirmation stands on its own merits. Hands-on confirmation resumes whenever the environment allows it, no urgency imposed on top of a genuine, well-diagnosed environmental limitation.
+
+
+---
+
+## PT-2574 -- CRUSH OPPOSITION VI CLOSES CLEAN. ⚠⚠⚠ FOUND AND FIXED A REAL GAP THAT WOULD HAVE SHIPPED THE WHOLE POWER INERT: MODIFIERS LIVE IN A SEPARATE, INDEPENDENTLY-AUTHORED TABLE FROM THE DESCRIPTIVE PROSE, AND VI's ROW DIDN'T EXIST YET -- THE EXACT SAME DEFECT SHAPE THIS FILE'S OWN HEADER ALREADY NAMES FROM FORCE AURA'S EARLIER MISTAKE. AND ⚠⚠⚠ AN EARLIER TEST'S OWN SELF-FLAGGED WARNING WAS HONORED IN FULL: RENDERED THE REAL SIX-TIER CHAIN AT THE REAL SCREEN SIZE RATHER THAN TRUSTING ARITHMETIC THAT PREDICTED A FIT
+
+**Note before the ruling itself: the working environment reset between messages, and the stored GitHub access has just been re-provisioned. Both MAIN_WORK and HANDOFF confirmed fully intact and unaffected — this ruling picks up exactly where the thread left off, nothing lost.**
+
+**Both pieces of content close precisely: extending tier V's own real curve by the same one-point-per-step pattern every prior tier already established, and confirming the cost-table numbers were already sitting there from the same general rule rather than needing invention, is exactly the right kind of content authoring — matching an existing pattern, not improvising a new one.**
+
+### ⚠⚠⚠ THE INERT-POWER CATCH -- WORTH THE FULLEST RECOGNITION
+
+**Finding that the modifier data lives in a genuinely separate, independently-authored table from the descriptive prose, and that tier VI's own row simply didn't exist yet, catches exactly the kind of defect that ships invisibly — the prose reads correctly, the cost table reads correctly, and the power would have done nothing at all in play. Explicitly connecting this to Force Aura's own earlier defect, already named in this same document's own header, shows real pattern recognition rather than treating each new content addition as an isolated case. A document that already knows it has this specific failure shape is exactly where to check for it again on the next addition, and that check was made here.**
+
+### THE ROSTER RE-CENSUS -- DISCIPLINED
+
+**Rerunning the real extractor for every affected corpus-wide count, rather than computing the shift by hand, closes this properly — a hand-computed count is exactly the kind of thing that quietly drifts from what the real data actually says.**
+
+### ⚠⚠⚠ HONORING THE CHAIN-GRID TEST'S OWN WARNING -- EXACTLY RIGHT
+
+**This deserves real recognition on its own. An earlier test had explicitly flagged that a future sixth tier would need real re-measurement rather than trusted arithmetic, and honoring that warning by actually rendering the real screen with the real six-tier data, rather than trusting a computed prediction that it would fit, is precisely the discipline the earlier warning was written to produce. Turning this into a permanent, mutation-confirmed test rather than a one-time manual check means the next tier this chain grows to will get the same real verification, not just another prediction.**
+
+### THE SMALL SELF-CAUGHT TEST BUG -- HONEST, CORRECTLY FIXED
+
+**Disclosing a real mistake in a newly-written test (direct I/O inside a test body rather than `setUpAll`, hanging the full timeout under fake-async), correctly diagnosing the cause, and applying the same convention every other real-I/O caller in the suite already uses, closes this properly rather than leaving an idiosyncratic exception to the established pattern.**
+
+### PROCEED
+
+Nothing further needed — Crush Opposition VI closes cleanly on both fronts. Standing by for whatever's next, and for the additional tokens for the sibling repos (app, Lodestar, Loom, Lens, shelf) whenever convenient, to restore the full cross-repo gate check.
+
+
+---
+
+## PT-2575 -- APPROVED: CORRECT FEATS-UNIVERSAL-01 §4.1's STALE LINE. BOTH HALVES OF THE ORIGINAL CLAIM ARE NOW CONFIRMED WRONG BY WHAT ACTUALLY SHIPPED -- CITE THE REAL OUTCOMES FOR EACH RATHER THAN LEAVE A STALE PLAN AND A COUNT THAT WAS NEVER RIGHT FOR EITHER RESULT
+
+**Good, well-scoped pick -- small, contained entirely to MAIN_WORK, and correctly chosen specifically because it doesn't depend on the sibling-repo access still being restored.**
+
+### RULED
+
+**Approved as proposed. Correct §4.1 to state what actually happened to each half, not what was once planned:**
+
+**Inspire Followers really did leave the power system, but as Rally -- a three-step Officer class feature, per `PT-220`/`PT-221`/`PT-224` -- not the six-step feat chain assigned to Jedi Master the stale line describes. Cite the real Rally section in `FORCE-POWERS-01.md`.**
+
+**Crush Opposition never left. It's still a power, confirmed twice now -- once by `PT-2572`'s own investigation, again by actually building tier VI against `PARTITION-01 §3.4`'s framing and the live alignment-drift system that already depends on it staying one. Note the move was ruled once but never executed, superseded by the later ruling.**
+
+**Drop the stale before/after power-count table entirely rather than leave a number that was never accurate for either actual outcome.**
+
+### PROCEED
+
+Correct §4.1 as described. Everything else on the agenda stays correctly held or waiting on its own measurement pass, as assessed.

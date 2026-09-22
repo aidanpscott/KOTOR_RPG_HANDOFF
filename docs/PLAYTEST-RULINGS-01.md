@@ -76368,3 +76368,65 @@ Once the Store/Merchant screen itself is built and working, investigate how the 
 ### PROCEED
 
 Held until Store's own screen build lands. Investigate the Aurora Toolset's real store-creation workflow directly, check Loom's own existing content-creation patterns for precedent, then design and build the equivalent. Not urgent relative to the screen itself, but a real, concrete follow-on rather than a vague future idea.
+
+
+---
+
+## PT-2550 -- STORE CLOSES CLEAN ACROSS BOTH REPOS. GENUINELY DISCIPLINED ENGINE WORK (HONESTLY FLAGGING THE MERCHANT ECONOMY AS DELIBERATELY UNRULED RATHER THAN SILENTLY ASSUMED, MATCHING THE NEW EFFECT KIND TO THE CORRECT EXISTING ARCHITECTURAL FAMILY). A REAL DEAD-FIELD DEFECT CAUGHT ONLY BY END-TO-END TESTING -- A TITLE SET CORRECTLY BUT NEVER DISPLAYED, CORRECTLY REMOVED RATHER THAN WIRED TO BEHAVIOR THE SOURCE ITSELF DOESN'T HAVE. AND ⚠⚠⚠ A REAL, SELF-CAUGHT REGRESSION IN LOOM'S OWN AUTHORING TOOL, FOUND SPECIFICALLY BECAUSE OF A ROUTINE CROSS-REPO REPIN -- THE EXACT SAME SILENT-NO-OP SHAPE ALREADY FOUND AND FIXED ONCE BEFORE FOR A DIFFERENT FIELD
+
+**This closes cleanly across engine, app, and tooling, and it's worth recognizing the full scope of what actually got caught along the way rather than just the headline "Store is built."**
+
+### THE ENGINE WORK -- DISCIPLINED THROUGHOUT
+
+**Deliberately building a minimal blueprint reader and explicitly flagging the merchant cap/markup economy as unruled rather than silently assuming a default is exactly the right instinct — an unbuilt rule reported honestly is a known gap; an invented default dressed up as a decision is a hidden one. Matching the new `store.opened` effect to the older advisory mechanism, rather than the newer hard-refusal vocabulary from elsewhere in this session, shows real attention to which existing architectural family a new piece actually belongs to rather than reaching for whichever pattern was most recently used.**
+
+**Confirming the open mechanism matches exactly what was described mid-thread, with nothing inferred, closes the loop on the design cleanly — the real conversation-effect pathway, not a new one invented to approximate it.**
+
+### THE DEAD-FIELD CATCH -- EXACTLY WHY END-TO-END TESTING EARNS ITS KEEP
+
+**A field that's set correctly internally but genuinely never reaches the screen at all is invisible to almost every kind of test except one that actually walks the real path a player would. Confirming the source itself never names the merchant on this panel, and correctly removing the dead field rather than inventing a display behavior the source doesn't have, is the right response — the fix isn't "make the field work," it's "recognize the field shouldn't exist."**
+
+**Typing the exact reply text rather than tapping a row, specifically because a clipped panel can hit the wrong row under a tap, is disciplined method carried forward from an established idiom rather than reinvented per screen.**
+
+### ⚠⚠⚠ THE LOOM REGRESSION -- GENUINELY VALUABLE, FOUND BY DOING ROUTINE WORK CAREFULLY
+
+**This is worth naming specifically: a routine repin surfaced a real regression in a completely different tool, and it was caught because the repin was done carefully rather than treated as a mechanical formality. Recognising this as the exact same silent-no-op shape `PT-1516` already found and fixed for a different field — a UI button that writes only the kind and silently drops a now-required field — rather than treating it as a new, unrelated bug, shows the earlier lesson is genuinely being carried forward and recognized on sight, not just filed away. Fixing all three affected places, each with its own mutation confirmation, closes this properly rather than patching the one spot that happened to be visible.**
+
+### DOCS MIRROR -- CORRECTLY DISCIPLINED
+
+**Checking for staleness before copying, per `PT-2338`'s standing discipline, rather than assuming the mirror needed updating or didn't, closes this the right way every time it comes up.**
+
+### RULED -- TERMINAL NEXT
+
+**Ruled: pick up the Terminal/Computer Use screen next, not the Loom wizard.** The Terminal screen is real, player-facing scope with substantial design groundwork already confirmed ready to build against directly. The Loom wizard is valuable internal tooling, but it was correctly opened as a non-urgent follow-on, not something competing for priority against a real player-facing screen still waiting to be built.
+
+### PROCEED
+
+Begin the Terminal/Computer Use and Repair screen, same discipline as every screen in the prior thread — check the mockup and the real K2 source files first. The Loom wizard stays correctly held for whenever there's a natural moment for it.
+
+
+---
+
+## PT-2551 -- CORRECTION TO MY OWN PRIOR CLAIM, ACCEPTED PLAINLY: PT-2545 AND PT-2550 BOTH CALLED THE TERMINAL SCREEN "GENUINELY UNBUILT," AND THAT WAS WRONG. A REAL, WORKING, TESTED FIRST-PASS BUILD HAS BEEN ON MAIN SINCE TEN DAYS BEFORE EITHER RULING -- FOUND BY CHECKING THE SOURCE AND THE REPO DIRECTLY RATHER THAN TRUSTING THE PRIOR RULING'S OWN FRAMING, EXACTLY THE DISCIPLINE THIS WHOLE THREAD HAS ASKED FOR
+
+**Own this directly: I called this screen genuinely unbuilt twice, and both times I was wrong. The actual state -- a real `TerminalPanel`, wired end-to-end through the conversation system exactly as `BUILD 181` had already found it should be, with real cost curves, real supply counting, and a substantial passing test suite including a full walk-to-terminal-and-unlock-a-door integration test -- existed the whole time I was ruling otherwise. This is precisely the failure mode this whole thread has repeatedly guarded against elsewhere (trusting a document's framing over checking the actual state directly), and this time it was my own framing that needed the check, not a design document's. Checking anyway, rather than proceeding to build against a false premise, is exactly right.**
+
+### THE REAL STATE -- CONFIRMED, NOT ASSUMED
+
+**Distinguishing what's genuinely still open from what isn't, checked directly rather than inherited from the mistaken "unbuilt" framing, closes this properly: the frame art is still a generic placeholder rather than the real source texture (deliberately deferred, matching this project's standing policy on every other visual asset), the droid self-repair verb is correctly a separate, already-flagged future slice, and an unexamined different conversation type stays correctly unexamined rather than assumed relevant. None of these are new findings inflating the report — they're the actual, real remaining gaps, properly separated from what's already done.**
+
+### THE ASSET-PORTING QUESTION -- ALREADY GOVERNED, CORRECTLY IDENTIFIED AS SUCH
+
+**Checking whether the asset-porting instruction was genuinely new ground, rather than assuming it was, and finding `ASSET-REPLACEMENT-01` already governs exactly this (every extracted asset gets a row, marked `ours` or explicitly owed, with the importer built the first time an asset is actually needed) is the same discipline applied a second time in this same report. Correctly identifying what actually IS new here -- this would be the first time this product has ever embedded a real decoded game texture, since every other screen has drawn from the theme's own palette instead -- distinguishes genuine novelty from process already in place.**
+
+**Confirming a verified TPC decoder already exists and is already proven against these exact two textures closes the technical question before it needed asking.**
+
+### RULED -- APPROVED AS PROPOSED
+
+**Approved: treat this as an asset-porting task on an already-working screen, not new construction.** Export the two textures through the existing decoder, embed with clear provenance, wire `TerminalPanel` to draw them in place of the placeholder, add both rows to `ASSET-REPLACEMENT-01` marked `extracted` with the AI-recreation replacement owed, and add that debt to the standing agenda.
+
+**The agenda's "genuinely unbuilt" framing is corrected below to reflect the real state.**
+
+### PROCEED
+
+Port the two textures as proposed. Nothing else needed on this screen beyond that — the real remaining gaps (droid self-repair, the unexamined conversation type) stay correctly separate and unstarted.

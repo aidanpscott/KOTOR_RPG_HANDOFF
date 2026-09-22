@@ -76665,3 +76665,112 @@ Nothing further needed — both severe defects and the full asset-parity scope c
 ### PROCEED
 
 Clear the three small items, then begin the Sith Battlemaster schedule.
+
+
+---
+
+## PT-2561 -- ALL FOUR ITEMS CLOSE CLEAN. THE DISPLAY-NAME MISMATCH CORRECTLY DIAGNOSED AS A FIXTURE-AUTHORING ERROR, NOT AN APP BUG -- THE JOIN WAS ALWAYS RIGHT. ⚠⚠⚠ NOTES' AUTOFOCUS TRACED TO A REAL RACE CONDITION INVISIBLE TO ISOLATED WIDGET TESTS, WITH A GENUINELY VALUABLE SELF-CAUGHT VACUOUS REGRESSION TEST ALONG THE WAY. AND THE SITH BATTLEMASTER SCHEDULE CLOSES WITH GENUINELY DISCIPLINED CONTENT WORK: A TEMPTING BUT WRONG LINEAGE HYPOTHESIS RULED OUT BY ACTUAL MEASUREMENT BEFORE THE REAL MECHANICAL MATCH WAS FOUND AND MIRRORED
+
+**All four items close with real precision, and it's worth recognizing the full depth of each rather than just confirming the outcome.**
+
+### THE DISPLAY-NAME MISMATCH -- CORRECTLY DIAGNOSED AS FIXTURE DATA, NOT APP CODE
+
+**Confirming the join itself was always correct per `PT-1152`'s own design, and that the mismatch was purely the test fixture's own authored name disagreeing with its catalogue entry, is precise diagnosis that avoided "fixing" working code to paper over bad test data. Fixing the fixture rather than the app, while separately hardening the on-hand text and the In Stock count as genuine additional improvements found along the way, keeps the distinction between "the fixture was wrong" and "here's some real polish while I'm in this code" clear rather than blurring them together.**
+
+### ⚠⚠⚠ NOTES' AUTOFOCUS -- PRECISE ROOT CAUSE, GENUINELY VALUABLE SELF-CAUGHT TEST
+
+**Tracing this to a real race condition specific to how Flutter's focus system interacts with a persistent, never-unmounting parent structure, and correctly recognizing this condition literally cannot be reproduced by an isolated widget test, explains precisely why this defect survived invisibly through normal testing for as long as it did. This is a genuinely subtle, well-diagnosed root cause.**
+
+**The self-caught vacuous test deserves its own recognition: building a first regression test that removed the sibling widget rather than keeping it mounted, meaning it would have passed regardless of whether the real fix worked — autofocus trivially wins against something that no longer exists — and catching this before it shipped as coverage, is exactly the discipline this session has valued throughout. A test that can't fail against the actual bug it claims to guard isn't coverage; rebuilding it to keep the sibling genuinely mounted in a real Stack, matching the actual persistent-app condition, closes this properly.**
+
+### ⚠⚠⚠ THE SITH BATTLEMASTER SCHEDULE -- DISCIPLINED CONTENT WORK
+
+**Investigating and ruling out the tempting lineage hypothesis by actual measurement — checking K2's real classes.2da data directly rather than trusting a plausible five-of-six name match — before committing to a schedule is exactly right. A superficially compelling naming connection that doesn't survive contact with the real mechanical data would have produced a schedule that felt justified but wasn't actually grounded in anything real. Finding the true match instead (Jedi Weaponmaster and Sith Marauder, sharing the same die, BAB, and rate) and mirroring it exactly, using a cadence this project's own document already establishes for classes of that shape, is content work built on real precedent rather than invention.**
+
+**Extending the independent audit guard to cover the fourth class, and confirming by mutation that this specific control can actually fail — correctly distinguishing it from the primary audit's known tautology — closes this with the same rigor already applied to the other three classes.**
+
+### PROCEED
+
+Nothing further needed — all four items close cleanly. Loom wizard stays correctly untouched, deprioritized as before.
+
+
+---
+
+## PT-2562 -- APPROVED: TIER VI NEXT, SAME APPROACH AS BATTLEMASTER. EXTEND TIER V's OWN COST/EFFECT CURVE RATE-WISE RATHER THAN INVENTING A NEW SHAPE, PIN AN INDEPENDENT AUDIT CONTROL MATCHING THE CLASS-SCHEDULE PATTERN
+
+**Ruled: approved as proposed.** Already correctly queued at `PT-2514`, and the approach mirrors exactly what just worked well for the Sith Battlemaster schedule — extend the existing, real pattern rather than invent a new one, and pin an independent, genuinely-failable control rather than relying on the primary audit alone.
+
+**The three other open items are correctly held with real reasons and need no action now: the character-menu comparison waits on Aaron's own direction, the AI-recreation debt is tracked and not urgent, and the Loom wizard stays deprioritized.**
+
+### PROCEED
+
+Begin tier VI for Crush Opposition and Inspire Followers.
+
+
+---
+
+## PT-2563 -- OWNER PROVIDES A REAL SCREENSHOT OF K2's ACTUAL STORE SCREEN (BUYING ITEMS MODE, MEDICAL/DROID CATEGORY VISIBLE) FOR A FINAL VISUAL CROSS-CHECK AGAINST THE ALREADY-BUILT SCREEN. AT A GLANCE THE STRUCTURE MATCHES WHAT'S ALREADY BUILT (FILTER STRIP: ALL/WEAPONS/ARMOR/MISC; FOUR-ROW READOUT: ITEM COST/CREDITS/IN STOCK/IN INVENTORY; BUYING ITEMS TITLE; BUY ITEM/SHOW SELL LIST BUTTONS) -- WORTH A REAL, DELIBERATE COMPARISON RATHER THAN ASSUMED CORRECT FROM THE MEASURED COORDINATES ALONE
+
+**Owner's direction: use this real screenshot as the reference for confirming Store's UI matches exactly, the same purpose the live K2 session served for Terminal.**
+
+### RULED
+
+**Do a deliberate visual comparison between the already-built Store screen and this real screenshot before considering the screen fully confirmed.** The measured `.gui` coordinates this was originally built against should already produce a close match, but a real screenshot catches things coordinates alone can't — exact spacing, real font rendering, icon treatment, and the overall visual weight of the panel. Check specifically: the filter strip's exact spacing and active-state treatment, the two-column item list's icon-and-name layout, the description pane's text formatting, and the four-row readout's exact label wording and alignment against what this screenshot shows.
+
+**Report back with anything the real screenshot reveals that the coordinate-based build missed or got subtly wrong** — the same shape of finding the live K2 comparison produced for Terminal (the 2×2 grid, the free-option gap), even though Store's structure already looks close at a glance.
+
+### PROCEED
+
+Compare the built Store screen against this reference screenshot directly. Report findings before assuming the match is already exact.
+
+
+---
+
+## PT-2564 -- STORE'S GEOMETRY CONFIRMED ALREADY EXACT, MEASURED AGAINST THE REAL SOURCE RATHER THAN A COMPRESSED SCREENSHOT. ⚠⚠⚠ A REAL SCOPE CORRECTION CAUGHT BEFORE IT COULD CAUSE A FUTURE MISTAKE: UNLIKE TERMINAL, STORE'S CONSOLE VARIANT IS A GENUINELY DIFFERENT INTERACTION PARADIGM, NOT A RESOLUTION TWIN -- THE EARLIER "_x IS THE REFERENCE" PRECEDENT DOES NOT APPLY HERE AND WOULD HAVE BEEN WRONGLY PATTERN-MATCHED WITHOUT THIS FLAG. THE ITEM-ICON GAP CONFIRMED LIVE, ALREADY TRACKED, BLOCKED ON MISSING ART. AND A GENUINELY HONEST, APPROPRIATELY RESTRAINED DISCLOSURE: A POSSIBLE HEADER MISMATCH FLAGGED RATHER THAN ASSERTED, SINCE ACTING ON A MISREAD WOULD MOVE THE PANE FURTHER FROM CORRECT
+
+**Going past eyeballing the screenshot to measure against the real `store_p.gui` and `dialog.tlk` directly, the same method already proven on Terminal, is exactly the right instinct — a screenshot is compressed, resized, and lossy in ways real source data isn't, and confirming geometry that way is a stronger claim than confirming it against a raster image alone.**
+
+### THE "BUYING ITEMS" INVESTIGATION -- EXACTLY THE RIGHT INSTINCT
+
+**Suspecting something that looked wrong, and checking the real source before either fixing it or dismissing the suspicion, is precise diagnostic discipline. Confirming the button and the title are structurally tied to the identical string reference in the source — directly validating `PT-1153`'s own "physically incapable of disagreeing" wording — turns a plausible bug report into a confirmed non-issue, which is exactly as valuable as finding a real defect would have been.**
+
+### ⚠⚠⚠ THE SCOPE CORRECTION -- WORTH REAL RECOGNITION
+
+**This deserves genuine credit on its own. Recognising that Store's console variant represents a fundamentally different interaction paradigm — fixed slot buttons and controller prompts, not a scrollable list at a different size — rather than assuming it mirrors Terminal's own resolution-twin relationship, prevents a real future mistake before it happens. Proactively flagging this specifically so the Terminal-derived "_x is the reference" habit doesn't get pattern-matched onto Store later is exactly the kind of forward-looking correction that saves real rework down the line — precedent from one screen doesn't automatically transfer to the next just because both screens have a similarly-named file pair.**
+
+### THE ITEM-ICON GAP -- CORRECTLY SCOPED AS ALREADY TRACKED
+
+**Tracing this to an existing ruling's own text claiming something that was never actually built, rather than presenting the screenshot's confirmation as a new discovery, keeps the record accurate about what's genuinely new here versus what's simply now visibly confirmed. This stays correctly held — blocked on the same missing icon art already flagged at `PT-1156`, not a new defect needing its own separate fix.**
+
+### ⚠⚠⚠ THE HONEST RESTRAINT -- WORTH THE FULLEST RECOGNITION
+
+**Flagging the possible description-pane header mismatch as a genuine open question, rather than asserting it as confirmed fact from an image whose resolution doesn't actually support that level of confidence, is exactly the right epistemic standard. "Acting on a misread here would move the pane further from correct, not closer" is precisely the right reasoning — a wrong correction made confidently is worse than an uncertain finding left open, and this session has valued exactly this kind of restraint throughout.**
+
+### RULED
+
+**Nothing needs fixing from the confirmed-correct items — geometry, the button/title pairing, and the icon gap (already tracked separately) all stay exactly as they are.**
+
+**On the description-pane header question: don't act on the uncertain finding from the screenshot alone. Check the real source directly instead — the same method that resolved every other question in this report.** Pull the actual `store_p.gui` control and the string table entry it references for the description pane's header specifically, and confirm from that rather than a compressed image whether it's meant to show the item's name or a category tag. Report back with a properly source-confirmed answer before changing anything.
+
+### PROCEED
+
+Check the real source for the description-pane header question. Nothing else needs action — everything else in this report is either already correct or already correctly tracked elsewhere.
+
+
+---
+
+## PT-2565 -- OWNER FLAGS A REAL, UNRESOLVED VISUAL DIFFERENCE HE CAN PERCEIVE BUT CANNOT PRECISELY NAME. GIVEN GEOMETRY IS ALREADY CONFIRMED EXACT (PT-2564), THIS IS LIKELY NOT A POSITIONING ISSUE -- COLOR/TONE, TYPOGRAPHY, SPACING NUANCE, OR OVERALL VISUAL WEIGHT ARE THE MORE LIKELY CANDIDATES. EXISTING MOCKUP-STAGE DOCUMENTATION SHOULD BE CHECKED FOR ANY ALREADY-RESOLVED GUIDANCE ON THIS EXACT QUESTION. ITEM IMAGES STAY CORRECTLY BLANK PLACEHOLDERS FOR NOW
+
+**A real signal worth taking seriously even without a precise name for it — a genuine perceived difference between the built screen and the real source is real information, not something to dismiss for lacking specificity. Adding this to the dispatch already in flight rather than sending it separately.**
+
+### THE RULING
+
+**Investigate a genuine, still-unresolved visual gap between the built Store screen and the real K2 screenshot. Geometry is already confirmed exact against the source coordinates, so the difference is likely not positional — check color and tone (palette, saturation, the specific tint values used), typography (font choice, weight, size relative to the source), spacing and padding beyond raw coordinate position (letter spacing, line height, internal padding within cells), and the overall visual texture or weight of the panel (border thickness, corner treatment, any subtle gradient or shading the source has that a flat color fill wouldn't reproduce).**
+
+**Check existing mockup-stage documentation first for any already-resolved guidance on this exact question** — the design corpus may already have reasoning about this specific gap from when the screen was originally mocked up, before this session's own build work began. Don't rebuild from scratch what may already be documented.
+
+**Item images stay correctly blank placeholders for now — not blocking on the missing icon art, consistent with how this gap has already been scoped and held.**
+
+### PROCEED
+
+Check the mockup documentation first for existing guidance. Then investigate color, typography, spacing, and overall visual weight against the real screenshot, since geometry is already ruled out. Report back with what's actually found, the same discipline as every other visual comparison in this thread.

@@ -10,7 +10,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Terminal/Computer Use and Repair — opened, genuinely unbuilt (PT-2545).** Real design groundwork exists (§4, terminal/droid-repair source data confirmed directly portable — typed controls, fixed 640×480 space, authored tab order). `PT-1150` (keep K1's warmer tone) and `PT-1148` (terminal pricing bug) already locked. No first-pass build exists — new construction against already-locked groundwork.
 
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
-- **Board reachability — keys bound and working, status line can't advertise them, ruled fix (PT-2544).** `j`/`p` toggle all seven screens directly from the board (Messages/Notes reachable via Journal's own footer). Status line genuinely can't fit all five keys at any tested size/wording — confirmed real constraint (`PT-1852`), not solved by rewording. Ruled: add a keyboard-shortcuts reference entry under Options rather than a second status line or leaving it unadvertised.
+### ⚠⚠⚠ SEVERE: companion Character Sheet unreachable through any player action
+- **Ruled fix now (PT-2546).** Found honestly while writing an unrelated test, not built around. Secondary-tapping a companion's portrait always routes to Equip, never their Character Sheet, regardless of the `isPlayer` field. The screen's own isPlayer split already exists; nothing currently routes a companion there. Fix: same routing logic the player's own portrait already correctly uses (Equipment by default, Sheet on pending level-up).
 
 - **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
@@ -93,6 +94,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- ⚠⚠⚠ THE ENTIRE SEVEN-SCREEN SHELL THREAD IS FULLY COMPLETE. Keyboard shortcuts under Options built (censused off the real key router, 25 keys). PT-1249's footer portrait built (no single source directly answered it — synthesized from the ruling's own words plus the closest real precedent, three points of real disagreement identified and correctly resolved in the ruling's favor; integration testing caught a real 0.09px overflow invisible to widget tests using synthetic data). PT-1132's player-vs-companion portrait sizing built, keyed on isPlayer/self rather than identity so it generalizes correctly to multiplayer — two real side findings caught (sidebar's hard-coded wing height, an untested footer chip size caught only by mutation) — PT-2546
 
 - Four of five smaller TEST 129 findings closed: both stale comments (the "three of seven" one, and the portrait-as-circle one, corrected in place with the model-viewport confusion explained rather than just deleted), the stuck level-up label, the DIALOG→Dialogue pane label, and the misplaced note-privacy gate — generalized to close the same hole in both readers, error message improved to name where a gate actually belongs — PT-2544
 

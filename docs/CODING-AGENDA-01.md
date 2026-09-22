@@ -6,7 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ Two real defects from the live K2 comparison — ruled fix-now
+### ⚠⚠⚠ Two real defects from the live K2 comparison — ruled fix-now, plus full asset parity
+- **Terminal: full visual asset parity ruled — port every remaining asset, not just the two border textures (PT-2558).** Identify and port every visual asset computer.gui/computer_x.gui actually references, through the existing verified decoder. Each gets its own ASSET-REPLACEMENT-01 row, marked extracted with the AI-recreation debt owed. Console backdrop stays correctly excluded — PT-1150/PT-2552's synthesis ruling isn't reopened by this.
 - **Terminal readout uses K1's single-column geometry instead of K2's real 2×2 grid — severe, ruled fix now (PT-2557).** Contradicts PT-1150's own "K2's structure" preference already applied to the rest of this panel. Fixable from already-extracted data (terminal_panel.json), no new measurement needed.
 - **Terminal wiring silently drops every free/uncosted reply — severe, ruled fix now (PT-2557).** Real K2 mixes free and costed options in one list (5 of 7 in the reviewed screenshot). Current code only ever builds a TerminalOption from a reply with a cost.
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.

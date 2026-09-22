@@ -30,7 +30,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **Sith feat schedule missing entirely — real content gap, ruled to author (PT-2490).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Needs a real schedule authored, own follow-up task.
+- **Sith feat schedule missing entirely — ruled priority, building now (PT-2553).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Ruled priority over the tier-VI gap and the Loom wizard — three classes with zero feats at any level is more severe.
 
 - **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.

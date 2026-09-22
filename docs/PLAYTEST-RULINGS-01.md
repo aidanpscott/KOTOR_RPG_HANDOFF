@@ -76774,3 +76774,71 @@ Check the real source for the description-pane header question. Nothing else nee
 ### PROCEED
 
 Check the mockup documentation first for existing guidance. Then investigate color, typography, spacing, and overall visual weight against the real screenshot, since geometry is already ruled out. Report back with what's actually found, the same discipline as every other visual comparison in this thread.
+
+
+---
+
+## PT-2566 -- TEST 132: EXCEPTIONAL METHODOLOGY THROUGHOUT. ⚠⚠⚠ CORRECTLY RECOGNIZED A PLAIN CIRCLE IS TOO GEOMETRICALLY REGULAR TO DISTINGUISH THE REAL ASSET FROM A MATHS-PERFECT ONE VIA CONFIDENCE SCORE ALONE (PROVED BY SHOWING BOTH SCORE NEARLY IDENTICALLY), THEN DESIGNED A GENUINE MUTATION TEST ON THE REAL ASSET FILE ITSELF, SAFELY SCOPED AND HASH-VERIFIED, TO PROVE PROVENANCE THE SCORE COULDN'T. AND ⚠⚠⚠ TWO GENUINELY SEVERE NEW DEFECTS FOUND INCIDENTALLY: INVENTORY AND DIALOGUE BOTH READ THE STALE STARTING CREDITS INSTEAD OF THE REAL CURRENT TOTAL -- THE DIALOGUE HALF FEEDS A REAL GATING MECHANISM, MEANING A PLAYER CAN BE GATED AGAINST A PURSE THEY NO LONGER HAVE. PLUS A HARDCODED "YOU HAVE NONE" WARNING THAT FIRES FOR ANY SHORTFALL, EVEN WHILE THE READOUT CORRECTLY SHOWS A NONZERO QUANTITY
+
+**Working through this in full — genuinely exceptional testing methodology combined with real, severe findings deserves the complete treatment, not a summary.**
+
+### THE 2×2 GRID -- DECISIVE, MEASURED RATHER THAN EYEBALLED
+
+**Measuring the actual pixel-boundary transitions column by column, and reasoning through exactly what a mismatched corner texture would have produced (a visible step or doubled edge) before confirming neither exists, is precise visual verification — not "it looks smooth," but a specific, falsifiable claim checked and confirmed.**
+
+### ⚠⚠⚠ THE THIRD TEXTURE -- THE METHODOLOGY HERE IS EXCEPTIONAL
+
+**This deserves the fullest recognition as a piece of testing craft. Recognising that a confidence score which looked decisive actually wasn't — proving it by showing the rendered cap scores nearly identically against both the real asset and a mathematically generated perfect disc — is precise epistemic honesty about a method's own limits. A circle is too geometrically regular to carry provenance information the way an irregular corner or edge tile does, and rather than reporting a false-confident pass or giving up on confirming provenance at all, designing a genuine mutation test on the real asset file itself — safely scoped to a local build bundle only, verified restored via hash — proves the actual causal link a similarity score never could. This is exactly the standard this whole session has held for guards throughout: don't trust a check that can't actually distinguish the thing it claims to prove, and when one method's limits are found, build a better one rather than accept a weaker confirmation.**
+
+### THE SMALL CLOSURES -- ALL CONFIRMED, WITH TWO VALUABLE PRECISION NOTES
+
+**Noting specifically why the 0/2 contrast is the real reading, rather than the coincidental agreement between ALL and MISC, and disclosing a genuine near-miss where clicking past a moved footer element would have produced a false negative if not for a screenshot taken first, are both exactly the kind of careful self-awareness that makes a confirmation trustworthy rather than merely stated.**
+
+### THE THREE RE-CONFIRMED FIXES -- ALL SOLID
+
+**Reading the panel overflow fix at both window sizes exactly as anticipated at `PT-2555`, and confirming neither axis clips at either size, closes the loop properly on a fix that could easily have looked correct at one size while still failing at the other.**
+
+### ⚠⚠⚠ THE CREDITS DEFECT -- SEVERE, RULED FIX NOW
+
+**Finding this while confirming something else entirely is exactly the value of thorough, curious testing beyond the narrow scope of what was asked. Two of three readers bypassing the proper computed fold in favour of a static starting value is a real, severe defect — and correctly identifying the dialogue instance as the worse of the two, since a stale credit total feeding directly into a real, active gating mechanism means a player could be denied or granted a dialogue option based on money they no longer have, is precise severity assessment. Honestly scoping the confidence difference between the two halves — Inventory measured in real play, Dialogue confirmed only as a source reading without a built payment-gated bed — is exactly the right epistemic calibration.**
+
+**Ruled: fix now, severe priority. Both readers need to go through the same `creditsAfter` fold the Store's own readout already correctly uses, rather than reading the stale starting field directly.**
+
+### ⚠ THE FIXED-STRING WARNING -- REAL, RULED FIX NOW
+
+**A hardcoded "you have none" firing for any shortfall, even when the readout correctly shows a real nonzero quantity two rows below it, is a genuine, confusing contradiction on the same screen — found specifically while confirming something else, the same value pattern as the credits defect above.**
+
+**Ruled: fix now. The message needs to reflect the actual quantity held, not assume zero whenever the option is simply unaffordable.**
+
+### PROCEED
+
+Fix the credits-reading defect in Inventory and Dialogue, severe priority — both need to route through the same fold Store already correctly uses. Fix the hardcoded "you have none" warning to reflect the real held quantity. Both ruled fix-now.
+
+
+---
+
+## PT-2567 -- BOTH FINDINGS CONFIRMED DECISIVELY, SOURCE-BACKED RATHER THAN INFERRED. THE HEADER IS A CATEGORY TAG NOT A NAME, CONFIRMED BY THREE INDEPENDENT STRING FACTS. THE UNNAMED VISUAL GAP IS THE REAL SOURCE'S ACTUAL BORDER ART -- EVERY RELEVANT CONTROL SPECIFIES REAL CORNER/EDGE/FILL TEXTURES WHILE THE CURRENT BUILD USES ONLY A FLAT 1PX LINE. TWO OF THREE NEEDED TEXTURES ARE ALREADY EXTRACTED AND SITTING UNUSED IN THE REPO FROM THE TERMINAL WORK. OWNER RULES: BOTH TOGETHER, NOTHING REMOVED
+
+**Working through this in full — both investigations are genuinely decisive, and the owner's ruling combines them rather than picking one.**
+
+### THE HEADER -- CONFIRMED WRONG, REAL SCOPE TO FIX IT PROPERLY
+
+**Going past the `.gui` file's own empty template text to the actual strings, and finding three independent facts that all point the same direction — the item's name matching the screenshot exactly, "Single Use" existing as its own separate, unrelated strref, and this project's own extracted description data starting directly with the flavor text with no category prefix baked in — is decisive confirmation rather than a plausible guess. Correctly identifying this requires a real new item property (use pattern: single-use, stackable, etc.), genuinely distinct from the existing type field, rather than a simple string swap, keeps the scope honest about what fixing this properly actually requires.**
+
+### THE VISUAL GAP -- FOUND, SOURCE-CONFIRMED, MOSTLY ALREADY-EXTRACTED
+
+**Checking the existing documentation first, exactly as directed, and confirming it genuinely gives no answer here, before going back to the source `.gui` file's own border specifications, is the right sequence — don't assume an answer exists just because a question was asked; confirm its absence before searching further. Finding that every relevant control specifies real corner, edge, and fill art, while the current build uses a flat line everywhere, is a precise, decisive explanation for a difference that was real but hard to name — exactly the kind of structural visual weight a flat border cannot reproduce regardless of how correct its color is.**
+
+**Finding two of the three needed textures already extracted and sitting unused in the repo from the Terminal work, with only one new tinted variant needing extraction through the exact same already-proven pipeline, means this is substantially less new work than it could have been. Checking color and typography alongside this and confidently ruling them out, rather than leaving the investigation open-ended, closes the question properly — this is the whole answer, not one piece of a longer list.**
+
+### RULED -- BOTH TOGETHER, AS OWNER DIRECTS
+
+**Build both pieces of work combined, nothing removed from either scope:**
+
+**1. Add the real item-use-pattern property to the item model (distinct from the existing type field), and wire the description pane's header to it, matching what the source actually shows.**
+
+**2. Port the one remaining tinted texture set (`uibit_brdr_16wct`/`16wet`/`fill_2wt`) through the same proven pipeline, and wire all of Store's boxes — the list, description pane, readout plate, title bar, footer buttons, and rule bars — to the real border art instead of the current flat line. Reuse the two already-extracted textures for the footer buttons and rule bars rather than re-extracting them.**
+
+### PROCEED
+
+Build both together. Report back once done, same discipline as every other screen in this thread.

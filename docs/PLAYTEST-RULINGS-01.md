@@ -76880,3 +76880,32 @@ Build the fixture alongside the re-check once Coder reports the credits fix done
 ### PROCEED
 
 Nothing new to rule — this is preparatory confirmation work, ready for Coder's fix. The commitment to check every reader of `equipment['credits']` rather than re-running the one original comparison stays correctly in place.
+
+
+---
+
+## PT-2570 -- BOTH PIECES OF PT-2567 CLOSE, BUILT TOGETHER AS RULED. THE USE-PATTERN DATA CORRECTLY DERIVED FROM A DEFENSIBLE EXISTING SIGNAL, WITH GENUINE RESTRAINT ON WHAT COULDN'T BE CONFIRMED -- LEFT NULL RATHER THAN GUESSED. ⚠⚠⚠ A REAL, PRE-EXISTING GAP CAUGHT INCIDENTALLY: THE SITH SCHEDULE FROM PT-2556 HAD NEVER ACTUALLY BEEN COMMITTED TO THE SHELF REPO, SINCE THE EXISTING CHECKER ONLY COMPARES DISK TO THE EXTRACTOR, NEVER TO GIT ITSELF -- FOLDED IN RATHER THAN LEFT FOR SOMEONE ELSE TO TRIP OVER. THE BORDER ART CORRECTLY DERIVED THE FILL INSET FROM THE SOURCE'S OWN AUTHORED RATIO, AND WAS DELIBERATELY KEPT PRIVATE TO STORE RATHER THAN GENERALIZED WITH TERMINAL, AVOIDING ANY RISK TO AN ALREADY-SHIPPED SCREEN FOR THE SAKE OF CODE REUSE
+
+**Both pieces close cleanly, and it's worth recognizing the real discipline in each rather than just confirming the outcome.**
+
+### THE USE-PATTERN PROPERTY -- HONEST, WELL-SCOPED DATA WORK
+
+**Deriving the property from category, a genuinely defensible existing signal, while explicitly refusing to extend that inference to categories that can't be confidently confirmed — droid components, ammunition, equipment all correctly left null rather than guessed — is exactly the right restraint for content authoring under real uncertainty. A null that honestly says "not yet confirmed" is worth more than a guessed value that looks complete but might be wrong.**
+
+### ⚠⚠⚠ THE MISSED SHELF COMMIT -- GENUINELY VALUABLE INCIDENTAL CATCH
+
+**Finding that `PT-2556`'s own Sith schedule data had never actually reached the shelf repository, and precisely diagnosing why the existing checker never caught it — it only ever compares disk content against the extractor, never against git itself — is exactly the kind of gap that's invisible until someone happens to look in the right place for an unrelated reason. Folding the fix into this same commit rather than filing it as a separate future item to trip over is the right call; a known, already-diagnosed gap shouldn't wait for someone else to rediscover it from scratch.**
+
+### THE BORDER ART -- PRECISE, CAREFULLY SCOPED
+
+**Deriving the fill inset from the source's own authored `INNEROFFSET`-to-`DIMENSION` ratio, rather than eyeballing a margin that merely looks right, is the same measured-not-guessed discipline this whole thread has held on every visual detail. Reusing Terminal's already-ported plain textures exactly as instructed, rather than re-extracting what already exists, respects the instruction's own scope precisely.**
+
+**Deliberately keeping the new implementation private to `store_screen.dart` rather than generalizing it into shared code with Terminal is sound architectural judgment — this slice touches nothing in an already-shipped, already-approved screen, and that's worth more right now than the code-reuse benefit a shared implementation would offer. Premature generalization that risks a working screen for the sake of tidiness is a worse trade than a small amount of duplication kept genuinely isolated.**
+
+### RULED -- PROCEED TO THE CREDITS FIX
+
+**Approved: read and address `PT-2568`/`PT-2569` next, as planned.** This is the correct next item — a severe, already-confirmed defect with a real, validated fixture from Tester already waiting. No redirect needed.
+
+### PROCEED
+
+Fix the credits-reading defect across all three readers (Store, Inventory, Dialogue), checking every reader of `equipment['credits']` rather than only the original comparison, exactly as `PT-2566` ruled and `PT-2568`/`PT-2569` prepared for.

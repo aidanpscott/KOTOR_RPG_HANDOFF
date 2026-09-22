@@ -6,13 +6,10 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Store/Merchant — opened, check existing first-pass build state first (PT-2545).** Real locked design already exists (`PT-1152` sealed-modal architecture, `PT-1151` commerce color exception). First-pass build already landed at `PT-1256`. Confirm current state before scoping further work — may be substantially further along than a cold start.
+- **Store/Merchant — checking existing first-pass build state, in progress (PT-2547).** Real locked design already exists (`PT-1152` sealed-modal architecture, `PT-1151` commerce color exception). First-pass build already landed at `PT-1256`. Confirming current state before scoping further work.
 - **Terminal/Computer Use and Repair — opened, genuinely unbuilt (PT-2545).** Real design groundwork exists (§4, terminal/droid-repair source data confirmed directly portable — typed controls, fixed 640×480 space, authored tab order). `PT-1150` (keep K1's warmer tone) and `PT-1148` (terminal pricing bug) already locked. No first-pass build exists — new construction against already-locked groundwork.
 
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
-### ⚠⚠⚠ SEVERE: companion Character Sheet unreachable through any player action
-- **Ruled fix now (PT-2546).** Found honestly while writing an unrelated test, not built around. Secondary-tapping a companion's portrait always routes to Equip, never their Character Sheet, regardless of the `isPlayer` field. The screen's own isPlayer split already exists; nothing currently routes a companion there. Fix: same routing logic the player's own portrait already correctly uses (Equipment by default, Sheet on pending level-up).
-
 - **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
 - **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
@@ -94,6 +91,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Companion Character Sheet routing gap closed. Investigated the real rules before coding — companions genuinely don't level independently under this ruleset (PARTY-01/LOOT-01), so the fix changes nothing observable today, honestly reported as such rather than overstated. What changed: the mechanism is now general rather than hardcoded, correctly future-proofed for any future source of a companion's own record. Dedicated mutation test targets the more dangerous failure direction (removing the identity check would leak one character's data under a different portrait, worse than the original defect). Closed a real gap where an existing test file's own header comment claimed uniform behavior neither of its tests had ever actually exercised — PT-2547
 
 - ⚠⚠⚠ THE ENTIRE SEVEN-SCREEN SHELL THREAD IS FULLY COMPLETE. Keyboard shortcuts under Options built (censused off the real key router, 25 keys). PT-1249's footer portrait built (no single source directly answered it — synthesized from the ruling's own words plus the closest real precedent, three points of real disagreement identified and correctly resolved in the ruling's favor; integration testing caught a real 0.09px overflow invisible to widget tests using synthetic data). PT-1132's player-vs-companion portrait sizing built, keyed on isPlayer/self rather than identity so it generalizes correctly to multiplayer — two real side findings caught (sidebar's hard-coded wing height, an untested footer chip size caught only by mutation) — PT-2546
 

@@ -6,7 +6,10 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Live K2 comparison for Terminal, then the character menus — in progress (PT-2556).** Confirm Terminal's fixed panel against a live K2 session (readout layout at multiple sizes, the affordable/unaffordable distinction). Then, same session, check Character Sheet/Equip/Inventory/Abilities against what's built before logging out.
+### ⚠⚠⚠ Two real defects from the live K2 comparison — ruled fix-now
+- **Terminal readout uses K1's single-column geometry instead of K2's real 2×2 grid — severe, ruled fix now (PT-2557).** Contradicts PT-1150's own "K2's structure" preference already applied to the rest of this panel. Fixable from already-extracted data (terminal_panel.json), no new measurement needed.
+- **Terminal wiring silently drops every free/uncosted reply — severe, ruled fix now (PT-2557).** Real K2 mixes free and costed options in one list (5 of 7 in the reviewed screenshot). Current code only ever builds a TerminalOption from a reply with a cost.
+- **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 - **Sith Battlemaster's zero feat schedule — real, held, same shape as the three just closed.** Found while authoring the Inquisitor/Warrior/Assassin schedules; correctly not silently fixed alongside them.
 
 ### Smaller TEST 131 findings — held, less urgent

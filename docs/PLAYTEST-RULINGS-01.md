@@ -76430,3 +76430,26 @@ Begin the Terminal/Computer Use and Repair screen, same discipline as every scre
 ### PROCEED
 
 Port the two textures as proposed. Nothing else needed on this screen beyond that — the real remaining gaps (droid self-repair, the unexamined conversation type) stay correctly separate and unstarted.
+
+
+---
+
+## PT-2552 -- TERMINAL BORDER ART CLOSES CLEAN. ⚠⚠⚠ A GENUINELY DEEP, PRECISE RENDERING BUG FOUND AND FIXED: STANDARD FLUTTER IMAGE WIDGETS NEVER ACTUALLY PAINTED WITHIN A TEST'S PUMP CYCLE, TRACED TO REAL ASSET I/O NEVER RESOLVING OUTSIDE runAsync -- FIXED WITH A CUSTOMPAINTER APPROACH THAT ALSO PROVIDES PER-TILE ROTATION DECORATIONIMAGE COULD NEVER HAVE SUPPORTED. AND A GENUINE, HONESTLY-FLAGGED TENSION CORRECTLY NOT DECIDED UNILATERALLY: DOES "PORT REAL ASSETS NOW" SUPERSEDE PT-1150'S OWN EARLIER, DELIBERATE RULING TO SYNTHESIZE THE CONSOLE BACKDROP RATHER THAN PORT IT
+
+**The importer, decoder reuse, and pre-wiring alpha-mask confirmation are all precise, disciplined work — confirming both textures are pure alpha masks before wiring anything, matching the exact tint-at-runtime pattern every other border and fill element in this app already uses, closes the architectural question correctly before any code depended on the answer.**
+
+### ⚠⚠⚠ THE RENDERING BUG -- GENUINELY VALUABLE, PRECISELY DIAGNOSED
+
+**This is a deep, non-obvious defect, and the diagnosis is exactly the kind of careful isolation this session has valued throughout — confirming the asset loads and decodes successfully, confirming a CustomPainter given the same decoded image paints correctly, and only then narrowing to the specific widget that silently failed, rather than guessing at a fix and hoping it resolved something poorly understood. Naming the precise mechanism (real asset I/O outside `runAsync` never resolving in the test binding, and `pumpAndSettle` only pumping already-scheduled frames rather than waiting on a future that hasn't called `setState`) is the difference between a fix that happens to work and one that's actually understood.**
+
+**Switching to a CustomPainter over a pre-decoded image, and confirming it also solves a real functional need the original approach couldn't (per-tile rotation for the edge tiles), turns a bug fix into a strictly better implementation rather than a workaround. Mutation-testing by removing a texture file and finding the build itself refuses to bundle — catching the defect before the test would even run — is thorough verification of the fix at the right layer.**
+
+### ⚠⚠⚠ THE BACKDROP QUESTION -- CORRECTLY NOT DECIDED UNILATERALLY, RULED NOW
+
+**Recognising that the console backdrop is genuinely different in kind from the two border textures just ported — real, substantial source art representing the physical object itself, not a generic UI-chrome mask — and that `PT-1150` already made a deliberate, reasoned ruling specifically about this exact asset, with real reasoning about why K1 and K2 diverge structurally here, is precise judgment about when a broad instruction does and doesn't extend to cover something it wasn't actually written with in mind. Correctly refusing to silently override an existing, considered decision just because a newer instruction covered an adjacent case is exactly right.**
+
+**Ruled: `PT-1150` stands, unchanged.** The console backdrop stays a synthesized, original creation — K2's structural approach combined with K1's tonal warmth, as already reasoned through — not a direct port of either source's own art. The "port real assets now" instruction was scoped to the two generic alpha-mask border textures specifically, which are architecturally identical to every other tinted-mask element already in this app; it was never meant to reopen a separate, already-deliberated question about a genuinely different category of asset. Porting the backdrop directly would also mean porting whichever specific game's own version got chosen, discarding the considered synthesis `PT-1150` already reasoned through for good reason.
+
+### PROCEED
+
+Nothing further needed — the border art closes cleanly, and the backdrop question is settled: `PT-1150` stands. No further work on the backdrop beyond what's already ruled there.

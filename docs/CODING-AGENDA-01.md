@@ -6,12 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### Smaller TEST 129 findings — approved order at PT-2543, stale comment first
-- **Board has no nav bar; four of seven screens reachable only via another screen first.**
-- **`_navBar`'s own doc comment still says "three of seven not built," eight lines above its own correction.**
-- **Messages pane labels read FEEDBACK/DIALOG rather than the intended friendlier names.**
-- **Level-up label stuck on "waiting" for an already-taken level** — a level-6 character with nothing pending shows "A level is waiting — 5."
-- **Misplaced note-privacy gate loads silently wrong** — authored under a table `_gate` never reads from; no error, does nothing.
+### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
+- **Board reachability — keys bound and working, status line can't advertise them, ruled fix (PT-2544).** `j`/`p` toggle all seven screens directly from the board (Messages/Notes reachable via Journal's own footer). Status line genuinely can't fit all five keys at any tested size/wording — confirmed real constraint (`PT-1852`), not solved by rewording. Ruled: add a keyboard-shortcuts reference entry under Options rather than a second status line or leaving it unadvertised.
 
 - **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
@@ -94,6 +90,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Four of five smaller TEST 129 findings closed: both stale comments (the "three of seven" one, and the portrait-as-circle one, corrected in place with the model-viewport confusion explained rather than just deleted), the stuck level-up label, the DIALOG→Dialogue pane label, and the misplaced note-privacy gate — generalized to close the same hole in both readers, error message improved to name where a gate actually belongs — PT-2544
 
 - All five severe TEST 129 defects closed. Condition classifier: a real defect caught in Coder's own already-written first attempt (a positive "bad" list — structurally the exact shape ruled against, wearing a different disguise) before shipping, honestly disclosed and rebuilt correctly — default is now bad, good requires its own positive source, currently empty. Notes' focus, the dismissed-companion name, the phantom re-add state, and the four-screen escape gap all fixed with precise root causes. Two more self-caught vacuous guards (a resolver bypassed by a pre-computed test value; a phantom-fix with zero coverage until mutation proved it) — both attributed directly to disciplined mutation testing rather than suspicion, second slice running with this exact shape. Phantom fix reproduces Tester's exact reported symptom through the real board — PT-2542
 

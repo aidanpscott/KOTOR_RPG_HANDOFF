@@ -6,10 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ Two severe defects from TEST 132 — ruled fix-now
-- **Inventory and Dialogue read stale starting credits instead of the real current total — severe, ruled fix now (PT-2566).** Store's readout correctly uses `creditsAfter`'s fold; Inventory (:2280) and Dialogue (:5688) both bypass it, reading the stale starting field directly. The dialogue half is worse — `payment` is a real gate term, so a player can be gated against a purse they no longer have. Fix: route both through the same fold.
-- **Terminal's "you have none" warning is a fixed string, fires for any shortfall — real, ruled fix now (PT-2566).** Prints even while the readout correctly shows a nonzero held quantity two rows below. Fix: reflect the real held amount, not an assumed zero.
-
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
@@ -100,6 +96,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Credits defect fully closed across all three readers (Store, Inventory, Dialogue), plus the shortfall warning fix. Reproduction built directly against Tester's own tester-purse fixture, replaying PT-2569's exact sequence — two real fixture problems found and properly fixed (package-specific start point, correct return target after closing Store), rather than routed around with a shortcut. Every mutated location confirmed to fail without the fix. Unrelated pre-existing test flake investigated in isolation, confirmed unrelated. Process change approved: full suite reserved for one pass before committing, targeted runs during iteration — PT-2571
 
 - Store's header property and real border art both close, built together as ruled. Use-pattern data honestly derived from a defensible existing signal, with genuine restraint (left null rather than guessed for categories that couldn't be confirmed). Real pre-existing gap caught incidentally — PT-2556's Sith schedule had never reached the shelf repo, since the checker only compares disk to the extractor, never git — folded into this commit. Border art's fill inset derived from the source's own authored ratio, not eyeballed; Terminal's already-ported textures reused exactly as instructed. Implementation deliberately kept private to Store rather than generalized with Terminal, avoiding any risk to an already-shipped screen — PT-2570
 

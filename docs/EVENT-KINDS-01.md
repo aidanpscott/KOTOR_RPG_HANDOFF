@@ -241,6 +241,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `dialogue.node-reached` | session |
 | `dialogue.choice-made` | campaign |
 | `note.written` | **⚠ campaign, and unreadable** — `PT-1253`: Personal Notes are private. **The event records that a note exists, never its content.** |
+| `store.opened` | **⚠ session, not campaign** — `PT-1152`, `PT-2548`. An author places it on a dialogue reply's own `effect` list, the same as `quest.flag-set`; the app watches for it in a beat's own events and opens the merchant it names. Nothing folds it into persistent state — a store visit does not need to outlive the sitting, and re-opening on a reload is not a defect.
 
 ---
 

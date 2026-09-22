@@ -76303,3 +76303,68 @@ Check Store's actual current build state before scoping further work on it. Begi
 ### PROCEED
 
 Fix the companion-sheet routing gap, severe priority. Nothing else remains held from this whole thread — nothing further needed on the shortcuts, footer, or sizing work, all three close cleanly.
+
+
+---
+
+## PT-2547 -- THE COMPANION-SHEET ROUTING GAP CLOSES, WITH GENUINELY ADMIRABLE HONESTY ABOUT ITS OWN SCOPE: INVESTIGATING THE REAL RULES BEFORE WRITING CODE FOUND COMPANIONS GENUINELY DON'T LEVEL INDEPENDENTLY UNDER THIS RULESET, SO THE FIX CHANGES NOTHING OBSERVABLE TODAY -- AND THAT'S REPORTED AS THE CORRECT OUTCOME, NOT SOFTENED OR OVERSTATED TO MAKE THE WORK READ AS BIGGER THAN IT IS. WHAT ACTUALLY CHANGED IS THE MECHANISM BECOMING GENERAL RATHER THAN HARDCODED, CORRECTLY FUTURE-PROOFED AGAINST ANY LATER SOURCE OF A COMPANION'S OWN RECORD
+
+**This deserves the fullest recognition, and it's worth stating exactly why: it would have been easy to report this fix as closing a real behavioral gap, and technically defensible to let it read that way. Instead, the actual observable truth -- that a companion's portrait still opens Equipment every time, today, because that's genuinely correct given companions don't independently level under this ruleset -- is stated plainly rather than buried under the more impressive-sounding claim that "the gap is fixed." That's honest reporting under no pressure to inflate it, and it's exactly the standard this whole session has tried to hold throughout.**
+
+**The investigation itself is precise: confirming the screen only ever holds one real character record, and citing the direct governing text on why (a companion's capability is paid for, not independently earned), rather than assuming the ambiguous instruction meant "make it behave differently" when the rules themselves say it shouldn't. Separating the fused identity-and-capability check into two properly scoped questions -- does this specific person have a level waiting, independent of who they are -- closes the actual architectural gap regardless of whether today's data happens to exercise the new path.**
+
+### ⚠⚠⚠ THE DANGEROUS-DIRECTION MUTATION -- WORTH NAMING
+
+**Recognising that removing the identity check entirely wouldn't just fail to fix the original defect but would create a strictly worse one -- a real data leak, one character's information rendering under a different character's portrait -- and building a dedicated test specifically naming that failure shape, is precise anticipation of the mutation that actually matters here, not just running every mutation mechanically and reporting what happened to survive.**
+
+### THE TESTED-BUT-UNTESTED CLAIM -- A REAL, SMALL GAP CLOSED
+
+**Finding that an existing test file's own header comment made a claim -- uniform behavior across the player and every party member -- that neither of its own tests had ever actually exercised against a companion, and closing that gap with a real fixture rather than a mock, is exactly the kind of quiet inconsistency between what a file says and what it proves that's easy to walk past without ever noticing.**
+
+### RULED -- START WITH STORE
+
+**Approved as proposed. Check Store's existing first-pass build state first, since confirming what already exists is the natural first step before committing further effort to either screen.**
+
+### PROCEED
+
+Check Store's current build state against the full locked design. Report back with what's found before proposing what's still needed, same discipline as every screen in the prior thread.
+
+
+---
+
+## PT-2548 -- STORE'S BUILD-STATE CHECK CONFIRMS A COLD START, NOT A PARTIAL BUILD -- PT-1256 WAS A DESIGN-REVIEW MILESTONE, NEVER CODE, AND A FULL GIT-HISTORY SEARCH FINDS NO TRACE OF ONE EVER EXISTING. ⚠⚠⚠ ONE REAL CORRECTION FOUND: THE ORIGINAL RULING'S STATED REASON FOR ITS OWN MODE-SWITCH DEPARTURE MISREAD THE SOURCE -- BOTH GAMES SHIP A LABELED IN-PANEL TOGGLE, NEITHER SETS MODE FROM OUTSIDE THE SCREEN. THE DEPARTURE DECISION ITSELF STAYS CORRECT; ONLY THE REASON GIVEN FOR IT NEEDS FIXING. OWNER CONFIRMS SCOPE: THE TWO ALREADY-APPROVED FUNCTIONAL IMPROVEMENTS STAY, BUT THE VISUAL LAYOUT ITSELF SHOULD MATCH THE SOURCE GAME EXACTLY
+
+**Confirming PT-1256 was never a code milestone, through both a full search of every tracked repo and a complete git-history search back to genesis, closes any ambiguity about what actually exists — this is a cold start, correctly reported as such rather than assumed further along because a "first pass" ruling existed somewhere in the design corpus. Distinguishing "first pass" as design-maturity vocabulary (this project's own standing usage) from a codebase state is precise, careful reading of what a phrase actually meant in its original context rather than what it could be mistaken to mean out of context.**
+
+### THE MODE-SWITCH CORRECTION -- REAL, WORTH FIXING IN THE DESIGN DOCUMENT
+
+**Finding that both K1 and K2 ship a real, labeled in-panel toggle (`BTN_Examine`, "Show Sell List," present and measured in both games' own files), directly contradicting the original ruling's stated claim that K2 has no visible mode switch at all, is a genuine correction to the design document's own reasoning. Correctly distinguishing this from the actual departure decision — which stays right regardless, since replacing "Examine" with the clearer "Show Buy List"/"Show Sell List" wording is independently a good choice — and flagging rather than silently correcting the ruling's own prose, is exactly right: a wrong reason attached to a right decision still needs fixing, even though the decision itself needs no revisiting.**
+
+**Ruled: correct the design document's stated reasoning for the mode-switch departure.** Both games ship a labeled toggle; the departure is about clearer wording, not about supplying a control the source lacked. The K1/K2 on-hand-readout finding (K1 has three rows, K2 adds a fourth) is confirmed as already correctly described — no correction needed there.
+
+### RULED -- SCOPE CONFIRMED
+
+**Owner's ruling: the two already-approved functional improvements stay exactly as locked — the Show Buy List/Show Sell List relabeling, and extending the on-hand readout further than either source game did. Everything else — the actual visual layout, components, and positioning — should match the source game exactly, with labeling and similar minor details as the only allowed departures beyond the two named improvements.**
+
+**This is good news for the build: the measurement work already done — `LB_INVITEMS`/`LB_SHOPITEMS`'s identical rect, the description pane's exact position, the four-row readout's precise coordinates, the filter bar's spacing between its two rules — is exactly what a faithful, exact-layout build needs, and it's already gathered and confirmed against the real source rather than approximated.**
+
+### PROCEED
+
+Build Store to the measured source coordinates directly, keeping the two already-approved functional improvements exactly as locked. Correct the design document's mode-switch reasoning separately from the build itself. Same discipline as every screen in the prior thread — build, wire to real data, test, render, look at the render before calling it done.
+
+
+---
+
+## PT-2549 -- OWNER OPENS A REAL, FOLLOW-ON ITEM FOR AFTER STORE'S SCREEN LANDS: INVESTIGATE HOW STORES/MERCHANTS ARE ACTUALLY CREATED IN THE ORIGINAL SOURCE TOOLING (RUN THE AURORA TOOLSET DIRECTLY TO SEE THE REAL AUTHORING WORKFLOW), THEN IMPLEMENT LOOM'S OWN EQUIVALENT STORE-CREATION WIZARD -- BECOMING THE STANDARD WAY THIS PROJECT AUTHORS REAL STORE/MERCHANT CONTENT AND TEST FIXTURES GOING FORWARD
+
+**A real, distinct piece of scope, correctly sequenced to follow Store's own screen work rather than compete with it for attention right now.**
+
+### THE ITEM
+
+Once the Store/Merchant screen itself is built and working, investigate how the original games' own tooling actually creates a store or merchant — specifically by running the real Aurora Toolset directly to observe the authentic authoring workflow, not just inferring it from the shipped `.gui` and `.2da` data already used to build the screen itself. Use what's found to design and build Loom's own equivalent store-creation tool — the same kind of authoring wizard Loom likely already has for other content types (exact existing patterns to be confirmed directly in Loom's own repository when this is picked up, since no matching documentation was found in `MAIN_WORK` itself).
+
+**The stated purpose is concrete: this becomes the standard, real way this project creates store and merchant content going forward — including the test fixtures this whole session has repeatedly needed for confirming screens against real data (the same shape as `mk119`, `mk123`, `mk124`, and every other purpose-built fixture already created this session, but through Loom's own proper tooling rather than a one-off script).**
+
+### PROCEED
+
+Held until Store's own screen build lands. Investigate the Aurora Toolset's real store-creation workflow directly, check Loom's own existing content-creation patterns for precedent, then design and build the equivalent. Not urgent relative to the screen itself, but a real, concrete follow-on rather than a vague future idea.

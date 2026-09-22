@@ -6,6 +6,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Store/Merchant — opened, check existing first-pass build state first (PT-2545).** Real locked design already exists (`PT-1152` sealed-modal architecture, `PT-1151` commerce color exception). First-pass build already landed at `PT-1256`. Confirm current state before scoping further work — may be substantially further along than a cold start.
+- **Terminal/Computer Use and Repair — opened, genuinely unbuilt (PT-2545).** Real design groundwork exists (§4, terminal/droid-repair source data confirmed directly portable — typed controls, fixed 640×480 space, authored tab order). `PT-1150` (keep K1's warmer tone) and `PT-1148` (terminal pricing bug) already locked. No first-pass build exists — new construction against already-locked groundwork.
+
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
 - **Board reachability — keys bound and working, status line can't advertise them, ruled fix (PT-2544).** `j`/`p` toggle all seven screens directly from the board (Messages/Notes reachable via Journal's own footer). Status line genuinely can't fit all five keys at any tested size/wording — confirmed real constraint (`PT-1852`), not solved by rewording. Ruled: add a keyboard-shortcuts reference entry under Options rather than a second status line or leaving it unadvertised.
 

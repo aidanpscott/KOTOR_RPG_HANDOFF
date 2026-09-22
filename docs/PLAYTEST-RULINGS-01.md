@@ -76241,3 +76241,30 @@ Take the smaller batch, stale comment first. Then the footer furniture. Then the
 ### PROCEED
 
 Add the keyboard-shortcuts entry under Options. Continue to `PT-1249`'s footer furniture next, per the already-approved order, then `PT-1132`'s portrait sizing.
+
+
+---
+
+## PT-2545 -- OWNER OPENS TWO REAL NEW ITEMS: STORE/MERCHANT AND THE TERMINAL/COMPUTER-REPAIR SCREEN. BOTH ALREADY HAVE SUBSTANTIAL EXISTING DESIGN WORK FOUND ON CHECK -- STORE HAS A FIRST-PASS BUILD ALREADY (PT-1256), NOT CURRENTLY TRACKED ON THE STANDING AGENDA. A THIRD ITEM ("VARIOUS MENU ITEMS BASED ON THE GAMES") NEEDS CLARIFICATION BEFORE OPENING
+
+**Checked the documents first, per the owner's own standing preference for this session. Both concrete items turn out to have real, substantial existing groundwork rather than being genuinely new territory.**
+
+### STORE/MERCHANT -- REAL DESIGN EXISTS, FIRST-PASS BUILD ALREADY LANDED
+
+**Locked design found: `PT-1152` establishes Store (and Container) as sealed modals outside the shared nav-bar family entirely, reached only from the world (a merchant, a container), with no path to any other screen while inside. `PT-1151` locks the commerce color exception — K2's gold and bronze palette, joining the terminal and target plate as the project's own confirmed chromatic exceptions. A first pass was already built at `PT-1256`, to K2's structure specifically (not K1's, which an earlier screenshot had mistakenly represented).**
+
+**Ruled: open as a real item — confirm the actual current state of the existing first-pass build before assuming what's still needed.** Check whether `PT-1256`'s build still exists and works, what it currently covers, and what's genuinely still missing against the full locked design (the four-row credit/spent/remaining readout, item icons, the active-state fix already applied to Store's own filter buttons per the pattern found across Store/Inventory/Messages). This may be substantially further along than a cold start.
+
+### TERMINAL / COMPUTER USE AND REPAIR -- REAL DESIGN GROUNDWORK, NOT YET BUILT
+
+**Locked design found: §4 of the design document explicitly identifies K2's own terminal and droid-upgrade panel data as directly, faithfully portable — typed controls with absolute rectangles in a fixed 640×480 space, textures referenced by name, text resolved through the same string table dialogue already uses, even control tab order as authored data. `PT-1150` locks a deliberate departure (keeping K1's warmer terminal tone rather than switching to K2's). `PT-1148` already closed a real pricing bug found specifically while researching this screen (the source's own bug pricing a terminal action off a fixed "party leader" rather than whoever's actually using it).**
+
+**Ruled: open as a real item, genuinely unbuilt.** Unlike Store, there's no first-pass build to check the state of — this is new construction against already-locked design groundwork. Build to the source's own typed-control data directly, the same discipline as every screen in the shell thread, since the design document itself confirms this is unusually well-suited to a faithful, direct port.
+
+### THE THIRD ITEM -- NEEDS CLARIFICATION
+
+**"The various menu items we have based on the games" is broader than the two concrete items above, and it's not clear from that phrasing alone which specific screens or menus this refers to beyond what's already covered by the seven-screen shell and these two new items. Before opening this as its own tracked item, need to know specifically which menus are meant — minigames, the galaxy map, something else entirely?**
+
+### PROCEED
+
+Check Store's actual current build state before scoping further work on it. Begin design-to-build work on the Terminal/Computer Use and Repair screen using the source's own directly-portable control data. Awaiting clarification on the third item before opening it.

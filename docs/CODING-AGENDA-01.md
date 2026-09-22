@@ -6,10 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ Two real defects from the live K2 comparison — ruled fix-now, plus full asset parity
-- **Terminal: full visual asset parity ruled — port every remaining asset, not just the two border textures (PT-2558).** Identify and port every visual asset computer.gui/computer_x.gui actually references, through the existing verified decoder. Each gets its own ASSET-REPLACEMENT-01 row, marked extracted with the AI-recreation debt owed. Console backdrop stays correctly excluded — PT-1150/PT-2552's synthesis ruling isn't reopened by this.
-- **Terminal readout uses K1's single-column geometry instead of K2's real 2×2 grid — severe, ruled fix now (PT-2557).** Contradicts PT-1150's own "K2's structure" preference already applied to the rest of this panel. Fixable from already-extracted data (terminal_panel.json), no new measurement needed.
-- **Terminal wiring silently drops every free/uncosted reply — severe, ruled fix now (PT-2557).** Real K2 mixes free and costed options in one list (5 of 7 in the reviewed screenshot). Current code only ever builds a TerminalOption from a reply with a cost.
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 - **Sith Battlemaster's zero feat schedule — real, held, same shape as the three just closed.** Found while authoring the Inquisitor/Warrior/Assassin schedules; correctly not silently fixed alongside them.
 
@@ -104,6 +100,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Terminal's two severe live-comparison defects and the full asset-parity sweep all close — Terminal thread now genuinely complete: structurally correct, functionally complete, visually matched to the real source. 2×2 grid rebuilt from already-extracted data; a real secondary geometry conflict (stat boxes vs. border art's native texel size) solved elegantly by generalizing the border renderer to a configurable corner size, which naturally produces the correct rounded pill shape. Free/costed content-modeling gap fixed; caught a real secondary bug in the row-width validator along the way (padding free replies with costed overhead before measuring). Third texture ported (uibit_fill_circ). Genuinely excellent judgment: a fourth referenced control deliberately NOT ported after confirming against the live screenshot it never actually renders on this platform — correctly recognizing porting it would move away from exact parity, not toward it — PT-2559
 
 - All five TEST 131 severe defects closed, exactly addressing both anticipated failure modes. Terminal's panel-scale fix inverted an existing test that had been asserting the bug as correct behavior. Genuinely valuable self-caught false negative on the credits-row fix — first test exercised the wrong transaction direction, would have passed clean against unfixed code, caught before being reported done. Store's In Inventory fix found a second root cause (forSaleBack's own deduplication had already discarded the count). Sith feat schedule (Inquisitor/Warrior/Assassin) closed, calibrated against already-ruled totals; a fourth zero-schedule class found and correctly held rather than silently fixed; a tautological audit clause caught and replaced with a real independent guard — PT-2556
 

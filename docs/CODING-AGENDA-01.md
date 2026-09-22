@@ -6,7 +6,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### Smaller TEST 129 findings — real, held, less urgent batch
+### Smaller TEST 129 findings — approved order at PT-2543, stale comment first
 - **Board has no nav bar; four of seven screens reachable only via another screen first.**
 - **`_navBar`'s own doc comment still says "three of seven not built," eight lines above its own correction.**
 - **Messages pane labels read FEEDBACK/DIALOG rather than the intended friendlier names.**

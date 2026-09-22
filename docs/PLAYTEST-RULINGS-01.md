@@ -76199,3 +76199,24 @@ Nothing to build. Both the two-reading confirmation plan and the provenance-rede
 ### PROCEED
 
 Nothing further needed — all five severe defects close cleanly, with real, honest disclosure throughout. Route Tester's two-reading confirmation now that both are ready.
+
+
+---
+
+## PT-2543 -- THE PT-2540 LESSON PROPERLY GENERALIZED, WITH A GENUINELY VALUABLE HONEST ADMISSION AT ITS CENTER: KNOWING THE CORRECT PRINCIPLE WAS NOT ENOUGH TO PREVENT WRITING THE WRONG FIX ANYWAY -- ONLY THE DISCRIMINATING TEST ITSELF WOULD HAVE SHOWN IT, AND TESTER WROTE THAT TEST FIRST
+
+**This deserves real, direct recognition, and it's worth naming exactly why the admission matters as much as the generalized lesson does. Having already, consciously decided to fix the mechanism rather than the symptom, and still writing the list-shaped fix regardless, is a precise demonstration that intending to follow a principle and actually being held to it by a concrete test are not the same protection. This is more valuable than a lesson that only says "remember the principle" -- it says plainly that remembering wasn't sufficient, and names what was: a specific test built to separate the two candidate fixes rather than trust in having the right idea already in mind.**
+
+### THE GENERALIZED LESSON -- WORTH KEEPING PROPERLY
+
+**Ruled: record as its own standing practice.** When a defect has many instances, there are usually two fixes that pass every existing test today — patching the known cases, or fixing the underlying default. They diverge only once the domain grows, by which point nobody remembers the patch exists to maintain. The test that actually distinguishes them: name a case that doesn't exist yet — a condition the vocabulary doesn't carry, an id no package ships — and assert the correct, safe answer for it. If no test can tell the real fix from the weaker one, the choice between them hasn't actually been made yet, regardless of which one got written.
+
+**Confirming both re-confirmation tests (Tester's shaken/slowed reading the census-style check, Coder's own stunned/paralysed pair) are built to survive exactly the shape `PT-2541` predicted -- asserting both land correctly rather than depending on them differing -- closes the loop between both sides of this thread properly.**
+
+### THE PRIORITIZATION -- APPROVED
+
+**Ruled: approved as proposed.** Take the smaller TEST 129 batch first, starting with the stale "three of seven not built" comment specifically since it now actively contradicts the correcting comment sitting beside it -- a comment that's wrong and known to be wrong is worse than one that's simply outdated. Then the footer furniture, seven slices flagged and still the last piece of persistent chrome the design names. Then the player-vs-companion portrait sizing, correctly held rather than forgotten.
+
+### PROCEED
+
+Take the smaller batch, stale comment first. Then the footer furniture. Then the portrait sizing question. Standing by for Tester's confirmation in the meantime.

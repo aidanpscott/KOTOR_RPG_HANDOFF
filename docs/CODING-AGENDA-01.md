@@ -7,12 +7,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 ## OPEN
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
-- **Sith Battlemaster's zero feat schedule — real, held, same shape as the three just closed.** Found while authoring the Inquisitor/Warrior/Assassin schedules; correctly not silently fixed alongside them.
-
-### Smaller TEST 131 findings — held, less urgent
-- **Terminal's stale "not wired yet" comment, duplicated twice.**
-- **Store's display-name mismatch** (blueprint "Stim Pack" vs. store "Medpac").
-- **Notes' autofocus still doesn't take — small, real.** Field works correctly once manually clicked; only the automatic focus-on-open is missing.
 
 - **Loom store-creation wizard — opened, held until Store's screen lands (PT-2549).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.
 
@@ -100,6 +94,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- All four items from PT-2560's priority ruling closed. Display-name mismatch correctly diagnosed as fixture-authoring error, not app code — the join was always right; fixture renamed, on-hand text and In Stock count hardened as additional real improvements. Notes' autofocus traced to a real race condition (persistent, never-unmounting parent stack) invisible to isolated widget tests — fixed with explicit postFrameCallback focus request. Self-caught vacuous first regression test (removed the sibling widget instead of keeping it mounted, would have passed regardless of the fix) rebuilt correctly. Sith Battlemaster feat schedule authored — a tempting lineage hypothesis ruled out by actual K2 stat measurement before the true mechanical match (Jedi Weaponmaster/Sith Marauder) was found and mirrored; independent audit guard extended, mutation-confirmed it can actually fail — PT-2561
 
 - Terminal's two severe live-comparison defects and the full asset-parity sweep all close — Terminal thread now genuinely complete: structurally correct, functionally complete, visually matched to the real source. 2×2 grid rebuilt from already-extracted data; a real secondary geometry conflict (stat boxes vs. border art's native texel size) solved elegantly by generalizing the border renderer to a configurable corner size, which naturally produces the correct rounded pill shape. Free/costed content-modeling gap fixed; caught a real secondary bug in the row-width validator along the way (padding free replies with costed overhead before measuring). Third texture ported (uibit_fill_circ). Genuinely excellent judgment: a fourth referenced control deliberately NOT ported after confirming against the live screenshot it never actually renders on this platform — correctly recognizing porting it would move away from exact parity, not toward it — PT-2559
 

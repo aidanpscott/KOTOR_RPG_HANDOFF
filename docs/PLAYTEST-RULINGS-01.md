@@ -76453,3 +76453,78 @@ Port the two textures as proposed. Nothing else needed on this screen beyond tha
 ### PROCEED
 
 Nothing further needed — the border art closes cleanly, and the backdrop question is settled: `PT-1150` stands. No further work on the backdrop beyond what's already ruled there.
+
+
+---
+
+## PT-2553 -- A REAL, SMALL TOOL-LIMITATION FOUND AND VERIFIED SAFELY: check_docs_mirror's STALE/FORK DISTINCTION IS PURELY LINE-COUNT-BASED, SO A SAME-FILE EDIT THAT BOTH ADDS AND REMOVES LINES READS IDENTICALLY TO A REAL FORK. VERIFIED BY INSPECTION BEFORE RESOLVING, CONFIRMED SAFE. AND A REAL PRIORITY DECISION: THE SITH FEAT SCHEDULE NEXT -- THREE ENTIRE CLASSES WITH ZERO FEATS AT ANY LEVEL IS MORE SEVERE THAN A MISSING TIER ON TWO POWER CHAINS OR NON-URGENT TOOLING WORK
+
+**Worth recording as a known limitation of the checker itself, not just a one-off resolved edge case. A tool that distinguishes staleness from forking purely by line count will always misclassify an edit that both adds and removes lines in the same pass — worth keeping in mind the next time a legitimate same-file edit trips this same flag, so it's recognized as the tool's known blind spot rather than re-investigated from scratch each time. Verifying the other copy carried zero independent content before resolving it as ordinary staleness, rather than trusting the FORK flag or assuming safety, is the right level of care regardless of how confident the explanation feels.**
+
+### RULED -- SITH FEAT SCHEDULE NEXT
+
+**Of the three real candidates, the Sith feat schedule is the clear priority.** Three entire classes receiving zero feats at any level is a complete absence of a core progression mechanic for a real chunk of the playable roster — more severe than a missing tier on two specific power chains (which still leaves those chains playable up to their current cap) or the Loom wizard (already explicitly scoped as non-urgent tooling work when it was opened).
+
+**Ruled: author the Sith feat schedule next.** This is real content work — determine what feats each of the three classes should grant at which levels, consistent with the rest of the class roster's own established patterns, then author it into the same `feat_levels` structure every other class already uses.
+
+### PROCEED
+
+Begin the Sith feat schedule. Crush Opposition/Inspire Followers tier VI and the Loom wizard both stay correctly held, ready to pick up next once this is done.
+
+
+---
+
+## PT-2554 -- TEST 131: TERMINAL'S ART CONFIRMED EXCEPTIONALLY (PIXEL-EXACT MATCHES, REAL PER-TILE ROTATION, REAL COMPUTED COSTS), BUT TWO SEVERE DEFECTS FOUND -- TWO OF FOUR READOUT ROWS ARE UNREACHABLE AT ANY WINDOW SIZE (PANEL SCALES AGAINST THE WHOLE WINDOW, NOT ITS OWN PANE), AND AN UNAFFORDABLE OPTION RENDERS IDENTICALLY TO AN AFFORDABLE ONE (HARDCODED true SITTING THREE LINES FROM THE REAL COUNT). STORE WORKS BUT HAS THREE REAL DEFECTS, INCLUDING THE SAME "GENERIC ACQUISITION FOLDS INTO INVENTORY" FAMILY ALREADY FOUND ONCE BEFORE. AND ⚠⚠ A GENUINELY ADMIRABLE, HONEST RETRACTION: NOTES ACTUALLY WORKS -- THE EARLIER FAILURE WAS TESTER'S OWN HARNESS, NOT THE PRODUCT
+
+**Exceptional measurement throughout, and it's worth starting with what confirmed cleanly before working through what didn't. The terminal art verification is genuinely rigorous — matched-pixel confidence scores against real controls (a solid square, a 1px outline) for every claim, catching one's own near-miss (the first sample accidentally measuring transcript text rather than the border) before it became a false positive. The per-tile rotation proof, especially the exact 1.000 match on one rotated edge, is decisive confirmation of exactly the capability the original rendering fix was built to provide.**
+
+### ⚠ TERMINAL'S TWO SEVERE DEFECTS -- BOTH RULED FIX NOW
+
+**Two of four readout rows being unreachable at any window size on a real display is a severe, player-facing defect -- not a small polish item, since it means the actual cost information the whole screen exists to show is partially invisible in real use. The root cause is precise and specific: the panel derives its scale from the whole window rather than the pane it's actually drawn within, the exact same shape the code's own comment claims was already fixed. Ruled: fix now, severe priority — scale the panel from its own pane, not the window.**
+
+**An unaffordable option rendering identically to an affordable one is equally severe — it means a player can select something they can't actually pay for with no visual signal telling them so. A hardcoded `true` sitting three lines from the real count that would have given the correct answer is exactly the kind of gap that's easy to miss once, but severe once found. Ruled: fix now, severe priority — read the real affordability from the actual supply count.**
+
+**The stale "not wired yet" comment and its own duplicate are small, held for whenever convenient — not urgent alongside the two severe items above.**
+
+### ✗ STORE'S THREE DEFECTS -- ALL RULED FIX NOW
+
+**The phantom "credits" row is the most important of the three, precisely because it's confirmed to be the same underlying risk family already found and fixed once before (`TEST 127`'s "standard (Equipped)") — a generic value folding into inventory display logic that was never meant to treat it as a real item. This is a recurring shape worth naming as its own standing caution: any code that treats "every key in this map" as "every worn or carried item" will keep re-introducing this exact defect at every new call site that uses the same map for a non-item purpose. Ruled: fix now.**
+
+**"In Stock" showing a stale count disconnected from the actual filtered list, and "In Inventory" never showing a real count at all because the field was built to answer a different question (what an item replaces, not how many are held) than `PT-1152`'s own "also names" wording implied, are both real defects. Ruled: fix both now.**
+
+**Correctly distinguishing the two things that look like Store defects but aren't — empty category tabs and a missing description both confirmed to be the same answer Inventory already gives for the same item in the same package, meaning the test bed's own minimal blueprint data is the real limitation, not Store's code — is precise scoping that keeps a real defect list from being padded with something that isn't actually Store's fault. The display-name mismatch (blueprint says "Stim Pack," store says "Medpac") is small, held.**
+
+### ⚠⚠ THE NOTES RETRACTION -- WORTH THE FULLEST RECOGNITION
+
+**This deserves to be named plainly and with real warmth: retracting one's own prior claim, in the product's favor, after finding the actual cause was a flaky testing instrument rather than a genuine defect, is honest self-correction under no pressure to maintain a prior position. "The field works, my instrument is flaky. Memory corrected accordingly." is exactly the right way to close a mistaken finding — precise about what was wrong, precise about why, and immediately update the record rather than let a stale, incorrect finding linger. The separately-confirmed, still-real autofocus gap shows this isn't blanket leniency toward the product either — the genuine defect stays flagged, the false one is properly withdrawn.**
+
+**Ruled: the autofocus gap stays held as a small, real item — worth fixing but not severe, since the field works correctly once manually clicked.**
+
+### THE GIT HOUSEKEEPING -- HANDLED CORRECTLY
+
+**Finding uncommitted changes that weren't one's own, stashing them safely to rebase, committing only the actual report, and restoring the other changes untouched — then reporting this plainly rather than silently reversing anything — is exactly the right handling of a real coordination situation. Nothing lost, nothing assumed, full transparency about what happened.**
+
+### PROCEED
+
+Fix Terminal's two severe defects (off-screen readout rows, the affordability display) and Store's three defects (phantom credits row, In Stock count, In Inventory count), all ruled fix-now. The remaining small items (stale comments, the display-name mismatch, autofocus) stay correctly held for a less urgent pass.
+
+
+---
+
+## PT-2555 -- TESTER PROACTIVELY ANTICIPATES HOW BOTH RULED FIXES COULD FAIL A NARROW VERIFICATION: THE PANEL-SCALE FIX'S TWO AXES CAN BIND AT DIFFERENT WINDOW SIZES INDEPENDENTLY, SO A SINGLE-SIZE CHECK COULD PASS WHILE STILL LEAVING A REAL CLIP AT ANOTHER SIZE -- EXACTLY WHY THE PRIOR FIX'S OWN COMMENT ALREADY READS AS CLOSED. AND THE PHANTOM CREDITS ROW COULD BE FILTERED IN ONE READER WHILE STILL LEAKING THROUGH EVERY OTHER READER OF THE SAME SHARED carriedBy DATA
+
+**Both of these are genuinely valuable, proactive anticipations of exactly how a correct-looking fix could still leave the real risk only partially closed — worth recording and worth Coder building with both in mind from the start rather than discovering the gap on the next re-check.**
+
+**The panel-scale reasoning is precise: if the current defect's own claimed-fixed comment already exists, and the defect still reproduces, the most likely explanation is that an earlier fix genuinely closed one axis's binding case while leaving the other's a real regression the original fix never actually re-verified against. Committing to re-derive the correct scale from the real design coordinates at both sizes, rather than eyeballing a single capture, is exactly the discipline that would have caught the original defect earlier if applied consistently.**
+
+**The credits-row reasoning is equally sound: a fix scoped narrowly to the one reader that happened to get tested (Inventory) doesn't touch the underlying shared data at all — if the same string still reaches every other reader of `carriedBy`, the defect simply resurfaces wherever someone next happens to look. Checking the store's own sell list and Equip specifically, not just the bag that was originally reported, closes the actual risk rather than the one instance of it that got noticed first.**
+
+### RULED
+
+**Build both fixes with these two specific risks in mind from the start, not as an afterthought discovered on re-check.** The panel scale should come from the pane's own box, verified at multiple window sizes before calling it closed. The credits-row fix should close the underlying shared-data issue, not just filter it at the one call site that was reported — confirmed against the sell list and Equip as well as the bag.
+
+**The HANDOFF housekeeping note is routed to Coder — those three docs are likely Coder's own pending edits, correctly not Tester's to commit.**
+
+### PROCEED
+
+Nothing further needed from Tester right now. Coder builds both fixes accounting for the anticipated failure modes above.

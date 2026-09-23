@@ -6,7 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-- **Loom trigger/effect system — tier one closed; tier two research closed, building parameterless (PT-2587).** Doors, containers, items, camera, map, log all declared, producible, and pickable in Loom. Tier two (droid.reprogrammed, turret.disabled, forcefield.toggled, alarm.raised) research confirmed no real source ships for any of the 40 candidate scripts; real authored-parameter sweep across the full 233-dialogue catalogue found 67 of 70 real call sites carry no parameters at all. Approved: build all four parameterless, matching camera.shown/encounter.began's precedent — the dominant real pattern, not a compromise. Two weak exceptions (a_setsecurity, a_neuter_droid) correctly held rather than guessed into a field shape.
 
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
@@ -96,6 +95,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- ⚠⚠⚠ THE ENTIRE LOOM TRIGGER/EFFECT SYSTEM CLOSES COMPLETELY. Research (234 real terminal dialogues surveyed, k_con_tokens.nss's designer catalogue found), design (grows an existing "named effect + parameters" system rather than a new mechanism), tier one (doors, containers, items, camera, map, log — declared, producible, pickable), tier-two follow-up research (confirmed no real source ships for 40 candidate scripts, real fallback signal found via full-catalogue parameter sweep), and tier-two build (droid.reprogrammed, turret.disabled, forcefield.toggled, alarm.raised — parameterless, matching the dominant real pattern). Ten declared kinds total, a real categorized picker matching the blueprint palette's proven pattern, full evidence trail written into EVENT-KINDS-01 itself. Genuinely mature mutation-testing judgment: deliberately confirmed category assignment correctly isn't a structural invariant the suite should enforce — PT-2588
 
 - Loom store-creation wizard closed — third and final of the owner's three ready items, all now complete. Real gap correctly scoped narrow (blueprint creation and palette un-gating only, the merchant mechanism already worked end to end). Built to the already-proven PT-1957 placeable precedent shape. Dialog honestly states what it doesn't ask about (merchant economy rules not yet decided). Real toolset substitution ruled acceptable — existing STUDY/27-aurora-pressed research was substantive prior investigation, not a guess. Fake-async-zone lesson from earlier this session correctly applied to new code. One genuine test gap (broken file refusal) honestly flagged and left unbuilt, matching existing project-wide precedent for comparable kinds — PT-2582
 

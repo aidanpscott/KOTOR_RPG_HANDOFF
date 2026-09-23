@@ -10,7 +10,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 
-- **Loom store-creation wizard — third of three ready items, unblocked and active, picked up next (PT-2580).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.
 
 - **AI-recreation debt for the three extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc`/`uibit_fill_circ` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.
 
@@ -95,6 +94,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Loom store-creation wizard closed — third and final of the owner's three ready items, all now complete. Real gap correctly scoped narrow (blueprint creation and palette un-gating only, the merchant mechanism already worked end to end). Built to the already-proven PT-1957 placeable precedent shape. Dialog honestly states what it doesn't ask about (merchant economy rules not yet decided). Real toolset substitution ruled acceptable — existing STUDY/27-aurora-pressed research was substantive prior investigation, not a guess. Fake-async-zone lesson from earlier this session correctly applied to new code. One genuine test gap (broken file refusal) honestly flagged and left unbuilt, matching existing project-wide precedent for comparable kinds — PT-2582
 
 - Level-up feat-chain progression defect closed — one of the most severe defects found this session (feat chains never worked past level 1, at any level, for any class, since level-up was built). Exceptional three-layer verification: logic-level fixtures, a real rendered capture, and confirmation through the actual running app via the real navigation door. The third layer caught a real selector-ambiguity defect neither of the other two could structurally have found, since it only manifests with multiple scrollables genuinely coexisting in the full app — mutation-confirmed against the real end-to-end wiring — PT-2580
 

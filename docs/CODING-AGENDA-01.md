@@ -15,7 +15,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **AI-recreation debt for the three extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc`/`uibit_fill_circ` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.
 
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
-- **Rulebook era-privileging sweep — scope measured, ruled, building (PT-2591).** Real finding: original suspicion mostly didn't hold up on read-through, but a genuine, consistent "campaign date = 3,956 BBY" methodology runs throughout both corpora, already once explicitly defended against tagging every entry with its own era. Ruled: keep the methodology as-is (sound, deliberate scope choice); add one explicit statement that "campaign date" is a parameter each table can set differently, with 3,956 BBY as this book's own worked default. No changes needed to existing instances.
 
 - **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
 
@@ -94,6 +93,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Rulebook era-privileging sweep closed, second of three owner-picked items — added the explicit "campaign date is a per-table parameter" statement to timeline/01's already-existing "what this book is not the authority on" section, the natural home where the dates discussion already lived. No existing instances touched — PT-2592
 
 - FEAT-SCHEDULE-01's stale Totals table corrected, first of three owner-picked items — checked against the document's own already-current verification table, all four Sith classes added, a real naming collision with an unrelated K2 "Assassin" prestige class caught and disambiguated on both rows — PT-2590
 

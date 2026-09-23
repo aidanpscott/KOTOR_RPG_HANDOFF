@@ -140,7 +140,7 @@
 | **Soldier** | 18 | **23** |
 | **Scout** | 11 | **16** |
 | **Smuggler** | 8 | **11** |
-| **Guardian** | 11 | **16** |
+| **Guardian** | **13** | **20** | **⚠ CORRECTED — `PT-2589`. Was `11`/`16`, stale against the re-derived verification figure `## The table` (above, line 16) already carries — this row never inherited it.** |
 | **Consular** | 7 | **11** |
 | **Sentinel** | 10 | **15** |
 | **Marksman** | 12 | **18** |
@@ -151,7 +151,16 @@
 | **Watchman** | 10 | **15** |
 | **Marauder** | 11 | **16** |
 | **Sith Sorcerer** | 7 | **11** | **⚠ was `Sith Lord` — `PT-215`** |
-| **Assassin** | 7 | **10** |
+| **Assassin** | 7 | **10** | **K2's own real prestige class — not `Sith Assassin`, in the table below, which is ours.** |
+
+**⚠⚠ ADDED — `PT-2589`. This project's own four Sith classes, mirroring their Jedi counterparts — real source-game classes above are not.** None of the fifteen K1/K2 classes this table otherwise lists are ours; **Sith Warrior, Sith Inquisitor, Sith Assassin and Sith Battlemaster are**, and they were never added here when they were authored, which is the gap this closes. Figures from `## The table` (above, lines 21–24), which already carried them correctly — only this summary had fallen behind.
+
+| Class *(ours)* | at 20 | **at 30** |
+|---|---|---|
+| **Sith Warrior** | 13 | **20** | **mirrors Guardian — `PT-2577`, `PT-2578`** |
+| **Sith Inquisitor** | 7 | **11** | **mirrors Consular** |
+| **Sith Assassin** | 10 | **15** | **mirrors Sentinel — `PT-2577`, `PT-2578`. Not `Assassin`, above: K2's own real prestige class differs (7/10).** |
+| **Sith Battlemaster** | 11 | **16** | **mirrors Weaponmaster — `PT-2560`, `PT-2572`** |
 
 > **The Soldier gets more than twice the Consular at every level** — **23 against 11 by level 30.** **No Force powers, fewest skill points, feats instead.**
 

@@ -20,7 +20,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.
 
-- **Full active/inactive control-switching concept — real gap, held, own future thread.** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.
+- **Full active/inactive control-switching concept — active, queued behind the four small items (PT-2595).** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.
 
 - **Powers chaining closed for the in-game Abilities screen (PT-2511).** Derived from `prerequisites`, matching K2's own proven method. Verified against all 106 real powers with four structural invariants, directly answering the derivation objection raised at `PT-2508`. Fork decision (3 powers with no K2 precedent) resolved by repeating the shared prefix per path — approved as built.
 - **Two powers gate at the level cap (30) — small, noted, no ruling needed.** Spear of Midnight Black, Arrow of White Dawn. Technically reachable, worth having on record if it turns out to matter in practice.
@@ -33,18 +33,18 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
-- **Two overlapping full-screen states when Level Up opens over the Character Sheet — small, held.** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
+- **`chargenData` fallback to empty lists is thin — active, one of four small items (PT-2595).** Honest but worth a real pass once something plays through a feat level.
+- **Two overlapping full-screen states when Level Up opens over the Character Sheet — active, one of four small items (PT-2595).** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
 - **Chargen re-entry would discard a level-up's feat — genuinely unreachable today, correctly not defended against.** A step-scoped clear actually clears the whole field; the hub is entered from New Game only and a levelled character never returns there. Named rather than patched — building a defence for an input nothing can produce would be worse than recording the gap.
 
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Inert package-menu Options entry — small, held.** `PackageMenuItem.options('Options')` exists on the package main menu with nothing dispatching it.
+- **Inert package-menu Options entry — active, one of four small items (PT-2595).** `PackageMenuItem.options('Options')` exists on the package main menu with nothing dispatching it.
 
 
 
-- **Force Confusion's missing range limit — small, held.** Reachable at 9-10 squares; the row itself states no cap.
+- **Force Confusion's missing range limit — active, one of four small items (PT-2595).** Reachable at 9-10 squares; the row itself states no cap.
 
 - **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.

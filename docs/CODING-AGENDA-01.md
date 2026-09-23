@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Loom trigger/effect system — opened, marked next, research phase first (PT-2583).** A general system for terminal/console/dialogue-driven effects (door unlocks, camera access, logs, area-map uploads clearing fog of war, gassing/killing a room, droid hacking — targeting disable, turning against owner). Dropdown of named effects in Loom, draggable onto a scoped target, with a "custom" entry opening the full scripting window. Also feeds procedural area generation's future need for randomly-spawned console content. Research first: survey both games' real terminal/console/dialogue effects, check the Aurora Toolset's own effect vocabulary, then assess whether a simpler accessible model can expose common cases while preserving the toolset's full depth for advanced authors.
+
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.

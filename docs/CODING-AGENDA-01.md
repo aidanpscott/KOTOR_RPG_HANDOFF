@@ -6,11 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: two real defects in the trigger/effect system, both fix-now, ahead of the five small/medium items
-- **door.unlocked/container.opened write to the log but do nothing live — severe, ruled fix now (PT-2596).** The generic dialogue-effect path never touches the live state tracker (unlike store.opened's own special-cased wiring beside this code). Confirmed empirically: played through a real door and footlocker, player stays blocked after the effect has landed.
-- **item.acquired/item.lost is a silent no-op against any real player, authored exactly as the wizard produces it — severe, ruled fix now (PT-2596).** `_playerCombatant()` never substitutes the literal "you" for the character's real handle. Confirmed with a real matched control. An existing test-file comment already named this exact distinction, one hop from catching it earlier.
-- **Correction to the standing record: map.revealed/log.written are inert, not real consumers as previously believed.** Of the six tier-one kinds, only doors/containers/items have (or will have, once fixed) real consumers. Map/log stay correctly held alongside the four tier-two kinds, pending real consumers — not a defect.
-
 
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
@@ -96,6 +91,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Both severe trigger/effect defects closed. door.unlocked/container.opened and item.acquired/item.lost both fixed at the one shared choke point every dialogue-authored effect passes through. The item fix is generic on the payload field, not the kind — correctly prevents a second special case for any future kind reusing the same auto-fill convention. Real end-to-end tests driving the actual UI, with a genuinely honest disclosure of a detour (an unreliable text-scraping first attempt, rebuilt to check the real event fields directly). Confirmed map.revealed/log.written were already documented correctly as inert — no doc change needed — PT-2597
 
 - All three PT-2589 owner-picked items now confirmed complete. Item 1 (footer furniture) turned out to already be closed at PT-2546 — a stale duplicate open-list entry corrected, no new work needed. Items 2 and 3 (era-privileging sweep, stale Totals table) built and closed properly this batch — PT-2593
 

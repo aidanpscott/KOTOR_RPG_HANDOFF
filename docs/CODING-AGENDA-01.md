@@ -18,7 +18,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
 
-- **PT-1249's footer right-side furniture — active, one of three owner-picked items (PT-2589).** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.
 
 - **Full active/inactive control-switching concept — real gap, held, own future thread.** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.
@@ -93,6 +92,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- All three PT-2589 owner-picked items now confirmed complete. Item 1 (footer furniture) turned out to already be closed at PT-2546 — a stale duplicate open-list entry corrected, no new work needed. Items 2 and 3 (era-privileging sweep, stale Totals table) built and closed properly this batch — PT-2593
 
 - Rulebook era-privileging sweep closed, second of three owner-picked items — added the explicit "campaign date is a per-table parameter" statement to timeline/01's already-existing "what this book is not the authority on" section, the natural home where the dates discussion already lived. No existing instances touched — PT-2592
 

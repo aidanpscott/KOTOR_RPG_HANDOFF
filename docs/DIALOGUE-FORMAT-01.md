@@ -385,7 +385,7 @@ then = ["stands-down"]
 [[player]]
 id     = "buy-passage"
 say    = "Fifty credits says you saw nobody."
-effect = [ { kind = "item.lost", item = "credits", count = 50 } ]
+effect = [ { kind = "item.lost", subject = "you", item = "credits", count = 50 } ]
 then   = ["stands-down"]
 
 [[player]]

@@ -168,6 +168,8 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 **⚠ `item.lost` still has neither, and that is deliberate rather than forgotten.** Nothing takes an item away yet. A fold for a kind nobody writes is exactly `PT-1523`'s `character.moved` — declared, folded, emitted by nothing, **zero occurrences across seventeen saves** — and `check_event_producers` exists to see that shape. Its first producer will be `DIALOGUE-FORMAT-01 §9`'s effect, and the fold arrives with it.
 
+**⚠⚠ `PT-2585` — THE PREDICTION LANDED.** `creditsAfter` folded `item.acquired`/`item.lost` for credits specifically (`PT-2548`), and `carriedBy`/`remainsIn` for everything else; both are real readers now. The trigger/effect system's tier one gives both kinds a THIRD producer beside looting and consumables spend: an authored `effect` naming `item.acquired` (give) or `item.lost` (take), `item` a blueprint path or the literal `credits`, `count` defaulting to 1. **`subject` is never asked** — `Loom`'s picker writes `subject = "you"` itself, matching `a_give_item`/`a_take_item`'s own real behaviour (`GetPartyLeader()`, never a picked target) and `store.opened`'s own precedent for a field with one obviously correct answer.
+
 ### Quest — `QUEST-MODEL-01`
 
 | Kind | Lifetime |
@@ -184,6 +186,16 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `party.waiting` / `.following` | ⚠⚠ campaign — `PT-1832`. Standing orders (Wait here / Follow-regroup) did not survive a save until declared: `_persist` keeps only what `campaignKinds` names, and neither kind was in it. Confirmed as the only two undeclared kinds in the build by diffing every `CharacterEventKind` constant against the shelf. |
 | `door.opened` / `.locked` / `.unlocked` | campaign |
 | `container.opened` | campaign |
+
+> **⚠⚠ `PT-2585` — `door.unlocked` AND `container.opened` GAINED A SECOND
+> PRODUCER.** `BUILD 182` gave them a picked-lock producer and `unlockedIn`'s
+> fold; the trigger/effect system's tier one gives them an AUTHORED one — a
+> terminal or a dialogue reply's own `effect` list, written by `Loom`'s
+> picker. Same kind, same fold, same `subject` field (the door or
+> container's own tag). **`door.opened` and `.locked` remain declared and
+> unproduced** — nothing in this pass writes a momentary "opened" fact or a
+> re-lock; `unlockedIn` is a monotonic set and re-locking a picked door is a
+> real question this pass did not answer, held rather than guessed at.
 | `hazard.set` | ⚠⚠ campaign — `PT-1957`. A mine the PLAYER put down. Authored content is read-only at runtime, so a set mine cannot join the `[[hazards]]` an author wrote: the room's hazards become *authored + set − sprung − disarmed*, which is the shape `door.unlocked` already gives a door. **Campaign because a mine you set and walked away from is still there when you come back** — that is the whole point of setting one. Payload: the area, the square, the item it was set from, and the two DCs, which the setter's own Demolitions decides at the point of placement and the event then remembers. |
 | `hazard.disarmed` / `.sprung` | ⚠⚠ campaign — `TEST`. **The other two terms of the formula the row above states.** `hazard.set` has said *authored + set − sprung − disarmed* since it was ruled, and neither subtraction had a kind: both were sets in the play screen that started empty on every load. So a defused mine came back live, a spent one came back armed, and a mine with a `recovers` handed out its item again every visit while the copies already carried were remembered — **an unlimited supply of a unique item, and no authored hazard that could ever be permanently cleared.** Campaign for the reason a picked lock is (`BUILD 182`). Two kinds rather than one because a mine that fired and a mine somebody defused are different facts about the same square; they are folded together only where the question is *is it still here*. Payload: the hazard's tag as `subject`, and the area. |
 
@@ -243,6 +255,20 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `note.written` | **⚠ campaign, and unreadable** — `PT-1253`: Personal Notes are private. **The event records that a note exists, never its content.** |
 | `store.opened` | **⚠ session, not campaign** — `PT-1152`, `PT-2548`. An author places it on a dialogue reply's own `effect` list, the same as `quest.flag-set`; the app watches for it in a beat's own events and opens the merchant it names. Nothing folds it into persistent state — a store visit does not need to outlive the sitting, and re-opening on a reload is not a defect.
 
+### Presentation and discovery — `PT-2583`, `PT-2584`, `PT-2585`
+
+**Three new kinds, the trigger/effect system's tier one.** `PT-2583`'s research swept both games' real terminal/console dialogues (234 found, 580 distinct action-script resrefs) and found real, confirmed analogues for these three with no existing kind to extend — unlike doors, containers and items, which already had one.
+
+| Kind | Lifetime |
+|---|---|
+| `camera.shown` | **session** — matching `store.opened`'s own reasoning: a presentation moment, not a fact to remember. Re-showing on a reload is not a defect. |
+| `map.revealed` | **campaign** — matching `area.entered`'s own lifetime. An area whose map has been revealed stays revealed. |
+| `log.written` | **campaign** — matching `note.written`'s own lifetime, on purpose: `log.written` is that kind's deliberate opposite. A note is private and its text never enters the log; a `log.written` entry is discoverable CONTENT an author writes and a player is meant to read back. A recovered log should not need recovering twice. |
+
+**⚠⚠ `camera.shown` CARRIES NOTHING, AND THAT IS A FINDING, NOT A GAP LEFT OPEN.** Real KOTOR's `SetDialogPlaceableCamera(nCamera)` names a camera INDEX — a 3D scene's own placed camera. This project has no camera concept at all; a top-down, paper-doll interface has nothing a camera index could mean. Inventing a field now would be `§3b`'s own warning one level up — a payload invented ahead of the consumer that would give it meaning. So the kind is declared and authorable, the same shape `encounter.began` already has (the kind alone is the whole effect), and it is inert until a real presentation concept exists to read it.
+
+**⚠ `map.revealed` (`area`) AND `log.written` (`log`, `text`) HAVE NO CONSUMER YET EITHER, AND ARE VALIDATED ANYWAY** — the opposite call from `item.lost`'s old one, above. The fields are not invented for this document: `area` is the same field `door.unlocked`'s own producer already writes, and `log`/`text` are the same shape `quest.flag-set`'s `flag` already is. Validating them now means whichever future system reads a journal-style discoverable-logs screen inherits well-formed data across every package already authored, instead of repeating `item.lost`'s own gap.
+
 ---
 
 ## ⚠⚠ 3b · WHAT A KIND CARRIES IS MOSTLY UNWRITTEN — named at `PT-1516`
@@ -257,9 +283,11 @@ effect = [ { kind = "quest.flag-set" } ]
 
 **`DialogueView.flagsFrom` matches on a `flag` field.** So **a flag effect authored in Loom was silently a no-op** — beside a `flag` GATE button that could read one. **A readable half with no writable half, offered as if complete.**
 
-### The three kinds something actually reads
+### The kinds something actually reads
 
-**Derived from the CONSUMERS, not from what a field name suggests:**
+**Derived from the CONSUMERS, not from what a field name suggests.** Three at
+`PT-1516`; `PT-2585` adds five real readers and two validated-ahead-of-time
+kinds in the same pass that found `item.lost`'s own long-open gap.
 
 | kind | carries | read by |
 |---|---|---|
@@ -267,6 +295,12 @@ effect = [ { kind = "quest.flag-set" } ]
 | **`quest.concluded`** | **`quest`, `conclusion`** — both strings | `DialogueView.questsFrom` |
 | **`encounter.began`** | **AN AUTHOR'S carries nothing.** The kind alone is the whole effect | `PT-1437`, `Beat.endsInFight` |
 | **`encounter.began`** ⚠ ENGINE | **`subject`, `encounter`** — `PT-1672`, the same payload `encounter.ended` carries | `combatRoster` |
+| **`door.unlocked`** | **`subject`** — the door's own tag | `unlockedIn`, `BUILD 182` |
+| **`container.opened`** | **`subject`** — the container's own tag | `unlockedIn`, `BUILD 182` |
+| **`item.acquired`** | **`subject`, `item`, `count`** (defaults to 1) | `creditsAfter` (when `item = "credits"`); `carriedBy`/`remainsIn` otherwise |
+| **`item.lost`** | **`subject`, `item`, `count`** (defaults to 1) | same two, the withdrawing half |
+| **`map.revealed`** ⚠ | **`area`** — validated, no consumer yet | none — see below |
+| **`log.written`** ⚠ | **`log`, `text`** — validated, no consumer yet | none — see below |
 
 **⚠⚠ TWO PRODUCERS, ONE KIND, AND THE PAYLOAD IS WHAT SEPARATES THEM — `PT-1672`.** An author's is a **request to start a fight**; the engine's is the **record that somebody is in one.** Began and ended are the two halves of one membership, so they carry the same payload, and a matched pair is the only shape a fold can close.
 
@@ -274,13 +308,15 @@ effect = [ { kind = "quest.flag-set" } ]
 
 **`validateConversation` requires exactly those fields and nothing else**, and `PT-1379` means `Loom` therefore cannot author one that is missing them.
 
-### ⚠ And the gap is left open on purpose
+### ⚠ And most of the gap is left open on purpose
 
-**Every other declared kind has no specified payload and no consumer reading one.** Requiring fields nobody reads would be **a validator inventing a format.**
+**Every OTHER declared kind has no specified payload and no consumer reading one.** Requiring fields nobody reads would be **a validator inventing a format.**
 
-> **⚠⚠ `item.lost` IS THE SHARP CASE.** `DIALOGUE-FORMAT-01 §9`'s own worked example writes `{ kind = "item.lost", item = "credits", count = 50 }` — **and nothing in this project reads it.** The fields look load-bearing and are decoration. **An author following the format's own example writes an effect that does nothing**, and the only reason that is not `PT-1516` again is that no gate reads a purse.
+> **⚠⚠ `item.lost` WAS THE SHARP CASE, AND IT CLOSED — `PT-2585`.** `DIALOGUE-FORMAT-01 §9`'s own worked example wrote `{ kind = "item.lost", item = "credits", count = 50 }` while **nothing in this project read it** — an author following the format's own example wrote an effect that did nothing, and the only reason that was not `PT-1516` again was that no gate read a purse. `creditsAfter` and `carriedBy`/`remainsIn` are real readers now, so the table above requires exactly those fields.
 
-**What would close it:** a payload column in the tables above, written **when a consumer exists** — kind by kind, as each one gains a reader. **Not all at once, and not from what the names imply.**
+> **⚠ AND `map.revealed`/`log.written` ARE THE OPPOSITE CHOICE, MADE DELIBERATELY.** No consumer exists for either, and they are validated anyway — reasoned through at `PT-2585`: the fields are not invented for this document, they reuse a shape every other spatial/named kind here already has, so validating now means a future consumer inherits well-formed data across every package already authored instead of repeating `item.lost`'s own gap. **This is a real, considered exception to the rule stated two lines up, not a quiet contradiction of it.**
+
+**What would close the rest:** a payload column in the tables above, written **when a consumer exists** — kind by kind, as each one gains a reader. **Not all at once, and not from what the names imply.**
 
 ---
 

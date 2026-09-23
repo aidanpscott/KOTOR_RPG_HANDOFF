@@ -33,6 +33,23 @@ consequence.** A table tells you the Mandalorian Wars ended in 3,960 BBY. It doe
 you that Revan won them with a weapon that killed a world, and that the campaign you are
 about to run is populated by people who were there.
 
+**One date is different from the rest, and worth naming plainly: the campaign date
+itself.**
+
+Every "at the campaign date" and every bare "3,956 BBY" in this book and its companion
+volumes is the same year — the year KOTOR 1 opens, and the point this project's own sources
+sit closest to and know best. **That is a worked default, not a silent universal given.**
+Your own table sets its own campaign date the same way it sets everything else about its
+campaign, and a different one is entirely legitimate — a decade earlier, a lifetime later,
+wherever your story actually sits. Where this book or its companions say a species is
+present, a world is thriving, or a droid line is in service "at the campaign date," read
+that against **your** table's chosen year, not against ours by default.
+
+**3,956 BBY holds the position it does in these pages because it is where the worked
+examples were actually written, not because it is the correct year to play in.** A
+rulebook's combat example uses one specific weapon without implying every fight uses that
+weapon; this book's availability entries use one specific year the same way.
+
 ## The four layers
 
 Everything in Star Wars falls into one of four categories here, and the middle two are the

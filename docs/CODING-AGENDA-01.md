@@ -34,7 +34,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — active, one of three owner-picked items (PT-2589).** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
 
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
 - **Two overlapping full-screen states when Level Up opens over the Character Sheet — small, held.** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
@@ -95,6 +94,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- FEAT-SCHEDULE-01's stale Totals table corrected, first of three owner-picked items — checked against the document's own already-current verification table, all four Sith classes added, a real naming collision with an unrelated K2 "Assassin" prestige class caught and disambiguated on both rows — PT-2590
 
 - ⚠⚠⚠ THE ENTIRE LOOM TRIGGER/EFFECT SYSTEM CLOSES COMPLETELY. Research (234 real terminal dialogues surveyed, k_con_tokens.nss's designer catalogue found), design (grows an existing "named effect + parameters" system rather than a new mechanism), tier one (doors, containers, items, camera, map, log — declared, producible, pickable), tier-two follow-up research (confirmed no real source ships for 40 candidate scripts, real fallback signal found via full-catalogue parameter sweep), and tier-two build (droid.reprogrammed, turret.disabled, forcefield.toggled, alarm.raised — parameterless, matching the dominant real pattern). Ten declared kinds total, a real categorized picker matching the blueprint palette's proven pattern, full evidence trail written into EVENT-KINDS-01 itself. Genuinely mature mutation-testing judgment: deliberately confirmed category assignment correctly isn't a structural invariant the suite should enforce — PT-2588
 

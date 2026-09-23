@@ -40,7 +40,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Options/Settings — measured, resolved two real contradictions, building (PT-2523).** Source confirmed to already match the ruling exactly (Exit as a listed entry, footer only closes the screen). Two named occupants both had real problems, both ruled: the companion AI preset picker contradicted `PT-1143` (which correctly places it on the Character Sheet instead) — stale contradicting line corrected in the design doc; the colour theme toggle can't be functional without a real token-layer rearchitecture, deferred rather than built inert. Building the shell, nav bar, escape routing, Save/Load/Exit Game entries, and the description pane — the content this pass actually supports.
 - **Inert package-menu Options entry — small, held.** `PackageMenuItem.options('Options')` exists on the package main menu with nothing dispatching it.
 
 

@@ -77076,3 +77076,47 @@ Nothing further needed — closed cleanly, entirely within the two repos current
 ### PROCEED
 
 Confirm the real current state of the Sith feat schedules first. Report back with what's actually found before assuming either "already done" or "needs building" — this genuinely can't be verified from MAIN_WORK alone right now.
+
+
+---
+
+## PT-2578 -- OWNER'S RESTATED PRINCIPLE WAS GENUINELY WARRANTED, NOT JUST PRECAUTIONARY: TWO OF THE THREE SCHEDULES HAD A REAL DEFECT. THE STAT PROFILE (DIE, BAB RATE) CORRECTLY MATCHED THEIR JEDI COUNTERPARTS, BUT THE FEAT SCHEDULE ITSELF HAD QUIETLY BEEN RECALIBRATED TO A DIFFERENT SUMMARY TABLE'S TOTAL INSTEAD OF ACTUALLY MIRRORING THE REAL JEDI CADENCE. FIXED TO LITERAL COPIES OF THE REAL JEDI ARRAYS, LEVEL FOR LEVEL
+
+**Checking the real data directly rather than trusting the earlier session's own summary confirms exactly why that was the right call — the earlier work had genuinely closed half the mirroring (the stat profile) correctly while quietly missing the other half (the actual feat cadence), which is precisely the kind of partial correctness that's easy to mistake for complete correctness without checking the real numbers directly.**
+
+### THE FIX -- PRECISE, MATCHES THE PRINCIPLE EXACTLY
+
+**Sith Inquisitor confirmed as an exact, genuine mirror of Jedi Consular, untouched and correct. Sith Warrior and Sith Assassin both correctly matched their Jedi counterparts' stat profile but had been independently recalibrated to hit a separate summary table's own stated total, rather than actually mirroring the real cadence — Warrior at 14/20 instead of Guardian's real 13/20, Assassin at 8/12 instead of Sentinel's real 10/15, three feats short by level 30. Correcting both to literal, level-for-level copies of the real Jedi arrays is exactly what "mirror their Jedi counterparts" means — not a similarly-shaped independent schedule, but the actual same cadence.**
+
+**Sith Battlemaster correctly confirmed as out of scope for this specific item — a prestige class held to its own separate ruling, not what "base Sith classes" covers — closing that question cleanly rather than leaving it ambiguous.**
+
+**Re-pinning the independent audit control and mutation-confirming both new pins actually catch the old, wrong arrays closes this with the same rigor already established for every other class-schedule correction this session.**
+
+### THE FLAGGED DOCUMENTATION INCONSISTENCY -- CORRECTLY NOT TOUCHED
+
+**Finding a separate, unrelated wrong number in a different table within the same document, and correctly recognizing this as its own documentation-sweep task rather than folding an unrelated fix into this one, keeps the scope of this correction honest about what it actually addresses.**
+
+### PROCEED
+
+Nothing further needed — the Sith feat schedule closes correctly on the real data this time. First of the three ready items complete. Moving to the second: the feats/powers catalogue gap.
+
+
+---
+
+## PT-2579 -- ⚠⚠⚠ SEVERE: THE CATALOGUE GAP IS FAR WORSE THAN ITS OWN TICKET FRAMING SUGGESTED. THE REAL IN-GAME LEVEL-UP FLOW HAS NEVER BEEN ABLE TO OFFER ANY FEAT-CHAIN PROGRESSION AT ALL, AT ANY LEVEL, FOR ANY CLASS, SINCE LEVEL-UP WAS BUILT -- A CHARACTER WHO TOOK TOUGHNESS AT LEVEL 3 HAS NO PATH TO EVER BE OFFERED IMPROVED TOUGHNESS THROUGH REAL PLAY. CONFIRMED UNVERIFIED, NOT KNOWN-AND-TOLERATED -- NO EXISTING TEST EXERCISES THIS PATH AT ALL
+
+**This deserves to be stated with the weight it actually carries: what the standing agenda described as "a level-9 character should be offered deeper tiers" was actually the entire feat-chain progression system never having functioned past level 1, for every class, for the whole time level-up has existed. Correctly investigating both real callers before assuming the shared method's behavior was uniformly appropriate, and correctly distinguishing chargen's own genuinely correct scoping from the level-up flow's genuine defect, is exactly the diagnostic precision this severity deserves — conflating the two would have either wrongly touched chargen or wrongly under-stated how serious the real defect is.**
+
+**Confirming no existing test exercises this path at all, rather than assuming it was a known, accepted limitation, correctly reclassifies this from "documented gap" to "unverified and broken" — a meaningfully worse status, and the right one to state plainly rather than soften.**
+
+### THE PROPOSED FIX -- SOUND, BUILDABLE NOW
+
+**Identifying that the three pieces of infrastructure this fix needs — chain data with source-order links, the character's own held-feat computation already used elsewhere on the same screen, and a rendering widget that's already agnostic to what it's handed — all already exist and are already proven, means this is genuinely buildable now rather than blocked on new architecture. The proposed logic (offer the first unheld link in each chain, exactly matching today's behavior for a chain nobody's started, offering nothing further for one already completed) is the correct shape for the actual progression this represents.**
+
+### RULED -- APPROVED, SEVERE PRIORITY
+
+**Approved as proposed. Build `buyableAtLevelFor`, wire it into `LevelUpStep.feats` in place of the first-level-only method, leave chargen's own call untouched.** This is severe, not a routine content item — it affects every class's real feat progression at every level beyond 1, for the entire life of the level-up system. Build it with the same discipline as the schedule work: real data, mutation-tested, and render the actual level-up screen for a character holding a first-tier feat to visually confirm the chain link renders correctly before calling it done, exactly as proposed.
+
+### PROCEED
+
+Build the fix as described. Report back once done, including the visual confirmation.

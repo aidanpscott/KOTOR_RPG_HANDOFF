@@ -34,7 +34,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **Feats/Powers catalogue can't answer "what can this character buy at level N" — opened next, second of three ready items (PT-2578).** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
+### ⚠⚠⚠ SEVERE: real level-up flow has never offered feat-chain progression at any level
+- **Ruled fix now, severe priority, approved (PT-2579).** `buyableAtFirstLevelFor` used correctly by chargen (always level 1) but also, incorrectly, by `LevelUpStep.feats` — the real in-game level-up screen at every level beyond 1, for every class, since it was built. A character taking Toughness at level 3 has never had a path to be offered Improved Toughness through real play. Confirmed unverified, not known-and-tolerated — no existing test exercises this path. Building `buyableAtLevelFor`, wired into level-up only, chargen untouched. Requires visual confirmation of a real chain link rendering before closing.
 - **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — real, small, held.** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
 
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.

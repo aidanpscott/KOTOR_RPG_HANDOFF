@@ -269,7 +269,18 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 **⚠ `map.revealed` (`area`) AND `log.written` (`log`, `text`) HAVE NO CONSUMER YET EITHER, AND ARE VALIDATED ANYWAY** — the opposite call from `item.lost`'s old one, above. The fields are not invented for this document: `area` is the same field `door.unlocked`'s own producer already writes, and `log`/`text` are the same shape `quest.flag-set`'s `flag` already is. Validating them now means whichever future system reads a journal-style discoverable-logs screen inherits well-formed data across every package already authored, instead of repeating `item.lost`'s own gap.
 
----
+### Security — `PT-2586`, `PT-2587`
+
+**Four more, tier two of the trigger/effect system.** `PT-2586` found none of the forty droid/turret/forcefield/alarm-family scripts `PT-2583`'s sweep turned up ship with real source in either game — a decompile is a materially larger undertaking than anything tier one needed, flagged rather than attempted. `PT-2587`'s fallback: the real ActionParam values at every one of 70 actual call sites across the full 233-dialogue catalogue. **67 of 70 carry no parameters at all** — K1 unanimous (55 of 55), K2 overwhelmingly so (12 of 15).
+
+| Kind | Lifetime |
+|---|---|
+| `droid.reprogrammed` | **campaign** — matching `door.unlocked`'s own reasoning: a droid you turned hostile to its own side stays turned. |
+| `turret.disabled` | **campaign** — same reasoning. |
+| `forcefield.toggled` | **campaign** — same reasoning. |
+| `alarm.raised` | **campaign** — same reasoning. |
+
+**⚠⚠ ALL FOUR CARRY NOTHING — `PT-2587`, ruled, and not a compromise forced by a weak signal.** The dominant real pattern IS parameterless, so this is `camera.shown`'s own precedent applied because the evidence supports it, not despite thin evidence. **Two exceptions were found and are named, not built around:** `a_setsecurity` (K2) takes one integer twice out of four real calls, all four inside the same single terminal — reads as two genuine branches on one console. `a_neuter_droid` (K2) takes one integer once out of two real calls, across two different dialogues — a weaker signal, could be two designers' own usage or a real distinction. Neither is enough to design a field around; both are held rather than guessed at, the same discipline `camera.shown` already established.
 
 ## ⚠⚠ 3b · WHAT A KIND CARRIES IS MOSTLY UNWRITTEN — named at `PT-1516`
 

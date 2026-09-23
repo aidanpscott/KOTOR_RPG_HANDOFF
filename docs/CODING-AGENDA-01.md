@@ -10,7 +10,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
 
-- **Loom store-creation wizard — opened, held until Store's screen lands (PT-2549).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.
+- **Loom store-creation wizard — third of three ready items, unblocked and active, picked up next (PT-2580).** Investigate the real Aurora Toolset's store/merchant authoring workflow directly (run the toolset, don't just infer from shipped data), then build Loom's own equivalent creation wizard, matching whatever pattern Loom already uses for other content types. Becomes the standard way this project authors real store/merchant content and test fixtures going forward.
 
 - **AI-recreation debt for the three extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc`/`uibit_fill_circ` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.
 
@@ -34,8 +34,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-### ⚠⚠⚠ SEVERE: real level-up flow has never offered feat-chain progression at any level
-- **Ruled fix now, severe priority, approved (PT-2579).** `buyableAtFirstLevelFor` used correctly by chargen (always level 1) but also, incorrectly, by `LevelUpStep.feats` — the real in-game level-up screen at every level beyond 1, for every class, since it was built. A character taking Toughness at level 3 has never had a path to be offered Improved Toughness through real play. Confirmed unverified, not known-and-tolerated — no existing test exercises this path. Building `buyableAtLevelFor`, wired into level-up only, chargen untouched. Requires visual confirmation of a real chain link rendering before closing.
 - **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — real, small, held.** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
 
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
@@ -97,6 +95,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Level-up feat-chain progression defect closed — one of the most severe defects found this session (feat chains never worked past level 1, at any level, for any class, since level-up was built). Exceptional three-layer verification: logic-level fixtures, a real rendered capture, and confirmation through the actual running app via the real navigation door. The third layer caught a real selector-ambiguity defect neither of the other two could structurally have found, since it only manifests with multiple scrollables genuinely coexisting in the full app — mutation-confirmed against the real end-to-end wiring — PT-2580
 
 - Sith feat schedule properly closed — first of three ready items. Owner's restated "mirror the Jedi counterparts" principle was genuinely warranted: Sith Warrior and Assassin had correctly matched stat profiles but quietly recalibrated feat schedules to a different summary total instead of the real Jedi cadence. Fixed to literal, level-for-level copies of the real Jedi arrays. Inquisitor confirmed already correct. Battlemaster confirmed out of scope (prestige, its own separate ruling). Audit re-pinned, mutation-confirmed — PT-2578
 

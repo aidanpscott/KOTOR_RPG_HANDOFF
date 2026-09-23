@@ -15,11 +15,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **AI-recreation debt for the three extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc`/`uibit_fill_circ` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.
 
 ### Smaller TEST 129 findings — four closed at PT-2544, one real finding ruled
-- **Rulebook era-privileging language sweep — opened, real scope, not urgent (PT-2534).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
+- **Rulebook era-privileging language sweep — active, one of three owner-picked items (PT-2589).** Distinct from `PT-1288`'s already-settled engine-level naming question. The rulebook prose itself may imply a fixed "current era" (e.g. treating K2's own setting as the default present) rather than treating the timeline as something each campaign's own table decides. Sweep for era-privileging phrases ("currently," "the present day," etc.) across the corpus. Measure scope before proposing fixes — likely touches multiple documents.
 
 - **Player-vs-companion portrait sizing — real, confirmed source difference, held, not urgent.** K2's source gives the player a larger portrait (57 units) than companions (31 units); ours are uniform. Correctly not touched without being asked — touches PT-1132's own separately-locked layout. Reads fine as-is; worth a real look eventually, not now.
 
-- **PT-1249's footer right-side furniture — not started.** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
+- **PT-1249's footer right-side furniture — active, one of three owner-picked items (PT-2589).** Portrait with name/class/level, red vitality edge, level-up arrow badge. Flagged, not built.
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.
 
 - **Full active/inactive control-switching concept — real gap, held, own future thread.** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.
@@ -34,7 +34,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — real, small, held.** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
+- **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — active, one of three owner-picked items (PT-2589).** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
 
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
 - **Two overlapping full-screen states when Level Up opens over the Character Sheet — small, held.** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.

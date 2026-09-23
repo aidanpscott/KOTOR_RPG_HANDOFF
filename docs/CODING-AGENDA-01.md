@@ -34,9 +34,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **Sith feat schedule missing entirely — ruled priority, building now (PT-2553).** `sith_inquisitor`, `sith_warrior`, `sith_assassin` — three of six Force base classes — carry no per-level `feat_levels` at all. `grantsAtLevel` correctly reports `feat: false` at every level 1–30; the code is correct, the data is missing. First-level feats confirmed working via a separate mechanism — this is specifically the ongoing per-level schedule. Ruled priority over the tier-VI gap and the Loom wizard — three classes with zero feats at any level is more severe.
+- **Feats/Powers catalogue can't answer "what can this character buy at level N" — opened next, second of three ready items (PT-2578).** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
+- **FEAT-SCHEDULE-01's separate "Totals" table has a stale Guardian number, doesn't list the four Sith classes — real, small, held.** A different table from the one that feeds the shelf; not machine-parsed. Own future documentation sweep, unrelated to the just-closed schedule fix.
 
-- **Feats/Powers catalogue can't answer "what can this character buy at level N" — small, held, real content work.** `buyableAtFirstLevelFor` is chargen-only; a level-9 character should be offered deeper tiers than first-level chains. Not a wiring gap — the catalogue itself doesn't yet answer this question.
 - **`chargenData` fallback to empty lists is thin — small, held.** Honest but worth a real pass once something plays through a feat level.
 - **Two overlapping full-screen states when Level Up opens over the Character Sheet — small, held.** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
 - **Chargen re-entry would discard a level-up's feat — genuinely unreachable today, correctly not defended against.** A step-scoped clear actually clears the whole field; the hub is entered from New Game only and a levelled character never returns there. Named rather than patched — building a defence for an input nothing can produce would be worse than recording the gap.
@@ -96,6 +96,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Sith feat schedule properly closed — first of three ready items. Owner's restated "mirror the Jedi counterparts" principle was genuinely warranted: Sith Warrior and Assassin had correctly matched stat profiles but quietly recalibrated feat schedules to a different summary total instead of the real Jedi cadence. Fixed to literal, level-for-level copies of the real Jedi arrays. Inquisitor confirmed already correct. Battlemaster confirmed out of scope (prestige, its own separate ruling). Audit re-pinned, mutation-confirmed — PT-2578
 
 - Crush Opposition tier VI closed, both content and code. Caught a real gap that would have shipped the power inert (modifier data lives in a separate table from prose, VI's row didn't exist yet — same defect shape as Force Aura's earlier known mistake). Roster re-census run through the real extractor, not hand-computed. Honored an earlier test's own self-flagged warning about a future sixth tier by rendering the real six-tier chain at real screen size rather than trusting predictive arithmetic — turned into a permanent mutation-confirmed test. Small self-caught test-authoring bug (real I/O outside setUpAll) fixed to match the suite's existing convention — PT-2574
 

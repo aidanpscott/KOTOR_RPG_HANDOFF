@@ -20,7 +20,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Nav-bar guard pattern — worth a standing note.** Confirmed twice now (the arc guard, this nav bar): a guard for "X doesn't happen" needs to separately confirm "Y does happen instead" — the negative half alone isn't the whole claim.
 
-- **Full active/inactive control-switching concept — active, queued behind the four small items (PT-2595).** `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase — confused with the existing but semantically different shared board-targeting marker (`PT-1957`). Genuine architectural collision: two correct rulings claim the same tap gesture, only one built. Resolved by tap: `PT-1957`'s targeting stays on primary tap unaffected; the full control-switching logic belongs on secondary tap once properly built. Not a sidebar tweak — needs its own measurement and proposal.
+- **Full active/inactive control-switching concept — measured, 0% built on both halves, proposal in progress (PT-2598).** Design already fully locked (APP-UI-VISION-01 §3/§3b, PT-1142/PT-1136 exploration; PT-1141/PT-1143 combat). Measured against real code: exploration follow/formation mechanics are built (_followMe), but no concept of an "active character" exists at all, and the combat control cycle (manual/hands-off/auto-battle, five AI presets) is entirely unbuilt. Ruled: propose the real build sequence now.
 
 - **Powers chaining closed for the in-game Abilities screen (PT-2511).** Derived from `prerequisites`, matching K2's own proven method. Verified against all 106 real powers with four structural invariants, directly answering the derivation objection raised at `PT-2508`. Fork decision (3 powers with no K2 precedent) resolved by repeating the shared prefix per path — approved as built.
 - **Two powers gate at the level cap (30) — small, noted, no ruling needed.** Spear of Midnight Black, Arrow of White Dawn. Technically reachable, worth having on record if it turns out to matter in practice.
@@ -33,18 +33,14 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 
 
-- **`chargenData` fallback to empty lists is thin — active, one of four small items (PT-2595).** Honest but worth a real pass once something plays through a feat level.
-- **Two overlapping full-screen states when Level Up opens over the Character Sheet — active, one of four small items (PT-2595).** `esc` has two meanings in this state; same area `PT-2465` already spent a slice on.
 - **Chargen re-entry would discard a level-up's feat — genuinely unreachable today, correctly not defended against.** A step-scoped clear actually clears the whole field; the hub is entered from New Game only and a levelled character never returns there. Named rather than patched — building a defence for an input nothing can produce would be worse than recording the gap.
 
 
 ### ⚠⚠⚠ MAJOR THREAD: player-facing UI screens — measured, ruled, building
 - **Alignment slider rebuilt from real game art, two more render-and-look defects closed (PT-2478).** Colour corrected — was a genuine sampling error (fixed column, ribbon curves away from it), not a taste note. Asset confirmed neither an arc nor an arrow — a bowed ribbon with two lines, recreated to the pixel from the real source texture. Slot/item subtitle inversion (a real, severe defect — slot view showed no selection when it should) fixed, guard added. "Worn item always among its slot's choices" rule moved from caller into the widget itself.
-- **Inert package-menu Options entry — active, one of four small items (PT-2595).** `PackageMenuItem.options('Options')` exists on the package main menu with nothing dispatching it.
 
 
 
-- **Force Confusion's missing range limit — active, one of four small items (PT-2595).** Reachable at 9-10 squares; the row itself states no cap.
 
 - **Gundark's Acute Hearing (12) and Togruta's Montral Echo (5) — no creature carries either value.** The field now exists and reads correctly from authored traits; neither ability is on a shipped blueprint yet. Own separate content decision.
 - **Damaged-save reporting confirmed working correctly — noted, not a defect.** The product's own corruption message ("holds 569 bytes... file has 529") reported accurately by the game itself, found incidentally during TEST 119, predates this session's work.
@@ -91,6 +87,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- Three of PT-2595's four small items closed: Force Confusion's missing range confirmed correct, no defect (matches the Shutdown row's own already-disclosed "no power in this corpus models a range field" precedent). chargenData's thin fallback fixed — AbilitiesScreen now shows a real reason across all three tabs instead of an indistinguishable empty list, when the catalogue fails to load at startup. Level Up over the Character Sheet confirmed already correct in code (escape chain exclusion, sheet-clearing both already documented) — what was missing was proof, now provided by a real through-the-board test, mutation-confirmed. The inert package-menu Options entry ruled to stay exactly as it is — matches every other unbuilt entry's honest behavior; no immediate need justifies a new pre-game-scoped screen — PT-2598
 
 - Both severe trigger/effect defects closed. door.unlocked/container.opened and item.acquired/item.lost both fixed at the one shared choke point every dialogue-authored effect passes through. The item fix is generic on the payload field, not the kind — correctly prevents a second special case for any future kind reusing the same auto-fill convention. Real end-to-end tests driving the actual UI, with a genuinely honest disclosure of a detour (an unreliable text-scraping first attempt, rebuilt to check the real event fields directly). Confirmed map.revealed/log.written were already documented correctly as inert — no doc change needed — PT-2597
 

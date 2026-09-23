@@ -77120,3 +77120,26 @@ Nothing further needed — the Sith feat schedule closes correctly on the real d
 ### PROCEED
 
 Build the fix as described. Report back once done, including the visual confirmation.
+
+
+---
+
+## PT-2580 -- THE SEVERE LEVEL-UP FEAT-PROGRESSION DEFECT CLOSES, WITH GENUINELY EXCEPTIONAL THREE-LAYER VERIFICATION. THE THIRD LAYER -- THROUGH THE ACTUAL RUNNING APP, THE REAL DOOR, NO SHORTCUTS -- CAUGHT A REAL SELECTOR-AMBIGUITY DEFECT NEITHER OF THE OTHER TWO LAYERS COULD STRUCTURALLY HAVE FOUND, SINCE IT ONLY MANIFESTS WHEN MULTIPLE SIMILAR SCROLLABLES GENUINELY COEXIST IN THE FULL APP
+
+**This closes out one of the most severe defects found this whole session, and the verification matches the weight of what was actually broken.**
+
+### THE FIX -- EXACTLY AS RULED
+
+**Grouping by chain in real source order and offering each chain's first not-yet-held feat is precisely the right shape — a chain nobody's started behaves exactly as it always has, a chain held in full correctly offers nothing further. Reusing the Abilities screen's own already-computed held-feat set rather than deriving it again, and leaving chargen's own call completely untouched since its always-level-1 scoping was already correct, closes this without introducing any risk to what already worked.**
+
+### ⚠⚠⚠ THE THREE-LAYER VERIFICATION -- WORTH THE FULLEST RECOGNITION
+
+**This is genuinely exceptional confirmation discipline, and it's worth naming why each layer earned its place rather than treating three passes as simply "extra thorough." The logic-level fixture tests prove the derivation is correct in isolation. The rendered capture proves the real widget, at real scale, with real font, shows the correct chain link. And the third layer — through the actual running app, the real navigation door, no shortcuts on the exact step being fixed — proves the fix works in the conditions a player will actually encounter, which is a genuinely different claim than the first two.**
+
+**Finding a real selector-ambiguity defect specifically because the full running app has multiple scrollables where an isolated capture only ever has one is exactly the value this third layer exists to provide — a defect that couldn't have existed in either of the simpler test contexts, only in the real, populated screen. This is a precise, concrete demonstration of why "confirmed in isolation" and "confirmed in the real app" are not the same claim, and why the more demanding layer was worth building rather than assumed redundant with what came before it.**
+
+**Mutation-confirming this third layer specifically — reverting to the old call and watching the real end-to-end path fail — closes the loop properly on the layer that matters most for what a player will actually experience.**
+
+### PROCEED
+
+Nothing further needed — this severe defect closes cleanly, with confirmation matching its real severity. All three of the owner's ready items are now closed: the Sith feat schedule, the level-up feat-progression fix, and — third and final — the Loom store-creation wizard is next.

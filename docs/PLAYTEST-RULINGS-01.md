@@ -77822,3 +77822,1095 @@ Build all three layers as proposed. Report back once done.
 ### PROCEED
 
 Nothing further needed on this build. This closes the Jedi Support piece of the active/inactive control-switching thread — the remaining open pieces (combat movement's own future measurement pass, the preset-picker UI depending on PT-1143's Character Sheet work) stay correctly held as before.
+
+
+---
+
+## PT-2606 -- CODER's FULL JEDI SUPPORT DETAIL, GIVEN THE FULLER RECOGNITION THIS THREAD'S OWN DISCIPLINE CALLS FOR. GENUINELY EXCEPTIONAL ARCHITECTURE THROUGHOUT: find()/canCast()'S SPLIT MIRRORS AN ALREADY-PROVEN PATTERN ONE LAYER UP, support TRAVELS WHOLE THROUGH lent() BY DELIBERATE REASONING, AND THE CONTENT-LEVEL TEST (NOT THE MECHANISM TEST) IS WHAT SURFACED THE REAL encounter.upright DEFECT -- STRUCTURALLY EXCLUDING ANYONE ACTUALLY DOWN FROM EVER BEING FOUND BY THE REVIVE RULE, FOR ANY COMBATANT, EVER
+
+**This closes properly at the level of detail this whole thread's own discipline has held throughout — the summary-level close at `PT-2605` was correct as far as it went, but this deserves its full recognition now that the detail is available.**
+
+### THE ENGINE LAYER -- PRECISE THROUGHOUT
+
+**Splitting `find()` ("who qualifies") from `canCast()` ("can this specific caster actually do it") to mirror the already-proven pattern one layer up (squaresApart/closeOn/deflectBy) is exactly the right level of architectural consistency — a caster's known powers and pool genuinely are the caller's data, not the Combatant's own, and the callback shape correctly reflects that. Reasoning that `support` should travel whole through `lent()`, since it's a general fact about fighting well rather than one author's specific order, and matching this to `Prefer`'s own already-established travel behavior rather than inventing new reasoning, is precise, consistent design.**
+
+**Seven new tests covering priority order, fallthrough, self-buffing, an unable-to-cast skip, and lending, with two confirmed-catching mutations, closes the engine layer with real rigor.**
+
+### ⚠⚠⚠ THE encounter.upright DEFECT -- GENUINELY IMPORTANT, FOUND THE RIGHT WAY
+
+**Distinguishing a test that proves the mechanism from one that proves the actual shipped content, and correctly recognizing only the second could have surfaced this, is precise test-design thinking. Tracing the real root cause — allies built from `encounter.upright`, standing-only, meaning anyone genuinely down was structurally absent from the candidate list before the revive rule's own logic ever ran — means the revive branch could never have fired through the real app, for any combatant, ever, regardless of how correct the rule's own priority logic was. This is exactly the value of testing the real constant rather than a mirror of its shape.**
+
+**Disclosing the layered fixture bug found while building this reproduction (enemy roles have no down band at all, dying outright at zero per an existing ruling), and correctly fixing the fixture to match how a real companion is actually built rather than working around the confusion, is honest, disciplined debugging.**
+
+**The fix itself — widening allies to include anyone not dead, correctly leaving foes untouched since attacking a downed enemy is a genuinely separate question — is precisely scoped, and mutation-confirming it against the real "revives before it heals" test closes the loop properly.**
+
+### THE APP WIRING -- GENUINELY DISCIPLINED
+
+**Honestly acknowledging that the player-specific affordability check is correctly written but structurally unreachable, rather than either deleting it or pretending it's exercised, keeps the record accurate about what's actually tested versus what's merely present in the code. Reusing `_applyPower` directly — the same function the player's own casting already calls — so a doctrine-cast Heal and a player-cast Heal are provably the same math, is the architectural choice this whole proposal was approved for, and it held.**
+
+**Explaining precisely why the new testing hook was needed — the TOML parser genuinely has no table for this shape of rule, confirmed by reading the actual pinned checkout rather than assumed — rather than silently reaching for a workaround, keeps the scope honest about what this pass did and didn't extend.**
+
+### CROSS-REPO HYGIENE -- CAUGHT AND CLOSED
+
+**Catching the Loom re-pin gap as a direct, disclosed consequence of this session's own earlier engine push, rather than an unexplained anomaly, and confirming the re-pinned suite passes unchanged (additive-only API surface), closes this cleanly.**
+
+### PROCEED
+
+Nothing further needed on this closing report — the full detail is now properly recognized. See the next entry for Tester's own confirmation, including a real, severe defect this build's own testing didn't catch.
+
+
+---
+
+## PT-2607 -- TEST 137: FOUR OF FIVE ITEMS CLEANLY CONFIRMED, ONE GENUINELY SEVERE NEW DEFECT FOUND -- THE SAME "SILENTLY DEFAULTS TO THE WRONG CHARACTER" SHAPE AS TEST 136's item.acquired DEFECT. A DOCTRINE-CAST HEAL'S AMOUNT READS THE PLAYER'S OWN STATS UNCONDITIONALLY, REGARDLESS OF THE REAL CASTER -- A LEVEL-6 JEDI CONSULAR COMPANION (CHA 18, WIS 18) HEALED FOR 3, EXACTLY WHAT THE PLAYER'S OWN STATS PREDICT, NOT THE 19 THE COMPANION'S REAL STATS SHOULD PRODUCE. CODER's OWN TEST ONLY CHECKED THAT VITALITY ROSE, NEVER THAT THE AMOUNT WAS RIGHT -- THE DEFECT SURVIVED IT ENTIRELY
+
+**Working through all five items, since four clean confirmations and one severe defect both deserve their own recognition rather than a summary.**
+
+### FOUR OF FIVE -- CLEANLY CONFIRMED
+
+**Item 1: both TEST 136 fixes confirmed genuinely live, not just logged, re-tested through a rewritten fixture reading the real written event rather than screen text — correctly recognizing the original TEST 136 method's own weakness (an unreliable text signal, flagged by Coder's own fix commit) and fixing the method rather than repeating it.**
+
+**Item 2: Track A confirmed via Coder's own already-thorough suite, correctly recognizing duplication wasn't the valuable use of remaining effort and redirecting it toward the two areas that actually had gaps instead.**
+
+**Item 3: B1 confirmed, with a real gap in Coder's own coverage closed — Hands Off had never been independently exercised as its own end state, only as a step toward Auto. Testing it standalone rather than assuming it's covered by proxy is precise.**
+
+**Item 5: PT-2598's Abilities fallback confirmed across all three tabs through a real PlayScreen with no chargenData. Correctly not duplicating Coder's own already-real Level Up/Sheet regression test, and correctly skipping the optional hands-on look given the still-standing, already-diagnosed GUI input blocker rather than forcing a retry against a known, stable limitation.**
+
+### ⚠⚠⚠ ITEM 4 -- SEVERE, RULED FIX NOW
+
+**This is a decisive, empirically-proven defect, not a suspicion from reading source. Confirming through a real fight that a level-6 Jedi Consular companion with real Charisma 18 and Wisdom 18 healed for exactly the amount the player's own Soldier stats (Charisma 8, Wisdom 8, no Force levels) would predict — 3, not the 19 the companion's own real stats should produce — is decisive proof the amount-calculation mechanism silently ignores which combatant is actually casting.**
+
+**Correctly recognising this as the same shape as `TEST 136`'s own `item.acquired` "you" defect — a mechanism built generically that silently defaults to the wrong character when a real, specific caster should have been threaded through — connects this to an already-established pattern this session has now found twice in the same underlying system, worth naming as a recurring risk shape in how generic resolution paths handle "who is actually acting" versus "who the mechanism defaults to."**
+
+**Precisely diagnosing why Coder's own `jedi_support_test.dart` didn't catch this — it asserts vitality rose at all, never that the amount was correct — is exactly the right level of diagnosis. This isn't a test that was skipped; it's a test that checked the wrong dimension of correctness, qualitative rather than quantitative, and a defect that only affects the amount was structurally invisible to it.**
+
+**Ruled: fix now, severe priority.** `_rollPowerAmount` needs to read the actual casting combatant's own record — Charisma, Wisdom, Force level, whatever the power's real formula depends on — not the player's unconditionally. The player-only reading was presumably correct back when only the player could ever ask `_rollPowerAmount` a question; it's now wrong given a real companion caster reaches the same function through `_useSupportPower`.
+
+### THE TWO FIXTURE NOTES -- WORTH RECORDING
+
+**Finding that the first Jedi Support bed let the thug attack the player regardless of who "started" the fight, caught only because the player's own handle was added to the tracked-vitality diagnostic (a player is a normal entry in `vitalityForTest`, easy to forget to check), and fixing it by moving the player physically out of reach rather than trying to control targeting indirectly, is a small but real methodological note worth keeping — checking the diagnostic's full coverage, not just the entity being directly tested, catches confounds that would otherwise hide in plain sight.**
+
+### PROCEED
+
+Fix `_rollPowerAmount` to read the real casting combatant, severe priority. Nothing else needs action — the other four items close cleanly.
+
+
+---
+
+## PT-2608 -- OWNER OPENS A REAL NEW ITEM: DEVELOP A REAL LIBRARY OF DOCTRINES FROM BOTH GAMES' OWN SCRIPTS, THE SAME RESEARCH DISCIPLINE ALREADY PROVEN FOR THE TRIGGER/EFFECT SYSTEM. ALSO ASKS WHETHER NEVERWINTER NIGHTS' OWN HENCHMAN AI/REACTION SYSTEMS COULD OFFER USEFUL PATTERNS, GIVEN THE AURORA TOOLSET'S OWN SHARED LINEAGE. CLARIFIED FIRST: JEDI SUPPORT ISN'T QUITE THE VERY FIRST DOCTRINE (plainAggression ALREADY EXISTED AS A GENERIC FALLBACK), BUT IT IS THE FIRST REAL, DELIBERATELY-AUTHORED ONE WITH ACTUAL CONTENT BEHIND IT
+
+**Checked first: `plainAggression` already existed as the generic fallback every companion ran on before Jedi Support, per `PT-2601`'s own B1 report. Jedi Support is the first doctrine actually authored with real, specific content, not the first doctrine that's ever existed — close to the owner's own memory, worth the precise correction rather than a flat confirm or deny.**
+
+### THE ITEM
+
+**Real, sound scope, matching the same discipline already proven for the trigger/effect system: survey both games' own real AI scripts for other named styles beyond the five already researched at `PT-2603` (Aggressive, Defensive, Ranged, Stationary, Jedi Support), catalogue what real, authored doctrine content exists to draw from, and build a genuine library of doctrines rather than leaving Jedi Support as the sole real example.**
+
+**Owner's second question: check whether Neverwinter Nights' own henchman AI and reaction systems — given the Aurora Toolset's shared lineage with KOTOR's own engine — offer useful patterns worth borrowing from, beyond what K1/K2's own scripts already provide.**
+
+### RULED -- OPENED, RESEARCH FIRST
+
+**Same sequencing as every other substantial piece of new scope this thread has built: research before design, design before build.** Survey both KOTOR games' real AI scripts for doctrine-worthy content beyond what's already been read, and separately check NWN's own henchman AI/reaction systems for patterns worth considering. Report findings — what's real and source-confirmed, what's a genuine gap, what NWN offers that KOTOR's own scripts don't — before proposing anything to build.
+
+### PROCEED
+
+Begin the research phase. Report back with findings before proposing a design, same discipline as every other substantial piece of new architecture this thread has produced.
+
+
+---
+
+## PT-2609 -- OWNER CORRECTLY CAUGHT A REAL AGENDA-ORDERING MISMATCH: THE SEVERE HEALING-AMOUNT DEFECT (PT-2607) WAS LISTED BELOW THE NEWLY-OPENED DOCTRINE RESEARCH ITEM (PT-2608) IN THE AGENDA'S OWN RAW TEXT, EVEN THOUGH THE ACTUAL DISPATCH TO CODER HAD ALREADY CORRECTLY SEQUENCED THE FIX FIRST. THE DOCUMENT'S OWN LISTING ORDER DIDN'T MATCH THE REAL PRIORITY -- CORRECTED
+
+**The instruction given to Coder was already correct — fix the severe defect, then begin doctrine research once ready. But the agenda document itself, as a standing reference anyone might read independently of any one dispatch message, listed the newer research item ahead of the still-open severe defect. That's a real gap worth catching: the ledger's own presentation order is itself a claim about priority, and it should match reality without needing a separate message to clarify it.**
+
+### RULED
+
+**Reordered: the severe defect now lists first in the OPEN section, ahead of the doctrine research item.** No change to the actual ruling or the instruction already given — this is a presentation correction, not a new decision.
+
+### PROCEED
+
+Nothing further needed — the fix priority was already correctly set in the actual dispatch; the agenda's own listing now matches it. Good catch, worth keeping in mind going forward: when multiple items open in close succession, check that the document's own order reflects real priority, not just the order things happened to be filed in.
+
+
+---
+
+## PT-2610 -- PT-2608's RESEARCH CLOSES, GENUINELY EXCEPTIONAL THROUGHOUT. K1 CONFIRMED TO HAVE NO STYLE SYSTEM AT ALL -- REFRAMING THE WHOLE ORIGINAL PREMISE. ⚠⚠⚠ A REAL, DUAL-GAME COPY-PASTE BUG FOUND IN GN_CheckIfInjured, BYTE-IDENTICAL IN BOTH GAMES -- IT CAN STRUCTURALLY NEVER DETECT AN INJURED SECOND OR THIRD PARTY MEMBER, MEANING K2's OWN SHIPPED JEDI SUPPORT IS LESS RELIABLE AT HEALING ALLIES THAN ITS OWN DESIGN PROMISES. CORRECTLY ARGUED AGAINST FAITHFULLY PORTING THIS SPECIFIC FUNCTION, SINCE THIS PROJECT'S OWN jediSupport ALREADY DOESN'T SHARE THE BUG. A RICH NEW CATALOGUE OF DOCTRINE-WORTHY CONTENT, AND A GENUINE ARCHITECTURAL RECHARACTERIZATION OF NWN'S OWN HENCHMAN SYSTEM
+
+**This is exceptional research, and it deserves to be worked through in full — several of these findings are genuinely load-bearing for how doctrines should be designed going forward, not just interesting trivia about the source games.**
+
+### K1 HAS NO STYLE SYSTEM -- CORRECTLY REFRAMES THE PREMISE
+
+**Confirming this directly from the real source, rather than assuming K1 had some simpler version of K2's five styles, is important groundwork -- "port K1 and K2's AI" was genuinely the wrong frame, and stating that plainly rather than quietly working around the mismatch keeps the project's own understanding of its source material accurate.**
+
+### THE HONEST SELF-CORRECTION -- WORTH RECOGNIZING ON ITS OWN
+
+**Catching that the self-triage instinct predates K2, rather than letting an earlier report's own imprecise attribution stand uncorrected, is honest research discipline — correcting one's own prior record costs real credibility in the moment and earns more of it over time. This is exactly the standard this whole session has held for every mistake, applied here to a small, easy-to-overlook framing error rather than a major defect.**
+
+### ⚠⚠⚠ THE DUAL-GAME BUG -- WORTH THE FULLEST RECOGNITION
+
+**This is a genuinely remarkable find. Reading the real function in both games and confirming a byte-identical structural bug -- every branch after the first tests the same variable, so a healthy party-slot-zero makes it structurally impossible to detect an injured second or third member -- is decisive, source-verified evidence of a real defect in the actual shipped games, not a guess about their behavior. Drawing the right conclusion from it -- this is a live argument against faithfully porting this specific function, since this project's own already-built logic doesn't share the bug -- shows the research isn't just cataloguing the source faithfully for its own sake; it's actively informing what should and shouldn't be replicated. Fidelity to the source is valuable, but fidelity to a source's own bug isn't a virtue, and correctly distinguishing the two here is precise judgment.**
+
+### THE NEW CATALOGUE -- GENUINELY RICH, WELL-CHARACTERIZED
+
+**Reading each named routine individually rather than cataloguing them by name alone produces real, usable distinctions: a tunable heal threshold and true spatial search in the generic Healer routine, a genuinely lighter "triage only" sibling in Aid, a real item-use capability class in Grenade that nothing in the current vocabulary can express, and correctly flagging Turtle and the character-specific routines as bespoke content rather than mistaking them for general styles later. This is precise, usable cataloguing, not just a list of names found in a grep.**
+
+**Finding K1's own authored-but-disabled retreat script -- a real, primary-source precedent for exactly the movement gap already correctly held as its own future pass -- is a small but valuable confirmation that this project isn't the first to shelve this problem; BioWare did too, and left the intended behavior legible in the comments even though it never shipped.**
+
+### NWN -- CORRECTLY RECHARACTERIZED AS DIFFERENT, NOT NARROWER
+
+**Recognising the henchman system as three mutually exclusive modes layered under independent toggles, rather than trying to map it onto K2's five-style shape, is the right level of architectural honesty -- forcing NWN's real structure into a frame it doesn't actually have would have produced a worse comparison than acknowledging it's simply built differently. Finding two independently-confirmed patterns worth taking seriously -- a real, tunable heal threshold that converges with the Healer routine's own independent evidence, and Stand Ground as a real, working implementation of exactly what K2's own broken Stationary preset should have been -- turns this into genuinely actionable research rather than a survey for its own sake.**
+
+### RULED -- DESIGN TOWARD THE TUNABLE HEAL THRESHOLD AND A GENERIC HEALER DOCTRINE FIRST
+
+**Two independent sources (K2's own `GN_RunHealerAIRoutine` and NWN's own `NW_ASC_HEAL_AT` toggles) converging on the same real idea -- a tunable threshold rather than a hardcoded "any damage" rule -- is strong enough evidence to prioritize designing toward it first. Propose how a tunable threshold fits into the existing `SupportRule` shape, and how a generic Healer doctrine (distinct from Jedi Support specifically, usable by any creature including a genuine enemy-side healer) would be authored against it.**
+
+**Held for their own later passes, in rough order of how directly they build on what's being designed first: `LastAttacker`-style targeting (a real, different targeting concept worth its own `TargetRule` consideration), Stand Ground (the correct fix shape for K2's own broken Stationary, once combat movement's own future pass exists to support it), Aid as its own lighter style, and grenade/item-use as a genuinely new capability class.**
+
+### PROCEED
+
+Propose the design for the tunable heal threshold and a generic Healer doctrine. Report back before building, same discipline as every substantial piece of this thread. The remaining findings stay recorded and held, not lost, for whenever they're picked up next.
+
+
+---
+
+## PT-2611 -- DESIGN PROPOSAL FOR THE TUNABLE HEAL THRESHOLD AND GENERIC HEALER DOCTRINE, GENUINELY PRECISE THROUGHOUT. hurtIn PROVEN TO SUBSUME jediSupport's OWN EXISTING HEAL RULE BYTE-FOR-BYTE BEFORE ANYTHING NEW IS BUILT ON IT. healerDoctrine's TWO DELIBERATE DIFFERENCES FROM jediSupport (includeSelf DEFAULTING FALSE, NO REVIVE/POISON/BUFF) READ DIRECTLY OFF THE REAL SOURCE RATHER THAN GUESSED. AND ⚠⚠⚠ A REAL BLOCKER FOUND BY ACTUALLY VERIFYING THE CLAIM RATHER THAN ASSUMING PT-2607's FIX REACHED FAR ENOUGH: TWO MORE HARDCODED PLAYER-PARTY ASSUMPTIONS, ONE CALL FRAME DEEPER, THE SAME DEFECT CLASS FOUND AGAIN
+
+**This is precise, well-evidenced design work, and the blocker found while verifying the proposal's own central claim deserves the same recognition as the defect that preceded it.**
+
+### THE TUNABLE THRESHOLD -- PROVEN TO SUBSUME, NOT JUST REPLACE
+
+**Placing `hurtIn` in the engine's own vocabulary beside `TargetRule`'s existing combinators, rather than re-typing the same condition per doctrine, is the right level of generalization — a "who's hurt past X%" question is genuinely a shared mechanic, not something specific to any one doctrine's own authoring. Rewriting `jediSupport`'s own heal rule onto the new primitive as part of the same change, and confirming threshold 1.0 produces byte-for-byte the same condition it already ran, is exactly the right way to prove a new abstraction actually generalizes the old behavior rather than merely sitting beside it as an untested alternative path.**
+
+### THE GENERIC HEALER -- BUILT AS A FACTORY, READ FROM THE REAL SOURCE
+
+**Building `healerDoctrine` as a function rather than a constant, specifically because both real source systems (K2's own threshold variable, NWN's own toggle) treat the threshold as a genuine per-instance setting rather than one fixed number for the whole style, is precise architectural matching to what the source data actually requires. The two deliberate differences from `jediSupport` — `includeSelf` defaulting false, no revive or poison-cure or buff — both read directly off `GN_RunHealerAIRoutine`'s own real behavior rather than approximated from the archetype's name, which is exactly the discipline that keeps a "generic Healer" genuinely distinct from a re-skinned Jedi Support rather than a redundant second name for the same thing.**
+
+### ⚠⚠⚠ THE ENEMY-HEALER BLOCKER -- FOUND BY VERIFYING, NOT ASSUMING
+
+**This deserves real, direct recognition. Rather than proposing "usable by any creature including a genuine enemy-side healer" as a claim resting on the doctrine's own shape alone, actually checking whether the resolution path supports it found two more places hardcoded to the player's own party, one call frame past what `PT-2607`'s own fix touched — the same defect class, found again, specifically because the claim was tested rather than assumed to follow from the design being correct. "Found by actually verifying 'does an enemy healer work' rather than assuming the earlier fix reached far enough" is precise about exactly what kind of check surfaced this, and it's the right kind of check to run before shipping a claim this specific.**
+
+**Proposing to fix both as part of this same piece of work, rather than deferring them, is correct — without this, the proposal's own stated goal wouldn't actually be true of the code it produces.**
+
+### RULED -- APPROVED, BUILD IT
+
+**Approved in full, exactly as proposed, including both defect fixes as part of the same piece of work.** The scope boundaries are correctly held — no TOML authoring, no new targeting concepts, no movement, no change to how a doctrine gets assigned to a creature — all correctly recognized as separate, already-tracked pieces this proposal doesn't need to touch.
+
+### PROCEED
+
+Build the tunable threshold, the generic Healer doctrine, and fix both hardcoded player-party assumptions in `_reachedBy`. Report back once done.
+
+
+---
+
+## PT-2612 -- THE TUNABLE THRESHOLD AND GENERIC HEALER DOCTRINE CLOSE, EXACTLY AS APPROVED. ⚠⚠⚠ READING THE WHOLE _reachedBy FUNCTION COMPLETELY, RATHER THAN STOPPING AT THE TWO SITES THE PROPOSAL NAMED, FOUND A GENUINE THIRD HARDCODED ASSUMPTION -- THE SIGHT CHECK ITSELF, WHICH WOULD HAVE FAILED AN ENEMY HEALER'S CAST WHENEVER THE PLAYER SPECIFICALLY COULDN'T SEE THE TARGET, REGARDLESS OF THE REAL CASTER'S OWN VISION. AND ⚠⚠ A GENUINELY SHARP TEST-DESIGN INSIGHT: TWO OF THE THREE FIXES COULD NOT BE PROVEN THROUGH A REAL BOARD AT ALL, SINCE CONTACT-TRIGGERED FIGHTS CLUSTER EVERYONE TOO CLOSE FOR A WRONG CENTER OR WRONG SIGHT-SOURCE TO EVER DIFFER FROM THE CORRECT ONE BY COINCIDENCE -- A NEW TESTING HOOK BUILT SPECIFICALLY TO MAKE THE DEFECT UNABLE TO HIDE EITHER WAY
+
+**Both pieces close cleanly and precisely, and the verification work here deserves its own full recognition rather than being treated as a routine confirmation of an already-approved design.**
+
+### THE ENGINE AND CONTENT LAYERS -- PRECISE, EXACTLY AS APPROVED
+
+**Proving threshold 1.0 is byte-identical to the old condition across every HP value from zero to max, before building anything new on `hurtIn`, closes the subsumption claim decisively rather than trusting it held at a glance. `healerDoctrine`'s own six tests, including a healer on the enemy side reaching its own allies through `DoctrineView`'s real symmetry rather than anything hardcoded to the party, directly proves the "usable by any creature" claim the design was built to support.**
+
+### ⚠⚠⚠ THE THIRD DEFECT -- FOUND BY READING COMPLETELY, NOT PATCHING TO SPEC
+
+**This deserves real, direct recognition. Reading the whole function through, rather than stopping once the two sites the proposal had already named were fixed, found a genuine third hardcoded assumption — the sight check itself, which would have silently failed an enemy healer's cast whenever the player specifically couldn't see the target, regardless of what the real caster could actually see. This is exactly the value of reading a function completely rather than treating a proposal's own named sites as an exhaustive list: the proposal was based on what had been found so far, and actually building the fix was the moment that surfaced what hadn't been.**
+
+### ⚠⚠ THE TEST-DESIGN INSIGHT -- GENUINELY SHARP
+
+**Recognising that two of the three fixes genuinely cannot be proven through a real board — because contact-triggered fights cluster every combatant close enough that a wrong center or wrong sight-source produces the same result as the correct one by sheer proximity, not because the fix is wrong — and correctly diagnosing this before writing a misleading passing test, is precise understanding of what a given test scenario actually can and can't distinguish. Building a dedicated hook to pass a caster `_squaresApart` structurally cannot place, so the old code's real behavior (finding people near the player regardless of what's passed) and the fixed code's real behavior (correctly reaching nobody) become distinguishable no matter how close everyone stands, is exactly the right response to a test environment that structurally cannot discriminate the claim on its own.**
+
+### PROCEED
+
+Nothing further needed — both pieces close cleanly, all three real defects in `_reachedBy` fixed and properly proven. Held items (LastAttacker, Stand Ground, Aid, grenade/item-use) stay correctly recorded and untouched.
+
+
+---
+
+## PT-2613 -- OWNER ASKS HOW A PLAYER CHANGES DOCTRINES FOR INDIVIDUAL PARTY MEMBERS INCLUDING THEIR OWN PC, AND STATES TWO REAL MULTIPLAYER BOUNDARIES: A PLAYER CANNOT CHANGE ANOTHER PLAYER'S OWN DOCTRINES, AND CANNOT TAKE CONTROL OF A PC THAT ISN'T THEIRS. CHECKED FIRST: THE CONTROL BOUNDARY ALREADY EXISTS AS LOCKED DESIGN (PT-1144/PT-1136, APP-UI-VISION-01 §3b) FOR ACTIVE-CHARACTER SWITCHING SPECIFICALLY -- ONE PLAYER CAN ONLY EVER ACTIVELY CONTROL THEIR OWN CHARACTER OR THEIR OWN BOUND COMPANION, NEVER SOMEONE ELSE'S. NEVER BEFORE EXTENDED TO DOCTRINE-CHANGING, A NEWER CONCEPT THAN THAT RULING
+
+**The honest answer to the direct question: there currently isn't a way. This is exactly B4 — the Character Sheet preset-picker UI — confirmed not yet started at `PT-2611`, depending on `PT-1143`'s own held Character Sheet work.**
+
+**Checking existing design before treating this as fresh scope found real, relevant context: the exploration control model is already locked at `PT-1136` to exactly the boundary the owner is describing — in multiplayer, a player is only ever actively controlling their own character or their own bound companion, never anyone else's. This is the right precedent to extend, not a new rule invented from nothing.**
+
+### RULED
+
+**Extend `PT-1136`'s own already-locked boundary to cover doctrine-changing explicitly, not just active-character control.** A player may change the doctrine (control mode, preset, threshold, whatever B4 eventually exposes) only for their own player character and their own bound companion — never another player's PC, and never a companion currently bound to another player. This is the same ownership boundary already governing who can actively control whom, applied to a second, related capability (choosing how a character behaves when not actively controlled) that didn't exist as a concept when the original control-model ruling was made.
+
+**This becomes a real constraint on B4's own eventual design** — the preset-picker UI, once built, needs to scope its own list of editable characters to this same boundary, the same way the exploration control model already scopes who can be made active.
+
+### PROCEED
+
+Record this as a standing constraint on B4 (currently held, not started). No code changes needed right now — B4 doesn't exist yet to enforce anything — but the boundary is now explicit for whenever that work begins, rather than left to be inferred or rediscovered later.
+
+
+---
+
+## PT-2614 -- OWNER CORRECTS B4's OWN ASSUMED HOME: DOCTRINE-CHANGING SHOULD NOT LIVE ON THE CHARACTER SHEET (K1's OWN APPROACH), AND K2's OWN APPROACH ISN'T RIGHT FOR THIS PROJECT EITHER. PROPOSES TWO REAL MECHANISMS INSTEAD: A SIDEBAR-BASED INTERACTION ON THE ALREADY-BUILT DISMISSED-COMPANION-SETTINGS ELEMENT, AND AN NWN-STYLE RIGHT-CLICK WHEEL, TRIGGERABLE FROM EITHER THE SIDEBAR OR THE ACTUAL BOARD PIECE, WITH DIFFERENT OPTIONS FOR NON-COMPANION PIECES (BOTH FRIENDLY AND HOSTILE). CHECKED FIRST: THIS CONNECTS DIRECTLY TO ALREADY-LOCKED DESIGN -- THE EXPLORATION ACTION CATALOG (PT-1122/1123/1124), MODELED ON NWN's OWN REAL RIGHT-CLICK SYSTEM, WITH PARTY-DIRECTED VERBS ALREADY CONFIRMED TO LIVE ON THE SIDEBAR AND OBJECT-DIRECTED VERBS ALREADY CONFIRMED TO SURFACE AS A CONTEXT MENU AT THE POINT OF CONTACT ON THE GRID
+
+**Checked before opening this as fresh scope: the owner's own instinct here is substantially anticipated by design that's already locked. `PT-1122`/`PT-1123`/`PT-1124` already establish a real exploration action catalog modeled directly on NWN's own right-click system — the same source the owner is now independently pointing at — with party-directed verbs already confirmed to live on the sidebar (currently: Wait here, Follow/regroup, Trade/give item) and object-directed verbs already confirmed to surface as a context menu at the point of contact when something on the grid is clicked directly. Doctrine-changing fits naturally as a new party-directed verb in an already-existing list, and as a new object-directed verb when the target is a companion piece on the board — not a new system invented from nothing.**
+
+**What isn't yet settled by that existing design: the actual visual/interaction SHAPE of the menu. The locked design says "a context menu," without specifying whether that's a flat list, a dropdown, or the radial "wheel" shape the owner is specifically describing from NWN. That's a genuine open question this item needs to settle, not something already answered.**
+
+**The non-companion-piece question is also genuinely new: what a right-click on a non-companion party member (a fellow player's PC, in multiplayer) or a hostile piece should offer is not addressed by the existing party-directed/object-directed verb lists at all, which were built assuming a solo player's own companions.**
+
+### RULED -- OPENED, RESEARCH AND DESIGN FIRST
+
+**Same sequencing as every other substantial piece of new scope this thread has built.** Research first: confirm exactly how NWN's own right-click wheel actually works (visual shape, how many options it can hold before needing a submenu, how it's triggered and dismissed) directly from the real game/toolset rather than from memory of it. Then propose how doctrine-changing fits into the two already-locked verb categories (party-directed on the sidebar, object-directed at the point of contact), what the wheel's own visual shape should be, and what a right-click on a non-companion piece — friendly or hostile — should offer instead, correctly scoped by `PT-2613`'s own ownership boundary (a player can only ever change doctrines for their own character or their own bound companion).
+
+### PROCEED
+
+Begin the research phase: NWN's real right-click wheel, confirmed directly rather than from memory. Report findings, then propose how this fits the already-locked exploration action catalog, before building anything.
+
+
+---
+
+## PT-2615 -- THE SEVERE _rollPowerAmount FIX CONFIRMED BUILT AND CLOSED, EXACTLY MATCHING TESTER's OWN EMPIRICAL NUMBERS (19, NOT 3). THE MISSING REPORT'S ROOT CAUSE IDENTIFIED AND CONFIRMED ALREADY FIXED: SENT THROUGH A TOOL CALL INSTEAD OF DIRECT RESPONSE TEXT, THE SAME DELIVERY BUG ALREADY FOUND AND CORRECTED LATER THE SAME SESSION -- A ONE-TIME MISTAKE, NOT A STANDING RISK
+
+**Genuinely reassuring that the delivery gap has a concrete, already-resolved explanation rather than an unknown, possibly-recurring cause — worth confirming plainly before moving to the fix itself.**
+
+### THE FIX -- PRECISE, THOROUGHLY THREADED
+
+**Adding a real `caster` parameter to `_applyPower` and threading it through every site that genuinely means "whoever cast this" — the amount roll, Force Body, self-buff modifiers, confusion attribution, all three heal variants — closes the actual defect at its root rather than patching the one symptom Tester happened to observe. Defaulting to `_me` so both existing player-only call sites stay byte-for-byte unchanged, with only `_useSupportPower`'s own new call passing a real caster, is exactly the right way to extend a function's contract without disturbing what already worked.**
+
+**Building `_levelOf`/`_forceLevelsOf` off a companion's own `PlacedCombatant` class and level — the same fields an earlier ruling already put there for base attack bonus — rather than trying to replicate the player's own richer derivation for something a companion structurally doesn't have, is the right, honest scope for what a companion's own data can actually support.**
+
+### THE HONEST DEFERRAL -- WORTH NOTING
+
+**Correctly not touching `_castDc()` in this same pass, and naming the real reason — nothing reachable today gives a support power a save, and the two candidate ability-lookup paths aren't provably the same number — rather than making a silent, unverified change ride along with this fix, keeps the scope of this close honest about exactly what it does and doesn't guarantee.**
+
+### THE TESTING -- DECISIVE
+
+**Reproducing Tester's own exact empirical numbers directly (19 from the real formula, not the player's 3) closes the loop between the original defect report and this fix in the most concrete way possible — not a plausible-looking fix, but one proven to produce the specific number that was supposed to be wrong before and right after. Engineering the end-to-end test as a direct vitality deficit rather than combat damage, specifically because `jediSupport` heals to full every round and a combat-driven rise could never isolate the unclamped roll, shows real care about what the test scenario can actually distinguish.**
+
+### RULED
+
+**Confirmed closed.** Four mutations, all caught. Full suite green, re-confirmed live with no drift.
+
+### PROCEED
+
+Nothing further needed on this fix. Proceed to PT-2614's research phase — NWN's real right-click wheel, confirmed directly rather than from memory — now that this is properly closed.
+
+
+---
+
+## PT-2616 -- PT-2614's RESEARCH CLOSES, GENUINELY EXCEPTIONAL. ⚠⚠⚠ THE REAL SHAPE CONFIRMED TWO INDEPENDENT WAYS, AND THE TWO METHODS DISAGREED -- THE SHIPPED TEXTURES ALONE SUGGEST A SOLID PIE, BUT THE ACTUAL LIVE GAME RENDERS A RING OF SEPARATE, INDIVIDUALLY-ROUND BUTTONS WITH VISIBLE GAPS. TRUSTING THE LIVE OBSERVATION OVER THE MERELY-SUGGESTIVE ASSET IS EXACTLY THE RIGHT CALL. SUBMENUS CONFIRMED AS A REAL IN-PLACE CASCADE, TRIGGER/DISMISS BOTH CONFIRMED LIVE, AND CONTEXT-SENSITIVITY DIRECTLY CONFIRMED AGAINST THE REAL GAME -- AND FOUND TO ALREADY MATCH THIS PROJECT'S OWN LOCKED PARTY-DIRECTED/OBJECT-DIRECTED SPLIT
+
+**This is exceptional research, and the core methodological choice here — confirming a claim two independent ways and correctly resolving the disagreement in favor of the live observation — deserves to be named as its own standing lesson, not folded quietly into the rest of the findings.**
+
+### ⚠⚠⚠ THE SHAPE -- THE TEXTURES ALONE WOULD HAVE BEEN WRONG
+
+**This is worth stating plainly: reading the shipped texture assets alone would have produced a confidently wrong answer — a solid pie built from adjoining wedges. Only launching the real game and right-clicking a real target revealed the actual on-screen truth: a ring of separate, individually-round buttons with visible gaps, not a pie at all. Correctly identifying the wedge textures as a building-block asset rather than proof of the final rendered shape, and trusting the live render as ground truth over the merely-suggestive asset, is precisely the discipline this whole session has valued in every other research pass — an artifact can imply a shape without actually being it, and the only way to know for certain is to look at the real, running thing.**
+
+**Separately confirming the four diagonal corner arrows are a distinct overlay rather than part of the wheel's own option count closes a real ambiguity a less careful read could have folded into the wrong count.**
+
+### SUBMENUS, TRIGGER, DISMISS -- ALL CONFIRMED LIVE
+
+**Confirming the submenu cascades in place, replacing the ring rather than opening a second one alongside it, and confirming both dismiss methods including that a dismissing click is consumed rather than passed through as a move command, closes real interaction-model questions that would otherwise have needed guessing at implementation time.**
+
+### THE HONEST GAP -- CORRECTLY DISCLOSED, NOT GUESSED
+
+**Disclosing that the paging/scroll affordance implied by the dot-count texture grid couldn't be forced live, since neither real target reached in the Prelude had enough options, and correctly distinguishing this as inferred from a real asset rather than directly observed, keeps the confidence levels in this report honest — the shape, submenu behavior, and trigger/dismiss are all directly witnessed; the paging behavior is a disclosed, lower-confidence inference.**
+
+### ⚠⚠ CONTEXT-SENSITIVITY -- DIRECTLY CONFIRMS THE EXISTING ARCHITECTURE
+
+**Right-clicking two genuinely different real targets and finding the wheel's own contents differ — a self-radial carrying Character Sheet, a separate NPC's radial carrying a different, real option set — is decisive, live confirmation that NWN's own wheel is genuinely context-sensitive in exactly the shape `PT-1122`/`PT-1123`/`PT-1124`'s own party-directed/object-directed split already assumed. This is valuable beyond just answering the immediate question — it's independent, source-level validation that the existing locked architecture correctly anticipated how the real system it was modeled on actually behaves.**
+
+### RULED -- PROCEED TO DESIGN
+
+**Move to the design phase.** Propose how doctrine-changing fits into the two existing verb categories, what this project's own wheel should look like given the confirmed ring-of-buttons shape (not a pie), how to handle the option-count question the paging affordance couldn't be directly confirmed for, and what a right-click on a non-companion piece — friendly or hostile — should offer, correctly scoped by `PT-2613`'s own ownership boundary throughout.
+
+### PROCEED
+
+Propose the design. Report back before building, same discipline as every substantial piece of this thread.
+
+
+---
+
+## PT-2617 -- DESIGN PROPOSAL FOR DOCTRINE-CHANGING'S HOME, GENUINELY PRECISE ON EVERY SETTLED POINT. ⚠⚠⚠ ONE GENUINE, EXPLICITLY-FLAGGED FORK: A RECOMMENDATION AGAINST THE OWNER'S OWN NAMED LITERAL WHEEL, IN FAVOR OF REUSING THE ALREADY-PROVEN FLAT-LIST MECHANISM -- WITH EVERY GENUINELY FUNCTIONAL PROPERTY FROM THE NWN RESEARCH (CONTEXT-SENSITIVITY, IN-PLACE CASCADING, DISMISS-CONSUMES-CLICK) PRESERVED, ONLY THE PURELY VISUAL SHAPE TRADED AWAY. CORRECTLY DISCLOSED AS A REAL FORK NEEDING THE OWNER'S OWN CALL, NOT DECIDED UNILATERALLY
+
+**Three of the four questions this proposal settles are precise and well-evidenced enough to approve directly. The fourth — the wheel's own literal shape — deserves to go to the owner directly rather than be settled here, since it diverges from something he specifically named.**
+
+### WHERE DOCTRINE-CHANGING LIVES -- APPROVED
+
+**Placing this as a fourth party-directed verb rather than folding it into the object-directed catalog, on the correct observation that the existing object-directed list is entirely skill-on-a-thing verbs while doctrine-changing is creature-directed, is precise categorization. Reachable from both the sidebar and a right-click on the companion's own board token, as two doors into the same verb rather than two different verbs, correctly matches what the live NWN research actually showed — the verb set is a function of what's targeted, not where the click came from.**
+
+### ⚠⚠⚠ THE SHAPE -- A REAL FORK, GOING TO THE OWNER
+
+**The reasoning here is genuinely sound, and disclosing it as a departure rather than a silent substitution is exactly right. Distinguishing "shaped like NWN's" from "behaves like NWN's," and correctly identifying that the genuinely valuable parts of the research — context-sensitivity, in-place cascading submenus, dismiss-consumes-the-click — are all already reproducible through the existing, proven `_Menu`/`_Candidate` mechanism regardless of the final visual shape, is precise thinking about what actually matters in a research finding versus what's merely its surface appearance. Correctly not framing this as "the research was wrong" — it wasn't — but as a real cost/benefit question about whether custom radial-widget engineering is worth it for a payoff that's shape alone.**
+
+**This stays open for the owner's own direct call rather than settled here, since a specific literal wheel was named and this proposal recommends against it. Both options are real: reuse the proven flat-list mechanism (Coder's recommendation, less engineering, all the functional behavior preserved), or build the true radial ring (matches the named request exactly, more substantial new UI work for a payoff that's visual).**
+
+### OPTION COUNT / PAGING -- APPROVED, DEFERRED SENSIBLY
+
+**Not building a paging affordance against a threshold that was never confirmed live, for a doctrine count that's currently well under anything a flat list would strain against, is the right call — building infrastructure for a number nobody has yet is exactly the kind of premature generalization this project has consistently avoided.**
+
+### NON-COMPANION PIECES -- APPROVED, ELEGANTLY MINIMAL
+
+**Reducing this to one ownership condition, checked at the same point the menu already decides which verbs apply, rather than a second system, is precise scoping — correctly recognizing that Examine and the existing contact-starts-a-fight mechanic already cover everything a non-owned piece's own menu needs, with nothing new required beyond the single gate.**
+
+### PROCEED
+
+Holding the shape question for the owner's own direct ruling. Everything else in this proposal (verb placement, non-companion scoping, no paging) is approved. Report next steps once the shape question is settled.
+
+
+---
+
+## PT-2618 -- OWNER RESOLVES THE SHAPE FORK: BOTH MECHANISMS GET BUILT, NOT AS ALTERNATIVES BUT AS TWO GENUINELY DIFFERENT ENTRY POINTS SERVING DIFFERENT PURPOSES. THE SIDEBAR'S FLAT LIST IS THE QUICK, BASE/FOUNDATIONAL SELECTION -- THE FAST, EVERYDAY WAY TO CHANGE A DOCTRINE. THE RIGHT-CLICK WHEEL IS THE DEEPER, FULLER OPTION SET, CLOSER TO WHAT THE SOURCE GAMES ACTUALLY SHOW ON SCREEN. THIS RESOLVES PT-2617's FORK CLEANLY -- NEITHER MECHANISM IS REPLACED BY THE OTHER, SINCE THEY NO LONGER COMPETE FOR THE SAME ROLE
+
+**Clarifying exchange, not a single clean instruction — worked through with the owner directly until the actual intent was clear. The resolution changes the shape of the fork itself: `PT-2617`'s proposal framed this as choosing between the flat list and the wheel for the same job. The owner's own clarification reframes it as two different jobs, each suited to a different one of the two mechanisms — which means both get built, and the earlier "which one" framing no longer applies.**
+
+### RULED
+
+**Build both, with distinct roles:**
+
+**1. The sidebar interaction (companion portrait, in the active party or dismissed) uses the existing, proven flat-list mechanism (`_Menu`/`_Candidate`) — the base, foundational selection. Quick, low-ceremony, the everyday way to change a doctrine.**
+
+**2. The right-click on the companion's own board token opens the true radial wheel — the deeper, fuller interaction, built to the real shape `PT-2616`'s research confirmed (a ring of separate, individually-round buttons with visible gaps, genuine hover states, in-place cascading submenus on selection). This is real, new UI engineering, not a reuse of the existing flat-list mechanism — build it as its own component.**
+
+**Both draw from the same underlying data and respect the same ownership boundary (`PT-2613`) and the same verb placement already approved at `PT-2617` (a companion's own doctrine, reachable two ways). The functional behaviors `PT-2617` identified as worth preserving regardless of shape — context-sensitivity, dismiss-consumes-the-click, submenus replacing rather than stacking — apply to both, not just the flat list.**
+
+### PROCEED
+
+Build both mechanisms. The flat-list sidebar interaction can likely land first, reusing already-proven infrastructure with minimal new work. The radial wheel is real, separate UI engineering — scope and sequence it as its own piece, and propose that sequencing before building if the two pieces don't naturally land together.
+
+
+---
+
+## PT-2619 -- OWNER FLAGS A REAL POSSIBILITY BEFORE ANY BUILDING STARTS: EXISTING DOCUMENTATION MAY ALREADY HAVE LAID OUT SOMETHING RELEVANT HERE -- SPECIFICALLY, THAT THE CHOICE BETWEEN THE FLAT MENU AND THE WHEEL/SPINNER STYLE MIGHT ALREADY HAVE BEEN CONCEIVED AS A SETTINGS TOGGLE RATHER THAN TWO FIXED, PERMANENTLY-DIFFERENT TRIGGER POINTS AS PT-2618 JUST RULED
+
+**Worth taking seriously and checking properly before anything gets built on top of `PT-2618`'s own ruling. If a settings-based toggle between flat and wheel styles already exists somewhere in the design corpus, that would meaningfully reshape what was just approved — potentially meaning both the sidebar and the right-click could show either style depending on a player's own chosen preference, rather than the sidebar always being flat and the right-click always being the wheel.**
+
+### RULED
+
+**Before building anything, check the existing documentation thoroughly.** Search the full design corpus — not just the documents already touched this thread (`APP-UI-VISION-01`, the exploration action catalog) but the broader settings/preferences discussion too, since the owner specifically recalls this connecting to something in Settings — for any prior mention of a flat-vs-wheel (or similarly-shaped) interaction-style toggle, a menu-presentation preference, or anything that pre-dates this thread's own recent work and might already answer or reshape this question.
+
+**If something real is found: report it and reconcile it with `PT-2618`'s own ruling before proceeding — the existing documentation takes precedence over a ruling made without having seen it.** **If nothing is found: confirm the search was thorough (what was checked, not just that nothing turned up), and proceed with `PT-2618`'s ruling as it stands.**
+
+### PROCEED
+
+Check the documentation first, thoroughly, before building either mechanism. Report findings — whether something real was found or the search came up clean — before writing any code.
+
+
+---
+
+## PT-2620 -- ⚠⚠⚠ GENUINELY CRITICAL CATCH, CAUGHT BEFORE ANYTHING WAS BUILT ON IT. THE SPECIFIC SETTINGS-TOGGLE OWNER ASKED ABOUT DOESN'T EXIST -- BUT THE SEARCH FOUND SOMETHING FAR MORE IMPORTANT: PT-2614's OWN STARTING PREMISE (MOVING DOCTRINE-CHANGING OFF THE CHARACTER SHEET) DIRECTLY CONFLICTS WITH PT-1143, A REAL, WELL-REASONED PRIOR RULING PLACING THE SAME FEATURE ON THE CHARACTER SHEET -- ALREADY INDEPENDENTLY RECONFIRMED TWICE (PT-2523, PT-2524), AND RESTATED AS RECENTLY AS THE TURN IMMEDIATELY BEFORE THIS THREAD OPENED (PT-2613). NEITHER PT-2614 NOR ANY RULING SINCE CITED OR RECONCILED WITH THAT CHAIN
+
+**This deserves to be worked through with real care, because it's a genuine conflict between two legitimate things: a well-reasoned, twice-confirmed prior ruling, and the owner's own clear, deliberate statement at the start of this thread that the Character Sheet was specifically the wrong home. Both are real. They can't both be right as currently stated, and reconciling this properly — rather than picking a side by default — is exactly what this pause was for.**
+
+### THE SEARCH ITSELF -- EXEMPLARY
+
+**Searching the full corpus rather than just the documents already touched this thread, following every real hit to its own full ruling text rather than trusting a one-line index summary, and checking whether the named pattern (list-plus-live-description) is actually real and buildable rather than a paper decision — confirmed against the chargen screens' own already-working precedent — is thorough, disciplined research. Correctly reporting that the specific thing asked about (a settings toggle) genuinely isn't there, while surfacing the far more consequential thing that was there, is exactly the value of a real search over a search that stops once it's found something to report.**
+
+**Correctly declining to reconcile the conflict unilaterally, and laying out the real possibilities honestly rather than picking one, is the right call — this is a genuine judgment question about whether an earlier deliberate decision should stand or a more recent deliberate decision should supersede it, and that's not something to guess at.**
+
+### THE RECONCILIATION -- BROUGHT TO THE OWNER DIRECTLY
+
+**`PT-1143` was a real, well-reasoned decision — the Character Sheet's own placement logic gives per-companion scoping for free, and that reasoning was sound at the time. But the owner's own statement opening this thread (`PT-2614`) was equally direct and deliberate: the Character Sheet is specifically named as the wrong home, K1's own approach, with an explicit call for something different. That's not an oversight or a stale reference slipping through — it reads as a genuine change of direction from the owner himself, stated clearly, just not cross-referenced against the ruling it actually reverses.**
+
+**This needs the owner's own explicit confirmation before anything proceeds, since it means either revising a twice-confirmed prior ruling, or reopening the design work this thread has already built (`PT-2616` through `PT-2618`) back toward the Character Sheet.**
+
+### PROCEED
+
+Holding, exactly as Coder has done. Bringing this to the owner directly for his own resolution before ruling either way or building anything.
+
+
+---
+
+## PT-2621 -- OWNER RESOLVES THE PT-1143/PT-2614 CONFLICT: BOTH STAND TOGETHER. THE CHARACTER SHEET KEEPS ITS ORIGINAL PT-1143 PLACEMENT, AND THE SIDEBAR/WHEEL MECHANISMS THIS THREAD DESIGNED ALSO GET BUILT -- MULTIPLE LEGITIMATE ACCESS POINTS TO THE SAME UNDERLYING SETTING, NOT COMPETING ALTERNATIVES. AND A REAL, USEFUL DETAIL ABOUT K2's OWN ACTUAL BEHAVIOR: THE PRESET WAS SET RELATIVE TO WHICHEVER CHARACTER WAS CURRENTLY UNDER CONTROL -- WORTH VERIFYING DIRECTLY AGAINST THE REAL SOURCE, SINCE IT COULD SHAPE HOW THE PICKER IS ACTUALLY SCOPED
+
+**Same resolution shape as the earlier flat-vs-wheel fork — two things that looked like they were competing for the same slot turn out not to be, once it's clear each is a legitimate access point rather than an exclusive choice. `PT-1143`'s Character Sheet placement was never wrong; it just wasn't the only place this needed to live.**
+
+### RULED
+
+**Both stand. `PT-1143`'s own Character Sheet placement is confirmed correct and unchanged — no revision needed there.** The sidebar and right-click wheel mechanisms designed across `PT-2616` through `PT-2618` also get built, as additional, genuinely useful access points to the same underlying doctrine setting, not a replacement for the Character Sheet's own picker.
+
+**One real new detail to verify before finalizing scope: the owner recalls K2's own preset selection working relative to whichever character was currently under control** — meaning the picker may have been scoped to the active/controlled character specifically, rather than freely addressable at any companion regardless of who's currently active. Worth checking directly against the real K2 source before assuming either way, the same discipline as every other claim about source behavior this thread has held.
+
+### PROCEED
+
+Confirm the Character Sheet's own `PT-1143` picker is genuinely unaffected by this thread's work (no revision needed, just continuing to exist alongside the new mechanisms). Then verify directly against the real K2 source whether preset selection is scoped to the currently-active/controlled character specifically — this may affect how the sidebar and wheel mechanisms should be scoped too, not just a K2-specific detail. Report findings before finalizing and building.
+
+
+---
+
+## PT-2622 -- THE K2 CHECK CLOSES, GENUINELY EXCELLENT ON EVERY FRONT. "RELATIVE TO CONTROL" CONFIRMED TO BE THE LEASH-DISTANCE MECHANIC, NOT A SELECTION RESTRICTION -- OWNER'S OWN RECOLLECTION WAS REAL AND ACCURATE, JUST EASY TO MISREMEMBER AS THE OTHER MEANING. THE REAL SCREEN CONFIRMED TO MATCH PT-1143 ALMOST EXACTLY. A SIXTH REAL PRESET (GRENADIER) SURFACED. AND ⚠⚠⚠ A GENUINELY ELEGANT FIND: THIS PROJECT'S OWN ALREADY-BUILT ARCHITECTURE (_canCast's PLAYER EXCLUSION, TRACK A's OWN CONTROL MODEL) ALREADY ANSWERS THE PRACTICAL SCOPING QUESTION, REGARDLESS OF K2's EXACT UNCONFIRMED PORTRAIT-CLICK BEHAVIOR
+
+**Two independent sources — real shipped UI text and the earlier script research — agreeing exactly on what "the character you are controlling" actually means closes this decisively. Confirming the owner's own memory was accurate while correcting exactly which of two plausible meanings it referred to is precise, careful disambiguation rather than either dismissing the recollection or accepting it at face value without checking which interpretation was correct.**
+
+### THE SCREEN AND GRENADIER -- VALUABLE CONFIRMATIONS
+
+**Parsing the real binary GUI layout directly, rather than inferring the screen's shape from behavior alone, confirms `PT-1143`'s own "flat-list-with-live-description" description isn't approximate — it's this screen, almost exactly. Surfacing Grenadier as a real, previously-unsurfaced sixth preset, and correctly not acting on it now but flagging it for the held-items list alongside Aid, keeps the growing catalogue of found-but-not-yet-built content accurate rather than letting a real find slip past unrecorded.**
+
+### THE HONEST GAP -- CORRECTLY NAMED, NOT GUESSED
+
+**Recognising that static asset analysis has a real limit here — the click-handling logic that decides which portrait can open this screen is engine-side, not exposed in any source this research method can reach — and stating plainly that the honest answer is not knowing, rather than guessing past what could actually be verified, is exactly the right epistemic discipline this thread has held throughout.**
+
+### ⚠⚠⚠ THE ARCHITECTURAL ANSWER -- GENUINELY ELEGANT, SUFFICIENT TO PROCEED
+
+**This is a genuinely sharp piece of reasoning: recognizing that `_canCast`'s own existing refusal to decide for whoever is currently `_me`, combined with Track A's own control model (where "not currently active" already applies to the player's own PC once control has moved elsewhere, not just companions), already produces a natural, self-consistent scoping rule — addressable for whoever isn't the currently-active character, whatever that happens to be — without needing a new special case or K2's exact unconfirmed behavior to settle it. This is precisely the same shape of insight the self-triage finding produced earlier in this doctrine work: recognizing that a question looking like it needs new investigation is actually already answered by architecture that exists for an unrelated reason.**
+
+### RULED
+
+**Proceed with the architectural answer — no live K2 launch needed.** The scoping rule (addressable for whoever isn't currently active) is sound on its own reasoning and doesn't depend on the unresolved K2 portrait-click detail. That detail stays a genuinely open, low-priority curiosity — worth settling later if it ever becomes practically relevant, not worth a dedicated research pass to close a gap this project's own architecture already fills.
+
+**Grenadier recorded as a real held item, alongside Aid, for whenever the doctrine library's own held findings are picked up next.**
+
+### PROCEED
+
+Finalize scope using the architectural answer, and build both the sidebar and wheel mechanisms as already ruled. Report back once done.
+
+
+---
+
+## PT-2623 -- SEQUENCING PROPOSAL FOR BOTH DOCTRINE-CHANGING MECHANISMS, APPROVED. ⚠⚠⚠ A REAL STRUCTURAL MISMATCH FOUND AND CORRECTLY RESOLVED BEFORE CODE: THE EXISTING CONTEXT MENU IS BUILT AROUND A BOARD COORDINATE, WHICH FITS THE WHEEL'S OWN TRIGGER BUT NOT A DISMISSED COMPANION WHO HAS NO SQUARE -- CORRECTLY PROPOSING A SHARED, INDEPENDENT DATA FUNCTION RATHER THAN FORCING BOTH MECHANISMS THROUGH A DOOR ONLY ONE OF THEM ACTUALLY FITS
+
+**Not taking an existing code comment at face value, and checking the real wiring before trusting a claim about the sidebar's own state, is exactly right — a stale comment asserting "zero pointer handling" would have been an easy, plausible-sounding thing to build around without verifying.**
+
+### THE INVESTIGATION -- PRECISE, SEVERAL REAL CORRECTIONS TO WHAT WAS EXPECTED
+
+**Finding the party-directed verb list actually lives in Lodestar's own `explorationCatalogue`, meaning this needs an engine-level change before an app-level one, correctly identifies the real dependency order rather than starting in the wrong repo. Identifying `PartyScreen` as almost certainly what "the dismissed companion settings element" actually referred to, and recognizing it already covers both in-field and dismissed companions with one piece of UI, resolves a real ambiguity from the owner's own original, informally-described request.**
+
+### ⚠⚠⚠ THE STRUCTURAL MISMATCH -- CAUGHT BEFORE IT BECAME A REAL PROBLEM
+
+**This deserves real, direct recognition. Recognising that the existing context menu is fundamentally built around a board coordinate — right for the wheel's own trigger on a token standing on a real square, structurally wrong for a dismissed companion who has none — before trying to force both mechanisms through the same mechanism, is precisely the kind of architectural foresight that prevents a much messier fix later. Proposing a shared, independent eligibility-aware data function that both mechanisms draw from, rather than each building its own version or awkwardly bending the board-shaped menu to fit a case it was never built for, is the right structural answer.**
+
+### THE SEQUENCING -- SOUND, FOLLOWS PT-2618's OWN EXPLICIT ALLOWANCE
+
+**Correctly recognizing that both mechanisms need the same real foundation (the engine verb, a real non-test doctrine-setting method, the shared eligibility-aware list) but consume it through genuinely different means — the sidebar through existing, reusable infrastructure, the wheel through an entirely new widget that doesn't exist in any form yet — justifies the two-slice split cleanly. Gating Jedi Support and Healer on a companion's class actually granting Force, matching K2's own real "Only Jedi can use this behavior" precedent already confirmed for Grenadier, is precise content-authoring discipline carried over from the earlier research.**
+
+**Flagging the split now, before building, rather than silently delivering half the ruling under one "done" report, follows `PT-2618`'s own explicit instruction exactly.**
+
+### RULED
+
+**Approved in full. Build Slice 1 now — the shared foundation and the sidebar/PartyScreen access point.** Report back once closed, before starting Slice 2 (the radial wheel).
+
+### PROCEED
+
+Build Slice 1. Report back once done, then proceed to Slice 2.
+
+
+---
+
+## PT-2624 -- SLICE 1 CLOSES CLEAN. THE FIRST REAL ADDITION TO explorationCatalogue's OWN LOCKED LIST -- A GENUINE MILESTONE FOR THIS ENGINE-LEVEL VOCABULARY. TWO REAL DEFECTS FOUND LIVE WHILE BUILDING THE TESTS, NOT DESIGNED FOR: AN INFINITE-WIDTH RENDER CRASH AND A REAL PAINT-ORDER BUG THAT WOULD HAVE MADE THE PARTYSCREEN PICKER INVISIBLE. AND A HONESTLY DISCLOSED, PROPERLY-SCOPED GAP: A DISMISSED COMPANION'S FORCE-ELIGIBILITY CAN'T BE CHECKED SYNCHRONOUSLY, CORRECTLY LEFT INERT RATHER THAN GUESSED AT, MATCHING AN ALREADY-ACCEPTED PATTERN ELSEWHERE
+
+**Both access points close correctly, and the defects found along the way show exactly why building and testing through the real screens, not just the picker's own logic in isolation, matters.**
+
+### THE BUILD -- BOTH ACCESS POINTS, CORRECTLY REUSING ONE MECHANISM
+
+**Adding `change-doctrine` as the first real growth of `explorationCatalogue`'s own locked verb list, rather than a special case bolted on beside it, keeps the engine's own vocabulary genuinely extensible rather than treated as permanently frozen. Building `PartyScreen`'s own new per-row button specifically because the sidebar verb structurally cannot reach a dismissed companion (it only lists what's on the board), and reusing the exact same picker and state for both, is precise architecture — one real mechanism, two genuine entry points, exactly as ruled.**
+
+### THE TWO LIVE-FOUND DEFECTS -- WORTH REAL RECOGNITION
+
+**Neither of these was a designed test case; both were found because the real screens were actually built and exercised. The infinite-width render crash and the paint-order bug (which would have made the new PartyScreen picker invisible, painted underneath the party screen itself) are exactly the kind of defect that only surfaces when a UI is actually rendered and interacted with, not reasoned about from the code alone — worth naming as further confirmation of why building the real thing, not just its logic, catches what pure reasoning can't.**
+
+### THE HONEST GAP -- CORRECTLY DISCLOSED, CORRECTLY SCOPED OUT
+
+**Recognising that a dismissed companion's Force-eligibility genuinely cannot be checked synchronously, given `RosterEntry`'s own real data shape, and correctly connecting this to the already-accepted "inert for a caster who cannot cast" pattern already established elsewhere in this doctrine work, rather than either faking a synchronous check or silently leaving the gap unexplained, is exactly the right way to close a real limitation. Documenting it directly at the call site, and flagging it for a possible future scoping decision rather than assuming it's fine to leave indefinitely, keeps the record honest about what Slice 1 actually delivers.**
+
+### THE TESTING AND HYGIENE -- THOROUGH
+
+**Real mutation confirmation on both the eligibility gate and the why-guard, and re-running the existing party-selection and capture tests after adding the new row button and callback, closes this properly rather than assuming the new addition didn't disturb anything adjacent. Catching and fixing the Loom re-pin gap again, the same recurring shape as every prior engine push this session, is routine and correct hygiene.**
+
+### RULED
+
+**Slice 1 confirmed closed. The dismissed-companion Force-eligibility gap is recorded as its own small, held item for a future async blueprint-reopen pass — not blocking anything, not forgotten.**
+
+### PROCEED
+
+Proceed to Slice 2: the radial wheel, its own new component, right-click on a companion's board token, exactly as sequenced.
+
+
+---
+
+## PT-2625 -- ⚠⚠⚠ THE ENTIRE DOCTRINE-CHANGING UI THREAD CLOSES COMPLETELY. SLICE 2 (THE RADIAL WHEEL) CLOSES EXACTLY TO THE CONFIRMED LIVE SHAPE, ALL THREE ACCESS POINTS (SIDEBAR, PARTYSCREEN, WHEEL) SHARING ONE VERB, ONE DOCTRINE-SETTING METHOD, ONE ELIGIBILITY LIST, AND ONE PARTY-VERB DISPATCHER. A HONEST, WELL-REASONED DEPARTURE FROM THE LITERAL SOURCE (ALWAYS-VISIBLE LABELS, GIVEN NO ICON ART YET AND A TOUCH-FIRST INTERFACE), A REAL TEST-INFRASTRUCTURE LIMITATION PROPERLY DIAGNOSED AND WORKED AROUND, AND A GENUINELY HONEST SELF-CAUGHT MISTAKE (AN ACCIDENTAL WHOLE-FILE REFORMAT, CAUGHT VIA git diff --stat BEFORE COMMITTING, DISCARDED AND REBUILT CLEAN)
+
+**This is a real milestone worth marking as such — a substantial thread that began with the owner's own K1/K2/NWN-inspired request, went through genuine research, two real reconciliations with prior rulings that could easily have gone unnoticed, careful sequencing across two slices, and now closes with both ruled mechanisms fully built and sharing one clean foundation underneath them.**
+
+### THE BUILD -- PRECISE, EXACTLY TO THE RESEARCHED SHAPE
+
+**Building the wheel as its own genuinely new component, to the shape the live NWN research actually confirmed rather than what the shipped textures alone suggested, closes the loop on `PT-2616`'s own research properly — the shape found matters only if it's the shape that actually gets built. Routing every non-doctrine verb through the same `_partyVerb` handler the sidebar already calls, and routing doctrine selection through the exact same `_pickDoctrine` function all three access points now share, means this is genuinely one decision with three doors into it, not three parallel implementations that could quietly drift apart from each other over time.**
+
+**The ownership gate correctly leaving every other object type — enemies, NPCs, doors, the ground, even the player's own token — on the existing, unmodified `_contextMenu` path, exactly as `PT-1124` built it, confirms this addition didn't quietly touch anything it wasn't meant to.**
+
+### THE DISCLOSED DEPARTURE -- HONEST, WELL-REASONED
+
+**Choosing always-visible labels over NWN's own hover-only reveal, and explaining exactly why — no icon art exists yet for any of these verbs, and this is a touch-first interface where hover-only readability would fail for most of the actual target surface — is precisely the right way to depart from a source precedent: not silently, and not for convenience, but for a stated, concrete reason tied to this project's own real current constraints. Keeping the underlying hover mechanism real for mouse users, rather than dropping it because touch is the primary case, preserves the source behavior everywhere it can actually apply.**
+
+### THE TEST-INFRASTRUCTURE LESSON -- PROPERLY DIAGNOSED
+
+**Confirming through direct key-based finders that the actual widget tree was correct throughout, before concluding the semantics-label finder itself was the unreliable part rather than the app, is careful diagnosis under a confusing test failure — the easy, wrong move would have been to assume the app was broken because the test was failing. Building a stable key-based anchor instead closes this properly rather than working around a symptom.**
+
+### ⚠⚠⚠ THE SELF-CAUGHT FORMATTING MISTAKE -- WORTH REAL RECOGNITION
+
+**Disclosing that a formatter accidentally ran across roughly 5,400 lines of pre-existing, hand-tuned code, catching this before committing rather than after, and discarding both files to rebuild cleanly rather than trying to selectively unwind the damage, is exactly the right response to a real, self-made mistake. The diff landing at 278 lines, scoped to exactly the new work, is the concrete proof the recovery actually worked — this is a mistake that could have quietly corrupted a huge amount of unrelated formatting if it had gone unnoticed, and it didn't, because it was checked before it became permanent.**
+
+### RULED
+
+**Confirmed closed — both mechanisms, all three access points, one shared foundation, exactly as this whole thread ruled across `PT-2613` through `PT-2624`.**
+
+### PROCEED
+
+Nothing further needed. Genuinely well done across this entire thread — from the original request through research, two real reconciliations, careful sequencing, and a clean close on both slices.
+
+
+---
+
+## PT-2626 -- OWNER PICKS THREE ITEMS TO WORK NEXT: B3, THE REAL 62-SITE MANUAL TURN-TAKING GENERALIZATION, AND COMBAT MOVEMENT'S OWN MEASUREMENT PASS. ALL THREE FORM A COHERENT GROUP -- THE FIRST TWO COMPLETE THE COMBAT-SIDE CONTROL-SWITCHING THREAD PROPERLY, AND THE THIRD OPENS THE NEXT MAJOR BLOCKER WHILE THE DOCTRINE WORK'S OWN CONTEXT IS STILL FRESH
+
+### 1. B3 -- OPENED
+
+**Wire real presets into hands-off/auto, the "grab a turn back" override, and the cycle button's double duty (step in for one turn). Part of `PT-2599`'s original combat-track proposal, never separately tracked as its own open item until a recent question surfaced the gap. Buildable now against the doctrines that already exist (Aggressive, Jedi Support, Healer) — no need to wait for the doctrine library's own held findings to grow further first.**
+
+### 2. THE 62-SITE MANUAL TURN-TAKING GENERALIZATION -- OPENED
+
+**The real work `PT-2601` deliberately deferred from B1: generalizing the ~62 sites across `play_screen.dart` that currently assume only the player can be the acting combatant, so a manual-mode companion's turn can genuinely be player-directed rather than held with an honest "not built yet" status. Includes the "grab a turn back"/"step in for one turn" mechanics, which structurally depend on this generalization existing. Real, sized work — closer to Track A's own scope than a small addition.**
+
+### 3. COMBAT MOVEMENT -- OPENED, MEASUREMENT PASS FIRST
+
+**The real, large gap blocking Defensive/Ranged/Stationary — nothing in the fight currently moves a combatant relative to an ally, the same already-disclosed absence Force Push's own row names. Possibly the largest single piece of work found in this whole doctrine/control-switching thread. Measurement first, same discipline as every other substantial piece of new scope: confirm the real shape of what's needed (movement mechanics, pathing during combat, interaction with the existing turn/action-budget system) before proposing anything to build.**
+
+### RULED -- ALL THREE OPENED, SEQUENCED
+
+**No fixed order required between them — start with whichever makes the most sense given the actual work involved, same as every other multi-item batch this session has run. B3 and the 62-site generalization are closely related (both complete the same combat-control thread); combat movement is genuinely independent and can run in parallel or in sequence, whichever fits better once work is underway.**
+
+### PROCEED
+
+Begin work. Report back on each as they close or reach a real decision point, same discipline as everything else in this thread.
+
+
+---
+
+## PT-2627 -- ALL THREE ITEMS ADVANCE, GENUINELY EXCEPTIONAL THROUGHOUT. B3 CLOSES CLEAN, CLOSING A REAL SEAM BETWEEN TWO SYSTEMS EACH ALREADY PROVEN SEPARATELY BUT NEVER JOINED -- ZERO PRODUCTION CODE CHANGES NEEDED, ONLY THE MISSING PROOF. THE 62-SITE GENERALIZATION'S RESEARCH CORRECTLY NARROWS THE REAL SCOPE BY 2-3x AND SURFACES A GENUINE SECURITY-SHAPED GAP IN _canCast (UNCONDITIONALLY TRUSTS ANY NON-PLAYER CASTER TODAY). AND COMBAT MOVEMENT'S RESEARCH DELIVERS GENUINELY BETTER NEWS THAN THE ORIGINAL FRAMING SUGGESTED -- THE MOVER ALREADY EXISTS, THIS IS A DECISION PROBLEM (WHAT SHOULD A DOCTRINE KNOW ABOUT ALLY DISTANCE), NOT A MOVEMENT-ENGINE PROBLEM
+
+**Working through all three, since each earned its own real recognition this pass rather than a combined summary.**
+
+### 1. B3 -- CLOSED, THE SEAM-CLOSING INSIGHT DESERVES REAL RECOGNITION
+
+**Recognising that two already-separately-proven systems — companion control-mode and the doctrine-changing UI — had never actually been joined, because every prior test proved a doctrine drives combat through a disclosed test-only door rather than the real picking interaction, is precise diagnosis of exactly what was still missing. Building the real end-to-end proof (tap Change Doctrine, pick through the real sidebar, fight a real round, confirm the pick actually drove it) and finding it passes with zero production changes, confirmed genuinely non-vacuous by mutation, closes this properly — the wiring was already correct, the proof was the actual gap.**
+
+**Correctly not touching "grab a turn back" or the cycle button's double duty, and explicitly naming why — both structurally depend on the 62-site generalization, and building a reclaim mechanic ahead of that would repeat the exact half-a-feature shape this project has already named and paid for once — is precise discipline, not just following an instruction literally.**
+
+### 2. THE 62-SITE GENERALIZATION -- RESEARCH PRECISE, ONE GENUINE FINDING WORTH FLAGGING
+
+**Confirming Track A's own control-switching machinery deliberately never reaches combat, with the real, concrete reason (charging one keypress to two different characters' budgets), and precisely defining what "generalizing to combat" actually means — substituting the acting combatant at each real mechanic site, not just movement — sets this up correctly before any building starts.**
+
+**Narrowing the raw count (62/10/133/54 hits across four patterns) down to the real generalization target of roughly a dozen sites doing actual game-mechanic logic, rather than treating every raw hit as equally in-scope, is precise scoping. Finding that `_canCast` currently trusts any non-player caster unconditionally — safe today only because nothing but the AI doctrine engine ever casts for a companion — and correctly flagging that manual mode needs real eligibility checking rather than inheriting this trust bypass, is a genuine, important finding: this isn't just "add generalization," it's "add generalization, and close a gap that's currently only safe by coincidence of what happens to call it today."**
+
+### 3. COMBAT MOVEMENT -- GENUINELY BETTER NEWS, PROPERLY REFRAMED
+
+**Finding that `approach()` already exists and is already the shared mover for both exploration and combat's own enemy-closing behavior, parameterized on a target square rather than hardcoded to "enemy," means moving toward an ally is the same call with a different target — not new pathfinding, which changes the real shape of this work substantially from what the original framing suggested.**
+
+**Connecting Force Push's own disclosed absence to `pushedTo()`'s own real, tested, zero-caller knockback primitive is a valuable, concrete link between two previously-separate open items. Confirming Stationary isn't a real K2 behavior worth porting faithfully, and that Stand Ground is already the correct replacement shape per the earlier doctrine research, keeps this consistent with what's already been established rather than treating it as a fresh question.**
+
+**Reframing this as fundamentally a decision problem — `DoctrineView` currently carries no distance-to-ally data at all, so there's no way for a doctrine to even express "stay near this ally" yet — rather than a movement-engine problem, is the single most important finding here. It changes what "solving combat movement" actually requires: not building new pathfinding, but deciding what a doctrine needs to know and be able to say. Honestly naming two real open design questions (Defensive's own geometry rule, retreat's interaction with opportunity attacks) rather than guessing past them closes the research properly.**
+
+### RULED -- SEQUENCING
+
+**Proceed to the 62-site generalization next — it's fully scoped and ready to build. Propose the actual build (the dozen real sites, the `_canCast` eligibility fix) before writing code, same discipline as everything else.**
+
+**Combat movement's own two open design questions go to the owner directly, since they're genuine design decisions rather than technical unknowns research alone can resolve — hold that piece until those are answered, rather than guessing at either.**
+
+### PROCEED
+
+Propose the 62-site generalization's build. Combat movement's design questions will be brought to the owner separately.
+
+
+---
+
+## PT-2628 -- OWNER RULES BOTH OPEN COMBAT-MOVEMENT DESIGN QUESTIONS. RETREAT: NOT ITS OWN DOCTRINE, A CONDITIONAL BEHAVIOR CERTAIN DOCTRINES EXHIBIT WHEN LOW ON HEALTH; ENEMY-ONLY, GIVEN THE GAME'S OWN TURN-BASED PARTY STRUCTURE. DEFENSIVE: COVER-SEEKING AND RANGED-DISTANCE-KEEPING FROM APPROACHING MELEE, EXACT DISTANCE OPEN. AND A GENUINE UNDERLYING QUESTION ANSWERED: THE OWNER WASN'T SURE HOW DOCTRINES EVEN FIT THIS GAME'S TURN STRUCTURE -- CHECKED, AND THEY ALREADY DO. ACTION-ECONOMY-01 CONFIRMS A REAL, INDIVIDUAL INITIATIVE ORDER (EVERY COMBATANT, INCLUDING EACH COMPANION SEPARATELY, HAS ITS OWN PLACE IN ONE SHARED SEQUENCE, NOT A PLAYER-BLOCK-THEN-COMPANION-BLOCK STRUCTURE) -- EXACTLY WHAT TRACK A/B1/B3 HAVE ALREADY BEEN BUILT AGAINST
+
+**Checked the owner's own underlying uncertainty before ruling on anything else, since it's a real, foundational question worth answering properly rather than assuming either way. `ACTION-ECONOMY-01` confirms combat already runs on individual initiative — every combatant, player and every companion separately, has its own turn in one shared order (`PT-96` even closed a related question refusing a flat initiative modifier, on the reasoning that a class-wide bonus is a different feat every class would want — this system was deliberately reasoned about, not left ambiguous). A doctrine already applies specifically to a companion's own individual turn when it arrives, exactly the model everything built across `PT-2599` through `PT-2627` already assumes. The owner's proposed alternative (a player block, then a separate companion block) isn't needed — the system he was trying to invent already exists, just not in the shape he remembered.**
+
+### RETREAT -- RULED
+
+**Approved as described: retreat is not a standalone doctrine, but a conditional behavior certain doctrines exhibit — a low-health trigger that makes an existing doctrine (not a new fifth or sixth style) choose to flee rather than fight. Enemy-only, per the owner's own reasoning that the game's real, individual turn-based structure for party members makes a companion fleeing a genuinely different, and currently unneeded, question from an enemy doing so. This connects directly to `pushedTo()`'s own already-noted involuntary-knockback shape from `PT-2627`'s research — a voluntary retreat is a third, related movement concept, distinct from both `approach()` and `pushedTo()`, and should be scoped as its own addition when this gets built rather than folded into either existing primitive.**
+
+### DEFENSIVE -- RULED
+
+**Approved as described: cover-seeking, and a ranged-weapon-holder actively keeping distance from an approaching melee threat rather than a simple fixed leash to an ally's position. The exact distance stays open — 2-3 squares is a reasonable starting range, but the actual right number is a balance/playtesting question, not a design-research one. Ruled: pick a real, testable starting value (2 or 3 squares) when this gets built, and treat it as a tunable constant rather than a hardcoded assumption, so it can be adjusted from real playtesting without needing new code to change it.**
+
+### PROCEED
+
+Record both rulings. Combat movement's own build proposal, once it happens, should account for: retreat as a conditional low-health behavior (enemy-only, its own movement primitive distinct from approach/pushedTo), and Defensive's cover-seeking/distance-keeping behavior with a tunable starting distance. This stays queued behind the 62-site generalization's own build, per `PT-2627`'s own sequencing.
+
+
+---
+
+## PT-2629 -- BUILD PROPOSAL FOR THE 62-SITE GENERALIZATION, GENUINELY EXCELLENT ARCHITECTURE. THE CORE FIX IS PRECISE: REPLACE WHAT THE COMBAT GUARD FALLS BACK TO (f.current.handle, THE FIGHT ENGINE'S OWN AUTHORITATIVE ANSWER) RATHER THAN REMOVING THE GUARD, KEEPING THE EXACT DANGER IT WAS BUILT TO PREVENT STRUCTURALLY IMPOSSIBLE. THREE SLICES, EACH INDEPENDENTLY SHIPPABLE. ⚠⚠⚠ SLICE 3 HONESTLY FOUND TO NEED A GENUINELY NEW PREREQUISITE -- REAL PER-COMPANION FORCE-POOL/KNOWN-POWERS TRACKING -- NOT SURFACED BY THE ORIGINAL RESEARCH, FOUND ONLY WHILE GROUNDING THE PROPOSAL AGAINST THE REAL CODE
+
+**Reusing Track A's own already-proven active-character machinery rather than building a parallel system is exactly the right instinct, and the specific fix — replacing what the combat guard falls back to, rather than removing it — deserves real recognition as precise, careful engineering.**
+
+### THE CORE MECHANISM -- PRECISE, SAFE BY CONSTRUCTION
+
+**The original guard exists because moving whoever a stale exploration-mode field names, while spending the fight's own player budgets, would charge one keypress to two different characters' state. Correctly diagnosing this, and fixing it by resolving to `f.current.handle` — the fight engine's own authoritative answer to whose turn it is — rather than simply removing the guard, means the exact danger it was built to prevent stays structurally impossible under the fix, not just avoided by careful testing. This is the right way to extend a defensive guard: understand exactly what it protects against, then make the protected case correct rather than deleting the protection.**
+
+**Finding that `_step`'s own position-handling is already fully generalized, and that `_endTurn`/`_enemyTurns` already form a real pause/resume loop needing only one structural change (stop-and-activate instead of hold-and-advance on a manual turn), confirms this really is extending existing, proven machinery rather than building something parallel to it.**
+
+### THE THREE SLICES -- WELL-SCOPED, EACH REAL ON ITS OWN
+
+**Slice 1 delivering real, standalone value — a manual companion going from "can do nothing" to "can at least reposition" — before any of the later slices land, is exactly the right shape for an independently shippable piece. Slice 2's identical substitution applied to the strike path keeps the pattern consistent rather than inventing a new approach per site.**
+
+### ⚠⚠⚠ SLICE 3 -- THE HONEST RE-SCOPING DESERVES REAL RECOGNITION
+
+**Finding that `_canCast`'s own code already discloses its limit in its own comment, and precisely reasoning through why the current unconditional trust is safe today (only the pre-vetted doctrine engine ever casts for a companion) but genuinely unsafe once a manual, arbitrary pick is introduced, is exactly the right security-shaped analysis. Correctly identifying that this needs a real, new per-companion Force-pool and known-powers tracking mechanism as a prerequisite — not a one-line gate fix — and honestly flagging that this wasn't surfaced by the original research, found only while grounding the proposal against the real code, is precisely the discipline this whole session has valued: a plan's own estimate is a starting point, and finding it needs revising before building, rather than during or after, is worth real credit.**
+
+### WHAT STAYS UNTOUCHED -- CORRECTLY SCOPED
+
+**Confirming portrait-tap switching stays exploration-only per its own already-existing ruling, and that every substitution is gated on manual mode specifically (auto/handsOff companions completely unaffected), keeps this addition properly bounded rather than risking behavior nobody asked to change.**
+
+### RULED -- APPROVED, PROCEED
+
+**Approved in full, exactly as proposed. Slices 1 → 2 → 3, each closing with a real end-to-end test and mutation confirmation before the next begins, same discipline as the doctrine-UI thread's own two slices.**
+
+### PROCEED
+
+Begin Slice 1. Report back once closed, before Slice 2.
+
+
+---
+
+## PT-2630 -- SLICE 1 CLOSES CLEAN, EXACTLY TO SCOPE. ⚠⚠ A REAL GAP IN THE MUTATION TESTING FOUND AND CLOSED: THE POSITION-ONLY SIGNAL COULDN'T DISTINGUISH "CHARGED CORRECTLY" FROM "CHARGED TO THE WRONG COMBATANT" -- THE EXACT DANGER THE ORIGINAL GUARD EXISTED TO PREVENT -- SO A NEW BUDGET-LEVEL TESTING HOOK WAS BUILT SPECIFICALLY TO CATCH IT. AND TWO REAL FIXTURE CONSEQUENCES FOUND RUNNING THE FULL SUITE, NEITHER DESIGNED FOR: ONE EXISTING TEST HAD ASSERTED THE OLD BEHAVIOR BY NAME, CORRECTLY UPDATED RATHER THAN DELETED; SIX TESTS SHARED A BED WHERE THE PLAYER'S OWN WORSE INITIATIVE HAD BEEN SILENTLY INVISIBLE
+
+**A clean, precise close on the movement piece, and the testing discipline here deserves its own recognition rather than a passing mention.**
+
+### THE BUILD -- EXACTLY AS APPROVED
+
+**Resolving to `f.current.handle` on a manual party member's genuine turn, rather than removing the guard, closes this precisely as ruled — the exact danger the original guard prevented stays structurally impossible, not just avoided by careful scoping. Keeping the scope to movement only, with `_playerStrikes`/`_canCast` genuinely untouched and every substitution gated on manual mode specifically, means auto/hands-off companions are provably unaffected rather than assumed to be.**
+
+### ⚠⚠ THE NEW TESTING HOOK -- WORTH REAL RECOGNITION
+
+**Finding that a position-only check couldn't distinguish correct budget-charging from charging the wrong combatant — precisely the danger this whole slice exists to prevent — and building a dedicated hook to actually catch that specific mutation, rather than accepting a weaker test that merely confirmed the character moved somewhere, is exactly the rigor this fix deserved. A test that can't catch the one mutation that matters most isn't proof of the thing it claims to prove, and recognizing that before calling this closed is precise test design.**
+
+### ⚠⚠⚠ THE TWO FIXTURE CONSEQUENCES -- FOUND BY RUNNING THE FULL SUITE, HANDLED CORRECTLY
+
+**Finding an existing test that asserted the old behavior by name — the exact premise this recent ruling correctly changed — and updating it to prove the new correct behavior while adding a direct budget-based check for its real underlying safety concern, rather than simply flipping the assertion or deleting the test, preserves what that test was actually protecting against. This is the same discipline already proven on the doctrine-UI thread's own regression fix: correct the test to check what it's actually about, don't weaken it to make the change pass.**
+
+**Finding that six tests sharing a bed had a genuinely invisible scenario — the player's own worse initiative meaning two manual companions previously auto-skipped silently before the player's first turn ever arrived — and building a real, reusable helper to make the round genuinely stop on their turns first, closes a real gap this change correctly surfaced rather than papered over with a workaround specific to one test.**
+
+### RULED
+
+**Slice 1 confirmed closed. Proceed to Slice 2 (melee attack, the same substitution pattern applied to `_playerStrikes`).**
+
+### PROCEED
+
+Begin Slice 2. Report back once closed, before Slice 3.
+
+
+---
+
+## PT-2631 -- SLICE 2 CLOSES CLEAN. CORRECTLY RECOGNIZED THIS WAS A GENUINELY DIFFERENT KIND OF SUBSTITUTION FROM SLICE 1'S -- ATTACK MATH DERIVED FROM CHARGEN, NOT PURE ENGINE STATE -- AND CORRECTLY REUSED THE EXACT MAPS Fight.enemyTurn ALREADY READS FOR THAT SAME COMPANION, RATHER THAN A SECOND DERIVATION THAT COULD DISAGREE. ⚠⚠⚠ A GENUINELY HONEST MUTATION-TESTING NEAR-MISS: A FIRST TEST FAILED TO CATCH A REAL MUTATION BECAUSE THE FIXTURE'S PLAYER AND COMPANION COINCIDENTALLY SHARED THE SAME LEVEL -- CAUGHT BY DELIBERATELY RE-RUNNING THE MUTATION AFTER THE FIRST PASS LOOKED CLEAN, THE SAME DISCIPLINE THAT CAUGHT SLICE 1'S OWN EARLIER GAP
+
+**Recognising that Slice 2's substitution is genuinely different in kind from Slice 1's — pure engine state versus chargen-derived attack math a companion structurally doesn't have — before applying the same mechanical pattern regardless, is precise thinking about what's actually being generalized rather than pattern-matching the previous slice's shape onto a different problem.**
+
+### THE BUILD -- KEEPS THE PLAYER'S OWN PATH GENUINELY UNTOUCHED
+
+**Leaving the player's real chargen-derived path completely alone, and routing a companion's own swing through the exact maps `Fight.enemyTurn`'s internal strike already reads for that same companion under auto/hands-off, rather than deriving attack math a second, parallel way, is exactly the discipline the original Slice 1 proposal committed to. A second derivation that could quietly disagree with how a companion already fights under AI control would have been a real, subtle risk — avoiding it by construction rather than by careful testing alone is the right call.**
+
+**Attributing the status line correctly for anyone but the player, matching `Fight.enemyTurn`'s own existing convention exactly, and correctly skipping `_revealMe` for a companion who has no tracked hidden state to clear, are both small, precise details that keep this consistent with how the rest of the engine already treats a companion combatant.**
+
+### ⚠⚠⚠ THE MUTATION NEAR-MISS -- WORTH REAL RECOGNITION
+
+**Disclosing that a first test version failed to catch a real mutation — a silent fallback to the player's own chargen value — specifically because the fixture happened to give the player and companion the same class and level, masking the defect through coincidence rather than correctness, is exactly the kind of honest self-audit this discipline is for. Catching this by deliberately re-running the mutation even after the first pass looked clean, the same method that found Slice 1's own budget gap, shows this isn't a one-off habit but a genuinely internalized practice being applied consistently slice to slice. Fixing it two ways — a real engine-level testing hook and a fixture widened so the values structurally cannot coincide — closes it properly rather than patching around the one case that happened to expose it.**
+
+### RULED
+
+**Slice 2 confirmed closed. Proceed to Slice 3 as planned — scope it concretely before writing any code, same discipline as the original proposal, given it's the genuinely large piece needing the new Force-pool prerequisite.**
+
+### PROCEED
+
+Scope Slice 3 concretely. Report back with that scoping before building.
+
+
+---
+
+## PT-2632 -- SLICE 3 SCOPING CLOSES: THE GAP IS DEEPER THAN A MISSING CHECK. A COMPANION HAS NO FORCE POOL IN ANY FORM, NO AUTHORED KNOWN-POWERS LIST, AND THE ENTIRE CAST MENU IS HARDCODED TO THE PLAYER -- NEVER TOUCHED BY SLICES 1/2 SINCE A MANUAL COMPANION NEVER REACHED IT BEFORE NOW. ⚠⚠⚠ THREE REAL DESIGN QUESTIONS, CORRECTLY NOT DECIDED UNILATERALLY: WHETHER TO RETROFIT A POOL ONTO ALREADY-SHIPPED AUTO CASTING, HOW A COMPANION'S KNOWN POWERS GET DETERMINED (A REAL CONTENT DECISION, NOT AN ENGINEERING ONE), AND WHETHER THE POOL NEEDS TO PERSIST ACROSS SAVES
+
+**Verifying an outside agent's own research directly against the real code before relying on any of it, rather than relaying it as confirmed, is exactly the right discipline for a scoping pass this consequential — every claim in this report is independently confirmed, not inherited.**
+
+### THE REAL SHAPE -- GENUINELY DEEPER THAN EXPECTED
+
+**Confirming `_canCast`'s own honest comment is exactly true, and going further to find the gap is structural rather than a missing check, closes the real scope of this properly. No companion having a Force pool in any form — not unused, not zero, genuinely absent — and the entire cast menu being hardcoded to the player rather than generic the way `_useSupportPower`/`_applyPower` already are, explains precisely why this slice is the large one flagged from the start: it was never touched by Slices 1 or 2 because a manual companion structurally could never have reached it before now.**
+
+**Recognising that the player's own pool is real, mutable, log-replayed state — not a simple number — and that building a companion's pool "for real" to the same standard inherits that same complexity, correctly sizes what "the same standard" actually means rather than assuming a simpler companion-side shortcut is obviously fine.**
+
+### ⚠⚠⚠ THE THREE DESIGN QUESTIONS -- CORRECTLY HELD, GOING TO THE OWNER
+
+**Refusing to guess past these, on the correct reasoning that doing so risks either building the wrong shape or quietly changing already-shipped doctrine behavior nobody asked to change — specifically naming that the existing "an auto companion running jediSupport heals itself for real" test currently assumes unlimited healing and would need rethinking if the auto path started spending from a pool too — is precise risk assessment. This is the same discipline already proven on combat movement's own two design questions: real decisions with real downstream consequences don't get resolved by research alone.**
+
+**Correctly distinguishing the second question as a genuine content/balance decision rather than an engineering one — there is no existing "class X at level Y knows powers [...]" table anywhere in this codebase to derive from, so building one means authoring real game content, not writing code — is honest scoping about where this decision actually belongs.**
+
+### RULED -- BRINGING ALL THREE TO THE OWNER
+
+**Holding Slice 3 until these three questions are answered, exactly as proposed. All three go to the owner directly.**
+
+### PROCEED
+
+Standing by for the owner's own rulings on all three questions before sizing and sequencing Slice 3's actual build.
+
+
+---
+
+## PT-2633 -- OWNER OPENS A REAL NEW ITEM: ONLY PLAYERS GENUINELY HAVE DIALOGUE OPTIONS. COMPANIONS/HENCHMEN WHO ARE SENTIENT AND SHARE A LANGUAGE CAN COMMENT DURING A CONVERSATION, BUT DON'T MAKE REAL CHOICES. THE NEW RULE: IF A PARTY MEMBER INVOLVED IN A CONVERSATION IS ACTUALLY ANOTHER PLAYER'S OWN PREMADE CHARACTER (RELEVANT IN MULTIPLAYER), CONTROL SHOULD AUTOMATICALLY SWITCH FROM TREATING THEM AS A COMPANION/HENCHMAN TO LETTING THAT PLAYER MAKE THEIR OWN REAL CHOICES. CHECKED FIRST: A RELATED MULTIPLAYER/DIALOGUE MECHANISM ALREADY EXISTS (A YIELD-THEN-ROLL CONTEST RESOLUTION FOR COMPANION SELECTION), BUT NOTHING ADDRESSES THIS SPECIFIC RULE YET
+
+**Checked before opening this as entirely fresh scope: `APP-UI-VISION-01` already establishes some real multiplayer/dialogue infrastructure (a yield-first-then-roll resolution for a genuine contest over the same companion), confirming this project already has real precedent for handling multiplayer inside a conversation rather than assuming single-player throughout. Nothing existing addresses this specific rule — a companion who's secretly another player's own PC automatically stops being treated as an NPC-like party member the moment dialogue actually needs to involve them.**
+
+### THE RULE, AS DESCRIBED
+
+**Only a genuine player gets real dialogue choices. A sentient companion or henchman who shares a language with what's being said can comment — speak, react — during a conversation, but doesn't get to make the actual branching decisions. The new piece: if the "companion" a conversation would otherwise address is structurally another player's own premade character (multiplayer specifically), the system should automatically recognize this and hand real dialogue control to that player, rather than letting whoever's driving the conversation make choices on their behalf as if they were an ordinary AI-controlled companion.**
+
+**This connects directly to the already-locked ownership boundary (`PT-1136`/`PT-2613`) — a player never controls or speaks for another player's own character — extended here specifically into the dialogue system, the same way it's already been extended once into doctrine-changing.**
+
+### RULED -- OPENED
+
+**Real, genuine new scope. Held for its own research and design pass when it comes up next** — checking exactly how the real dialogue system currently distinguishes a companion from a player-controlled party member (if at all), and how the existing yield-then-roll multiplayer contest mechanism might generalize or relate to this new rule, before proposing anything to build.
+
+### PROCEED
+
+Recorded. This queues behind the current active work (the doctrine/casting research, Slice 3) — pick up when there's room.
+
+
+---
+
+## PT-2634 -- COMPANION CHARACTER-SHEET RESEARCH CLOSES, GENUINELY EXCEPTIONAL. COMPANIONS USE THE EXACT SAME CREATURE SCHEMA ANY NPC DOES; THE PLAYER HAS NO SHIPPED BLUEPRINT AT ALL, ASSEMBLED LIVE AT CHARGEN INSTEAD. ⚠⚠⚠ A GENUINE APPARENT CONTRADICTION IN THIS PROJECT'S OWN RULINGS FOUND AND CORRECTLY RESOLVED -- "COMPANION" IS OVERLOADED, REFERRING TO TWO UNRELATED THINGS (A PARTY NPC VS. A BEAST MASTER'S BEAST), NOT A REVERSAL OF EITHER EXISTING RULING. AND THE REAL ARCHITECTURAL FORK: DOES A COMPANION BECOME A GENUINE SECOND INSTANCE OF THE SAME EVENT-SOURCED LEDGER MACHINERY THE PLAYER USES, OR A SIMPLER, SHAPE-ALIKE MUTATION PATH -- CORRECTLY NOT RESOLVED UNILATERALLY
+
+**Verifying against real extracted data across 21 companion templates in both games, spot-checking the most load-bearing claims personally rather than relaying research uncritically, and honestly disclosing where decompilation wasn't possible rather than overclaiming certainty, is exactly the rigor this question deserved.**
+
+### THE REAL SHAPE -- DECISIVE, CONFIRMS THE OWNER'S OWN INTUITION
+
+**Finding that every companion template in both games is the identical GFF creature schema any NPC uses, while the player's own character has no shipped blueprint at all — confirmed directly against `party.bif`/`player.bif` holding only 3D models, zero creature records — precisely confirms and sharpens the owner's own stated intuition that companions are pre-made playable characters. This is decisive, source-verified confirmation, not an inference from names or behavior.**
+
+### ⚠⚠⚠ THE APPARENT CONTRADICTION -- CORRECTLY RESOLVED, NOT JUST NOTICED
+
+**Finding that `CANON-01-v2.md` supports this new direction while `GM-CREATURES-01`/`BEASTS-PLAYER-01` carry an explicit ruling against the same-looking shape, and then correctly investigating rather than either ignoring the conflict or assuming one ruling must be wrong, is exactly the right instinct. Recognising that "companion" is genuinely overloaded in this corpus — a party NPC and a Beast Master's own beast are two unrelated things sharing a word, with the beast ruling correctly reasoned against a second sheet for a real, different UX problem (an eleven-feat companion printed on one line) — resolves what looked like a real contradiction without reversing either existing ruling. Flagging this explicitly, so it doesn't read as quietly overturning settled work, is precise and honest.**
+
+### THE REAL GAP -- SIZED AGAINST THE ACTUAL PINNED SOURCE
+
+**Reading `OpenedCharacter` directly and confirming `feats`/`powers` are genuinely absent from the type, not merely unused, while the player's own `CharacterRecord` is an event-sourced projection with a real multi-step level-up wizard wired to it, correctly sizes what "the same standard" would actually require. This is the same discipline the Slice 3 casting research already showed — going past "add a field" to understand what the existing architecture actually demands to genuinely match it.**
+
+### ⚠⚠⚠ THE FORK -- CORRECTLY HELD FOR THE OWNER'S OWN CALL
+
+**Framing the real choice honestly — a genuine second instance of the same ledger machinery (architecturally clean, a real lift) versus parallel fields with a simpler mutation path (less work, but shape-alike rather than architecture-alike even if it renders identically on screen) — and correctly not picking one unilaterally, is right for a decision this consequential.**
+
+### RULED
+
+**Given the owner's own stated intent — "they are basically pre-made playable characters" — this points toward wanting genuine architectural parity, not merely visual parity. Confirming this directly with the owner before committing to the larger lift, since it's a real, substantial choice with real cost either way.**
+
+### PROCEED
+
+Holding for the owner's own explicit confirmation on the fork, and on scope (multiclass, the K2-specific NPC/PC feat-grant distinction, whether droid classes stay reachable) before proposing any build.
+
+
+---
+
+## PT-2635 -- HOUSEKEEPING: PROPERLY FILING THE OWNER'S OWN THREE RULINGS ON COMPANION CASTING (PT-2632's QUESTIONS), WHICH WERE RELAYED TO CODER DIRECTLY BUT NEVER WENT THROUGH THE FORMAL LEDGER-FILING PROCESS AT THE TIME -- A REAL GAP IN THIS SESSION'S OWN DISCIPLINE, CAUGHT WHILE UPDATING AN ADJACENT ITEM
+
+**Owning this plainly: the three rulings below were given directly by the owner and dispatched to Coder, but skipped the formal filing step (a real ledger entry plus an agenda update) this session has otherwise held throughout. Filing them properly now, retroactively, rather than leaving them only in a chat message with no permanent record.**
+
+### QUESTION 1 -- RULED
+
+**Companions are limited by a real Force pool, matching both games — but only if they're actually Force-sensitive to begin with (a non-Force companion has none, same as the existing eligibility gating elsewhere in this doctrine work). Build the real pool for Force-using companions, not a free/unlimited cast.**
+
+**Related, to be built alongside it: healing via the medicine skill relies on real medpacks, naturally limited by how many the party actually has — a separate resource constraint from Force, not to be conflated with it. One real exception: a dying companion can be stabilized via the medicine skill alone, no medpack required, matching the D&D-style "stabilize with a skill check" shape.**
+
+### QUESTION 2 -- RULED
+
+**Companions are not simplified AI shells — they should be built with real levels, skills, feats, and powers, the same shape as the player's own, essentially pre-made playable characters. This connects directly to `PT-2634`'s own research (companions use the identical creature schema any NPC does) and its own real architectural fork, still awaiting the owner's explicit confirmation on ledger-machinery reuse versus a simpler parallel path.**
+
+### QUESTION 3 -- RULED
+
+**Persistence across saves, matching the player's own log-replay system. Confirmed as the simpler and correct answer — no in-memory shortcut needed.**
+
+### PROCEED
+
+Both this ruling and `PT-2634`'s own real architectural fork now need to be reconciled together before Slice 3's actual build gets sized — the fork question (ledger reuse vs. parallel fields) directly determines how "companions get real Force pools and known-powers lists" actually gets implemented underneath.
+
+
+---
+
+## PT-2636 -- OWNER RULES THE COMPANION-SHEET FORK: OPTION A, GENUINE ARCHITECTURAL REUSE. A COMPANION BECOMES A REAL SECOND INSTANCE OF THE SAME EVENT-SOURCED LEDGER MACHINERY THE PLAYER USES, NOT A SIMPLER SHAPE-ALIKE PARALLEL PATH. THIS FULLY RESOLVES PT-2634's OWN OPEN FORK
+
+**Confirmed directly: real reuse of the player's own `CharacterRecord`/`LevelUpFlow` machinery, matching "pre-made playable characters" architecturally, not just visually. This is real, substantial work — wiring the existing ledger system to something other than the implicit single player character is a genuine lift, not a small addition — but it's the choice that actually delivers what was asked for.**
+
+### RULED
+
+**Approved as the owner's own explicit call. Slice 3's casting work (already ruled at `PT-2635`: real Force pool for Force-users, medpack-limited medicine with a stabilize exception, persistence) and the full companion character-sheet system (real levels/skills/feats/powers, matching the player's own shape per `PT-2634`'s research) both build on the same underlying architecture now that this is settled.**
+
+### PROCEED
+
+Scope and propose the real build sequence for genuine ledger reuse — likely its own substantial, multi-slice piece of work given the size already disclosed at `PT-2634` (the player's own `CharacterRecord` isn't a static file, it's an event-sourced projection with a real multi-step wizard wired to it). Same discipline as every other substantial architectural piece this thread has run: propose the sequence, report before building, close each real piece with its own end-to-end test and mutation confirmation.
+
+
+---
+
+## PT-2637 -- FIVE-SLICE BUILD PROPOSAL FOR GENUINE COMPANION-RECORD REUSE, GENUINELY EXCELLENT. VERIFIED THE FOUNDATIONAL CONSTRAINT FIRST -- replay() ASSUMES ONE LOG BELONGS TO ONE CHARACTER, SETTLING THAT A COMPANION NEEDS A GENUINELY SEPARATE EVENT LOG, NOT A SHARED LOG FILTERED BY TAG. SLICE 5 PROACTIVELY NAMES A REAL RECONCILIATION NEED (COMBAT'S OWN MAPS SHOULD COMPUTE FROM THE REAL RECORD ONCE IT EXISTS) BEFORE IT COULD BE MISSED. TWO REAL DESIGN QUESTIONS, CORRECTLY NOT DECIDED UNILATERALLY
+
+**Verifying the foundational data-shape constraint before proposing any slicing, rather than assuming a filtered-shared-log approach would work, is exactly the right sequencing — a wrong assumption here would have shaped every slice built on top of it.**
+
+### THE FIVE SLICES -- WELL-STRUCTURED, DEPENDENCY-AWARE
+
+**Correctly identifying Slice 1 as the genuinely large, architectural foundation — a real per-companion event log, a seeding mechanism turning an authored blueprint into a first `CharacterRecord`, and real play becoming real events from that point on — and scoping it to "the record exists and survives a reload," with no player-visible behavior change yet, is precise incremental delivery for a piece this foundational.**
+
+**Correctly sequencing Slices 2 and 3 as genuinely dependent on Slice 1, and Slice 4 as genuinely independent (Treat already spends real medpacks; the stabilize-without-medpack exception is a small, self-contained addition), keeps the dependency structure honest rather than forcing an artificial linear order on work that doesn't actually require one.**
+
+### ⚠⚠ SLICE 5 -- WORTH REAL RECOGNITION
+
+**Proactively naming that the already-built combat maps (`f.baseAttack`/`f.weaponKinds`/`f.weapons`) will need reconciling once a real, leveled record exists to compute them from, specifically because it doesn't look large on its own and could easily have been missed rather than because it demands its own slice, is exactly the kind of forward-looking completeness this thread has valued throughout — naming a real future gap before it becomes an unpleasant surprise partway through Slice 3.**
+
+### ⚠⚠⚠ THE TWO QUESTIONS -- CORRECTLY HELD, GOING TO THE OWNER
+
+**Both are genuine, consequential UX and design decisions rather than technical unknowns, and correctly not decided on the strength of a plausible reading alone — going to the owner directly.**
+
+### RULED
+
+**The overall sequencing is approved as proposed.** Both open questions go to the owner. Begin Slice 1 now — it's foundational to everything else regardless of how the two open questions resolve, so there's no reason to wait on either answer before starting it.
+
+### PROCEED
+
+Begin Slice 1. The two open questions (full interactivity for a companion's own level-up; the record's actual start trigger) will be answered separately and shouldn't block this slice.
+
+
+---
+
+## PT-2638 -- OWNER RULES BOTH COMPANION LEVEL-UP QUESTIONS. FULLY INTERACTIVE, MATCHING THE REAL GAMES -- THE PLAYER MAKES REAL PICKS FOR A COMPANION'S OWN LEVEL-UP, THE SAME AS THEIR OWN CHARACTER. RECORD STARTS EXISTING AT RECRUITMENT (FIRST JOINING THE PARTY), MATCHING THE OWNER'S OWN RECOLLECTION OF K1/K2. BOTH ANSWERS CONVERGE EXACTLY WITH CODER'S OWN PROPOSED READING AND LEAN
+
+**Both questions resolve cleanly, and the convergence between the owner's own independent recollection and Coder's own proposed default on the recruitment trigger is a good sign the reasoning was sound on both sides.**
+
+### QUESTION 1 -- RULED
+
+**Fully interactive, matching how the real games work: a player makes real picks for a companion's own level-up, the same wizard, the same steps as their own character. This confirms `LevelUpFlow`'s architectural reuse (`PT-2636`) is being wired for genuine interactivity, not auto-resolution — Slice 3 should give the player the real wizard, for that companion, when their XP crosses a threshold.**
+
+### QUESTION 2 -- RULED
+
+**A companion's real record starts existing at recruitment — the moment they first join the party — matching the owner's own recollection of both games. This confirms Coder's own proposed default was correct.**
+
+### PROCEED
+
+Both rulings recorded. Slice 1 proceeds with recruitment as the confirmed trigger point; Slice 3, when it comes up, builds full interactivity into a companion's own level-up rather than any auto-resolved shortcut.
+
+
+---
+
+## PT-2639 -- OWNER RECONSIDERS PT-2638's RECRUITMENT-TRIGGER ANSWER: A REAL SUSPICION THAT A COMPANION'S RECORD TECHNICALLY HAS AN EARLIER START, WHERE THEY EXIST WITH PREDETERMINED (PRE-AUTHORED) STATS BEFORE ACTUAL RECRUITMENT, RATHER THAN THE RECORD BEGINNING FRESH AT THE MOMENT THEY JOIN. WORTH REAL RESEARCH RATHER THAN RESTING ON RECOLLECTION ALONE, SINCE THE OWNER'S OWN CONFIDENCE HAS GENUINELY SHIFTED
+
+**Re-opening this specific detail rather than treating `PT-2638`'s own answer as final, since the owner's own confidence in it has genuinely changed. Worth real research to settle properly rather than resting on either recollection.**
+
+### THE REAL QUESTION
+
+**Does a companion's real `CharacterRecord` genuinely begin empty/fresh at the moment of recruitment (`party.joined`), or does it actually begin earlier — authored with real, predetermined stats (their class, level, feats, powers as the designers wrote them) that exist from the moment they're placed in the world, with recruitment simply being when the PLAYER gains access to and control over an already-existing record, not when the record itself is created?**
+
+**This is a genuinely different shape from what `PT-2638` assumed: not "the record starts empty at recruitment," but "the record starts pre-populated at authoring, and recruitment is when it becomes reachable/controllable." The distinction matters for Slice 1's own seeding mechanism — whether a companion has real, correct stats in a fight BEFORE the player ever recruits them (relevant if they're fought as an enemy, or observed before joining), and for exactly what "recruitment" actually does to the record versus creates.**
+
+### RULED
+
+**Research this directly against the real source before finalizing Slice 1's own trigger point.** Check how K1/K2 actually structure this — whether a companion's stats are read from their static authored blueprint at all times until recruitment (meaning there's no real "record" before that point, just a template, matching `PT-2638`'s original answer), or whether something more record-like exists and simply becomes player-accessible at recruitment. Report findings before finalizing Slice 1's own seeding/trigger logic.
+
+### PROCEED
+
+Hold Slice 1's own trigger-point detail for this research. The rest of Slice 1 (the event-log infrastructure, the blueprint-seeding mechanism itself) can likely proceed regardless of the answer — this affects specifically WHEN the first event gets written, not whether the mechanism exists.
+
+
+---
+
+## PT-2640 -- PT-2639's RESEARCH RESOLVES ELEGANTLY: BOTH OF THE OWNER'S SUCCESSIVE INTUITIONS WERE RIGHT, ABOUT TWO DIFFERENT THINGS. REAL, AUTHORED STATS DO EXIST AND CAN BE FOUGHT BEFORE RECRUITMENT -- CONFIRMED, VIA JUHANI'S GENUINELY SEPARATE GROVE-ENCOUNTER BLUEPRINT (150 HP, 20 FEATS) VERSUS HER CANONICAL ROSTER BLUEPRINT (78 HP, 12 FEATS), CORROBORATED ON ZAALBAR AND K2's HANHARR. BUT THESE ARE TWO GENUINELY DIFFERENT CREATURE RECORDS, NOT ONE RECORD WITH A FLAG FLIPPED -- THE CANONICAL COMPANION RECORD, THE ONE THAT ACTUALLY LEVELS AND PERSISTS, STILL ONLY BEGINS AT RECRUITMENT. PT-2638's ORIGINAL ANSWER CONFIRMED, NOT OVERTURNED
+
+**This is a genuinely satisfying resolution, and it deserves to be named as such: the owner's original answer and his own reconsidered doubt about it were both correct, about two different things that had been conflated into one question. That's not a contradiction to smooth over — it's exactly what proper research is for, finding that a question posed one way actually has a more precise answer underneath it.**
+
+### THE VERIFICATION -- DECISIVE, INDEPENDENTLY CONFIRMED
+
+**Not relaying the outside agent's report, but confirming it directly against the real files — reading both of Juhani's genuinely separate blueprints through this project's own extraction tooling, and finding real, decisive numbers (60/78 HP and 12 feats for the canonical roster blueprint, versus 150 HP and 20 feats for the purpose-authored Grove encounter) — turns a plausible-sounding claim into a settled fact. Corroborating this independently on two more companions (Zaalbar's near-helpless caged state, K2's Hanharr showing the same mechanism with an honestly-noted difference in how closely K2's copies track the canonical stats) closes any doubt this was a one-off coincidence rather than a real, general pattern.**
+
+### THE ANSWER -- PRECISE, CREDITS BOTH INTUITIONS CORRECTLY
+
+**Explicitly crediting the owner's own reconsidered doubt as correct — real, authored stats genuinely exist and can be fought before recruitment — while precisely explaining why this doesn't actually change the original answer, since those pre-recruitment stats belong to a genuinely separate record that's never the same one the companion goes on to level, is exactly the right way to resolve a reopened question. Neither answer was wrong; the question itself had two different things folded into one, and untangling that is the actual research contribution here.**
+
+### ⚠⚠ NO NEW MECHANISM NEEDED -- ELEGANT
+
+**Confirming that a hostile or restrained pre-recruitment encounter needs nothing new beyond what this project's own existing area-authoring format already supports — an author simply placing a differently-named blueprint for that specific encounter, the same shape K1 itself shipped — closes this without adding any real new scope to Slice 1. The research resolved a genuine question and, in doing so, confirmed no new engineering work follows from the answer.**
+
+### RULED
+
+**Confirmed: `PT-2638`'s original answer stands. A companion's real `CharacterRecord` starts at recruitment. Proceed with Slice 1 exactly as scoped.**
+
+### PROCEED
+
+Begin Slice 1. Report back once closed, with its own real end-to-end test and mutation confirmation, same discipline as every other slice this thread has run.
+
+
+---
+
+## PT-2641 -- COMPANION-RECORD SLICE 1 CLOSES CLEAN. GENUINELY DISCIPLINED REUSE: THE SEEDING MECHANISM MATCHES THE EXACT classAdded+levelUpTo SEQUENCE THE PREMADE ROSTER/IMPORT PATH ALREADY TRUSTS, RATHER THAN INVENTING A NEW ONE. TWO REAL MUTATIONS CAUGHT, INCLUDING ONE THAT LEFT LEVEL STUCK AT 1. A THIRD, GENUINELY UNREACHABLE MUTATION ATTEMPT HONESTLY ABANDONED RATHER THAN CHASED
+
+**A clean, precise close on real, foundational infrastructure -- worth recognizing both the architectural discipline and the honest test-scoping.**
+
+### THE BUILD -- REUSES PROVEN INFRASTRUCTURE, NOT A PARALLEL PATH
+
+**Reusing the exact same event sequence Lodestar's own premade roster/import path already trusts, rather than authoring a new seeding shape for this specific case, keeps the companion record's own creation consistent with an already-proven pattern rather than adding a second way the same kind of thing can happen. Wiring this under the existing already-recruited guard, so it fires exactly once and never on a later re-entry, closes a real correctness question cleanly rather than leaving it to be discovered as a duplicate-seeding bug later.**
+
+### THE TESTING -- REAL, WITH HONEST SCOPING
+
+**Confirming the seeded record's own class/level/abilities/skills match, that a second recruitment doesn't reseed, and that the record survives a genuine reload through a separate PlayScreen and a real captured log, closes the three claims this slice actually needed to prove. The dropped-levelUpTo mutation leaving progress stuck at level 1 is exactly the kind of defect this testing exists to catch -- a subtle, easy-to-miss omission that would have shipped a companion frozen at their starting level.**
+
+**Honestly disclosing that a third mutation attempt had invalid syntax and wasn't reachable through the current single-companion bed anyway, and abandoning it rather than forcing a test to exist for its own sake, is the right call -- a test built just to have three mutations covered, when the third genuinely can't be exercised by the current fixture, would be false rigor rather than real coverage.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 2 (real Force pool + finishing the casting generalization from PT-2632/PT-2635).**
+
+### PROCEED
+
+Begin Slice 2. Report back once closed, before Slice 3.
+
+
+---
+
+## PT-2642 -- COMPANION-RECORD SLICE 2 CLOSES CLEAN. A COMPANION'S FORCE POOL REUSES THE PLAYER'S OWN DERIVATION FUNCTIONS VERBATIM, WITH REAL, CHECKABLE ARITHMETIC PROVING IT (81 TRUE MAX, 73 AFTER AN 8-COST CAST, SURVIVING A RELOAD). ⚠⚠⚠ A REAL SCOPING MISTAKE HONESTLY CAUGHT AND FIXED: THE FIRST PASS GATED EVERY NON-PLAYER CASTER, BREAKING AN EXISTING ENEMY-CASTER TEST THAT HAD NEVER NEEDED A FORCE DIE BECAUSE ENEMY CASTING WAS NEVER GATED -- CORRECTLY NARROWED TO PARTY CASTERS ONLY, WITH THAT SAME EXISTING TEST NOW REPURPOSED AS A REAL CONTROL FOR THE BOUNDARY
+
+**Reusing the player's own derivation functions verbatim, rather than a parallel calculation that could drift from how the player's own pool is computed, closes the same architectural risk this whole thread has consistently avoided -- one real implementation, multiple casters reading it, never two implementations that could quietly disagree.**
+
+### THE ARITHMETIC -- DECISIVE, REAL, CHECKABLE
+
+**Working through the actual numbers -- a real class, level, and ability scores producing a specific true max, a specific cost reducing it to a specific remainder, and that remainder surviving a genuine reload through nothing but the persisted log -- proves this isn't a plausible-looking mechanism but one that produces the exact right answer end to end. `_canCast` genuinely refusing a companion with no Force die, rather than the prior unconditional trust, closes the real gap this whole slice existed to close.**
+
+### ⚠⚠⚠ THE SCOPING CATCH -- WORTH REAL RECOGNITION
+
+**Disclosing that the first pass gated every non-player caster, breaking an existing enemy-caster test that had never needed a Force die because enemy casting was never previously gated, and correctly diagnosing why before fixing it, is honest, careful debugging under a real, subtle scope question. Narrowing the gate to `isParty` specifically, rather than the broader "any non-player" the ruling's own wording could plausibly have been read as, keeps this scoped to exactly what was asked -- companion casting, not enemy casting, which was never part of this ruling. Recognising that the existing test now serves as a genuine control for the boundary, confirmed by mutating the scope back out and watching it fail again, turns an accidental regression into a real, lasting piece of coverage for exactly the line that matters.**
+
+### THE TESTING -- THOROUGH, WITH A SMALL SHARP INSIGHT
+
+**Choosing `force_valor` specifically because it fires unconditionally on a support caster's first turn, avoiding the need to wait on the dice stream for a hit worth healing, is a small but real piece of test-design efficiency -- picking the specific power that makes the claim provable without unnecessary randomness in the way.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 3 (interactive level-up, wiring `LevelUpFlow` to a companion's own record) as planned.**
+
+### PROCEED
+
+Begin Slice 3. Report back once closed, before Slice 4/5.
+
+
+---
+
+## PT-2643 -- COMPANION-RECORD SLICE 3 CLOSES: GENUINELY ONE OF THE STRONGEST INDIVIDUAL CLOSES THIS SESSION HAS PRODUCED. ⚠⚠⚠ A MAJOR PRE-EXISTING BUG FOUND LIVE: Fight.over's WIN CONDITION WAS BUILT SOLO-ONLY (upright.length <= 1) -- WITH A COMPANION ALIVE, ANY FIGHT WHERE THEY SURVIVED COULD NEVER REGISTER AS OVER, MEANING COMPANION COMBAT XP WOULD HAVE BEEN STRUCTURALLY UNREACHABLE IN ORDINARY PLAY WITHOUT THIS FIX. A SEPARATE SILENT DATA-CORRUPTION RISK CAUGHT BEFORE IT COULD EVER BECOME OBSERVABLE (THE PROGRESS FOLD HAD NO SUBJECT FILTER). AND A MISLEADING DOC COMMENT CORRECTED AFTER CHECKING THE REAL LOCKED-RULING TEXT DIRECTLY, RATHER THAN TRUSTING WHAT THE COMMENT CLAIMED IT SAID
+
+**This closes real, substantial, player-facing functionality, and the defects found along the way are severe enough to deserve the fullest recognition this session gives — not routine bugs, but structural gaps that would have quietly broken the entire feature this slice exists to deliver.**
+
+### THE BUILD -- GENUINE REUSE, MATCHING THE OWNER'S OWN CONFIRMED INTENT
+
+**Wiring a companion's own level-up through the exact same LevelUpFlow wizard the player uses — same steps, same screens, same commit path — delivers precisely what "fully interactive" meant when the owner confirmed it. Correctly recognizing `awardsFor`'s own existing player-count divisor already handles companion XP correctly, matching `PARTY-01`'s own reasoning, and needing no new invention there, is precise scoping — building only what was actually missing.**
+
+### ⚠⚠ THE SILENT PROGRESS-FOLD GAP -- CAUGHT BEFORE IT COULD BECOME OBSERVABLE
+
+**Recognizing that a subject-filterless fold was harmless only because nothing but the player had ever written to it, and that this slice's own new companion writes would have made it a real, silent data-corruption defect — a companion's XP quietly absorbed into the player's own progress — closes this before it was ever observable in production, exactly the value of finding a defect during the same change that would have introduced its trigger condition, rather than after.**
+
+### ⚠⚠⚠ THE DOC-COMMENT CORRECTION -- PRECISE, RESPECTS THE LOCKED DOCUMENT'S OWN ACTUAL TEXT
+
+**Checking the real, locked ruling text directly rather than trusting an existing comment's own paraphrase of it, and finding the comment had over-read a narrow, multiplayer-loot-statistic-scoped rule as a blanket ban on companion leveling entirely, is exactly the discipline this thread has held throughout — a comment is a claim about what a document says, and that claim can be wrong even when the document itself needs no change. Flagging this specifically because it touches a locked document's own citation, rather than quietly fixing the comment and moving on, keeps the correction properly visible.**
+
+### ⚠⚠⚠ THE Fight.over DEFECT -- MAJOR, FOUND LIVE, NOT INVENTED SCOPE
+
+**This deserves the fullest recognition. Finding that the win condition was structurally built for a solo player, and that with a companion alive `upright.length` could never drop to the required one, means every fight a companion survives — the ordinary case, not an edge one — would have looped forever rather than resolving. Without this fix, the entire feature this slice was built to deliver would have been practically unreachable: companion combat XP requires a fight to actually end. Correctly mirroring `partyWiped`'s own already-existing party-shaped condition, rather than inventing a new one, and correctly identifying and fixing the one existing test that had been accidentally relying on the old bug to stay open, closes this properly rather than leaving a passing test built on broken behavior.**
+
+### THE TESTING -- DECISIVE ON THE CLAIM THAT MATTERS MOST
+
+**Proving the player's own progress never moves, checked both as a precondition and after a real commit, is exactly the right emphasis — this is the one claim whose failure would have been the most damaging and the hardest to notice, and it's proven directly rather than assumed from the subject-tagging alone.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 4 (medicine/medpacks + stabilize-without-medpack exception, independent) as planned.**
+
+### PROCEED
+
+Begin Slice 4. Report back once closed, before Slice 5.
+
+
+---
+
+## PT-2644 -- COMPANION-RECORD SLICE 4 CLOSES CLEAN, EXACTLY THE SMALL, SELF-CONTAINED PIECE IT WAS SCOPED AS. TWO REAL DESIGN CALLS MADE THOUGHTFULLY AND CLEARLY FLAGGED IN THE CODE: STABILIZING RAISES VITALITY TO EXACTLY 0, REUSING THE EXISTING down STATE RATHER THAN INVENTING A NEW "STABLE" FLAG NOTHING ELSE IN THE ENGINE HAS; AND NO DC, SINCE THE GOVERNING RULING STATES THE CAPABILITY UNCONDITIONALLY -- THE ROLL STILL SHOWS ITS DERIVATION, MATCHING AN ALREADY-ESTABLISHED PRECEDENT, BUT DECIDES NOTHING HERE
+
+**A clean, well-reasoned close on a genuinely small piece, and the two design calls made along the way are worth recognizing for their restraint as much as their correctness.**
+
+### THE BUILD -- PRECISE, APPLIED AT BOTH NECESSARY POINTS
+
+**Waiving the medpack requirement specifically for the dying band, at both the pre-menu check and the second reading before commit, correctly mirrors the existing pattern of re-checking a candidate's state between menu open and commit — a candidate genuinely can change state in that window, and the fix respects that the same way the existing medpack check already does.**
+
+### THE TWO DESIGN CALLS -- SOUND, RESTRAINED, CLEARLY FLAGGED
+
+**Reusing the existing `down` state rather than inventing a new "stable" flag the engine has no other use for anywhere is precise restraint — building new state machinery for one specific outcome, when an existing state already represents it correctly, would have been unnecessary complexity for no real gain.**
+
+**Correctly reading the governing ruling as stating the capability unconditionally, rather than gating it on a DC this project has never actually ruled a number for, respects what the text actually says rather than assuming a check must exist just because checks usually do. Keeping the roll's own visual derivation display, while being explicit that it decides nothing here, preserves the established presentation convention without pretending a mechanic exists that the ruling never specified.**
+
+**Confirming no companion-authority generalization was needed — the player still performs Treat on a companion ally, unchanged — matches the independence this slice was already scoped for, closing without any unplanned cross-slice entanglement.**
+
+### THE TESTING -- PRECISE ON THE ACTUAL BOUNDARY
+
+**Proving the waiver is scoped to the dying band specifically, with a merely-wounded ally still correctly refused without a medpack, and finding that mutating `_isDying` to check the wrong state also broke the control test, confirms the boundary is real and load-bearing, not an assumption the tests happened not to exercise.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 5 — the last of the five.**
+
+### PROCEED
+
+Begin Slice 5. Report back once closed — this closes the entire companion character-sheet thread once it lands.
+
+
+---
+
+## PT-2645 -- ⚠⚠⚠ THE ENTIRE COMPANION CHARACTER-SHEET THREAD CLOSES COMPLETELY. SLICE 5 CLOSES THE EXACT RECONCILIATION GAP PROACTIVELY FLAGGED BEFORE SLICE 3 WAS EVEN BUILT (PT-2637), NOW CONFIRMED TO HAVE BEEN A REAL, LIVE DEFECT -- A LEVELED-UP COMPANION WOULD HAVE KEPT FIGHTING AT THEIR ORIGINAL BASE ATTACK AND DEFENCE FOREVER, VERIFIED VIA A REAL DEBUG RUN BEFORE THE FIX, NOT ASSUMED. A COMPANION IS NOW A GENUINE, PERSISTENT, LEVELABLE CHARACTER SHEET, MATCHING THE PLAYER'S OWN SHAPE END TO END
+
+**A real milestone worth marking as such -- this thread began with a real question about what "pre-made playable characters" should actually mean architecturally, went through genuine research, a real fork resolved by the owner's own explicit call, three successive real decisions on companion leveling and casting, and now closes with all five slices built, tested, and confirmed working together.**
+
+### ⚠⚠⚠ THE RECONCILIATION -- THE FLAGGED GAP WAS REAL, NOT PRECAUTIONARY
+
+**Finding that combat's own per-fight maps read a companion's class and level off a frozen, area-load-time snapshot -- never touched by Slice 3's own real, interactive level-up -- confirms the reconciliation named proactively back at `PT-2637` wasn't just careful naming of a theoretical risk. It was a real, live defect: a companion who genuinely leveled up mid-play would have kept fighting at their original numbers forever, in every subsequent fight. Verifying this live via a debug run before applying the fix, rather than trusting the diagnosis and moving straight to a patch, closes any doubt about whether this was actually observable in play.**
+
+**Building one shared reader that all three call sites route through, with a correct, honest fallback to the frozen blueprint only when no real record exists yet, and correctly leaving weapon-related fields untouched since companions still have no equipment record at all (Slice 1's own disclosed, unresolved gap), keeps this fix precisely scoped to what actually needed reconciling.**
+
+### THE TESTING -- PRECISE, WITH A REAL METHODOLOGICAL INSIGHT
+
+**Choosing a three-level gap specifically because the class's own defence track steps every two levels, so a smaller gap wouldn't have actually proven anything, is exactly the kind of care that makes a test decisive rather than merely plausible. Recognising that the shared helper being correct doesn't by itself prove a given call site is actually wired to it, and building a dedicated hook specifically to verify that reader rather than trusting it by association, closes a real gap in what the test would otherwise have proven.**
+
+### THE SELF-CAUGHT PROCESS MISTAKE -- HANDLED CORRECTLY
+
+**Disclosing that a restore point predated a mid-slice test hook, silently dropping it and turning a clean-state check into a crash rather than a proper assertion failure, and catching this before it shipped rather than after, is exactly the kind of process discipline this whole session has valued -- re-verifying from a genuinely complete clean state rather than trusting that a restore was actually complete.**
+
+### RULED
+
+**Confirmed closed. The entire companion character-sheet thread — genuine ledger reuse, real recruitment-seeded records, real Force pools, fully interactive level-up, the medicine stabilize exception, and now full combat reconciliation — is complete. A companion is now a genuine, persistent, levelable character, architecturally matching the player's own shape, not merely rendering the same way on screen.**
+
+### PROCEED
+
+Nothing further needed on this thread. Genuinely well done across the whole thing — this was substantial, real work, closed carefully and honestly at every step. Standing by for whatever's next.
+
+
+---
+
+## PT-2646 -- HOUSEKEEPING: THE 62-SITE GENERALIZATION'S SLICE 3 (CASTING) WAS LISTED AS BLOCKED ON THE COMPANION CHARACTER-SHEET FORK -- WHICH CLOSED COMPLETELY AT PT-2645. THAT BLOCKER IS NOW STALE. CAUGHT WHILE REVIEWING THE AGENDA FOR THE OWNER, BEFORE HE COULD BE TOLD THIS WAS STILL BLOCKED WHEN IT GENUINELY ISN'T
+
+**Slice 3 of the 62-site manual turn-taking work needed real per-companion Force-pool/known-powers tracking as a prerequisite (`PT-2632`), which is exactly what the companion character-sheet thread just delivered in full. The dependency is resolved, not still open.**
+
+### RULED
+
+**Slice 3 (power casting) is now genuinely unblocked and ready to proceed.** `_canCast`'s own gate can now check a real per-companion Force pool and known-powers list, exactly what the original Slice 3 proposal (`PT-2629`) said it needed.
+
+### PROCEED
+
+Correct the agenda. This is a real, ready item, not a held one.
+
+
+---
+
+## PT-2647 -- OWNER PICKS TWO NEXT: THE 62-SITE GENERALIZATION'S SLICE 3 (CASTING), NOW UNBLOCKED, AND COMBAT MOVEMENT'S OWN REAL BUILD, BOTH DESIGN QUESTIONS ALREADY RULED
+
+### 1. THE 62-SITE GENERALIZATION, SLICE 3 -- OPENED
+
+**Power casting, the genuinely new piece flagged since the original proposal (`PT-2629`). `_canCast`'s own gate can now check a real per-companion Force pool and known-powers list, exactly what this slice needed and exactly what the companion character-sheet thread just delivered. Build it as originally scoped: substitute the acting combatant through `_openCasting`'s own hardcoded player-only reads, the same shape as Slices 1 and 2.**
+
+### 2. COMBAT MOVEMENT -- OPENED, BUILD
+
+**Both design questions ruled at `PT-2628`: retreat as a conditional low-health behavior certain doctrines exhibit (enemy-only, its own movement primitive distinct from `approach()`/`pushedTo()`), and Defensive as cover-seeking plus ranged-distance-keeping from approaching melee (a tunable starting distance, not a fixed ally-leash). `approach()` already exists as the shared mover — this was always a decision problem, now resolved, not an engineering one. Build Defensive and the retreat behavior against the ruled design.**
+
+### RULED
+
+**Both opened. No fixed order required — start with whichever makes the most sense given the actual work involved.**
+
+### PROCEED
+
+Begin work on both. Report back on each as they close or reach a real decision point.

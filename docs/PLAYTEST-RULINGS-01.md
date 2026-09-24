@@ -77484,3 +77484,341 @@ Nothing further needed — closed cleanly, minimal footprint as ruled. Proceedin
 ### PROCEED
 
 Nothing to build. Agenda corrected below. Standing by for whatever's next.
+
+
+---
+
+## PT-2594 -- HOUSEKEEPING: A SECOND STALE OPEN-LIST DUPLICATE FOUND WHILE REVIEWING THE AGENDA FOR THE OWNER -- THE SAME "OPTIONS/SETTINGS, MEASURED, BUILDING" ENTRY FROM PT-2523, NEVER REMOVED WHEN THE WHOLE SEVEN-SCREEN SHELL THREAD (INCLUDING OPTIONS/SETTINGS ITSELF) CLOSED COMPLETELY AT PT-2546
+
+**Same shape as `PT-2593`'s footer-furniture catch — an open-list entry that survived its own item's closure. Confirmed against the ledger directly: `PT-2546`'s own title states the whole seven-screen shell thread is fully complete, and Options/Settings' own build is described in detail as part of that closure. Correcting now.**
+
+### PROCEED
+
+Remove the stale open-list entry. No new work — already closed.
+
+
+---
+
+## PT-2595 -- OWNER PICKS THE HANDFUL OF SMALL ITEMS FIRST, THEN THE ACTIVE/INACTIVE CONTROL-SWITCHING CONCEPT. FOUR SMALL ITEMS OPENED TOGETHER; THE LARGER ARCHITECTURAL ITEM OPENED SEPARATELY, CORRECTLY QUEUED BEHIND THEM RATHER THAN MIXED IN
+
+### THE FOUR SMALL ITEMS -- OPENED
+
+**1. Inert package-menu Options entry.** `PackageMenuItem.options('Options')` exists on the package main menu with nothing dispatching it. Wire it to actually open Options, or remove it if it's not meant to be reachable from there — check which is correct before assuming.
+
+**2. Force Confusion's missing range limit.** The power is reachable at 9-10 squares; the row itself states no cap. Check the real source/rules for the intended range and add the limit, or confirm the row's silence is deliberate and document it as such.
+
+**3. `chargenData`'s thin fallback to empty lists.** Honest but worth a real pass. Check what actually triggers the fallback and whether a more informative default or an explicit error is more correct than a silent empty list.
+
+**4. Two overlapping full-screen states when Level Up opens over the Character Sheet.** `esc` has two meanings in this state — `PT-2465` already spent a slice on the same area. Check the real current behavior and resolve the ambiguity.
+
+### THE ACTIVE/INACTIVE CONTROL-SWITCHING CONCEPT -- OPENED, QUEUED BEHIND THE FOUR
+
+**Real gap, previously measured at `PT-2524`/`PT-2525`: `PT-1134`/`PT-1142`'s active/inactive model doesn't exist anywhere in the codebase, distinct from the existing shared board-targeting marker (`PT-1957`). Needs its own measurement and proposal before building — not a sidebar tweak. `PT-1957`'s targeting stays on the primary tap, unaffected; the full control-switching logic belongs on the secondary tap once properly built.**
+
+### PROCEED
+
+Work through the four small items first, in whatever order makes sense. Then measure and propose the active/inactive control-switching design before building it.
+
+
+---
+
+## PT-2596 -- TEST 136: TWO GENUINELY SEVERE DEFECTS FOUND IN WHAT WAS JUST CLOSED AS THE COMPLETE TRIGGER/EFFECT SYSTEM (PT-2588), BOTH CONFIRMED EMPIRICALLY THROUGH REAL PLAY. door.unlocked/container.opened WRITE TO THE LOG BUT DO NOTHING LIVE -- THE GENERIC DIALOGUE-EFFECT PATH NEVER TOUCHES THE ACTUAL LIVE STATE TRACKER. item.acquired/item.lost, AUTHORED THROUGH THE REAL WIZARD EXACTLY AS AN AUTHOR WOULD, IS A SILENT NO-OP AGAINST ANY REAL PLAYER, ALWAYS -- AN EXISTING TEST-FILE COMMENT HAD ALREADY FLAGGED THE EXACT ROOT CAUSE, ONE HOP FROM CATCHING THIS EARLIER. AND ⚠⚠⚠ MY OWN PRIOR ROUTING PREMISE WAS WRONG: map.revealed/log.written, WHICH I'D LISTED AS REAL CONSUMERS, ARE ACTUALLY THE INERT ONES -- CONFIRMED BEFORE EVEN OPENING THE APP, VIA SOURCE COMMENTS AND A CLEAN GREP, THEN REPRODUCED LIVE
+
+**This report needs to be worked through in full and closed properly before anything else is dispatched — it directly contradicts a thread this ledger closed as complete, and both findings are decisive.**
+
+### THE TWO CORRECTIONS TO MY OWN ROUTING -- SMALL, HONEST
+
+**Correcting "10 kinds" to the real 15, and correctly noting no `door.locked` kind exists (only `door.unlocked`), are small factual corrections to my own prior message, made plainly rather than left uncorrected. Neither changes what got confirmed, and naming them anyway is honest housekeeping.**
+
+### LOOM'S OWN PICKER -- CLEANLY CONFIRMED
+
+**Checking all 15 kinds against the real widget individually, not just that categories and descriptions render, and confirming the subject-field auto-fill behavior with a real control (kinds that do ask for `subject` and aren't auto-filled, proving the absence for `item.acquired`/`item.lost` means something rather than being an oversight), closes the authoring-tool half decisively.**
+
+### ⚠⚠⚠ THE TWO SEVERE DEFECTS -- RULED FIX NOW, BOTH
+
+**Finding that `door.unlocked`/`container.opened` write correctly to the log but never touch the live state tracker — because the generic dialogue-effect path was never wired to it, unlike `store.opened`'s own special-cased connection sitting right beside this code — and proving it by actually playing through a real door and a real footlocker, separately to avoid a confound, confirming the player stays genuinely blocked after the effect has supposedly landed, is decisive, empirical confirmation of a real, severe defect. Ruled: fix now.**
+
+**Finding that `item.acquired`/`item.lost` is a silent no-op against any real player, always, when authored exactly as the wizard would produce it — proven with a real matched control, the named version landing correctly while the wizard's own literal "you" never does — and tracing this to `_playerCombatant()` never substituting the literal string for the actual handle, is equally severe: this is the exact authoring path a real content creator would use, and it silently does nothing. Finding an existing test-file comment that already named this exact distinction, one hop from catching it earlier, is worth recording as a real near-miss. Ruled: fix now.**
+
+### ⚠⚠⚠ MY OWN ROUTING PREMISE WAS WRONG -- CORRECTED
+
+**This deserves direct acknowledgment: my own prior test-routing message listed `map.revealed` and `log.written` among the kinds with real consumers, and that was wrong. Confirming both are genuinely inert — through source comments and a clean grep before the app was even opened, then reproduced live as a scoped negative that lands without crashing but changes nothing — correctly identifies these as two of the five kinds the routing had explicitly expected to work, not the tier-two kinds already known to be inert. The original close at `PT-2588` was less complete than reported; this needs the record corrected accordingly.**
+
+### RULED
+
+**Both severe defects: fix now, same priority as any other severe defect this session has found. `map.revealed`/`log.written`'s inert status: correctly noted, not a defect — held the same way the four tier-two kinds already are, pending real consumers.**
+
+### PROCEED
+
+Fix `door.unlocked`/`container.opened`'s live-state wiring and `item.acquired`/`item.lost`'s "you" substitution, both severe priority. Correct the standing record: of the six tier-one kinds, only doors/containers/items have (or, once fixed, will have) real consumers — map and log stay correctly inert alongside the four tier-two kinds, not ahead of them.
+
+
+---
+
+## PT-2597 -- BOTH SEVERE DEFECTS CLOSE. FIXED AT THE ONE SHARED CHOKE POINT EVERY DIALOGUE-AUTHORED EFFECT PASSES THROUGH. ⚠⚠ THE item.acquired/item.lost FIX IS GENUINELY WELL-ARCHITECTED: A GENERIC TRANSFORMATION KEYED ON THE PAYLOAD FIELD ITSELF, NOT THE KIND -- CORRECTLY PREVENTING A SECOND SPECIAL CASE FOR ANY FUTURE KIND THAT REUSES THE SAME AUTO-FILL CONVENTION. AND A GENUINELY HONEST FIND: THE REFERENCED TEST-FILE COMMENT WAS THEIR OWN EARLIER WORK THIS SESSION, ONE HOP FROM CATCHING THIS BEFORE
+
+**Both diagnoses confirmed exactly before fixing, not assumed correct and built around — precisely re-tracing why the generic path only ever inherited half of what its direct counterparts already did, and precisely re-tracing the fallback chain that let the wizard's own literal "you" only ever match an unresolved default, closes the loop on the original report rather than proceeding straight to a fix on faith in the diagnosis.**
+
+### THE FIX -- PRECISE, WELL-SCOPED
+
+**Fixing both at `_landed`, the single append path every dialogue-authored effect passes through, rather than patching the one call site that happened to get tested, closes the actual shared risk rather than the one instance of it that was reported.**
+
+### ⚠⚠ THE GENERIC SUBJECT-RESOLUTION FIX -- WORTH REAL RECOGNITION
+
+**Building `_resolveYou` as a transformation keyed on the payload field itself, rather than a special case tied to these two specific kinds, is exactly the right level of generalization — it means any future kind that reuses the same "write the literal 'you', resolve it later" convention gets this fix for free, rather than needing its own separate patch the first time someone builds a new kind that happens to share the pattern. This is the same "close the mechanism, not the instance" discipline this whole session has valued throughout, applied precisely here.**
+
+### THE TESTING -- REAL, DISCIPLINED, HONEST ABOUT ITS OWN DETOUR
+
+**Building tests that drive the actual UI rather than seeding the log at construction, and correctly explaining that seeding is exactly why every existing test in this file had never caught the gap, is precise diagnosis of why the original defect survived as long as it did.**
+
+**Disclosing the real detour on the item test — a first attempt that scraped an unreliable inventory-screen string and failed even with the fix working, correctly diagnosed and rebuilt to check the real written event's own fields directly — is honest reporting of a mistake made and corrected within the same slice, not glossed over because the eventual test worked.**
+
+### THE HONEST FIND -- WORTH NAMING
+
+**Finding that the test-file comment Tester referenced was this session's own earlier work is a small, genuinely honest moment worth recording — a lesson that was one hop from being applied to prevent this exact defect, written by the same hand that later built the defect it would have caught. Naming this plainly, rather than letting the coincidence pass unremarked, is worth keeping on record as a reminder that a lesson recorded once still needs to be actively recalled the next time its own shape recurs.**
+
+### PROCEED
+
+Nothing further needed — both severe defects close cleanly. Proceed to the five queued items in order, starting with the inert package-menu Options entry.
+
+
+---
+
+## PT-2598 -- ALL FIVE QUEUED ITEMS WORKED THROUGH, GENUINELY DISCIPLINED ON EVERY ONE. TWO CLOSED CLEAN WITH NO DEFECT, TWO FIXED WITH REAL VERIFICATION, AND ONE CORRECTLY HELD FOR A GENUINE RULING RATHER THAN DECIDED UNILATERALLY. THE FINAL ITEM MEASURED DECISIVELY: THE ACTIVE/INACTIVE CONTROL-SWITCHING DESIGN IS ALREADY FULLY LOCKED, AND THE REAL CODE IS 0% BUILT ON BOTH HALVES
+
+**Working through all five in order, since each deserves its own real recognition rather than a summary.**
+
+### ITEM 1 -- HELD, RULED
+
+**Correctly held for a real ruling rather than proceeding on assumption. Finding that the button's current behavior is genuinely honest — falling through to the same "nothing built yet" state every other unbuilt entry already shows, not a silent, misleading dead end — and that the existing Options screen structurally assumes an active session it doesn't have in this context, correctly reframes the real question: not "wire it or remove it" as originally asked, but "is a whole new, pre-game-scoped screen worth designing now."**
+
+**Ruled: the entry stays exactly as it is.** Matching every other currently-unbuilt entry's existing, honest behavior is correct, and there's no immediate need driving a new pre-game Options screen that would justify the scope expansion. This can be revisited if a real, specific need for pre-game settings access ever actually arises — held with a clear reason, not silently dropped.
+
+### ITEM 2 -- CLOSED, NO DEFECT
+
+**Finding explicit prose confirming no range field, and an already-established corpus-wide precedent (the Shutdown row's own disclosed statement that no power in the corpus models a range field at all) confirming this is the expected shape rather than an omission, closes this cleanly. Nothing to fix.**
+
+### ITEM 3 -- FIXED, DISCIPLINED SCOPING
+
+**Confirming this is a real, reachable gap — not theoretical — by tracing the exact startup path that produces it, and correctly diagnosing the real harm (a player cannot distinguish "this character knows nothing" from "the catalogue failed to load"), closes the actual defect properly. Scoping the fix to the everyday-visible path first, and honestly flagging that Level Up's own deeper degradation in the same failure state is a bigger, separate question rather than silently expanding scope to chase it in the same pass, is exactly the right discipline — fix what was asked, name what wasn't, rather than either under-delivering or over-reaching.**
+
+### ITEM 4 -- CLOSED, PROVEN RATHER THAN REBUILT
+
+**Finding the actual logic was already correct, with both the escape-chain exclusion and the sheet-clearing already documented in the code's own comments, and recognizing what was genuinely missing was proof rather than a fix, is precise diagnosis — building a real test through the actual board, mutation-confirmed, closes the gap between "probably works" and "demonstrated to work" without touching code that didn't need touching.**
+
+### ITEM 5 -- MEASURED, RULED TO PROPOSE NOW
+
+**Confirming the design is already fully locked across both exploration and combat halves, and measuring the real code against it rather than assuming partial credit, decisively establishes this is genuinely 0% built on both halves — not a small gap, a real absence against a design that's already complete. Correctly recognizing this is a "propose a build sequence" task rather than a "confirm the design" one, and asking before proceeding rather than assuming which is wanted, is the right instinct for a task this size.**
+
+**Ruled: propose the build sequence now.** The other four items are settled; no reason to hold this one further.
+
+### PROCEED
+
+Propose the build sequence for the active/inactive control-switching concept. Nothing further needed on the other four.
+
+
+---
+
+## PT-2599 -- ⚠⚠⚠ GENUINELY MAJOR FINDING RESHAPES THE COMBAT HALF: A REAL, GENERAL-PURPOSE DETERMINISTIC AI SYSTEM ALREADY EXISTS AND ALREADY DRIVES EVERY COMPANION IN EVERY FIGHT, UNCONDITIONALLY, WITH ZERO PLAYER OVERRIDE -- CONTRADICTING PT-1143's OWN RULED DEFAULT OF FULL MANUAL CONTROL. THE REAL GAP ISN'T "NO AI," IT'S "NO OVERRIDE." APPROVED IN FULL, BOTH TRACKS, SEQUENCED
+
+**This is exactly the kind of finding that justifies asking for a proposal rather than jumping straight to a build — the real shape of the combat-side gap was genuinely different from what the original measurement at `PT-2598` characterized it as, and finding this before writing any code prevents building the wrong thing correctly.**
+
+### THE REFRAMING -- WORTH THE FULLEST RECOGNITION
+
+**Finding that the existing Doctrine system, despite living inside a function named for enemy turns, is genuinely general-purpose and already drives every companion's every turn unconditionally, with the current real default running closer to permanent auto-battle than `PT-1143`'s own ruled full-manual default, changes what actually needs building. The real gap isn't AI absence — it's the complete absence of a manual override and any way for a player to choose or change what drives a companion. This is a meaningfully more precise and more actionable diagnosis than "combat AI needs building," and it deserves to be recognized as the load-bearing finding it is.**
+
+**Precisely distinguishing which presets already map cleanly onto the existing targeting vocabulary from the one that genuinely can't be expressed at all — Jedi Support needing a real, new ally-directed action extension rather than just new content authored against what exists — closes the scoping question honestly rather than assuming all five presets are equally buildable.**
+
+### THE SEQUENCE -- APPROVED IN FULL
+
+**Splitting into two genuinely independent tracks, grounded directly in the design documents' own explicit framing that exploration and combat are separately-settled questions, is the right structure. Track A's five steps are precise and well-ordered — introducing a genuinely new "active character" concept rather than repurposing `_me` (which several call sites correctly depend on staying player-only) is exactly the right architectural choice, and including a regression sweep against `PT-1135`/`PT-1110` rather than assuming untouched code stays correct is good discipline. Track B's structure — a buildable, testable manual-override step that needs no AI change at all, then correctly holding the doctrine-authoring and engine-extension work for its own research pass, matching the same shape already proven for droid/turret/forcefield/alarm — is equally sound.**
+
+**Approved: build both tracks exactly as proposed.**
+
+### RULED -- SEQUENCING
+
+**Complete Track A fully (A1 through A5) and report back before starting B1.** Even though B1 is confirmed independent and could technically run concurrently, this project's own standing discipline has been to report and get confirmation between major pieces of work rather than build multiple substantial things in parallel without a checkpoint — Track A is explicitly the smaller, fully-specified piece with no open questions, and closing it cleanly first keeps the review pace matching everything else in this thread. B1 starts once Track A is confirmed closed, not before.
+
+### PROCEED
+
+Begin Track A: A1 through A5, in order. Report back once the full track closes and is regression-tested, before starting B1.
+
+
+---
+
+## PT-2600 -- TRACK A CLOSES COMPLETELY, ALL FIVE SLICES, GENUINELY DISCIPLINED THROUGHOUT. ⚠⚠⚠ A3's SELF-CAUGHT TEST GAP DESERVES REAL RECOGNITION: THE FIRST TEST ONLY PROVED HALF THE CLAIM AND WOULD HAVE SILENTLY PASSED A MUTATION OF THE OTHER HALF -- CAUGHT AND SPLIT INTO TWO GENUINELY SEPARATE GUARDS. A5's REGRESSION WAS FIXED THE RIGHT WAY: THE TEST WAS CORRECTLY UPDATED TO CHECK WHAT IT WAS ACTUALLY ABOUT, NOT WEAKENED OR DELETED TO MAKE THE CHANGE PASS
+
+**A milestone entry — this closes out a real, substantial track of the control-switching work, and the discipline throughout deserves recognition in full before approving the next step.**
+
+### A1/A2 -- PRECISE ARCHITECTURAL REASONING
+
+**Building active-character state as a genuinely new, separate concept, with the correct, deliberate unconditional force-back to the player during a fight, and precisely reasoning through the real danger a stale active reference would create during combat — charging one character's action budget while moving a different character's board position — is exactly the kind of careful reasoning that prevents a subtle, hard-to-notice defect from ever shipping. The player now correctly following when not leading is named as the one genuinely new case that couldn't exist before this slice, which is precise about what's actually new versus what was already possible.**
+
+### ⚠⚠⚠ A3 -- THE SELF-CAUGHT TEST GAP, WORTH THE FULLEST RECOGNITION
+
+**This deserves to be named specifically. Recognising that the first test for the fight-override behavior only proved the portrait-dispatch half of the claim, and would have silently passed a mutation of the read-time override that actually matters during combat, and splitting this into two genuinely separate guards rather than trusting one test to cover two distinct mechanisms, is precise test design. "The raw field and the read-time override are genuinely two different guards and needed two different tests" is exactly the right level of precision about what a single passing test can and can't actually prove.**
+
+### A4 -- HONEST, SMALL, CORRECTLY DIAGNOSED
+
+**Disclosing the real first-attempt failure from an under-specified test fixture, and rebuilding on the real shelf's own proven package shape rather than patching around the gap, closes this properly.**
+
+### ⚠⚠⚠ A5 -- TWO REAL EDGE CASES NAMED, AND THE REGRESSION FIXED CORRECTLY
+
+**Proactively identifying two correctness cases the original five-step plan didn't explicitly name — control needing to return to the player if the companion holding it is dismissed or the party leaves the area — and reasoning through the real, concrete consequence of leaving either unhandled (arrow keys silently doing nothing to a tag that no longer resolves), is thorough completion of the track's actual intent, not just its literal steps.**
+
+**Fixing the one real, expected regression the right way deserves explicit recognition: rather than weakening or deleting `a_portrait_opens_its_own_screen_test.dart`'s claim once it stopped being universally true, correctly diagnosing exactly why it changed (true before Track A, false on the first tap now that the first tap switches control) and updating the test to check what it was actually about — an already-active companion's portrait still correctly can't open the Sheet, on the second tap — preserves the real claim rather than discarding it to make the change pass. That's the difference between fixing a test and quietly hollowing one out.**
+
+### THE TWO NAMED, NOT CHASED, GAPS -- CORRECTLY SCOPED, RECORDED
+
+**Naming the footer portrait's own now-live question (it shows the player regardless of who's active, and its own doc comment already anticipated this becoming a real question) and the player-only skill-check gap (perception, lock-picking, terminal checks all read only the player's own ranks, with companions going through a separate, fight-only path with no equivalent outside combat), without chasing either into this track's own scope, is honest completion — real findings recorded rather than silently dropped, but correctly not expanded into work this track was never meant to cover.**
+
+### RULED -- PROCEED TO B1
+
+**Approved. Begin B1: per-companion control-mode state, the cycle button, and the manual-override branch in `_enemyTurns`.** Buildable and testable now, independent of B2, exactly as proposed.
+
+### PROCEED
+
+Begin B1. The two named gaps (footer portrait identity, player-only skill checks) are recorded as their own small, held items — not blocking B1, picked up whenever there's room.
+
+
+---
+
+## PT-2601 -- ⚠⚠⚠ B1's OWN ORIGINAL WORDING WAS UNDER-SPECIFIED, AND CODER CORRECTLY STOPPED BEFORE WRITING CODE TO FIND OUT HOW MUCH. 62 SITES ACROSS play_screen.dart ASSUME ONLY THE PLAYER CAN EVER BE THE ACTING COMBATANT -- THE REAL SIZE OF "MANUAL TURN-TAKING" IS CLOSER TO TRACK A ITSELF THAN TO "A STATE FIELD AND A BUTTON." AND ⚠⚠⚠ THE DANGER OF BUILDING IT INCOMPLETELY IS EXPLICITLY, CORRECTLY CONNECTED TO PT-2240's OWN HARD-WON LESSON -- A MODE THAT EITHER LIES ABOUT ITS REAL BEHAVIOR OR STALLS THE FIGHT IS WORSE THAN TODAY'S UNCHOSEN DEFAULT
+
+**This deserves the fullest recognition -- catching that one's own prior proposal was itself under-specified, before any code got written on the strength of it, is a harder and more valuable catch than finding a defect in someone else's plan. Measuring the real size honestly, rather than proceeding on the original estimate because it had already been approved, is exactly the discipline this whole session has asked for.**
+
+### THE REAL SCOPE -- MEASURED, NOT ASSUMED
+
+**Finding 62 real sites that all currently gate on the player specifically, rather than "whoever's turn this is," and correctly recognizing this is the same shape of generalization Track A already did for exploration's movement — but across combat's entire action surface rather than one function — is precise, honest re-scoping. Calling this closer to Track A's own size than to "buildable alongside a state field and a button" is exactly the kind of correction that should happen before building, not discovered halfway through.**
+
+### ⚠⚠⚠ THE DANGER, CORRECTLY NAMED AND CONNECTED
+
+**Reasoning through both failure modes of building the state and button without the underlying turn-taking logic — a mode that lies about what's actually happening, or a mode that silently stalls the fight — and explicitly connecting this to `PT-2240`'s own already-recorded lesson (a removed refusal turning a free no into a paid no-op) is precise pattern recognition. This is exactly the shape of mistake that lesson exists to prevent, correctly recognized before it could recur rather than after.**
+
+### THE PROPOSED SHAPE -- SOUND, MATCHES AN ESTABLISHED PATTERN
+
+**Building the real, chosen state and real UI now, with hands-off/auto running exactly what already runs today unconditionally (zero behavior change for the current default case, only that it becomes visible and switchable), and manual resolving as an honestly-labeled held turn rather than either lying or stalling, matches this project's own established "name what can't be resolved, don't drop it silently" convention — the same shape give-item's own refusal already uses. This is the right way to land real, honest progress now while correctly deferring the actual 62-site generalization as its own properly-sized piece.**
+
+### RULED -- APPROVED
+
+**Approved as proposed. Build B1 in the honestly-scoped shape: state, cycle button, hands-off/auto running today's real behavior unconditionally, manual resolving as an honest held-turn status naming why.** Defer the real 62-site manual turn-taking generalization, and the "grab a turn back"/"step in for one turn" mechanics that genuinely depend on it, as their own separate, sized piece — the same split discipline that already separated Track A from Track B at `PT-2598`.
+
+### PROCEED
+
+Build B1 in the scoped shape described. Report back once done, with the deferred manual turn-taking generalization recorded as its own future piece, sized and held rather than folded into this pass.
+
+
+---
+
+## PT-2602 -- B1 CLOSES CLEAN, EXACTLY THE HONESTLY-SCOPED SHAPE APPROVED. ⚠⚠⚠ A REAL, GENUINELY DANGEROUS BUG CAUGHT BY THE ACTUAL SUITE, NOT ADVANCE REASONING: THE MANUAL DEFAULT ACCIDENTALLY APPLIED TO EVERY ENEMY IN EVERY FIGHT TOO, SILENTLY STOPPING ALL DOCTRINE-DRIVEN ENEMY ACTION ACROSS THE WHOLE SUITE. FOUR TESTS TIMED OUT OR FAILED BEFORE THE ONE-LINE isParty GATE FIXED IT. TWO FURTHER REGRESSIONS CORRECTLY DIAGNOSED AS LEGITIMATE RIPPLES FROM THE SHIFTED SEEDED-DICE STREAM, NEITHER PAPERED OVER
+
+**This closes B1 exactly as scoped, and the defects found along the way deserve real recognition — this is precisely the kind of thing the honest, narrow scoping was meant to make safe to build.**
+
+### THE BUILD -- EXACTLY AS RULED
+
+**State, cycle button available both in and out of combat (correctly recognized as a standing choice about who decides a turn, not an action itself, so it shouldn't be gated like the exploration verbs), hands-off/auto running exactly what already ran unconditionally before this slice, and manual correctly holding with an honest status rather than lying or stalling — all matches the ruled shape precisely.**
+
+### ⚠⚠⚠ THE ISPARTY BUG -- GENUINELY SEVERE, CAUGHT THE RIGHT WAY
+
+**This deserves the fullest recognition. A default that silently applied to every enemy combatant, not just companions, meant every doctrine-driven enemy action across the entire suite would have stopped happening — a defect severe enough to have quietly broken combat's own basic functioning, caught specifically because the actual suite was run and its real failures investigated rather than trusting that the logic looked correct on inspection. "Caught by running the actual suite rather than trusting the logic looked right — exactly the discipline this thread has leaned on all along" is worth stating as plainly as it was stated here: this is precisely the value of running real tests over reasoning about correctness in the abstract, demonstrated concretely rather than asserted.**
+
+### THE TWO FURTHER REGRESSIONS -- CORRECTLY DIAGNOSED, NEITHER PAPERED OVER
+
+**Confirming the equip-screen overflow was genuinely pre-existing — byte-identical inputs with the branch on or off, and a deterministic overflow rather than an animation-timing artifact — before fixing it, rather than assuming the new code caused it, is careful, disciplined elimination. Fixing it with an already-established pattern from the same file's own history closes it properly.**
+
+**Recognising that the revive-bed regression was a legitimate consequence of the seeded dice stream shifting once a companion's own roll stopped consuming a draw, and correctly setting the companion to auto before the fight — the one mode that still runs exactly what the bed was tuned against — rather than weakening the test's own assertion, preserves the real claim the bed was built to prove. "Not a weakened assertion; the same claim, on a companion actually in the state the test was designed to test" is precise about what changed and why it's still the right test.**
+
+### RULED
+
+**Approved: begin B2's research phase now.** Same "check first, then propose" discipline that made B1's own rescoping possible — survey the real doctrine vocabulary against Aggressive/Ranged/Stationary/Defensive, and properly scope what Jedi Support's engine extension actually needs before proposing anything to build.
+
+### PROCEED
+
+Begin B2's research. Report back with findings before proposing a build, same discipline as every other substantial piece of this thread.
+
+
+---
+
+## PT-2603 -- B2 RESEARCH CLOSES, GENUINELY EXCEPTIONAL. THREE OF FIVE PRESETS (DEFENSIVE/RANGED/STATIONARY) ARE ALL BLOCKED ON COMBAT MOVEMENT -- A FOUNDATIONAL GAP THIS ENGINE HAS NEVER BUILT FOR ANYONE, CORRECTLY IDENTIFIED AS THE SAME ALREADY-DISCLOSED ABSENCE FORCE-PUSH'S OWN ROW NAMES, AND HONESTLY ASSESSED AS POSSIBLY THE LARGEST SINGLE PIECE FOUND IN THIS WHOLE THREAD. STATIONARY CONFIRMED NOT ACTUALLY DISTINCT FROM RANGED IN THE REAL SHIPPED GAME -- A FORWARD-DECLARED FUNCTION NEVER GIVEN A BODY, ITS OWN DISPATCH CALL COMMENTED OUT. AND ⚠⚠⚠ A GENUINELY ELEGANT UNIFYING FIND: THE SELF-TRIAGE BEHAVIOR JEDI SUPPORT NEEDS RUNS UNDERNEATH ALL FIVE STYLES, NOT JUST ONE -- BUILDING IT ONCE SERVES EVERY PRESET'S OWN SELF-PRESERVATION
+
+**Reading the real K2 AI dispatch and routine source directly, rather than inferring behavior from preset names, produced exactly the kind of findings that couldn't have come from anywhere else — including one that changes what "Stationary" even means.**
+
+### AGGRESSIVE -- CLEANLY CONFIRMED BUILDABLE
+
+**Mapping directly onto existing Nearest-targeting plus a break-off shape already in the vocabulary, with no engine changes needed, closes this preset decisively.**
+
+### ⚠⚠⚠ THE COMBAT-MOVEMENT BLOCKER -- CORRECTLY SIZED, NOT UNDERESTIMATED
+
+**Recognising that three of five presets all depend on real combat movement -- something this engine has genuinely never built for any combatant -- and connecting this directly to `FORCE-POWERS-01`'s own already-disclosed absence on Force Push's row, rather than treating it as a fresh discovery, shows this gap is being read consistently across the whole corpus rather than rediscovered piecemeal each time it blocks something. Honestly assessing this as possibly the largest single piece of work found in this entire thread, rather than underselling it to keep the current pass moving, is exactly the discipline B1's own rescoping already proved the value of.**
+
+**Finding that Stationary is not actually distinct from Ranged in the real shipped game -- a forward-declared routine with no body, its own dispatch call commented out -- and correctly framing this as the source's own gap rather than something this project would be failing to replicate, is a genuinely valuable piece of fidelity: building "Stationary" as a real, separate behavior would mean inventing something the source itself never shipped.**
+
+### JEDI SUPPORT -- CONFIRMED INDEPENDENT AND BUILDABLE
+
+**Reading the real priority ladder in full, rather than approximating it from the preset's name, gives a concrete, faithful specification to build against. Correctly confirming this needs no movement, only a genuinely new ally/self-directed action capability the current targeting vocabulary has no shape for, isolates exactly what's new versus what already exists.**
+
+### ⚠⚠⚠ THE UNIFYING FIND -- GENUINELY ELEGANT
+
+**Recognising that the self-triage behavior underlying Jedi Support's own ladder actually runs beneath all five styles in the real source, not just this one, and that building the ally/self-action capability once would serve every preset's own self-preservation rather than only the one it was found for, is precise architectural thinking. This turns what could have been scoped as "Jedi Support's own special case" into "a real, shared capability every preset should have had," which is a meaningfully better scope than the narrower one would have been.**
+
+### RULED -- COMBAT MOVEMENT GETS ITS OWN MEASUREMENT PASS
+
+**Approved: combat movement is genuinely its own, separate, dedicated piece of work — measure it properly before sizing it into anything, the same discipline already proven for droid/turret/forcefield/alarm and for B1's own honest rescoping.** Don't fold Defensive/Ranged/Stationary into a build sequence until that measurement exists.
+
+**Approved: propose and build Jedi Support's self/ally-action capability now, independently of the movement question.** It's confirmed buildable on its own, and building it serves the broader self-triage need every preset shares, not just this one preset.
+
+### PROCEED
+
+Propose the build sequence for Jedi Support's self/ally-action capability (which will also improve Aggressive's own self-triage once it lands). Hold Defensive/Ranged/Stationary and open combat movement as its own future measurement pass — real, sized, and separate, not folded into this thread's current scope.
+
+
+---
+
+## PT-2604 -- JEDI SUPPORT BUILD PROPOSAL, GENUINELY EXCELLENT ARCHITECTURE. A GENERAL SupportRule LIST REUSING THE SAME PROVEN "ORDERED, FIRST-MATCH-WINS" PATTERN ALREADY USED ELSEWHERE -- FOUR REAL CONTENT ROWS AGAINST ONE MECHANISM, NOT FOUR SPECIAL CASES. RESOLUTION REUSES _applyPower DIRECTLY, SO A DOCTRINE-CAST HEAL AND A PLAYER-CAST HEAL ARE PROVABLY THE SAME MATH. A REAL DESIGN WRINKLE (CASTER MUST QUALIFY, NOT JUST THE TARGET) CORRECTLY NAMED BEFORE BUILDING. OWNER CONFIRMS: THE GOAL IS K2-SIMILAR BEHAVIOR WITH THIS PROJECT'S OWN IMPROVEMENTS, AND B2's OWN RESEARCH ALREADY ESTABLISHES THAT
+
+**Owner's own confirmation: the underlying goal — functioning similarly to K2, with this project's own improvements — is already what `PT-2603`'s research established, reading the real priority ladder directly from `k_inc_generic.nss` rather than approximating it. This proposal builds faithfully against that real ladder while making genuine improvements where the corpus differs (the Cure Poison handling below) rather than inventing behavior from scratch.**
+
+### THE SMALL CORRECTION -- HONEST, DOESN'T CHANGE SCOPE
+
+**Catching that enemy-directed combat movement is already real and built, and that the still-genuine gap is narrower — movement relative to an ally specifically — before proceeding, is worth disclosing even though it doesn't change today's proposal. Correctly keeping this narrower gap as its own future measurement pass rather than letting the correction quietly expand today's scope is the right call.**
+
+### THE ARCHITECTURE -- APPROVED IN FULL
+
+**Building `SupportRule` as a genuinely general capability, reusing the exact ordered-list-first-match-wins shape `TargetRule` already proves, turns four hardcoded priority steps into real content authored against one mechanism — precisely the right level of generalization, matching this session's own consistent preference for closing a mechanism rather than four separate instances of it.**
+
+**Resolving through `_applyPower` directly, the same function the player's own casting already calls, so a doctrine-cast heal and a player-cast heal are provably the same math rather than a second implementation that could drift from the first, is exactly right — this is the kind of architectural choice that prevents an entire category of future defect (two heal implementations quietly disagreeing) rather than just avoiding today's instance of it.**
+
+### ⚠⚠⚠ THE DESIGN WRINKLE -- CORRECTLY NAMED BEFORE BUILDING
+
+**Proactively identifying that a support rule's own matching logic must confirm the caster genuinely knows and can afford the power, not just that a target qualifies to receive it, and correctly placing that check inside the rule's own match function so a rule that can't fire simply falls through honestly, closes a real defect class before it could ever be built — a doctrine "deciding" a cast the caster can't actually make is exactly the shape of defect this project has never let through elsewhere, and catching it here, in the proposal rather than after building, is the right sequencing.**
+
+### THE CONTENT GAP -- HONESTLY DISCLOSED, SENSIBLY HANDLED
+
+**Finding that this corpus has no standalone Cure Poison power, unlike K2's own ladder treating it as its own step, and proposing to fold poison-priority into the heal rule's own matching logic rather than inventing a power the corpus doesn't have, is exactly the right response to a genuine content difference — disclosed as a real, considered choice rather than left as a silent gap or forced into existence just to match the source exactly.**
+
+### RULED -- APPROVED, BUILD IT
+
+**Approved in full, exactly as proposed.** The three-layer sequence (engine, resolution, content) is well-structured, and correctly scoping out the player-facing preset picker (which depends on `PT-1143`'s own separate Character Sheet work, not yet built) keeps this proposal honest about what it actually delivers versus what it sets up for later.
+
+### PROCEED
+
+Build all three layers as proposed. Report back once done.
+
+
+---
+
+## PT-2605 -- JEDI SUPPORT CLOSES, PUSHED. TWO REAL FINDINGS BEYOND THE PLANNED BUILD, RELAYED VIA SUMMARY: THE REVIVE RULE WAS STRUCTURALLY UNREACHABLE THROUGH encounter.upright, SURFACED BY WRITING THE REAL END-TO-END TEST -- FIXED, MUTATION-TESTED. AND check_engine_pin.py CAUGHT A SEPARATE GAP -- LOOM LEFT BEHIND ON THE LODESTAR RE-PIN -- ALSO FIXED
+
+**Relayed at summary level rather than the full detailed report this thread has otherwise received — filing what's confirmed rather than inventing detail beyond what was actually reported. Full detail welcome whenever convenient, not required to close this.**
+
+**The revive-rule finding is worth recognizing even at this level of detail: a real structural defect (the revive rule unreachable through `encounter.upright`) found specifically because a real end-to-end test was written rather than trusted to work from the design alone, is exactly the value this discipline has proven repeatedly throughout this whole thread — the design being architecturally sound didn't guarantee the wiring was actually correct, and only writing the real test surfaced the gap.**
+
+**Catching the Loom re-pin gap through `check_engine_pin.py` before it could cause a real cross-repo inconsistency, and fixing it in the same pass, is good routine hygiene — exactly the kind of thing that's easy to miss without a check built specifically to catch it.**
+
+### RULED
+
+**Confirmed closed. Full suites green, gate.py back at baseline.** Jedi Support's capability is built, tested, and pushed.
+
+### PROCEED
+
+Nothing further needed on this build. This closes the Jedi Support piece of the active/inactive control-switching thread — the remaining open pieces (combat movement's own future measurement pass, the preset-picker UI depending on PT-1143's Character Sheet work) stay correctly held as before.

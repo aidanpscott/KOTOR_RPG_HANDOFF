@@ -6,8 +6,6 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
-### ⚠⚠⚠ SEVERE: Jedi Support's healing amount reads the player's stats unconditionally, not the real caster
-- **Ruled fix now (PT-2607).** `_rollPowerAmount` reads the player's own combatant/character record unconditionally for Charisma/Wisdom/Force-level terms. `_useSupportPower` passes a real companion caster into `_applyPower`, but the caster never actually reaches `_rollPowerAmount`. Empirically confirmed: a level-6 Jedi Consular companion (Cha 18, Wis 18) healed for 3 — exactly the player's own stats' prediction — not the 19 the companion's real stats should produce. Same shape as TEST 136's item.acquired "you" defect. Coder's own test only checked vitality rose, never that the amount was correct — the defect survived it entirely. Fix: `_rollPowerAmount` must read the real casting combatant, not the player unconditionally.
 
 - **A real doctrine library — tunable threshold + generic Healer doctrine closed (PT-2612).** hurtIn and healerDoctrine both built and closed, exactly as approved. A third hardcoded _reachedBy assumption found by reading the whole function completely (the sight check itself), beyond the two the proposal originally named — all three fixed. Two of three fixes couldn't be proven through a real board (fights cluster too close to distinguish a wrong center from a correct one) — a new testing hook built specifically to prove both. Held, correctly untouched: LastAttacker targeting, Stand Ground, Aid, grenade/item-use.
 - **B3 (wire real presets into hands-off/auto + "grab a turn back" override + cycle button's double duty) — real, not started.** Part of the original combat track (PT-2599's proposal). Never separately tracked as its own open item until Aaron's own question surfaced the gap.
@@ -99,6 +97,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- The severe _rollPowerAmount defect closed — confirmed exactly reproducing Tester's own empirical numbers (19, not 3). caster threaded through _applyPower's own amount roll, Force Body, self-buff modifiers, confusion attribution, and all three heal variants. Companion level/Force level built off PlacedCombatant's own fields rather than replicating the player's richer derivation. _castDc() honestly left untouched — nothing reachable gives a support power a save yet, and the two candidate lookups aren't provably equivalent. Four mutations, all caught. Missing report's root cause identified: sent through a tool call instead of response text, the exact delivery bug already found and fixed later the same session — PT-2615
 
 - TEST 137's four clean confirmations: both TEST 136 trigger/effect fixes confirmed genuinely live (re-tested with a corrected, reliable method reading real events rather than screen text). Track A confirmed via Coder's own thorough suite. B1 confirmed, with a real gap in coverage closed (Hands Off never independently exercised as its own end state). PT-2598's Abilities fallback confirmed across all three tabs — PT-2607
 - Jedi Support's full engine/resolution detail given complete recognition (see full entries in ledger history) — find()/canCast() split, support traveling whole through lent(), and the encounter.upright defect found by testing real content rather than a mirrored mechanism — PT-2606

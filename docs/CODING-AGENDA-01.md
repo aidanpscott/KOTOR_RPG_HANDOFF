@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **A real doctrine library, researched from both games' scripts — opened, research phase first (PT-2608).** Jedi Support is the first real, deliberately-authored doctrine, not the first doctrine ever (plainAggression was already the generic fallback). Survey both K1/K2's real AI scripts for doctrine-worthy content beyond the five already researched (Aggressive, Defensive, Ranged, Stationary, Jedi Support). Separately check Neverwinter Nights' own henchman AI/reaction systems for useful patterns, given the Aurora Toolset's shared lineage. Research before design, design before build — same discipline as the trigger/effect system.
+
 ### ⚠⚠⚠ SEVERE: Jedi Support's healing amount reads the player's stats unconditionally, not the real caster
 - **Ruled fix now (PT-2607).** `_rollPowerAmount` reads the player's own combatant/character record unconditionally for Charisma/Wisdom/Force-level terms. `_useSupportPower` passes a real companion caster into `_applyPower`, but the caster never actually reaches `_rollPowerAmount`. Empirically confirmed: a level-6 Jedi Consular companion (Cha 18, Wis 18) healed for 3 — exactly the player's own stats' prediction — not the 19 the companion's real stats should produce. Same shape as TEST 136's item.acquired "you" defect. Coder's own test only checked vitality rose, never that the amount was correct — the defect survived it entirely. Fix: `_rollPowerAmount` must read the real casting combatant, not the player unconditionally.
 

@@ -6,6 +6,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: Jedi Support's healing amount reads the player's stats unconditionally, not the real caster
+- **Ruled fix now (PT-2607).** `_rollPowerAmount` reads the player's own combatant/character record unconditionally for Charisma/Wisdom/Force-level terms. `_useSupportPower` passes a real companion caster into `_applyPower`, but the caster never actually reaches `_rollPowerAmount`. Empirically confirmed: a level-6 Jedi Consular companion (Cha 18, Wis 18) healed for 3 — exactly the player's own stats' prediction — not the 19 the companion's real stats should produce. Same shape as TEST 136's item.acquired "you" defect. Coder's own test only checked vitality rose, never that the amount was correct — the defect survived it entirely. Fix: `_rollPowerAmount` must read the real casting combatant, not the player unconditionally.
+
 
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
@@ -91,6 +94,9 @@ Standing, continually-updated list of open work. Updated every time something cl
 ---
 
 ## CLOSED
+
+- TEST 137's four clean confirmations: both TEST 136 trigger/effect fixes confirmed genuinely live (re-tested with a corrected, reliable method reading real events rather than screen text). Track A confirmed via Coder's own thorough suite. B1 confirmed, with a real gap in coverage closed (Hands Off never independently exercised as its own end state). PT-2598's Abilities fallback confirmed across all three tabs — PT-2607
+- Jedi Support's full engine/resolution detail given complete recognition (see full entries in ledger history) — find()/canCast() split, support traveling whole through lent(), and the encounter.upright defect found by testing real content rather than a mirrored mechanism — PT-2606
 
 - Three of PT-2595's four small items closed: Force Confusion's missing range confirmed correct, no defect (matches the Shutdown row's own already-disclosed "no power in this corpus models a range field" precedent). chargenData's thin fallback fixed — AbilitiesScreen now shows a real reason across all three tabs instead of an indistinguishable empty list, when the catalogue fails to load at startup. Level Up over the Character Sheet confirmed already correct in code (escape chain exclusion, sheet-clearing both already documented) — what was missing was proof, now provided by a real through-the-board test, mutation-confirmed. The inert package-menu Options entry ruled to stay exactly as it is — matches every other unbuilt entry's honest behavior; no immediate need justifies a new pre-game-scoped screen — PT-2598
 

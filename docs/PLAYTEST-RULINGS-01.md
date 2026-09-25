@@ -79613,3 +79613,70 @@ Begin Slice 5a: extract the shared search, build `seek()` against it, confirm ev
 ### PROCEED
 
 Begin Slice 5b: the `seeksCover` doctrine field, the `seekCover` callback on `Fight`, real app wiring, and real content. Report back once closed — this closes the entire five-slice cover-mechanics thread when it lands.
+
+
+---
+
+## PT-2671 -- ⚠⚠⚠ THE ENTIRE FIVE-SLICE COVER-MECHANICS THREAD CLOSES COMPLETELY. PT-2628's BOTH HALVES OF DEFENSIVE ARE FINALLY REAL -- DISTANCE-KEEPING AND COVER-SEEKING BOTH WIRED INTO THE SAME DOCTRINE. A REAL, HONESTLY-DISCLOSED REGRESSION FOUND AND CORRECTLY FIXED: TURNING ON seeksCover SILENTLY ATE THE MOVEMENT SLOT AN EXISTING TEST DEPENDED ON, CORRECTLY DIAGNOSED TO THE REAL ROOT CAUSE (A FIXTURE MISSING coverOf, NOT THE PRIORITY LOGIC ITSELF) AND MUTATION-CONFIRMED
+
+**A real, major milestone worth marking in full -- this thread began with the owner's own memory catching a real gap in the prior research (a whole, already-authored ruling the earlier search had missed), went through a five-slice build touching every layer from tile authoring to AI pathing, extracted and proved load-bearing changes to genuinely consequential existing infrastructure, and now closes with both halves of a years-old open design question finally real and working together.**
+
+### THE BUILD -- COMPLETE, PT-2628's OWN LONG-STANDING GAP FINALLY CLOSED
+
+**Wiring `seekCover` into the real priority ladder ahead of `keepAtLeast`, gated on live cover state, with `holdsGround` correctly staying absolute above both, closes the actual behavioral hierarchy this feature needed. Giving the defensive doctrine constant both `keepAtLeast` and `seeksCover: true` together means the one doctrine this whole thread was ultimately built to serve now genuinely does what its own description always said it should — distance-keeping and cover-seeking as one coherent behavior, not two separately-working halves that happened to share a name.**
+
+### ⚠⚠⚠ THE REGRESSION -- FOUND, DIAGNOSED CORRECTLY, FIXED AT THE RIGHT LAYER
+
+**Disclosing this separately rather than folding it quietly into the main build narrative keeps the record honest about a real, if properly caught and fixed, defect. Correctly diagnosing that the new priority branch silently consumed the movement slot an existing test depended on, specifically because that test's own fixture never supplied `coverOf` and the resulting null read as "already covered," is precise root-cause work — the bug lived in what the fixture failed to provide, not in the new priority logic itself. Fixing it by correcting the fixture to hold the field constant, since that test is genuinely about `keepAtLeast` and not cover-seeking, rather than weakening either the new feature or the existing test's own real claim, and confirming by mutation that reverting the branch restores the exact prior behavior, closes this with the same rigor this thread has held on every one of its five slices.**
+
+### RULED
+
+**Confirmed closed. The entire cover-mechanics thread — tile-authored tiers, defensive/offensive bonuses on both sides of combat, total-cover targeting confirmed already-enforced by existing infrastructure, and now real AI cover-seeking — is complete, built on `ACTION-ECONOMY-01 §6.2`'s own real, already-authored ruling rather than a secondary source.**
+
+### PROCEED
+
+Nothing further needed on this thread. Genuinely well done across all five slices, with real, consequential engineering (the `approach()` extraction especially) handled with exactly the care it deserved. Standing by for whatever's next.
+
+
+---
+
+## PT-2672 -- PT-2508's OWN LOOSE END CLOSES: THERE IS NO LIVE DEFECT CLAIM LEFT TO REPRODUCE. THE ORIGINAL BLANK-POWER OBSERVATION WAS ALREADY RETRACTED IN THE SAME REPORT THAT FILED IT, BEFORE IT WAS EVER CLEAN, AND TEST 128 ALREADY CLOSED THE LOOSE END FROM TESTER's OWN SIDE -- BOTH A PRICED AND AN UNPRICED KNOWN POWER RENDERED THEIR REAL NAMES CORRECTLY, WITH THE EXACT CHARACTER, POWERS, AND SHELF INDICES ON RECORD. ⚠⚠ ONE GENUINE, STILL-UNRECONCILED DISCREPANCY FLAGGED: CODER's OWN EARLIER REPORT DESCRIBED INSPECTING A RECORD WITH NO powerTaken EVENTS AT ALL, WHICH MATCHES NO REAL SAVE TESTER HELD AT THE TIME
+
+**Going back through the full testing history rather than trying to force a reproduction of something already walked back is exactly the right move, and finding it resolves cleanly deserves real recognition — this closes a genuine loose end honestly rather than manufacturing a defect to close it with.**
+
+### THE RETRACTION -- CONFIRMED, NEVER A LIVE CLAIM
+
+**Confirming that the original "every power reads blank" observation was retracted in the same report that filed it, before it was ever reported clean, and that TEST 128 already exists specifically to close this from Tester's own side with a precise, named case — Whisper, shelf indices 46 (priced, correctly named) and 8 (unpriced, also correctly named) — settles this decisively. There is no live claim left standing that needs Coder to reproduce anything; the thing originally reported wrong was already shown, by the same tester, to have been a misread of correct behavior.**
+
+### ⚠⚠ THE FLAGGED DISCREPANCY -- WORTH CHECKING, NOT WORTH CHASING FURTHER
+
+**Honestly flagging that Coder's own earlier description of an inspected record with no `powerTaken` events at all doesn't match any real Whisper save held at the time, rather than letting the mismatch pass unremarked, is the right instinct — even in a report that otherwise closes cleanly, a real discrepancy deserves naming. Correctly explaining why this isn't necessarily anyone's error (the generator's own delete-and-recreate behavior means a save checked an hour apart is a genuinely different file, not a stable handoff artifact) keeps this from reading as an accusation rather than an honest, open question.**
+
+### RULED
+
+**Confirmed closed — the original defect this thread chased is resolved: it was correct behavior, misread once and retracted before it was ever reported clean.**
+
+**One thing worth a quick check with Coder before fully closing the book on it: whether their own original fix (the "vacuous-pass" conflation of "not authored" with "authored but withheld") was scoped against the original, retracted claim or against real, confirmed behavior.** The fix itself may well be genuinely correct and worth keeping regardless — a real conflation is worth fixing even if the specific case that surfaced it turned out to be a misread — but it's worth a direct confirmation rather than leaving the question open indefinitely.
+
+### PROCEED
+
+Confirm with Coder what the original fix was actually scoped against. No further reproduction work needed from Tester — a fresh `tester-mind` character stays available if useful later, but isn't needed to close this.
+
+
+---
+
+## PT-2673 -- OWNER OPENS A REAL NEW DIFFICULTY-SCOPED RULE: ON EASIEST DIFFICULTY, PLAYER-THROWN GRENADES SHOULD NOT HARM ALLIES -- ONLY ENEMIES. CHECKED FIRST: DEATH-AND-DIFFICULTY-01.md ALREADY ESTABLISHES REAL, NAMED TIERS (EASY/NORMAL/HARD), WITH EASY's OWN STATED PURPOSE ALREADY BEING "PROTECTS THE PLAYER FROM LOSS" -- THIS NEW RULE FITS THAT SAME ESTABLISHED PHILOSOPHY DIRECTLY, EVEN THOUGH THE DOCUMENT DOESN'T YET COVER GRENADE FRIENDLY FIRE SPECIFICALLY. CORRECTLY NOT BUILDABLE NOW -- WAITS FOR DIFFICULTY MECHANICS THEMSELVES TO BE PROPERLY TACKLED AS THEIR OWN FUTURE THREAD
+
+**Checked before opening this as entirely fresh scope: `DEATH-AND-DIFFICULTY-01.md` already carries real, established difficulty tiers, and `Easy`'s own already-ruled purpose is explicitly to protect the player from loss, not a promise that the world itself is unkillable. This new rule is a natural, consistent extension of that same governing philosophy to a mechanic (player-thrown grenade friendly fire) the existing document doesn't yet address, not a new difficulty concept invented from nothing.**
+
+### THE RULE, AS STATED
+
+**On the easiest difficulty tier, a player-thrown grenade should only harm enemies caught in its blast — allies and companions in the same radius take no damage, regardless of positioning.** This is distinct from the AI's own existing friendly-fire refusal (which governs where an AI doctrine chooses to throw, already built at `PT-2659`/`PT-2661`) — this new rule instead governs what a grenade actually does to whoever's caught in a real explosion the player themselves throws, specifically at the easiest difficulty tier.
+
+### RULED -- RECORDED, HELD FOR ITS OWN FUTURE THREAD
+
+**Correctly not buildable now. This waits for difficulty mechanics themselves to be properly defined and tackled as their own real, scoped thread — the same way every other substantial piece of new architecture this session has built has gone through research and proposal before code, this needs the broader difficulty system's own real shape settled first, not a one-off special case bolted onto the existing grenade resolution ahead of that work.**
+
+### PROCEED
+
+Recorded for the record. No action needed now — held until difficulty mechanics become their own real, scoped item.

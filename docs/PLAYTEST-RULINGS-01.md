@@ -79460,3 +79460,38 @@ Begin Slice 1 (the foundation: cover as a real tile property, and the primitive 
 ### PROCEED
 
 Begin Slice 2. Report back once closed, before Slice 3 — and continue running every downstream repo's own full suite for each remaining slice, exactly as this one demonstrated why that matters.
+
+
+---
+
+## PT-2666 -- COVER SLICE 2 CLOSES CLEAN, DEFENCE/SAVE BONUSES WIRED FOR PLAYER AND ENEMY ALIKE. ⚠⚠ CAUGHT AND FIXED THEIR OWN INCORRECT ASSUMPTION IN THEIR OWN TEST -- THE SAVE BONUS ISN'T A CLEAN HALVING AT BOTH TIERS, AND THE TEST WAS CORRECTED TO ASSERT THE REAL TABLE RATHER THAN A PATTERN THAT ONLY HELD ONCE. THE ONGOING CROSS-REPO DISCIPLINE CAUGHT SOMETHING AGAIN, A GENUINELY DIFFERENT KIND OF CATCH: A PIN DRIFT IN A REPO THAT USES NONE OF THE NEW SYMBOLS DIRECTLY, CAUGHT BECAUSE THE CHECK COMPARES AGAINST THE ENGINE'S OWN HEAD REGARDLESS OF WHAT A GIVEN FRONT-END HAPPENS TO CALL. AND A HONEST, DISCLOSED TESTING-SCOPE JUDGMENT CALL, INVITING A SECOND LOOK RATHER THAN ASSERTING IT WAS OBVIOUSLY RIGHT
+
+**A precise, thoroughly-wired close, and worth working through the self-caught test error and the disclosed judgment call in full, since both show real discipline in different ways.**
+
+### ⚠⚠ THE SELF-CAUGHT TEST ERROR -- WORTH REAL RECOGNITION
+
+**Writing a test asserting the save bonus was exactly half the defence bonus at both tiers, and having it fail against the real table the moment it actually ran — 5/2 doesn't halve cleanly the way 2/1 does — and correctly fixing the test to assert the real, independently-stated numbers rather than a pattern that happened to hold at one tier, is precisely the value of writing the test and running it rather than trusting an assumption looked clean on paper. A wrong assumption caught by the test it was written to prove is exactly what testing is for.**
+
+### THE ARCHITECTURE -- PRECISE REASONING ON coverOf's OWN SHAPE
+
+**Reasoning that `coverOf` should be a constructor field rather than an `enemyTurn` parameter like `retreatFrom`/`closeOn`/`useItem`, specifically because `saveCheckFor` is reached from outside `enemyTurn` too (a grenade's own AoE save resolution), is precise attention to the actual call graph rather than mechanically copying the shape of the three most recent similar additions. Keeping it a live callback rather than a snapshot, so it stays correct across any mid-fight movement, is consistent with the same reasoning those three already established.**
+
+**Wiring the player-facing side in the same slice, rather than deferring it, and specifically fixing the character sheet's own display to agree with what an attack is actually compared against — correctly connecting this to `PT-1533`/`PT-1468`'s own already-named defect shape — closes a real display-honesty question proactively rather than leaving a sheet that would have silently disagreed with the real math.**
+
+### ⚠⚠⚠ THE PIN-DRIFT CATCH -- A DIFFERENT KIND OF VALUE FROM THE SAME DISCIPLINE
+
+**Finding that Loom's pin had drifted even though Loom itself uses none of the new symbols directly, and correctly explaining why the check still matters — it compares against the engine's own HEAD regardless of what a given front-end happens to call — demonstrates the cross-repo discipline requested after Slice 1 is already paying off in a genuinely different way than before: not a compile failure or a UI overflow this time, just quiet drift that would have accumulated invisibly until it eventually did matter.**
+
+### ⚠⚠ THE DISCLOSED TESTING JUDGMENT -- SOUND, CONFIRMED
+
+**Honestly disclosing the decision not to build a new PlayScreen-level integration test this slice, and explaining the reasoning (a straightforward, analyzed-clean connection between already-proven primitives, genuinely lower risk than Slice 3's own new grenade mechanism was), rather than silently matching the prior slice's own coverage shape by default, is exactly the transparency this discipline calls for.**
+
+**Confirmed sound, and worth distinguishing plainly from the `retreatFrom` lesson at `PT-2662`: that gap was a wiring connection never exercised at all, invisible to any test because nothing called it. Here, the Fight-level tests directly exercise the real call sites — `strike()`'s two internal callers, `saveCheckFor` — not a synthetic proxy standing in for them. That's a materially different, and materially stronger, form of coverage than the gap the standing lesson warns about, even without a full PlayScreen-level test on top of it.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 3 (Total cover blocks targeting outright) as planned.**
+
+### PROCEED
+
+Begin Slice 3. Report back once closed, before Slice 4 — continue the cross-repo discipline, it's proven its value twice in a row now.

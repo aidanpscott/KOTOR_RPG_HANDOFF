@@ -78914,3 +78914,417 @@ Correct the agenda. This is a real, ready item, not a held one.
 ### PROCEED
 
 Begin work on both. Report back on each as they close or reach a real decision point.
+
+
+---
+
+## PT-2648 -- TEST 138: ALL FOUR ITEMS CONFIRMED, ZERO NEW DEFECTS, GENUINELY EXCEPTIONAL METHODOLOGY THROUGHOUT. ⚠⚠⚠ CORRECTLY RECOGNIZED THE ORIGINAL TEST-137 FIXTURE HAD BEEN OVERTAKEN BY LATER PROGRESS (A COMPANION'S NEW REAL FORCE POOL NOW SPENDS ON SELF-BUFFS FIRST), NOT REGRESSED -- SWITCHED TO CODER'S OWN NEWER TESTING HOOKS RATHER THAN MISREADING A CHANGED RESULT AS A DEFECT. CHAINED ALL THREE DOCTRINE-UI ROUTES AGAINST THE SAME COMPANION IN ONE SESSION TO PROVE SHARED STATE, NOT THREE COPIES THAT HAPPEN TO AGREE. AND CLOSED A REAL GAP HERSELF: NOTHING HAD TESTED A DEPLETED FORCE POOL ACTUALLY FALLING BACK TO A WEAPON
+
+**Working through all four items, since the methodology here deserves real recognition beyond a routine confirmation summary.**
+
+### ITEM 1 -- CORRECTLY DIAGNOSED AS OVERTAKEN, NOT REGRESSED
+
+**Recognising that the original TEST-137 fixture no longer isolates cleanly because a companion's real Force pool now spends on self-buffs before healing — a direct consequence of later, correct work, not a regression — and switching to Coder's own newer testing hooks built for exactly this purpose, rather than either forcing the old fixture or mistaking the changed number for a defect, is precise diagnostic judgment. A test that stops working because the system around it correctly changed is a maintenance question, not a finding.**
+
+### ITEM 2 -- WENT BEYOND ISOLATED PROOF TO PROVE SHARED STATE
+
+**This deserves real recognition. Coder's own fourteen tests each prove one route works in isolation — chaining all three routes against the same companion in one continuous session, and confirming each correctly overwrites the last, proves something genuinely stronger: that the sidebar, PartyScreen, and radial wheel are three doors into one real decision, not three separately-correct implementations that happen to produce the same visible result. This is exactly the kind of confirmation that catches a subtle divergence individual per-route tests structurally cannot.**
+
+### ⚠⚠⚠ ITEM 3 -- THOROUGH CONFIRMATION, PLUS A REAL GAP FOUND AND CLOSED
+
+**Running all thirteen of Coder's own tests across five dedicated files closes the existing coverage properly. Finding that nothing actually tested a depleted Force pool falling back to a weapon attack, rather than assuming the afford-check alone implied correct fallback behavior, and building and confirming that specific scenario — a real hit landing after the pool ran below the cost of anything known — closes a genuine, previously-unproven claim about the feature's own real behavior under a condition players will actually encounter.**
+
+### ITEM 4 -- CLEANLY CONFIRMED
+
+**Confirmed via Coder's own suite, no gaps found.**
+
+### THE PROCESS NOTES -- HANDLED CORRECTLY
+
+**Leaving genuine uncommitted work from Coder entirely untouched, running everything from a clean git-archived snapshot instead, and not touching an unrelated stray process found at cleanup, are both exactly the right calls — respecting work in progress and a shared environment without letting either interfere with the confirmation itself.**
+
+### RULED
+
+**All four items confirmed, zero new defects. Nothing further needed.**
+
+### PROCEED
+
+Standing by. Genuinely strong confirmation work across the board.
+
+
+---
+
+## PT-2649 -- 62-SITE GENERALIZATION SLICE 3 CLOSES, THE ENTIRE THREE-SLICE THREAD NOW COMPLETE. ⚠⚠ A REAL MID-BUILD BUG SELF-CAUGHT BY MUTATION TESTING BEFORE IT SHIPPED: PASSING 0 INSTEAD OF null FOR "NO FORCE BODY RUNNING" WOULD HAVE CHARGED A COMPANION ROUGHLY A SIXTH OF A POWER'S REAL COST. AND ⚠⚠⚠ COMBAT MOVEMENT'S OWN REAL SCOPE FINDING: THIS GENUINELY NEEDS ENGINE-LEVEL WORK IN THE PINNED LODESTAR REPO, NOT JUST THE APP -- A FIRST FOR THIS SESSION, CORRECTLY FLAGGED RATHER THAN STARTED ON THE STRENGTH OF THE ORIGINAL, NOW-UNDERSOLD FRAMING
+
+**Two real things closing here, and both deserve their own full recognition -- a clean, disciplined close on the casting slice, and an honest correction to how big the next piece of work actually is.**
+
+### SLICE 3 -- CLOSES THE FULL THREE-SLICE THREAD
+
+**Recognising that casting needed a guard built from scratch, not a stale one to replace like Slices 1 and 2, and correctly building one consistent resolution across every one of the roughly fifteen player-only reads in `_castAt` -- target construction, sight, the confusion limit, budget spend, the deed's own subject tag, and finally passing the `caster:` argument `PT-2607` had already prepared the callee to accept but nothing had ever supplied -- closes this properly rather than patching a subset and leaving the rest silently player-only.**
+
+**Correctly leaving armour and Force Body disclosed as player-only, rather than silently ignored or guessed at, since companions genuinely have neither an equipment record nor tracked Force Body state yet, keeps this slice honest about its own real boundary.**
+
+### ⚠⚠ THE SELF-CAUGHT MUTATION BUG -- WORTH REAL RECOGNITION
+
+**Catching that Force Body's percent needed `null` rather than `0` for "no Force Body running," through the test's own pool arithmetic rather than a code review catching it first, is exactly mutation testing doing its job -- a subtle, easy-to-miss defect that would have silently undercharged a companion's real cost, caught before it ever shipped rather than found later by a player noticing their companion's Force draining strangely slowly.**
+
+**Finding and fixing the same "assumed it's always the player's turn" pattern in `hide_test.dart` that `two_enemies_test.dart` already needed fixing after Slice 1, and applying the same `passManualAllies()` shape, keeps this consistent with a pattern this thread has now seen and correctly handled twice.**
+
+### RULED -- SLICE 3 CONFIRMED CLOSED
+
+**The entire three-slice 62-site generalization thread is now complete: movement, melee attack, and casting, all generalized to whoever's actually acting on manual mode.**
+
+### ⚠⚠⚠ COMBAT MOVEMENT -- SCOPE CORRECTION, RULED
+
+**The honest re-scoping deserves real credit -- recognizing that `Decision` has no movement-only outcome at all, that `wantedWithinSquares()` has no symmetric "stay away" concept, and that voluntary retreat needs a genuinely new primitive distinct from both `approach()` and `pushedTo()`, correctly identifies this as real engine-level work in the pinned Lodestar repo, not an app-level substitution like every other piece of this session's own combat work. `PT-2628`'s design questions stand fully answered; what's corrected here is the size of the engineering underneath them, not the design itself.**
+
+**Ruled: scope this into its own explicit slice sequence before building, matching the standing practice this whole thread has used for every other substantial new piece of architecture.** This is a genuine first for this session — the first piece of work needing changes to the pinned engine repo directly rather than reusing what's already there — and deserves the same proposal-before-build discipline as the trigger/effect system, the doctrine library, and the companion character-sheet thread all received.
+
+### PROCEED
+
+Propose a real slice sequence for combat movement (Defensive + retreat) before building anything, given the confirmed engine-level scope. Report back with that proposal.
+
+
+---
+
+## PT-2650 -- FOUR-SLICE PROPOSAL FOR COMBAT MOVEMENT, GENUINELY WELL-STRUCTURED. CONFIRMED THE REAL CROSS-REPO MECHANICS FIRST, GIVEN THIS IS A GENUINE FIRST. THE FOUNDATION-THEN-MECHANISM-THEN-CONTENT SEQUENCE MATCHES THE SAME PATTERN ALREADY PROVEN ON COMPANION-RECORD. ⚠⚠⚠ TWO REAL QUESTIONS, ONE OF THEM A GENUINE NAMING COLLISION CORRECTLY CAUGHT BEFORE IT COULD CAUSE REAL CONFUSION LATER -- "DEFENSIVE" NAMES TWO GENUINELY DIFFERENT THINGS IN THIS PROJECT'S OWN RECORD, A PLAYER-PICKABLE COMPANION DOCTRINE OPTION AND AN ENEMY AI BEHAVIOR, SHARING ONLY THE WORD
+
+**Confirming the actual cross-repo mechanics before proposing any slicing — which checkout is editable, how a Lodestar change actually reaches the app's own pinned resolution — is the right first step for a genuine first in this session, and naming the extra per-slice step plainly rather than leaving it implicit keeps the proposal honest about its own real overhead.**
+
+### THE FOUR SLICES -- SOUND, MATCHES THE PROVEN PATTERN
+
+**Isolating the two new primitives as pure, foundation-only engine work in Slice 1, with real unit tests matching the existing `approach_test.dart`/`pushed_test.dart` pattern and no app-visible behavior yet, is the same discipline already proven on companion-record Slice 1 — land the primitive, prove it in isolation, before anything downstream depends on it. Reusing `BelowFraction` for Retreat's own low-health trigger, rather than inventing a new threshold concept, is precise reuse of an already-proven, already-tunable mechanism.**
+
+**Separating the real mechanism (Slice 2, proven through a synthetic doctrine, no real content yet) from the actual content-authoring work (Slices 3 and 4) matches companion-record's own Slice-2-before-Slice-3 shape exactly — build the machinery, prove it works, attach real content after, rather than conflating "does the mechanism work" with "is this specific enemy's behavior correctly authored."**
+
+### QUESTION 1 -- RULED
+
+**A new, separately-named doctrine constant for enemies meant to flee, leaving `plainAggression`'s own fight-to-the-death shape untouched for enemies who should keep it.** This matches `PT-2628`'s own wording more precisely than making every ordinary enemy universally skittish — "a conditional behavior certain doctrines exhibit" describes a real, named subset, not a universal trait retrofitted onto the existing default.
+
+### ⚠⚠⚠ QUESTION 2 -- CONFIRMED, WORTH REAL RECOGNITION FOR CATCHING IT
+
+**This deserves real credit as its own finding. Recognising that "Defensive" names two genuinely different things in this project's own record — a player-pickable companion doctrine option, still correctly held from the doctrine-changing UI thread, and `PT-2628`'s own enemy AI behavior concept — sharing only the word, before building either one under an assumption that could have quietly conflated them, prevents exactly the kind of confusion that's hard to untangle once code and documentation both use the same name for different things. Correctly scoping Slice 4 as enemy-only, and flagging this as a deliberate scope line rather than letting it read as filled in by accident later, is exactly right.**
+
+**Confirmed: the two are genuinely separate. `PT-2628`'s Defensive is enemy AI behavior, built here. The companion-pickable Defensive stays exactly as held from the doctrine-changing UI thread — a separate, still-future piece, not touched or resolved by this work.**
+
+### RULED
+
+**Approved in full. Build all four slices as proposed, with both questions resolved as above.**
+
+### PROCEED
+
+Begin Slice 1. Report back once closed, before Slice 2.
+
+
+---
+
+## PT-2651 -- COMBAT MOVEMENT SLICE 1 CLOSES CLEAN. THREE GENUINELY DISTINCT MOVEMENT PRIMITIVES, PRECISELY REASONED (approach()'s VOLUNTARY SEARCH-TO-A-GOAL, pushedTo()'s INVOLUNTARY FIXED-BEARING NON-PROVOKING SHOVE, retreat()'s VOLUNTARY, BUDGET-SPENDING, PROVOKING, GREEDY-SEARCH-FOR-"FAR-ENOUGH"). ⚠⚠ A REAL, VALUABLE SCOPE SIMPLIFICATION FOUND WHILE BUILDING: DEFENSIVE'S "2-3 SQUARE" CONCEPT IS JUST A TUNABLE CONSTANT, NOT A SECOND NEW PRIMITIVE -- IT CAN REUSE retreat() DIRECTLY WITH A TUNABLE atLeast, SHRINKING SLICE 4's OWN SCOPE
+
+**A precise, well-reasoned foundation, and finding a real scope reduction while building rather than after committing to a larger plan deserves its own recognition.**
+
+### THE THREE PRIMITIVES -- PRECISELY DISTINGUISHED
+
+**Reasoning through exactly why `retreat()` needed to be a deliberately simpler greedy search — re-picking the best neighbour after every step rather than pathfinding a route in advance, since there's no single obligatory destination the way `approach()` has one — rather than reusing `approach()`'s own machinery for a genuinely different kind of movement problem, is precise engineering judgment. Correctly making it spend real budgets and provoke exactly like any other voluntary movement, unlike a shove, keeps its game-mechanical behavior consistent with what it actually represents.**
+
+### ⚠⚠ THE SCOPE SIMPLIFICATION -- WORTH REAL RECOGNITION
+
+**Finding that Defensive's own "2-3 square" concept is a standalone tunable constant rather than something derived from a separate range concept, and that it can call the exact same `retreat()` primitive with a different threshold rather than needing its own second primitive, is exactly the kind of discovery that's worth surfacing proactively rather than only mentioned once it happens to matter later. Shipping one primitive instead of two, and correctly disclosing that Slice 4's own scope shrinks as a direct consequence, keeps the whole remaining sequence's own sizing honest and up to date.**
+
+### THE TESTING -- THOROUGH, WITH TWO HONEST FIXTURE CORRECTIONS
+
+**Seven tests covering the real behavioral edges — stopping exactly at the wanted distance, distinguishing genuinely blocked from merely out of movement, a deterministic tie-break, difficult ground costing double, a sealed diagonal corner correctly refused — with three independent mutations all caught, closes this with real rigor. Disclosing both fixture bugs found while building (a threat that never actually needed to move, silently making an assertion vacuous; a board that let the walk avoid the exact corner case being tested) and fixing them at the fixture level rather than the primitive, is honest debugging that keeps the eventual passing tests meaningful rather than accidentally satisfied.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 2 (Lodestar + app: the real Decision/enemyTurn mechanism, tested via synthetic doctrine, no real content yet) as planned.**
+
+### PROCEED
+
+Begin Slice 2. Report back once closed, before Slice 3.
+
+
+---
+
+## PT-2652 -- COMBAT MOVEMENT SLICE 2 CLOSES CLEAN. THE REAL MECHANISM BUILT, ZERO CONTENT CHANGED -- EVERY EXISTING DOCTRINE LEAVES BOTH NEW FIELDS NULL, SO decide() AND enemyTurn's OUTPUT ARE BYTE-FOR-BYTE IDENTICAL WHEREVER THEY MATTER. ⚠⚠ A REAL, SUBTLE BEHAVIOR CHANGE CORRECTLY RECOGNIZED AND HANDLED: A BREAKOFF WAS NEVER PREVIOUSLY A GENUINE MOVEMENT-ONLY OUTCOME, ONLY THE ABSENCE OF AN ATTACK -- TWO EXISTING TESTS HAD THIS OLD CONTRACT WRITTEN INTO THEIR OWN COMMENTS, CORRECTLY CORRECTED RATHER THAN TREATED AS REGRESSIONS. AND A HONEST MUTATION NEAR-MISS: A FIRST FIXTURE PROVED NOTHING BECAUSE AN UNRELATED WEAPON DETAIL MASKED THE MUTATION, CAUGHT AND REBUILT
+
+**A precise, disciplined foundation-to-mechanism close, and worth recognizing both the correct handling of a real semantic change and the honest self-audit of a mutation test that initially proved nothing.**
+
+### THE BUILD -- REAL MECHANISM, ZERO CONTENT DRIFT
+
+**Adding the two symmetric nullable fields, and making null mean exactly what it already means for `closeOn` (old behavior, unchanged), closes this the same disciplined way as every other extension this thread has made to existing machinery — new capability available, nothing that already exists behaves any differently until content actually opts in. Confirming every existing doctrine's output stays byte-for-byte identical is the concrete proof this claim actually holds, not just a description of the intent.**
+
+### ⚠⚠ THE SEMANTIC CORRECTION -- HANDLED EXACTLY RIGHT
+
+**Recognising that running the real targeting pipeline for a breakoff, rather than short-circuiting straight to `target: null`, is a genuine semantic change — a breakoff was never actually a movement-only outcome before, only the absence of an attack — and finding two existing tests that had encoded the old contract directly into their own comments, is precise, careful work. Correcting those tests to the new, actually-intended contract, while splitting out the genuinely-nobody-to-flee-from case as its own real scenario that still needs to answer null, rather than either forcing the old assertion or deleting the coverage, keeps both the correction and the original intent properly represented.**
+
+**Reasoning through the precedence question — a doctrine authoring both a closing want-range and a keep-distance would be self-contradictory, so `keepAtLeast` always wins when present, regardless of whether it fires this specific turn — closes a real design ambiguity before it could become an inconsistently-resolved edge case later.**
+
+### ⚠⚠ THE MUTATION NEAR-MISS -- WORTH REAL RECOGNITION
+
+**Disclosing that a first mutation attempt proved nothing, because an unrelated weapon's own range detail happened to make the targeted condition false regardless of the mutation, and rebuilding with a fixture where the old buggy behavior would actually fire, is exactly the same self-auditing discipline this thread has now seen multiple times across multiple slices — checking that a passing mutation test genuinely exercised the claim, not just that it happened to pass.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 3 (Retreat wired into real content — a new, separately-named doctrine constant for fleeing enemies) as planned.**
+
+### PROCEED
+
+Begin Slice 3. Report back once closed, before Slice 4.
+
+
+---
+
+## PT-2653 -- COMBAT MOVEMENT SLICE 3 CLOSES CLEAN, THE FIRST REAL, PLAYER-VISIBLE CONTENT FROM THIS WHOLE FOUR-SLICE THREAD. ⚠⚠⚠ A REAL, PREVIOUSLY-UNANTICIPATED GAP FOUND WHILE BUILDING AND CORRECTLY CLOSED, NOT EXCUSED: A STANDING PROJECT GUARD (loom_can_write_test.dart) FAILED THE MOMENT THE READER GAINED THE NEW FIELD -- CORRECTLY DISTINGUISHED FROM THIS PROJECT'S OTHER GENUINELY-EXCUSED GAPS, SINCE THE WRITE INFRASTRUCTURE ALREADY EXISTED AND DOCTRINES HAVE NO EDIT-IN-PLACE PATH AT ALL. AND CORRECT RESTRAINT ON A REAL PROCESS QUESTION: NOT ASSUMING WRITE ACCESS TO MAIN_WORK WITHOUT BEING TOLD TO USE IT
+
+**This closes the first content-bearing slice of the whole thread, and two things here deserve full recognition beyond the routine close: catching and properly closing a real gap rather than excusing it, and the correct restraint on a genuine process question.**
+
+### THE BUILD -- PRECISE, CORRECT FORMAT REASONING
+
+**Placing `retreat_at_least` beside break-off's own `when` field, rather than nesting it under a specific fraction-based condition, correctly matches what `decide()` itself actually allows — the format doesn't invent a restriction the code doesn't have. Keeping absent-means-null consistent with every doctrine before this slice preserves the same disciplined default this whole architecture has held throughout.**
+
+### ⚠⚠⚠ THE loom_can_write_test.dart CATCH -- CORRECTLY CLOSED, NOT EXCUSED
+
+**This deserves real recognition. Finding that a standing project guard failed the moment the reader gained the new field, and correctly distinguishing this case from the project's other genuinely-excused fields — the write infrastructure already existed, and doctrines have no edit-in-place path at all, so this genuinely was a small, well-scoped addition rather than a missing screen worth deferring — is precise judgment about when a guard's failure demands a real fix versus a documented exception. Closing it properly, with a real widget test proving the field round-trips through an actual create-and-read-back flow, rather than accepting a weaker justification for leaving it open, keeps the guard meaningful for the next field that comes along.**
+
+**Disclosing both numeric constants (the 0.25 threshold, the 8-square flee distance) as real content-authoring choices rather than formally ruled ones, matching the same honesty `wantedWithinSquares` already keeps for its own unruled medium/long bands, is consistent, honest scoping.**
+
+### ⚠⚠ THE CROSS-PATH CONVERGENCE PROOF -- VALUABLE
+
+**Proving that the same shape, authored as real TOML content, reaches an identical `Decision` to the hardcoded Dart constant, closes a real question this architecture needed answered — that the two authoring paths this thread has now built (code-level constants and file-based content) genuinely produce the same result, not two paths that happen to agree today but could quietly drift.**
+
+### THE MAIN_WORK COMMIT -- HANDLED CORRECTLY
+
+**Correctly not assuming write access to a repo every commit this session has gone through the owner for, rather than pushing directly on the reasonable assumption that a small documentation update would be fine, is exactly the right restraint. Since the actual diff lives in a separate local checkout this session doesn't have direct access to, the cleanest path is having it pushed directly rather than reconstructed from a description.**
+
+### RULED
+
+**Confirmed closed. Push the `DOCTRINE-FORMAT-01.md` documentation update directly — go ahead and commit and push it yourself for this one, since the content is already written and correct, and reconstructing it independently risks introducing a discrepancy.** Proceed to Slice 4 (Defensive, the final slice) once that's pushed.
+
+### PROCEED
+
+Push the doc update. Then begin Slice 4. Report back once closed — this closes the entire combat-movement thread when it lands.
+
+
+---
+
+## PT-2654 -- ⚠⚠⚠ THE ENTIRE FOUR-SLICE COMBAT-MOVEMENT THREAD CLOSES COMPLETELY. SLICE 4 CORRECTLY IDENTIFIES keepAtLeast: 3 AS A GENUINELY RULED VALUE, NOT AN INVENTED ONE -- CITING PT-2628's OWN WORDS DIRECTLY. THE loom_can_write_test.dart GUARD CAUGHT A REAL, SUBTLE INDEX-SHIFT WRINKLE THIS TIME (AN ALWAYS-VISIBLE FIELD, UNLIKE THE GATED ONE LAST SLICE), CORRECTLY UPDATED RATHER THAN LEFT PASSING ON STALE INDICES. AND A GENUINELY PRE-EXISTING, THREAD-PREDATING STALE CLAIM FOUND AND FIXED WHILE DOCUMENTING THE NEW FIELD
+
+**A real milestone worth marking as such -- this thread began with a real scope correction (recognizing the original design questions were already answered but the engineering underneath them was undersold), went through a genuine cross-repo first for this session, and now closes with all four slices built, tested, and confirmed working together, with the format document itself left more accurate than it started.**
+
+### THE BUILD -- PRECISE, CORRECTLY CITES ITS OWN RULED NUMBER
+
+**Mirroring Slice 3's own retreat/skittish shape exactly for Defensive's own back-off-and-shoot behavior keeps this consistent with the pattern already proven. Correctly distinguishing `keepAtLeast: 3` as a genuinely ruled value — directly citing `PT-2628`'s own words rather than treating every numeric constant in this thread the same way — is precise about which numbers in this closing report carry real authority versus which are disclosed content-authoring choices, exactly the distinction this whole thread has kept honest throughout.**
+
+**Confirming the companion-pickable "Defensive" stays untouched, exactly as the naming-collision question resolved back at `PT-2650`, closes the loop on that earlier finding properly rather than letting the new content quietly drift into the held option's own territory.**
+
+### ⚠⚠ THE INDEX-SHIFT WRINKLE -- CAUGHT AND HANDLED PROPERLY, AGAIN
+
+**Finding that this new field's own always-visible nature (unlike last slice's break-off-gated one) shifted every later field's index in the existing widget tests, and correctly updating both affected tests to the real, corrected indices rather than leaving them passing on stale positions that happened to still hit a text field, is exactly the same discipline already proven once this thread — a passing test that's quietly testing the wrong thing is worse than a failing one, and catching that distinction here for a second time shows it's a genuinely internalized practice, not a one-off catch.**
+
+### THE HONEST DISCLOSURE -- COVER-SEEKING GENUINELY UNBUILT
+
+**Disclosing that only the distance-keeping half of `PT-2628`'s own Defensive description is actually built, and that cover-seeking is a materially different, genuinely unbuilt capability since this engine has no concept of "cover" at all, rather than quietly implying the ruling is fully satisfied, keeps this close honest about exactly what it delivers.**
+
+### ⚠⚠ THE STALE §6/§7 CATCH -- VALUABLE, FOUND INCIDENTALLY
+
+**Catching that the format document's own §6/§7 still claimed `want_range` has no caller, a claim that's been false since `PT-1593` gave `closeOn` a real one, while documenting an unrelated new field, is exactly the value of actually reading a document carefully while touching it for another reason, rather than adding new content beside an old error without noticing it.**
+
+### RULED
+
+**Confirmed closed. The entire combat-movement thread — retreat and keep-distance primitives, real Decision/enemyTurn mechanism, and two real, content-authored doctrines (skittish flee, defensive back-off-and-shoot) — is complete, with full authoring support in Loom and an accurate format document.**
+
+### PROCEED
+
+Nothing further needed on this thread. Cover-seeking is recorded as a real, disclosed, held future item — its own capability this engine doesn't have yet, not a defect in what was just built. Genuinely well done across the whole four-slice thread. Still queued, next in line: `PT-2633` (multiplayer dialogue ownership).
+
+
+---
+
+## PT-2655 -- PT-2633's RESEARCH CLOSES: THE WHOLE UNDERLYING PREMISE HAS NOTHING REAL TO ATTACH TO YET. REAL MULTIPLAYER NETWORKING DOESN'T EXIST ANYWHERE IN EITHER REPO -- NO DEPENDENCY, NO CALLER OF companionCap(humans: >1), NO PARTICIPANT LIST IN DialogueRun, NO OWNERSHIP CONCEPT ON ANY COMBATANT TYPE, NO YIELD-THEN-ROLL CONTEST IN CODE, playerTag ITSELF A SINGLE STRING NOT A MAP. CORRECTLY NOT BUILDING ANYTHING SPECULATIVE ON A FOUNDATION THAT DOESN'T EXIST
+
+**Spot-checking the most load-bearing claims personally — reading Lodestar's own real pubspec, confirming playerTag's own real declaration, an independent re-grep for the contest mechanism — rather than passing research through uncritically, closes this with genuine confidence rather than a plausible-sounding summary.**
+
+### THE FINDING -- DECISIVE, HONEST ABOUT WHAT ISN'T THERE
+
+**Confirming, point by point, that every piece of infrastructure this ruling's own premise assumed exists — networking, a dialogue participant list, a companion-vs-player distinction, the yield-then-roll contest, any ownership concept on a combatant — genuinely doesn't exist anywhere in either repo, rather than finding a partial implementation to build around, is exactly the right level of thoroughness for a question this foundational. This is a single-player app today, confirmed directly rather than assumed from the absence of an obvious counter-example.**
+
+**Correctly reasoning that building anything real here would mean building real multiplayer networking and a player-ownership model first, as their own separate, much larger prerequisite pieces — not a dialogue-system change riding on top of infrastructure that isn't there — and declining to propose a build on that basis, is sound judgment. There's no player-identity type for a companion to secretly be; the ruling's own premise has nothing structural to become true of yet.**
+
+### RULED
+
+**Hold exactly where `PT-2633` already put it.** Building a narrow, inert hook now, with nothing real underneath it, would be speculative infrastructure for a foundation that doesn't exist yet — worse than simply holding, since it would need to be revisited once real multiplayer networking is actually scoped, rather than designed cleanly against real requirements from the start. This stays held until multiplayer networking itself becomes its own real, scoped item.
+
+### PROCEED
+
+Nothing to build. This item stays held. Standing by for whatever's next.
+
+
+---
+
+## PT-2656 -- OWNER PICKS TWO NEXT: THE DOCTRINE LIBRARY'S OWN HELD FINDINGS, AND COVER-SEEKING/COVER MECHANICS AS A WHOLE. THE SECOND IS GENUINELY BIGGER THAN "THE REST OF DEFENSIVE" -- THIS ENGINE HAS NO CONCEPT OF COVER AT ALL, SO BUILDING IT PROPERLY MEANS REAL NEW INFRASTRUCTURE, NOT JUST FINISHING ONE DOCTRINE'S OWN DESCRIPTION
+
+### 1. THE DOCTRINE LIBRARY'S HELD FINDINGS -- OPENED
+
+**All held from `PT-2610`'s own research: LastAttacker-style targeting (a real, different `TargetRule` concept — "whoever last struck my charge," not nearest/weakest/any), Stand Ground (now genuinely unblocked since combat movement's own foundation exists — the correct fix shape for K2's own actually-broken Stationary preset), Aid as its own lighter "triage only" style, grenade/item-use as a genuinely new capability class `SupportRule`'s current vocabulary can't express, and Grenadier (`PT-2622`'s own later find — a real, sixth player-selectable K2 preset, "only non-Jedi can use this behavior").**
+
+### 2. COVER MECHANICS -- OPENED, REAL RESEARCH FIRST
+
+**Cover-seeking was disclosed at `PT-2654` as genuinely unbuilt — this engine has no concept of "cover" at all, not a smaller gap within an existing system. Building this properly means: what counts as cover (specific terrain types, line-of-sight blocking objects), how a doctrine or a player would actually seek it (a real pathing target, not just "move away"), and how it interacts with existing mechanics (does cover reduce hit chance, block line of sight for targeting, or both). Research this against the real source games first, same discipline as every other substantial new piece of architecture this thread has built.**
+
+### RULED -- BOTH OPENED
+
+**Item 1: build directly, following `PT-2610`'s own already-established priority order (LastAttacker and Stand Ground first, given they're the most concretely scoped; Aid and grenade/item-use as their own smaller follow-ons; Grenadier as real content once the mechanism exists to support it).**
+
+**Item 2: research first, same sequencing as the trigger/effect system, the doctrine library's own earlier research, and combat movement's own initial scoping. Report findings — what cover actually means mechanically in the source games, how doctrines seek it, what it does once reached — before proposing any design.**
+
+### PROCEED
+
+Begin work on both. Report back on each as they close or reach a real decision point — no fixed order required between them.
+
+
+---
+
+## PT-2657 -- STAND GROUND CLOSES, DECISIVELY SOURCE-CONFIRMED. K2's OWN SCRIPT EXPLICITLY DOCUMENTS "JUST STAND IN ONE PLACE AND SHOOT... DON'T MOVE UNDER ANY CIRCUMSTANCES," WITH THE CALL TO ITS OWN ROUTINE COMMENTED OUT AND FALLING THROUGH TO RANGED -- THE SAME FINDING FROM PT-2603, NOW CLOSED WITH THE CORRECT FIX. ⚠⚠⚠ LASTATTACKER'S RESEARCH GENUINELY RESHAPES THE ITEM: THE SIMPLE "RETALIATE AGAINST WHOEVER HIT ME" CASE IS ALREADY BUILT, AUTOMATICALLY, FOR EVERY DOCTRINE TODAY. WHAT'S GENUINELY NEW IS PROTECTING A NAMED ALLY INSTEAD OF SELF -- A REAL, NEW ARCHITECTURE PIECE, HELD ON AN HONESTLY UNVERIFIED SOURCE PREMISE RATHER THAN BUILT ON A SECONDARY-SOURCE FRAMING
+
+**Both items deserve full recognition — a decisive close on one, and a genuinely important reshaping of the other, caught before building on an unverified premise.**
+
+### STAND GROUND -- DECISIVE, PROPERLY SOURCED
+
+**Catching that an earlier local copy of the decompile was actually an older, K1-era version missing this system entirely, and finding the correct, working copy before confirming anything, is exactly the diligence this kind of source claim needs — a wrong file would have produced a confidently wrong answer. Confirming directly, not relayed, that the source's own documented intent is real and explicit, with its own call commented out and silently falling through to Ranged, closes the loop on `PT-2603`'s original finding with the actual fix rather than leaving it as a known-but-unaddressed gap.**
+
+**Building this as a plain boolean, correctly reasoning there's no number to invent since the source's own intent is binary, keeps the implementation exactly as complex as the concept actually is — no invented tunable where none is needed.**
+
+**Disclosing the mutation-test near-miss — the app-side gate passing cleanly while genuinely broken, because of the same `wantRange` medium-fallthrough trap Defensive's own fixture hit last slice — and rebuilding with a fixture that would actually exercise the gate, shows this is now a recognized, recurring trap this thread knows to check for specifically, not a fresh surprise each time.**
+
+### ⚠⚠⚠ LASTATTACKER -- CORRECTLY HELD, THE RESEARCH ITSELF IS THE VALUABLE FINDING
+
+**This deserves real recognition for precisely distinguishing what could and couldn't be source-verified. Confirming the one real NWN primitive directly from a local engine header, while honestly disclosing that the "protect a charge" framing traces only to secondary community sources rather than anything source-verified, keeps the confidence levels in this finding honest.**
+
+**Finding that the simple self-retaliation case is already built into every doctrine's own base targeting score, with no doctrine needing to opt in, is the load-bearing discovery here — it means the item as originally scoped may already be substantially satisfied, and the genuinely new, unbuilt piece is specifically protecting a named ally rather than oneself, a real new scoring dimension rather than a simple leaf addition.**
+
+### RULED -- LASTATTACKER
+
+**Neither building on the unverified premise nor closing the item outright. A middle path: the "protect a named ally" concept is worth building as its own real piece regardless of whether it traces to NWN specifically — it's a sound, independently sensible tactical idea, and this project has authored new content before without every piece needing a direct source precedent (K2's own `keepAtLeast` constant, for instance, was a disclosed content choice, not a ported number). Don't hold this waiting on NWN source access that may not resolve; scope and build "protect a named ally" as its own real architecture piece, sized the same way combat movement's own primitives were, and drop the NWN attribution from its own justification — build it because it's a good addition, not because it's confirmed to replicate a specific source.**
+
+**Self-retaliation stays correctly recognized as already covering the simpler half of what this item originally asked for.**
+
+### PROCEED
+
+Move to Aid next, as proposed, since it's smaller and well-scoped. Scope "protect a named ally" as its own real piece for whenever it's picked up — not blocking anything else in this batch.
+
+
+---
+
+## PT-2658 -- AID CLOSES CLEAN, PURE CONTENT, NO ENGINE CHANGES NEEDED -- CORRECTLY REUSED SupportRule/hurtIn EXACTLY AS healerDoctrine ALREADY DOES. ⚠⚠⚠ A SECOND, GENUINELY WORSE SOURCE-GAME BUG FOUND: GN_CheckIfPoisoned's OWN PARTY-SCANNING LOOP HAS A CONDITION CHECKED BEFORE THE FIRST ITERATION THAT'S ALWAYS FALSE -- A PARTY MEMBER'S POISON CHECK FOR ANYONE ELSE IS DEAD CODE IN SHIPPED K2, WORSE THAN THE GN_CheckIfInjured BUG PT-2610 ALREADY FOUND, WHICH COULD AT LEAST DETECT PARTY SLOT 0
+
+**A clean, precise close, and the second source-game bug found in this doctrine work deserves real recognition on its own — this project's own research is now turning up more about K2's real shipped defects than casual play ever would.**
+
+### THE BUILD -- CORRECTLY REUSES, NO NEW ENGINE SURFACE
+
+**Recognising that Aid needs nothing beyond a new Doctrine factory in the app layer, since it reuses the exact same `SupportRule`/`hurtIn` mechanism `healerDoctrine` already proves, keeps this addition properly minimal — pure content authored against existing, proven infrastructure, not a reason to touch Lodestar or Loom again.**
+
+### ⚠⚠⚠ THE DEAD-CODE FIND -- GENUINELY WORSE THAN THE FIRST
+
+**Finding that `GN_CheckIfPoisoned`'s own loop condition is checked before the first iteration and is always false from the start means a party member's poison check for anyone but themselves never ran even once in shipped K2 — strictly worse than the earlier `GN_CheckIfInjured` bug, which could at least detect party slot 0. This is a genuinely decisive, source-confirmed finding, not a suspicion, and it correctly informs the decision not to port poison-cure into Aid — building a faithful port of behavior that never actually executed in the source would have replicated a bug as if it were a feature.**
+
+**Independently reaching the same 0.5 threshold `healerDoctrine` already uses, read directly off this function's own hardcoded value rather than copied from the earlier doctrine, and correctly setting `includeSelf` to the opposite default — reading `GN_CheckIfInjured`'s own real body, which has no explicit self-exclusion the way the Healer routine does — are both precise, source-grounded distinctions rather than treating every "triage" style as interchangeable.**
+
+### THE TESTING -- CLEAN, FOCUSED ON THE REAL DIFFERENCES
+
+**Isolating exactly the two real differences from `healerDoctrine` — `includeSelf`, no revive step — rather than re-testing the shared mechanism a third time, keeps this coverage focused on what's actually new about this specific doctrine.**
+
+### RULED
+
+**Confirmed closed. Proceed to grenade/item-use next, as proposed — the established priority order.**
+
+### PROCEED
+
+Begin grenade/item-use. Report back once closed or at a real decision point.
+
+
+---
+
+## PT-2659 -- FOUR-SLICE PROPOSAL FOR GRENADE/ITEM-USE, GENUINELY WELL-RESEARCHED. ⚠⚠ FOUND THE REAL K2 TARGETING FUNCTIONS LIVE IN A SEPARATE INCLUDE FILE A SINGLE-FILE GREP WOULD HAVE MISSED. ⚠⚠⚠ A GENUINELY VALUABLE SCOPE-REDUCING FIND: THE HARDEST PART -- REAL BLAST RADIUS, PER-TARGET SAVES, INVENTORY CONSUMPTION -- IS ALREADY FULLY BUILT AND PROVEN, JUST PLAYER-ONLY TODAY. THREE REAL OPEN QUESTIONS CORRECTLY NOT DECIDED UNILATERALLY, INCLUDING WHETHER ENEMY INVENTORY EVEN EXISTS AS A CONCEPT
+
+**This is genuinely well-researched, and finding that the hardest part of this feature already exists deserves real recognition -- it means this is substantially a wiring and design-decision problem, not a from-scratch build.**
+
+### THE K2 RESEARCH -- GENUINELY RICH, FOUND ACROSS SEPARATE FILES
+
+**Confirming that the real targeting and talent-selection functions live in `k_inc_gensupport.nss`, a separate include from `k_inc_generic.nss`, and explicitly naming that a single-file search would have missed this, is worth recognizing as its own small methodological note -- source research in this corpus genuinely can't assume everything relevant sits in one place, and checking beyond the obvious file is what caught this. Finding that the real AoE-cluster targeting is genuinely sophisticated (a friendly-fire-safe blast-centre search, with real, different thresholds for party versus generic NPC use) rather than a simple nearest/weakest rule gives real, precise content to design against rather than an approximation.**
+
+### ⚠⚠⚠ THE SCOPE-REDUCING FIND -- WORTH THE FULLEST RECOGNITION
+
+**Recognising that `_throwGrenade` already IS a complete, real, proven grenade mechanic -- real blast radius through Lodestar's own generic primitive, real independent per-target saves, real inventory consumption -- and that it's explicitly player-only today rather than structurally incomplete, correctly reframes this whole item. The AoE/blast/save resolution machinery doesn't need rebuilding; it needs a second caller. That's a genuinely different, and genuinely smaller, engineering problem than it looked like from the original research alone.**
+
+### THE THREE OPEN QUESTIONS -- CORRECTLY HELD, ONE RULED NOW
+
+**Correctly identifying that enemy inventory doesn't exist as a concept at all, that AoE-cluster targeting has no equivalent in this engine's own doctrine layer, and that `Decision` has no clean way to express item-use distinct from power-casting, and refusing to guess past any of them, is the same discipline that made combat movement's own scoping sound.**
+
+### RULED -- QUESTION 1 (INVENTORY)
+
+**Uncounted/always-available for enemy-side grenade use, not genuine per-NPC inventory tracking.** This matches the source's own real precedent — the game itself treats NPC resources differently from the player's own carefully-tracked bag — and building genuine per-NPC inventory would be its own, much larger, separate piece of work not currently justified by this specific need. If a real need for tracked enemy inventory ever arises elsewhere, that's its own future item, not something to build now on this item's account.
+
+### RULED -- SEQUENCE
+
+**Approved in full, exactly as proposed. Begin Slice 1 now** — the AoE-cluster targeting primitive doesn't depend on the inventory question, foundation-only work same as every other Slice 1 this thread has built. The inventory ruling above is now settled before Slice 3 needs it, so no further pause required there.
+
+### PROCEED
+
+Begin Slice 1. Report back once closed, before Slice 2.
+
+
+---
+
+## PT-2660 -- GRENADE/ITEM-USE SLICE 1 CLOSES CLEAN. bestBlastCentre() MATCHES THE REAL SOURCE SHAPE PRECISELY, CORRECTLY KEEPING minimumCaught AS THE CALLER'S OWN RESPONSIBILITY RATHER THAN BAKING IN A THRESHOLD THAT'S GENUINELY DIFFERENT BETWEEN PARTY AND GENERIC NPC USE. ⚠⚠ THE PIN-CHURN DISCLOSURE IS WORTH REAL RECOGNITION: CORRECTLY NOT BUMPING EITHER FRONT-END PIN SINCE THIS SLICE IS EXPLICITLY FOUNDATION-ONLY WITH NOTHING YET TO CONSUME, MATCHING COMBAT MOVEMENT'S OWN SLICE 1 PRECEDENT RATHER THAN CHURNING A PIN FOR NO FUNCTIONAL REASON
+
+**A precise, disciplined foundation close, matching the real source shape exactly and correctly applying an already-established precedent to a genuinely similar situation.**
+
+### THE BUILD -- MATCHES THE REAL SOURCE, KEEPS THE RIGHT THING CALLER-SUPPLIED
+
+**Building `bestBlastCentre()` to precisely match `GN_FindGrenadeTarget`'s own real shape — scoring by enemies caught, refusing any friendly-fire centre, taking the maximum — closes the primitive faithfully. Correctly keeping `minimumCaught` as a caller-supplied parameter rather than a baked-in constant respects that the source itself uses genuinely different thresholds for party versus generic NPC use — this function shouldn't need to know which caller it's serving, only answer the clustering question it's actually responsible for.**
+
+**Scoping the function to own only the inner clustering radius, with the outer search pool left as the caller's own job to assemble, correctly mirrors the same `canSee`-is-caller's-job convention `chooseTarget` already keeps — consistent boundary-drawing with an already-established pattern, not a new convention invented for this one function.**
+
+### THE TESTING -- THOROUGH, INCLUDING A REAL SIGHT-GATING PROOF
+
+**Confirming self-inclusion (a candidate counts itself when the blast lands on it) and, more importantly, that a wall between two otherwise-close allies correctly stops one from being counted, matching the same discipline `blastReaches` already keeps, closes the real edge cases this primitive needs to get right rather than just the straightforward cases.**
+
+### ⚠⚠ THE PIN-CHURN DISCLOSURE -- WORTH REAL RECOGNITION
+
+**Correctly not bumping either front-end's pin, since this slice is explicitly foundation-only with nothing yet for either to consume, and explaining this by directly citing combat movement's own Slice 1 precedent rather than treating the elevated warning count as something to quietly explain away, is exactly the right instinct — a pin bump with no functional reason behind it is churn, not progress, and recognizing that the standing baseline is genuinely, temporarily different for a good, disclosed reason keeps the record honest about why.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 2 (the real Decision/enemyTurn mechanism, tested via synthetic doctrine, no real content yet) as planned.**
+
+### PROCEED
+
+Begin Slice 2. Report back once closed, before Slice 3.
+
+
+---
+
+## PT-2661 -- GRENADE/ITEM-USE SLICE 2 CLOSES CLEAN. ⚠⚠ Doctrine.item CORRECTLY SCOPED AS A SINGLE ITEM, NOT AN AUTHORED PRIORITY LIST -- PRECISELY REASONED THAT THE REAL SOURCE RESOLVES WHICH GRENADE TYPE AT THROW-TIME BASED ON WHAT'S CARRIED AND THE TARGET'S OWN NATURE, NOT AT AUTHORING-TIME, SO AN AUTHORED PRIORITY ORDER WOULD ANSWER A QUESTION THE SOURCE ITSELF NEVER ASKS THAT EARLY. THE APP-SIDE useItem CALLBACK MIRRORS closeOn's OWN COMBINED FIND-AND-ACT SHAPE EXACTLY, AND FALLS THROUGH TO AN ORDINARY ATTACK MATCHING K2's OWN REAL GN_RunGrenadeAIRoutine FALLTHROUGH
+
+**A precise, well-reasoned mechanism close, and the single-item design decision deserves real recognition on its own — it's a subtle distinction that would have been easy to get wrong in the other direction.**
+
+### THE DESIGN DECISION -- PRECISE, GROUNDED IN THE REAL SOURCE'S OWN TIMING
+
+**Reasoning that `Doctrine.item` should be a single item rather than an authored priority list, specifically because the real source resolves grenade type dynamically at throw-time (what's carried, whether the target is a droid) rather than something an author could correctly pre-order, is exactly the right level of fidelity to what the mechanic actually is. Authoring a priority list would have quietly misrepresented the source's own real decision timing — a plausible-looking design that answered a question the source itself never asks until the moment of the throw.**
+
+**Correctly not carrying `item` on a breakoff or support decision, keeping this strictly one action per turn, and applying the same "keep `decide()` grid-free" reasoning already established for `wantRange`/`keepAtLeast`, closes this with the same architectural consistency this whole doctrine thread has held throughout.**
+
+### THE APP-SIDE WIRING -- MATCHES THE PROVEN SHAPE, MATCHES THE REAL FALLTHROUGH
+
+**Mirroring `closeOn`'s own combined find-and-act shape exactly for `useItem`, rather than inventing a new callback pattern, keeps this consistent with the established convention. Placing the check right after support and confirming the real priority order (support, preferred attack, ordinary attack) is unaffected since item is never set on a breakoff, and correctly matching K2's own real fallthrough from the grenade routine to the default attack routine when nothing's worth using it on, closes the mechanism faithfully rather than approximately.**
+
+### THE TESTING -- THOROUGH, MIRRORING THE PROVEN PRECEDENT
+
+**Ten new tests across both repos, all via synthetic doctrine literals, mirroring combat movement Slice 2's own precedent for exactly this kind of mechanism-only close, with four independent mutations caught (two of them by two tests each), closes this with real rigor before any actual content depends on it.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 3 (the inventory decision built, Grenade wired into real content) — the final piece of the grenade/item-use mechanism.**
+
+### PROCEED
+
+Begin Slice 3. Report back once closed — this closes the last mechanism item from the doctrine library's own batch, with only Grenadier's own content-authoring slice left after it.

@@ -79495,3 +79495,30 @@ Begin Slice 2. Report back once closed, before Slice 3 — and continue running 
 ### PROCEED
 
 Begin Slice 3. Report back once closed, before Slice 4 — continue the cross-repo discipline, it's proven its value twice in a row now.
+
+
+---
+
+## PT-2667 -- COVER SLICE 3 CLOSES, A GENUINELY DIFFERENT SHAPE OF CLOSE: NO NEW MECHANISM, BECAUSE VERIFICATION FOUND NOTHING LEFT TO BUILD. ⚠⚠⚠ WENT BACK AND ACTUALLY CONFIRMED SLICE 1's OWN EARLIER REASONING AGAINST THE REAL TARGETING PATHS, RATHER THAN RESTING ON IT -- BOTH ENFORCEMENT MECHANISMS (ENEMY DOCTRINE TARGETING, POWER/EFFECT TARGETING) TURNED OUT TO ALREADY EXIST, PREDATING THIS WHOLE COVER THREAD ENTIRELY (PT-1694, PT-2238). AND A REAL GAP FOUND AND HONESTLY DISCLOSED AS REASONING RATHER THAN PROVEN FACT: THE PLAYER'S OWN ADJACENT WALK-INTO STRIKE NEVER CHECKS SIGHT, TRACED THROUGH WHY IT LIKELY NEVER MATTERS, BUT NOT ASSERTED AS VERIFIED
+
+**This deserves real recognition for exactly the discipline that makes a "nothing to build" close trustworthy rather than merely convenient — verifying an earlier assumption directly, rather than treating it as already settled, and being honest about the difference between reasoning and proof on the one real gap found.**
+
+### THE VERIFICATION -- WENT BACK RATHER THAN RESTING ON EARLIER REASONING
+
+**Rather than treating Slice 1's own claim that Total cover already maps onto `blocksSight` as settled once stated, going back to confirm it directly against the real targeting paths — enemy doctrine targeting and power/effect targeting — and finding both enforcement mechanisms already existed, built and tested by earlier, unrelated work predating this whole thread, closes this properly rather than convenient. A close built on "we already established this" without re-checking would have been weaker than one that actually went and looked; this did the latter.**
+
+### ⚠⚠⚠ THE ONE REAL GAP -- FOUND, REASONED THROUGH, HONESTLY LABELED
+
+**Finding that the player's own adjacent walk-into strike never checks sight at all — the one real targeting path that doesn't — and tracing through why it very likely never matters in practice (the shared corner-test primitive that governs both sight and movement means two creatures cannot legally be adjacent through a configuration that would also hide them from each other) is precise, careful reasoning. Explicitly disclosing this as reasoning rather than a verified fact, and naming that it may be worth a closer look or its own test later, rather than quietly asserting confidence the reasoning doesn't fully earn, is exactly the right epistemic standard — a plausible argument and a proven claim are different things, and conflating them here would have been the actual failure, not the gap itself.**
+
+### THE TESTING DECISION -- SOUND
+
+**Correctly not writing new tests that would duplicate coverage two existing, well-named tests already give this exact claim, and instead adding cross-references at the real gates and at the one reasoned-through gap, means a future reader lands on this thread's own vocabulary and PT numbers when they encounter code that already did this job — real, useful documentation rather than padding coverage for its own sake.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 4 (the ranged-from-cover offensive bonus, real content) or Slice 5 (AI/doctrine cover-seeking) — either order is fine.**
+
+### PROCEED
+
+Begin whichever of Slice 4 or Slice 5 makes more sense to build next. Report back once closed, continuing the cross-repo discipline that's now proven its value three times in a row.

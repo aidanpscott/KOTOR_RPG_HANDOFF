@@ -32,9 +32,21 @@ when = "never"
 | `name` | what the decision records | **required** |
 | `goal` | the faction's own word for what it wants — `SPACE-AI-01`'s *"capture, not destruction"* | **required** |
 | `want_range` | `close` · `medium` · `long` | no — `medium` |
+| `keep_at_least` | how many squares a caller should keep this doctrine from its target, even while it still fights — `PT-2628`/`PT-2649`/`PT-2650`, Defensive's own field | no — `null`, no minimum kept |
+| `holds_ground` | `true`/`false` — Stand Ground, `PT-2610`/`PT-2656`: never move under any circumstances, still choose a target and still attack with whatever is already in reach | no — `false` |
+| `item` | a bare item id this doctrine tries to use offensively — `PT-2610`/`PT-2656`/`PT-2659`, a genuinely new capability class distinct from `[[support]]`'s own ally/self-directed powers | no — `null` |
 | `[break_off] when` | `never` · `alone` · `below` (with `fraction`) | no — `never` |
+| `[break_off] retreat_at_least` | how many squares a caller should walk this doctrine away once it breaks off — `PT-2649`/`PT-2650` | no — `null`, breaking off just holds |
 
 **⚠ `never` IS THE DEFAULT AND IT IS A REAL ANSWER**, not an absence: `SPACE-AI-01` — *"NEVER, and this one is a culture, not a tactic."*
+
+**⚠⚠⚠ `retreat_at_least` IS NOT NESTED UNDER `below` SPECIFICALLY** — `PT-2628` names retreat as *"a conditional low-health behavior"*, which is `below`'s own shape, but the engine does not itself restrict which break-off rule may carry a flee distance: `decide()` runs the same targeting pipeline regardless of which `BreakOff` fired, so a doctrine that breaks off `alone` and also names a distance flees too. **The field sits beside `when`, not inside one branch of it, because the code draws no line there and the format does not invent one.**
+
+**⚠⚠⚠ `keep_at_least` IS NOT A `[break_off]` FIELD AT ALL** — Defensive, `PT-2628`, is *"a ranged-weapon-holder actively keeping distance from an approaching melee threat"* while it is still choosing a target and still attacking; it has nothing to do with leaving the fight. It sits beside `want_range` in `[doctrine]` instead — the symmetric counterpart to closing a distance, not a break-off condition. `PT-2628` also rules the exact number a balance/playtesting question, not a design one: **2 or 3 squares is a reasonable starting value, and it is content, tunable per doctrine, never a hardcoded engine constant.**
+
+**⚠⚠⚠ `holds_ground` IS A BOOL, NOT A DISTANCE.** Stand Ground, `PT-2610`/`PT-2656`, is source-confirmed against K2's own real `k_inc_generic.nss`: a `NPC_AISTYLE_PARTY_STATIONARY` branch exists with a genuine, documented intent — *"Just stand in one place and shoot. Don't move under any circumstances"* — but its own call to the routine that would do it is commented out, and the branch silently falls through to the SAME function the Ranged preset calls. Shipped K2 "Stationary" is Ranged wearing a different name; this field is what the source's own comment actually describes. **Not the same thing as `want_range`'s own `medium`/`long` "holds where it is" fallthrough** — that is an accident of a band nobody gave real squares to, not a deliberate choice.
+
+**⚠⚠⚠ `item` NAMES ONE ITEM, NOT A LIST** — unlike `[[support]]`, which is a real priority ladder of several powers. `GN_GetGrenadeTalent` picks ONE grenade type dynamically, by what the thrower actually carries and whether the target is a droid; an authored priority order over several item ids would be answering a question the real source resolves at throw-time, not authoring-time. **Named unconditionally, the same reason `want_range`/`keep_at_least` are** — `decide()` stays grid-free, and whether a good AoE cluster actually exists this turn is a real geometry question only a caller with a real board can answer.
 
 ---
 
@@ -122,7 +134,6 @@ reaction = [ { on = "character.downed", then = "rally" } ]
 
 - **⚠ A goal that means anything.** `goal` is a string the decision carries and **nothing reads it** — `SPACE-AI-01`'s *"capture, not destruction"* changes what a fleet does, and here it changes nothing. **It is recorded for the narrator and is otherwise inert.**
 - **A match on anything but a combatant.** No *"the one holding the codes"*, because equipment is not in `DoctrineView`.
-- **A range the engine acts on.** `want_range` is carried into the decision and **no caller moves anyone yet.**
 - **Per-ally rules.** `allies` is in the view and no rule reads it except `alone`.
 - **⚠ A doctrine that changes mid-fight.** It is picked once and asked every turn. Escalation is `PT-1316`'s and is not this.
 
@@ -131,5 +142,6 @@ reaction = [ { on = "character.downed", then = "rally" } ]
 ## 7 · Open
 
 - **`goal` is inert** — `§6`. It wants either a vocabulary or a ruling that it is narration only.
-- **`want_range` has no caller.** Movement toward a band is unbuilt.
 - **Whether an instance may override its template's doctrine.** `AUTHORED-CHARACTER-01 §4` allows an instance to override an attachment *"only if the template permits it"* — and **no field says which attachments are overridable.**
+
+**⚠⚠⚠ CLOSED — `want_range` HAD A CALLER BEFORE THIS DOCUMENT NOTICED.** `PT-1442` stored it, `PT-1593` gave `Fight.enemyTurn`'s `closeOn` a real caller for it — this document's own §6 and this section both still claimed otherwise until `PT-2628`/`PT-2649`/`PT-2650` Slice 4 corrected them, having built `retreat_at_least` and `keep_at_least` right beside it. **The reading was stale before this thread ever started; nobody had come back to update it once the code moved.**

@@ -18,7 +18,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 - **Store console variant is a different paradigm, not a resolution twin — standing note.** Unlike Terminal's `_x`/`_p` pair, `store_x.gui` uses fixed slot buttons and controller prompts, a genuinely different interaction model. The "_x is the reference" precedent from Terminal does not transfer here — `store_p` is the correct comparison for this app's mouse/scrollable-list build.
 
-- **Character-menu live comparison — held, needs Aaron's own direction.** Environment correctly refused direct input to the live session. Needs either Aaron navigating himself while Coder screenshots, or an explicit permission grant.
+- **Live menu-comparison and asset-extraction pass, every K2 menu screen — active, opened (PT-2675).** Real workflow: launch the real game (Steam, most recent save), screenshot each menu, find the real game files that construct it, document which specific assets this project draws from (ASSET-REPLACEMENT-01's own disclosed-debt shape), run marked assets through AI later. One menu at a time, Coder's own call on sequencing. Two known complications: the Character Sheet is deliberately different from K2's own, still worth comparing; Equip's own added Boots slot needs a real placeholder box in the recreated layout, filled in by AI later.
 
 
 - **AI-recreation debt for the three extracted terminal textures — real, held.** Per `ASSET-REPLACEMENT-01`'s standing mechanism, the extracted `uibit_brdr_16we`/`16wc`/`uibit_fill_circ` textures are marked `extracted` with the AI-recreation replacement owed, matching every other placeholder-to-recreation debt already tracked this way in this project.

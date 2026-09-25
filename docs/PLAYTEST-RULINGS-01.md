@@ -79522,3 +79522,61 @@ Begin Slice 3. Report back once closed, before Slice 4 — continue the cross-re
 ### PROCEED
 
 Begin whichever of Slice 4 or Slice 5 makes more sense to build next. Report back once closed, continuing the cross-repo discipline that's now proven its value three times in a row.
+
+
+---
+
+## PT-2668 -- COVER SLICE 4 CLOSES CLEAN, THE OFFENSIVE BONUS BUILT AND WIRED INTO COMBAT ON BOTH SIDES. ⚠⚠⚠ THE EARLIER "PEEKING OUT OF TOTAL COVER" OPEN QUESTION RESOLVES ELEGANTLY: THE ARCHITECTURE THAT ACTUALLY SHIPPED MEANS THE QUESTION DOESN'T ARISE -- A SHOOTER'S OWN COVER IS A PROPERTY OF THE TILE THEY STAND ON, AND TOTAL WAS NEVER A TILE PROPERTY AT ALL (IT'S wall.blocksSight, AN ABSENCE OF TARGETING). THERE IS NO CONFIGURATION WHERE A SHOOTER'S OWN SQUARE SAYS "TOTAL," SO NOTHING NEEDED MODELING FOR IT
+
+**A precise, well-reasoned close, and the resolution of the earlier open question deserves real recognition -- it's the same shape of finding Slice 3 closed on, a question that looked open turning out to be already answered by the architecture itself.**
+
+### THE BUILD -- PRECISE ON A SUBTLE DISTINCTION
+
+**Correctly stating `coverAttackBonus` as its own dedicated function, rather than reusing `coverSaveBonus` even though the two numbers happen to coincide, because the two rules genuinely answer different questions -- how much easier a target is to hit versus how much better a shooter is aiming -- is exactly the right discipline. Two values that happen to match today aren't the same rule, and collapsing them into one function would have made a future divergence between the two (if either ever needed to change independently) a real, hidden coupling rather than an explicit, separate choice. Keeping the ranged-only gate inside the function itself, the same place `ability` already branches melee versus ranged, rather than pushing that responsibility onto every caller, closes this with the right ownership.**
+
+**Catching and fixing the stale `coverSaveBonus` comment left over from Slice 2's own correction -- a comment that kept claiming a clean halving the actual fix had already disproven -- while touching adjacent code for an unrelated reason, is exactly the value of reading carefully while already in the file, the same discipline this thread caught the `AREA-FORMAT-01` §6/§7 staleness with earlier.**
+
+### ⚠⚠⚠ THE RESOLVED OPEN QUESTION -- ELEGANT
+
+**This deserves real recognition. The original design proposal's own open question -- can you fire from Total cover, and if so what happens -- assumed a shooter's own position could genuinely be "Total," requiring some rule for what happens when they do. Finding that the shipped architecture makes this configuration impossible by construction, since Total was never a tile property to begin with, resolves the question by dissolving it rather than answering it. This is worth naming as its own small standing lesson: sometimes a design question that looks genuinely open is actually already settled by an earlier architectural decision, and the right response is recognizing that rather than inventing a rule for a case that can't occur.**
+
+### THE TESTING -- PRECISE, DISTINGUISHES THE RIGHT FAILURE MODES
+
+**Deliberately reading the shooter's own handle rather than the target's when asserting the bonus, specifically to avoid a test that would silently re-prove Slice 2's own defensive claim and pass for the wrong reason, is exactly the kind of care that keeps a test proving what it claims to prove rather than merely passing.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 5 (AI/doctrine cover-seeking) — no need to pause for a full-arc review given four clean, disciplined slices in a row.** Given this is confirmed as needing a genuinely new pathing primitive, closer in shape to grenade/item-use's own Slice 3 than anything built so far in this thread, scope and propose it before building — same discipline as every other genuinely new primitive this session has introduced.
+
+### PROCEED
+
+Scope Slice 5. Report back with the proposal before building.
+
+
+---
+
+## PT-2669 -- SLICE 5 PROPOSAL, GENUINELY CAREFUL WORK ON A REAL ARCHITECTURAL DECISION. CORRECTLY RULED OUT THE SIMPLER "CALL approach() PER CANDIDATE" ALTERNATIVE BY READING THE REAL IMPLEMENTATION DIRECTLY -- RAW DISTANCE DOESN'T TRACK REAL PATH COST, AND EACH CALL IS ITS OWN FULL SEARCH WHEN ONE SEARCH ALREADY HAS THE DATA. ⚠⚠⚠ CORRECTLY CONNECTED THE PROPOSED EXTRACTION TO AN ALREADY-ESTABLISHED PRECEDENT WITHIN THE SAME FILE -- diagonalIsOpen's OWN COMMENT ALREADY NAMES THE EXACT RISK TWO DRIFTING-APART SEARCHES WOULD REPEAT, AT A LARGER SCALE, AGAINST 620 LINES OF EXISTING TESTS EARNED BY REAL BUGS. CORRECTLY ASKED BEFORE TOUCHING LOAD-BEARING CODE
+
+**This deserves the fullest recognition for exactly the discipline it shows — a genuine architectural fork, with real stakes on both sides, researched thoroughly and brought for a decision before any code touches something this load-bearing.**
+
+### THE RULED-OUT ALTERNATIVE -- CONFIRMED BY READING THE REAL CODE, NOT ASSUMED
+
+**Checking whether repeated `approach()` calls could substitute for a new primitive, and correctly finding two independent reasons it can't — raw distance doesn't track real path cost around obstacles, and each call re-runs a full search when a single search already computes everything needed — closes off the tempting, no-engine-change option honestly rather than dismissing it without checking. Reading `approach()`'s own real implementation directly to confirm this, rather than reasoning about it from memory of what a Dijkstra search generally does, is exactly the rigor this decision deserves.**
+
+### ⚠⚠⚠ THE EXTRACTION PROPOSAL -- PRECISELY GROUNDED IN AN ALREADY-ESTABLISHED PRECEDENT
+
+**This is the heart of what deserves recognition here. Identifying that the shared expansion-and-reconstruction machinery is identical between the two use cases, with only the goal criterion actually differing, and connecting this directly to `diagonalIsOpen`'s own already-recorded lesson — two separate rules that could drift apart again is how this corpus got a creature detectable through a wall it couldn't be shot through — is precise pattern recognition. This isn't inventing a new refactoring philosophy; it's correctly recognizing that this file has already made exactly this move once, for exactly this reason, and the same reasoning applies here at a larger scale, against 620 lines of tests earned by real, specific bugs (`PT-1637`'s wall-as-off-switch, `PT-1013`'s determinism).**
+
+**Honestly naming the real risk on both sides — extraction risks touching genuinely load-bearing internals; duplication risks a second search quietly drifting from the first's own hard-won correctness over time — and correctly identifying which risk is actually larger long-term, while still bringing the decision here rather than proceeding on that judgment alone, is exactly right for a fork this consequential.**
+
+### THE DOCTRINE WIRING -- PRECISE, MINIMAL
+
+**Correctly keeping `seeksCover` as its own field rather than folding it into `keepAtLeast`, since the two genuinely answer different questions, and recognizing that whether an attack still happens the same turn falls entirely out of the existing budget accounting with no special-casing needed, keeps this addition as minimal as the actual new capability requires — no invented rule where the existing mechanics already produce the right answer.**
+
+### RULED
+
+**Approved: the extraction approach, exactly as proposed and preferred.** The duplication risk is the correct one to weigh as larger — a second, independently-maintained search is a standing invitation for the two to quietly diverge, the same shape this corpus has already been burned by once. Proceed with confidence given the reasoning here is sound, but treat `approach()`'s own 620 existing tests as a hard, byte-for-byte regression bar exactly as proposed — nothing about its own current behavior should change as an incidental side effect of the extraction.
+
+### PROCEED
+
+Begin Slice 5a: extract the shared search, build `seek()` against it, confirm every one of `approach()`'s existing tests still passes unchanged. Report back once closed, before Slice 5b (the doctrine field, the app wiring, real content).

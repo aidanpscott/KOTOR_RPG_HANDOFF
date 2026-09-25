@@ -6,6 +6,8 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **Easy difficulty: player-thrown grenades shouldn't harm allies — recorded, held for the difficulty-mechanics thread (PT-2673).** Fits DEATH-AND-DIFFICULTY-01.md's own already-established Easy-tier philosophy ("protects the player from loss") directly. Distinct from the AI's own existing friendly-fire refusal (governs where an AI throws; this governs what a real explosion does to whoever's caught in it, player-side, Easy only). Not buildable now — waits for difficulty mechanics to be properly scoped as their own thread.
+
 - **Dialogue control auto-switches to another player's own character — researched, held, needs real multiplayer networking first (PT-2655).** Only a genuine player has real dialogue options; a sentient, language-sharing companion/henchman can comment but not choose. Real research confirms the whole premise has nothing to attach to yet: no networking exists anywhere in either repo, no dialogue participant list, no ownership concept on any combatant type, the yield-then-roll contest is a pure design-ledger concept with no code. Held until multiplayer networking itself is scoped as its own item — building anything now would be speculative infrastructure for a foundation that doesn't exist.
 
 

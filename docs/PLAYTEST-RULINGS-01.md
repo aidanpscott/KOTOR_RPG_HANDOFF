@@ -79580,3 +79580,36 @@ Scope Slice 5. Report back with the proposal before building.
 ### PROCEED
 
 Begin Slice 5a: extract the shared search, build `seek()` against it, confirm every one of `approach()`'s existing tests still passes unchanged. Report back once closed, before Slice 5b (the doctrine field, the app wiring, real content).
+
+
+---
+
+## PT-2670 -- SLICE 5a CLOSES CLEAN, THE MOST DELICATE EXTRACTION THIS COVER THREAD HAS ATTEMPTED, EXECUTED WITH GENUINE CARE. approach()'s EXISTING 620-LINE SUITE PASSES BYTE-FOR-BYTE, AND THE SHARED EXTRACTION ITSELF IS MUTATION-CONFIRMED GENUINELY LOAD-BEARING IN approach()'s OWN REAL BEHAVIOR, NOT MERELY SITTING BESIDE IT UNUSED. ⚠⚠⚠ MUTATION TESTING FOUND A REAL DEFECT IN THE NEW CODE ITSELF -- A DEDICATED EARLY-RETURN THAT TURNED OUT TO BE DEAD WEIGHT, CORRECTLY REMOVED RATHER THAN LEFT UNTESTED BESIDE A PATH THAT ALREADY DID ITS JOB
+
+**This is genuinely exceptional care on the most consequential single piece of work this whole cover thread has attempted — worth recognizing in full rather than as a routine close.**
+
+### THE EXTRACTION -- EXACTLY TO SCOPE, PROVEN LOAD-BEARING NOT JUST PASSING
+
+**Extracting only the two genuinely shared pieces — neighbour expansion and route-walking — while leaving `approach()`'s own unique dual-criterion goal logic completely untouched, and confirming the existing 620-line suite passes byte-for-byte, closes the regression risk exactly as ruled. Mutation-testing the extraction itself, and confirming that disabling the shared corner check fails a real, existing `PT-1709` case directly, is the decisive proof this thread has repeatedly insisted on: not that the tests pass, but that the shared code is genuinely doing real work inside `approach()`'s own behavior, not sitting adjacent to it unexercised.**
+
+**Recognising that `seek()`'s own goal rule is genuinely simpler than `approach()`'s — a satisfied-or-not predicate, where the bucket queue's own natural cost-then-insertion order already gives the correct, deterministic answer with no secondary tie-break needed — is precise engineering judgment, building exactly as much complexity as the actual problem requires and no more.**
+
+### THE FIXTURE MISTAKES -- CAUGHT BY RUNNING, HONESTLY DISCLOSED
+
+**Both fixture bugs found in the new test file's own first drafts — an unbounded board letting a sealed-corner case walk around through the coordinate space instead of actually testing the corner rule, and a diagonal shortcut dodging a difficult-terrain cost meant to distinguish two candidates — were caught by actually running the tests and noticing they proved nothing, not by inspection. Fixing both by mirroring `approach_test.dart`'s own proven fixture shapes rather than reinventing the geometry keeps this consistent with hard-won precedent rather than risking the same mistakes independently.**
+
+### ⚠⚠⚠ THE DEAD-CODE REMOVAL -- WORTH REAL RECOGNITION
+
+**This deserves its own recognition. Finding that a dedicated early-return for "already on a matching square" was genuinely unnecessary — the general search loop already checks the start square first as the bucket queue's own first entry, and `_walkRoute` already produces the correct zero-step result when the goal equals the start — and removing it rather than leaving it in, untested, beside a path that already handled the case, is exactly the right response to a mutation that revealed genuinely redundant code rather than a real gap. Shipping less code that does the same job correctly is a real improvement, not just a neutral finding.**
+
+### CROSS-REPO DISCIPLINE -- CONTINUED EVEN WHEN LIKELY UNNECESSARY
+
+**Checking all three downstream repos even though this slice introduces no new types and therefore had no obvious reason to expect a surprise, rather than assuming a clean pass because the pattern from the last three slices, is exactly the right instinct — a discipline that's only applied when a surprise seems likely isn't really a discipline, it's a hedge.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 5b — the final piece of the entire cover-mechanics thread.**
+
+### PROCEED
+
+Begin Slice 5b: the `seeksCover` doctrine field, the `seekCover` callback on `Fight`, real app wiring, and real content. Report back once closed — this closes the entire five-slice cover-mechanics thread when it lands.

@@ -79328,3 +79328,106 @@ Begin Slice 2. Report back once closed, before Slice 3.
 ### PROCEED
 
 Begin Slice 3. Report back once closed — this closes the last mechanism item from the doctrine library's own batch, with only Grenadier's own content-authoring slice left after it.
+
+
+---
+
+## PT-2662 -- GRENADE/ITEM-USE SLICE 3 CLOSES, THE FULL MECHANISM COMPLETE. ⚠⚠⚠ A GENUINELY SEVERE DEFECT FOUND INCIDENTALLY: Fight.enemyTurn()'s REAL CALL SITE NEVER PASSED retreatFrom AT ALL -- THE ENTIRE COMBAT-MOVEMENT THREAD's SKITTISH AND DEFENSIVE DOCTRINES WERE BUILT, SOURCE-VERIFIED, AND CLOSED TWICE (PT-2653/PT-2654) ON SYNTHETIC FIGHT-LEVEL TESTS ALONE -- NONE OF THAT WORK HAD EVER RUN IN REAL PLAY UNTIL THIS SLICE'S OWN INCIDENTAL WIRING SURFACED IT. THE SAME CLASS OF GAP ALREADY NAMED AT PT-2366: A MECHANISM NOTHING CALLS IS NOT BUILT. AND A GENUINE DOCS-MIRROR FORK, PROPERLY INVESTIGATED AND RESOLVED -- NOT A REAL TWO-WAY CONFLICT, MAIN_WORK'S OWN COPY WAS CORRECT AND CURRENT, HANDOFF'S WAS SIMPLY STALE
+
+**This closes the grenade/item-use mechanism completely, and the incidental catch here is genuinely one of the most important findings this whole doctrine thread has produced — worth working through in full before anything else.**
+
+### THE BUILD -- PRECISE, WITH A REAL SELF-CAUGHT CORRECTNESS FIX
+
+**Building the live item-catalogue cache on the same proven "read once, cache, fall through until it lands" shape `_doctrines` already uses, rather than a new caching pattern, keeps this consistent with established infrastructure. Catching and fixing the throw-range restriction during self-review, before it shipped rather than after, is exactly the discipline that keeps a "correct in principle" mechanism from becoming "wrong in a specific, exploitable way" in practice.**
+
+### ⚠⚠⚠ THE retreatFrom CATCH -- GENUINELY ONE OF THE MOST IMPORTANT FINDINGS IN THIS THREAD
+
+**This deserves the fullest, most direct recognition. Finding that the real `Fight.enemyTurn()` call site never actually passed `retreatFrom`, discovered only because this slice's own wiring happened to touch the same call site for an unrelated reason, means the entire combat-movement thread's skittish and defensive content — built, source-confirmed, and formally closed twice — had never actually run in real play. Every prior confirmation rested on synthetic Fight-level tests that could prove the mechanism worked in isolation, but none of them exercised the real path a player would actually experience.**
+
+**Correctly recognizing this as the same class of gap already named at `PT-2366` — a mechanism nothing calls is not built, regardless of how thoroughly its own isolated logic is proven — and disclosing it as its own separate finding rather than folding it quietly into this slice's own narrative, keeps the record honest about a real, severe gap that survived two prior close-outs undetected. Fixing it since it shares the same wiring, rather than treating it as out of scope for this slice, was the right call — leaving a known, severe defect unfixed while touching the exact code that causes it would have been indefensible.**
+
+**This is worth a standing lesson: synthetic, mechanism-level tests prove a mechanism is internally correct. They do not prove anything is actually connected to it. The real, live integration test built for this slice — proving `retreatFrom` and `useItem` both fire for the first time through the actual `PlayScreen` pipeline — is what should have existed for Slices 3/4 of combat movement from the start, and didn't.**
+
+### THE INTEGRATION TEST -- DECISIVE, WITH TWO REAL LESSONS RECORDED
+
+**Choosing a real `PlayScreen`-level test specifically because real catalogue resolution through the real pipeline is exactly what needed proving, rather than another synthetic bed, is the correct response to what this slice's own findings just demonstrated. Documenting the two real testing-infrastructure lessons found while getting this test running — the single-outer-`runAsync` requirement, and the handle-must-match-filename constraint — in the test's own comments, means the next PlayScreen-level integration test doesn't have to rediscover either one.**
+
+### ⚠⚠⚠ THE DOCS-MIRROR FORK -- INVESTIGATED AND RESOLVED, NOT A REAL CONFLICT
+
+**Correctly not touching this and flagging it directly, rather than guessing at a resolution, was the right call given the checker's own explicit refusal to auto-resolve a genuine fork. Investigated directly: this was not a real two-way conflict — MAIN_WORK's own copy carried the full, correct, current documentation from the entire combat-movement and grenade/item-use threads, while HANDOFF's own mirror had simply fallen behind across several updates. Resolved by copying MAIN_WORK's correct version over; re-confirmed clean (`current 43, stale 0, forked 0`).**
+
+### RULED
+
+**Confirmed closed — the entire grenade/item-use mechanism is complete. The retreatFrom gap is fixed as part of this slice, correctly, and recorded as a standing lesson about the limits of synthetic testing.**
+
+### PROCEED
+
+Proceed to Slice 4 (Grenadier, the final content-authoring piece, closing the whole doctrine-library batch). Cover mechanics research stays queued behind it, or pick whichever order makes more sense.
+
+
+---
+
+## PT-2663 -- SLICE 4 (GRENADIER) CORRECTLY HELD ON A CONTENT GAP, NOT A CODE ONE -- NO REAL STORY PACKAGE SHIPS A GRENADE AT ANY PREDICTABLE PATH, SO A HARDCODED CONSTANT WOULD BE EXACTLY THE "STUB ENTRY WORSE THAN AN HONEST GAP" THIS THREAD JUST SPENT A SLICE FIXING. AND ⚠⚠⚠ A REAL GAP FOUND IN COVER MECHANICS' OWN RESEARCH: ACTION-ECONOMY-01 §6.2 ALREADY HAS A FULL, DEDICATED, THIS-PROJECT'S-OWN COVER RULING -- THREE TIERS, REAL DEFENCE/REFLEX BONUSES, TIED TO THE EXISTING ±2/±5/±10 LADDER -- THAT CODER'S OWN SEARCH MISSED, AND THE OWNER'S OWN RECOLLECTION CORRECTLY CAUGHT
+
+**Working through both findings, since the second genuinely reshapes the whole direction of the cover-mechanics research already done.**
+
+### SLICE 4 -- HELD, CORRECT REASONING
+
+**Approved as recommended (option b): hold Grenadier exactly where the existing picker comment already holds it, until real content actually ships a grenade at a known path.** Correctly recognizing this as the identical shape of problem this thread just closed a real defect over — a mechanism that would silently resolve to nothing in any real package today — and declining to reintroduce it for a small content-authoring convenience, is exactly the right call. The mechanism itself is fully proven and ready the moment real content exists to point it at; nothing is lost by waiting.
+
+### ⚠⚠⚠ THE COVER-MECHANICS CORRECTION -- A REAL, ALREADY-AUTHORED RULING EXISTS
+
+**Checking the owner's own recollection before assuming the prior research was complete found something genuinely important: `ACTION-ECONOMY-01 §6.2` already carries a full, dedicated cover ruling — Half (+2 Defence, +1 Reflex), Three-Quarters (+5 Defence, +2 Reflex), and Total (cannot be targeted by attacks needing line of sight), explicitly aligned with `SKILL-RESOLUTION-01`'s own already-established ±2/±5/±10 modifier ladder. This is this project's own authored content, not a secondary web source — far more concrete and immediately usable than the Saga Edition values the prior research turned up, and it should supersede them as the actual mechanical basis for this work.**
+
+**The section's own honest disclosure — "nothing in the corpus mentions cover, and blaster combat is built on it" — confirms this was a real, known gap the ruling itself was written to close, not merely a passing mention. Its own two disclosed open questions (whether Covering Fire lets an ally move without losing cover; whether Form II's barrier-cutting removes cover) stay open and worth keeping in view as this work proceeds.**
+
+**Worth naming plainly for the record: this was a real miss in the prior research pass, not a failure of diligence — `§6.2` sits in `ACTION-ECONOMY-01`, a document already searched, but the specific section wasn't surfaced by the terms tried. Catching this before building anything on the wrong foundation is exactly what checking the owner's own recollection against the corpus is for.**
+
+### OWNER'S NEW DIRECTION -- RECORDED
+
+**On top of `§6.2`'s own already-ruled defensive bonuses: cover should function similarly to D&D's own cover mechanics in shape, but with genuinely more incentive to actually use it than D&D typically provides — the owner wants players actively seeking cover, not merely tolerating it as passive protection. New addition, not yet in `§6.2`: a ranged weapon fired from cover should carry a real hit bonus, an offensive incentive layered on top of the existing defensive one.**
+
+### RULED
+
+**Proceed with cover mechanics as its own real design pass, now grounded in `§6.2`'s own real, authored values rather than the secondary Saga Edition figures. Incorporate the owner's new ranged-hit-bonus-from-cover addition as a genuine extension to what's already ruled, not a replacement for it. The structural findings from the prior research — the reaction-chain system being entirely unbuilt, the new corner-based sight primitive `canSee` can't currently express, and the saving-throw-versus-attack-roll mismatch for grenades — all still apply and still need resolving as part of this design.**
+
+### PROCEED
+
+Re-scope the cover-mechanics design against `§6.2`'s own real values plus the owner's new ranged-bonus addition. Propose a design before building, same discipline as every other substantial piece of this thread. Grenadier stays correctly held.
+
+
+---
+
+## PT-2664 -- FIVE-SLICE PROPOSAL FOR COVER MECHANICS, GENUINELY ONE OF THE STRONGEST PROPOSALS THIS WHOLE THREAD HAS PRODUCED. ⚠⚠⚠ THE ARCHITECTURAL CHOICE IS PRECISE: TILE-AUTHORED COVER, NOT GEOMETRIC RAY-TRACING -- §6.2's OWN TIER EXAMPLES ARE ALL CONCRETE, AUTHOR-DECLARABLE TERRAIN, AND THE TILE-AUTHORED SHAPE MATCHES BOTH THE SOURCE'S OWN EXAMPLES AND THIS PROJECT'S ALREADY-CONSISTENT "CONTENT DECLARES IT, ENGINE READS IT" PATTERN. AND CONFIRMED §6.2's OWN REFLEX-SAVE BONUS DIRECTLY RESOLVES THE GRENADE SAVE-VS-ATTACK-ROLL MISMATCH THE PRIOR RESEARCH HAD FLAGGED AS UNRESOLVED
+
+**This deserves to be worked through in full — the architectural reasoning here is precise enough to deserve real recognition beyond a routine approval, and every open question is handled with the same discipline this thread has held throughout.**
+
+### THE §6.2 CONFIRMATION -- CLOSES A REAL PRIOR GAP CLEANLY
+
+**Confirming that §6.2's own Reflex-save bonus lands directly on the existing save DC with no adaptation needed, resolving the exact mismatch the earlier Saga-sourced research had flagged as an open design question, shows the correction wasn't just a better source — it was the source that actually answers the hard problem the prior research had left unresolved. Checking `AREA-FORMAT-01` and confirming it already anticipated cover as a future tile type, and separately confirming `ENGINE-SPEC-04-COMBAT.md` doesn't already commit to a specific shape, closes the loop on whether anything upstream constrains this design before proposing one.**
+
+### ⚠⚠⚠ THE ARCHITECTURAL CHOICE -- WORTH THE FULLEST RECOGNITION
+
+**Recognising that §6.2's own tier examples are all concrete, declarable terrain — a low wall, a doorway, a pillar — rather than an abstract silhouette calculation, and that Saga's own geometric determination is a genuinely heavier primitive with no existing precedent in this engine, is precise reading of what the source ruling actually implies about its own mechanical shape. Proposing tile-authored cover instead, matching the exact pattern `blocksSight`/`moveCostSource`/every doctrine field already follow, rather than porting a tactical-skirmish geometry system built for a different tabletop's own grid conventions, is architecturally sound and consistent with everything else this corpus has chosen.**
+
+**Honestly naming the real trade-off the geometric alternative would buy — automatic cover from any wall, no extra authoring step — rather than presenting the recommendation as the only reasonable option, keeps this an actual decision rather than a foregone conclusion dressed up as one.**
+
+### RULED -- ARCHITECTURE
+
+**Approved: tile-authored cover, not geometric ray-tracing.** The reasoning is sound on its own merits, independent of the smaller build it also happens to imply.
+
+### THE OFFENSIVE BONUS -- APPROVED
+
+**Extending the table's own already-established halving pattern (Defence → Reflex saves already halves; the same halving applied to a third axis for firing from cover) rather than inventing an unrelated number, is precise, consistent design. Approved: +1/+2/— across Half/Three-Quarters/Total, ranged only.**
+
+### RULED -- TOTAL COVER AND FIRING
+
+**Approved: firing from total cover means peeking out, dropping to Three-Quarters cover for that one attack only, then reverting.** This is the sensible, intuitive reading — total cover's own definition (cannot be targeted) is incompatible with also being able to see and shoot out of it, and the drop-to-three-quarters shape gives a concrete, already-defined state to occupy during the attack rather than inventing a new fourth tier just for this moment.
+
+### RULED -- SEQUENCE
+
+**Approved in full, exactly as proposed. Slices 1 through 5, each independently real and testable, matching grenade/item-use's own proven shape.** §6.2's own two still-open questions (Covering Fire, Form II barrier-cutting) stay correctly open, since both genuinely depend on the entirely-unbuilt §10/reaction-chain system — don't answer them against content that doesn't exist to test against, and don't let them block any of the five slices.
+
+### PROCEED
+
+Begin Slice 1 (the foundation: cover as a real tile property, and the primitive answering what tier a target has from a given position). Report back once closed, before Slice 2.

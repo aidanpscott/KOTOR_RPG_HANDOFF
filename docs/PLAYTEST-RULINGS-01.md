@@ -79431,3 +79431,32 @@ Re-scope the cover-mechanics design against `§6.2`'s own real values plus the o
 ### PROCEED
 
 Begin Slice 1 (the foundation: cover as a real tile property, and the primitive answering what tier a target has from a given position). Report back once closed, before Slice 2.
+
+
+---
+
+## PT-2665 -- COVER SLICE 1 CLOSES CLEAN. ⚠⚠ ELEGANT RECOGNITION: TOTAL COVER NEEDED NO NEW MECHANISM AT ALL -- §6.2's OWN "CANNOT BE TARGETED" LANGUAGE IS ALREADY EXACTLY wall.blocksSight THROUGH canSee, WHICH EVERY TARGETING PATH ALREADY RESPECTS. ⚠⚠⚠ RUNNING EVERY DOWNSTREAM REPO'S OWN FULL SUITE, NOT JUST THE ONE THAT CHANGED, CAUGHT TWO REAL CROSS-REPO DEFECTS NEITHER OF WHICH A REVIEW ALONE WOULD HAVE FOUND: LENS's OWN EXHAUSTIVE COMPILE-TIME SWITCH REFUSED TO BUILD, AND LOOM'S OWN PALETTE HEADING OVERFLOWED BY 46 PIXELS
+
+**A precise, well-reasoned foundation, and the cross-repo discipline here deserves the fullest recognition this session gives — this is exactly what "run every downstream suite" is for, and it found real, otherwise-invisible defects doing it.**
+
+### THE BUILD -- ELEGANT, MINIMAL WHERE THE SOURCE ALREADY ANSWERS THE QUESTION
+
+**Recognising that Total cover's own "cannot be targeted by attacks that need line of sight" is already precisely what `blocksSight` through `canSee` already does, and correctly building only Half and Three-Quarters as new content rather than three parallel mechanisms, is exactly the right instinct — don't build a new primitive for a case the engine already correctly handles, just recognize that it does. Building `coverTier` as a property on `TileType` itself, the same shape `moveCostSource` already has, keeps this consistent with an already-proven pattern for "a fact about the type, not authored per instance."**
+
+### ⚠⚠⚠ THE CROSS-REPO CATCHES -- WORTH THE FULLEST RECOGNITION
+
+**This deserves to be named specifically. Extending a stable, five-year-old enum by two values sounds like a small, safe change, and it would have shipped as one if only Lodestar's own suite had been checked. Running Lens's own full suite caught a real compile-time exhaustiveness failure — the renderer's own switch over `TileType` genuinely refused to build the instant the pin bumped, which is exactly the kind of defect that's invisible until the actual downstream consumer is compiled against the change, not just read. Running Loom's own full suite caught a real, concrete UI overflow — a label longer than anything that row was ever laid out against, overflowing by a precise, measured 46 pixels. Neither of these would have been caught by reviewing the Lodestar-side change alone, no matter how carefully; they only exist as defects in the repos that actually consume the new values.**
+
+**Fixing both properly — real drawing added for both tiers in Lens, matching the existing "mark on the floor, not mass" treatment and using genuinely new colour tokens rather than borrowing one that already means something else; a real `Expanded` fix in Loom, mutation-confirmed by reproducing the exact overflow with it removed — closes both rather than leaving either as a known, tolerated gap.**
+
+### THE FALSE-ALARM INVESTIGATION -- HANDLED CORRECTLY
+
+**Investigating the recurring docs-mirror fork warning before assuming it was a real regression of `PT-2662`'s own fix, and correctly diagnosing it as a stale local pull rather than an actual recurrence, keeps the record honest about what actually happened rather than either alarming unnecessarily or dismissing a real warning without checking.**
+
+### RULED
+
+**Confirmed closed. Proceed to Slice 2 (Defence/save integration, player-facing first) as planned.**
+
+### PROCEED
+
+Begin Slice 2. Report back once closed, before Slice 3 — and continue running every downstream repo's own full suite for each remaining slice, exactly as this one demonstrated why that matters.

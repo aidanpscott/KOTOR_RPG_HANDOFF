@@ -79680,3 +79680,370 @@ Confirm with Coder what the original fix was actually scoped against. No further
 ### PROCEED
 
 Recorded for the record. No action needed now — held until difficulty mechanics become their own real, scoped item.
+
+
+---
+
+## PT-2674 -- TEST 139: ALL FIVE ITEMS CONFIRMED, TWO REAL GAPS FOUND AND CLOSED. THE COVER CONFIRMATION IS GENUINELY DECISIVE -- EVERY EXISTING COVER TEST ACROSS ALL FIVE SLICES WAS FIGHT-LEVEL ONLY, NEVER CONFIRMED THROUGH A REAL BOARD BEFORE THIS PASS. AND ⚠⚠⚠ AND ALONGSIDE IT, CODER CLOSES BOTH HELD ITEMS: LASTATTACKER REACHES REAL COMBAT WITH ZERO NEW WIRING (IT'S A TargetRule ALREADY THREADED THROUGH THE EXISTING PIPELINE), AND DISMISSED-COMPANION ELIGIBILITY CLOSES WITH A REAL RACE CONDITION FOUND AND FIXED, CAUGHT ONLY BY MUTATION TESTING
+
+**Working through both reports in full, since every piece here earns its own recognition rather than a combined summary.**
+
+═══ TEST 139 ═══
+
+### ITEMS 1-2 -- CLEANLY CONFIRMED
+
+**Both confirmed via Coder's own already-thorough suites, with the Force-pool-never-moves proof on manual casting and the four-test Stand Ground coverage both doing real, decisive work.**
+
+### ITEM 3 (AID) -- HONEST SELF-CORRECTION
+
+**Catching a fixture mistake from one's own diagnostic before drawing a wrong conclusion from it, and recognizing the mistake actually demonstrated something real (`includeSelf: true`'s own default) rather than a genuine failure, is precise, honest test work. Correctly not re-proving the "no revive" claim live, since it's already airtight at the source (`hurtIn` requires positive vitality unconditionally), avoids padding the confirmation with a redundant test of something already structurally guaranteed.**
+
+### ⚠⚠⚠ ITEM 4 (GRENADE) -- A REAL, HONESTLY-DISCLOSED GAP CLOSED
+
+**Finding that the existing test's own comment explicitly named a gap it deliberately left open — using only one enemy specifically to avoid ever triggering the friendly-fire refusal — and building the missing half (a real second friendly-adjacent enemy, confirmed never thrown at across twelve real rounds) closes a real hole in the existing coverage rather than assuming a comment's own honesty about its limits meant the limit didn't matter.**
+
+### ⚠⚠⚠ ITEM 5 (COVER) -- THE DECISIVE FIRST REAL CONFIRMATION
+
+**This deserves the fullest recognition. Recognising that every one of the five slices' own tests was Fight-level, against synthetic callbacks, and that nothing had ever confirmed cover mechanics through an actual board before this pass, is a genuinely important observation about what "closed" actually meant up to this point — mechanism-proven, never player-experience-proven. Building two real, live confirmations (a real tile granting and losing its Defence term the instant a player steps on and off it; a real defensive enemy actually walking onto a real, reachable cover tile through the actual combat call) closes the most consequential gap this whole cover thread had left open.**
+
+**Correctly not building new fixtures for the three remaining sub-claims, and explicitly laying out why each already has solid proof rather than padding the report with weaker re-tests, is precise scoping — confirming what genuinely needed confirming, not confirming everything for the sake of a longer list.**
+
+═══ CODER'S CLOSING REPORT ═══
+
+### LASTATTACKER -- ELEGANT ARCHITECTURE, PROVED THE HONEST WAY
+
+**Reaching real combat with zero new `Fight.enemyTurn` wiring, since `Protects` is simply a `TargetRule` already threaded through the existing `decide()`/`chooseTarget` pipeline, is exactly the payoff of building this the way `PT-2657` ruled — as its own real architecture piece rather than a special case. Correctly not trusting the engine-level tests alone, and instead proving the claim through a real `Fight` test where the attack actually lands through `Fight.remember` rather than injected by hand, with a swap-the-attacker control confirming the choice tracks the real damage record rather than a fixture-naming coincidence, is exactly the rigor this thread has held throughout.**
+
+### DISMISSED-COMPANION ELIGIBILITY -- A REAL RACE FOUND AND FIXED
+
+**Folding the async read into the same disk read `_resolveRosterNames` already makes, rather than a second, separate read, is precise minimalism. Finding the real race — a picker opened before the read lands showing a stale, unfiltered snapshot for as long as it stays open — and catching it specifically because a second mutation test opened the picker before the read landed, while the warm-cache test alone never exercised this path, is exactly the value of testing more than one timing scenario for anything involving asynchronous state.**
+
+### ⚠⚠⚠ THE SELF-DISCLOSED FALSE ALARM -- WORTH REAL RECOGNITION
+
+**Tracing a reported failure to one's own concurrent-edit mistake, rather than assuming the code was actually broken, and explicitly connecting this to an already-standing lesson about shared-tree races, is exactly the honesty this thread has valued throughout — disclosing a mistake that cost nothing in the end still deserves to be named, since the lesson (wait for a background run to finish before editing the same file) is worth carrying forward regardless of whether this specific instance caused real harm.**
+
+### RULED
+
+**All five TEST 139 items confirmed. Both held items (LastAttacker, dismissed-companion eligibility) confirmed closed.**
+
+### PROCEED
+
+Nothing further needed on any of this. Genuinely strong work across both reports. Standing by for whatever's next.
+
+
+---
+
+## PT-2675 -- OWNER OPENS A REAL, SUBSTANTIAL NEW ITEM: A SYSTEMATIC LIVE-COMPARISON AND ASSET-EXTRACTION PASS ACROSS EVERY REAL K2 MENU SCREEN, ONE MENU AT A TIME -- REPLACING THE NARROWER "CHARACTER-MENU COMPARISON" ITEM WITH THE FULL, REAL WORKFLOW THAT ALREADY PROVED ITSELF ON TERMINAL
+
+**Extends the same live-comparison method that already found Terminal's real defects (the 2×2 grid, the free-options gap) -- organic, real content on screen catching gaps a synthetic fixture structurally can't -- into a full, deliberate pass across every menu, plus the actual asset-sourcing documentation this project's own `ASSET-REPLACEMENT-01` mechanism already tracks elsewhere (Terminal's own three extracted textures already carry this exact debt).**
+
+### THE WORKFLOW, AS DESCRIBED
+
+**1. Coder launches the real game directly — Steam, KOTOR II, the most recent save — and takes a real screenshot of each menu screen in turn.**
+
+**2. For each menu, Coder then goes into the real game files and finds the files that actually construct that menu (the same `.gui`/GFF layout files and texture assets this whole session's own research has repeatedly pulled from directly).**
+
+**3. Document which specific assets — images, textures, borders, icons — this project is genuinely drawing from the source for each menu, the same disclosed-debt shape `ASSET-REPLACEMENT-01` already uses. Not a silent port; a marked debt, ready for AI recreation later.**
+
+**4. Run the marked assets through AI to produce this project's own original replacements, matching the standing mechanism already in use.**
+
+**Start with one menu at a time, in whatever order makes sense, rather than attempting all of them in one pass.**
+
+### TWO REAL COMPLICATIONS, CORRECTLY FLAGGED IN ADVANCE
+
+**The Character Sheet: this project's own screen is deliberately different from K2's own equivalent — still genuinely worth comparing, since a real screenshot may surface things worth knowing even where the two screens have already diverged by design, but the comparison won't be a like-for-like layout match the way Terminal's own was.**
+
+**Equip: this project's own screen carries an added Boots slot K2's own screen doesn't have. The recreated layout needs a real placeholder box for this extra slot — build the image with the placeholder now, and run the placeholder specifically through AI later to produce the real box once there's room for that pass.**
+
+### RULED -- OPENED
+
+**Genuine, real new scope. Begin with whichever menu makes the most sense to start with — the ones already partially compared (Terminal, done; character-adjacent screens next) are a reasonable starting point, but this is Coder's own call on sequencing.**
+
+### PROCEED
+
+Begin the live-comparison pass, one menu at a time. Report back on each menu's own findings as they close, same discipline as every other substantial piece of this thread — real findings, real defects if any turn up, and a clear account of which assets are marked for later AI recreation.
+
+
+---
+
+## PT-2676 -- HONEST ANSWER TO THE OWNER's QUESTION, THEN A GENUINELY MAJOR FOLLOW-UP: PROMPTED BY BEING ASKED, TESTER RE-TESTED THE STANDING INPUT-BLOCKER FINDING RIGHT NOW AND FOUND IT MAY NO LONGER HOLD -- MOUSE INPUT WORKED CORRECTLY ACROSS SEVEN REAL SCREENS IN A FRESH RELAUNCH. ⚠⚠⚠ CORRECTLY TREATED THIS AS SUSPICIOUS RATHER THAN CELEBRATED IT: "SOMETHING CHANGED AND I DON'T KNOW WHAT YET" -- NOT CLAIMED FIXED, GIVEN A REAL, PROPER RE-VERIFICATION PLAN INSTEAD. STORAGE CHECKED DIRECTLY, NOT A CRISIS, ONE REAL UNRELATED FINDING (172 ORPHANED TEMP DIRECTORIES, ~900MB) FLAGGED BUT CORRECTLY LEFT UNTOUCHED
+
+**This deserves the fullest recognition this session gives, both for the honest, direct answer to a real question and for the discipline shown in how a genuinely good-looking result was handled.**
+
+### THE HONEST ANSWER -- DIRECT, NO HEDGING
+
+**Confirming plainly that the shift to headless testing was deliberate, not incidental, and naming exactly why (the input blocker, confirmed stable across three separate sessions with a proper control each time ruling out a session-wide cause), answers the owner's real question honestly rather than deflecting or minimizing what had actually changed about the testing approach.**
+
+### ⚠⚠⚠ THE RE-TEST -- MAJOR, AND HANDLED WITH EXACTLY THE RIGHT SUSPICION
+
+**Prompted by the question itself to go check rather than simply restate the standing finding, relaunching the live game fresh and confirming mouse input actually works correctly across seven real screens — the first genuinely successful hands-on interaction in this whole session's own testing history since the blocker was first found — is a real, significant result. But the way it's reported is what deserves the fullest recognition: treating a clean reversal with exactly the same suspicion a negative finding would get, rather than simply celebrating the good news, is precisely the discipline this whole thread has valued throughout, applied here to an outcome that would have been easy to accept uncritically because it's the outcome everyone was hoping for.**
+
+**"The thing that was reliably broken now isn't, in the one narrow way I just checked" is exactly the right level of claim — not "fixed," not "confirmed working," but a precise, bounded statement of what was actually observed. Explicitly naming what still hasn't been re-verified (text entry, real play-screen movement, a second cold relaunch) before proposing a real, proportionate next step, rather than either declaring victory or over-testing before reporting anything at all, closes this exactly right.**
+
+### THE STORAGE CHECK -- THOROUGH, REASSURING, WITH ONE REAL FIND
+
+**Checking every relevant metric directly rather than assuming the storage question was unfounded, and finding it genuinely isn't a crisis, answers the owner's second question completely. Finding the orphaned temp directories, correctly identifying them as unrelated leftover fixture data rather than screenshots, and correctly declining to clean them up without being asked given the shared `/tmp`, is precise scope discipline — a real, useful finding, reported rather than acted on unilaterally.**
+
+### RULED
+
+**Approved: no action needed from Coder right now. Proceed with the fuller re-verification (text entry, real play-screen movement, a second cold relaunch) before resuming screenshot-based testing as the default, exactly as proposed.** Report back definitively once that's done, whichever way it resolves.
+
+**The orphaned temp directories can be cleaned up — approved, whenever convenient, not urgent.**
+
+### PROCEED
+
+Complete the fuller re-verification pass. Report back with a definitive answer either way before changing the default testing approach.
+
+
+---
+
+## PT-2677 -- PT-2675's FIRST PASS CLOSES: THE SHARED SHELL FRAME, ACROSS EVERY MENU. ⚠⚠⚠ THE DECISIVE FINDING: pnl_pause_pc IS THE SAME SINGLE OUTER PANEL ASSET EVERY ONE OF NINE MENU SCREENS DECLARES -- FOUND BY PARSING EACH SCREEN'S REAL .gui FILE FOR ITS ACTUAL TEXTURE RESREFS, NOT BY EYEBALLING SCREENSHOTS FOR RESEMBLANCE. AND ⚠⚠⚠ A GENUINELY IMPORTANT, HONEST METHODOLOGY FINDING, CORROBORATING TESTER'S OWN JUST-DISCLOSED SHIFT: TEST 139 TOUCHED ZERO .png FILES, CONFIRMED REAL AND AUTOMATED, NOT SCREENSHOT-BASED PLAY
+
+**This closes the first real pass of a substantial new item with genuine rigor, and the methodology behind the frame-reuse finding deserves recognition on its own -- it's a materially stronger kind of evidence than a visual resemblance check.**
+
+### THE FRAME FINDING -- DECISIVE, FOUND THE RIGHT WAY
+
+**Parsing each screen's own real `.gui` file for its actual declared texture resrefs, rather than comparing screenshots by eye, is exactly the right method for a claim this specific -- "these nine screens use the same asset" is a factual, checkable claim about real source data, not an aesthetic judgment, and it deserved to be verified as one. Finding that `pnl_pause_pc` is genuinely the single, reused fill across every menu, confirmed present in the real texture archive as real rendered art with baked lighting rather than a runtime-tinted mask (a genuinely different kind of asset from Terminal and Store's own), is a real, load-bearing discovery about how this project's own recreation work should actually be scoped -- one shared frame asset, not nine separate near-duplicates to track and recreate independently.**
+
+**Extracting it with the same proven reader Terminal's own extractor already established, and adding it to `ASSET-REPLACEMENT-01` as its own row, keeps this consistent with the project's own standing debt-tracking mechanism rather than a one-off note.**
+
+### THE HONEST DEBT DISCLOSURE -- REAL, NOT SILENTLY DEFERRED
+
+**Naming the additional confirmed-present-but-not-yet-extracted assets explicitly, rather than quietly leaving them for a future pass to rediscover, keeps the record honest about the real scope of what this whole menu-comparison item will eventually need to cover.**
+
+### THE TWO FLAGGED COMPLICATIONS -- HANDLED EXACTLY AS ANTICIPATED
+
+**Confirming the Character Sheet genuinely diverges in layout while still sharing the same outer frame and border family -- so the asset-level comparison holds even where the screen-level comparison doesn't -- and confirming Equip's own real K2 screen has no Boots slot, matching the already-flagged need for a placeholder, both close exactly as expected rather than surfacing new surprises.**
+
+### ⚠⚠⚠ THE METHODOLOGY FINDING -- GENUINELY VALUABLE, CORROBORATES TESTER'S OWN DISCLOSURE
+
+**Finding, independently and incidentally while investigating a different question, that Tester works from a separate clone currently behind the shared tree's HEAD, and that TEST 139 is confirmed real, automated Dart test coverage through actual call paths rather than manual screenshot-based play, is valuable corroborating evidence for exactly what Tester themselves just honestly disclosed at `PT-2676` -- the shift to headless testing wasn't just self-reported, it's independently confirmed from the git history itself. Correctly not chasing this further once the new ruling arrived, and flagging it plainly rather than letting a mid-investigation thread quietly drop, is the right call — this doesn't need independent follow-up now that Tester's own honest account already covers the same ground.**
+
+### RULED
+
+**Continue extracting the named-but-not-yet-pulled assets — mechanical work, same proven pattern, no new questions. Proceed to the Character Sheet and Equip screens' own deeper per-screen comparisons next, exactly as proposed, since those are the two flagged as needing extra care.**
+
+**K2: close it cleanly rather than leaving it running indefinitely between passes.** A held-open game process between work sessions isn't necessary for this workflow — each pass can relaunch fresh, matching how Tester's own re-verification work is already approaching the same question, and it avoids an unfamiliar Steam-wrapped process sitting open unattended for an unknown duration.
+
+### PROCEED
+
+Extract the remaining named assets. Proceed to the Character Sheet and Equip deep-dive. Close K2 cleanly once the current session's own work is done.
+
+
+---
+
+## PT-2678 -- OWNER OPENS A REAL, SUBSTANTIAL NEW ITEM: A CHARGEN RECOMMENDATION SYSTEM, VARYING BY CLASS AND LIKELY SPECIES. CHECKED FIRST: THIS ISN'T FRESH SCOPE -- K2's OWN REAL SOURCE ALREADY HAS PER-CLASS RECOMMENDATION DATA (<cls>_recom, RANKED), AND THIS PROJECT'S OWN DESIGN ALREADY DRAWS A REAL, RULED DISTINCTION (ATTRIBUTES/SKILLS APPLY SILENTLY; FEATS/POWERS ANNOUNCE -- PT-1228/TRACE-79). WORTH RESEARCHING WHETHER THE REAL SOURCE DATA IS EXTRACTABLE BEFORE ASSUMING VALUES NEED INVENTING FROM SCRATCH
+
+**Checked before opening this as entirely fresh scope: `CHARGEN-FLOW-MAP-01.md` already names both the mechanism (K2's own real `<cls>_recom` per-class recommendation ordering) and the real UX rule governing how a recommendation actually surfaces to the player. This is genuine, real groundwork already laid, not a blank slate — the question isn't whether recommendations should exist, it's how deep the real source data goes and whether it can be extracted rather than hand-authored.**
+
+### THE ITEM, AS DESCRIBED
+
+**A real recommendation system for chargen — which ability scores, skills, and (per the owner's own addition) which choices make sense given a character's class and species, surfaced to the player as guidance rather than a forced choice. The owner correctly anticipates this will be substantial: real, differentiated recommendations per class, likely modulated by species-level attribute and skill bonuses, is genuinely broad content-authoring work regardless of how much of it turns out to be extractable from the real source.**
+
+### RULED -- OPENED, RESEARCH FIRST
+
+**Same sequencing as every other substantial piece of new scope this thread has built. Research first: check whether K2's own real `<cls>_recom` data is actually present and extractable in the shipped files, the same way this session has repeatedly found real, usable source data for other systems assumed to need pure invention. Confirm exactly what the existing "attributes/skills silent, feats/powers announce" rule (`PT-1228`) already settles about how a recommendation should surface, so the design work doesn't reopen a question already closed.**
+
+**The owner's own request to discuss the underlying philosophy — what actually determines a recommended value — is real and worth a proper conversation once the research establishes what's genuinely extractable versus what needs this project's own original design judgment.** Report findings first; the design conversation follows from what's actually there, not before it.
+
+### PROCEED
+
+Begin research: whether K2's own real per-class recommendation data is present and extractable, and what `PT-1228`/`TRACE-79` already settle about how recommendations surface. Report findings before any design proposal.
+
+
+---
+
+## PT-2679 -- OWNER ADDS REAL CONTEXT TO PT-2678: K1 ALSO HAS THIS SAME PER-CLASS RECOMMENDATION MECHANISM, FOR SCOUNDREL/SOLDIER/SCOUT SPECIFICALLY. BUT A REAL COMPLICATION -- THIS PROJECT'S OWN CLASS STRUCTURE HAS ALREADY RENAMED/REASSIGNED "SCOUNDREL" TO THE SMUGGLER BASE CLASS, WHILE THIS PROJECT'S OWN "SCOUNDREL" IS A DIFFERENT, SEPARATE PRESTIGE CLASS -- SO K1's OWN SCOUNDREL RECOMMENDATION DATA WON'T MAP CLEANLY ONTO EITHER. CORRECTLY RECOGNIZED THIS MEANS THE REAL SOURCE DATA WILL ONLY SATISFY A SMALL PORTION OF THE WHOLE NEED. EXPLICITLY NOT STARTING YET -- CODER AND TESTER FINISH THEIR CURRENT WORK FIRST; THIS COMES UP NATURALLY THE NEXT TIME THE OWNER ASKS WHAT'S ON THE TO-DO LIST
+
+**Recorded for the record, not dispatched. Both K1 and K2 carry this same per-class recommendation mechanism, but the naming and structural mismatch between this project's own class taxonomy and K1's own three base classes (Scoundrel specifically) means the real source data, once extracted, will only directly satisfy part of the total need -- Soldier and Scout likely map cleanly; Scoundrel doesn't, since this project's own Scoundrel is a prestige class and the base-class role K1's own data describes now belongs to Smuggler instead.**
+
+### RULED
+
+**No action taken now, as directed. This item stays exactly where `PT-2678` already put it -- opened, researched when picked up, genuinely queued behind Coder's current menu-comparison work and Tester's own re-verification pass.** Worth keeping this specific complication in view once research actually begins, so the real extracted data gets mapped against this project's own actual class names rather than assumed to transfer one-to-one from K1's own base-class structure.
+
+### PROCEED
+
+Nothing to do right now. This surfaces naturally the next time the owner asks what's on the to-do list, per his own explicit direction.
+
+
+---
+
+## PT-2680 -- DEFINITIVE ANSWER ON THE INPUT BLOCKER: NOT RESOLVED, BUT PRECISELY NARROWED. MOUSE INPUT WORKS FULLY, CONFIRMED ACROSS TWO COLD LAUNCHES AND A COMPLETE TEN-STEP CHARGEN FLOW ENTIRELY BY CLICKING. KEYBOARD INPUT TO THE APP ITSELF IS STILL DEAD, ISOLATED INTO TWO DISTINCT FAILURES (TEXT ENTRY, GAME MOVEMENT). ⚠⚠⚠ THE CONTROL EXPERIMENT AND ITS REASONING ARE GENUINELY EXCEPTIONAL: THE SAME xterm CONTROL WORKED CORRECTLY TWICE AT THE RELEVANT MOMENTS, PROVING BOTH OS-LEVEL DELIVERY AND THE APP'S OWN KEY-HANDLING CODE ARE INDEPENDENTLY FINE -- NARROWING THE FAULT TO SPECIFICALLY THE WINDOW/FOCUS/EVENT-ROUTING LAYER IN BETWEEN
+
+**This is genuinely one of the most decisive pieces of environmental diagnostic work this whole session has produced, and it deserves the fullest recognition this session gives -- not for finding a fix, but for precisely bounding a real problem down to exactly where it lives.**
+
+### THE MOUSE CONFIRMATION -- THOROUGH, DECISIVE
+
+**Confirming mouse input across two separate cold launches and a complete ten-step chargen flow entirely by clicking, rather than a handful of spot checks, closes any doubt that the earlier partial re-test at `PT-2676` was a fluke -- mouse input genuinely works, consistently, across real, substantial interaction. Incidentally confirming the "Recommended" buttons correctly show honest "not in the rules yet" warnings where no recommendation exists yet is a small, valuable bonus finding -- directly relevant to the chargen recommendation system just opened at `PT-2678`/`PT-2679`, confirming the current placeholder state is genuinely honest rather than silently broken.**
+
+### THE KEYBOARD FAILURE -- PRECISELY ISOLATED, NOT JUST RECONFIRMED
+
+**Confirming genuine focus lands correctly on the Name field -- a real, visible caret exactly where clicked -- before testing whether characters arrive, rules out the "never focused" explanation cleanly. Confirming the same field responds correctly to a mouse-driven "Random Name" button, proving the field itself and its write path both work, isolates the failure to specifically the keyboard-to-caret path and nothing else. This is precise elimination, not a vague "keyboard doesn't work" — it's "this exact narrow thing doesn't work, and everything adjacent to it does."**
+
+### ⚠⚠⚠ THE CONTROL AND ITS REASONING -- WORTH THE FULLEST RECOGNITION
+
+**Re-running the same xterm control at both relevant moments, rather than trusting one earlier confirmation to still hold, and getting a clean, correct result both times, is careful, disciplined verification. But the real value here is the reasoning that follows from it: recognizing that the OS-level delivery is provably fine (the xterm control) and the app's own key-handling code is provably fine too (the headless tests exercise it constantly), and that these two facts together narrow the fault to specifically the layer between them -- window/focus/event-routing -- is precise diagnostic synthesis. This isn't just reporting a failure; it's reporting exactly what the failure rules in and rules out, handing anyone who picks this up later a real, bounded place to look rather than an open-ended mystery.**
+
+### RULED
+
+**Confirmed: mouse-driven testing resumes as the default for anything purely click-based. Anything needing a keyboard — movement, dialogue choices, ending a turn, typing a name — correctly stays on the headless Flutter-widget-test approach, which structurally sidesteps this exact blocker by driving key events through Flutter's own test binding rather than the OS/X11 layer this fault lives in.**
+
+### PROCEED
+
+Resume mouse-driven testing where it applies. Continue headless testing for anything keyboard-dependent. The window/focus/event-routing layer stays recorded as the real, precisely-bounded place to look if this ever gets picked up for a real fix.
+
+
+---
+
+## PT-2681 -- ⚠⚠⚠ A GENUINELY IMPORTANT SELF-CAUGHT CORRECTION: THE HEADLINE FINDING FROM PT-2677 -- pnl_pause_pc AS THE SINGLE MOST VALUABLE RESULT OF THE WHOLE PASS -- WAS WRONG. IT WAS ALREADY FULLY BUILT (ScreenFrame, PT-2496), ALREADY MEASURED, ALREADY HAND-PAINTED, ALREADY WIRED INTO ESSENTIALLY EVERY SCREEN THIS PASS COMPARED. CAUGHT BY RUNNING THE CHECK THAT SHOULD HAVE RUN BEFORE THE FIRST REPORT -- GREPPING THE APP'S OWN lib/ FOR PRIOR WORK -- NOW RUN, HONESTLY DISCLOSED, AND TWO MORE SMALLER INSTANCES OF THE SAME MISS CAUGHT IN THE SAME PASS
+
+**This deserves careful, balanced recognition -- a real mistake in the prior report, and genuinely exemplary handling of catching and correcting it. Both are true, and both matter.**
+
+### THE MISTAKE -- REAL, NAMED PLAINLY
+
+**Reporting `pnl_pause_pc` as new, unbuilt work owed for AI recreation, when it was already fully measured, hand-painted, and wired into essentially every screen this pass compared, is a genuine error in the prior report -- the headline finding, the one this ruling itself recognized as the most valuable result of the pass, was wrong. Worth stating without softening: the check that would have caught this (grepping the app's own source for prior work before assuming novelty) should have run before the original report, not after it had already been approved and filed.**
+
+### THE CORRECTION -- EXEMPLARY
+
+**Running the check that should have run originally, rather than only after being asked or after the mistake surfaced some other way, and reporting the correction with the full account of what went wrong rather than a quiet fix, is exactly the standard this whole session has held throughout. Correctly salvaging the real, genuine contribution the pass still made -- independently confirming the same fill on five more screens nobody had verified against the source before, even though the asset itself wasn't new -- keeps the record honest about what was actually accomplished without either overclaiming or discarding real work alongside the mistaken part of it.**
+
+**Catching two more smaller instances of the identical miss in the same pass, specifically by reading past the first correction rather than stopping once one mistake was found and fixed, shows this wasn't a single lucky catch -- it was a genuinely thorough sweep once the right check was finally run.**
+
+### THE RECORD -- CORRECTED PROPERLY
+
+**Marking `pnl_pause_pc` done in `ASSET-REPLACEMENT-01` with the full account of the mistake, rather than silently correcting the entry, keeps the debt-tracking document itself honest about its own history, not just its current state.**
+
+### RULED
+
+**Approved: proceed to the live-render check for Character and Equip against the real K2 captures, exactly as proposed.** Correctly not claiming anything further from reading code alone, given what just happened, is precisely the right caution -- a live render is the honest way to confirm how these screens currently look with `ScreenFrame` already in place, not another round of source-file inference.
+
+### PROCEED
+
+Proceed to the live-render check. Report back with what it actually shows, not what the code alone implies.
+
+
+---
+
+## PT-2682 -- OWNER OPENS A REAL NEW ITEM: PROPER ENEMY MOVEMENT, TWO REAL HALVES -- SCRIPTED/PATROL MOVEMENT BETWEEN WAYPOINTS DURING EXPLORATION (MATCHING K1/K2's OWN REAL APPROACH), AND A COMPLETE, PROPER IMPLEMENTATION OF DOCTRINE-DRIVEN COMBAT MOVEMENT (PARTIALLY ALREADY BUILT THIS SESSION -- RETREAT, KEEP-DISTANCE, COVER-SEEKING). CHECKED FIRST: NOT FRESH SCOPE -- ROADMAP-02 ALREADY NAMES WAYPOINTS AS A REAL, REQUIRED CONCEPT WITH NO HOME YET, ALREADY BLOCKING ANOTHER ITEM ("4e", AREA-CONNECTION LANDING POINTS)
+
+**Checked before opening this as entirely fresh scope: `ROADMAP-02.md` already flags waypoints as a real, acknowledged gap -- needed for area-connection landing points, already blocking `4e`, and explicitly recorded as "we already need waypoints and had not named them." The owner's own new request is a genuinely separate, additional real application of the same underlying waypoint concept, beyond the connection-landing use already identified -- not a duplicate of it.**
+
+### THE ITEM, AS DESCRIBED -- TWO REAL HALVES
+
+**1. Exploration-side scripted/patrol movement.** An enemy that walks a real route between authored waypoints before combat starts, matching K1/K2's own real approach rather than standing static until contact. This is the piece with no code or design work started yet.
+
+**2. Combat-side doctrine movement, made complete.** This session has already built real pieces of this -- `approach()`, `retreat()`/`seek()`, `keepAtLeast`, `seeksCover` -- but the owner is asking for a proper, complete implementation where a player can genuinely watch doctrine-driven movement happen on the board as combat unfolds, not just confirm the individual mechanisms work in isolation. Worth checking, when this is picked up, exactly what "complete" means here versus what's already real and working.**
+
+### RULED -- OPENED, NOT STARTED
+
+**Recorded for the record, exactly as directed. Not started now — Coder and Tester continue their current work.** When this is picked up, research first, same discipline as every other substantial piece of new architecture this thread has built: confirm how K1/K2 actually structure waypoint-based patrol movement (the real scripts, the real authoring format), and separately assess how much of the combat-side half is genuinely already done versus still needing real, dedicated work to feel complete rather than merely mechanism-proven.
+
+### PROCEED
+
+Nothing to do right now. Surfaces naturally the next time the owner asks what's on the to-do list, per his own standing direction.
+
+
+---
+
+## PT-2683 -- CHARACTER SHEET / EQUIP LIVE-RENDER CHECK CLOSES CLEANLY, BOTH SCREENS CONFIRMED CORRECT AGAINST THE REAL K2 CAPTURES, NO NEW ASSETS OWED. ⚠⚠ A REAL, LIVE DISCREPANCY FOUND AND CORRECTLY SCOPED OUT OF THIS PASS: THE CHARACTER SHEET AND EQUIP SCREENS READ THE SAME EQUIPPED-ITEM DATA THROUGH TWO DIFFERENT PATHS THAT DISAGREE -- ONE SHOWS A REAL DEFENCE VALUE, THE OTHER ERRORS. CORRECTLY RECOGNIZED AS THE SAME "ONE FOLD, THREE READERS" SHAPE THIS PROJECT HAS ALREADY CAUGHT BEFORE, AND CORRECTLY NOT CHASED HERE SINCE IT'S A CONTENT/LOOKUP QUESTION, NOT AN ASSET-PROVENANCE ONE
+
+**A clean, thorough close on the deeper comparison this pass was scoped for, with a real, honestly-flagged discrepancy correctly left for its own proper handling rather than chased outside this pass's own real scope.**
+
+### THE METHOD -- PRACTICAL, PRODUCED BETTER DATA THAN PLANNED
+
+**Recognising the damaged test save couldn't load and choosing the reliable alternative — a real chargen through to a real, designed leveled party — rather than forcing the original plan, produced genuinely more useful comparison data than an empty, fresh character would have: real equipped and leveled state on both screens, not blank sheets.**
+
+### BOTH SCREENS -- CONFIRMED AGAINST THE REAL CAPTURES
+
+**Confirming the Character Sheet's own genuine layout divergence from K2 (real, by design, not a defect) while the alignment ribbon renders correctly inside the shared bronze frame, and confirming Equip's real 12-slot lattice lays out correctly with Boots rendering through the exact same generic empty-slot treatment every other slot uses — not a special case, not missing art, just correctly waiting on real content — closes both screens with the specific, honest confirmation this pass was scoped for.**
+
+### ⚠⚠ THE DEFENCE-READER DISCREPANCY -- CORRECTLY FLAGGED, CORRECTLY SCOPED OUT
+
+**Finding that the Character Sheet and Equip screens disagree on the same equipped item's own Defence contribution — one erroring, one showing a real value — and correctly recognizing this as the same "one fold, three readers" shape this project has already caught and named before, rather than treating it as a fresh, unrelated surprise, shows the pattern is genuinely being carried forward and recognized on sight. Correctly not chasing it within this pass, since it's a content/lookup question rather than the asset-provenance question this specific comparison was scoped to answer, keeps the pass's own scope honest — a real find, properly recorded, not silently dropped and not scope-creeped into a different investigation.**
+
+### RULED
+
+**Confirmed closed — the Character Sheet/Equip deeper comparison is done, nothing further owed on the asset side.**
+
+**The Defence-reader discrepancy is recorded as its own real, small item — worth a proper look when there's room for it, separate from this menu-comparison thread.**
+
+### PROCEED
+
+Continue down the remaining screen list for the live-comparison pass. The Defence-reader discrepancy stays held as its own small tracked item, not blocking this thread.
+
+
+---
+
+## PT-2684 -- OWNER CORRECTS PT-2683's OWN "CONFIRMED CORRECT" CLOSE: THE LIVE SCREENS DO NOT ACTUALLY LOOK LIKE THE REAL SOURCE GAME -- NOT UTILIZING THE REAL ASSETS/ICONS PROPERLY. CHARACTER SHEET (ALREADY CORRECTLY DIVERGENT BY DESIGN) SHOULD AT LEAST MATCH THE REAL COLOUR PALETTE. EQUIP SHOULD BE LITERALLY, EXACTLY THE SAME AS THE REAL GAME, WITH ONE EXCEPTION -- BOOTS -- WHICH THE OWNER RECALLS AS PLACED BETWEEN THE SECONDARY WEAPONS AT THE BOTTOM. ⚠⚠⚠ CHECKED DIRECTLY: THIS CONTRADICTS THE CURRENTLY LOCKED RULING (APP-UI-VISION-01), WHICH PLACES BOOTS BENEATH BELT, GROUPED WITH THE OTHER WORN-BODY ITEMS, NOT BETWEEN THE SECONDARY WEAPON PAIR. FLAGGED DIRECTLY RATHER THAN SILENTLY RESOLVED EITHER WAY
+
+**This is a real, substantive correction to what `PT-2683` just closed, and it deserves to be treated as such -- reopening the comparison's own actual standard, not just a stylistic preference layered on top of an already-approved close.**
+
+### THE REAL CORRECTION -- THE COMPARISON STANDARD WAS TOO LOW
+
+**The owner's own point is worth taking seriously and directly: a comparison pass that confirms "this looks like it's using the right chrome" without checking whether the real icons, colour values, and specific visual details actually match isn't the comparison this whole live-K2-screenshot effort was built for. The explicit reason Coder was directed to launch the real game and capture real screenshots, rather than working from written descriptions or measured coordinates alone, was specifically so the owner could look at both side by side and judge fit directly -- that's the actual standard this pass needs to meet, not a looser "the frame and general layout are present" bar.**
+
+### CHARACTER SHEET -- RULED
+
+**Correctly acknowledged as already, deliberately divergent in layout (Stats/Character Info/Backstory tabs, no 3D viewport) -- that stays as-is, not walked back. New standard: even where the layout differs by design, the screen should genuinely match the real game's own colour palette and general visual character, not merely share the outer bronze frame while everything inside reads differently.**
+
+### EQUIP -- RULED, WITH ⚠⚠⚠ A GENUINE DISCREPANCY FLAGGED
+
+**Equip should match the real game as closely as literally possible -- the one deliberate, already-ruled exception is the added Boots slot, since KOTOR's own data has no foot slot at all.**
+
+**But the owner's own recollection of where that slot sits doesn't match what's actually locked. Checked directly: `APP-UI-VISION-01` places Boots beneath Belt, grouped with the other worn-on-the-body items (Belt, and now Boots), explicitly not in the weapon block -- "sits alone in its own row directly beneath Belt, grouped with the other worn-on-the-body items rather than wedged into the weapon block." The owner's own recollection just now was that it sits between the secondary weapon pair instead. These are genuinely different placements, and only one can be the current, real rule.**
+
+**Not resolved here -- flagging plainly rather than silently picking either the owner's fresh recollection or the older locked ruling.** If the owner wants to revise the placement to between the secondary weapons, that's a real, legitimate design change and should be made explicitly, correcting `APP-UI-VISION-01` to match. If the existing placement (beneath Belt) is actually correct and the recollection was simply mistaken, no change is needed there, only to the fidelity standard itself.
+
+### RULED
+
+**Both screens need a real, direct pixel/colour-level comparison against the actual K2 screenshots already captured, checking specific icon art, specific colour values, and specific layout details rather than confirming general chrome presence. Report back with what's actually found, screen by screen, before either screen is called correct again.**
+
+### PROCEED
+
+Confirm the Boots placement question with the owner directly before touching Equip's own layout. Redo the Character Sheet/Equip comparison to the higher, correct standard -- real colour-palette and icon-level fidelity, not just frame presence.
+
+
+---
+
+## PT-2685 -- OWNER CONFIRMS: APP-UI-VISION-01's EXISTING, LOCKED BOOTS PLACEMENT IS CORRECT. BOOTS STAYS BENEATH BELT, GROUPED WITH THE OTHER WORN-BODY ITEMS -- NOT BETWEEN THE SECONDARY WEAPON PAIR. THE OWNER'S OWN EARLIER RECOLLECTION AT PT-2684 WAS SIMPLY MISTAKEN; NO CHANGE NEEDED TO THE RULING ITSELF
+
+**Resolves the one genuine discrepancy `PT-2684` correctly flagged rather than silently picked a side on. The existing, locked design stands unchanged -- this was a memory mismatch, not a real design question needing a decision.**
+
+### RULED
+
+**No change to `APP-UI-VISION-01`'s own Boots placement. Equip's own layout work should build to the already-locked arrangement exactly as it already states it -- Boots alone in its own row directly beneath Belt.**
+
+**What remains genuinely open from `PT-2684`: the real fidelity standard for the live-comparison pass itself.** Both the Character Sheet (colour-palette and visual-character matching, even where layout diverges by design) and Equip (as close to literally identical to the real game as possible, aside from the one already-correct Boots addition) need to be re-checked against the real K2 captures at the higher standard the owner named -- specific icon art, specific colour values, specific layout details, not general chrome presence.
+
+### PROCEED
+
+Redo the Character Sheet/Equip live comparison to the corrected, higher standard. Equip's own layout work proceeds against the existing, confirmed-correct Boots placement — no revision needed there.
+
+
+---
+
+## PT-2686 -- REDONE COMPARISON, GENUINELY DECISIVE. MEASURED REAL PIXEL COLOURS FROM BOTH SCREENS RATHER THAN EYEBALLING, TURNING "DOESN'T QUITE MATCH" INTO SPECIFIC, ACTIONABLE FINDINGS. EQUIP: NO ICONS ANYWHERE (K2 DRAWS A SOLID GLYPH PER SLOT), BORDERS FUNCTIONALLY INVISIBLE (RGB(18,18,15) VS K2's BRIGHT #2fc4a5-#50e4c7 TEAL), THE EQUIPPED-HIGHLIGHT AND WEAPON-CONFIG MECHANISMS BOTH ENTIRELY DIFFERENT FROM THE REAL GAME. ⚠⚠⚠ CHARACTER SHEET: A REAL, QUANTIFIED PALETTE GAP (AMBER #c8a45a VS K2's REAL TEAL, CHANNEL-DISTANCE 260 VS 64 FOR THE APP'S OWN EXISTING ACCENT), BUT CORRECTLY NOT DECIDED UNILATERALLY -- THE CURRENT AMBER IS AN ALREADY-RULED SEMANTIC (UI-STYLE-VALUES-01, "PRIVILEGED/DERIVED MEMBER OF A PAIR"), NOT A STRAY CHOICE, AND CHANGING IT HAS REAL CONSEQUENCES ELSEWHERE
+
+**This is exactly the standard the owner asked for, and it deserves recognition as such -- measured, quantified, specific findings that turn a vague "doesn't look right" into something genuinely actionable.**
+
+### EQUIP -- DECISIVE, PRECISELY SCOPED
+
+**Confirming Equip has no icons anywhere against K2's own consistent, solid-glyph-per-slot approach, that the borders are functionally invisible against a background where K2's own are bright and clearly visible, and that both the equipped-highlight and weapon-config sub-panel work through entirely different mechanisms than the real game, closes the "how far off is this" question decisively. Correctly confirming Boots itself is positioned right, per the just-resolved ruling, and rendering consistently with every other slot rather than being singled out, closes that specific question cleanly. Precisely identifying what real fidelity would actually require -- real icon art per slot, using K2's own measured teal for borders and fills -- gives a concrete target rather than a vague aspiration.**
+
+### ⚠⚠⚠ THE CHARACTER SHEET PALETTE QUESTION -- WORTH THE FULLEST RECOGNITION
+
+**Quantifying the palette gap with a real channel-distance metric, rather than a subjective "it looks different," turns this into a measurable claim. But the real value here is recognizing that the current amber isn't an arbitrary choice sitting in the way of a fix -- it's an already-ruled, load-bearing semantic used consistently elsewhere in the project (Abilities' own Bonus column), and correctly refusing to quietly override an existing rule for the sake of one screen's fidelity, bringing the real tension to a decision instead, is exactly right. This is precisely the kind of conflict this session has repeatedly caught and properly escalated rather than resolved by default.**
+
+**The proposed synthesis -- match the real palette, not the real structure, keeping the current open layout while pulling colours toward K2's real measured teal -- is sound thinking, correctly separating "does this look like the same game" from "does this use the same grid," which are genuinely different questions with different right answers.**
+
+### RULED -- THE AMBER QUESTION
+
+**Keep the existing amber semantic for what it actually marks -- the privileged/derived member of a pair, consistent with Abilities' own Bonus column. Don't retire a real, meaningful, already-consistently-applied project rule to chase one screen's palette fidelity.** But pull everything else toward K2's real measured teal -- general borders, rules, and any accent that isn't specifically marking a privileged/derived value under the existing semantic. The result: ability modifiers keep their amber (a real, ruled meaning, consistent with the rest of the project), while the screen's overall visual character — borders, general accents, the frame's own internal rule lines — moves toward the real game's own measured palette. This gets both things right rather than sacrificing one for the other.
+
+### RULED -- EQUIP
+
+**Build the real fidelity Equip needs: icon art per slot (starting with the already-extracted `uibit_eqp_cnfg_p`/`uibit_eqp_shld_p`, plus new extraction for the ten remaining slot glyphs K2 draws that weren't part of the earlier shell/border pass), and K2's own measured teal for borders and fills, replacing the current near-invisible outline.** This is real, substantial work — scope and sequence it properly before building, same discipline as every other substantial piece of this thread.
+
+### PROCEED
+
+Scope and propose the Equip icon/colour work as its own real sequence before building. Apply the amber ruling to the Character Sheet — modifiers keep amber, everything else moves toward K2's real teal. The Defence-reader discrepancy stays correctly held as its own separate item, not re-chased here.

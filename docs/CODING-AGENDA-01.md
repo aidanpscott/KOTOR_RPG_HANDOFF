@@ -6,6 +6,12 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+### ⚠⚠⚠ SEVERE: starting-item paths don't match what the runtime item loader expects
+- **Ruled fix now (PT-2688).** resolveStartingArmour and resolveStartingWeapon both hand back paths the runtime loader refuses to open ("will not open: there is no item here"). Confirmed systemic, not armour-specific — same failure shape hit a real fight's own weapon-equip log too. Cleanly proven independent of the character-sheet contamination bug via a re-authored, armour-free save. Fix: reconcile the catalogue's own path format with whatever equips/item-open actually expects.
+
+### Manual companion casting has a proven backend but no reachable UI path — real, substantial, own future item
+- **Correctly not a bug — a real, disclosed design gap (PT-2688).** TEST 139 proved _useSupportPower/_applyPower work correctly. But every real UI path (sidebar card + token, clicking the enemy, arrow keys) dead-ends — arrow-key movement is hard-wired to the player regardless of whose turn it is, and clicking a creature is deliberately not an action trigger by design (PT-1108/PT-1425/PT-1443). The source's own comment marks the target picker as "still unruled." Needs its own real design-and-build sequence for a manual companion's combat action flow (movement and casting both), same discipline as every other substantial new architecture this session has built. Not started.
+
 ### ⚠⚠⚠ SEVERE: the player's own character sheet reads a joined companion's data instead of the player's
 - **Ruled fix now (PT-2687).** Whatever builds the player's own class/ability/level display folds the whole combined event log with no subject filter — the last-joined companion's events silently overwrite the player's own. Confirmed with real numbers: a Soldier 5 with STR 14/DEX 14/CON 14 displayed as level 4, STR 12/DEX 10/CON 12 — Grunt's (the last companion in the log), not the player's own. Confirmed trigger: henchman auto-join via an area's own contents. Needs checking: ordinary scripted recruitment. Fix: filter the combined log by the player's own subject, same discipline already applied to companion-record's own seeding/progress-fold work this session.
 

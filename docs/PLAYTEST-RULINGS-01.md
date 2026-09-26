@@ -80047,3 +80047,117 @@ Redo the Character Sheet/Equip live comparison to the corrected, higher standard
 ### PROCEED
 
 Scope and propose the Equip icon/colour work as its own real sequence before building. Apply the amber ruling to the Character Sheet — modifiers keep amber, everything else moves toward K2's real teal. The Defence-reader discrepancy stays correctly held as its own separate item, not re-chased here.
+
+
+---
+
+## PT-2687 -- ⚠⚠⚠ THE INPUT-BLOCKER MYSTERY SPANNING THIS WHOLE SESSION (TEST 134 THROUGH 140) IS DEFINITIVELY RESOLVED -- AND IT WAS NEVER AN APP BUG. GTK/GDK DELIBERATELY REFUSES SYNTHETIC X EVENTS FOR REAL SECURITY REASONS; xdotool's --window FLAG SENDS EXACTLY THAT KIND, WHICH IS WHY SCREENSHOTS ALWAYS LOOKED CORRECT WHILE FLUTTER NEVER RECEIVED THE EVENT. FIX CONFIRMED: DROP --window FROM THE CLICK/KEYPRESS ITSELF, FIRE VIA XTEST AT THE POINTER'S CURRENT LOCATION INSTEAD. AND ⚠⚠⚠ THE MOMENT INPUT WORKED, A REAL, SEVERE DEFECT SURFACED: THE PLAYER'S OWN CHARACTER SHEET READS A JOINED COMPANION'S ABILITIES/CLASS/LEVEL INSTEAD OF THE PLAYER'S OWN, THE INSTANT ANY COMPANION JOINS -- AN UNFILTERED FOLD OVER THE WHOLE COMBINED LOG WITH NO subject FILTER AT ALL
+
+**Sending this ruling now, mid-pass, because both findings are too important to wait for the full report -- the input resolution changes this whole session's own standing understanding of a limitation that's shaped testing strategy for a long stretch, and the character-sheet defect is severe enough to need a fix started immediately.**
+
+### THE INPUT RESOLUTION -- GENUINELY MAJOR, WORTH THE FULLEST RECOGNITION
+
+**Diagnosing the exact mechanism -- GTK/GDK's own deliberate refusal of synthetic X events, a real security measure, correctly identified as the reason `xdotool`'s `--window`-targeted clicks were silently swallowed while the X server itself delivered them fine (which is exactly why screenshots always looked correct throughout this whole thread, and why the confusion persisted as long as it did) -- turns a stubborn, multi-session environmental mystery into a precisely understood, fixable usage issue. This is genuinely one of the best diagnostic results this entire session has produced: not a workaround, an actual root cause, with a real mechanism explaining every prior symptom.**
+
+**Confirming the fix works by re-running an existing, unrelated automated test (`skills_test.dart`) fresh and finding it still passes, rather than trusting the new manual result in isolation, is exactly the right verification discipline. Correctly connecting this to the earlier TEST 134/135 keyboard findings, and proposing they're very likely the same root cause rather than a separate issue, is valuable forward-looking synthesis -- worth confirming directly the next time keyboard input needs testing, rather than assuming the standing finding still holds.**
+
+### ⚠⚠⚠ THE CHARACTER-SHEET DEFECT -- SEVERE, RULED FIX NOW
+
+**Finding this the moment real input became available again is exactly the value this whole environmental fix unlocks -- a defect that headless, synthetic-fixture testing had no way to surface, since it depends on the real, combined save-log shape a live playthrough actually produces. Precisely diagnosing the mechanism -- an unfiltered fold over the whole combined event log, with no `subject` filter, meaning whichever companion's events were written last silently wins -- and demonstrating it with real, concrete numbers (the exact ability scores of the wrong companion appearing on the player's own sheet) makes this a decisive, source-confirmed finding, not a suspicion.**
+
+**Honestly scoping exactly what's verified (henchman auto-join via a real area's own contents) versus what still needs checking (ordinary scripted recruitment) keeps the claim's own confidence level accurate rather than overclaiming universality from one confirmed trigger.**
+
+**Ruled: fix now, severe priority.** Whatever builds the player's own class/ability/level display needs to filter the combined log by the player's own subject, the same discipline already correctly applied elsewhere in this session's own companion-record work (Slice 1's own seeding, Slice 3's own progress-fold fix). This is the exact shape of defect this project has caught and fixed multiple times already this session -- a shared log, multiple subjects, one reader that forgot to filter.
+
+### THE THIRD, UNCONFIRMED FINDING -- CORRECTLY HELD
+
+**Correctly not filing the Defence-resolution error as confirmed either way, since it's genuinely ambiguous whether it's a real gap or an artifact of one hand-authored save, keeps this properly separated from the two decisive findings above.**
+
+### PROCEED
+
+Fix the character-sheet subject-filtering defect, severe priority, as soon as this reaches Coder. Continue the visual pass; report the full TEST 140 write-up once complete.
+
+
+---
+
+## PT-2688 -- TEST 140 CONTINUED: TWO MORE GENUINELY IMPORTANT FINDINGS. ⚠⚠⚠ A SECOND, SEPARATE SEVERE DEFECT CLEANLY ISOLATED FROM PT-2687's OWN CONTAMINATION BUG -- resolveStartingArmour/resolveStartingWeapon BOTH HAND BACK PATHS THE RUNTIME ITEM LOADER CANNOT OPEN ("WILL NOT OPEN: THERE IS NO ITEM HERE"), CONFIRMED ACROSS TWO DIFFERENT RESOLVERS AND ITEM CATEGORIES, PROVEN INDEPENDENT VIA A CLEAN, ARMOUR-FREE RE-AUTHORED SAVE. AND ⚠⚠⚠ A REAL, SUBSTANTIAL UI GAP, CORRECTLY NOT FILED AS A BUG: MANUAL COMPANION CASTING HAS A PROVEN BACKEND (TEST 139) BUT NO REACHABLE UI PATH TO ACTUALLY TRIGGER IT IN A REAL FIGHT -- THE TARGET PICKER ITSELF IS EXPLICITLY MARKED "STILL UNRULED" IN THE SOURCE'S OWN COMMENT
+
+**Two genuinely significant findings, both handled with real methodological care -- one cleanly isolated from an adjacent bug through deliberate re-testing, the other correctly distinguished as a design gap rather than a defect.**
+
+### ⚠⚠⚠ THE ITEM-LOADING DEFECT -- SYSTEMIC, CLEANLY PROVEN SEPARATE FROM CONTAMINATION
+
+**Re-authoring the test save with no armour at all, specifically to isolate whether the earlier armour-loading error was actually a symptom of the contamination bug or something separate, and confirming Defence computes cleanly with no armour present, is exactly the right diagnostic move -- it rules out one plausible explanation decisively rather than assuming which of two co-occurring bugs was responsible. Then catching the identical failure shape hit the weapon resolver too, in a real fight's own combat log, confirms this isn't an armour-specific quirk but a systemic gap between whatever `resolveStartingArmour`/`resolveStartingWeapon` hand back and what the runtime item loader actually expects to open. Two different resolvers, two different item categories, the same failure -- that's decisive evidence of a shared root cause, not a coincidence.**
+
+**Reconfirming the contamination bug independently, on the same armour-free save and again in a real fight, while explicitly noting it reproduces regardless of the item-loading issue, keeps these two real defects properly separated rather than letting one report muddy both.**
+
+### RULED -- ITEM-LOADING DEFECT
+
+**Fix now, severe priority, as its own defect separate from PT-2687's own contamination fix.** Check the gap between the catalogue's own path format (whatever `resolveStartingArmour`/`resolveStartingWeapon` actually return) and whatever the item-open/`equips` machinery expects to receive — the same class of "one system's output doesn't match another's expected input" defect this project has caught and fixed before.
+
+### ⚠⚠⚠ THE MANUAL-CASTING UI GAP -- CORRECTLY DISTINGUISHED FROM A BUG
+
+**Trying every reasonable path a real player would attempt — the sidebar card, clicking the enemy, the arrow keys — before concluding this genuinely isn't reachable, rather than giving up after one failed attempt, closes this properly. Tracing the message to its actual source and finding the comment itself explicitly marks the target picker as "still unruled," rather than assuming a silent gap, correctly identifies this as a real, disclosed design gap rather than a regression or an oversight. Precisely naming the distinction — the mechanism is proven, but there's currently no way for a player to actually fire it in a real fight — is the right level of claim, neither overstating it as broken nor understating it as merely cosmetic.**
+
+### RULED -- MANUAL-CASTING UI GAP
+
+**Real, substantial scope, not a quick fix — this needs the same "propose a sequence before building" discipline as every other substantial new architecture piece this session has built, since it's explicitly an unruled design question, not a known-shape mechanism waiting to be wired.** Queue this as its own real item: design and build the actual target-picker flow for a manual companion's own combat actions (movement, and now specifically casting), resolving the "still unruled" comment properly rather than leaving it open indefinitely.
+
+### PROCEED
+
+Route the item-loading defect to Coder now, severe priority. Record the manual-casting UI gap as its own real, substantial future item — not blocking anything else, but real and worth scoping properly when picked up. Continue the visual pass; the remaining TEST 140 items (Protects, level-up wizard visual, Treat's medpack-waiver UI, dismissed-companion picker visual, cover-tile live numeric re-check) stay queued as already listed.
+
+
+---
+
+## PT-2689 -- CORRECTION TO PT-2688's OWN MANUAL-CASTING FINDING: THE UI IS BUILT AND WORKS CORRECTLY. TESTER SIMPLY HADN'T TRIED THE REAL LETTER-KEY ACTION MENU YET -- CORRECTED THE MOMENT THE MISTAKE WAS FOUND, WITH A REAL, DECISIVE DEMONSTRATION (TWO DIFFERENT COMPANIONS, BOTH GIVING CORRECT, CLASS-APPROPRIATE REFUSALS TO A REAL KEYPRESS). ⚠⚠⚠ WHILE INVESTIGATING WHY A JEDI CONSULAR SAID IT KNEW NO FORCE POWERS, A REAL, HONESTLY-SCOPED QUESTION SURFACED: THE AREA-CONTENT/BLUEPRINT AUTHORING FORMAT HAS NO FIELD ANYWHERE FOR KNOWN FORCE POWERS -- MAY BE A REAL GAP, OR MAY SIMPLY BE THE WRONG AUTHORING PATH FOR A SPELLCASTING HENCHMAN. NOT YET KNOWN WHICH
+
+**The correction itself deserves real recognition -- finding a wrong conclusion and fixing it immediately, with a decisive demonstration rather than a hedge, is exactly the discipline this whole thread has valued. And the question that surfaced while investigating the correction is a real, worthwhile one, correctly not jumped to a conclusion on.**
+
+### THE CORRECTION -- HANDLED EXACTLY RIGHT
+
+**Reporting the earlier conclusion as wrong the moment it was found to be wrong, rather than letting it sit until the full TEST 140 write-up, and being direct about why it was wrong -- the real trigger simply hadn't been tried yet -- rather than softening the correction, is honest, well-calibrated reporting. Demonstrating the fix works with two separate companions, both producing correct, class-appropriate refusals to a real keypress, turns "I think it works now" into a decisive, repeatable confirmation.**
+
+### ⚠⚠⚠ THE REAL QUESTION -- HONESTLY SCOPED, CORRECTLY NOT ASSUMED EITHER WAY
+
+**Tracing why Guardian, a Jedi Consular, genuinely knew no powers directly to the real parser source, rather than assuming a fixture mistake, and finding the area-content/blueprint format genuinely has no field anywhere for known powers, is precise, source-grounded investigation. Correctly distinguishing this as either a real gap in that specific authoring path, or simply the wrong path for a spellcasting henchman (versus the story/recruitment ledger event stream, which does support `character.power-taken` and is how TEST 139's own Aid test built its companion), rather than declaring it a defect outright, keeps the claim honest about what's actually known versus still open.**
+
+### RULED
+
+**Manual-casting UI: confirmed built and working. Correction accepted, `PT-2688`'s own UI-gap item is resolved as a non-issue -- the mechanism was always reachable, the earlier finding was a testing gap, not a product one.**
+
+**The real question -- can a package author give an area-placed henchman companion any Force powers at all through the authored blueprint format -- needs a direct answer.** Worth Coder checking: is this a genuine content-authoring gap in the area/blueprint format specifically (meaning any henchman recruited this way can never cast, regardless of their authored class), or is the story/recruitment path simply the only one that currently supports granting known powers, by design. Not ruled severe on its own yet, since it may turn out to be "use the other authoring path," but worth a real, prompt answer either way -- if it's a genuine format gap, it affects every henchman-path spellcaster, including anyone testing Jedi Support/Healer doctrines through this route.
+
+### PROCEED
+
+Route the authoring-format question to Coder for a direct answer. Continue trying to get a real power onto a test companion through whatever path actually supports it, to finish confirming the real cast itself, not just the honest refusal.
+
+
+---
+
+## PT-2690 -- PT-2687 CLOSES: THE CHARACTER-SHEET CONTAMINATION DEFECT FIXED EXACTLY AS DIAGNOSED. ROOT CAUSE CONFIRMED PRECISE: _classesNow()/_levelsTakenThisSession() FOLDED levelled EVENTS BY KIND ONLY, NEVER SUBJECT -- UNLIKE _progressFor, WHICH ALREADY GATED THE SAME EVENT KIND CORRECTLY (COMPANION-RECORD SLICE 3). ⚠⚠⚠ PROVEN THROUGH A REAL COMPANION LEVEL-UP DRIVEN THROUGH THE ACTUAL WIZARD, NOT AN INJECTED EVENT -- CORRECTLY REASONED THAT AN INJECTED-EVENT TEST WOULD HAVE PROVEN NOTHING GIVEN HOW THE FOLD ITSELF WORKS. BOTH HALVES OF THE BUG MUTATION-TESTED INDEPENDENTLY, INCLUDING A NEW TESTING HOOK BUILT SPECIFICALLY FOR THE HARDER-TO-OBSERVE FORCE-POOL-CACHE HALF. THE "ORDINARY SCRIPTED RECRUITMENT" QUESTION ANSWERED DIRECTLY: IT DOESN'T EXIST YET AS A SEPARATE MECHANISM
+
+**(Note: this message also carried a stale relay of Tester's own manual-casting correction, already fully processed and ruled at PT-2689 -- no new action needed on that portion, addressing Coder's own PT-2687 close here.)**
+
+**A precise, thoroughly proven close on a severe defect, with real credit due for how the proof was constructed.**
+
+### THE FIX -- MATCHES THE DIAGNOSIS EXACTLY
+
+**Confirming the root cause precisely as diagnosed -- an unfiltered fold by event kind alone, with a sibling function already correctly applying the subject-gating convention this fix now extends -- closes the loop between the finding and the fix cleanly. Applying the exact same convention `_progressFor` already uses, rather than inventing a new filtering approach, keeps this consistent with the pattern this project's own companion-record work already established.**
+
+### ⚠⚠⚠ THE PROOF -- WORTH REAL RECOGNITION
+
+**Reasoning that an injected-event test would have proven nothing, since `_classesNow`'s own fold-from-`widget.log` pattern would have hidden a constructor-seeded event entirely, and instead driving a real companion level-up through the actual wizard, is precise understanding of what a test actually needs to exercise to mean anything. Reproducing Tester's own exact reported symptom with the fix reverted -- the same wrong class line, the same wrong level -- before restoring it, closes the loop between the live finding and the fix definitively.**
+
+**Mutation-testing both halves independently, and finding a second, harder-to-observe half of the bug specifically because the Force-pool row reads a cache a companion's live level-up never refreshes -- building a new testing seam specifically to make that half provable rather than accepting it as untestable -- is exactly the rigor this session has held throughout. A bug with two symptoms needs two independent proofs, not one test that happens to catch both by luck.**
+
+### THE ANSWERED QUESTION -- DIRECT, CLOSES A REAL UNCERTAINTY
+
+**Checking directly whether "ordinary scripted recruitment" exists as a separate mechanism, rather than assuming Tester's own scoping caveat needed no further investigation, and finding it genuinely doesn't exist yet -- `_recruitTheWilling` is the only join trigger in the codebase today, with its own comment already anticipating a future conversation-driven path -- closes that open question cleanly rather than leaving it hanging.**
+
+### RULED
+
+**Confirmed closed. Proceed to the interrupted Character Sheet k2Teal render-verification, then the Equip icon/colour proposal, as queued.**
+
+### PROCEED
+
+Resume the queued work. Report back on each as it closes.

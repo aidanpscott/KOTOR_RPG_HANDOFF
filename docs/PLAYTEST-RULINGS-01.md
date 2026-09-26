@@ -80161,3 +80161,32 @@ Route the authoring-format question to Coder for a direct answer. Continue tryin
 ### PROCEED
 
 Resume the queued work. Report back on each as it closes.
+
+
+---
+
+## PT-2691 -- k2Teal RENDER-VERIFICATION CLOSES, EXACT PIXEL MATCH CONFIRMED (#2FC4A5 AT ALL THREE SITES). AND THE EQUIP ICON/COLOUR PROPOSAL, WITH ⚠⚠⚠ A REAL SELF-CAUGHT CORRECTION WORTH FULL RECOGNITION: THE FIRST-PASS "idimplant CONFIRMED" CONCLUSION WAS PREMATURE -- CHECKING THE SURROUNDING id* FAMILY AGAINST THE REAL SCREENSHOT REVEALED IT'S ACTUALLY THE DROID SCREEN'S OWN ICON SET, NOT ORGANIC'S. WENT BACK, FOUND THE REAL ORGANIC SET UNDER A DIFFERENT PREFIX, VERIFIED EACH ICON INDIVIDUALLY AGAINST THE SCREENSHOT
+
+**Both pieces close well, and the correction on the icon families deserves real recognition -- a wrong prefix would have shipped droid-styled icons on organic characters, a real, visible defect this catch prevented before any code was built against it.**
+
+### THE k2Teal VERIFICATION -- DECISIVE, PRACTICAL PROBLEM-SOLVING
+
+**Working around the corrupted saves by building a fresh character rather than stalling on the original plan, and sampling the actual rendered pixels for an exact hex match rather than eyeballing the result, closes this with the same rigor the Equip work is about to need.**
+
+### ⚠⚠⚠ THE ICON-FAMILY CORRECTION -- WORTH THE FULLEST RECOGNITION
+
+**This is exactly the discipline this whole menu-comparison thread has needed. Recognising that one confirmed match (`idimplant`) wasn't sufficient grounds to trust the whole `id*` family without checking the others against the real screenshot, and finding that checking revealed a wrong classification -- the `id*` family is genuinely the droid screen's own icon set, confirmed by cross-referencing `equip_x.gui`'s own slot tags -- before any extraction or wiring happened, catches this at exactly the right moment. Going back and finding the real organic set under the `i*` prefix, then verifying each of the eight icons individually against the real screenshot rather than trusting the pattern once established, closes this properly rather than assuming the correction was itself complete without checking.**
+
+**Correctly identifying `idimplant` as a genuine, confirmed exception rather than folding it into the correction by mistake -- it's shared by both screens because implants are the same tech either way -- shows the correction was precise, not a blanket overcorrection.**
+
+### THE PROPOSAL -- SOUND, WELL-SCOPED
+
+**Proposing to extract both the organic and droid families now, since `isDroid` already exists as a real property on `CharacterRecord`, rather than extracting only the organic half and needing a second pass later once droid content is authored, is efficient, forward-looking scoping. Correctly flagging the unidentified decorative rifle graphic as low priority and not blocking, rather than either chasing it now or silently ignoring it, keeps the scope honest about what's genuinely unresolved without letting it stall the real work.**
+
+### RULED
+
+**Approved in full. Extract all 17 icons (8 organic, 8 droid, shared idimplant) into the proposed structure, wire `equip_screen.dart`'s `_cell()` to show the matching icon per slot gated by `isDroid`, and move borders/fills to `k2Teal` exactly as proposed.**
+
+### PROCEED
+
+Build as proposed. Report back with the render once done, same as the Character Sheet.

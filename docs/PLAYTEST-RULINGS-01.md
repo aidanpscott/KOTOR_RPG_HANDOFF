@@ -80190,3 +80190,37 @@ Resume the queued work. Report back on each as it closes.
 ### PROCEED
 
 Build as proposed. Report back with the render once done, same as the Character Sheet.
+
+
+---
+
+## PT-2692 -- THE EQUIP ICON/COLOUR BUILD CLOSES FOR ORGANIC: ALL 17 REAL ICONS EXTRACTED (8 ORGANIC `i*`, 8 DROID `id*`, SHARED `idimplant`), WIRED PER SLOT GATED BY `isDroid`, BORDERS/FILLS ON `k2Teal`, ORGANIC RENDER-VERIFIED LIVE. ⚠⚠ THE DROID HALF IS PROVEN BY A CONTROLLED TEST, NOT A LIVE RENDER -- HONESTLY DISCLOSED AS INCONCLUSIVE BECAUSE THE SHARED SAVE DIRECTORY CORRUPTED AGAIN. ⚠⚠⚠ THAT IS THE SAME ENVIRONMENTAL FAULT COSTING REAL VERIFICATION TIME FOR THE NTH TIME, AND IT STOPS BEING ABSORBED AS NOISE HERE
+
+**A clean close on the half that could be proven live, and an honest refusal to claim the half that couldn't.**
+
+### THE BUILD -- MATCHES PT-2691 EXACTLY
+
+**Seventeen icons, the two families kept separate, `idimplant` shared as the one deliberate exception, the slot glyphs driven by `isDroid` rather than a second screen, and borders/fills moved onto `k2Teal` -- this is what PT-2691 approved, built as approved. The extractor's own header records the `id*`/`i*` correction and why `idimplant` survives it, so the next reader inherits the reasoning and not just the result. Committed to KOTOR-RPG-APP (`cc447e6`) and MAIN_WORK (`c672fa34`); ledger mirror refreshed.**
+
+### ⚠⚠ THE DROID HALF -- CORRECTLY NOT CLAIMED
+
+**A controlled test proves the gate selects the droid family. It does not prove the droid screen looks like the real droid screen -- that is the standard PT-2684/2685 set, and it is a live render against the real capture. Disclosing the live attempt as inconclusive rather than letting the controlled test stand in for it is exactly right. Organic closes. Droid stays open as a small owed item: one live render of a droid character against the real `equip_x` capture, once a clean save exists.**
+
+### ⚠⚠⚠ THE SHARED SAVE DIRECTORY -- NOW ITS OWN ITEM
+
+**Tester's runs and Coder's live-verification sessions write to the same save directory, and saves that were good minutes earlier come back unreadable ("class levels add to N and the character is level M"). This has been disclosed honestly every time, and every time absorbed as noise. It has now blocked a close. Saves derive from `XDG_DATA_HOME` (`Lodestar/lib/src/locations.dart`), so separation should cost one environment variable per agent, not a code change.**
+
+### THE AMBER QUESTION ON THE CHARACTER SHEET -- ANSWERED
+
+**PT-2686 kept amber for the privileged member of a set and moved everything else toward K2's teal. `UI-STYLE-VALUES-01` already names both remaining sites: the tab selector marks selected, which is `accent` (#1AB28C) -- it moves off amber. The level-up button is the Play case -- the primary action, pulsing when ready -- and Play is amber by name in the same table. It keeps amber.**
+
+### RULED
+
+**Tab selector → `accent`. Level-up button keeps amber. Organic Equip: closed. Droid Equip: open, live render owed. Separate save directories for Coder and Tester -- each agent runs the app with its own `XDG_DATA_HOME`, packages copied or linked into each as needed. Confirm the separation actually holds (two concurrent runs, neither corrupts the other) before calling it done -- a guard for "X doesn't happen" also confirms "Y happens instead."**
+
+### PROCEED
+
+1. Set up the separate save directories and confirm them with a concurrent run. Report back.
+2. With a clean droid save, render droid Equip live against the real capture. Report back with the render.
+3. Move the Character Sheet tab selector to `accent`; leave the level-up button amber.
+4. Then PT-2688's starting-item path fix (⚠⚠⚠ SEVERE, ruled, not yet built) before the next menu in PT-2675.

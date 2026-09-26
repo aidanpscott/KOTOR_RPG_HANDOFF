@@ -80224,3 +80224,44 @@ Build as proposed. Report back with the render once done, same as the Character 
 2. With a clean droid save, render droid Equip live against the real capture. Report back with the render.
 3. Move the Character Sheet tab selector to `accent`; leave the level-up button amber.
 4. Then PT-2688's starting-item path fix (⚠⚠⚠ SEVERE, ruled, not yet built) before the next menu in PT-2675.
+
+
+---
+
+## PT-2693 -- ⚠⚠⚠ OWNER REOPENS EQUIP: THE ICONS ARE REAL, THE SCREEN IS NOT. EQUIP IS A 1:1 RECREATION OF KOTOR II's REAL EQUIP SCREEN -- EVERY ELEMENT -- WITH EXACTLY ONE EXCEPTION: THE BOOTS SLOT, WHICH K2 DOES NOT HAVE, GETS A BOOTS ICON DRAWN TO MATCH K2's OWN GLYPH FAMILY. ⚠⚠⚠ PT-2692's "ORGANIC EQUIP CLOSES" WAS WRONG: WHAT CLOSED WAS PT-2691's ICON-AND-COLOUR SLICE, NOT THE SCREEN. AND TWO REAL FINDINGS FROM THE DROID ATTEMPT -- A TESTER PACKAGE AREA THAT CORRUPTS ANY CHARACTER WHO ENTERS IT, AND A LIBRARY ROW THAT WILL NOT SCROLL UNDER SYNTHETIC INPUT
+
+**Items 1 and 3 close cleanly. Item 2 is blocked for real reasons, honestly reported. And the owner has corrected the standard the whole Equip thread was closing against.**
+
+### ⚠⚠⚠ THE CORRECTION -- WHAT PT-2692 GOT WRONG
+
+**PT-2686 ruled that Equip should be literally identical to the real game. PT-2691 then approved one slice of that: seventeen icons, plus borders and fills on `k2Teal`.** **That slice was built exactly as approved. But PT-2692 closed it as "organic Equip closes." That confused the slice with the screen.** **Nobody ever scoped the rest of the screen: layout, panels, the item list, the stat readouts, the slot descriptions, the weapon-configuration control, fonts, and text. The icons were the only real K2 piece on a screen that otherwise isn't K2's.** **The owner caught it by looking. PT-2692's Equip close is withdrawn. Organic and droid are both open.**
+
+### THE STANDARD -- STATED ONCE, EXACTLY
+
+**Equip is a 1:1 recreation of KOTOR II's Equip screen: every element, position, texture, font, colour, and piece of text. Pull whatever the game files hold to get there.** **The single exception is Boots.** **K2 has no foot slot (`ITEMS-08`, `PT-690`, `PT-2503`), so Boots keeps its locked position from `APP-UI-VISION-01`: beneath Belt, with the worn items, as reconfirmed at PT-2685.** **Boots gets an icon drawn to sit inside K2's own glyph family. Match the `i*` family for organic and the `id*` family for droid in size, stroke, and treatment, so that it reads as if BioWare had drawn it.** **Track it in `ASSET-REPLACEMENT-01` as ours, not extracted.** **Nothing else diverges.**
+
+**Proof is a side-by-side screenshot: the owner's real K2 save on Equip against ours in the same state, organic and droid. Not 1:1 is a fail. It is never a general "matches the chrome" claim.** **Two allowances only: K2's outer frame is left out, and ours may stretch or widen to fill its window, keeping K2's proportions and relative positions.**
+
+### ITEM 1 -- SAVE-DIRECTORY SEPARATION: CLOSED
+
+**Confirming `Locations.desktop()`'s real resolution order in Lodestar's source before relying on it, then proving the separation two independent ways, closes this properly.** The two ways were an on-disk file-count check across two concurrent real chargens, and PID plus `/proc/<pid>/environ` confirming both processes ran with their own environment throughout. **Recording the trap in `RUNNING-ON-THIS-MACHINE.md` is worth as much as the setup itself.** The trap: `XDG_DATA_HOME` is the data *home*, and the app appends `kotor-rpg/` beneath it. Pointing it at the final folder silently shows "no packages installed". **A silent failure with no error is exactly what the next person would lose an hour to.**
+
+### ITEM 3 -- TAB SELECTOR: CLOSED
+
+**Sampled live at (24, 167, 132) against `accent` #1AB28C, the suite at 1708/1708, and `dart analyze` clean.** **The level-up button was correctly left amber.**
+
+### ⚠⚠⚠ ITEM 2, FINDING (a) -- A PACKAGE AREA THAT CORRUPTS CHARACTERS
+
+**"0 AAA Visual Pass (Tester)"'s entry area corrupts any character that enters it, badly enough to fail save-reload validation ("class levels add to 11 and the character is level 4").** **It reproduced on three characters in a row, one of them loaded fresh minutes after a clean save, and in Coder's own now-separated save directory.** **So this is not the shared-directory noise PT-2692 just removed. It is real.** **Its shape matches PT-2687: something writes into the player's subject that doesn't belong there. The source this time is an area script, not a companion join.** **SEVERE, opened as its own item.** Not chased this pass, correctly. It queues behind PT-2688, since both are data-integrity defects in the same neighbourhood.
+
+### ITEM 2, FINDING (b) -- LIBRARY SCROLL
+
+**The package row would not scroll under wheel, shift-wheel, drag, Tab traversal, or resize.** **The hypothesis that this is the PT-2687 synthetic-input class, not a UI defect, is plausible, and it is correctly labelled a possibility rather than a diagnosis.** **It is cheap to settle: retry with the PT-2687 technique.** **If real input scrolls, this is a testing-method note. If it doesn't, it's a real defect and gets its own item.**
+
+### RULED
+
+**Items 1 and 3: closed.** **PT-2692's Equip close: withdrawn. Equip, organic and droid, is open under the 1:1 standard above. Boots is the only exception, with a K2-style boots icon.** **The droid live render folds into that work; it is no longer a separate item.** **The Tester-package character corruption is opened as SEVERE, queued behind PT-2688.** **Library scroll is pending the retry.**
+
+### PROCEED
+
+Equip capture and element checklist first; report before building. PT-2688 while that proposal waits. Library scroll retry alongside. Report back on each as it closes.

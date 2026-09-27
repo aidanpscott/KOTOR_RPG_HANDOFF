@@ -80265,3 +80265,52 @@ Build as proposed. Report back with the render once done, same as the Character 
 ### PROCEED
 
 Equip capture and element checklist first; report before building. PT-2688 while that proposal waits. Library scroll retry alongside. Report back on each as it closes.
+
+---
+
+## PT-2694 -- EQUIP CHECKLIST RULED: BUILD IT. ⚠⚠⚠ A GENUINELY IMPORTANT CORRECTION TO A STANDING ASSUMPTION -- `equip_x.gui` IS NOT THE DROID SCREEN, IT IS THE XBOX BUILD'S SCREEN (640x480, CONTROLLER GLYPHS), AND EVERY K2 SCREEN SHIPS AS A `_p`/`_x` PLATFORM PAIR. NO DROID-SPECIFIC EQUIP GUI EXISTS. ⚠⚠⚠ BUT THE GAP LIST IS TOO SHORT: A FULL GFF PARSE LISTED A DOZEN ELEMENTS AND THE DIVERGENCE SECTION COMPARED THREE. AND THE OWNER SETS THE LOOP: BUILD, SCREENSHOT OURS, CLOSE IT, LOAD THE REAL SAVE, SCREENSHOT K2, COMPARE -- NOT 1:1 MEANS REDO, UNTIL IT IS
+
+**The ground truth is the best this thread has produced. The comparison against it isn't finished yet.**
+
+### ⚠⚠⚠ THE `equip_x` CORRECTION -- WORTH THE FULLEST RECOGNITION
+
+**Surveying the whole `gui` folder instead of trusting the pair in front of you settles it. Every screen ships `_p`/`_x`. PC-only screens (`optkeymapping`, `optmouse`, `optresolution`) have no `_x` at all. `equip_x` declares Xbox controller glyphs on a 640x480 canvas.** **This is a platform convention, not a droid variant.** **It overturns a premise PT-2691 and PT-2692 both relied on. PT-2692 asked for a droid render "against the real `equip_x` capture", and that capture would have been of the Xbox screen.** **The icon work stands. The `id*` family was matched to droid art, not to `equip_x` layout. What changes is where a droid screen's truth lives: in real droid gameplay (T3-M4, HK-47) or in item/base-item data, never in a GUI file.**
+
+### THE GROUND TRUTH -- RIGHT METHOD
+
+**Parsing `equip_p.gui` completely with `gfffull.py`, resolving every strref against the real `dialog.tlk`, and cross-checking against a live capture of the owner's own save is exactly the evidence standard this screen needed.** **Details only the parse could give:**
+- The 54x54 cells.
+- The 312x108 weapon-config panel behind only the two weapon rows.
+- DEF as a floating badge at (653,223).
+- Unarmed ATKL/ATKR reading `+1`, not zero.
+- The verbatim cannot-equip string (strref 38450). If we ever show that message, use it word for word.
+
+**Confirming that K2's two-state slot/description behaviour matches PT-1252 live, rather than assuming it, is the right way to leave something alone.**
+
+### ⚠⚠⚠ THE GAP LIST -- NOT FINISHED
+
+**The parse lists the title and divider bars, the slot-name header, the Attack Modifier / Damage band, ATKL/ATKR with values, the Config 1 / Config 2 labels, the DEF caption, Switch Weapons, Close, OK, and the item list's size.** **The divergence section then names three gaps and calls "everything else" correct. But "correct" there means *present*: that Switch Weapons exists, that Close/OK exist.** **Whether each one matches K2's position, texture, font, colour and text was never compared.** **The owner has already said there is a lot of UI missing. Three gaps doesn't square with that, and "exists" is not "matches".** **Every element gets a row, and anything not confirmed as matching is a gap.**
+
+### THE THREE GAPS FOUND -- APPROVED AS PROPOSED
+
+**Reshape the lattice to K2's five rows: belt alone, and each weapon config as its own weapon | empty | weapon row. Boots goes in as its own row directly beneath Belt.** **This keeps the locked "beneath Belt" placement (APP-UI-VISION-01, PT-2685) and K2's rhythm everywhere K2 has precedent.** **DEF becomes the floating shield badge. Attack Modifier / Damage become their own band, with per-hand values flanking the weapon rows.** **The weapon-config panel goes behind the two weapon rows only.**
+
+### THE TEST -- OWNER'S LOOP, EXACTLY
+
+**Build. Screenshot our Equip. Close our app. Launch real K2, load the owner's save, open Equip, screenshot. Compare side by side, element by element.** **Not 1:1 is a fail: fix it and run the loop again, as many times as it takes.** **Only two things are excused: K2's outer frame, and our screen stretching or widening to fill its window with K2's proportions intact.** **"Close" is not a result.**
+
+### DROID -- DEFERRED, CORRECTLY
+
+**No droid save exists, and the premise it was going to be checked against was wrong.** **Droid Equip becomes its own follow-up, sourced from real droid gameplay or base-item data. It does not block the organic build.**
+
+### MACHINE STATE -- NOTED FOR THE OWNER
+
+**`swkotor2.ini` is now `FullScreen=0` and `EnableCheats=1`, and the original backup was lost to the reboot.** **Fullscreen hung the X session twice, once needing a hard reboot. Windowed has been stable since.** **Leave it windowed for this work. Whether to restore fullscreen afterwards is the owner's call.**
+
+### RULED
+
+**`equip_x` is the Xbox screen, not the droid screen. PT-2691/PT-2692's droid premise is corrected.** **Build approved: the three proposed gaps plus every element the full list finds unmatched.** **The owner's screenshot loop is the only pass condition. Not 1:1 means redo, until it is.** **Droid Equip is split out as its own follow-up.** **PT-2688 (starting-item paths) and the Tester-package corruption stay queued behind this.**
+
+### PROCEED
+
+Widen the list, build, loop until 1:1. Report back with the final pair.

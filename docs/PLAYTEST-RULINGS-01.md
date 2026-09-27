@@ -80314,3 +80314,45 @@ Equip capture and element checklist first; report before building. PT-2688 while
 ### PROCEED
 
 Widen the list, build, loop until 1:1. Report back with the final pair.
+
+---
+
+## PT-2695 -- EQUIP GETS CLOSER, THE OWNER CONFIRMS REAL PROGRESS ON THE RIGHT SIDE. ⚠⚠⚠ FOUR THINGS THE OWNER SAW THAT THE COMPARISON DIDN'T: BELT AND BOOTS OFF THE HEAD/BODY COLUMN, THE ART BEHIND ATTACK MODIFIER / DAMAGE RENDERED UPSIDE DOWN, THE CENTRE PORTRAIT ELEMENT UPSIDE DOWN, AND THE LEFT-SIDE ITEM LIST NEVER EXERCISED WITH A REAL INVENTORY. ⚠⚠⚠ AND THE COMPARISON PAIR WASN'T A PAIR: DIFFERENT CHARACTER, DIFFERENT GEAR. FIX: STOCK A COPY OF THE OWNER'S SAVE SO BOTH SIDES SHOW THE SAME STATE
+
+**Real, verified progress, reported honestly as not passing. The owner has found what a like-for-like comparison would have caught.**
+
+### WHAT WAS DONE WELL
+
+**Every element got its own row this time, as asked.** Two bugs were self-caught mid-build:
+- **White alpha masks rendered flat.** Every new chrome texture is pure white with the shape in alpha, and was drawn untinted. It was caught by checking the RGB channel directly and fixed with the same `srcIn` tint Terminal and Store already use.
+- **K2 pixel values copied without scaling.** A K2 value needs converting to our 340-wide design canvas first. The 54px cell became 23, and the screen now fits in one view as K2's does.
+
+**Naming what still didn't match, rather than glossing over it, is what made this report useful.**
+
+### ⚠⚠⚠ THE PAIR WASN'T A PAIR
+
+**K2's side was an empty-inventory Onjo Trigit. Ours was a fresh character with worn gear.** **"Structural comparison holds across the difference" is exactly the kind of claim the 1:1 standard exists to refuse.** **With different states on each side, an item list, a filled slot, a DEF value or a weapon row can't be compared at all.** **The fix is the owner's: stock a copy of his save with a full inventory, and match it on our side.** **The original is backed up first and never written.**
+
+### ⚠⚠⚠ UPSIDE-DOWN ART -- CHECK EVERYTHING, FIX AT THE SOURCE
+
+**Two elements render upside down. One of them, the centre portrait, may not be on our list at all.** **`tpc.py` has no orientation handling. If TPC stores rows bottom-up, every texture this project has extracted could be affected: Equip's, Terminal's, Store's, and the shared frame's.** **Symmetric textures would hide it. That may be why nobody saw it until now.** **Fix it once in the extractor, then re-extract and re-verify everything it touched.**
+
+### ALIGNMENT
+
+**Belt at x=533 is K2's centre column, the same x as Head and Body.** **Ours drifts off it, and Boots follows Belt.** **Measure it.**
+
+### THE ITEM LIST -- UNTESTED SO FAR
+
+**The left side is half the screen, and it has only ever been seen empty.** **With the stocked save, walk it the way a player would: click every slot, scroll, open descriptions, equip and unequip.** **Build ours to behave the same.** **This also settles the Close vs Cancel+OK footer question live, which the GFF alone couldn't.**
+
+### THE HOUSE-STYLE CALLS -- OVERRULED FOR THIS SCREEN
+
+**Keeping "EQUIP" in caps and the house font were reasonable defaults app-wide. But the owner's standard for this screen is 1:1, with exactly two allowances: the outer frame, and stretching to fill the window. Boots is the one exception.** **Title case follows K2. Font follows K2 if it can be extracted; if it can't, that's reported as a wall.** **The party arrows are visible K2 elements and get drawn and wired to the existing switching. The cannot-equip popup stays deferred until a prerequisite model exists.**
+
+### RULED
+
+**Not passing. Continue.** **Back up the owner's save, then stock a copy of it. Every comparison from here on is same character, same gear, same state.** **Fix texture orientation in the extractor and re-verify every extracted asset.** **Centre Belt and Boots on the Head/Body column.** **Build the portrait element and the item list to K2's behaviour.** **Close the DEF offset, panel opacity and icon-flatness gaps by measurement.** **Title and font follow K2.** **Loop until 1:1.**
+
+### PROCEED
+
+As listed. Report back when it passes, or at a wall.

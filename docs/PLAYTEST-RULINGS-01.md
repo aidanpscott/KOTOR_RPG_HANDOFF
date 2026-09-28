@@ -80463,3 +80463,51 @@ As listed. Report back when Equip passes, or at a wall.
 ### PROCEED
 
 As listed, straight through. Report back when Equip passes, or at a real wall.
+
+## PT-2699 -- OWNER OPENS A REAL NEW ITEM: DIRECTIONAL COVER. THE PART OF THE SQUARE THE COVER OBJECT OCCUPIES SHOULD DECIDE WHICH DIRECTION THE BONUS APPLIES FROM. ⚠⚠⚠ CHECKED FIRST: IT DOESN'T EXIST. COVER SHIPPED AS A PROPERTY OF THE WHOLE TILE (PT-2664, PT-2668: "A SHOOTER'S OWN COVER IS A PROPERTY OF THE TILE THEY STAND ON"), SO A UNIT BEHIND A LOW WALL IS EQUALLY PROTECTED FROM THE ATTACKER STANDING RIGHT BESIDE IT ON THE OPEN SIDE
+
+**The owner's instinct is right, and the record confirms it.**
+
+### WHAT SHIPPED
+
+**PT-2664 approved tile-authored cover over geometric ray-tracing, on sound grounds.** **§6.2's examples (a low wall, a console, a doorway, a pillar) are concrete terrain an author can declare.** **But "tile-authored" was built as "tile-wide": the cover tier is a property of the square, not of one edge of it.** **Total cover is directional already, because it's `wall.blocksSight` through `canSee`, and sight lines have direction.** **Half and Three-Quarters aren't.** **So flanking a unit in cover gains the attacker nothing, and cover works against a shot from behind.**
+
+### THE RULE, AS THE OWNER STATES IT
+
+**The cover object sits on a particular part of the square.** **The bonus applies against attacks coming from that side, and not from the open side.** **This keeps PT-2664's tile-authored architecture.** **It adds which edge to what's authored, and a side test at resolution.** **It is not ray-tracing.**
+
+### WHAT HAS TO BE ANSWERED BEFORE BUILDING
+
+**How an author marks the edge or edges.** **How corners and diagonal attacks resolve.** **Which test decides the attacker's side.** **What a grenade's blast origin does to the Reflex bonus.** **Whether `seeksCover` must now pick cover that faces the threat.** **It should, or the Defensive doctrine will hide on the wrong side of a wall.** **The corner and diagonal rule is the owner's call, so it's proposed, not built.**
+
+### RULED
+
+Opened. Research first, then a proposal. Queued behind the Equip work. Keep it tile-authored, per PT-2664. No geometric ray-tracing.
+
+### PROCEED
+
+Record it in the agenda. Don't start it until Equip passes. Continue with PT-2700.
+
+## PT-2700 -- LIVE-FEEDBACK EQUIP SLICE ACCEPTED: READOUTS ONTO THE PANEL's TOP BAND, MAIN HAND CORRECTED TO THE RIGHT PER K2's OWN GFF, ICONS ENLARGED AND CLIPPED, THE PANEL NO LONGER CROPPED. ⚠⚠ THE PARTY ARROWS ARE REMOVED ON THE OWNER's DIRECT WORD -- THE LEFT WINDOW ALREADY SELECTS WHO YOU'RE EQUIPPING -- SUPERSEDING PT-2697's ACCEPTANCE. ⚠⚠⚠ NEXT: ICONS TO THE BOX's INNER EDGE, THE PANEL DOWN A MEASURED SMIDGE, AND THE ATTACK AND DAMAGE VALUES BUILT FOR REAL -- DISPLAYED AS K2 DISPLAYS THEM, COMPUTED BY OUR OWN ATTACK CODE
+
+**Good corrections, made against the running app and each traced to a cause.**
+
+### THE SLICE -- ACCEPTED
+
+**The readout band has two independently scaling halves.** **Pixel insets tuned at one window size overflowed at the test viewport.** **That was traced through five failing tests to its cause and fixed, not papered over.** **The main hand now sits on the right.** **This is a screen-side fix, not a change to hand semantics.** **`LBL_INV_WEAP_L/R` put each letter on its own side, and `attack.dart` already treats `weapon_r` as the main hand.** **The lattice had simply swapped them.** **The panel uses `contain` instead of `cover`.** **A 7:1 box around a 4:1 asset was cropping both rounded end caps.** **The fix came from the asset's real aspect ratio, not from eyeballing it.**
+
+### ⚠⚠ THE ARROWS -- REMOVED, PT-2697 SUPERSEDED
+
+**The owner: the left window already selects the party member, so the arrows are redundant.** **PT-2697 accepted them as built.** **This ruling supersedes that, on the owner's word.** **Deleting the callbacks, `_adjacentParty` and the arrow-only tests, rather than leaving them dead, is right.** **It also explains the "two identical bars": Switch Weapons and the arrow band were the same `uibit_stf_1_p` texture stacked on top of each other.** **Flagging it for a ruling instead of silently editing the ledger was right too.**
+
+### ⚠⚠⚠ THE VALUES -- THE RULE FOR BUILDING THEM
+
+**The headers exist.** **The numbers under them don't yet.** **Whether a character is punching, swinging or shooting, the screen must show what that attack actually does.** **Two sources, two jobs.** **K2 decides the display: what's shown, where, in what format, per hand, per config, and whether a highlighted item previews.** **Our rules decide the numbers.** **RCR governs mechanics (source hierarchy).** **The value comes from the same code the attack roll uses, never from a separate screen formula.** **A screen number that disagrees with the fight is the "one fold, three readers" defect this project keeps catching.** **Where K2's formula and ours give different answers, the disagreement is reported, not silently resolved.** **Changing a rule to match K2 is the owner's call.**
+
+### RULED
+
+Slice accepted. Arrows removed; PT-2697 superseded on that point. Icons fill to the inner edge of their rounded box without overlapping it. The panel moves down by K2's measured offset. The attack and damage values are built with K2's display and our engine's numbers, and every disagreement is tabled for the owner. Then the rest of the list. Loop until 1:1.
+
+### PROCEED
+
+As listed. Report back when Equip passes, or at a real wall.

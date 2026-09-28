@@ -80423,3 +80423,43 @@ As listed. Report back when it passes, or at a wall.
 ### PROCEED
 
 As listed. Report back when Equip passes, or at a wall.
+
+## PT-2698 -- STEPS 0-3 OF PT-2697 CLOSE WELL. ⚠⚠⚠ THE SWEEP PAYS FOR ITSELF IMMEDIATELY: THREE MORE SUBJECT-UNAWARE FOLDS, THE WORST OF THEM LETTING A COMPANION's DARK-SIDE CASTING DRIFT THE PLAYER's OWN ALIGNMENT. ⚠⚠ THE ARROWS WERE IN THE WRONG PLACE AND ARE NOW WHERE K2's GFF PUTS THEM -- BUT MOVING THEM THERE MADE THE PANE SCROLL, WHICH IS A LAYOUT REGRESSION, NOT AN INPUT QUIRK. AND STOPPING FOR TIME IS NOT A WALL
+
+**The sweep is the headline. It found real defects that nobody had reported.**
+
+### ⚠⚠⚠ THE SWEEP -- EXACTLY WHY IT WAS ORDERED
+
+**Three new instances of a shape three local fixes had each closed one at a time:**
+
+- **Alignment, the most severe.** `_alignmentStanding` handed the whole combined log to `alignmentFrom`, which takes no subject at all. So a companion's dark-side cast moved the player's own standing, on the player's own sheet. Fixed by filtering at the call site, keeping Lodestar's primitive general, the same shape as `playerLog` for `replay()`. Mutation-tested.
+- **The log lines.** A companion's XP and level-ups printed as the player's. They're now attributed to the companion by name rather than dropped, which is the right call. Mutation-tested.
+- **`listFor`'s legacy fallback** could let a companion's `character.created` replace the player's package id, defeating the PT-1415 filter from inside its own function. Fixed by reading the code, with lower confidence, honestly labelled as unproven.
+
+**`_sideOf` is correctly left as a latent case, commented at the exact day it would bite.** **Lens was correctly confirmed out of scope by reading all four of its files.** **Keeping a filter at each call site rather than inventing a universal one follows this project's own convention.**
+
+### THE HENCHMAN PROOF -- GOOD, WITH ONE HONEST HOLE
+
+**Three real leave-session / Load Game cycles, not three bare `_open` calls.** **Site 3 was mutation-checked and fails as it should.** **Site 2 was mutation-checked and fails nothing, which proves it has no coverage.** **"Same one-line wrapper" is a reason to expect sites 1, 4 and 5 are fine. It is not proof, as Coder rightly said.** **All four get a test that fails when the wrapper is stripped. They don't need live play; a test that reaches each site is enough.** **The format-1 path gets a synthetic fixture. The format is known, so "no real save on disk" doesn't stop us proving it.**
+
+### THE ARROWS -- RIGHT PLACE, ONE REGRESSION
+
+**Moving them onto `LBL_BAR5`'s band below Switch Weapons, per the real GFF, fixes a guess.** **Putting them inside `_latticePane` so they hide in item view for free is clean.** **Relying on the integration test for the companion-present half, rather than console-cheating a companion into the owner's save, is the right risk call.** **"Equip", resolved from strref 31387, is correct.**
+
+⚠⚠ **But the pane now scrolls.** **PT-2694 fixed exactly this: K2's Equip fits in one view, and the 54→23 rescale was what made ours fit.** **Calling it the synthetic-scroll issue explains why the manual check couldn't reach the arrows. It doesn't explain why there's anything to scroll to. That's a layout defect, and it's fixed first.**
+
+### THE READOUT RESEARCH -- REAL, AND TWO CORRECTIONS
+
+**`LBL_TOHIT`/`LBL_DAMAGE` are the Config 1 / Config 2 labels, not numbers.** **`ATKL`/`ATKR` are literal, with the real to-hit values on Config 1's row only.** **Both were caught before they became code.** **Recording every absolute coordinate in the agenda means the layout pass starts from ground truth.**
+
+### ⚠ TIME IS NOT A WALL
+
+**"Reporting at a wall" was used here for "the rest didn't fit in this pass".** **This pass also closed real, valuable work, so this isn't a criticism of the pass itself.** **But the wall exception is reserved for things only the owner can unblock.** **From here: keep going through the list and report when Equip passes, or at a real wall.**
+
+### RULED
+
+**Sweep accepted.** **Three defects fixed, `listFor` owed a synthetic-fixture proof, and sites 1, 2, 4 and 5 owed tests that fail on stripping.** **Arrows accepted in their GFF position.** **The pane-scroll regression is opened and fixed first.** **Readout layout next, then Terminal/Store, then the rest.** **Loop until 1:1.** **Remaining work is not a wall.**
+
+### PROCEED
+
+As listed, straight through. Report back when Equip passes, or at a real wall.

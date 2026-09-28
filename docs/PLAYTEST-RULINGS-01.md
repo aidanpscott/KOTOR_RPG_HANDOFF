@@ -80567,3 +80567,69 @@ Readout accepted. PT-2688 is accepted pending the live starting-gear proof, and 
 ### PROCEED
 
 As listed. Report back when Equip passes, or at a real wall.
+
+---
+
+## PT-2703 -- OWNER OPENS A REAL NEW ITEM: LANGUAGES IN DIALOGUE. EVERY PARTICIPANT's LANGUAGES DECIDE WHO UNDERSTANDS EACH LINE, AND A PLAYER WHO DOESN't UNDERSTAND NEEDS A DEFINED EXPERIENCE -- WHAT THEY SEE, AND WHAT THEY CAN SAY. ⚠⚠ CHECKED FIRST: HALF OF THIS EXISTS. CHARACTERS ALREADY HAVE LANGUAGES (SPECIES-DERIVED, INT BONUS, DROID BANKS, AND A REAL SPEAK/UNDERSTAND SPLIT), AND PT-2633 ALREADY LEANS ON "SHARES A LANGUAGE". ⚠⚠⚠ THE MISSING HALF IS THE DIALOGUE SIDE: NO LINE CARRIES A LANGUAGE, SO NOTHING CAN CHECK IT
+
+**Real scope, and a foundation for the dialogue work already queued.**
+
+### WHAT ALREADY EXISTS
+
+**`SPECIES-MASTER §3` gives every species its languages. PT-1169 moved Known Languages onto the Stats page, so player and companion both carry it.** **`SPECIES-CHAPTER-v2` adds Intelligence-bonus languages and rules droids at five, with Basic and Binary fixed.** **It also separates understanding from speaking. An astromech understands, but speaks only Binary without `Synthesised Voice`.** **Subrace dialects are mutually intelligible.** **`CHARACTER-RECORD-01` has the field.** **The character side is designed. Whether all of it is built, including the Intelligence-bonus choice at chargen, is part of the research.**
+
+### WHAT DOESN'T
+
+**The dialogue format has no concept of language. A line can't say it's Huttese, and a conversation doesn't list who's in it for comprehension.** **So PT-2633's "a companion who shares a language can comment" has nothing to check against.** **This item builds the thing PT-2633 assumed.**
+
+### THE DECISION IT NEEDS
+
+**What does a player who doesn't understand a line see, and what can they say back?** **KOTOR's own answer, to be confirmed in the real `.dlg` files, is to show the alien speech and subtitle it, and sometimes to use a companion as interpreter. HK-47 with the Tusken Raiders is the K1 case.** **Our options include:**
+- showing the line untranslated, with its language named;
+- a companion relaying it;
+- a roll to catch the gist;
+- limiting replies to languages the player speaks, or to gestures.
+
+**In multiplayer, each player reads the conversation through their own character.** **The owner picks. Research comes first, then a proposal.**
+
+### RULED
+
+**Opened. Research, then a proposal with the non-speaker options laid out for the owner. Queued behind Equip. Tied to PT-2633.**
+
+### PROCEED
+
+Record it in the agenda. Don't start it until Equip passes. Continue PT-2702.
+
+---
+
+## PT-2704 -- DUAL-WIELDING (§7) NOW REAL IN THE FIGHT, THE OFF-HAND READOUT WIRED, CONFIG 2's ICONS ALIGNED, PT-2688 AND PT-2683 CLOSED. ⚠⚠⚠ BUT THE UNARMED FIX WENT AROUND THE REAL DEFECT INSTEAD OF THROUGH IT: IT FOUND THAT NO CLASS-GRANTED FEAT EVER REACHES ANY CHARACTER, THEN PATCHED ONE FEAT BY READING LEVEL -- AND UNARMED SPECIALIST IS CLASS-GRANTED (BRAWLER AND THE FORCE CLASSES), NOT UNIVERSAL. REVERT IT, BUILD THE GRANT PIPELINE. ⚠⚠ AND THE RULES HAVE NO PLAYER-ONLY EXCEPTION: ENEMIES AND COMPANIONS DUAL-WIELD AND PUNCH BY THE SAME RULES
+
+**Real progress on §7. A real discovery on grants. A wrong fix sitting on top of it.**
+
+### WHAT CLOSED
+
+**§7 dual-wielding reached the real fight and the off-hand readout reads it, so Equip and combat still share one set of numbers.** **PT-2688's starting gear and PT-2683's Defence mismatch closed together, as expected, since both had the same "will not open" root.** **§7.4's one-hand vs two-hand exclusivity was confirmed at the data layer.**
+
+### ⚠⚠⚠ THE GRANT PIPELINE -- THE REAL FINDING
+
+**`FeatRecord.granted` has exactly one caller, a chargen display count. Nothing ever adds a granted feat to a character.** **Per `CHARACTER-RECORD-01`, granted feats are the class schedule's automatic feats.** **So every class feature delivered as a granted feat has never been applied to anyone.** **That is the finding of this pass, bigger than unarmed damage, and it gets a census before anyone guesses at its size.**
+
+### ⚠⚠⚠ THE SHORTCUT -- WHY IT'S REVERTED
+
+**"ATTACKS-07 states no class restriction" is true of ATTACKS-07. But ATTACKS-07 says damage is "set by `Unarmed Specialist`" and "without that feat, 1d3."** **The feat's own entry says granted, and `FEATS-LIBRARY-01`'s gate note puts it in the Brawler and the Force classes.** **Reading level instead turns a class feature into a universal one, and every character at level 30 punches for 8d4.** **It's also a second path to the same number: the special-cased rule this project's "effects, not special cases" principle forbids.** **Declining to build the pipeline because the slice "didn't ask for it" was a scoping instinct in the wrong place. When the correct fix is the pipeline, the pipeline is the slice.**
+
+### ⚠⚠ ONE RULEBOOK FOR EVERY COMBATANT
+
+**Dual-wielding and unarmed damage were both scoped to the player, with the enemy and companion paths "flagged, not fixed."** **An enemy with two vibroblades gets neither the extra swing nor the penalty. An enemy brawler hits for 1d3 at any level.** **Nothing in §7 or ATTACKS-07 exempts non-players. Wire them in.**
+
+### ICONS -- THE GAP IS STILL THERE
+
+**The inset matched the border stroke, but the owner still sees a gap. That points at transparent margin inside the icon PNGs themselves.** **Size to the art's alpha bounds, not the file's canvas, and prove it by sampling pixels.**
+
+### RULED
+
+**§7, PT-2688 and PT-2683: accepted.** **The Unarmed Specialist level read is reverted.** **Granted-feat pipeline opened as SEVERE: census, build, test, before continuing Equip.** **Enemy and companion strike paths follow the same rules.** **Icons touch the inner edge with no gap, proven by pixel sampling.** **Then Config 2, the save wall, and the rest. Loop until 1:1.**
+
+### PROCEED
+
+As listed. Report back when Equip passes, or at a real wall.

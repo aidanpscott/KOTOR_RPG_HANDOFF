@@ -80397,3 +80397,29 @@ As listed. Report back when it passes, or at a wall.
 ### PROCEED
 
 As listed. Report back when it passes, or at a wall.
+
+## PT-2697 -- EQUIP'S PARTY ARROWS BUILT AND PROVEN THROUGH THE REAL BOARD, MUTATION-KILLED. ⚠⚠ TWO REAL CATCHES ON THE WAY: THE WHOLE `shell/` ASSET FOLDER WAS NEVER DECLARED IN `pubspec.yaml` (A SILENT 404 IN ANY RELEASE BUILD), AND A HEIGHT-ONLY `Image.asset` THAT BLEW THE TITLE ROW OUT BY 1157px. ⚠⚠⚠ AND THE HENCHMAN-CORRUPTION CLOSE (PT-2693) IS RECORDED: NOT THE AREA, BUT `replay()` WITH NO SUBJECT FILTER AT FIVE CALL SITES -- THE THIRD INSTANCE OF THE SAME DEFECT SHAPE AFTER PT-2687/PT-2690. THREE IS A PATTERN, NOT A COINCIDENCE: SWEEP FOR ALL OF THEM
+
+**A clean slice, well proven.** **The bigger news is the one that came in beside it.**
+
+### THE ARROWS -- WELL BUILT, WELL PROVEN
+
+**Null callbacks draw nothing, per PT-1380's no-dead-controls rule.** **A solo player sees no arrows.** **`_adjacentParty` reads the sidebar's own ordered roster and wraps around.** **The integration test runs through the real board and reads the subject off `noGearBecause`'s own text, rather than asserting that some state changed.** **Forcing `_adjacentParty` to return null and watching that test fail shows the test is watching the real wiring.** **Position and visibility still need checking against K2 before commit: "flanking the title" and "hidden once a list opens" are reasonable, but they're choices until K2 confirms them.**
+
+### ⚠⚠ THE TWO CATCHES
+
+**`shell/` missing from `pubspec.yaml`: the art existed and debug builds may have found it, but a release build would 404 silently and draw nothing.** **It was caught while wiring, not after shipping.** **Check whether anything else already extracted is undeclared.** **The 1157px blowout: a height-only image in a `Row` has no aspect anchor.** **Fixed with the same width, height and `BoxFit.contain` pattern the DEF icons use.**
+
+### ⚠⚠⚠ THE HENCHMAN CLOSE -- RIGHT, AND A PATTERN
+
+**PT-2693 suspected the Tester package's area script.** **The real cause: `replay()` folded a henchman's `class-added` and `levelled` events into the player's record on every load, for any save that had ever recruited a companion.** **The fix filters `playerLog` at all five `replay()` sites.** **Finding the real mechanism rather than the first suspect is exactly right.**
+
+**This was moved to CLOSED in the agenda without a ruling or an in-play proof on record.** **It gets both here.** **And it is the third time.** **PT-2687 was `_classesNow`, PT-2690 found its sibling, and now `replay()`.** **Each fix has been local.** **The shape is not: any fold over a per-subject event kind that forgets the subject.** **One sweep across the app, Lodestar and Lens closes the class, not just this instance.** **One test that fails if a companion's event ever reaches the player's projection keeps it closed.**
+
+### RULED
+
+**Arrows approved, pending the K2 position and visibility check.** **Then commit.** **Undeclared assets: check the rest.** **Henchman close accepted.** **The in-play re-open proof and a mutation check are owed.** **Subject-filter sweep opened across all three repos.** **Commit closed items without waiting for a word.** **Next on Equip: the readouts placed relative to the icons, then the Terminal/Store re-verification, then the rest of the list.** **Loop until 1:1.**
+
+### PROCEED
+
+As listed. Report back when Equip passes, or at a wall.

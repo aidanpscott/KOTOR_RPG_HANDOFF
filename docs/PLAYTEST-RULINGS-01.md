@@ -80511,3 +80511,27 @@ Slice accepted. Arrows removed; PT-2697 superseded on that point. Icons fill to 
 ### PROCEED
 
 As listed. Report back when Equip passes, or at a real wall.
+
+## PT-2701 -- OWNER OPENS A REAL NEW ITEM: EXTRACT THE REAL ICON FOR EVERY ITEM IN BOTH GAMES, SO EVERY MENU SHOWS THE ITEM's OWN ART. ⚠⚠ NOT FRESH SCOPE -- EQUIP ALREADY OWES PER-ITEM ICONS IN ITS GRID (PT-2695), AND INVENTORY, STORE AND CONTAINERS NEED THE SAME THING. ⚠⚠⚠ AND IT LANDS ON AN OPEN DECISION: PT-1350/PT-1351 SAY WHAT SHIPS IS OURS AND GAME ART IS EXTRACTED FROM THE PLAYER's OWN COPY, WITH THE LINE BETWEEN THE TWO NOT YET DRAWN
+
+**Real, broad, and the natural next asset pass after the UI chrome.**
+
+### WHY IT BELONGS NOW
+
+**Every screen this pass has matched shows items as text or as a generic slot glyph.** **K2 shows each item's own picture.** **That's most of what makes an inventory feel like KOTOR.** **Equip's per-item icons are one slice of this.** **Doing it once for the whole catalogue is cheaper than doing it screen by screen.**
+
+### WHAT HAS TO BE ANSWERED FIRST
+
+**How the game names each item's icon.** **It's built from the base item class and the model variation, so it has to be confirmed against real items, not assumed.** **Where the textures live.** **A census by game: what resolves, what doesn't, and why.** **K2 wins where both games have the item (PT-2184).** **Items with no real icon get a placeholder that's visibly a placeholder (PT-1157), never a borrowed icon that happens to look right.** **Every extraction goes through the orientation-fixed `tpc.py`.**
+
+### ⚠⚠⚠ THE DECISION IT TOUCHES
+
+**PT-1350: the product must stand alone, and game art is offered by extraction from the user's install.** **PT-1351: which assets we make and which are extracted is not decided yet.** **Item icons are a large, visible bucket: several hundred images.** **The proposal must state which bucket they fall in, and what someone without the games sees.** **That's the owner's call, and this item will probably force it.**
+
+### RULED
+
+Opened. Research and a full census first, then a proposal. Queued behind Equip.
+
+### PROCEED
+
+Record it in the agenda. Don't start it until Equip passes. Continue PT-2700.

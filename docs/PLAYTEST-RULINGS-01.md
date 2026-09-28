@@ -80356,3 +80356,44 @@ Widen the list, build, loop until 1:1. Report back with the final pair.
 ### PROCEED
 
 As listed. Report back when it passes, or at a wall.
+
+## PT-2696 -- EQUIP SLICE SIGNED OFF, COMMIT IT. ⚠⚠⚠ A PROJECT-WIDE DEFECT FOUND AT THE SOURCE: `tpc.py` NEVER FLIPPED TPC's BOTTOM-UP ROWS, ON EITHER DECODE PATH -- EVERY TEXTURE FIVE EXTRACTORS EVER PRODUCED WAS STORED UPSIDE DOWN, FIXED ONCE AND RE-EXTRACTED. ⚠⚠⚠ WHICH MEANS TERMINAL's AND STORE's EARLIER "EXACT MATCH" CLOSES NEED RE-VERIFYING. TWO MORE REAL ICON ERRORS FOUND BY BYTE COMPARISON, ONE OVERTURNING PT-2691. NEXT: THE READOUTS AND THEIR ART, POSITIONED EXACTLY RELATIVE TO THE ICONS
+
+**A strong slice. The orientation root cause is the most consequential find of the Equip thread.**
+
+### ⚠⚠⚠ THE FLIP -- FIXED AT THE SOURCE
+
+**Tracing two upside-down elements back to `tpc.py`, finding that neither decode path handled TPC's bottom-up row order, and fixing it once instead of flipping widgets is exactly right.** **Re-extracting everything that goes through it covers Equip, Terminal, Store and the shell frame.** **But it reaches backwards.** **Any asymmetric texture on a screen this project already closed as an exact match was upside down when it was verified.** **Either those checks couldn't see orientation, or those textures were symmetric. The re-verification settles which, screen by screen.** **If an earlier close was wrong, say so plainly.**
+
+### THE ICON CORRECTIONS -- REAL, AND ONE OVERTURNS PT-2691
+
+**`idimplant` is not shared. `iimplant` is organic's own, visually distinct icon.** **PT-2691 credited `idimplant` as "a genuine, confirmed exception" on the reasoning that an implant is the same tech either way. That reasoning was never checked in isolation, and it was wrong. Corrected here.** **The organic arm slots used `ihand_l/r`. Those are byte-identical to `iweap_l`: a deliberate game-data duplicate for the weapon-config cycling icon, not arm art. The real resref is `iforearm_l/r`.** **Both were found by byte and pixel comparison, not by resemblance. That is the method.**
+
+### THE SAVE -- DONE RIGHT
+
+**Original backed up untouched. A copy stocked through KSE, after fixing two real KSE path bugs: the Aspyr `steamassets/` location, and KSE ignoring its own `K2_SavePath`.** **Loads with a populated list.** **Record it so Tester can use the same save.**
+
+### ALIGNMENT -- ROOT CAUSE, NOT A NUDGE
+
+**The Belt/DEF misalignment was a `Stack` sized to its own content instead of the pane's width. Fixed by sharing the full-width `Stack` that Head, Body and Boots already use.** **That's a structural fix, not a pixel nudge.** **The three-column layout, with Head and Belt alone on their rows, is the owner's direct instruction to Coder and stands as ruled.**
+
+### NEXT -- THE READOUTS, RELATIVE TO THE ICONS
+
+**The icons are close. What's left is everything placed around them:**
+- Attack Modifier and Damage.
+- ATKL and ATKR.
+- The Config labels.
+- DEF and its badge.
+- The weapon panel.
+- Switch Weapons.
+- The white alpha-mask art in the band below Belt.
+
+**K2 puts that band directly beneath Belt. Ours inserts Boots there, so the band follows Boots and sits between Boots and the weapon block.** **Every one of these is positioned as an offset from its neighbouring icons in K2, scaled to our canvas, and then measured.**
+
+### RULED
+
+**Slice signed off. Commit and push now.** **The `tpc.py` flip is fixed project-wide. Every changed asset's screen gets re-verified, and earlier closes are corrected if wrong.** **PT-2691's shared-`idimplant` claim is withdrawn: `iimplant` for organic, `idimplant` for droid.** **Organic arms use `iforearm_l/r`.** **The readouts and band art are placed by measured offset from the icons, and the band sits below Boots.** **The rest of PT-2695's list continues. Loop until 1:1.**
+
+### PROCEED
+
+As listed. Report back when it passes, or at a wall.

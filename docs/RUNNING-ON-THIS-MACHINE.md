@@ -1,165 +1,129 @@
-# KOTOR RPG — where everything is, and how to run it
+# Running on this machine — separate directories, per agent
 
-**Everything is already on this machine.** Nothing needed cloning; the six
-repositories below were cloned here as the work was done, and they all point at
-`github.com/aidanpscott`.
+This machine runs more than one agent against this app at once — Coder and
+Tester, and possibly others later. `PT-2692` opens this as a real item: the
+two were sharing one save/package directory, and a save that was good
+minutes earlier kept coming back unreadable ("class levels add to N and the
+character is level M"). Two agents writing to the same files is the cause,
+not a defect in either agent's own work.
 
-    /mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT   ⚠ the real path
-    /home/aidan/kotor-repos      the same folder under an obvious name (a symlink)
+## The mechanism
 
-**⚠ It lives under a Steam library on purpose — the owner wanted it where the
-games are.** `~/kotor-repos` is the stable name: it survived the move from
-`/home/aidan/step1`, and every instruction below uses it rather than the real
-path so that the next move costs one symlink.
+`Locations.desktop()` (`Lodestar/lib/src/locations.dart`) derives a single
+shared root on Linux: `$XDG_DATA_HOME/kotor-rpg` if `XDG_DATA_HOME` is set
+and non-empty, otherwise `$HOME/.local/share/kotor-rpg`. Everything —
+`packages/`, `saves/`, `console/` — lives under that one root. Setting
+`XDG_DATA_HOME` before launch is the whole mechanism; no code change is
+needed.
 
-**⚠ Packages and saves do NOT live here.** They are at
-`~/.local/share/kotor-rpg/` and are derived from `XDG_DATA_HOME`/`$HOME`, never
-from the repo location — `Lodestar/lib/src/locations.dart`. Moving the code
-does not move the data, which is the intended behaviour.
+⚠⚠⚠ **THE ONE THING THAT WILL TRIP YOU UP**: `XDG_DATA_HOME` is *not* the
+app's own directory — it's the general data home, and the app appends its
+own `kotor-rpg` folder beneath whatever you point it at. Set
+`XDG_DATA_HOME=~/.local/share/coder-data` and the app's real content lands at
+`~/.local/share/coder-data/kotor-rpg/`, **not**
+`~/.local/share/coder-data/` itself. Pointing `XDG_DATA_HOME` straight at
+what you think is the final folder (e.g. naming it
+`~/.local/share/kotor-rpg-coder` and expecting packages there directly) puts
+the app one level too deep, looking at a folder that was never populated —
+it shows "no packages installed" with no error, because an empty directory
+and a wrong directory look identical to `PackageLibrary.list()`. Found this
+the hard way while setting this up; costs nothing once you know the extra
+segment is coming.
 
----
+## Coder's own directory
 
-## The six
+```
+XDG_DATA_HOME=~/.local/share/coder-data
+```
 
-| folder | repo | what it is |
-|---|---|---|
-| `Lodestar/` | `aidanpscott/Lodestar` | **the engine.** Every format reader, the ledger, combat, projections. No UI. |
-| `Lens/` | `aidanpscott/Lens` | **the shared draw layer.** The board, drawn once for both programs. |
-| `Loom/` | `aidanpscott/Loom` | **the Builder.** Makes packages. |
-| `KOTOR-RPG-APP/` | `aidanpscott/KOTOR-RPG-APP` | **the play client.** |
-| `MAIN_WORK/` | `KOTOR_RPG_MAIN_WORK` | **the design corpus** — `design/`, `rules/`, `playtest/`, `scripts/`. |
-| `HANDOFF/` | `KOTOR_RPG_HANDOFF` | **what you read** — `BUILD/`, `STUDY/`, `docs/`, `BUILD/screens/`. |
+Real content at `~/.local/share/coder-data/kotor-rpg/{packages,saves,console}`.
+`packages/` was seeded with a full copy of the existing shared shelf
+(`~/.local/share/kotor-rpg/packages`) — a copy, not a symlink, so a write
+under `packages/` (rare, but possible) can't reintroduce the exact
+cross-contamination this split exists to remove. Re-sync manually if the
+shelf gains new content Coder needs and hasn't picked up.
 
-**⚠ All six are in one tree.** `MAIN_WORK` and `HANDOFF` are not somewhere else.
+Launch:
 
-**The other things in this folder are working files, not repositories:** 86 loose
-`.png` captures from earlier passes, and `extract/` from the data extraction.
+```
+XDG_DATA_HOME=~/.local/share/coder-data ./scripts/run.sh debug
+```
 
----
+## Tester's own directory
 
-## Running them
+Tester should use its own distinct value — not Coder's, and not left unset
+(unset resolves to `~/.local/share/kotor-rpg`, the original shared
+location, which is exactly what this split is meant to end). Something like:
 
-    cd ~/kotor-repos
-    ./run-app.sh      the play client
-    ./run-loom.sh     the Builder
+```
+XDG_DATA_HOME=~/.local/share/tester-data
+```
 
-**⚠⚠ THEY ALWAYS BUILD, AND THE VERSION THAT DID NOT FAKED A PASS.** Until
-`PT-1448` both scripts read `[ -x <binary> ] || flutter build linux --debug` —
-build only when the binary is **missing**. An edited source with a built binary
-therefore ran the **old code and said nothing**, and `Tester` caught it live:
-the bundle was 21:31 while the two files carrying the save work were 22:10 and
-22:11. **Following the instructions literally would have confirmed six fixes
-against a build containing none of them.**
+with `packages/` seeded the same way (a full copy of the shared shelf into
+`~/.local/share/tester-data/kotor-rpg/packages/`), then:
 
-**⚠ The conditional was buying 3.4 seconds** — the measured cost of a no-op
-build on this machine; a build with real changes is ~7s. A cleverer staleness
-check is just a second thing that can be wrong, and `flutter build` already
-knows what is stale.
+```
+XDG_DATA_HOME=~/.local/share/tester-data ./scripts/run.sh debug
+```
 
-**First run takes a minute or two; after that it is a few seconds.**
+## Proof this actually works
 
-**⚠ WHY THERE IS A SCRIPT RATHER THAN A COMMAND.** Flutter, CMake, Ninja and
-Clang are installed under `~/spike`, **not on the system PATH**, and CMake needs
-a library from the same place. Run `flutter build linux` without that
-environment and it stops with **"CMake is required for Linux development"** —
-which is misleading, because it is installed. `env.sh` sets that up and the
-scripts source it.
+Two concurrent instances, one per directory above, each taken through a
+real chargen and into a real area (which is when the app writes its first
+save). Confirmed directly on-disk after both writes landed:
 
-**⚠⚠ AND `env.sh` ALSO MAKES A `clang` SYMLINK, WHICH IS NOT OPTIONAL.** Clang
-is installed as `clang-19` with **no plain `clang`** on the PATH, and CMake
-looks for `clang`/`clang++`. Builds before 2026-09-08 only worked because CMake
-had **cached** the compiler from an earlier run — delete `build/linux` and the
-next build fails with *"CMAKE_CXX_COMPILER not set, after EnableLanguage"*,
-which names the compiler and **not the missing symlink**. `env.sh` creates
-`~/spike/shim/clang` and `clang++` and puts that directory first on the PATH.
-**This was one wipe away from not building at all and nothing would have said
-why**, so it is recorded here and not only in a comment.
+- Coder's save (`kaeda-lhent.sav`) existed only under
+  `~/.local/share/coder-data/kotor-rpg/saves/` — absent from the shared
+  directory, whose file count was unchanged by it.
+- The shared directory's own save from that same run (`garon-tarkis.sav`,
+  written by the instance simulating Tester's unset-`XDG_DATA_HOME`
+  default) landed only there, absent from Coder's directory.
 
-**To develop rather than just run** — hot reload, from either repo:
+Both processes stayed alive throughout, confirmed by PID
+(`ps -p <pid>` and `/proc/<pid>/environ` showing the intended
+`XDG_DATA_HOME` each). Neither run touched the other's files.
 
-    cd ~/kotor-repos && . ./env.sh
-    cd Loom            # or KOTOR-RPG-APP
-    flutter run -d linux
+## If you're setting this up fresh
 
-**To run the tests:**
+1. `mkdir -p ~/.local/share/<name>-data/kotor-rpg`
+2. `cp -r ~/.local/share/kotor-rpg/packages ~/.local/share/<name>-data/kotor-rpg/packages`
+3. `mkdir -p ~/.local/share/<name>-data/kotor-rpg/saves ~/.local/share/<name>-data/kotor-rpg/console`
+4. Launch with `XDG_DATA_HOME=~/.local/share/<name>-data` set.
+5. First launch shows the "Welcome" import screen (a fresh root has never
+   seen it) — click "Continue without it." This is expected once, not a
+   sign anything is wrong.
 
-    cd ~/kotor-repos && . ./env.sh
-    cd Lodestar && dart test          # 270
-    cd ../KOTOR-RPG-APP && flutter test   # 206
-    cd ../Loom && flutter test            # 111
-    cd ../Lens && flutter test            # 4
+## The stocked real-K2 save, for Equip 1:1 comparisons — `PT-2695`/`PT-2696`
 
----
+This is about the OWNER's real Knights of the Old Republic II install, not
+this app — needed for screenshot-comparing our Equip screen against K2's
+real one with the same character and gear on both sides, so use it whenever
+you need a K2-side reference for that work.
 
-## ⚠ Where the packages are
+- **Location:** `~/.local/share/aspyr-media/kotor2/saves/000003 - stocked`.
+  Loads in K2's own Load Game browser with a populated item list. The
+  owner's real save (`000001 - autosave`) was backed up untouched before any
+  of this; only this copy was ever written to.
+- **Why it exists:** the first comparison pass used two characters with
+  different gear — not a real pair — so nothing about the item list, a
+  filled slot, or a weapon row was actually comparable. This save fixes
+  that: same character, real varied inventory, several items per slot type.
 
-    ~/.local/share/kotor-rpg/packages/
-        base-rules/          the rules the game ships with
-        endar-spire/         the two-area test bed
-        taris-undercity/     a second package
+### KSE (KOTOR Savegame Editor) — two real bugs in the tool itself
 
-    ~/.local/share/kotor-rpg/saves/     save files
-    ~/.local/share/kotor-rpg/console/   which screen you were last on
+Used to stock the save above. Both bugs are in KSE's own bundled Perl, not
+in anything this project owns — recorded here because anyone stocking a
+save again will hit both.
 
-**⚠ The folder is named for the PRODUCT, not for either program** — `PT-1382`.
-Loom writes there and the app reads there; **verified on this machine**, both
-resolving `/home/aidan/.local/share/kotor-rpg/packages` and seeing all three.
-
-**Open that folder and you will see directories, not archives.** A package is a
-folder of TOML files — `PACKAGE-FORMAT-01 §2`: *"`git diff` works. A modder can
-look."*
-
----
-
-## What works today
-
-**Loom — you can author:**
-
-- a **package** (New package), and its properties: authors, summary, cover,
-  requires, continues, entry area
-- an **area**: a grid, tiles painted square by square, doorways and arrival
-  points placed on the grid
-- a **creature**: name, class, level, abilities, hit die, protection,
-  equipment, a conversation and a doctrine
-- a **placement** — a creature put on a square
-- a **conversation**: lines, replies, links, gates, effects — from nothing
-- a **doctrine**: a goal, a break-off rule, exclusions and preferences
-
-**The play client — you can:**
-
-- open **Console Home**, import a package, pick one
-- run **all nine character-generation steps**, for an organic or a droid
-- **save and load**, and continue where you left off
-- **walk** a grid and travel between two areas through a door
-- **talk** to a creature that has a conversation — options, checks, a typed box
-- **fight** — initiative, turns, damage, dying, and a wound that survives
-  leaving the room
-
----
-
-## ⚠ What is scaffolding, so you are not surprised
-
-**These look like defects and are placeholders with a reason.**
-
-| what you will see | why |
-|---|---|
-| **the player is a circle, enemies are dots** | `PT-1319` ruled a character is a portrait and nothing animates; **no portrait art exists yet.** |
-| **the board is flat colour with thin lines** | `AREA-FORMAT-01 §2b`'s untextured default. **No tileset art exists.** It is a preference, not a missing file. |
-| **you punch** | nothing resolves equipment in play yet. The trooper *carries* a blaster rifle in its blueprint; `strike()` still uses a fist. |
-| **the trooper talks before it shoots** | it is the only creature in the bed, and its conversation ends in a fight when you push it. |
-| **`[Bribe · 50 credits]` always shows** | nothing projects a purse; the credits are a named placeholder constant. |
-| **50 credits does not leave your pocket** | the effect is written to the log and nothing spends it yet. |
-| **conversations look plain** | `UI-STYLE-VALUES-01 §7`'s sizes are re-derived against a real viewport now — **but nothing has been designed.** Typography, palette and framing are all untouched. |
-| **`conversati…` in Loom's tree** | the pane is narrower than the word. |
-| **Loom's palette cuts off** | it lists ten blueprint kinds and fits about nine. |
-
----
-
-## Where to read
-
-**`HANDOFF/BUILD/`** — one numbered note per slice, newest last.
-**`HANDOFF/BUILD/screens/`** — every capture.
-**`HANDOFF/docs/`** — the format documents: `PACKAGE-FORMAT-01`,
-`AREA-FORMAT-01`, `DIALOGUE-FORMAT-01`, `DOCTRINE-FORMAT-01` and the rest.
-**`HANDOFF/STUDY/`** — the source studies, `01` to `18`.
-**`MAIN_WORK/playtest/PLAYTEST-RULINGS-01.md`** — every `PT-` ruling.
+- **`K2_Path` in `kse.ini`** must point at `.../Knights of the Old Republic
+  II/steamassets`, not the bare game root. This Steam/Aspyr port keeps
+  `chitin.key` and `data/2da.bif` under `steamassets/`; pointed at the bare
+  root, KSE's `Generate_Master_Item_List` crashes (`Can't call method
+  "get_resource" on an undefined value`) because its own `Bioware::BIF->new`
+  never finds them.
+- **KSE ignores its own ini's `K2_SavePath` entirely.** Its save-directory
+  detection always re-derives `<K2_Path>/saves` (or `/Saves`, or an AppData
+  fallback) on every launch, confirmed by reading KSE's own extracted Perl
+  source (`unzip -o KSE_337.exe "script/*"`). A save KSE needs to see has to
+  physically exist under `<K2_Path>/steamassets/saves/<slotname>/` — the ini
+  value does nothing.

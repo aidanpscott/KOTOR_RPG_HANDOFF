@@ -80535,3 +80535,35 @@ Opened. Research and a full census first, then a proposal. Queued behind Equip.
 ### PROCEED
 
 Record it in the agenda. Don't start it until Equip passes. Continue PT-2700.
+
+## PT-2702 -- EQUIP's REAL ATTACK AND DAMAGE VALUES LAND, READ FROM THE FIGHT's OWN TERMS -- NO SECOND FORMULA. ⚠⚠⚠ AND PT-2688 ROOT-CAUSED LIVE: ITEM BLUEPRINTS WERE ONLY EVER OPENED FROM THE STORY PACKAGE, NEVER BASE-RULES, SO A REAL EQUIPPED BLASTER RIFLE SILENTLY FOUGHT AS A 1d3 FIST. ⚠⚠⚠ BUT THE DISAGREEMENT TABLE MISREADS TWO OF ITS THREE ROWS: DUAL-WIELDING AND THE SECOND WEAPON CONFIG ARE NOT OWNER CALLS -- BOTH ARE ALREADY RULED (ACTION-ECONOMY-01 §7, EMBODIMENT-01), AND THE ENGINE NEVER BUILT EITHER. THE SAME "A RULE NOTHING CALLS IS NOT BUILT" GAP, SEEN FROM THE OTHER SIDE
+
+**Strong engineering. One wrong conclusion, and it's the important one.**
+
+### THE READOUT -- BUILT THE RIGHT WAY
+
+**`equipReadout` sums the exact `attackTerms`/`damageTerms` the fight builds, over the exact weapon `equippedFrom` resolves.** **The screen can't disagree with the attack, because it is the attack's own arithmetic.** **A target-conditional bonus is correctly left out when no target is selected.** **A null BAB is omitted, not zeroed.** **Checking K2's unarmed layout twice with a zoomed crop settled that K2 stacks both values on the main hand only.** **Icons now sit at the inner edge.** **The panel moved by the GFF's own 54px gap, which comes to one cell.** **Both were measured, not guessed.**
+
+### ⚠⚠⚠ PT-2688 -- FOUND BECAUSE THE READOUT WAS HONEST
+
+**The readout showed 1d3 for a real blaster rifle, and that led straight to the root cause.** **`equippedFrom`, `wornAt` and three sibling readers only ever opened blueprints inside the story package.** **The catalogue merged base-rules in; the item files never did.** **So any story package that didn't duplicate base-rules' own items fought with fists and wore nothing.** **It was silent and systemic, and reproduced on a second character.** **One shared fallback: the story package first, then base-rules, with a package's own override still winning.** **It's covered by four tests, including a genuinely missing path that still refuses honestly.** **The display-honesty rule just caught a combat defect.** **That is exactly why the screen reads the fight's numbers.** **The starting-gear path and PT-2683's matching error get proven before this closes.**
+
+### ⚠⚠⚠ THE TABLE -- TWO ROWS ARE RULED WORK, NOT OPEN QUESTIONS
+
+**Dual-wield: "no off-hand attack mechanic exists... owner call if this should be built."** **It is ruled.** **`ACTION-ECONOMY-01 §7` covers it completely: alternating hands, one added attack per declaration, the −4 / −3 / −2 / −1 penalty on every attack that round, each swing with its own weapon's dice, 1.5× Strength for two-handed weapons, and double-blades counting as two.** **What's missing is the engine.** **`strike()` resolves one weapon, so every dual-wielder has been fighting with one weapon and paying no penalty.** **Declining to invent a screen formula was right.** **Concluding the rule didn't exist was wrong.** **Check the corpus before calling something an owner call.**
+
+**Config 2: `EMBODIMENT-01` and PT-1252 rule two configurations, switchable in one action.** **It is unbuilt, not unruled.**
+
+**Unarmed: our 1d3 + Strength is ruled (`ATTACKS-07 §2`); it isn't an arbitrary constant.** **K2's 2–5 is K2's rule, and RCR plus our corpus govern.** **What needs checking is whether `Unarmed Specialist`'s scaling reaches the engine.**
+
+### THE SAVE-LIST WALL -- REAL, AND CHEAP TO BREAK
+
+**The stocked save loaded before, so its disappearance from the list is a clue, not bad luck.** **Check which save directory the game reads, the folder name, and `savenfo.res`.** **If that fails, the owner is at the machine and can load it with a real mouse.** **Leaving the console alone was right.**
+
+### RULED
+
+Readout accepted. PT-2688 is accepted pending the live starting-gear proof, and PT-2683 is checked against it. Dual-wielding (§7) opened as engine work: it's ruled, so build it. Config 2 and Switch Weapons opened: ruled, build them. Unarmed is ruled; confirm the feat scales. Save-list fixes are ordered, and owner hand-load is the fallback. Then the rest. Loop until 1:1.
+
+### PROCEED
+
+As listed. Report back when Equip passes, or at a real wall.

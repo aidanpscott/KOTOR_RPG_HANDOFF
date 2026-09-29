@@ -80773,3 +80773,39 @@ As listed. Report back when PT-2705 is done, or at a real wall.
 ### PROCEED
 
 As listed, after PT-2707's steps 1–2. Report back when the list is done, or at a real wall.
+
+## PT-2709 -- PT-2708 CLOSES: ONE "WHOSE EVENT" CONVENTION, SO THE PLAYER EARNS XP AND A COMPANION KEEPS ITS LEVEL; EQUIPPING, THE PAIRING REFUSAL AND SWITCH WEAPONS BUILT; STARTING INVENTORY DELIVERED; SKILL CHECKS ADD THEIR ABILITY; CRITICALS MULTIPLY THE WHOLE DAMAGE; DISMISSAL HOLDS; GRANTED FEATS MARKED. ⚠⚠⚠ AND THE STORE "LABELS" WERE NEVER LABELS: AFTER PT-2696 TURNED THE ART UPRIGHT, THE PAINTERS KEPT FLAGS WRITTEN FOR UPSIDE-DOWN ART, SO EVERY BOX DREW INSIDE OUT -- AND TERMINAL's AND STORE's EARLIER "EXACT MATCH" CLOSES WERE WRONG. ⚠⚠ SIX QUESTIONS FOR MAIN, AND THE FILES ANSWER FIVE
+
+**A full list closed in one pass, each item on `main` with its commit.**
+
+### THE CLOSES
+
+**`lib/whose_event.dart` is the convention PT-2708 asked for, written once.** **"Level Up offered at level 2 with 3000 XP" is correct, because level 3 costs 3000. Good that it was checked, not "fixed".** **The Computer Spike was already in the corpus, so it's not a gap.** **Every skill check now adds its key ability.** **Criticals multiply the whole damage.** **Dismissal holds across a reload.** **The level-up summary names the feat it grants.**
+
+### ⚠⚠⚠ THE STORE AND TERMINAL FRAMES
+
+**PT-2696 said the flip "reaches backwards" and asked whether earlier closes were wrong. They were.** **The painters compensated for art that used to be upside down. When the art came upright, the compensation turned every box inside out.** **The footer's top line crossed its labels, and Terminal's readouts were struck through.** **The new test reads rendered pixels. That's the check that would have caught it the first time.**
+
+### (10c) -- OPTION A
+
+**Starting on the one declared arrival is what an author means by declaring one. Refusing none-or-many is honest.** **Pinning the old tests keeps them testing what they test (walking), not where they happen to start.** **Endar Spire at `aft` matches TEST 142's expectation.**
+
+### THE QUESTIONS -- FIVE ANSWERED BY THE FILES
+
+- **Confirmation roll:** PT-6 stands. The contradiction was a later reading that never found it.
+- **Mine DC:** the mine's own tier DC (§2.1, `ITEMS-06`), not the skill total.
+- **Second weapon:** Config 2, which follows from two-handed rifles, the Two-Weapon Fighting "alternative" rule and the point of two configs.
+- **`startingWeaponMissing`:** one resolver.
+- **Rifle wield:** PT-1783 makes both variants of the Blaster Rifle.
+- **Scavenger:** a wrong resref behind a right name.
+- **Seeds:** PT-1423 already requires a recorded seed. Only the reload behaviour is new.
+
+**The rest (boots, four missing base types, and what "tier-1" and the category grants mean) goes to the owner as proposals.**
+
+### RULED
+
+**PT-2708 closed.** **Store and Terminal's earlier exact-match closes withdrawn; they're now fixed and pixel-tested.** **(10c) Option A.** **Confirmation roll built per PT-6 and cited in ATTACKS-01.** **Mine DCs per §2.1 and ITEMS-06.** **Second weapon in Config 2.** **One resolver for the starting-weapon check.** **Rifle wield class for Marksman and Sniper.** **Components resref corrected.** **Companion sheet fixed.** **A recorded seed per new game.** **Five owner proposals.** **Everything on `main`, with session branches deleted.**
+
+### PROCEED
+
+As listed. Report back when done, or at a real wall.

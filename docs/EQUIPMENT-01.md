@@ -813,7 +813,7 @@ on it.
 | Medpac | heal | amount | an ally within reach | `SKILL-RESOLUTION-01 §5.3` — Medicine spends one |
 | Adrenal | ability | ability · amount · rounds | yourself | — |
 | Shield generator | absorb | pool · kinds · vulnerable | yourself or an ally within reach | `ACTION-ECONOMY-01 §3` — *"using a consumable or activating a worn device, on yourself or an ally within reach"*; worn AND spent |
-| Charge | damage · damage_over_time · condition · ability_penalty | damage → amount · kinds · save · deploy · plus_vs_droid? ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? ; condition → condition · rounds · save · deploy ; ability_penalty → ability · amount · rounds · save · deploy | aimed at a target | thrown or placed, and the item says which — `deploy`; the placed half is `§5.2`'s Demolitions |
+| Charge | damage · damage_over_time · condition · ability_penalty | damage → amount · kinds · save · deploy · plus_vs_droid? · set_dc? ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? · set_dc? ; condition → condition · rounds · save · deploy · set_dc? ; ability_penalty → ability · amount · rounds · save · deploy · set_dc? | aimed at a target | thrown or placed, and the item says which — `deploy`; the placed half is `§5.2`'s Demolitions. ⚠ `set_dc` — a placed mine's tier DC (`PT-2709`): `SKILL-RESOLUTION-01 §2.1` *"setting a mine uses the tier DC; disabling adds +2; recovering adds +5"*, the tier being K1 `traps.2da`'s `setdc` for the mine's grade (MINOR 15 · AVERAGE 20 · DEADLY 25, `PT-654`'s K1 port). The mine's EFFECT keeps its own stated save. |
 | Rocket | damage · damage_over_time · condition | damage → amount · kinds · save · deploy ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? ; condition → condition · rounds · save · deploy | aimed at a target | ⚠⚠⚠ **CORRECTED AT `PT-2417`, AND IT WAS A CONTRADICTION NO BLUEPRINT COULD SATISFY.** This row admitted neither `deploy` nor the `damage` verb, so a faithful rocket stating `deploy = "thrown"` was refused by the schema, and one omitting it to satisfy the schema was discarded by the deployment filter before any rocket logic ran. **The shape is Charge's, which has been right all along** — minus `ability_penalty` and `plus_vs_droid?`, which no rocket states. `damage` joins `does` because `PT-2409` ruled a rocket's bare `Damage: X, N` a burst. REQUIRES A WRIST LAUNCHER, which is the gate that makes this its own row rather than a Charge. ACTION-ECONOMY-01 §6.2a: the launcher has no attack range at all — it is a launcher SLOT, not a fireable weapon, and the rocket carries the 24 m range and 20 m travel itself. Eleven items: the rockets and the darts. |
 
 **⚠⚠⚠ `deploy` IS ON ALL FOUR OF `Charge`'S VERBS, AND IT IS THE ONLY FIELD
@@ -1292,8 +1292,8 @@ they are — and not by matching text.
 | sonic-rifle | Sonic Rifle | Ranged | `Sonic_Rifle` |  |
 | blaster-carbine | Blaster Carbine | Ranged | `Blaster_Carbine` |  |
 | blaster-rifle | Blaster Rifle | Ranged | `Blaster_Rifle` |  |
-| marksman-rifle | Marksman Rifle | Ranged | **—** | AUTHORED. PT-1473 added it and the games have no such row. |
-| sniper-rifle | Sniper Rifle | Ranged | **—** | AUTHORED. PT-1786. |
+| marksman-rifle | Marksman Rifle | Ranged | **—** | AUTHORED. PT-1473 added it and the games have no such row. ⚠ Wield class: the Blaster Rifle's (`weaponwield` 5) — `PT-1783` makes it that rifle reworked, `PT-2709` item 6. |
+| sniper-rifle | Sniper Rifle | Ranged | **—** | AUTHORED. PT-1786. ⚠ Wield class: the Blaster Rifle's (`weaponwield` 5) — `PT-1783` makes it that rifle reworked, `PT-2709` item 6. |
 | repeating-blaster | Repeating Blaster | Ranged | `Repeating_Blaster` |  |
 | heavy-repeating-blaster | Heavy Repeating Blaster | Ranged | `Heavy_Repeating_Blaster` |  |
 | bowcaster | Bowcaster | Ranged | `Bowcaster` |  |

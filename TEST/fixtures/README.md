@@ -25,3 +25,9 @@ had no faults. Dialogues passed `openConversation()` and stores passed `openStor
 
 The id, name, 12×4 size, character classes and levels, Grunt's abilities, placement tags and the doctrine
 file are as recorded.
+
+## Added at cloud hand-back (2026-09-29)
+
+| package | status | what it's for |
+|---|---|---|
+| `tester-xp-bed-arena` | **Played live** (TEST 144 §§2–4) | `tester-xp-bed` plus a door at [5,1] into `a02-arena`, which holds one **Sparring Partner** (Soldier 1, `challenge = 1`, vitality 60, unarmed, Dex 3). The first kill in `a01-room` levels the party; the arena then gives a fight that lasts several rounds. That's what checking a companion's level **in combat**, dual-wield −4, the in-combat Equip refusal and Switch Weapons' action cost needs. Its own id, so it can sit on the Shelf beside `tester-xp-bed`. `a01-room` also gains a `back` arrival at [4,1] for the return door. Validated clean with Lodestar 7b6c97f `validatePackage`. |

@@ -1,0 +1,22 @@
+[area]
+name    = "Arena"
+size    = [8, 3]
+tag_seq = 2
+
+[tiles]
+default = "floor"
+
+[[arrivals]]
+name = "in"
+at   = [1, 1]
+
+[[connections]]
+tag   = "door.arena.01"
+at    = [0, 1]
+to    = "a01-room"
+lands = "back"
+
+[[contents]]
+tag  = "sparring.arena.02"
+from = "characters/sparring"
+at   = [5, 1]

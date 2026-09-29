@@ -1,0 +1,11 @@
+[package]
+id      = "tester-xp-bed-arena"
+name    = "Tester XP Bed + Arena"
+version = "1"
+summary = "tester-xp-bed plus a door at [5,1] to a02-arena, which holds one Sparring Partner (Soldier 1, challenge 1, 60 vitality, unarmed). One kill in a01-room levels the party; the arena then gives a fight that lasts several rounds (companion level in combat, dual-wield -4, in-combat Equip refusal, Switch Weapons cost). Used in TEST 144."
+authors = ["Tester"]
+[order]
+areas = ["a01-room", "a02-arena"]
+[entry]
+area = "a01-room"
+at   = "start"

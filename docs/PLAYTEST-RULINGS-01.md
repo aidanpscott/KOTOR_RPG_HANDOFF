@@ -80697,3 +80697,41 @@ As listed. Report back when Equip passes, or at a real wall.
 ### PROCEED
 
 Record it in the agenda and return to what you were doing. No interruption.
+
+---
+
+## PT-2707 -- CODER's FIRST CLOUD SESSION: THE ENVIRONMENT BUILDS, TESTS AND RUNS. LODESTAR 1839/1839, LENS 13/13, LOOM 430/430, APP 1774/1775, AND CHARGEN REACHED BY REAL CLICKS UNDER XVFB. ⚠⚠⚠ THE CRASH COST ALL SEVEN PT-2705 ITEMS -- NONE HAD REACHED GITHUB. ⚠⚠ AND IT EXPOSED WHAT ONLY EVER LIVED ON THE PC: A REGENERATED SHELF THAT WAS NEVER PUSHED, A `linux/` DIRECTORY NOBODY COMMITS, A RUN SCRIPT THAT DIES SILENTLY WITHOUT A PC-ONLY FILE, TESTS THAT PASS BY RETURNING EARLY OFF-MACHINE, AND TESTER's PURSE
+
+**Exactly the report a fresh environment needed: what works, what doesn't, and why, with nothing assumed.**
+
+### WHAT WORKS
+
+**Flutter 3.47.5 satisfies the app's `^3.13.2`, so no pin is needed.** **The private Lodestar and Lens git dependencies fetch through the proxy with no overrides.** **Every suite runs.** **Real clicks through Welcome → library → New Game → Species, using the PT-2687 input technique.** **Attaching the three repos the session was missing, rather than working without them, was right.**
+
+### ⚠⚠⚠ THE LOSS
+
+**The app's last push, `87fb906`, predates PT-2705. All seven items were confirmed still open by reading the code, not the agenda:**
+
+* `_upgraded` still writes `'upgrade'`;
+* no second-weapon write exists;
+* `fight.dart` still has `?? unarmed` twice;
+* the colliding ids and "selectable" values are still there;
+* the −6 text is still there.
+
+**Checking each against the code is exactly right. The agenda's own "not yet started" line would have been a claim.**
+
+### ⚠⚠ WHAT ONLY LIVED ON THE PC
+
+**Shelf's base-rules was regenerated on the PC and never pushed. That gap was invisible until a clean machine ran the suites. This is the "filed but not sent" failure, and it gets a guard, not just a push.** **`linux/` being gitignored means no clean clone can build. Why it's ignored gets found out before anyone changes it.** **`run.sh` exits 1 silently without `env.sh`.** **Two tests "pass" off-machine by returning early. They were correctly reported as a scoped negative, and a quiet early return must become a loud skip.** **`tester-purse` is gone, and Tester re-authors it.**
+
+### THE BRANCH
+
+**The one fix landed on a session branch, not `main`, so no other agent would ever see it. Everything lands on `main`, as before.**
+
+### RULED
+
+**Environment accepted.** **Merge to `main`, and all work lands on `main` from now on.** **Coder owns `Shelf`: regenerate, push, and guard against drift.** **`linux/`: investigate and propose.** **`run.sh` made robust.** **Machine-bound tests read real locations or skip loudly.** **`tester-purse`: Tester authors it, Coder commits it.** **Loom's pin bumped.** **Analyzer baseline recorded.** **Setup-script text delivered.** **Then all seven PT-2705 items, in order.**
+
+### PROCEED
+
+As listed. Report back when PT-2705 is done, or at a real wall.

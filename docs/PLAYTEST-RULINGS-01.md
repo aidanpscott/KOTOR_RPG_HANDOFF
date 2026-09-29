@@ -80735,3 +80735,41 @@ Record it in the agenda and return to what you were doing. No interruption.
 ### PROCEED
 
 As listed. Report back when PT-2705 is done, or at a real wall.
+
+---
+
+## PT-2708 -- TESTER's FIRST CLOUD PASS (TEST 142): ⚠⚠⚠ TWO SEVERE PROGRESSION DEFECTS -- THE PLAYER NEVER GAINS XP FROM A KILL, AND A COMPANION's LEVEL-UP IS LOST ON EVERY LOAD. BOTH LOOK LIKE THE PT-2693 SUBJECT FILTER CUTTING THE OTHER WAY: A FIX FOR ONE LEAK THAT NOW DROPS THE PLAYER's OWN TAGGED EVENTS. ⚠⚠ AND EQUIPPING WAS NEVER BUILT, CARRYING AN "UNRULED" MESSAGE FOR A COST THE FILES SETTLED LONG AGO: PT-2046 REFUSES IT IN COMBAT, AND ACTION-ECONOMY-01 §5 MAKES A WEAPON SWAP OR LOADOUT SWITCH A FREE INTERACTION
+
+**A strong first pass in a new environment. It found real defects on a clean machine that the PC's history had been hiding.**
+
+### ⚠⚠⚠ XP AND LEVELS -- ONE CONVENTION, APPLIED EVERYWHERE
+
+**The player's award is tagged with the player's own name. `playerLog()` keeps only untagged events. So the player's XP is filtered out of the player's record.** **The companion's level-up survives in the save but never in the fold.** **PT-2693 fixed a leak by filtering on subject. PT-2698 swept for places that forgot to filter. Nobody ever wrote down what "the player's event" means.** **Write the convention once, then make every writer and every reader follow it.** **This is the fourth appearance of the subject shape, and it's the first one to break the player instead of contaminating them.**
+
+### ⚠⚠ EQUIPPING -- RULED LONG AGO
+
+**PT-2046: "RULED: EQUIPPING IS REFUSED IN COMBAT." `ACTION-ECONOMY-01 §5`: drawing, stowing, or switching to a second loadout is a free interaction, once per turn, and a second one costs the Action.** **The Equip screen still said "what it costs is unruled", from before PT-2046, and nothing ever replaced it.** **Main was about to ask the owner to rule on a settled question. The owner's "what do the files say?" is exactly the check that should have come first.** **PT-2704 and PT-2705's pointer to `EMBODIMENT-01` for the switch cost is corrected here: §5 governs.**
+
+### ⚠⚠ STARTING INVENTORY -- WIDER THAN ONE SWORD
+
+**Kit, medpacs, boots, purchased items and spikes are all recorded as "taken" and never created. So PT-2705's missing Short Sword was one symptom of a broken delivery step.** **The spike gap also means the terminal can't be sliced by anyone.**
+
+### THE TWO QUESTIONS -- BOTH ANSWERED BY THE FILES
+
+**Examine adds Intelligence: `SKILLS-01` keys Science to Int.** **Criticals multiply the damage: `ATTACKS-01 §12`, "damage doubles", and under RCR that means the whole roll, riders excepted.**
+
+### ALSO
+
+**A dismissed henchman still fights and still takes XP.** **Granted feats are held but unmarked.** **The Store footer labels are covered by art, and the PT-2696 flip is the first suspect.** **Three minor text and placement items.** **Conditioning is inert, recorded for PT-2706.** **Tester's `tester-xp-bed` becomes a Shelf fixture, and it's a good one: one kill that pays enough to level.**
+
+### TESTER -- CONFIRMED
+
+**Environment, chargen by clicks, area entry, and Leave Session → Load Game.** **The player's record holds across three reloads.** **Soldier's granted feats are held.** **Brawler level-1 unarmed is 1d3 + Strength, on Equip and in the fight.**
+
+### RULED
+
+**Both XP and level defects: SEVERE, first. Settle the subject convention and apply it everywhere.** **Equipping built to PT-2046 and §5, with the pairing refusal.** **Starting-inventory delivery replaces PT-2705 item 2, and the spike goes to the owner if it isn't in the corpus.** **Skill checks add the key ability.** **Criticals multiply the whole damage.** **Dismissal removes a henchman from the party, the fight and XP.** **Granted feats get marked.** **Store labels fixed.** **Minor items batched.** **Conditioning goes to PT-2706.** **Tester's fixtures are committed to Shelf.**
+
+### PROCEED
+
+As listed, after PT-2707's steps 1–2. Report back when the list is done, or at a real wall.

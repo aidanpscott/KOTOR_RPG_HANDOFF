@@ -286,3 +286,20 @@ Blocked by §4a: the player can't bank XP, so she can never level.
 `level = 9`, `challenge = 9`; abilities 10 except dex 3; `[vitality] override = 1`.
 
 `mate.toml` is copied unchanged from `companion-fixture`.
+
+---
+
+## Addendum — Main's answers (after filing), recorded so the report is complete
+
+- **Examine adds Intelligence.** `SKILLS-01` keys Science to Int, so §2's d20 + Science 4 should have
+  been d20 + 4 + 3. It's ruled at PT-2708 item 5 and is no longer an open question.
+- **A critical multiplies the whole damage.** Per `ATTACKS-01 §12`, "`crithitmult` 2 means damage
+  doubles", and under RCR Strength and flat bonuses are multiplied too; rider dice are not. So §5b's
+  natural 20 should have been (1d3 + 3) × 2. It's ruled at PT-2708 item 6.
+- **Equipping was already ruled.** PT-2046 refuses it in combat, and `ACTION-ECONOMY-01 §5` makes a
+  draw, stow or loadout switch a free interaction once per turn (a second costs the Action). The *"what
+  it costs is unruled"* message in §3 is stale, not an open question. Coder is building it (PT-2708
+  item 3), and the dual-wield −4 and pairing refusal wait for that.
+
+**Fixtures handed over:** `HANDOFF/TEST/fixtures/` holds `tester-xp-bed`, `tester-purse` (re-authored)
+and `tester-visual` (reconstructed). Their status and gaps are in that folder's README.

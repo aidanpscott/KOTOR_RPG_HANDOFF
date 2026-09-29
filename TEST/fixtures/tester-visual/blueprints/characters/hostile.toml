@@ -1,0 +1,24 @@
+[character]
+name    = "Hostile"
+handle  = "hostile"
+class   = "soldier"
+species = "human"
+level   = 2      # RECONSTRUCTED: level not recorded
+challenge = 2    # RECONSTRUCTED
+
+# RECONSTRUCTED: abilities not recorded.
+[abilities]
+str = 12
+dex = 12
+con = 12
+int = 10
+wis = 10
+cha = 10
+
+[vitality]
+die = "d10"   # RECONSTRUCTED
+
+[protection]
+plot      = false
+min_1_hp  = false
+raiseable = false

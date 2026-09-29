@@ -1,0 +1,11 @@
+[package]
+id      = "tester-xp-bed"
+name    = "Tester XP Bed"
+version = "1"
+summary = "A henchman companion (mate) and one level-9, challenge-9 enemy with 1 vitality: a single kill pays the whole party 3000 XP, enough to level. Built for TEST 142 item 4 (level a companion, reload three times); the fixture for PT-2708 items 1-2."
+authors = ["Tester"]
+[order]
+areas = ["a01-room"]
+[entry]
+area = "a01-room"
+at   = "start"

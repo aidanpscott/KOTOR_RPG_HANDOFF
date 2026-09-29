@@ -1,0 +1,40 @@
+[area]
+name    = "Hall"
+size    = [12, 4]
+tag_seq = 3
+
+# The cover row is recorded (TEST 140 §3); its exact squares are RECONSTRUCTED.
+[tiles]
+map = """
+............
+..'.;.#.....
+............
+............
+"""
+[tiles.legend]
+"." = "floor"
+"'" = "halfCover"
+";" = "threeQuarterCover"
+"#" = "wall"
+
+[[arrivals]]
+name = "door"
+at   = [0, 1]   # RECONSTRUCTED
+
+# Tags guardian.v01.01 / grunt.v01.01 are recorded (TEST 140 §2, §5); squares are RECONSTRUCTED.
+[[contents]]
+tag  = "guardian.v01.01"
+from = "characters/guardian"
+at   = [1, 0]
+role = "henchman"
+
+[[contents]]
+tag  = "grunt.v01.01"
+from = "characters/grunt"
+at   = [1, 2]
+role = "henchman"
+
+[[contents]]
+tag  = "hostile.v01.03"   # RECONSTRUCTED: tag suffix not recorded
+from = "characters/hostile"
+at   = [10, 2]

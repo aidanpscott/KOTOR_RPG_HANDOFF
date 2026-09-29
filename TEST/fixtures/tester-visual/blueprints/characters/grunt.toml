@@ -1,0 +1,23 @@
+[character]
+name    = "Grunt"
+handle  = "grunt"
+class   = "soldier"
+species = "human"
+level   = 4
+
+# Recorded exactly (TEST 140 §6: the contaminated sheet showed Grunt's own numbers).
+[abilities]
+str = 12
+dex = 10
+con = 12
+int = 10
+wis = 10
+cha = 10
+
+[vitality]
+die = "d10"   # RECONSTRUCTED
+
+[protection]
+plot      = false
+min_1_hp  = false
+raiseable = false

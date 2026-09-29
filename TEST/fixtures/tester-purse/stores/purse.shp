@@ -1,0 +1,6 @@
+[store]
+id   = "purse"
+name = "Vess's Stall"
+items = [
+  "items/weapons/vibroblade",
+]

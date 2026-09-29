@@ -1,0 +1,46 @@
+# The low gate is the CONTROL: if neither gated reply ever appears, the fault
+# is the authoring, not the product's credit fold. One vibroblade sale takes a
+# 500-credit character to 600 and should reveal pay-high, and nothing else should.
+
+[conversation]
+id    = "purse"
+start = ["greet"]
+
+[[npc]]
+id  = "greet"
+say = "Credits talk. What have you got?"
+replies = [
+  "browse",
+  { to = "pay-low",  gate = { payment = 400 } },
+  { to = "pay-high", gate = { payment = 600 } },
+  "leave",
+]
+
+[[player]]
+id     = "browse"
+say    = "Show me what you have."
+tag    = "opens-store"
+then   = ["take-your-time"]
+effect = [{ kind = "store.opened", store = "purse" }]
+
+[[player]]
+id   = "pay-low"
+say  = "I can cover four hundred."
+then = ["done"]
+
+[[player]]
+id   = "pay-high"
+say  = "I can cover six hundred."
+then = ["done"]
+
+[[player]]
+id   = "leave"
+say  = "Another time."
+
+[[npc]]
+id  = "take-your-time"
+say = "Take your time."
+
+[[npc]]
+id  = "done"
+say = "Pleasure doing business."

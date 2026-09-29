@@ -1,0 +1,13 @@
+[package]
+id      = "tester-purse"
+name    = "Tester Purse"
+version = "1"
+authors = ["Tester"]
+summary = "PT-2566/PT-2568 payment-gate bed (TEST 133), re-authored after the PC loss. Merchant Vess, two squares from the arrival, whose greeting carries the store reply plus two payment-gated replies: 400 (the control) and 600 (the reading). A character on 500 credits carrying two 100-credit vibroblades crosses 600 with exactly one sale."
+
+[order]
+areas = ["a01-market"]
+
+[entry]
+area = "a01-market"
+at   = "in"

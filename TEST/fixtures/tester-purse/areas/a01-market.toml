@@ -1,0 +1,17 @@
+[area]
+name    = "Market"
+size    = [8, 6]
+tag_seq = 1
+
+[tiles]
+default = "floor"
+
+[[arrivals]]
+name = "in"
+at   = [1, 1]
+
+# Two squares from the arrival, as in TEST 133.
+[[contents]]
+tag  = "merchant.purse.01"
+from = "characters/merchant"
+at   = [3, 1]

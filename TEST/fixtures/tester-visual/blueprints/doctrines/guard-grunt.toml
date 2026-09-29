@@ -1,0 +1,8 @@
+# Recorded verbatim (TEST 140 §5).
+[doctrine]
+name = "Guard Grunt"
+goal = "protect the wounded soldier"
+
+[protects]
+match = { handle = "grunt.v01.01" }
+because = "grunt"

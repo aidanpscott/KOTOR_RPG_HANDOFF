@@ -1,0 +1,19 @@
+# ⚠ RECONSTRUCTED after the PC loss (TEST 140 §§2-6 + Fixtures, TEST 141 §§1-2).
+# Recorded and kept exactly: the display name, id, a 12x4 hall "v01-hall" with a
+# halfCover / threeQuarterCover / wall row, guardian (Jedi Consular 6), grunt
+# (Soldier 4, 12/10/12/10/10/10), hostile (Soldier, enemy), and the guard-grunt
+# doctrine attached to guardian. Every value marked RECONSTRUCTED below was NOT
+# recorded and is a stand-in, not the original.
+[package]
+id      = "tester-visual"
+name    = "0 AAA Visual Pass"
+version = "1"
+authors = ["Tester"]
+summary = "Tester's visual-pass hall (TEST 140/141): two henchmen who auto-join on arrival (Guardian, Jedi Consular 6; Grunt, Soldier 4), one enemy Soldier, and a row of cover tiles. Rebuilt from the reports after the PC loss; unrecorded values are marked RECONSTRUCTED. Pairs with KOTOR-RPG-APP tool/author_tester_visual_save.dart, which authors a Soldier 5 player straight into v01-hall."
+
+[order]
+areas = ["v01-hall"]
+
+[entry]
+area = "v01-hall"
+at   = "door"   # RECONSTRUCTED: arrival name and square not recorded

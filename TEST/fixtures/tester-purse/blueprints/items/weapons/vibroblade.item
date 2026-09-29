@@ -1,0 +1,5 @@
+[item]
+name        = "Vibroblade"
+base        = "vibroblade"
+catalogue   = "g_w_vbroshort01"
+description = "The edge does the work; the hum is what people remember."

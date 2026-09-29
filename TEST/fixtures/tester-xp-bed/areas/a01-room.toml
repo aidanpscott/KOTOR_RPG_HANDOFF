@@ -1,0 +1,22 @@
+[area]
+name    = "Room"
+size    = [6, 3]
+tag_seq = 2
+
+[tiles]
+default = "floor"
+
+[[arrivals]]
+name = "start"
+at   = [1, 1]
+
+[[contents]]
+tag  = "mate.room.01"
+from = "characters/mate"
+at   = [1, 0]
+role = "henchman"
+
+[[contents]]
+tag  = "dummy.room.02"
+from = "characters/dummy"
+at   = [2, 1]

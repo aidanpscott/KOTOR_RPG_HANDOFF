@@ -441,6 +441,8 @@
 
 **The critical *multiplier* is separate and unchanged.** **`crithitmult` 2 means damage doubles.** **`Power Attack` raises it by 1.**
 
+**⚠⚠⚠ A THREAT IS NOT YET A CRITICAL — `PT-6`: *"There is a confirmation roll. Confirmed. A threat is confirmed by a second attack roll against the same Defence."*** **A roll in the threat range — the weapon's own, widened by ×2/×3/×4 above — that hits triggers a second attack roll with the same attack bonus against the same Defence. The critical applies only if that roll hits; otherwise the blow is an ordinary hit. A natural 20 threatens like any other face in the range and is confirmed the same way.** **The widening acts on the first roll only; the confirmation roll threatens nothing.** **Recorded here because a later combat slice searched these documents, missed `PT-6` in the ledger, and built criticals without it — `PT-2709` item 2.**
+
 ### 12.2 A declaration is atomic
 
 **When a multi-attack declaration drives a target past 0 partway through, the remaining attacks still resolve.**

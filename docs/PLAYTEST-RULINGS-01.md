@@ -80671,3 +80671,29 @@ As listed. Report back when Equip passes, or at a real wall.
 ### PROCEED
 
 As listed. Report back when Equip passes, or at a real wall.
+
+---
+
+## PT-2706 -- OWNER OPENS A LARGE, NECESSARY ITEM: GO THROUGH EVERY FEAT AND MAKE SURE ITS STATED BONUS OR EFFECT ACTUALLY REACHES THE GAME's NUMBERS -- METHODICALLY, SLOWLY, WITH A REAL TEST FOR EACH. ⚠⚠⚠ CHECKED FIRST: IT HAS NEVER BEEN DONE AS A WHOLE. FEATS HAVE BEEN WIRED PIECEMEAL AS THREADS NEEDED THEM, AND PT-2705 JUST SHOWED AN ENTIRE FAMILY -- EVERY CLASS-GRANTED FEAT -- CAN SIT INERT WITH NOTHING NOTICING
+
+**The right question to ask right after the grant pipeline, and the right way to ask it.**
+
+### WHY NOW
+
+**Feats have been wired one at a time as other work needed them: the feat-name join (PT-2355), Evasion (PT-2330), dual-wielding (PT-2704), the grant pipeline (PT-2705).** **Nothing has ever gone row by row asking "does this feat change the number it claims to?"** **PT-2705 is the warning. Every class-granted feat was inert, and the only reason anyone knew was that one readout showed 1d3 where it shouldn't have.** **Without an audit, the next inert feat surfaces the same way, by accident.**
+
+### THE SHAPE -- CENSUS FIRST, THEN SLICES
+
+**One tracked audit file, one row per feat: what the rule says it does, what it touches, and whether the engine does it (wired, partial, inert or unrepresentable), with the code site and the test for anything wired.** **Counts per status, each with its predicate. That tells the owner how big this is before a line is written.** **Then slices by category, mechanical first: flat bonuses, conditional, Force, stances, triggered, attack-granting.** **Each feat gets a test through the real path, where the sheet, the Equip readout and the fight all agree, mutation-checked, with every combatant included.** **Tester confirms a sample per slice in play.**
+
+### THE DISCIPLINE
+
+**Through the existing resolution code only. No per-feat special cases where an effect kind can carry it; that's the project's "effects, not special-cased rules" principle.** **Unrepresentable feats are named and held, not forced.** **Where the rule is silent on a number, the owner rules.** **This pairs with PT-2705's description sweep: the text matches the rules there, and the engine matches the rules here.**
+
+### RULED
+
+**Opened and parked. Census first, then category slices, each fully tested — when the owner says. Not among the next three items.**
+
+### PROCEED
+
+Record it in the agenda and return to what you were doing. No interruption.

@@ -80633,3 +80633,41 @@ Record it in the agenda. Don't start it until Equip passes. Continue PT-2702.
 ### PROCEED
 
 As listed. Report back when Equip passes, or at a real wall.
+
+---
+
+## PT-2705 -- THE GRANTED-FEAT PIPELINE IS BUILT: 188 GRANTED ROWS CENSUSED, ~25 CLASS-FEATURE CHAINS WIRED, KEYED TO THE OWNING CLASS's LEVEL. BOTH CHARGEN PATHS WIRED (THE PAIRING TEST CAUGHT THE MISSED ONE), AND LEVEL-UP DIFFED AGAINST WHAT's HELD. THE UNARMED SHORTCUT IS REVERTED. ⚠⚠⚠ AND TESTER's TEST 141 REOPENS PT-2688, NARROWED: THE HUNTER BACKGROUND's MELEE-UPGRADE GRANT RESOLVES TO INTERNAL IDS, AND ONE CHARACTER's DEFENCE READS BLANK / 12 / 15 ACROSS THREE SCREENS. ⚠⚠ PLUS A NEW ONE: EVERY ARRAY's SECOND WEAPON NEVER GETS CREATED. AND TWO-WEAPON FIGHTING DESCRIBES ITSELF AS −6 WHEN IT IS −3
+
+**Coder's pass was strong. Tester's pass is what keeps it honest.**
+
+### THE GRANT PIPELINE -- RIGHT, INCLUDING THE CATCH IN ITS OWN FIX
+
+**A census before building: 188 granted rows checked against `FEATS-LIBRARY-01`.** **Keying class-feature chains to the owning class's level, not character level, is necessary, not just tidier. A prestige class's tier-1 grant could never fire at character level 1.** **Unarmed Specialist correctly stays on character level, per ATTACKS-07's ladder.** **The best moment: `ledger_test.dart`'s "two paths must match" test caught the second chargen path the first version missed. That's the "a rule applied to one path and not its pair" shape again, this time inside the fix itself, and caught in the same pass.** **Level-up diffs against what's already held, sharing the multiclass upsert the fold uses. A level-30 Brawler hits for 8d4 and a level-30 Soldier for 1d3.** **Leaving out ambiguous census rows, and flagging the colliding ids, the mislabelled availability and the missing Consular chain rather than guessing, is right.**
+
+### ⚠ UNARMED SPECIALIST -- THE PUSHBACK IS CORRECT
+
+**PT-2704 said "Brawler and the Force classes" as if the corpus declared it. It doesn't.** **The feat sits under "Restricted — owner unassigned", and that phrase is Combination's gate note, not a grant.** **So PT-2704 filled an owner decision with an inference. Building to the ruling as given, while naming the tension, was exactly right.** **The owner rules on who gets it, after seeing which classes K2 grants it to. The current build stands until then.**
+
+### ⚠⚠⚠ PT-2688 -- NARROWED, NOT CLOSED
+
+**Tester built two nearly identical Soldiers minutes apart. The plain array was clean everywhere. The Hunter melee-upgrade one failed with refs that aren't blueprint paths at all (`'upgrade'`, `'soldier-both-0'`).** **So PT-2702's close covered the ordinary resolvers and never touched the upgrade-grant path.** **And the same character's Defence is blank, 12 and 15 at once, across three screens.** **That's "one fold, three readers" again. Each reader handles a failed item differently, so each shows a different number.** **Fix the path, then make all three readers one fold.**
+
+### ⚠⚠ THE MISSING SECOND WEAPON
+
+**`STARTING-EQUIPMENT-01` gives nearly every class a Short Sword beside its ranged weapon. Tester's Soldier got the rifle only, and the sword appears nowhere.** **It is never created, which is a different shape from PT-2688's "created, then won't open".** **It probably affects every class carrying a second weapon.** **It was found by reading the Equipment step's own preview text against Inventory, which is exactly the check that catches this.**
+
+### THE −6 DESCRIPTION
+
+**The mechanic is right at −3. The feat tells the player −6.** **If feat text comes from K2's own strings, every numbered description may carry K2's numbers instead of ours. Sweep them all.**
+
+### TESTER -- CONFIRMED
+
+**Companion contamination is fixed in real play, through real chargen.** **Dual-wielding is correct with real fight numbers, including −3 exactly.** **Store round-trips cleanly.** **An own data directory and an own display, both verified by count and PID rather than assumed, and Coder's uncommitted work confirmed untouched by diff.**
+
+### RULED
+
+**Grant pipeline accepted. Unarmed shortcut reverted, accepted.** **PT-2688 reopened for the upgrade-grant path, plus one-fold Defence across all three readers.** **Missing second array weapon opened, SEVERE.** **Enemy and companion rules parity next.** **Census follow-on: rename the colliding ids, fix availability, and bring the Consular chain to the owner if the corpus lacks it.** **Feat description sweep against the rules.** **Unarmed Specialist's assignment goes to the owner with K2's evidence; the current build stands.** **Then Equip. Loop until 1:1.**
+
+### PROCEED
+
+As listed. Report back when Equip passes, or at a real wall.

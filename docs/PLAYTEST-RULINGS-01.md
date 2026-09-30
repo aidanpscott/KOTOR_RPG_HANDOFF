@@ -80895,3 +80895,35 @@ As listed.
 ### PROCEED
 
 As listed.
+
+## PT-2713 -- TEST 145 PART 2: SEEDS VARY ACROSS NEW GAMES (0 NATURAL 20s IN 6 FIRST ROLLS), SLICING OPENS A TERMINAL BY GRADE WITH NO ROLL, SECURITY IS A PURE DC ROLL, A STORE PURCHASE LANDS IN INVENTORY, INITIATIVE SHOWS NAMES, AND "THREAT CONFIRMED / NOT CONFIRMED" REPRODUCES WITH THE RIGHT ARITHMETIC. ⚠ BUT THREE PT-2710 CLOSES AREN'T WHOLE IN PLAY: THE CREDITS ROUTE NEVER APPEARS, BECAUSE `clothing` WON'T PRICE; MINE DISARMS BURN COMPUTER SPIKES; AND A COMPANION LOSES ITS ALLY RING AFTER A DOOR. ⚠ AUTO LEVEL UP TAKES ONE LEVEL PER PRESS AND GRANTS NO CHOSEN FEAT
+
+**Good confirmations, and three closes that tests passed and play didn't.**
+
+### ⚠ THE CREDITS ROUTE
+
+**A ruled choice was gated on data being clean, and one row (`clothing`) is never clean. So the route was silently absent for the most common class.** **The data gets fixed. The route is always offered, and when it genuinely can't be priced it shows disabled with the reason.** **A choice that disappears is the display-honesty defect.**
+
+### ⚠ SPIKES ON MINES
+
+**§5.2 names one resource per skill. Demolitions spends mines, not spikes.** **A disarm burning Computer Spikes is a skill path spending the wrong resource. Check every path against §5.2.**
+
+### THE ALLY RING
+
+**Side and targeting are correct and only the look is lost, but the look is how a player tells friend from foe.** **Draw it from the same party state, across every transition.**
+
+### ⚠ AUTO LEVEL UP -- AN INTERIM GUARD
+
+**One level per press, and chosen feats never picked.** **The full rule (recommended picks, all pending levels) waits on recommendations.** **But a level consumed with its feat unspent is a loss today.** **Until recommendations exist, Auto hands any unrecommended choice to the manual flow instead of skipping it.**
+
+### STILL TO CONFIRM (TEST 146)
+
+**The mine tier numbers, the companion sheet with real data, and the same-campaign seed half.**
+
+### RULED
+
+**Ally ring kept across transitions.** **Credits route always offered, and `clothing` priced.** **No spike spent on a mine.** **Mine tier numbers tested.** **Auto never silently skips a choice.** **Order: after PT-2712 item 1, before PT-2711 resumes.**
+
+### PROCEED
+
+As listed.

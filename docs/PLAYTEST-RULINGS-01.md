@@ -80871,3 +80871,27 @@ Part 0, report. Then Part 1, as listed.
 ### PROCEED
 
 As listed.
+
+## PT-2712 -- TEST 145: ⚠⚠ EQUIP's DEF BADGE IS A THIRD DEFENCE READER, STILL CALLING `defence()` WITHOUT `classBonus` -- SHEET 14, FIGHT 14, EQUIP 11. PT-2711 FIXED THE FUNCTION AND TWO CALLERS; THE THIRD FELL BACK TO A DEFAULT OF 0. MAKE THE TERM REQUIRED SO NO CALLER CAN FORGET IT. ⚠ AND AN OWNER RULING: AUTO LEVEL UP TAKES THE RECOMMENDED OPTION AT EVERY STEP, FOR EVERY PENDING LEVEL -- SO IT DEPENDS ON RECOMMENDATIONS EXISTING FOR ALL OF LEVEL-UP. TESTER CONFIRMS THE PLAYER's GRANTS, HOMEWORLD STACKING, THE SKILL CAP, THE HUNTER/TWO-WEAPON GRANT AND CONFIG 2 IN PLAY
+
+**One more reader of the same number. This time the fix goes where the problem actually is.**
+
+### THE THIRD READER
+
+**PT-2711 added `classBonus` to `defence()` and wired two call sites. Equip's badge was a third, and the new term defaulted to 0 there, silently.** **An optional term that defaults to zero is the silent-no-op family.** **A missing argument should fail to compile, not produce a smaller number.** **Make it required, let the compiler list every caller, and have the parity test cover all three screens.**
+
+### AUTO LEVEL UP -- OWNER RULING
+
+**Auto is the same walk a player takes through every level-up menu, with the recommended choice picked and accepted at each step, looping until no level is pending.** **So recommendations are a precondition, not a nicety.** **PT-2678/2679's recommendation system (research first, from K1/K2's per-class data) now covers level-up as well as chargen.** **Nothing is built yet; first, a report of what Auto does today.**
+
+### CONFIRMED IN PLAY (TEST 145)
+
+**Auto and manual Level Up both grant Unarmed Specialist I, marked granted, with 1d4 + Str on Equip and in a fight.** **Homeworld Persuade stacks all the way to a live dialogue check: d20 17 + 4 + 2 Cha + 2 homeworld.** **The skill cap rises from 4 to 5 at level 2.** **Boots and gloves are greyed out with the real reason.** **Hunter + Two-Weapon Fighting gives Long Sword + Short Sword, while Hunter alone gives one Long Sword, per `STARTING-EQUIPMENT-01`'s BOTH rule.** **Tester corrected its own first reading before filing, which is right.** **Config 2's second weapon sits in its main hand.** **The arena plays.**
+
+### RULED
+
+**The Equip DEF reader is fixed by making `classBonus` required, with every Defence reader through one arithmetic and the parity test covering Equip.** **The Auto Level Up rule is recorded; today's behaviour gets reported; the build waits on recommendations.** **Then back to PT-2711.**
+
+### PROCEED
+
+As listed.

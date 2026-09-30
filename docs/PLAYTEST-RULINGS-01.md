@@ -80979,3 +80979,29 @@ Equip: one precise click attempt, then owner by hand. Class Defence: read the RC
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2716 -- EQUIP's REAL EQUIP PATH FOUND: CLICK THE SLOT ICON, PICK, OK. A FULL LOADOUT IS NOW SAVED THROUGH K2 ITSELF (`000008 - game7`), VERIFIED BYTE-DIFFERENT WITH THE REAL RESREFS INSIDE. THE LOOP CAN RUN WITHOUT THE OWNER, AND "STRUCTURALLY MATCHES" STILL ISN'T 1:1. ⚠ A BELT CONTRADICTION (THE GFF PLACES ONE, THE LIVE SCREEN SHOWS NONE) AND A REAL GAP (WEAPON CELLS SHOW NAMES WHERE K2 SHOWS ICONS). ⚠⚠ OWNER RULING ON CLASS DEFENCE SOURCES: K1 FOR SMUGGLER, SCOUT AND SOLDIER; K2 FOR THE THREE JEDI; WHERE A GAME GIVES NONE, THE OTHER GAME, THEN THE RULEBOOK. THE OTHER 33 CLASSES COME TO THE OWNER AS A ONE-ROW-PER-CLASS PROPOSAL
+
+**The owner's description of K2's equip was exactly the missing step, and Coder's verification of the save was exactly the discipline the save editor lacked.**
+
+### EQUIP
+
+**Clicking the slot icon opens the confirm panel. Clicking an item fills the description, even without moving the border. OK equips it.** **All six accessory slots and both weapon hands were filled and saved through the game's own Save, then checked by bytes and resrefs.** **Now the loop: four states, element by element.** **Belt is a contradiction to settle from the GFF before either side changes.** **Icons in the weapon cells, with placeholders where art isn't extracted yet.**
+
+### ⚠⚠ CLASS DEFENCE -- THE OWNER's SOURCE ORDER
+
+**For class Defence, the owner puts KOTOR's own data first, because it's KOTOR's feel we're after. K1 covers the classes K1 defines; K2 covers the Jedi.** **Where a game gives nothing (K1's Soldier and Scout are flat 0), the other game is checked, then the rulebook. K2's Soldier rises, so the Soldier takes K2's column. The Scout is 0 in both games, so the Scout takes the rulebook's.** **If K1 and K2 disagree on the Jedi, D&D 3rd Edition and then RCR are checked. 3.x has no class Defence bonus, so RCR likely decides.** **Ladders stay named for their shapes (PT-1547).**
+
+### THE OTHER 33
+
+**The owner rules each one. Coder brings one row per class, with its evidence and a reasoned ladder.** **The six K2 Force prestige classes follow their K2 columns by the same rule as their bases.**
+
+### RULED
+
+**Equip: finish the loop, settle Belt from the GFF, icons in the weapon cells.** **Class Defence: the source order as above, built for the six base classes named and the six K2 Force prestige classes.** **A one-row proposal for the other 33.** **The Scout waits on the rulebook with a loud "unread" marker.**
+
+### PROCEED
+
+As listed.

@@ -80841,3 +80841,33 @@ As listed. Report back when done, or at a real wall.
 ### PROCEED
 
 Part 0, report. Then Part 1, as listed.
+
+---
+
+## PT-2711 -- PT-2710 ITEMS 1–11 CLOSED ON THE PC, AND ITEM 12's FIRST PIECE: ONE-FOLD DEFENCE AT LAST. THE CHARACTER SHEET LEFT OUT THE CLASS DEFENCE BONUS THAT BOTH COMBAT READERS HAD CARRIED SINCE PT-2249, SO EVERY SOLDIER's SHEET UNDERCOUNTED THEM AT EVERY LEVEL. FIXED AT THE ROOT IN LODESTAR's `defence()`, AND THE PARITY TEST THAT SHOULD HAVE CAUGHT IT NOW VARIES THE TERM IT NEVER VARIED. ⚠ THE HUNTER-GRANT HALF DIDN'T REPRODUCE, AND GETS A LIVE CHECK. ⚠ THE REMAINING LIST IS LONG, BUT LONG IS NOT A WALL
+
+**Solid work, and a fix at the right layer.**
+
+### ONE-FOLD DEFENCE -- THE REAL ROOT
+
+**"Blank / 12 / 15" was three readers, and one of them was missing a whole term.** **Adding `classBonus` to `defence()`, the term `defenceTerms` already carried, makes the sheet and the fight the same arithmetic.** **`one_defence_test.dart` existed to prove exactly this, and never varied the term that differed.** **Extending it closes the reason it slipped, not just the instance.**
+
+### THE HUNTER GRANT -- NOT REPRODUCED
+
+**The write path resolves real blueprint paths today, and the metadata keys aren't read as items.** **A guard test was added.** **But TEST 141 saw `'upgrade' will not open` on the Character Sheet, in play.** **Several fixes since then (one resolver, one-fold Defence) may have closed it on the way.** **Tester checks it live with a Hunter-background Soldier in TEST 145.** **That's what closes it.**
+
+### ITEM 11 -- NARROW CLOSE, WIDER PATTERN
+
+**Fixing the two named instances and flagging the identically-shaped family was the right first move.** **The rest of the family is the next step, not a separate someday.**
+
+### THE TAIL
+
+**Four substantial pieces and a live Equip loop remain.** **Parity needs per-combatant second-weapon tracking, and that's the build, not a reason to stop.** **Equip needs K2, which is on this machine.** **If it won't run, that's the one real wall on the list.**
+
+### RULED
+
+**Items 1–11 and item 12's Defence piece: accepted.** **The Hunter grant goes to a live check.** **Order: item 11's wider pattern, the description sweep, the census, the K2 evidence, enemy and companion parity, the flake, then Equip live.** **Report once, at the end or at a real wall.**
+
+### PROCEED
+
+As listed.

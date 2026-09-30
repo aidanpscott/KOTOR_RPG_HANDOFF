@@ -80927,3 +80927,29 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2714 -- PT-2711, PT-2712 AND PT-2713 CLOSE: EQUIP's DEF BADGE FIXED BY MAKING `classBonus` REQUIRED (THE COMPILER FOUND ALL THREE CALLERS); THE ALLY RING KEPT ACROSS DOORS (A JOINING COMPANION WAS NEVER IN THE FILE LENS DRAWS FROM); THE CREDITS ROUTE PRICES ALL 19 BASE CLASSES (WAS 6); MINE TIERS PROVEN; AUTO'S INTERIM GUARD BUILT; THE CENSUS, DESCRIPTION SWEEP, ENEMY AND COMPANION PARITY AND THE FLAKE ALL DONE. ⚠ EQUIP's LIVE LOOP HIT A REAL WALL: CLICKS DON'T REACH K2's ITEM LIST, AND THE SAVE EDITOR SAYS IT SAVED WHILE LEAVING THE FILE BYTE-IDENTICAL. ⚠⚠ AND A LIVE FINDING: 36 OF 38 CLASSES HAVE NO CLASS DEFENCE LADDER. BY OWNER DECISION, CLASS DEFENCE IS NEXT, AND THE KEYBOARD IS WORTH ONE MORE TRY ON EQUIP
+
+A full combined list closed, and one wall reported honestly.
+
+### THE CLOSES
+
+Making `classBonus` required turned three silent callers into three compile errors. That's the right fix for a term that defaults to zero. The ally ring's root cause (Lens drawing only the static area file, while a joined companion lives elsewhere) is the kind of cause that explains, rather than patches. `_priceOf` had two bugs, and fixing both took the Credits route from 6 classes to 19. The spike-on-disarm report didn't reproduce after a line-by-line read of every spending site, and it now has a guard. Auto's interim guard reuses the wizard's own "does this level owe a choice?" question. Auto now hands off at every level until recommendations exist; that's the honest consequence, and it's accepted.
+
+### ⚠ THE EQUIP WALL
+
+Copying the stocked save into new slots, never touching an existing one, and verifying byte-for-byte got K2 onto the real save. Catching that the save editor's "Save Successful" wrote nothing, by comparing the files and reopening, is exactly the verification discipline this project needs: a tool's success message is a claim, not a proof. Mouse clicks don't reach the item list. The owner's suggestion, the keyboard, is the last cheap route before he sets the state by hand.
+
+### ⚠⚠ CLASS DEFENCE -- NEXT, BY OWNER DECISION
+
+Two of 38 classes carry a class Defence ladder. The rest are 0 in every fight. The structure is ruled (PT-1544, PT-1547); the numbers were never extracted from RCR. Research first, propose, and the owner rules the classes RCR doesn't cover. The recommendation system follows.
+
+### RULED
+
+All three closes accepted. Equip: one keyboard attempt, then a wall for the owner. Class Defence research starts now, with a proposal, not a build. Arrow-key movement and the `recovers` mine recorded. Unarmed Specialist evidence to the owner.
+
+### PROCEED
+
+As listed.

@@ -80953,3 +80953,29 @@ All three closes accepted. Equip: one keyboard attempt, then a wall for the owne
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2715 -- PT-2714 CLOSES. ⚠ EQUIP's CLICK PATH GETS ONE PRECISE RETRY, AS THE OWNER DESCRIBES IT: LEFT-CLICK THE SLOT ICON, THE MENU OPENS, PICK, CONFIRM. OTHERWISE THE OWNER SETS THE STATES BY HAND TONIGHT. ⚠⚠ CLASS DEFENCE: THE PROPOSAL RESTARTED WORK THE LEDGER ALREADY HOLDS. PT-1541 FOUND THE RCR PDF ON THIS MACHINE AND READ SOLDIER, CONSULAR AND NOBLE; PT-1545 BUILT THE LADDERS SO THE INTERIORS ARE A DATA CHANGE. READ THE BOOK; DON'T FILE AN EXTRACTOR REQUEST FOR IT. ⚠ THE OWNER RULES UNARMED SPECIALIST: FORCE CLASSES PLUS THE BRAWLER
+
+Good evidence work, one missed ledger read.
+
+### EQUIP
+
+The keyboard route is closed. The overlay's own text confirms the owner's description: left-click the slot to open its list. One precise attempt at that exact sequence, each step recorded, then the owner by hand.
+
+### ⚠⚠ CLASS DEFENCE -- READ THE LEDGER FIRST
+
+"No class among the 39 has a real RCR number" is contradicted by PT-1541, which read Soldier +3→+12, Consular +3→+11 and Noble +2→+10 from the PDF on this machine. The structure PT-1545 built makes the Noble's interior fill the Consular automatically. That's the "check the corpus before calling it an owner call" rule again, applied to the ledger. What's genuinely open is the interiors, the other RCR classes' columns, and the mapping. The first two are reads; the last is the owner's.
+
+### WHAT WAS DONE WELL
+
+39, not 38, is caught and corrected. Refusing name-alike matches without a citation is right; they're now listed as owner candidates. `acbonus` was pulled with the project's own parser and kept as intent only. The Unarmed Specialist evidence is clean: K2 grants it to the nine Force classes only, and our Brawler is the one addition.
+
+### RULED
+
+Equip: one precise click attempt, then owner by hand. Class Defence: read the RCR on this machine, fill the ladders already wired, name the shapes, propose the mapping with name-alikes as candidates. Unarmed Specialist: Force classes plus Brawler, recorded in FEATS-LIBRARY-01. Recommendations after Class Defence is ruled.
+
+### PROCEED
+
+As listed.

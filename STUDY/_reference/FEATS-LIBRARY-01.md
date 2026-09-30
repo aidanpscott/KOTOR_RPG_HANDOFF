@@ -46,9 +46,9 @@
 | **Toughness** | Raw physical resilience — the ability to keep standing. | +1 vitality per level. **Retroactive** for levels already gained. |
 | › Improved Toughness |  | +2 vitality per level, and **−2 damage** from any hit under 20. |
 | ›› Master Toughness |  | +2 vitality per level *(overrides, not cumulative)*, −2 damage under 20, and ⚠ **a further `−2` on hits of 20 or more** — `PT-629`. *(source: −10%)* |
-| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. **⚠ Pairable weapons are wield classes 1, 2 and 4 — `PT-169`. A rifle or a heavy weapon cannot be paired with anything.** | Dual-wield penalty reduced from −6/−10 to **−6 main / −6 off** |
-| › Advanced Two-Weapon Fighting |  | **−4 main / −4 off.** |
-| ›› Master Two-Weapon Fighting |  | **−2 main / −2 off.** A balanced off-hand weapon reduces this further to 0 / −2. |
+| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. **⚠ Pairable weapons are wield classes 1, 2 and 4 — `PT-169`. Effect corrected against `ACTION-ECONOMY-01 §7.2` — `PT-2711`. A rifle or a heavy weapon cannot be paired with anything.** | Dual-wield penalty reduced to **−3.** |
+| › Advanced Two-Weapon Fighting |  | **−2.** |
+| ›› Master Two-Weapon Fighting |  | **−1**, floored. |
 | **Weapon Proficiency: Blaster** | Basic training with blaster pistols and hold-outs. | Allows the weapon to be equipped. **Without proficiency it cannot be used at all.** |
 | › Weapon Focus: Blaster |  | +1 attack. |
 | ›› Weapon Specialization: Blaster |  | +2 damage. **Critical hits multiply it.** |
@@ -72,6 +72,14 @@
 | ›› Weapon Specialization: Blaster Rifle |  | +2 damage. |
 
 ---
+
+> **⚠ `PT-1462` — TWO ROWS IN THIS DOCUMENT ARE WRONG, AND THE NOTE IS HERE RATHER THAN IN A CELL.**
+>
+> **`Plating Proficiency: Light`** sits under **§3 Organics only** and its own text says **DROID ONLY**. **The extraction is faithful; the source row is misfiled.** It belongs in `§4`.
+>
+> **`Environmental Sealing`** carries `availability = selectable` while its text says *granted at 1st level to every droid* — and **`granted` already exists and is used by 188 feats.** **A wrong value, not a missing field.**
+>
+> **⚠ AND WHY THIS IS NOT IN THE ROWS:** I first appended both marks **to the Effects cell**, which extracts into `effect` — **the field the Feats screen shows a player.** A re-extraction would have shipped *"⚠ PT-1462 — IN THE WRONG SECTION"* **into player-facing text.** A defect annotation must never live in a data cell.
 
 # 3. Organics only
 
@@ -175,9 +183,9 @@
 | › Installation 2 |  | **Level 1–2.** ⚠ Droid Master 3. |
 | ›› Installation 3 |  | **Level 1–3.** ⚠ Droid Master 7. |
 | **Droid Upgrade 4** | **Authored.** The chassis accepts a fourth hardpoint. | **Allows level 4 droid upgrades.** *Extends the source's three-slot ladder, which stops at level 13 — the only chassis chain that ends before level 20.* |
-| **Emergency Reboot** | When the frame takes a killing blow, the core drops to minimum power and waits. | **Once per day, when reduced to 0, go inert instead of being destroyed.** You reactivate after the encounter at **10% vitality.** *A droid does not die. It stops working.* |
-| › Improved Emergency Reboot |  | **Reactivate at 25% vitality**, and **within the encounter** if an ally is still standing. |
-| ›› Master Emergency Reboot |  | **Reactivate at 50% vitality**, and **twice per day.** |
+| **Emergency Reboot** | When the frame takes a killing blow, the core drops to minimum power and waits. | **Once per day, when reduced to 0, go inert instead of being destroyed.** You reactivate after the encounter at **1 vitality** — `PT-629`. *A droid does not die. It stops working.* |
+| › Improved Emergency Reboot |  | **Reactivate at a quarter vitality**, and **within the encounter** if an ally is still standing. |
+| ›› Master Emergency Reboot |  | **Reactivate at half vitality**, and **twice per day.** |
 | **Environmental Sealing** | **Racial. Granted at 1st level to every droid.** A sealed frame does not breathe, and does not care what it is standing in. | **Immune to vacuum, pressure, radiation, atmospheric hazards, and airborne toxins.** *Nothing in the corpus stated this and it is true of all four chassis.* |
 | **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *⚠ The droid equivalent of Tenacity — organics cannot take that chain, droids cannot take this one.* |
 | › Improved Hardened Chassis |  | **+4 to your death threshold.** |
@@ -203,9 +211,9 @@
 | **Networked** | A live link to any droid within range. | **Share sensor data with one allied droid within 20 metres** — you each use the higher of your two Awareness and Alertness scores. |
 | › Improved Networked |  | **Two allied droids, 40 metres**, and **+1 attack against any target another linked droid is attacking.** |
 | ›› Master Networked |  | **Any number of allied droids on the same field**, and **+2 attack.** *G0-T0's droid army is the precedent.* |
-| **Self-Diagnostic** | Continuous internal fault-checking. | **Repair kits restore +25% more vitality** when used on you. *(Droids have no Medicine; this is the equivalent.)* |
-| › Improved Self-Diagnostic |  | **+50%.** |
-| ›› Master Self-Diagnostic |  | **+100%, and you may repair yourself in combat** without a kit, once per encounter. |
+| **Self-Diagnostic** | Continuous internal fault-checking. | **Repair kits restore +1d4 more vitality** when used on you — `PT-629`. *(Droids have no Medicine; this is the equivalent.)* |
+| › Improved Self-Diagnostic |  | **+1d8.** |
+| ›› Master Self-Diagnostic |  | **Double, and you may repair yourself in combat** without a kit, once per encounter. |
 | **Sensor Package** | Optical, motion, and sonic sensors as standard. | **+2 Awareness and Alertness**, and **a stealth field imposes no penalty on your Awareness.** *The droid answer to `SKILL-RESOLUTION-01 §4` — sensors do not see, so a field that defeats eyes does nothing.* |
 | › Improved Sensor Package |  | **+4 Awareness and Alertness.** |
 | ›› Master Sensor Package |  | **+6 Awareness and Alertness**, and **you detect droids and powered devices through walls** within 20 metres. |
@@ -277,7 +285,7 @@
 |---|---|---|
 | **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** *⚠ Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.* | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct |  | **+2d6 against an unaware target.** |
-| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *⚠ The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. Wound points equal Constitution, so that is lethal to most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
+| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *⚠ The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. The one pool `PT-559` ruled means this rider can carry a target well past 0 in one blow against most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
 | **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st — `scd_granted`.** | **Defence +2 + (2 × [(level+1)/6])** in combat |
 | › **Improved Smuggler's Luck** | **⚠ Tier restored.** `IMPROVED_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** — the source row exists and its string is not in holdings |
 | ›› **Master Smuggler's Luck** | **⚠ Tier restored.** `MASTER_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** |
@@ -438,9 +446,21 @@
 | **Dark Side Corruption** | A Sith Lord's command of the dark side is so great that it influences his companions. Some grow more corrupt; others find new resolve and align further with the light. | Shifts companion alignment. **Strengthens as the Sith Lord grows in power.** |
 
 
+## Force classes and the Brawler
+
+**1 chain.**
+
+| Feat | Description | Effects |
+|---|---|---|
+| **Unarmed Specialist I** | **⚠ Holders: the three base Force classes (`Jedi Guardian`, `Jedi Sentinel`, `Jedi Consular`), all six Force prestige classes (`Jedi Weaponmaster`, `Jedi Watchman`, `Jedi Sage`, `Sith Marauder`, `Sith Battlemaster`, `Sith Sorcerer`), and the `Brawler` — `PT-2715`.** Extra experience in hand-to-hand combat. | **Unarmed damage 1–4.** Granted at level 2. |
+| › Unarmed Specialist II–VIII |  | **2–8 through 8–32 damage**, granted at levels 6, 10, 14, 18, 22, 26, and 30. |
+
+**K2's own `k2_feat.2da` `_granted` columns confirm the nine Force classes and grant it to no standard class — the Brawler is our own addition, ruled on the class's identity being unarmed combat and the `Combination` chain's own gate ("in practice means the Brawler and the Force classes") already assuming it. Kept as built; `PT-2711` (4) is the evidence this rules on.**
+
+
 ## Restricted — owner unassigned
 
-**14 chains.**
+**13 chains.**
 
 | Feat | Description | Effects |
 |---|---|---|
@@ -460,11 +480,11 @@
 | **Force Rapport** | The pool runs deeper than the training accounts for. **Some Force users simply hold more.** | **Requires `Force-Sensitive`.** **+1 Force point per character level.** |
 | › Knight Force Rapport |  | **Level 8.** **+2 Force points per character level**, replacing the tier below. |
 | ›› Master Force Rapport |  | **Level 14.** **+3 Force points per character level**, and **your working maximum degrades at half the normal rate** — `FORCE-POOL-01-v3 §4.2`. |
-| **Force Sensitive** | A heightened connection to the Force, previously unseen in a newly trained Jedi. | **+40 Force points** to base total. |
+| **Force Sensitive** | A heightened connection to the Force, previously unseen in a newly trained Jedi. | NONE — `FORCE-POOL-01-v3 §2` explicitly does not adopt K2's flat `+40`, KOTOR-scale against this pool's RCR-scale costs. **The gate for `Force Rapport` is the whole grant.** |
 | **Guard Stance** | **Reinstated from cut content. ⚠ AUTHORED at `PT-620`.** A defensive posture traded against offence. | **−2 attack, +2 Defence, +2 on all saving throws.** ⚠ **A STANCE: it lasts until you ATTACK or MOVE more than half your speed.** ⚠ *The only accounts report a bonus to attributes or saving throws. `hybrid_authored`. |
 | › Advanced Guard Stance |  | **−2 attack, +4 Defence, +4 on saves.** Level 4. |
 | ›› Master Guard Stance |  | **−2 attack, +6 Defence, +6 on saves.** ⚠ **And you may move your FULL SPEED without ending it.** Level 8. |
-| **Jedi Defense** | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **Opposed roll against incoming blaster attacks.** Beat the attack and the bolt is deflected; beat it by 6 or more and the bolt returns to the attacker. Only within the 180° front arc. |
+| **Jedi Defense** | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **Opposed roll against incoming blaster attacks.** Beat the attack and the bolt is deflected; beat it by 6 or more and the bolt returns to the attacker. `PT-2` struck the 180° front-arc limit: this corpus does not model facing. |
 | › Advanced Jedi Defense |  | **+3 Blaster Bolt Deflection.** Level 4. |
 | ›› Master Jedi Defense |  | **+6 Blaster Bolt Deflection.** Level 8. |
 | **Jedi Sense** | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/6]).** Always active. |
@@ -472,8 +492,6 @@
 | ›› Master Sense |  | **Defence +2 + (2 × [level/5])** for other prestige classes — the fastest progression of the three. |
 | **Regenerate Force Points** | The body renews its connection to the Force faster than training alone allows. | Force regeneration **+25% out of combat, +250% in combat.** Stacks additively with the Consular's Force Channel chain. |
 | **Stealth Run** | Training in stealth so extensive that speed no longer costs concealment. | **Run instead of walk while in Stealth mode.** Requires level 4. |
-| **Unarmed Specialist I** | Extra experience in hand-to-hand combat. | **Unarmed damage 1–4.** Granted at level 2. |
-| › Unarmed Specialist II–VIII |  | **2–8 through 8–32 damage**, granted at levels 6, 10, 14, 18, 22, 26, and 30. |
 | **Weapon Proficiency: Lightsaber** | **Force classes only.** Droids can never take it. | Allows lightsabers to be equipped. |
 | › Weapon Focus: Lightsaber |  | +1 attack. |
 | ›› Weapon Specialization: Lightsaber |  | +2 damage. |
@@ -507,7 +525,7 @@
 
 **⚠ `CLASS-ATTACKS-01 §4` states the Bounty Hunter *"takes targets alive and moving."* Nothing implemented it.**
 
-**Grepped the corpus: no rule for non-lethal damage, subdual or capture exists anywhere.** **`ATTACKS-01 §12.4` gives the window — 0 is Disabled and a legal target, −1 to −9 dying, −10 dead — and nothing lets a player aim for it.**
+**Grepped the corpus: no rule for non-lethal damage, subdual or capture exists anywhere.** **`ATTACKS-01 §12.4` gives the window — 0 is Disabled and a legal target, −1 to −(Con − 1) dying, −Con dead — and nothing lets a player aim for it.**
 
 > **Every bounty in KOTOR is *alive if possible*. The class named after it should own the mechanic.**
 
@@ -645,7 +663,7 @@
 |---|---|---|
 | **Still Standing** | **1** | **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you |
 | › **Not Finished** | **4** | **Two turns**, taken on your own initiative |
-| ›› **Last Word** | **8** | Two turns, and **during them damage cannot take you below −9.** You cannot die until they are spent |
+| ›› **Last Word** | **8** | Two turns, and **during them damage cannot take you below −(Constitution − 1)**, the real dying floor `ATTACKS-01 §12.4` states, not the old flat −9. You cannot die until they are spent |
 
 **⚠ Priced.** **One extra turn for a Combat-rate character is one extra declaration — about 27 damage at level 8.** **Once per encounter, across a three-feat investment, on the Combat class with the fewest feats at 18.**
 
@@ -722,7 +740,7 @@
 
 **⚠ Three scenarios are reported against the 3.4× figure.** **The finding is not overturned — the number it is stated in moves.**
 
-**Under the repriced ladder Vess holds `Targeting 1` only at level 8, so her attack is `+11` and the gap is roughly 3.1×.**
+**Under the repriced ladder `Targeting 2` moved from level 5 to level 6 — still at or below Vess's level 8, so she holds it either way.** **Her attack stays `+12` and the gap stays the `2.9×` already stated above; the reprice changes nothing for THIS worked example, only for a Scout below level 6.**
 
 ---
 
@@ -1405,7 +1423,7 @@
 |---|---|---|
 | **Field Surgery** | **1** | **A Gear action.** Spend a medpac to restore **`1d8` vitality** to an adjacent character ⚠ **at or below 0**. They stop dying |
 | › **Stabilise** | **4** | **`2d8`**, ⚠ **the character is no longer `dying`**, and it is no longer `Disabled` |
-| ›› **Back Up** | **8** | **`3` wounds**, and **once per encounter you may do this at range 4 metres** without touching them |
+| ›› **Back Up** | **8** | **`3d8`** — continuing tier 1/2's own progression; `wounds` do not exist under `PT-559`'s one pool — and **once per encounter you may do this at range 4 metres** without touching them |
 
 > **⚠ YOU CAN BRING BACK SOMEONE WHO IS ALREADY DYING, WHICH NOTHING ELSE IN THE GAME CAN — `PT-559`.**
 
@@ -1471,7 +1489,7 @@
 
 **⚠ The source's prerequisite is literally `HK-47` — a named character.** **Retargeted to the two COMBAT chassis: `Assassin` and `Battle` — `DROID-SKILLS-01 §2.3`.** **HK-47 is the Assassin chassis' own exemplar.**
 
-**⚠ And the mechanic ports cleanly because shields in this corpus ARE percentage damage immunity:** **`Energy Shielding Mark I–IV` at 10/15/20/30%, `Thermal Shield Generator` at 75% Fire, `Multishield Generator` at 50% Electrical.**
+**⚠ And the mechanic ports cleanly because shields in this corpus ARE `DamageImmunity` effects — `PT-629` converted the whole family from percentages to flat DR:** **`Energy Shielding Mark I–IV` at `DR 2/3/4/6`, `Thermal Shield Generator` at `DR 15` Fire, `Multishield Generator` at `DR 10` Electrical / `DR 10` Fire / `DR 3` Ion.**
 
 ---
 
@@ -1499,7 +1517,7 @@
 
 **⚠ FLAT POINTS, NOT PERCENTAGES — deliberately.** **The source reads `+20% / +40% / +60%`.**
 
-> **⚠ See `AGENDA-CURRENT`'s percentage-mechanics item.** **Percentages are everywhere in `ITEMS-03` and `ITEMS-05` and they are the wrong shape for a table.** **This feat is written the way the replacement should look.**
+> **⚠ `PT-629` since closed the percentage-mechanics item this pointed at.** **`ITEMS-03` and `ITEMS-05` now carry flat DR, not percentages — this feat's own flat points were the shape the replacement adopted.**
 
 ---
 

@@ -81005,3 +81005,25 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2717 -- PT-2716 CLOSES: K2's REAL EQUIP PATH, BELT CONFIRMED REAL AT (533, 260), WEAPON CELLS SHOW PLACEHOLDERS NOT NAMES, SOLDIER ON K2's COLUMN, THE SIX K2 FORCE PRESTIGE CLASSES WIRED. ⚠⚠ OWNER RULES CLASS DEFENCE FOR ALL 39 CLASSES: KOTOR's OWN CURVES, CHOSEN BY ARMOUR, WITH VARIETY. THE JEDI MOVE TO K2 (ALL THREE); THE SMUGGLER READS K2 ABOVE 21 INSTEAD OF A CLAMP; THE BOUNTY HUNTER TAKES THE SOLDIER CURVE −1, AND SO DOES THE SCOUT (THE RULEBOOK PUTS IT EXACTLY ONE BELOW THE SOLDIER). ⚠ EQUIP's FOUR-STATE LOOP IS STILL OWED
+
+**Good work on the Belt: the GFF was re-read, the screen position was derived from two reference points, and it was proved live.**
+
+### CLASS DEFENCE -- RULED
+
+**Every curve comes from KOTOR's own tables.** **The less armour a class may wear, the faster its class Defence grows. That's KOTOR's logic (PT-1544), applied class by class for variety.** **The owner set the Bounty Hunter's row himself: light and medium armour and all weapons put it just below the Soldier.** **Offsets are pointer data, floored at 0.** **Droids take none; their plating is their curve.** **The Scout takes its place from the rulebook (the Soldier −1) on KOTOR's scale; the Sharpshooter follows it.**
+
+### CORRECTIONS
+
+**The Smuggler's clamp is replaced by K2's real column above 21.** **The Jedi follow the owner's "K2 for all three"; the RCR Consular pointer is retired for this mechanic.** **The proposal file's counts are fixed, and Droid Master is added.**
+
+### EQUIP
+
+**The Belt and the placeholders are accepted. The four-state, element-by-element loop is the close condition, and it hasn't run yet.**
+
+### PROCEED
+
+As listed.

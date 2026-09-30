@@ -80809,3 +80809,35 @@ As listed, after PT-2707's steps 1–2. Report back when the list is done, or at
 ### PROCEED
 
 As listed. Report back when done, or at a real wall.
+
+## PT-2710 -- PT-2709 CLOSES IN THE CLOUD: THE START RULE (ENDAR SPIRE AT `aft`), THE PT-6 CONFIRMATION ROLL (NOW CITED IN ATTACKS-01 §12.1), MINES ON THEIR TIER DC, ONE ITEM RESOLVER, RIFLE WIELD CLASS, COMPONENTS FOUND AS K2 `compont_00001`, A COMPANION's REAL SHEET, AND A SEED PER CAMPAIGN. ⚠⚠ AN EARLIER CLOSE WAS WRONG AND SELF-CAUGHT: PT-2708's STARTING CONSUMABLES ARRIVED BUT COULDN'T BE USED. ⚠⚠ TEST 144 CONFIRMS PT-2708 IN PLAY, AND FINDS THE PLAYER NEVER RECEIVES CLASS-GRANTED FEATS. ⚠ THE SEED STREAM RESTARTS AT EVERY SCREEN OPEN. AND THE PC IS BACK: THE ORIGINAL AGENTS RESUME AND RECONCILE BEFORE THEY BUILD
+
+**A productive cloud day. The handover back needs as much care as the handover out.**
+
+### PT-2709 -- ACCEPTED
+
+**The start rule was proven by running the suite with it on and off. Every pinned failure passes with it off, so the pins are honest.** **The confirmation roll reads the same terms against the same Defence. The multiplier and immunity read the confirmed critical, and every seeded test that moved says why.** **Mines: set 15/20/25 from K1's `traps.2da`, disarm +2, recover +5, the blast on the item's own save, and a failed set keeps the mine.** **Treating "notice = tier" as a reading, because §2.1 states no detection DC, is labelled correctly.** **One resolver took 15 false positives to zero.** **Finding Components in `ITEMS-06` as `compont_00001` fixes the name-behind-a-wrong-resref problem.**
+
+### ⚠⚠ THE SELF-CAUGHT WRONG CLOSE
+
+**PT-2708 item 4 said starting inventory was delivered. It was delivered, and unusable: the blueprints named a catalogue row, and play read the blueprint alone.** **Catching it and saying so plainly is the standard. The fix joins a row's single effect, and refuses a multi-effect row rather than guessing.**
+
+### ⚠ THE SEED
+
+**A seed per campaign, recorded on `character.created`, with replay reproducing it, is PT-1423 done right.** **But each screen open restarts the stream at the seed, so a later save draws the same early rolls. That's why Tester saw most sessions open on a 20.** **That part is a defect. Only reload-and-retry-the-same-save is the owner's question.**
+
+### TEST 144 -- CONFIRMED, AND ONE FAILURE
+
+**PT-2708 was confirmed in real play: XP, companion levels, equipping and its refusals, −4, the pairing message, abilities on checks, whole-damage criticals, dismissal, granted markers, frames, and the purse.** **The player-side grant failure comes first.** **Spikes (§5) and homeworld stacking (PT-931) are both ruled, and both were built wrong.** **The Credits route is ruled and missing.**
+
+### THE HANDOVER BACK
+
+**The PC agents' trees are behind, and may hold pre-crash work.** **Nothing is pulled over, discarded, or committed over the cloud's work until it has been compared and reported.** **The PC answers what the cloud couldn't: `linux/`, the stocked save, live K2.**
+
+### RULED
+
+**PT-2709 accepted.** **PT-2708 item 4's close corrected and fixed.** **Player grants first.** **The seed resumes from the log; reload-retry is the owner's call.** **Spikes per §5.** **Homeworld stacks.** **Credits route.** **Companion side across doors.** **Skill cap.** **Minor batch.** **Undeliverable items greyed until the owner rules.** **Data fixes.** **Then PT-2705, then Equip live.** **Part 0 before anything.**
+
+### PROCEED
+
+Part 0, report. Then Part 1, as listed.

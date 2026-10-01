@@ -1,6 +1,6 @@
 # CLASS-DEFENCE-01 — all 39 classes, ruled
 
-**`PT-2717`. Every one of our 39 classes now has a wired Class Defence ladder, built in `Lodestar/lib/src/combat.dart`. This file replaces `CLASS-DEFENCE-PROPOSAL-01.md` (renamed, not deleted from history), whose "27 proposed / 6 open" summary was itself wrong — the rows it actually carried were closer to 17 proposed / 9 open — and whose whole "proposal, not built" frame no longer applies now that the owner has ruled every row.**
+**`PT-2717`, corrected at `PT-2718`. Every one of our 39 classes now has a wired Class Defence ladder, built in `Lodestar/lib/src/combat.dart`. This file replaces `CLASS-DEFENCE-PROPOSAL-01.md` (renamed, not deleted from history), whose "27 proposed / 6 open" summary was itself wrong — the rows it actually carried were closer to 17 proposed / 9 open — and whose whole "proposal, not built" frame no longer applies now that the owner has ruled every row.**
 
 **The owner's own logic, stated once and applied class by class: the less armour a class may wear, the faster its class Defence grows — KOTOR's own logic (`PT-1544`), for variety. Offsets live on the class pointer (`defenceTrackOf`), never as copied numbers, and any offset result below 0 is floored at 0.**
 
@@ -75,23 +75,19 @@
 | Beast Master | The beast takes the hits | `k2-prestige-step-eight`, offset 0 | Owner's own reasoning (same shape as Officer) |
 | Tech Specialist | K2-only, `tec` column real | `flat-zero`, offset 0 | K2's own `tec` column — the strongest possible source, IS the class the column names |
 | Sharpshooter | Scout/Marksman/Bounty Hunter lineage | `k2-soldier-step`, offset -1 | "Follows" the Scout (owner's own wording, `PT-2717`) |
-| Juggernaut ⚠ | Heavy armour, the only class besides Soldier granted it | `k2-soldier-step`, offset 0 | **Reconstructed** — see note below |
-| Droid Master ⚠ | Commands droids, does not fight through them | `k2-prestige-step-eight`, offset 0 | **Reconstructed** — same reasoning as Beast Master ("the droids take the hits") |
+| Juggernaut | Heavy armour, the only class besides Soldier granted it | `k2-prestige-step-eight`, offset -2 | Owner-ruled, `PT-2718` |
+| Droid Master | Commands droids, does not fight through them | `k2-prestige-step-eight`, offset -2 | Owner-ruled, `PT-2718`, same row as Juggernaut |
 
 ---
 
-## ⚠⚠ Juggernaut and Droid Master — reconstructed from a garbled row, flagged for confirmation
+## Juggernaut and Droid Master — corrected at PT-2718
 
-`PT-2717`'s own message cut off mid-table at this exact row — the text ran `"Juggernaut, **Droid**"` directly into an unrelated paragraph about the Scout's extractor marker, with no ladder or reason visible for either class. Both of these two rows are independently counted: 14 standard prestige classes total (the ruling names "the missing 14th standard prestige class, Droid Master" explicitly, confirming the count), of which 12 have an unambiguous row elsewhere in the ruling — Juggernaut and Droid Master are the remaining two, and this document's own arithmetic is what places them here, not a stated ladder.
+`PT-2717`'s own message was cut off mid-table at this exact row on Main's side — the text ran `"Juggernaut, **Droid**"` directly into an unrelated paragraph about the Scout's extractor marker, with no ladder or reason visible for either class. That was Main's own truncation, not an owner gap: flagged rather than silently guessed, and the flag caught it.
 
-**Juggernaut**, wired to `k2-soldier-step` at offset 0 (the Soldier's own column, unmodified): the only class besides Soldier granted Heavy Armour Proficiency, so by the ruling's own stated logic — less armour, faster growth — it should sit on the Soldier's own slow curve, the same as Commando's own reasoning ("a Soldier continuation").
-
-**Droid Master**, wired to `k2-prestige-step-eight` at offset 0: a commander archetype who controls a small army of droids rather than fighting through personal armour (`DROID-MASTER-01.md` — INT-primary, Middle BAB, parented from Engineer 6 or Machinist 6), directly analogous to Beast Master's own ruled reasoning, "the beast takes the hits" — here, the droids take the hits.
-
-**Both are built and live in code (not held back as open), since a garbled row is a transcription gap, not a genuine unknown — but both should be read back to the owner for confirmation before this document's own flag is removed.**
+The reconstruction built then — Juggernaut on `k2-soldier-step` at offset 0 (the Soldier's own column, unmodified), Droid Master on `k2-prestige-step-eight` at offset 0 (Officer/Beast Master's own exact numbers) — was a reasoned guess and was wrong. **The owner's real row for both, delivered at `PT-2718`: `k2-prestige-step-eight`, offset -2, floored at 0** (0 at L1-8, +2 at L9-16, +4 at L17-24, +6 at L25-30). Neither class shares a ladder with Soldier or Officer any more.
 
 ---
 
 ## Summary
 
-**All 39 classes have a wired ladder.** 19 base + 20 prestige, including the six K2 Force-prestige classes (unchanged from `PT-2716`) and the two reconstructed rows above. **Nothing in this file is a proposal any more.**
+**All 39 classes have a wired, owner-ruled ladder.** 19 base + 20 prestige, including the six K2 Force-prestige classes (unchanged from `PT-2716`) and Juggernaut/Droid Master (corrected at `PT-2718`, above). **Nothing in this file is a proposal or a reconstruction any more.**

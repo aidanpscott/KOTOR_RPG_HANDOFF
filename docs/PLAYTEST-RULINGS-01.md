@@ -81027,3 +81027,25 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2718 -- PT-2717 CLASS DEFENCE CLOSES FOR 37 OF 39 CLASSES: ALL WIRED, TESTED AT FIVE LEVELS, FLOOR AND SEAM MUTATION-CHECKED, TWO FIXTURE REGRESSIONS ROOT-CAUSED BY BISECTION. ⚠ MAIN's PROMPT WAS TRUNCATED: JUGGERNAUT AND DROID MASTER WERE RECONSTRUCTED, NOT RULED, AND ARE CORRECTED TO THE SLOW CURVE −2. ⚠ A FIGHT FAILS TO START AT DEX 18: A REAL BUG, NOT A FIXTURE. ⚠ EQUIP IS STRUCTURALLY ALIGNED IN ALL FOUR STATES, BUT TEXT, FONT AND COLOUR ARE UNCOMPARED. THE LOOP CONTINUES ON A LIVE CAPTURE OF OUR APP
+
+**Flagging the reconstruction instead of silently guessing was the right call, and it caught Main's error.**
+
+### CLASS DEFENCE
+
+**The rows are corrected to the owner's table.** **Main owns the truncation.** **Accepted: the Consular's new values and the fixture fixes, proved by bisection.**
+
+### THE DEX 18 FIGHT
+
+**A fight that won't start on one stat value is a defect in setup. Reproduce it, find the root cause, and fix it, or put it on the agenda with the repro.**
+
+### EQUIP
+
+**"Structurally aligned" is not 1:1, and a harness that renders boxes can't pass a font check.** **Capture the running app and compare element by element.** **The diamond grid needs the owner's own words quoted before it counts as excused.**
+
+### PROCEED
+
+As listed.

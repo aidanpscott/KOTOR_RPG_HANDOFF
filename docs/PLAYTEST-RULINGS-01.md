@@ -81049,3 +81049,21 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2719 -- PT-2718 CLOSES: JUGGERNAUT AND DROID MASTER ON THE OWNER's ROW; THE DEX 18 FIGHT WAS A WAIT CONDITION THAT ASSUMED THE ENEMY WINS INITIATIVE, FIXED AT THE CAUSE WITH A DEX 12-20 GUARD. EQUIP WAS CAPTURED LIVE WITH THE REAL FONT ON BOTH SIDES: TWO GAPS. ⚠ THE OFF-HAND READOUT IS FIXED NOW. ⚠ THE FONT IS NOT A WALL: K2's FONTS ARE ATLAS TEXTURES WITH GLYPH TABLES, AND A SMALL RENDERER DRAWS THEM. THE DIAMOND GRID WAITS ON THE OWNER
+
+**A clean cycle, with the honest reporting this project asks for.**
+
+### THE DEX 18 FIGHT
+
+**A wait condition that only fired because the enemy happened to act first is a hidden dependency. Finding it by reproducing across DEX values before touching anything is the method.**
+
+### EQUIP
+
+**The off-hand gap is a missing reader of an existing fold. Fix it.** **The font: a glyph atlas plus a TXI is a font, just not a TTF. Draw it.** **Then loop to 1:1.** **The grid waits on the owner's own words.**
+
+### PROCEED
+
+As listed.

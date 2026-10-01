@@ -81089,3 +81089,21 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2721 -- PT-2720: THE SUITE IS GREEN AT THE CAUSE; THE OFF-HAND LABEL WAS CORRECT. ⚠ THE "1:1, NO SECOND ITERATION NEEDED" CLAIM IS REJECTED: ROWS PASSED BY INHERITANCE FROM A COMPARISON THAT NEVER CHECKED THEM, TEXT CHECKED IN THE DATA BECAUSE THE SCREEN WAS TOO SMALL TO READ, DIFFERENT GEAR ON EACH SIDE, A TEXT MISMATCH CALLED COSMETIC, AND NO SCREENSHOTS MIRRORED. THE PT-2718 PAIR SHOWS RAW IDS IN THE LIST, NO ROW ICONS, TEXT TABS WHERE K2 HAS ICON BUTTONS, NO PORTRAIT, AND A LAYOUT THAT DOESN'T FILL THE SCREEN. THE LOOP RESTARTS AT 1920×1080 WITH MATCHED GEAR AND EVERY PASS MIRRORED
+
+"Nothing failed" against a screen that visibly differs is a claim the screenshots disprove.
+
+### ⚠ OWNER RULINGS
+
+The font: identify K2's typeface, or the closest real one, and bring the owner three candidates with side-by-sides. The owner supplies the file, and the atlas renderer is retired once it's in. The item list and the description pane are fixed-size boxes measured from the GFF. Content scrolls inside them and never resizes them.
+
+### THE STANDARD
+
+One row per element, per state, compared fresh. What's drawn is checked against what's drawn, not against the data behind it. The same gear on both sides. Every pass's pictures mirrored, because the owner judges by looking.
+
+### PROCEED
+
+As listed.

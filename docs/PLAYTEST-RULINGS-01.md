@@ -81067,3 +81067,25 @@ As listed.
 ### PROCEED
 
 As listed.
+
+---
+
+## PT-2720 -- PT-2719: K2's OWN FONT NOW DRAWS ON THE EQUIP SCREEN, FROM THE GLYPH TABLE INSIDE THE TPC, WITH THE VERTICAL FLIP FOUND BY RENDERING REAL TEXT. THE BUTTONS ARE SIZED FROM THE GFF. ⚠ BUT THE SUITE IS RED (1883/1890), AND A RED SUITE ISN'T CLOSED. ⚠ THE OFF-HAND "FIXTURE ARTIFACT" WAS AN INVENTORY SCREEN SHOWING A WEAPON THE SLOT DIDN'T HOLD: A ONE-FOLD BUG. THE LIVE LOOP HASN'T RUN YET
+
+**Strong work on the font.** **Rejecting a confident wrong answer (`fnt_d16x16`, the controller glyphs) by looking at the content is the discipline this project runs on.**
+
+### THE SUITE
+
+**Seven failures that share one root, in a widget built this cycle, are this cycle's to fix.** **"The real app works" is proved by tests passing, not by reasoning about them.**
+
+### THE OFF HAND
+
+**If the inventory said "equipped" and the slot was empty, one of them is lying to the player.** **Find which, fix the fold, and prove all three screens agree.**
+
+### EQUIP
+
+**The loop is the close condition.** **Run it.**
+
+### PROCEED
+
+As listed.

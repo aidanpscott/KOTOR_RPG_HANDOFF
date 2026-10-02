@@ -81209,3 +81209,36 @@ No new PT. Accepted: the rewritten repo builds and runs from a fresh clone, back
 
 No new PT. Window title **`Knights of the Old Republic RPG`**; application id **`io.github.aidanpscott.kotor_rpg`**. **Done (`d377837`):** the title is one define on the runner side (`APP_TITLE`) and one const on the Dart side (`kAppTitle`, which `WidgetsApp.title` uses), a guard holding the two together; the id is in `linux/CMakeLists.txt`; the binary name is unchanged. **Data paths checked before the id changed:** on Linux every data path is `Locations.desktop()` (`XDG_DATA_HOME/kotor-rpg`), `getApplicationSupportDirectory` is only the Android/iOS fallback, and nothing else in `lib` uses `path_provider`; a guard fails if another appears. Nothing moved. Fresh-clone proof: title read, existing save found and loaded, Equip opened, data layouts identical.
 
+## PT-2723 -- TEST 147: CLASS DEFENCE HOLDS IN REAL PLAY FOR 11 CLASSES; FIGHTS START AT DEX 8/12/18; A REAL DEATH IS WRITTEN AND RELOADED; THE ARMOUR CHANGE AGREES ON THREE READERS. ⚠ THE PLAY VIEW STILL SHOWS THROUGH THE MENUS (THE STATUS LINE, THE FIGHT HUD): HIDDEN NOW, WITH THE EQUIP WORK. EIGHT FINDINGS QUEUED AFTER EQUIP: TWO HP READERS DISAGREE ON A DOWNED CHARACTER; THE DEFEAT SAVE RECORDS THE WRONG AREA; THE UNCHECKED-RULES COUNT ISN'T DETERMINISTIC; A WRONG BUTTON TARGET; AUTHORING TEXT LEAKS INTO CHARGEN; A DISABLED OK WITH NO REASON; RAW IDS SHOWN TO PLAYERS; STALE HUB TEXT
+
+*Filed 2026-10-02 from MAIN's `MAIN-TO-CODER-PT-2723`; `PT-2722` was the last `## PT-` entry. The report is `HANDOFF/TEST/reports/147-…`, screenshots in `BUILD/screens/test-147/`. **Do not interrupt the Equip work for this.** Item 1 folds into it; items 2–9 are queued on the agenda right after Equip closes, ahead of droid Equip, in the order below.*
+
+### What TEST 147 confirmed in real play
+
+- **Class Defence at level 1 is right for all 11 classes checked.** The sheet and the fight line agree.
+- **A fight starts at DEX 8, 12 and 18,** including with the enemy acting first.
+- **Losing writes a real death,** and the defeat panel reloads from it.
+- **The hint line and area name are gone** from the menus.
+- **Taking armour off** updates all three readers (17 → 16).
+
+### 1. FOLDED INTO EQUIP AND CHROME NOW
+
+**The play view still shows through the menu screens.** The status line shows on all four menus Tester opened, and the fight HUD shows while in a fight. **Ruling:** the status line and fight HUD are play-view chrome, the same as the hint line and area name. **Hide both on every in-game menu screen.** The party column stays hidden on Equip, as ruled; it is decided on the other menus when each one gets its own 1:1 pass. Item (i), a menu laid out differently in a fight and moving with the HUD's height, should disappear with this. **Test that a menu opened mid-fight is laid out identically to one opened outside a fight.**
+
+### 2–9. QUEUED (agenda, OPEN, in this order)
+
+2. **(c) Two readers disagree on a downed character's HP.** The status line reads −11, then −41, while the defeat panel says 0 of 12, and damage keeps landing. **First check the corpus and ledger** for what happens to a character at or below 0 (dying, unconscious, dead), and whether a downed character can still be targeted. **Report what the rule says, with its citation, before changing anything.** Whatever the rule, **one fold decides the HP everyone shows.** Two numbers for one character is a bug either way.
+3. **(b) The defeat save records the wrong area.** The party fell in `a02-arena`, but the save lists `a01-room`, and has no player `character.moved` event. Tester's likely cause, not shown: the defeat write doesn't update the area or position. **Reproduce it, show the cause, and fix it at the cause.**
+4. **(h) The "N rules about this character not checked" count changes across a reload** (2 → 1, 1 → 2). The same save must give the same count. **Find what isn't deterministic** (iteration order, a seed, or state recomputed differently on load), and fix it.
+5. **(a) "Go to Load Game List" lands on the package menu,** not the list. Make it open the list.
+6. **(d) Authoring text shown as a player label** on chargen's Equipment step: "TAKES THE CLASS'S OWN melee UPGRADE FROM §4a…". Same class of bug as D4. **Extend D4's guard to every chargen and menu string,** not just item descriptions: no "§", "PT-", "section:", ".2da" or file paths in anything a player reads.
+7. **(e) OK disabled without a reason** on the Equipment step, until "Standard Gear" is clicked. **Project rule: a disabled control says why.** Either show the reason, or pre-select the default if the rules give one. Say which, and why.
+8. **(g) Raw ids where players read names:** class ids in Load Game (`jedi_sentinel`, `bounty_hunter`), item ids in Inventory, and "×2" on single items. **One display-name source for classes and items,** used by every screen. Fix the ×2 count at its cause.
+9. **(f) Stale hub copy:** "It does not lead anywhere yet … nothing is saved." Play does enter and save. Rewrite it to say what's true, or remove it.
+
+**Close each item with a test that fails before the fix.**
+
+### PROCEED
+
+As listed.
+

@@ -6,10 +6,11 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## NEXT UP — the queue, in order (updated 2026-10-02)
 
-1. **Equip** — the `PT-2722` fixes in the order ruled (fixes 1 → 2 → the layout slice with both fonts → loop pass 2), pass after pass until every row passes, then **close Equip** with one clean full app-suite run plus the Lodestar, Lens and Loom suites.
-2. **Droid Equip** — the live four-state loop against a droid character in K2 (`PT-2692`).
-3. **The full K1 + K2 item import** — every item tagged `k1` / `k2` / `both`, conflicts listed for the owner (`PT-2722` D1).
-4. **The recommendation system and Auto Level Up** (`PT-2679`, widened at `PT-2712`) — after Equip.
+1. **Equip** — the `PT-2722` fixes in the order ruled (fixes 1 → 2 → the layout slice with both fonts → loop pass 2), pass after pass until every row passes, then **close Equip** with one clean full app-suite run plus the Lodestar, Lens and Loom suites. **Folded in now (`PT-2723` item 1):** the status line and the fight HUD are play-view chrome and are hidden on every in-game menu screen; a menu opened mid-fight must lay out identically to one opened outside a fight (tested).
+2. **`PT-2723` items 2–9 (TEST 147), in order** — queued right after Equip closes, ahead of droid Equip: (c) two HP readers disagree on a downed character (rule first, with its citation; one fold decides); (b) the defeat save records the wrong area; (h) the "N rules not checked" count is not deterministic across a reload; (a) "Go to Load Game List" lands on the package menu; (d) authoring text on chargen labels, D4's guard extended to every chargen and menu string; (e) OK disabled with no reason on the Equipment step; (g) raw class and item ids and "×2" shown to players, one display-name source; (f) stale hub copy. Each closes with a test that fails before the fix. *(Item 1 of `PT-2723` — hide the status line and fight HUD on every menu, and a menu laid out the same in and out of a fight — is folded into Equip now, below.)*
+3. **Droid Equip** — the live four-state loop against a droid character in K2 (`PT-2692`).
+4. **The full K1 + K2 item import** — every item tagged `k1` / `k2` / `both`, conflicts listed for the owner (`PT-2722` D1).
+5. **The recommendation system and Auto Level Up** (`PT-2679`, widened at `PT-2712`) — after Equip.
 
 *Owner actions waiting on nobody else: report the new `/dev/sdb` link speed (cable replaced; 6.0 Gb/s expected).*
 

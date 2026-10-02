@@ -26,8 +26,7 @@ a reboot it read cleanly again. **Verified, not assumed:** SMART **PASSED** (0 r
 sectors, 98% life left, no errors logged); the link negotiates **3.0 Gb/s on a 6.0 Gb/s
 drive**, which points at a **cable or port**; the owner ran `journalctl -k | grep -iE
 'ata4|sdb'` and since the 21:46 reboot there are **no link resets and no I/O errors** — only
-normal boot lines and an ext4 journal replay from the crash. **The cable is still due to be
-replaced.** All six repos were copied to `~/kotor-home/` with `cp -a`; `git fsck` is clean in
+normal boot lines and an ext4 journal replay from the crash. **The owner has since replaced the cable** (he will report the new link speed; 6.0 Gb/s expected). Work stays in `~/kotor-home/`; nothing moves back to `/mnt/ga`. All six repos were copied to `~/kotor-home/` with `cp -a`; `git fsck` is clean in
 all six and every head is level with `origin`. **If `EIO` comes back on `/mnt/ga`: stop, run
 nothing that writes to it, and do not `fsck`.** GitHub holds everything that was pushed.
 
@@ -62,9 +61,8 @@ OK ("your progress will not be saved") then Quit.** Our app is captured on a pri
 
 **The Equip fonts — two faces, as K2 draws two** (`PT-2721`, `PT-2722`; `KOTOR-RPG-APP/lib/play/equip_text.dart`).
 
-- **UI face — `BankGothic Md BT`**, `assets/fonts/BankGothicMediumBT.ttf`. ⚠⚠⚠ **THE LICENCE IS NOT SETTLED.** The zip it came in carried **no
-  licence text** and its source site listed the licence as **"Unknown"**; it is a commercial Bitstream typeface. **Settle this before the app is
-  shared with anyone** (owner action). Private `KOTOR-RPG-APP` repo only. Letter-spacing −0.044 em, fitted to K2's hi-res atlas.
+- **UI face — `BankGothic Md BT`**, `assets/fonts/BankGothicMediumBT.ttf`. ⚠⚠⚠ **BEING REPLACED (owner ruling): it is commercial and carried no licence, so it comes out of the app once the owner picks from Coder's OFL top three** (candidates measured against K2's hi-res atlas; image in `STUDY/_reference/pt2722-bank-gothic-replacement/`). It stays until the replacement lands. **THE LICENCE WAS NOT SETTLED.** The zip it came in carried **no
+  licence text** and its source site listed the licence as **"Unknown"**; it is a commercial Bitstream typeface. **It must not ship.** Private `KOTOR-RPG-APP` repo only. Letter-spacing −0.044 em, fitted to K2's hi-res atlas.
 - **Description face — `Liberation Sans Bold` 2.1.5**, `assets/fonts/LiberationSans-Bold.ttf`, **SIL OFL 1.1 — no licence question.** Downloaded by Coder
   from the project's own release (`github.com/liberationfonts/liberation-fonts`, release 2.1.5), checked against its own name table, the OFL text in the
   tarball and Debian's `fonts-liberation2` package; **SHA-256 `788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173`**; the licence file is

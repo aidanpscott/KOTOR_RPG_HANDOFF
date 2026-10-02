@@ -61,8 +61,14 @@ OK ("your progress will not be saved") then Quit.** Our app is captured on a pri
 
 **The Equip fonts — two faces, as K2 draws two** (`PT-2721`, `PT-2722`; `KOTOR-RPG-APP/lib/play/equip_text.dart`).
 
-- **UI face — `BankGothic Md BT`**, `assets/fonts/BankGothicMediumBT.ttf`. ⚠⚠⚠ **BEING REPLACED (owner ruling): it is commercial and carried no licence, so it comes out of the app once the owner picks from Coder's OFL top three** (candidates measured against K2's hi-res atlas; image in `STUDY/_reference/pt2722-bank-gothic-replacement/`). It stays until the replacement lands. **THE LICENCE WAS NOT SETTLED.** The zip it came in carried **no
-  licence text** and its source site listed the licence as **"Unknown"**; it is a commercial Bitstream typeface. **It must not ship.** Private `KOTOR-RPG-APP` repo only. Letter-spacing −0.044 em, fitted to K2's hi-res atlas.
+- **UI face — `Orbitron` v2.001, weight 600, OpenType `smcp` on**, `assets/fonts/Orbitron[wght].ttf` (variable, `wght` 400–900), **SIL OFL 1.1 — no
+  licence question.** Owner pick (`PT-2722`) from three OFL candidates measured against K2's hi-res `dialogfont16x16`. It **replaced Bank Gothic Md BT**
+  (commercial, no licence text), which is out of the app tree. **Bundled UNMODIFIED — "Orbitron" is a Reserved Font Name**: no subsetting, no renaming.
+  Source: `github.com/googlefonts/orbitron-vf` commit `f16482824e0c` (`fonts/variable/Orbitron[wght].ttf`), the source Google Fonts' `METADATA.pb` names;
+  **byte-identical to `github.com/google/fonts` `ofl/orbitron/`; SHA-256 `f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd`**, 38,576
+  bytes. ⚠ The original `github.com/theleagueof/orbitron` has no releases or tags and nothing since 2011 (static v1.000 only). Licence (`Orbitron-OFL.txt`),
+  `Orbitron-AUTHORS.txt`, `Orbitron-CONTRIBUTORS.txt` and `ORBITRON-NOTES.md` sit beside the file. Letter-spacing +0.119 em, word gap +0.424 cell,
+  fitted to K2's atlas (line 1: 890 px against K2's 887). Private `KOTOR-RPG-APP` repo only.
 - **Description face — `Liberation Sans Bold` 2.1.5**, `assets/fonts/LiberationSans-Bold.ttf`, **SIL OFL 1.1 — no licence question.** Downloaded by Coder
   from the project's own release (`github.com/liberationfonts/liberation-fonts`, release 2.1.5), checked against its own name table, the OFL text in the
   tarball and Debian's `fonts-liberation2` package; **SHA-256 `788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173`**; the licence file is

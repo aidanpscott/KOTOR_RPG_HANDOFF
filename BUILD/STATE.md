@@ -13,51 +13,85 @@ with a slice report, this file is the later one.
 
 ---
 
-## ⚠ Where everything is — this changed at `BUILD 37`
+## ⚠ Where everything is — rewritten 2026-10-02, `PT-2721`
 
-    /mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT   the real path
-    /home/aidan/kotor-repos                                   the same folder (a SYMLINK)
+    WORK FROM THIS:   /home/aidan/kotor-home/        six clones, on the HOME drive (/dev/sda1)
+    the old place:    /mnt/ga/SteamLibrary/steamapps/common/KOTOR_APP_PROJECT
+    ~/kotor-repos     a symlink to the old place — do not start new work through it
 
-**It moved from `/home/aidan/step1` into a Steam library**, because the owner
-wants the code where the games are. **Use `~/kotor-repos` in anything you
-write** — it is the stable name and it is why the move cost one symlink.
+**Why the move, and the drive.** On 2026-10-01 at about 21:00 the drive under the old place
+(`/dev/sdb3`, a 1 TB SATA SSD on `ata4`, mounted at `/mnt/ga`) began returning
+**I/O errors on files that had read fine** — `git` could not open any of the six repos. After
+a reboot it read cleanly again. **Verified, not assumed:** SMART **PASSED** (0 reallocated
+sectors, 98% life left, no errors logged); the link negotiates **3.0 Gb/s on a 6.0 Gb/s
+drive**, which points at a **cable or port**; the owner ran `journalctl -k | grep -iE
+'ata4|sdb'` and since the 21:46 reboot there are **no link resets and no I/O errors** — only
+normal boot lines and an ext4 journal replay from the crash. **The cable is still due to be
+replaced.** All six repos were copied to `~/kotor-home/` with `cp -a`; `git fsck` is clean in
+all six and every head is level with `origin`. **If `EIO` comes back on `/mnt/ga`: stop, run
+nothing that writes to it, and do not `fsck`.** GitHub holds everything that was pushed.
 
-**⚠ Steam can delete things under `common/` on a verify.** ✓ **Everything is
-now on GitHub** — the app's last uncommitted work went in at `BUILD 38` — so
-the exposure is a re-clone and nothing else.
+**Pushing.** The VS Code sandbox has no `gh`. From it:
 
-**⚠ Packages and saves did NOT move and are not repo paths.**
-`~/.local/share/kotor-rpg/`, derived from `XDG_DATA_HOME`/`$HOME` by
-`Locations.desktop()`. Verified from all three repos after the move.
+    flatpak-spawn --host git -C /home/aidan/kotor-home/<repo> push origin main
 
-**⚠ `env.sh` is not optional and neither is its `clang` shim.** Flutter, CMake,
-Ninja and Clang live under `~/spike`; clang is installed as `clang-19` with no
-plain `clang`. Without the shim a **cold** build dies with *"CMAKE_CXX_COMPILER
-not set"* — earlier builds only worked because CMake had cached the compiler.
+**The toolchain — `KOTOR-RPG-APP/tool/env.sh`** (versioned; the loose `env.sh` beside the old
+repos is the OLD one and is wrong in the sandbox). Flutter, CMake, Ninja and Clang live under
+`~/spike`. **There are two places a command can run and they want opposite things:** on the
+**host** the spike libraries are right and a cold build takes ~27 s; inside **VS Code's
+flatpak sandbox** they make `which`, `flutter` and every system binary refuse to load
+("`GLIBC_2.42 not found`"), so `env.sh` detects `/.flatpak-info` and sets the PATH only.
+`flutter test` and `flutter analyze` work in the sandbox; **a build does not**:
+
+    flatpak-spawn --host bash -c 'cd /home/aidan/kotor-home/KOTOR-RPG-APP && . tool/env.sh && flutter build linux --debug'
+
+`env.sh` also puts `XDG_DATA_HOME` back to `~/.local/share` when the sandbox has pointed it at
+`~/.var/app/com.visualstudio.code/data` (**otherwise ~200 tests fail** with "Directory listing
+failed … packages/" and nothing is wrong with the code). ⚠ **The clang/clang++ shims are
+symlinks and must never be written through** — doing that once overwrote the real compiler
+(`~/spike/prefix/usr/lib/llvm-19/bin/clang`); it was restored from the `.deb` in `~/spike/debs`.
+
+**Running K2 for the Equip comparison.** Through Steam, from the host:
+`steam steam://rungameid/208580` (the direct `./KOTOR2` fails — `libopenal.so.1` is missing
+outside Steam's runtime). It opens windowed at 1920×1080 on `DISPLAY=:0`. Drive it with
+`xdotool mousemove X Y` then `xdotool click 1` — **keys sent to it did not land.** Find windows by
+PID (`xdotool search --pid`), never by name. **Read-only: never save; quit with its own Exit Game →
+OK ("your progress will not be saved") then Quit.** Our app is captured on a private
+`Xvfb :99 -screen 0 1920x1080x24` so it renders at exactly 1920×1080. Coder's own data directory is
+`XDG_DATA_HOME=~/.local/share/coder-data`.
+
+**The Equip font — `BankGothic Md BT`, `KOTOR-RPG-APP/assets/fonts/BankGothicMediumBT.ttf`.**
+⚠⚠⚠ **THE LICENCE IS NOT SETTLED.** The zip it came in carried **no licence text** and its source site listed
+the licence as **"Unknown"**; it is a commercial Bitstream typeface. **Settle this before the app is shared
+with anyone.** Owner ruling: it lives in the **private** `KOTOR-RPG-APP` repo and **nowhere else** — never
+this public repo, which rejects `.ttf/.otf/.woff/.woff2/.eot` with a pre-commit hook (`git config
+core.hooksPath .githooks` once per clone) and a CI check. Notes: `assets/fonts/BANKGOTHIC-NOTES.md`.
+
+**The keyboard hint line is off for a player** ("arrows to move · m map · …"; owner ruling). The
+Tester gets it back with `KOTOR_KEY_HINTS=1` in the environment at launch.
 
 ## Repository heads
 
-> **⚠⚠ AND THIS FILE WENT STALE AGAIN, BY THE MECHANISM `PT-1608` NAMES.** The
-> table below carried `BUILD 39`'s heads and *"846 tests"* until `BUILD 103` —
-> **sixty-four slices** — because *"rewritten in full each time"* is a promise
-> with **no trigger anybody watches.** The same shape as *"next time that file
-> is open."* It is refreshed here; it will go stale again unless something
-> makes it fail.
-
 | Repo | Head | Visible to the owner? |
 |---|---|---|
-| `KOTOR_RPG_MAIN_WORK` | `643f3fa` — K1 governs the seven mines |      ✓ |
-| `KOTOR_RPG_HANDOFF` | this commit | ✓ |
-| `Lodestar` | `67e6775` — `PT-1905`'s save channel |     ⚠ no |
-| `Lens` | `e79bc06` — `PT-1137` — a token is the sidebar's portrait |  ⚠ no |
-| `Loom` | `64cabe2` — pinned to `PT-1903`'s engine |        ⚠ no |
-| `KOTOR-RPG-APP` | `cb13d3c` — pinned to `PT-1903`'s engine |      ⚠ no |
+| `KOTOR_RPG_MAIN_WORK` | this commit — the Equip comparison, pass 1 | ✓ (private) |
+| `KOTOR_RPG_HANDOFF` | this commit | ✓ (**public**) |
+| `Lodestar` | `df81340` — `PT-2718` | ⚠ no |
+| `Lens` | `2bad745` — cover tile types | ⚠ no |
+| `Loom` | `1d1fa74` — base-rules as the item fallback | ⚠ no |
+| `KOTOR-RPG-APP` | `c7ef0d1` — Equip opens on Body; the matched-gear character | ⚠ no (**private**) |
 
-**All six clean and level with origin**, and `check_engine_pin.py` compares the
-four pins on every slice — **which is the difference between this row and the
-one above it: the pins have a check and the heads have a habit.**
+**All six level with `origin` at the time of writing**, working from `~/kotor-home/`.
 
 ## Tests, as measured
+
+**`KOTOR-RPG-APP`, measured 2026-10-02 at `c7ef0d1`: 1,924 passed, 1 failed** — the one failure was a guard test that was
+too broad (fixed in the next commit, and green alone). ⚠ **That is not one clean run of one fixed version**, and it is not the
+closing commit of the Equip work (Equip has not closed): **a single clean full run is still owed at the commit where Equip
+closes.** Nothing is skipped in the app suite any more (`whole_loop_test`'s long-skipped case now loses a real fight, 20
+consecutive clean runs). `Lodestar`, `Lens` and `Loom` were **not** re-run this session; the `BUILD 178` figures below stand for
+them.
+
 
 **`Lodestar` 765 · `Lens` 13 · `Loom` 263 · `KOTOR-RPG-APP` 597 — 1,638, all
 green.** *(`BUILD 178`.)*
@@ -253,6 +287,13 @@ returns in some widget harnesses and returns fine in others, on the same
 package. It made two tests worthless and nothing detects it.
 
 ## ⚠ What is open
+
+> **⚠⚠ `PT-2721` — THE EQUIP LOOP IS AT A REAL STOP, WITH SIX DECISIONS OPEN.** Pass 1 compared K2's Equip screen to ours at
+> 1920×1080, 46 rows, every one read off a picture (`docs/EQUIP-COMPARISON-PT2721.md`; pictures in
+> `BUILD/screens/pt2721-equip-loop/pass-1/`): **PASS 16 · FAIL 24 · DECISION 4 · EXCUSED 1.** The owner is asked: **D1** the gear (K2's
+> items are not in the K1-sourced catalogue), **D2** the Map icon, **D3** the description font, **D4** 21 developer notes leaking into
+> item descriptions (`equipment.toml`), **D5** portrait art, **D6** Bank Gothic's width. The agenda holds the fixes in order
+> (`docs/CODING-AGENDA-01.md`).
 
 ### ⚠⚠ 54 DUAL-GAME ROWS STILL TAKE K2's TEXT, AND NOBODY RULED ON THEM
 

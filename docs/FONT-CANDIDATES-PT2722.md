@@ -50,3 +50,14 @@ Not recommended: **Arial Bold itself** — it is the exact shapes, but it is Mic
 - K2's glyphs in the picture are drawn from the game's own `d3xfnt_d16x16b.tga` / `d3xfont16x16b.tga` with the `.txi` glyph tables taken from the original texture resources (`tpc.txi()`); the candidates are rendered from their downloaded files **for the picture only — nothing is bundled and nothing was added to either repo.**
 - **The Equip screen's current size is also off, and this is a separate finding:** `kK2CapHeightOfCell` (0.5) was measured from the LOW-res atlas. The hi-res face's capitals are **0.5625** of its cell (36 px in a 64 px cell). On the 1920×1080 captures K2's list text is about 22% larger than ours (about 9.5 px per character against 7.8). It is sized with the layout slice (fix 3), from the pictures, not from this constant.
 - Not measured: GroupType's condensed cuts (no file), the Dist variants, Morris Sans / Card Gothic (Linotype derivatives) — named by the research agent and not rendered.
+
+## ⚠ APPLIED (`PT-2722`, after the owner's ruling) — both faces, fitted, with the picture
+
+The owner ruled both choices and authorised Coder to download free, openly licensed fonts. **Done:**
+
+- **D3 — Liberation Sans Bold** downloaded from the project's own release (2.1.5), **checked**: the file's name table (family *Liberation Sans*, style *Bold*, *Version 2.1.5*, "Licensed under the SIL Open Font License, Version 1.1"), the **OFL text** shipped in the same tarball (102 lines), and **Debian's `fonts-liberation2` package as an independent source** (same size, names, version and a `copyright` file declaring SIL-OFL-1.1 — its bytes differ because Debian rebuilds from source). The release publishes **no checksum**; this file's SHA-256 is `788abee4…9a9173`. It sits in `KOTOR-RPG-APP/assets/fonts/` **with `LiberationSans-OFL-LICENSE.txt` and `LIBERATION-NOTES.md`**. Never in HANDOFF.
+- **D6 — Bank Gothic Md BT kept**, tightened. **No condensed cut bought, nothing downloaded.**
+- **Spacing, fitted against K2's hi-res atlases** (least-squares over real strings: eleven UI, eight description): **−0.044 em** (Bank Gothic; the ruling said about −0.037) and **+0.042 em** (Liberation; the ruling said about +0.057). The fits are what the atlas gives; the per-string spread is real (Bank Gothic −0.019 to −0.091; Liberation +0.016 to +0.055).
+- **Capitals from K2's hi-res heights:** the UI face 36 px in a 64 px cell = **0.5625** (so `kK2CapHeightOfCell` is 0.5625); the description face **0.6875**, from K2's own screen (11 px against 9 px).
+- **Result, in the picture** (`STUDY/_reference/pt2722-font-candidates/equip-font-side-by-side.png`): the first UI line is **−1.3%** of K2's width and the first description line **−2.5%**, with matching letterforms.
+- **Not yet done:** the Equip screen's on-screen text SIZE (K2's list text is ~22% larger than ours at 1920×1080) — that is the layout slice.

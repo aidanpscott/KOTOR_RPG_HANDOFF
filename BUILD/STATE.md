@@ -60,12 +60,19 @@ OK ("your progress will not be saved") then Quit.** Our app is captured on a pri
 `Xvfb :99 -screen 0 1920x1080x24` so it renders at exactly 1920×1080. Coder's own data directory is
 `XDG_DATA_HOME=~/.local/share/coder-data`.
 
-**The Equip font — `BankGothic Md BT`, `KOTOR-RPG-APP/assets/fonts/BankGothicMediumBT.ttf`.**
-⚠⚠⚠ **THE LICENCE IS NOT SETTLED.** The zip it came in carried **no licence text** and its source site listed
-the licence as **"Unknown"**; it is a commercial Bitstream typeface. **Settle this before the app is shared
-with anyone.** Owner ruling: it lives in the **private** `KOTOR-RPG-APP` repo and **nowhere else** — never
-this public repo, which rejects `.ttf/.otf/.woff/.woff2/.eot` with a pre-commit hook (`git config
-core.hooksPath .githooks` once per clone) and a CI check. Notes: `assets/fonts/BANKGOTHIC-NOTES.md`.
+**The Equip fonts — two faces, as K2 draws two** (`PT-2721`, `PT-2722`; `KOTOR-RPG-APP/lib/play/equip_text.dart`).
+
+- **UI face — `BankGothic Md BT`**, `assets/fonts/BankGothicMediumBT.ttf`. ⚠⚠⚠ **THE LICENCE IS NOT SETTLED.** The zip it came in carried **no
+  licence text** and its source site listed the licence as **"Unknown"**; it is a commercial Bitstream typeface. **Settle this before the app is
+  shared with anyone** (owner action). Private `KOTOR-RPG-APP` repo only. Letter-spacing −0.044 em, fitted to K2's hi-res atlas.
+- **Description face — `Liberation Sans Bold` 2.1.5**, `assets/fonts/LiberationSans-Bold.ttf`, **SIL OFL 1.1 — no licence question.** Downloaded by Coder
+  from the project's own release (`github.com/liberationfonts/liberation-fonts`, release 2.1.5), checked against its own name table, the OFL text in the
+  tarball and Debian's `fonts-liberation2` package; **SHA-256 `788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173`**; the licence file is
+  beside it (`LiberationSans-OFL-LICENSE.txt`, `LIBERATION-NOTES.md`). Letter-spacing +0.042 em.
+- **Owner ruling:** font files never go in this public repo, whatever their licence — it rejects `.ttf/.otf/.woff/.woff2/.eot` with a pre-commit hook
+  (`git config core.hooksPath .githooks` once per clone) and a CI check. Coder may download **free, openly licensed** fonts; **paid fonts are never bought.**
+- ⚠ **K2's real UI face is the HI-RES atlas the Steam build draws from `override/`**, not the 256-px original `PT-2721` first compared; against it Bank Gothic is
+  +6.8% wide, not 1.8×.
 
 **The keyboard hint line is off for a player** ("arrows to move · m map · …"; owner ruling). The
 Tester gets it back with `KOTOR_KEY_HINTS=1` in the environment at launch.

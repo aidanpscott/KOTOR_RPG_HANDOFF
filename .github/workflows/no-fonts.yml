@@ -1,0 +1,15 @@
+# KOTOR_RPG_HANDOFF is public. Fail any push or PR that carries a font file
+# (PT-2721, owner ruling): BankGothic Md BT has no licence on file.
+name: no-font-files
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject font files
+        run: |
+          bad=$(git ls-files | grep -iE '\.(ttf|otf|woff2?|eot)$' || true)
+          if [ -n "$bad" ]; then
+            echo "Font files are not allowed in this public repo:"; echo "$bad"; exit 1
+          fi

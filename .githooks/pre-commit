@@ -1,0 +1,11 @@
+#!/bin/sh
+# KOTOR_RPG_HANDOFF is PUBLIC. A font file must never be committed here —
+# BankGothic Md BT is a commercial Bitstream font with no licence on file
+# (PT-2721, owner ruling). Screenshots and side-by-sides are fine; the font is not.
+# Enable once per clone:  git config core.hooksPath .githooks
+bad=$(git diff --cached --name-only --diff-filter=ACMR | grep -iE '\.(ttf|otf|woff2?|eot)$')
+if [ -n "$bad" ]; then
+  echo "REFUSED: font files may not be committed to this public repo:" >&2
+  echo "$bad" | sed 's/^/  /' >&2
+  exit 1
+fi

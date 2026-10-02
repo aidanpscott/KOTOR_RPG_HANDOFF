@@ -1,0 +1,7 @@
+
+# PT-2721: fonts never go in this public repo (see .githooks/pre-commit)
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.eot

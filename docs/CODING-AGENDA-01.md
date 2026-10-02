@@ -12,12 +12,15 @@ Standing, continually-updated list of open work. Updated every time something cl
 3. **Droid Equip** — the live four-state loop against a droid character in K2 (`PT-2692`).
 4. **The full K1 + K2 item import** — every item tagged `k1` / `k2` / `both`, conflicts listed for the owner (`PT-2722` D1).
 5. **The recommendation system and Auto Level Up** (`PT-2679`, widened at `PT-2712`) — after Equip.
+6. **Save and Load Game screens, 1:1 with K2** — *parked, owner schedules* (owner request 2026-10-02; full text under OPEN).
 
 *Owner actions waiting on nobody else: report the new `/dev/sdb` link speed (cable replaced; 6.0 Gb/s expected).*
 
 ---
 
 ## OPEN
+
+> - **Save and Load Game screens: 1:1 with KOTOR II, owner request (2026-10-02). PARKED: the owner schedules it.** The owner wants saving and loading to recreate K2's own experience. That means K2's Save and Load screens (`saveload.gui` and its siblings), with the same layout, list, slot thumbnails and portraits, slot naming and confirmation prompts, the same flow from the in-game menu and from the main menu, and K2's own fonts, textures and highlight states. Same standard as Equip (PT-2693/2694): element by element, in every state (empty list, a filled list, a slot selected, the overwrite prompt, the delete prompt, saving in progress), against fresh K2 captures, looped until 1:1. **Open questions for the owner when it starts:** K2's save-slot model against ours (`kotor-rpg/` saves, autosave per door, PT-121-style per-door autosaves); quicksave; and whether the main menu's Load matches too. **It also absorbs TEST 147's "Go to Load Game List lands on the package menu"** (PT-2723 item 5) if that isn't fixed first.
 
 ### ⚠⚠⚠ PT-2721 — `PT-2720`'s "1:1" claim rejected; the real four-state loop, matched gear, 1920×1080, every pass mirrored
 - `PT-2720`'s comparison is rejected for five reasons: rows passed by inheriting a PT-2718 read that never checked font/colour/text; description text checked against `equipment.toml` instead of against what's actually drawn on screen; different gear on each side (K2's Onjo Trigit is a full loadout, ours was one lightsaber + one robe); a real text mismatch ("nothing equipped in this slot" vs K2's own wording) called "cosmetic" instead of a fail; no screenshots mirrored to HANDOFF.

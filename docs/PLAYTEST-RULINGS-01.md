@@ -81284,3 +81284,38 @@ As listed.
 
 As listed. After Equip.
 
+## PT-2725 -- EQUIP PASS 2: 42 PASS, 3 EXCUSED, 2 DECISIONS. OWNER KEEPS THE DIAMOND WITH SMALLER CELLS. MAIN: REPLICATE K2's DIM INVENTORY ICON, CAUSE FIRST. ⚠ MAIN READS FOUR FAILS IN THE PAIR: "ATKL/ATKR" LABELS K2 LACKS, AND THE OFF HAND's DAMAGE RANGE MISSING; THE DESCRIPTION PANE LACKS K2's FEATS REQUIRED BLOCK AND SHOWS DIFFERENT PROPERTY LINES; THE CONFIG LABELS DIMMER; THE HOVER STATE UNMATCHED. D1: THE INSTALLED TLK IS THE AUTHORITY; BASE TYPES AND SLOTS COME FROM K2's BASEITEMS.2DA. PASS 3 NEXT
+
+*Filed 2026-10-02 from MAIN's `MAIN-TO-CODER-PT-2725`; `PT-2724` was the last `## PT-` entry. Main: "the pass-2 pair is the first that reads as the same screen"; the asset audit and the K2 list rebuild landed as asked; catching the D1 regression with the full suite is the discipline working.*
+
+### The two decisions
+
+- **DECISION A, the slot cells (owner): keep the diamond with the smaller cells.** Row 14 becomes **EXCUSED, owner, PT-2725**. The figure stays scaled to fit, with text at K2's size. Record the owner's choice beside the PT-2695 diamond entry.
+- **8b, the dim Inventory icon (Main): replicate it.** The standard is 1:1, so draw Inventory at K2's measured (36,146,123) against the others' (49,196,165). **But first find out why K2 dims it.** Check `top_p.gui` and `equip_p.gui` for a per-button colour or alpha, and whether it's a disabled or "current-screen sibling" state that changes on other screens. Replicate the cause, not just the colour. If no cause is found, replicate the measured colour and say so.
+
+### ⚠ Rows Main reads as failing in the pass-2 pair. Re-examine each one fresh.
+
+Compared by eye on `side-2-filled-slot.png` and `side-4-description.png`. Each either fails or needs a measurement to show why it passes:
+
+1. **The weapon readout.** Ours prints "ATKL" and "ATKR" labels K2 doesn't have: remove them. K2 shows two values beside each hand: a damage range on top (3-17 / 5-23) and the attack modifier below (−6 / 0), outside each weapon cell, in larger text. Our left hand shows only "−2", with no damage range, though a lightsaber is equipped there: either the old off-hand gap or a layout clip — find which. Match K2's position, size and order for both hands.
+2. **The description pane's format.** K2 opens with "Feats Required:" and the feat on its own line, then a blank line, before the numbered properties; ours has no Feats Required block at all. The property lines differ: K2 shows "Regenerate Force Points: 1"; ours shows "Max Dexterity Bonus: uncapped". **Rule:** the pane follows K2's order and format (Feats Required, then properties, then the flavour line) and shows the lines K2 would show for that item, **unless a ruled rules difference changes a line; name the ruling for each line that differs.** Check whether K2 ever shows "Max Dexterity Bonus" for an uncapped item; if it doesn't, ours shouldn't. Check at least three items (a robe, a medium armour, a weapon) against K2.
+3. **The "Config 1" and "Config 2" labels** look dimmer and smaller in ours. Measure the colour and size.
+4. **The hover state.** K2's captures show an orange border on the last row (hover). Ours shows none because the pointer was elsewhere: **put the pointer over the same row before capturing ours.**
+
+**A row passes only when it has been compared fresh in this pass.** If pass 2's table marked any of these PASS, say what was compared and why the picture disagrees.
+
+### D1 data: rulings
+
+- **The installed game is the authority** for K2 names and descriptions, since that is what the 1:1 captures show. Use the **installed** `dialog.tlk`, not the corpus copy, and re-read every item description from it. **Report how many strings differ** between the two (136,551 vs 136,329 entries, likely a restored-content mod in one of them) and which one the corpus came from. Don't delete the corpus copy.
+- **The Peragus vs Telos name conflict:** take the installed TLK's name, and note the old name in the item's developer-only `note`.
+- **The Stealth Unit belts with no base type:** take the base type from **K2's `baseitems.2da`** row the item's own template points to. If that row truly doesn't exist, list the two items for the owner with what's missing.
+- **The shield generator with no `worn_at`:** in both games an energy shield is worn in **an arm slot (forearm band)**, per `baseitems.2da`'s equipable-slots column. Read it from there, not from memory, and set `worn_at` to match. Test that the shield is offered for an arm slot and not the belt.
+
+### Then
+
+Re-run the loop (**pass 3**) with all of the above, mirror it, and if every row passes or is excused, **run the closing suites** (app plus Lodestar, Lens and Loom) and report Equip ready for the owner's sign-off.
+
+### PROCEED
+
+As listed.
+

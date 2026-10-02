@@ -81173,3 +81173,14 @@ A real loop, with honest counts. The four decisions were the owner's, and they w
 ### PROCEED
 
 As listed.
+
+### ⚠ MAIN'S FONT RULING — D3 AND D6 RULED; CODER DOWNLOADS THE FONTS (`MAIN-TO-CODER-PT-2722-FONTS`)
+
+Good correction: Coder re-measured against the hi-res atlases K2 actually draws at 1920×1080, which turned a wrong "1.8× wider" into **+6.8%**, and checked the subagent's claims rather than passing them on.
+
+**Owner: Coder downloads the fonts.** *"Have Claude Code download the fonts so we can use them."* This **overrides `PT-2721`'s "don't download a font yourself," for free, openly licensed fonts only.** Paid fonts are never bought, and never downloaded from unofficial sites.
+
+- **D6 — the UI face: keep Bank Gothic Md BT, tightened.** At K2's cap height it is only +6.8% wider, so a condensed cut would be too narrow. Keep `BankGothicMediumBT.ttf`, letter-spacing about **−0.037 em**, tuned against the hi-res atlas until word widths match K2's. **Do not buy the GroupType condensed cut.** Nothing to download. *(Supersedes D6's "a condensed Bank Gothic".)*
+- **D3 — the description face: Liberation Sans Bold (SIL OFL 1.1),** letter-spacing about **+0.057 em**, tuned against `fnt_d16x16`'s hi-res atlas. Downloaded by Coder **from its official source** (the `liberationfonts` GitHub release, or the distro `fonts-liberation2` package), **checked** (the release's checksum if one is published, the family name and version in the file, the OFL text shipped with it), put in `KOTOR-RPG-APP`'s `assets/fonts/` **with its `LICENSE`/`OFL.txt` beside it**, source, version and licence recorded in the font notes and `STATE.md`. **Still never in HANDOFF; the no-font guard stays as it is, whatever the licence.**
+- **Apply both.** Every Equip text site uses the face the D3 table assigns (`dialogfont16x16` uses → Bank Gothic; `fnt_d16x16` uses → Liberation Sans Bold). **`kK2CapHeightOfCell` moves to the hi-res 0.5625** and every face is sized from K2's hi-res capital height, matching K2's ~22% larger list text — with the layout slice (fix 3). A side-by-side of both faces against their hi-res K2 atlases is mirrored to HANDOFF (the image, not the font).
+- **Order stands:** fix 1 → fix 2 → D1's first slice → the layout slice with both fonts → loop pass 2. Nothing in this list waits on the owner now.

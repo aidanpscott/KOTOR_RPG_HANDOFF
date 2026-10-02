@@ -81242,3 +81242,45 @@ No new PT. Window title **`Knights of the Old Republic RPG`**; application id **
 
 As listed.
 
+## PT-2724 -- TEST 148 NARROWS THREE OF PT-2723's FINDINGS. (h) CAUSE SHOWN: A NEW GAME INHERITS THE LAST LOADED CHARACTER's UNCHECKED-RULES COUNT. (b) NARROWED: THE DEFEAT WRITE RECORDS NO PLAYER POSITION. (c) RULED: THIS BUILD RUNS NORMAL; ONLY A WIPE KILLS (PT-1633); EVERY READER SHOWS THE SAME HP, NEGATIVES INCLUDED, AND THE BLEED STOPS AT −CON. THE MISSING DIFFICULTY SETTING GOES ON THE AGENDA
+
+*Filed 2026-10-02 from MAIN's `MAIN-TO-CODER-PT-2724`; `PT-2723` was the last `## PT-` entry. **Still queued after Equip; the Equip work is not interrupted.** This only sharpens the agenda entries, so each starts from a shown cause. The report is `HANDOFF/TEST/reports/148-…`, screenshots in `BUILD/screens/test-148/`.*
+
+### PT-2723 item 4 (h): cause shown
+
+**A new game's "N rules not checked" count is the count of the last character that was loaded.** It matched in 12 of 12 cases. A Bounty Hunter whose true count is 1 showed 2 in play, and 1 after its own load. Loading alone never changes it.
+- **This is state leaking between characters,** the same class of bug as the old subject-filter ones. Find what holds the count across a new game, and make **a new game start clean.** The count must be computed from the character in play only.
+- Test: load character A (count 2), start a new character B (true count 1), and assert 1. Mutation-check it.
+- **Also make the screen name the unchecked rules**, not just count them. Tester couldn't see which rules they were. A count with no list can't be acted on.
+
+### PT-2723 item 3 (b): narrowed
+
+**The defeat write records no player position.** Tester ran three arms (unmoved, moved to the arena, moved within the arena). There's never a player `character.moved` event, and the header stays `a01-room`. The leave-session write for the same move does record it. **Likely cause, not shown:** `_endFight` never calls `_writePosition()`. Confirm it, fix it at the cause, and test it with all three arms.
+
+### PT-2723 item 2 (c): the rule, and what the build does
+
+**The rule.** `DEATH-AND-DIFFICULTY-01`:
+- **§1:** 0 = Disabled; −1 to −(Con−1) = dying, loses 1 per round; −Con = the threshold.
+- **PT-1633 (owner, governs Easy and Normal):** **only a wipe kills.** There's no individual death threshold on either difficulty.
+- **Easy:** the negative band doesn't exist.
+- **Normal:** the band exists, and −Con is where an ally can no longer bring you up mid-fight.
+
+**This build runs Normal.** Encounter defaults to `normal`, and there's no difficulty setting (ledger, line ~55604).
+
+**What the build does:** the 1-per-round bleed works; **the party card clamps at 0 while the status line and sheet show the negative value;** the defeat panel shows "0 of 8 — killed"; the bleed continues past −Con (to −21 at CON 14). TEST 147's "damage kept landing" is withdrawn: it was the bleed.
+
+**Ruling:**
+1. **One fold, one number.** On Normal, every reader (status line, party card, sheet, defeat panel) shows the same value, **negative included.** On Easy, the fold itself floors at 0, so every reader shows 0. **The card must not clamp on its own.**
+2. **The bleed stops at −Con on Normal.** Past it, the number means nothing (no death until a wipe, and no help mid-fight), so floor it there. **This is Main's reading of PT-1633. The owner may overrule it.**
+3. **Check that "can't be helped up mid-fight below −Con" is actually built.** If not, add it to the agenda as its own item. Don't build it in this pass.
+4. Test it per difficulty, mutation-checked: Normal shows the negative value everywhere, floored at −Con; Easy shows 0 everywhere.
+
+### Two more for the agenda (after Equip)
+
+- **There's no difficulty setting.** The TABLE RULES screen is unbuilt, so every fight is Normal and the three modes have never been exercised. Add it as OPEN if it isn't already, so the owner can schedule it.
+- **Initiative after a load:** Veya rolled 10 / 10 / −1 in her first session, then 17 / −3 / 0 in every fight after a load. Oreth matched before and after. **Report whether the saved RNG seed restoring identical rolls on every reload is intended.** If it isn't, name the cause. Low priority.
+
+### PROCEED
+
+As listed. After Equip.
+

@@ -81107,3 +81107,17 @@ One row per element, per state, compared fresh. What's drawn is checked against 
 ### PROCEED
 
 As listed.
+
+### ⚠ OWNER RULINGS, SECOND ROUND (answers to the PT-2721 handoff, and what the owner then decided)
+
+**1. The diamond slot layout is approved.** Owner, `PT-2695`, given live: *"I know this breaks a bit with the original game, but that's fine."* Owner, asked directly again under `PT-2721`: *"yes, it's fine."* The 7-cell diamond is an **excused difference** from K2's 2×3 grid. In the comparison the grid-shape row reads **"excused, owner, PT-2721"**. The icons *inside* the cells are still compared: the item's own art against K2's.
+
+**2. The menu screens drop the play-view chrome.**
+- The keyboard hint line ("arrows to move · m map · i carrying · esc options") is **removed** — it was there for the tester and was never part of the game's design. If the Tester needs it, it goes behind a debug/test flag that is off by default, and the Tester is told where it went.
+- The **area name** is not shown on any of the eight in-game menu screens (K2 does not show the location there); it stays on the normal play view.
+- The **party panel** is hidden on the Equip screen (K2 has none; characters are switched through the portrait). The portrait block must let the player change the selected party member the way K2's does; if that is harder than it looks it is reported, not guessed. *The owner can still overrule this one.*
+- Tests: none of the three render on Equip; the hint line is gone from play; the area name still renders on the play view.
+
+**3. The font.** Owner ruled **BankGothic Md BT** (Bitstream), file `BankGothicMediumBT.ttf` v4.4, committed to the **private** `KOTOR-RPG-APP` repo, and **nowhere else**. It never goes to `KOTOR_RPG_HANDOFF` or any public repo; HANDOFF gets a guard that rejects `.ttf`, `.otf` and `.woff`. Screenshots and side-by-sides are fine. ⚠ **The downloaded zip carried no licence text, and its source site listed the licence as "Unknown". Settle the licence before the app is shared with anyone.** Then: every Equip text site moves onto it, with size, spacing and colour from `equip_p.gui`; the atlas renderer is retired; every drawn string keeps a real text label (`PT-2720`'s semantics fix); a side-by-side against K2's text is mirrored to HANDOFF (the image only).
+
+**4. Process rulings (from MAIN's answers message).** Order: commit and push, full suite, the size guard, list rows (item name + icon, ⊘ for "None"), portrait block, matched K2 loadout, then the 1920×1080 four-state loop (ask the owner to start K2 with the save loaded). The shared `nav_bar.dart` is accepted: each of the eight icons opens its own screen in K2's order, any icon with no screen of ours is named and left visibly disabled, and every other play screen's tests stay green. Sessions are kept small: a fresh session when a PT closes, and `STATE.md` kept current at every commit.

@@ -73,6 +73,7 @@ OK ("your progress will not be saved") then Quit.** Our app is captured on a pri
   from the project's own release (`github.com/liberationfonts/liberation-fonts`, release 2.1.5), checked against its own name table, the OFL text in the
   tarball and Debian's `fonts-liberation2` package; **SHA-256 `788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173`**; the licence file is
   beside it (`LiberationSans-OFL-LICENSE.txt`, `LIBERATION-NOTES.md`). Letter-spacing +0.042 em.
+- ⚠ **`KOTOR-RPG-APP`'S HISTORY WAS REWRITTEN 2026-10-02 (`PT-2722`)** to purge Bank Gothic, and force-pushed (owner-approved); head `ca16ef4` → `60898dc`. **Any app hash cited in this repo before that date is the OLD hash — see `MAIN_WORK/playtest/APP-HASH-MAP-PT2722.md` (mirrored at `docs/APP-HASH-MAP-PT2722.md`).** Anyone holding a clone must re-clone.
 - **Owner ruling:** font files never go in this public repo, whatever their licence — it rejects `.ttf/.otf/.woff/.woff2/.eot` with a pre-commit hook
   (`git config core.hooksPath .githooks` once per clone) and a CI check. Coder may download **free, openly licensed** fonts; **paid fonts are never bought.**
 - ⚠ **K2's real UI face is the HI-RES atlas the Steam build draws from `override/`**, not the 256-px original `PT-2721` first compared; against it Bank Gothic is

@@ -81129,3 +81129,47 @@ As listed.
 3. **`whole_loop_test`'s second case is self-contained and loses a real fight.** Forging `dying`/`died` into the log was rejected: it tests that the panel reads a log line, not that losing a fight leads to death. The case now has its own copied shelf, an authored legal character, and an unbeatable fixture enemy on the real play screen; the real death path writes the real log and the panel reads it. Mutation-checked by breaking the death path itself (play_screen.dart stops writing a combatant's `died`) and the log-to-panel routing (main.dart loads every save into play). `7d63a40`.
 4. **`env.sh` is fixed in the file, not rediscovered each session.** `tool/env.sh` in KOTOR-RPG-APP detects the VS Code flatpak sandbox (PATH and XDG only there) and the host (full toolchain, where a cold build takes 27 s). Build from the host: `flatpak-spawn --host bash -c 'cd <repo> && . tool/env.sh && flutter build linux --debug'`. `XDG_DATA_HOME` is put back to `~/.local/share` when the sandbox has pointed it at `~/.var/app/...`. `0da942e`.
 5. **The font is committed to the private app repo** as part of the font swap, never HANDOFF, with the licence note in `STATE.md`.
+
+
+---
+
+## PT-2722 -- PT-2721 PASS 1: 46 ROWS, 16 PASS, 24 FAIL, 4 DECISIONS, 1 EXCUSED. ⚠ OWNER: EVERY K1 AND K2 ITEM IN THE CATALOGUE, TAGGED BY SOURCE GAME, MISSING ONES ADDED, NOTHING ALREADY RULED REVERTED. ⚠ OWNER: K2's FONTS ARE MATCHED PER USE, NOT ONE FACE FOR EVERYTHING. ⚠ OWNER: PORTRAITS COME FROM THE GAME FILES. ⚠ OWNER: A CONDENSED BANK GOTHIC. MAIN: THE MAP ICON OPENS THE MAP; INTERNAL NOTES NEVER REACH A PLAYER
+
+A real loop, with honest counts. The four decisions were the owner's, and they were brought to him rather than guessed.
+
+### ⚠ OWNER RULINGS
+
+**D1 — Items: all of K1 and all of K2, each tagged by game (owner).** *"We should get KOTOR 1's items and KOTOR 2's items and give them tags so we know which came from which game, but we should include the missing ones."*
+- Nothing already ruled is reverted. Every change made to existing items stays.
+- Import every K1 item and every K2 item through the same pipeline and rules the K1 catalogue already uses, including a carryable blueprint where one is owed. Tag each by source game: `k1`, `k2` or `both`. An item in both games is one entry tagged `both`.
+- Where K1 and K2 disagree on an item's stats, **existing rulings decide**. Where none covers it, **list the conflict for the owner; do not pick.**
+- Order: **first, as the first slice,** the items in `000008 - game7`'s loadout and inventory (Jamoh Hogra's Battle Armor, Nomi's Armband, the Telos Mining Shield and the rest), through the real pipeline, not test stand-ins, so the comparison runs on real items. The full import of every other item is **its own agenda item right after Equip closes.** Report counts as k1 / k2 / both, plus the conflicts.
+
+**D2 — The Map icon (Main).** K2's Map icon opens the map. Wire it to the existing map overlay (the one `m` opens) and enable it. Test it from two screens.
+
+**D3 — The fonts: K2 uses a different face for different uses, so match each one (owner).** *K2 used different fonts for different things. Check that, and use the face K2 used for each use, matched to our equivalent.*
+- Map every font on the Equip screen to its use from `equip_p.gui`'s GFF (each control's font resref) and from anything the engine sets in code (descriptions use `fnt_d16x16`). Produce a table: use (title, top bar, list rows, description, buttons, readout numbers, name/class) → K2 font resref.
+- For each distinct K2 face, bring three closest real fonts, each with source, licence and a side-by-side against that face's own glyphs, the `FONT-CANDIDATES-PT2721` method. The small-caps UI face already has its answer (Bank Gothic, narrower; D6). **Then stop for the owner to pick and download.** Once the files are in, each use gets its own face.
+
+**D4 — Internal notes leaking into player descriptions (Main).** *"SECTION: PT-1734 — READ FROM BASEITEMS.2DA ROWS 66–68" on a player's screen is a bug. Internal notes are never shown to a player.*
+- Split `equipment.toml`'s `note` into a developer-only field (not rendered) and a player-facing description.
+- The player-facing text comes from the game's own item description (the TLK description) for items imported from K1 or K2, where one exists. Otherwise it stays empty, never invented.
+- Guard test: no rendered description contains "PT-", "section:", ".2da" or a file path. Mutation-check it.
+
+**D5 — Portraits: extract them from the game files (owner).** Extract the player and NPC portraits (via `portraits.2da` and the `po_*` textures) from K1 and K2, tagged by game, the way the icons were extracted. Give a character a portrait id and draw it in the portrait block. Set the test character's portrait to the one Onjo Trigit uses in the save. **Extracted game art lives in the private app repo only, never in HANDOFF.** Screenshots are fine. **Extend the HANDOFF guard to refuse `.tga`, `.tpc` and extracted art folders.**
+
+**D6 — A narrower Bank Gothic (owner).** *A condensed Bank Gothic, so the letters match K2's height and width.* Find the condensed or narrow cuts of Bank Gothic (Bitstream, ParaType and others). For each: name, where to get it, licence, and a side-by-side against K2's small-caps face at K2's capital height, **measuring a word's width against K2's.** Recommend one. **Then stop for the owner to download it.** It replaces `BankGothicMediumBT.ttf` in the private app repo only.
+
+### THE FIXES, IN ORDER
+
+1. **Now, no decision needed:** (3) items from blueprints showing raw ids, and the second belt not being offered; (5) the status row ("force 7 of 7" and the player name) still drawing under a menu screen — the chrome ruling, not finished. **D4 goes with these.**
+2. **Next:** (2) the bordered title box and K2-sized icon buttons. **D2 and D5.**
+3. **After the D6 font file arrives:** (1) stretch the panes to K2's proportions, and match K2's row height (pass 1: ours ~80 px, K2 ~36 px, so K2 fits far more rows). Then (4), the small placement and colour rows.
+4. **Then loop pass 2:** recapture, a full row table, fix and loop until every row passes. Mirror each pass to `pt2721-equip-loop/pass-N/`.
+5. **At the commit where Equip closes:** one clean full app-suite run, plus the Lodestar, Lens and Loom suites, every number reported.
+
+**Report the D3 and D6 candidates the moment they are ready, in the message itself,** so the owner can download while items 1 and 2 are worked.
+
+### PROCEED
+
+As listed.

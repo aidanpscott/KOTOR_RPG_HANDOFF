@@ -13,12 +13,16 @@ Standing, continually-updated list of open work. Updated every time something cl
 4. **The full K1 + K2 item import** — every item tagged `k1` / `k2` / `both`, conflicts listed for the owner (`PT-2722` D1).
 5. **The recommendation system and Auto Level Up** (`PT-2679`, widened at `PT-2712`) — after Equip.
 6. **Save and Load Game screens, 1:1 with K2** — *parked, owner schedules* (owner request 2026-10-02; full text under OPEN).
+7. **Container screen, 1:1 with K2** — *parked, owner schedules* (owner request 2026-10-02; full text under OPEN; needs the full item import first).
 
 *Owner actions waiting on nobody else: report the new `/dev/sdb` link speed (cable replaced; 6.0 Gb/s expected).*
 
 ---
 
 ## OPEN
+
+- **Container screen: an exact copy of KOTOR II's, owner request (2026-10-02). PARKED: the owner schedules it.** When the player opens anything that holds items (a crate, a footlocker, a locker, or the **remains of someone they killed**), the screen that opens must be K2's own container screen, 1:1 (K2's `container.gui` and its siblings; find the real resref in the GUI archive). Same standard as Equip (PT-2693/2694): layout, item list rows with icons, the description pane, the **Take / Take All / Close** controls as K2 has them, the item count, K2's fonts, textures and highlight states, and the flow (open, take one, take all, close, and what happens to an emptied container or emptied remains). Element by element in every state (a full container, a partly taken one, an empty one, an item selected, can't-carry if K2 has it), against fresh K2 captures, looped until 1:1. **Also cover:** how remains appear after a kill (K2 leaves lootable remains in place of the body), how containers that are locked or trapped hand off to the existing Security / Demolitions checks, and whether our current loot flow (`LOOT-01`) maps onto K2's or needs owner rulings where our rules differ. **Uses the full K1 + K2 item import** for the contents, so it comes after that.
+  *(CODER's note from the pass-4 K2 session: K2's Peragus medical-bay container opens a centred "Container Inventory" panel with a list row per item (icon, count, name), and **Get Items / Switch To Give Items / Close** buttons — a first capture is `HANDOFF/BUILD/screens/pt2721-equip-loop/final/k2-container-medical-bay.png`, to be re-captured in that pass.)*
 
 - **Portraits in the left-hand party panel, owner request (2026-10-02).** Each character's own portrait (the same portrait id Equip now draws, from `portraits.2da` / `po_*`) appears in the party panel on the left for **the player, companions and henchmen.** Today those cells are empty frames. One portrait source for every reader (Equip's block, the party panel, the footer portrait). A character with no portrait gets a defined placeholder, never a blank. Check it against K2's in-game party portraits for position, size, frame and the health/Force bars beside them. **Ties in with the existing "footer portrait shows the player regardless of who's active" item.**
 

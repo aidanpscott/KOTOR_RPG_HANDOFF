@@ -44,6 +44,8 @@ flatpak sandbox** they make `which`, `flutter` and every system binary refuse to
 
     flatpak-spawn --host bash -c 'cd /home/aidan/kotor-home/KOTOR-RPG-APP && . tool/env.sh && flutter build linux --debug'
 
+**The Linux runner is committed (`PT-2722`, `0b474da`)** — `KOTOR-RPG-APP/linux/` (only `linux/flutter/ephemeral/` is ignored). It had been gitignored since the first commit, so a fresh clone could not build without a `flutter create` writing a different runner. The working copy's runner was in fact byte-identical to a fresh `flutter create` (1280×720, title `kotor_rpg_app`, `APPLICATION_ID com.example.kotor_rpg_app`); **it now opens at 1920×1080**, the capture resolution (the Equip loop's earlier captures were made by resizing the window by hand with `xdotool windowsize`, which still works). **Check, 2026-10-02:** a fresh `git clone` + `flutter build linux --debug` with NO `flutter create` builds, and launched on `Xvfb :99` (1920×1080, no window manager) reports a **1920×1080** window named `kotor_rpg_app` — the same as the working build.
+
 `env.sh` also puts `XDG_DATA_HOME` back to `~/.local/share` when the sandbox has pointed it at
 `~/.var/app/com.visualstudio.code/data` (**otherwise ~200 tests fail** with "Directory listing
 failed … packages/" and nothing is wrong with the code). ⚠ **The clang/clang++ shims are

@@ -1,0 +1,18 @@
+# KOTOR_RPG_HANDOFF is public. Fail any push or PR that carries a font file, a game texture (.tga/.tpc) or
+# extracted game art (PT-2721 fonts, PT-2722 art; owner rulings). The list lives in .githooks/forbidden.sh,
+# shared with the pre-commit hook, and the guard is tested first so a broken guard cannot pass silently.
+name: no-font-files
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: The guard's own test
+        run: sh .githooks/test-forbidden.sh
+      - name: Reject forbidden files
+        run: |
+          bad=$(git ls-files | sh .githooks/forbidden.sh || true)
+          if [ -n "$bad" ]; then
+            echo "Fonts, .tga/.tpc and extracted game art are not allowed in this public repo:"; echo "$bad"; exit 1
+          fi

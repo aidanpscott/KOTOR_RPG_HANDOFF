@@ -47,3 +47,19 @@ A fan font built BY tracing K2's own screenshots — the creator's own note: "re
 **Bank Gothic first, Aldrich as its free-licence twin, Galahad third.** The visual evidence favours Bank Gothic over Galahad even though Galahad has the stronger paper trail (the literal filename in K2's own asset family) — reported as a real disagreement between two kinds of evidence rather than smoothed into one answer. If the owner wants to spend nothing, Aldrich is the same genre as Bank Gothic under a free licence. Galahad stays a real candidate on the strength of the naming evidence alone, worth trying if the other two don't look right once rendered at full size — a 16-pixel bitmap and a handful of static specimen images are not a substitute for the owner's own eye on the actual file.
 
 **Stopping here, as instructed.** No font downloaded for bundling. Once the owner hands over a file (`~/kotor-repos/books/fonts/` or wherever they say), the swap is: bundle it as the app's font, move every Equip text site off `KotorText` to it, pull size/letter-spacing/colour from `equip_p.gui`'s own controls, retire the atlas renderer, and keep the semantics-always-present fix (`PT-2720` item 1) alive in whatever replaces it.
+
+---
+
+## ⚠ CHOSEN — BankGothic Md BT (owner ruling, `PT-2721`)
+
+The owner chose **Candidate 2, Bank Gothic**, in Bitstream's "BankGothic Md BT" cut: `BankGothicMediumBT.ttf`, **v4.4 (1998)**. It is bundled in the **private** app repository (`assets/fonts/`) and **nowhere else — never in this public repo**; the font file itself is not here, only pictures made with it.
+
+**Picture:** `STUDY/_reference/pt2721-font-candidates/equip-font-side-by-side.png` — K2's own text on top (the real `fnt_dialog16x16` atlas at 3×), the same four strings in the Equip screen's font below, at the same cell (48 = 3 × 16), colours and row pitch.
+
+**How it is sized.** K2's capitals fill 8 px of the 16 px cell (measured off the extracted atlas, rows 3–10); BankGothic's capitals are 0.52 em (measured by rendering "H": 104 px at 200 px). The Equip call sites speak in K2's cell, so the font size is scaled by 0.50 / 0.52 in one place (`EquipText`, `kEquipFontScale`) so the **capitals are K2's height**. K2's `spacingR` is 0, so no spacing is added. A test re-measures the capitals by rendering the real file.
+
+**⚠ WHAT THE PICTURE SHOWS, AND IT IS NOT SMALL.** At K2's capital height Bank Gothic is **much wider** than K2's face: "LIGHT COMBAT SUIT (EQUIPPED)" runs about 880 px against K2's 490 px at 3× — roughly **1.8×**. It is an extended typeface; K2's bitmap font is narrow. It fits the Equip screen's fixed boxes at 1920×1080 (the list rows, the description pane, the buttons and the portrait block were rendered and checked), but every string will read visibly wider than K2's. Bank Gothic also draws lowercase as small capitals, so "Light Combat Suit" reads as "LIGHT COMBAT SUIT" with larger first letters. If the width is not wanted, the options are a narrower face, or the same face at a smaller size (capitals then shorter than K2's) — the owner's call, with this picture.
+
+**⚠⚠⚠ THE LICENCE IS NOT SETTLED.** The zip carried no licence text and its source site listed the licence as "Unknown"; it is a commercial Bitstream typeface. Settle it before the app is shared with anyone.
+
+The atlas renderer (`KotorText`, `fnt_dialog16x16`'s extracted texture and glyph table) is retired; `scripts/extract_equip_font.py` goes with it.

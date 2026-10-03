@@ -660,7 +660,20 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 - **Apart from `§11`'s Aptitude.** Aptitude is a **cost** rule (how cheaply a rank comes) and says nothing about whether an unranked skill may be used; this section says nothing about cost. A skill can be apt and still need its first rank before it works.
 - **Where it bites:** setting or disarming a mine (Demolitions), hiding (Stealth), picking a lock (Security) — `SKILL-RESOLUTION-01 §7a`.
 - **Built once:** `trainedOnlyRefusal(skill, ranks)` in Lodestar; the play screen's one gate (`_untrainedRefusal`) sits before every roll of the three. Guarded by a test that reads the source.
-- *The reach on the shipped classes is in `PLAYTEST-RULINGS-01 §PT-2727` (answer 2). No class was adjusted.*
+- **Classes built around them START TRAINED — owner ruling, `PT-2727`.** One rank, granted at level 1, from the class row's `granted_skills`; it is **not** paid from the player's skill points (a granted rank adds to ranks the player chooses) and the Abilities screen says it is class-granted. Seven classes only:
+
+| Class | Starts with (1 rank each) | Basis |
+|---|---|---|
+| Saboteur | Demolitions | class list + its starting Minor Frag Mine |
+| Smuggler | Stealth, Security | class list; K2's Scoundrel ranks Stealth first; kit: Security Tunneler |
+| Engineer | Security | class list; kit: four computer spikes |
+| Agent | Stealth, Security | class list; role "the spy" (`PT-179`) |
+| Jedi Sentinel | Stealth, Security | class list; K2 ranks Stealth first; role "skills, stealth, versatility" |
+| Sith Assassin | Stealth, Security | class list; K2 ranks Stealth first; mirrors the Sentinel |
+| Bounty Hunter | Demolitions | **the owner's addition** — mines and traps fit a hunter |
+
+  **Every other class gets none, all 24 prestige classes included** (their entry already requires the training: Operative, Shadow Hunter and Scoundrel need Stealth 8, Tech Specialist needs Engineer 6 or Machinist 6). Basis and the rows considered and declined: `TRAINED-SKILL-GRANTS-PROPOSAL-PT2727.md`.
+- *The reach on the shipped classes is in `PLAYTEST-RULINGS-01 §PT-2727` (answer 2).*
 
 ## 12. Skill feats
 

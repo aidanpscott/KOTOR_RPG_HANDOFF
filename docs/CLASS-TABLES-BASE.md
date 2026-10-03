@@ -84,6 +84,8 @@
 
 ## Smuggler — d6, Dexterity, 8 base skill points
 
+> **⚠ Starts trained — `PT-2727`, owner ruling.** One rank in **Stealth and one in Security**, granted at level 1 (not from the player's skill points; shown as class-granted on the Abilities screen) — Demolitions, Stealth and Security are trained-only (`SKILLS-01 §11a`).
+
 **Three-quarters base attack bonus. Reflex is the only good save.**
 
 | Level | BAB | Fort | Ref | Will |

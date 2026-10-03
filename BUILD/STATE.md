@@ -13,6 +13,17 @@ with a slice report, this file is the later one.
 
 ---
 
+## How to run it yourself (the owner's copy)
+
+**Double-click the shortcut _Knights of the Old Republic RPG_** (on the Desktop and in the application menu), **or run `tool/run-owner.sh`** in the
+app's `KOTOR-RPG-APP-owner` folder. It tells you what it is doing in plain words: it checks for newer code, **rebuilds only if the code changed**
+(a few minutes), opens the game on your screen and leaves it running; run twice, it says it is already running and stops.
+
+The game gets **its own data folder, `~/.local/share/owner-data`**, so nothing you do touches the tester's or the coder's data or any Knights of
+the Old Republic II save. The first run fills it with the shared rules (Shelf `main`) and one ready-made character, **Onjo Trigit** (Jedi Sentinel 1,
+the matched K2 loadout), so **Library → Endar Spire → Continue** puts you straight into a game with gear. Your own progress is never overwritten.
+The log is `owner-data/owner-app.log`. To start over, close the game and delete `owner-data`.
+
 ## ⚠ Where everything is — rewritten 2026-10-02, `PT-2721`
 
     WORK FROM THIS:   /home/aidan/kotor-home/        six clones, on the HOME drive (/dev/sda1)

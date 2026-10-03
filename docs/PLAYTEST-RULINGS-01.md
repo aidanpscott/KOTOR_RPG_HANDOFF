@@ -81464,3 +81464,23 @@ As listed.
 4. **Item effects queued with the item import; creature alignment opened** as its own OPEN agenda item (`CODING-AGENDA-01`). **Owner's note, recorded as an OPEN agenda item too: audit every item description against the effects the game actually applies** (the pane prints K2's wording for every property; several are shown and not applied, or applied differently — Nomi's +1 vs. Dark Side, the robe's Force regeneration, a belt's Armor, Computer Use, `Damage Immunity: 30% vs. Cold` against our flat 6/4, `Immunity: Stun, Fear, Horror`, alignment-restricted items, every weapon property).
 5. **One weapon, one number.** The description pane prints our ruled dice (`Damage: Energy, 2-16` for the Lightsaber, `2-12` for the Short Lightsaber) from the same `damage` the readout and every roll use; `damage_k2` stays on the row as reference data and is read by nothing. The pane's damage line is **EXCUSED, ruled rules difference (our weapon dice)**. Tests: `describe_base_type_test` (pinned layouts now with our dice; K2's 2-16 must not appear), `equip_readout_uses_worn_strength_test` (pane 2–16 + 3 = readout 5–19; pane 2–12 + 1 = 3–13), and `equip_readout_matches_the_fight_test` ties the readout to a roll.
 6. **Recorded, no change:** K2's attack modifier, K2's vitality of 36, the 11 K2 starting feats — in `K2-PARITY-ONJO-PT2726.md §5`.
+
+## PT-2728 -- TEST 150 FINDS FOUR "DONE" ITEMS FAILING IN REAL PLAY: THE FIGHT's DEFENCE STILL READS BASE DEXTERITY WHILE THE SHEET AND BADGE READ THE WORN BONUS; THE ARROW KEYS STILL WALK THE CHARACTER BEHIND EQUIP's ITEM LIST (CAUSE SHOWN); DROID SHIELDS ARE BOUGHT BUT NEVER OFFERED BY ANY SLOT; AND THREE SPILLS UNDER MENUS. THE SHEET BLANKS DEFENCE ON A REFUSED IMPLANT. EVERY FIX STARTS WITH A TEST THROUGH THE REAL PLAY PATH. EQUIP WAITS ON ALL OF IT
+
+*Filed 2026-10-03 from MAIN's `MAIN-TO-CODER-PT-2728`; `PT-2727` was the last `## PT-` entry. Tester built `5081698` (before PT-2727); the report is `HANDOFF/TEST/reports/150-…`, screenshots in `BUILD/screens/test-150/`.*
+
+Finish PT-2727's open steps first (done: reach table, commits, pushes; Lodestar suite 1879 green on `05fb7a9`). Then, **before reporting Equip ready**, each fix starting with a test through the **real play path** that fails today:
+
+1. **The fight's Defence ignores worn gear (one-fold break).** Belt DEX +3: the sheet reads DEX 17, Reflex +5, Equip's badge 18; the fight line prints `base 10 + Dexterity 2 + armour 3 + class 2 = 17` and an enemy needed 17. Make **the fight read the same one score**: grep every place combat derives an ability modifier (Defence, attack, damage, saves, skill checks, initiative), route each through the same reader, list each call site changed. Test through a **real fight** (equip the belt, take a hit: the printed Defence line and the "needed" number use worn DEX; the gauntlets' STR in an attack line). Mutation-check.
+2. **Arrow keys still walk the character behind Equip** (item list open; Left, Left, Up moved (4,3) to (2,3)). Cause shown. **No key reaches the map while any menu is open, in every sub-state** (slot view, item list, popup, description) — at the play screen's key router, not per widget. Test with the real play screen: every menu and Equip sub-state, every arrow and WASD, position unchanged.
+3. **Droid shields never appear in any slot list** (bought, in the bag; all 12 droid cells offer only "None"). Find the cause (catalogue id vs base, `worn_at` vs slot key, filter before slot match), fix it; **complete the fixture** (an organic character buildable in `droid-shield-bed`); test through the real Equip of a fixture character (droid belt offers the droid shield, organic arm list the organic shield, neither the other).
+4. **More spills under menus:** the Abilities screen draws the map through itself; the defeat panel sits over a half-visible Options menu; Equip's red refusal text is drawn inside the item list box (check which build has the popup). Fix each; extend the menu test to all eight top-bar screens plus the defeat panel.
+5. **The sheet's Defence row reads "—"** on Onjo (refused implant) while badge and fight read 17. A refused implant must not blank Defence: one reader, one number; show the refusal somewhere that does not replace a stat.
+6. **Double-click:** Tester found it equips and stays on the slot view. **State exactly what K2 does** (closes the item list back to the slot view, or closes Equip entirely) from the K2 observation; if ours matches, MAIN corrects the test spec; if not, fix it.
+
+**Then:** full app suite plus Lodestar at the closing commit, then **Equip ready.** Tester re-runs TEST 150's failures against that build.
+
+### PROCEED
+
+As listed.
+

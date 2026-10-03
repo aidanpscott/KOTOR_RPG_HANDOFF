@@ -6,7 +6,7 @@
 
 ## 1. Two findings that matter more than the numbers
 
-> **Melee adds Strength to both attack and damage.** **⚠ Ranged adds Dexterity to damage — `PT-340`.**
+> **Melee adds Strength to both attack and damage** *(the off hand adds half of it to damage — `ACTION-ECONOMY-01 §7.2a`, `PT-2727`)*. **⚠ Ranged adds Dexterity to damage — `PT-340`.**
 
 *"Strength modifier is added to both Attack and Damage."* *"Ranged weapons do not get a bonus to damage from STR or DEX, so they can easily be outpaced by melee weapons."*
 
@@ -695,6 +695,7 @@ python3 scripts/parse2da.py data/2da/k1/baseitems.2da --dump
 
     melee 1H    weapon dice + Strength
     melee 2H    weapon dice + 1.5x Strength
+    ⚠ melee off hand   weapon dice + half Strength, rounded down — PT-2727 (ACTION-ECONOMY-01 §7.2a)
     ⚠ ranged     weapon dice + Dexterity
 
 ### ⚠ It does not overtake melee, and my first check said it did

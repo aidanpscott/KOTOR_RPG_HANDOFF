@@ -100,6 +100,8 @@
 
 ## 4. Stealth, and the stealth field generator
 
+> *`PT-2727`: hiding needs at least one rank in Stealth — `§7a`.*
+
 **UI presentation locked separately, mechanics here untouched — see `APP-UI-VISION-01`, `PT-1108`.** A visible Hidden indicator and running-disabled-while-hidden are app-side decisions built on top of everything below; nothing in this section changed to accommodate them.
 
 **The defender rolls the better of Awareness or Alertness.**
@@ -206,6 +208,10 @@ Acrobatics · Alertness · Appraise · Archaeology · Athletics · Awareness · 
 | **Knowledge-skill DCs** | Archaeology, Xenology, Mysticism, and Botany need a DC-by-obscurity ladder — common 10, specialist 20, lost 30 is a starting shape, not a decision. |
 
 ---
+
+## 7a. Who may attempt Demolitions, Stealth and Security — `PT-2727`
+
+**⚠ Setting a mine, disarming or recovering one (Demolitions), hiding (Stealth) and picking a lock (Security) each need at least ONE RANK in the skill** — `SKILLS-01 §11a`, owner ruling `PT-2727`, K2's `Untrained` 0. With no ranks the action is **refused with the reason stated and no die is rolled**; a bonus from an item or a power does not stand in for the rank. Everything in `§2` (the ladder), `§4` (Stealth against Awareness and Alertness) and `§5.2` (spikes, mines) is unchanged for a character who may attempt the skill.
 
 ## Who may use a skill against whom
 

@@ -651,6 +651,17 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 **Trained skills are the only route that arrives mid-campaign**, which makes them a package-authoring tool rather than a chargen option — the same shape as `INFLUENCE-01`'s opportunity frequency.
 
 
+## 11a. Trained-only skills — `PT-2727`
+
+> **⚠⚠ DEMOLITIONS, STEALTH AND SECURITY CANNOT BE USED WITH NO RANKS.** *Owner ruling, 2026-10-03: like K2, a character with 0 ranks in one of them cannot attempt it — K2 shows 0 and refuses the action.* K2's own `skills.2da` carries `Untrained` `0` for exactly these three and `1` for the other five it ships (Computer Use, Awareness, Persuade, Repair, Treat Injury).
+
+- **Ranks only.** One rank lets the character try; an item bonus, a power, a homeworld or species bonus does **not** make an unranked skill usable. A character who tries anyway is **refused with a stated reason and nothing is rolled** (`PT-1460`'s shape for a closed droid skill).
+- **Every other skill is unchanged:** an unranked Awareness, Persuade, Repair, Medicine, Alertness… still rolls on its key ability.
+- **Apart from `§11`'s Aptitude.** Aptitude is a **cost** rule (how cheaply a rank comes) and says nothing about whether an unranked skill may be used; this section says nothing about cost. A skill can be apt and still need its first rank before it works.
+- **Where it bites:** setting or disarming a mine (Demolitions), hiding (Stealth), picking a lock (Security) — `SKILL-RESOLUTION-01 §7a`.
+- **Built once:** `trainedOnlyRefusal(skill, ranks)` in Lodestar; the play screen's one gate (`_untrainedRefusal`) sits before every roll of the three. Guarded by a test that reads the source.
+- *The reach on the shipped classes is in `PLAYTEST-RULINGS-01 §PT-2727` (answer 2). No class was adjusted.*
+
 ## 12. Skill feats
 
 **⚠ Thirteen feats, 25 CHARACTER skills, one feat per skill, no overlap — `PT-652`.** **⚠ The table holds 26; `Fly` is BEAST-ONLY — `PT-554` — and takes no feat.** **⚠ Was `24`: `Survival` — `PT-552` — was added and this sentence did not move. ⚠⚠ CONFIRMED LIVE AT `PT-859` — `ATLAS-SEED-v3` LISTS `Survival` AMONG THREE **RETIRED** NAMES AND THAT IS WRONG.**

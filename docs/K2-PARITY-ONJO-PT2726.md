@@ -23,8 +23,8 @@
 | 9 | Fortitude / Reflex / Will | 4 / 4 / 4 | +4 / +4 / +4 | = | Fort 2 + CON 2; Ref 2 + DEX 2; Will 1 + WIS 1 + Neural Band +2 (K2 `cls_st_jedi_s` row 1 is 2/2/1, which `CLASS-TABLES-JEDI` carries). The Neural Band's Will +2 reached the **sheet** only in this pass — see §3. |
 | 10 | Attack modifier, main hand | 0 | −1 | **(c)** | Ours = BAB 0 (`CLASS-TABLES-JEDI` row 1) + STR +3 − 4 (the dual-wield penalty, no Two-Weapon feat — `ACTION-ECONOMY-01 §7.2`, applied to **every** attack). K2's 0 cannot be rebuilt from its own tables: `cls_atk_1` gives BAB 1 at level 1, STR is +3, so no plain sum reads 0. What K2's "Attack Modifier" adds up is unknown. |
 | 11 | Attack modifier, off hand | −6 | −1 | **(a)** for the shared penalty, **(c)** for K2's hand-specific −6 | K2 puts the whole penalty on the off hand (main 0 / off −6); `ACTION-ECONOMY-01 §7.2` puts the same penalty on every attack. |
-| 12 | Damage range, main hand | 5–23 | 5–19 | **(a)** | Lightsaber dice: ours 2d8 (`equipment.toml` `damage`), K2 2d10 (`damage_k2`); both + STR +3. |
-| 13 | Damage range, off hand | 3–17 | 5–15 | **(a)** dice, **(c)** Strength | Short Lightsaber: ours 2d6, K2 2d8 (a). K2 adds **+1** (half of STR +3, rounded down); ours adds the **full +3**. No ruling about off-hand Strength was found in `ACTION-ECONOMY-01`, `ATTACKS-01` or `CLASS-ATTACKS-01`. |
+| 12 | Damage range, main hand | 5–23 | 5–19 | **(a)** | Lightsaber dice: ours 2d8 (`equipment.toml` `damage`), K2 2d10 (`damage_k2`); both + STR +3. **`PT-2727` (Main): the description pane now prints OUR dice too** (`Damage: Energy, 2-16`), from the same source as the readout and every roll; `damage_k2` is reference data only. **EXCUSED — ruled rules difference (our weapon dice).** |
+| 13 | Damage range, off hand | 3–17 | 3–13 | **(a)** both | Short Lightsaber: ours 2d6, K2 2d8 (a). **Off-hand Strength: `PT-2727` (owner) — half the modifier, rounded down (+3 → +1), as K2 does; built, so ours now reads +1 too** (was the full +3: 5–15). `ACTION-ECONOMY-01 §7.2a`. |
 | 14 | Equip DEF badge | 17 | 17 | = | |
 | 15 | **Skill: Computer Use** | 4 ranks +2 = 6 | no such skill | **(a)** | `SKILLS-01 §8` and `PT-370`: Computer Use and Treat Injury are K2's, this ruleset did not keep them; Slicing is *an application of* Computer Use, not a rename. (The same ruling is why the Exchange Casual Gloves' +1 Computer Use is not applied.) |
 | 16 | Skill: Stealth | 4 + DEX 2 = 6 | 6 | = | |
@@ -32,7 +32,7 @@
 | 18 | Skill: Persuade | 4 + CHA 1 = 5 | 5 | = | |
 | 19 | Skill: Security | 4 + INT 2 = 6 | 6 | = | |
 | 20 | Skill: Repair | 0 + INT 2 = 2 | 2 | = | |
-| 21 | **Skill: Demolitions** | 0 ranks → **0** | 0 ranks → **2** | **(c)** | K2's `skills.2da` has `Untrained` 0 for Demolitions, Stealth and Security: with no ranks the skill cannot be used and K2 shows 0. Ours has no trained-only concept — `SKILLS-01 §11` *Aptitude* is a **cost** rule and says it is not "trained" — so an unranked Demolitions shows INT +2. Whether the ruleset wants K2's gate is the owner's call. |
+| 21 | **Skill: Demolitions** | 0 ranks → **0** (refused) | 0 ranks → **refused** | **(a) `PT-2727`** | K2's `skills.2da` has `Untrained` 0 for Demolitions, Stealth and Security. **Owner ruled (PT-2727): trained-only, as K2 — `SKILLS-01 §11a`, `SKILL-RESOLUTION-01 §7a`.** With no ranks the action is refused with a stated reason and never rolled. (Apart from §11's Aptitude, which is a cost rule.) |
 | 22 | Skill: Treat Injury | 0 + WIS 1 = 1 | Medicine 0 + WIS 1 = 1 | **(a)** | Same number under our name (`PT-370`: not a rename). |
 | 23 | Alignment | `GoodEvil` 50 | Neutral 50 | = | |
 | 24 | XP | 0 / 1000 | level 1, XP 0 | = | |
@@ -54,7 +54,9 @@
 2. **The Equip readout's Strength/Dexterity ignored worn gear** (row 2/10–13) — the same fault at the second reader. Fixed with the same reader; the test builds the same score two ways and requires identical readouts.
 3. **A worn item's saves, skills, resistances and immunities never reached any roll** unless its blueprint restated them. A blueprint that only names `catalogue = <resref>` (everything chargen delivers) carried its *abilities* through the catalogue row and nothing else, so the Neural Band's Will +2 appeared in the pane and nowhere in the numbers. `wornAt` now joins the row's `save`/`skill`/`resist`/`immune` effects for a table the blueprint does not state itself (a blueprint's own table still wins). The sheet's three saves show the worn bonus (they already rolled it in a fight).
 
-## 4 · Listed for the owner (c)
+## 4 · Listed for the owner (c) — **all six now RULED, `PT-2727`**
+
+*(1) K2's attack modifier and (4) K2's vitality and (5) the starting feats are recorded as known differences, no change; (2) off-hand Strength is half, built; (3) trained-only is built; (6) the pane shows our dice. The list below is as it stood.*
 
 1. **K2's attack modifier** (rows 10–11): what it adds is not recoverable from its tables (BAB 1 + STR 3 would read +4, it shows 0 / −6).
 2. **Off-hand Strength** (row 13): K2 gives the off hand half; ours the full STR modifier. No ruling found.
@@ -62,3 +64,10 @@
 4. **Vitality 36** (row 5): the K2 magnitude is unexplained by its own class table.
 5. **Starting feats** (§2): eleven K2 feats ours does not grant at level 1.
 6. **A mismatch inside our own Equip screen:** the description pane prints K2's weapon dice (`Damage: Energy, 2-20`, `damage_k2`, per `PT-2725`) while the readout beside it and every roll use ours (2d8 → 5–19). Two numbers on one screen for one weapon.
+
+## 5 · Known differences, recorded with no change — `PT-2727` (owner via Main)
+
+- **K2's attack modifier (0 main / −6 off hand)** cannot be rebuilt from K2's own tables; ours follows our ruled attack rules (BAB per `CLASS-TABLES-JEDI`, the dual-wield penalty on every attack per `ACTION-ECONOMY-01 §7.2`).
+- **K2's vitality of 36**: ours follows the one-pool ruling (`PT-559`, `PT-648`).
+- **The eleven K2 starting feats**: Onjo is the Exile, K2's authored story character; our classes grant their own feats.
+- **Force 0/0 (K2) against 8/8 (ours)**, **Mental Boost refused**, **Computer Use / Awareness key / Treat Injury naming** — authored rows above, unchanged.

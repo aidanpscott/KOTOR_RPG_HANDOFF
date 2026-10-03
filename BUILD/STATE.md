@@ -24,6 +24,11 @@ the Old Republic II save. The first run fills it with the shared rules (Shelf `m
 the matched K2 loadout), so **Library → Endar Spire → Continue** puts you straight into a game with gear. Your own progress is never overwritten.
 The log is `owner-data/owner-app.log`. To start over, close the game and delete `owner-data`.
 
+## Moving the weapon readout's numbers yourself (`ui-nudge.json`) — `PT-2727`
+
+**The damage ranges (4-18, 4-14) are the ones you judge by eye.** Open `~/.local/share/owner-data/kotor-rpg/ui-nudge.json` and set **`"equip.range.dy"`** — **a negative number moves the ranges UP** (try `-3`; positive moves them down; it moves the ranges and nothing else). **Close the game and run the shortcut again to see it** — the file is read when the game starts.
+Example: `{"equip.headers.dy":12,"equip.header.damage.dy":-1,"equip.numbers.dy":-3.5,"equip.numbers.spread":5,"equip.attack.dy":0,"equip.range.dy":-3}`. The other keys move the headers (`equip.header.damage.dy` is the "Damage" header alone) and the attack values (`equip.attack.dy`); leave them be.
+
 ## ⚠ Where everything is — rewritten 2026-10-02, `PT-2721`
 
     WORK FROM THIS:   /home/aidan/kotor-home/        six clones, on the HOME drive (/dev/sda1)

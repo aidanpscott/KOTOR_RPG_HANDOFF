@@ -62,7 +62,7 @@
 | **Disengage** | **Your movement provokes no opportunity attacks.** |
 | **Dodge** | **Attacks against you take −4 until the start of your next turn**, and you gain +4 on Reflex saves. |
 | **Aid** | **An ally's next attack roll or skill check gains +2**, if you can plausibly help. |
-| **Hide** | **A Stealth check** against the better of enemy Awareness or Alertness. |
+| **Hide** | **A Stealth check** against the better of enemy Awareness or Alertness. *(Needs at least one rank in Stealth — `SKILLS-01 §11a`, `PT-2727`.)* |
 | **Ready** | **Name a trigger and an action.** When it fires, spend a reaction to take it. **Your turn ends.** |
 | **Scan** | **An Awareness or Alertness check** to find what you have missed — a hidden enemy, a trap, a way out. |
 | **Slice** | **A Slicing check** against a terminal, droid, or system. |
@@ -467,11 +467,23 @@
 
 > **The feat chain is what makes dual-wielding viable.** **At −4 with no feat it is a bad trade; at −1 it is a good one.**
 
+## 7.2a Off-hand damage adds half Strength — `PT-2727`
+
+**⚠⚠ A weapon in the off hand adds HALF the Strength modifier to damage, rounded down.** **The main hand keeps the whole modifier.** *Owner ruling, 2026-10-03; K2 and d20 both do this — Onjo's Short Lightsaber reads `+1` where his main-hand Lightsaber reads `+3` at Strength 17.*
+
+    main hand      weapon dice + Strength modifier
+    off hand       weapon dice + half the Strength modifier, rounded down      (+3 → +1, +2 → +1, +1 → 0, +5 → 2)
+
+- **A penalty is not halved.** A Strength modifier of `−3` is `−3` in either hand — the same reasoning as `§7.4`'s *"a penalty is not multiplied"* (`PT-2338`). *(Stated choice: the ruling says "half the modifier"; softening a weakness in the off hand has no clearer rationale than worsening it in two hands.)*
+- **Strength only.** A ranged off-hand weapon still adds its **Dexterity** in full (`EQUIPMENT-01`, `PT-340`).
+- **Built once:** `damageTerms(offHand: true)`, so the Equip readout, the strike line and every roll agree.
+- **⚠ NOT EXTENDED.** `§7.4` already gives a two-handed weapon `1.5×` Strength (`PT-2222`, `PT-2338`) and is unchanged. No other d20 Strength rule is built by this ruling.
+
 ## 7.3 What it buys
 
 **One extra attack on `Strike` and `Shoot`.**
 
-**And two damage profiles.** **Alternating hands means each attack uses that weapon's dice, its upgrades, and its crystal.** *A vibrosword primary and a short-blade offhand deal different damage on alternating strikes; two lightsabers carry two crystals.*
+**And two damage profiles** *(the off-hand one adds half Strength — `§7.2a`, `PT-2727`).* **Alternating hands means each attack uses that weapon's dice, its upgrades, and its crystal.** *A vibrosword primary and a short-blade offhand deal different damage on alternating strikes; two lightsabers carry two crystals.*
 
 ## 7.4 Two-handed weapons
 

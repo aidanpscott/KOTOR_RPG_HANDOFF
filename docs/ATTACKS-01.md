@@ -493,7 +493,7 @@
 
 > **`weapon dice + ability modifier + Weapon Specialization + declaration modifier`**
 
-**Melee adds Strength. Ranged adds Dexterity** — `EQUIPMENT-01 §1`, amended by `PT-340`. **A two-handed weapon adds 1.5× Strength.**
+**Melee adds Strength. Ranged adds Dexterity** — `EQUIPMENT-01 §1`, amended by `PT-340`. **A two-handed weapon adds 1.5× Strength.** **⚠ A weapon in the off hand adds HALF the Strength modifier, rounded down — `ACTION-ECONOMY-01 §7.2a`, `PT-2727`.**
 
 **⚠ Lightsabers add Strength for this playtest.** **`EQUIPMENT-01 §4b` quotes the source saying *"lightsabers are not melee weapons,"* which is a statement about upgrade rules and critical behaviour rather than a damage rule.** **Provisional and flagged: it is ±3 a hit on every Jedi.**
 

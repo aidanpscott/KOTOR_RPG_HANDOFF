@@ -114,3 +114,34 @@ Run one at a time (the first parallel attempts filled `/tmp`; the first full app
 **EXCUSED (each names its ruling):** row 1, outer chrome frame — `ASSET-REPLACEMENT-01` / `PT-1309`; row 13, slot grid shape — owner, `PT-2721`; row 14, slot cell size — owner, `PT-2725` DECISION A. **Recorded, covered by the font ruling `PT-2722`:** glyph widths (prose −4.4% against K2's atlas).
 
 **Observations owed from K2 (agenda, none blocks sign-off):** damage labels Physical-for-slashing/bludgeoning, Sonic, Ion, Unstoppable (*sourced from TLK, not observed*); `Balanced` on size 4 and 1; a slot whose list is "None" alone; hover pixel under a real pointer.
+
+## Keyboard, mouse and the owner's nudges — read off the running K2 (2026-10-03, owner request: "copy how the keys and pads work, exactly")
+
+**Method.** K2 launched by me on the owner's display (read-only, nothing saved, left through Options → Exit Game → Quit); the slot view walked with 130 arrow presses and a highlight detector (13 cells), the three unreached cells confirmed by hand; `equip_p.gui` and `equip_x.gui` read for control order and focus fields.
+
+**Item view (the list).** Down/Up move the selection **one row and WRAP** (Down from the last row → None; Up from None → the last), landing on a can't-use row too — and the GUI file says so: `LB_ITEMS` carries `LOOPING 1` (`LB_DESC` is 0). **Enter = OK.** **A double-click on a row equips it and closes the item view** (observed on the equipped row). **Escape leaves the item view for the slot view (like Cancel); a second Escape closes Equip.**
+
+**Slot view.** Opens on the **Body** icon. The arrows move the highlight; Enter opens the selected icon's list. K2's 44 measured moves (cells in K2's 3×3 grid):
+
+| from | Up | Down | Left | Right |
+|---|---|---|---|---|
+| implant | weapon_l_2 | arm_l | hands | head |
+| head | belt | body | implant | hands |
+| hands | weapon_r_2 | arm_r | head | implant |
+| arm_l | implant | weapon_l_1 | arm_r | body |
+| body | head | belt | arm_l | arm_r |
+| arm_r | hands | weapon_r_1 | body | arm_l |
+| belt | body | weapon_l_1 | weapon_l_1 | weapon_r_1 |
+| weapon_l_1 | belt | weapon_l_2 | weapon_r_1 | weapon_r_1 |
+| weapon_r_1 | belt | weapon_r_2 | weapon_l_1 | weapon_l_1 |
+| weapon_l_2 | weapon_l_1 | implant | weapon_r_2 | weapon_r_2 |
+| weapon_r_2 | weapon_r_1 | hands | weapon_l_2 | weapon_l_2 |
+
+Switch Weapons and Close are **never** reached by an arrow key. **No focus table is stored in the GUI file** (`equip_p.gui` carries control IDs and extents only), so the order is K2's engine's own. **The rule that reproduces it:** the nearest icon in the pressed direction (`along + 2 × off`, ties to the lowest control ID), wrapping to the far end of the same line when there is none — **40 of the 44**; the four misses are all the belt's diagonals (belt Left/Right → the weapon below, weapon Up → belt), which are exact 45° ties in K2's grid and did not fit any geometric tie-break tried (cone, L1, Euclid, weighted, lowest/highest ID, left/lower first) — they look hand-set. **What we ship:** the rule, applied to OUR grid (the owner's `PT-2721` decision keeps the diamond, so a literal copy of the table would send Right in a direction that is not where the icon is): the keys go to the icon you can see. The two layouts agree on many moves (Hands→Right→Implant, Head→Up→Belt, Belt→Down→left weapon, weapon_l_2→Down→Implant, weapon_r_2→Down→Hands).
+
+**The console layout.** `equip_x.gui` (the Xbox layout; the `_x` suffix) carries `LBL_A`/`LBL_B`/`LBL_X`/`LBL_START`/`LBL_RANALOG` button hints and `BTN_ITEM1`–`8` (a console quick-list). Not built: ours is the PC layout; gamepad support is its own future item (agenda).
+
+**The owner's number nudges.** The numbers beside the weapon icons and the two captions are knobs, not constants: `kotor-rpg/ui-nudge.json` in the data folder, read at start (`equip.headers.dy` default **12** — the captions sat near the top edge of their lobes where K2 centres them; `equip.numbers.dy` default 0; `equip.numbers.spread` default 0; K2 px at 1080, positive = down/apart). A missing or malformed file is the defaults.
+
+**Guards (all mutation-checked):** wrap, Escape order, double-click, scrolling with the keys, focus (the arrows never walk the player — through the real play screen), the click memory reset between visits, the nudge defaults. Suite: **app 2037 passed, 0 failed** on `bd2a882`.
+

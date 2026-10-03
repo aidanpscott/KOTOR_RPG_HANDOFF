@@ -80357,6 +80357,9 @@ Widen the list, build, loop until 1:1. Report back with the final pair.
 
 As listed. Report back when it passes, or at a wall.
 
+
+> **Owner's choice, recorded at PT-2725 (DECISION A): keep this diamond with the smaller cells.** The figure is scaled to fit K2's pane with its text at K2's size; Equip-comparison row 14 is EXCUSED, owner, PT-2725.
+
 ## PT-2696 -- EQUIP SLICE SIGNED OFF, COMMIT IT. ⚠⚠⚠ A PROJECT-WIDE DEFECT FOUND AT THE SOURCE: `tpc.py` NEVER FLIPPED TPC's BOTTOM-UP ROWS, ON EITHER DECODE PATH -- EVERY TEXTURE FIVE EXTRACTORS EVER PRODUCED WAS STORED UPSIDE DOWN, FIXED ONCE AND RE-EXTRACTED. ⚠⚠⚠ WHICH MEANS TERMINAL's AND STORE's EARLIER "EXACT MATCH" CLOSES NEED RE-VERIFYING. TWO MORE REAL ICON ERRORS FOUND BY BYTE COMPARISON, ONE OVERTURNING PT-2691. NEXT: THE READOUTS AND THEIR ART, POSITIONED EXACTLY RELATIVE TO THE ICONS
 
 **A strong slice. The orientation root cause is the most consequential find of the Equip thread.**
@@ -80544,7 +80547,7 @@ Record it in the agenda. Don't start it until Equip passes. Continue PT-2700.
 
 **`equipReadout` sums the exact `attackTerms`/`damageTerms` the fight builds, over the exact weapon `equippedFrom` resolves.** **The screen can't disagree with the attack, because it is the attack's own arithmetic.** **A target-conditional bonus is correctly left out when no target is selected.** **A null BAB is omitted, not zeroed.** **Checking K2's unarmed layout twice with a zoomed crop settled that K2 stacks both values on the main hand only.** **Icons now sit at the inner edge.** **The panel moved by the GFF's own 54px gap, which comes to one cell.** **Both were measured, not guessed.**
 
-### ⚠⚠⚠ PT-2688 -- FOUND BECAUSE THE READOUT WAS HONEST
+### ⚠⚠⚠ Found because the readout was honest (under the PT-2688 entry above)
 
 **The readout showed 1d3 for a real blaster rifle, and that led straight to the root cause.** **`equippedFrom`, `wornAt` and three sibling readers only ever opened blueprints inside the story package.** **The catalogue merged base-rules in; the item files never did.** **So any story package that didn't duplicate base-rules' own items fought with fists and wore nothing.** **It was silent and systemic, and reproduced on a second character.** **One shared fallback: the story package first, then base-rules, with a package's own override still winning.** **It's covered by four tests, including a genuinely missing path that still refuses honestly.** **The display-honesty rule just caught a combat defect.** **That is exactly why the screen reads the fight's numbers.** **The starting-gear path and PT-2683's matching error get proven before this closes.**
 
@@ -80648,7 +80651,7 @@ As listed. Report back when Equip passes, or at a real wall.
 
 **PT-2704 said "Brawler and the Force classes" as if the corpus declared it. It doesn't.** **The feat sits under "Restricted — owner unassigned", and that phrase is Combination's gate note, not a grant.** **So PT-2704 filled an owner decision with an inference. Building to the ruling as given, while naming the tension, was exactly right.** **The owner rules on who gets it, after seeing which classes K2 grants it to. The current build stands until then.**
 
-### ⚠⚠⚠ PT-2688 -- NARROWED, NOT CLOSED
+### ⚠⚠⚠ Narrowed, not closed (under the PT-2688 entry above)
 
 **Tester built two nearly identical Soldiers minutes apart. The plain array was clean everywhere. The Hunter melee-upgrade one failed with refs that aren't blueprint paths at all (`'upgrade'`, `'soldier-both-0'`).** **So PT-2702's close covered the ordinary resolvers and never touched the upgrade-grant path.** **And the same character's Defence is blank, 12 and 15 at once, across three screens.** **That's "one fold, three readers" again. Each reader handles a failed item differently, so each shows a different number.** **Fix the path, then make all three readers one fold.**
 
@@ -80814,7 +80817,7 @@ As listed. Report back when done, or at a real wall.
 
 **A productive cloud day. The handover back needs as much care as the handover out.**
 
-### PT-2709 -- ACCEPTED
+### Accepted (under the PT-2709 entry above)
 
 **The start rule was proven by running the suite with it on and off. Every pinned failure passes with it off, so the pins are honest.** **The confirmation roll reads the same terms against the same Defence. The multiplier and immunity read the confirmed critical, and every seeded test that moved says why.** **Mines: set 15/20/25 from K1's `traps.2da`, disarm +2, recover +5, the blast on the item's own save, and a failed set keeps the mine.** **Treating "notice = tier" as a reading, because §2.1 states no detection DC, is labelled correctly.** **One resolver took 15 false positives to zero.** **Finding Components in `ITEMS-06` as `compont_00001` fixes the name-behind-a-wrong-resref problem.**
 
@@ -81246,18 +81249,18 @@ As listed.
 
 *Filed 2026-10-02 from MAIN's `MAIN-TO-CODER-PT-2724`; `PT-2723` was the last `## PT-` entry. **Still queued after Equip; the Equip work is not interrupted.** This only sharpens the agenda entries, so each starts from a shown cause. The report is `HANDOFF/TEST/reports/148-…`, screenshots in `BUILD/screens/test-148/`.*
 
-### PT-2723 item 4 (h): cause shown
+### Item 4 (h) of the PT-2723 list: cause shown
 
 **A new game's "N rules not checked" count is the count of the last character that was loaded.** It matched in 12 of 12 cases. A Bounty Hunter whose true count is 1 showed 2 in play, and 1 after its own load. Loading alone never changes it.
 - **This is state leaking between characters,** the same class of bug as the old subject-filter ones. Find what holds the count across a new game, and make **a new game start clean.** The count must be computed from the character in play only.
 - Test: load character A (count 2), start a new character B (true count 1), and assert 1. Mutation-check it.
 - **Also make the screen name the unchecked rules**, not just count them. Tester couldn't see which rules they were. A count with no list can't be acted on.
 
-### PT-2723 item 3 (b): narrowed
+### Item 3 (b) of the PT-2723 list: narrowed
 
 **The defeat write records no player position.** Tester ran three arms (unmoved, moved to the arena, moved within the arena). There's never a player `character.moved` event, and the header stays `a01-room`. The leave-session write for the same move does record it. **Likely cause, not shown:** `_endFight` never calls `_writePosition()`. Confirm it, fix it at the cause, and test it with all three arms.
 
-### PT-2723 item 2 (c): the rule, and what the build does
+### Item 2 (c) of the PT-2723 list: the rule, and what the build does
 
 **The rule.** `DEATH-AND-DIFFICULTY-01`:
 - **§1:** 0 = Disabled; −1 to −(Con−1) = dying, loses 1 per round; −Con = the threshold.
@@ -81318,4 +81321,51 @@ Re-run the loop (**pass 3**) with all of the above, mirror it, and if every row 
 ### PROCEED
 
 As listed.
+
+### Addendum (MAIN) to this entry — accepted items, and two flags from CODER's report
+
+**Accepted:** the readout (left damage was an unwired parameter); the teal Config labels; the pulsing nav icon (`HILIGHT PULSING=1`, so 8b closes by its cause); the description pane for weapons, medium armour and robes including the uncapped skip; the mutation checks.
+
+**1. "Extrapolated, not observed" cannot pass.** The damage format for a non-energy weapon and the feat names on the Feats Required line must both be observed in K2. Pass 3 captures K2's pane for a non-energy weapon and compares; feat names come from the installed TLK via `feat.2da`'s name column, with one example where id and name differ. Until each is observed its row is FAIL.
+
+**2. Row 36b was excused for the wrong reason.** The Light Combat Suit's AC −1 is an unmodelled item property, not a ruling. Un-excuse 36b; model item properties from the item's template through the D1 pipeline; follow an existing ruling and cite it; re-check every other EXCUSED row in passes 1 and 2 for a named ruling; test Defense Bonus 3 on Equip, the sheet and in a fight, mutation-checked by dropping the property.
+
+#### CODER's answer (2026-10-02)
+
+- **36b: fixed at the cause and un-excused.** The ruling already existed (`PT-2128`/`PT-2144`); the shelf generator never wrote the finished number onto the blueprint. Details and census in `rules/EQUIP-D1-DATA-PT2725.md` §4. Tests: `armour_reaches_defence_test.dart` (shipped suit wears +3 through `wornAt`, which the sheet and a fight read) and `describe_base_type_test.dart` (pane prints 3); each fails when the property is dropped.
+- **Other EXCUSED rows re-checked:** row 1 (frame) — `ASSET-REPLACEMENT-01` / `PT-1309`, which carries the standing rule "reuse the source games' assets as reference, then recreate them close but ours" (`PT-1105`, `BUILDER-VISION-01 §7`): **named**. Row 13 (grid shape) — owner, `PT-2721`: **named**. Row 14 (cell size) — owner, `PT-2725` (DECISION A): **named**. No excuse remains without a citation.
+- **Feat names:** from the installed game, not ids (`extract_base_feats.py`); K2 prints them with the colon as a dash. Hypothesis from three captured panes; pass 3 observes more.
+- **Non-energy damage format:** NOT yet observed — the K2 save holds no non-energy weapon. Row stays FAIL until a K2 pane for one is captured (needs a K2 save that carries one; I will not save in K2).
+- **D1 data:** see `rules/EQUIP-D1-DATA-PT2725.md`.
+
+#### CODER's second answer (2026-10-02, pass 3)
+
+- **K2 started and loaded by CODER, read-only, no slot written** (recipe in `STATE.md`). Fresh captures; table in `rules/EQUIP-COMPARISON-PT2721-PASS3.md`.
+- **Droid-only items:** one filter, `wearerAllows`, reads each item's own `baseitems.2da` `droidorhuman` (`wearer` on the catalogue row); an organic's arm lists never carry a droid shield, a droid's do. Mutation-checked both ways.
+- **Ledger headings renamed (six labels, no ruling text changed; `git diff 6ac8cef2 1f5a794d` is 24 added, 6 changed lines):** line 80550 `### ⚠⚠⚠ PT-2688 -- FOUND BECAUSE THE READOUT WAS HONEST` → `### ⚠⚠⚠ Found because the readout was honest (under the PT-2688 entry above)`; 80654 `### ⚠⚠⚠ PT-2688 -- NARROWED, NOT CLOSED` → `### ⚠⚠⚠ Narrowed, not closed (under the PT-2688 entry above)`; 80817 `### PT-2709 -- ACCEPTED` → `### Accepted (under the PT-2709 entry above)`; 81249 `### PT-2723 item 4 (h): cause shown` → `### Item 4 (h) of the PT-2723 list: cause shown`; 81256 `### PT-2723 item 3 (b): narrowed` → `### Item 3 (b) of the PT-2723 list: narrowed`; 81260 `### PT-2723 item 2 (c): the rule, and what the build does` → `### Item 2 (c) of the PT-2723 list: the rule, and what the build does`. The 3 lines at 80360 (owner's choice beside PT-2695) and the addenda are appended text.
+- **Full gate:** SENDABLE, 0 blocking, 9 warnings (71 PASS of 80). PT-2688 appears as `## PT-2688` at 80083 with its two renamed sub-headings; PT-2709 as `## PT-2709` at 80780. Not renumbered.
+- **Agenda follow-up:** `ITEMS-0x` documents still hold the corpus text; refresh from the installed TLK as a docs pass (not in this one).
+- **Owner correction on K2 row borders (2026-10-02):** red-orange = an item this character may not use (here a missing armour-proficiency feat); pointer hover = white; a separate orange = a new item not yet hovered, cleared once the cursor passes over it. CODER's pass-3 reading of the orange row as "hover" was wrong and the pass-3 table is corrected. Our hover colour (`_rowHover`) is therefore wrong, and the can't-use marker, refusal popup, greyed OK and new-item marker are unbuilt.
+
+#### CODER's third answer (2026-10-02, pass 4) — answering "after pass 3"
+
+1. **Armour Defence: a data fix, kept.** Ruling `PT-303` (quoted in `rules/EQUIP-ARMOUR-DEFENCE-PT2725.md` and `EQUIP-COMPARISON-PT2721-PASS4.md`): `Armor N` is "+N on top of the base item's class"; with `EQUIPMENT-01 §5` and `PT-2144` the generator was missing a join, as with 36b. Case 1. Only three shipped blueprints change; before/after for every armour in the table doc. Commits: shelf `42ef20a`, app `8049f16`, MAIN_WORK `f4267789`.
+2. **Row states built:** red-orange can't-use with K2's popup, greyed OK that cannot commit, one rule (`unmetFeat`) from `reqfeat0..4`; white focus/hover. **Not built, with the reason:** the new-item amber — K2 paints it on the Inventory screen only (Equip's lists draw `NewItem` items plain, fresh capture), so it waits for the Inventory screen; measured (149,122,71) and the clear-on-focus behaviour are in the pass-4 doc.
+3. **Weapon lines sourced** from `baseitems.2da` (`maxattackrange`, `critthreat`, `crithitmult`, `weaponsize` 2) and `dialog.tlk` 42145/32172; Short Lightsaber and Blaster Pistol panes match K2 byte for byte.
+4. **Non-energy damage line: not reachable without moving through the level or saving** — owner to supply a K2 save with a vibroblade or a sonic/ion weapon.
+
+#### CODER's fourth answer (2026-10-02, TEST 149)
+
+1. **Menus take the whole frame — fixed at the cause** (status row, left column, turn order, HUD, area name, hint line all gone under Equip, Inventory and Character; Equip's refusal is a popup on its own screen). Tests: three menus × {out of a fight, status pending, in a fight}, no chrome and one rectangle; three mutations. Consequences to confirm: the left column no longer switches characters from Inventory/Character; a pending message ("took X") shows nowhere on a menu.
+2. **Droid shields: read from `baseitems.2da`, both games.** `Forearm_Bands` = 0x180 (arms), `Droid_Shield` = 0x400 (belt). The base-level forearms I set was wrong for the 14 droid shields; each shield item now states its own slot (14 belt, 17 arms). Fixture package `droid-shield-bed` (a stall selling both) is on the shelf for Tester; not in any campaign.
+3. **Closing suites at the final heads:** app 2001, Lodestar 1870, Lens 13, Loom 430 — all passing (Loom needed its palette counts and its Armor N writer brought up to PT-2722/PT-2725; Lodestar needs `TMPDIR` off the 793 MB tmpfs).
+4. **⚠ Working-copy conflict in `KOTOR-RPG-APP`:** a no-op `git stash` followed by `git stash pop` applied an OLD stash from 2026-10-01 and left conflicts. The tool blocked `git reset --hard` + `git clean`, so I did not discard anything; HEAD (`4edf885` and the pushed `2f5abd9`) is intact and the stash is kept. All later work is in `KOTOR-RPG-APP-clean`. Owner/Main: run `git reset --hard HEAD && git clean -fd` in `KOTOR-RPG-APP`.
+
+#### CODER's fifth answer (2026-10-03, "prove Equip in the running app" and the three loose ends)
+
+1. **Proven in the running app.** Fresh clone of `origin/main`, `flutter build linux --release`, head **`83f9134`** for the final capture (later commits are tests/labels only, final head `66a5fbf`); window title **"Knights of the Old Republic RPG"**, PID **286975**; played Library → Endar Spire → Continue → Equip. The five K2 states captured and read **pixel for pixel** against K2's `final/k2-*.png`: list-panel crops, description-pane crops and one full-screen pair per state in `HANDOFF/BUILD/screens/pt2721-equip-loop/live-app/` (21 PNGs, images only). **The earlier `final/` captures came from the running app** (debug build via `drive.sh`), not a test harness; they were read by eye, this pass by pixel.
+2. **Eleven differences found only in the running app, each fixed test-first and mutation-checked:** selected row breathes; flat wash; clean row edges; whole-pixel opening; portrait flush (owner); **framed scrollbar** with native 16 px arrows (thumb rows 261→875 in both); selected-row **fill breathes against the border**; can't-use popup **456×217 at (411,441)**; **blank description pane for "None"** (only where there is a list; an empty-list slot is unobserved and keeps its line); description **pitch 19.2 px**; first line **2 px lower**. Residual, recorded: glyph widths under the `PT-2722` font ruling (prose −4.4%).
+3. **Vibroblade, from the owner's save:** K2 prints `Damage: Physical, 1-10` — ours said `Piercing`; fixed. **`Fully Upgradeable` has a source:** it is the first paragraph of the item's own description in the installed K2 `dialog.tlk` (127076; `Not Upgradeable` is 127098), already carried by the shelf's K2 vibroblade — not an engine line, which is why armours print nothing. Searched: every TLK string, `upgrade.2da`, `upgradetypes.2da`, `baseitems.2da`, the Linux executable's strings. A byte-for-byte test on the real shelf item proves K2's pane.
+4. **Damage labels** come from the TLK flag-name table (`38552–38562`, one `Physical` entry for flags 1|2|4). **Observed:** piercing, energy. **Sourced from TLK, not observed:** slashing, bludgeoning, Sonic, Ion, Unstoppable — marked so in the comparison doc and put on the agenda with `Balanced` on size 4 and the empty-list slot.
+5. **Closing suites:** app **2011**, Lodestar **1870**, Lens **13**, Loom **430** — all passing. **Equip is ready for the owner's sign-off.** EXCUSED: row 1 (`ASSET-REPLACEMENT-01`/`PT-1309`), row 13 (owner `PT-2721`), row 14 (owner `PT-2725` DECISION A).
 

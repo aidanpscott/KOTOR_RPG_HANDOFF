@@ -105,6 +105,8 @@ Run one at a time (the first parallel attempts filled `/tmp`; the first full app
 |---|---|---|
 | app (`KOTOR-RPG-APP`) | `66a5fbf` | **2011 passed, 0 failed** |
 | app, after the owner's play-test fixes | `22cf96b` | **2024 passed, 2 failed** — two load-sensitive tests (`the_payment_gate…`, `a_merchant_opens_the_store…`) that each pass alone, repeatedly; see the ledger, "CODER's sixth answer" |
+| app, keyboard / double-click / nudges | `bd2a882` | **2037 passed, 0 failed** (one clean complete run) |
+| app, upgrade-lore decision | `aa157fa` | **2051 passed, 1 failed** — `whole_loop_test`, load-sensitive; passes alone every time on a quiet machine |
 | Lodestar | `df81340` | **1870 passed, 0 failed** |
 | Lens | `2bad745` | **13 passed, 0 failed** |
 | Loom | `083e570` | **430 passed, 0 failed** (with the default `TMPDIR`; `the_identity_survives_a_fault_test` fails under a redirected one, as before) |
@@ -144,4 +146,34 @@ Switch Weapons and Close are **never** reached by an arrow key. **No focus table
 **The owner's number nudges.** The numbers beside the weapon icons and the two captions are knobs, not constants: `kotor-rpg/ui-nudge.json` in the data folder, read at start (`equip.headers.dy` default **12** — the captions sat near the top edge of their lobes where K2 centres them; `equip.numbers.dy` default 0; `equip.numbers.spread` default 0; K2 px at 1080, positive = down/apart). A missing or malformed file is the defaults.
 
 **Guards (all mutation-checked):** wrap, Escape order, double-click, scrolling with the keys, focus (the arrows never walk the player — through the real play screen), the click memory reset between visits, the nudge defaults. Suite: **app 2037 passed, 0 failed** on `bd2a882`.
+
+## Owner decisions (2026-10-03): the upgrade lore stays except a "cannot be upgraded" sentence; the slot-view arrows on the diamond stand
+
+**The upgrade lore: kept (owner).** Item descriptions keep their K2 story text even where it mentions upgrading or workbenches (**537** sentences that mention upgrading, modifying, customising or workbenches stay). **The one exception:** a sentence saying an item **cannot** be upgraded contradicts the owner's rule (every weapon is fully upgradeable) and is cut **at the same description-building point as the upgradeability header** (`ItemRecord.fromMap` → `splitUpgradeability`): a sentence is cut only when it mentions upgrading **and** says `cannot` / `can't` / `can not` / `unable` / `incompatible` / `unsuitable` / `not suitable`; the rest of the description is untouched. **19 sentences in 19 items** (counted by the real code, and by an independent census over the raw shelf — the same 19):
+
+| item | the sentence that goes |
+|---|---|
+| Heavy Repeating Carbine | As it is a carbine, it cannot be upgraded. |
+| Slavemaster Stun Carbine | As it is a carbine, it cannot be upgraded. |
+| Ion Blaster | Ion weapons cannot utilize most power pack upgrades. |
+| Ion Rifle | Ion weapons cannot utilize most power pack upgrades, however. |
+| Aratech Droid Oxidizer | Ion weapons cannot utilize most power pack upgrades. |
+| Aratech Ionmaster | Ion weapons cannot utilize most power pack upgrades. |
+| Bothan Droid Disruptor | Ion weapons cannot utilize most power pack upgrades. |
+| Verpine Droid Disintegrator | Ion weapons cannot utilize most power pack upgrades. |
+| Verpine Droid Disruptor | Ion weapons cannot utilize most power pack upgrades. |
+| Sonic Pistol | Unfortunately, sonic weapons generally cannot be upgraded. |
+| Rodian Blade | Its design is unsuitable for weapon upgrades. |
+| Rodian Death Blade | Its design is unsuitable for weapon upgrades. |
+| Trandoshan Sword | They are not suitable for weapon upgrades, however. |
+| Trandoshan Double-Blade | They are not suitable for weapon upgrades, however. |
+| Plasma Projector | Difficult to wield except by highly trained marksmen, the plasma projector is also unsuitable for further upgrades. |
+| Arkanian Heavy Pistol | Unfortunately, their design is incompatible with modern upgrade technology. |
+| Arkanian Blaster Rifle | However, they cannot be outfitted with modern firing chambers and power cells, limiting them to scopes for upgrade options. |
+| Charric | As it is such an exotic weapon, it is incompatible with modern upgrades. |
+| Ceremonial Bowcaster | Though not suitable for upgrading, few of the weapon's targets would argue that further enhancement is necessary. *(the whole sentence goes; its second half is flavour that went with it — for the owner to see)* |
+
+**Checked and kept (not denials):** the Mandalorian Heavy Suit's *"can also be outfitted with upgrades normally restricted to medium armor"* (it says it CAN), and the K1 Advanced Flame Thrower's *"Intended as a combat upgrade…"* (the item IS an upgrade). Guards: each real sentence is cut with the sentence before it and the paragraph after it kept; controls for upgrade lore that is not a denial; a description with no denial is returned exactly as it came; on the real shelf no description still says it, and 300+ still mention upgrading. Mutation-checked (denial words off → 13 fail).
+
+**The slot-view arrows on the diamond: approved as built (owner).** The nearest-in-direction rule applied to OUR grid stands. **The four K2 belt/weapon diagonals** (belt Left → left weapon, belt Right → right weapon, left/right weapon Up → belt), which exist only in K2's 3×3 grid, are **EXCUSED, owner, PT-2725** — they are no longer an open item.
 

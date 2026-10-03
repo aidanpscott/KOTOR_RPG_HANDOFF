@@ -1,0 +1,34 @@
+# ITEM-PROPERTY-AUDIT-PT2726 — every item-property type of the first slice, carried / shown / applied
+
+**`PT-2726` item 4.** The first slice is the 22 K2 items of save `000008 - game7` (8 worn, 14 bagged). `scripts/audit_item_properties.py` reads each one's `.uti` `PropertiesList` → `data/extracted/item_properties_000008.json`: **23 property types, 99 entries.**
+**Carried** = the shelf row keeps it (structured effect/stat/gate, or its `properties` text). **Shown** = the Equip description pane prints it in K2's wording (`extract_item_pane.py`, K2's 2das + installed `dialog.tlk`; every line checked against a live K2 capture by `item_pane_k2_test`). **Applied** = a number a player reads or a roll uses changes (`first_slice_worn_effects_test`, `worn_gear_reaches_the_sheet_test`).
+
+| Property type | Entries | Items | Carried | Shown | Applied | Note |
+|---|---|---|---|---|---|---|
+| `Ability` | 8 | Dominator Gauntlets, Circlet, Mental Boost, Strength Package, Frozian Belt, Jamoh Hogra's | yes (`ability`) | yes (`Strength: +5`) | **yes** | The sheet now shows it (it already rolled). Gated implants (`UseLimitationAttribute`) need Con 12. |
+| `ImprovedSavingThrowsSpecific` | 5 | Neural Band, Stabilizer Mask, Taris Gloves, Adrenaline Amplifier, Cardio-Regulator | yes (`save`) | yes (`Saves: Will +2`, `All +2`) | **yes — FIXED** | **Was shown and never applied** for a catalogue-named blueprint (only an author's own `[item.saves]` reached a roll). Joined in `wornAt`; the sheet's three saves show it. |
+| `Skill` | 4 | Exchange Gloves (3), Frozian Belt | yes (`skill`) | yes (`Skills: …`, one line) | **yes — FIXED**, except Computer Use | **Was never applied** for a catalogue-named blueprint. `Computer Use +1` is **not** applied or carried as an effect: not our skill — `SKILLS-01 §8`, `PT-370`. It *is* shown (K2's words). |
+| `DamageImmunity` | 2 | Insulated Gloves | yes (`resist`, flat 6 / 4) | yes (`Damage Immunity: 30% vs. Cold`, `20% vs. Fire`) | **yes — FIXED** | K2's percentages become the authored flat reductions of `PT-2128` (*"a flat reduction wearing a percentage"*). Pane = K2's wording; number = ours. |
+| `Immunity` | 2 | Stabilizer Mask (`MindSpells`), Jamoh Hogra's (`Critical Hits`) | yes (`immune`) | yes (`Immunity: Stun, Fear, Horror` / `Critical Hits`) | **yes — FIXED** for the catalogue join; `mindspells` is *recorded, not honoured* (no condition system for it — `PT-2158`) | |
+| `Armor` / `DecreaseAC` | 4 + 1 | Light Combat Suit, Jedi Robe, Reinforced Fiber, Jamoh Hogra's, **Frozian Belt** | yes (`stat armour` / `defence`) | yes (`Defense Bonus`) | **body armour yes; the Frozian Belt's Armor 1 NO** | The Defence term is taken from the `body` slot alone (`wornBy`). K2's own pane prints `Defense Bonus: 1` for it, so K2 treats it as a Defence term (the live K2 Defence in §1 of the parity table was captured without the belt, so not measured) — **(c) listed for the owner**: whether a non-body `Armor` property adds Defence. |
+| `Regeneration_Force_Points` | 1 | Jedi Robe | yes (`regenerate`) | yes (`Regenerate Force Points: 1`) | **NO** | The pane prints it; **nothing reads a worn `regenerate` effect** (grep: its only consumer is the pane). The Force pool's regeneration does not include it. Listed for the owner / the Force-pool owner. |
+| `UseLimitationAttribute` | 2 | Mental Boost, Strength Package | yes (`gate attribute`) | yes (`Attributes Required: Minimum Constitution: 12`) | yes (`gateRefusal`) | K2's `Constitution 11` cost row is "at least 12" (the minimum column). |
+| `Use_Limitation_Feat` | 1 | Stabilizer Mask | yes (`gate feat`) | yes (`Feats Required: Armor Proficiency - Medium`) | yes | |
+| `UseLimitationAlignmentGroup` | 2 | Lightsaber, Circlet | yes (`gate alignment`) | yes (`Restricted to: Light Side`) | **NO — held by ruling** | `item_gates.dart` header: *alignment is held by ruling* (`PT-2342`): there is no character alignment value to compare, so the gate is declared, never enforced. |
+| `UseLimitationRacial` | 4 | the four armours (Human) | prose (`wearer`) | **no — K2 prints nothing for it** | yes (`wearer`) | NWN scaffolding (`PT-2128`). |
+| **`ArmorAlignmentGroup`** | 1 | **Nomi's Armband** | **yes (`properties` text; no structured effect)** | **yes — FIXED (`+1 vs. Dark Side`)** | **NO** | **The owner's missing effect.** It was carried only as text and shown nowhere. Now shown. **Not applicable by design**: it is a Defence bonus *against* an attacker of that alignment, and no creature in the engine has an alignment to compare — `defenceTerms` has no attacker-alignment input. Making it count is a rules decision (which attackers are "Dark Side"?), listed for the owner. It must **not** become an unconditional +1 (a test pins that). |
+| `CastSpell` | 1 | Telos Mining Shield (`ITEM_ABILITY_HEAT_SHIELD`) | yes (`absorb`) | yes (`Uses: 3/3`, `Absorbs`, `Duration`, `Charges` — **`Uses` FIXED**, from the `.uti` `Charges`) | yes (the absorb pool) | Charges are on the `.uti`, not in `PropertiesList`. |
+| `Damage`, AttackBonus, `DamageRacialGroup`, `DamageAlignmentGroup`, `Enhancement`, `Keen`, `Massive_Criticals`, `OnHit`, `Blaster_Bolt_Deflect_Increase` | 22 + 21 + 7 + 1 + 2 + 1 + 2 + 2 + 3 | the two lightsabers | **no** (a weapon's numbers come from its base type) | **no — K2 prints none for a weapon** (a Lightsaber's 29 properties are not listed) | **no** | **(a) authored** — a weapon's damage and attack come from its base type (`EQUIPMENT-01`), not from the item's UTI properties. These are the types that would multiply in the full import; listing them is the point of this table. |
+
+## Gaps closed in this pass
+1. Pane lines for every non-weapon, non-armour property (Neural Band, Dominator Gauntlets, Nomi's, both implants, Stabilizer Mask, Circlet, gloves, belts) — K2's wording, line for line against live captures.
+2. `Uses: 3/3` on the Telos Mining Shield (and `Uses: 5/5` on the seven other shield generators).
+3. Saves, skills, resistances and immunities of a catalogue-named item now reach rolls and the sheet.
+4. The sheet's ability scores and its three saves include what is worn; the Equip readout and its Defence read the same score.
+
+## Gaps left, for the owner
+1. **Nomi's `+1 vs. Dark Side`** — needs an attacker alignment (above).
+2. **A non-body `Armor` property** (Frozian Belt) — whether it adds Defence.
+3. **A worn `Regeneration_Force_Points`** (Jedi Robe): shown, not applied — nothing reads it.
+4. **`UseLimitationAlignmentGroup`** (Lightsaber, Circlet of Saresh): declared, not enforced — held by ruling `PT-2342` (no alignment value to read).
+5. **Weapon properties** — the 22 + 21 + 7 + 1 + 2 + 1 + 2 + 2 + 3 entries on the two lightsabers are not carried as effects; a weapon's numbers come from its base type (`EQUIPMENT-01`). The full item import will multiply this, so it is listed.

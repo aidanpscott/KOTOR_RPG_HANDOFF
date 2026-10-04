@@ -266,3 +266,26 @@ area           where they were standing
 - **Structural problems still REFUSE, each with a plain-English reason.** The game has nothing to run: an unknown species, chassis or class; a droid's model, gender or origin that its chassis cannot have; no class at all; and the file-level faults (too short, not a save, truncated header, an unreadable field, a save from a newer version, contents the wrong length, damaged contents); an area not in the package's manifest; a package whose entry names no start. The wording is for a player — *"This character is a species this package does not have: zorg"*, *"this game has no place to begin: the package has not said where a new character starts"* — with the author's detail kept after it, never an internal code.
 - **Play-time gates are unchanged:** equip gates, trained-only skills (`SKILLS-01 §11a`), the droid melee gate.
 
+---
+
+## Bookmarks — the save list K2 shows, on a log that never rewrites — `PT-2732`
+
+> **Owner (2026-10-04), via MAIN:** *the bookmark model is accepted.* Slot numbers are **global across characters** (K2's), the list/New Slot/naming entry/prompts are K2's word for word, one **Auto Save** row (Load list only, no checkbox), **F4/F5** quicksave (one unnumbered **Quick Save**), a small **picture** of the play view per bookmark, **no saving in a conversation**, **combat saves allowed and resumed mid-fight**, **no limit** on the number of saves. **Every bookmark loads exactly as saved, forever.**
+
+**A bookmark is a position in the log, plus what the list needs to draw a row.** The character's `.sav` stays the one append-only log (`§5·0`); it is never rewritten for a bookmark. Each bookmark is its own small file beside it:
+
+    saves/<handle>.sav                 the log, as before
+    saves/<handle>.marks/<NNNNNN>.mark one bookmark (NNNNNN = the global slot number; Quick Save is `quick.mark`)
+
+so *New Slot* costs one small write, *Delete* removes one file, the global number is "one more than the highest `.mark` anywhere" (a directory scan, no decompression), and the list reads each `.mark` header, not the log.
+
+**What a `.mark` holds:** the slot number (or none for Quick Save), the player's name for it, `saved at`, **`at`** (the index of the last log event it includes), the row fields (character, class, level, area name, level/place text, play time, up to three party portrait ids), the **modded** flag, the **picture** (small, compressed; read only for the selected row), and — for a save made in combat — the **fight snapshot** (turn, round, initiative order, positions, vitality, effects), a *cache of the moment, never the truth*, which is why a combat bookmark is also a log position (the start of the player's turn).
+
+**Loading a bookmark = replaying the log up to `at`** (then applying the fight snapshot if there is one). It does not touch the file. **Playing on from it writes one `character.rewound {to: at}` event first**, and replay honours it: the state after a rewind is exactly the state at that position. Nothing is discarded; the abandoned branch stays in the log under later bookmarks, which is what makes every bookmark loadable as saved: a bookmark names a prefix of an append-only log, and a prefix never changes. (The effective history is a tree walked once, linear in the log.)
+
+**Branching, tested:** save A, play, save B, load A, play differently, save C; then B loads exactly as at B, C exactly as at C, A as at A.
+
+**Auto Save** is not a file: it is the live end of the log, drawn as a row and loading it is Continue. **Delete** removes a `.mark` only, never log. **Quick Save** overwrites `quick.mark`. A corrupt `.mark` is skipped with a plain reason; a corrupt log refuses as today.
+
+**Size (measured and budgeted in the build; numbers in the report):** one bookmark = header + compressed picture (budget: a stated number of KB, enforced by a test) + the combat snapshot when present; the log's growth per hour is measured from a real play run; 100 bookmarks cost 100 small files, **not 100 copies of the log**. If the log itself proves unbounded, compaction is proposed separately and must keep every `at` resolvable.
+

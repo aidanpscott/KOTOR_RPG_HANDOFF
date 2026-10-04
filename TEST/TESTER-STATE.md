@@ -1,6 +1,7 @@
 # TESTER-STATE — rewritten each report; a fresh session resumes from this alone
 
-**Last filed report: TEST 150** (2026-10-03). Next number: 151. Nothing half-done.
+**Last filed report: TEST 151** (2026-10-04). Next number: 152. Unchecked from 151: double-click, defeat-panel-over-Options spill. Refusal text inside Equip list still FAILS.
+TEST 151: worn gear reaches fight (PASS), no key leaks (PASS 10/10), shields split (PASS), modded saves open (PASS; hand-edit needs the length field at byte 90). Build 4bc67ad / Lodestar 1f12d12.
 TEST 150 (re-check after PT-2725/2726): menus fill the frame in 4 states (Abilities screen and defeat panel still spill); droid shield bought but offered in NO slot (organic half untested); worn Strength/Dexterity/Defence show on sheet+Equip but the fight's Defence line ignores worn DEX/Defence; arrow keys still move the character behind Equip (4,3 -> 2,3, shown).
 TEST 149 (regression after PT-2723/2725): Defence UNCHANGED for all 10 starting kits; menus hide the fight HUD but the layout shifts ~34 px when a bottom status line exists; Inventory rows still raw ids; no droid shield reachable (positive filter case untested). Details and repro in the report.
 TEST 148 (narrowing pass): (c) negative HP = the rule's bleed, death at -Con never applied; (b) the defeat write carries no position event (header area stale); (h) the 'N rules not checked' notice on a NEW game is the last LOADED character's count (`_handlePlay` never sets `_unchecked`); (4) DEX 18 enemy-first seen only on a LOCAL DEX 30 variant (no Shelf enemy above DEX 12).
@@ -15,6 +16,9 @@ TEST 147 (before it): environment proof; class Defence L1 (11 classes); fight st
 - Helpers in `~/kotor-tester/run/` (not committed): `c.sh X Y [btn]` (pointer by `xdotool --window`, click without it), `k.sh KEY`, `s.sh NAME` (→ `~/kotor-tester/shots/`), `cg1.sh CLASSY STR DEX CON INT WIS CHA` (chargen to the ability step), `cg2.sh TAG` / `cg2j.sh TAG` (Equipment → Play → round the Dummy → arena → fight; `j` for Force classes), `cgj1.sh`, `openarena.sh`, `launch.sh`.
 
 ## Traps learned (each cost time)
+- **A command over ~200 s goes to the background and its screenshots are stale** (TEST 151 lost ~8 hours). Keep loops under 150 s; never read images from a run that has not reported completion.
+- Store-close eats the next Escape, so Equip does not open: screenshot before cell clicks.
+- Save files: header, then gzip JSONL; the 4-byte LE contents length is at byte offset 90 of the Onjo header; update it after editing the body. In-game list tags edited saves `[Modded]`.
 - **A screenshot taken right after a key shows the PREVIOUS frame.** Wait ~2 s (`kk.sh NAME KEY` does) before judging a keyboard test.
 - **Equip's own nav bar is drawn larger**: icons at y≈140, x≈907/1020/1133/1245/1358/1471/1584/1697 (Equip/Inventory/Character/Abilities…); on the other screens the bar is at y≈122, x≈1133/1203/1273/1343/1413/1483/1553/1623. A blind click on the wrong bar lands on a neighbour (Abilities draws the map through itself).
 - **A blind `Right, space` loop ends your own fight** (a lone character loses to even a trooper by passing). Never loop keys without reading the state.

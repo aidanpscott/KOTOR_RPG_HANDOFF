@@ -1599,6 +1599,8 @@ catalogue gates the same items by Constitution:**
 > items."* A character needs the correct feat tier **and** the Constitution
 > score — `§17.2`'s `AND` across categories, applied consistently.
 
+> **⚠⚠ `PT-2731` (owner, option A) — HOW IT SHOWS IN EQUIP.** **K2's own data gates an implant by Constitution ONLY** *(Mental Boost Package: Minimum Constitution 12, tiers 14/16/18; no feat — read from `e_imp1_10` and the pane K2 prints)*; **the feat chain is ours, from `PT-2342`, and stays.** **Equip enforces both the K2 way: a character who does not qualify sees the implant red-orange in the list and gets K2's can't-use box if they try** *("You cannot equip this item. You don't have the prerequisites. Please see the item description.")*. **An implant already worn by a character who does not qualify (an old save, a modded record) stays worn, and the sheet says so in plain English** *("Mental Boost Package has no effect: it needs the Cybernetic Implantation, Advanced Cybernetic Implantation or Master Cybernetic Implantation feat.")*.
+
 **⚠⚠ THEY ARE NOT REDUNDANT AND THE PROOF IS STRUCTURAL: the feat chain has
 three tiers and cannot express `implant-3`'s split into 16 and 18.** The CON
 gate, in turn, says nothing at all about feat prerequisites.

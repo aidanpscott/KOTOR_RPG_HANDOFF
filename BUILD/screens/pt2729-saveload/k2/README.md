@@ -20,4 +20,23 @@ Read off the pictures (not yet cited to a `.gui`/StrRef; the next pass does that
 - The list belongs to ONE CHARACTER; the main-menu Load opened on a different character (Palyn Morusk) than the one last played, and Switch Characters moves between them.
 - New Slot's pane: character name, empty thumbnail frame with `NEW SLOT` centred, `TIME: 0H 0M`, empty portraits.
 
-NOT captured, on purpose: the naming entry, the overwrite prompt, the delete prompt, saving/loading in progress, quicksave and the "cannot save here" refusals. Each needs a Save, Delete or confirm press (or a special area) and K2 is read-only for us. These go to the owner as open questions.
+## Second pass, same day: the owner's one-time exception ("option A") let the confirm states be reached
+
+Done with a full backup first (`~/kotor-home/k2-saves-backup-20261004`, 45 files + sha256 list), two throwaway saves, and a byte-for-byte restore afterwards (checksums, directory list and `diff -r` all match, re-checked after a Steam restart; `remotecache.vdf` unchanged, K2 does not sync this folder). **The rule is back to: never save in K2.**
+
+| Shot | State |
+|---|---|
+| 20, 21 | Naming entry after New Slot > Save: a translucent popup titled `SAVE GAME` over the list, one edit box with a caret, `OK` and `CANCEL` stacked; typed `ztemp` |
+| 22 | After OK: straight back to the Options menu. **Saving in progress: none observed in six frames** for a named save |
+| 24, 25 | The new row: `[MODDED] 10 : ZTEMP / OCT 04, 2026 - 15:06:39`, first under New Slot. Slot numbers are global across characters (9 was Palyn Morusk's) |
+| 26, 27 | Overwrite prompt: `Are you sure you want to overwrite the save game?` (StrRef 1591) with `OK` / `CANCEL`; Cancel returns to the list untouched |
+| 28 | Delete prompt: `Are you sure you want to delete the save game?` with `OK` / `CANCEL`; Cancel used |
+| 32 | Gameplay options: **AUTOSAVE** is a checkbox (ticked) |
+| 33 | Key Mapping > Game: **Quick Save = F4, Quick Load = F5** |
+| 34 | Quicksave (F4): a full-screen **SAVING** loading screen (progress bar, a tip line) over the game, then back to play |
+| 35, 36 | After quicksave: the Load list gains `[MODDED] QUICK SAVE / OCT 04, 2026 - 15:36:14` **with no slot number**, first in the list; the pane shows the same Onjo thumbnail |
+
+Ordering read from 36: rows are newest first by DATE (the `Auto Save` row sits last because it is the oldest, 23:07:25), not by slot number and not pinned.
+Not reached: "cannot save here" (no combat or dialogue reachable from this save) — **not captured**.
+
+NOT captured in the first pass, on purpose: the naming entry, the overwrite prompt, the delete prompt, saving/loading in progress, quicksave and the "cannot save here" refusals. Each needs a Save, Delete or confirm press (or a special area) and K2 is read-only for us. These go to the owner as open questions.

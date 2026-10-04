@@ -5,6 +5,7 @@ Taken in a live K2 session (Steam build with the Cloud Save checkbox), 1920x1080
 | Shot | State |
 |---|---|
 | 00-main-menu | Main menu: New Game, Load Game, Movies, Music, Options, Quit, More Games |
+| 01 | Main-menu Load Game, FIRST view: the list opens on the OTHER character (Palyn Morusk, one row `[MODDED] 9 : DROID ARMOR`, Oct 02 2026 - 17:59:46; area bar `EBON HAWK`, `INTERIOR`, a droid portrait), not the one last played |
 | 02, 03 | Main-menu Load Game on Onjo's list: first row selected, then a lower row selected |
 | 10 | In-game Options menu: Save Game ("Save the current game"), Load Game, Gameplay, Feedback, Auto-Pause, Graphics, Sound, Exit Game |
 | 11 | In-game Save Game: first row **New Slot**, then the saves; Delete disabled; Auto Save row absent from this list |

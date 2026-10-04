@@ -756,6 +756,8 @@ why this needed stating rather than leaving to whoever next read the line:
 **`weaponwield` distinguishes one-handed from two-handed at the data level.** **4 = one hand *(all pistols)*, 5 = two hands *(all rifles)*, 6 = special *(repeating blasters)*.** **`weaponsize` 2 = Small, 4 = Large.**
 
 > **This settles which weapons can be dual-wielded without a separate ruling.** **`weaponwield` 1, 2, and 4 are one-handed and may be paired. 3, 5, and 6 are two-handed and may not.** **Two pistols yes; two rifles no; two vibroblades yes; two Force Pikes no.**
+>
+> **⚠ A MIX OF RANGED AND MELEE IS NOT A PAIR — `PT-2731` item 2, read in K2.** **One-handed does not mean pairable with every other one-handed weapon: K2 refuses a pistol (`weaponwield` 4) beside a one-handed blade (1 or 2), in either order, with the box *"You cannot equip this weapon while an incompatible weapon is equipped in your other hand."* The row is still listed, painted can't-use. Two of a kind pair; an empty other hand blocks nothing.**
 
 **And `weaponwield` 6 is resolved: it is the heavy autofire category, exactly two items in both games.**
 

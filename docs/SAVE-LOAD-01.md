@@ -289,3 +289,29 @@ so *New Slot* costs one small write, *Delete* removes one file, the global numbe
 
 **Size (measured and budgeted in the build; numbers in the report):** one bookmark = header + compressed picture (budget: a stated number of KB, enforced by a test) + the combat snapshot when present; the log's growth per hour is measured from a real play run; 100 bookmarks cost 100 small files, **not 100 copies of the log**. If the log itself proves unbounded, compaction is proposed separately and must keep every `at` resolvable.
 
+
+## Addendum — what a bookmark carries that the log does not (PT-2733, TEST 153)
+
+**Cause confirmed.** The log records a position only at arrival in an area and on leaving the screen (`_writePosition`, PT-1523/PT-1526: *two moments, not every keypress*). A bookmark was a log index, so a load rebuilt the area and put the character on its arrival square; only a mid-fight save kept squares, because the combat snapshot held them.
+
+**The fix.** A bookmark now also stores the **world**: a gzip'd JSON section after the combat snapshot (optional, so a bookmark from before it still loads as it always did). Quick Save is a bookmark and carries it. **Auto Save** is the live log, so its world is written beside its picture when play is left (`autosave.world.json`, with the raw log's length) and used only if the log is still that long.
+
+**Every piece of play state that changes without a log event, and whether it is restored:**
+
+| State | Where it lives | Restored by a load |
+|---|---|---|
+| The player's square | `_at` | yes (world) |
+| Every creature's and companion's square | `_movedTo` | yes (world) |
+| Which way each creature faces | `_facing` | yes (world) |
+| Hidden creatures that have been found | `_revealed` | yes (world) |
+| Doors that have been opened this visit | `_opened` | yes (world) |
+| Who has turned hostile | `_hostile` | yes (world) |
+| The player hiding (stealth) | `_hidden` | yes (world) |
+| The Force pool as it reads now | `_force` | yes (world) |
+| Every combatant's wounds, conditions, ongoing effects, shields, ability and skill modifiers, standing modifiers, budgets | `Combatant` (`captureCombatant`) | yes (world; `restoreCombatant`) |
+| A fight in progress: round, order, turn, who waits | `_fight` | yes (combat snapshot, PT-2732) |
+| Credits, journal flags, items taken, who has died, who has joined, doors unlocked, level and gear | the log | yes (rewind) — proven by the A/B/C test, which varies credits and a journal flag between saves |
+| The dice's position in their stream | `_dice` | **no, by design**: the seed is the log's; a load rolls from the seed's start, as a fresh visit does |
+| Open screens, the status line, scroll positions | UI | no (a load always lands on the board) |
+
+Proof: `a_load_restores_where_you_stood_test.dart` makes A, B and C with the REAL play screen's own facts after walking to a different square each time and varying credits, a journal flag and a poison condition, then opens B, C and A and checks all of them; Quick Save (F4/F5) and Auto Save (Options > Leave session, then Load Game > Auto Save) each have a test. Mutation-checked: dropping the position restore, the combatant restore, writing the world, or reading it each turns the test red.

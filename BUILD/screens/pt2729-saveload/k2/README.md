@@ -40,3 +40,11 @@ Ordering read from 36: rows are newest first by DATE (the `Auto Save` row sits l
 Not reached: "cannot save here" (no combat or dialogue reachable from this save) — **not captured**.
 
 NOT captured in the first pass, on purpose: the naming entry, the overwrite prompt, the delete prompt, saving/loading in progress, quicksave and the "cannot save here" refusals. Each needs a Save, Delete or confirm press (or a special area) and K2 is read-only for us. These go to the owner as open questions.
+
+## Added 2026-10-05 (read-only K2 run, nothing saved; saves folder re-checked against the backup checksums, all OK)
+| Shot | State |
+|---|---|
+| 40 | In-game Load: after choosing a row, K2 asks "The current game will not be saved. Continue with load?" OK / Cancel (before loading) |
+| 41 | In-game Options menu, Save Game row mid-pulse (dim text is the selection pulse, not a disabled button) |
+| 42 | Container Inventory (a broken droid on Peragus): Get Items / Switch To Give Items / Close; Escape closes it |
+Options sub-screens are in `../../options-k2/`. K2 facts seen: Escape opens Options in play and closes it (a quick tap is sometimes lost: use a held press); a tutorial box does not swallow Escape; Space pauses ("PAUSED PRESS Spacebar TO CONTINUE"). **Escape inside a conversation was NOT observed**: no conversation was reachable from any existing K2 save (Onjo's saves are all in the Peragus start rooms, Palyn's on the Ebon Hawk alone).

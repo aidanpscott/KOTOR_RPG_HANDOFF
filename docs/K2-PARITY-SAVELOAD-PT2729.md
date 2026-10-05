@@ -25,7 +25,8 @@
 | 16 | Orbitron glyph widths | K2 renders its own face | same face, ±1px | X |
 | 17 | Cloud Save tick | present | none (no cloud) | X |
 | 18 | Autosave tick | present | none; ours writes continuously, K2 throttles | X |
-| 19 | Quick Save row appears in both lists | Load only | both lists | GAP |
+| 19 | Quick Save row | Load list only, first by date, no number (captures 35/36; no K2 Save-list capture after a quicksave exists, and K2's Save list also omits Auto Save) | Load list only | = (Save-list half inferred, not captured) |
+| 22 | **Party portraits beyond three** | three boxes, no arrows | the three boxes exactly; with more than three saved, K2's own party-switch arrows (`uibit_arrow_l/r`, 14×24, beside the row) page through the party — normal teal, white on hover, dim and inert at either end; hidden at three or fewer; mouse only, list keys unchanged; order is the player, then party order; the whole party (ids and portraits) is stored in the `.mark`, a bookmark from before reads as its one portrait | **X — owner-ruled difference** (`PT-2732`); arrow placement not yet compared live against a five-member save |
 | 20 | Options screen (doorway to Save/Load) | optionsingame/optionsmain | old layout | GAP — next slice, 1:1 |
 | 21 | Auto Save pane fields | name/area/time only | same (no class/level, as K2) | = |
 
@@ -51,4 +52,4 @@ Measured in the live app (Xvfb, a real play session on one character, seven save
 
 ## 4 · Known gaps for "Save/Load ready"
 
-Options screen still the old layout (next slice); Quick Save listed in both lists. Remaining flaky: `whole_loop_test` in full runs.
+Options screen still the old layout (next slice). Remaining flaky: `whole_loop_test` in full runs.

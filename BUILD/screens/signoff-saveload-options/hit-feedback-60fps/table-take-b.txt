@@ -1,0 +1,7 @@
+turn outcome  event_f  hp_f  flash_f  number_f  miss_f   (frames @60; deltas vs the event frame)
+  1 miss       133          -           -           -     133(+0)
+  2 hit        362    362(+0)     362(+0)     362(+0)           -
+  3 miss       589          -           -           -           -
+  4 miss       822          -           -           -     822(+0)
+  5 miss      1947          -           -           -    1947(+0)
+hits 1 misses 4

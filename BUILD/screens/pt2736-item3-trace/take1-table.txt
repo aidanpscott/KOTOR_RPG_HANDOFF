@@ -1,0 +1,15 @@
+take1.mkv hit 13 PASS 13 FAIL []
+take1.mkv miss 53 PASS 53 FAIL []
+  hit 2 -11 flash-hp 0 num-hp 0 lag 298 gap 33 PASS
+  hit 5 -4 flash-hp 0 num-hp 0 lag 362 gap 33 PASS
+  hit 6 -10 flash-hp 0 num-hp 0 lag 330 gap 33 PASS
+  hit 15 -10 flash-hp 0 num-hp 0 lag 264 gap 17 PASS
+  hit 19 -7 flash-hp 0 num-hp 0 lag 226 gap 17 PASS
+  hit 20 -1 flash-hp 0 num-hp 0 lag 242 gap 17 PASS
+  hit 21 -5 flash-hp 0 num-hp 0 lag 415 gap 17 PASS
+  hit 26 -9 flash-hp 0 num-hp 0 lag 594 gap 17 PASS
+  hit 36 -9 flash-hp 0 num-hp 0 lag 507 gap 17 PASS
+  hit 49 -5 flash-hp 0 num-hp 0 lag 480 gap 17 PASS
+  hit 55 -1 flash-hp 0 num-hp 0 lag 292 gap 17 PASS
+  hit 59 -4 flash-hp 0 num-hp 0 lag 575 gap 17 PASS
+  hit 65 -9 flash-hp 0 num-hp 0 lag 528 gap 17 PASS

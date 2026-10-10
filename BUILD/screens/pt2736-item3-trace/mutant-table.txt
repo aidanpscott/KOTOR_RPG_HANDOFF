@@ -1,0 +1,9 @@
+take-m2.mkv hit 7 PASS 0 FAIL [3, 7, 8, 13, 16, 23, 24]
+take-m2.mkv miss 22 PASS 0 FAIL [1, 2, 4, 5, 6, 9, 10, 11, 12, 14, 15, 17, 18, 19, 20, 21, 22, 25, 26, 27, 28, 29]
+  hit 3 -10 flash-hp 10 num-hp 10 lag 355 gap 17 FAIL
+  hit 7 -11 flash-hp 7 num-hp 7 lag 253 gap 17 FAIL
+  hit 8 -9 flash-hp 8 num-hp None lag 364 gap 17 FAIL
+  hit 13 -2 flash-hp 7 num-hp 7 lag 259 gap 17 FAIL
+  hit 16 -8 flash-hp 7 num-hp 7 lag 228 gap 17 FAIL
+  hit 23 -10 flash-hp 6 num-hp 6 lag 205 gap 17 FAIL
+  hit 24 -4 flash-hp 6 num-hp None lag 202 gap 17 FAIL

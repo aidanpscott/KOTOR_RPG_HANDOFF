@@ -81664,3 +81664,14 @@ Everything kept is built element by element against `optionsingame`/`optionsmain
 5. **Smaller:** droid portraits (footer tile flat teal; Load row shows a human face) use droid art, never a human face; blank pictures (Auto Save, mid-fight, five-party page 2 for over 2 s) shown straight away; library cards still read "d shield 01, baseitem..." and show PT numbers: move authoring notes out of the description, write Tester Strongroom's missing description, extend the guard (no `PT-`, no `baseitem`, no snake_case in player text); the uncommitted STR edit in `tool/author_pt2721_equip_save.dart`: commit with a reason or revert.
 6. **Then:** full suite alone, report the hash; re-record both sign-off videos on that hash (same format and folder, replacing the old ones). Tester re-runs 157 after.
 Still owed, not blocking: the K2 run for the XP pop-up, the medpac number, Floating Numbers OFF in K2, and a K2 footer with a party (2-tile question).
+
+## PT-2738 -- A DROID KEEPS THE FORCE BAR, EMPTY, AS IN K2
+
+*Owner via MAIN, 2026-10-10.* Owner ruling (quoted): "for a droid character he created the force bar does not appear on the right side of the portrait like the health bar does on the left side ... if you look at KOTOR 2 droid still had it and it was just basically empty and I want us to keep that for our game as well."
+1. Wherever a portrait shows the health bar on its left and the Force bar on its right (the party footer tiles, and any other portrait-with-bars view: list them), a droid shows the Force bar too: same frame, same position, same size, fill at zero. Nothing about a droid hides it. Organic characters are unchanged.
+2. Find the code that hides it and say what it keys on (a droid flag, zero max FP, no Force class). If the cause is "max FP is 0, so no bar", then an organic character with 0 max FP must ALSO show an empty bar. Say whether one exists in a shipped package.
+3. Confirm against K2 under the backup rule: a K2 capture of a droid party member's portrait showing the empty Force bar (HK-47 or T3-M4). If K2 shows anything other than an empty bar (a different frame, a dimmed bar, no bar on some screen), report it TO THE OWNER instead of choosing.
+4. A failing test first through the real render path: a droid party member's tile has the Force bar at zero fill, plus an organic control. Mutation-check it by restoring the hide and watching the test fail.
+5. TESTER verifies it on a chargen droid in TEST 158 or the next test.
+Priority: after items 1-5 of the work order MAIN numbered just before this one (not yet filed in this ledger), and before PT-2736 items 3 and 1. It does not touch sign-off.
+**This replaces `PT-1517`'s "the wing is ABSENT rather than drawn empty" for the bar** (the pool itself stays null for a character with none, `PLAY-STATE-01 §3`).

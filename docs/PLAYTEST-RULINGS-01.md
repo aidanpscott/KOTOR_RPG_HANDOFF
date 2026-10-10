@@ -81665,6 +81665,26 @@ Everything kept is built element by element against `optionsingame`/`optionsmain
 6. **Then:** full suite alone, report the hash; re-record both sign-off videos on that hash (same format and folder, replacing the old ones). Tester re-runs 157 after.
 Still owed, not blocking: the K2 run for the XP pop-up, the medpac number, Floating Numbers OFF in K2, and a K2 footer with a party (2-tile question).
 
+## PT-2737 -- NEW MACHINE: TOOLCHAIN, BUILD, PROBE PATH, OWNER LAUNCHER, FLAKE NOTE; THEN THE PT-2736 ITEM 3 LIVE PROOF AND THE ITEM 1 BISECT
+
+*Owner via MAIN, 2026-10-10. **Re-issued 2026-10-10; original text lost; reconstructed from the new-machine order and PT-2738/PT-2739's references.** The original was written in a Main chat that no longer exists; this entry is filed late, in its place before PT-2738.*
+1. tool/env.sh (and the KOTOR_APP_PROJECT/env.sh it forwards from): stop putting ~/spike/prefix on LD_LIBRARY_PATH. Use the system toolchain plus ~/spike/flutter only. Prove it from a fresh shell.
+   STATUS: DONE b8d9b04, proven from a clean login shell.
+2. Build on the new machine.
+   STATUS: DONE (cold debug build 11 s; release via the launcher 26 s; full suite 2291/0 at 9fc1bcb).
+3. k2_parity_onjo_probe_test must not default its output to ~/kotor-home (the old machine's path).
+   STATUS: DONE 05bd601 (system temp folder).
+4. The owner's desktop shortcut ("Knights of the Old Republic RPG") runs tool/run-owner.sh. Remove the Flatpak hop, make it work from a normal desktop session, and say when it's safe to double-click.
+   STATUS: DONE aeaae99 and 5bc6af2 (Flatpak hop gone, a failed build stays visible, the game no longer holds the launcher lock), owner clone KOTOR-RPG-APP-owner, both .desktop files pointed at it, proven twice from a clean environment. Tell the owner it's safe to double-click, if you haven't.
+5. The keys_return_after_every_close flake under full-suite load: note it and move on unless it blocks.
+   STATUS: NOTED, pre-existing (fails alone 2 of 3 at 5bc6af2 and c7aed04). It stays on the flaky-tests agenda item.
+6. PT-2736 item 3: the live 60 fps proof of hit feedback.
+   STATUS: CLOSED by TEST 158 (per PT-2739), with your independent run filed as support (BUILD/screens/pt2736-item3-trace/: 13/13 hits, 53/53 misses, the late mutant fails 7/7).
+7. PT-2736 item 1: the bisect of the mid-fight load fault.
+   STATUS: REPLACED by PT-2739's method (revert only the load-race fix on the current head, show the TEST 157 fault returns with one fixed fixture, restore the fix, show it's gone; if it doesn't return, say the cause is unknown, then bisect). NOT YET RUN. Record your 6a5f715 finding under it: a quick load showed a board-less screen for about 0.9 s; a click at about 1.09 s was carried out on the restored state (a move spent); clicks at 0.15, 0.56 and 0.84 s were lost.
+Also recorded, outside the items: the commit identity (Aidan Scott <aidanpscott@gmail.com>, set per command, global git config untouched) and the KOTOR_ATTACK_TRACE hook (7b8b9e1).
+THEN, in this order, reporting after each: PT-2739 items 1-3 (Continue after leaving mid-fight resumes the fight; the Strongroom library card; the name, not the tag, everywhere a creature is named, including "sith-trooper.command-deck.39" on the Endar Spire); PT-2737 item 7 by PT-2739's revert method; PT-2739 items 4-6. Report the hash after items 1-3 so Tester can run the held parts of TEST 159.
+
 ## PT-2738 -- A DROID KEEPS THE FORCE BAR, EMPTY, AS IN K2
 
 *Owner via MAIN, 2026-10-10.* Owner ruling (quoted): "for a droid character he created the force bar does not appear on the right side of the portrait like the health bar does on the left side ... if you look at KOTOR 2 droid still had it and it was just basically empty and I want us to keep that for our game as well."
@@ -81673,13 +81693,37 @@ Still owed, not blocking: the K2 run for the XP pop-up, the medpac number, Float
 3. Confirm against K2 under the backup rule: a K2 capture of a droid party member's portrait showing the empty Force bar (HK-47 or T3-M4). If K2 shows anything other than an empty bar (a different frame, a dimmed bar, no bar on some screen), report it TO THE OWNER instead of choosing.
 4. A failing test first through the real render path: a droid party member's tile has the Force bar at zero fill, plus an organic control. Mutation-check it by restoring the hide and watching the test fail.
 5. TESTER verifies it on a chargen droid in TEST 158 or the next test.
-Priority: after items 1-5 of the work order MAIN numbered just before this one (not yet filed in this ledger), and before PT-2736 items 3 and 1. It does not touch sign-off.
+Priority: after PT-2737 items 1-5, before PT-2736 items 3 and 1. It does not touch sign-off.
 **This replaces `PT-1517`'s "the wing is ABSENT rather than drawn empty" for the bar** (the pool itself stays null for a character with none, `PLAY-STATE-01 §3`).
 
 **TEST 159a result (MAIN, 2026-10-10; `TEST/reports/159a-...`, app `5bc6af2`). No new number.** ACCEPTED: PT-2738 passes in real play: an empty well for a droid (fresh start) and a Soldier, a full well for a Jedi, real companion pools (Guardian 57 of 57, computed correctly), the footer well placed the same as the sidebar's. The well reuses the existing bar widgets, as the owner asked.
 - **FIX 1 (serious): a New Game inherits the last played character's state.** Repro: load a Jedi (force 8 of 8) standing off the arrival square, Options > Exit Game > OK > New Game > make a droid > Play: the droid shows force 8 of 8 and stands on the Jedi's last square. Seen 2 of 2; clean straight after an app restart. It is WRITTEN INTO THE NEW CHARACTER'S AUTOSAVE (t3-77 `autosave.world.json` holds force 8/8/8 at [3,2]) and survives a restart. Find every piece of play-screen state that outlives a session (force, position, HP, conditions, combat, selection, floating numbers, the map...) and reset ALL of it when a session ends and before a new one starts; better, a fresh play-screen state object per session. Check Load and Continue into a DIFFERENT character for the same leak; test both. Test through the real path (Jedi off the arrival square, Exit Game, New Game as a droid: empty pool, arrival square, clean autosave; the same for Load and Continue into another character), mutation-checked. Say whether `a845f96` and earlier had it (TEST 148 (h) had the same shape). Tester's contaminated saves (t3-77, t3-21): no migration; Tester discards them.
 - **FIX 2: two readers disagree on a companion's Force pool.** The five-party fixture's second Guardian shows 33 of 33 (the die alone, as if WIS and CHA were 10) while its sheet reads 14/14: it has only a `partyJoined` event and the pool reader replays logged scores. One reader, one number: the pool uses the sheet's score source. Fix the reader, not the fixture; test with a companion with no logged scores.
 - **CHECK:** the footer's full Force fill (12,54,46) is hard to tell from empty (black). Compare our full and empty Force well colours with K2's captures (Equip and footer) and match K2.
-- **Then:** report the hash. Tester re-checks these with the held items (Continue after leaving mid-fight, the Strongroom card, name-not-tag) once those land.
+- **Then:** report the hash. Tester re-checks these with the held items (Continue after leaving mid-fight, the Strongroom card, name-not-tag: PT-2739 items 1-3) once those land.
 
 **TEST 160 result (MAIN, 2026-10-10; `TEST/reports/160-...`, app `c7aed04`): the TEST 159a fixes are CLOSED.** All five checks pass in real play: New Game after a Jedi opened twice starts empty on the arrival square with a clean autosave (2 of 2, and again after a restart and Continue); Load and Continue into another character carry nothing over; a Jedi left mid-fight leaves no fight for a New Game; TEST 148 (h)'s leaked "rules not checked" count is gone (the droid shows its own 3); both Guardians read force 57 of 57; the PT-2738 wells are unchanged. Still open under this number: the footer Force well's FULL colour against K2 (waiting on the owner for a K2 save with a Force user at full FP).
+
+## PT-2739 -- TEST 158 PASSES PT-2736 ITEMS 1-4 IN REAL PLAY AND PROVES HIT FEEDBACK AT 60 FPS (13 HITS, 14 MISSES); FAIL: CONTINUE AFTER LEAVING MID-FIGHT DROPS THE FIGHT; STRONGROOM CARD CARRIES VISUAL PASS's SUMMARY; NAME NOT TAG IN SPEAKER AND LOG; FLASH LENGTH TO K2
+
+*MAIN, 2026-10-10. Sources: TEST 158 (HANDOFF 3204722, report 158-..., screens test-158/). Filed after PT-2737 and PT-2738, as received:*
+
+AMENDS PT-2737:
+- Item 6 (the 60 fps proof) is CLOSED by TEST 158 take A/B. Do not redo it.
+- Item 7 (the bisect) is REPLACED by: on current head, revert only the load-race fix, show the TEST 157 mid-fight load fault returns with one fixed fixture, restore the fix, show it is gone. If it does NOT return, the cause is still unknown: say so and then bisect.
+
+1. FAIL 2b, CONTINUE AFTER LEAVING MID-FIGHT. Repro (TEST 158): start the fight with Dressa, take a step, Exit Game -> OK -> Continue. Party is on the right square with the right HP, but there is no fight. Walking into Dressa starts a NEW fight with new initiative (18/15 vs saved 1/7). autosave.world.json has hostile + combatants but no round/turn key. b8f87ff claimed Continue resumes the fight: find why that claim passed. Failing test first through the real play path (leave mid-fight, Continue), mutation-checked. Save/Load is NOT signed off until TESTER re-checks this.
+
+2. LIBRARY CARD. Tester Strongroom's summary (Shelf 8fa2475) is Visual Pass's text. Write its own summary from what the package holds (footlocker, console, crate, guard droid; empty vault). Make the library-card guard catch a summary that describes a different package, or say why it can't.
+
+3. NAME, NOT TAG (ruled, K2 parity). The conversation header and the combat log show the creature's NAME, never its placement tag (TEST 158 saw MERCHANT.BED.02 / merchant.bed.02 while the party panel said Dressa). Check it on a Shelf package, not only Tester's fixture. Sweep every place a creature is named.
+
+4. FLASH LENGTH (ruled, K2 parity). Tune the edge flash to K2's measured shape: about +55 peak red, gone in about 0.27 s (ours: 0.9-1.3 s in 5 steps). Measure the result at 60 fps the way TEST 158 did.
+
+5. SMALL. The Loading picture covers only 0.18 s of a ~2 s load (0.7 s on the old list, then 1.2 s black board). Show it from the click to the first playable frame. Clicks are already inert, so this is cosmetic.
+
+6. OPTIONS MENU, TWO LIT ROWS. The default row (Save Game) stays outlined while another row is hovered. Capture K2's Options menu under the backup rule. Fix if K2 shows one lit row; report if K2 does the same.
+
+SIGN-OFF. MAIN recommends Options SIGNED OFF on TEST 158 (pending the owner); items 4 and 6 above are follow-ups. Save/Load waits on item 1 and TESTER's re-check.
+
+Order of work: PT-2737 items 1-5, PT-2738, then this PT-2739 1-3, the PT-2737 item 7 reversal, then 4-6. Gate before every push, one plain-text CODER -> MAIN block at the end.

@@ -81727,3 +81727,18 @@ AMENDS PT-2737:
 SIGN-OFF. MAIN recommends Options SIGNED OFF on TEST 158 (pending the owner); items 4 and 6 above are follow-ups. Save/Load waits on item 1 and TESTER's re-check.
 
 Order of work: PT-2737 items 1-5, PT-2738, then this PT-2739 1-3, the PT-2737 item 7 reversal, then 4-6. Gate before every push, one plain-text CODER -> MAIN block at the end.
+
+## PT-2740 -- TEST 159b: CONTINUE RESUMES THE SAME FIGHT, IN-GAME LOADS CLEAN, NAMES NOT TAGS (ACCEPTED). FIX: NEW GAME SILENTLY OVERWRITES A CHARACTER WITH THE SAME NAME (DATA LOSS); LIBRARY CARDS MUST MATCH THEIR PACKAGE. AGENDA: MESSAGES SCREEN 1:1 WITH K2. FIXTURE: A SLOWER ENEMY TURN
+
+*MAIN, 2026-10-10. Source: `TEST/reports/159b-...` (app `d75c3da`, Shelf `1f04018`).*
+ACCEPTED in real play: Continue after leaving mid-fight resumes the same fight, 4 of 4, including after an app restart (PT-2739 item 1 CLOSED). In-game loads mid-fight, 10 of 10, no error screen (the regression fix holds). Names, not tags, on every screen in Save Bed and the Shelf's Endar Spire (PT-2739 item 3 CLOSED). Save/Load now goes to the owner for sign-off.
+1. **FIX 1 (serious, data loss): New Game silently overwrites an existing character with the same name.** Chargen generated T3-75, an existing droid's designation, and t3-75.sav was replaced; typing an existing name (T3-35) did the same, with no warning. The old character is gone, and its bookmarks would list under the new one. K2 never loses a save to a name clash: two characters can share a name and both are kept. Do the same:
+   - Key every character's save, autosave, bookmarks and .marks folder by a unique id, never by the name. Two characters with the same name both survive and both list (Switch Characters shows both).
+   - The droid designation generator never hands out a designation already used by an existing character.
+   - No silent overwrite anywhere, ever. A guard: writing a new character's save fails if the file exists and belongs to another character.
+   - Existing saves keyed by name keep loading: migrate them, or read both forms.
+   - Tests through real chargen: (a) two characters with the same typed name: both exist, both load with their own state and bookmarks; (b) 50 droid designations generated against existing ones: no clash. Mutation-checked.
+2. **FIX 2: library cards must match their package.** Strongroom says "two mines"; a01-strongroom holds four (mine.strongroom.01, .08, .09, .10): correct the count. Tester Probe says "A single room" but has 11 areas and 18 doors: rewrite it from what it holds. Can the guard check counts it can read (mines, areas, doors) against the package? If it can, add that; if not, say why.
+3. **AGENDA (not now):** the Messages screen holds no creature lines. Combat shows only "A fight begins." and Dialogue is empty after a full conversation. K2's Messages screen keeps the dialogue history and the combat feedback. "Messages screen 1:1 with K2", with this finding attached (already one of the outstanding PT-2675 menus).
+4. **FIXTURE:** Tester could not leave on an enemy's turn, because one unarmed enemy's turn resolves in under 0.15 s. Give Tester a fixture with a slower enemy turn (several enemies, or a pause a test can catch), so "leave on the enemy's turn, then Continue" can be checked. Low priority; before Tester's next Save/Load pass.
+ORDER: Fix 1 first (data loss), then PT-2737 item 7 / PT-2739 items 4-6, then Fix 2 and the fixture. Report the hash after Fix 1 so Tester can check it.

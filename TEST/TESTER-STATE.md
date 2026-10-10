@@ -18,6 +18,13 @@ TEST 147 (before it): environment proof; class Defence L1 (11 classes); fight st
 
 **No order waiting (2026-10-10).** TEST 159 complete (159a + 159b). `run/gobed.sh` finds the Save Bed card by title template (`run/findcard.py`, `run/bedtitle.gray`); the library scroll position is not deterministic.
 
+## Process principle (OWNER, 2026-10-10): SIMPLICITY OVER CORRECTNESS, HIERARCHICALLY
+Simplicity ranks above correctness. When the simpler choice and the more correct one pull apart, take the simpler one. For Tester:
+- The smallest check that answers the order's question (a screenshot, the status line, one autosave field) beats a bespoke instrument (pixel pipelines, detectors, scripts).
+- Simplest fixture that reproduces the case; short reports, caveats only where they change what someone does.
+- Do not push Coder toward heavier fixes for completeness.
+- It never licenses a PASS without evidence or a hidden FAIL; it limits machinery and scope, not honesty.
+
 ## Where things are (NEW OS since 2026-10-09: Ubuntu 24.04, KDE, X11, user `aidanpscott`, normal VS Code — run everything directly, NO flatpak-spawn / r.sh)
 - Clones: `~/kotor-tester/{KOTOR-RPG-APP,Lodestar,Lens,Shelf,KOTOR_RPG_MAIN_WORK,KOTOR_RPG_HANDOFF}` (re-made 2026-10-10). HANDOFF has `core.hooksPath=.githooks` (blocks font files). Coder's repos are at `/mnt/Games/Steam/steamapps/common/KOTOR_APP_PROJECT/` — never use those. The old Debian root (`/media/aidanpscott/8f48e276-…/home/aidan`) has none of the old Tester files (searched 2026-10-10).
 - **Last build block (TEST 158):** app `a845f96a10230f065cad6b8d617fea56b733e7d9`; Lodestar `e729d36…` = lock = pub-cache; Lens `2bad745`; Shelf `8fa2475`; MAIN_WORK `34984a07`; HANDOFF `9776672` at start; snapshot `/tmp/test158-build`; check_shelf clean (30 rules files, 105 blueprints).
@@ -77,13 +84,10 @@ TEST 147 (before it): environment proof; class Defence L1 (11 classes); fight st
 ## Still untested / open for a later order
 Difficulty mode selection (TABLE RULES unbuilt) and whether death at -Constitution is meant for this build; where a defeat save resumes the party; initiative differing after a reload for some characters (Veya 10/10/-1 first session vs 17/-3/0 after loads); Defence above level 1; classes outside the CLASS-DEFENCE table; re-equipping armour and any armour but the Padawan Robe; mine tiers above Minor; the companion sheet with levelled data. Findings awaiting rulings are in TEST 147 ("Seen, not in the order"). From TEST 158: whether the speaker/log should show a placement tag; the Options menu's two lit rows; the flash length vs K2.
 
-## Skills (MAIN → TESTER work order, 2026-10-02) — user-level, NEVER committed into any KOTOR repo
-Found already installed on this PC (not reinstalled):
-- Matt Pocock's skills: git clone at `~/.local/share/agent-skills/mattpocock-skills` (head `d81f3a1`, "release v1.3"), symlinked into `~/.claude/skills` (the skills.sh/tinkerer route; the README's alternative is `claude plugins install mattpocock-skills`).
-  Tester's set from it: `diagnosing-bugs` (narrow to a smallest repro), `research` (check what a rule says in the corpus), `writing-for-agents` (reports a fresh reader can act on), `handoff` (run before the session grows).
-  Not used by Tester: tdd, implement, implement-spec, to-spec, to-tickets, triage, code-review, setup-matt-pocock-skills (nothing here writes code or tickets; setup would write config into a cwd).
-- obra/superpowers `verification-before-completion`: `~/.claude/skills/verification-before-completion` (installed by Coder, PT-2722; SOURCE.txt: commit `8ca22db`, MIT).
-Not installed, on purpose: obra/superpowers `systematic-debugging` (overlaps `diagnosing-bugs`; its Phase 4 is about implementing fixes). To add it later:
-`git clone --depth 1 https://github.com/obra/superpowers.git <scratch> && cp -r <scratch>/skills/systematic-debugging ~/.claude/skills/ && cp <scratch>/LICENSE ~/.claude/skills/systematic-debugging/`
-To reinstall Matt's set on a fresh machine: `claude plugins install mattpocock-skills` (or `npx skills@latest add mattpocock/skills`, run from a scratch folder, not a repo).
+## Skills — user-level, NEVER committed into any KOTOR repo (updated 2026-10-10)
+Matt Pocock's skills (github.com/mattpocock/skills, MIT): clone at `~/.local/share/agent-skills/mattpocock-skills`, now at upstream **49dd158** (was d81f3a1), symlinked into `~/.claude/skills` (shared with Coder's sessions on this machine).
+- In use: `diagnosing-bugs` (smallest repro; upstream now adds: diff against a pristine copy to prove a forced mutation landed), `research`, `writing-for-agents`, `handoff`.
+- Added 2026-10-10: `to-questionnaire` (user-invoked; turns a question only the owner can answer, e.g. a K2-parity ruling, into a fill-in document) and `retro` (user-invoked; a session retrospective that proposes environment fixes: checks, navigation, tool economy).
+- Considered, not added: tdd, implement, implement-spec, to-spec, to-tickets, triage, code-review, codebase-design, prototype, wayfinder (Coder/Main work); grilling/grill-me (Main's planning); wait-what (needs a GLOSSARY.md we don't have); git-guardrails (would block our pushes); in-progress/* (unstable).
+- obra/superpowers `verification-before-completion` (8ca22db) unchanged.
 Rules: every CONFIRMED carries its evidence; every FAILED its smallest repro; "cause, shown" only when demonstrated, otherwise "likely cause, not shown"; verdict first; end the report with which skill was used where.

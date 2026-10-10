@@ -1,0 +1,15 @@
+turn  hp_change  log_change  edge(start,len,peakTop,peakRight,peakBottom)  red(start,len)  miss(start,len)
+  1     147     147  147(+0) 66f top+12.4 right+9.2 bottom+42.4           -                -
+  2    1066    1066  1066(+0) 59f top+11.9 right+9.4 bottom+41.6          -                -
+  3    1365    1365  1365(+0) 62f top+12.3 right+9.6 bottom+43.0          -                -
+  4    1671    1671  1671(+0) 65f top+11.9 right+9.4 bottom+41.6          -                -
+  5    2573    2573  2573(+0) 70f top+11.9 right+9.4 bottom+41.6          -                -
+  6    2869    2869  2869(+0) 63f top+12.4 right+8.5 bottom+42.0          -                -
+  7    3173    3173  3173(+0) 66f top+12.5 right+8.8 bottom+66.7          -                3173(+0) 302f
+  8    3475    3475  3475(+0) 63f top+12.4 right+8.5 bottom+42.0          -                -
+  9    4091    4091  4091(+0) 64f top+11.8 right+9.0 bottom+66.5          -                4091(+0) 296f
+ 10    4695    4695  4695(+0) 68f top+11.9 right+9.4 bottom+41.6          -                -
+ 11    4995    4995  4995(+0) 53f top+11.9 right+9.4 bottom+41.6          -                -
+ 12    5905    5905  5905(+0) 65f top+11.9 right+9.4 bottom+41.6          -                -
+ 13    6204    6204  6204(+0) 64f top+11.9 right+9.4 bottom+41.6          -                -
+hits(red runs): 0  misses(white runs): 2  edge runs: 13

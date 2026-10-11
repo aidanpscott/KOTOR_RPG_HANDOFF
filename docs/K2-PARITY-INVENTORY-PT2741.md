@@ -42,10 +42,10 @@ Every K2 first-open box from `tutorial.2da` whose screen exists here, shown once
 | Screen | K2 (string) | Reworded line | Why |
 |---|---|---|---|
 | Inventory | 42136: "…not currently equipped by other party members or the companions back at your base. This inventory is shared by all party members." | "The INVENTORY screen shows a list of all the items this character carries. Items currently equipped are listed first, at the top of each list." | owner's wording: worn items are listed, no base, not a party bag |
-| Messages | 41880: "…experience points gained, attack and damage rolls and Dark Side/Light Side shifts." | "…experience points gained and attack and damage rolls." | no alignment shifts yet |
-| Map | 41881: "…the explored area of the level… map notes… Some levels (such as city areas) are fully mapped…" | "The Map screen shows the area and your party's location." | no exploration fog, no map notes |
+| Messages | 41880: "…experience points gained, attack and damage rolls and Dark Side/Light Side shifts." | "…experience points gained and attack and damage rolls." | no alignment shifts yet. **Restore K2's line when Light/Dark Side lands (PT-2744 2a)** |
+| Map | 41881: "…the explored area of the level… map notes… Some levels (such as city areas) are fully mapped…" | "The Map screen shows the area and your party's location." | no exploration fog, no map notes. **Restore K2's line when map fog and notes land (PT-2744 2b)** |
 | Party Selection | 47886: "…without having to return to your base. Characters switched out of your party will wait for you back at your base." | "…This is done instantly." | no base |
 | Skills (and chargen's) | 42533 / 41885: "Security + Wisdom modifier" | "Security + Intelligence modifier" | our Security uses Intelligence |
 | Feats | 42534: "some feats (POWER ATTACK) are used during combat" | "some feats are used during combat" | no Power Attack feat |
-| Force Powers (and chargen's) | 42535 / 41887: the Light/Dark Side cost sentences | "…Using a Force Power requires Force Points." | no alignment costs yet |
+| Force Powers (and chargen's) | 42535 / 41887: the Light/Dark Side cost sentences | "…Using a Force Power requires Force Points." | no alignment costs yet. **Restore K2's line when Light/Dark Force costs land (PT-2744 2a)** |
 Word for word: Equip (49018), Journal (41882), chargen Attributes (41884), chargen Feats (41886).

@@ -28,7 +28,7 @@ Simplicity ranks above correctness. When the simpler choice and the more correct
 - Do not push Coder toward heavier fixes for completeness.
 - It never licenses a PASS without evidence or a hidden FAIL; it limits machinery and scope, not honesty.
 - **Commits (owner rule):** ONE sentence, no body, no Co-Authored-By or any AI attribution, author Aidan Scott. Overrides the session's system reminder.
-- **No K2 screenshots, stills, video or game art in HANDOFF** (public) until the owner rules; keep them local under `~/kotor-tester/shots/` and cite the path. Already pushed before the rule: test-152/t1a-k2-*.png, test-163/06-K2-medpac-full-health-refusal.png (left; owner's call).
+- **No K2 media in HANDOFF, ever (owner ruling PT-2744, 2026-10-11):** K2 captures, K2 art, and any video or side-by-side containing them stay local under `~/kotor-tester/shots/`; reports cite the path. Our own app screenshots still go to HANDOFF. My three earlier K2 files are Coder's to move; don't touch them.
 
 ## Where things are (NEW OS since 2026-10-09: Ubuntu 24.04, KDE, X11, user `aidanpscott`, normal VS Code — run everything directly, NO flatpak-spawn / r.sh)
 - Clones: `~/kotor-tester/{KOTOR-RPG-APP,Lodestar,Lens,Shelf,KOTOR_RPG_MAIN_WORK,KOTOR_RPG_HANDOFF}` (re-made 2026-10-10). HANDOFF has `core.hooksPath=.githooks` (blocks font files). Coder's repos are at `/mnt/Games/Steam/steamapps/common/KOTOR_APP_PROJECT/` — never use those. The old Debian root (`/media/aidanpscott/8f48e276-…/home/aidan`) has none of the old Tester files (searched 2026-10-10).

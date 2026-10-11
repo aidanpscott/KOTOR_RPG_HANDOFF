@@ -32,7 +32,7 @@ pub-cache checkout      ~/.pub-cache/git/Lodestar-496d5e79.../ — present,
 - `linux/` is gitignored and absent from a fresh `git archive`; rebuilt
   with `flutter create --platforms=linux .` before building, same as
   TEST 140.
-- `HANDOFF/BUILD/screens/51-equip-slot-view.png` and
+- `KOTOR_RPG_MAIN_WORK/media/screens/51-equip-slot-view.png` and
   `52-equip-item-selected.png`: **not mine.** Checked before touching
   anything — both are Equip-screen screenshots, mtime today, last real
   commit yesterday (`945c8dc`, "Mirror PT-2696, refresh screens with the

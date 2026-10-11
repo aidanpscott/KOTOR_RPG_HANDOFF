@@ -17,35 +17,35 @@ device ratio 1.0. Not a window grab.
 
 | | |
 |---|---|
-| [`01-entry`](01-entry.png) | The entry screen. `Select Premade` correctly dead at `none` |
-| [`02-species-subrace-open`](02-species-subrace-open.png) | Species with a subrace picker open |
-| [`04-class`](04-class.png) | Class |
-| [`05a`](05a-origin-world.png) · [`05b`](05b-origin-world-picked.png) · [`05c`](05c-origin-upbringing.png) | Origin, **now two stages** with `◂ change world` inside the step |
-| [`06-gender`](06-gender.png) | Gender |
-| [`07-backstory`](07-backstory.png) | Backstory, one tab — `PT-1401` |
-| [`08-abilities-organic`](08-abilities-organic.png) | Abilities, the point buy |
-| [`09-skills`](09-skills.png) | Skills, aptitude marked with its sources named |
-| [`10-feats`](10-feats.png) | Feats, 52 chain heads |
-| [`11-powers`](11-powers.png) | Powers, 21 open at 1st level |
-| [`12a-equipment`](12a-equipment.png) · [`12b`](12b-equipment-the-two-boxes.png) | Equipment, and **the two `PT-1200` boxes** |
-| [`13a`](13a-identity-portrait.png) · [`13b`](13b-identity-name.png) · [`13c`](13c-identity-your-story.png) | Identity, all three stages |
+| [`01-entry`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/01-entry.png) | The entry screen. `Select Premade` correctly dead at `none` |
+| [`02-species-subrace-open`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/02-species-subrace-open.png) | Species with a subrace picker open |
+| [`04-class`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/04-class.png) | Class |
+| [`05a`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/05a-origin-world.png) · [`05b`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/05b-origin-world-picked.png) · [`05c`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/05c-origin-upbringing.png) | Origin, **now two stages** with `◂ change world` inside the step |
+| [`06-gender`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/06-gender.png) | Gender |
+| [`07-backstory`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/07-backstory.png) | Backstory, one tab — `PT-1401` |
+| [`08-abilities-organic`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/08-abilities-organic.png) | Abilities, the point buy |
+| [`09-skills`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/09-skills.png) | Skills, aptitude marked with its sources named |
+| [`10-feats`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/10-feats.png) | Feats, 52 chain heads |
+| [`11-powers`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/11-powers.png) | Powers, 21 open at 1st level |
+| [`12a-equipment`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/12a-equipment.png) · [`12b`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/12b-equipment-the-two-boxes.png) | Equipment, and **the two `PT-1200` boxes** |
+| [`13a`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/13a-identity-portrait.png) · [`13b`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/13b-identity-name.png) · [`13c`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/13c-identity-your-story.png) | Identity, all three stages |
 
 ## The droid — six steps, renumbered
 
 | | |
 |---|---|
-| [`03-model`](03-model.png) | Model, which only a droid sees |
-| [`20-droid-abilities-protocol-inferred`](20-droid-abilities-protocol-inferred.png) | ⚠ **The chassis spread, no spend controls, and the inferred line — 16 Charisma with its source named** |
-| [`21-droid-skills-gated`](21-droid-skills-gated.png) | 13 of 25, and the three kinds of closure kept apart |
+| [`03-model`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/03-model.png) | Model, which only a droid sees |
+| [`20-droid-abilities-protocol-inferred`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/20-droid-abilities-protocol-inferred.png) | ⚠ **The chassis spread, no spend controls, and the inferred line — 16 Charisma with its source named** |
+| [`21-droid-skills-gated`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/21-droid-skills-gated.png) | 13 of 25, and the three kinds of closure kept apart |
 
 ## The strip
 
 | | |
 |---|---|
-| [`30b-strip-locked-padlocks`](30b-strip-locked-padlocks.png) | Nothing done. Only Origin is open |
-| [`30-strip-organic-nine-play-unlocked`](30-strip-organic-nine-play-unlocked.png) | ⚠ **Zero padlocks, Play unlocked.** Never seen before today |
-| [`30-strip-droid-six-play-unlocked`](30-strip-droid-six-play-unlocked.png) | Six steps, Play as 7 |
-| [`31-relock-warning`](31-relock-warning.png) | The re-lock warning, naming what will be discarded |
+| [`30b-strip-locked-padlocks`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/30b-strip-locked-padlocks.png) | Nothing done. Only Origin is open |
+| [`30-strip-organic-nine-play-unlocked`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/30-strip-organic-nine-play-unlocked.png) | ⚠ **Zero padlocks, Play unlocked.** Never seen before today |
+| [`30-strip-droid-six-play-unlocked`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/30-strip-droid-six-play-unlocked.png) | Six steps, Play as 7 |
+| [`31-relock-warning`](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/screens/31-relock-warning.png) | The re-lock warning, naming what will be discarded |
 
 ---
 

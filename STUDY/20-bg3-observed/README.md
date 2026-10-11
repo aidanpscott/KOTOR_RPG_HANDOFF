@@ -114,9 +114,9 @@ not a result display. What it carries:
 
 ### ⚠⚠ BG3 ships FOUR ART STATES PER BUDGET, and distinguishes budgets by SHAPE
 
-![BG3 action-resource pips](shots/bg3_resource_states.png)
+![BG3 action-resource pips](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/study/20-bg3-observed/shots/bg3_resource_states.png)
 
-![BG3 movement resource](shots/bg3_movement_states.png)
+![BG3 movement resource](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/study/20-bg3-observed/shots/bg3_movement_states.png)
 
 **These are the shipped `.DDS` files, converted, not a mock-up.** Four resources
 × four states = sixteen separate art files, `PROVENANCE.md` lists every path.

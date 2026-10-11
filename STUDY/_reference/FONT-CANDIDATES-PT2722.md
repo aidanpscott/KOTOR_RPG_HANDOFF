@@ -1,6 +1,6 @@
 # FONT-CANDIDATES-PT2722 — K2's fonts by use, and what the right candidates are
 
-**`PT-2722`, D3 and D6.** Written by CODER. Picture: `STUDY/_reference/pt2722-font-candidates/equip-font-candidates.png` (K2's own glyphs drawn from the game's **hi-res atlases**, then each candidate, at the **same capital height**, with each one's width ÷ capital height measured).
+**`PT-2722`, D3 and D6.** Written by CODER. Picture: `KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2722-font-candidates/equip-font-candidates.png` (K2's own glyphs drawn from the game's **hi-res atlases**, then each candidate, at the **same capital height**, with each one's width ÷ capital height measured).
 
 ## ⚠⚠⚠ A CORRECTION TO `PT-2721`, AND IT CHANGES D6
 
@@ -59,5 +59,5 @@ The owner ruled both choices and authorised Coder to download free, openly licen
 - **D6 — Bank Gothic Md BT kept**, tightened. **No condensed cut bought, nothing downloaded.**
 - **Spacing, fitted against K2's hi-res atlases** (least-squares over real strings: eleven UI, eight description): **−0.044 em** (Bank Gothic; the ruling said about −0.037) and **+0.042 em** (Liberation; the ruling said about +0.057). The fits are what the atlas gives; the per-string spread is real (Bank Gothic −0.019 to −0.091; Liberation +0.016 to +0.055).
 - **Capitals from K2's hi-res heights:** the UI face 36 px in a 64 px cell = **0.5625** (so `kK2CapHeightOfCell` is 0.5625); the description face **0.6875**, from K2's own screen (11 px against 9 px).
-- **Result, in the picture** (`STUDY/_reference/pt2722-font-candidates/equip-font-side-by-side.png`): the first UI line is **−1.3%** of K2's width and the first description line **−2.5%**, with matching letterforms.
+- **Result, in the picture** (`KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2722-font-candidates/equip-font-side-by-side.png`): the first UI line is **−1.3%** of K2's width and the first description line **−2.5%**, with matching letterforms.
 - **Not yet done:** the Equip screen's on-screen text SIZE (K2's list text is ~22% larger than ours at 1920×1080) — that is the layout slice.

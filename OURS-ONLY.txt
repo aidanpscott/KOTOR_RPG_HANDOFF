@@ -1,6 +1,0 @@
-# Videos and K2-named art that are OUR OWN APP ONLY, with no K2 capture or K2 art in them, and may stay in this public repo.
-# Owner ruling 2026-10-11: K2 screenshots, K2 art and anything showing them go in the private repo (KOTOR_RPG_MAIN_WORK/media).
-# MAIN_WORK/scripts/check_handoff_media.py (run by gate.py) refuses any video, or any image/font/texture with "k2" in its path, not listed here.
-# One path per line, relative to this repo. Add a line only after looking at the file.
-BUILD/screens/test-158/analysis/hfA-60fps.mp4
-BUILD/screens/test-158/analysis/hfB-60fps.mp4

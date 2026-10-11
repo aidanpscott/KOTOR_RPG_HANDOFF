@@ -62,7 +62,7 @@ the same mechanism on both inputs. Two art sets, one convention.
 
 ### The keyboard art, shown
 
-![BG3 keyboard resource pips](shots/bg3_keyboard_pips.png)
+![BG3 keyboard resource pips](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/study/22-keyboard-bar-and-wording/shots/bg3_keyboard_pips.png)
 
 *`Public/Game/GUI/Assets/Shared/Resources/`, converted DDS→PNG.*
 

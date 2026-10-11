@@ -78,7 +78,7 @@ default version of its action** (upcast, or a variant).
 
 ## 2 · ⚠⚠ THE PARTIAL MOVE — TWO ARCS ON ONE DIAL
 
-![BG3 movement circle parts](shots/bg3_movement_circle.png)
+![BG3 movement circle parts](https://github.com/aidanpscott/KOTOR_RPG_MAIN_WORK/blob/main/media/study/21-bg3-hotbar-and-ceremony/shots/bg3_movement_circle.png)
 
 *The shipped `.DDS` from `Public/Game/GUI/Assets/BottomBar/`. Note the base is a
 **notched dial** — tick marks around the rim — not a plain circle.*

@@ -14,7 +14,7 @@ genuinely new fixes from the two already fixed elsewhere the same day. Marked AP
 ## Chapter four — Lightsabers, checked against the raw 2DA files directly
 
 This one didn't go through `ITEMS-01`'s markdown copy at all, given the ranged
-chapter's experience. Checked `data/k1_baseitems.2da` and `data/k2_baseitems.2da`
+chapter's experience. Checked `KOTOR_RPG_MAIN_WORK/media/data/k1_baseitems.2da` and `KOTOR_RPG_MAIN_WORK/media/data/k2_baseitems.2da`
 directly instead.
 
 **Found a real error in `EQUIPMENT-01 §4b`'s own table:** the standard `Lightsaber`'s K1

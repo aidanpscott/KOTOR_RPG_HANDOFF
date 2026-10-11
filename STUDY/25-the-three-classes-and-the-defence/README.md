@@ -85,7 +85,7 @@ already knows.
 hit dice match across all three, independently, which is what makes this an
 identification rather than a guess.
 
-**⚠ Staged against source:** `HANDOFF/data/k2_classes.2da` was compared to the
+**⚠ Staged against source:** `KOTOR_RPG_MAIN_WORK/media/data/k2_classes.2da` was compared to the
 game's own binary for these rows — **identical, no drift.** *(It is a plain-TSV
 export, a **third** 2DA representation in this project beside V2.b binary and
 NWN's V2.0 text.)*

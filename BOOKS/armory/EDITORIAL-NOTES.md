@@ -271,7 +271,7 @@ still listed with the reason for each exclusion.**
 
 **Chapter status: DRAFT.** Split from the combined melee/ranged/lightsabers chapter per
 MAIN's ruling. **Base table checked against the raw `.2da` files directly** —
-`data/k1_baseitems.2da`, `data/k2_baseitems.2da` — **not `ITEMS-01`'s markdown copy**,
+`KOTOR_RPG_MAIN_WORK/media/data/k1_baseitems.2da`, `KOTOR_RPG_MAIN_WORK/media/data/k2_baseitems.2da` — **not `ITEMS-01`'s markdown copy**,
 whose merged `K2+K1` tag masks the two games' different values for these three weapons.
 **Rulings:** `PT-1472` (training sabers take crystals), `PT-345` (the crystal subsystem),
 `PT-1747` (the stale Vibrosword comparison).

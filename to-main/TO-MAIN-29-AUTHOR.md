@@ -32,7 +32,7 @@ nobody spends a Coder cycle re-deriving what's already sitting in `STUDY/_refere
 
 `EQUIPMENT-01 §8` states plainly that droid plating's rows in `baseitems.2da` were never
 extracted, and ships **authored placeholder values**, flagged everywhere they're used
-(including droid pregens' Defence). `data/k1_baseitems.2da` and `data/k2_baseitems.2da`
+(including droid pregens' Defence). `KOTOR_RPG_MAIN_WORK/media/data/k1_baseitems.2da` and `KOTOR_RPG_MAIN_WORK/media/data/k2_baseitems.2da`
 are both sitting in this repository's `data/` — parsed them directly by header, rows
 66–68 in both files:
 

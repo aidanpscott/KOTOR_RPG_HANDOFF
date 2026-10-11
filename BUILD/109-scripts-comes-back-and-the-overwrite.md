@@ -1,7 +1,7 @@
 # BUILD 109 — `scripts` comes back, and the crossing was overwritten
 
 Loom `908a412` · app `4b66395`. Loom 239 · app 374 · Lodestar 463 · Lens 7 —
-**1,083 green.** Screenshot: `BUILD/screens/109-loom-three-roots.png`.
+**1,083 green.** Screenshot: `KOTOR_RPG_MAIN_WORK/media/screens/109-loom-three-roots.png`.
 
 ---
 

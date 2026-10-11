@@ -113,7 +113,7 @@ Status: **PASS** · **FAIL** (a fix is in scope) · **DECISION** (needs the owne
 
 | # | element | K2 | ours | status |
 |---|---|---|---|---|
-| 43 | typeface | `fnt_dialog16x16`, a narrow bitmap face | **BankGothic Md BT**, the owner's choice | **DECISION D6** — at K2's capital height it is about **1.8× wider** ("LIGHT COMBAT SUIT (EQUIPPED)": 880 px against 490 at 3×); see `STUDY/_reference/pt2721-font-candidates/equip-font-side-by-side.png`. It fits the boxes at 1920×1080. Narrower face, or smaller size, or accept — the owner's call |
+| 43 | typeface | `fnt_dialog16x16`, a narrow bitmap face | **BankGothic Md BT**, the owner's choice | **DECISION D6** — at K2's capital height it is about **1.8× wider** ("LIGHT COMBAT SUIT (EQUIPPED)": 880 px against 490 at 3×); see `KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2721-font-candidates/equip-font-side-by-side.png`. It fits the boxes at 1920×1080. Narrower face, or smaller size, or accept — the owner's call |
 | 44 | capital height | 8 px in a 16 px cell | scaled to match (measured by rendering) | **PASS** |
 | 45 | case | the real strings are mixed case, drawn as small-caps-style by the face | BankGothic draws lowercase as small capitals | **PASS** for the look |
 | 46 | colour | teal (111,227,196) on near-black | tinted from the app's tokens | not compared numerically this pass |

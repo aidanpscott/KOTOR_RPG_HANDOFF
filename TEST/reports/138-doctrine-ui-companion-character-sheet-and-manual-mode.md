@@ -19,7 +19,7 @@ play_screen.dart` modified, `test/manual_companion_casts_test.dart` new) —
 left entirely untouched, consistent with never fixing and never touching
 the live tree; everything below ran from the git-archived snapshot only.
 `Loom` clean throughout. HANDOFF itself carried one foreign, unrelated
-uncommitted change (`BUILD/screens/76-party-selection.png`, a modified
+uncommitted change (`KOTOR_RPG_MAIN_WORK/media/screens/76-party-selection.png`, a modified
 screenshot) — stashed before pulling 40 commits, restored after, left as
 found.
 

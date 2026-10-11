@@ -68,7 +68,7 @@ The log is `owner-data/owner-app.log`. To start over, close the game and delete 
 
     https://raw.githubusercontent.com/aidanpscott/KOTOR_RPG_HANDOFF/main/BRIEF-CLASS-DESIGNER.md
     https://raw.githubusercontent.com/aidanpscott/KOTOR_RPG_HANDOFF/main/docs/SKILLS-01.md
-    https://raw.githubusercontent.com/aidanpscott/KOTOR_RPG_HANDOFF/main/data/k2_classes.2da
+    https://raw.githubusercontent.com/aidanpscott/KOTOR_RPG_HANDOFF/main/docs/EQUIPMENT-01.md
 
 **Any file, same pattern:** `.../main/` then the path.
 

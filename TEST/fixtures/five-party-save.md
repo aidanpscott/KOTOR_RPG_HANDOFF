@@ -18,4 +18,4 @@ It copies an existing three-member save (default `mira-mourn`: the player, Guard
 
 The portraits in this bookmark are stock faces chosen so the pages look different; companions carry no portrait art yet, so a real bookmark of this party shows empty boxes for them (known gap, parked with the party-panel-portraits item).
 
-Live captures, K2-style frame: `BUILD/screens/pt2733-saveload2/five-party-pages-live.png` (page one, right arrow hovered, page two, back) and `five-party-load-screen.png`.
+Live captures, K2-style frame: `KOTOR_RPG_MAIN_WORK/media/screens/pt2733-saveload2/five-party-pages-live.png` (page one, right arrow hovered, page two, back) and `five-party-load-screen.png`.

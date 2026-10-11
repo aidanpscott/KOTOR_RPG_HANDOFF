@@ -1,7 +1,7 @@
 # BUILD 108 — I was wrong about cmake, and here is the Builder running
 
 Loom `ee0e7aa`. Loom 239 green. Screenshot:
-`BUILD/screens/107-loom-slice-five-opening-state.png`.
+`KOTOR_RPG_MAIN_WORK/media/screens/107-loom-slice-five-opening-state.png`.
 
 ---
 

@@ -218,6 +218,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Reaction refresh cadence — not yet a question, will become one.** Deflection was the only thing ever spending the per-encounter reaction pool; now that it's Force-only, nothing does. The day `§10`'s chain is built, whether its members refresh per round or share the same per-encounter pool is the identical question just resolved for Deflection — flagged now so it isn't rediscovered from scratch later. Nothing broken today.
 
 ### Small items found along the way
+- **Icons for our skills and feats (PT-2747 ruling 3, owner 2026-10-11).** Only game icons matched by exact name are drawn (6 of 26 skills, the matched feats); the rest show K2's empty icon frame on purpose. Later: a proposal sheet of K2's nearest art for each, as was done for the 20 powers.
 - **Explosive/Ion/Plasma Rocket's damage-secondary gap — small, held, different kind of gap.** Three items state a Secondary and extract no effect, but their secondary is damage data, not a condition — already correctly visible in an existing broader census (548 across 144 shapes), not silently hidden the way the seven were. Damage modelling, not this defect.
 
 

@@ -81993,3 +81993,46 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
   - Feats: game icons for 60 of 320 by exact name. Recommend the chain head's icon on every tier, as K2 does, with a sheet only for chains with no game head.
 - **Content:** 34 descriptions (25 feats, 9 powers, Heal's included) carry rule numbers, "the source says" and 2DA labels. The coverage test will refuse them, so they move out of the player's text in the source documents.
 - **Waits on Telos:** a known power and a live chain arrow in K2.
+
+**MAIN, 2026-10-11 (under PT-2747), the owner's rulings on the Abilities list (MAIN_WORK cc77dac7).**
+- **Accepted as YES:**
+  - K2's words and colours on the frame ("Abilities", "Close", teal text, bone selection).
+  - Skills scroll, with "Related Attribute: X".
+  - Powers scroll the chain grid (known first, then Light, Universal, Dark), with "Dark · Tier 2" under the name, and "Prerequisites:", the description and the ceiling line in the pane.
+  - The 34 descriptions' rule notes move to the source documents' notes columns.
+  - The coverage test runs on the real screen.
+- **Rulings:**
+  1. FEATS: held first, exactly as K2 shows them, then every other feat below in its chain, drawn as unavailable, in one scrolling list. Add K2's "Prerequisites:" pane line. No Held/All toggle.
+  2. THE 20 POWER ICONS: approved as proposed, the three red orbs for Enflame, Combustion and Incinerate included. Record each mapping in the icon coverage doc.
+  3. SKILLS AND FEATS WITH NO GAME ICON: no icon for now and no proposal sheets. Use only game icons matched by exact name (normalising spellings like Armour/Armor is fine). Where there is none, draw the cell as K2 draws an empty icon slot, so it reads as intentionally empty, never broken. The icon guard must not fail on these. Agenda: "icons for our skills and feats".
+- **Note:** the owner's GameCore session opens windows on display :0. Until he sorts it, check focus before every K2 input and pause when the display is busy.
+- **ORDER:** build the Abilities screen now; the Telos-only parts wait. Report "Abilities ready (first pass)" with the hash and a short private sign-off video. Then the Map build, then BG3.
+
+**MAIN, 2026-10-11 (under PT-2744 and PT-2740): TEST 169 (HANDOFF 3cdb415, app e78cf7d).**
+- **ACCEPTED:** the enemy-turn hold in real play with real timing; Grise's Heal (50 → 49, Heal 8 → 10, Shock 6 → 5, screen and menu agree); the Force Powers screen inside its frame with all three rows and icons; the help box; the regression.
+- **FAIL, the text sweep:** developer prose written as plain sentences reached the player (class page "not in classes.json", the pre-hub and hub prose, the portrait page, "see §2", the powers page's "withheld", Heal's "PT-297", and "a01-room" on the status line).
+- **FIX, before the Abilities build goes further:**
+  1. Remove all of it; the player sees game text only.
+  2. The status line names the area, and the leaking path gets a test.
+  3. Widen the guard: section signs, rule and decision numbers, file names, area ids and a build-talk phrase list, kept in one file with a test that every entry fails, run over every chargen and level-up page and every Shelf description.
+  4. List every power with no Force cost, with its tier, nearest K2/RCR equivalent and a proposed cost by POWER-COSTS-01's method (MAIN rules); hide them from the Powers page with no explanation meanwhile.
+  5. Fix XP Bed so Tester reaches a level-up with a feat choice.
+
+**CODER result (2026-10-11) -- the TEST 169 fixes.** App, Lodestar b3b0dba, Shelf and MAIN_WORK hashes in the report.
+- **3, the guard:** `test/build_talk.dart` is the one list. Phrases: not built, not extracted, not drawn yet, not written, placeholder, stands in for, the hub, the pre-hub, owner ruling, the source says, withheld, and "this build", which I added. Shapes: §, PT-n, D-xx, `.json/.toml/.md/.2da/.gui`, area ids. The frame guard reads it on every frame of every widget test. `build_talk_test` checks each list entry and, separately, MAIN's own phrases written out in the test, so an entry deleted from the list fails (mutation killed). `every_description_is_game_text_test` reads every skill, feat and power name and description in the base rules through the same rules: 0 failures, after the cleanup below.
+- **1, what it found, all removed:**
+  - **Chargen:** the class page's "not extracted / classes.json" and its citation; the pre-hub's strip and hub prose (the step is now "SPECIES AND CLASS" and its button "Continue"); the hub's "what is not built"; the portrait and import pages' build talk; the powers page's "withheld" (unpriced powers are left out with nothing shown); the droid skills' "withheld" lines; the feats page's "not written down" prose.
+  - **Play:** "not built yet" fallbacks; "this build" sentences (the app's four and Lodestar's three: save, listing and tile messages now say "this version"); the Force-die note, the default-speed line and the no-weapon note (dev log; they were panel lines at PT-1640); the entry-area and door errors (dev log, with the player reading "this adventure has nowhere to start", "This game cannot start." and "that way is shut").
+  - **Content:** 34 descriptions (25 feats, 9 powers, Heal's "PT-297" included) moved their authoring sentences out of the player's text: FORCE-POWERS-01's Notes column for powers; for feats, a `(note: ...)` aside that the shared splitter now moves to the record's note (FEATS-LIBRARY-01 has no Notes column). 9 more cited document sections and are fixed the same way, and the two shouted Hunter/Veteran grant lines are reworded.
+  - **Found while doing it:** `extract_feats.py` keys three colliding ids by source line, and PT-2715 had added lines above two of them, so `triage_field_surgery` had silently become `field_surgery` again. The keys are fixed, and the extract now refuses when a keyed line no longer holds the feat it names (mutation killed).
+- **2, the area on the status line:** Lodestar's vitality line carries the encounter's area id ("in your campaign, a01-room left you at 4"), and the app's naming pass knew creature tags only. The pass now names area ids too, and every status and panel line goes through it. The path is tested by the frame guard in the fight tests that print that line (wound_survives, two_enemies and others); with the naming removed they fail on the id (mutation killed). Save rows on the package menu named the area id too ("level 3 soldier · a01-command-deck"); they now read the area's real name from the package.
+- **4, powers with no cost (for MAIN to rule; hidden from chargen's Powers page meanwhile):**
+  - **Seven are priced already in POWER-COSTS-01**, which governs; their cells in FORCE-POWERS-01 are empty (a hand-join gap, not a rules gap). Proposal: copy POWER-COSTS-01's own rows.
+    - Crush Opposition II / III / IV (Dark): tier 2 / 12 / −3, tier 3 / 16 / −5, tier 3 / 20 / −6. K2: 20 FP each tier.
+    - Inspire Followers II / III / IV (Light): tier 2 / 12 / −3, tier 3 / 16 / −5, tier 3 / 20 / −6. K2: 20 FP.
+    - Force Stasis Field (Light, POWER-COSTS-01's "Stasis Field"): tier 3 / 24 / −8. K2 MASS_STASIS: 25 FP.
+  - **Two have no cost anywhere:**
+    - Dominate Mind (Universal, after Mind Trick): K2 costs it 0 FP, a conversation power. Proposal: no Force cost and not cast in a fight; it opens conversation options, as in K2.
+    - Precognition (Universal): K2 0 FP, a passive warning. Proposal: no cost, passive, never cast.
+- **5, XP Bed:** the room was three rows with the companion able to stand between; now five rows, the companion behind the player and the dummy in front. A real-path test has a level-1 Soldier kill the dummy, level, and open Level Up with the Feats step offered (Soldier takes a feat at 2). On the old layout the same test fails (control).
+- App suite 2358 passed, 2 skipped. Lodestar 1928.

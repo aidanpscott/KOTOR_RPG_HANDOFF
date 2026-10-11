@@ -1,6 +1,6 @@
 # OPTIONS-K2-CONTROLS — every control on K2's Options screens, and whether ours can have it
 
-**For the owner (sent early, before building).** Source: K2 itself, read-only, captured live 2026-10-05 (`BUILD/screens/options-k2/`); the in-game Options menu, its five sub-screens, Mouse Settings, the main-menu Options, and the Exit Game prompt. Gameplay's Key Mapping was captured earlier (`pt2729-saveload/k2/33`).
+**For the owner (sent early, before building).** Source: K2 itself, read-only, captured live 2026-10-05 (`MAIN_WORK media/screens/options-k2/`); the in-game Options menu, its five sub-screens, Mouse Settings, the main-menu Options, and the Exit Game prompt. Gameplay's Key Mapping was captured earlier (`pt2729-saveload/k2/33`).
 **Why this list exists:** our Options were built as a *tabletop* list at `PT-1255`/`PT-2522` (Table Rules, Turn Pacing, Display, Rolls & Feedback, Sound, Session, Account, Keyboard Shortcuts, Leave Session) because "ours is not a video game". The order is now 1:1 with K2. Where K2 has an option our product cannot honour, that is named here for a ruling, as the Autosave checkbox was. **Recommendation** is mine; nothing is built until the owner rules.
 
 Legend: **YES** we can build it as K2 has it · **MEANS** we can build it, with a stated meaning that differs · **CANNOT** the thing it controls does not exist · **RULE** the owner decides.

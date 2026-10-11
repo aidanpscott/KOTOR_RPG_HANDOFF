@@ -1,6 +1,6 @@
 # K2-PARITY-INVENTORY-PT2741 — the Inventory screen against K2, element by element (first pass PT-2742; the owner's rulings PT-2743)
 
-Sources: K2's `inventory_p.gui` (800×600 canvas, read with `scripts/gffparse.py`), its strings from `dialog.tlk`, and the live K2 captures in `HANDOFF/BUILD/screens/pt2741-k2-session/` (a save with 22 items, every count 1, the player alone). Ours: the live app at 1920×1080, `HANDOFF/BUILD/screens/pt2742-inventory/` (K2 left, ours right). The owner's list of what differs: `design/INVENTORY-K2-CONTROLS.md`.
+Sources: K2's `inventory_p.gui` (800×600 canvas, read with `scripts/gffparse.py`), its strings from `dialog.tlk`, and the live K2 captures in `MAIN_WORK media/screens/pt2741-k2-session/` (a save with 22 items, every count 1, the player alone). Ours: the live app at 1920×1080, `MAIN_WORK media/screens/pt2742-inventory/` (K2 left, ours right). The owner's list of what differs: `design/INVENTORY-K2-CONTROLS.md`.
 
 Excused, as for every K2 screen: the frame (`PT-1309`), Orbitron's glyph widths and slashed zero for K2's `dialogfont16x16`, Liberation Sans Bold for `fnt_d16x16`.
 

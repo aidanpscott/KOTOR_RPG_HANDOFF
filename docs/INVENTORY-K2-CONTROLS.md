@@ -1,6 +1,6 @@
 # INVENTORY-K2-CONTROLS — every part of K2's Inventory screen, and whether ours can have it
 
-**For the owner (PT-2742 item 1, sent before building the parts that differ).** Source: K2 itself, read-only, captured live 2026-10-10 (`HANDOFF/BUILD/screens/pt2741-k2-session/`, a save with 22 items, every count 1, the player alone), and K2's layout file `inventory_p.gui` with its strings from `dialog.tlk`.
+**For the owner (PT-2742 item 1, sent before building the parts that differ).** Source: K2 itself, read-only, captured live 2026-10-10 (`MAIN_WORK media/screens/pt2741-k2-session/`, a save with 22 items, every count 1, the player alone), and K2's layout file `inventory_p.gui` with its strings from `dialog.tlk`.
 
 Legend: **YES** we build it as K2 has it · **MEANS** we build it, with a meaning that differs · **CANNOT** the thing does not exist here · **RULE** the owner decides. The recommendation is mine. Everything marked YES is being built now.
 

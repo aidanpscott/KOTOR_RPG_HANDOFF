@@ -1,6 +1,6 @@
 # K2-PARITY-SAVELOAD-PT2729 — K2's Save/Load screens against ours
 
-**PT-2729 / PT-2732.** Element by element, K2 (`saveload_p.gui`, `savename_p.gui`, captures in `HANDOFF/BUILD/screens/pt2729-saveload/k2/`) against our live app (side-by-sides in `.../sbs/`, our shots in `.../live/`, K2 on the left, ours on the right, K2 cropped of its 28px title bar).
+**PT-2729 / PT-2732.** Element by element, K2 (`saveload_p.gui`, `savename_p.gui`, captures in `MAIN_WORK media/screens/pt2729-saveload/k2/`) against our live app (side-by-sides in `.../sbs/`, our shots in `.../live/`, K2 on the left, ours on the right, K2 cropped of its 28px title bar).
 **Status:** `=` matches · `X` excused (ruled or structural) · `GAP` known, listed for a later slice.
 
 ## 1 · Screens

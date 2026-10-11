@@ -1,5 +1,8 @@
 # ALIGNMENT-01 v2 — The Alignment and Force Drift System
 
+> **⚠ SUPERSEDED by `ALIGNMENT-01-v3.md` (decision D-AQ, 2026-10-11).** Force costs no longer come from the bands below: they come
+> from the Alignment Step (v3 §1.3, KOTOR's own eleven rows). The bands keep drift, hysteresis and mastery. Kept as history.
+
 **Status: SETTLED.** Two numerical test rounds and one book check. Four defects found and fixed; one authorship claim withdrawn.
 **Decision ID: D-AF.**
 **Supersedes:** `ALIGNMENT-01` v1.

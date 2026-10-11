@@ -1,7 +1,9 @@
 # FORCE-POWERS-01 — What Each Power Does
 
 **Source: `Force_Powers_Table.docx`, 88 powers.** `source_system: kotor_game`, secondary.
-**Costs, tiers, and degradation joined from `POWER-COSTS-01`, which governs on mechanical values.**
+**Costs, tiers, and degradation joined from `POWER-COSTS-01`, which governs on mechanical values.** **Cost and Degr are base values:** a
+Light or Dark power's cost, and the degradation read from it, are adjusted by the caster's Alignment Step (`ALIGNMENT-01 v3 §1.3`,
+D-AQ; `FORCE-COST-TABLE-01`). Universal powers are never adjusted.
 
 > **This document existed and was never sent to the playtesters.** **Two S4 reports independently found that `POWER-COSTS-01` supplies cost and no effect** — one authored eleven powers to run the scenario, the other refused and ran Force casts as bookkeeping only. **Both were right to flag it.**
 

@@ -177,16 +177,18 @@
 
 **Force powers — 8.** *Light and universal only. **Every one legal at level 8.***
 
-| Power | Align | Tier | Cost | Degradation |
-|---|---|---|---|---|
-| **Force Push** | Universal | 1 | 6 | −1 |
-| **Force Stun** | Light | 1 | 6 | −1 |
-| **Force Aura** | Light | 1 | 6 | −1 |
-| **Burst of Speed** | Universal | 1 | 6 | −1 |
-| **Throw Lightsaber** | Universal | 1 | 8 | −1 |
-| **Stun Droid** | Universal | 1 | 6 | −1 |
-| **Force Confusion** | Universal | 2 | 20 | −4 |
-| **Heal** | Light | 1 | 8 | −1 |
+| Power | Align | Tier | Cost | Degradation | Adjusted cost | Adjusted degr. |
+|---|---|---|---|---|---|---|
+| **Force Push** | Universal | 1 | 6 | −1 | 6 | −1 |
+| **Force Stun** | Light | 1 | 6 | −1 | 5 | −1 |
+| **Force Aura** | Light | 1 | 6 | −1 | 5 | −1 |
+| **Burst of Speed** | Universal | 1 | 6 | −1 | 6 | −1 |
+| **Throw Lightsaber** | Universal | 1 | 8 | −1 | 8 | −1 |
+| **Stun Droid** | Universal | 1 | 6 | −1 | 6 | −1 |
+| **Force Confusion** | Universal | 2 | 20 | −4 | 20 | −4 |
+| **Heal** | Light | 1 | 8 | −1 | 7 | −1 |
+
+*Adjusted at alignment 65, Alignment Step 6 (Light ×0.9, Dark ×1.25), from `FORCE-COST-TABLE-01` (`ALIGNMENT-01 v3 §1.3`, D-AQ). Rewrite both columns when the step changes.*
 
 > **37 points and six tier-1 powers.** **`Throw Lightsaber` is her only damage power and that is not an oversight** — **`FORCE-POWERS-01` has seventeen damage powers and every one is Dark.** **The light side has none.**
 >
@@ -224,19 +226,21 @@
 
 **Force powers — 11.** *Committed Light. **Every one legal at level 8.***
 
-| Power | Align | Tier | Cost | Degradation |
-|---|---|---|---|---|
-| **Force Push** | Universal | 1 | 6 | −1 |
-| **Force Stun** | Light | 1 | 6 | −1 |
-| **Force Aura** | Light | 1 | 6 | −1 |
-| **Throw Lightsaber** | Universal | 1 | 8 | −1 |
-| **Stun Droid** | Universal | 1 | 6 | −1 |
-| **Heal** | Light | 1 | 8 | −1 |
-| **Force Valor** | Light | 1 | 8 | −1 |
-| **Battle Meditation** | Universal | 1 | 12 | −2 |
-| **Disable Droid** | Universal | 2 | 12 | −3 |
-| **Force Confusion** | Universal | 2 | 20 | −4 |
-| **Beast Control** | Universal | 1 | 6 | −1 |
+| Power | Align | Tier | Cost | Degradation | Adjusted cost | Adjusted degr. |
+|---|---|---|---|---|---|---|
+| **Force Push** | Universal | 1 | 6 | −1 | 6 | −1 |
+| **Force Stun** | Light | 1 | 6 | −1 | 5 | −1 |
+| **Force Aura** | Light | 1 | 6 | −1 | 5 | −1 |
+| **Throw Lightsaber** | Universal | 1 | 8 | −1 | 8 | −1 |
+| **Stun Droid** | Universal | 1 | 6 | −1 | 6 | −1 |
+| **Heal** | Light | 1 | 8 | −1 | 7 | −1 |
+| **Force Valor** | Light | 1 | 8 | −1 | 7 | −1 |
+| **Battle Meditation** | Universal | 1 | 12 | −2 | 12 | −2 |
+| **Disable Droid** | Universal | 2 | 12 | −3 | 12 | −3 |
+| **Force Confusion** | Universal | 2 | 20 | −4 | 20 | −4 |
+| **Beast Control** | Universal | 1 | 6 | −1 | 6 | −1 |
+
+*Adjusted at alignment 78, Alignment Step 7 (Light ×0.85, Dark ×1.25), from `FORCE-COST-TABLE-01` (`ALIGNMENT-01 v3 §1.3`, D-AQ). Rewrite both columns when the step changes.*
 
 > **71 points and nine powers — she is the only character in the set who can cast all fight.**
 > **⚠ Force Whirlwind, Force Stasis, Improved Heal, and Force Wave were removed. All four gate above level 8.**
@@ -330,13 +334,15 @@
 
 **Force powers — 5.** *Committed Dark. **Every one legal at level 6.***
 
-| Power | Align | Tier | Cost | Degradation |
-|---|---|---|---|---|
-| **Drain Force** | Dark | 1 | 4 | −1 |
-| **Force Shock** | Dark | 1 | 6 | −1 |
-| **Force Strangle** | Dark | 1 | 6 | −1 |
-| **Force Scream** | Dark | 1 | 8 | −1 |
-| **Fear** | Dark | 1 | 6 | −1 |
+| Power | Align | Tier | Cost | Degradation | Adjusted cost | Adjusted degr. |
+|---|---|---|---|---|---|---|
+| **Drain Force** | Dark | 1 | 4 | −1 | 3 | −1 |
+| **Force Shock** | Dark | 1 | 6 | −1 | 5 | −1 |
+| **Force Strangle** | Dark | 1 | 6 | −1 | 5 | −1 |
+| **Force Scream** | Dark | 1 | 8 | −1 | 6 | −1 |
+| **Fear** | Dark | 1 | 6 | −1 | 5 | −1 |
+
+*Adjusted at alignment 20, Alignment Step 2 (Light ×1.5, Dark ×0.8), from `FORCE-COST-TABLE-01` (`ALIGNMENT-01 v3 §1.3`, D-AQ). Rewrite both columns when the step changes.*
 
 > **28 points and five tier-1 powers, four of which deal damage.** **That is the Sith side of the roster and it is why he empties his pool where the Jedi do not.**
 > **⚠ Force Lightning and Force Choke were removed. Both gate at level 9.**

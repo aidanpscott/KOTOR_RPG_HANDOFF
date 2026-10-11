@@ -1475,7 +1475,7 @@
 
 **⚠ The alignment scaling is KEPT and INVERTED against `Sadism`: half as effective for a DARK-side character.**
 
-> **⚠ TOGETHER THESE TWO ARE A MECHANIC WE DID NOT HAVE.** **`ALIGNMENT-01` scales the COST of a power by alignment band — 0.50x to 1.75x. Nothing scaled an EFFECT.** **`Sadism` and `Constancy` are the first, and they are mirrored: cruelty works for the dark, patience for the light.**
+> **⚠ TOGETHER THESE TWO ARE A MECHANIC WE DID NOT HAVE.** **`ALIGNMENT-01` scales the COST of a power by alignment — 0.5x to 1.75x, by Alignment Step since v3 (§1.3, D-AQ), no longer by band. Nothing scaled an EFFECT.** **`Sadism` and `Constancy` are the first, and they are mirrored: cruelty works for the dark, patience for the light.**
 
 **⚠ *"Half as effective"* needs a rule where a doubling does not divide cleanly.** **Ruled: halve the numeric result and round down; a `+50%` becomes `+25%`, a `1d8` becomes `1d4`.**
 

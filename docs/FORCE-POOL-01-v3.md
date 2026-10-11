@@ -4,7 +4,7 @@
 **Decision ID: D-AG.**
 **Supersedes:** `FORCE-POOL-01` v1 and v2, and `GAP-001b`'s rename-only resolution.
 **Fuses in:** `REST-AND-MEDITATION-01` (D-AI) rest units, and `POWER-COSTS-01 §1` (D-AL) degradation. **Both remain live documents** — see §8.
-**Depends on:** `GAP-002` (Branch C with hybrid elements), `ALIGNMENT-01` (cost multipliers by band).
+**Depends on:** `GAP-002` (Branch C with hybrid elements), `ALIGNMENT-01 v3` (costs by Alignment Step, §1.3, D-AQ; v2's cost multipliers by band are withdrawn).
 **Sources:** KOTOR 1 and 2 `classes.2da`, `regeneration.2da`, `spells.2da`, `featgain.2da`, `cls_atk_*`, `cls_st_jedi_*`. All values `source_system: kotor_game`, adopted deliberately.
 
 ---

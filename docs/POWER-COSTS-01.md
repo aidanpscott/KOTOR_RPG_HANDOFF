@@ -4,6 +4,9 @@
 **Decision ID: D-AL.**
 **Amends:** `FORCE-POOL-01 v2 §4` — degradation becomes a per-cast value derived from cost and tier.
 **Depends on:** `PARTITION-01` (D-AK).
+**Cost means the adjusted cost** (`ALIGNMENT-01 v3 §1.3`, D-AQ): every cost below is the base; a Light or Dark power's cost is adjusted
+by the caster's Alignment Step (`FORCE-COST-TABLE-01` has every value), and degradation (§1) reads the adjusted cost. Universal powers
+are never adjusted.
 **Naming:** follows `Force_Powers_Table.docx`, the project's naming authority for powers.
 
 ---
@@ -16,7 +19,7 @@
 | **2** | **20%** of cost | Force Lightning, cost 14 → **−3** |
 | **3** | **30%** of cost | Force Storm, cost 24 → **−8** |
 
-**Rounded up. Applied on each cast.**
+**Rounded up. Applied on each cast.** The cost is the adjusted cost (`ALIGNMENT-01 v3 §1.3`); the examples use base costs.
 
 ### 1.1 Why cost and tier both
 

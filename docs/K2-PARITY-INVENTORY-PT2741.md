@@ -47,5 +47,5 @@ Every K2 first-open box from `tutorial.2da` whose screen exists here, shown once
 | Party Selection | 47886: "…without having to return to your base. Characters switched out of your party will wait for you back at your base." | "…This is done instantly." | no base |
 | Skills (and chargen's) | 42533 / 41885: "Security + Wisdom modifier" | "Security + Intelligence modifier" | our Security uses Intelligence |
 | Feats | 42534: "some feats (POWER ATTACK) are used during combat" | "some feats are used during combat" | no Power Attack feat |
-| Force Powers (and chargen's) | 42535 / 41887: the Light/Dark Side cost sentences | "…Using a Force Power requires Force Points." | no alignment costs yet. **Restore K2's line when Light/Dark Force costs land (PT-2744 2a)** |
+| Force Powers (and chargen's) | 42535 / 41887: the Light/Dark Side cost sentences | **K2's own line, restored** (2026-10-11) | Light/Dark costs are built (`ALIGNMENT-01 v3 §1.3`, D-AQ), so the reworded line went |
 Word for word: Equip (49018), Journal (41882), chargen Attributes (41884), chargen Feats (41886).

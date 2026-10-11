@@ -1,6 +1,9 @@
 # POWER-COSTS-01 — Per-Power Costs and Ceiling Degradation
 
 **Status: SETTLED. All 106 powers priced, nothing flagged.**
+**⚠ The shipped roster is 107** (`FORCE-POWERS-01` and the Shelf's `powers.toml`, identical). This document's 106 is its own, older roster:
+25 of its names are not shipped (renamed or cut, e.g. Force Grip, Telekinetic Throw, the mind-invasion chain) and 1 shipped power (Beast
+Trick) is absent. On every power both list, cost and tier agree (checked: `scripts/check_force_cost_table.py`).
 **Decision ID: D-AL.**
 **Amends:** `FORCE-POOL-01 v2 §4` — degradation becomes a per-cast value derived from cost and tier.
 **Depends on:** `PARTITION-01` (D-AK).
@@ -226,7 +229,7 @@ are never adjusted.
 | | | | | |
 | **Force Sight** | 1 | 6 | −1 |  |
 | | | | | |
-| **Force Distraction** | 1 | 15 | −2 |  |
+| **Force Distraction** | 1 | 8 | −1 | cost 8 (ruled 15 → 8: utility costing more than Force Lightning) |
 | › **Force Confusion** | 2 | 20 | −4 |  |
 | | | | | |
 | **Force Mire** | 2 | 12 | −3 | ⚠ `PT-465`, Character Level 9, Force Slow |
@@ -246,7 +249,7 @@ are never adjusted.
 | **Shutdown** | 1 | 6 | −1 | ⚠ `PT-463` |
 | › **Overload** | 3 | 20 | −2 | ⚠ `PT-463`, Character Level 15 |
 | **Beast Control** | 1 | 6 | −1 |  |
-| › **Beast Confusion** | 2 | 14 | −3 |  |
+| › **Beast Confusion** | 2 | 20 | −4 | cost 20, Force Confusion's twin (`PT-2304`) |
 | ›› **Dominate Beast** | 3 | 22 | −7 | **new** |
 | | | | | |
 | **Droid Trick** | 1 | 6 | −1 |  |
@@ -387,7 +390,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 |---|---|---|
 | **Breath Control** | Universal, T1, 6 | **Not in a KOTOR 1 package.** Available in KOTOR 2 and later. |
 | **Beast Control** | Universal, T1, 6 | **Not in a KOTOR 1 package.** |
-| **Beast Confusion** | Universal, T2, 14 | Same. |
+| **Beast Confusion** | Universal, T2, 20 | Same (`PT-2304`: Force Confusion's twin, same cost). |
 | **Droid Trick** | Universal, T1, 6 | **Restricted to a specific set of droids** — likely G0-T0 only. **Revisit with droid classes and racial traits.** |
 | **Droid Confusion** | Universal, T2, 14 | Same. |
 
@@ -402,7 +405,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 | Power | Tier | Cost | Ceiling |
 |---|---|---|---|
 | Beast Control | 1 | 6 | −1 |
-| › Beast Confusion | 2 | 14 | −3 |
+| › Beast Confusion | 2 | 20 | −4 |
 | ›› **Dominate Beast** | 3 | 22 | −7 |
 
 **Restores the three-tier shape the family had before its middle tier was cut from the source.**

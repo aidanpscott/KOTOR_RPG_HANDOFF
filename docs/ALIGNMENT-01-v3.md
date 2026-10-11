@@ -102,8 +102,9 @@ Falling into Committed Dark happens at 28. Climbing back out requires reaching 3
 **3. Rounding: half up, never below 1.**
 
 **4. Degradation (`POWER-COSTS-01 §1`) reads the adjusted cost:** the tier's rate × the adjusted cost, rounded up, as before.
-*Open, for the owner:* eight powers state their own degradation rather than the tier rate (`FORCE-COST-TABLE-01` lists them); until
-ruled, their degradation is read as stated, unadjusted.
+**Fixed degradation (owner ruling, 2026-10-11):** eight powers state their own degradation rather than the tier rate (Arrow of White
+Dawn 10, Dark Healing 6, Deadly Sight 6, Force Incinerate 6, Force Root 5, Overload 2, Sever Force 4, Spear of Midnight Black 10). **It
+stands at every step, never scaled; their cost still follows the step.** `FORCE-COST-TABLE-01` lists them under its degradation grid.
 
 **5. When it changes.** Recheck your step whenever your alignment changes, and rewrite the costs. **Alignment never changes during a
 fight:** dark-power drift and Ferocity drift are settled once per encounter, **at its end** (§2.1; the engine resolves them the moment

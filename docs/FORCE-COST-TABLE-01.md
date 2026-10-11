@@ -63,6 +63,9 @@ and a second grid keeps both readable on one printed page. A dash: no power of t
 | **28** | – · – · 5 | – · – · 6 | – · – · 7 | – · – · 8 | – · – · 8 | – · – · 9 | – · – · 11 | – · – · 13 | – · – · 15 |
 | **30** | 2 · – · 5 | 3 · – · 7 | 3 · – · 8 | 3 · – · 8 | 3 · – · 9 | 3 · – · 9 | 4 · – · 12 | 5 · – · 14 | 6 · – · 16 |
 
+**Fixed degradation** (owner ruling, 2026-10-11): these eight take the degradation stated here at **every** step, never the grid's;
+their **cost** still follows the step. Arrow of White Dawn **10**, Dark Healing **6**, Deadly Sight **6**, Force Incinerate **6**, Force Root **5**, Overload **2**, Sever Force **4**, Spear of Midnight Black **10**.
+
 ## Worked example
 
 A Consular at **alignment 83** is at **step 8**, and knows **Heal** (Light, tier 1, base cost 8) and **Force Lightning** (Dark, tier 2,
@@ -76,20 +79,4 @@ base cost 14).
 At 83 the Consular reads step 8 (Light ×0.8, Dark ×1.5), then the cost table's rows for 8 and 14 in those columns. A dark act
 settled at the end of an encounter brings them to 79: step 7 (Light ×0.85, Dark ×1.25). They look both up again and rewrite the
 two boxes: Heal 7, Force Lightning 18. **Moving toward the Dark Side made Heal dearer and Force Lightning cheaper.**
-
-## Not covered by the degradation table — OPEN, for the owner
-
-These 8 powers state a degradation that is not their tier's rate of their cost (set one by one, `PT-463` to `PT-473`).
-Until the owner rules, read their adjusted cost from the table as usual and their degradation as stated, unadjusted.
-
-| Power | Tier | Base cost | Stated degradation | The tier rule would give |
-|---|---|---|---|---|
-| Arrow of White Dawn | 3 | 30 | 10 | 9 |
-| Dark Healing | 3 | 24 | 6 | 8 |
-| Deadly Sight | 3 | 24 | 6 | 8 |
-| Force Incinerate | 3 | 22 | 6 | 7 |
-| Force Root | 3 | 18 | 5 | 6 |
-| Overload | 3 | 20 | 2 | 6 |
-| Sever Force | 3 | 22 | 4 | 7 |
-| Spear of Midnight Black | 3 | 30 | 10 | 9 |
 

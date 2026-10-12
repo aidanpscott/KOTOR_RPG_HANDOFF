@@ -82036,3 +82036,18 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
     - Precognition (Universal): K2 0 FP, a passive warning. Proposal: no cost, passive, never cast.
 - **5, XP Bed:** the room was three rows with the companion able to stand between; now five rows, the companion behind the player and the dummy in front. A real-path test has a level-1 Soldier kill the dummy, level, and open Level Up with the Feats step offered (Soldier takes a feat at 2). On the old layout the same test fails (control).
 - App suite 2358 passed, 2 skipped. Lodestar 1928.
+
+**MAIN, 2026-10-11 (under PT-2744 and PT-2740): the TEST 169 fixes ACCEPTED (app 3514567).** Accepted: the developer prose gone from chargen, play and the 43 descriptions; area names on the status line and the package menu's save rows; the build-talk list in one file read on every frame, and the every-description test; the XP Bed fix with its control; the extract_feats refusal.
+- **Rulings on the powers with no cost:**
+  1. The 7 already priced in POWER-COSTS-01: copy its rows into FORCE-POWERS-01, and add a check that both documents agree on every power's cost and tier with no blank on either side.
+  2. Dominate Mind: as K2. No cost, never cast in a fight; it opens conversation options. Marked "Conversation power" in the pane.
+  3. Precognition: as K2. No cost, passive, never cast. Marked "Passive". FORCE-POWERS-01 must state what it does at the table; if our rules don't say, report it and MAIN rules.
+- Unhide all nine on chargen's Powers page once priced or marked.
+
+**CODER result (2026-10-11) -- the rulings done.**
+1. **The 7 copied:** Crush Opposition II / III / IV and Inspire Followers II / III / IV at tier 2 / 12 / −3, tier 3 / 16 / −5 and tier 3 / 20 / −6; Force Stasis Field at tier 3 / 24 / −8.
+   - **The check:** `gen_force_cost_table.py`'s documents check (run by the gate through check_force_cost_table) now refuses three things: a FORCE-POWERS-01 row with no cost and no `use:` mark; a priced row absent from POWER-COSTS-01 or disagreeing with it (case and a dropped "Force" aside); and a blank POWER-COSTS-01 row. Mutations killed: one row blanked, and Precognition's mark removed.
+   - **What it found at once:** Beast Trick, priced in FORCE-POWERS-01 at PT-2304 as Mind Trick's twin (tier 1, cost 10), was missing from POWER-COSTS-01. Joined there with that value. FORCE-COST-TABLE-01 needed no change: its rows run by base cost, and all eight costs were already rows.
+2. **Dominate Mind and Precognition:** marked `use: conversation` and `use: passive` in FORCE-POWERS-01's Notes. The extractor reads the mark into a `use` field. Such a power is never on a cast menu, its chargen cost column and Force Powers pane say "Conversation power" or "Passive", and chargen offers Precognition again (nothing is withheld; Dominate Mind needs Mind Trick, so it is not a first-level power). Test on the real play screen: a Consular who knows Precognition and Force Push is offered only Force Push to cast (mutation killed), and the pane labels both.
+3. **Precognition at the table: OUR RULES DO NOT SAY.** FORCE-POWERS-01 has only K2's sentence: *"Precognition warns the Jedi whenever they are about to enter extreme danger. These warnings are quite rare."* Nothing states when the warning comes or what the player gets from it. For MAIN to rule; nothing invented.
+- App suite 2360 passed, 2 skipped.

@@ -82147,3 +82147,9 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
    - (7) FIXED: 19 mirrors copied; 70 current, 0 stale, 0 forked.
    - (5) FIXED: interpolations are taken out before the field-name shape is asked; the last real hits (the dev log's [entry]) were reworded. The scan reads 0.
    - Left, as ruled: (1) citations, (2) docrefs, (4) event producers, (8) superseded.
+
+**CODER result (2026-10-11, under PT-2744 and PT-2740) -- the world openings are in the Atlas. Atlas 81f5c59 (pushed, owner-approved), MAIN_WORK this entry; app and Shelf unchanged.**
+- **Atlas:** the 33 opening sentences are written into the Atlas's own world notes (tools/menus m_a, m_b, m_c, m_d and menus.py), each ahead of a • marker with the research kept behind it.
+- **Atlas checks:** validate.py (run through a shim for its missing batchA/batchB imports, outside the repo), eracheck.py and quotecheck.py all read identically before and after. validate.py's pre-existing research_vs_live PROBLEM (Rhen Var, Toprawa) and its missing /home/claude/reg path error are unchanged.
+- **One copy:** scripts/world_openings.py and its overlay in export_worlds.py are deleted. The export from the Atlas is identical to the previous worlds.json; only its provenance moved to 81f5c59. The Shelf regenerates byte-identical, and every_content_table_is_game_text reads it.
+- **TEST 172 runs on app 919a530.**

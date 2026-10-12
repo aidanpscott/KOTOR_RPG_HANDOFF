@@ -1207,6 +1207,7 @@ no helmet type either.
 | forearm-band | Forearm band | arm_l · arm_r | forearms | — | 33 items, and THIS IS WHERE A SHIELD GOES — Energy Shield, Echani Shield, Mandalorian Power Shield are all forearm bands. Two slots, left and right. ⚠⚠ AND THE COLUMN SAYS BOTH NOW — `PT-2346`. It read `forearms` while the Note beside it said *"two slots"* and the format writes `arm_l` and `arm_r`; the first reader this column ever had faulted four correctly-equipped bands. |
 | belt | Belt | belt | belt | — | 47 items, including the Stealth Unit. |
 | boots | Boots | boots | boots | — | 25 items, every one ours. A ruled addition with no K2 precedent (PT-2503, EMBODIMENT-01): the Equip screen's Boots slot. A droid has no boots slot. |
+| motivator | Motivator | boots | boots | — | **A droid's locomotion part, in the same Equip square (owner ruling after TEST 176, PT-2744): an organic sees Boots there, a droid sees Motivator.** A ruled addition with no K2 precedent (neither game has a locomotion slot). Droids only; an organic cannot wear one, as a droid cannot wear boots. See §Motivator below. |
 | implant-1 | Implant, level 1 | implant | implant | cybernetic_implantation · advanced_cybernetic_implantation · master_cybernetic_implantation | FEATS-LIBRARY-01 gates these — Cybernetic Implantation allows level 1, Advanced allows 1-2, Master allows 1-3. The three tiers are a ruled feat chain and not a display grade. ⚠⚠ THE COLUMN IS THE RULE NOW — `PT-2342`. It said this in prose and `§17.4` has to be READ, and a sentence is not a column. |
 | implant-2 | Implant, level 2 | implant | implant | advanced_cybernetic_implantation · master_cybernetic_implantation | ⚠ THE LIST IS AN `OR` — `§17.2`, the same semantics every gate category has. A chain that allows 1-2 is named on BOTH rows rather than derived from a tier order nothing states. ⚠⚠ AND IT IS **IDS, NOT DISPLAY NAMES** — `PT-2344`. Every feat reader in the product matches an id; a display name is not a key. |
 | implant-3 | Implant, level 3 | implant | implant | master_cybernetic_implantation | |
@@ -1338,6 +1339,7 @@ they are — and not by matching text.
 | forearm-band | Forearm band | Worn slots | `Forearm_Bands` · `Wrist_Launcher` |  |
 | belt | Belt | Worn slots | `Belt` · `Stealth_Unit` | ⚠ `Stealth_Unit` (13 items, `baseitems.2da` equipable slots `0x20400` in both games) carries the belt bit `0x400`, so the games put it in the belt slot — `PT-2725` D1, from the row the item's own `.uti` names rather than an inference from its name. The extra bit `0x20000` is the creature-hide slot and is not ours. |
 | boots | Boots | Worn slots | — | Ours, with no K2 precedent (PT-2503). Every boots item is `src: AUTHORED`, so it takes this base from its catalogue category. |
+| motivator | Motivator | Worn slots | — | Ours, with no K2 precedent (owner ruling after TEST 176). Droids only. |
 | implant-1 | Implant, level 1 | Worn slots | `Implant_1` |  |
 | implant-2 | Implant, level 2 | Worn slots | `Implant_2` |  |
 | implant-3 | Implant, level 3 | Worn slots | `Implant_3` |  |
@@ -1636,3 +1638,22 @@ they express is **variant selection as the player drifts**, not permission:
 **It has no base type**, so it is a fitted component rather than equipment, and
 the equip refusal in `§17.1` was never going to apply to it. **Held as its own
 item, once alignment tracking exists to drive it.**
+
+---
+
+## Motivator — the droid's locomotion slot (owner ruling after TEST 176, PT-2744)
+
+**What it is.** The part that moves a droid: wheels, treads, legs or a repulsorlift. It sits in the Equip square organics use for Boots; the square is labelled **Motivator** for a droid. **Droids only**: an organic cannot wear one, and a droid cannot wear boots (EMBODIMENT-01). **No K2 precedent**: neither game has a locomotion slot (`baseitems.2da`'s droid rows are sensor, plating, interface, belt shield, two utility devices and weapons, identical in K1 and K2). K2's **Droid Motivator Booster** (`d_interface_06`) is not a motivator in this sense: **it stays in the Interface slot, where K2 puts it** (owner ruling).
+
+**What a motivator may affect — nothing else:**
+
+| Axis | In our rules | Unit |
+|---|---|---|
+| Movement | the chassis speed (DROID-MASTER-01: Astromech 8 m, Assassin and Battle 10 m, Remote 12 m hover) | ±2 m (one square) |
+| Footing on rough ground | difficult terrain costs double (PT-1513); a motivator may make it cost nothing extra | yes / no |
+| Resisting a push or being knocked prone | a bonus to the save against a push or a knockdown | +2 / +4 |
+| Noise | the Stealth skill (DROID-SKILLS-01: open to the Assassin and Remote frames; *"repulsorlift frames make no footfalls; wheels and servos do"*) | ±2 Stealth |
+
+**Chassis limits.** A motivator names the frames that can mount it. A Remote or Probe already floats on its own repulsorlift frame and takes only what changes its noise. Labor and Protocol are not playable (PT-567).
+
+**Price** follows the boots: each is priced against the boots item with the nearest effect (ITEMS-08 §boots: *"the belt category is the template"*).

@@ -82302,3 +82302,39 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
   - DROID-CONSTRUCTION-01's two leftover "motivator" lines should be reworded to the slot's meaning.
   
   **"Treads" is weaker:** it clashes with our Dockworker's Treads boots in every class kit, and it implies tracks. If both are refused, "Drive" and "Locomotion" have no hits at all.
+
+**MAIN (2026-10-12) -- TEST 176 fixes ACCEPTED (app e53748a), under PT-2744:** the turn check inside `_interactionToll`; K2 level-1 grants for the classes with a K2 namesake, plus the every-class kit test; Continue opens the last played character; Kael recallable from the Party screen; the Quartermaster in Locked and Trapped. The Motivator research was clean. **OWNER RULINGS:** (1) **THE DROID SLOT IS "MOTIVATOR"**, the droid's counterpart to Boots in the same Equip square (organics see Boots, droids see Motivator), locomotion parts only. Rules first: an EQUIPMENT-01 entry next to boots (a ruled addition with no K2 precedent): the base type, the slot, what a motivator can affect (movement, footing in rough terrain, resisting knockdown or push, the noise it makes for stealth), and chassis limits where our droid chassis rules call for them; reword DROID-CONSTRUCTION-01's two stale "Motivator" lines. Starter items priced by EQUIPMENT-01's method: Treaded, Repulsor (check the name against the taken "Repulsor" words), Magnetic Grip, Servo-Leg and Silenced Motivators; send MAIN the five rows before building them into stores. Build: the droid's Equip square labelled and drawn the K2 way; equip, unequip, sell and buy; an organic cannot equip a motivator and a droid cannot equip boots; a pair in Quick-Fix's stock for Tester; tests through the real Equip, mutation-checked. (2) K2's "Droid Motivator Booster" (`d_interface_06`) STAYS in the Interface slot; only our locomotion parts go in the Motivator slot. (3) **PROFICIENCIES FOR OUR OWN CLASSES** (Agent, Bounty Hunter, Duelist, Engineer, Machinist, Medic, Smuggler, Treasure Hunter, Marksman, Saboteur, Sith Warrior, Sith Inquisitor): what OUR rulebook's class tables grant; where a table says nothing, the nearest K2 class's level-1 grants; list each class with its source for the owner; the every-class kit test passes with no exceptions. TEST 177 runs on the hash; then the stack count, the Map, BG3; the Telos save items first.
+
+**CODER result (2026-10-12, under PT-2744) -- the Motivator slot and our own classes' proficiencies. App d69382f (TEST 177 runs on it), Shelf 6f74e54, MAIN_WORK this entry. Suite 2408 pass, 2 skipped, 1 known flake (whole_loop_test, passes alone).**
+- **Ruling 1, the Motivator: rules written, square built, five rows waiting for MAIN.**
+  - EQUIPMENT-01: a `motivator` row beside `boots` in the worn-slot table and in the base-type table, plus §Motivator. It covers: same square as Boots, droids only, no K2 precedent, and the Booster stays in Interface. A motivator may affect four things: movement (±2 m, one square), rough ground (difficult terrain costs nothing extra, PT-1513), the save against knockdown or push (Reflex, as Power Attack's knockdown is saved), and noise (Stealth). Chassis limits: a Remote or Probe already floats, so it takes only a noise part; Labor and Protocol are not playable.
+  - DROID-CONSTRUCTION-01: line 13 now reads "You do not travel the galaxy for a droid's parts." Line 92 names the Control Cluster, and notes that "Motivator" is now the slot.
+  - **The five rows (ITEMS-08 §motivator, PROPOSED, in no store):**
+
+    | Name | Resref | Tier | Cost | Properties | Priced against |
+    |---|---|---|---|---|---|
+    | Treaded Motivator | a_motiv_01 | 1 | 75 | Reflex +4 vs knockdown and push · rough ground costs no extra · Movement −2 m | Spacer's Magboots 75 |
+    | Hover Motivator (renamed: "Repulsor" is taken by d_device_02, Repulsor Agility and the Repulsorlift Frame) | a_motiv_02 | 2 | 400 | rough ground costs no extra · Stealth −2 | Kashyyyk Climbing Boots 400 |
+    | Magnetic Grip Motivator | a_motiv_03 | 1 | 75 | Athletics +1 · Reflex +2 vs knockdown and push | Spacer's Magboots 75 |
+    | Servo-Leg Motivator | a_motiv_04 | 2 | 550 | Movement +2 m · humanoid frames only (Assassin, Battle) | Republic Marching Boots 550 |
+    | Silenced Motivator | a_motiv_05 | 2 | 400 | Stealth +2 | Kashyyyk Climbing Boots 400 (a +2 skill) |
+
+  - **For MAIN to decide:**
+    - (a) Only the Stealth and Athletics numbers apply in play. No item effect moves a speed or a terrain cost, and a save "vs" one thing is text only (as on Dune Striders). These are printed, not applied, until the engine gets those effect kinds.
+    - (b) The Hover Motivator's "noisy" works against DROID-SKILLS-01's "repulsorlift frames make no footfalls". I read it as fan noise, not footfalls.
+    - (c) Stealth only matters to the Assassin and Remote, and Athletics only to the Assassin and Battle frames.
+    - (d) "Humanoid frames only" is printed, not enforced.
+  - **App:** a droid's square is drawn and labelled "motivator", and an organic's is labelled "boots" (`EquipScreen.slotLabel`). A droid is offered only motivators there, and an organic only boots. A commit of the wrong kind is refused: "A droid cannot wear boots." or "Only a droid can fit a motivator." A motivator's catalogue row carries `wearer = "droid"`. The Store Bed has two blueprints (Treaded, Silenced) that are not yet in Quick-Fix's stock.
+  - **Tests:** `a_droid_wears_a_motivator_test` covers three things: a droid sees Motivator, is offered both motivators and not the boots in its bag, and can put one on, take it off and put it back, with boots refused; an organic sees Boots, is offered no motivator, and a commit is refused; a droid sells a motivator to the merchant. Four mutations were each caught: the label, the offer filter, the commit refusal, and hiding the droid's square. `boots_are_worn_test`'s droid case now asserts that no square is labelled Boots. **Buying waits** until the rows are approved and a pair goes in Quick-Fix's stock.
+- **Ruling 3, our own classes' proficiencies.** None of our class tables grant weapon or armour proficiencies to these twelve classes. Each takes the level-1 grants of a K2 class:
+  - **From our rulebook's own lineage:**
+    - Smuggler: Scoundrel (CLASS-ROSTER-01, "absorbed the Scoundrel", PT-73);
+    - Machinist: Tech Specialist ("was Tech Specialist", PT-83);
+    - Engineer: Expert Droid ("was Expert Droid", PT-76, PT-83);
+    - Sith Warrior: Jedi Guardian, and Sith Inquisitor: Jedi Consular (the PT-125 mirror).
+  - **From MAIN's example:** Bounty Hunter: Soldier.
+  - **CODER's choice by role (for the owner to confirm):**
+    - Duelist: Soldier;
+    - Marksman, Treasure Hunter and Medic: Scout;
+    - Agent and Saboteur: Scoundrel.
+  - The every-class kit test (every class with a starting array, organic and droid, through the real chargen writer) passes with no exceptions; its awaiting-a-ruling list is gone.

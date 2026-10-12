@@ -126,7 +126,7 @@ The proposal is the icon of the nearest game item WITH art: the same base type, 
 | Spear of Midnight Black | ✦ was `ip_fury03` |
 | Arrow of White Dawn | ✦ was `isa_rage` |
 
-## Skills and feats (PT-2747): 6 of 26 skills, 72 of 322 feats
+## Skills and feats (PT-2747): 6 of 26 skills, 75 of 322 feats
 
 **63 feats** match a game feat by exact name (spelling normalised only), K2 first, K1 as the fallback. **Owner ruling (2026-10-12): a feat that is the game's feat at the same tier under another name takes its icon.** `scripts/extract_ability_icons.py` (`by_tier`) walks the game's own chains down `feat.2da`'s `successor` column. It anchors each of our chains to a game chain through a tier whose name matches exactly; every exact match in the chain must agree on the same offset; then our tier n takes the game's tier n. That gives **9 more**, for the owner to check:
 
@@ -141,5 +141,10 @@ The proposal is the icon of the nearest game item WITH art: the same base type, 
 | Unarmed Specialist II–VIII | K2 Unarmed Specialist II (ours merges K2's II to VIII into one row) | `if_unarmspec02` |
 | Advanced Assassin Protocols | K2 Modified Assassin Protocols | `if_assassin02` |
 | Master Assassin Protocols | K2 Integrated Assassin Protocols | `if_assassin03` |
+| Weapon Proficiency: Blaster | K2 Weapon Proficiency: Blaster Pistol (named alias, see below) | `if_weapprof01` |
+| Weapon Focus: Blaster | K2 Weapon Focus: Blaster Pistol (by tier from the alias) | `if_weapfoc01` |
+| Weapon Specialization: Blaster | K2 Weapon Specialization: Blaster Pistol (by tier from the alias) | `if_weapspec01` |
+
+**One named alias (TEST 174):** our blaster family is K2's blaster pistol family. Our own Weapon Focus: Blaster reads "with blaster pistols and hold-outs", and K2's row 39 is Weapon Proficiency: Blaster Pistol. The alias (`ALIASES` in the script) anchors the chain; the tier pass does the rest. Feats with a game icon: 75 of 322.
 
 Not matched, because no tier's name anchors the chain: our Superior Two-Weapon Fighting chain against K2's "Superior Two-Weapon Fighting I/II/III" (the names differ by the numeral). Feats and skills with no game equivalent draw K2's empty slot, as ruled. Test: `abilities_k2_test.dart`, "a feat matched to K2's by chain and tier draws K2's icon".

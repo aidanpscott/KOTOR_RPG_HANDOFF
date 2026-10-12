@@ -82078,3 +82078,25 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
    - **Also for the owner:**
      - Who holds the chain. K2 gives it by story only: the Handmaiden duel for Battle Precognition, and never in normal play for Precognition. Recommend: any Force class at a level the owner picks, or left unassigned.
      - The chain makes Battle Precognition require Precognition, as MAIN asked; K2 links them in no way.
+
+**CODER result (2026-10-11, under PT-2744 and PT-2740) -- the Precognition rulings and the TEST 170 fixes. App cb57359, Shelf e37a0b8, MAIN_WORK this entry.**
+- **The Precognition chain, built as ruled.** FEATS-LIBRARY-01 carries all three rulings ("unruled" removed), with the table text in its new section "Precognition — story or GM only".
+  - **Precognition: never surprised.** The surprise rule (ACTION-ECONOMY-01) was written but nothing ever set it in play. It is now set at fight start when an ambush begins (any enemy still concealed when the fight starts): the party is surprised, except a holder. "Unaware" has no other reader in play today: Sneak Attack and Killer's Instinct are not built, and the reaction rule's hidden-mover clause cannot fire on a fight member, because a fight reveals everyone in it (tried and proved; nothing added).
+  - **Battle Precognition: K2 exactly.** The Wisdom modifier is added to Defence with no body armour, in the fight, the player's Defence and the character sheet. Body armour is our armour type leather or armor; a robe or clothing is not. **The forbiditemmask was not decoded**; our rule decides, so it changes nothing.
+  - **Who gets them.** Never offered at chargen or at level-up (both are granted rows). A package grants either through a conversation node's `character.feat-taken` effect; a feat granted this session is held at once, without waiting for the next load. The GM line is in the rules text. The chain is kept: Battle Precognition requires Precognition.
+  - **Tests:**
+    - an ambush surprises a non-holder (the control) but not a holder; no ambush surprises nobody;
+    - Battle Precognition gives +3 at Wisdom 16 with nothing on the body or in a robe, 0 in leather, 0 without the feat;
+    - neither is offered at chargen or at level-up, organic or droid, with or without Precognition held;
+    - a real conversation's effect, run by the dialogue runtime, grants Battle Precognition, and Defence reads it.
+  - **Mutations, all killed (6):** the holder check; the ambush trigger; the armour check; the grant in the player's Defence; the log grants not read; a selectable Precognition.
+- **TEST 170 fixes:**
+  1. **Merchant "see §2" is gone.** A new test renders every backstory, every class's equipment page (organic and droid) and every species/chassis page through the frame guard.
+  2. **Dockworker's Treads.** The refusal is now a dev-log line, and the item shows dimmed. Every other kit item was checked: 6 more resolve now (Sparring Gloves to gauntlets; Glow Rod and Recording Rod to object, with the torch and collar light rows). **The Treads themselves still have no base type: we have no footwear base type or slot** (boots in 25 catalogue items). **RULE:** add a boots base type and slot, or map boots to an existing one?
+  3. The droid class refusal reads "A droid cannot take this class."
+  4. The chassis text now says what the feat does, not "the feat KOTOR grants T3-M4 by name".
+  5. Level-up Skills shows nothing where no allocation is recommended.
+  6. **Every description was read:** 322 feats, 26 skills and 106 powers. **33 sentences were moved** into the notes columns and 28 rewritten in place; 4 species notes were moved too. build_talk now refuses "renamed from", "in total" (not "in total cover"), "aptitude source(s)", "the feat KOTOR grants", "the catalogue", "in the rules yet", "cut content" and "(source:".
+  7. **The package menu's "6 saves" with no rows is a fallback screen.** The app opens K2's Load Game screen from the menu (which lists every save with its area name). The package menu's own save panel is drawn only when no load screen is wired, as in a bare test harness. Tester saw that fallback.
+- Feat cells with no icon are expected, as ruled.
+- **Next:** PT-2747 Abilities, then PT-2746 Part C Map, then BG3.

@@ -82051,3 +82051,30 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
 2. **Dominate Mind and Precognition:** marked `use: conversation` and `use: passive` in FORCE-POWERS-01's Notes. The extractor reads the mark into a `use` field. Such a power is never on a cast menu, its chargen cost column and Force Powers pane say "Conversation power" or "Passive", and chargen offers Precognition again (nothing is withheld; Dominate Mind needs Mind Trick, so it is not a first-level power). Test on the real play screen: a Consular who knows Precognition and Force Push is offered only Force Push to cast (mutation killed), and the pane labels both.
 3. **Precognition at the table: OUR RULES DO NOT SAY.** FORCE-POWERS-01 has only K2's sentence: *"Precognition warns the Jedi whenever they are about to enter extreme danger. These warnings are quite rare."* Nothing states when the warning comes or what the player gets from it. For MAIN to rule; nothing invented.
 - App suite 2360 passed, 2 skipped.
+
+**MAIN, 2026-10-11 (under PT-2744): the power-cost rulings ACCEPTED (app a9cbde5); Tester runs TEST 170 on it.** Precognition: an older ruling exists. `PARTITION-01 §6.1` (D-AK, settled) moved PRECOGNITION and BATTLE_PRECOGNITION to feats; PT-2400 measured K2's passive column. It was never carried out. Do: (1) move Precognition to FEATS-LIBRARY-01 as a chain with Battle Precognition, in K2's names and text, with K2's access, and regenerate everything downstream; (2) find what each does in K2 without inventing it; (3) give the owner 2 or 3 options for each, with a recommendation; (4) until he rules, Precognition is a feat with its description only and is not on chargen's Powers page.
+
+**CODER result (2026-10-11) -- D-AK carried out, and what K2 says.**
+1. **Moved:** Precognition left FORCE-POWERS-01 (the roster is now **106 powers**; a note in its place cites `PARTITION-01 §6.1`). FEATS-LIBRARY-01 gains one chain in "Restricted — owner unassigned" (now 14 chains): **Precognition › Battle Precognition**, each in K2's own words, with the source row, the grant evidence and "unruled" in the note.
+   - **Access:** K2 gives them no class or level: every class column is −1, there are no prerequisites, and no Force cost. So the chain is `granted` with no holder until ruled. Feats are now **322** (195 granted).
+   - **Downstream:** the Shelf, the cost check (passes; Precognition had no cost) and FORCE-COST-TABLE-01 (unchanged) were regenerated. Power counts in seven tests moved by one, each noted.
+   - **Catch:** adding the two rows moved two line-keyed feat ids, and the extract refused, exactly as built last round; the keys were updated.
+2. **What K2 says** (`spells.2da`, `dialog.tlk`, and all of K2's shipped script source):
+   - **Precognition** (row 178): *"Universal Power. Precognition warns the Jedi whenever they are about to enter extreme danger. These warnings are quite rare."* No cost, never cast, passive (`forcepassive` 3, a value only it uses).
+     - No script reads it. The only grant in the shipped game is a developer test conversation on Telos ("Fear me - I am temp man. Blarg."), and the real grant script has its Precognition line commented out (`a_addcombatpre`: `//GrantSpell ( 178, GetFirstPC() );`).
+     - **Plainly: in the shipped K2, Precognition reaches the player only through a test NPC and has no mechanic anyone can find; story text only.**
+   - **Battle Precognition** (row 179): *"Light Side Power. Restricted By Armor. This power allows the Jedi to sense the flows of the Force and increases the Jedi's reaction time in combat. The Jedi adds their Wisdom modifier to their Defense."* No cost, passive (`forcepassive` 4), forbidden with body armour (`forbiditemmask` 0x003f).
+     - **Granted for real:** `a_addcombatpre` gives it to the player during the Handmaiden duel (called from `handmaiden.dlg`). Its mechanic is K2's own text; the engine applies it, and no script does.
+   - **Not known:** what the engine does with passive value 3, and exactly which armour the mask forbids (it is one mask covering six item types, which I have not decoded).
+3. **The owner's options** (not built; both stay description-only until ruled):
+   - **Precognition:**
+     - **A. Story only, as K2.** No mechanic; the GM may give the holder a warning before a deadly ambush or trap.
+     - **B. Never surprised (RECOMMENDED).** Once per area, the holder cannot be caught unaware: a hidden creature's first attack, or an ambush, does not get its surprise against them, and they are not "unaware" for Killer's Instinct. It uses rules we already have (hidden placements, unaware), it is rare as K2 says, and it is easy to run at a table.
+     - **C. A small passive.** +2 to Awareness and initiative, always on. Simple, but not what K2's sentence describes.
+   - **Battle Precognition:**
+     - **A. K2 exactly (RECOMMENDED).** Add your Wisdom modifier to Defence while wearing no body armour. Always on. K2's own words, one line at the table.
+     - **B. As A, but only while Light-aligned** (Alignment Step 6 or higher), reading K2's "Light Side Power" as a gate rather than a cost.
+     - **C. As A, capped** at +3 so it cannot outrun the Jedi Sense chain.
+   - **Also for the owner:**
+     - Who holds the chain. K2 gives it by story only: the Handmaiden duel for Battle Precognition, and never in normal play for Precognition. Recommend: any Force class at a level the owner picks, or left unassigned.
+     - The chain makes Battle Precognition require Precognition, as MAIN asked; K2 links them in no way.

@@ -82171,3 +82171,9 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
 5. **Other stale Atlas tools (listed, not fixed):**
    - Container paths (/home/claude) remain in: edit_entry.py (fallback roots; the export imports it), progress.py and xref_derive.py (hard paths, will not run), worksheet.py (uploads_index and LOOT-SIGNALS paths), loot/build_loot.py (loot_unique and loot_sites paths), sync.py (copies to /home/claude/push, a container-only tool), and m_d.py (a selection.json fallback inside a corpus module). temporal_classify.py only mentions the path in a comment.
    - The seven batch*__SUPERSEDED files are still read by validate (needed).
+
+**CODER result (2026-10-11, under PT-2744) -- the owner's lore call and edit_entry. Atlas 4bea150 (pushed), Shelf ac987ba, MAIN_WORK this entry; app unchanged.**
+- **Belnar and Bothawui, KEPT and marked as after our date** in their Atlas research text: "Later, by 3950 BBY (after our date of 3956): ..." ahead of each claim. The player's view is unchanged: both claims sit after a marker the origin screen cuts at.
+- **eracheck** accepts "Later, by N BBY" as a guard, and its acknowledged list is empty. Mutation-checked: "Later, by 3950 BBY: the docks were rebuilt." passes; "The docks were rebuilt in 3950 BBY." fails; removing the new pattern makes the marked line fail again.
+- **edit_entry.py** now has repo-only roots (the container roots are gone). The export is identical with the old and new edit_entry: worlds and module digests are the same. Only Belnar's and Bothawui's notes changed, from the marking; re-exported. check_atlas passes.
+- **Agenda:** "Atlas tools with old paths" (progress.py, xref_derive.py, worksheet.py, loot/build_loot.py, sync.py, the m_d.py fallback) is added to CODING-AGENDA-01 as one item, held.

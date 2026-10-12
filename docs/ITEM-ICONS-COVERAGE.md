@@ -95,3 +95,33 @@ The proposal is the icon of the nearest game item WITH art: the same base type, 
 | Recording Rod | `g_i_recordrod01` | the icon the game names is not in its texture pack | k2:ip_pltuseitm_001 (Aesthetic Item, same category) |
 | Energy Emitter Mk 1 | `w_blhvy001` | the icon the game names is not in its texture pack | k1:ia_cloths_001 (Energy Emitter Mk 1, same category) |
 | Energy Emitter Mk 2 | `w_lghtsbr001` | the icon the game names is not in its texture pack | k1:ia_cloths_001 (Energy Emitter Mk 1, same category) |
+
+
+## Force powers (PT-2747): 106 of 106 have an icon
+
+86 are the games' own, matched by name in `spells.2da` (K2 first, K1 as the fallback). The 20 below are ours, in neither game; the owner approved one icon each from the proposal sheet (private: `MAIN_WORK media/screens/pt2747-abilities/proposed-icons-for-our-20-powers.png`): an unused K2 icon nearest in meaning, or the icon of the power each one extends or copies. `scripts/extract_power_icons.py` carries the same table (`APPROVED`).
+
+**Owner ruling (PT-2747): where the Full Force Mod (installed under `kotor 2 mods/Full Force Mod-987-1-0`) has its own icon for one of our powers, that icon is used instead of the stand-in, everywhere the power is drawn** (the Abilities screen and chargen's Powers screen read the one asset). Seven come from the mod (`FFM_ICONS` in the script): Arrow of White Dawn, Dark Healing, Deadly Sight, Force Combustion, Force Enflame, Sever Force and Spear of Midnight Black. The other thirteen keep the approved stand-in below.
+
+| Power | Icon (K2 `swpc_tex_gui.erf`; ✦ = now the Full Force Mod's own) |
+|---|---|
+| Beast Control | `ip_affectmind` |
+| Force Distraction | `isa_senses` |
+| Dark Fury | `ip_fury01` |
+| Deadly Sight | ✦ was `ip_horror` |
+| Dark Healing | ✦ was `ip_drainlife` |
+| Force Blindness | `isa_camo` |
+| Force Enflame | ✦ was `ip_fury02` |
+| Force Combustion | ✦ was `ip_scram01` |
+| Force Incinerate | `ip_scram03` |
+| Sever Force | ✦ was `ifrm_force04` |
+| Force Sleep | `ip_sleep` |
+| Force Mire | `ip_slow` |
+| Force Root | `ip_hold` |
+| Force Static Field | `isa_psystance` |
+| Force Strangle | `ip_wound` |
+| Force Contagion | `ip_plague` |
+| Shutdown | `ip_droiddisable` |
+| Overload | `ip_droiddestroy` |
+| Spear of Midnight Black | ✦ was `ip_fury03` |
+| Arrow of White Dawn | ✦ was `isa_rage` |

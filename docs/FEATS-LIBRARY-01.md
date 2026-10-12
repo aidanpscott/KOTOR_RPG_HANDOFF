@@ -137,7 +137,7 @@
 > **This is the one thing that makes a blaster user relevant against a lightsaber** — **and it is the KOTOR moment: watching your bolts come back until they stop coming back.**
 
 **⚠ *First attack each round* is `PT-188`'s pricing.** **Without it the capstone triples on a `Barrage`.**
-| **Mobility** | (note: Reinstated from cut content. Restored and verified functional by TSLRCM.) | **Through rigorous training, the character moves 10% faster than normal.** (note: was **+10% movement rate.** **) (note: Source: TSLRCM changelog. Whether 10% is BioWare's value or the modders' is unstated.) |
+| **Mobility** | (note: Reinstated from cut content. Restored and verified functional by TSLRCM.) | **Through rigorous training, the character moves 10% faster than normal.** (note: was **+10% movement rate.**) (note: Source: TSLRCM changelog. Whether 10% is BioWare's value or the modders' is unstated.) |
 | **Naturalist** | The study of living things in the field rather than the archive. | +1 Beast Handling, Botany, and Science. |
 | › Improved Naturalist |  | +2 Beast Handling, Botany, and Science. |
 | ›› Master Naturalist |  | +3 Beast Handling, Botany, and Science. |
@@ -410,8 +410,8 @@
 | › Advanced Increase Melee Damage |  | **From level 8, you do an additional 4 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+4 damage.** Level 8.) |
 | ›› Master Increase Melee Damage |  | **From level 15, you do an additional 6 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+6 damage.** Level 15.) |
 | **Inner Strength** | Weaponmasters use the light side to shield themselves from pain. | ⚠ **`DR 1` against every source — `PT-629`.** *(note: source: −5% damage taken)* |
-| › Advanced Inner Strength |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7. **) (note: source: −10%) |
-| ›› Master Inner Strength |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11. **) (note: source: −15%) |
+| › Advanced Inner Strength |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7.) (note: source: −10%) |
+| ›› Master Inner Strength |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11.) (note: source: −15%) |
 
 
 ## Sith Marauder
@@ -421,8 +421,8 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Ignore Pain** | Prolonged channelling of dark side energy has accustomed the Marauder to pain. | ⚠ **`DR 1` against every source — `PT-629`.** Applied after Damage Immunity and Shields, before Toughness. |
-| › Advanced Ignore Pain |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7. **) (note: source: −10%) |
-| ›› Master Ignore Pain |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11. **) (note: source: −15%) |
+| › Advanced Ignore Pain |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7.) (note: source: −10%) |
+| ›› Master Ignore Pain |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11.) (note: source: −15%) |
 | **Increase Combat Damage** | Sith Marauders call upon hatred and strength to deliver powerful blows. | **+2 damage** on unarmed, melee, or ranged. Critical hits multiply it. |
 | › Advanced Increase Combat Damage |  | **From level 8, you do an additional 4 points of damage with any successful unarmed, melee or ranged attack.** (note: was **+4 damage.** Level 8.) |
 | ›› Master Increase Combat Damage |  | **From level 15, you do an additional 6 points of damage with any successful unarmed, melee or ranged attack.** (note: was **+6 damage.** Level 15.) |

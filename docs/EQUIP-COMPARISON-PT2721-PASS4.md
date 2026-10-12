@@ -1,6 +1,6 @@
 # EQUIP COMPARISON — PASS 4 (PT-2725)
 
-K2 started by CODER again (read-only, `000008 - game7` and the stocked save, no slot written, left through Options → Exit Game → Quit). Captures: `HANDOFF/BUILD/screens/pt2721-equip-loop/pass-4/` (`k2-*` K2, `app-*` ours); the K2 panes for the three weapons and Jamoh Hogra's are the pass-3 captures taken the same day in the same game (`pass-3/`, copied here).
+K2 started by CODER again (read-only, `000008 - game7` and the stocked save, no slot written, left through Options → Exit Game → Quit). Captures: `MAIN_WORK media/screens/pt2721-equip-loop/pass-4/` (`k2-*` K2, `app-*` ours); the K2 panes for the three weapons and Jamoh Hogra's are the pass-3 captures taken the same day in the same game (`pass-3/`, copied here).
 
 ## 1. The armour Defence change — a DATA FIX, kept
 

@@ -1,6 +1,6 @@
 # EQUIP-COMPARISON-PT2718 — live app vs live K2, element by element
 
-**`PT-2718` item 3. Both sides captured live and legible — K2 via the PT-2687 technique (position with `--window`, click without it), our own app via a fresh `flutter build linux --debug` launched the same way, both reading the same character (`Onjo Trigit`/`Garon Corvan`, a Jedi, on `000008 - game7`'s own equipment where the app's chargen allowed an equivalent build). Paired screenshots in `BUILD/screens/pt2718-equip-loop/`, mirrored from this same commit.**
+**`PT-2718` item 3. Both sides captured live and legible — K2 via the PT-2687 technique (position with `--window`, click without it), our own app via a fresh `flutter build linux --debug` launched the same way, both reading the same character (`Onjo Trigit`/`Garon Corvan`, a Jedi, on `000008 - game7`'s own equipment where the app's chargen allowed an equivalent build). Paired screenshots in `MAIN_WORK media/screens/pt2718-equip-loop/`, mirrored from this same commit.**
 
 Earlier in this cycle, the only capture tool available was an isolated `flutter test` widget capture, which renders placeholder glyph boxes instead of the real bundled font — every piece of text was positioned but not legible, so text/font/colour could not honestly be compared. This pass replaces that with a live desktop launch, which renders the real font and is not standing in for anything.
 

@@ -1,6 +1,6 @@
 # Save / Load — what K2 does, what we do, what I propose (PT-2729, step 2)
 
-*For the owner to rule on. Everything under "K2 does" was read off the real game on 2026-10-04 (screenshots in `BUILD/screens/pt2729-saveload/k2/`, described in that folder's README). Nothing under "we do" is new: it is how the app works today.*
+*For the owner to rule on. Everything under "K2 does" was read off the real game on 2026-10-04 (screenshots in `MAIN_WORK media/screens/pt2729-saveload/k2/`, described in that folder's README). Nothing under "we do" is new: it is how the app works today.*
 
 **The short version:** K2 keeps a numbered list of saves per character and you save by hand into it. Our app already writes everything you do to one file per character as you play, so a "save" for us is a **bookmark** into that record, not a copy of it. I propose we draw K2's screens exactly, and let each K2 button do the closest honest thing in our model. Six questions need your ruling; each has a recommended answer.
 

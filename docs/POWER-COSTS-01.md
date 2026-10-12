@@ -251,6 +251,7 @@ are never adjusted.
 | **Beast Control** | 1 | 6 | −1 |  |
 | › **Beast Confusion** | 2 | 20 | −4 | cost 20, Force Confusion's twin (`PT-2304`) |
 | ›› **Dominate Beast** | 3 | 22 | −7 | **new** |
+| **Beast Trick** | 1 | 10 | −1 | Mind Trick's twin (`PT-2304`); joined here from FORCE-POWERS-01 when the cost check began refusing a blank on either side (TEST 169) |
 | | | | | |
 | **Droid Trick** | 1 | 6 | −1 |  |
 | › **Droid Confusion** | 2 | 14 | −3 |  |

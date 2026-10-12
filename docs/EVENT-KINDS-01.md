@@ -161,6 +161,14 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `item.equipped` / `.unequipped` | session |
 | `item.acquired` / `.lost` | campaign |
 | `item.used` | transient |
+| `item.examined` | campaign |
+| `item.quest-done` | campaign |
+
+**`help.seen` — `PT-2743` (owner: every K2 first-open help box, for a new game).** Written when a screen's K2 help box is shown: `screen` (the screen's id). A box shows only for a character whose `character.created` carries `help = true` (written by chargen, so only a NEW GAME), only once per screen, and only with Feedback > Tutorial Popups on. Campaign, so save, load and bookmarks carry what was seen.
+
+**`item.quest-done` — `PT-2743` (owner: Quests is a tag).** An item is a quest item because the adventure says so: the blueprint's `quest = true`, or an `item.acquired` carrying `quest = true`. The tag never replaces the item's own category. `item.quest-done` (`subject`, `item`) is the adventure taking it off when the quest is done: the item leaves Quests and stays in its own tab. Campaign, like the bag.
+
+**`item.examined` — `PT-2742` (owner-ruled "New" Inventory tab).** Written when the player selects an item in the Inventory: `subject`, `item` (the blueprint path). An item acquired by a later `item.acquired` than its last `item.examined` is *new*. Campaign, like `item.acquired`, so a bookmark and a branch carry it exactly as they carry the bag.
 
 **⚠ `item.*` events exist even though KOTOR gave items zero hooks.** An item that cannot react is an item that cannot be a trap, a cursed blade, or a thing that reacts to being drawn.
 
@@ -264,6 +272,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `camera.shown` | **session** — matching `store.opened`'s own reasoning: a presentation moment, not a fact to remember. Re-showing on a reload is not a defect. |
 | `map.revealed` | **campaign** — matching `area.entered`'s own lifetime. An area whose map has been revealed stays revealed. |
 | `log.written` | **campaign** — matching `note.written`'s own lifetime, on purpose: `log.written` is that kind's deliberate opposite. A note is private and its text never enters the log; a `log.written` entry is discoverable CONTENT an author writes and a player is meant to read back. A recovered log should not need recovering twice. |
+| `help.seen` | **campaign** — `PT-2743`: a screen's K2 help box, shown once per character; a bookmark carries what was seen. |
 
 **⚠⚠ `camera.shown` CARRIES NOTHING, AND THAT IS A FINDING, NOT A GAP LEFT OPEN.** Real KOTOR's `SetDialogPlaceableCamera(nCamera)` names a camera INDEX — a 3D scene's own placed camera. This project has no camera concept at all; a top-down, paper-doll interface has nothing a camera index could mean. Inventing a field now would be `§3b`'s own warning one level up — a payload invented ahead of the consumer that would give it meaning. So the kind is declared and authorable, the same shape `encounter.began` already has (the kind alone is the whole effect), and it is inert until a real presentation concept exists to read it.
 
@@ -310,6 +319,7 @@ kinds in the same pass that found `item.lost`'s own long-open gap.
 | **`container.opened`** | **`subject`** — the container's own tag | `unlockedIn`, `BUILD 182` |
 | **`item.acquired`** | **`subject`, `item`, `count`** (defaults to 1) | `creditsAfter` (when `item = "credits"`); `carriedBy`/`remainsIn` otherwise |
 | **`item.lost`** | **`subject`, `item`, `count`** (defaults to 1) | same two, the withdrawing half |
+| **`item.quest-done`** | **`subject`, `item`** | the Inventory's Quests tab (`PT-2743`) |
 | **`map.revealed`** ⚠ | **`area`** — validated, no consumer yet | none — see below |
 | **`log.written`** ⚠ | **`log`, `text`** — validated, no consumer yet | none — see below |
 

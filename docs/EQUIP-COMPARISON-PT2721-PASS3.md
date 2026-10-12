@@ -1,6 +1,6 @@
 # EQUIP COMPARISON — PASS 3 (PT-2725) — FRESH K2 CAPTURES, ONE ROW LEFT FAILING SHORT OF SIGN-OFF
 
-K2 was started by CODER (`steam steam://rungameid/208580`, recipe in `HANDOFF/BUILD/STATE.md`), `000008 - game7` loaded and Equip opened, read-only; a second load of the stocked save (`000003`'s row) for the weapon lists; left through Options → Exit Game. **No slot was written** (slot mtimes unchanged; the only new slot is the owner's `000009 - game8`). Captures: `HANDOFF/BUILD/screens/pt2721-equip-loop/pass-3/` (`k2-*` fresh, `app-*` ours on the rebuilt app).
+K2 was started by CODER (`steam steam://rungameid/208580`, recipe in `HANDOFF/BUILD/STATE.md`), `000008 - game7` loaded and Equip opened, read-only; a second load of the stocked save (`000003`'s row) for the weapon lists; left through Options → Exit Game. **No slot was written** (slot mtimes unchanged; the only new slot is the owner's `000009 - game8`). Captures: `MAIN_WORK media/screens/pt2721-equip-loop/pass-3/` (`k2-*` fresh, `app-*` ours on the rebuilt app).
 
 Status: **PASS** (compared fresh in this pass) · **FAIL** · **EXCUSED** (named ruling).
 

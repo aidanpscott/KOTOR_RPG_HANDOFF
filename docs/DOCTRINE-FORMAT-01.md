@@ -12,7 +12,8 @@
 
     1  what is my goal this fight?       goal
     2  when do I break off?              [break_off]
-    3  which target serves it?           [[never]] then [[prefer]]
+    3  which target serves it?           [[never]] gates it, [[prefer]] and
+                                          [protects] both score it
     4  what range does my doctrine want?  want_range
 
 **⚠ BREAK OFF IS SECOND, NOT FOURTH, AND THE FILE SAYS SO.** `PT-1423`: *"a doctrine that is leaving does not pick who to leave."* `decide()` answers it before it looks at a target, and **the file reads in the order the engine asks.**
@@ -34,6 +35,7 @@ when = "never"
 | `want_range` | `close` · `medium` · `long` | no — `medium` |
 | `keep_at_least` | how many squares a caller should keep this doctrine from its target, even while it still fights — `PT-2628`/`PT-2649`/`PT-2650`, Defensive's own field | no — `null`, no minimum kept |
 | `holds_ground` | `true`/`false` — Stand Ground, `PT-2610`/`PT-2656`: never move under any circumstances, still choose a target and still attack with whatever is already in reach | no — `false` |
+| `seeks_cover` | `true`/`false` — `PT-2628`/`PT-2656`/`PT-2669`, the last of Defensive's own two fields: on a turn this doctrine has no cover, take it before anything else moves | no — `false` |
 | `item` | a bare item id this doctrine tries to use offensively — `PT-2610`/`PT-2656`/`PT-2659`, a genuinely new capability class distinct from `[[support]]`'s own ally/self-directed powers | no — `null` |
 | `[break_off] when` | `never` · `alone` · `below` (with `fraction`) | no — `never` |
 | `[break_off] retreat_at_least` | how many squares a caller should walk this doctrine away once it breaks off — `PT-2649`/`PT-2650` | no — `null`, breaking off just holds |
@@ -45,6 +47,8 @@ when = "never"
 **⚠⚠⚠ `keep_at_least` IS NOT A `[break_off]` FIELD AT ALL** — Defensive, `PT-2628`, is *"a ranged-weapon-holder actively keeping distance from an approaching melee threat"* while it is still choosing a target and still attacking; it has nothing to do with leaving the fight. It sits beside `want_range` in `[doctrine]` instead — the symmetric counterpart to closing a distance, not a break-off condition. `PT-2628` also rules the exact number a balance/playtesting question, not a design one: **2 or 3 squares is a reasonable starting value, and it is content, tunable per doctrine, never a hardcoded engine constant.**
 
 **⚠⚠⚠ `holds_ground` IS A BOOL, NOT A DISTANCE.** Stand Ground, `PT-2610`/`PT-2656`, is source-confirmed against K2's own real `k_inc_generic.nss`: a `NPC_AISTYLE_PARTY_STATIONARY` branch exists with a genuine, documented intent — *"Just stand in one place and shoot. Don't move under any circumstances"* — but its own call to the routine that would do it is commented out, and the branch silently falls through to the SAME function the Ranged preset calls. Shipped K2 "Stationary" is Ranged wearing a different name; this field is what the source's own comment actually describes. **Not the same thing as `want_range`'s own `medium`/`long` "holds where it is" fallthrough** — that is an accident of a band nobody gave real squares to, not a deliberate choice.
+
+**⚠⚠⚠ `seeks_cover` IS A BOOL, NOT A DISTANCE OR A TILE** — the same shape as `holds_ground`, for the same reason: there is no number to author. `PT-2628` named two halves for Defensive — keeping distance (`keep_at_least`) and taking cover — and this is the second, finally built at Cover Slice 5b. Checked *ahead of* `keep_at_least` in the real decision order: a doctrine naming both gets cover first on a turn it has none, and only falls through to keeping distance once it is already covered — read live, each turn, off whatever the caller's own board says now, never a stored flag. **Total cover needs no field here at all** — `ACTION-ECONOMY-01 §6.2`'s Total tier was already established, at Cover Slice 1/3, as "cannot be targeted," not a tile a combatant occupies, so it was never a `seek()` destination to author toward.
 
 **⚠⚠⚠ `item` NAMES ONE ITEM, NOT A LIST** — unlike `[[support]]`, which is a real priority ladder of several powers. `GN_GetGrenadeTalent` picks ONE grenade type dynamically, by what the thrower actually carries and whether the target is a droid; an authored priority order over several item ids would be answering a question the real source resolves at throw-time, not authoring-time. **Named unconditionally, the same reason `want_range`/`keep_at_least` are** — `decide()` stays grid-free, and whether a good AoE cluster actually exists this turn is a real geometry question only a caller with a real board can answer.
 
@@ -85,11 +89,21 @@ rule = "any"
 | `any` | ⚠ the last resort, and deliberate: with every preference declined a doctrine still has to act |
 | *(omitted, with `match`)* | the general form — *"the one with the lightsaber"* |
 
+### `[protects]` is a single table, matched against allies, not the enemy pool — `PT-2657`/`PT-2671`
+
+```toml
+[protects]
+match   = { handle = "bastila" }
+because = "my ward"
+```
+
+**One charge, not a list — unlike `[[never]]`/`[[prefer]]`, only one makes sense at a time, the same shape `[break_off]` already has.** **And its own `match` answers a different question than every other one in this file: which of *my own allies* am I protecting, not which enemy does this rule pick or exclude.** Real content, not a ported mechanism — see `TARGETING-01 §3.6`.
+
 ---
 
 ## 3 · ⚠ `match` is a closed vocabulary, because it is a predicate in a file
 
-`Never` and `Prefer` carry `bool Function(Combatant)` in the code. **A file cannot carry a closure**, so a match is **data**, and the vocabulary is closed exactly as `DIALOGUE-FORMAT-01 §4`'s gate is.
+`Never`, `Prefer`, and `Protects` all carry `bool Function(Combatant)` in the code. **A file cannot carry a closure**, so a match is **data**, and the vocabulary is closed exactly as `DIALOGUE-FORMAT-01 §4`'s gate is.
 
 | key | tests | |
 |---|---|---|
@@ -134,7 +148,7 @@ reaction = [ { on = "character.downed", then = "rally" } ]
 
 - **⚠ A goal that means anything.** `goal` is a string the decision carries and **nothing reads it** — `SPACE-AI-01`'s *"capture, not destruction"* changes what a fleet does, and here it changes nothing. **It is recorded for the narrator and is otherwise inert.**
 - **A match on anything but a combatant.** No *"the one holding the codes"*, because equipment is not in `DoctrineView`.
-- **Per-ally rules.** `allies` is in the view and no rule reads it except `alone`.
+- **⚠ NO LONGER TRUE OF `alone` ALONE — `PT-2657`/`PT-2671` gave `allies` a second reader.** `[protects]` matches ONE charge against it; what still cannot be expressed is more than one — no priority ladder of several allies to protect in order, the way `[[prefer]]` orders several enemy preferences. `Protects` names its one charge unconditionally, the same reasoning `item`/`keep_at_least` already carry for being named outside any ladder.
 - **⚠ A doctrine that changes mid-fight.** It is picked once and asked every turn. Escalation is `PT-1316`'s and is not this.
 
 ---

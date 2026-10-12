@@ -290,7 +290,7 @@ Bith do not sleep. Instead, they enter a meditative trance for four to six hours
 - **Speed:** 10 metres.
 - **Heightened Smell:** A Bith can identify an individual by scent at a range of 10 metres with a successful Wisdom check (DC 15).
 - **Skill Bonuses:** +4 Awareness when examining anything within 4 metres; −2 Alertness beyond 10 metres.
-- **Meditative Trance:** Instead of sleeping for 8 hours, a Bith can enter a trance lasting 4 hours that provides the same benefits. During the trance, the Bith remains somewhat aware and can make Listen and Spot checks to avoid being surprised. This can be done once per standard day.
+- **Meditative Trance:** Instead of sleeping for 8 hours, a Bith can enter a trance lasting 4 hours that provides the same benefits. During the trance, the Bith remains somewhat aware and can make Alertness checks to avoid being surprised. This can be done once per standard day.
 - **Languages:** Speak and read/write Bith. Bith who travel the galaxy commonly speak Basic as well.
 
 *Source: Ultimate Alien Anthology, pp.23–24.*
@@ -354,7 +354,7 @@ Their homeworld of Urkupp was destroyed approximately forty years before the cam
 - **Ability Adjustments:** +2 Strength, +2 Dexterity, −2 Wisdom, −2 Charisma.
 - **Size:** Medium.
 - **Speed:** 10 metres.
-- **Force-Deadened:** *Racial feat — learned on level-up, maximum level 6.* **+10 on Will saves against any mind-influencing Force power.** *A functional immunity expressed as a number. Not a KOTOR mechanic — it comes from the tabletop line, which is why it costs a pick.*
+- **Force-Deadened:** *Racial feat — learned on level-up, maximum level 6.* **+10 on Will saves against any mind-influencing Force power.** (note: A functional immunity expressed as a number. Not a KOTOR mechanic — it comes from the tabletop line, which is why it costs a pick.)
 - **Heat Dissipation:** **Immune to heat and to fire damage from natural sources.**
 - **Shadow Killer:** *Racial feat — learned on level-up, maximum level 4.* **+2 damage against any target unaware of you.**
 - **Skill Bonuses:** +2 Stealth, +2 Intimidate.
@@ -408,7 +408,7 @@ Droids are built rather than generated. **They do not use the 30-point buy** —
 > **So the app inherits from the parent, and `Rakata`'s restatement is REDUNDANT rather than load-bearing.** **⚠ Nothing distinguishes a restatement from an inheritance until somebody checks**, because the behaviour is identical either way.
 >
 > **And it is `PT-1391`'s overlay direction with a second user** — *the variant wins where both speak; the parent fills silence.* **Here both say the same thing, which is why the inconsistency has cost nothing — and why it would cost everything the day one of them changed.**
-- **Fixed Armature:** **A droid cannot take a `Combat`-rate class.** **`PT-109`.** *A chassis reaches eleven ranged attack chains and no melee at all — thirty-three tiers against a Combat class's forty. The frame cannot absorb the training.*
+- **Fixed Armature:** **A droid cannot take a `Combat`-rate class.** *The frame cannot absorb the training.* (note: `PT-109`. A chassis reaches eleven ranged attack chains and no melee at all — thirty-three tiers against a Combat class's forty.)
 - **Ion Vulnerability:** **Ion damage drains 1 Constitution per hit, 2 on a critical**, recovered at 1 per day. *`PLAYTEST-RULINGS-01 B4`.*
 - **Languages:** **Every droid understands five languages at creation.** **Basic and Binary are two of them; the other three are chosen freely.** *A droid's language bank is storage, and storage is cheap.*
 
@@ -437,11 +437,11 @@ Wheeled or treaded, a metre tall, built to plug into a starship and fix what is 
 - **Ability Adjustments:** +2 Intelligence, −2 Strength, −2 Charisma.
 - **Size:** Small.
 - **Speed:** 8 metres.
-- **Blaster Integration:** **Integrates a blaster into the frame as a self-contained weapon system.** *The feat KOTOR grants T3-M4 by name.*
+- **Blaster Integration:** **Integrates a blaster into the frame as a self-contained weapon system.** (note: The feat KOTOR grants T3-M4 by name.)
 - **Portable Workbench:** **An astromech is a workbench.** **Any character may perform item construction or upgrade work anywhere the droid is**, without needing a facility.
 - **Spike Fabrication:** *Racial feat — learned on level-up, maximum level 5.* **Once per session, fabricate a set of programming spikes or a security tunneler from available material.** *T3-M4 does this as a matter of course.*
 - **Skill Bonuses:** +2 Slicing, +2 Repair.
-- **Racial Skills:** **Both — Slicing *and* Repair.** **The only entry in the chapter with two.** *The chassis is a diagnostic computer with tool arms; splitting them would make it good at one half of its own job.*
+- **Racial Skills:** **Slicing *and* Repair.** (note: The only entry in the chapter with two. The chassis is a diagnostic computer with tool arms; splitting them would make it good at one half of its own job.)
 - **Languages:** **Five, as every droid.** **Speaks Binary only** — an astromech that holds a conversation has taken `Synthesised Voice`, or had one fitted.
 
 ---
@@ -456,8 +456,8 @@ Humanoid combat frame with precision servos. **The chassis a protocol droid and 
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Assassin Protocols:** **+2 damage against any target that has not acted this encounter.**
-- **Heavy Weapon Mounts:** **An Assassin chassis may equip heavy weapons and assault cannons**, which no Medium organic can carry unbraced. **⚠ The `Battle` chassis may also, all the way to `Weapon Specialization` — `PT-578`.** **⚠ Heavy weapons no longer gate a prestige class — `PT-579` — so this is a CAPABILITY rather than a class route.** **⚠ `Astromech` and `Remote` may NOT.** **It may not equip melee weapons** — `ATTACKS-05` closes melee to every droid.
-- **Targeting Computer:** *Racial feat — learned on level-up, maximum level 6.* **+1 attack with blasters.** *The feat KOTOR grants through the Superior Targeting Computer, which cannot be obtained by levelling in the source.*
+- **Heavy Weapon Mounts:** **An Assassin chassis may equip heavy weapons and assault cannons**, which no Medium organic can carry unbraced. **⚠ The `Battle` chassis may also, all the way to `Weapon Specialization` — `PT-578`.** **The Astromech and Remote chassis may not.** **It may not equip melee weapons.** (note: Heavy weapons no longer gate a prestige class — `PT-579` — so this is a CAPABILITY rather than a class route. `ATTACKS-05` closes melee to every droid.)
+- **Targeting Computer:** *Racial feat — learned on level-up, maximum level 6.* **+1 attack with blasters.** (note: The feat KOTOR grants through the Superior Targeting Computer, which cannot be obtained by levelling in the source.)
 - **Skill Bonuses:** +2 Repair, +2 Demolitions.
 - **Languages:** **Five, as every droid, and it speaks all of them.** **This chassis ships with a vocabulator** — which is why protocol droids use it, and why an Assassin droid can talk to you before it kills you.
 
@@ -474,7 +474,7 @@ Mass-produced infantry. Cheap, identical, and never manufactured in ones.
 - **Speed:** 10 metres.
 - **Mass-Produced:** **Repair on a Battle droid takes half the normal time and cost.**
 - **Hardened Frame:** **+1 natural armour bonus to Defence.**
-- **Standardised Parts:** *Racial feat — learned on level-up, maximum level 3.* **Repair parts cost one fewer, minimum one**, and **you may salvage parts from any destroyed droid without a check.** *Already a three-tier chain in `FEATS-LIBRARY-01`.*
+- **Standardised Parts:** *Racial feat — learned on level-up, maximum level 3.* **Repair parts cost one fewer, minimum one**, and **you may salvage parts from any destroyed droid without a check.** (note: Already a three-tier chain in `FEATS-LIBRARY-01`.)
 - **Skill Bonuses:** +2 Scavenging, +2 Repair.
 - **Languages:** **Five, as every droid**, and **Basic and Binary are always two of them** — a Battle droid has to take orders. **It speaks both.** *Cheap production still needs a unit that can answer.*
 
@@ -487,7 +487,7 @@ Mass-produced infantry. Cheap, identical, and never manufactured in ones.
 Repulsorlift spheroid, no limbs, no footfalls. **G0-T0 at Medium; Bao-Dur's Remote at Tiny.** **Size is a property of the individual, not a separate chassis.**
 
 - **Ability Adjustments:** +2 Dexterity, +2 Intelligence, −4 Strength.
-- **Size:** **Tiny or Medium**, chosen at creation. *`creaturesize.2da` gives Tiny +2 to attack and Defence.*
+- **Size:** **Tiny or Medium**, chosen at creation. Tiny gives +2 to attack and Defence. (note: from `creaturesize.2da`.)
 - **Speed:** 12 metres, hovering. **Ignores difficult terrain.**
 - **Repulsorlift Frame:** **Hovers. Ignores difficult terrain, and makes no footfalls** — **+4 Stealth.**
 - **Shield Projector:** *Racial feat — learned on level-up, maximum level 6.* **Once per encounter, project a shield giving one adjacent ally damage reduction 5 for a round.** *G0-T0 carries one.*
@@ -558,7 +558,7 @@ At the campaign date, the Echani take the Republic's side during the Mandalorian
 - **Familial Near-Identity:** **Echani siblings are near-indistinguishable to outsiders.** **+4 on any attempt to pass as another Echani; −4 on any attempt by an outsider to tell two apart.**
 - **Silver Reflex:** *Racial feat — learned on level-up, maximum level 4.* **+2 on Reflex saves and on initiative.**
 - **Skill Bonuses:** +2 Alertness, +2 Acrobatics.
-- **Languages:** Speak and read/write Basic. An Echani may select one additional language at character creation. Few records exist of an original Echani language; Basic became their tongue of choice on entering the galactic community — the only species on this roster whose own language is effectively lost.
+- **Languages:** Speak and read/write Basic. An Echani may select one additional language at character creation. Few records exist of an original Echani language; Basic became their tongue of choice on entering the galactic community. (note: the only species on this roster whose own language is effectively lost.)
 **Availability:** **Present at 3956 BBY.** ⚠ **The Echani take the Republic's side during the Mandalorian Wars — `EVENTS-01 §1`, ⚠⚠ 3964–3960 BBY · ⚠ raiding from 3976, `PT-892`.** **Narrative, and it influences no value.**
 
 
@@ -607,7 +607,7 @@ Since their world was discovered — the entry does not say when — Gamorreans 
 - **Ability Adjustments:** +4 Strength, −2 Dexterity, −2 Intelligence, −2 Charisma.
 - **Size:** Medium.
 - **Speed:** 10 metres.
-- **Bred to the Axe:** **A Gamorrean receives the `Power Attack` chain's tier 1 free at 1st level, in addition to the four attack credits every class receives.** *`PT-90`. It is the only species granted an attack chain.*
+- **Bred to the Axe:** **A Gamorrean receives the `Power Attack` chain's tier 1 free at 1st level, in addition to the four attack credits every class receives.** (note: `PT-90`. It is the only species granted an attack chain.)
 - **Brute Force:** **+3 damage with any one-handed weapon.** *A Gamorrean puts a shoulder behind a blow others swing from the wrist.*
 - **Thick Skull:** *Racial feat — learned on level-up, maximum level 3.* **+4 on saves against stun, and cannot be knocked prone by anything that allows a save.**
 - **Skill Bonuses:** +2 Intimidate, +2 Athletics.
@@ -692,7 +692,7 @@ Kaleesh of the same tribe communicate by scent on the Weequay pattern — **20 m
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Natural Armour:** **+1 natural armour bonus to Defence.**
-- **Hunter's Scent:** **Detect creatures by smell within 10 metres — 20 upwind, 6 downwind.** **Doubled for strong scents and tripled for overpowering ones.** *UAA p.183.*
+- **Hunter's Scent:** **Detect creatures by smell within 10 metres — 20 upwind, 6 downwind.** **Doubled for strong scents and tripled for overpowering ones.** (note: UAA p.183.)
 - **Death Mask:** *Racial feat — learned on level-up, maximum level 5.* **+2 Intimidate, and enemies who fail a `fear effect` against you are `Slowed` for one round.**
 - **Skill Bonuses:** +2 Beast Handling, +2 Survival.
 - **Languages:** Speak and read Kaleesh; speak Basic.
@@ -950,7 +950,7 @@ Quarren are practical, conservative, and pragmatic. They are tough — physicall
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Waterbreathing:** **Cannot drown.**
-- **Cold Blood:** **+2 on Will saves against `fear effects`, Intimidate, and any mind-influencing Force power.** ⚠ *The engine separates `Fear` and `MindSpells` — `PT-446`.* *A Quarren face gives nothing away.*
+- **Cold Blood:** **+2 on Will saves against `fear effects`, Intimidate, and any mind-influencing Force power.** *A Quarren face gives nothing away.* (note: The engine separates `Fear` and `MindSpells` — `PT-446`.)
 - **Skill Bonuses:** +2 Swim, +2 Intimidate.
 - **Languages:** Speak and read/write Quarrenese and Basic.
 
@@ -1111,7 +1111,7 @@ Short, stocky, tusked scavengers from the frozen world of Cadomai Prime. **A Sni
 - **Size:** ⚠ **Small — `+1` Defence, `PT-623`.**
 - **Speed:** ⚠ **8 metres.**
 - **Observant:** *Racial feat — learned on level-up, maximum level 5.* **Once per encounter, substitute an `Alertness` check for a `Persuade` check.** **⚠ You are not talking them round; you have already read them.**
-- **Cold-Adapted:** ⚠ **`+2` on any check or save against cold, ice or exposure.** ⚠ **A GM ruling hangs on it until an environment system exists — `PT-624`.**
+- **Cold-Adapted:** ⚠ **`+2` on any check or save against cold, ice or exposure.** (note: A GM ruling hangs on it until an environment system exists — `PT-624`.)
 - **Skill Bonuses:** +2 Alertness, +2 Stealth.
 - **Racial Skill:** **Alertness.**
 - **Languages:** Basic and Snivvian.
@@ -1279,10 +1279,10 @@ Wookiees understand Basic but cannot speak it — their vocal apparatus produces
 - **Size:** Medium.
 - **Speed:** 10 metres.
 - **Wookiee Rage:** **Once per day a Wookiee may enter a rage.** **While raging: +4 Strength, +2 vitality per character level, and +2 on Will saves.**
-- **Extraordinary Recuperation:** **A Wookiee regains vitality at twice the normal rate — ⚠ 2 vitality per hour of rest, and `PT-559` removed the second pool it also doubled
-- **Nothing Worn On The Body:** **A Wookiee never wears anything on the torso — no armour, no robe, no clothing, no Zeison Sha.** ⚠⚠ **`PT-2144`. This is `KOTOR`'s own rule, not ours**: `baseitems.2da`'s `denysubrace` column sets bit 1 — `Wookiee` — on every `Armor_Class` row, on `Armor_Zeison_Sha`, on all three Jedi Robe tiers, on `Basic_Clothing` and `Slave_Outfit`, and on `Disguise_Item`. **It is what Zaalbar does for an entire game.** ⚠ **One exception, and it is the source's, not ours:** `Revan_Armor` sets no deny bit at all, so it is the single body item a Wookiee may wear.
+- **Extraordinary Recuperation:** **A Wookiee regains vitality at twice the normal rate — 2 vitality per hour of rest. (note: `PT-559` removed the second pool it also doubled.)
+- **Nothing Worn On The Body:** **A Wookiee never wears anything on the torso — no armour, no robe, no clothing, no Zeison Sha.** One exception: Revan's armour is the single body item a Wookiee may wear. (note: `PT-2144`. This is `KOTOR`'s own rule, not ours: `baseitems.2da`'s `denysubrace` column sets bit 1 — `Wookiee` — on every `Armor_Class` row, on `Armor_Zeison_Sha`, on all three Jedi Robe tiers, on `Basic_Clothing` and `Slave_Outfit`, and on `Disguise_Item`. It is what Zaalbar does for an entire game. `Revan_Armor` sets no deny bit at all.)
 - **No Headgear:** **A Wookiee cannot wear headgear — masks, visors, helmets, neural bands.** **⚠ Every other worn slot is unaffected:** gauntlets, forearm bands, belts, boots and implants all fit a Wookiee and all remain available.
-- **Natural Armour:** *Racial feat — learned on level-up, maximum level 4.* **`+1` natural armour bonus to Defence, rising to `+2` at 8th level and `+3` at 12th.** *A pelt thickens with age and hard use.* ⚠⚠ **`PT-2145` — IT IS EARNED, AND THAT IS WHY IT MAY PASS `Weequay`'s `+2`.** Every other species' natural armour is free at creation; a Wookiee spends a level-up pick on this one, and a trait you pay for should out-scale a trait you are given. ⚠ **The ceiling is `+3` — `Zeison Sha`, the lightest armour in either game.** At full growth a Wookiee's hide is worth the lightest suit and no more, so it never stands in for the armour line's `+4` to `+9`, which `PT-2144` put permanently out of reach.
+- **Natural Armour:** *Racial feat — learned on level-up, maximum level 4.* **`+1` natural armour bonus to Defence, rising to `+2` at 8th level and `+3` at 12th.** *A pelt thickens with age and hard use.* (note: `PT-2145` — it is earned, and that is why it may pass `Weequay`'s `+2`. Every other species' natural armour is free at creation; a Wookiee spends a level-up pick on this one, and a trait you pay for should out-scale a trait you are given. The ceiling is `+3` — `Zeison Sha`, the lightest armour in either game. At full growth a Wookiee's hide is worth the lightest suit and no more, so it never replaces the armour line's `+4` to `+9`, which `PT-2144` put permanently out of reach.)
 - **Skill Bonuses:** +4 Intimidate, +2 Beast Handling.
 
 - **Languages:** Read/write Shyriiwook and Basic; speak Shyriiwook; understand Basic. Wookiees cannot speak Basic or any language other than Shyriiwook.

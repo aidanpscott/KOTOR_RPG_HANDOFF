@@ -1,6 +1,6 @@
 # EQUIP COMPARISON — FINAL PASS (PT-2725): ONE ROW STILL FAILING (+ TEST 149 FIXES)
 
-Paired screenshots (four states and the can't-use popup, K2 and ours): `HANDOFF/BUILD/screens/pt2721-equip-loop/final/` (`k2-1…5`, `app-1…5`, and the portrait zooms). K2 was played read-only (no slot written) and quit through its menu.
+Paired screenshots (four states and the can't-use popup, K2 and ours): `MAIN_WORK media/screens/pt2721-equip-loop/final/` (`k2-1…5`, `app-1…5`, and the portrait zooms). K2 was played read-only (no slot written) and quit through its menu.
 
 ## The portrait block (owner's list) — measured, fixed, pixel-tested
 
@@ -51,7 +51,7 @@ NOT READY FOR SIGN-OFF: the non-energy damage line remains the one FAIL (no reac
 
 ## LIVE-APP PROOF (owner order, 2026-10-03) — the running release build, read against K2 pixel for pixel
 
-**What was run.** `flutter build linux --release` from a **fresh clone of `origin/main`** (`KOTOR-RPG-APP-live3`, never the conflicted folder), head `83f9134`; launched at 1920×1080 on a virtual display, window title **"Knights of the Old Republic RPG"**, PID **286975**; played Library → Endar Spire → Continue → Equip (`q`), and the five states captured exactly as K2's final set (filled slot, empty belt slot, the item list, the robe's description, the can't-use popup on Jamoh Hogra's). Images, list-panel crops side by side with K2's `k2-*.png`, description-pane crops and one full-screen pair per state are in `HANDOFF/BUILD/screens/pt2721-equip-loop/live-app/`.
+**What was run.** `flutter build linux --release` from a **fresh clone of `origin/main`** (`KOTOR-RPG-APP-live3`, never the conflicted folder), head `83f9134`; launched at 1920×1080 on a virtual display, window title **"Knights of the Old Republic RPG"**, PID **286975**; played Library → Endar Spire → Continue → Equip (`q`), and the five states captured exactly as K2's final set (filled slot, empty belt slot, the item list, the robe's description, the can't-use popup on Jamoh Hogra's). Images, list-panel crops side by side with K2's `k2-*.png`, description-pane crops and one full-screen pair per state are in `MAIN_WORK media/screens/pt2721-equip-loop/live-app/`.
 
 **The earlier `final/` captures came from the running app** (a debug build driven by `drive.sh` and xdotool), **not a test harness** — but they were read by eye, and the running-app proof read them by pixel. That is where these came from:
 

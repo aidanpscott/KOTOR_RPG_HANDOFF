@@ -42,15 +42,15 @@
 | **Gear Head** | An instinct for machinery — what it does, how it opens, and how to make it do something else. | +1 Repair, Security, and Slicing. |
 | › Adept Gear Head |  | +2 Repair, Security, and Slicing. |
 | ›› Master Gear Head |  | +3 Repair, Security, and Slicing. |
-| **Skill Focus** | **Renamed from Class Skill. One feat exists per skill — 23 in total.** The fourth of five aptitude sources. | **Grants aptitude in that skill: 1 point per rank instead of 2**, and raises the rank cap to character level + 3. |
+| **Skill Focus** | (note: Renamed from Class Skill. One feat exists per skill — 23 in total. The fourth of five aptitude sources.) | **Grants aptitude in that skill: 1 point per rank instead of 2**, and raises the rank cap to character level + 3. |
 | **Toughness** | Raw physical resilience — the ability to keep standing. | +1 vitality per level. **Retroactive** for levels already gained. |
 | › Improved Toughness |  | +2 vitality per level, and **−2 damage** from any hit under 20. |
-| ›› Master Toughness |  | +2 vitality per level *(overrides, not cumulative)*, −2 damage under 20, and ⚠ **a further `−2` on hits of 20 or more** — `PT-629`. *(source: −10%)* |
-| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. **⚠ Pairable weapons are wield classes 1, 2 and 4 — `PT-169`. Effect corrected against `ACTION-ECONOMY-01 §7.2` — `PT-2711`. A rifle or a heavy weapon cannot be paired with anything.** | Dual-wield penalty reduced to **−3.** |
-| › Advanced Two-Weapon Fighting |  | **−2.** |
-| ›› Master Two-Weapon Fighting |  | **−1**, floored. |
+| ›› Master Toughness |  | +2 vitality per level *(overrides, not cumulative)*, −2 damage under 20, and ⚠ **a further `−2` on hits of 20 or more** — `PT-629`. *(note: source: −10%)* |
+| **Two-Weapon Fighting** | Training in fighting with a weapon in each hand, or with a double-bladed weapon. **⚠ Pairable weapons are wield classes 1, 2 and 4 — `PT-169`. (note: Effect corrected against `ACTION-ECONOMY-01 §7.2` — `PT-2711`.) A rifle or a heavy weapon cannot be paired with anything.** | Dual-wield penalty reduced to **−3.** |
+| › Advanced Two-Weapon Fighting |  | **This feat further reduces the attack penalty of a character wielding a double-bladed weapon or two weapons, to −2.** (note: was **−2.**) |
+| ›› Master Two-Weapon Fighting |  | **This feat again reduces the attack penalty of a character wielding a double-bladed weapon or two weapons, to −1.** (note: was **−1.**) (note: floored.) |
 | **Weapon Proficiency: Blaster** | Basic training with blaster pistols and hold-outs. | Allows the weapon to be equipped. **Without proficiency it cannot be used at all.** |
-| › Weapon Focus: Blaster |  | +1 attack. |
+| › Weapon Focus: Blaster |  | **Adds a +1 attack bonus with blaster pistols and hold-outs.** (note: was +1 attack.) |
 | ›› Weapon Specialization: Blaster |  | +2 damage. **Critical hits multiply it.** |
 
 ---
@@ -59,17 +59,17 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** **⚠ Universal — granted to the Scout at 1, purchasable by anyone. `PT-208`.** | **+1 attack within one range increment** — `PT-163`. **⚠ And an adjacent enemy's `+2` against you drops to `+1`.** Level 4 |
-| › Improved Close Combat |  | **+2**, and the adjacent enemy's bonus drops to **0**. Level 8 |
-| ›› Master Close Combat | **Authored — the source chain stops at Improved.** | **+3**, and **your own `−4` for firing while adjacent drops to `−1`** |
+| **Close Combat** | Training for ranged fighters caught at knife distance. **Astromechs cannot take these.** **⚠ The Scout starts with it; anyone may learn it. `PT-208`.** | **When your target is within one range increment you receive a +1 attack bonus, and an adjacent enemy's +2 against you drops to +1. Available from level 4.** (note: was **+1 attack within one range increment** — `PT-163`. **⚠ And an adjacent enemy's `+2` against you drops to `+1`.** Level 4) |
+| › Improved Close Combat |  | **When your target is within one range increment, you receive a +2 attack bonus, and an adjacent enemy gains no bonus against you. Available from level 8.** (note: was **+2**, and the adjacent enemy's bonus drops to **0**. Level 8) |
+| ›› Master Close Combat | (note: Authored — the source chain stops at Improved.) | **When your target is within one range increment, you receive a +3 attack bonus, and your own penalty for firing while adjacent drops to −1.** (note: was **+3**, and **your own `−4` for firing while adjacent drops to `−1`**) |
 
 > **⚠ Repriced by `PT-164`.** **The chain reduced *"the usual +6"* and that `+6` was written nowhere.** **A feat that reduced a bonus nobody had stated.**
-| **Dueling** | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** | **+1 attack and defence** when unarmed or wielding a single weapon of **wield class 1, 2 or 4** — `PT-169`. **⚠ A class-3 staff does not qualify: it is already two weapons** |
+| **Dueling** | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** | **You gain +1 attack and +1 Defence when unarmed or wielding a single weapon of wield class 1, 2 or 4. A double-bladed staff does not qualify.** (note: was **+1 attack and defence** when unarmed or wielding a single weapon of **wield class 1, 2 or 4** — `PT-169`. **⚠ A class-3 staff does not qualify: it is already two weapons**) |
 | › Advanced Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+2 attack and defence.** Level 4. |
 | ›› Master Dueling | Single-weapon combat discipline — **the counterpart to Two-Weapon Fighting.** A character focused on one weapon fights more efficiently than one splitting attention. | **+3 attack and defence.** Level 8. |
 | **Weapon Proficiency: Blaster Rifle** | Rifles, carbines, and repeaters. | Allows the weapon to be equipped. |
-| › Weapon Focus: Blaster Rifle |  | +1 attack. |
-| ›› Weapon Specialization: Blaster Rifle |  | +2 damage. |
+| › Weapon Focus: Blaster Rifle |  | **Adds a +1 attack bonus with blaster rifles.** (note: was +1 attack.) |
+| ›› Weapon Specialization: Blaster Rifle |  | **Adds a +2 damage bonus with blaster rifles.** (note: was +2 damage.) |
 
 ---
 
@@ -85,32 +85,32 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Plating Proficiency: Light** | ⚠ ⚠ **DROID ONLY — `PT-615`.** A chassis rated to carry plating. **⚠ EARNED BY LEVEL, not granted by class.** | **Allows LIGHT plating — `g_i_drdltplat001–003`.** ⚠ Character level 1. |
-| › **Plating Proficiency: Medium** |  | **MEDIUM plating.** ⚠ Character level 7. |
-| ›› **Plating Proficiency: Heavy** |  | **HEAVY plating.** ⚠ Character level 13. ⚠ **CLOSED to `Astromech` and `Remote`** — `PT-577`. |
+| **Plating Proficiency: Light** | **Droids only — `PT-615`.** A chassis rated to carry plating, earned by level rather than granted by class. | **Allows light plating — `g_i_drdltplat001–003`.** ⚠ Character level 1. |
+| › **Plating Proficiency: Medium** |  | **Medium plating.** ⚠ Character level 7. |
+| ›› **Plating Proficiency: Heavy** |  | **Heavy plating.** ⚠ Character level 13. ⚠ **Closed to `Astromech` and `Remote`** — `PT-577`. |
 | **Armour Proficiency: Light** | Basic training in wearing light armour. Without it, the armour cannot be equipped at all. | Allows light armour on body, head, and hands. |
 | › Armour Proficiency: Medium | Training in heavier plating that trades mobility for protection. | Allows medium armour. |
 | ›› Armour Proficiency: Heavy | The heaviest personal protection available. | Allows heavy armour. |
 | **Blindside** | An instinct for the moment an opponent cannot watch you. | **Flanking grants +3 instead of +2.** |
-| › Improved Blindside |  | **+4.** |
-| ›› Master Blindside |  | **+5.** |
+| › Improved Blindside |  | **Flanking grants you +4 instead of +2.** (note: was **+4.**) |
+| ›› Master Blindside |  | **Flanking grants you +5 instead of +2.** (note: was **+5.**) |
 | **Conditioning** | Physical hardening against everything the galaxy can throw at you. | +1 to all saving throws. |
 | › Improved Conditioning |  | +2 to all saving throws. |
 | ›› Master Conditioning |  | +3 to all saving throws. |
-| **Cybernetic Implantation** | **Reinstated from cut content.** Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows level 1 implants. |
+| **Cybernetic Implantation** | **(note: Reinstated from cut content.)** Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows level 1 implants. |
 | › Advanced Cybernetic Implantation |  | Allows level 1–2 implants. |
 | ›› Master Cybernetic Implantation |  | Allows level 1–3 implants. |
 | **Elusive** | Never quite where the blow lands. | **+1 Defence.** Always active. |
-| › Improved Elusive |  | **+2 Defence.** |
-| ›› Master Elusive |  | **+3 Defence.** |
-| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. **⚠ Granted to the Scout at 6th level — `sct_granted`, `feat.2da`. Purchasable by anyone else.** | On a successful Reflex save, take **no** damage instead of half. |
+| › Improved Elusive |  | **You gain +2 Defence. Always active.** (note: was **+2 Defence.**) |
+| ›› Master Elusive |  | **You gain +3 Defence. Always active.** (note: was **+3 Defence.**) |
+| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. **Granted to the Scout at 6th level. Purchasable by anyone else.** (note: `sct_granted`, `feat.2da`.) | On a successful Reflex save, take **no** damage instead of half. |
 | **Freetrader** | Life between worlds — flying, trading, and knowing who to ask. | +1 Appraise and Pilot. |
 | › Improved Freetrader |  | +2 Appraise and Pilot. |
 | ›› Master Freetrader |  | +3 Appraise and Pilot. |
 | **Guarded** | You do not give anyone your back. | **Enemies gain no flanking bonus against you.** |
-| › Well Guarded | The more of them there are, the less any one of them matters. | **+1 Defence for each enemy adjacent to you beyond the first**, to a maximum of **+3.** *Live only while the gate is met — a Jedi who switches out of Resilience loses it until they switch back.* |
-| ›› Circle of Blades | Nobody gets behind you, and nobody gets behind the person you are standing in front of. | **Maximum rises to +5**, and **enemies adjacent to you do not grant flanking to each other against your allies.** *Live only while you hold Resilience.* |
-| **Guarded Step** | They cannot get around you without paying for it. | **An enemy that moves into a flanking position against you provokes an opportunity attack.** **If it hits, their movement ends immediately** — they do not reach the flank. **Costs a reaction from the pool.** Single tier. |
+| › Well Guarded | The more of them there are, the less any one of them matters. | **+1 Defence for each enemy adjacent to you beyond the first**, to a maximum of **+3.** *Only while you hold the Resilience form; switching out of it loses this until you switch back.* |
+| ›› Circle of Blades | Nobody gets behind you, and nobody gets behind the person you are standing in front of. | **Maximum rises to +5**, and **enemies adjacent to you do not grant flanking to each other against your allies.** *Only while you hold the Resilience form.* |
+| **Guarded Step** | They cannot get around you without paying for it. | **An enemy that moves into a flanking position against you provokes an opportunity attack.** **If it hits, their movement ends immediately** — they do not reach the flank. **Costs a reaction.** (note: Single tier.) |
 | **Hardiness** | Carrying on when the body wants to stop. | +1 Athletics, Scavenging and **Survival**. |
 | › Improved Hardiness |  | +2 Athletics, Scavenging and **Survival**. |
 | ›› Master Hardiness |  | +3 Athletics, Scavenging and **Survival**. |
@@ -121,14 +121,14 @@
 | › Improved Improvisation |  | **Twice per encounter.** |
 | ›› Master Improvisation |  | **Twice per encounter, at full ranks.** The half-ranks penalty is removed. |
 | **Linguist** | A trained ear for how languages are built. | **+1 language**, spoken and read/write. |
-| › Improved Linguist |  | **+2 languages** total. |
+| › Improved Linguist |  | **You know two extra languages, spoken and read/write.** (note: was **+2 languages** total.) |
 | ›› Master Linguist |  | **+3 languages** total, and **basic comprehension of any tongue related to one already known** — no check required. |
 | **Loremaster** | Deep knowledge of the dead, the living, and the Force. | +1 Archaeology, Mysticism, and Xenology. |
 | › Advanced Loremaster |  | +2 Archaeology, Mysticism, and Xenology. |
-| ›› Grand Loremaster | **The name already contains *master*, so the chain uses Advanced and Grand.** | +3 Archaeology, Mysticism, and Xenology. |
-| **Boresight** | Shots placed where they are hardest to turn aside. **⚠ Universal — granted to the Scout at 4 / 8 / 12, purchasable by anyone. `PT-208`.** **⚠ Renamed from `Marksman`, which collided with the class of that name — `PT-206`.** | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(The passive half of KOTOR's Precise Shot. The damage half is an attack — see `ATTACKS-01`.)* |
-| › Improved Boresight |  | **Enemy BBD −4.** Level 6 |
-| ›› Master Boresight |  | **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round.** Level 12 |
+| ›› Grand Loremaster | **(note: The name already contains master, so the chain uses Advanced and Grand.)** | +3 Archaeology, Mysticism, and Xenology. |
+| **Boresight** | Shots placed where they are hardest to turn aside. **⚠ The Scout gains it at 4, 8 and 12; anyone may learn it. `PT-208`.** (note: Renamed from `Marksman`, which collided with the class of that name — `PT-206`.) | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(note: The passive half of KOTOR's Precise Shot. The damage half is an attack — see ATTACKS-01.)* |
+| › Improved Boresight |  | **Enemy Blaster Bolt Deflection is reduced by 4 against your ranged attacks. Available from level 6.** (note: was **Enemy BBD −4.** Level 6) |
+| ›› Master Boresight |  | **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round. Available from level 12.** (note: was **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round.** Level 12) |
 
 > **⚠ Repriced from five tiers to three at `1 / 6 / 12` — `PT-209`.** **The source ran `PRECISE_SHOT_I–V` at 4 / 8 / 12 / 16 / 20 and `PT-101` cut `Targeting` from eight tiers to three for the same reason.**
 
@@ -137,7 +137,7 @@
 > **This is the one thing that makes a blaster user relevant against a lightsaber** — **and it is the KOTOR moment: watching your bolts come back until they stop coming back.**
 
 **⚠ *First attack each round* is `PT-188`'s pricing.** **Without it the capstone triples on a `Barrage`.**
-| **Mobility** | **Reinstated from cut content.** Restored and verified functional by TSLRCM. | **+10% movement rate.** *Source: TSLRCM changelog. Whether 10% is BioWare's value or the modders' is unstated.* |
+| **Mobility** | (note: Reinstated from cut content. Restored and verified functional by TSLRCM.) | **Through rigorous training, the character moves 10% faster than normal.** (note: was **+10% movement rate.** **) (note: Source: TSLRCM changelog. Whether 10% is BioWare's value or the modders' is unstated.) |
 | **Naturalist** | The study of living things in the field rather than the archive. | +1 Beast Handling, Botany, and Science. |
 | › Improved Naturalist |  | +2 Beast Handling, Botany, and Science. |
 | ›› Master Naturalist |  | +3 Beast Handling, Botany, and Science. |
@@ -156,17 +156,17 @@
 
 | **Spotter** | You make the opening; someone else takes it. | **One ally adjacent to your target counts as flanking with you, regardless of position.** |
 | › Improved Spotter |  | **All allies adjacent to your target.** |
-| ›› Master Spotter |  | **Allies attacking your target at range also count**, within **half one range increment** — 12 m with a pistol, 14 m with a rifle. **⚠ Resolved by `PT-163`; it previously read *"half their weapon's maximum range"* against no range system** |
+| ›› Master Spotter |  | **Allies attacking your target at range also count**, within **half one range increment** — 12 m with a pistol, 14 m with a rifle. (note: Resolved by `PT-163`; it previously read "half their weapon's maximum range" against no range system.) |
 | **Tenacity** | Refusing to stop when the body has run out of reasons to continue. | **+2 to your death threshold.** ⚠ You die at `−(Constitution + 2)` — `PT-559`. |
 | › Improved Tenacity |  | **+4 to your death threshold.** |
-| ›› Master Tenacity |  | **+6 to your death threshold**, and **Constitution damage is halved.** *⚠ Constitution drain shrinks the death threshold directly — this protects the band it widens.* |
-| **Underworld Connections** | You know people. Not how the fringe works — **specific people in it.** | **Black-market vendors will deal with you**, opening restricted goods that are otherwise unpurchasable. **Once per world, you know someone here.** Single tier. *Distinct from Streetwise, which reduces what you pay; this changes what you can buy at all.* |
-| **Weapon Proficiency: Assault Cannons** | **Reinstated from cut content.** Heavy repeating weapons and mounted cannons. | Allows the weapon to be equipped. |
-| › Weapon Focus: Assault Cannons |  | +1 attack. |
-| ›› Weapon Specialization: Assault Cannons |  | +2 damage. |
+| ›› Master Tenacity |  | **+6 to your death threshold**, and **Constitution damage is halved.** *(note: Constitution drain shrinks the death threshold directly — this protects the band it widens.)* |
+| **Underworld Connections** | You know people. Not how the fringe works — **specific people in it.** | **Black-market vendors will deal with you**, opening restricted goods that are otherwise unpurchasable. **Once per world, you know someone here.** (note: Single tier.) *Distinct from Streetwise, which reduces what you pay; this changes what you can buy at all.* |
+| **Weapon Proficiency: Assault Cannons** | **(note: Reinstated from cut content.)** Heavy repeating weapons and mounted cannons. | Allows the weapon to be equipped. |
+| › Weapon Focus: Assault Cannons |  | **Adds a +1 attack bonus with assault cannons.** (note: was +1 attack.) |
+| ›› Weapon Specialization: Assault Cannons |  | **Adds a +2 damage bonus with assault cannons.** (note: was +2 damage.) |
 | **Weapon Proficiency: Melee Weapons** | Vibroblades, vibroswords, quarterstaffs, and Mandalorian melee weapons. | Allows the weapon to be equipped. **Droids cannot take this.** |
 | › Weapon Focus: Melee Weapons |  | +1 attack. **Does not affect lightsabers** — they have their own. |
-| ›› Weapon Specialization: Melee Weapons |  | +2 damage. |
+| ›› Weapon Specialization: Melee Weapons |  | **Adds a +2 damage bonus with melee weapons.** (note: was +2 damage.) |
 
 ---
 
@@ -176,30 +176,30 @@
 |---|---|---|
 | **Blaster Integration** | Special universal ports allow internal placement of most blaster pistol models, tapping the energy pack and emitters as though factory installed. | **Integrates a blaster into the frame as a self-contained weapon system.** **Granted at 1st level to Astromech and Remote droids** — the two chassis with no hands to hold one. |
 | **Droid Interface** | Lets a droid speak with other droids that use no sentient language. | Unlocks droid-to-droid dialogue and machine interrogation. |
-| **Droid Upgrade 1** | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. ⚠ **THE DROID'S OWN CAPACITY TO RECEIVE — `PT-583`. An organic cannot hold it. `Installation` is the MASTER'S counterpart.** | Allows level 1 droid upgrades. Granted at level 1. |
+| **Droid Upgrade 1** | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. (note: The droid's own capacity to receive — `PT-583`. `Installation` is the Master's counterpart.) | Allows level 1 droid upgrades. Granted at level 1. |
 | › Droid Upgrade 2 |  | Allows level 1–2 upgrades. Granted at level 7. |
 | ›› Droid Upgrade 3 |  | Allows level 1–3 upgrades. Granted at level 13. |
-| **Installation 1** | ⚠ **Authored — `PT-583`. Droid Master only, granted by the class.** Skill at fitting hardware into a droid that is not you. | **Allows you to INSTALL level-1 upgrades into any droid you own.** ⚠ Granted at Droid Master 1. |
+| **Installation 1** | **Droid Master only, granted by the class.** (note: Authored — `PT-583`.) Skill at fitting hardware into a droid that is not you. | **Allows you to install level-1 upgrades into any droid you own.** ⚠ Granted at Droid Master 1. |
 | › Installation 2 |  | **Level 1–2.** ⚠ Droid Master 3. |
 | ›› Installation 3 |  | **Level 1–3.** ⚠ Droid Master 7. |
-| **Droid Upgrade 4** | **Authored.** The chassis accepts a fourth hardpoint. | **Allows level 4 droid upgrades.** *Extends the source's three-slot ladder, which stops at level 13 — the only chassis chain that ends before level 20.* |
+| **Droid Upgrade 4** | (note: Authored.) The chassis accepts a fourth hardpoint. | **Allows level 4 droid upgrades.** (note: Extends the source's three-slot ladder, which stops at level 13 — the only chassis chain that ends before level 20.) |
 | **Emergency Reboot** | When the frame takes a killing blow, the core drops to minimum power and waits. | **Once per day, when reduced to 0, go inert instead of being destroyed.** You reactivate after the encounter at **1 vitality** — `PT-629`. *A droid does not die. It stops working.* |
 | › Improved Emergency Reboot |  | **Reactivate at a quarter vitality**, and **within the encounter** if an ally is still standing. |
 | ›› Master Emergency Reboot |  | **Reactivate at half vitality**, and **twice per day.** |
-| **Environmental Sealing** | **Racial. Granted at 1st level to every droid.** A sealed frame does not breathe, and does not care what it is standing in. | **Immune to vacuum, pressure, radiation, atmospheric hazards, and airborne toxins.** *Nothing in the corpus stated this and it is true of all four chassis.* |
-| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *⚠ The droid equivalent of Tenacity — organics cannot take that chain, droids cannot take this one.* |
+| **Environmental Sealing** | **Racial. Granted at 1st level to every droid.** A sealed frame does not breathe, and does not care what it is standing in. | **Immune to vacuum, pressure, radiation, atmospheric hazards, and airborne toxins.** *(note: Nothing in the corpus stated this and it is true of all four chassis.)* |
+| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *(note: The droid equivalent of Tenacity — organics cannot take that chain, droids cannot take this one.)* |
 | › Improved Hardened Chassis |  | **+4 to your death threshold.** |
 | ›› Master Hardened Chassis |  | **+6 to your death threshold**, and **immunity to ion damage's Constitution drain.** |
-| **Integrated Toolkit** | Tools built into the frame rather than carried. | **Computer, security, and repair consumables cost one fewer** — minimum one. *Stacks with the `SKILL-RESOLUTION-01 §5.1` reduction curve.* |
-| **Ion Shielding** | Grounding and surge protection against the weapons built to kill droids. | **Damage reduction 2 against ion weapons.** *Ion blasters, ion rifles, and ion grenades all exist in `baseitems.2da` and specifically target droids.* |
+| **Integrated Toolkit** | Tools built into the frame rather than carried. | **Computer, security, and repair consumables cost one fewer** — minimum one. (note: Stacks with the `SKILL-RESOLUTION-01 §5.1` reduction curve.) |
+| **Ion Shielding** | Grounding and surge protection against the weapons built to kill droids. | **Damage reduction 2 against ion weapons.** (note: Ion blasters, ion rifles, and ion grenades all exist in `baseitems.2da` and specifically target droids.) |
 | › Improved Ion Shielding |  | **DR 5 against ion.** |
 | ›› Master Ion Shielding |  | **DR 10 against ion**, and ion effects cannot disable you. |
 | **Kill Box** | Converging fire on a target that cannot cover both angles. | **Flanking grants +3 instead of +2.** |
-| › Improved Kill Box |  | **+4.** |
-| ›› Master Kill Box |  | **+5.** |
+| › Improved Kill Box |  | **Flanking grants you +4 instead of +2.** (note: was **+4.**) |
+| ›› Master Kill Box |  | **Flanking grants you +5 instead of +2.** (note: was **+5.**) |
 | **Logic Upgrade: Combat** | Having witnessed combat first-hand, the droid self-upgrades its defensive algorithms. | Defence +2, rising +2 every six levels. **+2 at 1, +4 at 5, +6 at 11, +8 at 17.** |
-| › Logic Upgrade: Tactician | Advanced combat processing — the chassis begins reading the fight rather than only surviving it. | **+2 attack against a target an ally or allied droid is also attacking**, and Defence as tier 1. Level 5 |
-| ›› Logic Upgrade: Battle Droid | Full military combat processing. | **+4 attack** under the same condition, and Defence as tier 1. Level 11 |
+| › Logic Upgrade: Tactician | Advanced combat processing — the chassis begins reading the fight rather than only surviving it. | **You gain +2 attack against a target an ally or allied droid is also attacking, with Defence as the first tier. Available from level 5.** (note: was **+2 attack against a target an ally or allied droid is also attacking**, and Defence as tier 1. Level 5) |
+| ›› Logic Upgrade: Battle Droid | Full military combat processing. | **You gain +4 attack against a target an ally or allied droid is also attacking, with Defence as the first tier. Available from level 11.** (note: was **+4 attack** under the same condition, and Defence as tier 1. Level 11) |
 
 > **⚠ Tiers 2 and 3 were empty and we ported the emptiness — `PT-210`.** **`FEATS-LIBRARY-01` recorded it as *"in KOTOR 2 this grants no defence bonus despite its description. A known defect."***
 
@@ -210,14 +210,14 @@
 **⚠ Which is why `Squad Tactics` is NOT shared with droids.** **They have their own, it was already in the corpus, and two of its three tiers were doing nothing.**
 | **Networked** | A live link to any droid within range. | **Share sensor data with one allied droid within 20 metres** — you each use the higher of your two Awareness and Alertness scores. |
 | › Improved Networked |  | **Two allied droids, 40 metres**, and **+1 attack against any target another linked droid is attacking.** |
-| ›› Master Networked |  | **Any number of allied droids on the same field**, and **+2 attack.** *G0-T0's droid army is the precedent.* |
-| **Self-Diagnostic** | Continuous internal fault-checking. | **Repair kits restore +1d4 more vitality** when used on you — `PT-629`. *(Droids have no Medicine; this is the equivalent.)* |
-| › Improved Self-Diagnostic |  | **+1d8.** |
+| ›› Master Networked |  | **Any number of allied droids on the same field**, and **+2 attack.** *(note: G0-T0's droid army is the precedent.)* |
+| **Self-Diagnostic** | Continuous internal fault-checking. | **Repair kits restore +1d4 more vitality** when used on you — `PT-629`. *(note: Droids have no Medicine; this is the equivalent.)* |
+| › Improved Self-Diagnostic |  | **Repair kits restore 1d8 more vitality when used on you.** (note: was **+1d8.**) |
 | ›› Master Self-Diagnostic |  | **Double, and you may repair yourself in combat** without a kit, once per encounter. |
-| **Sensor Package** | Optical, motion, and sonic sensors as standard. | **+2 Awareness and Alertness**, and **a stealth field imposes no penalty on your Awareness.** *The droid answer to `SKILL-RESOLUTION-01 §4` — sensors do not see, so a field that defeats eyes does nothing.* |
+| **Sensor Package** | Optical, motion, and sonic sensors as standard. | **+2 Awareness and Alertness**, and **a stealth field imposes no penalty on your Awareness.** Sensors do not see, so a field that defeats eyes does nothing. (note: The droid answer to `SKILL-RESOLUTION-01 §4`.) |
 | › Improved Sensor Package |  | **+4 Awareness and Alertness.** |
 | ›› Master Sensor Package |  | **+6 Awareness and Alertness**, and **you detect droids and powered devices through walls** within 20 metres. |
-| **Synthesised Voice** | A speech synthesiser, either fitted or learned. **A droid that ships mute is not designed to talk; one that ends up talking has usually been rebuilt for it.** | **Level 1. Astromech and Remote chassis only** — corrected at `PT-1189`, removing Battle. Both Assassin and Battle ship with a vocabulator already and cannot take this; `SPECIES-CHAPTER-v2`'s own primary Battle entry states it speaks both Basic and Binary by default, no feat required.
+| **Synthesised Voice** | A speech synthesiser, either fitted or learned. **A droid that ships mute is not designed to talk; one that ends up talking has usually been rebuilt for it.** | **Level 1. Astromech and Remote chassis only.** Assassin and Battle droids ship with a vocabulator already and cannot take this. (note: corrected at `PT-1189`, removing Battle; `SPECIES-CHAPTER-v2`'s own primary Battle entry states it speaks both Basic and Binary by default, no feat required.)
 
 **Grants the ability to speak aloud** in any language the droid already understands.
 
@@ -248,7 +248,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Force Immunity: Fear** | The Sentinel's mind is closed to terror. | **Immune to fear effects — cannot be `shaken` or `panicked`. `PT-446`.** *Covers `Fear`, `Horror`, `Insanity`, `On-Hit: Fear` items, and **plasma grenades** — anything that applies `shaken`, `panicked` or `cowering`. ⚠ The category does the work; the list is illustration, not definition. `k1_feat.2da` row 98 has an empty `spellid` and names no mechanic, because the engine flags a TYPE.* |
+| **Force Immunity: Fear** | The Sentinel's mind is closed to terror. | **Immune to fear effects — cannot be `shaken` or `panicked`. `PT-446`.** *Covers `Fear`, `Horror`, `Insanity`, `On-Hit: Fear` items, and **plasma grenades** — anything that applies `shaken`, `panicked` or `cowering`. * (note: The category does the work; the list is illustration, not definition. `k1_feat.2da` row 98 has an empty `spellid` and names no mechanic, because the engine flags a TYPE.) |
 | › Force Immunity: Stun |  | **Immune to Force Push, Force Wave, Stun, Critical Strike and Sniper Shot stuns, Concussion Grenades, Flash mines, On-Hit: Stun.** Level 6. |
 | ›› Force Immunity: Paralysis |  | **Immune to Stasis and Stasis Field, CryoBan Grenades, On-Hit: Paralyze.** Level 12. A Sentinel past level 11 can only be debilitated by Force Whirlwind, Wound, Choke, or Kill. |
 
@@ -260,8 +260,8 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Squad Tactics** | Trained to fight as part of a unit rather than as an individual. **Soldiers only.** | **+2 attack** against a target another party member is attacking. |
-| › Improved Squad Tactics |  | **+4 attack.** Level 4. |
-| ›› Master Squad Tactics |  | **+6 attack.** Level 8. |
+| › Improved Squad Tactics |  | **You gain +4 attack against a target another party member is attacking. Available from level 4.** (note: was **+4 attack.** Level 4.) |
+| ›› Master Squad Tactics |  | **You gain +6 attack against a target another party member is attacking. Available from level 8.** (note: was **+6 attack.** Level 8.) |
 
 
 ## Scout
@@ -270,9 +270,9 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Targeting 1** | Effective with any weapon fired rather than swung. **⚠ Universal — granted to the Scout at 1, purchasable by anyone. `PT-208`.** | **+1 attack with any ranged weapon — wield classes 4, 5 and 6. `PT-209`.** *Previously read "with blasters", which excluded the bowcaster.* Granted at level 1. |
-| › **Targeting 2** |  | **+2 attack**, granted at level 6. **⚠ Repriced — `PT-101`** |
-| ›› **Targeting 3** |  | **+3 attack**, granted at level 12. **⚠ The ladder ends here.** The source ran to eight |
+| **Targeting 1** | Effective with any weapon fired rather than swung. **⚠ The Scout starts with it; anyone may learn it. `PT-208`.** | **+1 attack with any ranged weapon — wield classes 4, 5 and 6. `PT-209`.** *(note: Previously read "with blasters", which excluded the bowcaster.)* Granted at level 1. |
+| › **Targeting 2** |  | **+2 attack**, granted at level 6. (note: Repriced — `PT-101`) |
+| ›› **Targeting 3** |  | **+3 attack**, granted at level 12. (note: The ladder ends here. The source ran to eight.) |
 | **Uncanny Dodge 1** | The character keeps their footing even when taken by surprise. **⚠ Scout only — `PT-208`. Granted at 4.** | **Retains Dexterity bonus to defence when surprised.** Grenade DC −2. Level 4 Scout. |
 | › Uncanny Dodge 2 |  | **Grenade DC −4.** **Granted at 7.** |
 
@@ -283,12 +283,12 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** *⚠ Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.* | **+1d6 damage on any attack against a target unaware of you.** *Unaware is defined in `ACTION-ECONOMY-01 §19.5` — you are Hidden from them, they are Stunned, or they cannot see.* **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
+| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** (note: Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.) | **+1d6 damage on any attack against a target unaware of you.** A target is unaware of you when you are Hidden from them, they are Stunned, or they cannot see. (note: Unaware is defined in `ACTION-ECONOMY-01 §19.5`.) **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct |  | **+2d6 against an unaware target.** |
-| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** *⚠ The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. The one pool `PT-559` ruled means this rider can carry a target well past 0 in one blow against most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.* |
-| **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st — `scd_granted`.** | **Defence +2 + (2 × [(level+1)/6])** in combat |
-| › **Improved Smuggler's Luck** | **⚠ Tier restored.** `IMPROVED_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** — the source row exists and its string is not in holdings |
-| ›› **Master Smuggler's Luck** | **⚠ Tier restored.** `MASTER_SCOUNDRELS_LUCK`, prereq 104 | **Authored effect pending** |
+| ›› Master Killer's Instinct |  | **+3d6 against an unaware target.** (note: The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. The one pool `PT-559` ruled means this rider can carry a target well past 0 in one blow against most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.) |
+| **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st.** (note: `scd_granted`.) | **This feat is always active and grants a Defence bonus in combat: +2 at level 1, rising by +2 at levels 5, 11 and 17.** (note: was **Defence +2 + [2 × [[level+1]/6]]** in combat) |
+| › **Improved Smuggler's Luck** | (note: Tier restored. `IMPROVED_SCOUNDRELS_LUCK`, prereq 104.) | **Smugglers learn to make the most of their infamous luck, turning the whims of chance into a certain +4 to Defence. Always active; replaces Smuggler's Luck.** (note: Authored effect pending — the source row exists and its string is not in holdings.) |
+| ›› **Master Smuggler's Luck** | (note: Tier restored. `MASTER_SCOUNDRELS_LUCK`, prereq 104.) | **Their skills and luck combine to grant a remarkable +6 to Defence. Always active; replaces Improved Smuggler's Luck.** (note: Authored effect pending.) |
 
 > **⚠ The source has three tiers and this document carried one.** **Same family as the Consular's chain: the ladder exists in `feat.2da` and only its first rung was catalogued.**
 
@@ -318,8 +318,8 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Weapon Proficiency: Wrist-Mounted** | **Bounty Hunter only.** Wrist launchers and integrated arm weapons — the Mandalorian hunter's signature. | Allows the weapon to be equipped. |
-| › Weapon Focus: Wrist-Mounted | **Authored — the source has no Focus tier for this family.** | +1 attack. |
-| ›› Weapon Specialization: Wrist-Mounted | **Authored.** | +2 damage. |
+| › Weapon Focus: Wrist-Mounted | (note: Authored — the source has no Focus tier for this family.) | **Adds a +1 attack bonus with wrist-mounted weapons.** (note: was +1 attack.) |
+| ›› Weapon Specialization: Wrist-Mounted | (note: Authored.) | **Adds a +2 damage bonus with wrist-mounted weapons.** (note: was +2 damage.) |
 
 
 ## Astromech droid
@@ -342,7 +342,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Assassin Protocols** | **Learnable, not HK-47's alone.** Targeting routines written to kill organics efficiently. | ⚠ **On a critical hit, roll again: on `17+` you deal `4d6` unstoppable damage** — `PT-630`. **Fortitude at `DC 10 + your level` negates.** *(source: 20% chance, ¼ of the target's remaining life)* |
+| **Assassin Protocols** | **(note: Learnable, not HK-47's alone.)** Targeting routines written to kill organics efficiently. | ⚠ **On a critical hit, roll again: on `17+` you deal `4d6` unstoppable damage** — `PT-630`. **Fortitude at `DC 10 + your level` negates.** *(note: source: 20% chance, ¼ of the target's remaining life)* |
 | › Advanced Assassin Protocols |  | **1/3 of remaining life.** |
 | ›› Master Assassin Protocols |  | **1/2 of remaining life.** |
 | **Target Analysis** | Study a subject, then act on what the study returns. | **Spend one round observing a target. Gain +2 attack and damage against that individual** for the rest of the encounter. |
@@ -370,7 +370,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Personal Cloaking Shield** | **G0-T0's, made learnable.** A cloaking field built into the frame. | **Use Stealth without a stealth field generator.** *Remote droids are the one chassis the source permits Stealth to.* |
+| **Personal Cloaking Shield** | **(note: G0-T0's, made learnable.)** A cloaking field built into the frame. | **Use Stealth without a stealth field generator.** (note: Remote droids are the one chassis the source permits Stealth to.) |
 | › Improved Personal Cloaking Shield |  | **+4 Stealth**, and the field **holds through one attack** before dropping. |
 | ›› Master Personal Cloaking Shield |  | **+8 Stealth**, and **you may cloak one adjacent ally** while the field is up. |
 | **Repulsor Agility** | No legs, no wheels, no ground contact. | **Ignore difficult terrain**, and **cross gaps up to 4 metres** without a check. |
@@ -384,13 +384,13 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **−2 main / −2 off.** |
-| › Advanced Superior Two-Weapon Fighting |  | **0 main / −2 off.** |
+| **Superior Two-Weapon Fighting** | Dual-wielding beyond ordinary training. | **This feat reduces the penalties for fighting with two weapons to −2 in each hand.** (note: was **−2 main / −2 off.**) |
+| › Advanced Superior Two-Weapon Fighting |  | **This feat further reduces the penalties for fighting with two weapons, to none in the main hand and −2 in the off hand.** (note: was **0 main / −2 off.**) |
 | ›› Master Superior Two-Weapon Fighting |  | **0 main / −1 off.** With a balanced off-hand weapon: **+2 main / −1 off.** |
-| **Superior Two-Weapon Fighting** | **⚠ Holders: `Jedi Weaponmaster`, `Sith Marauder`, `Gunslinger` — `PT-183`.** A penalty reduction, not an attack bonus — `PT-158` | **Reduces the two-weapon penalty further, to zero at the top.** ⚠ Three classes now reach zero, so `ACTION-ECONOMY-01 §7.2`'s *never zero* needs its exception clause |
-| **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. **⚠ Opened from lightsaber-only by `PT-150`.** | **+1 attack**, above the Specialization tier |
-| › Advanced Superior Weapon Focus |  | **+2 attack** |
-| ›› Master Superior Weapon Focus |  | **+3 attack** |
+| **Superior Two-Weapon Fighting** | (note: Holders: `Jedi Weaponmaster`, `Sith Marauder`, `Gunslinger` — `PT-183`. A penalty reduction, not an attack bonus — `PT-158`.) | **Reduces the two-weapon penalty further, to zero at the top.** (note: Three classes now reach zero, so `ACTION-ECONOMY-01 §7.2`'s never zero needs its exception clause.) |
+| **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. (note: Opened from lightsaber-only by `PT-150`.) | **Adds a +1 attack bonus with the chosen weapon family, above Weapon Specialization.** (note: was **+1 attack**, above the Specialization tier) |
+| › Advanced Superior Weapon Focus |  | **Adds a +2 attack bonus with the chosen weapon family.** (note: was **+2 attack**) |
+| ›› Master Superior Weapon Focus |  | **Adds a +3 attack bonus with the chosen weapon family.** (note: was **+3 attack**) |
 
 > **⚠ The superior tier existed for one of six weapon families, and it was the Jedi weapon.** **A prestige Jedi could reach `+3` beyond Specialization; a prestige Soldier could reach it with nothing.**
 
@@ -407,11 +407,11 @@
 |---|---|---|
 | **Deflect** | A Weaponmaster with a lightsaber has incredible skill deflecting blaster bolts. | **Blaster Bolt Deflection +[(class level + 1) / 2].** +1 at level 1 rising to +18 at 35. Main-hand lightsaber only. |
 | **Increase Melee Damage** | Weaponmasters focus their strength to deliver powerful strikes. | **+2 damage** unarmed, melee, or lightsaber. Critical hits multiply it. |
-| › Advanced Increase Melee Damage |  | **+4 damage.** Level 8. |
-| ›› Master Increase Melee Damage |  | **+6 damage.** Level 15. |
-| **Inner Strength** | Weaponmasters use the light side to shield themselves from pain. | ⚠ **`DR 1` against every source — `PT-629`.** *(source: −5% damage taken)* |
-| › Advanced Inner Strength |  | ⚠ **`DR 2`.** Level 7. *(source: −10%)* |
-| ›› Master Inner Strength |  | ⚠ **`DR 3`.** Level 11. *(source: −15%)* |
+| › Advanced Increase Melee Damage |  | **From level 8, you do an additional 4 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+4 damage.** Level 8.) |
+| ›› Master Increase Melee Damage |  | **From level 15, you do an additional 6 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+6 damage.** Level 15.) |
+| **Inner Strength** | Weaponmasters use the light side to shield themselves from pain. | ⚠ **`DR 1` against every source — `PT-629`.** *(note: source: −5% damage taken)* |
+| › Advanced Inner Strength |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7. **) (note: source: −10%) |
+| ›› Master Inner Strength |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11. **) (note: source: −15%) |
 
 
 ## Sith Marauder
@@ -421,11 +421,11 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Ignore Pain** | Prolonged channelling of dark side energy has accustomed the Marauder to pain. | ⚠ **`DR 1` against every source — `PT-629`.** Applied after Damage Immunity and Shields, before Toughness. |
-| › Advanced Ignore Pain |  | ⚠ **`DR 2`.** Level 7. *(source: −10%)* |
-| ›› Master Ignore Pain |  | ⚠ **`DR 3`.** Level 11. *(source: −15%)* |
+| › Advanced Ignore Pain |  | **From level 7, you reduce any damage you suffer by 2.** (note: was ⚠ **`DR 2`.** Level 7. **) (note: source: −10%) |
+| ›› Master Ignore Pain |  | **From level 11, you reduce any damage you suffer by 3.** (note: was ⚠ **`DR 3`.** Level 11. **) (note: source: −15%) |
 | **Increase Combat Damage** | Sith Marauders call upon hatred and strength to deliver powerful blows. | **+2 damage** on unarmed, melee, or ranged. Critical hits multiply it. |
-| › Advanced Increase Combat Damage |  | **+4 damage.** Level 8. |
-| ›› Master Increase Combat Damage |  | **+6 damage.** Level 15. |
+| › Advanced Increase Combat Damage |  | **From level 8, you do an additional 4 points of damage with any successful unarmed, melee or ranged attack.** (note: was **+4 damage.** Level 8.) |
+| ›› Master Increase Combat Damage |  | **From level 15, you do an additional 6 points of damage with any successful unarmed, melee or ranged attack.** (note: was **+6 damage.** Level 15.) |
 
 
 ## Jedi Master
@@ -460,14 +460,14 @@
 
 ## Restricted — owner unassigned
 
-**13 chains.**
+**14 chains.**
 
 | Feat | Description | Effects |
 |---|---|---|
 | **Empathy** | An instinct for reaching people, and for keeping them alive. | +1 Persuade and Medicine. |
 | › Improved Empathy |  | +2 Persuade and Medicine. |
 | ›› Master Empathy |  | +3 Persuade and Medicine. |
-| **Finesse: Lightsabers** | As above, for lightsabers specifically. | Use Dexterity or Strength for lightsaber attack rolls. **Redundant if Finesse: Melee Weapons is held.** |
+| **Finesse: Lightsabers** | Grace and speed in place of raw power, with a lightsaber. | Use Dexterity or Strength for lightsaber attack rolls. **Redundant if Finesse: Melee Weapons is held.** |
 | **Finesse: Melee Weapons** | Grace and speed in place of raw power. | Use Dexterity **or** Strength for melee attack rolls, whichever is higher. Affects melee weapons and lightsabers. Does not affect unarmed. |
 > **⚠ Force Channel (Alter) and Force Channel (Control) are RETIRED. `PT-103`.**
 
@@ -479,22 +479,31 @@
 
 | **Force Rapport** | The pool runs deeper than the training accounts for. **Some Force users simply hold more.** | **Requires `Force-Sensitive`.** **+1 Force point per character level.** |
 | › Knight Force Rapport |  | **Level 8.** **+2 Force points per character level**, replacing the tier below. |
-| ›› Master Force Rapport |  | **Level 14.** **+3 Force points per character level**, and **your working maximum degrades at half the normal rate** — `FORCE-POOL-01-v3 §4.2`. |
-| **Force Sensitive** | A heightened connection to the Force, previously unseen in a newly trained Jedi. | NONE — `FORCE-POOL-01-v3 §2` explicitly does not adopt K2's flat `+40`, KOTOR-scale against this pool's RCR-scale costs. **The gate for `Force Rapport` is the whole grant.** |
-| **Guard Stance** | **Reinstated from cut content. ⚠ AUTHORED at `PT-620`.** A defensive posture traded against offence. | **−2 attack, +2 Defence, +2 on all saving throws.** ⚠ **A STANCE: it lasts until you ATTACK or MOVE more than half your speed.** ⚠ *The only accounts report a bonus to attributes or saving throws. `hybrid_authored`. |
+| ›› Master Force Rapport |  | **Level 14.** **+3 Force points per character level**, and **your working maximum degrades at half the normal rate**. (note: `FORCE-POOL-01-v3 §4.2`.) |
+| **Force Sensitive** | A heightened connection to the Force, previously unseen in a newly trained Jedi. | **Opens the way to Force powers and the Force classes.** (note: was NONE — `FORCE-POOL-01-v3 §2` explicitly does not adopt K2's flat `+40`, KOTOR-scale against this pool's RCR-scale costs. **The gate for `Force Rapport` is the whole grant.**) |
+| **Guard Stance** | (note: Reinstated from cut content. AUTHORED at `PT-620`.) A defensive posture traded against offence. | **−2 attack, +2 Defence, +2 on all saving throws.** **A stance: it lasts until you attack or move more than half your speed.** (note: The only accounts report a bonus to attributes or saving throws. `hybrid_authored`.) |
 | › Advanced Guard Stance |  | **−2 attack, +4 Defence, +4 on saves.** Level 4. |
-| ›› Master Guard Stance |  | **−2 attack, +6 Defence, +6 on saves.** ⚠ **And you may move your FULL SPEED without ending it.** Level 8. |
-| **Jedi Defense** | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **Opposed roll against incoming blaster attacks.** Beat the attack and the bolt is deflected; beat it by 6 or more and the bolt returns to the attacker. `PT-2` struck the 180° front-arc limit: this corpus does not model facing. |
+| ›› Master Guard Stance |  | **−2 attack, +6 Defence, +6 on saves.** ⚠ **And you may move your full speed without ending it.** Level 8. |
+| **Jedi Defense** | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **Opposed roll against incoming blaster attacks.** Beat the attack and the bolt is deflected; beat it by 6 or more and the bolt returns to the attacker. (note: `PT-2` struck the 180° front-arc limit: this corpus does not model facing.) |
 | › Advanced Jedi Defense |  | **+3 Blaster Bolt Deflection.** Level 4. |
 | ›› Master Jedi Defense |  | **+6 Blaster Bolt Deflection.** Level 8. |
 | **Jedi Sense** | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/6]).** Always active. |
 | › Knight Sense |  | **Defence +2 + (2 × [level/8])** for Jedi Master and Sith Lord. |
 | ›› Master Sense |  | **Defence +2 + (2 × [level/5])** for other prestige classes — the fastest progression of the three. |
+| **Precognition** | Precognition warns the Jedi whenever they are about to enter extreme danger. These warnings are quite rare. (note: K2's own text, `spells.2da` row 178 `FORCE_POWER_PRECOGNITION`, StrRefs 48522/48523: no cost, passive (`forcepassive` 3); in the shipped game only a developer test conversation grants it. Moved from FORCE-POWERS-01 by `PARTITION-01 §6.1` (D-AK). Mechanic ruled by the owner after TEST 170.) | **Never surprised.** You cannot be caught unaware: an ambush or a hidden creature's first attack gets no surprise against you, and you are never unaware for Killer's Instinct or anything else that asks. Always on. |
+| › Battle Precognition | This power allows the Jedi to sense the flows of the Force and increases the Jedi's reaction time in combat. The Jedi adds their Wisdom modifier to their Defense. Restricted by armour. (note: K2's own text, `spells.2da` row 179 `FORCE_POWER_BATTLE_PRECOGNITION`, StrRefs 48524/48525: Light Side, no cost, passive (`forcepassive` 4), forbidden with body armour (`forbiditemmask` 0x003f, not decoded: our rule decides); K2 grants it during the duel with the Handmaiden (`a_addcombatpre`). Ruled by the owner after TEST 170: K2 exactly.) | **Add your Wisdom modifier to Defence while you wear no body armour.** Body armour is a body item of armour type leather or armor; robes and clothing are not. Always on. |
 | **Regenerate Force Points** | The body renews its connection to the Force faster than training alone allows. | Force regeneration **+25% out of combat, +250% in combat.** Stacks additively with the Consular's Force Channel chain. |
 | **Stealth Run** | Training in stealth so extensive that speed no longer costs concealment. | **Run instead of walk while in Stealth mode.** Requires level 4. |
 | **Weapon Proficiency: Lightsaber** | **Force classes only.** Droids can never take it. | Allows lightsabers to be equipped. |
-| › Weapon Focus: Lightsaber |  | +1 attack. |
-| ›› Weapon Specialization: Lightsaber |  | +2 damage. |
+| › Weapon Focus: Lightsaber |  | **Adds a +1 attack bonus with lightsabers.** (note: was +1 attack.) |
+| ›› Weapon Specialization: Lightsaber |  | **Adds a +2 damage bonus with lightsabers.** (note: was +2 damage.) |
+
+### Precognition — story or GM only (owner rulings after TEST 170)
+
+**Neither feat is offered at level-up or in character creation.** They come as they do in K2: from the story. A package grants one through an event (a conversation node's `character.feat-taken`, as K2's Handmaiden duel grants Battle Precognition), and **a GM may grant either** to a Force-sensitive character when the story earns it. **Battle Precognition requires Precognition.**
+
+- **Precognition — never surprised.** An ambush or a hidden creature's first attack gets no surprise against the holder, and the holder is never unaware for Killer's Instinct or anything else that reads it. Always on.
+- **Battle Precognition — K2 exactly.** Add your Wisdom modifier to Defence while wearing no body armour (armour type leather or armor; a robe or clothing does not count). Always on.
 
 ### ⚠ Force Channel — the live chain, and it was never catalogued
 
@@ -531,9 +540,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Quarry** | **1** | **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying |
-| › **Run to Ground** | **4** | As above, and **+2 attack against your quarry**, which gains no benefit from cover against you |
-| ›› **No Escape** | **8** | As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you |
+| **Quarry** | **1** | **Name one target you can see, as a free action once per encounter. You know its exact current wounds and vitality, and your attacks against it may be declared non-lethal at no penalty: a quarry reduced to 0 is Disabled and stable rather than dying.** (note: was **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying) |
+| › **Run to Ground** | **4** | **As Quarry, and you gain +2 attack against your quarry, which gains no benefit from cover against you.** (note: was As above, and **+2 attack against your quarry**, which gains no benefit from cover against you) |
+| ›› **No Escape** | **8** | **As Quarry, at +4 attack, and once per encounter you may spend a reaction to move your full speed toward your quarry when it moves away from you.** (note: was As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you) |
 
 **⚠ Priced against `Squad Tactics`, the only comparand in the corpus.** **`Squad Tactics` is Soldier-only and reaches `+6` against any target an ally is also attacking.** **Quarry reaches `+4` against one named target and costs a naming action.**
 
@@ -576,9 +585,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Terrain Sense** | **1** | **On entering an area, name one feature of it before anyone acts** — a cover position, a chokepoint, a hazard, a second exit. **The GM answers truthfully.** Once per encounter |
-| › **Ground Read** | **4** | **Two features**, and one ally who acts before you may use one of them — moving to a cover square you named as part of their own move |
-| ›› **Forewarned** | **8** | **Two features**, and **the party is never surprised in an area you entered first** |
+| **Terrain Sense** | **1** | **On entering an area, name one feature of it before anyone acts — a cover position, a chokepoint, a hazard or a second exit — and learn the truth of it. Once per encounter.** (note: was **On entering an area, name one feature of it before anyone acts** — a cover position, a chokepoint, a hazard, a second exit. **The GM answers truthfully.** Once per encounter) |
+| › **Ground Read** | **4** | **You may name two features, and one ally who acts before you may use one of them, moving to a cover square you named as part of their own move.** (note: was **Two features**, and one ally who acts before you may use one of them — moving to a cover square you named as part of their own move) |
+| ›› **Forewarned** | **8** | **You may name two features, and the party is never surprised in an area you entered first.** (note: was **Two features**, and **the party is never surprised in an area you entered first**) |
 
 **⚠ It does not touch initiative.** **`PT-96` closed that deliberately — *"a flat initiative bonus is a different feat and every class wants it."*** **This changes what the party *knows*, not the order they act in.**
 
@@ -609,9 +618,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Field Override** | **1** | **Declare in place of an attack.** Opposed `Slicing` against an enemy droid's **Will save**, within 20 m and in line of sight. **On a success it loses its next turn.** You make no attack this round |
-| › **Subverted** | **4** | On a success it instead **takes one action of your choosing on your initiative**, that turn only |
-| ›› **Turned** | **8** | As above, and it **remains under your control** until it takes damage from your party, you use the chain again, or the encounter ends. **⚠ One droid at a time** |
+| **Field Override** | **1** | **In place of an attack, make an opposed Slicing check against an enemy droid's Will save, within 20 m and in line of sight. On a success it loses its next turn.** (note: was **Declare in place of an attack.** Opposed `Slicing` against an enemy droid's **Will save**, within 20 m and in line of sight. **On a success it loses its next turn.** You make no attack this round) |
+| › **Subverted** | **4** | **On a successful Field Override, the droid instead takes one action of your choosing on your initiative, that turn only.** (note: was On a success it instead **takes one action of your choosing on your initiative**, that turn only) |
+| ›› **Turned** | **8** | **On a successful Field Override, the droid stays under your control until your party damages it, you use the chain again, or the encounter ends. One droid at a time.** (note: was As above, and it **remains under your control** until it takes damage from your party, you use the chain again, or the encounter ends. **⚠ One droid at a time**) |
 
 **Uses only machinery that exists.** **The declaration economy — `ATTACKS-01 §2`. Opposed rolls against a save — `SKILL-RESOLUTION-01 §6`, which already pairs `Intimidate` with Will. Player protection — the same section.**
 
@@ -637,9 +646,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Jury Rig** | **1** | **Spend one repair part to restore `2d8 + half your Repair total` vitality to an adjacent droid.** Any droid, not only yourself |
-| › **Percussive Maintenance** | **4** | As above, **or instead clear one ion effect, stun, or disabled state** on an adjacent droid |
-| ›› **Back in the Fight** | **8** | As above, and **once per encounter restore a droid at 0 to a quarter of its vitality.** It acts on your initiative that round |
+| **Jury Rig** | **1** | **Spend one repair part to restore 2d8 plus half your Repair total in vitality to an adjacent droid, including yourself.** (note: was **Spend one repair part to restore `2d8 + half your Repair total` vitality to an adjacent droid.** Any droid, not only yourself) |
+| › **Percussive Maintenance** | **4** | **As Jury Rig, or instead clear one ion effect, stun or disabled state from an adjacent droid.** (note: was As above, **or instead clear one ion effect, stun, or disabled state** on an adjacent droid) |
+| ›› **Back in the Fight** | **8** | **As Jury Rig, and once per encounter you may restore a droid at 0 to a quarter of its vitality. It acts on your initiative that round.** (note: was As above, and **once per encounter restore a droid at 0 to a quarter of its vitality.** It acts on your initiative that round) |
 
 **⚠ Parity, derived.** **`Medicine` on a medpac is `2d8 + Medicine ÷ 2`.** **This is the same expression on the same action for the other half of the party.**
 
@@ -661,9 +670,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Still Standing** | **1** | **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you |
-| › **Not Finished** | **4** | **Two turns**, taken on your own initiative |
-| ›› **Last Word** | **8** | Two turns, and **during them damage cannot take you below −(Constitution − 1)**, the real dying floor `ATTACKS-01 §12.4` states, not the old flat −9. You cannot die until they are spent |
+| **Still Standing** | **1** | **The first time each encounter you are reduced to 0 or below, you take one more full turn before you become Disabled or begin dying.** (note: was **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you) |
+| › **Not Finished** | **4** | **You take two more turns instead of one, on your own initiative.** (note: was **Two turns**, taken on your own initiative) |
+| ›› **Last Word** | **8** | **You take two more turns, and during them damage cannot take you below the dying floor. You cannot die until they are spent.** (note: was Two turns, and **during them damage cannot take you below −[Constitution − 1]**, the dying floor . You cannot die until they are spent) (note: `ATTACKS-01 §12.4` states it, not the old flat −9.) |
 
 **⚠ Priced.** **One extra turn for a Combat-rate character is one extra declaration — about 27 damage at level 8.** **Once per encounter, across a three-feat investment, on the Combat class with the fewest feats at 18.**
 
@@ -828,9 +837,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Cover Identity** | **1** | **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round |
-| › **Deep Cover** | **4** | On a success it **leaves the encounter** if already below half vitality |
-| ›› **Handler** | **8** | On a success it **acts on your initiative under your control for one round.** One NPC at a time |
+| **Cover Identity** | **1** | **In place of an attack, make an opposed Persuade or Intimidate check against one enemy's Alertness or Will save. On a success it takes no hostile action against your party until the end of its next turn.** (note: was **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round) |
+| › **Deep Cover** | **4** | **On a successful Cover Identity, an enemy already below half vitality leaves the encounter.** (note: was On a success it **leaves the encounter** if already below half vitality) |
+| ›› **Handler** | **8** | **On a successful Cover Identity, the enemy acts on your initiative under your control for one round. One at a time.** (note: was On a success it **acts on your initiative under your control for one round.** One NPC at a time) |
 
 **⚠ The capstone mirrors Field Override's deliberately.** **The Engineer turns machines with `Slicing`; the Agent turns people with `Persuade`.** **Neither works on the other's target and both cost a declaration.**
 
@@ -866,9 +875,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence** |
-| › **Through The Plate** | **4** | **4 points** |
-| ›› **Unburdened** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely** |
+| **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence.** (note: was **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence**) |
+| › **Through The Plate** | **4** | **Your unarmed attacks ignore 4 points of the target's armour bonus to Defence.** (note: was **4 points**) |
+| ›› **Unburdened** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely.** (note: was **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely**) |
 
 > **⚠ *The first each round* — `PT-188`.** **Without it the capstone triples the moment an unarmed Velocity chain exists.**
 
@@ -960,9 +969,9 @@
 
 | Tier | ⚠ Granted at | Effect |
 |---|---|---|
-| **Command Protocol** | ⚠ **Droid Master 1** | ⚠ **You CONTROL two droids** — at character level 7, the earliest entry. **Each acts on ITS OWN INITIATIVE from a menu of three — `PT-566`, `PT-573`.** |
-| › **Squad Protocol** | ⚠ **Droid Master 4** | ⚠ **THREE droids** — at character level 15 or higher. ⚠ **THIS IS THE CAP.** |
-| ›› **Master Protocol** | ⚠ **Droid Master 8** | ⚠ **Still three.** **Once per encounter, as a BONUS action, every controlled droid takes its turn IMMEDIATELY AFTER YOURS instead of on its own initiative.** |
+| **Command Protocol** | ⚠ **Droid Master 1** | **You control two droids** — at character level 7, the earliest entry. **Each acts on its own initiative from a menu of three — `PT-566`, `PT-573`.** |
+| › **Squad Protocol** | ⚠ **Droid Master 4** | **Three droids** — at character level 15 or higher. **This is the cap.** |
+| ›› **Master Protocol** | ⚠ **Droid Master 8** | **Still three.** **Once per encounter, as a bonus action, every controlled droid takes its turn immediately after yours instead of on its own initiative.** |
 
 > **⚠ THREE IS THE CAP — `PT-582`. It was four.** **THE THIRD TIER IS NOT MORE DROIDS. IT IS BETTER CONTROL.**
 
@@ -1017,9 +1026,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| ⚠⚠ **Hold the Deck** | **1** | ⚠ **WHILE YOU ARE ABOARD A SHIP YOU HAVE BOARDED OR SEIZED, ⚠⚠ ALLIES WITHIN 10 SQUARES TAKE `+1` ON ATTACK ROLLS AND SAVES AGAINST FEAR** |
-| ⚠ **Take the Bridge** | **4** | ⚠⚠ THE BONUS RISES TO `+2`, ⚠ AND YOU MAY **REROLL ONE FAILED `Persuade` OR `Intimidate` CHECK PER BOARDING** |
-| ⚠⚠ **Nothing Is Nailed Down** | **8** | ⚠ ONCE PER BOARDING, ⚠⚠ **NAME ONE ITEM ABOARD** — ⚠ IT IS IN THE HAUL IF THE SHIP IS TAKEN |
+| ⚠⚠ **Hold the Deck** | **1** | **While you are aboard a ship you have boarded or seized, allies within 10 squares gain +1 on attack rolls and on saves against fear.** (note: was **While you are aboard a ship you have boarded or seized, allies within 10 squares take `+1` on attack rolls and saves against fear**) |
+| ⚠ **Take the Bridge** | **4** | **The bonus rises to +2, and you may reroll one failed Persuade or Intimidate check per boarding.** (note: was The bonus rises to `+2`, and you may **reroll one failed `Persuade` or `Intimidate` check per boarding**) |
+| ⚠⚠ **Nothing Is Nailed Down** | **8** | **Once per boarding, name one item aboard. It is in the haul if the ship is taken.** (note: was Once per boarding, **name one item aboard** — it is in the haul if the ship is taken) |
 
 > **⚠ IT KEYS ON ⚠⚠ **BOARDING**, WHICH `SPACE-COMBAT-01` ALREADY HAS AS A MECHANIC — ⚠ AND `PT-828` GAVE THE `Pirate` A **DOCTRINE** IN `SPACE-AI-01 §7`. ⚠⚠ THE CLASS HAD A DOCTRINE AND A SHIP AND **NOTHING TO DO ONCE IT ARRIVED**.**
 
@@ -1033,9 +1042,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| ⚠⚠ **Triage** | **1** | ⚠ **WHEN YOU STABILISE A DYING ALLY, THEY RETURN AT `1` VITALITY INSTEAD OF `0`, ⚠⚠ AND MAY ACT ON THEIR NEXT TURN** |
-| ⚠ **Field Surgery** | **4** | ⚠⚠ ONCE PER ENCOUNTER, ⚠ A `Treat Injury` CHECK **RESTORES VITALITY EQUAL TO YOUR CLASS LEVEL** |
-| ⚠⚠ **No One Left** | **8** | ⚠ YOU MAY STABILISE ⚠⚠ **AT RANGE**, 6 SQUARES, ⚠ WITHOUT TOUCHING THE PATIENT |
+| ⚠⚠ **Triage** | **1** | **When you stabilise a dying ally, they return at 1 vitality instead of 0 and may act on their next turn.** (note: was **When you stabilise a dying ally, they return at `1` vitality instead of `0`, and may act on their next turn**) |
+| ⚠ **Field Surgery** | **4** | **Once per encounter, a Medicine check restores vitality equal to your class level.** (note: was Once per encounter, a `Treat Injury` check **restores vitality equal to your class level**) |
+| ⚠⚠ **No One Left** | **8** | **You may stabilise an ally up to 6 squares away, without touching them.** (note: was You may stabilise **at range**, 6 squares, without touching the patient) |
 
 > **⚠ IT KEYS ON ⚠⚠ `DEATH-AND-DIFFICULTY-01`'s **THREE MODES**, ⚠ WHICH IS WHY TIER 1 IS WRITTEN AS *"stabilise"* RATHER THAN *"heal"*: ⚠⚠ ON `Easy` NOBODY DIES AND THE TIER **STILL DOES SOMETHING** — ⚠ IT GETS A DOWNED ALLY **BACK ON HIS FEET A TURN EARLIER**.**
 
@@ -1055,9 +1064,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why* it failed** |
-| › **Second Look** | **4** | It also tells you **what would succeed** — a tool, a skill, or a piece of knowledge you lack |
-| ›› **Nothing Is Sealed** | **8** | It tells you **whether anything would**, so the party knows to stop trying |
+| **Read the Ruin** | **1** | **When you fail a knowledge, Security or Awareness check to understand, open or navigate something, you learn why it failed.** (note: was **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why* it failed**) |
+| › **Second Look** | **4** | **A failed check also tells you what would succeed — a tool, a skill or a piece of knowledge you lack.** (note: was It also tells you **what would succeed** — a tool, a skill, or a piece of knowledge you lack) |
+| ›› **Nothing Is Sealed** | **8** | **A failed check also tells you whether anything would succeed, so the party knows when to stop trying.** (note: was It tells you **whether anything would**, so the party knows to stop trying) |
 
 > **⚠ Tiers restored — `PT-240`.** **`PT-233` cut the old tiers 2 and 3 and left both of their ideas inside tier 1.**
 
@@ -1085,9 +1094,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Single Combat** | **1** | **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else** |
-| › **Measured** | **4** | **+2 / +2**, and **−1 against everyone else** |
-| ›› **Nothing Else Matters** | **8** | **+3 / +3**, and **−2 against everyone else** |
+| **Single Combat** | **1** | **Name one enemy as a free action. You gain +1 attack and +1 Defence against it, and −1 Defence against everyone else.** (note: was **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else**) |
+| › **Measured** | **4** | **Against your named enemy you gain +2 attack and +2 Defence, and −1 Defence against everyone else.** (note: was **+2 / +2**, and **−1 against everyone else**) |
+| ›› **Nothing Else Matters** | **8** | **Against your named enemy you gain +3 attack and +3 Defence, and −2 Defence against everyone else.** (note: was **+3 / +3**, and **−2 against everyone else**) |
 
 > **⚠ It gets sharply better against exactly one enemy and no better at all in a crowd.**
 
@@ -1105,9 +1114,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Field Position** | **1** | **While you are in cover, your attacks gain `+2`** — the same bonus the cover gives your Defence |
-| › **Shift** | **4** | **Once per round, move from one cover square to another within your speed as a free action.** Provokes nothing |
-| ›› **Never In The Open** | **8** | **Once per encounter, when targeted by an attack you can see, move to any cover square within your speed before it resolves** |
+| **Field Position** | **1** | **While you are in cover, your attacks gain +2, the same bonus the cover gives your Defence.** (note: was **While you are in cover, your attacks gain `+2`** — the same bonus the cover gives your Defence) |
+| › **Shift** | **4** | **Once per round, you may move from one cover square to another within your speed as a free action. It provokes nothing.** (note: was **Once per round, move from one cover square to another within your speed as a free action.** Provokes nothing) |
+| ›› **Never In The Open** | **8** | **Once per encounter, when targeted by an attack you can see, you may move to any cover square within your speed before it resolves.** (note: was **Once per encounter, when targeted by an attack you can see, move to any cover square within your speed before it resolves**) |
 
 **Cover as offence, then mobility, then escape. All three read `PT-3`'s existing rule and add no geometry.**
 
@@ -1129,9 +1138,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Combination** | **1** | **Strike twice unarmed.** The second gains `+2` if the first hit. **Attack −3, Defence −2** |
-| › **Chain Punch** | **4** | **Three strikes**, each `+2` if the previous hit. **Attack −2, Defence −1** |
-| ›› **Rain of Blows** | **8** | **Three strikes**, each `+2` if the previous hit, and **if all three hit the target is `Slowed`** until the end of its next turn |
+| **Combination** | **1** | **Strike twice unarmed; the second strike gains +2 if the first hit. You take −3 attack and −2 Defence.** (note: was **Strike twice unarmed.** The second gains `+2` if the first hit. **Attack −3, Defence −2**) |
+| › **Chain Punch** | **4** | **Strike three times unarmed, each strike gaining +2 if the one before it hit. You take −2 attack and −1 Defence.** (note: was **Three strikes**, each `+2` if the previous hit. **Attack −2, Defence −1**) |
+| ›› **Rain of Blows** | **8** | **Strike three times unarmed, each gaining +2 if the one before it hit. If all three hit, the target is Slowed until the end of its next turn.** (note: was **Three strikes**, each `+2` if the previous hit, and **if all three hit the target is `Slowed`** until the end of its next turn) |
 
 **⚠ Deliberately not `Flurry` renamed.** **`Flurry` buys back accuracy across its tiers and keeps volume flat.** **This starts at two strikes and escalates *within the round* — a hit makes the next easier.**
 
@@ -1149,9 +1158,9 @@
 
 | Tier | | Effect |
 |---|---|---|
-| **Unrepeatable** | **1** | **If the attack you declare comes from a different chain than the one you declared last round, `+2` attack** |
-| › **Unreadable** | **4** | **`+4`**, same condition |
-| ›› **Unpredictable** | **8** | **`+4`**, and the target gains **no Defence bonus from any Defensive chain it has declared** against you |
+| **Unrepeatable** | **1** | **If the attack you declare comes from a different chain than the one you declared last round, you gain +2 attack.** (note: was **If the attack you declare comes from a different chain than the one you declared last round, `+2` attack**) |
+| › **Unreadable** | **4** | **If the attack you declare comes from a different chain than last round's, you gain +4 attack.** (note: was **`+4`**, same condition) |
+| ›› **Unpredictable** | **8** | **If the attack you declare comes from a different chain than last round's, you gain +4 attack, and the target gains no Defence bonus from any defensive chain it has declared against you.** (note: was **`+4`**, and the target gains **no Defence bonus from any Defensive chain it has declared** against you) |
 
 > **He never attacks the same way twice, and you cannot get set for it.**
 
@@ -1265,9 +1274,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Hold the Line** | **1** | **When an enemy in your reach attacks an ally other than you, you may take the hit instead.** Once per round, no action |
-| › **Shield Wall** | **4** | **Twice per round**, and an ally adjacent to you **gains your armour bonus against ranged attacks** while they stay adjacent |
-| ›› **None Get Past** | **8** | As above, and **once per encounter, when you take a hit for an ally you may immediately make one attack against the enemy that dealt it** |
+| **Hold the Line** | **1** | **When an enemy in your reach attacks an ally, you may take the hit instead. Once per round, with no action.** (note: was **When an enemy in your reach attacks an ally other than you, you may take the hit instead.** Once per round, no action) |
+| › **Shield Wall** | **4** | **You may take a hit for an ally twice per round, and an ally adjacent to you gains your armour bonus against ranged attacks while they stay adjacent.** (note: was **Twice per round**, and an ally adjacent to you **gains your armour bonus against ranged attacks** while they stay adjacent) |
+| ›› **None Get Past** | **8** | **As Shield Wall, and once per encounter, when you take a hit for an ally, you may immediately make one attack against the enemy that dealt it.** (note: was As above, and **once per encounter, when you take a hit for an ally you may immediately make one attack against the enemy that dealt it**) |
 
 **⚠ It pairs with `Immovable Object` rather than duplicating it.** **That chain is *you cannot get past me*; this is *and it costs you to try*.**
 
@@ -1298,9 +1307,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Both Hands** | **1** | **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other |
-| › **Improvised** | **4** | **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing |
-| ›› **No Wrong Weapon** | **8** | As above, and **you take no penalty for firing a ranged weapon while adjacent** — `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply to you |
+| **Both Hands** | **1** | **Your Power chains do not distinguish melee from ranged: a tier bought in one applies at the same tier in the other.** (note: was **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other) |
+| › **Improvised** | **4** | **Switching between a melee and a ranged weapon is free once per round and provokes nothing.** (note: was **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing) |
+| ›› **No Wrong Weapon** | **8** | **As Improvised, and you take no penalty for firing a ranged weapon while adjacent to an enemy.** (note: was As above, and **you take no penalty for firing a ranged weapon while adjacent**) (note: `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply.) |
 
 **⚠ Tier 3 is the one that makes the class:** **the `−4` for firing while adjacent is the point-blank rule, and the Soldier is the one character it never touches.**
 
@@ -1322,9 +1331,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Two Fronts** | **1** | **Use `Jury Rig` on an allied droid and `Field Override` on an enemy droid in the same round** — one is a Gear action, the other your declaration |
-| › **Nothing Is Scrap** | **4** | **Your `Field Override` target counts as an allied droid for `Jury Rig` while you hold it.** You can repair what you stole |
-| ›› **Salvage And Command** | **8** | **Once per encounter, repair and seize in one action** — an enemy droid at or below half vitality is restored to half and turned |
+| **Two Fronts** | **1** | **You may use Jury Rig on an allied droid and Field Override on an enemy droid in the same round.** (note: was **Use `Jury Rig` on an allied droid and `Field Override` on an enemy droid in the same round** — one is a Gear action, the other your declaration) |
+| › **Nothing Is Scrap** | **4** | **A droid you hold with Field Override counts as an allied droid for Jury Rig. You can repair what you stole.** (note: was **Your `Field Override` target counts as an allied droid for `Jury Rig` while you hold it.** You can repair what you stole) |
+| ›› **Salvage And Command** | **8** | **Once per encounter, repair and seize in one action: an enemy droid at or below half vitality is restored to half and turned.** (note: was **Once per encounter, repair and seize in one action** — an enemy droid at or below half vitality is restored to half and turned) |
 
 **⚠ Not a bundle.** **Holding both features is what multiclassing already buys.**
 
@@ -1354,9 +1363,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Vigil** | **1** | **You may `Scan` as a free action once per round**, and you use the better of `Awareness` or `Alertness` for it |
-| › **Unhidden** | **4** | **Anything you find with a `Scan` is found by your whole party** until the end of your next turn |
-| ›› **Standing Watch** | **8** | **An enemy Hidden from you when combat begins is not**, and **you may not be made unaware by anything short of losing consciousness** |
+| **Vigil** | **1** | **You may Scan as a free action once per round, using the better of Awareness or Alertness.** (note: was **You may `Scan` as a free action once per round**, and you use the better of `Awareness` or `Alertness` for it) |
+| › **Unhidden** | **4** | **Anything you find with a Scan is found by your whole party until the end of your next turn.** (note: was **Anything you find with a `Scan` is found by your whole party** until the end of your next turn) |
+| ›› **Standing Watch** | **8** | **An enemy hidden from you when combat begins is revealed, and nothing short of losing consciousness can make you unaware.** (note: was **An enemy Hidden from you when combat begins is not**, and **you may not be made unaware by anything short of losing consciousness**) |
 
 **⚠ The capstone is the class's own parent chain finished.** **`Force Immunity` runs Fear → Stun → Paralysis, and two of those three are ways to be made *unaware* under `ACTION-ECONOMY-01 §19.5`.**
 
@@ -1376,9 +1385,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Rally** | **1** | **Spend your declaration.** Every ally who can hear you gains **`+1` attack, `+1` damage and `+1` Will** |
-| › **On My Mark** | **4** | **`+2`**, and **one ally may immediately make one attack** |
-| ›› **Command Presence** | **8** | **`+3`**, and the immediate attack applies to **two** allies |
+| **Rally** | **1** | **Spend your declaration. Every ally who can hear you gains +1 attack, +1 damage and +1 Will.** (note: was **Spend your declaration.** Every ally who can hear you gains **`+1` attack, `+1` damage and `+1` Will**) |
+| › **On My Mark** | **4** | **Every ally who can hear you gains +2 attack, +2 damage and +2 Will, and one ally may immediately make one attack.** (note: was **`+2`**, and **one ally may immediately make one attack**) |
+| ›› **Command Presence** | **8** | **Every ally who can hear you gains +3 attack, +3 damage and +3 Will, and two allies may immediately make one attack each.** (note: was **`+3`**, and the immediate attack applies to **two** allies) |
 
 > **It lasts while you are conscious and able to speak. It ends the moment you are not.**
 
@@ -1421,9 +1430,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Field Surgery** | **1** | **A Gear action.** Spend a medpac to restore **`1d8` vitality** to an adjacent character ⚠ **at or below 0**. They stop dying |
-| › **Stabilise** | **4** | **`2d8`**, ⚠ **the character is no longer `dying`**, and it is no longer `Disabled` |
-| ›› **Back Up** | **8** | **`3d8`** — continuing tier 1/2's own progression; `wounds` do not exist under `PT-559`'s one pool — and **once per encounter you may do this at range 4 metres** without touching them |
+| **Field Surgery** | **1** | **As a Gear action, spend a medpac to restore 1d8 vitality to an adjacent character at or below 0. They stop dying.** (note: was **A Gear action.** Spend a medpac to restore **`1d8` vitality** to an adjacent character ⚠ **at or below 0**. They stop dying) |
+| › **Stabilise** | **4** | **Field Surgery restores 2d8 vitality, and the character is no longer dying or Disabled.** (note: was **`2d8`**, ⚠ **the character is no longer `dying`**, and it is no longer `Disabled`) |
+| ›› **Back Up** | **8** | **Field Surgery restores 3d8 vitality, and once per encounter you may perform it from 4 metres away.** (note: was **`3d8`**  — and **once per encounter you may do this at range 4 metres** without touching them) (note: continuing tier 1/2's own progression; `wounds` do not exist under `PT-559`'s one pool) |
 
 > **⚠ YOU CAN BRING BACK SOMEONE WHO IS ALREADY DYING, WHICH NOTHING ELSE IN THE GAME CAN — `PT-559`.**
 
@@ -1581,9 +1590,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Plunder** | **1** | **When you reduce an enemy to 0 or below, take one carried item as a free action** — a weapon, medpac, grenade, spike or mine. **It is immediately usable** |
-| › **Quick Hands** | **4** | **Also on a critical hit, without dropping them** |
-| ›› **Everything Is Cargo** | **8** | As above, and **once per encounter the item you took costs no Gear action to use** |
+| **Plunder** | **1** | **When you reduce an enemy to 0 or below, take one item it carried as a free action — a weapon, medpac, grenade, spike or mine. It is ready to use at once.** (note: was **When you reduce an enemy to 0 or below, take one carried item as a free action** — a weapon, medpac, grenade, spike or mine. **It is immediately usable**) |
+| › **Quick Hands** | **4** | **You may also Plunder on a critical hit, without dropping the enemy.** (note: was **Also on a critical hit, without dropping them**) |
+| ›› **Everything Is Cargo** | **8** | **As Quick Hands, and once per encounter the item you took costs no Gear action to use.** (note: was As above, and **once per encounter the item you took costs no Gear action to use**) |
 
 **⚠ Requires dropping someone first, which is why it unlocks at class level 1 — `PT-239`.**
 
@@ -1593,9 +1602,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Unrelenting** | **1** | **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter |
-| › **Past Caring** | **4** | **`+4` below half** |
-| ›› **Last Stand** | **8** | **`+6` below half**, and **`+2` attack while below a quarter** |
+| **Unrelenting** | **1** | **While your vitality is below half, you gain +2 damage on every attack you make. Always active.** (note: was **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter) |
+| › **Past Caring** | **4** | **While your vitality is below half, you gain +4 damage on every attack you make.** (note: was **`+4` below half**) |
+| ›› **Last Stand** | **8** | **While your vitality is below half, you gain +6 damage on every attack, and +2 attack while below a quarter.** (note: was **`+6` below half**, and **`+2` attack while below a quarter**) |
 
 **⚠ It multiplies — `PT-180`.** **`+6` on a three-strike `Barrage` is `+18`, which took the realised increase from a reported `+22%` to `+46%`.**
 
@@ -1609,9 +1618,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Vanish** | **1** | **Once per encounter, immediately after an attack of yours deals `Sneak Attack` damage, make a `Stealth` check as a free action** against the better of each enemy's `Awareness` or `Alertness` |
-| › **Displaced** | **4** | **Twice per encounter** |
-| ›› **Absent** | **8** | Twice, and **you may move up to half your speed as part of it**, before the check resolves |
+| **Vanish** | **1** | **Once per encounter, immediately after an attack of yours deals Sneak Attack damage, make a Stealth check as a free action against the better of each enemy's Awareness or Alertness.** (note: was **Once per encounter, immediately after an attack of yours deals `Sneak Attack` damage, make a `Stealth` check as a free action** against the better of each enemy's `Awareness` or `Alertness`) |
+| › **Displaced** | **4** | **As Vanish, twice per encounter.** (note: was **Twice per encounter**) |
+| ›› **Absent** | **8** | **As Vanish, twice per encounter, and you may move up to half your speed as part of it before the check resolves.** (note: was Twice, and **you may move up to half your speed as part of it**, before the check resolves) |
 
 **⚠ It is conditional, which is the Jedi shape under `PT-129` rather than the Sith one.** **`PT-131` records that as a departure caused by `PT-126` — the owner ruled the Assassin off the mirror onto `Specialist`, which made it the one Sith built around a tool rather than a number.**
 
@@ -1623,9 +1632,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Dominion** | **1** | **`+1` to the saving throw DC of every Force power you cast** |
-| › **Advanced Dominion** | **4** | **`+2`** |
-| ›› **Master Dominion** | **8** | **`+3`** |
+| **Dominion** | **1** | **Adds +1 to the saving throw DC of every Force power you cast.** (note: was **`+1` to the saving throw DC of every Force power you cast**) |
+| › **Advanced Dominion** | **4** | **Adds +2 to the saving throw DC of every Force power you cast.** (note: was **`+2`**) |
+| ›› **Master Dominion** | **8** | **Adds +3 to the saving throw DC of every Force power you cast.** (note: was **`+3`**) |
 
 **⚠ `PT-182` flagged the capstone: converting a failure into a partial success is a different mechanic, borrowed from an existing stun clause.** **`REPLY-45` ruled it cut and the cut was never applied.**
 

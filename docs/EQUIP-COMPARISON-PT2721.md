@@ -11,7 +11,7 @@
 | Size | 1920×1080, windowed; the desktop panel covers the bottom 44 px, **cropped from the mirrored images** (both sides' bottom 44 px are excluded) | 1920×1080 |
 | Read-only | nothing was equipped, unequipped or saved in K2; every slot was opened and **Cancelled** (never OK); no slot (`000003`, `000005`–`000008`) was touched | n/a |
 
-Pictures: `HANDOFF/BUILD/screens/pt2721-equip-loop/pass-1/` — `k2-<state>.png` beside `app-<state>.png`, four states: `1-empty-slot` (Belt selected, nothing worn), `2-filled-slot` (Body), `3-item-list` (Body's list), `4-description` (an item selected, its description in the pane); `app-0-as-opened.png` is the screen as it first opens.
+Pictures: `MAIN_WORK media/screens/pt2721-equip-loop/pass-1/` — `k2-<state>.png` beside `app-<state>.png`, four states: `1-empty-slot` (Belt selected, nothing worn), `2-filled-slot` (Body), `3-item-list` (Body's list), `4-description` (an item selected, its description in the pane); `app-0-as-opened.png` is the screen as it first opens.
 
 **Measurement is by eye off the 1920×1080 pictures, ±3 px.** Where a number matters for a fix it must be re-measured from the picture, not taken from this table.
 
@@ -113,7 +113,7 @@ Status: **PASS** · **FAIL** (a fix is in scope) · **DECISION** (needs the owne
 
 | # | element | K2 | ours | status |
 |---|---|---|---|---|
-| 43 | typeface | `fnt_dialog16x16`, a narrow bitmap face | **BankGothic Md BT**, the owner's choice | **DECISION D6** — at K2's capital height it is about **1.8× wider** ("LIGHT COMBAT SUIT (EQUIPPED)": 880 px against 490 at 3×); see `KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2721-font-candidates/equip-font-side-by-side.png`. It fits the boxes at 1920×1080. Narrower face, or smaller size, or accept — the owner's call |
+| 43 | typeface | `fnt_dialog16x16`, a narrow bitmap face | **BankGothic Md BT**, the owner's choice | **DECISION D6** — at K2's capital height it is about **1.8× wider** ("LIGHT COMBAT SUIT (EQUIPPED)": 880 px against 490 at 3×); see `media/study/_reference/pt2721-font-candidates/equip-font-side-by-side.png`. It fits the boxes at 1920×1080. Narrower face, or smaller size, or accept — the owner's call |
 | 44 | capital height | 8 px in a 16 px cell | scaled to match (measured by rendering) | **PASS** |
 | 45 | case | the real strings are mixed case, drawn as small-caps-style by the face | BankGothic draws lowercase as small capitals | **PASS** for the look |
 | 46 | colour | teal (111,227,196) on near-black | tinted from the app's tokens | not compared numerically this pass |

@@ -789,18 +789,18 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 | **Beast Handling** | Riding, calming and directing animals. |
 | **Botany** | Plant and soil analysis. *Astromechs run samples; Ithorians read a forest.* |
 | **Demolitions** | Placing charges and defusing someone else's. **Spends mines; the skill sets grade and radius.** |
-| **Intimidate** | Making someone believe the cost of refusing. **Resisted differently from Persuade** — see `SKILL-RESOLUTION-01 §3.1`. |
+| **Intimidate** | Making someone believe the cost of refusing. **Resisted differently from Persuade.** |
 | **Medicine** | Treating injury. **The roll answers how much a medpac restores**, not whether it works. |
 | **Mysticism** | The Force as a subject of study — traditions, relics and what the untrained call superstition. |
 | **Persuade** | Changing a mind that was made up. **Rolled against the target's Alertness** — *can they see through you?* |
 | **Pilot** | Flying a ship, and knowing where to point it. |
 | **Repair** | Restoring damaged equipment and droids. **Spends parts by damage — and a droid repairing itself restores more.** |
-| **Scavenging** | Finding value in wreckage, and food where there is none. **⚠ Reduces ration use only where a package tracks rations.** |
+| **Scavenging** | Finding value in wreckage, and food where there is none. **Reduces ration use where rations are tracked.** |
 | **Science** | Laboratory analysis, chemistry and physical theory. |
 | **Security** | Opening what was locked against you — locks, traps and sealed doors as one job. **Spikes grant a bonus, not access.** |
 | **Sleight of Hand** | Taking something without the hand being seen. |
 | **Slicing** | Getting into a closed system, and forging what comes out of it. **Spends spikes by terminal grade.** |
-| **Stealth** | Moving unseen and unheard, as one act. **Opposed by Awareness** — see `§4`. |
+| **Stealth** | Moving unseen and unheard, as one act. **Opposed by Awareness.** |
 | **Streetwise** | Knowing who to ask, and passing for someone who belongs. **Spends credits; higher skill means cheaper informants.** |
 | **Swim** | Moving through water, and staying above it. |
 | **Survival** | Tracking, foraging, shelter, and reading terrain and weather. |

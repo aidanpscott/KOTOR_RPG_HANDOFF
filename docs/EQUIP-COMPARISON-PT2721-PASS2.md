@@ -1,6 +1,6 @@
 # EQUIP-COMPARISON-PT2721 — PASS 2 (2026-10-02, `KOTOR-RPG-APP` `f7e3320` + the commits after it)
 
-*K2's Equip screen beside ours, 1920×1080, the same character, four states, one row per element. Pictures: `HANDOFF/BUILD/screens/pt2721-equip-loop/pass-2/` (`app-*.png` ours, `side-*.png` K2 over ours). **K2's side is `pass-1/k2-*.png`, reused**: it is the same save (`000008 - game7`), read-only, and K2 does not change; ours is fresh. Numeric extents below were scanned off both pictures, not read by eye.*
+*K2's Equip screen beside ours, 1920×1080, the same character, four states, one row per element. Pictures: `MAIN_WORK media/screens/pt2721-equip-loop/pass-2/` (`app-*.png` ours, `side-*.png` K2 over ours). **K2's side is `pass-1/k2-*.png`, reused**: it is the same save (`000008 - game7`), read-only, and K2 does not change; ours is fresh. Numeric extents below were scanned off both pictures, not read by eye.*
 
 **Same gear on both sides now (D1):** the 22 items of `000008 - game7` (8 worn, 14 bagged) are in the catalogue (19 `k2`, 3 `both`, 0 `k1`); 20 are built as blueprints and carried by our character. Two belts are not (see D1 below).
 

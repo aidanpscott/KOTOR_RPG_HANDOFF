@@ -94,6 +94,10 @@ default = "floor"
 | **`water`** | **no** | no | **⚠ not merely slow — you cannot simply walk over it** |
 | **`difficult`** | yes | no | **costs DOUBLE to cross — `PT-1513`** |
 | **`hazard`** | yes | no | crossing it does something. **⚠ What, is unruled** |
+| **`halfCover`** | yes | no | **+2 Defence, +1 Reflex saves — `ACTION-ECONOMY-01 §6.2`, `PT-2656`/`PT-2664`** |
+| **`threeQuarterCover`** | yes | no | **+5 Defence, +2 Reflex saves — `§6.2`, `PT-2656`/`PT-2664`** |
+
+**⚠⚠ NO `total`-COVER TYPE EXISTS, AND THAT IS DELIBERATE — `PT-2664`.** `§6.2`'s Total tier — *"cannot be targeted by attacks that need line of sight"* — is already exactly what `wall`'s `blocksSight: true` produces through the engine's own sight check, which every targeting path already respects. Total cover is `wall`; it needed no new type.
 
 > **⚠⚠ IT COSTS DOUBLE, AND THE MULTIPLIER IS ON THE CREATURE — `PT-1513`.** `TEST 016` found it **costs nothing**: the move budget spends a flat 1 with no tile lookup, and `difficult` appears nowhere else in either repo.
 >
@@ -106,7 +110,7 @@ default = "floor"
 > **⚠ And `hazard` stays inert and stays unruled.** `§2·0a` says what it does is undecided, and **that is a different problem from a type whose cost was written and never spent.**
 
 
-**⚠ Five. Nothing else exists, and a package cannot add one** — `PT-1361`. A swamp is **`water` and `difficult` with swamp art**, not a new type.
+**⚠ Seven now — `PT-1361` capped who may add to this list, not how many entries it holds.** The two cover types are the engine's own addition, `PT-2664`, not an opening of the vocabulary to packages: **nothing a package declares becomes a type, still**. A swamp is **`water` and `difficult` with swamp art**, not a new type.
 
 **⚠ And `door` is NOT a tile type**, though `§2`'s own legend example shows one. `§4a` makes a door **a connection with an optional template.** The example is wrong and is the kind of thing that would have become a second door model.
 
@@ -212,9 +216,11 @@ default = "floor"
 
 **The palette shows FIVE things today and looked like it could only ever show five.** It cannot — **three different ideas were collapsed into one word.**
 
+**⚠ HISTORICAL COUNT — the palette shows SEVEN now, `PT-2664` added two.** The argument this section makes is unchanged by the count: TYPE is still ours and fixed, VARIETY is still the author's and unlimited. `§2·0a`'s own table carries the current list.
+
 | | | |
 |---|---|---|
-| **TYPE** | `floor` `wall` `water` `difficult` `hazard` | **ours, fixed, five.** `PT-1361`. **Mechanics** |
+| **TYPE** | `floor` `wall` `water` `difficult` `hazard` | **ours, fixed, five at the time.** `PT-1361`. **Mechanics** |
 | **VARIETY** | *deck plating* · *grating* · *scorched deck* | **all type `floor`, different art. ⚠ THE AUTHOR PICKS.** Unlimited, tileset-supplied |
 | **VARIANT** | four near-identical deck platings | **the ENGINE picks**, seeded by position so a big room does not visibly tile. `PT-1367`. **The author never sees them** |
 

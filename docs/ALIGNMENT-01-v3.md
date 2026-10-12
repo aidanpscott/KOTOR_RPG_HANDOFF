@@ -88,7 +88,10 @@ Falling into Committed Dark happens at 28. Climbing back out requires reaching 3
 
 **1. Your Alignment Step is the tens digit of your alignment, 0 to 10.** Alignment 47 is step 4; 100 is step 10.
 *⚠ PROVISIONAL, this line only: the games may round to the nearest ten instead (47 would be step 5). One reading in KOTOR II settles it
-(a Light and a Dark power's cost at a known alignment whose tens digit and nearest ten differ); the word "provisional" goes then.*
+(a Light and a Dark power's cost at a known alignment whose tens digit and nearest ten differ); the word "provisional" goes then.
+**Why it matters, the clearest case (TEST 168):** a neutral character at 50 casts one Dark power (Force Shock, tier 1); the fight ends and
+alignment folds to 49. Under the tens digit that is step 4, so every Light power now costs ×1.25 (Heal 8 → 10) after a single dark act.
+Under the nearest ten, 49 is still step 5 and Heal still costs 8.*
 
 **2. The step table — the games' numbers exactly** (`forceadjust.2da`, identical in KOTOR I and II):
 

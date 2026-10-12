@@ -62,3 +62,14 @@ Recorded the live app at 60 fps (Xvfb, a real fight against the Sith Trooper, ch
 - **Not obtained in K2:** XP pop-up on a kill (none visible in the kill frames), the medpac heal (K2 refused: full health; the medpac stack was injected into a COPY of the save, now deleted), Floating Numbers OFF vs flash, a footer with a multi-member party. A droid (T3-M4) footer and Load row are captured (`k2-droid/`): K2 shows the droid's own portrait.
 
 **Feedback > Tutorial Popups (`PT-2743`, owner):** back, K2's tick (string 42280, help 42287), between Hide Unequippable and Floating Numbers as K2 orders them, default ON. Off means no help box shows (play screens and chargen pages).
+
+## Edge flash length (PT-2739 item 4, 2026-10-11)
+**Cause of TEST 158's 0.9-1.3 s:** the flash's clock advanced at most 45 ms per app frame (so a slow frame could not skip the peak). On Xvfb the app draws ~7 fps, so 270 ms took 6-9 app frames. **Now** the clock is real time, and a frame that would cross the peak lands on it, so every flash is drawn once at full strength and is gone at 0.27 s at any frame rate. Test: `floating_numbers_test.dart` "AT A SOFTWARE RENDERER'S ~7 FPS…" (140 ms frames: the peak is drawn and it is gone by the third frame). Mutants: the old code fails it (no frame at the peak), and the 45 ms cap with the peak landing kept fails it (7 frames).
+**Live, 60 fps, GPU display (not Xvfb):** debug build of the change, `Flash Proof` (CON 200, DEX 8) against the Endar Spire's Sith Trooper, Space every 3 s, 92 s, 29 attacks, 9 hits (the `KOTOR_ATTACK_TRACE` record). **9 of 9 hits flashed; 0 flashes without a hit.** Measured as TEST 158's `hfnum.py` did (bottom band, full-res y 750-770, x 520-1740, mean R−G over baseline):
+
+| | TEST 158 (Xvfb, old) | now (GPU) | K2 |
+|---|---|---|---|
+| Length | 53-78 frames (0.9-1.3 s), stepped every ~14 frames | **15-21 frames (0.25-0.35 s), median 0.317 s** | ~8 frames at 30 fps (~0.27 s) |
+| Peak (band mean) | +42 | **+43.5 to +69.8** (two clusters: the band sits at a different depth of the flash when the log line wraps, Tester's "two baselines") | ~+55 |
+
+The extra over 0.27 s is one app frame: the debug build draws ~15 fps here (each value holds 3-5 captured frames), and the frame after 0.27 s is the first without the flash. The peak brackets K2's +55 and was left as it is (bottom alpha 0.34, K2's own reading). Private: `MAIN_WORK media/screens/pt2739-item4-flash/` (the video, the per-flash table, the attack trace, a peak frame).

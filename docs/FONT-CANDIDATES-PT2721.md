@@ -2,7 +2,7 @@
 
 **`PT-2721`'s first owner ruling: identify the real font, or the closest real one, bring three candidates with sourcing and a side-by-side, then stop and wait for the file. This is that report. No font has been downloaded for bundling, and nothing in the app has changed — the atlas renderer (`lib/play/kotor_font.dart`) still draws the Equip screen until the owner's file arrives.**
 
-Side-by-side image: `KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2721-font-candidates/side-by-side.png`. Individual specimens in the same folder.
+Side-by-side image: `media/study/_reference/pt2721-font-candidates/side-by-side.png`. Individual specimens in the same folder.
 
 ---
 
@@ -54,7 +54,7 @@ A fan font built BY tracing K2's own screenshots — the creator's own note: "re
 
 The owner chose **Candidate 2, Bank Gothic**, in Bitstream's "BankGothic Md BT" cut: `BankGothicMediumBT.ttf`, **v4.4 (1998)**. It is bundled in the **private** app repository (`assets/fonts/`) and **nowhere else — never in this public repo**; the font file itself is not here, only pictures made with it.
 
-**Picture:** `KOTOR_RPG_MAIN_WORK/media/study/_reference/pt2721-font-candidates/equip-font-side-by-side.png` — K2's own text on top (the real `fnt_dialog16x16` atlas at 3×), the same four strings in the Equip screen's font below, at the same cell (48 = 3 × 16), colours and row pitch.
+**Picture:** `media/study/_reference/pt2721-font-candidates/equip-font-side-by-side.png` — K2's own text on top (the real `fnt_dialog16x16` atlas at 3×), the same four strings in the Equip screen's font below, at the same cell (48 = 3 × 16), colours and row pitch.
 
 **How it is sized.** K2's capitals fill 8 px of the 16 px cell (measured off the extracted atlas, rows 3–10); BankGothic's capitals are 0.52 em (measured by rendering "H": 104 px at 200 px). The Equip call sites speak in K2's cell, so the font size is scaled by 0.50 / 0.52 in one place (`EquipText`, `kEquipFontScale`) so the **capitals are K2's height**. K2's `spacingR` is 0, so no spacing is added. A test re-measures the capitals by rendering the real file.
 

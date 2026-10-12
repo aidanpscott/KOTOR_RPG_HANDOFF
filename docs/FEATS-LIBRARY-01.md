@@ -405,7 +405,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Deflect** | A Weaponmaster with a lightsaber has incredible skill deflecting blaster bolts. | **Blaster Bolt Deflection +[(class level + 1) / 2].** +1 at level 1 rising to +18 at 35. Main-hand lightsaber only. |
+| **Deflect** | A Weaponmaster with a lightsaber has incredible skill deflecting blaster bolts. | **Blaster Bolt Deflection + half of (class level + 1), rounded down.** +1 at level 1 rising to +18 at 35. Main-hand lightsaber only. |
 | **Increase Melee Damage** | Weaponmasters focus their strength to deliver powerful strikes. | **+2 damage** unarmed, melee, or lightsaber. Critical hits multiply it. |
 | › Advanced Increase Melee Damage | Weaponmasters focus their strength to deliver powerful strikes. | **From level 8, you do an additional 4 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+4 damage.** Level 8.) |
 | ›› Master Increase Melee Damage | Weaponmasters focus their strength to deliver powerful strikes. | **From level 15, you do an additional 6 points of damage with any successful unarmed, melee or lightsaber attack.** (note: was **+6 damage.** Level 15.) |
@@ -487,9 +487,9 @@
 | **Jedi Defense** | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **Opposed roll against incoming blaster attacks.** Beat the attack and the bolt is deflected; beat it by 6 or more and the bolt returns to the attacker. (note: `PT-2` struck the 180° front-arc limit: this corpus does not model facing.) |
 | › Advanced Jedi Defense | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **+3 Blaster Bolt Deflection.** Level 4. |
 | ›› Master Jedi Defense | With a lightsaber in hand, a Jedi can turn blaster fire aside at any time. | **+6 Blaster Bolt Deflection.** Level 8. |
-| **Jedi Sense** | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/6]).** Always active. |
-| › Knight Sense | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/8])** for Jedi Master and Sith Lord. |
-| ›› Master Sense | Awareness of danger before it arrives. | **Defence +2 + (2 × [level/5])** for other prestige classes — the fastest progression of the three. |
+| **Jedi Sense** | Awareness of danger before it arrives. | **Defence +2, and +2 more for every 6 levels.** Always active. |
+| › Knight Sense | Awareness of danger before it arrives. | **Defence +2, and +2 more for every 8 levels,** for Jedi Master and Sith Lord. |
+| ›› Master Sense | Awareness of danger before it arrives. | **Defence +2, and +2 more for every 5 levels,** for other prestige classes — the fastest progression of the three. |
 | **Precognition** | Precognition warns the Jedi whenever they are about to enter extreme danger. These warnings are quite rare. (note: K2's own text, `spells.2da` row 178 `FORCE_POWER_PRECOGNITION`, StrRefs 48522/48523: no cost, passive (`forcepassive` 3); in the shipped game only a developer test conversation grants it. Moved from FORCE-POWERS-01 by `PARTITION-01 §6.1` (D-AK). Mechanic ruled by the owner after TEST 170.) | **Never surprised.** You cannot be caught unaware: an ambush or a hidden creature's first attack gets no surprise against you, and you are never unaware for Killer's Instinct or anything else that asks. Always on. |
 | › Battle Precognition | This power allows the Jedi to sense the flows of the Force and increases the Jedi's reaction time in combat. The Jedi adds their Wisdom modifier to their Defense. Restricted by armour. (note: K2's own text, `spells.2da` row 179 `FORCE_POWER_BATTLE_PRECOGNITION`, StrRefs 48524/48525: Light Side, no cost, passive (`forcepassive` 4), forbidden with body armour (`forbiditemmask` 0x003f, not decoded: our rule decides); K2 grants it during the duel with the Handmaiden (`a_addcombatpre`). Ruled by the owner after TEST 170: K2 exactly.) | **Add your Wisdom modifier to Defence while you wear no body armour.** Body armour is a body item of armour type leather or armor; robes and clothing are not. Always on. |
 | **Regenerate Force Points** | The body renews its connection to the Force faster than training alone allows. | Force regeneration **+25% out of combat, +250% in combat.** Stacks additively with the Consular's Force Channel chain. |

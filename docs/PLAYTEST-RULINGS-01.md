@@ -82100,3 +82100,27 @@ Full suite: all pass but the known `keys_return_after_every_close` "Escape then 
   7. **The package menu's "6 saves" with no rows is a fallback screen.** The app opens K2's Load Game screen from the menu (which lists every save with its area name). The package menu's own save panel is drawn only when no load screen is wired, as in a bare test harness. Tester saw that fallback.
 - Feat cells with no icon are expected, as ruled.
 - **Next:** PT-2747 Abilities, then PT-2746 Part C Map, then BG3.
+
+**CODER result (2026-10-11, under PT-2744 and PT-2740) -- BOOTS, as ruled, plus two bugs found on the way and the gate's nine warnings. App cdd571e, Shelf 5a03142, Loom 68d0681, MAIN_WORK this entry.**
+- **Boots base type.** EQUIPMENT-01 now has a `boots` row in the worn-slot table and in the §14 mapping: slot `boots`, worn at `boots`, no `baseitems.2da` row (ours, no K2 precedent, PT-2503). It gets what our rules give a belt: no Defence and no Dexterity cap; everything comes from the item's own properties. The "no boots slot" paragraph now says ours is a ruled addition.
+- **All 25 boots items** take it through the declared category fallback. Resolved rows: 988 to 1013. The base-type check passes with no boots exception (a wrong boots fallback is refused; mutation-checked). Dockworker's Treads and the other boots are now made, sold and worn.
+- **Chargen.** An array's boots go on in the Boots slot and are not carried twice. A droid's array names no boots, and a droid gets no boots key.
+- **Play.** Equip offers boots in the Boots slot. A droid is offered none, a commit is refused ("A droid cannot wear boots."), and its Equip screen draws no Boots cell (the space is kept).
+- **Tests:**
+  - the Soldier's Treads are in the Boots slot after chargen, show in the Inventory, and are not also in the bag;
+  - a pair is bought from the Store Bed merchant, equipped, taken off and put back;
+  - a droid is offered none, is refused, and has no Boots cell; the control is a belt offered on the same screen, so an empty list is a reading and not an unfilled screen.
+- **Mutations, all killed (8):** the droid offer filter; the droid refusal; the droid cell; the chargen boots slot; boots carried twice; a wrong boots fallback in the check; the dev-log count match; the starting-items key. One guard that could never fire (a droid array's boots) was removed instead.
+- **BUG FOUND: 10 class arrays got NO starting items at all.** The array ids are normalised from `jedi-consular` to `jedi_consular` on load, and the starting-items keys were not. So Bounty Hunter, Treasure Hunter, the three Jedi and the three Sith (organic), and Bounty Hunter and Treasure Hunter (droid) started without their medpacs, kit and boots. Fixed. A new test checks every array, organic and droid.
+- **BUG FOUND: the dev-log reason never matched a kit name with a count or without a resref.** For example, the Consular's "1 tier-1 saber upgrade" was never dimmed. Fixed.
+- **The gate's 9 warnings:**
+  1. check_citations (advisory): 96 section citations whose section was not found (e.g. PORT-02 §3, RULES-02 §4). Old documents; no player text. Left.
+  2. audit_docrefs: 46 citations to files not in the corpus (27 in the frozen baseline). The new ones are the MAIN-TO-CODER-PT-2722-* message names cited in the ledger, which were never files. Left.
+  3. check_item_names: 4 catalogue rows whose document name is an upgrade's name ("Energy Emitter Mk 1" on w_blhvy001; "Absorption Underlay Mk 1" on ptar_sbpasscrd). The fix is in the item document's rows. Not done this slice; I can take it.
+  4. check_event_producers: container.opened, door.unlocked, item.quest-done and store.opened are read but never built in code. They are conversation effects a package writes (the merchants write store.opened); the scan reads code only. No package uses the other three yet. No fix needed; the check could learn to read package effects.
+  5. check_player_strings: 14 flags. FIXED 2 real ones: the start refusal's author detail ([entry] ...) now goes to the dev log, and a fallback no longer cites PT-2708. The other 12 are the scan reading `_nameOf[who]` interpolation as a field name.
+  6. check_annotations: 29 asides in shipped cells (worlds.toml no_menu_reason 12, items.toml properties 7 and others, species 2, professions 1). Older content; the item property notes can reach the Inventory pane. Proposed for the next slice: move them to notes, as with the 61 descriptions.
+  7. check_docs_mirror: HANDOFF's EQUIPMENT-01 was stale, not forked; its one extra line is the old "Stealth_Unit undecided" row the source settled at PT-2725. FIXED: the source was copied over.
+  8. audit_superseded (screening only): 69 live citations of a ruling later overturned (e.g. ATTACKS-01 cites PT-193, overturned by PT-923). Left.
+  9. check_engine_pin: Loom was 13 Lodestar commits behind. FIXED: upgraded; Loom's effect list gained item.quest-done (the new Lodestar requires its fields). Four Loom count pins moved for the boots (1 shipped blueprint, 11 skill bonuses, 5 save bonuses, 27 rows poured), each explained in its test. Loom: 430 pass.
+- App suite: 2375 pass, 0 fail.

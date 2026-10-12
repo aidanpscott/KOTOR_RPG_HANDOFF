@@ -809,13 +809,13 @@ on it.
 
 ### The five
 
-| Consumable | Does | Takes | Used on | Note |
-|---|---|---|---|---|
-| Medpac | heal | amount | an ally within reach | `SKILL-RESOLUTION-01 §5.3` — Medicine spends one |
-| Adrenal | ability | ability · amount · rounds | yourself | — |
-| Shield generator | absorb | pool · kinds · vulnerable | yourself or an ally within reach | `ACTION-ECONOMY-01 §3` — *"using a consumable or activating a worn device, on yourself or an ally within reach"*; worn AND spent |
-| Charge | damage · damage_over_time · condition · ability_penalty | damage → amount · kinds · save · deploy · plus_vs_droid? · set_dc? ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? · set_dc? ; condition → condition · rounds · save · deploy · set_dc? ; ability_penalty → ability · amount · rounds · save · deploy · set_dc? | aimed at a target | thrown or placed, and the item says which — `deploy`; the placed half is `§5.2`'s Demolitions. ⚠ `set_dc` — a placed mine's tier DC (`PT-2709`): `SKILL-RESOLUTION-01 §2.1` *"setting a mine uses the tier DC; disabling adds +2; recovering adds +5"*, the tier being K1 `traps.2da`'s `setdc` for the mine's grade (MINOR 15 · AVERAGE 20 · DEADLY 25, `PT-654`'s K1 port). The mine's EFFECT keeps its own stated save. |
-| Rocket | damage · damage_over_time · condition | damage → amount · kinds · save · deploy ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? ; condition → condition · rounds · save · deploy | aimed at a target | ⚠⚠⚠ **CORRECTED AT `PT-2417`, AND IT WAS A CONTRADICTION NO BLUEPRINT COULD SATISFY.** This row admitted neither `deploy` nor the `damage` verb, so a faithful rocket stating `deploy = "thrown"` was refused by the schema, and one omitting it to satisfy the schema was discarded by the deployment filter before any rocket logic ran. **The shape is Charge's, which has been right all along** — minus `ability_penalty` and `plus_vs_droid?`, which no rocket states. `damage` joins `does` because `PT-2409` ruled a rocket's bare `Damage: X, N` a burst. REQUIRES A WRIST LAUNCHER, which is the gate that makes this its own row rather than a Charge. ACTION-ECONOMY-01 §6.2a: the launcher has no attack range at all — it is a launcher SLOT, not a fireable weapon, and the rocket carries the 24 m range and 20 m travel itself. Eleven items: the rockets and the darts. |
+| Consumable | Does | Takes | Used on | Worn at | Note |
+|---|---|---|---|---|---|
+| Medpac | heal | amount | an ally within reach | — | `SKILL-RESOLUTION-01 §5.3` — Medicine spends one |
+| Adrenal | ability | ability · amount · rounds | yourself | — | — |
+| Shield generator | absorb | pool · kinds · vulnerable | yourself or an ally within reach | forearms | ⚠ `forearms` IS THE ORGANIC FAMILY'S (`Forearm_Bands` 0x180); THE 14 DROID SHIELDS ARE `Droid_Shield` 0x400 — THE BELT — so each shield ITEM states its own `worn_at` (`PT-2725`, TEST 149; both games read from `baseitems.2da`). `ACTION-ECONOMY-01 §3` — *"using a consumable or activating a worn device, on yourself or an ally within reach"*; worn AND spent |
+| Charge | damage · damage_over_time · condition · ability_penalty | damage → amount · kinds · save · deploy · plus_vs_droid? · set_dc? ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? · set_dc? ; condition → condition · rounds · save · deploy · set_dc? ; ability_penalty → ability · amount · rounds · save · deploy · set_dc? | aimed at a target | — | thrown or placed, and the item says which — `deploy`; the placed half is `§5.2`'s Demolitions. ⚠ `set_dc` — a placed mine's tier DC (`PT-2709`): `SKILL-RESOLUTION-01 §2.1` *"setting a mine uses the tier DC; disabling adds +2; recovering adds +5"*, the tier being K1 `traps.2da`'s `setdc` for the mine's grade (MINOR 15 · AVERAGE 20 · DEADLY 25, `PT-654`'s K1 port). The mine's EFFECT keeps its own stated save. |
+| Rocket | damage · damage_over_time · condition | damage → amount · kinds · save · deploy ; damage_over_time → amount · kinds · rounds · save · deploy · count? · sides? ; condition → condition · rounds · save · deploy | aimed at a target | — | ⚠⚠⚠ **CORRECTED AT `PT-2417`, AND IT WAS A CONTRADICTION NO BLUEPRINT COULD SATISFY.** This row admitted neither `deploy` nor the `damage` verb, so a faithful rocket stating `deploy = "thrown"` was refused by the schema, and one omitting it to satisfy the schema was discarded by the deployment filter before any rocket logic ran. **The shape is Charge's, which has been right all along** — minus `ability_penalty` and `plus_vs_droid?`, which no rocket states. `damage` joins `does` because `PT-2409` ruled a rocket's bare `Damage: X, N` a burst. REQUIRES A WRIST LAUNCHER, which is the gate that makes this its own row rather than a Charge. ACTION-ECONOMY-01 §6.2a: the launcher has no attack range at all — it is a launcher SLOT, not a fireable weapon, and the rocket carries the 24 m range and 20 m travel itself. Eleven items: the rockets and the darts. |
 
 **⚠⚠⚠ `deploy` IS ON ALL FOUR OF `Charge`'S VERBS, AND IT IS THE ONLY FIELD
 HERE THAT DESCRIBES THE ITEM RATHER THAN THE EFFECT.** `PT-2322`. This row has
@@ -1192,9 +1192,10 @@ are stale NWN holdovers that must be matched by number; grouping every base type
 by the bits it actually sets makes each slot self-evidencing instead. **K1 and
 K2 agree exactly.**
 
-**⚠⚠ AND THERE IS NO BOOTS SLOT AND NO SHIELD SLOT.** No base type in either
+**⚠⚠ AND NEITHER GAME HAS A BOOTS SLOT, AND THERE IS NO SHIELD SLOT.** No base type in either
 game matches boot, shoe, greave or foot — *the twenty-five pairs of boots in our
-catalogue are entirely ours, every one `src: AUTHORED`.* And a shield is not
+catalogue are entirely ours, every one `src: AUTHORED`.* **Ours is a ruled addition**
+(PT-2503; owner ruling after TEST 170): the `boots` row below, worn in the Boots slot. And a shield is not
 carried: `Droid_Shield` equips at the BELT, and the player's Echani, Arkanian
 and Mandalorian shields are **forearm-band items.** Headgear is `Mask`; there is
 no helmet type either.
@@ -1205,6 +1206,7 @@ no helmet type either.
 | gauntlets | Gauntlets | hands | hands | — | 40 items. |
 | forearm-band | Forearm band | arm_l · arm_r | forearms | — | 33 items, and THIS IS WHERE A SHIELD GOES — Energy Shield, Echani Shield, Mandalorian Power Shield are all forearm bands. Two slots, left and right. ⚠⚠ AND THE COLUMN SAYS BOTH NOW — `PT-2346`. It read `forearms` while the Note beside it said *"two slots"* and the format writes `arm_l` and `arm_r`; the first reader this column ever had faulted four correctly-equipped bands. |
 | belt | Belt | belt | belt | — | 47 items, including the Stealth Unit. |
+| boots | Boots | boots | boots | — | 25 items, every one ours. A ruled addition with no K2 precedent (PT-2503, EMBODIMENT-01): the Equip screen's Boots slot. A droid has no boots slot. |
 | implant-1 | Implant, level 1 | implant | implant | cybernetic_implantation · advanced_cybernetic_implantation · master_cybernetic_implantation | FEATS-LIBRARY-01 gates these — Cybernetic Implantation allows level 1, Advanced allows 1-2, Master allows 1-3. The three tiers are a ruled feat chain and not a display grade. ⚠⚠ THE COLUMN IS THE RULE NOW — `PT-2342`. It said this in prose and `§17.4` has to be READ, and a sentence is not a column. |
 | implant-2 | Implant, level 2 | implant | implant | advanced_cybernetic_implantation · master_cybernetic_implantation | ⚠ THE LIST IS AN `OR` — `§17.2`, the same semantics every gate category has. A chain that allows 1-2 is named on BOTH rows rather than derived from a tier order nothing states. ⚠⚠ AND IT IS **IDS, NOT DISPLAY NAMES** — `PT-2344`. Every feat reader in the product matches an id; a display name is not a key. |
 | implant-3 | Implant, level 3 | implant | implant | master_cybernetic_implantation | |
@@ -1334,7 +1336,8 @@ they are — and not by matching text.
 | mask | Mask | Worn slots | `Mask` |  |
 | gauntlets | Gauntlets | Worn slots | `Gauntlets` |  |
 | forearm-band | Forearm band | Worn slots | `Forearm_Bands` · `Wrist_Launcher` |  |
-| belt | Belt | Worn slots | `Belt` |  |
+| belt | Belt | Worn slots | `Belt` · `Stealth_Unit` | ⚠ `Stealth_Unit` (13 items, `baseitems.2da` equipable slots `0x20400` in both games) carries the belt bit `0x400`, so the games put it in the belt slot — `PT-2725` D1, from the row the item's own `.uti` names rather than an inference from its name. The extra bit `0x20000` is the creature-hide slot and is not ours. |
+| boots | Boots | Worn slots | — | Ours, with no K2 precedent (PT-2503). Every boots item is `src: AUTHORED`, so it takes this base from its catalogue category. |
 | implant-1 | Implant, level 1 | Worn slots | `Implant_1` |  |
 | implant-2 | Implant, level 2 | Worn slots | `Implant_2` |  |
 | implant-3 | Implant, level 3 | Worn slots | `Implant_3` |  |
@@ -1373,7 +1376,6 @@ made rather than an absence nobody noticed.
 | `Pazaak_Sideboard` | k1, k2 | A card game. |
 | `Plot_Useable_Items` | k1, k2 | ⚠⚠ DELIBERATELY UNCLAIMED, AND THIS ROW IS A TRAP. 152 items, of which only THIRTEEN are plot items — the rest are upgrade components (emitters 26, ranged cells 30, melee cells 15, edges 15, scopes 16, grips 12). K1 has no Upgrade_Items row and files its upgrade parts here. `object` would claim 152 items to serve 13. |
 | `Restrictive_Jedi_Robe` | k2 | ZERO items in either game. A row the games ship and never use. |
-| `Stealth_Unit` | k1, k2 | 13 items, belt slot AND the creature-hide bit (0x20400). Belongs with `belt` or its own row; undecided rather than absent. |
 | `Torch` | k1, k2 | A light source. |
 | `Upgrade_Items` | k2 | THE UPGRADE SYSTEM, 60 items. |
 

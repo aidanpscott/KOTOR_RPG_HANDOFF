@@ -22,6 +22,10 @@
 >
 > **⚠⚠ AND A RULE AUTHORED NATIVELY IN SQUARES MUST SAY SO.** `PT-1576`'s `range = 10` is squares and was never a metre value — **and a number that does not say which it is will be halved by somebody who assumes it was doubled.**
 
+**Moving on the grid — `PT-2750` (owner).** You move one square at a time: up, down, left or right. To reach a diagonal square you move two squares. A creature on a diagonal square next to you is still **adjacent**: you can reach it, flank it, and it can make an attack of opportunity on you. Distances for reach, range and areas are still counted the short way, with a diagonal as one square; only **walking** goes four-way. Every creature moves this way, not only player characters.
+
+> **⚠ WHAT IT REPLACED.** `PT-1588` let a diagonal step cost one square; its adjacency, reach and flanking clauses stand. `PT-1707`'s numpad diagonals are gone, and `PT-1709`'s corner rule now governs sight only — no step cuts a corner because no step is diagonal.
+
 ---
 
 ## The five budgets

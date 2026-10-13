@@ -1175,3 +1175,24 @@
 | **30** | +22 | +10 | +17 | +10 |
 
 ---
+
+## Starting proficiencies of our own classes
+
+**⚠ Owner ruling after TEST 176 (`PT-2744`).** Our class tables grant these twelve classes no weapon or armour proficiencies, so each starts with the level-1 grants of one K2 class (`feat.2da`, `<class>_granted`).
+
+| Class | Takes K2's | Source |
+|---|---|---|
+| Smuggler | Scoundrel | our lineage: CLASS-ROSTER-01, "absorbed the Scoundrel" (PT-73) |
+| Machinist | Tech Specialist | our lineage: CLASS-ROSTER-01, "was Tech Specialist" (PT-83) |
+| Engineer | Expert Droid | our lineage: CLASS-ROSTER-01, "was Expert Droid" (PT-76, PT-83) |
+| Sith Warrior | Jedi Guardian | our lineage: PT-125's mirror, the Guardian's stat block |
+| Sith Inquisitor | Jedi Consular | our lineage: PT-125's mirror, the Consular's stat block |
+| Bounty Hunter | Soldier | MAIN's example, approved by the owner |
+| Duelist | Soldier | by role (a melee fighter), approved by the owner |
+| Marksman | Scout | by role (ranged), approved by the owner |
+| Treasure Hunter | Scout | by role (an explorer), approved by the owner |
+| Medic | Scout | by role (K2 has no medic; the Scout is its skills class), approved by the owner |
+| Agent | Scoundrel | by role (the spy), approved by the owner |
+| Saboteur | Scoundrel | by role (demolitions and stealth), approved by the owner |
+
+---

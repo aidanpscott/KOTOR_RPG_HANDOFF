@@ -1656,4 +1656,6 @@ item, once alignment tracking exists to drive it.**
 
 **Chassis limits.** A motivator names the frames that can mount it. A Remote or Probe already floats on its own repulsorlift frame and takes only what changes its noise. Labor and Protocol are not playable (PT-567).
 
+**All four apply in play** (owner ruling after the five rows were approved): movement through the fight's speed, rough ground through `ignoresMoveCostMultipliers`, and the save only when the roll is against a knockdown or a push (an on-hit Knockdown, Force Push, Force Wave). **A motivator naming frames is refused on any other** (Servo-Leg: Assassin and Battle).
+
 **Price** follows the boots: each is priced against the boots item with the nearest effect (ITEMS-08 §boots: *"the belt category is the template"*).

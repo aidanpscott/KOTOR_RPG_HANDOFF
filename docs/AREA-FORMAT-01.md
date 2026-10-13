@@ -481,6 +481,9 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **`PT-1588` — `PLAYTEST-RULINGS-01:238`:** *"**Grid diagonals** — Ruled here: **diagonal costs 1 square**, diagonally touching is adjacent, and diagonal adjacency satisfies both melee reach and flanking."* **One sentence carrying three rulings**, and `PT-4` at line 117 rules flanking geometry consistently with it.
 
+**⚠ SUPERSEDED FOR WALKING (owner, under `PT-2749`, 2026-10-13):** movement is up, down, left or right only; a diagonal square is two steps to walk. `PT-1588`'s adjacency, reach and flanking clauses stand, and so does `squaresBetween` for distance. The numpad diagonals (`PT-1707`) are removed and the corner check (`PT-1709`) now governs sight only.
+
+
 > **⚠⚠ AND THIS PARAGRAPH USED TO ASSERT THE OPPOSITE.** It said *"nothing in the corpus says whether a diagonal counts as one square or more"* and called the number mine. **It does say, and it had said all along.**
 >
 > **That is a scoped negative that searched the wrong shelf** — `design/` and `rules/`, and **not `playtest/`.** The same defect this corpus keeps finding, in a document rather than in code: *a claim about absence is only as wide as the search behind it, and this one did not name its scope.*

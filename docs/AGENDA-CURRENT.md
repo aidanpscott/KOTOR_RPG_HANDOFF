@@ -1554,3 +1554,11 @@
      WHY DEFERRED   the vision pass isn't done; this is downstream
                     of decisions still in motion
      PICK UP WHEN   `APP-UI-VISION-01` is settled
+
+## H — DEFERRED RULES ITEM: JUMPING (`PT-2749`)
+
+**Jumping: cost in movement and whether it provokes, decided when the board has height and gaps.** The owner's ruling on the BG3 study's Q2 (2026-10-13): later, with height. BG3's Jump (a Bonus Action plus 3 m of movement, still warning of attacks of opportunity) is recorded in `design/BG3-COMBAT-STUDY.md` §A as evidence only.
+
+     WHAT           whether we have a jump; its movement cost; whether
+                    it provokes an attack of opportunity
+     PICK UP WHEN   the board has height and gaps to jump

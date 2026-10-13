@@ -32,7 +32,7 @@ Our game's item list (1424 items) sorts into them as: Weapons 356, Armor 197, Us
 |---|---|---|
 | K2's help box says the Inventory lists "all the items **not currently equipped**". Worn items are not in it | ours lists worn items too, marked "(Equipped)" (`PT-1251`) | **RULE:** recommend K2: leave worn items out (the Equip screen shows them). One less thing in the list |
 | An empty tab: both panes simply blank | ours prints "nothing here under WEAPONS — the filter is hiding 4 other things" (`PT-2493`) | **RULE:** recommend K2's blank panes. The New tab's empty state is ruled to look like K2's, and one empty look for every tab is simpler |
-| Stacks (a count on one row) | ours shows the count on the icon | **BUILT (2026-10-13):** K2 prints a stack's number on the item's icon, bottom right, in teal, and leaves the name alone (captured after all: `signoff-saveload-options/k2-medpac/k2-medpac-inventory-description.png`, Adrenaline Amplifier with a "5"). Ours matches without the dark box K2 draws behind the digit (owner). |
+| Stacks (a count on one row) | ours shows the count on the icon | **BUILT (2026-10-13):** K2 prints a stack's number on the item's icon, bottom right, in teal, and leaves the name alone (captured after all: `signoff-saveload-options/k2-medpac/k2-medpac-inventory-description.png`, Adrenaline Amplifier with a "5"). Ours matches **without the dark box K2 draws behind the digit: an OWNER RULING (2026-10-13), a deliberate difference; a 1:1 sweep must not restore the box.** |
 
 ## The first-open help box
 "The PARTY INVENTORY screen shows a list of all the items not currently equipped by other party members or the companions back at your base. This inventory is shared by all party members." (string 42136), with OK.

@@ -24,6 +24,8 @@
 
 **Moving on the grid — `PT-2750` (owner).** You move one square at a time: up, down, left or right. To reach a diagonal square you move two squares. A creature on a diagonal square next to you is still **adjacent**: you can reach it, flank it, and it can make an attack of opportunity on you. Distances for reach, range and areas are still counted the short way, with a diagonal as one square; only **walking** goes four-way. Every creature moves this way, not only player characters.
 
+**Pushes and pulls — `PT-2750` (owner).** A push or a pull is forced movement, not a walk, so it is not four-way. The creature goes straight away from the source (or toward it, for a pull) along the nearest of the eight directions, diagonals included, one square for each square of push. It stops at a wall or a creature, and it never cuts a corner that is blocked on both sides.
+
 > **⚠ WHAT IT REPLACED.** `PT-1588` let a diagonal step cost one square; its adjacency, reach and flanking clauses stand. `PT-1707`'s numpad diagonals are gone, and `PT-1709`'s corner rule now governs sight only — no step cuts a corner because no step is diagonal.
 
 ---

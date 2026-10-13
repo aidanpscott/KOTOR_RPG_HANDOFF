@@ -467,6 +467,10 @@ resref is what says what a thing is.
 
 **And armour blocks Force powers**, which `ACTION-ECONOMY-01 §12` already depends on to make the Heavy-Armour and Soresu gates on `Well Guarded` genuinely alternative paths. **Confirmed.**
 
+### 5.5 Footwear — the second source of worn Defence (owner ruling after TEST 176, `PT-2744`)
+
+**Boots that state `Defence +N` add it ON TOP of the armour's.** Armour (this section's table) is the first source of worn Defence; **footwear is the second, and the only other**. A droid's motivator is footwear for this rule, should one ever state Defence. **There is one Boots/Motivator square, so a character has at most one footwear bonus.** It stacks with the armour, the class bonus and Dexterity; it does not raise the armour's Dexterity cap. Four boots carry one today: Sith Trooper Greaves +1, Mandalorian Battle Greaves +2, Krath War Boots +3, Vanguard Assault Boots +3. A character with no armour and these boots has the footwear bonus alone.
+
 ---
 
 ## 6. Ability score generation — the blocker is closed
@@ -1387,6 +1391,28 @@ items of ordinary weaponry with no base type — nobody chose that, it was simpl
 never noticed. **And `Armor_Zeison_Sha` needs a ruling rather than a mapping:**
 its `baseac 3 / dexbonus 4` sums to **seven**, and `§5.1` states the sum is
 always nine.
+
+---
+
+## 14a. Display names of the generic blueprints — TEST 177
+
+**The generic blueprints' display names (MAIN's ruling after TEST 177; the implants RULED by the owner, the armour PROPOSED).** A base type's name above is a rule label ("Armour Class 4"); the generic item a player could hold as loot or buy in a store reads as a plain name instead. K2's own names for these rows are no better ("Defense Bonus 4", "Implant 1"). The ids stay generic; `gen_base_rules.NAMES` writes these, and `check_shipped_names.py` refuses any shipped item name that is not written in a rule document.
+
+| Base type | Rule name | Shown to the player | Status |
+|---|---|---|---|
+| armour-class-4 | Armour Class 4 | Light Leather Armour | PROPOSED |
+| armour-class-5 | Armour Class 5 | Heavy Leather Armour | PROPOSED |
+| armour-class-6 | Armour Class 6 | Light Combat Armour | PROPOSED |
+| armour-class-7 | Armour Class 7 | Combat Armour | PROPOSED |
+| armour-class-8 | Armour Class 8 | Heavy Combat Armour | PROPOSED |
+| armour-class-9 | Armour Class 9 | Battle Armour | PROPOSED |
+| implant-1 | Implant, level 1 | Cybernetic Implant | **RULED** — owner, after TEST 177 (PT-1125's convention, paired with Cybernetic Implantation) |
+| implant-2 | Implant, level 2 | Advanced Cybernetic Implant | **RULED** — owner (paired with Advanced Cybernetic Implantation) |
+| implant-3 | Implant, level 3 | Master Cybernetic Implant | **RULED** — owner (paired with Master Cybernetic Implantation) |
+| robe-1 | Robe 1 | Jedi Robe | shipped before this table |
+| robe-2 | Robe 2 | Knight Robe | shipped before this table |
+| robe-3 | Robe 3 | Master Robe | shipped before this table |
+| robe-5 | Robe 5 | Revan Robes | shipped before this table |
 
 ---
 

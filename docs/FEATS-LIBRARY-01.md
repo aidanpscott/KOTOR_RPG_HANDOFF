@@ -97,9 +97,9 @@
 | **Conditioning** | Physical hardening against everything the galaxy can throw at you. | +1 to all saving throws. |
 | › Improved Conditioning | Physical hardening against everything the galaxy can throw at you. | +2 to all saving throws. |
 | ›› Master Conditioning | Physical hardening against everything the galaxy can throw at you. | +3 to all saving throws. |
-| **Cybernetic Implantation** | **(note: Reinstated from cut content.)** Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows level 1 implants. |
-| › Advanced Cybernetic Implantation | Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows level 1–2 implants. |
-| ›› Master Cybernetic Implantation | Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows level 1–3 implants. |
+| **Cybernetic Implantation** | Surgical grounding for cybernetic hardware. Without it, implants cannot be installed. | Allows Cybernetic Implants. |
+| › Advanced Cybernetic Implantation | Further surgical grounding allows the use of Advanced Cybernetic Implants. | Allows Cybernetic Implants and Advanced Cybernetic Implants. |
+| ›› Master Cybernetic Implantation | The fullest surgical grounding allows the use of Master Cybernetic Implants. | Allows Cybernetic, Advanced Cybernetic and Master Cybernetic Implants. |
 | **Elusive** | Never quite where the blow lands. | **+1 Defence.** Always active. |
 | › Improved Elusive | Never quite where the blow lands. | **You gain +2 Defence. Always active.** (note: was **+2 Defence.**) |
 | ›› Master Elusive | Never quite where the blow lands. | **You gain +3 Defence. Always active.** (note: was **+3 Defence.**) |
@@ -129,6 +129,8 @@
 | **Boresight** | Shots placed where they are hardest to turn aside. **⚠ The Scout gains it at 4, 8 and 12; anyone may learn it. `PT-208`.** (note: Renamed from `Marksman`, which collided with the class of that name — `PT-206`.) | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(note: The passive half of KOTOR's Precise Shot. The damage half is an attack — see ATTACKS-01.)* |
 | › Improved Boresight | Shots placed where they are hardest to turn aside. | **Enemy Blaster Bolt Deflection is reduced by 4 against your ranged attacks. Available from level 6.** (note: was **Enemy BBD −4.** Level 6) |
 | ›› Master Boresight | Shots placed where they are hardest to turn aside. | **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round. Available from level 12.** (note: was **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round.** Level 12) |
+
+> **Note — Cybernetic Implantation** is reinstated from cut content (K2's `IMPLANT_LEVEL_1`-`3`, displayed there as "Implants I / II / III"). Each tier's description says what it adds, as K2's do (MAIN's ruling after TEST 177).
 
 > **⚠ Repriced from five tiers to three at `1 / 6 / 12` — `PT-209`.** **The source ran `PRECISE_SHOT_I–V` at 4 / 8 / 12 / 16 / 20 and `PT-101` cut `Targeting` from eight tiers to three for the same reason.**
 

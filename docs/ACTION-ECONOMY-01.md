@@ -122,6 +122,8 @@
 
 **From the pool. `ATTACKS-01 §10`: 1 to 3 per encounter, by Dexterity modifier or base attack bonus, whichever serves better.**
 
+**Who decides a reaction (MAIN, 2026-10-14, PT-2749 step 3):** the player decides the reactions of the player character and of a companion the player controls; for a companion under the AI, the AI decides. Each reaction has a setting, Always / Ask / Never: under Ask the game pauses and asks, and only for a character the player controls. Force Deflection defaults to Always (the owner, confirming `PT-1055`); the others default to Ask. A stunned creature takes no reactions (`PT-848`, §19.1).
+
 | Reaction | Trigger |
 |---|---|
 | **Opportunity attack** | **An enemy leaves your melee reach on foot** while you can see it. **One `Strike` at no penalty** — no chain applies. Prevented by Disengage. **⚠ Not available to droids** — see below. |

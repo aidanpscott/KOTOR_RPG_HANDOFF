@@ -459,7 +459,7 @@
 
 **It begins immediately.** **A fresh stun on an already-stunned target refreshes it — the count restarts from the newest hit.**
 
-**A stunned character may still use reactions**, and **does not lose an action already readied.**
+~~**A stunned character may still use reactions**~~ *(corrected 2026-10-14: **a stunned character takes no reactions** — `PT-848`, which sides with ACTION-ECONOMY-01 §19.1)*, and **does not lose an action already readied.**
 
 > **Refresh is the load-bearing clause.** **Without it a Precision build cannot lock a target, and with it, it can.** **That is precisely what S1 and S4 are measuring.**
 

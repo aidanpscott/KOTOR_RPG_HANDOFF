@@ -130,3 +130,8 @@ Started 2026-10-13 22:30 EDT. Tester, Xvfb :2, own data dir (~/.local/share/test
 - Ivy None, Advanced implant: the list rows are outlined red; picking it pops K2's generic box "You cannot equip this item. You don't have the prerequisites. Please see the item description." and the side pane reads "Feats Required: Advanced Cybernetic Implantation" (i08d). Refused: PASS. "Told which feat they need": the pane names it, the refusal line does not (same as TEST 178). PARTIAL.
 - Note: the three feats and three implants draw no icons.
 - **Item 8: PASS except the refusal line not naming the feat (PARTIAL).**
+
+### Item 11 (last bullet): click on an enemy moves and attacks (Rough Two's mid-fight quick save, Short Sword after a free swap)
+- Hover the droid at (7,3) from (9,1): path (8,1),(7,1),(7,2) with one rounded bend and the ghost on (7,2); "Sentry Droid / 65% (needs 8+) / +1 attack · +1 Strength, against Defence 10 / 3 squares · 2 left / Provokes an attack from Sentry Droid" (i11-move-attack-hover-3sq.png).
+- Click: walked to (7,2), move 5 -> 2, then "Short Sword · rolled 20 — d20 18 + attack 1 + Strength 1 · needed 10 — hit · damage 7 — 1d6 6 + Strength 1 · 17 left" (i11-move-attack-click.png). PASS. (No opportunity-attack line is visible afterwards; the status line shows only the last line.)
+- **Item 11: PASS except one wording point: on rough ground the label counts movement spent, not marked squares.**

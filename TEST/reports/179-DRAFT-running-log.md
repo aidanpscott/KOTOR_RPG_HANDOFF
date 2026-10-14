@@ -77,3 +77,29 @@ Started 2026-10-13 22:30 EDT. Tester, Xvfb :2, own data dir (~/.local/share/test
   - Flanking: NOT SHOWN. Kael at (3,3) and me at (5,1) are diagonally opposite across the droid at (4,2); neither the hover reasons nor the attack line has a flanking term (i10-diagonal-hover-no-flank-term.png). The app has no flanking bonus code: "flank" appears in lib only in comments (play_screen.dart:7452, fight.dart:1154). Cannot be checked in play.
   - Follower stops on the diagonal: out of a fight, one Right step from (0,2) put me at (1,2) and Kael (from (0,4)) at (0,3), diagonal (i10c-arrow-control.png). PASS.
 - 9 (part): own-turn Switch Weapons in Equip: 1st "you switch weapons" (free, action still lit); 2nd "switching weapons — your second interaction this turn, so it cost your Action"; 3rd "switching weapons — you have spent your interaction and your Action" (i09-switch-free-action-refused.png, i09-switch-slots.png). PASS.
+
+### Item 12: Stack numbers (Rough Two, fresh chargen Soldier: 2 Frag Grenades, 2 medpacs, 1 Adrenal Strength)
+- Inventory: Frag Grenade and Medpac icons each carry a bare teal "2" at the bottom right, no dark box behind it (i12-stack-icons-zoom.png). Names read "Frag Grenade", "Medpac", no "x2". Single items (Adrenal Strength, the worn ones) show no number (i12-inventory.png). **PASS.**
+- Note: Dockworker's Treads draws no icon (empty cell) in Inventory and in Equip's list.
+
+### Item 9 (rest), Rough Two in a fight in tester-rough
+- Escape + F4: Escape opens Options; F4 with Options open writes nothing (known since TEST 175). Escape again (closes Options) + F4: rough-two.marks/quick.mark written 23:38:32; two more Escape, Escape, F4 cycles rewrote the one quick.mark (23:38:46, 23:38:55), no second file. PASS.
+- Auto Save shows companions: Options > Load Game, Auto Save row: faces of Kael and Rough Two, area Rough Field, package Tester Rough Ground (i09-autosave-companions.png). PASS. Notes: Kael's face is first and the leader second; the Auto Save time equals the Quick Save time (23:38:55).
+- Party bar faces: Kael's and the player's portraits in the play sidebar and the Equip footer throughout (i03b, i12-inventory). PASS.
+- Boots off/on: refused in a fight ("...gear cannot be changed in a fight — only weapons"), as expected; to be done out of a fight.
+
+### Item 10 (rest)
+- Enemies close in on L-shaped paths: NOT OBSERVED. In two fights every droid approach was a straight run that ended diagonal to its target ((9,2)->(5,2); (5,2)->(4,2); (5,3)->(7,3)) (i10-droid-approach-straight.png). My bed did not force an L. Companion approach not observed (Kael is MANUAL).
+
+### Fixtures for items 5-8 (authored fresh with notes/fixtures/tester_author.dart, specs in notes/fixtures/specs/, one locked dart run):
+- bolt-ninety (Store Bed, astromech Engineer, 1000 credits, Dockworker's Treads in bag); c79-astromech/-remote (Engineer), c79-assassin/-battle (Marksman, male), c79-tread (astromech wearing a Treaded Motivator) all in tester-rough; ivy-ninety (Store Bed, Soldier 3, all three Cybernetic Implantation feats, three implants in bag); ivy-none (same, no feats).
+
+### Item 6: Droid speed by chassis (fresh authored c79-* saves in tester-rough; fight started by bumping the droid at (5,3))
+- Move legend on the droid's own turn: Assassin 5, Battle 5, Remote 6 (i06-speeds.png). Astromech: 4 move diamonds (frame on Kael's turn; the legend shows the player's allowance, same as the Treaded run where it read 3 on both Kael's and the droid's turn). PASS.
+- Remote on rough ground (its own turn, 6 move): to rough (5,1) via (4,2),(4,1): "3 squares · 3 left"; to rough (2,1): "4 squares · 2 left"; no "rough ground costs extra", no amber inset (i06-remote-rough-free.png). PASS.
+- **Item 6: PASS.**
+- Mishap (mine, not the app): my first loop ended the astromech's own turns too, because the status line "Kael is waiting on you" stays up into the player's turn; the droids took it to "-14 of 18". Fixed the loop to read the turn-order marker (run/turn.py).
+
+### Item 5 (part): Treaded Motivator in play (c79-tread, astromech wearing it, tester-rough)
+- Move: 3 diamonds (astromech 4, one less). PASS.
+- Rough ground: path to rough (5,1) from (4,3), 3 squares: "3 squares · 0 left", no "rough ground costs extra", no amber inset (i05-treaded-3-and-rough-free.png). A plain 4-square path reads "Not enough movement". PASS.

@@ -57,3 +57,23 @@ Started 2026-10-13 22:30 EDT. Tester, Xvfb :2, own data dir (~/.local/share/test
 - Sentry Droid's turn: Equip > Switch Weapons inside the droid's turn; status line "switching weapons — it is Sentry Droid's turn; wait for your own" (i03c, top half; the bottom half 0.6 s later shows the next droid acting). PASS.
 - Note: the line is on the play status line only; inside Equip the press shows nothing (the line is visible after Close).
 - **Item 3: PASS.**
+
+### Items 10 and 11 in a fight (tester-rough, Rough Ninety Soldier + Kael manual, 2 sentry droids)
+- 11 path line, on my turn (i11-six-hovers.png, zooms i11-colours-teal-red-amber.png, i11-straight-row-lines.png):
+  - Straight up a column: (4,2),(4,1),(4,0) teal, "3 squares · 2 left", one straight line. Straight along row 2: "3 squares · 2 left", "4 squares · 1 left". PASS.
+  - L to (7,4): one rounded bend, 4 squares marked, "4 squares · 1 left". PASS.
+  - Past movement (11,4): 5 teal then red-tinted squares with a red dashed line, "Not enough movement". PASS.
+  - Rough ground: (2,4) and (2,0) drawn with an amber inset; past movement amber+red. PASS.
+  - Occupied squares: target (8,3) with a droid on (5,3) in the straight row: detours down row 4 and back up; target (1,3) with Kael on (3,3): detours via row 4. Never through an occupied square. PASS.
+  - Provokes: "Provokes an attack from Sentry Droid" on paths leaving the droids' reach. After d (Disengage: "disengaging — your movement provokes nothing this turn") the same hovers show no provoke line (i11-disengage-line.png, i11-disengage-no-provoke.png). PASS.
+  - Click walks exactly: clicked the 4-square L to (7,4): landed on (7,4), move 5 -> 1 (i11-click-walked-4.png). PASS.
+  - Count vs marked squares on rough ground: hover (5,1) from (6,2): 2 squares marked ((5,2), (5,1) rough) but the label reads "3 squares · 2 left / rough ground costs extra" (i11-rough-count-and-provoke.png). The count is movement spent, not marked squares. FAIL against the order's wording ("The label's count equals the marked squares").
+  - Move-and-attack (Short Sword): hover the droid at (4,2) from (6,2): ghost on (5,2), "Sentry Droid / 65% (needs 8+) / +1 attack · +1 Strength, against Defence 10 / 1 square · 4 left" (i11-move-attack-hover.png). PASS (note: the tooltip box covers most of the ghost). Clicking it not done; the in-place diagonal attack was clicked instead (below).
+  - Stale move counter: at the start of a turn the legend read "5 → 3 move" with the pointer off the board, and later "2 → 0" with 2 left; the real allowance was 5 ("4 squares · 1 left") (i11-stale-move-counter.png). Looks like the last hover's preview kept after the click/turn change.
+- 10 diagonal adjacency:
+  - Enemy: the far droid closed 4 squares along row 2 to (5,2), diagonal to me at (4,3), and attacked me from there ("1 square — hit"). A droid stepped (5,2)->(4,2), diagonal to Kael (3,3), and attacked him (i10-enemy-diagonal-attack.png). PASS (stops on the diagonal and strikes).
+  - Me hitting a diagonal neighbour in place: from (5,1) clicked the droid at (4,2): "Short Sword · rolled 13 — d20 11 + attack 1 + Strength 1 · needed 10 — hit · damage 2", no move spent (i10-diagonal-hit-in-place.png). PASS.
+  - Walking away from a diagonal neighbour provokes: (5,2) -> (5,1) leaves the droid at (4,3) (diagonal): "Sentry Droid catches Rough Ninety leaving — ... miss" (i10-diagonal-leave-provokes.png). PASS.
+  - Flanking: NOT SHOWN. Kael at (3,3) and me at (5,1) are diagonally opposite across the droid at (4,2); neither the hover reasons nor the attack line has a flanking term (i10-diagonal-hover-no-flank-term.png). The app has no flanking bonus code: "flank" appears in lib only in comments (play_screen.dart:7452, fight.dart:1154). Cannot be checked in play.
+  - Follower stops on the diagonal: out of a fight, one Right step from (0,2) put me at (1,2) and Kael (from (0,4)) at (0,3), diagonal (i10c-arrow-control.png). PASS.
+- 9 (part): own-turn Switch Weapons in Equip: 1st "you switch weapons" (free, action still lit); 2nd "switching weapons — your second interaction this turn, so it cost your Action"; 3rd "switching weapons — you have spent your interaction and your Action" (i09-switch-free-action-refused.png, i09-switch-slots.png). PASS.

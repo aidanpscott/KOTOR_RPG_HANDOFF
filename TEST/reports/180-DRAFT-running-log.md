@@ -91,3 +91,24 @@ Started 2026-10-14. Tester, Xvfb :2, own data dir (~/.local/share/tester-data), 
   - "Probe Droid: unarmed" / "rolled 10 — d20 7 + attack 1 + Strength 0 + closed on a ranged weapon 2 · needed 11 · 1 square — miss"
   - Status lines: "initiative — Sentry Droid 18 · Nine Ninety 11"; "Sentry Droid and Sentry Droid falls — Kael: unarmed · ..." ("falls" with two subjects); "the fight resumes — round 1, Mine Two's turn"; "goes off — d20 20 = 20 vs 15 · 3 damage · 8 of 11 · 2 more rounds"; "YOU FALL, AND NOBODY IS LEFT STANDING. That is a total party defeat, and it is the only thing that kills. — Sentry Droid: unarmed · ..."; defeat box "Your entire party has been killed. / Anyone who goes down is revived when a battle ends. Nobody is left standing, so there is no end of battle. / the newest save is this one — it already records the defeat".
 - Attacks of opportunity in the log: not yet seen.
+
+### AMENDMENT (MAIN): app 4c01d57 pushed after TEST 180 was written. I am already on 617578e: finishing there. RE-CHECK ON 4c01d57 at the end: item 4 (mine, save, load; and mine, rest, save, load), item 10 ranged flanking (a) on the line within half range with an adjacent ally +2 both, (b) past half range none, (c) off the line none, item 13 K2 wording ("<A> attacks <B> : hit (roll + bonus = total)", "<A> damages <B> for N damage", "Opportunity attack: ", " · Flanking +2"), strip enemy tiles stay initials. NEW item 16 (attacks of opportunity, a-g) to run on 4c01d57.
+
+### Item 11 (rest): Boot Rich (100000 credits) bought all four (900, 6500, 24000, 31000). Heavy Leather Armour alone: DEF 17.
+- Equip DEF / sheet Defence: Sith Trooper Greaves 18 / 18; Mandalorian Battle Greaves 19 / 19 (Fortitude +5 -> +6); Krath War Boots 20 / 20; Vanguard Assault Boots 20 / 20 (DEX 14 -> 15, modifier stays +2; Fortitude +7) (i11f, i11g). Each adds on top of the armour. PASS.
+- In a fight (Boot Fight, authored with all four in the bag, Krath worn): "defence base 10 + Dexterity 2 + armour 8 = 20"; every droid attack on me reads "needed 20" (on Kael "needed 11") (i11h). PASS. Note: the line folds the boots into "armour 8" rather than naming them.
+- Long names fit their Equip square (three lines for "Mandalorian Battle Greaves").
+- **Item 11: PASS.**
+
+### Item 8: Equip
+- "Silenced Motivator" fits its square in full (Bolt Eighty, authored, wearing it) (i08a). PASS.
+- Abilities > Feats: the three Cybernetic Implantation feats draw three different K2 implant icons by tier (i08b). PASS.
+- Switch Weapons on Kael's turn, inside Equip: a red-bordered box "switching weapons — it is Kael's turn; wait for your own" (i08c). PASS. On my own turn it swaps (Config 1 empty <-> Short Sword) and the second press says "switching weapons — your second interaction this turn, so it cost your Action" (i08d).
+- **Item 8: PASS.**
+
+### Item 14 (rest): the gunman
+- Sith Trooper (Blaster Rifle, Tester Save Bed, fight from "Stand aside."): hover shows "Sith Trooper · Level 3", bar, "18 of 18", and NO reach ring (i14c). PASS. Note: the hit-chance tooltip there covers my own token beside him.
+- **Item 14: PASS** (strip tiles as initials: re-check on 4c01d57).
+
+### Item 13 (rest): attack of opportunity in the log (617578e)
+- Stepping away from an adjacent droid: status line "Sentry Droid catches Aoo Eighty leaving — unarmed · rolled 23 — d20 20 + attack 1 + Strength 0 + closed on a ranged weapon 2 · needed 11 · 1 square — hit · threat confirmed: ..."; the log files it under a plain "Sentry Droid: unarmed" heading with the same roll beneath (i13b). The log keeps it, but without saying it was an opportunity attack. Re-check wording on 4c01d57.

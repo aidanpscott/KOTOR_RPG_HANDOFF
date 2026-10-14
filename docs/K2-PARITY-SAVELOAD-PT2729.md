@@ -1,5 +1,7 @@
 # K2-PARITY-SAVELOAD-PT2729 — K2's Save/Load screens against ours
 
+**✓ SIGNED OFF by the owner, 2026-10-13** (from `signoff-1-save-load.mp4` and `signoff-2-options-combat.mp4`, app 9a1919f; ledger under PT-2740 and PT-2736). From now on a change to this screen needs a reason in the ledger, and a short clip for the owner if it changes what he sees.
+
 **PT-2729 / PT-2732.** Element by element, K2 (`saveload_p.gui`, `savename_p.gui`, captures in `MAIN_WORK media/screens/pt2729-saveload/k2/`) against our live app (side-by-sides in `.../sbs/`, our shots in `.../live/`, K2 on the left, ours on the right, K2 cropped of its 28px title bar).
 **Status:** `=` matches · `X` excused (ruled or structural) · `GAP` known, listed for a later slice.
 

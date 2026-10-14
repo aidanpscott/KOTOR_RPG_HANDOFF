@@ -1,5 +1,7 @@
 # K2-PARITY-OPTIONS-PT2734 — K2's Options screens against ours
 
+**✓ SIGNED OFF by the owner, 2026-10-13** (from `signoff-1-save-load.mp4` and `signoff-2-options-combat.mp4`, app 9a1919f; ledger under PT-2740 and PT-2736). From now on a change to this screen needs a reason in the ledger, and a short clip for the owner if it changes what he sees.
+
 K2: `optionsingame_p.gui`, `optionsmain_p.gui`, `optfeedback_p.gui`, `optgraphics_p.gui` (extents read from the GFF) and live captures in `MAIN_WORK media/screens/options-k2/`; ours: side-by-sides in `.../sbs/`, K2 left, ours right. Owner rulings: `PT-2734` B. Rule: **what does not exist is left out, not faked.** Where a row is absent the list **closes up** (K2's own `optionsmain_p.gui` starts its first row at the same top as the in-game menu, so a missing row leaves no gap).
 
 | Element | K2 | Ours | Status |
@@ -62,6 +64,8 @@ Recorded the live app at 60 fps (Xvfb, a real fight against the Sith Trooper, ch
 - **Not obtained in K2:** XP pop-up on a kill (none visible in the kill frames), the medpac heal (K2 refused: full health; the medpac stack was injected into a COPY of the save, now deleted), Floating Numbers OFF vs flash, a footer with a multi-member party. A droid (T3-M4) footer and Load row are captured (`k2-droid/`): K2 shows the droid's own portrait.
 
 **Feedback > Tutorial Popups (`PT-2743`, owner):** back, K2's tick (string 42280, help 42287), between Hide Unequippable and Floating Numbers as K2 orders them, default ON. Off means no help box shows (play screens and chargen pages).
+
+**The red edge flash when you take damage: OWNER-APPROVED as it is (2026-10-13): "a really nice touch."** It is K2's own cue (K2 flashes the viewport edge red, strongest along the bottom; see the read above), so it is not ours-only; recorded anyway so no later pass removes or retunes it without a ledger reason.
 
 ## Edge flash length (PT-2739 item 4, 2026-10-11)
 **Cause of TEST 158's 0.9-1.3 s:** the flash's clock advanced at most 45 ms per app frame (so a slow frame could not skip the peak). On Xvfb the app draws ~7 fps, so 270 ms took 6-9 app frames. **Now** the clock is real time, and a frame that would cross the peak lands on it, so every flash is drawn once at full strength and is gone at 0.27 s at any frame rate. Test: `floating_numbers_test.dart` "AT A SOFTWARE RENDERER'S ~7 FPS…" (140 ms frames: the peak is drawn and it is gone by the third frame). Mutants: the old code fails it (no frame at the peak), and the 45 ms cap with the peak landing kept fails it (7 frames).

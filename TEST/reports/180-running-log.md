@@ -112,3 +112,38 @@ Started 2026-10-14. Tester, Xvfb :2, own data dir (~/.local/share/tester-data), 
 
 ### Item 13 (rest): attack of opportunity in the log (617578e)
 - Stepping away from an adjacent droid: status line "Sentry Droid catches Aoo Eighty leaving — unarmed · rolled 23 — d20 20 + attack 1 + Strength 0 + closed on a ranged weapon 2 · needed 11 · 1 square — hit · threat confirmed: ..."; the log files it under a plain "Sentry Droid: unarmed" heading with the same roll beneath (i13b). The log keeps it, but without saying it was an opportunity attack. Re-check wording on 4c01d57.
+
+## RE-CHECKS ON 4c01d57 (Lodestar 17754af47278c63621fd3323c8362cf0bbd09cf1 = lock = compiled; Lens fe10327 = lock = compiled; Loom none; built through the lock in 11 s, pubspec.lock unchanged; ~/kotor-tester/builds/test180b)
+
+### Item 4 (4c01d57): Gee Eighty (fresh chargen, Tester Mines) walked onto the mine: 8 of 11. F4, app restarted, Continue: 8 of 11 (i04e, i04f). Rest (e): "you rest a day · vitality 8 → 11 of 11"; F4, restart, Continue: 11 of 11 (i04g, i04h). PASS. Note: Continue puts me on the arrival square (1,1), not where I saved ((2,1)).
+
+### Item 10 ranged (4c01d57), local bed tester-rflank: Kael (3,2) beside a droid (4,2); me with the Blaster Rifle on the same row.
+- (a) from (11,2), 7 squares (half of 14): hover "75% (needs 6+) / +1 attack · +1 Dexterity · +2 Flanking"; shot "Blaster Rifle · rolled 14 — d20 10 + attack 1 + Dexterity 1 + Flanking 2 · needed 10 — hit"; log "Rifle Eighty attacks Sentry Droid : *hit* : (10 + 4 = 14)" with "Flanking +2" beneath (i10j, i10k). Kael's melee in the same set-up: "+2 Flanking"; line "+ Flanking 2"; log "Kael attacks Sentry Droid : *hit* : (7 + 4 = 11) / Flanking +2" (i10l). PASS (both).
+- (b) from (12,2), 8 squares: "65% (needs 8+) / +1 attack · +1 Dexterity" — no flank (i10m). PASS.
+- (c) from (12,3), off the line: "65% (needs 8+) / +1 attack · +1 Dexterity"; shot "d20 13 + attack 1 + Dexterity 1 · needed 10" — no flank (i10n, i10o). PASS.
+- Grenades not tried.
+
+### Item 13 wording (4c01d57), verbatim
+- "Sentry Droid attacks Kael : *hit* : (10 + 1 = 11)" / "Sentry Droid damages Kael for 1 damage"
+- "Sentry Droid attacks Gee Two : *miss* : (3 + 3 = 6)" (also the centre banner, word for word)
+- "Sentry Droid attacks Rifle Eighty : *critical hit* : (20 + 3 = 23 : Threat …" (cut)
+- "Opportunity attack: Sentry Droid attacks Boot Fight : *miss* : (10 + 1 …" (cut by the panel width)
+- "Rifle Eighty attacks Sentry Droid : *hit* : (10 + 4 = 14)" then "Flanking +2" on its own indented line beneath (not " · Flanking +2" at the end of the line)
+- "Sentry Droid has already acted"; "OA Droid is a droid holding unarmed — melee is closed to every droi…"
+- The status line keeps the old long form ("Kael: unarmed · rolled 11 — d20 7 + attack 1 + Strength 1 + Flanking 2 · needed 10 — hit · damage 4 — 1d3 3 + Strength 1 · 10 left"); the "catches <name> leaving" wording too.
+- Strip: enemy tiles initials ("S", "O"); party tiles portraits. PASS.
+
+### Item 16: attacks of opportunity (4c01d57)
+- Positions (Boot Fight, tester-rough, 4c01d57): fight started from (5,2) with the droid at (5,3), Kael at (4,3).
+- (b) adjacent to its diagonal: (5,2) -> (6,2), still adjacent to (5,3): hover "1 square · 4 left", no provoke line; no attack, 52 of 52 (i16b). PASS.
+- (a) walk up and stop beside: (6,1) -> (8,1), ending diagonal to the second droid at (9,2): hover "2 squares · 0 left", no provoke line; no attack (i16a). PASS.
+- (c) step away out of reach: hover "1 square (2 movement) · 2 left / Provokes an attack from Sentry Droid"; stepping: "Sentry Droid catches Boot Fight leaving — unarmed · rolled 11 — d20 10 + attack 1 + Strength 0 · needed 20 — miss"; log "Opportunity attack: Sentry Droid attacks Boot Fight : *miss* : (10 + 1 …" — one attack (i16c). PASS.
+- (d) walk past it in one move: hover "3 squares · 2 left / Provokes an attack from Sentry Droid"; one "Opportunity attack:" line for the move (i16d). PASS.
+- (e) Disengage (d): "disengaging — your movement provokes nothing this turn"; hover with no provoke line; step away: no new attack in the log (i16e). PASS. (Also on a later turn a plain step out of reach drew no attack: the droid had used its reaction — "reaction · per encounter".)
+- (f) droid: OA Droid (local copy of the shipped Opportunity Attacks package entering a02-droid): stepping away: no attack; line "OA Droid is a droid holding unarmed — melee is closed to every droid chassis, so it has no attack it can make" (i16f-droid). PASS.
+- (f) ranged-only enemy: **FAIL.** Sith Trooper (Blaster Rifle only, Tester Save Bed): stepping away from beside him: "Opportunity attack: Sith Trooper attacks Gun Eighty : *miss* : (5 + 5 =…" (i16f-gunman-provokes-FAIL, i16f-gunman-log). A gunman makes an opportunity attack.
+- (g) move-and-attack onto a square beside it: Kael from (0,0) clicked the droid at (5,0): hover "4 squares · 1 left" with no provoke line; walked and struck "Kael attacks Sentry Droid : *hit* : (11 + 2 = 13)"; no opportunity attack (i16g). PASS.
+- Owner's bug (attacks on walking up): NOT reproduced in (a), (b) or (g) on 4c01d57.
+
+### Item 15: regression (4c01d57)
+- Numpad 7/9/1/3 (Num Lock off and on): nothing (i15a). Diagonal neighbour hit in place: Kael hit the diagonal droid (617578e, i10e). Path: an L with one rounded bend, "3 squares · 0 left" (i15d). Stack numbers "2" on Frag Grenade and Medpac, no "x2" (i15b). Escape+Escape+F4 x3: one quick.mark rewritten 08:25:43/52, 08:26:01 (no second file). Auto Save row shows Kael and Rifle Eighty (i15c). PASS.

@@ -53,3 +53,41 @@ Started 2026-10-14. Tester, Xvfb :2, own data dir (~/.local/share/tester-data), 
 - Kael AUTO closed straight down column 0 (0,0)->(0,3) and stopped diagonal to the droid at (1,4), then killed both droids. A straight run, not an L (my bed did not force one for him).
 - Earlier run (Kael MANUAL, droid from (5,0) with me at (0,2) and Kael at (9,4)): the droid alternated targets every round, "closes 5 squares — 6 to 2 / out of movement 2 squares short", "closes 5 squares — 8 to 3", for 17 rounds without reaching either of us (i12c). Dithering between two targets.
 - **Item 12: four-way PASS by step count; the L itself NOT OBSERVABLE (moves are drawn as jumps); a dithering enemy noted.**
+
+### Item 10 (rest)
+- Enemy pair flanking me (tester-nine, me at (0,3), droids on (0,2) and (0,4)): "Sentry Droid: unarmed · rolled 20 — d20 17 + attack 1 + Strength 0 + Flanking 2 · needed 12 — hit · damage 1 — 1d3 1 · 38 left" and "... rolled 17 — d20 14 + attack 1 + Strength 0 + Flanking 2 · needed 12 — hit ..." (i10g). PASS.
+- Downed ally (tester-rough with Kael's local blueprint at 3 HP, fresh chargen Down Eighty): control first: me (5,2), Kael (5,4), droid (5,3): Kael's hover "75% (needs 6+) / +1 attack · +1 Strength · +2 Flanking, against Defence 10" and line "Kael: unarmed · rolled 10 — d20 6 + attack 1 + Strength 1 + Flanking 2 · needed 10 — hit" (i10h). After the droid downed Kael (card "0 of 3", token "K", line "Kael: -7 of 3", "1 bleeding · round 6"), my hover on the same droid: "65% (needs 8+) / +1 attack · ..." — the arithmetic (1 + 1 vs 10 -> 8+) has no flanking term (i10i). PASS from the preview; my attack line was not captured (the droids ended the fight first: total party defeat). Kael's blueprint restored to 40 afterwards.
+- **Item 10: PASS** (straight, diagonal, L, ranged, downed, enemy pair). Wording: the reasons say "+2 Flanking", the attack lines "Flanking 2".
+- Seen: the downed Kael's card reads "0 of 3" while the status line reads "Kael: -7 of 3".
+
+### Item 9: move-and-attack tooltip (tester-nine, hovering a droid two squares off)
+- The tooltip sits to the right below the target; the ghost at (4,4) and the target's red ring at (5,5) are both fully visible (i14b). PASS. BUT the combat log panel can cover the tooltip when the target is right of centre (i13-log-covers-tooltip.png, i10i: "65% (need..." cut by the log).
+
+### Item 14: enemy hover and strip
+- Hover banner: "Sentry Droid · Level 1", red vitality bar, "24 of 24" / "21 of 24"; red dashed ring = the 3x3 around it, diagonals included (i10a, i10h). PASS.
+- Gunman with no ring: not yet (sentry droids are all unarmed).
+- Strip: strict initiative order (tester-nine: 20, 19, 18 raised, me 11, 11, 10, 7, 6, 4, 2), acting tile raised, hourglass on each who has acted (i14a); the dead and the downed leave the strip (i14-strip-dead-removed, i10i). PASS.
+- Nine enemies + me = ten tiles; the strip fits above the board (i14a). PASS. Note: the party sidebar in that fight is cut at the bottom (Nine Ninety's card half shown) — nine enemy cards fill it.
+- Hovering an enemy's strip tile raises the tile and shows its name under it, its banner, its ring, and the move-and-attack preview on the board (i14b). PASS.
+- "Your Turn" appears in big text with the last enemy action banner still showing above it ("Sentry Droid: unarmed on Flank Ninety") (i14-your-turn...). PASS.
+
+### Item 13: log and banners (record, word for word)
+- Banner hold, 10 fps recording (vid t180-banner.mp4): lit 2.4, 2.5, 2.5, 2.5 s each. PASS (about 2.5 s).
+- Banners appear for attacks only: "Sentry Droid: unarmed on Nine Ninety", "Sentry Droid: unarmed on Kael", "Sentry Droid: unarmed on Flank Ninety". An enemy turn that only moves ("closes 5 squares") or does nothing ("nothing it can walk gets it closer") showed no banner (17 s with none in the recording while droids took turns).
+- Log: grouped by "Round N", each action line with its roll line indented beneath. The panel shows only the last 6 entries (play_screen.dart:11482 sublist(length-6)); earlier rounds are not reachable by scrolling. The panel always sits bottom right over the board (Positioned right 6, bottom 6, width 150 s) and hides tokens there.
+- Names, not tags: every line I saw uses names (Sentry Droid, Probe Droid, Kael, the player). One raw tag: a kill with the rifle ended the status line with "· character.died" (i10d).
+- Lines seen, verbatim (action line / beneath):
+  - "Round 1"
+  - "Sentry Droid out of movement 4 squares short" / "Sentry Droid has already acted"
+  - "Sentry Droid: unarmed" / "rolled 18 — d20 17 + attack 1 + Strength 0 · needed 11 — hit · damage 2 — 1d3 2 · 38 left"
+  - "Sentry Droid closes 2 squares — 3 to 1" / "Sentry Droid: unarmed · rolled 15 — d20 14 + attack 1 + Strength 0 · needed 12 — hit · damage 2 — 1d3 2 · 50 left"
+  - "Sentry Droid closes 5 squares — 6 to 2" / "out of movement 2 squares short · Sentry Droid: unarmed · out of reach — unarmed reaches 1 square and Kael is 2 away"
+  - "Sentry Droid nothing it can walk gets it closer" / "Sentry Droid: unarmed · out of reach — unarmed reaches 1 square and Nine Ninety is 2 away"
+  - "Sentry Droid: unarmed" / "rolled 21 — d20 20 + attack 1 + Strength 0 · needed 12 — hit · threat confirmed: rolled 14 — d20 13 + attack 1 + Strength 0 · needed 12 · dama…" (cut with an ellipsis)
+  - "Flank Ninety: Short Sword" / "rolled 16 — d20 9 + attack 3 + Strength 2 + Flanking 2 · needed 10 — hit · damage 8 — 1d6 5 + Strength 3 · 16 left"
+  - "Flank Ninety: Blaster Rifle" / "rolled 12 — d20 11 + attack 3 + Dexterity 2 − point blank 4 · needed 10 · 1 square, increment 14 — hit · damage 14 — 1d12 12 + Dexterity 2 · 0 left · …"
+  - "Kael: unarmed" / "rolled 21 — d20 17 + attack 1 + Strength 1 + Flanking 2 · needed 10 — hit · damage 2 — 1d3 1 + Strength 1 · 14 left"
+  - "Kael closes 3 squares — 4 to 1"
+  - "Probe Droid: unarmed" / "rolled 10 — d20 7 + attack 1 + Strength 0 + closed on a ranged weapon 2 · needed 11 · 1 square — miss"
+  - Status lines: "initiative — Sentry Droid 18 · Nine Ninety 11"; "Sentry Droid and Sentry Droid falls — Kael: unarmed · ..." ("falls" with two subjects); "the fight resumes — round 1, Mine Two's turn"; "goes off — d20 20 = 20 vs 15 · 3 damage · 8 of 11 · 2 more rounds"; "YOU FALL, AND NOBODY IS LEFT STANDING. That is a total party defeat, and it is the only thing that kills. — Sentry Droid: unarmed · ..."; defeat box "Your entire party has been killed. / Anyone who goes down is revived when a battle ends. Nobody is left standing, so there is no end of battle. / the newest save is this one — it already records the defeat".
+- Attacks of opportunity in the log: not yet seen.

@@ -585,7 +585,9 @@ why this needed stating rather than leaving to whoever next read the line:
 
 # 8. Flanking
 
-**Flanking exists. It gives +2 to attack rolls. It is melee only.**
+**Flanking exists. It gives +2 to attack rolls.** A shooter flanks too, within half its weapon's range (`§13.2`).
+
+> **⚠ CORRECTED (2026-10-14, MAIN after TEST 179).** This line said *"It is melee only."* `PT-4` (*"Ranged flanking uses the same test. A shooter within half weapon range whose position negates a melee ally's is flanking"*) and `PT-171` (2026-08-24, `§13` *"held"*) are later decisions than this section's text (the 2026-08-22 import), and the later decision wins. One of the pair stands adjacent to the enemy; the other stands on the same line through the enemy, on the far side, within 1 square in melee or within half its weapon's range when it shoots. Grenades still never flank (`§13.3`).
 
 **You flank when you and an ally are adjacent to the same enemy on opposite sides.** **Both of you get the bonus.**
 

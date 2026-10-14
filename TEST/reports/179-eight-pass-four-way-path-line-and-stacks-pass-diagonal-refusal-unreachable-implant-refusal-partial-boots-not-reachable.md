@@ -1,6 +1,6 @@
 # TEST 179: TEST 178's checks on the newest build, plus four-way movement, the path line and stack numbers
 
-Written for: Main and Coder. Real game, my Xvfb `:2`, my data dir, no K2 and no BG3. Text only. Screenshots are in `KOTOR_RPG_MAIN_WORK/media/screens/test-179/` (MAIN_WORK `2ba481d5`), one prefix per item (`i01-` … `i12-`). The step-by-step log is `TEST/reports/179-running-log.md`.
+Written for: Main and Coder. Real game, my Xvfb `:2`, my data dir, no K2 and no BG3. Text only. Screenshots are in `KOTOR_RPG_MAIN_WORK/media/screens/test-179/` (MAIN_WORK `71aadd87`), one prefix per item (`i01-` … `i12-`). The step-by-step log is `TEST/reports/179-running-log.md`.
 
 ## Build
 

@@ -47,3 +47,33 @@ Read first: Coder's TEST 180 entries (PLAYTEST-RULINGS-01.md, MAIN_WORK 0b11d923
 
 ### Item 6: legend (tester-rough, fresh chargen Leg One on (5,2) beside rough (5,1))
 - Turn start, pointer off the board: "5 move". Hover rough (5,1): "5 → 3 move" and "1 square (2 movement) · 3 left". Pointer off again: "5 move" (i06). PASS.
+
+### Item 7: mine saves (tester-minek; Evk One authored with Kael given Evasion by a feat-taken event on his tag; Kael's Abilities > Feats shows Evasion, "On a successful Reflex save, take no damage instead of half" (i07a))
+- BED ERROR FIRST (mine): my mines copied Locked and Trapped's save with no `kind`. With no kind, the roll was a bare d20 ("goes off — d20 19 = 19 vs 15 · 3 damage") and Evasion could not apply (evasionApplies needs kind reflex) (i07d). Note: the shipped Locked and Trapped mine has no `kind` either, so everyone rolls bare there. After adding kind = "reflex" (DC 5 small mines):
+- Player (no Evasion), made save: "goes off — d20 12 + Dexterity 1 = 13 vs 5 · 3 damage · 8 of 11" — half (i07c).
+- Kael (Evasion, under my control), made save: "goes off — d20 12 + Dexterity 1 = 13 vs 5 · you are clear", 40 of 40 (i07b). And at DC 15: "d20 18 + Dexterity 1 = 19 vs 15 · you are clear". Failed: "d20 1 + Dexterity 1 = 2 vs 15 · 6 damage".
+- **Item 7: PASS** (each saves with its own bonus; Evasion only for Kael). Notes: the line says "you are clear" for Kael (second person); after a load the first mine roll is always the same d20 (1 here), deterministic per save.
+
+### Item 8: a mine to 0 outside a fight (lethal mines amount 200, save dc 100 on_save none — a damage mine must state a save, the content check said so when I left it out)
+- (c) Kael under my control on the lethal mine: "goes off — d20 15 + Dexterity 1 = 16 vs 100 · 200 damage · 1 of 40" and "Kael: 1 of 40 — revived at 1"; the player untouched 11 of 11 (i08c). F4, kill, Continue: Kael 1 of 40 (i08c-after). PASS. Note: after the reload Kael stands on his start square (0,4), not where he was.
+- (b) the player on the lethal mine with Kael standing: "· 200 damage · 1 of 11", "Evk One: 1 of 11"; F4, kill, Continue: 1 of 11 (i08b). PASS.
+- (a) the player alone (tester-minesolo, Solo One): "Your entire party has been killed." game-over box at once; Main Menu, kill, restart, Continue: straight back to the same game-over box ("the newest save is this one — it already records the defeat") (i08a). PASS.
+- **Item 8: PASS.**
+
+### Item 9: K2 log lines (tester-rough, Pwr One authored Jedi Consular 6 with force_push, force_stun, fear; 2 frag grenades, 2 medpacs), verbatim
+- Cast menu: "cast — 1 Force Push 6f · 2 Force Stun 6f · 3 Fear 6f · esc", then "Force Stun — 1 Sentry Droid · 2 Sentry Droid · esc" (keys; a click attacks instead) (i09a).
+- 1405: "Pwr One attempts Force Stun on Sentry Droid : *resisted* : (18 + 2 = 20 vs. 18)" (i09b).
+- 47873: "Sentry Droid has been affected by Force Stun" — on a RESISTED save (the lesser effect, status line "· slowed"). Status line: "Force Stun · 6f — 75 → 69 · ceiling −1 to 74 · at Sentry Droid · Sentry Droid — d20 18 = 20 vs 18 · slowed" (the +2 is missing from the status form).
+- 32292 + 1402: "Pwr One uses Frag Grenade." / "Kael damaged: 20" / "Sentry Droid damaged: 20" / "Sentry Droid damaged: 20" / "Pwr One damaged: 20" (i09d). Note: the 'o' key threw at once (no aiming step) and the blast caught Kael and me. Status: "throw Frag Grenade at Sentry Droid — Kael — d20 8 + Dexterity 1 vs 15 · 20 damage · Sentry Droid — d20 2 vs 15 · 20 damage · Sentry Droid — d20 10 − power 1 vs 15 · 20 damage · Pwr One — d20 1 + reflex 3 + Dexterity 2 vs 15 · 20 damage · 1 left".
+- Medpac (Inventory > Use Item): "Pwr One uses Medpac." / "Pwr One : Healed 10 hit points."; status "Medpac — 70 of 86 (was 60) · 1 left" (i09e).
+- Other lines: "Sentry Droid attacks Pwr One : *miss* : (4 + 0 = 4)" (the slowed droid).
+- **Item 9: recorded.**
+
+### Item 10: quick regression
+- Four-way: KP_Home/Prior/End/Next do nothing ("5 move" kept) (i10a); item 1's routes were all orthogonal; diagonal neighbours hit in place in item 2's fight (A at (7,2) from (8,3)). PASS.
+- Flanking: melee (enemy pair) "· Flanking +2" (item 2); ranged at 7 squares (half the rifle's 14) on Kael's line: hover "+2 Flanking", shot "+ Flanking 2", log "Reg One attacks Sentry Droid : *miss* : (4 + 4 = 8) · Flanking +2" (i10b, i10c). PASS.
+- Boots over armour: Boot Rich with Vanguard Assault Boots DEF 20, boots off 17 (i10e). PASS.
+- Stack numbers "2" on Frag Grenade and Medpac, no "x2" (i10d). PASS.
+- Path line: straight with rounded bends throughout item 1. PASS.
+- Escape, Escape, F4 twice: one quick.mark rewritten 13:16:54 / 13:17:03. PASS.
+- **Item 10: PASS.**

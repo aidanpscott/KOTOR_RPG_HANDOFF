@@ -671,6 +671,8 @@ why this needed stating rather than leaving to whoever next read the line:
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action.
 
+**Who threatens (MAIN, 2026-10-14, after TEST 180):** a creature holding a ranged weapon makes no opportunity attacks; one with empty hands threatens with its fists or its natural weapons. *(`§4`'s line: ranged characters do not get opportunity attacks; melee gets zone control and ranged gets range.)*
+
 > **A character with Dexterity +0 and base attack bonus +0 makes none at all.** **That is a Consular, and it reads correctly.**
 
 **Because they come from the pool they compete with Parry, Snap Shot, and Overwatch.** **A character who spends reactions swatting runners has none left to turn a blade.**

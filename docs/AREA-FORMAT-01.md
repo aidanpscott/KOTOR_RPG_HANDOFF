@@ -510,6 +510,8 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 ### ⚠ And what is NOT here — `PT-1550`
 
+**⚠ AMENDED (`PT-2746`, 2026-10-13): THE MAP NOW HAS K2's EXPLORED AREA; THE BOARD STAYS UNFOGGED.** The Map shows only what the party has explored of the current area (5 squares round each member, through no wall, only ever adding, kept per character in the log as `map.revealed`), and `blocksSight` is now read for it. Nothing below changes for the board: PT-1550 stands, there is no fog on the terrain in play. Two optional fields serve the Map: `mapped = true` in `[area]` ("fully mapped": the whole area explored at once, for towns and the like) and `[[map_notes]]` (`name`, `at = [x, y]`), a named place listed once its square is explored; a connection may carry `map_note = "…"` to name itself on the Map, else it is noted by where it leads (named once that area has been visited, else "Exit"). The original text follows.
+
 **Fog of war on the terrain is ruled OUT.** `wall.blocksSight` **stays `true` and stays UNREAD** — the field is right and nothing consumes it, which `PT-1529` established is a **roadmap rather than a defect**.
 
 > **The board shows what is in the area. What perception governs is WHO IS STANDING IN IT.**

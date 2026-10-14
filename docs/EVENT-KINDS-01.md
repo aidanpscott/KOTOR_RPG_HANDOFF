@@ -276,6 +276,8 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 **⚠⚠ `camera.shown` CARRIES NOTHING, AND THAT IS A FINDING, NOT A GAP LEFT OPEN.** Real KOTOR's `SetDialogPlaceableCamera(nCamera)` names a camera INDEX — a 3D scene's own placed camera. This project has no camera concept at all; a top-down, paper-doll interface has nothing a camera index could mean. Inventing a field now would be `§3b`'s own warning one level up — a payload invented ahead of the consumer that would give it meaning. So the kind is declared and authorable, the same shape `encounter.began` already has (the kind alone is the whole effect), and it is inert until a real presentation concept exists to read it.
 
+**⚠ UPDATE (`PT-2746`, 2026-10-13): `map.revealed` HAS ITS CONSUMER NOW — the Map.** Play writes it as the party walks, with two optional fields beside the required `area`: `subject` (the played character) and `squares` (`[[x, y], …]`, only the newly explored ones). A `map.revealed` with no `squares` explores the whole area ("Area map downloaded"). Folded by `exploredIn` in the app. `log.written` still has none.
+
 **⚠ `map.revealed` (`area`) AND `log.written` (`log`, `text`) HAVE NO CONSUMER YET EITHER, AND ARE VALIDATED ANYWAY** — the opposite call from `item.lost`'s old one, above. The fields are not invented for this document: `area` is the same field `door.unlocked`'s own producer already writes, and `log`/`text` are the same shape `quest.flag-set`'s `flag` already is. Validating them now means whichever future system reads a journal-style discoverable-logs screen inherits well-formed data across every package already authored, instead of repeating `item.lost`'s own gap.
 
 ### Security — `PT-2586`, `PT-2587`

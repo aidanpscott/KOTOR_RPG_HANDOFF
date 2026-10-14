@@ -28,3 +28,22 @@ Read first: Coder's TEST 180 entries (PLAYTEST-RULINGS-01.md, MAIN_WORK 0b11d923
 - Flanking: "Sentry Droid attacks Aoo One : *hit* : (13 + 3 = 16) · Flanking +2" (one line). PASS.
 - Kill: log "Sentry Droid dies"; status "... · -3 left · dies"; no dotted event kind seen in any line (i02b). PASS.
 - Notes: the enemy action banner can sit over the top of the log column; the dead droid's card reads "struck down 0 of 24" while the bottom line reads "Sentry Droid: -3 of 24".
+- (f) droid: OA Droid (tester-oa-droid, fresh chargen Oad Two): stepping away: no attack; log "OA Droid is a droid holding unarmed — melee is closed to every droid chassis, so it has no attack it can make" (i01f-droid). PASS.
+- (f) gunman: Sith Trooper (Blaster Rifle), Tester Save Bed, fresh chargen Gun One (I won initiative, so his reaction was unused): hover away "2 squares · 3 left" with no provoke line; two steps away: no attack (i01f-gunman). PASS.
+- (f) empty-handed: every Sentry Droid above (unarmed, human species) threatens and made the opportunity attacks in (c), (d), (h). PASS.
+- **Item 1: PASS, all of (a)-(h).**
+
+### Item 3: hidden placeables (tester-mines; crate (5,4) hidden stealth 60; new crate (10,3) hidden stealth 1 range 2)
+- Fresh chargen Hid One: neither crate drawn on arrival (i03a). Walked to (8,4): "you notice Shipping Crate — 15 against 1", and the crate is drawn at (10,3); the stealth-60 one is never drawn, though I walked through its square (i03b). PASS.
+
+### Item 4: Continue after a hard kill (kill -9 of the app PID)
+- F4 at (9,4), kill, restart, Continue: (9,4) (i04a). PASS.
+- Walked to (6,4), F5 (quick load): back on (9,4); kill, Continue: (9,4) (i04b). PASS.
+- Walked to (6,5), Escape > Save > New Slot "esc save" (000017.mark), kill, Continue: (6,5) (i04c). PASS.
+- FINDING: after the Escape > Save run, the crate I had found at (10,3) is no longer drawn (it was after the F4 and F5 runs). The found state seems lost on that path.
+
+### Item 5: targeting (tester-lshape restored to TEST 180's layout: me (0,2) beside a droid at (1,2), droid at (5,0), Kael MANUAL at (9,4); fresh chargen Tgt One; I passed every turn)
+- The (5,0) droid: round 2 "Sentry Droid closes 5 squares — 4 to 2 · out of movement 2 squares short"; from round 3 to round 8 "Sentry Droid attacks Kael" every round (i05). Kept one target and reached it. PASS.
+
+### Item 6: legend (tester-rough, fresh chargen Leg One on (5,2) beside rough (5,1))
+- Turn start, pointer off the board: "5 move". Hover rough (5,1): "5 → 3 move" and "1 square (2 movement) · 3 left". Pointer off again: "5 move" (i06). PASS.

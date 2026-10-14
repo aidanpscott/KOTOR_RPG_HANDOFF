@@ -103,3 +103,30 @@ Started 2026-10-13 22:30 EDT. Tester, Xvfb :2, own data dir (~/.local/share/test
 ### Item 5 (part): Treaded Motivator in play (c79-tread, astromech wearing it, tester-rough)
 - Move: 3 diamonds (astromech 4, one less). PASS.
 - Rough ground: path to rough (5,1) from (4,3), 3 squares: "3 squares · 0 left", no "rough ground costs extra", no amber inset (i05-treaded-3-and-rough-free.png). A plain 4-square path reads "Not enough movement". PASS.
+
+### Item 5: Motivators (Store Bed)
+- Fixtures: bolt-ninety (authored astromech Engineer, 1000 credits, Dockworker's Treads in bag); Med Ninety (fresh chargen Medic, 100 credits).
+- Quick Fix (Dressa, "Show me what you have.") stocks Treaded Motivator (75) and Silenced Motivator (400) (i05a-store-stock.png). Bolt Ninety bought both: credits 1000 -> 925 -> 525, each "In Inventory 1" (i05b-bought-both.png). PASS.
+- Droid's Motivator list: None, Treaded Motivator, Silenced Motivator; the Dockworker's Treads in its bag are not offered (droid refused boots, by omission, no line) (i05c). PASS.
+- "MOTIVATOR" header on one line (i05d-motivator-label.png). PASS. Note: the slot's own label is cut: "Silenced Motivato...".
+- Silenced worn: Abilities > Skills > Stealth: Rank 0, Bonus +2, Total 2 (i05e). Control, motivator taken off: Bonus 0, Total 0 (i05f). PASS.
+- Treaded: 3 move and rough ground free (logged above from c79-tread). PASS.
+- Organic: Med Ninety bought a Treaded Motivator (100 -> 25); the store's row says "In Inventory 1 · replaces Dockworker's Treads" (i05g) although an organic cannot wear it; Equip > Boots then offers only None and Dockworker's Treads (i05h): refused by omission, no line. PASS (refusal), with that store note.
+- Note: both motivators draw no icon (empty cells in the store and in Equip).
+- **Item 5: PASS** (refusals are "not offered", as in TEST 178).
+
+### Item 9 (boots), Med Ninety out of a fight
+- Boots -> None: slot reads "BOOTS"; reopened, "Dockworker's Treads" offered; picked, back on (i09-boots-off-on.png). PASS.
+- **Item 9: PASS** (Auto Save companions, own-turn swap free/Action/refused, party bar faces, boots off/on, Escape+F4 one save).
+
+### Item 7: Boots Defence
+- NOT REACHABLE. Sith Trooper Greaves, Mandalorian Battle Greaves, Krath War Boots and Vanguard Assault Boots exist only as rows in base-rules/rules/items.toml (lines 29170, 29229, 29504, 29527). No package has an item blueprint for any of them, no store stocks them (grep of every .item/.shp/.toml/.area in my Shelf 83b5bec data dir), and both Sith Trooper creature blueprints (endar-spire, tester-save-bed) carry only a blaster rifle. Note the shipped names are "Greaves" for the Sith Trooper and Mandalorian pairs.
+
+### Item 8: Implants (Store Bed)
+- Fixtures: ivy-ninety (Soldier 3, all three feats, three implants in bag); ivy-none (Soldier 1, no implant feat, same implants).
+- Abilities > Feats (Ivy Ninety): a chain of three cells (no icons). Each selected: "Cybernetic Implantation" (Prerequisites None; "Surgical grounding for cybernetic hardware. Without it, implants cannot be installed." / "Allows Cybernetic Implants."), "Advanced Cybernetic Implantation" (Prerequisites Cybernetic Implantation; "Further surgical grounding allows the use of Advanced Cybernetic Implants." / "Allows Cybernetic Implants and Advanced Cybernetic Implants."), "Master Cybernetic Implantation" (Prerequisites Advanced Cybernetic Implantation; "The fullest surgical grounding allows the use of Master Cybernetic Implants." / "Allows Cybernetic, Advanced Cybernetic and Master Cybernetic Implants.") (i08a-three-feats.png). PASS.
+- Inventory names: "Advanced Cybernetic Implant", "Cybernetic Implant", "Master Cybernetic Implant"; the Advanced pane reads "Feats Required: Advanced Cybernetic Implantation" (i08b). PASS.
+- Ivy Ninety equips the Master Cybernetic Implant: "(Equipped)" (i08c). PASS.
+- Ivy None, Advanced implant: the list rows are outlined red; picking it pops K2's generic box "You cannot equip this item. You don't have the prerequisites. Please see the item description." and the side pane reads "Feats Required: Advanced Cybernetic Implantation" (i08d). Refused: PASS. "Told which feat they need": the pane names it, the refusal line does not (same as TEST 178). PARTIAL.
+- Note: the three feats and three implants draw no icons.
+- **Item 8: PASS except the refusal line not naming the feat (PARTIAL).**

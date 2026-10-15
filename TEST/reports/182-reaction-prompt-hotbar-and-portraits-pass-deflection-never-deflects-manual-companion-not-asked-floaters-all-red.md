@@ -42,3 +42,12 @@ Fresh fixtures: `rx-182`, `kind-182`, `defl-182` (Jedi 12 knowing Deflection and
 - Floaters: a 10 fps recording measured the colour per mine.
 
 Skills: `verification-before-completion`. Kept small per the simplicity rule.
+
+## Addendum (same build, run after filing)
+
+The open cases, closed on 7a863fc (screenshots MAIN_WORK `10f4dc29`):
+
+- **Item 5, stunned: PASS.** Stunned beside two droids with my reaction unspent, a droid left my reach: under Ask no box and no swing; under Always (identical replay) no swing and an identical log (`i05a`, `i05b`).
+- **Item 6, AI companion: PASS** for that half. AUTO Kael, with a droid leaving his reach: "Opportunity attack: Kael attacks Sentry Droid : *hit* : (10 + 2 = 12)", no box, and the turn ran on by itself (`i06c`). The MANUAL half stays a FAIL.
+- **Item 12, L approach: PASS.** A droid two columns right and four rows down slid up 3 squares, then left 1, with no diagonal step (15 fps tracking, `i12b`).
+- Still not reached: item 4's two-at-once and target-gone cases, which need a MANUAL companion to be asked.

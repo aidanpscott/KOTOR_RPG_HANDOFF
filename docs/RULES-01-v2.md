@@ -467,6 +467,8 @@ you.**
 
 ⚠⚠ **ENFORCED AT `PT-2389`** — *the `−4` and the `−2` are modifier rows; the square-naming is an aiming cursor the blinded character alone is given, because walking into what you mean to hit names a CREATURE.* ⚠ **Two clauses remain unbuilt and are named rather than left silent: the Dexterity loss (a term removed from the defence derivation, not a number added to it) and *“sight-based checks automatically fail”* (nothing marks a check as sight-based).**
 
+**Aim** — `PT-2389`. **Name a square and swing at it; the Action is spent whether or not anything is there.** *The blinded character's one way to attack: walking into what you mean to hit names a creature, which a character who cannot see does not know. A swing at an empty square is a miss, not a refusal.* *(The hotbar's Aim button, `PT-2749` step 4; recorded here at MAIN's ruling so the name has a document.)*
+
 **Dependents: Miraluka `Second Sight` (cannot be blinded) · `Nictitating Membrane` (immune to light, sand, smoke, spray) · Togruta `Spatial Awareness` (keeps the Dexterity bonus to Defence — `PT-2150`).**
 
 #### `paralysed` — `PT-2392`

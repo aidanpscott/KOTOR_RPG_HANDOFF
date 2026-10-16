@@ -66,3 +66,8 @@ Read first: CODER "TEST 182 FIXES BUILT" (ed8fc9d: deflection rolls logged 42417
   - Name: "A name is required. Everything else on this step is not.", "Story ▸"; Story: "YOUR STORY", "assembled from your choices", "Try another", "CLEAR", "BACK" (capitals mixed with sentence case).
   - Species: Twi'lek "Low-light vision" heading with no text under it.
   - Attributes: "A species adjustment applies AFTER generation — it attaches to what you bought and never touches the budget."
+
+### Item 10: quick regression
+- Reaction prompt Ask / Always / Never for the PC: PASS (items 2 and 4 runs). Deflection default Always: PASS (Default restored Ask / Always / Ask, i01d). Sidebar pips: Kael's lit before the trigger (i02a). Walking tokens slide: PASS (Rx L Approach: the Walker came down column 5, turned along row 3 and followed me west, frames 1 s apart, i10a). Opportunity attack, step away: one ("Opportunity attack: Walker attacks Lap Three : *miss* : (1 + 1 = 2)"). Escape+Escape+F4 twice: one quick.mark rewritten (09:38:35, 09:38:44). PASS.
+- Stunned and the hotbar's refusals: NOT RE-RUN this build (my library click opened the neighbouring card twice; both passed on 7a863fc and aren't in this build's changes).
+- **FINDING: Continue after a MID-FIGHT F4 and a killed app drops the fight.** Rx L Approach, round 4, F4, kill -9, restart, Continue: I'm on my square (1,4) but the fight is gone and the Walker is back at its start (5,0), no turn order (i10b). Loading the same Quick Save from Load Game resumes it ("the fight resumes — round 4, Lap Three's turn") (i10c). The Load list shows Auto Save and Quick Save with the same time 09:38:44, while autosave.world.json is from 09:34:44 (before the fight).

@@ -131,8 +131,20 @@
 | **Snap Shot** *(chain)* | An enemy enters your line of sight or leaves cover. |
 | **Overwatch** *(chain)* | Declared on your turn; fires when an enemy moves or attacks. |
 | **Readied action** | Your named trigger fires. **This is how a ranged character reacts to someone approaching** — see below. |
+| **Force Deflection / Force Redirection** | A ranged attack that would hit you. **Costs only the power's Force points** (`PT-2423`). **A deflected bolt goes back** — see below (`PT-2753`). |
 
 > **All of these draw on the same pool.** **A character who spends reactions on opportunity attacks has none left to parry** — which is the decision the single pool exists to create.
+
+### A deflected bolt goes back (`PT-2753`, owner, 2026-10-16)
+
+| | |
+|---|---|
+| **The roll** | When you deflect a blaster bolt, roll to hit with it: d20 plus your ranged attack bonus against the target's Defence. Cover and flanking apply as for any ranged attack. |
+| **The damage** | On a hit it deals half the weapon's damage roll, rounded down, minimum 1, of the weapon's own damage type. |
+| **Who it can hit** | Force Deflection sends it back at the shooter. Force Redirection lets you choose any enemy within the shooter's weapon range of you, in sight. |
+| **The cost** | Nothing beyond the deflection's own Force points: no action, no reaction. |
+| **The settings** | Under Ask, Redirection's question lists each target with the return shot's chance, shooter first. Under Always, and for a companion under the AI, it goes back at the shooter. |
+| **A target already down** | No roll; the log says so. |
 
 ### `Ready` is the ranged answer, and nobody has used it
 

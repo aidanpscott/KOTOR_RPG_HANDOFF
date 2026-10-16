@@ -1,0 +1,53 @@
+# K2-PARITY-CHARGEN-PT2752 — character generation against K2, screen by screen
+
+**Status: first pass complete (2026-10-16).** One row per screen and control. Each row cites the K2 picture it is checked against (`MAIN_WORK/media/study/pt2752/k2-live/`, private) and our own (`ours/`), and says whether ours **matches**, **differs on purpose** (with the ruling), or is **still to build**. Rulings: `PT-2752` (MAIN's rulings 1–8, the owner's chargen-text ruling, the class screen, Powers and the class gates, all in PLAYTEST-RULINGS-01), `PT-2751` (portraits), `PT-1697` (powers at level 1), `PT-215` (Jedi Master and Sith Lord cut as classes). App hashes are where each was built.
+
+**Every deliberate difference, in one place:**
+
+1. **Species is a step of its own, before Class**, and a droid chooses a chassis and model (`CHARACTER-CREATION-01 §3`; `PT-1222`). K2 has one human species.
+2. **Gender is its own hub step**, before Portrait (owner's R-b, `PT-2751`: "Gender and species before portrait"). K2 bakes gender into the six class figures. So our class screen shows **one face**, a stand-in until Portrait is chosen.
+3. **Our extra steps: Origin, Background and Equipment**, which K2 does not have; our Name popup has a second stage, the Story panel.
+4. **Powers is a creation step** after Feats, 2 powers at level 1 (`PT-1697`, ruling 6). K2 offers no powers at creation; ours is built from K2's level-up `pwrlvlup_p` parts.
+5. **The plus is removed at the cap** on Attributes and Skills (owner ruling) where K2 leaves it dim.
+6. **No home-made sentence on a chargen screen** outside the description pane and the help box (owner's chargen-text ruling); labels are K2's StrRefs or approved names, and a guard test enforces it.
+7. **Recommended is dimmed everywhere, and so is Quick Character**, until recommended builds are written (checkpoint 1, the Quick correction). K2's are live.
+
+| # | Screen · control | K2 (picture) | Ours (picture) | State |
+|---|---|---|---|---|
+| 1 | Entry · Quick / Custom | Quick and Custom over the hub, description pane; Quick above Custom (`04`, `05`) | Quick Character (239) above Custom Character (240), Premade Character below; K2's 241 in the description pane (`ours/01`) | **Matches** (ad01497) |
+| 2 | Entry · Quick Character | Live: Portrait, Name, Play (`07`) | Dimmed; its reason in the description pane: no class has a recommended build written | **Differs on purpose** (difference 7); wired when the recommended table exists |
+| 3 | Entry · Cancel / Back | Cancel → class select (`06`); Quick Back → Quick/Custom (`08`), Cancel → class (`09`) | Back → the package menu | **Differs on purpose** (difference 1: Class comes after Species, not before Entry) |
+| 4 | Species | — | Species list, subrace, description pane keyed (`ours/02`); droid → Model (chassis, model) | **Ours only** (difference 1) |
+| 5 | Class · the list | Six figures, three classes × two genders (`01`, `02`) | Our base classes as a list, each barred one shown with its reason in the pane (`ours/03`) | **Differs on purpose** (differences 1, 2) |
+| 6 | Class · the figure | A model per class and gender (`01`) | The species' default face (`PT-2751` R6; a droid's chassis face, R3; the placeholder where none exists), at most twice its art | **Differs on purpose** (difference 2): one face (d2c5598) |
+| 7 | Class · name bar, description, title | Name bar ("Female Jedi Guardian"), description bar (`01`) | CHOOSE YOUR CLASS (32160); the class name; Description (217) and a keyed pane | **Matches** (d2c5598) |
+| 8 | Class · Cancel | → main menu (`03`) | → Species (or Model for a droid) | **Differs on purpose** (difference 1) |
+| 9 | Hub · the strip | Custom panel: steps unlock in order, only the current step live (`10`, `13`, `20`, `26`) | Same; strip Gender, Portrait, Origin, Background, Attributes, Skills, Feats, Powers, Equipment, then Name and Play (`ours/05`, `ours/18`) | **Matches** in behaviour (0c0c020); steps differ (differences 2, 3, 4). Retires `PT-1215`'s re-open warning |
+| 10 | Hub · Back | Dimmed at step 1; later undoes the last step (`21`) | Same; each undo is a logged discard | **Matches** (0c0c020) |
+| 11 | Hub · Cancel | 109863 "All settings for this character will be lost. Proceed?" OK / Cancel (`37`); OK → Quick/Custom (`38`) | Same box; OK → the entry screen | **Matches** (0c0c020) |
+| 12 | Hub · Play | Ready to play (`36`) | Play when every step is done (`ours/18`) | **Matches** |
+| 13 | Gender | — (in the class figure) | Male / Female (Voice for an Assassin or Battle chassis; absent for Astromech and Remote) (`ours/06`) | **Ours only** (difference 2) |
+| 14 | Portrait | LBL_PORTRAIT between arrows, the head large (`11`, `12`) | Same layout, a fixed slot, faces filtered by gender and species (`ours/07`) | **Matches** (`PT-2751`) |
+| 15 | Origin, Background | — | Homeworld and upbringing; background; each a keyed pane and a help box (`ours/08`–`10`) | **Ours only** (difference 3) |
+| 16 | Attributes · points | Remaining Points (210), point cost, description pane (`14`, `15`, `19`) | Same labels (`ours/11`) | **Matches** |
+| 17 | Attributes · plus at the cap | Plus left dim | Plus removed | **Differs on purpose** (difference 5) |
+| 18 | Attributes · Recommended | Live (`16`) | Dimmed | **Differs on purpose** (difference 7); walker built (Lodestar 7dd507a) |
+| 19 | Attributes · Cancel | Keeps nothing (`17`, `18`) | Same | **Matches** |
+| 20 | Skills · points | Class skills, Point Cost 1/2, Class Skill / Cross-class Skill (`22`–`24`) | Same; "Point Cost N · maximum rank M" and Aptitude in the pane (`ours/12`) | **Matches** (5dfa5ad, c3d2bac) |
+| 21 | Skills · plus at the cap | Plus left dim | Plus removed | **Differs on purpose** (difference 5) |
+| 22 | Skills · Recommended | Live (`25`) | Dimmed | **Differs on purpose** (difference 7) |
+| 23 | Feats · the grid | Three-tier chains with arrows (`27`, `28`) | Same grid, our feats in it, scrolling (`ours/13`) | **Matches** (01b3f20, 45951fc) |
+| 24 | Feats · right column | Remaining Feats (32062), the name, prerequisites and description, Add Feat (`29`) | Same | **Matches** |
+| 25 | Feats · granted popup | 42258 on entry (`30`) | Same | **Matches** |
+| 26 | Feats · Recommended | Live, announces 42256 (`31`) | Dimmed; announces 42256 once a list exists | **Differs on purpose** (difference 7) |
+| 27 | Powers · the step | None at creation; `pwrlvlup_p` at level-up | CHARACTER GENERATION (208) / POWERS (1072): the power list, Remaining Powers (1074), the lit power's name (217 until lit), description, Select (236) (`ours/14`) | **Differs on purpose** (difference 4) (e215033) |
+| 28 | Powers · refusals | — | A refused power says why in its pane; level-up reads every class gate in our class names (Sith Sorcerer for Sith Lord, Jedi Sage for Jedi Master, `PT-215`; "Jedi" is every Force class's levels), and Force Sight is taught, never bought | **Ours** (88128f9, Shelf 0cf2242) |
+| 29 | Powers · Recommended | Live at level-up | Dimmed | **Differs on purpose** (difference 7) |
+| 30 | Equipment | — | Slot labels in K2's words (Armor 48420, Weapons 48544, Medical Supplies 40096, Credits 545, Repair 253), Kit (`PT-1482`), Boots (`PT-2503`); item names, never ids (`ours/15`) | **Ours only** (difference 3) (e215033, 88128f9) |
+| 31 | Name | Popup over the hub, pre-filled, Random Name (48760) / Cancel / OK (`33`–`35`) | Same popup; then the Story panel (YOUR STORY, Try another, CLEAR) (`ours/16`, `ours/17`) | **Matches** (4476e0f); Story **ours only** (difference 3) |
+| 32 | Help boxes | Once per screen: Attributes, Skills, Feats; none on Portrait or Name | K2's three; Powers keeps K2's 41887; ours for Species, Origin, Background, Equipment, in our documents' words (`ours/11-abilities-help`, `12-skills-help`, `14-powers-help`) | **Matches**, plus ours (difference 3) |
+| 33 | Words on every screen | K2's StrRefs | K2's StrRefs, approved names and document values only, outside the panes; the guard test fails on anything else | **Matches** (difference 6) |
+
+**Still to build after the first pass:** the recommended builds (then Quick and every Recommended go live), and the Miraluka's Force Sight at creation (agenda).
+
+**Note on `ours/`:** those captures predate the Feats grid, the class face and the Powers rebuild; the clip for TEST 184 records the current screens.

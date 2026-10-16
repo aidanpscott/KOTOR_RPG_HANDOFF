@@ -71,6 +71,8 @@ When you create a character, you choose a species before anything else. Your spe
 
 **Where a species grants only one bonus skill, there is no choice.** **`Droid, Astromech` is the only entry with two.** **`Human` chooses freely and may trade its bonus feat for a second.**
 
+**A Human's two `+2`s go to two different skills** — owner ruling, `PT-2752` (2026-10-16). Both are chosen on the Species step, and its racial skill is one of the two.
+
 **The choice is locked once play begins** — free to change while building, fixed after the first session.
 
 **Subraces.** **Seven species are recorded as multiple entries each, and choosing the species means choosing which.** **There is no way to play the parent without picking a side.**

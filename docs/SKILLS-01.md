@@ -595,7 +595,7 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 | **Ranks**, bought and class-granted (`PT-2727`) | `§11.1` |
 | **The homeworld's `+2`** | `§10`, `PT-954` |
 | **Every unconditional species bonus**, both of a two-skill species (`§11.4`: *"Both are on the sheet; only one comes cheap"*) | `PT-954` |
-| **A Human's two chosen `+2`s**, as species bonuses | `PT-2752` (owner) |
+| **A Human's two chosen `+2`s**, as species bonuses — **two different skills** (owner, 2026-10-16) | `PT-2752` (owner) |
 
 | Does **not** count — adds on top of the cap freely | Source |
 |---|---|

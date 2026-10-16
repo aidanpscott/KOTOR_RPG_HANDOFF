@@ -586,6 +586,28 @@ Slicing · Security · Science · Appraise · Awareness · Pilot · Repair
 
 > **⚠⚠ WITHOUT THIS, A BONUS IS **FREE HEADROOM** AND THE CAP MEASURES NOTHING. ⚠ THE POINT OF A CEILING IS THAT ⚠⚠ EVERYTHING BELOW IT COUNTS.**
 
+#### What counts against the cap, and what does not — `PT-2752` (owner, 2026-10-15)
+
+> **Owner: *"match K2 and whatever other rulings we have"*, and items *"the same way the video games did"*.**
+
+| Counts against the cap | Source |
+|---|---|
+| **Ranks**, bought and class-granted (`PT-2727`) | `§11.1` |
+| **The homeworld's `+2`** | `§10`, `PT-954` |
+| **Every unconditional species bonus**, both of a two-skill species (`§11.4`: *"Both are on the sheet; only one comes cheap"*) | `PT-954` |
+| **A Human's two chosen `+2`s**, as species bonuses | `PT-2752` (owner) |
+
+| Does **not** count — adds on top of the cap freely | Source |
+|---|---|
+| **Ability modifiers** | K2 |
+| **Feat bonuses** (`Hardiness` and the like) | K2 |
+| **Item bonuses** — an item can take a skill's total above the cap; nothing is wasted or removed | K2 |
+| **A conditional species bonus** (`Bith`'s Awareness, `+4` within 4 metres) — `PT-954` speaks of a plain `+2`, and a conditional bonus is not always on | MAIN's reading, `PT-2752`; the owner can overturn it |
+
+**K2's own rule caps the RANK, not the total.** `dialog.tlk` 42178: *"Class skills can have a maximum skill rank of <CUSTOM0> (current level + 3)"*; 42179: cross-class *"((current level + 3) / 2)"*. K2's skill readout keeps three rows apart — `Skill Rank` (1579), `Bonus` (32129), `Total Rank` (41904) — and an item's skill bonus is its own property (`Skill Bonus`, 698). Observed in K2 (`media/screens/pt2747-abilities/k2-04-skills.png`): Onjo Trigit, Jedi Sentinel **level 1**, Computer Use `Skill Rank 4`, `Bonus +2` (his Intelligence 14), `Total Rank 6` — the ability modifier goes over the level-1 cap of 4. **The species and homeworld bonuses are ours, not K2's** — K2 has none — so they follow our own `PT-954`.
+
+**The plus at the cap is dimmed, with the reason on hover** (`PT-2752`, owner; it was removed under `PT-1227`): *"Rank 2 plus a bonus of 2 is the maximum of 4. A +2 from a species or a homeworld does not raise it."*
+
 ### ⚠⚠⚠ AND THIS BITES `PT-931`'s STACKING AT LEVEL 1
 
 **⚠ `§10.0` RULED SPECIES AND HOMEWORLD BONUSES ⚠⚠ STACK. ⚠ A TWI'LEK RAISED ON `Ryloth` TAKING `Persuade` HAS ⚠⚠ **+4**.**

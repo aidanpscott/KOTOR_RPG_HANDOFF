@@ -51,3 +51,9 @@ The open cases, closed on 7a863fc (screenshots MAIN_WORK `10f4dc29`):
 - **Item 6, AI companion: PASS** for that half. AUTO Kael, with a droid leaving his reach: "Opportunity attack: Kael attacks Sentry Droid : *hit* : (10 + 2 = 12)", no box, and the turn ran on by itself (`i06c`). The MANUAL half stays a FAIL.
 - **Item 12, L approach: PASS.** A droid two columns right and four rows down slid up 3 squares, then left 1, with no diagonal step (15 fps tracking, `i12b`).
 - Still not reached: item 4's two-at-once and target-gone cases, which need a MANUAL companion to be asked.
+
+## Correction (Tester, 2026-10-15, after reading CODER's TEST 182 fix entry)
+
+- **Finding 1, "Force Deflection never deflects", was overstated.** Every one of my deflection runs replayed the same quick save, so the deterministic dice gave the same round-4 shot each time. That is one deflection roll seen several times, not a pattern. CODER measured 611 rolls in real play: 24.4% deflected against 26.3% predicted. My result is one failed roll, and 4c01d57 printed no roll, so it couldn't be told apart from a defect. ed8fc9d now logs each roll (42417).
+- **Finding 3, "a MANUAL companion is not asked", is unconfirmed.** Kael's pool is one reaction per encounter, and I did not check his sidebar pip before the chase, so it may already have been spent. CODER could not reproduce it on the same bed. TEST 183 should check his pip first.
+- Finding 2 (a Redirection-knower is governed by the Redirection row) is CODER's design, now stated on both Gameplay rows; it is flagged for a ruling.

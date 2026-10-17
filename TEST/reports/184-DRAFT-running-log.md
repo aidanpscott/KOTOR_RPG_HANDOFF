@@ -68,3 +68,34 @@ Known, per MAIN (recorded if seen, not new findings): End Turn off screen at 192
 - MANUAL Vela, Deflection Ask: once I was down, a box: "Force Deflection / Gunman fires at Vela / 6 Force points · 51 left · spent only if the shot would hit / back at Gunman, 80% (needs 5+)" (i16a). 51 is HER pool (mine was 1). Yes: "Gunman attacks Vela : *critical hit* : (20 + 3 = 23 : Threat Roll: 18 Automatic Hit!)" / "Deflection Breakdown: Vela deflects projectile with 20 + 5 = 25 vs. attack 23" / "Deflected!" / "Vela sends the bolt back at Gunman" / "Vela attacks Gunman : *hit* : (6 + 5 = 11)" / "Vela damages Gunman for 6 damage" (i16b). PASS.
 - MANUAL Vela, Deflection Always (Redir run): no box, deflected and sent back at the shooter; one return killed it ("Gunman dies"). Her spends are power.cast with subject vela.range.01 in the save, from her pool (51 -> 45 -> 39 ...; ceiling 50, 49 ...). PASS.
 - Vela's control label can't be changed during a fight (clicks on MANUAL do nothing); out of a fight it cycles MANUAL -> HANDS OFF -> AUTO.
+- AUTO Vela, Deflection Ask (Bolt Defl, pre-fight quick save, label set AUTO out of the fight): she closed to melee and killed all three gunmen unarmed; five shots at her all missed (4 - 1 = 3, 13 - 1 = 12, ...), so no deflection was needed and none seen. No box named her. The AI half is NOT OBSERVED.
+
+### 15. Naturals
+- Attacks: "Gunman attacks Bolt Redir : *miss* : (1 + 3 = 4 Automatic Miss!)", "Gunman attacks Bolt Redir : *hit* : (20 - 1 = 19 : Threat Roll: 12 Automatic Hit!)", "Gunman attacks Vela : *critical hit* : (20 + 3 = 23 : Threat Roll: 18 Automatic Hit!)", and on a returned bolt "Bolt Redir attacks Gunman : *miss* : (1 + 14 = 15 Automatic Miss!)" (i15). PASS.
+- Saves: not seen in play. The code (k2_feedback.dart:121) writes "automatic success" (K2 1415) on a 20 and "automatic failure" (our term) on a 1, lower case and different from the attack words. MAIN said "saves the same": recorded for a ruling.
+- Hit chance: hitChance clamps needs to 2..20 (path_line.dart:13), so 95%..5%. Seen "95% (needs 2+)" against Defence 10 with +12. A 5% case was not staged. PASS on what was seen.
+
+### 17. Party rest (authored Rest Party: me 50/196 Force 10/97, Vela 9/40 Force 7/51 via encounter.ended events)
+- Rest: Vela 40 of 40, Force 51 of 51; me 146 of 196 (a day's rest, not full), Force 97 of 97. Status names only me: "you rest a day · vitality 50 → 146 of 196 · Force 10 → 97 of 97" (i17a, i17b).
+- F4, kill -9, Continue: the same numbers for both (i17c). PASS.
+
+### 11. Continue mid-fight
+- F4 on my turn in round 2 (gunmen 17, 15, 18 of 18; Force 85 of 95), kill -9, Continue: "the fight resumes — round 2, Rest Party's turn", same numbers, same initiative (i11a, i11b). PASS.
+- Escape > Save > New Slot "esc fight" after my attack (gunman 11 of 18, action spent), kill -9, Continue: round 2, my turn, action still spent, gunman 11 of 18 (i11c, i11d). PASS.
+- Note: after Continue the combat log column is empty.
+
+### 12. End Turn glow
+- 1920x1080: End Turn is off the row (known) and reached by scrolling the hotbar sideways. Fresh turn, action spent, and move 0 with action spent all look the same; pixel means and maxima identical between the last two (i12a-c). No pulse over 2.4 s. FAIL.
+- 1280x720 (fresh window): the same, End Turn also off the row (i12d). FAIL.
+- Code (play_screen.dart:21339) lights it only when !budgets.anythingLeft; the "gear" pip stays lit in every state, which likely keeps anythingLeft true.
+
+### 13. AUTO Kael, Rx Two Triggers (authored Two Four)
+- Kael AUTO: every round "Kael attacks Backer : *hit* : (8 + 4 = 12)" / "Kael damages Backer for 4 damage", his own opportunity attacks too, and he followed the Backer across the room and killed it: "Backer falls — Kael: unarmed · rolled 17 — ... · 1 square — hit · damage 2" (i13). PASS.
+
+### 18. Quick regression
+- Four-way: arrow keys move one square; numpad Home does nothing. PASS.
+- Path line: an L with a rounded bend on hover in a fight (item 14 hovers). PASS.
+- Opportunity attacks: "Opportunity attack: Kael attacks Backer : *hit* : (18 + 4 = 22)" and for me. PASS.
+- Reaction settings: Ask shows boxes, Always shows none (Vela), set in settings.json and read on launch. PASS.
+- Hotbar refusal: Dash outside a fight: "there is nothing to dash for" (i18a). PASS.
+- Escape+F4: F4 does nothing while the Escape menu is open; after Close, F4 rewrites the single quick.mark (no second row). PASS.

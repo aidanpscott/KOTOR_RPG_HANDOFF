@@ -8,7 +8,7 @@
 2. **Gender is its own hub step**, before Portrait (owner's R-b, `PT-2751`: "Gender and species before portrait"). K2 bakes gender into the six class figures. So our class screen shows **one face**, a stand-in until Portrait is chosen.
 3. **Our extra steps: Origin, Background and Equipment**, which K2 does not have; our Name popup has a second stage, the Story panel.
 4. **Powers is a creation step** after Feats, 2 powers at level 1 (`PT-1697`, ruling 6). K2 offers no powers at creation; ours is built from K2's level-up `pwrlvlup_p` parts.
-5. **The plus is removed at the cap** on Attributes and Skills (owner ruling) where K2 leaves it dim.
+5. *(Retired 2026-10-17.)* The plus removed at the cap is **K2's own behaviour**, not a difference: the level-up capture shows K2 removes it (Demolitions at 2 cross-class, Stealth at 5; `k2-levelup/09`, `12`, `manual/L3-04`).
 6. **No home-made sentence on a chargen screen** outside the description pane and the help box (owner's chargen-text ruling); labels are K2's StrRefs or approved names, and a guard test enforces it.
 7. **Recommended is dimmed everywhere, and so is Quick Character**, until recommended builds are written (checkpoint 1, the Quick correction). K2's are live.
 
@@ -30,11 +30,11 @@
 | 14 | Portrait | LBL_PORTRAIT between arrows, the head large (`11`, `12`) | Same layout, a fixed slot, faces filtered by gender and species (`ours/07`) | **Matches** (`PT-2751`) |
 | 15 | Origin, Background | — | Homeworld and upbringing; background; each a keyed pane and a help box (`ours/08`–`10`) | **Ours only** (difference 3) |
 | 16 | Attributes · points | Remaining Points (210), point cost, description pane (`14`, `15`, `19`) | Same labels (`ours/11`) | **Matches** |
-| 17 | Attributes · plus at the cap | Plus left dim | Plus removed | **Differs on purpose** (difference 5) |
+| 17 | Attributes · plus at the cap | Plus removed at the cap (level-up capture, the same screen as chargen) | Plus removed | **Matches** (corrected 2026-10-17; was wrongly "K2 leaves it dim") |
 | 18 | Attributes · Recommended | Live (`16`) | Dimmed | **Differs on purpose** (difference 7); walker built (Lodestar 7dd507a) |
 | 19 | Attributes · Cancel | Keeps nothing (`17`, `18`) | Same | **Matches** |
 | 20 | Skills · points | Class skills, Point Cost 1/2, Class Skill / Cross-class Skill (`22`–`24`) | Same; "Point Cost N · maximum rank M" and Aptitude in the pane (`ours/12`) | **Matches** (5dfa5ad, c3d2bac) |
-| 21 | Skills · plus at the cap | Plus left dim | Plus removed | **Differs on purpose** (difference 5) |
+| 21 | Skills · plus at the cap | Plus removed at the cap: Demolitions 2 cross-class, Stealth 5 (`k2-levelup/09`, `12`, `manual/L3-04`) | Plus removed | **Matches** (corrected 2026-10-17; was wrongly "K2 leaves it dim") |
 | 22 | Skills · Recommended | Live (`25`) | Dimmed | **Differs on purpose** (difference 7) |
 | 23 | Feats · the grid | Three-tier chains with arrows (`27`, `28`) | Same grid, our feats in it, scrolling (`ours/13`) | **Matches** (01b3f20, 45951fc) |
 | 24 | Feats · right column | Remaining Feats (32062), the name, prerequisites and description, Add Feat (`29`) | Same | **Matches** |

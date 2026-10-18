@@ -61,7 +61,7 @@ and a second grid keeps both readable on one printed page. A dash: no power of t
 | **24** | – · – · 4 | – · – · 6 | – · – · 6 | – · – · 6 | – · – · 7 | – · – · 8 | – · – · 9 | – · – · 11 | – · – · 13 |
 | **25** | 2 · 3 · 4 | 2 · 4 · 6 | 2 · 4 · 6 | 3 · 5 · 7 | 3 · 5 · 7 | 3 · 5 · 8 | 4 · 7 · 10 | 4 · 8 · 12 | 5 · 9 · 14 |
 | **28** | – · – · 5 | – · – · 6 | – · – · 7 | – · – · 8 | – · – · 8 | – · – · 9 | – · – · 11 | – · – · 13 | – · – · 15 |
-| **30** | 2 · – · 5 | 3 · – · 7 | 3 · – · 8 | 3 · – · 8 | 3 · – · 9 | 3 · – · 9 | 4 · – · 12 | 5 · – · 14 | 6 · – · 16 |
+| **30** | – · – · 5 | – · – · 7 | – · – · 8 | – · – · 8 | – · – · 9 | – · – · 9 | – · – · 12 | – · – · 14 | – · – · 16 |
 
 **Fixed degradation** (owner ruling, 2026-10-11): these eight take the degradation stated here at **every** step, never the grid's;
 their **cost** still follows the step. Arrow of White Dawn **10**, Dark Healing **6**, Deadly Sight **6**, Force Incinerate **6**, Force Root **5**, Overload **2**, Sever Force **4**, Spear of Midnight Black **10**.

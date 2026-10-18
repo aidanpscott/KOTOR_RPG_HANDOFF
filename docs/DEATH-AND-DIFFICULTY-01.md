@@ -68,11 +68,11 @@
 
 ### Normal
 
-> **Players can die. ⚠ So do BEAST and DROID companions. Henchmen get up.**
+> **Players, BEAST and DROID companions die only in a wipe — `PT-1633`. Henchmen get up.** *(Corrected 2026-10-18 with the line below.)*
 
 **⚠ With exceptions chosen by the GM.**
 
-**A player character reduced to `−Constitution` is dead. ⚠ SO IS A BEAST COMPANION AND SO IS A DROID COMPANION — `PT-558`.** **⚠ A HENCHMAN USES THE `Easy` RULE: down at 0, up after combat at 1 vitality — `PT-571`.** **⚠ A hired NPC or a temporarily overridden droid is not the player's to lose permanently.**
+**A player character reduced to `−Constitution` is down beyond an ally's help until the fight ends; ⚠ only a wipe kills, on Easy and Normal both, and `−Constitution` kills only on Hard — `PT-1633`. The same holds for a beast companion and a droid companion (`PT-558`).** *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4: this line read "…is dead. SO IS A BEAST COMPANION AND SO IS A DROID COMPANION", which `PT-1633` overruled; the engine already kills at `−Constitution` on Hard only — Lodestar `pools.dart:174`.)* **⚠ A HENCHMAN USES THE `Easy` RULE: down at 0, up after combat at 1 vitality — `PT-571`.** **⚠ A hired NPC or a temporarily overridden droid is not the player's to lose permanently.**
 
 **⚠ AMENDED. This section previously read *"a henchman, a beast companion, or a droid is not [dead] — it is out for the encounter and recovers."*** **That made the two companion classes the only ones playing without a stake at the default difficulty.**
 

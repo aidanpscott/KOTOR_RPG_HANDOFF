@@ -215,7 +215,7 @@ effect:
 
 ### 5.1 Effects write scores, not derived values
 
-`bull's strength` is **not** "+4 to attack and damage." It is an enhancement effect on the **Strength score**, from which attack, damage, Climb, Jump, and carrying capacity all re-derive.
+`bull's strength` is **not** "+4 to attack and damage." It is an enhancement effect on the **Strength score**, from which attack, damage, Climb and Jump all re-derive. *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4: "carrying capacity" removed — `PT-656` killed it; there is no encumbrance system.)*
 
 Model it as a derived-value write and you get the wrong answer everywhere 3.5e distinguishes a bonus *to Str* from a bonus *to Str-based checks*. The derivation graph is:
 

@@ -132,7 +132,7 @@ are never adjusted.
 | › **Improved Dark Fury** | 2 | 14 | −3 |  |
 | ›› **Master Dark Fury** | 3 | 20 | −6 |  |
 | | | | | |
-| **Force Crush** | 1 | 30 | −3 |  |
+| **Force Crush** | 3 | 30 | −9 | tier 3 by `PARTITION-01 §3.3`, restored `PT-2752` (2026-10-17) |
 | | | | | |
 | › **Invade Mind** | 2 | 16 | −4 | **new** · *chain crosses alignment* |
 | ›› **Drain Thoughts** | 3 | 24 | −8 | **new** · *chain crosses alignment* |

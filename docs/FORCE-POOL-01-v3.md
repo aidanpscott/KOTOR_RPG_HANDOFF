@@ -223,6 +223,8 @@ At 25% and 50% the rests barely register. **75% is taken:** two rests produce a 
 | 13–16 | Tier 3 | **16** |
 | 17–20 | Tier 3 | 20 |
 
+**⚠⚠ THE "TOP TIER AVAILABLE" COLUMN IS A RULE — owner ruling, 2026-10-17 (`PT-2752`).** A power of tier 1 may be taken from character level 1, tier 2 from level 6, tier 3 from level 13 — read against **total character level** (`POWER-COSTS-01 §3`). It gates taking a power at creation and at level-up, alongside the power's own prerequisites, and is printed in K2's form (`Character Level 6`). The note below covers the **cost** column only.
+
 **The right column is a modelling assumption, not a rule.** Powers cost 6, 12, or 20 by tier. But a character does not cast their most expensive power every turn — a level 13 Guardian mixes Force Speed and Force Jump with the occasional Force Storm, so the *average* sits between tiers and rises smoothly.
 
 > **This correction removed most of an apparent defect.** Modelled as top-tier-only, the castings-per-fight curve sawtooths downward at levels 6 and 13, and the Guardian appeared to "dry out in normal fights at 11 of 15 levels." **That was measuring spam.** Blended, the curve tracks the design target within ±1 at nearly every level.

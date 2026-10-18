@@ -1562,3 +1562,16 @@
      WHAT           whether we have a jump; its movement cost; whether
                     it provokes an attack of opportunity
      PICK UP WHEN   the board has height and gaps to jump
+
+## I — STORY AND GM GRANTS OF POWERS, AND LOOM'S POWER EDITOR (`PT-2752`, 2026-10-17)
+
+**Force Enlightenment and Force Crush are story rewards (owner, 2026-10-17), and Force Sight is taught only — but nothing can grant a power yet.** The ledger already has the event a grant needs (`character.power-taken`, with a `source`, as feats carry `source: chosen`), and the app folds it into the character's powers; nothing emits it except the Powers step. K2 grants both by script from dialogue (`650DAN` `a_end`/`a_grant_force`, `FORCE-POWERS-01`'s notes). Loom has no way to author a grant into a dialogue or script, and no power editor at all (its editors are areas, conversations, creatures, doctrines, items, placeables and stores), so the owner's "Loom's power editor shows the tier default" has nowhere to live yet; the rule itself is Lodestar's `powerDefaultGate`, ready for it.
+
+     WHAT           a grant action (story, GM, or a dialogue node) that writes
+                    character.power-taken with source granted, in K2's words
+                    (136053 / 136054); Loom authoring for it; a Loom power
+                    editor showing the level gate (written, or the tier default)
+     WHY DEFERRED   no dialogue action system to hang it on; Loom has no power
+                    editor
+     PICK UP WHEN   the owner rules how a grant is authored (dialogue node,
+                    script, GM tool), or orders the Loom power editor

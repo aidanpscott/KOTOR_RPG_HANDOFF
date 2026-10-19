@@ -1585,3 +1585,7 @@
 ## K — BEAST CONTROL'S ICON (`PT-2752`, owner icon audit, 2026-10-18)
 
 **Beast Control** is ours (no row in either game); its approved stand-in (`PT-2747`) is `ip_affectmind` — **which is our Mind Trick's own icon** (K2's Affect Mind row), now that Mind Trick draws it. **Proposed:** `ip_beasttrick`, the icon of K2's Beast Trick (`FORCE_POWER_BEAST_TRICK`, a power we cut), nearest in meaning. **For the owner's approval** (`media/study/pt2752/power-icon-audit/before-after.png`).
+
+## L — FEAT ICONS HELD FOR THE OWNER (`PT-2752`, owner icon ruling, 2026-10-18)
+
+Forty-three renamed feats took their game icons (Cautious = K2 Caution, Smuggler's Luck = Scoundrel's Luck, Squad Tactics = Dual Strike, …). **Held for the owner:** **Killer's Instinct** (the owner replaced the Sneak Attack feat chain with it, `FEATS-LIBRARY-01:155`; Sneak Attack I–III's icons fit, but our Sneak Attack *attack* tree keeps the name); **Dominion** (same effect as K2's Force Focus, but `PT-103` gave that chain to our *Force Channel*, which has no record); **Emergency Reboot** (shaped like K2's Spirit chain, no document links them); **Skill Focus** (renamed from K2's Class Skill per `FEATS-LIBRARY-01:45` and TRACE-68; K2 has seven per-skill Class Skill icons, `if_clsskill01–07`, and our one record takes one — which?). Contact sheet: `media/study/pt2752/icon-transfers/feats-renamed.png`.

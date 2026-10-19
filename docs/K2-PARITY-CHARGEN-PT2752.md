@@ -28,6 +28,7 @@
     - **Character:** the Basic Info table's form under K2 section bars: Origin (species, subrace, chassis, gender or voice, homeworld, upbringing), Background (background, aptitudes), Languages. A long value wraps and its row grows: the shelf's languages are a sentence, not a list (agenda J).
 
     The Attacks step is shown locked (its picks are a later design). K2 has no Basic Info, Character or Attacks tab and no summary beside its steps.
+16. **A finished step can be opened again** (owner, 2026-10-18, going back). K2 enables only the current step's button (reone `custom.cpp` 85–90); ours also opens any finished step, and locked steps stay locked. Left with the same choices, or cancelled, nothing changes. Changed, a K2 confirm box warns first (its line is with the owner: K2-WORDS-PENDING-PT2752 §4); OK clears every finished step after it, to be redone in order, and Cancel keeps everything. Back still undoes one step at a time.
 
 | # | Screen · control | K2 (picture) | Ours (picture) | State |
 |---|---|---|---|---|
@@ -39,7 +40,7 @@
 | 6 | Class · the figure | A model per class and gender (`01`) | The species' default face (`PT-2751` R6; a droid's chassis face, R3; the placeholder where none exists), at most twice its art | **Differs on purpose** (difference 2): one face (d2c5598) |
 | 7 | Class · name bar, description, title | Name bar ("Female Jedi Guardian"), description bar (`01`) | CHOOSE YOUR CLASS (32160); the class name; Description (217) and a keyed pane | **Matches** (d2c5598) |
 | 8 | Class · Cancel | → main menu (`03`) | → Species (or Model for a droid) | **Differs on purpose** (difference 1) |
-| 9 | Hub · the strip | Custom panel: steps unlock in order, only the current step live (`10`, `13`, `20`, `26`) | Same, on our own page from K2's parts (difference 15): Gender, Portrait, Origin, Background, Attributes, Skills, Feats, Attacks (locked), Powers, Equipment, then Name and Play, beside the six tabs (`pt2752-hub-wired.mp4`) | **Matches** in behaviour (6c51c50: a done row no longer re-opens on tap); steps differ (differences 2, 3, 4); the page differs on purpose (difference 15). Retires `PT-1215`'s re-open warning |
+| 9 | Hub · the strip | Custom panel: steps unlock in order, only the current step live (`10`, `13`, `20`, `26`) | Same, on our own page from K2's parts (difference 15): Gender, Portrait, Origin, Background, Attributes, Skills, Feats, Attacks (locked), Powers, Equipment, then Name and Play, beside the six tabs (`pt2752-hub-wired.mp4`) | **Differs on purpose** (difference 16: a finished step opens again; a change clears the steps after it, after a warning); steps differ (differences 2, 3, 4); the page differs on purpose (difference 15) |
 | 10 | Hub · Back | Dimmed at step 1; later undoes the last step (`21`) | Same; each undo is a logged discard | **Matches** (0c0c020; dimmed again on the wired hub, 6c51c50) |
 | 11 | Hub · Cancel | 109863 "All settings for this character will be lost. Proceed?" OK / Cancel (`37`); OK → Quick/Custom (`38`) | Same box; OK → the entry screen | **Matches** (0c0c020) |
 | 12 | Hub · Play | Ready to play (`36`) | Play when every step is done (`ours/18`) | **Matches** |

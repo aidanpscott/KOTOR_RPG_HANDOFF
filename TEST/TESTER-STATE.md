@@ -63,6 +63,7 @@ Simplicity ranks above correctness. When the simpler choice and the more correct
 - Layout (TEST 158): out-of-fight Save Bed grid x 624–1640, y 168–846 (84.7 px cells); fight layout grid x 692–1570, y 158–742 (73 px); Onjo's token in the hit takes at full-res (948,340). Options rows: Save 270, Load 335, Feedback 400, Graphics 465, Keys 529, Exit 594; Close (323,954); quit OK (960,560); package menu Continue (960,280), Load Game (960,452), Exit to Library (960,797). Load list rows y=268/311/354; Load button (636,954). Naming popup OK (960,566).
 
 ## Traps learned (each cost time)
+- **Test worktrees go BESIDE the main clone, in `KOTOR_APP_PROJECT`** (Coder, 2026-10-19, app 75b1eac). A worktree anywhere else cannot see the sibling packages by relative path: it ran 1997 of 4058 tests and stamped a false failure. `tool/test_tier.sh` now refuses before running or stamping (exit 4, "put test worktrees beside the main clone").
 - **xdotool `key --window` does nothing here** (no window manager on Xvfb: focus is the root window and Flutter ignores the synthetic events). `k.sh` does `windowfocus` then plain `xdotool key`; `xdotool type` works after windowfocus.
 - **`$!` after `cd … && nohup app &` is the wrapper's PID**, not the app's: launch with `( cd … && exec app ) &`.
 - The 10×10 helper window now sits at (10,10); `win.sh` picks the 1920×1080 one.

@@ -2,6 +2,15 @@
 
 **Made 2026-10-19 (MAIN, `PT-2752` ruling 6): there was no Coder seed file in the repos.** Kept short; update it when a standing rule changes.
 
+## Before any question goes to the owner (owner, 2026-10-19, standing rule)
+
+1. Read the ORIGINAL documents written before the coding work, to see what was decided.
+2. Follow it forward: every later ruling, ledger entry and comms note that touched it. Don't stop at the first answer; the most recent decision wins.
+3. Compare with K2 (and K1 where it applies).
+4. Only if the systems differ, or our own documents leave it truly open after all that, bring the owner a question: the options, the evidence and a recommendation.
+
+Every "for a ruling" item shows steps 1–3 done, with citations. If the documents answer it, build to them and report what was found; don't ask.
+
 ## Running the tests
 
 - **Test worktrees go BESIDE the main clone, in `KOTOR_APP_PROJECT`** (app 75b1eac). A worktree anywhere else cannot see the sibling packages (Lodestar, Lens, Shelf) by relative path: one ran 1997 of 4058 tests and stamped a false failure. `tool/test_tier.sh` now refuses before running or stamping (exit 4, "put test worktrees beside the main clone").

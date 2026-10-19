@@ -116,9 +116,15 @@ Everyone else in the party has three systems and splits their attention. You hav
 
 ## Class feature
 
-### Hold the Line
+### Both Hands
 
-| **Hold the Line** | Soldier | any round an ally is adjacent | **broad** |
+**⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): this section carried a superseded name. The chain below is `FEATS-LIBRARY-01`'s, which governs, copied from it; `PT-211` moved `Hold the Line` to the Juggernaut and gave the Soldier `Both Hands`; levels per `PT-239` (class level 3).**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Both Hands** | **3** | **Your Power chains do not distinguish melee from ranged: a tier bought in one applies at the same tier in the other.** |
+| › **Improvised** | **6** | **Switching between a melee and a ranged weapon is free once per round and provokes nothing.** |
+| ›› **No Wrong Weapon** | **10** | **As Improvised, and you take no penalty for firing a ranged weapon while adjacent to an enemy.** |
 
 
 \pagebreak
@@ -201,7 +207,9 @@ Six class skills — fewer than anyone. You are not here to solve the problem. Y
 |---|---|---|
 | **Nothing In My Hands** | **1** | **Your unarmed attacks ignore 2 points of the target's armour bonus to Defence** |
 | › **Through The Plate** | **4** | **4 points** |
-| ›› **Armour Is A Comfort** | **8** | **The target's armour bonus does not apply against your unarmed attacks at all** |
+| ›› **Unburdened** | **8** | **The first unarmed attack you make each round ignores the target's armour bonus to Defence entirely.** |
+
+**⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): tier 3 was `Armour Is A Comfort`, renamed `Unburdened` by `PT-337`; its effect is `FEATS-LIBRARY-01`'s, which governs.**
 
 **⚠ Priced.** **`KORR` carries 7 of his 19 Defence in medium battle armour, so the capstone is worth about `+7` to hit against him.**
 
@@ -295,9 +303,11 @@ The shot that should have ended you lands. You fire back before you go down. Tha
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Still Standing** | **1** | **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you |
-| › **Not Finished** | **4** | **Two turns**, taken on your own initiative |
-| ›› **Last Word** | **8** | Two turns, and **during them damage cannot take you below −(Constitution − 1)** — `ATTACKS-01 §12.4`'s own dying floor, not the old flat −9. You cannot die until they are spent |
+| **Still Standing** | **2** | **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you |
+| › **Not Finished** | **5** | **Two turns**, taken on your own initiative |
+| ›› **Last Word** | **9** | Two turns, and **during them damage cannot take you below −(Constitution − 1)** — `ATTACKS-01 §12.4`'s own dying floor, not the old flat −9. You cannot die until they are spent |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Marksman: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ Priced.** **One extra turn for a Combat-rate character is one extra declaration — about 27 damage at level 8.** **Once per encounter, across a three-feat investment, on the Combat class with the fewest feats at 18.**
 
@@ -382,7 +392,7 @@ The grenade lands. You shout. The party does not die. It happens two or three ti
 
 ## Class feature
 
-### Read the Ground
+### Terrain Sense
 
 **Derived from the one number that makes the class:** **12 / 12 / 12 at level 20 is 36 save points against the Soldier's 24 and the Jedi's 33.** **The only all-strong progression in either game.**
 
@@ -390,19 +400,13 @@ The grenade lands. You shout. The party does not die. It happens two or three ti
 
 > **The Soldier absorbs. The Scout avoids.**
 
+**⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): this section carried a superseded chain. The chain below is `FEATS-LIBRARY-01`'s, which governs, copied from it; `PT-207` replaced `Read the Ground` with `Terrain Sense`. The old chain's pricing notes went with it.**
+
 | Tier | Level | Effect |
 |---|---|---|
-| **Read the Ground** | **1** | **When you succeed on a Reflex save against an effect with an area, one ally in that area may use your result in place of their own.** Declared after your roll, before theirs |
-| › **Called It** | **4** | **Two allies** |
-| ›› **Nobody Steps On It** | **8** | **Two allies**, and **when `Evasion` reduces your damage to none, each of them takes half instead of full** |
-
-**⚠ Priced.** **The only area effects on the pregen sheets are grenades.** **A trooper's frag against `KORR` at Reflex `+5` lands about 8 on a failure.** **At tier 1 the Scout converts one ally's failure roughly a third of the time — under 3 expected damage a round, and only when someone throws something.**
-
-**Not dominant: it does nothing against weapons, which is almost every attack in the game.** **A hard counter to one narrow category, which is what a save specialist should be.**
-
-> **The grenade lands, the Scout shouts, and the party does not die.** **Two or three times a campaign, not every round.**
-
-**⚠ The reconnaissance half of the class — going first, not being surprised — is initiative.** **`ACTION-ECONOMY-01 §17` lists class initiative modifiers as open and notes the Smuggler was to own one.** **The Scout has the better claim and the two should be settled together.**
+| **Terrain Sense** | **1** | **On entering an area, name one feature of it before anyone acts — a cover position, a chokepoint, a hazard or a second exit — and learn the truth of it. Once per encounter.** |
+| › **Ground Read** | **4** | **You may name two features, and one ally who acts before you may use one of them, moving to a cover square you named as part of their own move.** |
+| ›› **Forewarned** | **8** | **You may name two features, and the party is never surprised in an area you entered first.** |
 
 
 ---
@@ -490,9 +494,11 @@ Every bounty in the galaxy is worth more breathing. Naming a target and taking i
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Quarry** | **1** | **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying |
-| › **Run to Ground** | **4** | As above, and **+2 attack against your quarry**, which gains no benefit from cover against you |
-| ›› **No Escape** | **8** | As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you |
+| **Quarry** | **2** | **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying |
+| › **Run to Ground** | **5** | As above, and **+2 attack against your quarry**, which gains no benefit from cover against you |
+| ›› **No Escape** | **9** | As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Bounty Hunter: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ Priced against `Squad Tactics`, the only comparand in the corpus.** **`Squad Tactics` is Soldier-only and reaches `+6` against any target an ally is also attacking.** **Quarry reaches `+4` against one named target and costs a naming action.**
 
@@ -688,9 +694,11 @@ Cover is a place in the world rather than an action you take, and you are the on
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Cover Identity** | **1** | **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round |
-| › **Deep Cover** | **4** | On a success it **leaves the encounter** if already below half vitality |
-| ›› **Handler** | **8** | On a success it **acts on your initiative under your control for one round.** One NPC at a time |
+| **Cover Identity** | **2** | **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round |
+| › **Deep Cover** | **5** | On a success it **leaves the encounter** if already below half vitality |
+| ›› **Handler** | **9** | On a success it **acts on your initiative under your control for one round.** One NPC at a time |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Agent: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ The capstone mirrors Field Override's deliberately.** **The Engineer turns machines with `Slicing`; the Agent turns people with `Persuade`.** **Neither works on the other's target and both cost a declaration.**
 
@@ -780,17 +788,14 @@ You fail a check and learn *why*. The party is delayed rather than stopped, whic
 
 **Replaced `Prior Study`, which was declared in advance and spent once per adventure** — **a resource, not a competence, and the class is a competence.**
 
+**⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): this section carried a superseded chain. The chain below is `FEATS-LIBRARY-01`'s, which governs, copied from it; `PT-240` restored its tiers as `Second Look` and `Nothing Is Sealed`. The old chain's pricing notes went with it.**
+
 | Tier | Level | Effect |
 |---|---|---|
-| **Read the Ruin** | **1** | **When you fail a knowledge, `Security` or `Awareness` check to understand, open or navigate something, you learn *why*** — one concrete fact about what would work. **You may retry once that condition is met** |
-| › **Methodical** | **4** | As above, and **you may take 10 on those checks even under pressure**, where taking 10 is otherwise unavailable |
-| ›› **Nothing Is Sealed Forever** | **8** | As above, and **once per scene one such obstacle drops one difficulty tier** for the whole party |
+| **Read the Ruin** | **1** | **When you fail a knowledge, Security or Awareness check to understand, open or navigate something, you learn why it failed.** |
+| › **Second Look** | **4** | **A failed check also tells you what would succeed — a tool, a skill or a piece of knowledge you lack.** |
+| ›› **Nothing Is Sealed** | **8** | **A failed check also tells you whether anything would succeed, so the party knows when to stop trying.** |
 
-**⚠ Tier 2 is `SKILL-RESOLUTION-01 §2`'s own sentence turned into a class ability.** **That section says the number that matters is *"auto-succeeds at"* because *"most skill use is not under pressure."*** **The Explorer is never not taking 10.**
-
-**Not dominant: it does nothing in combat, and it cannot make an impossible check succeed — it tells you what would.**
-
-**⚠ Tier 3 needs `SKILL-RESOLUTION-01 §7`'s knowledge-skill DC ladder, which is listed as unset.** **The class works at tiers 1 and 2 without it.**
 
 ---
 
@@ -929,7 +934,9 @@ Against one enemy you get sharply, visibly better. In a crowd you get nothing at
 
 ### Single Combat
 
-| **Single Combat** | **1** | **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else** |
+| **Single Combat** | **2** | **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else** |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Duelist: class level 2; the later tiers keep their gaps. Was 1, now 2.**
 
 
 \pagebreak
@@ -1266,7 +1273,15 @@ Medicine sat on five classes and was central to none. Now it is yours.
 
 ## Class feature
 
-**⚠ Not yet written.** *⚠ `Medic` has no class feature in `FEATS-LIBRARY-01`.*
+### Triage
+
+**⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): this read "Not yet written". `PT-991` wrote the Medic's class feature, `Triage`; the chain below is `FEATS-LIBRARY-01`'s, which governs, copied from it.**
+
+| Tier | Level | Effect |
+|---|---|---|
+| **Triage** | **1** | **When you stabilise a dying ally, they return at 1 vitality instead of 0 and may act on their next turn.** |
+| › **Field Surgery** | **4** | **Once per encounter, a Medicine check restores vitality equal to your class level.** |
+| ›› **No One Left** | **8** | **You may stabilise an ally up to 6 squares away, without touching them.** |
 
 
 \pagebreak

@@ -659,6 +659,8 @@
 
 **⚠ CURRENT: `Command Protocol` → `Squad Protocol` → `Master Protocol`, GRANTED by the class at Droid Master 1 / 4 / 8, gated on character level 7 / 15.**
 
+**⚠ Checked 2026-10-19 (owner via MAIN, `PT-2752` ruling 11): this whole `PT-201` block, the prose below included, is superseded and kept as a record. `FEATS-LIBRARY-01` governs.**
+
 **The turn-order cost is bounded the way `REPLY-31` asked:** **decision cost is one order, not one per droid, and silence resolves instantly.**
 
 **⚠ `Intelligence` primary makes `PT-133` load-bearing.** **The Treasure Hunter was the first Intelligence class; this is the second, and the rule covering it is four exchanges old.**

@@ -103,7 +103,7 @@
 | **Elusive** | Never quite where the blow lands. | **+1 Defence.** Always active. |
 | › Improved Elusive | Never quite where the blow lands. | **You gain +2 Defence. Always active.** (note: was **+2 Defence.**) |
 | ›› Master Elusive | Never quite where the blow lands. | **You gain +3 Defence. Always active.** (note: was **+3 Defence.**) |
-| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. **Granted to the Scout at 6th level. Purchasable by anyone else.** (note: `sct_granted`, `feat.2da`.) | On a successful Reflex save, take **no** damage instead of half. |
+| **Evasion** | Training so complete that an area attack can be avoided entirely rather than merely survived. **Granted to the Scout at 6th level.** (note: `sct_granted`, `feat.2da`. ⚠ Scout only since `PT-2705`'s availability flip, which the most recent decision keeps — MAIN, 2026-10-19, `PT-2752`; this read "Purchasable by anyone else" until then.) | On a successful Reflex save, take **no** damage instead of half. |
 | **Freetrader** | Life between worlds — flying, trading, and knowing who to ask. | +1 Appraise and Pilot. |
 | › Improved Freetrader | Life between worlds — flying, trading, and knowing who to ask. | +2 Appraise and Pilot. |
 | ›› Master Freetrader | Life between worlds — flying, trading, and knowing who to ask. | +3 Appraise and Pilot. |
@@ -126,7 +126,7 @@
 | **Loremaster** | Deep knowledge of the dead, the living, and the Force. | +1 Archaeology, Mysticism, and Xenology. |
 | › Advanced Loremaster | Deep knowledge of the dead, the living, and the Force. | +2 Archaeology, Mysticism, and Xenology. |
 | ›› Grand Loremaster | Deep knowledge of the dead, the living, and the Force. **(note: The name already contains master, so the chain uses Advanced and Grand.)** | +3 Archaeology, Mysticism, and Xenology. |
-| **Boresight** | Shots placed where they are hardest to turn aside. **⚠ The Scout gains it at 4, 8 and 12; anyone may learn it. `PT-208`.** (note: Renamed from `Marksman`, which collided with the class of that name — `PT-206`.) | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(note: The passive half of KOTOR's Precise Shot. The damage half is an attack — see ATTACKS-01.)* |
+| **Boresight** | Shots placed where they are hardest to turn aside. **⚠ The Scout gains it at 4, 8 and 12.** (note: ⚠ Scout only since `PT-2705`'s availability flip, which the most recent decision keeps — MAIN, 2026-10-19, `PT-2752`; this read "anyone may learn it" (`PT-208`) until then.) (note: Renamed from `Marksman`, which collided with the class of that name — `PT-206`.) | **Enemy Blaster Bolt Deflection −2** against your ranged attacks. **Always active.** *(note: The passive half of KOTOR's Precise Shot. The damage half is an attack — see ATTACKS-01.)* |
 | › Improved Boresight | Shots placed where they are hardest to turn aside. | **Enemy Blaster Bolt Deflection is reduced by 4 against your ranged attacks. Available from level 6.** (note: was **Enemy BBD −4.** Level 6) |
 | ›› Master Boresight | Shots placed where they are hardest to turn aside. | **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round. Available from level 12.** (note: was **The target's Blaster Bolt Deflection does not apply to the first ranged attack you make each round.** Level 12) |
 
@@ -323,6 +323,8 @@
 | › Weapon Focus: Wrist-Mounted | Wrist launchers and integrated arm weapons — the Mandalorian hunter's signature. (note: Authored — the source has no Focus tier for this family.) | **Adds a +1 attack bonus with wrist-mounted weapons.** (note: was +1 attack.) |
 | ›› Weapon Specialization: Wrist-Mounted | Wrist launchers and integrated arm weapons — the Mandalorian hunter's signature. (note: Authored.) | **Adds a +2 damage bonus with wrist-mounted weapons.** (note: was +2 damage.) |
 
+> **⚠ Bought, not granted (owner, 2026-10-19, `PT-2752` ruling 4).** The Wrist-Mounted chain is BOUGHT, and only by a Bounty Hunter: it costs a feat pick like any chain in §1–§4, and only a Bounty Hunter sees it takeable. Every other class sees it refused, its class line ("Bounty Hunter only.") saying why. `scripts/extract_feats.py` reads these three rows as selectable (`SELECTABLE_OVERRIDE`) although they sit outside §1–§4.
+
 
 ## Astromech droid
 
@@ -393,6 +395,8 @@
 | **Superior Weapon Focus** *(any family)* | The character's skill with one weapon family is almost unmatched. (note: Opened from lightsaber-only by `PT-150`.) | **Adds a +1 attack bonus with the chosen weapon family, above Weapon Specialization.** (note: was **+1 attack**, above the Specialization tier) |
 | › Advanced Superior Weapon Focus | The character's skill with one weapon family is almost unmatched. | **Adds a +2 attack bonus with the chosen weapon family.** (note: was **+2 attack**) |
 | ›› Master Superior Weapon Focus | The character's skill with one weapon family is almost unmatched. | **Adds a +3 attack bonus with the chosen weapon family.** (note: was **+3 attack**) |
+
+> **Differences from K2, kept (owner via MAIN, 2026-10-19, `PT-2752` ruling 9: our documents govern, K2 is design intent).** Both superior chains head their own rows here and ask only for a prestige class. K2 asks more: its Superior Two-Weapon Fighting requires Master Two-Weapon Fighting, and its Superior Weapon Focus requires Weapon Specialization: Lightsaber (rules/FEAT-GRID-AUDIT-PT2752.md, the chain comparison). We keep our prerequisites. These are recorded differences, not defects.
 
 > **⚠ The superior tier existed for one of six weapon families, and it was the Jedi weapon.** **A prestige Jedi could reach `+3` beyond Specialization; a prestige Soldier could reach it with nothing.**
 
@@ -542,9 +546,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Quarry** | **1** | The bounty hunter's craft of marking one target and bringing it in alive. | **Name one target you can see, as a free action once per encounter. You know its exact current wounds and vitality, and your attacks against it may be declared non-lethal at no penalty: a quarry reduced to 0 is Disabled and stable rather than dying.** (note: was **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying) |
-| › **Run to Ground** | **4** | The bounty hunter's craft of marking one target and bringing it in alive. | **As Quarry, and you gain +2 attack against your quarry, which gains no benefit from cover against you.** (note: was As above, and **+2 attack against your quarry**, which gains no benefit from cover against you) |
-| ›› **No Escape** | **8** | The bounty hunter's craft of marking one target and bringing it in alive. | **As Quarry, at +4 attack, and once per encounter you may spend a reaction to move your full speed toward your quarry when it moves away from you.** (note: was As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you) |
+| **Quarry** | **2** | The bounty hunter's craft of marking one target and bringing it in alive. | **Name one target you can see, as a free action once per encounter. You know its exact current wounds and vitality, and your attacks against it may be declared non-lethal at no penalty: a quarry reduced to 0 is Disabled and stable rather than dying.** (note: was **Name one target you can see. Free action, once per encounter.** You know its exact current wounds and vitality. **Your attacks against it may be declared non-lethal at no penalty** — a quarry reduced to 0 is **Disabled and stable** rather than dying) |
+| › **Run to Ground** | **5** | The bounty hunter's craft of marking one target and bringing it in alive. | **As Quarry, and you gain +2 attack against your quarry, which gains no benefit from cover against you.** (note: was As above, and **+2 attack against your quarry**, which gains no benefit from cover against you) |
+| ›› **No Escape** | **9** | The bounty hunter's craft of marking one target and bringing it in alive. | **As Quarry, at +4 attack, and once per encounter you may spend a reaction to move your full speed toward your quarry when it moves away from you.** (note: was As above at **+4**, and **once per encounter spend a reaction to move your full speed toward your quarry** when it moves away from you) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Bounty Hunter: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ Priced against `Squad Tactics`, the only comparand in the corpus.** **`Squad Tactics` is Soldier-only and reaches `+6` against any target an ally is also attacking.** **Quarry reaches `+4` against one named target and costs a naming action.**
 
@@ -672,9 +678,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Still Standing** | **1** | A sheer refusal to fall, even after the body has had enough. | **The first time each encounter you are reduced to 0 or below, you take one more full turn before you become Disabled or begin dying.** (note: was **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you) |
-| › **Not Finished** | **4** | A sheer refusal to fall, even after the body has had enough. | **You take two more turns instead of one, on your own initiative.** (note: was **Two turns**, taken on your own initiative) |
-| ›› **Last Word** | **8** | A sheer refusal to fall, even after the body has had enough. | **You take two more turns, and during them damage cannot take you below the dying floor. You cannot die until they are spent.** (note: was Two turns, and **during them damage cannot take you below −[Constitution − 1]**, the dying floor . You cannot die until they are spent) (note: `ATTACKS-01 §12.4` states it, not the old flat −9.) |
+| **Still Standing** | **2** | A sheer refusal to fall, even after the body has had enough. | **The first time each encounter you are reduced to 0 or below, you take one more full turn before you become Disabled or begin dying.** (note: was **The first time each encounter you are reduced to 0 or below, take one more full turn before you become Disabled or begin dying.** Resolved immediately after the attack that dropped you) |
+| › **Not Finished** | **5** | A sheer refusal to fall, even after the body has had enough. | **You take two more turns instead of one, on your own initiative.** (note: was **Two turns**, taken on your own initiative) |
+| ›› **Last Word** | **9** | A sheer refusal to fall, even after the body has had enough. | **You take two more turns, and during them damage cannot take you below the dying floor. You cannot die until they are spent.** (note: was Two turns, and **during them damage cannot take you below −[Constitution − 1]**, the dying floor . You cannot die until they are spent) (note: `ATTACKS-01 §12.4` states it, not the old flat −9.) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Marksman: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ Priced.** **One extra turn for a Combat-rate character is one extra declaration — about 27 damage at level 8.** **Once per encounter, across a three-feat investment, on the Combat class with the fewest feats at 18.**
 
@@ -839,9 +847,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Cover Identity** | **1** | A false face convincing enough to make an enemy hold its hand. | **In place of an attack, make an opposed Persuade or Intimidate check against one enemy's Alertness or Will save. On a success it takes no hostile action against your party until the end of its next turn.** (note: was **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round) |
-| › **Deep Cover** | **4** | A false face convincing enough to make an enemy hold its hand. | **On a successful Cover Identity, an enemy already below half vitality leaves the encounter.** (note: was On a success it **leaves the encounter** if already below half vitality) |
-| ›› **Handler** | **8** | A false face convincing enough to make an enemy hold its hand. | **On a successful Cover Identity, the enemy acts on your initiative under your control for one round. One at a time.** (note: was On a success it **acts on your initiative under your control for one round.** One NPC at a time) |
+| **Cover Identity** | **2** | A false face convincing enough to make an enemy hold its hand. | **In place of an attack, make an opposed Persuade or Intimidate check against one enemy's Alertness or Will save. On a success it takes no hostile action against your party until the end of its next turn.** (note: was **Declare in place of an attack.** Opposed `Persuade` or `Intimidate` against one NPC's `Alertness` or Will save. **On a success it takes no hostile action against your party until the end of its next turn.** You make no attack this round) |
+| › **Deep Cover** | **5** | A false face convincing enough to make an enemy hold its hand. | **On a successful Cover Identity, an enemy already below half vitality leaves the encounter.** (note: was On a success it **leaves the encounter** if already below half vitality) |
+| ›› **Handler** | **9** | A false face convincing enough to make an enemy hold its hand. | **On a successful Cover Identity, the enemy acts on your initiative under your control for one round. One at a time.** (note: was On a success it **acts on your initiative under your control for one round.** One NPC at a time) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Agent: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ The capstone mirrors Field Override's deliberately.** **The Engineer turns machines with `Slicing`; the Agent turns people with `Persuade`.** **Neither works on the other's target and both cost a declaration.**
 
@@ -1096,9 +1106,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Single Combat** | **1** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Name one enemy as a free action. You gain +1 attack and +1 Defence against it, and −1 Defence against everyone else.** (note: was **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else**) |
-| › **Measured** | **4** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Against your named enemy you gain +2 attack and +2 Defence, and −1 Defence against everyone else.** (note: was **+2 / +2**, and **−1 against everyone else**) |
-| ›› **Nothing Else Matters** | **8** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Against your named enemy you gain +3 attack and +3 Defence, and −2 Defence against everyone else.** (note: was **+3 / +3**, and **−2 against everyone else**) |
+| **Single Combat** | **2** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Name one enemy as a free action. You gain +1 attack and +1 Defence against it, and −1 Defence against everyone else.** (note: was **Name one enemy as a free action. +1 attack and +1 Defence against it**, and **−1 Defence against everyone else**) |
+| › **Measured** | **5** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Against your named enemy you gain +2 attack and +2 Defence, and −1 Defence against everyone else.** (note: was **+2 / +2**, and **−1 against everyone else**) |
+| ›› **Nothing Else Matters** | **9** | The duellist's focus on one chosen opponent, at the cost of everyone else. | **Against your named enemy you gain +3 attack and +3 Defence, and −2 Defence against everyone else.** (note: was **+3 / +3**, and **−2 against everyone else**) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Duelist: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 > **⚠ It gets sharply better against exactly one enemy and no better at all in a crowd.**
 
@@ -1116,9 +1128,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Field Position** | **1** | A soldier's instinct for fighting from cover. | **While you are in cover, your attacks gain +2, the same bonus the cover gives your Defence.** (note: was **While you are in cover, your attacks gain `+2`** — the same bonus the cover gives your Defence) |
-| › **Shift** | **4** | A soldier's instinct for fighting from cover. | **Once per round, you may move from one cover square to another within your speed as a free action. It provokes nothing.** (note: was **Once per round, move from one cover square to another within your speed as a free action.** Provokes nothing) |
-| ›› **Never In The Open** | **8** | A soldier's instinct for fighting from cover. | **Once per encounter, when targeted by an attack you can see, you may move to any cover square within your speed before it resolves.** (note: was **Once per encounter, when targeted by an attack you can see, move to any cover square within your speed before it resolves**) |
+| **Field Position** | **2** | A soldier's instinct for fighting from cover. | **While you are in cover, your attacks gain +2, the same bonus the cover gives your Defence.** (note: was **While you are in cover, your attacks gain `+2`** — the same bonus the cover gives your Defence) |
+| › **Shift** | **5** | A soldier's instinct for fighting from cover. | **Once per round, you may move from one cover square to another within your speed as a free action. It provokes nothing.** (note: was **Once per round, move from one cover square to another within your speed as a free action.** Provokes nothing) |
+| ›› **Never In The Open** | **9** | A soldier's instinct for fighting from cover. | **Once per encounter, when targeted by an attack you can see, you may move to any cover square within your speed before it resolves.** (note: was **Once per encounter, when targeted by an attack you can see, move to any cover square within your speed before it resolves**) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Agent: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **Cover as offence, then mobility, then escape. All three read `PT-3`'s existing rule and add no geometry.**
 
@@ -1134,15 +1148,11 @@
 ---
 
 
-### Combination — unarmed Velocity, `ATTACKS-07`. Authored.
+### Combination — unarmed Velocity, `ATTACKS-07`. Authored. ⚠ MOVED TO THE ATTACKS, 2026-10-19.
 
 **Gated on `Unarmed Specialist IV`, which in practice means the Brawler and the Force classes.**
 
-| Tier | Level | Description | Effect |
-|---|---|---|---|
-| **Combination** | **1** | Rapid unarmed strikes thrown in quick succession. | **Strike twice unarmed; the second strike gains +2 if the first hit. You take −3 attack and −2 Defence.** (note: was **Strike twice unarmed.** The second gains `+2` if the first hit. **Attack −3, Defence −2**) |
-| › **Chain Punch** | **4** | Rapid unarmed strikes thrown in quick succession. | **Strike three times unarmed, each strike gaining +2 if the one before it hit. You take −2 attack and −1 Defence.** (note: was **Three strikes**, each `+2` if the previous hit. **Attack −2, Defence −1**) |
-| ›› **Rain of Blows** | **8** | Rapid unarmed strikes thrown in quick succession. | **Strike three times unarmed, each gaining +2 if the one before it hit. If all three hit, the target is Slowed until the end of its next turn.** (note: was **Three strikes**, each `+2` if the previous hit, and **if all three hit the target is `Slowed`** until the end of its next turn) |
+**⚠⚠ NOT A FEAT: MOVED TO THE ATTACKS, 2026-10-19 (MAIN, `PT-2752`; the owner: "Attack feats should obviously be removed").** Combination › Chain Punch › Rain of Blows (1 / 4 / 8) is an attack chain: `ATTACKS-07`'s unarmed roster and the Brawler's starting attack (`CLASS-ATTACKS-01:304`, `PT-228`), and attacks are their own track (`ATTACKS-01 §11`: three currencies, three tracks, no crossover). Its rows now live in `data/attacks.json` (Class · Brawler, Unarmed), and its table left this document. Added here at 38a3b744 (2026-08-24, `PT-188`). The design notes below stay as its history.
 
 **⚠ Deliberately not `Flurry` renamed.** **`Flurry` buys back accuracy across its tiers and keeps volume flat.** **This starts at two strikes and escalates *within the round* — a hit makes the next easier.**
 
@@ -1276,9 +1286,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Hold the Line** | **1** | The guardian's resolve to stand between an ally and harm. | **When an enemy in your reach attacks an ally, you may take the hit instead. Once per round, with no action.** (note: was **When an enemy in your reach attacks an ally other than you, you may take the hit instead.** Once per round, no action) |
-| › **Shield Wall** | **4** | The guardian's resolve to stand between an ally and harm. | **You may take a hit for an ally twice per round, and an ally adjacent to you gains your armour bonus against ranged attacks while they stay adjacent.** (note: was **Twice per round**, and an ally adjacent to you **gains your armour bonus against ranged attacks** while they stay adjacent) |
-| ›› **None Get Past** | **8** | The guardian's resolve to stand between an ally and harm. | **As Shield Wall, and once per encounter, when you take a hit for an ally, you may immediately make one attack against the enemy that dealt it.** (note: was As above, and **once per encounter, when you take a hit for an ally you may immediately make one attack against the enemy that dealt it**) |
+| **Hold the Line** | **3** | The guardian's resolve to stand between an ally and harm. | **When an enemy in your reach attacks an ally, you may take the hit instead. Once per round, with no action.** (note: was **When an enemy in your reach attacks an ally other than you, you may take the hit instead.** Once per round, no action) |
+| › **Shield Wall** | **6** | The guardian's resolve to stand between an ally and harm. | **You may take a hit for an ally twice per round, and an ally adjacent to you gains your armour bonus against ranged attacks while they stay adjacent.** (note: was **Twice per round**, and an ally adjacent to you **gains your armour bonus against ranged attacks** while they stay adjacent) |
+| ›› **None Get Past** | **10** | The guardian's resolve to stand between an ally and harm. | **As Shield Wall, and once per encounter, when you take a hit for an ally, you may immediately make one attack against the enemy that dealt it.** (note: was As above, and **once per encounter, when you take a hit for an ally you may immediately make one attack against the enemy that dealt it**) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Juggernaut, "the one natural exception": Hold the Line at class level 3; the later tiers keep their gaps. Was 1/4/8, now 3/6/10.**
 
 **⚠ It pairs with `Immovable Object` rather than duplicating it.** **That chain is *you cannot get past me*; this is *and it costs you to try*.**
 
@@ -1309,9 +1321,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Both Hands** | **1** | Training that makes no difference between blade and blaster. | **Your Power chains do not distinguish melee from ranged: a tier bought in one applies at the same tier in the other.** (note: was **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other) |
-| › **Improvised** | **4** | Training that makes no difference between blade and blaster. | **Switching between a melee and a ranged weapon is free once per round and provokes nothing.** (note: was **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing) |
-| ›› **No Wrong Weapon** | **8** | Training that makes no difference between blade and blaster. | **As Improvised, and you take no penalty for firing a ranged weapon while adjacent to an enemy.** (note: was As above, and **you take no penalty for firing a ranged weapon while adjacent**) (note: `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply.) |
+| **Both Hands** | **3** | Training that makes no difference between blade and blaster. | **Your Power chains do not distinguish melee from ranged: a tier bought in one applies at the same tier in the other.** (note: was **Your Power-axis chains do not distinguish melee from ranged.** A tier bought in one applies at the same tier in the other) |
+| › **Improvised** | **6** | Training that makes no difference between blade and blaster. | **Switching between a melee and a ranged weapon is free once per round and provokes nothing.** (note: was **Switching between a melee and a ranged weapon is free once per round**, and provokes nothing) |
+| ›› **No Wrong Weapon** | **10** | Training that makes no difference between blade and blaster. | **As Improvised, and you take no penalty for firing a ranged weapon while adjacent to an enemy.** (note: was As above, and **you take no penalty for firing a ranged weapon while adjacent**) (note: `ACTION-ECONOMY-01 §6.2a`'s `−4` does not apply.) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): the Soldier's Both Hands: class level 3; the later tiers keep their gaps. Was 1/4/8, now 3/6/10.**
 
 **⚠ Tier 3 is the one that makes the class:** **the `−4` for firing while adjacent is the point-blank rule, and the Soldier is the one character it never touches.**
 
@@ -1604,9 +1618,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Unrelenting** | **1** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +2 damage on every attack you make. Always active.** (note: was **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter) |
-| › **Past Caring** | **4** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +4 damage on every attack you make.** (note: was **`+4` below half**) |
-| ›› **Last Stand** | **8** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +6 damage on every attack, and +2 attack while below a quarter.** (note: was **`+6` below half**, and **`+2` attack while below a quarter**) |
+| **Unrelenting** | **2** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +2 damage on every attack you make. Always active.** (note: was **While your vitality is below half, `+2` damage on every attack you make.** No declaration, no action, no limit per encounter) |
+| › **Past Caring** | **5** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +4 damage on every attack you make.** (note: was **`+4` below half**) |
+| ›› **Last Stand** | **9** | Pain only sharpens the character's blows. | **While your vitality is below half, you gain +6 damage on every attack, and +2 attack while below a quarter.** (note: was **`+6` below half**, and **`+2` attack while below a quarter**) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Sith Warrior: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ It multiplies — `PT-180`.** **`+6` on a three-strike `Barrage` is `+18`, which took the realised increase from a reported `+22%` to `+46%`.**
 
@@ -1634,9 +1650,11 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Dominion** | **1** | A will that presses the character's Force powers past an enemy's defences. | **Adds +1 to the saving throw DC of every Force power you cast.** (note: was **`+1` to the saving throw DC of every Force power you cast**) |
-| › **Advanced Dominion** | **4** | A will that presses the character's Force powers past an enemy's defences. | **Adds +2 to the saving throw DC of every Force power you cast.** (note: was **`+2`**) |
-| ›› **Master Dominion** | **8** | A will that presses the character's Force powers past an enemy's defences. | **Adds +3 to the saving throw DC of every Force power you cast.** (note: was **`+3`**) |
+| **Dominion** | **2** | A will that presses the character's Force powers past an enemy's defences. | **Adds +1 to the saving throw DC of every Force power you cast.** (note: was **`+1` to the saving throw DC of every Force power you cast**) |
+| › **Advanced Dominion** | **5** | A will that presses the character's Force powers past an enemy's defences. | **Adds +2 to the saving throw DC of every Force power you cast.** (note: was **`+2`**) |
+| ›› **Master Dominion** | **9** | A will that presses the character's Force powers past an enemy's defences. | **Adds +3 to the saving throw DC of every Force power you cast.** (note: was **`+3`**) |
+
+**⚠ LEVELS PER `PT-239`, applied 2026-10-19 (owner via MAIN, `PT-2752`: "PT-239 STANDS"; ledger line 6692, "When a class feature unlocks"): Sith Inquisitor: class level 2; the later tiers keep their gaps. Was 1/4/8, now 2/5/9.**
 
 **⚠ `PT-182` flagged the capstone: converting a failure into a partial success is a different mechanic, borrowed from an existing stun clause.** **`REPLY-45` ruled it cut and the cut was never applied.**
 

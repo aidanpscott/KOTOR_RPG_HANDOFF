@@ -6,7 +6,7 @@
 >
 > **⚠ Edit this file BY HAND. `gen_docs.py` also writes to the REPO ROOT rather than `rules/`, so running it creates a SECOND FILE instead of overwriting this one — `PT-618`.**
 
-**Eight axes. 11 chains, 31 entries.**
+**Nine axes. 12 chains, 34 entries.** *(Was eight axes, with 11 chains and 31 entries, until 2026-10-19, MAIN applying the owner's research rule, `PT-2752`. Stealth is the ninth axis: `PT-193` restored the chains as their own section and the counts were never updated; the ledger calls it the ninth since (`PT-334`/`PT-335` "six of nine axes", `PT-627` "a ninth axis", ATTACKS-07:154 "four of nine axes"). The ninth is Stealth, below.)*
 
 **Available to organics and to all four playable droid chassis.**
 

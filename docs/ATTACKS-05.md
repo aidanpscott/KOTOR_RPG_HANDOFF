@@ -6,7 +6,7 @@
 >
 > **⚠ Edit this file BY HAND. `gen_docs.py` also writes to the REPO ROOT rather than `rules/`, so running it creates a SECOND FILE instead of overwriting this one — `PT-618`.**
 
-**Eight axes. 14 chains, 34 entries.**
+**Nine axes. 12 chains, 34 entries.** *(Was eight axes, with 14 chains and 34 entries, until 2026-10-19, MAIN applying the owner's research rule, `PT-2752`. Stealth is the ninth axis: `PT-193` restored the chains as their own section and the counts were never updated; the ledger calls it the ninth since (`PT-334`/`PT-335` "six of nine axes", `PT-627` "a ninth axis", ATTACKS-07:154 "four of nine axes"). And the 14 counted `ATTACKS-07`'s Jab, Punch and Kick, which are the unarmed roster's; this document's own count is "eleven chains" (§ the gates), twelve with Stealth — the same 12 / 34 it stated before the code.)*
 
 **No droid may take any of them.** **Melee is chassis-blocked in both games — a droid frame does not swing.**
 

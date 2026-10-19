@@ -8,8 +8,8 @@
 |---|---|
 | **ATTACKS-01** *(this)* | **The category, the declaration rule, and what moved out of feats** |
 | **ATTACKS-02** | The six inherited trees compared across both games |
-| **ATTACKS-04** | **The ranged roster** — 11 chains, 31 entries |
-| **ATTACKS-05** | **The melee roster** — 11 chains, 31 entries |
+| **ATTACKS-04** | **The ranged roster** — 12 chains, 34 entries |
+| **ATTACKS-05** | **The melee roster** — 12 chains, 34 entries |
 | **ATTACKS-06** | **The lightsaber roster** — 14 chains, 42 entries, two per form |
 
 ---
@@ -233,11 +233,11 @@
 
 | | Chains | Entries | Who |
 |---|---|---|---|
-| **Ranged** | 11 | 31 | Organics, **Assassin and Battle droids** |
-| **Melee** | 11 | 31 | **Organics only** |
+| **Ranged** | 12 | 34 | Organics, **Assassin and Battle droids** |
+| **Melee** | 12 | 34 | **Organics only** |
 | **Lightsaber** | 14 | 42 | **Force classes, and only the form you hold** |
 
-**Eight axes: Velocity, Spread, Precision, Power, Position, Control, Support, Reaction** — plus **Penetration**, reserved for Form II.
+**Nine axes: Velocity, Spread, Precision, Power, Position, Control, Support, Reaction, Stealth** — plus **Penetration**, reserved for Form II. *(Counts and axes corrected 2026-10-19, MAIN applying the owner's research rule, `PT-2752`: Stealth is the ninth axis: `PT-193` restored the chains as their own section and the counts were never updated; the ledger calls it the ninth since (`PT-334`/`PT-335` "six of nine axes", `PT-627` "a ninth axis", ATTACKS-07:154 "four of nine axes").)*
 
 > **Melee is chassis-blocked; ranged is role-blocked.** **No droid frame swings a blade** — but **the Assassin droid takes the entire ranged suite** while the Astromech and Remote take none of it. **That distinction is the source's, not ours.**
 

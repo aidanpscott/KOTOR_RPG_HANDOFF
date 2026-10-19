@@ -1577,3 +1577,11 @@
                     script, GM tool), or orders the Loom power editor
 
 **Owner's rulings to carry when this is picked up (2026-10-18, `PT-2752`):** (1) THE POWER EDITOR: where a power sets no level, the editor shows the tier default it will get, marked as the default, by calling Lodestar's `powerDefaultGate` (`power_gate.dart`); where a level is set, it shows that; a Loom test proves both. (2) THE GRANT ACTION: ONE grant function in Lodestar emits `character.power-taken` with a `source` (`taught` or `story`), and a dialogue or script action and a GM tool all call it; the player is told in K2's own words (136053 *"You have gained a new Light Side Force power: Force Enlightenment."*, 136054 *"You have gained a new Dark Side Force power: Force Crush."*). Force Sight's Miraluka grant uses the same path.
+
+## J — A LANGUAGE PICK AT CHARGEN (`PT-2752`, 2026-10-18)
+
+**`SPECIES-MASTER` §3 gives every species its languages, and some a choice at creation** — *"A Human may select one additional language at character creation"*; *"Every droid understands five languages at creation. Basic and Binary are two of them; the other three are chosen freely."* **Chargen has no language pick at all.** A chargen step item, **to be designed with the owner** (MAIN, 2026-10-18). It does not block the hub: the hub's Character tab shows the species' languages meanwhile.
+
+## K — BEAST CONTROL'S ICON (`PT-2752`, owner icon audit, 2026-10-18)
+
+**Beast Control** is ours (no row in either game); its approved stand-in (`PT-2747`) is `ip_affectmind` — **which is our Mind Trick's own icon** (K2's Affect Mind row), now that Mind Trick draws it. **Proposed:** `ip_beasttrick`, the icon of K2's Beast Trick (`FORCE_POWER_BEAST_TRICK`, a power we cut), nearest in meaning. **For the owner's approval** (`media/study/pt2752/power-icon-audit/before-after.png`).

@@ -16,6 +16,8 @@
 
 ---
 
+> **⚠ Forms are not feats (owner, 2026-10-19, `PT-2752`): the lightsaber and Force forms are a track of their own (FORMS-01, `forms.toml`), not in this library and not on the Feats grid. This supersedes `PT-185`'s "forms are feats"; between the morning and evening of 2026-10-19 they were briefly read into the feats.**
+
 ## Summary
 
 **⚠ THE TABLE BELOW DOES NOT MATCH THE DOCUMENT — `TRACE-100`.** It states **90 chains and 221 entries**. A direct extraction counts **74 chains and 192 entries**, excluding `§5a` (a class-to-ladder table) and `§5b` (prose definitions), neither of which contains feats.

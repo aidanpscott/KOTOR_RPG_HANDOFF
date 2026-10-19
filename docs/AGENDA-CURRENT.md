@@ -1611,3 +1611,7 @@ Forty-three renamed feats took their game icons (Cautious = K2 Caution, Smuggler
 ## N — ATTACKS AND FORM MODIFIERS IN PLAY (`PT-2752`, 2026-10-19)
 
 **With the Attacks step's design, not before (MAIN, 2026-10-19).** The stance model is built (`lib/play/stance.dart`, FORMS-01 §5c), but three things it needs are not: §6.1's modifiers need two Defense values (general and against the current target) and a deflection derived from attack, which FORMS-01 calls "two mechanics the port must carry"; nothing triggers a stance from an attack, because no attacks rules file is on the Shelf; and "taught" forms after level 12 are unwritten (ATTACKS-06:26).
+
+## O — THE LEVEL-UP SCREEN, AND FORMS ON IT (`PT-2752`, 2026-10-19)
+
+**After the chargen pages (the level structure and Auto), not now (owner via MAIN, 2026-10-19).** The level-up screen needs designing. Add forms to it: a level that grants a form pick — the class's own level 6 or 12, or entering a Force prestige class (`formPicksAt`; PT-38, PT-185, FORMS-01, TRACE-76, CLASS-ROSTER-01:733) — shows the Forms page in the level-up hub, as Powers does.

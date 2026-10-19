@@ -87,6 +87,8 @@
 
 ### 2.2 ⚠ Feat and stance are two different things — `PT-185`
 
+> **⚠⚠ SUPERSEDED IN PART (owner, 2026-10-19, `PT-2752`, the latest decision): forms are NOT feats.** *"Forms should not be feats. They should be forms. And that should include lightsaber forms and Force forms."* The seven lightsaber forms and the four Force forms are a fourth track beside feats, powers and attacks, with a chargen step of their own ("Forms"). Only the category changed: what a form unlocks, the stance, Form I granted at level 1, the picks at 1 / 6 / 12 of the class's own levels and every effect below stand. Their data is `forms.toml` on the Shelf (`scripts/extract_forms.py`, from this document), not the feats.
+
 **Owner ruling: lightsaber forms become **feats** that *"mostly serve as unlocks for attacks."***
 
 **`§2` says forms are *conditions*, not feats. Both are true, of different objects.**

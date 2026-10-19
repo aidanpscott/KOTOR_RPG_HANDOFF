@@ -1594,6 +1594,14 @@
 
 Forty-three renamed feats took their game icons (Cautious = K2 Caution, Smuggler's Luck = Scoundrel's Luck, Squad Tactics = Dual Strike, …). **Held for the owner:** **Killer's Instinct** (the owner replaced the Sneak Attack feat chain with it, `FEATS-LIBRARY-01:155`; Sneak Attack I–III's icons fit, but our Sneak Attack *attack* tree keeps the name); **Dominion** (same effect as K2's Force Focus, but `PT-103` gave that chain to our *Force Channel*, which has no record); **Emergency Reboot** (shaped like K2's Spirit chain, no document links them). *(Skill Focus settled 2026-10-18: the owner confirmed K2's Class Skill; the one record takes `if_clsskill01`.)* Contact sheet: `media/study/pt2752/icon-transfers/feats-renamed.png`.
 
+## N — ARCHIVE RED AT 6c51c50, FIXED; THE GATE READS ANY HASH (`PT-2752`, 2026-10-19) — DONE
+
+**ARCHIVE:** green again at fc89fec (821 passed, 0 failed, 3m27s). Both failures were tests pinned to behaviour a ruling had changed; the product was right.
+- `a_drain_heals_its_caster_test`: the save-branch census expected 23 rows. Shelf 0fbb89a added the two documented droid rows (Disable Droid, Stun Droid: Force-levels damage, half on a made Fortitude save; MAIN's batch-1 ruling 3, `FORCE-POWER-DAMAGE-01` "TWO ROWS ADDED 2026-10-18"), so it is 25.
+- `the_players_own_manual_levelup_grants_test`: broke at app 87db7e3 (bisected: green at 1605653, red at 87db7e3). The feats announce box became K2's own frame (batch 1, accepted 2026-10-18), and its border tiles are Images too: 48, not 2. It now reads the box's feat NAMES (Unarmed Specialist I, Nothing In My Hands). A box that drops one fails it (mutation-checked).
+
+**`gate.py --at <hash>`:** reads the app stamps recorded for that commit. `tool/test_tier.sh` now also appends every run to `.git/test-stamps.jsonl`, because the per-tier files keep only the last run. Without `--at`, the output is byte-identical to the old gate. With it, the verdict is not recorded for the push guard, since the other checks ran on the working trees. A bad hash exits 2. ⚠ A test run from a worktree OUTSIDE `KOTOR_APP_PROJECT` stamps falsely: the relative paths to Shelf and MAIN_WORK miss, so CORE ran 1997 tests with 2 failed. Run worktrees beside the main clone (`KOTOR_APP_PROJECT/KOTOR-RPG-APP-<hash>`).
+
 ## M — THE LOAD-TEST HANG, AND whole_loop's REAL-TIME WAITS (`PT-2752`, 2026-10-18)
 
 **The hang:** do not raise the limit; diagnose it as a defect (a reproduction loop under -j 3 load, then the cause). It comes after the chargen pages and before level-up (PLAYTEST-RULINGS-01).

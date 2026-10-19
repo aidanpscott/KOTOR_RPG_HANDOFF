@@ -203,6 +203,8 @@
 | › Logic Upgrade: Tactician | Advanced combat processing — the chassis begins reading the fight rather than only surviving it. | **You gain +2 attack against a target an ally or allied droid is also attacking, with Defence as the first tier. Available from level 5.** (note: was **+2 attack against a target an ally or allied droid is also attacking**, and Defence as tier 1. Level 5) |
 | ›› Logic Upgrade: Battle Droid | Full military combat processing. | **You gain +4 attack against a target an ally or allied droid is also attacking, with Defence as the first tier. Available from level 11.** (note: was **+4 attack** under the same condition, and Defence as tier 1. Level 11) |
 
+> **⚠ Granted, not bought (MAIN, 2026-10-19, `PT-2752` ruling 5).** The Installation chain is granted by the Droid Master at class levels 1, 3 and 7, as its own text says ("Droid Master only, granted by the class"). It sat in the droid pool and read as buyable; `scripts/extract_feats.py` now reads its three rows as granted (`AVAILABILITY_OVERRIDE`).
+
 > **⚠ Tiers 2 and 3 were empty and we ported the emptiness — `PT-210`.** **`FEATS-LIBRARY-01` recorded it as *"in KOTOR 2 this grants no defence bonus despite its description. A known defect."***
 
 **Filled with what their own names promise.** **This is the droid `Squad Tactics`, and the source named the tiers for us.**
@@ -239,9 +241,9 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Force Jump** | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. | **Closes to a target more than 10 metres away** on a standard lightsaber melee attack. Requires clear line of sight. **Counts as an ambush** against an unengaged opponent — the `Sneak Attack` dice apply if you hold them. |
-| › Force Jump Advanced | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. | **+2 attack and damage** on every attack in the round. Level 6 Guardian. |
-| ›› Force Jump Mastery | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. | **+4 attack and damage.** Level 12 Guardian. |
+| **Force Jump** | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. **Granted at 1st.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Closes to a target more than 10 metres away** on a standard lightsaber melee attack. Requires clear line of sight. **Counts as an ambush** against an unengaged opponent — the `Sneak Attack` dice apply if you hold them. |
+| › Force Jump Advanced | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. **Granted at 6th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **+2 attack and damage** on every attack in the round. Level 6 Guardian. |
+| ›› Force Jump Mastery | If diplomacy fails, combat must be swift and decisive. The Jedi crosses the distance in a series of jumps and rolls, almost instantly. **Granted at 12th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **+4 attack and damage.** Level 12 Guardian. |
 
 
 ## Jedi Sentinel
@@ -250,9 +252,9 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Force Immunity: Fear** | The Sentinel's mind is closed to terror. | **Immune to fear effects — cannot be `shaken` or `panicked`. `PT-446`.** *Covers `Fear`, `Horror`, `Insanity`, `On-Hit: Fear` items, and **plasma grenades** — anything that applies `shaken`, `panicked` or `cowering`. * (note: The category does the work; the list is illustration, not definition. `k1_feat.2da` row 98 has an empty `spellid` and names no mechanic, because the engine flags a TYPE.) |
-| › Force Immunity: Stun | The Sentinel's mind is closed to terror. | **Immune to Force Push, Force Wave, Stun, Critical Strike and Sniper Shot stuns, Concussion Grenades, Flash mines, On-Hit: Stun.** Level 6. |
-| ›› Force Immunity: Paralysis | The Sentinel's mind is closed to terror. | **Immune to Stasis and Stasis Field, CryoBan Grenades, On-Hit: Paralyze.** Level 12. A Sentinel past level 11 can only be debilitated by Force Whirlwind, Wound, Choke, or Kill. |
+| **Force Immunity: Fear** | The Sentinel's mind is closed to terror. **Granted at 1st.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Immune to fear effects — cannot be `shaken` or `panicked`. `PT-446`.** *Covers `Fear`, `Horror`, `Insanity`, `On-Hit: Fear` items, and **plasma grenades** — anything that applies `shaken`, `panicked` or `cowering`. * (note: The category does the work; the list is illustration, not definition. `k1_feat.2da` row 98 has an empty `spellid` and names no mechanic, because the engine flags a TYPE.) |
+| › Force Immunity: Stun | The Sentinel's mind is closed to terror. **Granted at 6th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Immune to Force Push, Force Wave, Stun, Critical Strike and Sniper Shot stuns, Concussion Grenades, Flash mines, On-Hit: Stun.** Level 6. |
+| ›› Force Immunity: Paralysis | The Sentinel's mind is closed to terror. **Granted at 12th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Immune to Stasis and Stasis Field, CryoBan Grenades, On-Hit: Paralyze.** Level 12. A Sentinel past level 11 can only be debilitated by Force Whirlwind, Wound, Choke, or Kill. |
 
 
 ## Soldier
@@ -261,9 +263,9 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Squad Tactics** | Trained to fight as part of a unit rather than as an individual. **Soldiers only.** | **+2 attack** against a target another party member is attacking. |
-| › Improved Squad Tactics | Trained to fight as part of a unit rather than as an individual. | **You gain +4 attack against a target another party member is attacking. Available from level 4.** (note: was **+4 attack.** Level 4.) |
-| ›› Master Squad Tactics | Trained to fight as part of a unit rather than as an individual. | **You gain +6 attack against a target another party member is attacking. Available from level 8.** (note: was **+6 attack.** Level 8.) |
+| **Squad Tactics** | Trained to fight as part of a unit rather than as an individual. **Soldiers only.** **Granted at 1st.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **+2 attack** against a target another party member is attacking. |
+| › Improved Squad Tactics | Trained to fight as part of a unit rather than as an individual. **Granted at 4th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **You gain +4 attack against a target another party member is attacking. Available from level 4.** (note: was **+4 attack.** Level 4.) |
+| ›› Master Squad Tactics | Trained to fight as part of a unit rather than as an individual. **Granted at 8th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **You gain +6 attack against a target another party member is attacking. Available from level 8.** (note: was **+6 attack.** Level 8.) |
 
 
 ## Scout
@@ -285,12 +287,12 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** (note: Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.) | **+1d6 damage on any attack against a target unaware of you.** A target is unaware of you when you are Hidden from them, they are Stunned, or they cannot see. (note: Unaware is defined in `ACTION-ECONOMY-01 §19.5`.) **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
+| **Killer's Instinct** | An instinct for the moment before someone knows they are in a fight. **Granted to the four classes built on striking an unaware target — Smuggler, Sith Assassin, Jedi Watchman, Scoundrel. `PT-199`.** (note: Previously read "the three classes that carried Sneak Attack in the source" — false twice, since the count is four and the fourth did not exist in the source.) **Granted at 1st, 3rd and 5th to the Smuggler, the Sith Assassin and the Scoundrel; at 1st, 4th and 7th to the Jedi Watchman** — K2's own Sneak Attack schedule (`k2_feat.2da` rows 60–62). *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **+1d6 damage on any attack against a target unaware of you.** A target is unaware of you when you are Hidden from them, they are Stunned, or they cannot see. (note: Unaware is defined in `ACTION-ECONOMY-01 §19.5`.) **A target that has not yet acted but can see you is not unaware; that is Quick Attack's condition.** **Stacks with the `Sneak Attack` chain.** |
 | › Improved Killer's Instinct | An instinct for the moment before someone knows they are in a fight. | **+2d6 against an unaware target.** |
 | ›› Master Killer's Instinct | An instinct for the moment before someone knows they are in a fight. | **+3d6 against an unaware target.** (note: The `Master Sneak Attack` stacking note that was here is void — `PT-193` deleted that chain. `Killer's Instinct` is the whole feat, and `Sneak Attack` is an attack tree that competes for the declaration. The one pool `PT-559` ruled means this rider can carry a target well past 0 in one blow against most non-boss targets. Deliberate: it is what an assassin does to someone who has not seen them.) |
 | **Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. **Granted at 1st.** (note: `scd_granted`.) | **This feat is always active and grants a Defence bonus in combat: +2 at level 1, rising by +2 at levels 5, 11 and 17.** (note: was **Defence +2 + [2 × [[level+1]/6]]** in combat) |
-| › **Improved Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. (note: Tier restored. `IMPROVED_SCOUNDRELS_LUCK`, prereq 104.) | **Smugglers learn to make the most of their infamous luck, turning the whims of chance into a certain +4 to Defence. Always active; replaces Smuggler's Luck.** (note: Authored effect pending — the source row exists and its string is not in holdings.) |
-| ›› **Master Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. (note: Tier restored. `MASTER_SCOUNDRELS_LUCK`, prereq 104.) | **Their skills and luck combine to grant a remarkable +6 to Defence. Always active; replaces Improved Smuggler's Luck.** (note: Authored effect pending.) |
+| › **Improved Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. (note: Tier restored. `IMPROVED_SCOUNDRELS_LUCK`, prereq 104.) **Granted at 6th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Smugglers learn to make the most of their infamous luck, turning the whims of chance into a certain +4 to Defence. Always active; replaces Smuggler's Luck.** (note: Approved as written, owner via MAIN, 2026-10-19, `PT-2752` ruling 3: K2's own Improved Scoundrel's Luck, `k2_feat.2da` row 105, whose text is in `dialog.tlk` — the old note saying it was not in holdings was stale.) |
+| ›› **Master Smuggler's Luck** | Smugglers have a knack for getting into trouble and an incredible instinct for surviving it. (note: Tier restored. `MASTER_SCOUNDRELS_LUCK`, prereq 104.) **Granted at 12th.** *(owner via MAIN, 2026-10-19, `PT-2752` ruling 4.)* | **Their skills and luck combine to grant a remarkable +6 to Defence. Always active; replaces Improved Smuggler's Luck.** (note: Approved as written, owner via MAIN, 2026-10-19, `PT-2752` ruling 3: K2's own Master Scoundrel's Luck, `k2_feat.2da` row 106.) |
 
 > **⚠ The source has three tiers and this document carried one.** **Same family as the Consular's chain: the ladder exists in `feat.2da` and only its first rung was catalogued.**
 
@@ -301,6 +303,12 @@
 > **When someone you can see turns hostile, you may attack them immediately, before anyone else acts.**
 
 **One attack. Once per encounter.**
+
+| Tier | Level | Description | Effect |
+|---|---|---|---|
+| **Quickdraw** | **1** | Drawing first when a conversation turns. | **When someone you can see turns hostile, you may attack them immediately, before anyone else acts. One attack, once per encounter.** |
+
+**⚠ The table row, written 2026-10-19 (owner via MAIN, `PT-2752` ruling 4):** the section said "IS BELOW, WITH A TABLE ROW" and no row followed, so Quickdraw never reached the Shelf. The effect is this section's ruled text (`PT-74`, `PT-909`) word for word; the description is new. Level 1 by `PT-239`; granted to the Smuggler.
 
 **⚠ *Turns* hostile is the whole condition.** **Someone already fighting you does not qualify; someone drawing a weapon mid-conversation does.**
 
@@ -1277,6 +1285,16 @@
 **⚠ And where a droid should have the effect, give it its own chain rather than access to the organic one.** **`Logic Upgrade` is that done; `Droid Upgrade 1–3` is the same opportunity unused.**
 
 ---
+
+### Immovable Object — Juggernaut only. Authored.
+
+**⚠ Written into this library 2026-10-19 (owner via MAIN, `PT-2752` ruling 4), copied from `CLASS-ROSTER-01:764–766`, where it lived alone and never reached the Shelf.** At class levels 1 / 4 / 8: a prestige class's feature at class level 1 (`PT-239`), and Hold the Line at 3 below is "the one natural exception".
+
+| Tier | Level | Description | Effect |
+|---|---|---|---|
+| **Immovable Object** | **1** | The Juggernaut is not the class that takes hits. It is the class you cannot get past. | **You cannot be knocked back, knocked prone, or Slowed.** |
+| › **No Way Through** | **4** | The Juggernaut is not the class that takes hits. It is the class you cannot get past. | **An enemy that begins its turn in your melee reach cannot leave it except by Disengage, and Disengage against you costs its whole movement.** |
+| ›› **The Line Holds** | **8** | The Juggernaut is not the class that takes hits. It is the class you cannot get past. | **As above, and an enemy that closes into your reach provokes an opportunity attack.** |
 
 ### Hold the Line — Juggernaut only. Authored.
 

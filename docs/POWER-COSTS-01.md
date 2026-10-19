@@ -95,8 +95,14 @@ are never adjusted.
 | Power | Tier | Cost | Ceiling | Notes |
 |---|---|---|---|---|
 | **Force Slow** | 1 | 6 | −1 |  |
-| › **Force Affliction** | 2 | 12 | −3 |  |
+| › **Force Mire** | 2 | 12 | −3 | ⚠ `PT-465`, Character Level 9, Force Slow |
+| ›› **Force Root** | 3 | 18 | −5 | ⚠ `PT-465`, Character Level 15 |
+| | | | | |
+| **Force Affliction** | 2 | 12 | −3 | ⚠ head of the disease tree since `PT-465`; its tier is K2's depth under Slow (see the note below) |
+| › **Force Contagion** | 2 | 16 | −4 | ⚠ `PT-465`, Character Level 9, Force Affliction |
 | ›› **Force Plague** | 3 | 20 | −6 |  |
+
+> **⚠ Corrected 2026-10-19 (owner via MAIN, `PT-2752`): this table still printed K2's one tree, `Force Slow › Force Affliction › Force Plague`. `PT-465` split it into two (ledger 14534): the slow tree `Force Slow › Force Mire › Force Root` and the disease tree `Force Affliction › Force Contagion › Force Plague`. Mire, Root and Contagion moved here from the added-powers table with their numbers unchanged. ⚠ Affliction still carries tier 2 (cost 12, ceiling −3) from K2's depth under Slow, so the disease tree reads 2 / 2 / 3; whether it becomes tier 1 (ceiling −1, `price.py`'s depth rule after the split) is for a ruling.**
 | | | | | |
 | **Force Strangle** | 1 | 6 | −1 |  |
 | › **Force Choke** | 2 | 14 | −3 |  |
@@ -232,9 +238,6 @@ are never adjusted.
 | **Force Distraction** | 1 | 8 | −1 | cost 8 (ruled 15 → 8: utility costing more than Force Lightning) |
 | › **Force Confusion** | 2 | 20 | −4 |  |
 | | | | | |
-| **Force Mire** | 2 | 12 | −3 | ⚠ `PT-465`, Character Level 9, Force Slow |
-| **Force Root** | 3 | 18 | −5 | ⚠ `PT-465`, Character Level 15 |
-| **Force Contagion** | 2 | 16 | −4 | ⚠ `PT-465`, Character Level 9, Force Affliction |
 | **Force Sleep** | 2 | 14 | −3 | ⚠ `PT-465`, Character Level 9, Force Stun |
 | **Force Enflame** | 1 | 8 | −1 | ⚠ `PT-467`, Character Level 8 |
 | **Force Combustion** | 2 | 14 | −3 | ⚠ `PT-467`, Character Level 12 |

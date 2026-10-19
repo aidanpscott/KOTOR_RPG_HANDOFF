@@ -81,6 +81,7 @@
 **They are not the same case.** Force Camouflage is a thing you are *sometimes* in and needed a duration. **A form is a thing you are *always* in — there is no off state to price.**
 
 > **Switching forms costs an action. Being in one costs nothing.** That is the correct shape and it requires no duration, no drain, and no activation cost.
+> **⚠ SUPERSEDED for lightsaber forms (2026-10-19, owner via MAIN, `PT-2752`): `PT-976` §5c — a lightsaber stance is entered by attacking from its tree, at no action. A Force form still costs one action to switch (`PT-978`, `PT-2126`).**
 
 ---
 
@@ -115,6 +116,7 @@
 **⚠ SUPERSEDED by `PT-230` and `PT-232`.** **Two forms at 1, a third at 6, a fourth at 12 — and only Form I is granted.**
 
 **⚠ Force forms are deferred as a *system*. But some classes may take one in place of a lightsaber form — `PT-232`.**
+**⚠ SUPERSEDED (2026-10-19, owner via MAIN, `PT-2752`): Force forms are no longer deferred. `PT-978` and `PT-979` (§6.2a) rule them: declared, one at a time, one action to switch, no lightsaber needed, active out of combat.**
 
 **`CLASS-ROSTER-01 §603` states it and names two classes `PT-215` cut:** *"a lightsaber form, or for `Jedi Master` and `Sith Lord` a Force form. `Watchman` and `Marauder` choose between the two."*
 
@@ -305,6 +307,7 @@
 | Item | Status |
 |---|---|
 | **What each form does** | **Unknown.** `spelldesc` IDs 111623–111633 resolve into `dialog.tlk`, which we do not hold. **`Force_Powers_Table.docx` contains no forms** — checked. |
+| ⚠ *Superseded (2026-10-19, owner via MAIN, `PT-2752`)* | **The row above is stale: §6 holds what each form does, from `Lightsaber_Forms_Table.docx`, `Force_Forms_Table.docx` and K2's own `spells.2da` rows 258–268.** |
 | **Whether Niman ships** | **GameBanshee lists six lightsaber forms, not seven** — Aggression, Contention, Determination, Ferocity, Perseverance, Resilience, mapping to Ataru, Makashi, Shii-Cho, Juyo, Shien, Soresu. **Niman is absent from their list and present in the 2DA.** Either cut late or undocumented. |
 | **Acquisition** | Forms have no prerequisites and no tier marking in the source — **the numbering is nominal, not a chain.** Whatever grants them is in an unread table. |
 | **Class gating** | Deferred with the rest of the class-gate question. |
@@ -380,11 +383,13 @@
 
 > **⚠ AND `Moderation`'s LINE IS ⚠⚠ **AUTHORED** — ⚠ `hybrid_authored`, ⚠ NO SOURCE SUPPLIES IT. ⚠⚠ IT IS THE ONLY ONE OF THE SEVEN THAT IS NOT THE GAME'S OWN NUMBER, AND IT SAYS SO.
 
+> **⚠ SUPERSEDED (2026-10-19, owner via MAIN, `PT-2752`): K2's `spells.2da` row 263 supplies Moderation's line, and it is now the game's own number like the other six (below).**
+
 **Niman is absent from the docx and from GameBanshee.** Two independent sources, same omission — it is in the 2DA and documented nowhere.
 
 > **Restored rather than cut, and named Moderation.** The name follows the other six, which are all abstract nouns rather than Legends form names, and it matches Niman's own lore — the balanced, generalist form.
 
-**Moderation's effects are authored. No source supplies them.** Marked `hybrid_authored`.
+~~**Moderation's effects are authored. No source supplies them.** Marked `hybrid_authored`.~~ **⚠ SUPERSEDED (2026-10-19, owner via MAIN, `PT-2752`): K2 supplies them. `spells.2da` row 263 (`FORM_SABER_VI_NIMAN`, `ifrm_saber06`) reads: "Attack Modifier: +1 / Defense: +1 / Blaster Bolt Deflection: +1 / Saves vs. Force Powers: +1". That is the line we use, below; it has no Defence-vs-target bonus.**
 
 **The lore supplies a precise shape.** Wookieepedia records Form VI as **the Moderation Form, the Way of the Rancor, and the diplomat's form** — a hybrid of Forms I–V built deliberately to have no weaknesses rather than any strength, favoured by **Jedi Consulars** who would rather spend their time on study and diplomacy than combat drill.
 
@@ -417,7 +422,7 @@
 | **Resilience** | Soresu, Form III | Defence vs. current target +2; Blaster Deflection +4; Threat Range −1 |
 | **Aggression** | Ataru, Form IV | Defence −2; Defence vs. current target +5; Blaster Deflection −4; Threat Range +1. **Net +3 against your target, −2 against everyone else.** |
 | **Perseverance** | Shien, Form V | Attack +2; Defence vs. current target −5; Blaster Deflection +2; Critical Multiplier +1. **Attack bonuses also aid deflection, so net deflection is +4.** |
-| **Moderation** | Niman, Form VI | Attack +1; Defence +1; Defence vs. current target +1; Blaster Deflection +1; Saves vs. Force +1. **Casting a Force power does not end your melee stance or provoke.** |
+| **Moderation** | Niman, Form VI | Attack +1; Defence +1; Blaster Deflection +1; Saves vs. Force +1. *(K2's `spells.2da` row 263, 2026-10-19, owner via MAIN, `PT-2752`. Was the authored "Defence vs. current target +1", and the casting clause `PT-1093`/`PT-1094` removed.)* |
 | **Ferocity** | Juyo, Form VII | Defence −4; Defence vs. current target +2; Saves vs. Force **−4**; **Attacks per round +1**; Critical Hit Attack +4 |
 
 **Two mechanics the port must carry that RCR does not have:**
@@ -640,7 +645,7 @@ not rule on it and it is not a form's value.
 | Form effects | **Closed** — §6, and the percentages converted at `PT-2125` · §6.2b |
 | In-combat regeneration | **Closed** — 50% of normal, rounded up. Force Affinity removes the halving. §7.1 |
 | Form degradation modifiers | **Closed** — Mastery −10%, Affinity −5%, applied per encounter to the accumulated total. §7.2 |
-| Moderation's effects | **Closed** — §6.1, `hybrid_authored`, drafted to the Legends description |
+| Moderation's effects | **Closed** — §6.1, `hybrid_authored`, drafted to the Legends description ⚠ *Superseded 2026-10-19 (owner via MAIN, `PT-2752`): K2's row 263 is the line now, not the draft.* |
 | Power descriptions | **88 of 106 held.** The 14 authored powers have no description because they do not have one yet; the rest are covered. |
 | Acquisition — picks per level per class | **Open, and belongs to classes**, not here |
 | Class gates | **Deferred to classes**, as ruled |
@@ -674,6 +679,8 @@ not rule on it and it is not a form's value.
 ---
 
 ## ⚠ Forms are ACTIVE again — `PT-338`. Reverses `PT-189`.
+
+> **⚠⚠ SUPERSEDED, this whole section to the end of the document (2026-10-19, owner via MAIN, `PT-2752`): `PT-338`'s "choose at combat start" rule was replaced by `PT-976`/`PT-977` (§5c): you start in Form I, attacking from a form's tree puts you in its stance, and a lightsaber must be equipped. Kept as a record.**
 
 **`PT-189` deleted twenty-eight ported effect values on the grounds that *"the attacks have benefits already."***
 

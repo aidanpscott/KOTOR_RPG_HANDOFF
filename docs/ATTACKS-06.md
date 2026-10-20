@@ -1,8 +1,8 @@
 # ATTACKS-06 — The Lightsaber Roster
 
-**Seven forms, two chains each. 14 chains, 42 entries.**
+**Seven forms, two chains each and five for Form I (`PT-234`). 17 chains, 51 entries.** *Was fourteen and forty-two (2026-10-19, `PT-2752`: Form I's three `PT-234` chains moved under Form I and into `data/attacks.json`).*
 
-> **Every lightsaber attack requires the matching form's feat.** **A Jedi holding one form has six of these entries available, not forty-two.**
+> **Every lightsaber attack requires the matching form's feat.** **A Jedi holding one form has six of these entries available (fifteen for Form I, `PT-234`), not fifty-one.**
 
 **⚠ CORRECTED by `PT-189`.** **This read *"you hold one form at a time"* and that stopped being true when the stance was cut.**
 
@@ -10,6 +10,8 @@
     1              6
     3             18     every Force base class by level 12
     6             36     a form-master at 30
+
+**⚠ (2026-10-19, `PT-2752`) Form I carries five chains (`PT-234`) and every Force class holds it, so add nine to each line for a character holding Form I.**
 
 **⚠ The gate still exists — you cannot use a form's entries without its feat — it is no longer *one*.**
 
@@ -35,7 +37,7 @@
 
 > **This is an eighth axis on top, not a parallel set.**
 
-**Forty-two entries looks large against melee's thirty-one — until you count what a character can reach.** **Six.** **Switching forms is the cost of switching attacks**, which makes the form choice a decision every encounter rather than a one-time pick.
+**Fifty-one entries looks large against melee's thirty-one — until you count what a character can reach.** **Six.** **Switching forms is the cost of switching attacks**, which makes the form choice a decision every encounter rather than a one-time pick.
 
 ---
 
@@ -43,7 +45,7 @@
 
 | Form | Ours | Way of the… | Identity | Chains |
 |---|---|---|---|---|
-| **I** | Determination | Sarlacc | Disarm and crowds | Sweeping · Disarming |
+| **I** | Determination | Sarlacc | Disarm and crowds | Sweeping · Disarming · Wide Parry · Feint · Opening Guard (`PT-234`) |
 | **II** | Contention | Ysalamiri | The duel | **Penetration** · Anticipation |
 | **III** | Resilience | Mynock | Outlast | Attrition · Deflection |
 | **IV** | Aggression | Hawk-Bat | Acrobatic assault | Mobility · **Velocity** |
@@ -67,15 +69,6 @@
 | **Disarming Slash** | **Form I, Determination.** *"A strike directed at the opponent's weapon in an attempt to rip it out of their grasp."* **The named Form I technique, and the form's stated purpose — disarming rather than injuring.** | **Level 1. Requires the Determination form.** **Opposed attack roll. On a win the target's weapon is knocked from its grip. No damage.** **No ability prerequisite** — the form supplies what the melee version demands of Strength and Dexterity. |
 | › Weapon Bind |  | **Level 4.** **Opposed roll at +3.** **On a win you may take the weapon** rather than let it fall. **The disarm option remains available.** |
 | ›› Sun Djem | **The mark of contact Form I was built around** — the opponent is disarmed, not killed. | **Level 8.** **Opposed roll at +6. Disarm, take, or destroy the weapon — your choice.** *The most Jedi thing in either roster: it ends a fight without a wound.* |
-
-## Form II — Contention *(Makashi, the Way of the Ysalamiri)*
-
-**The duel — and **Penetration**.**
-
-*"Form II's primary purpose was to serve as a counter to the first form. Makashi relied on precision swordplay to counter the sweeping movements of Shii-Cho, and a heavy focus on protecting one's weapon to avoid being disarmed."*
-
-| Attack | Description | Effects |
-|---|---|---|
 | **Wide Parry** | **Form I, Determination.** *"Broad parries — the form assumes more than one opponent."* **Shii-Cho's defence is a wide guard rather than a tight one.** | **Level 1. Requires the Determination form.** **A reaction.** **`+5` Defence against every melee attack made by one enemy this round.** You may not attack that enemy on your next declaration — you gave ground rather than countering |
 | › Give Ground |  | **Level 4.** **Two enemies**, and you may **move one square** as part of the reaction |
 | ›› Sweeping Guard |  | **Level 8.** **Every enemy**, and the movement no longer provokes |
@@ -85,6 +78,17 @@
 | **Opening Guard** | **Form I, Determination.** *"The form every student learns first."* **What Shii-Cho gives is not mastery — it is never being caught without an answer.** | **Level 1. Requires the Determination form.** **Once per encounter, when combat begins, take one attack or one move before initiative is rolled** |
 | › Set the Line |  | **Level 4.** As above, and **one ally may do the same** |
 | ›› Answer Back |  | **Level 8.** As above, and **the enemy who acts first in that combat takes `−2` attack on its first declaration** |
+
+**⚠ MOVED (owner via MAIN, 2026-10-19, `PT-2752`): Wide Parry, Feint and Opening Guard are Form I's (`PT-234`, "three more Determination chains") and stood in Form II's table; they are under Form I now, and their nine rows are in `data/attacks.json`. Form I has five chains.**
+
+## Form II — Contention *(Makashi, the Way of the Ysalamiri)*
+
+**The duel — and **Penetration**.**
+
+*"Form II's primary purpose was to serve as a counter to the first form. Makashi relied on precision swordplay to counter the sweeping movements of Shii-Cho, and a heavy focus on protecting one's weapon to avoid being disarmed."*
+
+| Attack | Description | Effects |
+|---|---|---|
 | **Saber Pierce** | **Form II, Contention. The Penetration axis.** *"Precision swordplay to counter the sweeping movements of Shii-Cho, and a heavy focus on protecting one's weapon to avoid being disarmed."* A thrust rather than a cut. | **Level 1. Requires the Contention form.** **Ignore 5 points of damage reduction and armour bonus. Attack −2.** **Against a blast door, bulkhead, or barrier the strike cuts through** — three rounds per obstacle. **Once per encounter, a critical hit against a living target deals its damage directly to wounds.** **While in this form you cannot be disarmed.** |
 | › Stabbing Strike |  | **Level 4.** **Ignore 10 points. Attack −1.** **Barriers take two rounds.** |
 | ›› Impale | The blade goes through and the duel is over. | **Level 8.** **Ignore all damage reduction and armour. No penalty. Barriers take one round.** |

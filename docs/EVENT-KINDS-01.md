@@ -72,6 +72,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `character.skill-ranked` | permanent |
 | `character.feat-taken` | permanent |
 | `character.power-taken` | permanent |
+| `character.form-taken` | permanent |
 | `character.grant-resolved` | permanent |
 | `character.equipment-set` | permanent |
 | `character.identity-set` | permanent |

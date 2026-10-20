@@ -10,7 +10,7 @@
 | **ATTACKS-02** | The six inherited trees compared across both games |
 | **ATTACKS-04** | **The ranged roster** — 12 chains, 34 entries |
 | **ATTACKS-05** | **The melee roster** — 12 chains, 34 entries |
-| **ATTACKS-06** | **The lightsaber roster** — 14 chains, 42 entries, two per form |
+| **ATTACKS-06** | **The lightsaber roster** — 17 chains, 51 entries, two per form and five for Form I (`PT-234`; was 14 / 42 (2026-10-19, `PT-2752`: Form I's three `PT-234` chains moved under Form I and into `data/attacks.json`)) |
 
 ---
 
@@ -235,7 +235,7 @@
 |---|---|---|---|
 | **Ranged** | 12 | 34 | Organics, **Assassin and Battle droids** |
 | **Melee** | 12 | 34 | **Organics only** |
-| **Lightsaber** | 14 | 42 | **Force classes, and only the form you hold** |
+| **Lightsaber** | 17 | 51 | **Force classes, and only the form you hold** |
 
 **Nine axes: Velocity, Spread, Precision, Power, Position, Control, Support, Reaction, Stealth** — plus **Penetration**, reserved for Form II. *(Counts and axes corrected 2026-10-19, MAIN applying the owner's research rule, `PT-2752`: Stealth is the ninth axis: `PT-193` restored the chains as their own section and the counts were never updated; the ledger calls it the ninth since (`PT-334`/`PT-335` "six of nine axes", `PT-627` "a ninth axis", ATTACKS-07:154 "four of nine axes").)*
 

@@ -130,6 +130,10 @@
 
 **⚠ The base classes take lightsaber forms.** **A Force form is a prestige-tier option, which is what made it a Jedi Master and Sith Lord thing before those were cut.**
 
+> **⚠ NARROWED (owner via MAIN, 2026-10-19, `PT-2752`, ruling e): "in place of any chosen form" above is superseded.** A Force form is taken ONLY with the form granted on entering the prestige class (CLASS-ROSTER-01:735, "Prestige entry grants a form", the corrected ledger text): Jedi Sage and Sith Sorcerer may take a Force form in its place, Jedi Watchman and Sith Marauder choose between the two, Weaponmaster and Battlemaster take a lightsaber form. The picks at class level 1, 6 and 12 are lightsaber forms for every class.
+
+> **⚠ NO TRADE-IN (owner via MAIN, 2026-10-19, `PT-2752`, ruling b).** Forms are permanent, "granted, never bought" (`PT-38`): a form held is held for good, and no rule swaps, retrains or replaces one. Switching attacks between forms changes the STANCE (§5c), never the forms held.
+
 
 ### 2.3 ⚠ SUPERSEDED — the stance does not survive. `PT-189`.
 
@@ -346,6 +350,12 @@
     ⚠ 6  ⚠⚠ **A LIGHTSABER MUST BE EQUIPPED.** ⚠ UNEQUIPPING
          ⚠⚠ **IMMEDIATELY** ENDS THE STANCE
     ⚠ 7  ⚠ REDRAWING RETURNS YOU TO ⚠⚠ **THE STANCE YOU WERE LAST IN**
+
+> **⚠ AND THREE MORE, RULED (owner via MAIN, 2026-10-19, `PT-2752`, ruling d):**
+>
+>     8  An attack that belongs to no form does NOT break the stance.
+>     9  The stance lasts while the lightsaber is drawn: the end of combat does not end it.
+>    10  Sheathing, unequipping or being disarmed ends it; redrawing restores the last stance (rule 7).
 
 ### ⚠⚠⚠ AND THIS IS NOT WHAT `PT-189` CUT
 

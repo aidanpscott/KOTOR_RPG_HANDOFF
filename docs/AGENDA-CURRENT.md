@@ -1619,3 +1619,7 @@ Forty-three renamed feats took their game icons (Cautious = K2 Caution, Smuggler
 ## P — RECOMMENDED BUILDS (`PT-2752`, 2026-10-22)
 
 Recommended is dimmed everywhere, and so is Quick Character, until recommended builds are designed (parity difference 7). **Owner, 2026-10-22: Recommended is DROPPED from Equipment** (the approved page has Cancel, Purchase Gear and OK) and returns when recommended builds are designed. Background's page was approved without it too (Cancel and OK). When this item opens: design the builds, then put Recommended back on Equipment and Background with the rest.
+
+## Q — YOUR STORY: A CLICK LANDS WHERE THE CARET DRAWS (`PT-2752`, 2026-10-22)
+
+The story is drawn in K2's bitmap face over an invisible text field that takes the keys (as Name's is). The keys are exact; a click maps through the hidden field's own line-wrapping, which is not the bitmap face's, so on a long story a click can land a little off. MAIN asked for it fixed if small. It is not: the fix is to read the caret's place from the bitmap face's own line layout (`K2BitmapText`'s wrap), which needs a position-to-offset function in the face itself, then route the field's taps through it. Recorded here instead.

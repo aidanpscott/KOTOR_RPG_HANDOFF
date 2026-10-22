@@ -213,6 +213,9 @@
 
 #### ⚠ Only Form I is granted. Every other form is a choice. `PT-232`.
 
+> **⚠⚠ FORM PICKS COUNT TOTAL FORCE LEVELS (owner, 2026-10-22, `PT-2752`, the latest decision; it supersedes "each class counts its own levels" for forms).** *"Multiclassing is a thing, so fixed per-class levels shouldn't make a player lose out or double up. We gotta think about what actually impacts the player."* **Form I is granted the first time a character takes a level in ANY Force class, once only, however many Force classes they hold. The picks come at total Force level 1, 6 and 12** — the levels in every Force class added together, the same Force levels the power gates and DCs use (`PT-2216`). A second Force class grants no second Form I and no extra picks. The pick on entering a Force prestige class stays (owner, 2026-10-19, ruling a), and a level that is both the entry and Force level 12 gives both. Forms beyond 12 are taught (story, unwritten). *Examples:* a Soldier 6 takes Jedi Guardian at character level 7 — Force level 1: Form I and a pick at once; then a pick at Force level 6 (character level 12) and one at Force level 12. Consular 3 / Guardian 3 is Force level 6: one pick, not one per class.
+
+
 **The owner's earlier ruling made the second class-determined; that is withdrawn.**
 
 > **Form I is granted to every Force class. The second, third and fourth are all chosen by the player.**

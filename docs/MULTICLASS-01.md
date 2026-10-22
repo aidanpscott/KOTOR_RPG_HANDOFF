@@ -75,6 +75,12 @@
 
 **⚠ Powers known still favours early entry, and that is left standing.** **A Jedi who trains young knows more powers than one who trains late. The mechanic and the fiction agree, and nothing needs correcting.**
 
+### 2.2a-ii ⚠ Forms count Force levels too — `PT-2752` (owner, 2026-10-22)
+
+> **⚠⚠ FORM PICKS COUNT TOTAL FORCE LEVELS (owner, 2026-10-22, `PT-2752`, the latest decision; it supersedes "each class counts its own levels" for forms).** *"Multiclassing is a thing, so fixed per-class levels shouldn't make a player lose out or double up. We gotta think about what actually impacts the player."* **Form I is granted the first time a character takes a level in ANY Force class, once only, however many Force classes they hold. The picks come at total Force level 1, 6 and 12** — the levels in every Force class added together, the same Force levels the power gates and DCs use (`PT-2216`). A second Force class grants no second Form I and no extra picks. The pick on entering a Force prestige class stays (owner, 2026-10-19, ruling a), and a level that is both the entry and Force level 12 gives both. Forms beyond 12 are taught (story, unwritten). *Examples:* a Soldier 6 takes Jedi Guardian at character level 7 — Force level 1: Form I and a pick at once; then a pick at Force level 6 (character level 12) and one at Force level 12. Consular 3 / Guardian 3 is Force level 6: one pick, not one per class.
+
+**The first case of a wider principle the owner has asked for (2026-10-22):** what a late entrant or a two-class character gains or loses, item by item, is in `MULTICLASS-FAIRNESS-PT2752` for the owner's decision.
+
 ### 2.2b Banking is discouraged, not forbidden
 
 **No minimum level to enter a Force class.** **A player who wants to bank may.**

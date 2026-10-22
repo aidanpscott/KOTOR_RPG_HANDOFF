@@ -1615,3 +1615,7 @@ Forty-three renamed feats took their game icons (Cautious = K2 Caution, Smuggler
 ## O — THE LEVEL-UP SCREEN, AND FORMS ON IT (`PT-2752`, 2026-10-19)
 
 **After the chargen pages (the level structure and Auto), not now (owner via MAIN, 2026-10-19).** The level-up screen needs designing. Add forms to it: a level that grants a form pick — the class's own level 6 or 12, or entering a Force prestige class (`formPicksAt`; PT-38, PT-185, FORMS-01, TRACE-76, CLASS-ROSTER-01:733) — shows the Forms page in the level-up hub, as Powers does.
+
+## P — RECOMMENDED BUILDS (`PT-2752`, 2026-10-22)
+
+Recommended is dimmed everywhere, and so is Quick Character, until recommended builds are designed (parity difference 7). **Owner, 2026-10-22: Recommended is DROPPED from Equipment** (the approved page has Cancel, Purchase Gear and OK) and returns when recommended builds are designed. Background's page was approved without it too (Cancel and OK). When this item opens: design the builds, then put Recommended back on Equipment and Background with the rest.

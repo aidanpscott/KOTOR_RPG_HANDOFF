@@ -696,6 +696,8 @@ Two additions the source had no need for: **the campaign package is named at the
 
 ## 7b. Level-up — locked at `PT-1225`
 
+> **⚠ CHANGED → `PT-2752` (owner, 2026-10-22, the latest decision): CLASS FIRST, ON ITS OWN PAGE.** The class is picked on the approved Class page titled "Level Up", before the hub; the hub (`maincg_p` with `leveluppnl_p`'s rows) carries six fixed rows: Attributes, Skills, Feats, Powers, Forms, Accept, with a row left empty when the level grants nothing, as K2 does. K2's grant popups (42258, 111635) replace the amber grant summary below. "A Class step at position 1" on the hub, below, is superseded.
+
 **No new screens.** `TRACE-77` found there are no level-up variants of the ability, skill or feat panels — only `pwrlvlup_p` exists as level-up-specific. Attributes, Skills and Feats reuse `abchrgen_p`, `skchrgen_p` and `ftchrgen_p` **exactly**, which is why `leveluppnl_p`'s steps 1–3 carry chargen's own strrefs (209, 233, 232) while step 4 gets a new one. The strref reuse and the panel reuse are the same fact.
 
 **And the asymmetry has a cause:** KOTOR has no Force class at level 1 — you begin a Soldier, Scout or Scoundrel and become a Jedi later — so Powers never appears in chargen and `pwrlvlup_p` is the game's only powers screen. **Ours differs**: Jedi Guardian and Consular are base classes, so our chargen needed a powers screen where KOTOR's did not. `PT-1204` built one from `pwrlvlup_p`, and this explains rather than merely justifies that call.

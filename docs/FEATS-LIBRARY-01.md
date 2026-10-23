@@ -469,7 +469,15 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Unarmed Specialist I** | **⚠ Holders: the three base Force classes (`Jedi Guardian`, `Jedi Sentinel`, `Jedi Consular`), all six Force prestige classes (`Jedi Weaponmaster`, `Jedi Watchman`, `Jedi Sage`, `Sith Marauder`, `Sith Battlemaster`, `Sith Sorcerer`), and the `Brawler` — `PT-2715`.** Extra experience in hand-to-hand combat. | **Unarmed damage 1–4.** Granted at level 2. |
-| › Unarmed Specialist II–VIII | Extra experience in hand-to-hand combat. | **2–8 through 8–32 damage**, granted at levels 6, 10, 14, 18, 22, 26, and 30. |
+| › Unarmed Specialist II | Extra experience in hand-to-hand combat. | **Unarmed damage 2–8.** Granted at level 6. |
+| › Unarmed Specialist III | Extra experience in hand-to-hand combat. | **Unarmed damage 3–12.** Granted at level 10. |
+| › Unarmed Specialist IV | Extra experience in hand-to-hand combat. | **Unarmed damage 4–16.** Granted at level 14. |
+| › Unarmed Specialist V | Extra experience in hand-to-hand combat. | **Unarmed damage 5–20.** Granted at level 18. |
+| › Unarmed Specialist VI | Extra experience in hand-to-hand combat. | **Unarmed damage 6–24.** Granted at level 22. |
+| › Unarmed Specialist VII | Extra experience in hand-to-hand combat. | **Unarmed damage 7–28.** Granted at level 26. |
+| › Unarmed Specialist VIII | Extra experience in hand-to-hand combat. | **Unarmed damage 8–32.** Granted at level 30. |
+
+> **⚠ ONE ROW PER TIER (TEST 191, MAIN 2026-10-22, `PT-2752`).** This was one row, `Unarmed Specialist II–VIII` ("2–8 through 8–32 damage, granted at levels 6, 10, 14, 18, 22, 26, and 30"), and the app granted it as one entry naming the whole ladder. Split here, the same numbers, so each tier is its own grant as K2 draws it.
 
 **K2's own `k2_feat.2da` `_granted` columns confirm the nine Force classes and grant it to no standard class — the Brawler is our own addition, ruled on the class's identity being unarmed combat and the `Combination` chain's own gate ("in practice means the Brawler and the Force classes") already assuming it. Kept as built; `PT-2711` (4) is the evidence this rules on.**
 

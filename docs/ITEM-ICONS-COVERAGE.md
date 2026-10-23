@@ -138,7 +138,7 @@ The proposal is the icon of the nearest game item WITH art: the same base type, 
 | Force Jump Mastery | K2 Master Force Jump | `if_jump03` |
 | Logic Upgrade: Combat | K2 Logic Upgrade | `if_droidac01` |
 | Advanced Dueling | K2 Improved Dueling | `if_duel02` |
-| Unarmed Specialist II–VIII | K2 Unarmed Specialist II (ours merges K2's II to VIII into one row) | `if_unarmspec02` |
+| ~~Unarmed Specialist II–VIII~~ | ⚠ split into II to VIII, one row per tier (TEST 191, MAIN 2026-10-22); each now takes K2's own tier icon | `if_unarmspec02` to `08` |
 | Advanced Assassin Protocols | K2 Modified Assassin Protocols | `if_assassin02` |
 | Master Assassin Protocols | K2 Integrated Assassin Protocols | `if_assassin03` |
 | Weapon Proficiency: Blaster | K2 Weapon Proficiency: Blaster Pistol (named alias, see below) | `if_weapprof01` |

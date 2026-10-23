@@ -38,3 +38,16 @@ Characters:
 Known and not filed: in-game frames and the store, missing pictures, Recommended dimmed at level-up and on Equipment and Background.
 
 Skills: `verification-before-completion`. Kept small per the simplicity rule.
+
+## Addendum: the droid retest on app 94a5615 (MAIN: severe fixed)
+
+`gate.py --at 94a5615`: FOR TESTER, CORE 4988 passed, 0 failed; ARCHIVE green. Built from my own clone (9.8 s); the lock was unchanged; Lodestar `7af61b9` = lock = compiled. Screenshots: MAIN_WORK `c4fbd75f` (`media/screens/test-193b/`).
+
+- **Battle Machinist 6 → 7 (RX-193): PASS.** The Skills page lists droid-battle's exact 15 skills with 6 points; then Attacks (1 pick); Accept gives "Machinist · 7, 44 of 51".
+- **Astromech Scout 6 → 7 (T3-193): PASS.** Granted Droid Upgrade 2 and Plating Proficiency: Medium. Skills shows droid-astromech's 15 (Botany, Medicine, Pilot, Sleight of Hand; no Acrobatics or Athletics); Feats; Accept gives "Scout · 7, 45 of 52".
+- **Remote Scout 6 → 7 (RM-193): PASS.** Upgrade 2 and Plating Medium granted. Skills shows droid-remote's 14 (Acrobatics, Medicine, Stealth; no Athletics or Intimidate); Feats; Accept gives "Scout · 7, 45 of 52".
+- **No developer text** on any level-up page for the three droids.
+- **The sheet's Species row reads "Droid"**, without the chassis. MAIN to say whether "names the species" means the chassis should show (the hub shows "Species Droid / Chassis Battle").
+- **New finding:** the level-up hub's attribute cells leave out the chassis adjustments. RX-193's hub shows STR 12, CON 14, INT 12, CHA 10, while the sheet shows 14 / 16 / 10 / 8 (Battle +2 STR, +2 CON, −2 INT, −2 CHA).
+- Small: a save refusal names the raw id: "A droid-astromech droid carries no vocabulator…". (That was my fixture's fault, giving an astromech a voice, but the wording shows on screen.)
+- Your answer on the level-1 attack picks (rate + 4 credits) is noted; I won't raise it again.

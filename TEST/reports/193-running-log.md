@@ -41,3 +41,15 @@ Con Twenty played: "Jedi Consular · 1, 8 of 8, force 25 of 25". PASS (2).
 4. Droid Attacks: only ranged rosters (melee hidden), Remaining 1; Shoot held.
 SEVERE (sent ahead, HANDOFF ce7238e): the droid's level-up Skills step shows an empty list and "This droid is on none of them. / this step cannot complete for a droid"; OK dead; Accept dim: a droid can never level up. play_screen.dart:2932 _droidSkills matches species id "droid" against droid_skills ids "droid-battle" etc.
 6. Dice: identical to TEST 185 (md5). Regression (Icon Nine): slot 27 "reg193", Escape then F4 rewrote one quick save, Load, a fight to its end. PASS.
+
+## Droid retest on app 94a5615 (MAIN: severe fixed)
+- Gate "--at 94a5615": FOR TESTER, CORE 4988 passed, 0 failed; ARCHIVE green at 94a5615. Built to builds/test193b (9.8 s), lock unchanged, Lodestar 7af61b9 = lock = compiled, Shelf bf52834.
+- Fixtures (specs193/lu193b-*): RX-193 Battle Machinist 6, T3-193 Astromech Scout 6, RM-193 Remote Scout 6, each with XP for 7.
+- MAIN on attack picks: level 1 = rate's picks + 4 credits (CLASS-ATTACKS-01 §3a): Specialist 1+4 = 5, Combat 2+4 = 6. As designed.
+- RX-193 (Battle Machinist 6->7): Skills page lists exactly droid-battle's 15 (Acrobatics, Alertness, Appraise, Archaeology, Athletics, Awareness, Demolitions, Intimidate, Repair, Scavenging, Science, Security, Slicing, Survival, Xenology), Remaining 6; spent; Attacks (Remaining 1, took Covering Fire); Accept -> "Machinist · 7, 44 of 51". No developer text. PASS.
+  Sheet Character Info: "Species Droid" (no chassis): MAIN to say if "the species" means Battle/"Droid, Battle".
+  FINDING: the level-up hub's attribute cells show the authored base (STR 12, CON 14, INT 12, CHA 10) while the sheet shows the chassis-adjusted 14/16/10/8: the hub leaves out the chassis adjustments.
+- T3-193 (Astromech Scout 6->7; fixture needed no voice, the app refuses a voiced astromech): granted Droid Upgrade 2, Plating Medium (+ Targeting); hub Skills, Feats (no Attacks row); Skills list = droid-astromech's 15 (Botany, Medicine, Pilot, Sleight of Hand; no Acrobatics/Athletics), Remaining 7; Feats; Accept -> "Scout · 7, 45 of 52". PASS.
+- RM-193 (Remote Scout 6->7, model Marksman-H, no voice): granted Droid Upgrade 2, Plating Medium; Skills = droid-remote's 14 (Acrobatics, Medicine, Stealth; no Athletics/Intimidate); Feats; Accept -> "Scout · 7, 45 of 52". PASS.
+- No developer text on any level-up page for the three droids. PASS.
+- Small: refusal "A droid-astromech droid carries no vocabulator..." prints the raw id ("droid-astromech").

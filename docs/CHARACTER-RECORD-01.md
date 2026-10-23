@@ -113,7 +113,7 @@
     "credits": 100
   },
 
-  "progress": { "level": 1, "xp": 0 },
+  "progress": { "level": 1, "xp": 0, "skill_points_saved": 0 },
 
   "chosen_side": "light"
 }
@@ -138,6 +138,8 @@
 **`forms`** — **the lightsaber and Force forms CHOSEN, never Form I** (owner, 2026-10-19, `PT-2752`: forms are a track of their own, not feats; one `character.form-taken` per form, written by the Forms step and at level-up). Form I is granted to every Force class at level 1 (`PT-230`) and derived from `classes`, as granted feats are. Present only for a Force class (FORMS-01 §2).
 
 **`attacks`** — **⚠ owner ruling, 2026-10-23 (`PT-2752`), on the forms pattern: the attack-chain tiers TAKEN**, one entry per tier, each with the level it was taken at and its `source` — `credit` (one of the level-1 credits, `CLASS-ATTACKS-01 §3a`) or `pick` (the class's schedule by rate, `§3`). One permanent `character.attack-taken` per tier, declared in `EVENT-KINDS-01` before any writer uses it, written by the Attacks page at chargen and at level-up. **The free attacks (`Strike`, `Shoot`, `Jab`, `Punch`, `Kick`) are never recorded; a granted chain (a Gamorrean's `Power Attack` tier 1) is derived, as granted feats are.** The rules file is the shelf's `attacks.toml`, generated from `data/attacks.json`.
+
+**`progress.skill_points_saved`** — **⚠ owner ruling, 2026-10-23 (`PT-2752`; `SKILLS-01 §9.1a`): the skill points left unspent, saved for the next level** (K2's 41815). Written by a permanent `character.skill-points-saved` (payload `points`, the total now saved) whenever a Skills step completes, at creation and at each level; the latest one stands. The next level's skill budget is its own plus these.
 
 **`skills`** — ranks only, and **only skills with a rank above zero appear**. An absent skill is rank 0. Aptitude is *not* stored — it is derived, and §3 says how.
 

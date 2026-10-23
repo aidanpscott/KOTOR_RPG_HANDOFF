@@ -263,6 +263,10 @@
 
 **`Smuggler` is ours entirely and is set at 6** — below the Smuggler it resembles, above the Scout, because its case is breadth without the Smuggler's depth.
 
+### 9.1a Unspent skill points carry — owner ruling, 2026-10-23 (`PT-2752`), the latest decision
+
+**Skills are the one thing a player does not have to spend in full.** OK with points unspent asks K2's own question (41815, *"You have not spent all of your skill points. These will be saved and you may spend them the next time you gain a level. Do you wish to continue?"*), and on OK the step is done. **The points left are saved and added to the next level's budget**, at creation and at every level, as K2 does (captured in K2's character creation, 2026-10-23, `k2-chargen/10`). Attributes, feats, powers, forms and attacks must still be spent in full.
+
 ### 9.2 The lists
 
 **Eleven classes.**

@@ -712,6 +712,18 @@ Two additions the source had no need for: **the campaign package is named at the
 
 **Automatic grants are announced**, in an amber block kept separate from what the player chose. `_granted` columns carry the class level of each grant; `-1` is a sentinel meaning never, and is the dominant value.
 
+### 7b-i. ⚠⚠ THE ATTACKS PAGE — owner rulings, 2026-10-23 (`PT-2752`), the latest decision
+
+**K2's Feats grid (`ftchrgen_p`), as the approved mock-ups draw it** (`media/study/pt2752/attacks/`), at chargen and on the level-up hub's Attacks row:
+
+- **One list, grouped by roster, with no headings** — Ranged, Melee, Unarmed and the lightsaber chains each held together in that order, as K2's feat list groups its chains (question 8, option a). The mock-ups' heading rows were a starting point and go.
+- **Refused rows are shown, dimmed, with their reason** in the pane (`Prerequisites:`, one line each, as the Feats and Powers pages read). **A roster the character's chassis can never use is hidden**, not refused (a droid sees no melee, unarmed or lightsaber rows: `ATTACKS-05`, `PT-568`).
+- **Picks: the class's schedule by rate** (`CLASS-ATTACKS-01 §3`), and **at level 1 the four credits on top** (three for a Battle or Assassin droid, two for an Astromech or Remote, `§3b`). Credits may buy ranged, melee or lightsaber tiers (`§3a`). **The chain count is a cap**: no more chains entered than the class's count (the highest held, multiclassed — `MULTICLASS-01`).
+- **Recommended at chargen takes the class's opening** (`CLASS-ATTACKS-01 §4`); a droid's determined credits are taken, not recommended (`§3b`), and one that lands on a free or barred entry is chosen.
+- **An unspent pick carries to the next level, and Accept goes ahead** (question 9, a with c); the page says so in one line, whose wording goes to the owner before it ships unless K2 or a document already has it.
+- **Held chains are drawn as held**: what the record holds; a Gamorrean's free `Power Attack` tier 1 (`PT-90`); an item's chain while the item is worn, marked as the item's. Echani training is a gate, not a grant: its chain is bought.
+- **`Strike`, `Shoot`, `Jab`, `Punch` and `Kick` are free** — a basic attack anyone can make (`ATTACKS-01`; `ATTACKS-07`) — and are not picks.
+
 ## 7c. The in-game screens — restyled against real screenshots, from `PT-1249`
 
 **All eight were locked at `PT-1152`–`PT-1168` before any screenshot existed**, from parsed geometry and `TRACE-42`'s audit alone. They largely held. `TRACE-80` supplied what the files could not.

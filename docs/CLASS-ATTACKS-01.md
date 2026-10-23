@@ -31,8 +31,8 @@
 | Rate | Classes | Source signal |
 |---|---|---|
 | **Combat** | **Soldier · Jedi Guardian · Marksman · Sith Warrior · Brawler** | **Feats 18–23 at level 30.** **The Soldier's 23 is the ceiling; the Marksman's 18 is the floor** |
-| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Engineer · Agent · Treasure Hunter · Duelist · Weaponmaster · Marauder · Watchman** | **16 or 15 at level 30. `featgain.2da` treats these as one kind of character** |
-| **Specialist** | **Smuggler · Jedi Consular · Machinist · Sith Assassin · Sith Inquisitor · Medic · Jedi Master · Sith Lord · Tech Specialist** | **11 or 10 at level 30** |
+| **Middle** | **Bounty Hunter · Scout · Jedi Sentinel · Engineer · Agent · Treasure Hunter · Duelist · Weaponmaster · Marauder · Watchman · ⚠ Sith Assassin** (owner, 2026-10-23: the mirror rule) | **16 or 15 at level 30. `featgain.2da` treats these as one kind of character** |
+| **Specialist** | **Smuggler · Jedi Consular · Machinist · ~~Sith Assassin~~ · Sith Inquisitor · Medic · Jedi Master · Sith Lord · Tech Specialist** | **11 or 10 at level 30** |
 
 **Derived from `FEAT-SCHEDULE-01`'s level-30 totals**, because that is the only signal the source gives about how fast a class acquires anything.
 
@@ -59,6 +59,8 @@
 ---
 
 ## 3. The schedule, extended to thirty
+
+> **⚠⚠ THE SCHEDULE OF RECORD — owner, 2026-10-23 (`PT-2752`): every class's per-level attack picks are generated from this table by its rate (`extract_classes.py`), replacing `CLASSES-STANDARD-PHB`'s smoothed column. The four level-1 credits (§3a) are on top.**
 
 **`ATTACKS-01 §11.3` ran to level 20. `PT-55` set the ceiling at 30.**
 
@@ -157,6 +159,11 @@
 | **Smuggler** | Specialist | **8** | 11 | 7 |
 | **Jedi Consular** | Specialist | **13** | 11 | 4 |
 | **Machinist** | Specialist | **10** | 11 | 6 |
+| **⚠ Sith Warrior** | Combat | **18** | 20 | 11 |
+| **⚠ Sith Inquisitor** | Specialist | **13** | 11 | 4 |
+| **⚠ Sith Assassin** | Middle | **13** | 15 | 9 |
+
+> **⚠ THE THREE SITH BASE CLASSES — owner ruling, 2026-10-23 (`PT-2752`), by the mirror rule (`PT-2577`: *"base Sith classes should mirror their Jedi counterparts"*):** the Warrior the Guardian's 18, the Inquisitor the Consular's 13, the Assassin the Sentinel's 13. **The Assassin is `Middle`, as the shelf already reads — §1's `Specialist` for it is superseded by the same rule (`PT-2578` gave it the Sentinel's feat schedule, and rate follows feats).**
 
 **⚠ RULED, and it does not resolve. `PT-104`. Owner: droids may not spend attack credits on melee.**
 
@@ -216,7 +223,9 @@
 
 ## 3a. Four attack credits at 1st level — owner ruling
 
-> **Every class receives four attack credits at 1st level. The player splits them between ranged and melee in any combination.**
+> **Every class receives four attack credits at 1st level. The player splits them between ranged, melee and lightsaber in any combination.**
+>
+> **⚠ "and lightsaber" added — owner, 2026-10-23 (`PT-2752`), the latest decision:** credits may buy lightsaber chain tiers, as `ATTACKS-01`:341 already says (*"a Jedi's lightsaber picks and melee picks come from the same pool"*); the Force classes' openings, which the credits stand for, are lightsaber chains.
 
 **Four ranged, four melee, two and two — any split. `PT-89`.**
 
@@ -264,6 +273,8 @@
 
 > **⚠ WHERE A CLASS'S OPENING IS MELEE, THE DROID SKIPS IT AND TAKES THE NEXT RANGED ENTRY.** **`§4.1a`: *"a chassis may be closed out of a grant; a class is not."*** **⚠ It does not get a replacement — that deficit is real and is the upgrade system's job.**
 
+> **⚠⚠ A DETERMINED CREDIT THAT LANDS ON A FREE OR BARRED ENTRY IS THE PLAYER'S CHOICE — owner ruling, 2026-10-23 (`PT-2752`).** A Battle-droid Soldier's `Shoot` is already free (`ATTACKS-01`:333), and an Astromech Scout's `Rapid Fire` and `Precise Shot` are barred to its chassis (`ATTACKS-04`:15); each such credit is chosen like the last one, within ranged.
+
 **⚠ AND THE CHOSEN CREDIT IS FREE WITHIN RANGED.** **A droid is not handed a build; it picks its last opening like anyone else, from a smaller menu.**
 
 ### ⚠ Why `Battle` and `Assassin` get one more than `Astromech` and `Remote`
@@ -297,18 +308,20 @@
 | **⚠ Saboteur** | `Spray` · `Covering Fire` · `Shoot` | ⚠ **The area axis, and nobody else opens on it.** ⚠ A `Saboteur` does not aim at a person — ⚠ it puts fire and ordnance where people are going to be. |
 | **Jedi Guardian** | `Sarlacc Sweep` · `Strike` · `Shoot` | The blade first. A crowd answer at 1st level |
 | **Jedi Sentinel** | `Deflecting Slash` · `Strike` · `Shoot` | Defence that answers back |
-| **Jedi Consular** | `Saber Pierce` · `Strike` · `Shoot` | One precise blade, because the Force is the weapon |
+| **Jedi Consular** | ~~`Saber Pierce`~~ **`Guided Strike`** ⚠ · `Strike` · `Shoot` | One precise blade, because the Force is the weapon |
 | **Marksman** | `Power Attack` · `Strike` · `Shoot` | **⚠ Melee restored.** `PT-75` dropped the droid/organic class split; an organic may take this class and `ATTACKS-05`'s closure is a *chassis* restriction, not a class one |
 | **Engineer** | `Covering Fire` · `Shoot` | Support, and the only attack it reliably contributes |
 
 | **⚠ Brawler** | `Combination` · `Body Blow` · `Strike` · `Shoot` | ⚠ **UNARMED, from `ATTACKS-07`'s own roster — `PT-228`.** **Velocity and Power: strike twice, or put everything behind one.** ⚠ **`AGENDA-CURRENT` still says the Brawler *"opens with `Flurry`, `Quick Attack` and `Dual Strike` — all weapon chains"*. THAT NOTE IS STALE — it predates `PT-228` building the unarmed roster.** `PT-569` |
-| **⚠ Duelist** | `Quick Attack` · `Deflecting Slash` · `Strike` · `Shoot` | ⚠ **One blade, answered fast.** **Speed and a defence that returns — the Sentinel's chain on a class with no Force behind it.** `PT-569` |
+| **⚠ Duelist** | `Quick Attack` · ~~`Deflecting Slash`~~ **`Parry`** ⚠ · `Strike` · `Shoot` | ⚠ **One blade, answered fast.** **Speed and a defence that returns — the Sentinel's chain on a class with no Force behind it.** `PT-569` |
 | **⚠ Agent** | `Precise Shot` · `Snap Shot` · `Shoot` | ⚠ **One shot that lands, and the reaction to take it first.** **Nothing that draws attention — the Agent's whole premise is not being identified.** `PT-569` |
 | **⚠ Medic** | `Covering Fire` · `Snap Shot` · `Shoot` | ⚠ **It does not open the fight; it keeps people alive in one.** **`Covering Fire` is the only attack that helps someone else, and `Field Surgery` is where the class actually spends its turn — `PT-559`.** `PT-569` |
 | **⚠ Treasure Hunter** | `Point Blank Shot` · `Precise Shot` · `Shoot` | ⚠ **Close quarters and opportunism.** **A corridor, a tomb, and whatever is in it — `Sneak Attack` is the Smuggler's and this class earns its damage by position instead.** `PT-569` |
 | **⚠ Sith Warrior** | `Power Attack` · `Sarlacc Sweep` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Guardian — `PT-125`, `PT-553`.** **The Guardian opens with the crowd answer; the Warrior opens with the crowd answer AND weight, because a Sith does not defend.** `PT-569` |
-| **⚠ Sith Inquisitor** | `Saber Pierce` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Consular.** **One precise blade, because the Force is the weapon.** `PT-569` |
+| **⚠ Sith Inquisitor** | ~~`Saber Pierce`~~ **`Vornskr's Ferocity`** ⚠ · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Consular.** **One precise blade, because the Force is the weapon.** `PT-569` |
 | **⚠ Sith Assassin** | `Critical Strike` · `Strike` · `Shoot` | ⚠ **Mirrors the Jedi Sentinel and departs from it.** **The Sentinel answers back; the Assassin ends it before there is anything to answer.** **`FEATS-LIBRARY-01` already names it among *"the four classes built on"* `Killer's Instinct`.** `PT-569` |
+
+> **⚠⚠ EVERY OPENING CAN BE TAKEN — owner ruling, 2026-10-23 (`PT-2752`), the latest decision.** **A Force class's saber opening is a chain its own recommended second form opens (`FORMS-01 §2.4`):** the Consular's `Saber Pierce` needed Form II and its form is VI, so `Guided Strike` (Form VI — *"the Force is the weapon"*); the Inquisitor's needed Form II and its form is VII, so `Vornskr's Ferocity` (Form VII). **The Duelist's `Deflecting Slash` is a lightsaber chain, Force classes only (`ATTACKS-01`:238), so it opens with `Parry`** — the melee chain that is *"a defence that returns."* The Sentinel's `Deflecting Slash` stands: Form III is its recommended form.
 
 **⚠ `Strike` and `Shoot` are the free baseline** — `ATTACKS-01`. **Listing them is a statement that no class is denied them, not a grant of anything scarce.**
 

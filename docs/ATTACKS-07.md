@@ -130,7 +130,7 @@
 
 ### 4.4 Who may take them
 
-**⚠ Universal.** **Every class, every species, droids included.**
+**⚠ Universal.** **Every class, every species~~, droids included~~.** **⚠ Droids excluded (owner, 2026-10-23, `PT-2752`, the latest decision): `PT-568`/`PT-569` close melee, and unarmed with it, to every chassis (`ATTACKS-01`:237, *"Organics only"*). `Combination`'s data label "Class · Brawler" came over from the feats and is not a restriction.**
 
 **`PT-210`: share what is *training*, withhold what is *instinct* or *anatomy*.** **A fist is training.**
 

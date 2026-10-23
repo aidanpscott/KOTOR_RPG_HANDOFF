@@ -111,6 +111,8 @@
 
 **⚠ USED INSTEAD: Sith Battlemaster's own true mechanical twins, already in this table.** `d10`, full BAB, Combat rate is EXACTLY Jedi Weaponmaster's and Sith Marauder's own shape (`classes.json`: both `d10`) — and this document already states, in its own words, that classes of this shape share one cadence: *"Weaponmaster and Marauder run the Guardian's rhythm"* (`§ Seven schedules`). Sith Battlemaster gets that same real, already-extracted K2 cadence exactly — `[1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]`, 11/16 — not phase-shifted or otherwise altered, because nothing about its profile differs from the two classes that already carry it.
 
+> **⚠⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): the Battlemaster runs the Marksman's 18 by the prestige rhythm rule below. The premise above did not hold on the shelf: the Battlemaster is `full` BAB, the Weaponmaster `three-quarters`.**
+
 ---
 
 ## Seven schedules, fifteen classes
@@ -131,6 +133,33 @@
 
 **Two exceptions.** **The Watchman matches the Sentinel — its own base class — which is consistent.** **The Assassin does not match anything**: a flat feat every three levels from 1, and **the only class in either game with a perfectly regular cadence.**
 
+
+#### ⚠⚠ PRESTIGE FEAT RHYTHM, AS DATA — owner ruling, 2026-10-23 (`PT-2752`), the latest decision
+
+**One rule: a class whose feats are written only as a total takes the rhythm of the base-class column with the same total** — 15 is the Sentinel's, 16 is `1, 2, 3, then every odd` (the Scout's, which the Force prestige classes already run), 18 is the Marksman's. **A class documented in part keeps its documented levels and takes the rhythm after them** (`after 20`). The totals are `PT-644`'s (set to each class's rate peers, `audit_bands.py`). **The Sith Marauder runs the Sentinel's 15 (it continues the Sith Assassin, which mirrors the Sentinel — `PT-216`) and the Sith Battlemaster the Marksman's 18 (`PT-216`'s Combat-rate total), superseding `PT-2560`'s 16, whose premise — the same die, BAB and rate as the Weaponmaster — was wrong on BAB and rate.** Read by `extract_classes.py`; a rhythm column whose length is not its total is refused.
+
+```
+rhythm 15: jedi_sentinel
+rhythm 16: scout
+rhythm 18: marksman
+agent: 15 after 20
+pirate: 15 after 20
+sith_marauder: 15
+sith_battlemaster: 18
+commando: 18
+juggernaut: 18
+blademaster: 18
+gunslinger: 16
+sharpshooter: 16
+operative: 16
+shadow_hunter: 16
+officer: 16
+shock_trooper: 16
+beast_master: 15
+droid_master: 15
+scoundrel: 15
+```
+
 ---
 
 ## Totals
@@ -149,7 +178,7 @@
 | **Weaponmstr** | 11 | **16** |
 | **Jedi Sage** | 7 | **11** | **⚠ was `Jedi Master`; the class was cut and the line moved — `PT-215`** |
 | **Watchman** | 10 | **15** |
-| **Marauder** | 11 | **16** |
+| **Marauder** | 11 | **16** | **K2's own column. ⚠ Our Sith Marauder runs the Sentinel's 15 (owner, 2026-10-23, `PT-216`): see PRESTIGE FEAT RHYTHM, AS DATA** |
 | **Sith Sorcerer** | 7 | **11** | **⚠ was `Sith Lord` — `PT-215`** |
 | **Assassin** | 7 | **10** | **K2's own real prestige class — not `Sith Assassin`, in the table below, which is ours.** |
 
@@ -160,7 +189,7 @@
 | **Sith Warrior** | 13 | **20** | **mirrors Guardian — `PT-2577`, `PT-2578`** |
 | **Sith Inquisitor** | 7 | **11** | **mirrors Consular** |
 | **Sith Assassin** | 10 | **15** | **mirrors Sentinel — `PT-2577`, `PT-2578`. Not `Assassin`, above: K2's own real prestige class differs (7/10).** |
-| **Sith Battlemaster** | 11 | **16** | **mirrors Weaponmaster — `PT-2560`, `PT-2572`** |
+| **Sith Battlemaster** | 11 | ~~16~~ **18** | ~~mirrors Weaponmaster — `PT-2560`, `PT-2572`~~ **⚠ the Marksman's 18 (owner, 2026-10-23, `PT-216`): see PRESTIGE FEAT RHYTHM, AS DATA** |
 
 > **The Soldier gets more than twice the Consular at every level** — **23 against 11 by level 30.** **No Force powers, fewest skill points, feats instead.**
 

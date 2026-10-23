@@ -275,6 +275,8 @@
 
 ### ⚠ Prestige entry level is 10, and it is set below the optimum deliberately. `PT-142`.
 
+> **⚠⚠ SUPERSEDED (owner via MAIN, 2026-10-23, `PT-2752`): there is no character-level gate. `PT-581`, the most recent ruling, reads entry as the parent's 6 plus one (*"the earliest Droid Master IS character level 7"*), as `PT-358` read the Beast Master. The entry of record is `CLASS-ROSTER-01`'s "Prestige entry, as data".**
+
 **Derived, cumulated over `k2_featgain.2da`:**
 
     pure Guardian 30                   16 feats

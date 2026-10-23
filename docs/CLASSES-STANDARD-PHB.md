@@ -111,7 +111,7 @@ Everyone else in the party has three systems and splits their attention. You hav
 | **25** | 20 | 30 | +14 | +8 | +8 |
 | **30** | 23 | 36 | +17 | +10 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -194,7 +194,7 @@ Six class skills — fewer than anyone. You are not here to solve the problem. Y
 | **25** | 16 | 30 | +14 | +8 | +8 |
 | **30** | 18 | 36 | +17 | +10 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -290,7 +290,7 @@ The shot that should have ended you lands. You fire back before you go down. Tha
 | **25** | 16 | 30 | +14 | +8 | +8 |
 | **30** | 18 | 36 | +17 | +10 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -387,7 +387,7 @@ The grenade lands. You shout. The party does not die. It happens two or three ti
 | **25** | 14 | 22 | +14 | +14 | +14 |
 | **30** | 16 | 27 | +17 | +17 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -479,7 +479,7 @@ Every bounty in the galaxy is worth more breathing. Naming a target and taking i
 | **25** | 14 | 22 | +14 | +14 | +8 |
 | **30** | 16 | 27 | +17 | +17 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -577,7 +577,7 @@ And in a fight you do the thing no one else in the galaxy can: you reach into an
 | **25** | 14 | 22 | +8 | +14 | +14 |
 | **30** | 16 | 27 | +10 | +17 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -681,7 +681,7 @@ Cover is a place in the world rather than an action you take, and you are the on
 | **25** | 13 | 22 | +8 | +14 | +14 |
 | **30** | 15 | 27 | +10 | +17 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -777,7 +777,7 @@ You fail a check and learn *why*. The party is delayed rather than stopped, whic
 | **25** | 14 | 22 | +14 | +8 | +14 |
 | **30** | 16 | 27 | +17 | +10 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -927,7 +927,7 @@ Against one enemy you get sharply, visibly better. In a crowd you get nothing at
 | **25** | 13 | 22 | +8 | +14 | +14 |
 | **30** | 15 | 27 | +10 | +17 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -1006,7 +1006,7 @@ The same class plays both. Which one you are is written in your alignment, not y
 | **25** | 13 | 22 | +14 | +14 | +8 |
 | **30** | 15 | 27 | +17 | +17 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -1081,7 +1081,7 @@ When a conversation turns and somebody reaches, you do not wait to see what for.
 | **25** | 9 | 15 | +8 | +14 | +8 |
 | **30** | 11 | 18 | +10 | +17 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -1170,7 +1170,7 @@ And you are the only person in the galaxy who can put an ally droid back togethe
 | **25** | 9 | 15 | +8 | +14 | +8 |
 | **30** | 11 | 18 | +10 | +17 | +10 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature
@@ -1268,7 +1268,7 @@ Medicine sat on five classes and was central to none. Now it is yours.
 | **25** | 9 | 15 | +14 | +8 | +14 |
 | **30** | 11 | 18 | +17 | +10 | +17 |
 
-**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**
+~~**⚠ Attack picks are shown at the rate's own accrual. Four of them are the credits every character receives at 1st level.**~~ **⚠ SUPERSEDED (owner, 2026-10-23, `PT-2752`): this column is a smoothed draft. The attack picks of record are `CLASS-ATTACKS-01 §3` by rate (`ATTACKS-01 §11.3` to 20), and the four level-1 credits are on top of them, not among them.**
 
 
 ## Class feature

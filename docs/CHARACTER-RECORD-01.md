@@ -103,6 +103,10 @@
     { "id": "form_v_perseverance", "at_level": 1 }
   ],
 
+  "attacks": [
+    { "id": "power_attack", "at_level": 1, "source": "credit" }
+  ],
+
   "equipment": {
     "route": "standard",
     "items": ["padawan_robe", "training_lightsaber", "medpac", "medpac"],
@@ -132,6 +136,8 @@
 **`abilities`** — ⚠ **CORRECTED at `PT-1415`: the BOUGHT scores, not the final ones.** This line said *"the final scores"* and **`§5`'s `PT-1260` closure says the opposite** — the species modifier applies **on read**, and `§3` lists ability adjustments as derived. **`§1`'s own first principle settles it: store the choice, derive the consequence.** Floor 8, ceiling 18 at level 1 (`PT-1227`).
 
 **`forms`** — **the lightsaber and Force forms CHOSEN, never Form I** (owner, 2026-10-19, `PT-2752`: forms are a track of their own, not feats; one `character.form-taken` per form, written by the Forms step and at level-up). Form I is granted to every Force class at level 1 (`PT-230`) and derived from `classes`, as granted feats are. Present only for a Force class (FORMS-01 §2).
+
+**`attacks`** — **⚠ owner ruling, 2026-10-23 (`PT-2752`), on the forms pattern: the attack-chain tiers TAKEN**, one entry per tier, each with the level it was taken at and its `source` — `credit` (one of the level-1 credits, `CLASS-ATTACKS-01 §3a`) or `pick` (the class's schedule by rate, `§3`). One permanent `character.attack-taken` per tier, declared in `EVENT-KINDS-01` before any writer uses it, written by the Attacks page at chargen and at level-up. **The free attacks (`Strike`, `Shoot`, `Jab`, `Punch`, `Kick`) are never recorded; a granted chain (a Gamorrean's `Power Attack` tier 1) is derived, as granted feats are.** The rules file is the shelf's `attacks.toml`, generated from `data/attacks.json`.
 
 **`skills`** — ranks only, and **only skills with a rank above zero appear**. An absent skill is rank 0. Aptitude is *not* stored — it is derived, and §3 says how.
 

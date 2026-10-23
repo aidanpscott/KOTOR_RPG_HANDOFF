@@ -30,6 +30,10 @@
 
 > **⚠ RULED. Owner decision, `PT-102`. The fork is closed and this is the formula.**
 
+> **⚠⚠ PLUS FORCE SENSITIVE: +12, ONCE — owner ruling, 2026-10-23 (`PT-2752`), the latest decision.** **`Force Sensitive` is granted at the first Force level and raises the pool's true maximum by 12, once, however many Force classes are taken. At the table: write +12 beside your Force pool.** **Why 12:** K2's `Force Sensitive` (`k2_feat.2da` row 116; dialog.tlk 41892, *"grants 40 additional Force Points"*) buys two casts of K2's typical tier-1 power (20 FP: Push, Aura, Shock, Slow, Wound, Mind Trick). Our typical tier-1 power costs 6 (16 of the 36 tier-1 powers; median 8), so two casts is 12. **Why the first Force level, not K2's level 2:** a Quara Sith Warrior at Wisdom and Charisma 8 (−4 a level against a d4) has a pool of 0 at level 1 by the formula alone; with +12 it has 12. **This supersedes the "not adopted" line below for Force Sensitive only:** that line refused K2's +40 as KOTOR-scale, and 12 is the same boost re-scaled to these costs. The Consular's +50 stays not adopted.
+>
+> **⚠ THE SLIDE, NOT CHANGED (owner, 2026-10-23: "whatever K2 does").** Whether a negative Wisdom + Charisma modifier can lower a level's gain below 0 could not be established from what we hold: no 2DA carries it, and every K2 save on this machine is the level-1 Exile on Peragus at 0 Force with no Force level gained (`LvlStatForce` 0). The formula stands as written.
+
 **It previously read *"Force die + Wisdom modifier + Charisma modifier, per level"* — everything hanging off Jedi level.**
 
 **`MULTICLASS-01 §2.1` is the reason.** **Under the old formula a banked level was worth a whole Force die *plus both modifiers*, which made delaying your first Jedi level worth roughly three times the pool.** **Splitting it drops the banking advantage by 71% and leaves an honest multiclass route within 20% of a pure Jedi.**
@@ -284,6 +288,7 @@ At 25% and 50% the rests barely register. **75% is taken:** two rests produce a 
 - Regeneration flat, per own turn, 3/2/1 base, +1 every 4/5/5 levels
 - In-combat regeneration ported from KOTOR 2, not authored
 - Wisdom feeds the maximum, not the rate
+- **⚠ `Force Sensitive`: +12 to the true maximum, once, at the first Force level (owner, 2026-10-23, `PT-2752`)**
 - Working maximum degrades **10/20/30% of the power's cost by tier, per cast**, floor at 50%
 - **One hour of meditation** restores 75% of lost ceiling, two per day; **eight hours** restores the true maximum
 - Rest and meditation are distinct activities in RCR's hours and days

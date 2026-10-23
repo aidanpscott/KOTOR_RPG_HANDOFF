@@ -46,6 +46,8 @@
 
 *(`k1_classes.2da`. KOTOR 2's prestige classes continue the pattern: Weaponmaster and Marauder 6, Watchman and Assassin 8, Master and Lord 10.)*
 
+> **⚠⚠ OUR FORCE PRESTIGE CLASSES' DICE — AS THE ROSTER DECIDED THEM (owner via MAIN, 2026-10-22, `PT-2752`: "if a die was decided for each Force prestige class, use it").** `CLASS-ROSTER-01`:447–452 (`PT-143`, amended by `PT-215`/`PT-216`) gives every prestige class its base line's die +2: **Jedi Weaponmaster d6 · Sith Battlemaster d6 · Jedi Watchman d8 · Sith Marauder d8 · Jedi Sage d10 · Sith Sorcerer d10** (the Sage and Sorcerer carry the cut Jedi Master and Sith Lord lines; the Battlemaster continues the Warrior and our Marauder the Assassin). The K2 line above is K2's own roster, not ours. Each prestige level adds its own die (the multiclass principle, 2026-10-22); a prestige level is never the first Force level (entry needs a Force base class 6), so its die is never the maximum. Extracted from the roster's stat lines (`extract_classes.py`), on the Shelf as `force_die`.
+
 **`forcedie` sits beside `hitdie` in the same table** — the game's own statement that the pool is built the way vitality is built. **No base lookup table exists in either game's data**; the mechanics agent searched `cls_spgn_jedi.2da` (which is the powers-known table, 2 at level 1 and +1 per level), `classpowergain.2da`, `forceshields.2da`, all `cls_st_*` and `cls_atk_*`, and both games' `classes.2da` and `spells.2da`. The base calculation is runtime, not stored.
 
 **Both ability modifiers contribute.** StrategyWiki reports totals adjusted by (Wisdom + Charisma) × Jedi level. **Secondary, unverifiable from the data**, but consistent with every observable fact.

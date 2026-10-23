@@ -40,6 +40,7 @@
 19. **Level-up: Accept on the foot beside Back, not K2's numbered step 5** (owner, 2026-10-22, option 4): our hub has up to six choice rows (Attributes, Skills, Feats, Powers, Forms, Attacks), so the rows are 26 tall on a 28 pitch (93% of K2's 28 on 32) and Accept shares the foot with Back, each half of K2's Back width. The rows keep K2's fixed places and its empty-row gaps; the bubbles number the rows shown.
 20. **Level-up: Forms and Attacks rows** (ours): Forms at Force levels 1, 6 and 12 and a Force prestige entry (owner, 2026-10-22); Attacks on the hub dimmed until agenda N designs its page, never holding Accept back.
 21. **Level-up: Auto Level Up dim** (owner, 2026-10-22; agenda P): K2's button (36812), above Level Up as K2 places it, dimmed until recommended builds exist.
+22. **The base page's model frame shows the character's facts** (owner, 2026-10-22; this app has no 3-D model, `PT-1319`): where K2 draws its 3-D figure (`maincg_p` MODEL_LBL), ours shows species, origin and background in the Character tab's form; nothing before anything is chosen. On Entry, Gender and the level-up hub; Your Story keeps the story there.
 
 | # | Screen · control | K2 (picture) | Ours (picture) | State |
 |---|---|---|---|---|
@@ -85,6 +86,7 @@
 | 40 | Level-up · spend pages | Attributes, Skills, Feats on the chargen panels; Powers on `pwrlvlup_p`, titled Level Up | The approved pages titled "Level Up"; Forms on its list page | **Matches**; Forms **ours** (difference 20) |
 | 41 | Level-up · Attacks | — | A row on the hub, dimmed until agenda N; its reason waits on wording (K2-WORDS-PENDING) | **Ours only** (difference 20) |
 | 42 | Sheet · Auto Level Up | Live (36812), above Level Up (`k2-levelup/01`, `35`) | Same place, dimmed | **Differs on purpose** (difference 21) |
+| 43 | Base page · model frame | A 3-D figure of the character (`04`, `k2-levelup/03`) | The character's facts (species, origin, background) in the Character tab's form | **Differs on purpose** (difference 22) |
 
 **Still to build after the first pass:** the recommended builds (then Quick and every Recommended go live), and the Miraluka's Force Sight at creation (agenda).
 

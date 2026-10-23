@@ -968,6 +968,35 @@
 | **Tech Specialist** | **Engineer 6 or Machinist 6** | — |
 | **Beast Master** | **Scout 6 or Treasure Hunter 6** | `Beast Handling` 8 — `PT-237` |
 
+#### ⚠⚠ PRESTIGE ENTRY, AS DATA — the live table, read by the level-up Class page (owner via MAIN, 2026-10-22, `PT-2752`, TEST 191 gap 3)
+
+Every prestige class also needs **character level 10** held (`PT-142`) and a free class slot (**three classes, maximum**, `PT-723`); those two are checked for all and are not repeated below. `+` joins holdings; `|` separates alternatives; `base 6` is any of the nineteen base classes at 6 (Force base included, Saboteur included), `force-base 6` any Force base class at 6. Compiled from this file's live tables (above, `:447–452`, `PT-628` at `:481–489`) and the ledger forward (`PT-225`, `PT-237`, `PT-553`, `PT-579`, `PT-578`, `PT-1006`, `PT-2517`).
+
+**⚠ READINGS CHOSEN WHERE THE DOCUMENTS DISAGREE — each listed for the owner (CODER, 2026-10-22):** Shadow Hunter as `PT-628` wrote it (Stealth 8 + Killer's Instinct; `PT-217`'s melee chain dropped); Beast Master as aptitude plus 8 ranks (`PT-237` and `PT-553` together); Tech Specialist Repair 8 alone (`PT-628`, though `PT-225` let the Droid Master take Slicing instead); Operative locked to Agent 6; Commando's and Shock Trooper's "any ranged family" as blaster, blaster rifle, assault cannons and wrist-mounted; the Juggernaut's droid swap (Droid Upgrade 3 for Heavy Armour). NOT CHECKED HERE: a Force prestige class's alignment and teacher (`PT-1005`: no threshold is ruled, and a teacher is story), the chassis closures (`:144–157`), and the Scoundrel's Sneak Attack tier 2 (attacks are not recorded yet, agenda N), which therefore cannot be met.
+
+```
+commando: base 6 + feat:weapon_specialization_blaster|feat:weapon_specialization_blaster_rifle|feat:weapon_specialization_assault_cannons|feat:weapon_specialization_wrist_mounted
+droid_master: class:engineer 6|class:machinist 6 + skill:Repair 8|skill:Slicing 8
+gunslinger: class:bounty_hunter 6|class:smuggler 6|class:pirate 6 + feat:master_two_weapon_fighting
+officer: class:soldier 6|class:agent 6 + skill:Alertness 8
+shadow_hunter: base 6 + skill:Stealth 8 + feat:killer_s_instinct
+juggernaut: base 6 + feat:armour_proficiency_heavy|feat:droid_upgrade_3
+beast_master: class:scout 6|class:treasure_hunter 6 + aptitude:Beast Handling + skill:Beast Handling 8
+scoundrel: base 6 + skill:Stealth 8 + attack:Sneak Attack 2
+sharpshooter: base 6 + feat:weapon_specialization_blaster_rifle
+operative: class:agent 6 + skill:Stealth 8 + skill:Slicing 8
+shock_trooper: base 6 + skill:Alertness 8 + feat:weapon_focus_blaster|feat:weapon_focus_blaster_rifle|feat:weapon_focus_assault_cannons|feat:weapon_focus_wrist_mounted
+blademaster: base 6 + feat:weapon_specialization_melee_weapons
+tech_specialist: class:engineer 6|class:machinist 6 + skill:Repair 8
+pirate:
+jedi_weaponmaster: force-base 6 + feat:weapon_focus_lightsaber
+sith_battlemaster: force-base 6 + feat:weapon_focus_lightsaber
+jedi_watchman: force-base 6 + skill:Stealth 8
+sith_marauder: force-base 6 + skill:Stealth 8
+jedi_sage: force-base 6 + skill:Mysticism 8
+sith_sorcerer: force-base 6 + skill:Mysticism 8
+```
+
 **⚠⚠⚠ THE `Gunslinger` MOVED FROM OPEN TO LOCKED — `PT-2517`.** **`PT-217` put it in the open tier at *"any base class 6"*, and the owner has narrowed it to three named routes: `Bounty Hunter 6`, `Smuggler 6` or `Pirate 6`.**
 
 **⚠ It follows this section's own line — *"Open when the prestige is a technique. Locked when it is a background."*** **Two guns and a fast draw is not a technique anyone picks up with the work; it is where you came up. The three named classes are the lives that produce it.**

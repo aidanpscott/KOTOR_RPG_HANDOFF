@@ -2,7 +2,7 @@
 
 > **Generated context: `data/attacks.json`. Companion to `ATTACKS-04` (ranged), `ATTACKS-05` (melee), and `ATTACKS-06` (lightsaber).**
 
-**5 chains, 9 entries.** *(Was 4 and 6 until 2026-10-19: Combination › Chain Punch › Rain of Blows were carried into `data/attacks.json` from the feats, `PT-2752` ruling 5.)* *Derived from `data/attacks.json` by matching the names this document renders. `ATTACKS-07` is hand-written, so no `stats()` call covers it and the figure is stated here rather than generated.*
+**9 chains, 21 entries.** *(Was 5 and 9 until 2026-10-23: §3's four — Body Blow, Uppercut, Inside Reach, Clinch — carried into `data/attacks.json`, owner ruling, `PT-2752`.)* *(Was 4 and 6 until 2026-10-19: Combination › Chain Punch › Rain of Blows were carried into `data/attacks.json` from the feats, `PT-2752` ruling 5.)* *Derived from `data/attacks.json` by matching the names this document renders. `ATTACKS-07` is hand-written, so no `stats()` call covers it and the figure is stated here rather than generated.*
 
 
 **Two things live here. A basic attack anyone can make, and one chain almost nobody can.**

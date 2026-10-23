@@ -54,7 +54,7 @@
 
 **⚠ The only class in the game with full BAB, d10, and a `Middle` pick rate.**
 
-**⚠ The Marksman is Specialist, not Combat.** **`featgain.2da` gives it 11 at level 30 — the Smuggler's number, not the Soldier's.** **Its d12 and full BAB carry its combat identity instead.** *The name is the source's and it misleads.*
+~~**⚠ The Marksman is Specialist, not Combat.** **`featgain.2da` gives it 11 at level 30 — the Smuggler's number, not the Soldier's.** **Its d12 and full BAB carry its combat identity instead.** *The name is the source's and it misleads.*~~ **⚠ SUPERSEDED by `PT-77` (owner ruling, *"Marksman: Specialist to Combat"* — *"a d12 that acquires like a Smuggler is a class nobody takes"*), the latest ruling on its rate, which every later ruling builds on (`PT-109`'s droid closure among them). §1's `Combat` and the shelf stand. Marked 2026-10-23 (`PT-2752`).**
 
 ---
 

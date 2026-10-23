@@ -101,6 +101,16 @@
 
 ## 3. The rules themselves — 3.5, as in the source
 
+> **⚠⚠ THE MULTICLASS PRINCIPLE — owner, 2026-10-22, `PT-2752` (the latest decision; adopted from `MULTICLASS-FAIRNESS-PT2752`).** *"We gotta think about what actually impacts the player."*
+>
+> 1. **A level gives what the class taken at that level gives:** its hit die, its skill points, its own feat-column row, and its own feature tiers at its own class level.
+> 2. **Anything several classes share counts once, across all of them:** Force powers, the Force pool's dice and forms by total Force level; a feature chain several classes grant (Killer's Instinct) by the levels in all the classes that grant it, on the earliest schedule held; Unarmed Specialist by the levels in the classes that grant it; a class-trained rank once per skill.
+> 3. **Whole-character things count character level:** attribute points, the skill cap, the ability half of the Force pool, attack picks at the best rate held.
+> 4. **One-time things happen once:** the attack credits and the ×4 skill points at character level 1; a prestige class's entry grants once per class.
+> 5. **Nothing reads "the first class" as a stand-in** for a class's own levels.
+>
+> **SAVES (owner, 2026-10-22, option a): SUM PER CLASS**, each class's base saves at its own level, as the line below states and as d20 does. Each extra class whose save is good adds its +2, at most +4 under the three-class cap (`PT-723`). This supersedes every "saves take the highest rate" reading of `PT-159` below: `PT-159` ruled the attack-pick rate and chain count, not saves.
+
 **KOTOR's multiclass system is D&D 3.5's, and we keep it.**
 
 **Take a level in any class you qualify for, at any level-up.**
@@ -365,6 +375,8 @@
 
 **⚠ THE FOUR-WAY SPREAD. ⚠ A `Soldier 2 / Scout 2 / Smuggler 2 / Medic 2` HAS NO IDENTITY AND `PT-159`'s HIGHEST-RATE RULE WOULD HAND IT EVERY GOOD SAVE.**
 
+> **⚠ SUPERSEDED reading (owner, 2026-10-22, `PT-2752`): saves sum per class (§3), they do not take the highest rate.** The three-class cap still stands, and still limits the spread: at most +4 from extra good saves.
+
 > **⚠ THAT IS THE EXPLOIT `PT-722` SAID THE MATHS WOULD PUNISH. ⚠ IT DOES NOT — `PT-159` TAKES THE **BEST** OF EACH, SO BREADTH IS REWARDED, NOT PENALISED.**
 
 **⚠ `PT-722` WAS WRONG ABOUT ITS OWN EVIDENCE, AND THE CAP IS THE FIX.**
@@ -381,6 +393,8 @@
     ⚠ `PT-648`  a character MAY RETURN to a class they have left
     ⚠ `PT-159`  ⚠ SAVES TAKE THE HIGHEST RATE ACROSS ALL CLASSES HELD —
                 ⚠ A FORMULA OVER A SET, NOT A SEQUENCE
+                ⚠ SUPERSEDED for saves (owner, 2026-10-22, `PT-2752`): saves SUM per
+                  class (§3). `PT-159` itself ruled the attack rate and chain count.
 
 **⚠⚠ `PT-159` IS THE TELL. ⚠ A RULE THAT CANNOT DISTINGUISH `Soldier 3 / Scout 2 / Soldier 2` FROM `Soldier 5 / Scout 2` IS A RULE WRITTEN EXPECTING PEOPLE TO MOVE BACK AND FORTH.**
 
@@ -442,6 +456,8 @@
 > **⚠ 3.5 SAYS YES, NOTHING HERE SAID OTHERWISE, AND NOTHING SAID SO EXPLICITLY. IT SAYS SO NOW.**
 
 **⚠ AND `PT-159`'s MULTICLASS RULE ALREADY ASSUMED IT.** **Saves take the HIGHEST RATE and the HIGHEST CHAIN COUNT across all classes held — ⚠ A FORMULA OVER A SET, NOT A SEQUENCE. It cannot tell the difference between `Soldier 3 / Scout 2 / Soldier 2` and `Soldier 5 / Scout 2`.**
+
+> **⚠ SUPERSEDED for saves (owner, 2026-10-22, `PT-2752`): saves sum per class (§3). The highest chain count across classes held stands.**
 
 **⚠ THE PROHIBITION WOULD HAVE NEEDED A MECHANISM AND THERE IS NONE.** **A rule nothing enforces is not a rule.**
 

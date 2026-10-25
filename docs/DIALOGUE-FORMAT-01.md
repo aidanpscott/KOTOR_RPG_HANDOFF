@@ -280,6 +280,9 @@ then   = ["dismissed"]
     character.alignment-shifted permanent
     item.acquired / item.lost   campaign
     character.faction-changed   campaign
+    party.locked / .unlocked    campaign   ⚠ PT-2752, the kind alone
+
+**⚠⚠ `party.locked` / `party.unlocked` — THE PARTY LOCK, `PT-2752`.** A package marks a mission with them (`PARTY-01 §5`): `effect = [ { kind = "party.locked" } ]` at the beat where the party must stay as it is, `party.unlocked` where it may change again. No payload; the last of the two decides.
 
 **This is `RULES-02 §3`'s `on_reveal: set_flags:` generalised** — the same idea, spelled as the ledger vocabulary the rest of the engine already uses.
 

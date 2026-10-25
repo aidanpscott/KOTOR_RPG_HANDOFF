@@ -194,6 +194,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 |---|---|
 | `area.entered` / `.left` | **campaign** ⚠ `PT-1417` — was `session` |
 | `party.joined` / `.left` | campaign |
+| `party.locked` / `.unlocked` | ⚠⚠ campaign — `PT-2752`, the owner's party lock. A package writes them at its story beats (a dialogue reply's or a terminal's `effect`, the kind alone, no payload); the last one in the log decides whether the party may change. `PARTY-01 §5`'s MISSION. A fight locks the party too, but that is read from the fight, never logged. |
 | `party.waiting` / `.following` | ⚠⚠ campaign — `PT-1832`. Standing orders (Wait here / Follow-regroup) did not survive a save until declared: `_persist` keeps only what `campaignKinds` names, and neither kind was in it. Confirmed as the only two undeclared kinds in the build by diffing every `CharacterEventKind` constant against the shelf. |
 | `door.opened` / `.locked` / `.unlocked` | campaign |
 | `container.opened` | campaign |

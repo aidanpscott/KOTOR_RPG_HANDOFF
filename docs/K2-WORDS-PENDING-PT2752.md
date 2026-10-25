@@ -207,6 +207,7 @@ Searched in K2's and K1's `dialog.tlk` for each line and its close variants ("[L
 | Interrupt | not in K2; **K1 44792** "[Interrupt.]" (4 lines) | **"[Interrupt.]"**, in K2's form | ✓ **approved** (replaces "[Cut in]") |
 | The typed reply | none in either game ("Type" appears only as 917 and the spike-bin names) | **"[Type a reply.]"**, in K2's tag form | ✓ **approved** (replaces "say something…") |
 | The reactions left | none in either game ("reaction" is our documents' word: `ATTACKS-01` §10, "The reaction pool") | **"Reactions left: one"** (the count in words) | ✓ **approved** (replaces "costs a reaction — you have …") |
+| Continue | not in either game as a tag: K1 and K2 38623 "Continue" (a button, beside 38624 "Back"); K2 76098/76100/76103/76105 "Continue." (one computer scene's replies, not borrowed); "[Continue the Prologue.]" 118954/130731, "[Continue with Loop.]" 84876 | **"[Continue.]"**, ours (`PT-1578`'s control) in K2's tag form | ✓ **ruled** (MAIN, 2026-10-25, `PT-2752`; replaces "[Continue]", whose wording had no approval) |
 
 ## 17. The store's accept button — K2's words (MAIN, 2026-10-24)
 

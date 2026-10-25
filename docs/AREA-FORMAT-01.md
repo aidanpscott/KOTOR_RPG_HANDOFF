@@ -372,7 +372,7 @@ at   = [12, 4]
 
 **⚠ And `tag` follows `PT-1331`: a tag names ONE placed thing and is never reassigned.** A `role` may be refilled; a tag may not. **The log records tags.**
 
-**A placed thing that is not a creature blocks movement** (MAIN after TEST 179, K2's behaviour). A console, a container, a door panel or any other placeable stands on its square: nobody steps onto it, and the path planner treats it as occupied, as it does a creature. A step into one is refused ("the console is in the way"). A placeable that is still `hidden` does not block until it is found. A creature blocks as a creature always has.
+**A placed thing that is not a creature blocks movement** (MAIN after TEST 179, K2's behaviour). A console, a container, a door panel or any other placeable stands on its square: nobody steps onto it, and the path planner treats it as occupied, as it does a creature. A step into one is refused ("the console is in the way"). A placeable that is still `hidden` does not block until it is found. A creature blocks as a creature always has. **⚠⚠ AND A PLAIN CLICK USES IT — `PT-2752` (owner, 2026-10-25), as in K2:** a click on a usable non-creature (a `terminal`, a `container`, a `fixture`) walks the player beside it and does the first verb its menu lists (a terminal opens, a container opens, a fixture is examined); the right-click menu keeps the other verbs. Stepping INTO one is still refused, as above. A door is a connection, not a placement, and keeps its own rule (`§4`).
 
 ### ⚠⚠ `3a` · `hidden` — an ambush without the machinery, `PT-1550`
 

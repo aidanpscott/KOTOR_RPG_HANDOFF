@@ -374,6 +374,19 @@ at   = [12, 4]
 
 **A placed thing that is not a creature blocks movement** (MAIN after TEST 179, K2's behaviour). A console, a container, a door panel or any other placeable stands on its square: nobody steps onto it, and the path planner treats it as occupied, as it does a creature. A step into one is refused ("the console is in the way"). A placeable that is still `hidden` does not block until it is found. A creature blocks as a creature always has. **⚠⚠ AND A PLAIN CLICK USES IT — `PT-2752` (owner, 2026-10-25), as in K2:** a click on a usable non-creature (a `terminal`, a `container`, a `fixture`) walks the player beside it and does its USE: a terminal's Slice (or Repair), a container's Search (Open Lock first while it is locked), a fixture's Examine; the right-click menu keeps the other verbs. Stepping INTO one is still refused, as above. A door is a connection, not a placement, and keeps its own rule (`§4`).
 
+**⚠⚠ A CONTAINER HOLDS WHAT ITS AUTHOR LISTS — `PT-2752` (MAIN, 2026-10-25, option A), as K2's containers carry an authored item list:**
+
+```toml
+[[contents]]
+tag    = "footlocker.strongroom.02"
+kind   = "container"
+from   = "placeables/footlocker"
+at     = [4, 1]
+holds  = ["items/consumables/medpac", "items/weapons/vibroblade"]   # item blueprint paths, the same shape as a pile's
+```
+
+`holds` is a list of item blueprint paths (`PT-1452`: always a path), meaningful only on a `container`; absent means it holds nothing. **What is left is derived, never written back:** `holds` less every `item.acquired` whose `from` is this container's tag (`PT-1421`, one crossing, one event; the engine may not edit a package, `§4`). A plain click opens it on K2's `container_p`: "Get Items" takes everything, a click on a row (or Enter on the lit one) takes that item, "Close" closes; an empty container shows its empty list with "Get Items" dim and K2's 394 "Container is Empty" under it. Opening costs the interaction once (`ACTION-ECONOMY-01 §5`); taking inside the page is free; outside a fight nothing is charged. `LOOT-01`'s rolled tables are a later feature that fills `holds`.
+
 ### ⚠⚠ `3a` · `hidden` — an ambush without the machinery, `PT-1550`
 
 ```toml

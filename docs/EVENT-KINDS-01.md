@@ -175,7 +175,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 **⚠ `item.*` events exist even though KOTOR gave items zero hooks.** An item that cannot react is an item that cannot be a trap, a cursed blade, or a thing that reacts to being drawn.
 
-**⚠⚠ `item.acquired` HAS A PRODUCER AND A CONSUMER NOW — `PT-1525`.** Looting a dead creature writes one per item, carrying `subject`, `item` (a blueprint path — `PT-1452` makes `[equipment]` a path always), `from` (the pile's placement **tag**) and `area`. `remainsIn` folds it back, and `carriedBy` is what the player reads.
+**⚠⚠ `item.acquired` HAS A PRODUCER AND A CONSUMER NOW — `PT-1525`.** Looting a dead creature writes one per item, carrying `subject`, `item` (a blueprint path — `PT-1452` makes `[equipment]` a path always), `from` (the pile's placement **tag**) and `area`. `remainsIn` folds it back, and `carriedBy` is what the player reads. **⚠ AND A CONTAINER IS THE SAME CROSSING — `PT-2752`:** taking from a container writes the same event with `from` the container's placement tag, and what is left in it is its authored `holds` (`AREA-FORMAT-01 §3`) less those events.
 
 **⚠ `item.lost` still has neither, and that is deliberate rather than forgotten.** Nothing takes an item away yet. A fold for a kind nobody writes is exactly `PT-1523`'s `character.moved` — declared, folded, emitted by nothing, **zero occurrences across seventeen saves** — and `check_event_producers` exists to see that shape. Its first producer will be `DIALOGUE-FORMAT-01 §9`'s effect, and the fold arrives with it.
 

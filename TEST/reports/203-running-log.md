@@ -46,3 +46,6 @@ Typing control: the same 'xdotool type' entered 'reg203' into the save-name box,
 
 ## 8b. Regression (Icon Nine) — PASS
 reg202 loaded; Save > New Slot '40 : reg203' (16:24:36); Escape then F4: one quick.mark (16:24:41); Load lists Auto, Quick, '40 : reg203'; loaded reg203 at the start; a fight to its end (total defeat; my fightbolt.py reads the turn from the retired left panel, so it only ended turns — to be updated). (reg/load-list, reg/start, reg/end)
+
+## Regression redo with the updated run/fightbolt.py (MAIN, after acceptance) — WON
+Turn read from the message box ('<name> is waiting on you' = a companion's manual turn); fight-over from the queue's End Turn disappearing. reg203 loaded, walked in, fight won: three gunmen fall, three piles. (reg/end-redo)

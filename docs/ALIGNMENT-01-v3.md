@@ -229,6 +229,8 @@ A move that is not a tier's (drift's own size) takes the degree of the band it f
 
 **No dark powers used for an entire session and score below 50 → +3, capped at 50. Characters at or above 50 receive nothing.**
 
+**⚠ "50" IS THE CHARACTER's OWN START (MAIN, `PT-2752`, 2026-10-26).** Recovery runs toward where the character began, not toward 50: the player begins at 50, so nothing changes for the player; a companion whose file states `alignment = 35` (`AUTHORED-CHARACTER-01 §2c`) recovers to 35 and stops there, rather than drifting to Neutral by itself.
+
 > **This restriction fixed the system's one blocking defect.** v1 had passive recovery trend toward 50 from both directions, reasoning that a character should not reach Deep Light by doing nothing. The effect was inverted: a disciplined Jedi who never touched a dark power was dragged backward every session, while a curious Jedi who used one dark power per session **disqualified from passive recovery** and kept all their story gains.
 >
 > **Test result: Profile A (never uses dark powers) ended at 54. Profile B (one dark power per session) ended at 72.** A rational player optimizing for light alignment should have used exactly one dark power per session to dodge the pulldown.

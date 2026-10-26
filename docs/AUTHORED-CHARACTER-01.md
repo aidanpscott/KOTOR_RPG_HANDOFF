@@ -82,6 +82,7 @@ class      = "soldier"               # §2 — people take our real classes
 level      = 3
 challenge  = 3                       # ⚠⚠ §2b — what beating it is worth
 faction     = "sith"                 # §2
+alignment   = 50                     # ⚠⚠ §2c — 0-100; absent is 50
 
 [abilities]
 str = 14
@@ -134,6 +135,18 @@ reaction   = [                                  # ⚠ PT-1441 — INLINE, no fil
 **⚠ A NUMBER, AND FRACTIONS ARE LEGAL.** The games express a weak creature as `0.5` and `NWN` ships a whole `fractionalcr.2da` for the halves and thirds. `k2_xptable`'s columns are whole numbers, so **a fractional CR indexes the column below it** — `0.5` reads column `0`, which is the floor row and pays the floor.
 
 **⚠⚠ ABSENT IS NOT ZERO — it is *this creature is worth nothing yet*, and it is said out loud.** A blueprint with no `challenge` awards nothing and the log says so, rather than quietly paying the `CR 0` column. `PT-2233` ruled the field authored; a default would be the derivation the ruling refused, wearing a different hat.
+
+### ⚠⚠ 2c · `alignment` — WHERE A CREATURE STANDS ON THE LIGHT AND DARK. `PT-2752`
+
+> **A whole number from 0 (dark) to 100 (light), on the player's own scale (`ALIGNMENT-01`). Absent means 50.** The validator refuses a value outside 0-100.
+
+**⚠ 50 IS K2's OWN DEFAULT, NOT A GUESS:** 238 of the 284 creature templates in K2's BIFs carry `GoodEvil` 50. The party's own templates carry their own: Atton 50, Bao-Dur 60, the Disciple 62, G0-T0 30, the Handmaiden 62, Hanharr 20, HK-47 20, Kreia 50, Mandalore 30, Mira 55, Visas 35, T3-M4 50.
+
+**What reads it (MAIN, `PT-2752`, sweep item 21):**
+- **A Force power's price** (`ALIGNMENT-01 v3 §1.3`): every caster pays the step its own score sets, as the player does.
+- **A companion's score is this start, moved by its own subject-tagged events**: its own dark-power casts drift it as the player's do, and each drift writes its own Feedback line. `INFLUENCE-01 §4`'s pull waits for the influence system.
+- **An enemy's score is this start, unmoved.**
+- **The companion's sheet shows the same alignment marker as the player's.**
 
 ### ⚠ A CHARACTER BLUEPRINT NAMES ITS SPECIES — `PT-1490`
 

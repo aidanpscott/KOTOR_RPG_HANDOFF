@@ -815,7 +815,7 @@ why this needed stating rather than leaving to whoever next read the line:
 | **Covering Barrage radius** | 10 | **5** | `ATTACKS-04` |
 | **Lockdown splash** | 3 | **1–2** | `ATTACKS-04` |
 | **Draw Closer pull** | 10 | **5** | `ATTACKS-06` |
-| **Pushing Slash push** | 5 | **2–3** | `ATTACKS-06` |
+| **Draw Closer push** | 4 | **2** | `ATTACKS-06` *(corrected at `PT-2752`: the push is Draw Closer's, at the document's 4 metres; Pushing Slash inherits it)* |
 | **Disarmed weapon lands within** | 3 | **1–2** | `ATTACKS-05` |
 | **Grenade travel** | 10 | **5** | `baseitems.2da` |
 
@@ -1096,7 +1096,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 > **At 2 squares the knockback denied nothing at all.** **The target stood, walked back the two squares, and attacked exactly as it would have.**
 
-**Three squares also matches `Force Push`, which pushes 4 metres — and which denied the Dark Jedi two full turns in S4.** **It was the only Force power either Jedi cast in twenty rounds, and the movement denial is why.**
+**`Force Push` pushes 2 squares (4 metres), one fewer than this knockback, and in S4 it still denied the Dark Jedi two full turns.** *(Reason line corrected at `PT-2752`: it said three squares "matches" Force Push; the 3 stands.)* **It was the only Force power either Jedi cast in twenty rounds, and the movement denial is why.**
 
 **⚠ Applies to melee enemies only, and that is a narrow buff by design** — **thirty-one enemy combatants across seven scenarios and three of them were melee.** **Being pushed three squares does not break a rifleman's line of sight or exceed his range.**
 

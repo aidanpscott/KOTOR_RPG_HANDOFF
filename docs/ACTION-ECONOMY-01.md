@@ -436,6 +436,8 @@
 
 **Nothing. They lose ⚠ 1 VITALITY per round until stabilised — `PT-559`.** **A Medicine check by an ally stops the bleed.**
 
+**⚠ WHEN THE FIRST POINT GOES — `PT-2752` (MAIN, 2026-10-25, after TEST 204).** The loss is for a round spent dying: a character who was dying when a round began loses 1 at that round's end; a character who falls during a round loses nothing at that round's end and loses the first point at the end of the next. A creature felled by a round's last blow has spent no round dying. *(This refines, and does not overturn, the order approved at `PT-2041`: at a boundary a tick, such as a poison, still lands before the dying countdown is judged, for anyone already dying.)*
+
 ---
 
 # 7. Two weapons

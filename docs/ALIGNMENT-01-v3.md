@@ -195,11 +195,11 @@ Without it, dark power use generates constant downward pressure that light story
 | **4** | Heroic act forgoing its reward | Murder, torture | ±8 |
 | **5** | Dramatic heroism | Atrocity against many | ±15 |
 
-> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. A package may override with a raw number for a genuinely special moment, but the tier is the default.
+> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. A package may override with a raw number for a genuinely special moment, but the tier is the default. ***Not supported in the app (`PT-2752`): a conversation's shift names a tier and a side, and Lodestar refuses one without a tier; the raw-number override is on CODING-AGENDA-01's OPEN list.***
 
 **Tier 5 moves a full band in one act** — the Vader moment in either direction. Rare, GM-judged.
 
-**Magnitudes are scaled from KOTOR's dialogue practice.** The specific values are not extractable (they live in compiled dialogue scripts, not tables), so these are authored against the observed shape.
+**Magnitudes are scaled from KOTOR's dialogue practice.** The sizes are extractable after all (`PT-2752`, CODER's research, 2026-10-25): K2's shipped script source `k_inc_utility.nss` (`UT_AdjustCharacterAlignment`, lines 885–975; K1 the same) moves the score by |(category + scale) × 2|, raised to 1 when it is 0, over five position categories (≥85, 61–84, 40–60, 15–39, <15): small 2, medium 4, high 6 at neutral, **1 to 10** across positions. The direct grants (`a_givelight`/`a_givedark`) are almost always 1 point (187 and 146 of K2's 973 dialogues). Our tiers 1–4 (±1/2/4/8) sit inside that range; tier 5 (±15) is beyond any single K2 call, which fits its "rare, GM-judged" use.
 
 **What the player sees — `PT-2752` (the owner, 2026-10-25).** Every move of the score, a story shift, a night's meditation or a dark power's drift, writes one line to Messages ▸ Feedback in K2's own words, with no number: 1471 *"You have moved ‹degree› ‹side›."* The side is 41924 *"the light side of the Force"* or 41925 *"the Dark Side of the Force"*. The degree is K2's word and the cut-off ours, by tier:
 

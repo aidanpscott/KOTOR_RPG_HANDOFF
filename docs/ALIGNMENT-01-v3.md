@@ -201,6 +201,16 @@ Without it, dark power use generates constant downward pressure that light story
 
 **Magnitudes are scaled from KOTOR's dialogue practice.** The specific values are not extractable (they live in compiled dialogue scripts, not tables), so these are authored against the observed shape.
 
+**What the player sees — `PT-2752` (the owner, 2026-10-25).** Every move of the score, a story shift, a night's meditation or a dark power's drift, writes one line to Messages ▸ Feedback in K2's own words, with no number: 1471 *"You have moved ‹degree› ‹side›."* The side is 41924 *"the light side of the Force"* or 41925 *"the Dark Side of the Force"*. The degree is K2's word and the cut-off ours, by tier:
+
+| Tier | Shift | Degree |
+|---|---|---|
+| 1–2 | ±1–2 | 41923 *"closer to"* |
+| 3–4 | ±4–8 | 41922 *"much closer to"* |
+| 5 | ±15 | 41921 *"a great deal closer to"* |
+
+A move that is not a tier's (drift's own size) takes the degree of the band it falls in: up to 2 *"closer to"*, up to 8 *"much closer to"*, beyond that *"a great deal closer to"*. No HUD icon, no Status Summary and no sound, by standing rulings.
+
 ### 2.5 Meditation
 
 **Eight hours of meditation** restores the Force pool and the true maximum in full, and additionally moves the character **1 point toward their chosen side.** **⚠ Was *"long rest"* — `REST-AND-MEDITATION-01` defines the unit as eight hours of meditation and states RCR has no long rest. `PT-482`.**

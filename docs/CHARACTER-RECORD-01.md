@@ -96,7 +96,8 @@
   ],
 
   "powers": [
-    { "id": "force_push", "at_level": 1 }
+    { "id": "force_push", "at_level": 1 },
+    { "id": "force_sight", "source": "taught", "at_level": 1 }
   ],
 
   "forms": [

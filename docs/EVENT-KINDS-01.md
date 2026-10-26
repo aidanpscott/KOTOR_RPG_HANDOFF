@@ -71,7 +71,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `character.ability-set` | permanent |
 | `character.skill-ranked` | permanent |
 | `character.feat-taken` | permanent |
-| `character.power-taken` | permanent |
+| `character.power-taken` | permanent — ⚠ `PT-2752`: a power held by a level's pick carries `id` and `at_level`; one given by the story, a teacher or a species trait carries `source` (`taught` or `story`) too, written only by Lodestar's `grantPower` (a conversation's authored grant names `id` and `source`, and the app fills the level). |
 | `character.form-taken` | permanent |
 | `character.attack-taken` | permanent |
 | `character.skill-points-saved` | permanent |
@@ -118,7 +118,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | `character.dying` | **transient — *until the encounter ends*** ⚠ `PT-1618` — newly declared |
 | `character.condition-applied` / `.condition-expired` | transient — *until its own duration* |
 | `character.moved` | **campaign** ⚠ `PT-1417` — was `session` |
-| `character.alignment-shifted` | **permanent** — `PT-1279`, alignment history is not compactable |
+| `character.alignment-shifted` | **permanent** — `PT-1279`, alignment history is not compactable. ⚠ `PT-2752`: an author may write it as a conversation effect, `tier` (1–5, `ALIGNMENT-01 §2.4`) and `side` (`light`/`dark`), the shape `storyShift` builds; Messages shows every move of the score in K2's words. |
 | `character.side-chosen` | **permanent** — `PT-2433`, and see below |
 | `character.faction-changed` | campaign |
 
@@ -193,7 +193,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 | Kind | Lifetime |
 |---|---|
 | `area.entered` / `.left` | **campaign** ⚠ `PT-1417` — was `session` |
-| `party.joined` / `.left` | campaign |
+| `party.joined` / `.left` | campaign — ⚠ `PT-2752`: a join carries `subject`, `from` and `role` (`companion` for a person who joins); ⚠ `fielded = false` when there was no room, so the newcomer waits on the roster (`rosterIn`, not `partyIn`) and is not dismissed (`dismissedIn`). An author never writes `fielded`: the party's own count decides (`PARTY-01 §1`). |
 | `party.locked` / `.unlocked` | ⚠⚠ campaign — `PT-2752`, the owner's party lock. A package writes them at its story beats (a dialogue reply's or a terminal's `effect`, the kind alone, no payload); the last one in the log decides whether the party may change. `PARTY-01 §5`'s MISSION. A fight locks the party too, but that is read from the fight, never logged. |
 | `party.waiting` / `.following` | ⚠⚠ campaign — `PT-1832`. Standing orders (Wait here / Follow-regroup) did not survive a save until declared: `_persist` keeps only what `campaignKinds` names, and neither kind was in it. Confirmed as the only two undeclared kinds in the build by diffing every `CharacterEventKind` constant against the shelf. |
 | `door.opened` / `.locked` / `.unlocked` | campaign |

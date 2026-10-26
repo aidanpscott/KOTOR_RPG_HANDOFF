@@ -473,6 +473,10 @@ resref is what says what a thing is.
 
 ---
 
+### 5.6 Defence against an alignment group — the third source (MAIN, `PT-2752`, 2026-10-26)
+
+**`ArmorAlignmentGroup (<group>) N` is +N Defence against an attacker in that group, and against nobody else.** One item carries it: Nomi's Armband, `+1 vs. Dark Side`. The group is the bands' own line (`PROPERTY-VOCAB-01 §7a`), read from the ATTACKER's own score at the moment it attacks; it is never part of the Defence the sheet shows.
+
 ## 6. Ability score generation — the blocker is closed
 
 > ***"At character generation each of the six physical attributes is at 8, with 30 points to invest in them. Any attribute can be increased to a maximum of 18 at this time, but beyond 14 there are increased point costs."***

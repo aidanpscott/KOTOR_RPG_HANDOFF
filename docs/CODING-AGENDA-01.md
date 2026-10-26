@@ -273,7 +273,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ### Standing, low-priority
 - **21 orphaned upgrade components under `PT-2184`** — 18 K1 lightsaber crystals and 3 K1 weapon parts, standing ruling (K2 is the standard). Confirmed correct, stays unplaced.
-- **16 alignment-conditional damage terms** — needs target-alignment tracking that doesn't exist.
+- **✓ BUILT (MAIN, `PT-2752`, 2026-10-26): the 16 alignment-conditional damage terms read the TARGET's score (Bastila's saber folded as `vs dark-side`; the crystals as stat rows, qcrystal 5-8 two separate properties both applying, 9 one written twice counting once), Nomi's Armband +1 Defence against a dark-side ATTACKER, and the alignment equip gate (`PT-2342`, unheld) against the wearer's own score; one reader, `alignmentGroupOf`.** **16 alignment-conditional damage terms** — needs target-alignment tracking that doesn't exist.
 - **"Bonus" mechanic granted by nothing — small, held.** Nothing anywhere in the product grants a Bonus, making `slowed`'s "Bonus lost" and `cowering`'s "Bonus kept" currently unfalsifiable. Not a defect in the condition work; a pre-existing absence elsewhere.
 
 ---

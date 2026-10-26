@@ -262,6 +262,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 - **Personal Crystal (45 items)** — own small future item, variant selection not an equip-gate.
 
 ### Held, deliberately, with real reasons
+- **A companion's file kit: the feat half of its gates — held beside `PT-2524` (MAIN, `PT-2752`, ruling 3 option (a)).** Her file kit is gated by her file's alignment and abilities (TEST 213). Her feat gates and `§12`'s `requires_feat` are not asked: a companion's feats are not authorable yet, and only the player has an equipment record (`PT-2524`, as play_screen.dart's comment states it where Equip-from-portrait landed). Build when companion feats are authorable.
 - **`heal`'s silence on fallen allies — small, held.** Neither its row nor its prose says whether it may target a fallen ally. Correctly not guessed at during the ally-power targeting sweep (`PT-2379`). Doesn't block anything.
 - **Force Camouflage's deactivation affordance — general mechanism still genuinely absent, but no longer blocking Camouflage itself.** `§4.2`'s ten-round bound now reaches the table, closing Camouflage's own need for it. A real, standing toggle/sustained-state mechanism still doesn't exist anywhere in the product; any future power stating "until deactivated" still meets this same gap.
 - **Dark Fury's kill-driven ramping bonus** — a third distinct "ramp clock" shape, held deliberately per `PT-2189`'s reasoning against building new infrastructure for one power.

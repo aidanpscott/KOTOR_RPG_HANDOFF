@@ -445,7 +445,7 @@ you.**
 
 **`stunned` — you cannot act.**
 
-- **You lose your Action and your Bonus for the round.** ⚠ Same note as `slowed` on the Bonus: `§2` grants one only for a self-directed Force power.
+- **You lose your Action, your Bonus and your Gear for the round.** *(Gear added 2026-10-26: the owner, `PT-2752`, with `ACTION-ECONOMY-01 §19.1`.)* ⚠ Same note as `slowed` on the Bonus: `§2` grants one only for a self-directed Force power.
 - **You keep your Move.** ⚠ **OWNER-RULED SHAPE, AND IT IS THE POINT OF THE LADDER:** `stunned` takes what you DO and leaves you able to get out of the way. A condition that took everything is `helpless`, which is two rungs further on.
 - **You lose your Dexterity bonus to Defence**, and attacks against you are made as against a `flat-footed` target.
 - ~~**You keep your Reaction pool.**~~ *(corrected 2026-10-14: **you take no reactions while stunned** — `PT-848`, which sides with ACTION-ECONOMY-01 §19.1. The pool is not spent; it cannot be used until the stun ends.)*

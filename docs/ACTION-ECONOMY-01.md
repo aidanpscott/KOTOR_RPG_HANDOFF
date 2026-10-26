@@ -979,7 +979,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 ## 19.1 Stunned
 
-> **A stunned character loses their full turn** — no Action, no Bonus, no Gear, no movement.
+> **A stunned character loses their Action, their Bonus and their Gear, and keeps their Move.** *(Corrected 2026-10-26: this read "loses their full turn — no Action, no Bonus, no Gear, no movement", against `RULES-01-v2 §7`. The owner ruled for `PT-2167` under `PT-2752`: the Move is kept, so a stunned creature can still get out of the way.)*
 >
 > **They may not use reactions while stunned.**
 >

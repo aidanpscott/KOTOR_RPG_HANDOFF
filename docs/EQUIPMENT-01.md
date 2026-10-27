@@ -1602,7 +1602,7 @@ character in the product from the items carrying them.
        118 bay gate (Droid Upgrade 1·2·3) · 55 attack chain · 44 other
     alignment    73 /  54     both games        ⚠ 57 of them are §17.5
     character    63 /  61     ⚠ K2 only         46 `Player` · 17 named
-    attribute    42 /  42     ⚠ K2 only         ALL implants, ALL Constitution
+    attribute    42 /  42     ⚠ K2 only         ALL implants, ALL Constitution   ⚠ NOT READ for a tiered implant — §17.4, owner 2026-10-26
     class         5 /   3     property in both, used only by K2 items
     gender        1 /   1     ⚠ K2 only
 
@@ -1619,33 +1619,32 @@ that it is still true.
 **⚠ AND TWO ALIGNMENT GROUPS THE GAMES DEFINE ARE USED BY NOTHING** — `100%
 Dark` and `100% Light`. Measured absence, not an assumption.
 
-### 17.4 ⚠⚠ Implants carry TWO real gates, and both apply — RULED, `PT-2342`
+### 17.4 ⚠⚠⚠ Implants are gated by the Cybernetic Implantation feat ONLY — OWNER RULING, 2026-10-26 (`PT-2752`)
 
-**`§14`'s implant rows are gated by a feat chain** — *Cybernetic Implantation
-allows level 1, Advanced allows 1-2, Master allows 1-3* — **and the K2
-catalogue gates the same items by Constitution:**
+> **⚠⚠⚠ OWNER RULING via MAIN, 2026-10-26 (`PT-2752`):** *"We use the Cybernetic Implantation feats in place of K2's Constitution system, so
+> no implant requires a Constitution score, whether to equip it or for its effects to work. The feat gate (the Cybernetic Implantation tier the
+> implant needs) is the only gate."* **This supersedes `PT-2342`'s "both apply" for implants.**
 
-    implant-1 → CON ≥ 12        implant-3 → CON ≥ 16 **or** 18
-    implant-2 → CON ≥ 14
+**`§14`'s implant rows are gated by the feat chain alone** (`FEATS-LIBRARY-01`): *Cybernetic Implantation allows level 1, Advanced allows
+1-2, Master allows 1-3.* Each implant's tier is its base type: `implant-1`, `implant-2`, `implant-3`.
 
-> **⚠⚠ RULED: both apply.** *"This isn't two answers to one question competing
-> for the win; it's two real constraints that happen to overlap on the same
-> items."* A character needs the correct feat tier **and** the Constitution
-> score — `§17.2`'s `AND` across categories, applied consistently.
+**One rule for K1 and K2.** K2's catalogue gates its 40 implants by Constitution (`UseLimitationAttribute`: 12 / 14 / 16 or 18) and prints
+*"Minimum Constitution: N"* in the item pane; K1's 22 carry none. **Neither is read: the generator (`gen_base_rules.py`,
+`_drop_implant_constitution`) drops the Constitution gate, the pane line and the property from every implant with a tier.** `ITEMS-05`
+keeps K2's raw property list as the record of what the game carries. **A Constitution BONUS (Cardio Package and the like) is an effect, not a
+gate, and stays.**
 
-> **⚠⚠ `PT-2731` (owner, option A) — HOW IT SHOWS IN EQUIP.** **K2's own data gates an implant by Constitution ONLY** *(Mental Boost Package: Minimum Constitution 12, tiers 14/16/18; no feat — read from `e_imp1_10` and the pane K2 prints)*; **the feat chain is ours, from `PT-2342`, and stays.** **Equip enforces both the K2 way: a character who does not qualify sees the implant red-orange in the list and gets K2's can't-use box if they try** *("You cannot equip this item. You don't have the prerequisites. Please see the item description.")*. **An implant already worn by a character who does not qualify (an old save, a modded record) stays worn, and the sheet says so in plain English** *("Mental Boost Package has no effect: it needs the Cybernetic Implantation, Advanced Cybernetic Implantation or Master Cybernetic Implantation feat.")*.
+> **⚠⚠ `PT-2731` (owner, option A) — HOW IT SHOWS IN EQUIP, UNCHANGED BUT FOR THE GATE.** **A character without the tier sees the implant
+> red-orange in the list and gets K2's can't-use box if they try** *("You cannot equip this item. You don't have the prerequisites. Please see
+> the item description.")*, with our reason under it. **An implant already worn without the tier stays worn, and the sheet says so in plain
+> English.**
 
-**⚠⚠ THEY ARE NOT REDUNDANT AND THE PROOF IS STRUCTURAL: the feat chain has
-three tiers and cannot express `implant-3`'s split into 16 and 18.** The CON
-gate, in turn, says nothing at all about feat prerequisites.
+> **⚠ A COMPANION'S FILE KIT (`PT-2752`, ruling 3 option (a)) asks no feat yet** (held beside `PT-2524`), so with Constitution gone a
+> companion's file implant is worn ungated until companion feats are authorable.
 
-**⚠⚠⚠ AND THE 22 K1 IMPLANTS STAY UNGATED, FAITHFULLY — `PT-2342`.** All 40 K2
-implants carry a CON gate and **not one K1 implant does, because the property
-does not exist in K1's engine.** This is not `PT-2184`'s shape, where K2 is the
-later and more complete standard for a mechanism both games have; it is the
-same structural absence already honoured for the shields' K1 Repair-duration
-term. **Each game gets its own real capability rather than K2's mechanism
-imported onto an engine that cannot carry it.**
+> **⚠ HELD FOR A RULING: the five AUTHORED implants** (`ITEMS-05`: Clarity, Motor, Presence, Fortitude and Will Package) carry no base type,
+> so no tier. Fortitude and Will Package still carry a Constitution 12 gate; all five carry no feat gate. Left as they are until MAIN rules
+> their tier.
 
 ### 17.5 ⚠⚠ Two things this section deliberately does NOT cover
 

@@ -1051,7 +1051,14 @@ why this needed stating rather than leaving to whoever next read the line:
 >
 > **You are Hidden from them** — a successful Stealth check, and you have not revealed yourself.
 > **They are Stunned.**
+> **They are Paralysed** — anything that applies `paralysed`, K2's *"otherwise immobilized"*. *Owner, 2026-10-29 (`PT-2752`).*
 > **They are blinded or otherwise cannot see.**
+>
+> **A Precognition holder is never unaware** (`FEATS-LIBRARY-01`).
+
+> **⚠⚠ THE EXTRA DICE ARE NOT MULTIPLIED ON A CRITICAL** — MAIN, 2026-10-29 (`PT-2752`): precision damage, as in K2 (*"The extra damage is
+> not multiplied in the case of a critical hit"*, `feat.2da` row 60) and the d20 rule. **Killer's Instinct, Sneak Attack and Stealthy Shot all
+> add their dice once.** Built: Lodestar's `unawareOf` is the one reader and `DamageRider` the unmultiplied dice.
 
 **Attacking reveals you**, so it fires once per approach unless you hide again.
 

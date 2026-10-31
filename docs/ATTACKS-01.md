@@ -47,6 +47,19 @@
 
 **Dual Strike is the exception and it is a different mechanic** — two swings with one weapon, or one swing with damage rolled twice.
 
+### 2.0 How the app carries a declaration — MAIN, `PT-2752` (9), 2026-10-31
+
+**The declaration is made each turn and lasts that turn.** **With none made, the attack is Strike or Shoot.** **When the turn ends it goes back to Strike or Shoot.**
+
+- **What can be declared:** the built tiers the character holds that can be used with the weapon in hand. The melee chains need a blade, a fist or a lightsaber, and the ranged chains a gun. They are listed in K2's first action column.
+- **Unbuilt chains are not listed.** The built tiers are the Power chain and the Stealth chains' dice.
+- **What it feeds:** every swing of the turn, main hand and off hand alike, and the hover preview. The combat line names it (*"Power Attack · …"*).
+- **Enemies do not declare.**
+- **Dice:** a turn with nothing declared draws no new dice.
+- **The Power chain:** Attack −3 on every swing, and its dice on the first swing that hits, multiplied on a critical. A melee target then saves Reflex (DC 10 + level + Strength modifier, a save against knockdown) or is knocked back 3 squares and falls prone. A ranged target is not knocked back.
+- **The Stealth chains:** declarable whenever held. Their dice land only if the first swing hits a target unaware of the swinger. They are never multiplied and stack with Killer's Instinct. Against an aware target the declaration plays as a plain Strike or Shoot.
+- **Held on the agenda:** the tier extras (Improved Sneak Attack's re-hide, Master Sneak Attack's threat, Marked Shot, Unheralded's stun).
+
 ### 2.1 This is the source's own rule
 
 **Every active entry in both games says so:** *"Attack penalty applies to every attack in a combat round."* **You click Flurry once and the round is a Flurry round.**

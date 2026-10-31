@@ -549,7 +549,7 @@ why this needed stating rather than leaving to whoever next read the line:
 | **Sweep Attack · Staggering Shot** | One knockdown, one stagger. |
 | **Covering Fire · Guarding Stance** | Neither deals damage. |
 | **Parry · Snap Shot · Overwatch** | **Reactions.** They come from the pool, and the pool is not per hand. |
-| **Sneak Attack** *(now a feat)* | **The dice attach to the first attack of your declaration, once.** |
+| **Sneak Attack** *(an attack chain, `PT-193`, `PT-198`)* | **The dice attach to the first attack of your declaration, once.** |
 | **The Spread chains** — Cleave · Spray · Sarlacc Sweep | **A sweep is one motion.** **Every attack is made with the primary weapon.** |
 | **Rancor's Reach · Sustained and Total Overwatch** | Same — **primary only.** |
 
@@ -621,7 +621,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **`Killer's Instinct` fires on an unaware target — one that cannot see you.** **A flanked enemy sees you perfectly well; it simply cannot watch both of you.**
 
-**And flanking does not enable the `Sneak Attack` chain.** **That chain is gated on Stealth 5 / 10 / 15 and triggered by attacking from concealment.**
+**And flanking does not enable the `Sneak Attack` chain.** **That chain is gated on Stealth 6 / 12 / 18 (`PT-197`), and its dice land only on a target unaware of you (`§19.5`).**
 
 > **3.5 lets flanking enable a rogue's sneak attack, and that is exactly the coupling the research warns about.** **Our three triggers stay distinct: `from Stealth`, `unaware`, and `has not yet acted`.** **Flanking is a fourth thing and it is worth +2.**
 

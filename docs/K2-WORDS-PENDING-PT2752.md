@@ -215,3 +215,14 @@ Searched in K2's and K1's `dialog.tlk` for each line and its close variants ("[L
 |---|---|---|
 | Accept, buying | `store_p` gives `BTN_Accept` the title's 32132 "Buying Items"; K2's running screen sets **125552 "Buy Item"** (capture run `03a`) | "Buy Item" |
 | Accept, selling | the same file string; K2's **125553 "Sell Item"** | "Sell Item" |
+
+## 18. Force Stasis and Stasis Field: "instead of paralysed" — OUR WORDING OVER K2's (owner, 2026-10-30, `PT-2752`)
+
+The owner ruled that both powers apply `paralysed` (2026-10-29). K2's descriptions still said the made save leaves the target slowed "instead of stunned", so the owner changed that one word so the text matches the rule. The rest of each description stays K2's own words.
+
+| Power | K2's StrRef | K2's words | Shipped |
+|---|---|---|---|
+| Force Stasis | 1229 | "…means the target is slowed for the duration instead of stunned." | "…means the target is slowed for the duration instead of paralysed." |
+| Force Stasis Field | 1243 | "…means the targets are slowed instead of stunned." | "…means the targets are slowed instead of paralysed." |
+
+The text lives in `force/FORCE-POWERS-01.md`'s two rows and reaches the Shelf through `extract_powers.py`.

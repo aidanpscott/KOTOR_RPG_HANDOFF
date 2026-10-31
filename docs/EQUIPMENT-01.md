@@ -434,9 +434,34 @@ property is what selects one: **a `Padawan Robe` is `Armor 1` and so is a `Jedi
 Robe`** — the same row, and calling that row *Jedi Robe* would make a Padawan's
 robe a Jedi's. `§5.1`'s classes are named by their number for the same reason.
 
-**⚠ AND THE CATALOGUE CONFIRMS THE LADDER EXACTLY.** Forty-two robes carry
+**⚠ AND THE CATALOGUE CONFIRMS THE LADDER.** Forty-two robes; forty-one carry
 `Armor` **1 · 2 · 3 · 5** — thirteen, twelve, thirteen and three of them — and
-**no other value appears.** `§5.2`'s four numbers are the whole set.
+**no other value appears.** `§5.2`'s four numbers are the whole set. The
+forty-second, the `Matukai Apprentice Robe`, carries no `Armor` at all, and is
+`Clothing` (MAIN, `PT-2752`): K2 gives it Defence 0, and no rule reads a robe
+better than clothing.
+
+**⚠⚠ THE GRADE IS THE ROBE's `Armor`, NOT ITS `baseitems.2da` ROW — MAIN,
+`PT-2752`, 2026-10-31.** Every robe row has `baseac` 0 in both games, so a
+robe's whole Defence is its own `Armor` property. `§14` names the rows a robe
+sits on; thirteen robes sit on a row whose grade is not their `Armor`
+(`Crado's Robe` is a `Jedi_Master_Robe` with `Armor 2`, and is `Robe 2`).
+`extract_item_base_types` grades each robe by its `Armor`.
+
+**⚠⚠ AND ITS WEAR GATE STAYS WITH ITS ROW — MAIN, `PT-2752`, 2026-10-31.**
+**A robe's Defence is its `Armor`; the feat it needs to wear is the row it sits
+on, in its own game.** K2 asks `Jedi Defense` of `Jedi_Robe` and
+`Jedi_Master_Robe` and not of `Jedi_Knight_Robe` or `Revan_Armor`; K1 asks it
+of all three Jedi rows. So each robe carries its own gate (`feats_required` on
+the item), and Equip asks the item's before its base type's: `Crado's Robe`
+is `Robe 2` and needs `Jedi Defense` (a `Jedi_Master_Robe`), `Handmaiden's
+Robe` is `Robe 3` and needs nothing (a `Jedi_Knight_Robe`), and the `Matukai
+Apprentice Robe` is `Clothing` and needs `Jedi Defense`, Defence 0.
+
+**⚠ FEAT GATES ARE ENFORCED AT EQUIP ONLY, AS IN K2 — MAIN, `PT-2752`,
+2026-10-31.** K2 refuses an item whose feat its wearer lacks when it is
+equipped, and so do we; the worn read does not re-ask the feat, for robes and
+armour proficiencies alike.
 
 > **⚠⚠ `Clothing` IS `+0`, RULED.** Nothing in either game or this corpus states
 > a Defence for ordinary clothes; `0` is what wearing them means. **It is the
@@ -1329,10 +1354,10 @@ they are — and not by matching text.
 | armour-class-8 | Armour Class 8 | Armour | `Armor_Class_8` |  |
 | armour-class-9 | Armour Class 9 | Armour | `Armor_Class_9` |  |
 | zeison-sha | Zeison Sha | Armour | `Armor_Zeison_Sha` | §5.1's NAMED EXCEPTION — baseac 3 / dexbonus 4 sums to SEVEN, not nine. The rule names its own population (rows 38-43) and this row sits outside it. Same shape as §9a's Kyber Dart: named as the exception AND fully carried. |
-| robe-1 | Robe 1 | Robes | `Jedi_Robe` |  |
-| robe-2 | Robe 2 | Robes | `Jedi_Knight_Robe` |  |
-| robe-3 | Robe 3 | Robes | `Jedi_Master_Robe` |  |
-| robe-5 | Robe 5 | Robes | `Revan_Armor` |  |
+| robe-1 | Robe 1 | Robes | `Jedi_Robe` | A ROBE ROW, NOT A GRADE: a robe on any of the four rows takes the grade its own `Armor` names (`§5.2`, `PT-2752`). |
+| robe-2 | Robe 2 | Robes | `Jedi_Knight_Robe` | A ROBE ROW, NOT A GRADE: a robe on any of the four rows takes the grade its own `Armor` names (`§5.2`, `PT-2752`). |
+| robe-3 | Robe 3 | Robes | `Jedi_Master_Robe` | A ROBE ROW, NOT A GRADE: a robe on any of the four rows takes the grade its own `Armor` names (`§5.2`, `PT-2752`). |
+| robe-5 | Robe 5 | Robes | `Revan_Armor` | A ROBE ROW, NOT A GRADE: a robe on any of the four rows takes the grade its own `Armor` names (`§5.2`, `PT-2752`). |
 | clothing | Clothing | Robes | `Basic_Clothing` · `Slave_Outfit` |  |
 | medpac | Medpac | Consumables | `Medical_Equipment` · `Squad_Recovery_kit` |  |
 | adrenal | Adrenal | Consumables | `Adrenaline` · `Combat_Shots` |  |

@@ -24,7 +24,7 @@ Written for: Main and Coder. Real game, my Xvfb `:2`, my data dir, no K2 and no 
 
 Seen, not filed:
 - Armor Jedi's own Defense line under the reactions reads "Defense base 10 + Dexterity 1 + class 6 + power 6 = 23": the generic "power", not "Force Armor" (and not "force_armor"). The enemy's line names it.
-- Twin One's critical-strike damage on the off hand reads "Strength 1" against "Strength 3" on the attack: the off hand's half Strength (ruled earlier).
+- Twin One's critical-strike damage on the off hand reads "Strength 1" against "Strength 3" on the attack: probably the off hand's half Strength; one sample.
 
 KNOWN, not filed: enemies don't start fights on sight; Hide outside a fight; talking hostiles at range; the non-Jedi and Sith Acolyte robes; "if_ at all.".
 

@@ -458,7 +458,7 @@ say = "Don't push him. He is looking for a reason."
 - **⚠ No cross-conversation link.** `then` and `replies` name ids **in this file only**. A conversation cannot hand off to another. **Theirs cannot either** — a `.dlg` is closed — so this is inherited rather than chosen, and it is the first thing a large package will ask for.
 - **Nothing about who is PRESENT.** `by` names a tag; whether that tag is in the area is not the file's business and no rule says what happens when it is not. **`PACKAGE-FORMAT-01 §6a` distinguishes a missing asset from a missing dependency and does not cover this case.**
 - **`pinned` is per line, not per character.** `§4b` says *"pinned inverts from exception to default for canonical characters"* — **the file cannot say that.** It is a blueprint property and the blueprint has no field for it.
-- **No XP.** `PlotXPPercentage` is on their nodes; **whether a conversation awards XP in our design is not ruled anywhere I could find.**
+- ~~**No XP.**~~ **⚠⚠ RULED — a conversation awards XP (MAIN, `PT-2752` (36), 2026-10-31, from the owner's forced-level-2 ruling for the opening):** a node's `effect = [ { kind = "character.xp-awarded", subject = "you", amount = 1000 } ]` awards it, as K1's `end_levelup` does before the Endar Spire's bridge (`k_pend_xpboost`, SetXP 1000). *(It read: "`PlotXPPercentage` is on their nodes; whether a conversation awards XP in our design is not ruled anywhere I could find.")*
 - **⚠ A BLANK ROUTING NODE THAT SITS UNDER A LINE ALREADY OFFERING REAL REPLIES.** Folding a real `.dlg` measures what has no home here, and after `PT-1434` **there is one shape left and it is 0.5%:**
 
     ```

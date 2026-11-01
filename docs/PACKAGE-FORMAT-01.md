@@ -206,6 +206,20 @@ area        = "a01-endar-spire"
 
 **This is the same refusal as need A**, where `Continue` could not know which save was latest and **the answer was not to let the app guess from `mtime`.** Here the app may guess, because **which tile sorts first is not a fact about the package.**
 
+### ⚠⚠ `shelf = "test"` — a GROUPING, not a sort, MAIN, `PT-2752` (36), 2026-10-31
+
+```toml
+[package]
+shelf = "test"     # listed under the test beds, below the stories
+```
+
+**The library lists `shelf = "test"` packages under their own heading, below every story. Within each group the order is the name's, as before.** It changes WHICH GROUP a tile is in, never where in its group it falls, so the rule above (no sort field, nothing temporal) stands.
+
+- **`"test"` is its one value;** absent is a story. Anything else is refused by name.
+- **Marked `"test"`:** `endar-spire` (the two-area test bed), every `tester-*` package, the eighteen other beds (their own summaries say what they check) and `taris-undercity` (MAIN, `PT-2752` (36) Q3). The opening, *Endar Spire — The Opening*, is then the first story tile.
+- **A package with no areas is not listed at all** (MAIN, `PT-2752` (36) Q3): nothing in it can be played. `base-rules` is the one on the Shelf: the rules every package is played by. It is still a package, still required, still read; it is only not a tile.
+- **The heading's word is the owner's:** "Test beds" (`PT-2752` (36), approved).
+
 ### For the Builder
 
 **⚠ CLOSED at `PT-1383` — DEFERRED, not defaulted.** `§4·1` offered either. **Defaulting was available and is dishonest:** the OS account name for `authors` **attributes a credit to someone who did not claim it**, and the package name repeated as `summary` **tells a browser nothing while looking answered.** Both **write a claim the author never made.**

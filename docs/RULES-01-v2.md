@@ -593,6 +593,7 @@ Lifecycle: `created → active → (suppressed ⇄ active) → expired | dispell
 
 - State is **derived by replay** of an append-only event log. State is never the primary artifact.
 - Every event records the **RNG seed and draw index**. Replay is bit-identical.
+- **⚠ RELOADING REPLAYS THE SAME DICE, BY DESIGN (the owner, `PT-2752`, 2026-11-01).** The seed and draw index resume from the save, so a fight reloaded from the same save rolls the same dice again. *"Reloading replays the same dice: intended, as built. The seed resumes from the save."*
 - Every event carries a **visibility set**. Per-player state is the replay filtered to events that player can see. Single-player is the degenerate case where the viewer sees everything.
 - **No code path reads global state directly** — enforced by §1.1, not by discipline.
 

@@ -52,13 +52,17 @@
 **The declaration is made each turn and lasts that turn.** **With none made, the attack is Strike or Shoot.** **When the turn ends it goes back to Strike or Shoot.**
 
 - **What can be declared:** the built tiers the character holds that can be used with the weapon in hand. The melee chains need a blade, a fist or a lightsaber, and the ranged chains a gun. They are listed in K2's first action column.
-- **Unbuilt chains are not listed.** The built tiers are the Power chain and the Stealth chains' dice.
+- **Unbuilt chains are not listed.** The built tiers are the Power chain, the Stealth chains' dice, and tier 1 of Flurry, Rapid Fire, Critical Strike, Precise Shot and Charged Shot *(MAIN, `PT-2752`, 2026-11-01)*.
 - **What it feeds:** every swing of the turn, main hand and off hand alike, and the hover preview. The combat line names it (*"Power Attack · …"*).
 - **Enemies do not declare.**
 - **Dice:** a turn with nothing declared draws no new dice.
 - **The Power chain:** Attack −3 on every swing, and its dice on the first swing that hits, multiplied on a critical. A melee target then saves Reflex (DC 10 + level + Strength modifier, a save against knockdown) or is knocked back 3 squares and falls prone. A ranged target is not knocked back.
 - **The Stealth chains:** declarable whenever held. Their dice land only if the first swing hits a target unaware of the swinger. They are never multiplied and stack with Killer's Instinct. Against an aware target the declaration plays as a plain Strike or Shoot.
-- **Held on the agenda:** the tier extras (Improved Sneak Attack's re-hide, Master Sneak Attack's threat, Marked Shot, Unheralded's stun).
+- **The Velocity chains (Flurry, Rapid Fire):** three swings at the one target, Attack −4 on each, then the off hand's one (`ACTION-ECONOMY-01 §7.5`). A target that falls partway is not replaced (`§12.2`): an enemy dies at 0 and leaves the board, so the swings left are wasted and draw nothing.
+- **The Precision chains (Critical Strike, Precise Shot):** threat span +1 on every swing, additive (`PT-330`). If the first swing hits, the target saves Fortitude (DC 10 + level + Strength, or Intelligence for Precise Shot): stunned on a failure, slowed on a pass, for one round, which costs its next full turn (`§12.3`; the round boundary counts down only what the bearer's turn has read, TEST 207). A fresh stun replaces the old one.
+- **Charged Shot:** the Power chain with a gun. Its 1d6 rides the first shot that hits, critical multiplier +1, Attack −3; a melee target saves Reflex (DC 10 + level + Dexterity) or is knocked back 3 squares and falls prone.
+- **Defence costs:** Velocity −2 and Precision −1, on the declarer from the swing until the start of its next turn.
+- **Held on the agenda:** the tier extras (Improved Sneak Attack's re-hide, Master Sneak Attack's threat, Marked Shot, Unheralded's stun), and tiers 2 and 3 of the five.
 
 ### 2.1 This is the source's own rule
 
@@ -439,7 +443,9 @@
 **And K2's three exceptions are worth knowing rather than porting:** **all three are ion weapons or a bowcaster, and K2 raised them as part of the same pass that bumped every lightsaber a die step** — **the pass `EQUIPMENT-01 §105` declined for widening the Jedi gap.**
 
 
-**A weapon's printed threat range is its base.** **The multiplier widens it by that factor, counting downward from 20.**
+> **⚠⚠ SUPERSEDED BY `PT-330` (MAIN, `PT-2752`, 2026-11-01 (a)): the Precision chains' threat span is ADDITIVE.** **Threat span +1 adds one number below the weapon's own range** — `20` becomes `19–20`, `19–20` becomes `18–20`, a keen `18–20` becomes `17–20`; +2 and +3 add two and three. **The multiplying table below is kept as history and is not the rule.**
+
+~~**A weapon's printed threat range is its base.** **The multiplier widens it by that factor, counting downward from 20.**~~
 
 | Weapon base | ×2 | ×3 | ×4 |
 |---|---|---|---|

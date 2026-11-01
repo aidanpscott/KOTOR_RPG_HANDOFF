@@ -511,7 +511,7 @@
 
 ## 7.4 Two-handed weapons
 
-**A two-handed weapon adds **1.5× your Strength modifier** to damage, rounded down.**
+**A one-handed weapon held in both hands, with an empty off hand, adds **1.5× your Strength modifier** to damage, rounded down** — a wielding choice, not a weapon property (`PT-2222`: *"holding a one-handed weapon in both hands, with an empty off-hand, trading the off-hand attack for `1.5×` Strength to damage"*). **A double-bladed weapon never gets it (`§7.6`), and neither does a custom weapon (`EQUIPMENT-01 §16`).**
 
 **⚠⚠⚠ A PENALTY IS NOT MULTIPLIED — `PT-2338`.** **The grip amplifies a bonus
 and leaves a negative modifier at its own value**: a Strength modifier of `−3`

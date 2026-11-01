@@ -55,7 +55,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Precise Shot** | A patient, aimed shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **Threat span +1, on every shot you fire this round.** **A first-shot hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Intelligence modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
+| **Precise Shot** | A patient, aimed shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **Threat span +1, on every shot you fire this round.** **A first-shot hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Intelligence modifier. **Defence −1**, until the start of your next turn *(MAIN, `PT-2752`, 2026-11-01: like every declared Defence cost)*. **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
 | › Sniper Shot |  | **Level 4.** **Threat span +2, on every shot. `1d6` damage on the first shot that hits.** **Stun as above. Defence −2.** |
 | ›› Assassinate |  | **Level 8.** **Threat span +3, on every shot. `2d6` damage on the first shot that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
 
@@ -63,7 +63,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Charged Shot** | An overcharged shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **`1d6` damage on the first shot that hits this round. Attack −3.** **Knockback 3 squares on that hit** unless the target saves — Reflex, DC 10 + your level + Dexterity modifier. |
+| **Charged Shot** | An overcharged shot. **Astromechs and Remotes cannot take these.** | **Level 1.** **`1d6` damage on the first shot that hits this round. Attack −3. Critical multiplier +1** *(the Power axis, as Power Attack: MAIN, `PT-2752` (9) (b) and 2026-11-01 (c)).* **Knockback 3 squares on that hit, against a melee target only** *(one rule with Power Attack, `ATTACKS-01 §2.0`; MAIN, `PT-2752`, 2026-11-01 (d))*, unless the target saves — Reflex, DC 10 + your level + Dexterity modifier. |
 | › Power Shot |  | **Level 4.** **`2d6` damage on the first shot that hits. Attack −3. Critical multiplier +1.** **Knockback as above.** |
 | ›› Blast |  | **Level 8.** **`3d6` damage on the first shot that hits. Attack −3**, and **your critical multiplier is increased by 1** on that shot. **Knockback as above.** |
 

@@ -52,7 +52,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Critical Strike** | A precise strike aimed at a weak point. **Droids cannot take these.** | **Level 1.** **Threat span +1** — `PT-330`. **The threat range applies to every attack you make this round.** **A first-attack hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Strength modifier. **Defence −1.** **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
+| **Critical Strike** | A precise strike aimed at a weak point. **Droids cannot take these.** | **Level 1.** **Threat span +1** — `PT-330`. **The threat range applies to every attack you make this round.** **A first-attack hit stuns the target for one round** unless it saves — Fortitude, DC 10 + your level + Strength modifier. **Defence −1**, until the start of your next turn *(MAIN, `PT-2752`, 2026-11-01: like every declared Defence cost)*. **A successful save leaves the target Slowed for the same duration instead** — `ACTION-ECONOMY-01 §19.1`. |
 | › Wounding Strike |  | **Level 4.** **Threat span +2, on every attack. `1d6` damage on the first attack that hits.** **Stun as above. Defence −2.** |
 | ›› Deathstroke |  | **Level 8.** **Threat span +3, on every attack. `2d6` damage on the first attack that hits**, and **your critical multiplier is increased by 1.** **Stun as above. Defence −3.** |
 

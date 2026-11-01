@@ -195,7 +195,7 @@ Without it, dark power use generates constant downward pressure that light story
 | **4** | Heroic act forgoing its reward | Murder, torture | ±8 |
 | **5** | Dramatic heroism | Atrocity against many | ±15 |
 
-> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. A package may override with a raw number for a genuinely special moment, but the tier is the default. ***Not supported in the app (`PT-2752`): a conversation's shift names a tier and a side, and Lodestar refuses one without a tier; the raw-number override is on CODING-AGENDA-01's OPEN list.***
+> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. **A shift is a tier and a side, always.** ~~A package may override with a raw number for a genuinely special moment, but the tier is the default.~~ ***Struck by the owner (`PT-2752`, 2026-11-01): "the tiers are closer to the games." No raw-number shift exists; Lodestar refuses a shift without a tier.***
 
 **Tier 5 moves a full band in one act** — the Vader moment in either direction. Rare, GM-judged.
 

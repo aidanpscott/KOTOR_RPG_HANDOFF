@@ -106,6 +106,11 @@
 
 **The defender rolls the better of Awareness or Alertness.**
 
+**⚠⚠⚠ HIDE WORKS OUTSIDE A FIGHT, AS K2's STEALTH MODE — the owner, `PT-2752`, 2026-11-01.** *"The same opposed roll (Stealth against each watcher's better of Awareness or Alertness) when a watcher first gets a line to you; moving allowed, no running while hidden (`PT-1108`); attacking or being touched reveals you."*
+- **Hiding outside a fight rolls nothing yet**: you are hidden until a watcher gets a line to you.
+- **Each watcher rolls once**, the first time it has you in its perception range with a line to you. If it wins, you are seen and, being hostile, it starts the fight (`PLAY-STATE-01`, on sight). If you win, it has not seen you, and it does not roll again while you stay in the area.
+- **Moving is allowed; running is not** (`PT-1108`). **Attacking, or walking into a creature, reveals you.** Hidden does not travel through a door (`PT-1108`).
+
 **A stealth field generator imposes −10 on Awareness only. Alertness is unaffected.**
 
 ### 4.1 Why this is better than one detection skill

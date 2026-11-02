@@ -83,6 +83,7 @@ level      = 3
 challenge  = 3                       # ⚠⚠ §2b — what beating it is worth
 faction     = "sith"                 # §2
 alignment   = 50                     # ⚠⚠ §2c — 0-100; absent is 50
+powers      = []                     # ⚠⚠ §2d — power ids, in the order it reaches for them
 
 [abilities]
 str = 14
@@ -147,6 +148,22 @@ reaction   = [                                  # ⚠ PT-1441 — INLINE, no fil
 - **A companion's score is this start, moved by its own subject-tagged events**: its own dark-power casts drift it as the player's do, and each drift writes its own Feedback line. `INFLUENCE-01 §4`'s pull waits for the influence system.
 - **An enemy's score is this start, unmoved.**
 - **The companion's sheet shows the same alignment marker as the player's.**
+
+### ⚠⚠ 2d · `powers` — THE FORCE POWERS IT KNOWS, IN THE ORDER IT REACHES FOR THEM. `PT-2752`
+
+> **A list of power ids from the package's powers table (`force_push`, `force_slow`), in `[character]`. Absent or empty means it knows none.** The opener refuses anything that is not a list of text, in words.
+
+**Ruled (MAIN, `PT-2752`, 2026-11-02, owner batch 1 item 1):**
+- **The order is the order it casts in.** `GROUND-AI-01 §10` (the owner's ruling, list order) reads the list top to bottom on every turn.
+- **The same field for an enemy and a placed ally.** A placement points at a blueprint and carries no character content of its own, so the field lives here and every placement of this blueprint knows the same powers.
+- **Loom writes it**, as the creature form's `powers` box (ids separated by commas), written only when set.
+
+**What a listed power needs to be cast:**
+- **A Force pool, the companion's.** The same derivation a companion's pool uses (`FORCE-POOL-01 v3 §2`, from the blueprint's class, level, Wisdom and Charisma). A class with no Force die has no pool, and a creature with no pool casts nothing, whatever its list says.
+- **The cost at its own alignment.** `§2c`: an enemy pays the step its file's starting score sets, unmoved; a companion pays the step its own moved score sets.
+- **Each cast is logged against it** (`subject` = its tag), as a companion's is, so the pool a fight leaves it with is the pool it has after a quick load.
+
+**A creature with no list is unchanged.** Its doctrine's support ladder still names the power it uses, and nothing here checks that ladder against a list it does not have.
 
 ### ⚠ A CHARACTER BLUEPRINT NAMES ITS SPECIES — `PT-1490`
 

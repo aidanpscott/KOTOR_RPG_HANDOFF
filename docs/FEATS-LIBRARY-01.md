@@ -34,6 +34,8 @@
 
 ---
 
+> **⚠⚠ A SKILL-FEAT CHAIN GIVES ITS HIGHEST HELD TIER, NEVER THE SUM — MAIN, `PT-2752`, 2026-11-01 (TEST 217, 33c).** *"Highest held tier, never the sum (Master Cautious +3); each tier states the chain's total, and Toughness says \"overrides\"."* This is the rule for every chain whose tiers add a skill bonus — Cautious, Freetrader, Hardiness, Hustler, Loremaster, Naturalist, Nimble and the rest: a character holding all three tiers of Cautious has **+3** Demolitions and Stealth, not +6. Each row below states the chain's total at that tier.
+
 # 1. Everyone — organics and all droids
 
 | Feat | Description | Effects |

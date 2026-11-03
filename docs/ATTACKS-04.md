@@ -86,6 +86,8 @@
 | › Pinning Fire |  | **Level 4.** **On a failed save the target cannot move at all.** It may still act. |
 | ›› Lockdown | Nothing moves in that doorway. | **Level 8.** **On a failed save the target cannot move or take a move action**, and **the save is made at −4.** |
 
+> **Built (MAIN, `PT-2752`, 2026-11-03; TEST 225):** the save comes only on a shot that hits, and the shot keeps its normal damage. On a failure, Staggering Shot is `slowed` for its movement half only (no Bonus lost, none of its −1s), and Pinning Fire is `held` (cannot move at all, may still act). Lockdown is Pinning Fire with the save at −4: `held` already takes the Move, which is our one move action. Each lasts until the start of the shooter's next turn. A fresh one refreshes its own and never stacks (one per tier and condition, as Force Slow). No off hand (`ACTION-ECONOMY-01 §7.5`); with two weapons, the one shot still takes `§7.2`'s dual-wield penalty (*"every attack that round"*).
+
 ## Support — Help someone else
 
 | Attack | Description | Effects |

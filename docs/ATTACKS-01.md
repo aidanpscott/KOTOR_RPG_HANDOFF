@@ -37,13 +37,13 @@
 | Declaration | Swings or shots |
 |---|---|
 | **Strike** or **Shoot** | **1** |
-| **A Velocity chain** — Flurry, Rapid Fire, Saber Swarm | **3 / 4 / 5** by tier |
+| **A Velocity chain** — Flurry, Rapid Fire, Saber Swarm | **3 at every tier** (the owner, `PT-2752`, 2026-11-03; ~~3 / 4 / 5 by tier~~ superseded) |
 | **Dual Strike** | **2**, or one swing with damage rolled twice |
 | **Wielding two weapons** | **You strike with both.** Every attack that round takes the dual-wield penalty — see `ACTION-ECONOMY-01 §7`. |
 
 **A level 8 character declaring Flurry strikes three times, and all three take −4 attack and −2 Defence.** **They cannot also declare Power Attack.**
 
-**Every Velocity chain replaces your attack count rather than adding to it.** **Flurry, Rapid Fire, and Saber Swarm all grant three at tier 1, four at tier 2, five at tier 3** — you do not get a base attack plus the chain's bonus. **The chain *is* how many times you go.**
+**Every Velocity chain replaces your attack count rather than adding to it.** **Flurry, Rapid Fire, and Saber Swarm all grant three at every tier; the tiers lower the penalty** (the owner, `PT-2752`, 2026-11-03: the later correction found by three audits, as K2, and it keeps Power and Precision worth picking; ~~three at tier 1, four at tier 2, five at tier 3~~ superseded, the earlier draft `ACTION-ECONOMY-01 §7.1` names) — you do not get a base attack plus the chain's bonus. **The chain *is* how many times you go.**
 
 **Dual Strike is the exception and it is a different mechanic** — two swings with one weapon, or one swing with damage rolled twice.
 
@@ -52,17 +52,18 @@
 **The declaration is made each turn and lasts that turn.** **With none made, the attack is Strike or Shoot.** **When the turn ends it goes back to Strike or Shoot.**
 
 - **What can be declared:** the built tiers the character holds that can be used with the weapon in hand. The melee chains need a blade, a fist or a lightsaber, and the ranged chains a gun. They are listed in K2's first action column.
-- **Unbuilt chains are not listed.** The built tiers are the Power chain, the Stealth chains' dice, and all three tiers of Flurry, Rapid Fire, Critical Strike, Precise Shot and Charged Shot *(tier 1: MAIN, `PT-2752`, 2026-11-01; tiers 2 and 3: MAIN, `PT-2752`, 2026-11-02)*. **Each tier carries its own row's numbers** (`ATTACKS-04`, `ATTACKS-05`).
+- **Unbuilt chains are not listed.** The built tiers are the Power chain, the Stealth chains' dice, all three tiers of Flurry, Rapid Fire, Critical Strike, Precise Shot and Charged Shot *(tier 1: MAIN, `PT-2752`, 2026-11-01; tiers 2 and 3: MAIN, `PT-2752`, 2026-11-02)*, and all three tiers of Dual Strike *(MAIN, `PT-2752`, 2026-11-03)*. **Each tier carries its own row's numbers** (`ATTACKS-04`, `ATTACKS-05`).
 - **What it feeds:** every swing of the turn, main hand and off hand alike, and the hover preview. The combat line names it (*"Power Attack · …"*).
 - **Enemies do not declare.**
 - **Dice:** a turn with nothing declared draws no new dice.
 - **The Power chain:** Attack −3 on every swing, and its dice on the first swing that hits, multiplied on a critical. A melee target then saves Reflex (DC 10 + level + Strength modifier, a save against knockdown) or is knocked back 3 squares and falls prone. A ranged target is not knocked back.
 - **The Stealth chains:** declarable whenever held. Their dice land only if the first swing hits a target unaware of the swinger. They are never multiplied and stack with Killer's Instinct. Against an aware target the declaration plays as a plain Strike or Shoot.
-- **The Velocity chains (Flurry, Rapid Fire):** three swings at the one target, Attack −4 on each (Whirlwind and Open Fire −2, Barrage and Volley of Bolts −1), then the off hand's one. ⚠ **The count at tiers 2 and 3 is PROVISIONAL** (MAIN, `PT-2752`, 2026-11-02): the tier rows say three, this section's table and Velocity line say 3 / 4 / 5, and the owner rules which; the app carries one count per tier (`ACTION-ECONOMY-01 §7.5`). A target that falls partway is not replaced (`§12.2`): an enemy dies at 0 and leaves the board, so the swings left are wasted and draw nothing.
+- **The Velocity chains (Flurry, Rapid Fire):** three swings at the one target, Attack −4 on each (Whirlwind and Open Fire −2, Barrage and Volley of Bolts −1), then the off hand's one. **Three at every tier, the owner's ruling** (`PT-2752`, 2026-11-03), as the tier rows say; the app carries one count per tier (`ACTION-ECONOMY-01 §7.5`). A target that falls partway is not replaced (`§12.2`): an enemy dies at 0 and leaves the board, so the swings left are wasted and draw nothing.
 - **The Precision chains (Critical Strike, Precise Shot):** threat span +1 on every swing, additive (`PT-330`); +2 and 1d6 on the first swing that hits at Wounding Strike and Sniper Shot; +3, 2d6 and critical multiplier +1 on that swing at Deathstroke and Assassinate. If the first swing hits, the target saves Fortitude (DC 10 + level + Strength, or Intelligence for Precise Shot): stunned on a failure, slowed on a pass, for one round, which costs its next full turn (`§12.3`; the round boundary counts down only what the bearer's turn has read, TEST 207). A fresh stun replaces the old one. A holder of Force Immunity: Stun takes neither: its text names *"Critical Strike and Sniper Shot stuns"* (`FEATS-LIBRARY-01` §5, Jedi Sentinel), read as every tier of both Precision chains, since Sniper Shot is the Precise Shot chain's second tier; the save is still rolled and shown, and the line reads *resists*, as a power's does *(MAIN's ruling on (14a), `PT-2752`, 2026-11-02: "Each named tier keeps off its WHOLE chain (Sniper Shot, a tier of Precise Shot, keeps off Precise Shot's stun; Critical Strike keeps off its chain).")*.
+- **The Dual Strike chain (Dual Strike, Double Strike, Two-Pronged Attack):** Attack −3 on every swing (−2, −1), no Defense cost, two blows at the one target *(MAIN's rulings, `PT-2752`, 2026-11-03)*. **With two weapons** they are the main hand's, then the off hand's (`ACTION-ECONOMY-01 §7.1`), not three. **With one weapon alone in both hands** (`ACTION-ECONOMY-01 §7.4`, `PT-2222`: an empty off hand) it is one swing with the weapon's dice rolled twice and its modifiers once. **A double-bladed weapon alone** is never held in both hands, and no off-hand swing is built beside it, so it swings twice with the same weapon. **If the first blow hits, the second threatens whenever it hits**, then rolls the normal confirmation; it is not an automatic critical. If the first blow drops the target the second is wasted, as with Velocity (`§12.2`).
 - **Charged Shot:** the Power chain with a gun. Its 1d6 (Power Shot 2d6, Blast 3d6) rides the first shot that hits, critical multiplier +1, Attack −3; a melee target saves Reflex (DC 10 + level + Dexterity) or is knocked back 3 squares and falls prone.
 - **Defence costs:** Velocity −2 and Precision −1 at tier 1 (Velocity −1 at tiers 2 and 3; Precision −2 and −3), on the declarer from the swing until the start of its next turn.
-- **Held on the agenda:** the tier extras (Improved Sneak Attack's re-hide, Master Sneak Attack's threat, Marked Shot, Unheralded's stun), and the owner's ruling on the Velocity count.
+- **Held on the agenda:** the tier extras (Improved Sneak Attack's re-hide, Master Sneak Attack's threat, Marked Shot, Unheralded's stun).
 
 ### 2.1 This is the source's own rule
 

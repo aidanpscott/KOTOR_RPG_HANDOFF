@@ -110,6 +110,8 @@
 - **Hiding outside a fight rolls nothing yet**: you are hidden until a watcher gets a line to you.
 - **Each watcher rolls once**, the first time it has you in its perception range with a line to you. If it wins, you are seen and, being hostile, it starts the fight (`PLAY-STATE-01`, on sight). If you win, it has not seen you, and it does not roll again while you stay in the area.
 - **Moving is allowed; running is not** (`PT-1108`). **Attacking, or walking into a creature, reveals you.** Hidden does not travel through a door (`PT-1108`).
+- **⚠⚠ WALKING INTO A HOSTILE TO FIGHT REVEALS YOU BEFORE THE FIGHT'S FIRST ROLL** *(MAIN, `PT-2752`, TEST 221 item 1)*. So no opener walked into keeps a hidden strike's dice. **And while you are hidden from a creature it cannot take you as its target** (`TARGETING-01 §2`, "not Hidden from you").
+- **⚠⚠ A REVEAL SAYS SO, IN K2's OWN LINE** *(MAIN, `PT-2752`, TEST 221 item 2)*: **"Stealth Mode Deactivated (Run Enabled)"** (dialog.tlk 1465, both games), at the head of the line that revealed you and in the Messages log.
 
 **A stealth field generator imposes −10 on Awareness only. Alertness is unaffected.**
 

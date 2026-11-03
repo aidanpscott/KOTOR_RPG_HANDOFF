@@ -561,6 +561,8 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **The source is explicit.** *"A double bladed lightsaber gives you an off-hand attack — for all intents and purposes it acts like dual wielding two sabers, and should be treated the same."* *"Dual bladed weapons count as two weapons and using them gives a penalty to your attack value."*
 
+**Built (MAIN, `PT-2752`, 2026-11-03):** a double-bladed weapon alone swings its main end, then its off end, on every declaration that takes the off hand (`§7.5`), the player's and a creature's alike, with the −3 / −2 / −1 / −1 above. **Each end adds the whole Strength modifier**: one profile, both ends, and `§7.2a`'s half is for *a weapon in the off hand*, which a double-blade's second end is not. *(Was: the second end never swung; an ordinary attack was one swing.)*
+
 ### Three differences from carrying two separate weapons
 
 | | Two weapons | Double-bladed |

@@ -464,6 +464,8 @@
 
 **`§7.5` is rewritten to agree.**
 
+**Built (MAIN, `PT-2752`, 2026-11-04; TEST 225's finding):** a Velocity chain with two weapons or a double-blade swings P O P O, each swing with its own weapon's dice. *(Was: P P P O.)* A target that falls stops the rest.
+
 ### Velocity does not scale with tier
 
 **Flurry, Rapid Fire, and Saber Swarm grant the same number of attacks at every tier. The tiers reduce the penalty.**

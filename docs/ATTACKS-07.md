@@ -46,9 +46,11 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Combination** | **1** | **Strike twice unarmed.** The second gains `+2` if the first hit. **Attack −3, Defence −2** |
-| › **Chain Punch** | **4** | **Three strikes**, each `+2` if the previous hit. **Attack −2, Defence −1** |
-| ›› **Rain of Blows** | **8** | **Three strikes**, each `+2` if the previous hit, and **if all three hit the target is `Slowed`** until the end of its next turn |
+| **Combination** | **1** | **Three strikes unarmed**, each `+2` attack if the previous hit. **Attack −4, Defence −2** |
+| › **Chain Punch** | **4** | **Three strikes**, each `+2` attack if the previous hit. **Attack −2, Defence −1** |
+| ›› **Rain of Blows** | **8** | **Three strikes**, each `+2` attack if the previous hit. **Attack −1, Defence −1.** **If all three hit the target is `Slowed`** until the end of its next turn |
+
+**⚠ THREE STRIKES AT EVERY TIER (the owner, `PT-2752`, 2026-11-04: whatever is simplest for a tabletop; MAIN's ruling), as every Velocity chain, at the Flurry family's penalties (−4/−2, −2/−1, −1/−1).** *(~~Strike twice, Attack −3~~ struck: at −3 tier 1 ran +19% to +43% ahead of Flurry, fist to fist, and a smaller rider did not cure it. At −4 every tier is +7% fist to fist, and behind a blade: −33% to −20% at tier 1, −34% at tier 2, −4% at tier 3, before the −4. Rain of Blows' −1 / −1 was unstated and comes from the family.)*
 
 **⚠ Adopted at `PT-188` and never written here until now.** **Deliberately not `Flurry` renamed — `Flurry` buys back accuracy across its tiers and keeps volume flat; this escalates *within the round*.**
 
@@ -56,9 +58,11 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Body Blow** | **1** | **+4 damage. Attack −2.** On a hit the target cannot take a reaction until the end of its next turn |
-| › **Hammer Blow** | **4** | **+7 damage. Attack −2**, and **knockback 2 squares** unless the target saves — Fortitude, DC 10 + your level + Strength modifier |
-| ›› **Haymaker** | **8** | **+10 damage. Attack −2**, knockback 4 squares, and **the target is knocked prone** on a failed save |
+| **Body Blow** | **1** | **1d6 damage on the first attack that hits this round. Attack −3. Critical multiplier +1.** On that hit the target cannot take a reaction until the end of its next turn |
+| › **Hammer Blow** | **4** | **2d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, and **knockback 2 squares** unless the target saves — Fortitude, DC 10 + your level + Strength modifier |
+| ›› **Haymaker** | **8** | **3d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, knockback 4 squares, and **the target is knocked prone** on a failed save |
+
+**⚠ CONVERTED TO THE MODEL (the owner, `PT-2752`, 2026-11-04; `PT-330`): ~~+4 / +7 / +10 flat, Attack −2~~ is now 1d6 / 2d6 / 3d6, Attack −3, critical multiplier +1 at each tier, as `Power Attack` and `Charged Shot` (`PT-334`, `PT-335`). This roster was written two days before `PT-330` and was never converted.**
 
 **⚠ The melee mirror is `Power Attack`, which requires Strength 12.** **This does not** — **it is the one Power chain a character with no Strength investment can enter, which is `AGENDA-CURRENT §2.4c`'s whole point.**
 
@@ -66,15 +70,15 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Uppercut** | **1** | **Threat range ×2.** On a critical the target takes **−2 attack** until the end of its next turn |
-| › **Nerve Strike** | **4** | **Threat ×3**, and the penalty becomes **−4** and also applies to the target's **Reflex saves** |
-| ›› **Blackout** | **8** | **Threat ×4**, and on a critical the target is **`Stunned` for one round** unless it saves — Fortitude, DC 10 + your level + Dexterity modifier |
+| **Uppercut** | **1** | **Threat span +1.** On a critical the target takes **−2 attack** until the end of its next turn |
+| › **Nerve Strike** | **4** | **Threat span +2**, and the penalty becomes **−4** and also applies to the target's **Reflex saves** |
+| ›› **Blackout** | **8** | **Threat span +3**, and on a critical the target is **`Stunned` for one round** unless it saves — Fortitude, DC 10 + your level + Dexterity modifier |
 
-**⚠ Mirrors `Critical Strike` and `Precise Shot` at the same multipliers — `ATTACKS-01 §292`.** **The rider is a debuff rather than damage, because an unarmed critical is already `8d4` at 30.**
+**⚠ Mirrors `Critical Strike` and `Precise Shot` at the same threat span, +1 / +2 / +3, additive (the owner, `PT-2752`, 2026-11-04; `PT-330`): ~~threat range ×2 / ×3 / ×4~~, the same numbers for a fist, which threatens on a 20 alone (19–20, 18–20, 17–20).** **The rider is a debuff rather than damage, because an unarmed critical is already `8d4` at 30.**
 
 **⚠ The tiers escalate one idea:** **a blow that rattles → a blow that finds a nerve → a blow that ends it.** **`PT-182`'s test — a chain is one line if its tiers scale one idea.**
 
-**And `PT-176` applies: `Uppercut`'s multiplier does not compound with `Deathstroke` or the `Commando` capstone. Where more than one threat multiplier applies, use the largest.**
+**And `PT-176` applies: `Uppercut`'s span does not compound with the `Commando` capstone. Where more than one threat multiplier applies, use the largest.** *(`Deathstroke` struck from this line, MAIN, `PT-2752`, 2026-11-04: one declaration a turn means they can never combine.)*
 
 ### Position — inside their reach
 
@@ -124,9 +128,9 @@
 
 **⚠ Every chain here modifies an unarmed strike; none sets its damage.** **`§2` governs: `1d4` at level 2 rising to `8d4` at 30, or `1d3` without the feat.**
 
-**So `Body Blow`'s `+4` is `+4` on top of that ladder, not a replacement for it.**
+**So `Body Blow`'s `1d6` is `1d6` on top of that ladder, not a replacement for it.**
 
-**⚠ And `PT-184` defers the comparison that matters:** **`8d4` averages 20 against a lightsaber's `2d8` at 9.** **The owner ruled that meaningless until weapon upgrades exist, and these chains do not change it — they add riders, not dice.**
+**⚠ And `PT-184` defers the comparison that matters:** **`8d4` averages 20 against a lightsaber's `2d8` at 9.** **The owner ruled that meaningless until weapon upgrades exist, and these chains do not change it.** *(Was: "they add riders, not dice"; the Power chain adds dice since the owner's conversion, `PT-2752`, 2026-11-04.)*
 
 ### 4.4 Who may take them
 
@@ -191,4 +195,4 @@
 
 **A Jedi stripped of a lightsaber is not unarmed.**
 
-**⚠ It is also the only chain outside Velocity that scales its attack count**, which is deliberate: **it has no weapon die and no Strength behind it, so the count is where its scaling has to live.**
+**⚠ It is also the only chain that scales its attack count** *(MAIN, `PT-2752`, 2026-11-04: Velocity is three at every tier, the owner, 2026-11-03, and Combination with it)*, which is deliberate: **it has no weapon die and no Strength behind it, so the count is where its scaling has to live.**

@@ -1174,7 +1174,7 @@
 
 **⚠⚠ NOT A FEAT: MOVED TO THE ATTACKS, 2026-10-19 (MAIN, `PT-2752`; the owner: "Attack feats should obviously be removed").** Combination › Chain Punch › Rain of Blows (1 / 4 / 8) is an attack chain: `ATTACKS-07`'s unarmed roster and the Brawler's starting attack (`CLASS-ATTACKS-01:304`, `PT-228`), and attacks are their own track (`ATTACKS-01 §11`: three currencies, three tracks, no crossover). Its rows now live in `data/attacks.json` (Class · Brawler, Unarmed), and its table left this document. Added here at 38a3b744 (2026-08-24, `PT-188`). The design notes below stay as its history.
 
-**⚠ Deliberately not `Flurry` renamed.** **`Flurry` buys back accuracy across its tiers and keeps volume flat.** **This starts at two strikes and escalates *within the round* — a hit makes the next easier.**
+**⚠ Deliberately not `Flurry` renamed.** **`Flurry` buys back accuracy across its tiers and keeps volume flat.** **This escalates *within the round* — a hit makes the next easier.** *(Was: "starts at two strikes"; three at every tier, MAIN, `PT-2752`, 2026-11-04.)*
 
 > **Which is what a boxer does and what a swordsman does not.**
 

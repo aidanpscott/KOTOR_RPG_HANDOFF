@@ -18,7 +18,7 @@
 
 | Axis | Chains | The difference |
 |---|---|---|
-| **Velocity** | Flurry · Dual Strike | **Two chains where ranged has one.** Flurry strikes three times, rising to five; **Dual Strike doubles what one weapon does.** |
+| **Velocity** | Flurry · Dual Strike | **Two chains where ranged has one.** Flurry strikes three times at every tier *(the owner, `PT-2752`, 2026-11-03; ~~rising to five~~)*; **Dual Strike doubles what one weapon does.** |
 | **Spread** | Cleave | **Mirrors ranged exactly.** Two adjacent enemies, then three, then all. |
 | **Precision** | Critical Strike | Same |
 | **Power** | Power Attack | Same |
@@ -47,6 +47,8 @@
 | **Cleave** | One motion, two bodies. **The mundane answer to being outnumbered.** | **Level 1. Requires Strength 12.** **Strike two adjacent enemies with one declaration. Attack −3** against each. |
 | › Wide Cleave |  | **Level 4.** **Three adjacent enemies. Attack −2.** |
 | ›› Great Cleave |  | **Level 8.** **Every enemy within 2 squares. Attack −1.** |
+
+**⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-04):** **one click strikes the clicked enemy, then the next going clockwise round you, up to the tier's count; whoever is there, never refused, enemies only.** **`Great Cleave` reaches 2 squares for this declaration, every enemy in sight within it, nothing through a wall.** **Each strike is its own roll, damage and critical, with the primary weapon: no off-hand swing, the `ACTION-ECONOMY-01 §7.2` penalty kept, no Defence cost.**
 
 ## Precision — Better criticals
 
@@ -109,6 +111,9 @@
 | **Sweep Attack** | A low, wide cut that takes the legs rather than the head. | **Level 1. Requires Strength 12.** **Opposed attack roll. On a win the target is knocked prone and cannot stand until the start of your next turn.** **Prone targets take +2 damage from your attacks.** Half damage on a loss. |
 | › Legsweep |  | **Level 4.** **Opposed roll at +3.** **Prone targets take +4 damage** from your attacks. |
 | ›› Knockdown | They go down and they stay down. | **Level 8.** **Opposed roll at +6.** **Prone targets take +6 damage** from your attacks. |
+
+**⚠ `Sweep Attack`, AS BUILT (MAIN, `PT-2752`, 2026-11-04):** **your d20 plus attack terms against its d20 plus its attack terms; a tie goes to the defender; no critical.** **Full damage on a win, half on a loss.** **"Cannot stand" lasts to the start of your next turn.** **The +2/+4/+6 is a passive of holding the tier, the highest held, on any of your attacks at any prone target, whatever put it down; the Sweep's own blow gets it only if the target was already prone.** **A prone-immune target takes the damage, not the prone.** **A shooter can be swept; a save bonus against knockdown does not apply, since there is no save.**
+
 | **Disarming Strike** | Take the weapon rather than the hand. | **Level 5. Requires Strength 12 and Dexterity 13.** **Opposed attack roll. On a win the target's weapon is knocked from its grip and lands within 4 metres. No damage.** **⚠ A disarm applies ONLY if the target is holding something that is not a natural weapon — `PT-460`.** *No held object, no disarm.* |
 | › Stealing Strike |  | **Level 8.** **On a win you may take the weapon** rather than let it fall, **or force the target to drop a shield or held item.** **The disarm option remains available.** **⚠ Same gate: only a HELD object that is not a natural weapon can be taken — `PT-460`.** |
 | ›› Sever | The weapon does not fall. It breaks. | **Level 14.** **On a win you may destroy the weapon outright.** Against an unarmed or natural-weapon target, **its attacks deal half damage for the encounter.** **Both lower options remain available.** **⚠ `Sever` DOES reach natural weapons — `PT-459`. Breaking a limb is not disarming it.** |

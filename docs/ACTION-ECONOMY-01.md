@@ -905,6 +905,8 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Attack rolls, saves, opposed rolls, and skill checks all draw d20.** **They resolve in the order they arise, and initiative order breaks simultaneity.**
 
+**⚠ AN OPPOSED ROLL: A TIE GOES TO THE DEFENDER (MAIN, `PT-2752`, 2026-11-04).** **One rule for every opposed roll.** *Until now this lived only in a comment in the engine.*
+
 **Each die type draws independently.** *A character wielding a vibrosword and a blaster in the same round draws d6 for one and d8 for the other; the two do not interleave.*
 
 ---
@@ -1090,11 +1092,13 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Five documents referenced it. One defined it, for itself.**
 
-> **A prone character takes +2 damage from melee attacks, and standing costs half their movement.**
+> ~~**A prone character takes +2 damage from melee attacks, and standing costs half their movement.**~~
+
+**⚠ SUPERSEDED ON BOTH POINTS (MAIN, `PT-2752`, 2026-11-04): standing costs the Action, and prone carries no number of its own (`RULES-01-v2`:525, `PT-2366`). `Sweep Attack`'s +2/+4/+6 are that chain's own (`ATTACKS-05`).**
 
 **Nothing else.** **No Defence penalty, no attack penalty.** **A prone rifleman shoots from the floor at full effect** — **which is correct, and it is why knockback against a shooter is worth little.**
 
-**`Sweep Attack`'s chain now reads as a scaling of a general condition** rather than a private rule: **its tiers raise the save DC and add its own riders on top of this.**
+~~**`Sweep Attack`'s chain now reads as a scaling of a general condition** rather than a private rule: **its tiers raise the save DC and add its own riders on top of this.**~~ **⚠ Corrected (MAIN, `PT-2752`, 2026-11-04): the rows win. `Sweep Attack` resolves on an opposed attack roll, not a save (`ATTACKS-05`); its tiers raise that roll, +3 and +6.**
 
 ## Knockback is 3 squares, not 2
 

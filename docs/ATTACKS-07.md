@@ -59,8 +59,8 @@
 | Tier | Level | Effect |
 |---|---|---|
 | **Body Blow** | **1** | **1d6 damage on the first attack that hits this round. Attack −3. Critical multiplier +1.** On that hit the target cannot take a reaction until the end of its next turn |
-| › **Hammer Blow** | **4** | **2d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, and **knockback 2 squares** unless the target saves — Fortitude, DC 10 + your level + Strength modifier |
-| ›› **Haymaker** | **8** | **3d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, knockback 4 squares, and **the target is knocked prone** on a failed save |
+| › **Hammer Blow** | **4** | **2d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, and **knockback 2 squares** unless the target saves — Fortitude, DC 10 + your level + Strength modifier **A ranged target is not pushed** (MAIN, `PT-2752`, 2026-11-04, Q4: one knockback rule, as `Power Attack`, §2.0; the one place this goes beyond the row). |
+| ›› **Haymaker** | **8** | **3d6 damage on the first attack that hits. Attack −3. Critical multiplier +1**, knockback 4 squares, and **the target is knocked prone** on a failed save **A ranged target is not pushed** (MAIN, `PT-2752`, 2026-11-04, Q4: one knockback rule, as `Power Attack`, §2.0; the one place this goes beyond the row). |
 
 **⚠ CONVERTED TO THE MODEL (the owner, `PT-2752`, 2026-11-04; `PT-330`): ~~+4 / +7 / +10 flat, Attack −2~~ is now 1d6 / 2d6 / 3d6, Attack −3, critical multiplier +1 at each tier, as `Power Attack` and `Charged Shot` (`PT-334`, `PT-335`). This roster was written two days before `PT-330` and was never converted.**
 

@@ -51,7 +51,7 @@
 | › Suppression Spray |  | **Level 4.** **Three enemies within 4 metres of each other. Attack −2.** |
 | ›› Sweeping Fire |  | **Level 8.** **Every enemy within 10 metres of your first target. Attack −1.** |
 
-**⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05).** A square is 2 m, so 4 m is 2 squares and 10 m is 5. One click: the clicked enemy, then going clockwise round you each who qualifies, up to the tier's count (two, three, every one), never refused. "Within 4 metres of each other" needs every pair within 2 squares; Sweeping Fire measures from the first target. Taken in that clockwise order, the first who fit are kept. Enemies only, in sight and in range from where you shoot. Each shot keeps its own roll, damage and range penalties. Primary weapon only, `§7.2`'s penalty kept (`§7.5`). The hover names who the click will shoot.
+**⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05).** A square is 2 m, so 4 m is 2 squares and 10 m is 5. One click: the clicked enemy, then going clockwise round you each who qualifies, up to the tier's count (two, three, every one), never refused. "Within 4 metres of each other" needs every pair within 2 squares; Sweeping Fire measures from the first target. Taken in that clockwise order from the clicked one, the first who fit are kept (accepted, MAIN, ruling c); the hover shows the same set as the click. Enemies only, in sight and in range from where you shoot. Each shot keeps its own roll, damage and range penalties. Primary weapon only, `§7.2`'s penalty kept (`§7.5`). The hover names who the click will shoot.
 
 ## Precision — One shot that counts
 

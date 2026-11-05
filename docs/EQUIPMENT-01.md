@@ -1443,6 +1443,13 @@ always nine.
 | robe-3 | Robe 3 | Master Robe | shipped before this table |
 | robe-5 | Robe 5 | Revan Robes | shipped before this table |
 
+**The opening's two package items (the owner, `PT-2752` (36) point 2, 2026-10-31; K1's `dialog.tlk`, verbatim, spelling and capitals as K1 has them).** Each has no base type: `§16`'s `attack` field states its −5.
+
+| Shown to the player | K1 strref | Blueprint | Status |
+|---|---|---|---|
+| One Damage Blaster | 43348 | `endar-spire-opening/blueprints/items/weapons/one-damage-blaster.item` | **RULED** — the owner; K1's name kept (MAIN, `PT-2752`, 2026-10-31) |
+| One damage blade | 43349 | `endar-spire-opening/blueprints/items/weapons/one-damage-blade.item` | **RULED** — the owner; K1's name kept |
+
 ---
 
 ## 15. ⚠⚠ The palette tree — where a base type appears in the builder
@@ -1539,7 +1546,7 @@ declaration. Custom is the fallback, not the default.
 | `attacks` | as `§16.1` below | One-handed or two-handed, stated the same way an ordinary base type states it — `PT-2223` ruled this is the field a custom item uses, not `wield`, so nothing new needs inventing for `isDoubleWeapon` or `§7.4`'s own reader to understand it. |
 | damage | `NdM`, plus any bonus dice or flat modifier | Stated directly. No base type supplies this by inheritance, so the item's own row is read exactly as authored — no folding, no layering against a base that does not exist. |
 | threat / multiplier | as a base type would state them | Same reasoning as damage — nothing to inherit, so the item states its own. |
-| `attack` | a whole number, e.g. `-5` | ⚠⚠ The weapon's own attack bonus or penalty — MAIN, `PT-2752` (36), 2026-10-31, for the opening's one-damage weapons (K1's "One damage blaster" and "One damage blade": attack −5, 1 damage). Added to every swing it makes and named on the line as the weapon's own term. Optional; absent is 0. |
+| `attack` | a whole number, e.g. `-5` | ⚠⚠ The weapon's own attack bonus or penalty — MAIN, `PT-2752` (36), 2026-10-31, for the opening's one-damage weapons (K1's "One Damage Blaster" and "One damage blade": attack −5, 1 damage). Added to every swing it makes and named on the line as the weapon's own term. Optional; absent is 0. |
 
 **⚠ `openItem` REFUSES AN ITEM THAT NAMES BOTH A BASE TYPE AND A CUSTOM
 DECLARATION.** A custom item has nothing behind it to fall back to if its own

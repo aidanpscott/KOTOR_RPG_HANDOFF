@@ -144,7 +144,7 @@ are never adjusted.
 | ›› **Drain Thoughts** | 3 | 24 | −8 | **new** · *chain crosses alignment* |
 | | | | | |
 
-### Light side — 28
+### Light side — 22
 
 | Power | Tier | Cost | Ceiling | Notes |
 |---|---|---|---|---|
@@ -172,13 +172,6 @@ are never adjusted.
 | › **Improved Force Barrier** | 2 | 12 | −3 |  |
 | ›› **Master Force Barrier** | 3 | 20 | −6 |  |
 | | | | | |
-| **Inspire Followers I** | 1 | 8 | −1 |  |
-| › **Inspire Followers Ii** | 2 | 12 | −3 |  |
-| ›› **Inspire Followers Iii** | 3 | 16 | −5 |  |
-| ›› **Inspire Followers Iv** | 3 | 20 | −6 |  |
-| ›› **Inspire Followers V** | 3 | 24 | −8 |  |
-| ›› **Inspire Followers Vi** | 3 | 28 | −9 |  |
-| | | | | |
 | **Revitalize** | 1 | 12 | −2 |  |
 | › **Improved Revitalize** | 2 | 20 | −4 |  |
 | ›› **Master Revitalize** | 3 | 28 | −9 |  |
@@ -194,7 +187,7 @@ are never adjusted.
 | › **Advanced Throw Lightsaber** | 2 | 15 | −3 |  |
 | | | | | |
 | **Mind Trick** | 1 | 10 | −1 |  |
-| › **Advanced Mind Trick** | 2 | 25 | −5 |  |
+| › **Dominate Mind** | 2 | 25 | −5 |  |
 | | | | | |
 | **Burst of Speed** | 1 | 6 | −1 |  |
 | › **Knight Speed** | 2 | 12 | −3 |  |
@@ -253,8 +246,6 @@ are never adjusted.
 | › **Overload** | 3 | 20 | −2 | ⚠ `PT-463`, Character Level 15 |
 | **Beast Control** | 1 | 6 | −1 |  |
 | › **Beast Confusion** | 2 | 20 | −4 | cost 20, Force Confusion's twin (`PT-2304`) |
-| ›› **Dominate Beast** | 3 | 22 | −7 | **new** |
-| **Beast Trick** | 1 | 10 | −1 | Mind Trick's twin (`PT-2304`); joined here from FORCE-POWERS-01 when the cost check began refusing a blank on either side (TEST 169) |
 | | | | | |
 | **Droid Trick** | 1 | 6 | −1 |  |
 | › **Droid Confusion** | 2 | 14 | −3 |  |
@@ -335,11 +326,11 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 **Force Crush — 30**, the most expensive. A tier-1 root by chain depth, **tier 3 by override**. KOTOR charged 60, double its nearest rival.
 
-**Advanced Mind Trick — 25 at tier 2**, above most tier 3s. **Unresistable by anything not immune to mind-affecting powers.** The price gates it to roughly 3rd level for a Consular, 7th for a Guardian.
+**Dominate Mind — 25 at tier 2**, above most tier 3s. **Unresistable by anything not immune to mind-affecting powers.** The price gates it to roughly 3rd level for a Consular, 7th for a Guardian.
 
 **Drain Force — 4**, the cheapest. Drains an enemy's Force points rather than dealing damage — **useless against most of the galaxy.**
 
-**Crush Opposition and Inspire Followers ladder 8 / 12 / 16 / 20 / 24 / 28.** Both run six deep where everything else runs three, **and cost is the only thing left to express the last three steps** once the tier caps at 3.
+**Crush Opposition ladders 8 / 12 / 16 / 20 / 24 / 28.** It runs six deep where everything else runs three, **and cost is the only thing left to express the last three steps** once the tier caps at 3.
 
 **Revitalize and Battle Meditation start at 12** — high for tier 1, because both affect the whole party from their first step. KOTOR charged 50 and 35.
 
@@ -404,15 +395,14 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 **Wookiee Rage I–III** — **a racial feat for Wookiees**, not a Force power. This also resolves a collision: `Rage` already carried three referents — the RCR feat at p.181, the Wookiee species trait, and Rakata Rage. **A fourth as a Force power would have made the same identifier both a species trait and a thing that trait interacts with.**
 
-### 8.2 The Beast tree completed
+### 8.2 The Beast tree
 
 | Power | Tier | Cost | Ceiling |
 |---|---|---|---|
 | Beast Control | 1 | 6 | −1 |
 | › Beast Confusion | 2 | 20 | −4 |
-| ›› **Dominate Beast** | 3 | 22 | −7 |
 
-**Restores the three-tier shape the family had before its middle tier was cut from the source.**
+**⚠ Struck (MAIN, `PT-2752`, 2026-11-05): `Dominate Beast`, priced here at tier 3, 22, −7, is not authored. `PARTITION-01 §6.1` withdrew it, and K2's row 183 is a cut row with no description. The Beast line is two tiers. Beast Trick is merged into Beast Control (the owner, the same day).**
 
 ### 8.3 Telekinesis — the gap the video-game roster left
 

@@ -172,6 +172,8 @@ Three independent signals, and they agree:
 
 ### 6.1 Roster changes
 
+**⚠ SUPERSEDED IN PART (MAIN and the owner, `PT-2752`, 2026-11-05).** The Beast line stands: `PT-462`, `PT-2304` and the owner's 2026-10-19 rulings kept it, and the owner merged Beast Trick into Beast Control on 2026-11-05, as K2's row 182. Breath Control stands: K2's row 270, built and tested (MAIN). `BEAST_DOMINATION` stays withdrawn. The droid pair stays held and the two Precognitions stay moved, as written below.
+
 **Cut:** `BREATH_CONTROL`, `BEAST_TRICK`, `BEAST_CONFUSION`, `DROID_TRICK`, `DROID_CONFUSION`.
 
 > **`BEAST_DOMINATION` is withdrawn.** It was authored to complete the Beast tree; cutting Beast Control and Beast Confusion removes the tree it completed.
@@ -188,16 +190,16 @@ Three independent signals, and they agree:
 
 | Tree | Tier 1 | Tier 2 | Cost | Rate | Games |
 |---|---|---|---|---|---|
-| **A** | **Mind Trick** *(was Affect Mind)* | **Advanced Mind Trick** *(was Dominate)* | 10 / 25 | **6%** | both |
+| **A** | **Mind Trick** *(was Affect Mind)* | **Dominate Mind** *(K1's and K2's row 14; "Advanced Mind Trick" until MAIN's ruling, `PT-2752`, 2026-11-05)* | 10 / 25 | **6%** | both |
 | **B** | **Force Distraction** *(was Mind Trick)* | **Force Confusion** *(was Confusion)* | 15 / 20 | 12% | both |
 
 **All four universal. No drift either way.**
 
 > **The name `Mind Trick` moved.** It was row 181 and is now row 6. **Any reference written before this ruling that says "Mind Trick" meant the costed combat power, not the free social one.** Noted on both records.
 
-**Advanced Mind Trick ignores resistance** — any creature not immune to mind-affecting powers cannot resist it. **That is why it costs more than Force Confusion despite sitting in the cheaper tree.** The trees cross over at their second tier, deliberately.
+**Dominate Mind ignores resistance** — any creature not immune to mind-affecting powers cannot resist it. **That is why it costs more than Force Confusion despite sitting in the cheaper tree.** The trees cross over at their second tier, deliberately.
 
-**The gate this creates:** at 10, **only a Consular can cast Mind Trick at 1st level** — Guardian and Sentinel pools are 6 and 9. **Advanced Mind Trick is unreachable until 3rd for a Consular, 5th for a Sentinel, 7th for a Guardian.** Accepted; an unresistable effect should not be a first-level option.
+**The gate this creates:** at 10, **only a Consular can cast Mind Trick at 1st level** — Guardian and Sentinel pools are 6 and 9. **Dominate Mind is unreachable until 3rd for a Consular, 5th for a Sentinel, 7th for a Guardian.** Accepted; an unresistable effect should not be a first-level option.
 
 ### 6.3 The low-impact degradation rate
 

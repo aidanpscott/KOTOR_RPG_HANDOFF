@@ -1249,7 +1249,7 @@
 
 ### ⚠ And two things the trees do NOT do
 
-**They do not stun.** **The stun belongs to `Critical Strike` and `Precise Shot` — *"a first-attack hit stuns the target for one round unless it saves."***
+**The melee tree does not stun.** **That stun belongs to `Critical Strike` and `Precise Shot` — *"a first-attack hit stuns the target for one round unless it saves."*** **`Unheralded`, the ranged tree's third tier, keeps its own stun (the owner, `PT-2752`, 2026-11-05).**
 
 **⚠ And *surprise* is not a bonus of the chain — it is the *condition* that lets it fire.** **`ACTION-ECONOMY-01 §19.5`: unaware means Hidden from, Stunned, or unable to see.**
 

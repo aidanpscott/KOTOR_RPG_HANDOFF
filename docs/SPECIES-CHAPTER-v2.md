@@ -33,9 +33,9 @@ When you create a character, you choose a species before anything else. Your spe
 
 **Mind-influencing Force powers, defined.** **Several species resist them and nothing said what they were.** **`PARTITION-01 §4` names the set and `§6.1` cuts part of it; what survives is:**
 
-> **`Mind Trick` · `Advanced Mind Trick` · `Force Distraction` · `Force Confusion` · `Fear` · `Horror` · `Insanity`**
+> **`Mind Trick` · `Dominate Mind` · `Force Distraction` · `Force Confusion` · `Fear` · `Horror` · `Insanity`**
 
-**⚠ `Beast Control`, `Beast Confusion`, `Droid Trick` and `Droid Confusion` are cut or held for the KOTOR 2 package — `PARTITION-01 §6.1`.** **They are not in the set.**
+**⚠ `Droid Trick` and `Droid Confusion` are held for the KOTOR 2 package, `PARTITION-01 §6.1`; `Beast Control` and `Beast Confusion` work on beasts (`PT-462`, `PT-2304`).** **None of the four is in the set.**
 
 **⚠ And the name `Mind Trick` moved.** **It was row 181 and is now row 6.** **Any reference written before `D-AK` that says *Mind Trick* meant the costed combat power, now `Force Distraction`.** **Every reference in this chapter is post-ruling and means row 6.**
 
@@ -170,7 +170,7 @@ Their history is a war over fish that nearly ended them — the Aquala blamed th
 - **Ability Adjustments:** **−2 Wisdom, −2 Charisma**, plus a +2 set by subrace. *See each entry.*
 - **Size:** Medium. *1.7 metres.*
 - **Speed:** 10 metres.
-- **Low-Light Vision.** *Eyes built for deep water, not for daylight.*
+- **Low-Light Vision.** See at full range in dim light. *Eyes built for deep water, not for daylight.*
 - **Waterbreathing:** **Cannot drown.**
 - **Languages:** Speak and read/write **Aqualish and Basic**. **The three subraces speak dialects of one tongue** — mutually intelligible, whatever any of them says about it.
 **Availability:** **Present and unambiguous at 3956 BBY.** ⚠ **Ando is a long-settled Republic ward by the campaign date, disarmed as a term of peace.**
@@ -850,7 +850,7 @@ Their language, Nautila, is pronounceable only underwater. On land, it loses so 
 - **Ability Adjustments:** +2 Constitution, −2 Intelligence.
 - **Size:** Medium.
 - **Speed:** 10 metres on land; 6 metres swimming.
-- **Low-Light Vision.**
+- **Low-Light Vision.** See at full range in dim light.
 - **Waterbreathing:** **Cannot drown.**
 - **Pheromonal Sensor:** **Nautolan tendrils read chemical state directly.** **+4 Alertness while in water, +1 out of it**, and **+4 Alertness to detect a lie or read intent within 5 squares.**
 - **Nerve Tendrils:** *Racial feat — learned on level-up, maximum level 4.* **+2 on saves against `fear effects` and against any mind-influencing Force power.**
@@ -1207,7 +1207,7 @@ Their lekku serve as a secondary communication channel — a subtle, silent lang
 - **Ability Adjustments:** +2 Charisma, −2 Wisdom.
 - **Size:** Medium.
 - **Speed:** 10 metres.
-- **Low-Light Vision.**
+- **Low-Light Vision.** See at full range in dim light.
 - **Hardy:** **+2 species bonus on Fortitude saves.**
 - **Dancer's Footing:** **+2 Defence in any round in which you moved at least 2 squares.**
 - **Skill Bonuses:** +2 Persuade, +2 Streetwise.

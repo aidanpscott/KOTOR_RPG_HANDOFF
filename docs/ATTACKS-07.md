@@ -96,11 +96,13 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Clinch** | **1** | **Opposed attack roll.** On a success the target is **`Slowed`** and cannot make ranged attacks until the end of its next turn |
+| **Clinch** | **1** | **Opposed attack roll.** On a success the target is **`Slowed`** and cannot make ranged attacks until the end of its next turn. On a failure it takes **half damage**, rounded down, at least 1 (the owner, `PT-2752`, 2026-11-05) |
 | › **Off Balance** | **4** | On a success the target is **knocked prone** instead |
 | ›› **Throw Down** | **8** | On a success the target is **knocked prone and moved 2 squares**, and **provokes an opportunity attack from one ally** |
 
 **⚠ Mirrors `Sweep Attack` and `Staggering Shot`.** **`Sweep Attack` requires Strength 12; this does not, for the same reason as Power.**
+
+**⚠⚠⚠ AS BUILT (MAIN and the owner, `PT-2752`, 2026-11-05).** Empty hands (Q1). A win deals the strike's damage (`§4.3`); a loss half, at every tier, and lands nothing else. **Clinch**: `Slowed` is the full condition, as Rain of Blows' (Q5), and it and the bar end at the end of the target's next turn. A barred creature holding only a gun makes an unarmed strike at a foe in reach; with none it moves as its doctrine does and makes no attack. A foe in reach beats the target it kept. If its move ends beside a foe, it may punch that foe in the same turn. A droid has no melee (`§4`), so it only moves. A Force power or a thrown item is not barred. **Off Balance**: prone instead of both, with no "cannot stand"; standing costs the Action. **Throw Down**: prone, and moved 2 squares by the one knockback rule (Q4): away from you, stopped by a wall or a creature, never a ranged target, whose prone still lands. No save. The attack it provokes is `§10`'s: one Strike, no chain, a reaction, from the first ally in turn order with the target in reach and in sight, a reaction left and no gun; it follows the Opportunity attack's Always/Ask/Never setting, with no row of its own. With no able ally there is no attack, and the throw stands. Neither game has any of these rows.
 
 ---
 

@@ -281,7 +281,7 @@
 
 **`§9` sets a square at 2 metres and `§587` records that every distance in the corpus lands cleanly on one.**
 
-**⚠ `ATTACKS-04`'s `Point Blank Shot` and three `Spray` tiers use **4 metres** — 2.5 squares.** **They do not land cleanly and they are the only distances in the corpus that do not.**
+**⚠ `ATTACKS-04`'s `Point Blank Shot` and two `Spray` tiers use **4 metres** — 2.5 squares (`Sweeping Fire`'s row reads 10 metres, 5 squares, and the row wins: `ATTACKS-04`; MAIN, `PT-2752`, 2026-11-05).** **They do not land cleanly and they are the only distances in the corpus that do not.**
 
 **Corrected to 4 metres — two squares.** **`PT-165`.**
 

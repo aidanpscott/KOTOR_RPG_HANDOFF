@@ -76,6 +76,8 @@
 | › **Improved Sneak Attack** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and you may attempt to re-hide as part of the same declaration — opposed `Stealth` |
 | ›› **Master Sneak Attack** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **your critical threat multiplier against an unaware target is `+1`** |
 
+**⚠⚠⚠ RULED, NOT YET BUILT (`PT-2752`, 2026-11-05).** OWNER: Improved Sneak Attack keeps its re-hide, the same check as Hide, one roll per watcher (`ACTION-ECONOMY-01:73`). K2 differs: K2 refuses Stealth Mode in combat (its 1452). MAIN: Master Sneak Attack's "critical threat multiplier" is +1 threat span against an unaware target, additive (`PT-330`); no damage multiplier.
+
 **⚠ The ranged equivalent is `Stealthy Shot`, `ATTACKS-04`.** **Same gating, same dice, different roster — `ATTACKS-01 §4`'s parity holding.**
 
 > **⚠ Two clauses, both owner-ruled — `PT-197`.**

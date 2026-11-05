@@ -110,7 +110,7 @@
 
 **Beast Handling — Ride + Handle Animal.** Riding, calming, driving off, training. **Two narrow skills into one that earns its slot.**
 
-> **It also gives non-Force characters parity with a Force option.** Beast Control, Beast Confusion, and Dominate Beast already do this job for Jedi. **Beast Handling is what everyone else reaches for — and a Force user with both can do things neither alone allows.**
+> **It also gives non-Force characters parity with a Force option.** Beast Control and Beast Confusion already do this job for Jedi. **Beast Handling is what everyone else reaches for — and a Force user with both can do things neither alone allows.**
 
 ### 3.1 Forgery split rather than merged
 

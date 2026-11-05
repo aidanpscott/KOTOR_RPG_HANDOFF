@@ -51,6 +51,8 @@
 | › Suppression Spray |  | **Level 4.** **Three enemies within 4 metres of each other. Attack −2.** |
 | ›› Sweeping Fire |  | **Level 8.** **Every enemy within 10 metres of your first target. Attack −1.** |
 
+**⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05).** A square is 2 m, so 4 m is 2 squares and 10 m is 5. One click: the clicked enemy, then going clockwise round you each who qualifies, up to the tier's count (two, three, every one), never refused. "Within 4 metres of each other" needs every pair within 2 squares; Sweeping Fire measures from the first target. Taken in that clockwise order, the first who fit are kept. Enemies only, in sight and in range from where you shoot. Each shot keeps its own roll, damage and range penalties. Primary weapon only, `§7.2`'s penalty kept (`§7.5`). The hover names who the click will shoot.
+
 ## Precision — One shot that counts
 
 | Attack | Description | Effects |
@@ -158,6 +160,8 @@
 | **Stealthy Shot** | **1** | **Requires `Stealth` 6.** **Against a target unaware of you — `ACTION-ECONOMY-01 §19.5` — `+2d6` damage.** Attacking reveals you |
 | › **Marked Shot** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and the shot does not reveal you if it drops the target |
 | ›› **Unheralded** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
+
+**⚠⚠⚠ RULED, NOT YET BUILT (`PT-2752`, 2026-11-05).** MAIN: Marked Shot is built as written, the row the exception to `§19.5`; other watchers keep their own rolls. Whether a fight starts then is ruled once the code's behaviour is reported. OWNER: Unheralded keeps its stun.
 
 > **⚠ Two clauses, both owner-ruled — `PT-197`.**
 >

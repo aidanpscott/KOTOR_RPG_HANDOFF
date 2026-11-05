@@ -1425,16 +1425,16 @@ always nine.
 
 ## 14a. Display names of the generic blueprints — TEST 177
 
-**The generic blueprints' display names (MAIN's ruling after TEST 177; the implants RULED by the owner, the armour PROPOSED).** A base type's name above is a rule label ("Armour Class 4"); the generic item a player could hold as loot or buy in a store reads as a plain name instead. K2's own names for these rows are no better ("Defense Bonus 4", "Implant 1"). The ids stay generic; `gen_base_rules.NAMES` writes these, and `check_shipped_names.py` refuses any shipped item name that is not written in a rule document.
+**The generic blueprints' display names (MAIN's ruling after TEST 177; the implants RULED by the owner; the armour RULED by the owner, `PT-2752`, 2026-11-05).** A base type's name above is a rule label ("Armour Class 4"); the generic item a player could hold as loot or buy in a store reads as a plain name instead. K2's own names for these rows are no better ("Defense Bonus 4", "Implant 1"). The ids stay generic; `gen_base_rules.NAMES` writes these, and `check_shipped_names.py` refuses any shipped item name that is not written in a rule document.
 
 | Base type | Rule name | Shown to the player | Status |
 |---|---|---|---|
-| armour-class-4 | Armour Class 4 | Light Leather Armour | PROPOSED |
-| armour-class-5 | Armour Class 5 | Heavy Leather Armour | PROPOSED |
-| armour-class-6 | Armour Class 6 | Light Combat Armour | PROPOSED |
-| armour-class-7 | Armour Class 7 | Combat Armour | PROPOSED |
-| armour-class-8 | Armour Class 8 | Heavy Combat Armour | PROPOSED |
-| armour-class-9 | Armour Class 9 | Battle Armour | PROPOSED |
+| armour-class-4 | Armour Class 4 | Combat Suit | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class4001`, verbatim |
+| armour-class-5 | Armour Class 5 | Heavy Combat Suit | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class5001`, verbatim |
+| armour-class-6 | Armour Class 6 | Military Suit | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class6001`, verbatim |
+| armour-class-7 | Armour Class 7 | Light Battle Armor | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class7001`, verbatim |
+| armour-class-8 | Armour Class 8 | Battle Armor | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class8001`, verbatim |
+| armour-class-9 | Armour Class 9 | Heavy Battle Armor | **RULED** — owner, `PT-2752`, 2026-11-05: K1's own `g_a_class9001`, verbatim |
 | implant-1 | Implant, level 1 | Cybernetic Implant | **RULED** — owner, after TEST 177 (PT-1125's convention, paired with Cybernetic Implantation) |
 | implant-2 | Implant, level 2 | Advanced Cybernetic Implant | **RULED** — owner (paired with Advanced Cybernetic Implantation) |
 | implant-3 | Implant, level 3 | Master Cybernetic Implant | **RULED** — owner (paired with Master Cybernetic Implantation) |

@@ -1,6 +1,7 @@
 # TESTER-STATE — rewritten each report; a fresh session resumes from this alone
 
-**Last filed report: TEST 230** (2026-11-05) on app main e3a90c9 / Lodestar 4199fd7 / Shelf 4f15356; defaults; gate SENDABLE. A to C pass, nothing filed (the dead stay dead through a reload, the Combat log on a lost Sweep). Next number: 231.
+**Last filed report: TEST 231** (2026-11-05) on app main 2bd9706 / Lodestar 9950093 / Shelf 326ea8b; defaults; gate SENDABLE. A to G pass; one finding (a shot lands on a target the wall hides), one question (barred Gunman with nobody in reach stands still). Next number: 232.
+MAIN TEST 231 order (2026-11-05): app main 2bd9706 (Lodestar 9950093, Loom fcae558, Shelf 326ea8b; FULL 5597/0). Sprayer, Spray Pair, Clincher, Clinch Armed, Thrower, Spray Allies; dice, regression; plus a lost Sweep on Sweep Pair (MAIN's added step).
 MAIN TEST 230 order (2026-11-05): app main e3a90c9 (Lodestar 4199fd7, Loom e6dafde, Shelf 4f15356; FULL 5566/0). A the dead stay dead (Body Blow Fists, Cleaver); B the Combat log on a lost Sweep (Sweeper); C dice, regression.
 MAIN TEST 229 update (2026-11-04): step I only on app main a46ca98 (Shelf 4f15356, Lodestar 4199fd7, Loom e6dafde; FULL 5556/0): Brute cannot stand wording, Great Cleave hover at 2 squares. Then hold for TEST 230.
 MAIN TEST 229 order (2026-11-04): app main 0f8ae8e (Lodestar 4199fd7, Loom e6dafde, Shelf a1f1bab; FULL 5550/0). Cleaver, Cleaver Pair, Sweeper, Sweep Plain, Sweep Pair, Sweep Shot, mid-fight reloads (Sweep Plain, Combination Fists, Staggering, Body Blow Fists), dice, regression; known: gets still down wording, Great Cleave's hover walk.

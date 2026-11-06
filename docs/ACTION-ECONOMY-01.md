@@ -218,6 +218,8 @@
 
 **⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05, TEST 231's finding; `PT-2665`).** One reader, `canSee`, on every attack. A player's strike with no line is refused on the hover and on the click in K2's words (strref 1433, K1 and K2: "You cannot target a creature you cannot see or do not have a line of sight to."), asked of the square the strike would stand on, so a wall a fist can walk round is walked round, a walk that would end with no line takes no step, and no Action or declaration goes. An enemy chooses among those it sees, and one whose move loses the line makes no strike. Opportunity and provoked strikes ask the same reader. **Adjacent is not always seen:** `canSee` blocks a diagonal across a closed corner (`PT-1703`), so that one strike is refused too.
 
+**⚠⚠⚠ EVERY "ADJACENT" ASKS THE SAME QUESTION (MAIN, `PT-2752`, 2026-11-06, after TEST 232; `PT-1703`, `PT-2665`).** Adjacent across a closed corner is no line, for everyone. A flanker needs a line to the target (`§8`). So does an ally for Quick Attack's position (`ATTACKS-05`). The red reach ring draws only the squares its creature can strike without a step: no walls, nothing without a line, nothing off the board. Cleave's list, Combination and the punch already asked and now have beds. A creature joins by contact only with a line. A creature not yet in the fight, with no line from where the click would strike, reads K2's 1433 sentence on the hover as on the click; a concealed one reads nothing on the hover.
+
 **Aligns with `SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 modifier ladder.**
 
 > **Blaster combat is built on cover and nothing in the corpus mentioned it.** **Making it positional rather than an action means it costs movement, which is the correct price** — and it gives the GM something concrete to describe about a room.
@@ -607,7 +609,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 # 8. Flanking
 
-**Flanking exists. It gives +2 to attack rolls.** A shooter flanks too, within half its weapon's range (`§13.2`).
+**Flanking exists. It gives +2 to attack rolls.** A shooter flanks too, within half its weapon's range (`§13.2`). ⚠ The ally must be able to strike the target: across a closed corner there is no line and no flank (MAIN, `PT-2752`, 2026-11-06; `§6.2`).
 
 > **⚠ CORRECTED (2026-10-14, MAIN after TEST 179).** This line said *"It is melee only."* `PT-4` (*"Ranged flanking uses the same test. A shooter within half weapon range whose position negates a melee ally's is flanking"*) and `PT-171` (2026-08-24, `§13` *"held"*) are later decisions than this section's text (the 2026-08-22 import), and the later decision wins. One of the pair stands adjacent to the enemy; the other stands on the same line through the enemy, on the far side, within 1 square in melee or within half its weapon's range when it shoots. Grenades still never flank (`§13.3`).
 
@@ -690,6 +692,7 @@ why this needed stating rather than leaving to whoever next read the line:
 **They exist. They are universal. They draw on the reaction pool.**
 
 **Trigger:** an enemy **leaves your melee reach on foot** while you can see them.
+⚠ The line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started (MAIN, `PT-2752`, 2026-11-06).
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action.
 

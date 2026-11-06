@@ -216,6 +216,8 @@
 | **Three-quarters** — a doorway, a pillar, a crouching position behind a barricade | **+5** | **+2** |
 | **Total** | **cannot be targeted** by attacks that need line of sight | — |
 
+**⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05, TEST 231's finding; `PT-2665`).** One reader, `canSee`, on every attack. A player's strike with no line is refused on the hover and on the click in K2's words (strref 1433, K1 and K2: "You cannot target a creature you cannot see or do not have a line of sight to."), asked of the square the strike would stand on, so a wall a fist can walk round is walked round, a walk that would end with no line takes no step, and no Action or declaration goes. An enemy chooses among those it sees, and one whose move loses the line makes no strike. Opportunity and provoked strikes ask the same reader. **Adjacent is not always seen:** `canSee` blocks a diagonal across a closed corner (`PT-1703`), so that one strike is refused too.
+
 **Aligns with `SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 modifier ladder.**
 
 > **Blaster combat is built on cover and nothing in the corpus mentioned it.** **Making it positional rather than an action means it costs movement, which is the correct price** — and it gives the GM something concrete to describe about a room.

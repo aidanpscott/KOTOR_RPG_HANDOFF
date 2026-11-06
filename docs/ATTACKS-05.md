@@ -102,9 +102,9 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **`1d6` damage and +2 attack against a target with an ally adjacent to it** — `PT-333`. **Against a target with no ally adjacent, attack −2. (Was: +2/+2 against a target that had not yet acted this round, and it loses its Dexterity bonus to Defence.** **Defence −2 until the start of your next turn.** **If the attack reduces the target below half vitality, it acts last next round.** |
-| › Opening Strike |  | **Level 4.** **+4 attack and +4 damage.** |
-| ›› First Blood | The fight is decided in the first exchange or not at all. | **Level 8.** **+6 attack and +6 damage.** |
+| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **`1d6` damage and +2 attack against a target with an ally adjacent to it** — `PT-333`. **Against a target with no ally adjacent, attack −2.** **A melee weapon in hand.** (Was: +2/+2 against a target that had not yet acted this round, and it loses its Dexterity bonus to Defence.) **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** |
+| › Opening Strike |  | **Level 4.** **`2d6` damage and +3 attack in position, −2 out of it.** **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** *(MAIN, `PT-2752`, 2026-11-06, Q1 and Q4: the latest rulings win; ~~+4 attack and +4 damage~~ superseded.)* |
+| ›› First Blood | The fight is decided in the first exchange or not at all. | **Level 8.** **`3d6` damage and +4 attack in position, −2 out of it.** **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** *(MAIN, `PT-2752`, 2026-11-06, Q1 and Q4: the latest rulings win; ~~+6 attack and +6 damage~~ superseded.)* |
 
 ## Control — Prone and disarmed
 

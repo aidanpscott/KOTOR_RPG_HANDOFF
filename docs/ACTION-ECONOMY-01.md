@@ -1076,7 +1076,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Surprised. Prone. Slowed. Flanked. A target that has simply not acted yet.**
 
-> **That last one is `Quick Attack`'s condition and always was.**
+> **That last one was `Quick Attack`'s condition until `PT-333` moved it from timing to position.** *(~~and always was~~ superseded; MAIN, `PT-2752`, 2026-11-06.)*
 
 **And surprised stays out on purpose.** **`§19.2` says a surprised character is not easier to hit** — **if surprise made you unaware it would strip Dexterity and quietly reverse that.** **A surprised soldier still has his feet under him; he has not started shooting yet.**
 

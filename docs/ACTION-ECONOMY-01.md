@@ -258,6 +258,8 @@
 
 **Ours does not cancel:**
 
+> ⚠ **The Point Blank Shot chain, in position, waives this −4** (the owner, `PT-2752`, 2026-11-06).
+
 > **Firing a ranged weapon while adjacent to an enemy is at **−4**.** **The Reaction axis is the answer — `Snap Shot` fires as they close, before they are adjacent.**
 
 **⚠ And `Close Combat` now has a definition.** **It read *"+1 attack at short range"* with short range undefined.** **Short range is within one increment. The feat is a specialist's answer to the `−4`, and it stacks against it rather than against nothing.**
@@ -816,7 +818,7 @@ why this needed stating rather than leaving to whoever next read the line:
 |---|---|---|---|
 | **Movement, Medium creature** | 10 | **5** | species records |
 | **Melee reach** | 2 | **1** | — |
-| **Point Blank Shot band** | 5 | **2–3** | `ATTACKS-04` |
+| **Point Blank Shot band** | 4 | **2** | `ATTACKS-04`; corrected at `PT-165`, this table was stale (MAIN, `PT-2752`, 2026-11-06) |
 | **Guarding Stance radius** | 3 | **1–2** | `ATTACKS-05` |
 | **Bulwark radius** | 5 | **2–3** | `ATTACKS-05` |
 | **Reflex Fire — ally protected** | 5 | **2–3** | `ATTACKS-04` |

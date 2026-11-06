@@ -1,6 +1,7 @@
 # TESTER-STATE — rewritten each report; a fresh session resumes from this alone
 
-**Last filed report: TEST 232** (2026-11-06) on app main 6f9b8e1 / Lodestar 9950093 / Shelf 326ea8b; defaults; gate SENDABLE. A to E pass; one finding (blank hover on a creature not yet in the fight), one question (Flanking across a closed corner). B and C ran in a private yard, since deleted. Next number: 233.
+**Last filed report: TEST 235** (2026-11-06) on app main d0eaa56 / Lodestar 9950093 / Shelf e454ade; defaults; gate SENDABLE. TEST 234 (Inside Reach) 1 to 8 pass, one finding (name panel covers the hover tip). TEST 235 (Point Blank Shot) 1 to 7, dice and regression pass, one question (chain die on a critical). TEST 233 (corner sweep) not yet received; hold that number. Next number after it: 236.
+MAIN TEST 234 and 235 order (2026-11-06): app main d0eaa56 (Lodestar 9950093, Loom fcae558, Shelf e454ade; FULL 5686/0). 234 Inside Reach: Reacher, Reach Blade. 235 Point Blank Shot: Pointer, Point Pair, Point Blade. Dice, regression after both.
 MAIN TEST 232 order (2026-11-06): app main 6f9b8e1 (Lodestar 9950093, Loom fcae558, Shelf 326ea8b; FULL 5630/0). The sight fix: A Sprayer, B melee round a wall, C closed corner, D the bar on Clincher, E dice, regression, a plain shot and a Cleave in sight.
 MAIN TEST 231 order (2026-11-05): app main 2bd9706 (Lodestar 9950093, Loom fcae558, Shelf 326ea8b; FULL 5597/0). Sprayer, Spray Pair, Clincher, Clinch Armed, Thrower, Spray Allies; dice, regression; plus a lost Sweep on Sweep Pair (MAIN's added step).
 MAIN TEST 230 order (2026-11-05): app main e3a90c9 (Lodestar 4199fd7, Loom e6dafde, Shelf 4f15356; FULL 5566/0). A the dead stay dead (Body Blow Fists, Cleaver); B the Combat log on a lost Sweep (Sweeper); C dice, regression.

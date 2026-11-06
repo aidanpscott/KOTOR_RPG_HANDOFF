@@ -20,7 +20,7 @@
 
 ---
 
-## The eight axes
+## The nine axes
 
 | Axis | Chains | What it answers |
 |---|---|---|
@@ -32,6 +32,7 @@
 | **Control** | Disarming · Staggering Shot | *Can I take the fight away from them?* |
 | **Support** | Covering Fire | *Can I help someone else?* |
 | **Reaction** | Snap Shot · Overwatch | *Do I have to wait my turn?* |
+| **Stealth** | Stealthy Shot | *Can I hit them before they know I'm here?* |
 
 ---
 
@@ -74,8 +75,8 @@
 | Attack | Description | Effects |
 |---|---|---|
 | **Point Blank Shot** | Firing with the muzzle almost touching. No time to react, nowhere to go. | **Level 1.** **`1d6` damage and +2 attack against a target within 4 metres, and it loses its Dexterity bonus to Defence.** ⚠ **Beyond 4 metres, attack −2** — `PT-333`. **In position, the −4 for firing while adjacent does not apply** (the owner, `PT-2752`, 2026-11-06; `ACTION-ECONOMY-01 §6.2a`). (Struck: *"Once per encounter, against a target below 15% vitality, the damage is dealt directly to wounds."* `PT-559` removed wound points and this clause was missed: MAIN, `PT-2752`, 2026-11-06.) |
-| › Lethal Shot |  | **Level 4.** **`2d6` damage and +3 attack in position, −2 out of it.** **In position, the target loses its Dexterity bonus to Defence and the −4 for firing while adjacent does not apply** (MAIN and the owner, `PT-2752`, 2026-11-06). **⚠ On a hit, the target's DEATH THRESHOLD narrows by 2 for the rest of the encounter** — it dies at `−(Con − 2)`. `PT-559`. |
-| ›› Execute | The shot taken when the fight is already decided. | **Level 8.** **`3d6` damage and +4 attack in position, −2 out of it.** **In position, the target loses its Dexterity bonus to Defence and the −4 for firing while adjacent does not apply** (MAIN and the owner, `PT-2752`, 2026-11-06). **⚠ The narrowing rises to 4** — it dies at `−(Con − 4)`, and ⚠ **a target already at 0 or below is killed outright if this hit would reach its threshold.** `PT-559`. |
+| › Lethal Shot |  | **Level 4.** **`2d6` damage and +3 attack in position, −2 out of it.** **In position, the target loses its Dexterity bonus to Defence and the −4 for firing while adjacent does not apply** (MAIN and the owner, `PT-2752`, 2026-11-06). (Struck: the death-threshold clause. Enemies die at 0, at the table too: MAIN, `PT-2752`, 2026-11-06.) |
+| ›› Execute | The shot taken when the fight is already decided. | **Level 8.** **`3d6` damage and +4 attack in position, −2 out of it.** **In position, the target loses its Dexterity bonus to Defence and the −4 for firing while adjacent does not apply** (MAIN and the owner, `PT-2752`, 2026-11-06). (Struck: the death-threshold clause. Enemies die at 0, at the table too: MAIN, `PT-2752`, 2026-11-06.) |
 
 ## Control — Take the fight away
 

@@ -26,6 +26,7 @@
 | **Control** | Sweep Attack · Disarming Strike | **Prone replaces immobilised**, and **both resolve on opposed rolls** rather than saves — you are close enough that the target's competence opposes you. |
 | **Support** | Guarding Stance | **Bodyguarding replaces suppression.** You cannot pin a corridor with a blade; **you can stand in front of someone.** |
 | **Reaction** | Parry | **Parry-riposte replaces opportunity fire.** The most natural reaction in the game. |
+| **Stealth** | Sneak Attack | **Mirrors ranged's Stealthy Shot.** Extra damage against an unaware target. |
 
 ---
 
@@ -102,7 +103,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **`1d6` damage and +2 attack against a target with an ally adjacent to it** — `PT-333`. **Against a target with no ally adjacent, attack −2.** **A melee weapon in hand.** (Was: +2/+2 against a target that had not yet acted this round, and it loses its Dexterity bonus to Defence.) **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** |
+| **Quick Attack** | The first blow, struck before the other has settled. | **Level 1.** **`1d6` damage on the first attack that hits this round, in either hand** *(ATTACKS-01 §2.0)***, and +2 attack against a target with an ally adjacent to it** — `PT-333`. **Against a target with no ally adjacent, attack −2.** **A melee weapon in hand.** (Was: +2/+2 against a target that had not yet acted this round, and it loses its Dexterity bonus to Defence.) **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** |
 | › Opening Strike |  | **Level 4.** **`2d6` damage and +3 attack in position, −2 out of it.** **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** *(MAIN, `PT-2752`, 2026-11-06, Q1 and Q4: the latest rulings win; ~~+4 attack and +4 damage~~ superseded.)* |
 | ›› First Blood | The fight is decided in the first exchange or not at all. | **Level 8.** **`3d6` damage and +4 attack in position, −2 out of it.** **Defence −2 until the start of your next turn.** **If the attack takes the target from half vitality or above to below half, it acts last next round.** *(MAIN, `PT-2752`, 2026-11-06, Q1 and Q4: the latest rulings win; ~~+6 attack and +6 damage~~ superseded.)* |
 
@@ -110,7 +111,7 @@
 
 | Attack | Description | Effects |
 |---|---|---|
-| **Sweep Attack** | A low, wide cut that takes the legs rather than the head. | **Level 1. Requires Strength 12.** **Opposed attack roll. On a win the target is knocked prone and cannot stand until the start of your next turn.** **Prone targets take +2 damage from your attacks.** Half damage on a loss, rounded down, at least 1. |
+| **Sweep Attack** | A low, wide cut that takes the legs rather than the head. | **Level 1. Requires Strength 12.** **Opposed attack roll** *(your d20 + attack bonus vs. its d20 + attack bonus; a tie goes to the defender)***.** **This attack cannot score a critical hit.** **On a win the target is knocked prone and cannot stand until the start of your next turn.** **Prone targets take +2 damage from your attacks** *(a passive of holding the tier, on any of your attacks against any prone target)***. On a loss, half damage, rounded down, at least 1.** |
 | › Legsweep |  | **Level 4.** **Opposed roll at +3.** **Prone targets take +4 damage** from your attacks. |
 | ›› Knockdown | They go down and they stay down. | **Level 8.** **Opposed roll at +6.** **Prone targets take +6 damage** from your attacks. |
 

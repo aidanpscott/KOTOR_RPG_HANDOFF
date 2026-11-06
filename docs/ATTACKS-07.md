@@ -84,8 +84,8 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Inside Reach** | **1** | **Move up to your speed and strike as one declaration.** The movement provokes nothing from the target you strike |
-| › **Boxed In** | **4** | As above, and **the target cannot move away from you** until the end of its next turn unless it `Disengage`s |
+| **Inside Reach** | **1** | **Move up to your speed and strike as one declaration.** The movement provokes no opportunity attack from any enemy (the owner, `PT-2752`, 2026-11-06) |
+| › **Boxed In** | **4** | As above, and **the target cannot move away from you** (no step that increases its distance from you) until the end of its next turn unless it `Disengage`s |
 | ›› **Smother** | **8** | As above, and **the target's `Disengage` against you costs its whole movement** |
 
 **⚠ Mirrors `Quick Attack` and `Point Blank Shot`.**
@@ -96,9 +96,9 @@
 
 | Tier | Level | Effect |
 |---|---|---|
-| **Clinch** | **1** | **Opposed attack roll.** On a success the target is **`Slowed`** and cannot make ranged attacks until the end of its next turn. On a failure it takes **half damage**, rounded down, at least 1 (the owner, `PT-2752`, 2026-11-05) |
+| **Clinch** | **1** | **Opposed attack roll.** On a success, deal the strike's damage *(§4.3)* and the target is **`Slowed`** and cannot make ranged attacks until the end of its next turn. On a failure, **half damage**, rounded down, at least 1 (the owner, `PT-2752`, 2026-11-05) |
 | › **Off Balance** | **4** | On a success the target is **knocked prone** instead |
-| ›› **Throw Down** | **8** | On a success the target is **knocked prone and moved 2 squares**, and **provokes an opportunity attack from one ally** |
+| ›› **Throw Down** | **8** | On a success the target is **knocked prone and moved 2 squares away from you** *(stopped by a wall or a creature; never against a ranged target)*, and **provokes an opportunity attack from one ally** *(first in turn order with the target in reach, in sight, a reaction left, and no gun; §10's one Strike, no chain)* |
 
 **⚠ Mirrors `Sweep Attack` and `Staggering Shot`.** **`Sweep Attack` requires Strength 12; this does not, for the same reason as Power.**
 

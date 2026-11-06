@@ -12,7 +12,7 @@
 |---|---|---|
 | **Movement** | 10 | **5** |
 | **Melee reach** | 2 | **1** |
-| **Point-blank band** | 5 | **2–3** |
+| **Point-blank band** | 4 | **2** |
 
 > **⚠ METRES ARE THE SOURCE'S UNIT; SQUARES ARE THE BOARD'S — `PT-1587`.** RCR speaks in metres and every attested number arrives that way: `PT-1568`'s light radii, `PT-1571`'s perception ranges, the scent bands. **Rules and documents keep metres where the source gave metres, so a citation still matches its folio.**
 >
@@ -216,9 +216,13 @@
 | **Three-quarters** — a doorway, a pillar, a crouching position behind a barricade | **+5** | **+2** |
 | **Total** | **cannot be targeted** by attacks that need line of sight | — |
 
+### 6.2 The closed corner (`PT-1703`, `PT-2665`)
+
+**No line of sight across a closed corner.** A wall on each side of a corner blocks the diagonal through it. A creature adjacent to you across a closed corner cannot be attacked, flanked, or provoked — there is no line. The same rule applies to every reader that asks whether one creature can see or reach another: attacks, flanking (§8), Quick Attack's ally-in-position (`ATTACKS-05`), Cleave's clockwise list, the reach ring, Combination, and opportunity attacks (§10).
+
 **⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05, TEST 231's finding; `PT-2665`).** One reader, `canSee`, on every attack. A player's strike with no line is refused on the hover and on the click in K2's words (strref 1433, K1 and K2: "You cannot target a creature you cannot see or do not have a line of sight to."), asked of the square the strike would stand on, so a wall a fist can walk round is walked round, a walk that would end with no line takes no step, and no Action or declaration goes. An enemy chooses among those it sees, and one whose move loses the line makes no strike. Opportunity and provoked strikes ask the same reader. **Adjacent is not always seen:** `canSee` blocks a diagonal across a closed corner (`PT-1703`), so that one strike is refused too.
 
-**⚠⚠⚠ EVERY "ADJACENT" ASKS THE SAME QUESTION (MAIN, `PT-2752`, 2026-11-06, after TEST 232; `PT-1703`, `PT-2665`).** Adjacent across a closed corner is no line, for everyone. A flanker needs a line to the target (`§8`). So does an ally for Quick Attack's position (`ATTACKS-05`). The red reach ring draws only the squares its creature can strike without a step: no walls, nothing without a line, nothing off the board. Cleave's list, Combination and the punch already asked and now have beds. A creature joins by contact only with a line. A creature not yet in the fight, with no line from where the click would strike, reads K2's 1433 sentence on the hover as on the click; a concealed one reads nothing on the hover.
+**⚠⚠⚠ EVERY "ADJACENT" ASKS THE SAME QUESTION (MAIN, `PT-2752`, 2026-11-06, after TEST 232; `PT-1703`, `PT-2665`).** Adjacent across a closed corner is no line, for everyone. A flanker needs a line to the target (`§8`). So does an ally for Quick Attack's position (`ATTACKS-05`). The red reach ring draws what the strike allows, so it leaves out a square across a closed corner. Cleave's list, Combination, the punch and the opportunity watchers ask the same question. A creature not yet in the fight reads K2's 1433 sentence on the hover as on the click. **CODER's reading, awaiting MAIN:** the ring also leaves out walls and squares off the board. A creature joins by contact only with a line. A concealed creature reads nothing on the hover.
 
 **Aligns with `SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 modifier ladder.**
 
@@ -694,7 +698,7 @@ why this needed stating rather than leaving to whoever next read the line:
 **They exist. They are universal. They draw on the reaction pool.**
 
 **Trigger:** an enemy **leaves your melee reach on foot** while you can see them.
-⚠ The line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started (MAIN, `PT-2752`, 2026-11-06).
+⚠ **CODER's reading, awaiting MAIN:** the line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started.
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action.
 
@@ -818,7 +822,7 @@ why this needed stating rather than leaving to whoever next read the line:
 |---|---|---|---|
 | **Movement, Medium creature** | 10 | **5** | species records |
 | **Melee reach** | 2 | **1** | — |
-| **Point Blank Shot band** | 4 | **2** | `ATTACKS-04`; corrected at `PT-165`, this table was stale (MAIN, `PT-2752`, 2026-11-06) |
+| **Point Blank Shot band** | 4 | **2** | `ATTACKS-04` — `PT-165` |
 | **Guarding Stance radius** | 3 | **1–2** | `ATTACKS-05` |
 | **Bulwark radius** | 5 | **2–3** | `ATTACKS-05` |
 | **Reflex Fire — ally protected** | 5 | **2–3** | `ATTACKS-04` |
@@ -1109,12 +1113,14 @@ why this needed stating rather than leaving to whoever next read the line:
 
 ## Knockback is 3 squares, not 2
 
-**Base speed is 10 metres — 5 squares.** **Standing costs half of that, rounded up under `§14`: 3.**
+~~Base speed is 10 metres — 5 squares. Standing costs half of that, rounded up under §14: 3.~~ *(Stale: standing now costs the Action, not half movement — §19.4 above. DOCS, PT-2752.)*
 
-| Pushed | Movement left after standing | Squares to re-close | Result |
+**Standing costs the Action (§19.4).** The target stands, then has its full Move (5 squares) but no Action to attack with.
+
+| Pushed | Can re-close? | Can attack? | Result |
 |---|---|---|---|
-| **2** | 2 | 2 | **re-closes and attacks** |
-| **3** | 2 | 3 | **turn denied** |
+| **2** | Yes (2 ≤ 5) | **No (Action spent standing)** | **turn denied** |
+| **3** | Yes (3 ≤ 5) | **No** | **turn denied** |
 
 > **At 2 squares the knockback denied nothing at all.** **The target stood, walked back the two squares, and attacked exactly as it would have.**
 

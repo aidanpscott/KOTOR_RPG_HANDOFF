@@ -573,6 +573,10 @@ The die follows the beast-tier ladder (`BEASTS-FEATS-01`), scaled by the propert
 
 **⚠ Which ability score is drained is stated on the item's own row** — Dexterity for sonic weapons, Strength for melee poisons, Constitution for toxins. The property names the target attribute, not a pool.
 
+#### Timed ability penalty — `PT-2188`
+
+**A timed ability penalty is not ability damage.** Seven Force powers apply a penalty to an ability score that lasts a stated number of rounds and ends automatically. This is a duration, not an injury: it does not recover one point per day of rest, and it does not stack with ability damage. When the rounds expire, the penalty is removed in full.
+
 ---
 
 ## 8. Equipment as effect source

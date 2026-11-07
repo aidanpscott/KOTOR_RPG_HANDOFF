@@ -193,6 +193,8 @@
 
 **And Saber Swarm at 2 points a round is a real constraint.** A Velocity chain is declared most rounds, **so an Ataru duellist is spending from the pool for an entire fight.**
 
+**Saber Swarm keeps four strikes at every tier** (the owner, `PT-2752`, 2026-11-07). The three-swing ruling (`PT-2752`, 2026-11-03) covers the Flurry family, not the lightsaber roster. The Force-point cost is the lightsaber chain's own justification for the higher count.
+
 **Niman breaks the declaration rule.** `ATTACKS-01 §2` establishes one declaration per round, **and that a Force power is an attack.** **Guided Strike is the only entry permitted two.**
 
 ### The Ferocity drift rule

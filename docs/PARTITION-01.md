@@ -15,9 +15,11 @@
 
 | | Dark | Light | Universal | Total |
 |---|---|---|---|---|
-| **PC-facing** | 30 | 28 | 41 | **99** |
+| **PC-facing** | 39 | 22 | 39 | **100** |
 | NPC-only | — | — | 3 | 3 |
-| **Roster** | **30** | **28** | **44** | **102** |
+| **Roster** | **39** | **22** | **42** | **103** |
+
+**⚠ RECOUNTED (MAIN, `PT-2752`, 2026-11-07), from the shipped roster, `data/extracted/powers.json` (built from `FORCE-POWERS-01`), after Beast Trick's merge into Beast Control and Inspire Followers I–V's removal (MAIN and the owner, `PT-2752`, 2026-11-05, rulings B(a) and B(d)).** It was 30 · 28 · 41 = 99, KOTOR 2's list as first counted; `§6`'s cuts and moves, the powers restored to KOTOR 1 (`§6.4`) and the powers we authored have changed it since. The three NPC-only rows (`§1.3`) are not in the extract.
 
 **Plus 11 forms** at `usertype = 6`, handled separately — see `§3.4`/`§3.5` of the agenda.
 

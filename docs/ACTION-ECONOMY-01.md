@@ -52,15 +52,11 @@
 
 **The main thing you do. One per round, and resolving it ends your turn.**
 
-> **⚠⚠ THE TURN DOES NOT END ITSELF — `PT-1540`, owner ruling.** `TEST 025` found the action pip **can never be seen spent**: the strike spends the action, ends the turn, runs the enemy's turn and begins a new round **inside one keypress.** `PT-1517`'s *a spent pip goes grey* is unreachable for it.
+**Ending your turn is a deliberate act** (`PT-1540`, owner ruling). Resolving an action **spends the action** — `§1` is unchanged about the budget. **What changes is that the turn waits for you.** Four of five budgets survive an action — move you have not spent, gear, bonus, reaction — and you may spend them after acting.
+
+> ### As built — §1
 >
-> **⚠ And auto-advancing deletes half the action economy.** Four of five budgets survive an action — **move you have not spent, gear, bonus, reaction** — and ending the turn on resolution means **you can never spend them after acting.** You would have to move first, always, or lose it.
->
-> **⚠ And the pip row exists to say what is left.** If the turn ends the instant you act, **the row only ever describes a turn you can no longer use.**
->
-> **RULED: ending your turn is a deliberate act.** Resolving an action still **spends the action** — `§1` is unchanged about the budget. **What changes is that the turn waits for you.**
->
-> **⚠ And BG3 already answered the affordance:** an **End Turn** button that **glows when the budgets are spent and is cancellable** (`STUDY 20`). One more keypress per turn, and the same one every tactical game asks for.
+> **⚠⚠ THE TURN DOES NOT END ITSELF — `PT-1540`.** `TEST 025` found the action pip can never be seen spent: the strike spends the action, ends the turn, runs the enemy's turn and begins a new round inside one keypress. `PT-1517`'s *a spent pip goes grey* is unreachable for it. The pip row exists to say what is left. BG3 answered the affordance: an End Turn button that glows when the budgets are spent and is cancellable (`STUDY 20`).
 
 | Action | What it does |
 |---|---|
@@ -74,8 +70,8 @@
 | **Ready** | **Name a trigger and an action.** When it fires, spend a reaction to take it. **Your turn ends.** |
 | **Scan** | **An Awareness or Alertness check** to find what you have missed — a hidden enemy, a trap, a way out. |
 | **Slice** | **A Slicing check** against a terminal, droid, or system. |
-| **Treat** | **A Medicine check** on a wounded ally within reach. |
-| **Repair** | **A Repair check** on a droid within reach. |
+| **Treat** | **A Medicine check** on a wounded ally within reach **and line of sight** (MAIN, `PT-2752`, 2026-11-06). |
+| **Repair** | **A Repair check** on a droid within reach **and line of sight**. |
 | **Improvise** | **Anything else the GM allows.** Kick a console, cut a cable, shove someone off a ledge. |
 
 > **⚠ Throwing a grenade is an Attack, not Gear.** **It spends the Attack because treating it as Gear would let a character grenade *and* declare an attack in the same round** — the economy is the whole reason it sits here.
@@ -101,7 +97,7 @@
 
 # 3. Gear
 
-**One per round. Using a consumable or activating a worn device, on yourself or an ally within reach.**
+**One per round. Using a consumable or activating a worn device, on yourself or an ally within reach and line of sight** (MAIN, `PT-2752`, 2026-11-06).
 
 | Gear use | Examples from `baseitems.2da` |
 |---|---|
@@ -143,8 +139,11 @@
 | **The damage** | On a hit it deals half the weapon's damage roll, rounded down, minimum 1, of the weapon's own damage type. |
 | **Who it can hit** | Force Deflection sends it back at the shooter. Force Redirection lets you choose any enemy within the shooter's weapon range of you, in sight. |
 | **The cost** | Nothing beyond the deflection's own Force points: no action, no reaction. |
-| **The settings** | Under Ask, Redirection's question lists each target with the return shot's chance, shooter first. Under Always, and for a companion under the AI, it goes back at the shooter. |
-| **A target already down** | No roll; the log says so. |
+| **A target already down** | No roll. |
+
+> ### As built — §4 deflected bolt
+>
+> **The settings:** Under Ask, Redirection's question lists each target with the return shot's chance, shooter first. Under Always, and for a companion under the AI, it goes back at the shooter.
 
 ### `Ready` is the ranged answer, and nobody has used it
 
@@ -301,6 +300,8 @@
     point blank         2 squares   4 m    Point Blank Shot, Spray
 
 > **⚠ Adjacent and point blank are different distances and both were in the corpus unstated.** **Adjacent is *in melee with you*. Point blank is *close enough that they cannot react*.**
+
+**Point Blank measures from where the shot is fired, and the Dexterity loss applies to that attack only** (MAIN, `PT-2752`, 2026-11-07).
 
 **The increments, in squares:**
 
@@ -474,7 +475,11 @@
 
 **`§7.5` is rewritten to agree.**
 
-**Built (MAIN, `PT-2752`, 2026-11-04; TEST 225's finding):** a Velocity chain with two weapons or a double-blade swings P O P O, each swing with its own weapon's dice. *(Was: P P P O.)* A target that falls stops the rest.
+**A Velocity chain with two weapons or a double-blade swings P O P O** (primary, off, primary, off), each swing with its own weapon's dice (MAIN, `PT-2752`, 2026-11-04). A target that falls stops the rest. *(Was: P P P O.)*
+
+> ### As built — §7.1
+>
+> Built (TEST 225's finding): the P O P O swing order is now the engine's alternation.
 
 ### Velocity does not scale with tier
 
@@ -512,8 +517,11 @@
 
 - **A penalty is not halved.** A Strength modifier of `−3` is `−3` in either hand — the same reasoning as `§7.4`'s *"a penalty is not multiplied"* (`PT-2338`). *(Stated choice: the ruling says "half the modifier"; softening a weakness in the off hand has no clearer rationale than worsening it in two hands.)*
 - **Strength only.** A ranged off-hand weapon still adds its **Dexterity** in full (`EQUIPMENT-01`, `PT-340`).
-- **Built once:** `damageTerms(offHand: true)`, so the Equip readout, the strike line and every roll agree.
-- **⚠ NOT EXTENDED.** `§7.4` already gives a two-handed weapon `1.5×` Strength (`PT-2222`, `PT-2338`) and is unchanged. No other d20 Strength rule is built by this ruling.
+- **⚠ NOT EXTENDED.**
+
+> ### As built — §7.2a
+>
+> Built once: `damageTerms(offHand: true)`, so the Equip readout, the strike line and every roll agree. `§7.4` already gives a two-handed weapon `1.5×` Strength (`PT-2222`, `PT-2338`) and is unchanged. No other d20 Strength rule is built by this ruling.
 
 ## 7.3 What it buys
 
@@ -573,7 +581,11 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **The source is explicit.** *"A double bladed lightsaber gives you an off-hand attack — for all intents and purposes it acts like dual wielding two sabers, and should be treated the same."* *"Dual bladed weapons count as two weapons and using them gives a penalty to your attack value."*
 
-**Built (MAIN, `PT-2752`, 2026-11-03):** a double-bladed weapon alone swings its main end, then its off end, on every declaration that takes the off hand (`§7.5`), the player's and a creature's alike, with the −3 / −2 / −1 / −1 above. **Each end adds the whole Strength modifier**: one profile, both ends, and `§7.2a`'s half is for *a weapon in the off hand*, which a double-blade's second end is not. *(Was: the second end never swung; an ordinary attack was one swing.)*
+**A double-bladed weapon alone swings its main end, then its off end, on every declaration that takes the off hand (`§7.5`)**, the player's and a creature's alike, with the −3 / −2 / −1 / −1 above (MAIN, `PT-2752`, 2026-11-03). **Each end adds the whole Strength modifier**: one profile, both ends, and `§7.2a`'s half is for *a weapon in the off hand*, which a double-blade's second end is not. *(Was: the second end never swung; an ordinary attack was one swing.)*
+
+> ### As built — §7.6
+>
+> Built (MAIN, `PT-2752`, 2026-11-03): the double-blade's two-swing pattern.
 
 ### Three differences from carrying two separate weapons
 
@@ -659,13 +671,11 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **d20 + Dexterity modifier, rolled once per encounter. No re-rolls.**
 
-> **⚠ `PT-1422` — A TIE BREAKS ON DEXTERITY, THEN ON TAG. NEVER ON A ROLL.**
+**A tie breaks deterministically: higher Dexterity modifier first** (`PT-1422`). No tiebreak roll — a tiebreak roll IS a re-roll. *(If still level after Dexterity: the table needs a second tiebreak — OPEN FOR MAIN.)*
+
+> ### As built — §9 initiative
 >
-> **"No re-rolls" settles it: a tiebreak roll IS a re-roll.** So the break is deterministic — **higher Dexterity modifier first**, and if still level, **tag order**.
->
-> **⚠ And it may NOT be the order the caller passed in.** `APP-UI-VISION-01` requires *"one shared, objective order, identical on every player's screen, since initiative is a fact of the fight"* — **and a tie broken by declaration order is a fact about the array a caller happened to build.** Two clients could show different orders for the same encounter.
->
-> **A tag is permanent, unique and never reassigned (`PT-1331`), so it is the only stable name a combatant has** — and it makes the order **replayable**, which a caller's array never was.
+> **`PT-1422` — A TIE BREAKS ON DEXTERITY, THEN ON TAG.** The tag is the app's deterministic tiebreak: permanent, unique, never reassigned (`PT-1331`), replayable. `APP-UI-VISION-01` requires "one shared, objective order, identical on every player's screen."
 
 **⚠ CLOSED. No class modifies initiative. `PT-96`.**
 
@@ -698,7 +708,7 @@ why this needed stating rather than leaving to whoever next read the line:
 **They exist. They are universal. They draw on the reaction pool.**
 
 **Trigger:** an enemy **leaves your melee reach on foot** while you can see them.
-⚠ The line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started (MAIN, `PT-2752`, 2026-11-06).
+**Line of sight is checked from the square the mover leaves, not the one they reach** (MAIN, `PT-2752`, 2026-11-06). A step that starts across a closed corner provokes nothing (§6.2). A step that ends out of your sight still provokes if you had a line where it started. The declared Inside Reach walk provokes no enemy when the declared strike will follow at the walk's end (MAIN, `PT-2752`, 2026-11-07; `ATTACKS-07`).
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action.
 
@@ -800,7 +810,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 > **This settles which weapons can be dual-wielded without a separate ruling.** **`weaponwield` 1, 2, and 4 are one-handed and may be paired. 3, 5, and 6 are two-handed and may not.** **Two pistols yes; two rifles no; two vibroblades yes; two Force Pikes no.**
 >
-> **⚠ A MIX OF RANGED AND MELEE IS NOT A PAIR — `PT-2731` item 2, read in K2.** **One-handed does not mean pairable with every other one-handed weapon: K2 refuses a pistol (`weaponwield` 4) beside a one-handed blade (1 or 2), in either order, with the box *"You cannot equip this weapon while an incompatible weapon is equipped in your other hand."* The row is still listed, painted can't-use. Two of a kind pair; an empty other hand blocks nothing.**
+> **⚠ A MIX OF RANGED AND MELEE IS NOT A PAIR — `PT-2731` item 2, read in K2.** **One-handed does not mean pairable with every other one-handed weapon: K2 refuses a pistol (`weaponwield` 4) beside a one-handed blade (1 or 2), in either order, with the box *"You cannot equip this weapon while an incompatible weapon is equipped in your other hand."* The combination is refused. Two of a kind pair; an empty other hand blocks nothing.**
 
 **And `weaponwield` 6 is resolved: it is the heavy autofire category, exactly two items in both games.**
 
@@ -823,26 +833,18 @@ why this needed stating rather than leaving to whoever next read the line:
 | **Movement, Medium creature** | 10 | **5** | species records |
 | **Melee reach** | 2 | **1** | — |
 | **Point Blank Shot band** | 4 | **2** | `ATTACKS-04` — `PT-165` |
-| **Guarding Stance radius** | 3 | **1–2** | `ATTACKS-05` |
+| **Guarding Stance radius** | ~~3~~ 4 | **2** | `ATTACKS-05` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
 | **Bulwark radius** | 5 | **2–3** | `ATTACKS-05` |
 | **Reflex Fire — ally protected** | 5 | **2–3** | `ATTACKS-04` |
 | **Suppressing Fire radius** | 5 | **2–3** | `ATTACKS-04` |
 | **Covering Barrage radius** | 10 | **5** | `ATTACKS-04` |
-| **Lockdown splash** | 3 | **1–2** | `ATTACKS-04` |
+| **Lockdown splash** | ~~3~~ 4 | **2** | `ATTACKS-04` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
 | **Draw Closer pull** | 10 | **5** | `ATTACKS-06` |
 | **Draw Closer push** | 4 | **2** | `ATTACKS-06` *(corrected at `PT-2752`: the push is Draw Closer's, at the document's 4 metres; Pushing Slash inherits it)* |
-| **Disarmed weapon lands within** | 3 | **1–2** | `ATTACKS-05` |
+| **Disarmed weapon lands within** | ~~3~~ 4 | **2** | `ATTACKS-05` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
 | **Grenade travel** | 10 | **5** | `baseitems.2da` |
 
-> **⚠ Several land on an odd metre and straddle two squares.** **A 3-metre radius is one and a half squares; a 5-metre radius is two and a half.**
-
-**Two ways to resolve, and it should be one of them consistently:**
-
-**Round down** — 4 m becomes 1 square, 4 m becomes 2. **Tighter, and it makes Guarding Stance adjacent-only.**
-
-**Round up** — 4 m becomes 2 squares, 4 m becomes 3. **More generous, and it keeps Guarding Stance covering a small cluster.**
-
-**⚠ Or restate the affected radii in even metres** — 4 m and 6 m instead of 3 and 5 — **which is cleanest but touches eight entries across three documents.**
+> ~~⚠ Several land on an odd metre and straddle two squares.~~ **Settled: all snap to 4 m — 2 squares** (`PT-165`; the owner, `PT-2752`, 2026-11-07). Three rows (Guarding Stance, Lockdown splash, Disarmed weapon) go from 3 to 4. *(Row changes for Coder.)*
 
 ---
 
@@ -916,7 +918,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Attack rolls, saves, opposed rolls, and skill checks all draw d20.** **They resolve in the order they arise, and initiative order breaks simultaneity.**
 
-**⚠ AN OPPOSED ROLL: A TIE GOES TO THE DEFENDER (MAIN, `PT-2752`, 2026-11-04).** **One rule for every opposed roll.** *Until now this lived only in a comment in the engine.*
+**AN OPPOSED ROLL: A TIE GOES TO THE DEFENDER (MAIN, `PT-2752`, 2026-11-04).** **One rule for every opposed roll.**
 
 **Each die type draws independently.** *A character wielding a vibrosword and a blaster in the same round draws d6 for one and d8 for the other; the two do not interleave.*
 
@@ -1075,7 +1077,11 @@ why this needed stating rather than leaving to whoever next read the line:
 
 > **⚠⚠ THE EXTRA DICE ARE NOT MULTIPLIED ON A CRITICAL** — MAIN, 2026-10-29 (`PT-2752`): precision damage, as in K2 (*"The extra damage is
 > not multiplied in the case of a critical hit"*, `feat.2da` row 60) and the d20 rule. **Killer's Instinct, Sneak Attack and Stealthy Shot all
-> add their dice once.** Built: Lodestar's `unawareOf` is the one reader and `DamageRider` the unmultiplied dice.
+> add their dice once.**
+
+> ### As built — §19.5
+>
+> Lodestar's `unawareOf` is the one reader and `DamageRider` the unmultiplied dice.
 
 **Attacking reveals you**, so it fires once per approach unless you hide again.
 
@@ -1113,14 +1119,12 @@ why this needed stating rather than leaving to whoever next read the line:
 
 ## Knockback is 3 squares, not 2
 
-~~Base speed is 10 metres — 5 squares. Standing costs half of that, rounded up under §14: 3.~~ *(Stale: standing now costs the Action, not half movement — §19.4 above. DOCS, PT-2752.)*
+~~**Base speed is 10 metres — 5 squares.** **Standing costs half of that, rounded up under `§14`: 3.**~~ ⚠ Superseded: standing now costs the Action, not half movement (§19.4, MAIN, `PT-2752`, 2026-11-04). A knocked-prone target stands at the cost of its Action (§19.4).
 
-**Standing costs the Action (§19.4).** The target stands, then has its full Move (5 squares) but no Action to attack with.
-
-| Pushed | Can re-close? | Can attack? | Result |
+| Pushed | Movement left after standing | Squares to re-close | Result |
 |---|---|---|---|
-| **2** | Yes (2 ≤ 5) | **No (Action spent standing)** | **turn denied** |
-| **3** | Yes (3 ≤ 5) | **No** | **turn denied** |
+| **2** | 2 | 2 | **re-closes and attacks** |
+| **3** | 2 | 3 | **turn denied** |
 
 > **At 2 squares the knockback denied nothing at all.** **The target stood, walked back the two squares, and attacked exactly as it would have.**
 

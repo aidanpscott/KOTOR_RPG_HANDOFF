@@ -222,7 +222,7 @@
 
 **⚠⚠⚠ AS BUILT (MAIN, `PT-2752`, 2026-11-05, TEST 231's finding; `PT-2665`).** One reader, `canSee`, on every attack. A player's strike with no line is refused on the hover and on the click in K2's words (strref 1433, K1 and K2: "You cannot target a creature you cannot see or do not have a line of sight to."), asked of the square the strike would stand on, so a wall a fist can walk round is walked round, a walk that would end with no line takes no step, and no Action or declaration goes. An enemy chooses among those it sees, and one whose move loses the line makes no strike. Opportunity and provoked strikes ask the same reader. **Adjacent is not always seen:** `canSee` blocks a diagonal across a closed corner (`PT-1703`), so that one strike is refused too.
 
-**⚠⚠⚠ EVERY "ADJACENT" ASKS THE SAME QUESTION (MAIN, `PT-2752`, 2026-11-06, after TEST 232; `PT-1703`, `PT-2665`).** Adjacent across a closed corner is no line, for everyone. A flanker needs a line to the target (`§8`). So does an ally for Quick Attack's position (`ATTACKS-05`). The red reach ring draws what the strike allows, so it leaves out a square across a closed corner. Cleave's list, Combination, the punch and the opportunity watchers ask the same question. A creature not yet in the fight reads K2's 1433 sentence on the hover as on the click. **CODER's reading, awaiting MAIN:** the ring also leaves out walls and squares off the board. A creature joins by contact only with a line. A concealed creature reads nothing on the hover.
+**⚠⚠⚠ EVERY "ADJACENT" ASKS THE SAME QUESTION (MAIN, `PT-2752`, 2026-11-06, after TEST 232; `PT-1703`, `PT-2665`).** Adjacent across a closed corner is no line, for everyone. A flanker needs a line to the target (`§8`). So does an ally for Quick Attack's position (`ATTACKS-05`). The red reach ring draws what the strike allows, so it leaves out a square across a closed corner. Cleave's list, Combination, the punch and the opportunity watchers ask the same question. A creature not yet in the fight reads as its click acts: K2's 1433 sentence on the hover as on the click where there is no line, and otherwise the walk and the strike, as for any creature. The ring also leaves out walls and squares off the board. A creature joins by contact only with a line. A concealed creature reads nothing on the hover, and a click on its square does what a click on an empty square does and gives no sentence. Treat and Repair ask the same question: no line, no Treat (all MAIN, `PT-2752`, 2026-11-06).
 
 **Aligns with `SKILL-RESOLUTION-01`'s ±2 / ±5 / ±10 modifier ladder.**
 
@@ -698,7 +698,7 @@ why this needed stating rather than leaving to whoever next read the line:
 **They exist. They are universal. They draw on the reaction pool.**
 
 **Trigger:** an enemy **leaves your melee reach on foot** while you can see them.
-⚠ **CODER's reading, awaiting MAIN:** the line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started.
+⚠ The line is asked from the square they leave, not the one they reach: you hit them as they go. A step that starts across a closed corner provokes nothing, and a step that ends out of your sight still provokes if you had a line where it started (MAIN, `PT-2752`, 2026-11-06).
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action.
 

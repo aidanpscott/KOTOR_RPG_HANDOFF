@@ -50,7 +50,7 @@
 
 *(`k1_classes.2da`. KOTOR 2's prestige classes continue the pattern: Weaponmaster and Marauder 6, Watchman and Assassin 8, Master and Lord 10.)*
 
-> **⚠⚠ OUR FORCE PRESTIGE CLASSES' DICE — AS THE ROSTER DECIDED THEM (owner via MAIN, 2026-10-22, `PT-2752`: "if a die was decided for each Force prestige class, use it").** `CLASS-ROSTER-01`:447–452 (`PT-143`, amended by `PT-215`/`PT-216`) gives every prestige class its base line's die +2: **Jedi Weaponmaster d6 · Sith Battlemaster d6 · Jedi Watchman d8 · Sith Marauder d8 · Jedi Sage d10 · Sith Sorcerer d10** (the Sage and Sorcerer carry the cut Jedi Master and Sith Lord lines; the Battlemaster continues the Warrior and our Marauder the Assassin). The K2 line above is K2's own roster, not ours. Each prestige level adds its own die (the multiclass principle, 2026-10-22); a prestige level is never the first Force level (entry needs a Force base class 6), so its die is never the maximum. Extracted from the roster's stat lines (`extract_classes.py`), on the Shelf as `force_die`.
+> **⚠⚠ OUR FORCE PRESTIGE CLASSES' DICE — AS THE ROSTER DECIDED THEM (owner via MAIN, 2026-10-22, `PT-2752`: "if a die was decided for each Force prestige class, use it").** `CLASS-ROSTER-01`:447–452 (`PT-143`, amended by `PT-215`/`PT-216`) gives every prestige class its base line's die +2: **Jedi Weaponmaster d6 · Sith Battlemaster d6 · Jedi Watchman d8 · Sith Marauder d8 · Jedi Sage d10 · Sith Sorcerer d10** (the Sage and Sorcerer carry the cut Jedi Master and Sith Lord lines; the Battlemaster continues the Warrior and our Marauder the Assassin). The K2 line above is K2's own roster, not ours. Each prestige level adds its own die (the multiclass principle, 2026-10-22); a prestige level is never the first Force level (entry needs a Force base class 6), so its die is never the maximum. Extracted from the roster's stat lines.
 
 **`forcedie` sits beside `hitdie` in the same table** — the game's own statement that the pool is built the way vitality is built. **No base lookup table exists in either game's data**; the mechanics agent searched `cls_spgn_jedi.2da` (which is the powers-known table, 2 at level 1 and +1 per level), `classpowergain.2da`, `forceshields.2da`, all `cls_st_*` and `cls_atk_*`, and both games' `classes.2da` and `spells.2da`. The base calculation is runtime, not stored.
 
@@ -59,6 +59,10 @@
 > **The formula is `hybrid_authored`, not ported.** It reuses the engine's vitality machinery, matches the stored inputs, and is consistent with reported behaviour. KOTOR's actual arithmetic is not recoverable.
 
 **Not adopted:** the flat +40 from Force Sensitive and +50 from Consular dark Mastery — both KOTOR-scale. **Costs are RCR-scale**, roughly 4–20 across the tiers, not KOTOR's 10–60.
+
+**Companions who are Force-sensitive have a real Force pool**, built from their own levels and ability scores by the same formula (the owner, `PT-2635`, `PT-2636`). A non-Force companion has no pool. A companion's pool is restored on a rest with the rest of the party (`REST-AND-MEDITATION-01 §2`).
+
+**When a character gains a level, their maximum Force points increase but their current Force points stay where they are** (`PT-2489`). Only a rest restores Force points.
 
 ---
 
@@ -229,7 +233,11 @@ At 25% and 50% the rests barely register. **75% is taken:** two rests produce a 
 | 13–16 | Tier 3 | **16** |
 | 17–20 | Tier 3 | 20 |
 
-**⚠⚠ LATEST DECISION — owner rulings, 2026-10-17 (`PT-2752`), replacing the same evening's first wording: A POWER'S OWN WRITTEN GATE COMES FIRST; THIS TABLE IS THE DEFAULT.** Where a power's prerequisites set a level — a character level (`Character Level 12`) or a class level (`Level 9 Jedi`, `Level 5 Sith Sorcerer`, `Officer 5`) — that written gate is the rule for that power, and this table adds nothing on top of it. **Only where a power sets no level** (no prerequisite at all, or only power names and class names without a number, such as `Any Prestige Class` or `Sith Marauder`) does the "Top tier available" column apply as the default: **tier 1 from character level 1, tier 2 from 6, tier 3 from 13**, read against total character level (`POWER-COSTS-01 §3`). It gates taking a power at creation and at level-up and is printed in K2's form (`Character Level 6`). One function holds the rule for the app and the Builder (Lodestar `powerDefaultGate`). The note below covers the **cost** column only.
+**⚠⚠ LATEST DECISION — owner rulings, 2026-10-17 (`PT-2752`), replacing the same evening's first wording: A POWER'S OWN WRITTEN GATE COMES FIRST; THIS TABLE IS THE DEFAULT.** Where a power's prerequisites set a level — a character level (`Character Level 12`) or a class level (`Level 9 Jedi`, `Level 5 Sith Sorcerer`, `Officer 5`) — that written gate is the rule for that power, and this table adds nothing on top of it. **Only where a power sets no level** (no prerequisite at all, or only power names and class names without a number, such as `Any Prestige Class` or `Sith Marauder`) does the "Top tier available" column apply as the default: **tier 1 from character level 1, tier 2 from 6, tier 3 from 13**, read against total character level (`POWER-COSTS-01 §3`). It gates taking a power at creation and at level-up and is printed in K2's form (`Character Level 6`). The note below covers the **cost** column only.
+
+> ### As built — §4 tier gates
+>
+> One function holds the rule for the app and the Builder (Lodestar `powerDefaultGate`). Extracted from the roster's stat lines (`extract_classes.py`), on the Shelf as `force_die`.
 
 **The right column is a modelling assumption, not a rule.** Powers cost 6, 12, or 20 by tier. But a character does not cast their most expensive power every turn — a level 13 Guardian mixes Force Speed and Force Jump with the occasional Force Storm, so the *average* sits between tiers and rises smoothly.
 

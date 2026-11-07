@@ -463,9 +463,9 @@
 
 **It costs nothing. The awakening was the payment.**
 
-**⚠ App design requirement, recorded here because the chargen schema does not exist yet:** **the engine holds a granted-but-hidden feat, and the `Confirmed — yes` tag flips its visibility.**
-
-> **The character sheet carries state the player cannot see.** **That is `E-11` territory — *no sheet field is reliably cosmetic* — and the chargen schema needs to represent it when it is written.**
+> ### As built — §21 awakening feat
+>
+> **App design requirement, recorded here because the chargen schema does not exist yet:** the engine holds a granted-but-hidden feat, and the `Confirmed — yes` tag flips its visibility. The character sheet carries state the player cannot see. That is `E-11` territory — *no sheet field is reliably cosmetic* — and the chargen schema needs to represent it when it is written.
 
 ## 22. What Stage 3 does NOT cover
 

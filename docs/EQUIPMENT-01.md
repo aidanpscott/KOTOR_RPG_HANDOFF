@@ -900,6 +900,12 @@ reinstating the exact reading the ruling rejected.** So it is required, which
 also means an author cannot forget it — the refusal says which field is
 missing.
 
+**A shield absorbs only the parts of a blow whose damage kinds it covers** (`PT-2320`). Per-part resolution, not all-or-nothing: a mixed blow (energy and unstoppable) has its energy portion absorbed while the unstoppable portion passes through. Ion vulnerability is checked first — a stated weakness defeats the shield for the entire hit (`PT-2310`); per-part stopping applies to whatever is left.
+
+**In K2, a shield's duration extends by one round per rank in Repair** (`PT-2311`). K1 shields have a flat duration with no skill scaling. Build faithfully to each game's source.
+
+**When an item's own description carries zero stated effect, the table may supply one** (`PT-2315`). This is a narrow exception to `PT-2310`'s "corrects, never creates" principle: a description that says nothing has no competing claim for the table to override. It does not extend to any item whose description states something, however imprecise.
+
 **⚠⚠ THE ROCKET IS A FIFTH ROW AND NOT A `Charge`, AND THE DIFFERENCE IS A
 GATE RATHER THAN A FLAVOUR.** A grenade needs a hand; a rocket needs a Wrist
 Launcher, which `ACTION-ECONOMY-01 §6.2a` already describes — *"the Wrist

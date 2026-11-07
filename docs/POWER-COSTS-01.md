@@ -8,7 +8,7 @@ Trick) is absent. On every power both list, cost and tier agree (checked: `scrip
 **Amends:** `FORCE-POOL-01 v2 §4` — degradation becomes a per-cast value derived from cost and tier.
 **Depends on:** `PARTITION-01` (D-AK).
 **Cost means the adjusted cost** (`ALIGNMENT-01 v3 §1.3`, D-AQ): every cost below is the base; a Light or Dark power's cost is adjusted
-by the caster's Alignment Step (`FORCE-COST-TABLE-01` has every value), and degradation (§1) reads the adjusted cost. Universal powers
+by the caster's Alignment Step (`FORCE-COST-TABLE-01` has every value), and degradation (§1) reads the adjusted cost. **Each caster pays by their own alignment score** — a companion's cost is read from the companion's alignment, an enemy's from its own starting score (MAIN, `PT-2752`, 2026-10-26). Universal powers
 are never adjusted.
 **Naming:** follows `Force_Powers_Table.docx`, the project's naming authority for powers.
 
@@ -215,9 +215,9 @@ are never adjusted.
 | › **Improved Battle Meditation (enemy)** | 2 | 20 | −4 |  |
 | ›› **Master Battle Meditation (enemy)** | 3 | 28 | −9 |  |
 | | | | | |
-| **Force Body** | 1 | 15 | −2 | 5 rounds |
-| › **Improved Force Body** | 2 | 20 | −4 | 5 rounds |
-| ›› **Master Force Body** | 3 | 25 | −8 | 5 rounds |
+| **Force Body** | 1 | 15 | −2 | 10 rounds (`PT-2401`; K2's 30 seconds at 3 seconds a round) |
+| › **Improved Force Body** | 2 | 20 | −4 | 10 rounds (`PT-2401`) |
+| ›› **Master Force Body** | 3 | 25 | −8 | 10 rounds (`PT-2401`) |
 | | | | | |
 | **Force Camouflage** | 1 | 8 | −1 | 10 rounds |
 | › **Improved Force Camouflage** | 2 | 14 | −3 | 10 rounds |
@@ -316,7 +316,7 @@ Stealth is used mostly out of combat, so a minute is the right window — long e
 
 **Worked: four 20-cost powers inside the window.** Without it, 80 Force points. **With Master Force Body, 48 total — 24 Force and 24 vitality. It saves 56 Force points for 24 vitality.**
 
-**Priced at 15 / 20 / 25.** At Master you break even at roughly two powers in the window and profit at three — **a commitment before a hard fight, not something left running.** ⚠ The break-even arithmetic below was worked against the five-round figure; `PT-2401` re-examines it against ten.
+**Priced at 15 / 20 / 25.** At Master you break even at roughly two powers in the window and profit at three — **a commitment before a hard fight, not something left running.** ~~⚠ The break-even arithmetic below was worked against the five-round figure; `PT-2401` re-examines it against ten.~~ *(Superseded: the window is 10 rounds — `PT-2401`, confirmed `PT-2752`. The break-even holds: ten rounds is a full encounter, and two to three powers inside it is realistic.)*
 
 > **And it reaches our layer model deliberately.** `FORCE-POOL-01` already spills overreach into vitality. **Force Body makes that spill voluntary** — choosing to bleed to conserve, ten rounds at a time.
 

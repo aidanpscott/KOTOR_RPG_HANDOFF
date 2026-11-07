@@ -80,6 +80,8 @@
 >
 > **⚠ The Attack-versus-Gear classification above is untouched by that correction.** What it costs is an economy decision this document makes; whether it rolls to hit is a fact about the source, and only the second was wrong.
 
+> **⚠ Enemies do not track individual grenade counts** (`PT-2659`). An enemy that can throw grenades always has grenades available. This matches the source: K2 treats NPC consumables as unlimited.
+
 ---
 
 # 2. Bonus
@@ -179,6 +181,8 @@
 
 **A second interaction in the same turn costs your Action.**
 
+**Equipping is refused in combat** (`PT-2046`, restated at `PT-2708`). Drawing, stowing and switching a loadout are free interactions (above); changing any other equipment — armour, headgear, gloves, belts, implants — is not available during a fight.
+
 ---
 
 # 6. Rulings that needed argument
@@ -205,15 +209,25 @@
 
 ## 6.2 Cover
 
-**Nothing in the corpus mentions cover, and blaster combat is built on it.**
+~~Nothing in the corpus mentions cover, and blaster combat is built on it.~~ *(Superseded: cover is now ruled — `PT-2664`, `PT-2665`.)*
 
-**Cover is a property of position, gained by moving. It is not an action.**
+**Cover is a property of position, gained by moving. It is not an action.** Cover is tile-authored: a tile's cover tier is set by the map author, not calculated by geometry (`PT-2664`).
+
+**Defensive bonus** (being behind cover):
 
 | Cover | Defence | Reflex saves |
 |---|---|---|
 | **Half** — a low wall, a console, a corner | **+2** | **+1** |
 | **Three-quarters** — a doorway, a pillar, a crouching position behind a barricade | **+5** | **+2** |
 | **Total** | **cannot be targeted** by attacks that need line of sight | — |
+
+**Offensive bonus** (firing from cover, ranged attacks only, `PT-2664`):
+
+| Cover you fire from | Attack bonus |
+|---|---|
+| **Half** | **+1** |
+| **Three-quarters** | **+2** |
+| **Total** | **You peek out: drop to Three-Quarters cover for that one attack only, then revert.** Attack bonus +2 (as Three-Quarters). |
 
 ### 6.2 The closed corner (`PT-1703`, `PT-2665`)
 
@@ -671,7 +685,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **d20 + Dexterity modifier, rolled once per encounter. No re-rolls.**
 
-**A tie breaks deterministically: higher Dexterity modifier first** (`PT-1422`). No tiebreak roll — a tiebreak roll IS a re-roll. *(If still level after Dexterity: the table needs a second tiebreak — OPEN FOR MAIN.)*
+**A tie breaks on the higher total initiative modifier; if still tied, the tied creatures roll again** (RCR, `PT-1422`).
 
 > ### As built — §9 initiative
 >
@@ -715,6 +729,8 @@ why this needed stating rather than leaving to whoever next read the line:
 **Who threatens (MAIN, 2026-10-14, after TEST 180):** a creature holding a ranged weapon makes no opportunity attacks; one with empty hands threatens with its fists or its natural weapons. *(`§4`'s line: ranged characters do not get opportunity attacks; melee gets zone control and ranged gets range.)*
 
 > **A character with Dexterity +0 and base attack bonus +0 makes none at all.** **That is a Consular, and it reads correctly.**
+
+**Confused creatures (`PT-2442`):** while confused, a creature's former allies treat it as an enemy for opportunity attacks, and it treats them the same way. Opportunity attacks follow the same side-switch as the rest of targeting.
 
 **Because they come from the pool they compete with Parry, Snap Shot, and Overwatch.** **A character who spends reactions swatting runners has none left to turn a blade.**
 
@@ -833,18 +849,18 @@ why this needed stating rather than leaving to whoever next read the line:
 | **Movement, Medium creature** | 10 | **5** | species records |
 | **Melee reach** | 2 | **1** | — |
 | **Point Blank Shot band** | 4 | **2** | `ATTACKS-04` — `PT-165` |
-| **Guarding Stance radius** | ~~3~~ 4 | **2** | `ATTACKS-05` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
-| **Bulwark radius** | 5 | **2–3** | `ATTACKS-05` |
-| **Reflex Fire — ally protected** | 5 | **2–3** | `ATTACKS-04` |
-| **Suppressing Fire radius** | 5 | **2–3** | `ATTACKS-04` |
+| **Guarding Stance radius** | ~~3~~ 4 | **2** | `ATTACKS-05` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
+| **Bulwark radius** | ~~5~~ 4 | **2** | `ATTACKS-05` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
+| **Reflex Fire — ally protected** | ~~5~~ 4 | **2** | `ATTACKS-04` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
+| **Suppressing Fire radius** | ~~5~~ 4 | **2** | `ATTACKS-04` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
 | **Covering Barrage radius** | 10 | **5** | `ATTACKS-04` |
-| **Lockdown splash** | ~~3~~ 4 | **2** | `ATTACKS-04` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
+| **Lockdown splash** | ~~3~~ 4 | **2** | `ATTACKS-04` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
 | **Draw Closer pull** | 10 | **5** | `ATTACKS-06` |
 | **Draw Closer push** | 4 | **2** | `ATTACKS-06` *(corrected at `PT-2752`: the push is Draw Closer's, at the document's 4 metres; Pushing Slash inherits it)* |
-| **Disarmed weapon lands within** | ~~3~~ 4 | **2** | `ATTACKS-05` *(the owner, `PT-2752`, 2026-11-07; row change for Coder)* |
+| **Disarmed weapon lands within** | ~~3~~ 4 | **2** | `ATTACKS-05` *(MAIN, `PT-2752`, 2026-11-07, under `PT-165`; row change for Coder)* |
 | **Grenade travel** | 10 | **5** | `baseitems.2da` |
 
-> ~~⚠ Several land on an odd metre and straddle two squares.~~ **Settled: all snap to 4 m — 2 squares** (`PT-165`; the owner, `PT-2752`, 2026-11-07). Three rows (Guarding Stance, Lockdown splash, Disarmed weapon) go from 3 to 4. *(Row changes for Coder.)*
+> ~~⚠ Several land on an odd metre and straddle two squares.~~ **Settled: all snap to 4 m — 2 squares** (`PT-165`; MAIN, `PT-2752`, 2026-11-07). Six rows (Guarding Stance, Bulwark, Reflex Fire, Suppressing Fire, Lockdown splash, Disarmed weapon) go from 3 or 5 to 4. *(Row changes for Coder.)*
 
 ---
 
@@ -994,6 +1010,8 @@ why this needed stating rather than leaving to whoever next read the line:
 
 # 19. Conditions
 
+**`RULES-01-v2 §7` governs; this section summarises for play reference.**
+
 **Each of these was defined inside whichever entry first needed it, then referenced by four or five others as though it were general.** **This is the general definition. Where an entry scales one of them, it says so in its own text.**
 
 ## 19.1 Stunned
@@ -1119,14 +1137,16 @@ why this needed stating rather than leaving to whoever next read the line:
 
 ## Knockback is 3 squares, not 2
 
-~~**Base speed is 10 metres — 5 squares.** **Standing costs half of that, rounded up under `§14`: 3.**~~ ⚠ Superseded: standing now costs the Action, not half movement (§19.4, MAIN, `PT-2752`, 2026-11-04). A knocked-prone target stands at the cost of its Action (§19.4).
+~~**Base speed is 10 metres — 5 squares.** **Standing costs half of that, rounded up under `§14`: 3.**~~ ⚠ Superseded (§19.4, MAIN, `PT-2752`, 2026-11-04): standing now costs the Action, not half movement.
 
-| Pushed | Movement left after standing | Squares to re-close | Result |
-|---|---|---|---|
-| **2** | 2 | 2 | **re-closes and attacks** |
-| **3** | 2 | 3 | **turn denied** |
+~~| Pushed | Movement left after standing | Squares to re-close | Result |~~
+~~|---|---|---|---|~~
+~~| **2** | 2 | 2 | **re-closes and attacks** |~~
+~~| **3** | 2 | 3 | **turn denied** |~~
 
-> **At 2 squares the knockback denied nothing at all.** **The target stood, walked back the two squares, and attacked exactly as it would have.**
+*(Table superseded: its columns rest on the half-movement standing cost.)*
+
+**A knockback that also knocks prone** (Power Attack's Reflex save, `ATTACKS-05`): the target stands at the cost of its Action (§19.4). **A knockback that does not knock prone** (Hammer Blow, Haymaker — `ATTACKS-07`): it costs the target nothing beyond the move.
 
 **`Force Push` pushes 2 squares (4 metres), one fewer than this knockback, and in S4 it still denied the Dark Jedi two full turns.** *(Reason line corrected at `PT-2752`: it said three squares "matches" Force Push; the 3 stands.)* **It was the only Force power either Jedi cast in twenty rounds, and the movement denial is why.**
 

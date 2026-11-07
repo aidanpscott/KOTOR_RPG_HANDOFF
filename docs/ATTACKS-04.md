@@ -89,7 +89,11 @@
 | › Pinning Fire |  | **Level 4.** **On a failed save the target cannot move at all.** It may still act. |
 | ›› Lockdown | Nothing moves in that doorway. | **Level 8.** **On a failed save the target cannot move or take a move action**, and **the save is made at −4.** |
 
-> **Built (MAIN, `PT-2752`, 2026-11-03; TEST 225):** the save comes only on a shot that hits, and the shot keeps its normal damage. On a failure, Staggering Shot is `slowed` for its movement half only (no Bonus lost, none of its −1s), and Pinning Fire is `held` (cannot move at all, may still act). Lockdown is Pinning Fire with the save at −4: `held` already takes the Move, which is our one move action. Each lasts until the start of the shooter's next turn. A fresh one refreshes its own and never stacks (one per tier and condition, as Force Slow). No off hand (`ACTION-ECONOMY-01 §7.5`); with two weapons, the one shot still takes `§7.2`'s dual-wield penalty (*"every attack that round"*).
+**The save comes only on a shot that hits, and the shot keeps its normal damage** (MAIN, `PT-2752`, 2026-11-03). Each effect lasts until the start of the shooter's next turn. A fresh one refreshes its own and never stacks (one per tier, as Force Slow). No off hand (`ACTION-ECONOMY-01 §7.5`); with two weapons, the one shot still takes `§7.2`'s dual-wield penalty.
+
+> ### As built — Staggering Shot
+>
+> Built (MAIN, `PT-2752`, 2026-11-03; TEST 225): Staggering Shot's movement-halving is the row's own effect, not the full `slowed` condition (no Bonus lost, none of its −1s); its label is "· movement halved." Pinning Fire's and Lockdown's "cannot move" IS the `held` condition in full (`RULES-01-v2 §7`: Move budget zero, everything else untouched); their label is "· held." A label or text may name a §7 condition only when the effect is that condition in full.
 
 ## Support — Help someone else
 
@@ -162,7 +166,11 @@
 | › **Marked Shot** | **5** | **Requires `Stealth` 12.** **`+4d6`**, and the shot does not reveal you if it drops the target |
 | ›› **Unheralded** | **10** | **Requires `Stealth` 18.** **`+6d6`**, and **the target is `Stunned` until the end of its next turn** on a failed Fortitude save, DC 10 + your level + Dexterity modifier |
 
-**⚠⚠⚠ RULED, NOT YET BUILT (`PT-2752`, 2026-11-05).** MAIN: Marked Shot is built as written, the row the exception to `§19.5`; other watchers keep their own rolls. Whether a fight starts then is ruled once the code's behaviour is reported. OWNER: Unheralded keeps its stun.
+**Marked Shot is built as written** (MAIN, `PT-2752`, 2026-11-05): the row is the exception to `§19.5`; other watchers keep their own rolls. Whether a fight starts then is ruled once the code's behaviour is reported. **Unheralded keeps its stun** (the owner, `PT-2752`, 2026-11-05).
+
+> ### As built — Stealth axis
+>
+> Not yet built (`PT-2752`, 2026-11-05).
 
 > **⚠ Two clauses, both owner-ruled — `PT-197`.**
 >

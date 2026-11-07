@@ -89,9 +89,13 @@ Falling into Committed Dark happens at 28. Climbing back out requires reaching 3
 **1. Your Alignment Step is the tens digit of your alignment, 0 to 10.** Alignment 47 is step 4; 100 is step 10.
 *⚠ PROVISIONAL, this line only: the games may round to the nearest ten instead (47 would be step 5). One reading in KOTOR II settles it
 (a Light and a Dark power's cost at a known alignment whose tens digit and nearest ten differ); the word "provisional" goes then.
-**Why it matters, the clearest case (TEST 168):** a neutral character at 50 casts one Dark power (Force Shock, tier 1); the fight ends and
+**Why it matters, the clearest case:** a neutral character at 50 casts one Dark power (Force Shock, tier 1); the fight ends and
 alignment folds to 49. Under the tens digit that is step 4, so every Light power now costs ×1.25 (Heal 8 → 10) after a single dark act.
 Under the nearest ten, 49 is still step 5 and Heal still costs 8.*
+
+> ### As built — §1.3 alignment step
+>
+> TEST 168 demonstrated this case.
 
 **2. The step table — the games' numbers exactly** (`forceadjust.2da`, identical in KOTOR I and II):
 
@@ -195,7 +199,7 @@ Without it, dark power use generates constant downward pressure that light story
 | **4** | Heroic act forgoing its reward | Murder, torture | ±8 |
 | **5** | Dramatic heroism | Atrocity against many | ±15 |
 
-> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. **A shift is a tier and a side, always.** ~~A package may override with a raw number for a genuinely special moment, but the tier is the default.~~ ***Struck by the owner (`PT-2752`, 2026-11-01): "the tiers are closer to the games." No raw-number shift exists; Lodestar refuses a shift without a tier.***
+> **Tier, not value, is the interface.** A package author writes "tier-3 dark act"; the rules pack owns what tier 3 is worth. This gives authors a five-word vocabulary instead of a number line, keeps every package consistent with every other, lets difficulty scaling multiply one table, and means an improvising AI GM makes the identical decision an author makes. **A shift is a tier and a side, always.** ~~A package may override with a raw number for a genuinely special moment, but the tier is the default.~~ ***Struck by the owner (`PT-2752`, 2026-11-01): "the tiers are closer to the games." No raw-number shift exists.***
 
 **Tier 5 moves a full band in one act** — the Vader moment in either direction. Rare, GM-judged.
 

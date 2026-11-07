@@ -53,7 +53,7 @@
 
 **The banking advantage drops from 60 points to 18 — a 71% reduction** — **and the honest route lands within 20% of a pure Guardian instead of a third of one.**
 
-**⚠ This is a real change to `FORCE-POOL-01-v3 §2` and needs applying there.**
+~~**⚠ This is a real change to `FORCE-POOL-01-v3 §2` and needs applying there.**~~ *(Applied: `FORCE-POOL-01-v3 §2` carries the split formula.)*
 
 ### 2.2 There is no entry credit
 
@@ -119,7 +119,7 @@
 **Every class you hold contributes its class skill list. All of them are class skills.**
 **Force die accrues only on Force-class levels** — `§2.2`.
 
-**Entry credit applies on first taking any class you do not already hold** — `§2.2`.
+~~Entry credit applies on first taking any class you do not already hold~~ — *(superseded: §2.2 rules there is no entry credit; §5 records the reasons.)*
 
 **⚠ 3.5's favoured-class XP penalty is cut.** **It is fiddly, it punishes exactly the character concept this game is about, and KOTOR did not implement it either.**
 

@@ -554,6 +554,25 @@ you.**
 
 > **⚠ SAVE-ENDS-EACH-TURN IS DELIBERATE, and it matters most for `cowering`.** **The games run fixed durations — the `Fear` power cowers for 2 rounds, `Horror` for 4.** **`PT-201` cost a rebuild because one player was consuming 62% of the round; a character who cannot act for four rounds is a player not playing.** **One failed save costs one turn.**
 
+#### `confused` — `PT-2442`
+
+**A confused creature attacks its former allies as though it were an enemy.** Its former allies treat it as an enemy for opportunity attacks, and it treats them the same way (`PT-2442`). The change applies to all targeting for the duration of the confusion — opportunity attacks follow the same side-switch as regular attacks.
+
+#### Ability drain — `PT-2180`, `PT-2181`
+
+**⚠ The source calls it "Ability Drain" (`iprp_onhit` row 6). It is ability damage — recoverable, not permanent.** Twenty-four items carry it. A creature hit by an Ability Drain property must save (Fortitude, at the item's DC) or lose ability-score points. One point is recovered per day of rest.
+
+The die follows the beast-tier ladder (`BEASTS-FEATS-01`), scaled by the property's DC:
+
+| DC | Die | Tier name |
+|---|---|---|
+| 10 | 1d2 | Weakening |
+| 14 | 1d4 | Numbing |
+| 18 | 1d6 | Dulling |
+| 22 | 1d8 | Withering |
+
+**⚠ Which ability score is drained is stated on the item's own row** — Dexterity for sonic weapons, Strength for melee poisons, Constitution for toxins. The property names the target attribute, not a pool.
+
 ---
 
 ## 8. Equipment as effect source
@@ -561,6 +580,10 @@ you.**
 A `+1 flaming longsword` is a modifier bundle with the same schema as a spell — an enhancement modifier on attack and damage, plus an `on_hit` hook adding fire damage. Equipping and unequipping are effect application and removal.
 
 Cheap now. Special-cased forever if skipped.
+
+#### Multiple on-hit effects — `PT-2203`, `PT-2204`
+
+**When a weapon or fitted set carries more than one on-hit effect, they resolve in a fixed order.** Effects of the **same kind** (two stuns, two drains) resolve sequentially: the first to pass its chance roll and save applies, and the rest do not fire. Effects of **different kinds** (a stun and a drain) each get an independent chance and save, and both can land on the same hit.
 
 ---
 

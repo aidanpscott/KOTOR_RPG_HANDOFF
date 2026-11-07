@@ -43,11 +43,11 @@ Three independent signals, and they agree:
 
 ### 1.2 What was added
 
-**`FORCE_POWER_BEAST_DOMINATION` — authored, universal, third tier of the Beast chain.**
+**`FORCE_POWER_BEAST_DOMINATION` — ⚠ WITHDRAWN (MAIN, `PT-2752`, 2026-11-05, ruling B(c)).**
 
-**Beast Control → Beast Confusion → Beast Domination.** The family was built as a three-tier chain, the middle tier was cut, and the remaining two were re-pointed. **This restores the intended shape rather than inventing one.**
+~~Beast Control → Beast Confusion → Beast Domination. The family was built as a three-tier chain, the middle tier was cut, and the remaining two were re-pointed. This restores the intended shape rather than inventing one.~~ *(Superseded: K2's row 183 is a cut Improved Beast Control with no description, so there is nothing to port. The Beast line is two tiers: Beast Control (with Beast Trick merged in) and Beast Confusion.)*
 
-**Universal**, matching its siblings. **Marked `hybrid_authored`** — no game data supports it, and the record should say so.
+~~**Universal**, matching its siblings. **Marked `hybrid_authored`** — no game data supports it, and the record should say so.~~
 
 ### 1.3 The three NPC-only rows
 

@@ -333,7 +333,7 @@
 
 > **One pool. Every reaction chain in every roster draws on it.**
 
-**Uses per encounter = the lower of your highest reaction tier and your ability allowance.**
+**Chain uses per encounter = the lower of your highest reaction tier held and your ability allowance; each use also spends a reaction** (MAIN, `PT-2752`, 2026-11-08). **Opportunity attacks are uncapped. The pool refreshes per encounter.**
 
 | Allowance | Uses |
 |---|---|
@@ -347,6 +347,10 @@
 > **This is the one place where breadth would otherwise convert into extra actions.** **107 of 110 attack entries cost you your declaration**; the three reaction chains do not, **except that declaring `Overwatch` costs your Action, as `Ready` does — you keep your Move, and each shot spends a reaction (the owner, `PT-2752`, 2026-11-08).** **Without a single pool, a combat class buying all three would gain nine free attacks per encounter where a specialist gains three.**
 
 **With it, holding all three buys *options*** — parry a blade, snap-shoot a runner, hold a corridor — **which is what breadth buys everywhere else in the system.**
+
+**No reaction to a reaction** (MAIN, `PT-2752`, 2026-11-08). A parry-riposte does not provoke another parry; an opportunity attack does not trigger Snap Shot or Overwatch.
+
+**Creatures may hold reaction chains** (MAIN, `PT-2752`, 2026-11-08). A creature's blueprint may list attack chains, and it uses them by the same rules as a player character.
 
 ---
 

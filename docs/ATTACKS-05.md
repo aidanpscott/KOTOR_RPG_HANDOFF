@@ -141,6 +141,10 @@
 | › Riposte |  | **Level 6.** **Strike back at −2, for ⚠ HALF AGAIN the damage, rounded down — `PT-629`. Reaction tier 2.** *(source: +50%)* |
 | ›› Counter Strike | Their attack becomes yours. | **Level 12.** **Strike back at no penalty, for double damage. Reaction tier 3.** |
 
+**Parry** (MAIN, `PT-2752`, 2026-11-08). Your d20 plus your melee attack terms (primary weapon) against the blow's attack roll; a tie is the parrier's. Parry is offered only on a blow that would hit. A win makes the blow a miss and gives one strike back with the primary weapon, if the attacker is in reach: at −4 (Parry), −2 for half again the damage rounded down (Riposte), or no penalty for double damage (Counter Strike). One parry per attack roll. Requires a melee weapon or empty hands — never with a gun in hand, and never while stunned.
+
+**No reaction to a reaction** (MAIN, `PT-2752`, 2026-11-08). A reaction cannot trigger another reaction. A parry-riposte does not provoke a parry; an opportunity attack does not trigger Snap Shot or Overwatch.
+
 ---
 
 # Gates

@@ -133,6 +133,10 @@
 
 > **All of these draw on the same pool.** **A character who spends reactions on opportunity attacks has none left to parry** — which is the decision the single pool exists to create.
 
+**No reaction to a reaction** (MAIN, `PT-2752`, 2026-11-08). A reaction cannot trigger another reaction. A parry-riposte does not provoke a parry; an opportunity attack does not trigger Snap Shot or Overwatch.
+
+**Creatures may hold attack chains** (MAIN, `PT-2752`, 2026-11-08). A creature's blueprint may list attack chains, including reaction chains, and it uses them by the same rules as a player character.
+
 ### A deflected bolt goes back (`PT-2753`, owner, 2026-10-16)
 
 | | |
@@ -734,7 +738,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Confused creatures (`PT-2442`):** while confused, a creature's former allies treat it as an enemy for opportunity attacks, and it treats them the same way. Opportunity attacks follow the same side-switch as the rest of targeting.
 
-**Because they come from the pool they compete with Parry, Snap Shot, and Overwatch.** **A character who spends reactions swatting runners has none left to turn a blade.**
+**Because they come from the pool they compete with Parry, Snap Shot, and Overwatch.** **A character who spends reactions swatting runners has none left to turn a blade.** Opportunity attacks are uncapped — the pool limits only how many chain uses (Parry, Snap Shot, Overwatch) a character gets per encounter (`§4`). An opportunity attack does not trigger another reaction (`§4`: no reaction to a reaction).
 
 ---
 

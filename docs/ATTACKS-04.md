@@ -110,7 +110,7 @@
 | **Snap Shot** | A shot fired on instinct, at whoever moved. | **Level 1. Requires Dexterity 12.** **As a reaction, fire on an enemy that enters your line of sight or leaves cover.** Attack at **−4.** **Reaction tier 1** — see the reaction pool. |
 | › Reflex Fire |  | **Level 6.** **Attack at −2**, and you may react to an enemy **attacking an ally within 4 metres of you.** **Reaction tier 2.** |
 | ›› Interdiction | Anyone who acts in your field is shot for it. | **Level 12.** **No attack penalty. Reaction tier 3.** |
-| **Overwatch** | You are not shooting. You are waiting. | **Level 6. Requires Dexterity 13.** **Hold your shot. The first enemy that moves or attacks within your line of sight is fired on before it acts.** If the shot reduces it to 0 vitality, **its action is lost entirely.** **Reaction tier 1.** |
+| **Overwatch** | You are not shooting. You are waiting. | **Level 6. Requires Dexterity 13.** **Declaring it costs your Action, as `Ready` does: you keep your Move, and each shot spends a reaction (the owner, `PT-2752`, 2026-11-08).** **Hold your shot. The first enemy that moves or attacks within your line of sight is fired on before it acts.** If the shot reduces it to 0 vitality, **its action is lost entirely.** **Reaction tier 1.** |
 | › Sustained Overwatch |  | **Level 10.** **You may hold against two enemies**, each fired on before acting. **Reaction tier 2.** |
 | ›› Total Overwatch | Nothing crosses that line. | **Level 14.** **Three enemies, each at +2 attack. Reaction tier 3.** |
 

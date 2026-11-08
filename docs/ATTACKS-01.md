@@ -344,7 +344,7 @@
 
 **Three reaction chains exist** — **Snap Shot** and **Overwatch** in ranged, **Parry** in melee.
 
-> **This is the one place where breadth would otherwise convert into extra actions.** **107 of 110 attack entries cost you your declaration**; the three reaction chains do not. **Without a single pool, a combat class buying all three would gain nine free attacks per encounter where a specialist gains three.**
+> **This is the one place where breadth would otherwise convert into extra actions.** **107 of 110 attack entries cost you your declaration**; the three reaction chains do not, **except that declaring `Overwatch` costs your Action, as `Ready` does — you keep your Move, and each shot spends a reaction (the owner, `PT-2752`, 2026-11-08).** **Without a single pool, a combat class buying all three would gain nine free attacks per encounter where a specialist gains three.**
 
 **With it, holding all three buys *options*** — parry a blade, snap-shoot a runner, hold a corridor — **which is what breadth buys everywhere else in the system.**
 

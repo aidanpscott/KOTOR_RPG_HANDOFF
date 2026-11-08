@@ -114,6 +114,16 @@
 | › Sustained Overwatch |  | **Level 10.** **You may hold against two enemies**, each fired on before acting. **Reaction tier 2.** |
 | ›› Total Overwatch | Nothing crosses that line. | **Level 14.** **Three enemies, each at +2 attack. Reaction tier 3.** |
 
+**Snap Shot** (MAIN, `PT-2752`, 2026-11-08). Triggers when an enemy steps from a square you cannot see onto one you can, or steps from a covered square onto an uncovered one while in your sight. Once per enemy per walk. Only enemies already in the fight trigger "enters sight."
+
+The shot is one Shoot with the gun in hand, using the ordinary ranged terms (range, cover, the adjacent −4), plus −4 (Snap Shot), −2 (Reflex Fire) or 0 (Interdiction) by tier. The shot is measured from the square that triggered it: range and that square's cover apply. It is resolved after the walk; a mover reduced to 0 vitality goes down on the way, and its action is lost. Point Blank Shot's adjacency waiver does not apply.
+
+**Reflex Fire** (tier 2 and up) also answers an enemy's Strike or Shoot against one of your allies within 2 squares (4 m) of you, after the attack, if the attacker is in your sight and range. It does not answer powers, items, opportunity attacks or reactions.
+
+**Interdiction** is Reflex Fire's triggers at no penalty.
+
+The cap and no-reaction-to-a-reaction rules apply as for Parry (`ATTACKS-05`, `ATTACKS-01 §10`).
+
 ---
 
 # Gates

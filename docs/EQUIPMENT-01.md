@@ -902,7 +902,7 @@ missing.
 
 **A shield absorbs only the parts of a blow whose damage kinds it covers** (`PT-2320`). Per-part resolution, not all-or-nothing: a mixed blow (energy and unstoppable) has its energy portion absorbed while the unstoppable portion passes through. Ion vulnerability is checked first — a stated weakness defeats the shield for the entire hit (`PT-2310`); per-part stopping applies to whatever is left.
 
-**A shield's duration extends by two seconds per rank in Repair** (`PT-2311`). K1 has no such scaling; this is K2's own structural term, built as measured.
+**A shield lasts its printed seconds plus two seconds per rank in Repair, divided by 3, rounded up, in rounds** (`PT-2311`; rounding: `§C24`). K1 shields have no Repair scaling; the two-seconds-per-rank term is K2's.
 
 **Our item rules may author an effect for an item whose own description states none** (`PT-2315`, the Baragwin principle). This is a narrow exception to `PT-2310`'s "corrects, never creates" rule: an item that carries zero stated effect has no competing claim to override. The exception does not extend to any item whose description states something, however imprecise.
 

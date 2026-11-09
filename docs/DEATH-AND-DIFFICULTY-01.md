@@ -31,7 +31,13 @@
 
 **⚠ `ENGINE-SPEC-04-COMBAT §5`'s *"a mode, not a multiplier"* is superseded by `PT-666` (the owner).** The Difficulty setting IS a damage multiplier: K2's numbers, ×0.5 / ×1.0 / ×1.5.
 
+**Rounding:** the multiplier rounds down, but a hit that does damage always does at least 1 (`PT-1622`).
+
+**What's scaled:** blows, shots, grenades and powers from outside the party, against the party. Not mines, hazards, ongoing damage or the bleed. Enemies take normal damage (the owner, `PT-2752`, 2026-11-09).
+
 **Difficulty and Death are Table Rules settings, changeable at any time, including during a fight; the change applies from the next roll** (the owner, `PT-2752`, 2026-11-08).
+
+**Mid-fight changes of the Death setting** (MAIN, `PT-2752`, 2026-11-09): a setting change never kills — someone below `−Constitution` when Hard is switched on is judged at their next damage. Dead stays dead. Switching to Easy turns someone dying into simply down.
 
 ---
 
@@ -81,7 +87,12 @@
 >
 > **⚠ AND IT DISSOLVES THE OBJECTION THE AMENDMENT BELOW WAS MADE FOR.** That amendment removed a companion's recovery because it *"made the two companion classes the only ones playing without a stake at the default difficulty."* **⚠ The asymmetry was the complaint — and this rule is symmetric.** Nobody has an individual stake; **the party has one, and it is the whole of it.**
 >
-> **⚠ WHAT STILL SEPARATES EASY FROM NORMAL is the negative band, unchanged.** `PT-559`: on Easy it **does not exist** and damage below 0 is not tracked. On Normal it does — **you can be at −5 and need helping.** ⚠ **⚠ SUPERSEDED (the owner, `PT-2752`, 2026-11-08): at `−Constitution` the bleed stops, the character stays down and never dies (only a wipe kills — `PT-1633`), and an ally can lift them mid-fight with a medpac or Treat Injury, at the cost of that ally's Action.** *(The previous reading, that `−Constitution` is where an ally can no longer bring you up, is withdrawn.)* ⚠ The specific roll for lifting at `−Constitution` is not yet in our documents — left for Coder's research.
+> **⚠ WHAT STILL SEPARATES EASY FROM NORMAL is the negative band, unchanged.** `PT-559`: on Easy it **does not exist** and damage below 0 is not tracked. On Normal it does — **you can be at −5 and need helping.** ⚠ **⚠ SUPERSEDED (the owner, `PT-2752`, 2026-11-08, corrected 2026-11-09): at `−Constitution` the bleed stops, the character stays down and never dies (only a wipe kills — `PT-1633`), and an ally can lift them mid-fight at the cost of that ally's Action:**
+>
+> - **With a medpac:** the existing medpac heal — the medpac's amount plus the full Medicine check (`SKILL-RESOLUTION-01 §5.3`) — from wherever they lie. If the total clears 0, they stand; otherwise they stay down, higher.
+> - **Without a medpac:** Medicine brings them up to 0 ("Medicine stabilises" — `ACTION-ECONOMY-01 §10`), with no DC, at the ally's Action. They stay down.
+>
+> *(The previous reading, that `−Constitution` is where an ally can no longer bring you up, is withdrawn.)*
 >
 > **⚠ AND IT IS WHAT THE GAMES DO.** `STUDY 23` found `NoPermDeath` on **all nine recruitable party members and no enemy**, and `PT-1524` found KOTOR has **no dying band at all**. *A party that loses is the loss.*
 
@@ -89,11 +100,11 @@
 
 ### Normal
 
-> **Players, BEAST and DROID companions die only in a wipe — `PT-1633`. Henchmen get up.** *(Corrected 2026-10-18 with the line below.)*
+> **Every party member — players, companions AND henchmen — takes the wide band. Only a wipe kills, on Easy and Normal both — `PT-1633`.** *(Corrected 2026-11-09: `PT-571`'s henchman exemption is superseded by `PT-1633`, which names no henchman exception.)*
 
 **⚠ With exceptions chosen by the GM.**
 
-**A player character reduced to `−Constitution` is down beyond an ally's help until the fight ends; ⚠ only a wipe kills, on Easy and Normal both, and `−Constitution` kills only on Hard — `PT-1633`. The same holds for a beast companion and a droid companion (`PT-558`).** *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4: this line read "…is dead. SO IS A BEAST COMPANION AND SO IS A DROID COMPANION", which `PT-1633` overruled; the engine already kills at `−Constitution` on Hard only — Lodestar `pools.dart:174`.)* **⚠ A HENCHMAN USES THE `Easy` RULE: down at 0, up after combat at 1 vitality — `PT-571`.** **⚠ A hired NPC or a temporarily overridden droid is not the player's to lose permanently.**
+**A player character reduced to `−Constitution` is down beyond an ally's help until the fight ends; ⚠ only a wipe kills, on Easy and Normal both, and `−Constitution` kills only on Hard — `PT-1633`. The same holds for a beast companion and a droid companion (`PT-558`), and for henchmen.** *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4; henchman rule corrected 2026-11-09 — `PT-571`'s "`Easy` rule for henchmen" is superseded by `PT-1633`.)*
 
 **⚠ AMENDED. This section previously read *"a henchman, a beast companion, or a droid is not [dead] — it is out for the encounter and recovers."*** **That made the two companion classes the only ones playing without a stake at the default difficulty.**
 
@@ -145,7 +156,7 @@
 
 ## 3. ⚠ Exceptions are the GM's, and a package may set them
 
-**Every mode above `Easy` allows named exceptions.** **A campaign package may name characters who cannot truly die, and say what happens instead.**
+**A campaign may name characters who never die on Normal or Hard** (the owner, `PT-2752`, 2026-11-09). **They stay down until lifted or the fight ends, and only a wipe kills them.** A campaign package may set these, and a GM may add more.
 
 ### The worked example — a KOTOR 1 package
 

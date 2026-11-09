@@ -488,7 +488,7 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
     on approach       after every step, and after arriving in an area
     passive           the finder's number TAKEN AT 10, no dice
-    settled once      a failure stands; there is no retrying it
+    settled once      ~~a failure stands; there is no retrying it~~ **SUPERSEDED by `PT-1968` (the owner): retries are allowed on locks and terminals, gated by resource cost. See `SKILL-RESOLUTION-01 §5.4a` and `DEATH-AND-DIFFICULTY-01 §1b/§2`.**
 
 **⚠ AND IT IS AN OPPOSED PAIR, NOT A DC.** `§4`: **the defender rolls the better of Awareness or Alertness** against the hider's `stealth`. **Two skills that fail differently is worth more than one that is simply better** — without a stealth field sight leads, with one hearing does. Nothing models the field yet; **taking the better of the two is what makes it expressible later without changing this.**
 

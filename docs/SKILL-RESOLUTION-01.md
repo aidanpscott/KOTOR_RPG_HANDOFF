@@ -176,7 +176,7 @@
 
 > **Ration tracking is real in the fiction and abandoned by most tables within two sessions.**
 
-**It is therefore optional, controlled by the campaign difficulty setting** — the same knob that scales alignment drift and, in KOTOR, added +5 to skill DCs. **⚠ UNSOURCED (DOCS, 2026-11-08): no ruling ties rations, alignment drift or "+5 to skill DCs in KOTOR" to the difficulty setting. Brought to MAIN.**
+**It is therefore optional, controlled by the campaign difficulty setting.** ~~the same knob that scales alignment drift and, in KOTOR, added +5 to skill DCs~~ **⚠ STRUCK (MAIN, `PT-2752`, 2026-11-09): Coder checked K1's and K2's files — difficulty touches only combat damage (`difficultyopt.2da`), plus one tutorial lock in K2 (`StrRef 132458`). The +5 to skill DCs, rations and alignment-drift links were unsourced.**
 
 **Where rations are not in play, Scavenging is a pure fixed-DC skill.** **Where they are, Scavenging reduces consumption on the curve in §5.1.**
 
@@ -186,9 +186,11 @@
 
 **Security and Computer Use (locks, doors, terminals) may be retried on every difficulty.** The d20 RCR allows retries on Open Lock; our Security inherits that.
 
-**All other skills get one try, except on Easy**, where any failed check may be retried (`DEATH-AND-DIFFICULTY-01 §2`, Easy).
+**All other skills get one try, except on Easy**, where any failed check may be retried (`DEATH-AND-DIFFICULTY-01 §2`, Easy). **Persuade in dialogue is the exception: see below.**
 
 **On Hard, a terminal or lock the campaign marks can lock you out permanently, or be destroyed, on a failed attempt** (`DEATH-AND-DIFFICULTY-01 §2`, Hard). Unmarked terminals and locks stay retryable.
+
+**Persuade in dialogue** (the owner, as K2, `PT-2752`, 2026-11-09). Each Persuade option in a conversation is marked by its author as one of: **one try** (the default — `RULES-02-social-and-gates §Diplomacy`), **closed only on success**, or **retryable**, on every difficulty. Easy's "any failed check may be retried" covers every other skill, not Persuade in dialogue.
 
 ### 5.5 Seventeen skills have no resource dimension
 

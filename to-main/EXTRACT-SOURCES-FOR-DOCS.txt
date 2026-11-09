@@ -1,0 +1,645 @@
+MACHINE-READ PARTS OF THE RULE DOCUMENTS
+========================================
+
+What this is: a list of every line in the rule documents that a script reads, for each document that a data/extracted/*.json extract (or the attacks.json pair) is built from. Anything not listed under a document is not read by that document's generator. Docs may edit those other lines freely, with the cautions given under each document.
+
+How it was made: by reading the generator scripts in scripts/ at the MAIN_WORK HEAD, commit 20f86f98. "script L123" is a line in the named generator. "doc L123" is a line in the document at that commit. Line numbers move when lines are added above them, so read them as "where it is today".
+
+Which generator builds which extract is taken from the HOW table in scripts/check_extracts.py (L135-184).
+
+For Docs, from CODER (MAIN, PT-2752, 2026-11-08, ruled b): a table row in any document below, and the attack rows of ATTACKS-04 to -07, is out of Docs' lane. Send the change through MAIN; CODER applies it to the document and the data together. Prose that no generator reads stays Docs' to edit; flag every edit to a document on this list.
+Since it was made: design/EVENT-KINDS-01.md gained one row (table.difficulty-set, CODER, 2026-11-08), so its line numbers after that row are one later.
+
+
+GENERAL RULES (they apply to every document below)
+--------------------------------------------------
+
+1. Changing a value changes the extract. A machine-read cell or line is copied into JSON, often word for word. Rewording it, even with the same meaning, changes the extract's content. The docs-profile gate blocks on that (check_extracts.py L124-132). Only the source md5, the line counts and the ".md:N" line references count as provenance. A line shift caused by adding prose above a row only warns.
+
+2. The shared table reader (scripts/_tables.py) is used by most generators.
+   - clean() (L11-12) removes * ` ⚠ ✓ from a cell. Bold, italics, backticks and warning or check glyphs in a cell are therefore usually NOT data. Exceptions are noted per document: extract_powers keeps ⚠, and several readers match on ** bold markers in the raw line.
+   - table_at(heading regex, header=) (L38-61) finds the first line matching the heading regex. From there it takes the first table, meaning a "|" header row immediately followed by a |---| separator. If header= is given, the table's leading header cells must match. It does NOT stop at the end of the section when searching.
+   - rows() (L17-36) reads every "|" line after the separator. Separators are skipped. Non-"|" lines (prose, blockquotes, blank lines) are skipped and the table resumes at the next "|" line. Reading stops ONLY at a line starting with "#" or a line that is exactly "---".
+   - CONSEQUENCE FOR DOCS. Prose between rows is safe. But any new "|" line placed after a read table and before the next heading or "---" is read as a row of that table. That includes a second, unrelated table and its header row. To add a table near a read table, put a heading or a "---" line between them. Adding a heading or "---" in the middle of a table that is interrupted by prose cuts the table short there.
+
+3. Header row text is load-bearing where a generator matches on it, and is quoted below as written. Header cells are compared after clean() and lower-casing, so ⚠ and bold on header words are not load-bearing. The words are.
+
+4. An em dash "—" in a cell usually means "none" and becomes null. Do not replace one with words, or with a blank where the cell count is fixed.
+
+
+======================================================================
+DOCUMENT: design/CHARGEN-DATA-01.md
+======================================================================
+Generators: scripts/extract_chassis.py (chassis), scripts/extract_first_level_feats.py (first_level_feats), scripts/extract_designations.py (designations). Everything else in this document is not read.
+
+A. extract_chassis.py
+   - Section: from the first line that starts with "###" and contains "PT-1403". Today that is doc L420, "### ⚠ RULED at `PT-1403` — a spread per chassis, and it is FINAL" (script L24). It runs to the next "###" line that does NOT contain "FOUR chassis" (script L28). Today the section is doc L420-456 and ends at L457, "### Why the model scores were NOT used directly". The "### ⚠ Only FOUR chassis have an authored adjustment" heading (doc L444) does NOT end it.
+   - The text "PT-1403" in that heading and "FOUR chassis" in the L444 heading are both load-bearing.
+   - Spread rows (script L34-45): any "|" line in the section with at least 7 cells, where cells 2-7 are all digits after clean(). Today these are doc L432-438, under the header "| chassis | STR | DEX | CON | INT | WIS | CHA | |" (L430).
+     - Cell 1 is the chassis name and id.
+     - Cells 2-7 are STR DEX CON INT WIS CHA, in that order. The order is positional; the header is not consulted.
+     - Cell 8: if it contains "derived" the basis is derived, otherwise inferred.
+   - Adjustment rows (script L47-48): any 2-cell "|" line in the section whose cell 2 contains a signed number (+N, −N or -N). Today these are doc L448-451 in the "| | |" table. Cell 1 is the chassis and cell 2 is stored verbatim as authored_adjustment.
+   - Not read: the blockquotes at L422-428 and the bold prose at L440-442 and L453-456. Any NEW 2-cell row with a +/− number, or a 7-cell digit row, anywhere in L420-456 would be read.
+
+B. extract_first_level_feats.py
+   - Section: the first line starting "##" that contains "PT-1407" (script L27-28). That is doc L380, "## ⚠ THE THREE SITH BASE CLASSES — `PT-1407`". It runs to the next "## " heading (script L33-34), today doc L404.
+   - It reads only the FIRST line in that section that, after clean(), matches "gain <word> feat at first level", where the word is one/two/three/four (script L38-52). Today that is doc L384:
+       > **⚠ `Sith Warrior`, `Sith Inquisitor` and `Sith Assassin` gain ONE feat at first level, like every other class.**
+     - The number word is read.
+     - Every "Sith X" or "Jedi X" (capitalised) BEFORE that phrase on the line becomes a record.
+     - Rewording this sentence, reordering the names or adding another "Sith Something" before the phrase changes the extract.
+   - Not read: everything else in the section, including the "### ⚠ And attacks need NOTHING authored" subsection.
+
+C. extract_designations.py
+   - Section anchor: the first line starting "#" that contains "A DROID IS DESIGNATED" (script L44). That is doc L463, "## ⚠ A DROID IS DESIGNATED, NOT NAMED — `PT-1720`, ...".
+   - Table 1 (script L57-72): the first table after that line whose header starts "model | chassis | prefix | digits | basis". As written it is "| model | chassis | prefix | digits | basis |" (doc L477). The rows are doc L479-516, 38 rows.
+     - Cell 1 is the model.
+     - Cell 2 is the chassis.
+     - Cell 3 is the prefix, read verbatim after clean(). An em dash or blank means none.
+     - Cell 4 is the digits, an integer, read only when there is a prefix.
+     - Cell 5 is the basis, lower-cased.
+     - HARD CHECK (script L91-116): the set of model names here must equal the model names in models.json, which are built from DROID-MODELS-01. Renaming a model in one document only stops the build.
+   - Table 2 (script L81-87): the first table after the same anchor whose header starts "also reserved | why | where". As written it is "| also reserved | why | where |" (doc L530). The rows are doc L532-533 (HK-50, HK-51).
+     - Cell 1 is the designation.
+     - Cells 2 and 3 are stored as the note "why (where)".
+   - The rows of both tables run until the next heading or "---": table 1 to doc L524 ("### ⚠ RESERVED ..."), table 2 to doc L539 ("---").
+   - Not read: the prose at L465-475 and L518-537.
+   - Also read from rules/DROID-MODELS-01.md; see that document.
+
+
+======================================================================
+DOCUMENT: design/EVENT-KINDS-01.md
+======================================================================
+Generator: scripts/extract_event_kinds.py (event_kinds)
+
+   - Group headings (script L46-49): every line starting "### " sets the group. The group is the heading text up to the first "—", after clean(). Examples: "### Character — the log's core" gives "Character", and "### Quest — `QUEST-MODEL-01`" gives "Quest". The words before the dash are machine-read. "## " headings do NOT end a group or a table; only the next "### " does.
+   - Table start (script L60-63): a "|" row whose cell 1 is "Kind" (case-insensitive) starts a lifetime table only if cell 2 is "Lifetime". That is the "| Kind | Lifetime |" headers at doc L57, 63, 162, 186, 193, 216, 245, 263, 274 and 291. Any other "| Kind | ..." header switches reading off; for example "| kind | carries | read by |" at doc L318 is not read.
+   - Rows (script L64-112), inside a lifetime table:
+     - A row is read only if cell 1, after clean(), starts with lowercase "word.word". For example "`character.created`".
+     - Cell 1 may name several kinds in "a.b / .c" shorthand, split on "/". A part starting with "." takes the previous part's prefix.
+     - Cell 2 is stored VERBATIM as the note. The lifetime is the earliest of the words permanent, campaign, session or transient that appears in cell 2.
+     - Rewording a cell 2 can change the lifetime: adding an earlier "session" or "campaign" word, for example.
+   - Not read: prose, blockquotes, rows whose cell 1 does not look like a kind (sub-heading rows inside tables), the table at L318, and anything before the first "### ".
+
+
+======================================================================
+DOCUMENT: force/FORCE-POWERS-01.md
+======================================================================
+Generator: scripts/extract_powers.py (powers). The real path is force/. rules/FORCE-POWERS-01.md does not exist; only an old comment (script L7) and a note string (L1953) say rules/.
+
+   - Anchor (script L1308): the first line starting "| Power ". That is doc L184:
+       | Power | Align | Tier | Cost | Degr | Prerequisites | Effect | Notes |
+   - Rows (script L1762-1767): after the anchor there is NO heading or section scope. EVERY later line in the file that starts with "|" and splits into 8 or more cells is a power row. Separators are skipped.
+     - Today the rows are doc L186 to before L416, including the continuations after the Strangle (### L228) and Rally (### L345) sections, which carry no repeated header.
+     - The 6-column table at doc L236-240 and the 3-column one at L246-250 are skipped only because they are narrower.
+     - A new table of 8 or more columns ANYWHERE after L184, including under "## What joined and what did not" (L416), would be read as powers.
+     - Tables before L184 (doc L64-73) are not read.
+   - Cell clean-up (script L13): only * and backticks are removed. ⚠ is KEPT. Adding or removing ⚠ inside a power row changes content, except a leading ⚠ on the Power name, which is stripped (L1768).
+   - Columns (script L1773-1792):
+     - c1 Power is the name.
+     - c2 Align is lower-cased; "—" means null.
+     - c3 Tier, c4 Cost and c5 Degr must be whole numbers, or the value is null.
+     - c6 Prerequisites is split on commas.
+     - c7 Effect is stored verbatim.
+     - c8 Notes is stored verbatim.
+     - Cells after the 8th are not read.
+   - The Effect and Notes cells are mined by about 40 regexes (script L52-1680 range), so TREAT EVERY WORD OF EVERY Effect AND Notes CELL AS DATA.
+     - Key: value asides are lifted out of the cells: targets: (L795), affects: enemy|ally|self (L810), use: conversation|passive (L815), level_up: taught (L827), replaces: <ids · …> (L843), condition_excludes: (L853), condition_spares: (L868) and anchor: caster|target (L107). Quoted spans are ignored (L1156).
+     - Prose phrasings are also read:
+       - "N metres", "radius", "within", "in front", "pushed back|thrown N metres — N squares" (L52-66, L706)
+       - condition words (L329-360)
+       - Fortitude/Reflex/Will and save clauses (L344, L407-449)
+       - "N rounds" (L427) and "X instead of Y" (L454)
+       - "inert for N rounds" (L128), "the weapon is destroyed" (L157)
+       - "does not affect droids" and similar exclusions (L938-965)
+       - an Effect starting "As <Power>," or "As <Power>." (L1979)
+     - Citations in Effect are moved into the note by scripts/_annotation.py apply_to (L1904).
+   - Cross-checks:
+     - every replaces: id must be a real power (L1880-1886);
+     - a chain whose two tiers both grant a standing bonus must say replaces: (L1914-1940).
+   - Not read: every line not starting with "|". That covers all headings and all prose, doc L1-183 and the ###/#### prose sections.
+
+
+======================================================================
+DOCUMENT: force/FORCE-POWER-DAMAGE-01.md
+DOCUMENT: force/FORCE-POWER-MODIFIER-01.md
+DOCUMENT: force/FORCE-POWER-PENALTY-01.md
+DOCUMENT: force/FORCE-POWER-ABILITY-BONUS-01.md
+DOCUMENT: force/FORCE-POWER-IMMUNITY-01.md
+DOCUMENT: force/FORCE-POWER-SKILL-01.md
+======================================================================
+Generator: scripts/extract_powers.py (powers). These are not declared in powers.json _source; no md5 is recorded for them. They ARE read on every rebuild.
+
+Shared rule for all six: each reader is keyed ONLY on the cell count of a "|" line, file-wide. It has no heading scope. A row whose cell 2 is "id" (the header) is skipped. Cell 1, the bold Power display name, is NEVER read; rows are keyed by the `id` cell. Any NEW "|" line anywhere in the file with the same cell count as a data table is read as a row. The 2-column "| column | meaning |" explanation tables and all prose are not read.
+
+   - FORCE-POWER-DAMAGE-01 (script L1328-1430): any line of exactly 19 cells.
+     - The header is at doc L51 under "## The table" (L49):
+         | Power | `id` | count | sides | per | divisor | to | then ÷ | cap | × level | kind | on save | on save × level | heals | flat | plus abilities | plus levels | only if fallen | rounds |
+     - The rows are doc L53-86.
+     - c2 id, c3 count, c4 sides, c5 per, c6 divisor, c7 to, c8 then ÷, c9 cap, c10 × level, c11 kind.
+     - c12 on save: negate, half or dice_only only, or the build stops.
+     - c13 on save × level is a float. c14 heals, c15 flat.
+     - c16 plus abilities is a "·" list. c17 plus levels.
+     - c18 only if fallen: "yes". c19 rounds.
+   - FORCE-POWER-MODIFIER-01 (script L1473-1572): any line of exactly 7 cells.
+     - The header is at doc L43, "| Power | `id` | amount | modifies | rounds | on save | side |". The rows are doc L45-91.
+     - c2 id, c3 amount (signed; "−" accepted), c4 modifies (a closed vocabulary), c5 rounds, c6 on save, c7 side.
+   - FORCE-POWER-PENALTY-01, two readers:
+     - 6-cell lines (script L238-319): the header is at doc L77, "| Power | `id` | ability | points | rounds | on save |", and the rows are doc L79-101. c2 id, c3 ability (the six), c4 points, c5 rounds, c6 on save ("negate" or "—" only).
+     - 5-cell lines (script L1575-1620): the header is at doc L132 under "## The ability-damage table — `PT-2192`", "| Power | `id` | ability | points | on save |", and the rows are doc L134-142.
+   - FORCE-POWER-ABILITY-BONUS-01 (script L1622-1667): 5-cell lines. The header is at doc L29, "| Power | `id` | ability | points | rounds |", and the rows are doc L31-39.
+   - FORCE-POWER-IMMUNITY-01 (script L1669-1705): 4-cell lines. The header is at doc L26, "| Power | `id` | immune to | rounds |", and the rows are doc L28-30. "immune to" must be poison or critical hits.
+   - FORCE-POWER-SKILL-01 (script L1707-1750): 5-cell lines. The header is at doc L21, "| Power | `id` | skill | points | rounds |", and the rows are doc L23-24. The skill must be a name in skills.json, which comes from SKILLS-01.
+
+
+======================================================================
+DOCUMENT: rules/ATTACKS-04.md, ATTACKS-05.md, ATTACKS-06.md, ATTACKS-07.md
+======================================================================
+Not an extract. data/attacks.json and scripts/attacks.json are hand-kept copies of the chain rows, compared by scripts/check_attack_rows.py.
+
+   - Rows (check_attack_rows.py L41-50): every "|" line in the four files with at least 3 cells whose cell 1 is an attack name in data/attacks.json. Cell 1 is compared after removing ** and backticks and leading › » and spaces (L37-38). For example "| **Critical Strike** | ... | **Level 1.** ... |" at ATTACKS-05 L58.
+     - Each attack must appear in EXACTLY ONE such row across the four files (L110-111). Adding another table whose first column names an attack (a summary or cross-reference table, say) makes the check fail.
+     - Strike, Shoot, Pounce and Claw must appear in NO such row (L19-24, L106-108).
+   - Compared text (L87-90, L114): cells 3 onward of the row are joined with "|" and compared word for word with the JSON row's effect field (index 5).
+     - If cell 2 is a bare level number, "Level N." is prefixed.
+     - Otherwise cell 2, the Description cell, is NOT compared.
+     - Before comparing, both sides are normalised (L53-84): ~~struck~~ text, * ` ⚠, citation brackets (those holding a PT number, a date or a bare § reference, and "(was …)", "(struck …)", "(source …)"), "— PT-n" tails, "— old text: …", and trailing . , ; : are all dropped, then everything is case-folded.
+     - Any other word change in an Effects cell must be made in BOTH attacks.json copies too, or the check fails.
+   - Not compared but still duplicated: the Description cell matches attacks.json index 4 and is not checked. Editing it silently makes the book and the game data disagree.
+   - Not read: prose, headings, and table rows whose cell 1 is not an attack name. Examples are the "| **Velocity** | Rapid Fire | ..." axis tables at ATTACKS-04 L25 and ATTACKS-05 L19, and the tier tables like ATTACKS-05 L157.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-ATTACKS-01.md   (READ BUT NOT DECLARED in classes.json _source)
+======================================================================
+Generator: scripts/extract_classes.py §9c (script L761-817) (classes)
+
+   - The schedule: table_at("^## 3\. The schedule, extended to thirty", header=[level, combat, middle, specialist]), the table at doc L67.
+     - Exactly 30 rows with a numeric level are needed.
+     - Each Combat, Middle and Specialist cell must contain "(N)". Only N is read.
+   - Chain counts: lines starting "| **" from the line containing "**Assigned so far:**" (doc L148) to the line containing "**⚠ RULED, and it does not resolve." (doc L168).
+     - The header is "| Class | Rate | Chains | Feats@30 | Capstones |".
+     - Cell 1 is the class name and cell 3 (Chains) the count. Both marker lines are load-bearing.
+   - Openings: lines starting "| **" from "## 4. Grants" (doc L296) to the line containing "**⚠ `Strike` and `Shoot` are the free baseline**" (doc L326).
+     - The header is "| Class | **Recommended opening** — `PT-89` | Why |".
+     - In cell 2, ~~struck~~ names are removed and backticked names are read; Strike and Shoot are dropped. The Why column is not read.
+     - At least 18 rows are needed.
+   - Class names in cell 1 must equal the roster's display names exactly, after "*(prestige)*" and ⚠ are removed.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-ROSTER-01.md
+======================================================================
+Generators: scripts/extract_classes.py (classes) and scripts/gen_class_tables.py. gen_class_tables.py is not an extract generator; it WRITES rules/CLASS-TABLES-AUTHORED.md from this document.
+
+A. extract_classes.py
+   - Tier headings matching "^## \d+\. (.+?) — " (script L38): "## 1. Standard base — 13", "## 2. Force base — 6", "## 3. Standard prestige — ⚠ 14", "## 4. Force prestige — 6".
+     - The text before the em dash is the tier field.
+     - A tier ends at any "## " heading not of the form "## N. " (L57), such as "## ⚠ 3a." and "## ⚠ 3b.".
+   - Rows in a tier (L41-46): every 2-cell "|" row whose cell 1 is not "Class". Today these are the "| Class | State |" tables at doc L24-38 (§1) and L42-49 (§2).
+     - Cell 1 is the class name.
+     - Cell 2, the State text, is stored VERBATIM as state. For example "Built. **`PT-73`** …". It is prose, but it is data.
+   - Prestige tier lines (L49-56): in each tier, the first bold "**…**" line that contains "·" and does not start with "**⚠" (doc L102 in §3, L196 in §4). The names are split on "·", and the line ends the tier.
+   - PT-717 table (L60-74): the first line containing "PRIMARY AND SECONDARY ABILITY" is doc L1098, "## ⚠ PRIMARY AND SECONDARY ABILITY — NINETEEN BASE CLASSES. `PT-717`". The script reads 4-cell rows within the next 60 lines.
+     - The table is "| Base class | ⚠ Primary | ⚠ Secondary | Strong saves |" at doc L1114.
+     - It reads the class, primary, secondary, and saves split on "·".
+   - Force dice (L192-206): ANY line in the file matching "| **Name** | dN · Force N ·". Today that is the "| Class | Stat line | Entry |" table at doc L446-453. Only the bold name and the Force number are used.
+   - Prestige entry (L211-233): the line containing "PRESTIGE ENTRY, AS DATA" (the doc L972 heading), then the FIRST fenced ``` block after it (doc L978-999).
+     - Every line in that fence is an "id: value" data line.
+     - The prose between the heading and the fence is not read.
+   - Not read: the §3a/§3b tables, the §5-§7 prose, and all other tables except those listed.
+
+B. gen_class_tables.py
+   - It reads from the first occurrence of "| Rate | Die" (doc L385) to the end of the file. The header there is "| | Rate | Die | Skill base | Class skills | Feats@30 | Chains | Capstones | Saves |".
+   - Only rows matching "^\| \*\*Name\*\* \| (Combat|Middle|Specialist) \| (d\d+) \|.*\| N/N/N \|" are used (script L142-149). They give the name, rate, die and the last a/b/c saves cell.
+     - Today these are doc L387-391, L406, and L547-548 (Operative and Shadow Hunter, in the second numbers table at L545).
+     - The ** bold on names in these rows is load-bearing.
+     - Everything else comes from hard-coded lists in the script (L75-140, L168-172) and class_proficiency_map.OURS.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-TABLES-AUTHORED.md   (GENERATED — DO NOT EDIT ANY LINE)
+======================================================================
+It is written in full by scripts/gen_class_tables.py (L213-214), and its header says "NEVER HAND-EDIT". Prose edits would be overwritten.
+It is read by extract_classes.py §5 (script L443-545):
+   - headings "^## (.+?) — (dN), `", 30 today;
+   - "**BAB: X.** **Y.**" lines;
+   - "**Skill points: N + Intelligence modifier per level.**" lines;
+   - rows with at least 5 cells and a numeric first cell.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-TABLES-BASE.md
+======================================================================
+Generator: scripts/extract_classes.py §4b (L290-324) and §6 (L550-558) (classes)
+   - Section headings matching "^## (.+?) — d\d+,": "## Soldier — d10, Strength, 2 base skill points", and the same shape for Scout and Smuggler. Each section runs to the next such heading or the end of the file.
+   - Rows: at least 5 cells, a numeric cell 1, and cell 2 starting with "+". The header is "| Level | BAB | Fort | Ref | Will |". §6 also takes the level-20 row's Fort/Ref/Will.
+   - Not read: the Summary, Cross-checks and later sections. They sit inside the Smuggler section, though, so a level-shaped row ("| 7 | +5 | …") added there WOULD be read as a Smuggler level.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-TABLES-DROID.md
+======================================================================
+Generator: scripts/extract_classes.py §4c (L349-396) and §6 (L559-575) (classes)
+   - Summary rows: lines matching "^\| \*\*(.+?)\*\* \| \*?\*?d\d+\*?\*? \| \*?\*?(full|three-quarters|half)" (doc L15-16). Exactly 2 are needed; the name and rate word are used.
+   - Level rows: ANY row in the file with at least 9 cells, a numeric cell 1 and cell 2 starting with "+". They start at doc L33.
+     - The header at L31 is "| Level | **CD** BAB | Fort | Ref | Will | **ED** BAB | Fort | Ref | Will |".
+     - Cells 2-5 are the Marksman and 6-9 the Engineer.
+     - The level-20 BABs must be 20 and 15.
+   - The script hard-codes the line reference "CLASS-TABLES-DROID.md:29" (L574). That is provenance only.
+
+
+======================================================================
+DOCUMENT: rules/CLASS-TABLES-JEDI.md
+======================================================================
+Generator: scripts/extract_classes.py (L261-277) (classes)
+   - Headings "^## \d+\. Jedi": "## 2. Jedi Guardian", "## 3. Jedi Sentinel", "## 4. Jedi Consular". The text after "N. " is the class name.
+   - Rows: at least 9 cells and a numeric cell 1. The header is "| Level | BAB | Fort | Ref | Will | **Def** | Feats | Force pts | Regen |".
+   - The Consular section runs to the END OF FILE, because §5A, §5 and later do not match the heading pattern. No matching row exists past doc L160 today, but a level-shaped 9-cell row added in §5-§7 would be read as Consular.
+   - Not read: §1 and §5-§7, except as just noted.
+
+
+======================================================================
+DOCUMENT: rules/CLASSES-STANDARD-PHB.md
+DOCUMENT: rules/CLASSES-FORCE-PHB.md
+======================================================================
+Generator: scripts/extract_classes.py read_phb (L121-185) and, for the Force PHB, read_derived_dice (L94-118) (classes)
+
+   - Chapters (L122-123): "# Name" lines, other than line 1 and lines containing "CLASSES". For example "# Soldier", "# ⚠ Saboteur" (the ⚠ is stripped) or "# Jedi Guardian". A chapter runs to the next "# " line.
+   - Record fields (L77-81, L128-146): ANY table row in the chapter whose cell 1, after clean(), is exactly one of: Rate, Hit die, Force die, Skill points, Feats at 30, Attack chains, Capstones reachable, Attack picks at 30, Saves at 20, Saves, Status.
+     - Cell 2 is the value.
+     - Today these rows are in the "## The record" "| | |" tables. The "⚠ Key abilities" and "Class skills" rows there are not read.
+   - Class skills (L147-154): the first bold line containing "·" within 5 lines after an exact "## Class skills" line.
+   - DESCRIPTION — PROSE THAT IS DATA (L159-172): the "### *tagline*" line plus every non-blank line from the chapter heading to the first "## " heading is stored VERBATIM as the class description.
+     - Lines starting with "#", "|" or "<!--" are skipped.
+     - A ">" line before any text is skipped (ruling notices); the first ">" line after text ends the description (the pull-quote).
+     - In the Standard PHB this is the tagline and opening paragraphs, for example Soldier doc L54-58.
+     - In the Force PHB, the Guardian's pull-quote (doc L31) comes before "## The record", so the description ends there.
+     - Editing these opening paragraphs changes classes.json content.
+   - Progression (L173-184): from the "| Level | Feats" header to the END OF THE CHAPTER, not the end of the table. Rows with at least 6 cells and a numeric cell 1 are read. For example doc L89, "| Level | Feats | Attack picks | Fort | Ref | Will |".
+   - CLASSES-FORCE-PHB only (L94-118): the first line containing "THE THREE SITH FORCE DICE" (doc L41, a blockquote) and the next 20 lines, with "> " stripped.
+     - Rows whose cell 1 is a class and cell 2 is "dN" (doc L45-47) give the Force die.
+     - Cell 3 is not read.
+
+
+======================================================================
+DOCUMENT: rules/DROID-MODELS-01.md
+======================================================================
+Generators: scripts/extract_models.py (models) and scripts/extract_designations.py (designations)
+
+A. extract_models.py
+   - Chassis sections (script L40-55): a heading matching "^## (\d+) · .*?[`*]{1,2}(\w+)[`*]{1,2}" opens a chassis section. The chassis is the first backticked or bolded word in the heading:
+       "## 1 · `Battle` — the line units" (L133), "## 2 · `Assassin`" (L277), "## 3 · `Labor`" (L362), "## 4 · `Astromech`" (L517), "## 5 · The **Protocol** chassis" (L616), "## 6 · The **Probe** chassis" (L782), "## 7 · ⚠ The **Remote** chassis — NO FILE ENTRY EXISTS" (L819).
+     - Any other "## " heading closes it: §0-§0d, "## 7b" (LORE ONLY, L953), "## 7c" (L966), §8-§10.
+     - Adding backticks or bold to another word earlier in one of these headings changes the chassis. Adding bold or backticks to a §0 or §8+ heading would wrongly open a section.
+   - Tables (script L58-78) are every header + separator pair, read with _tables.rows() (so across prose, to the next heading or "---"). They are identified by header (clean, lower-case):
+     - MENU, header "| Model | Menu | Drawn from |" (doc L158, 287, 375, 531, 644, 798, 833). Read only inside a chassis section (L134-138). Cell 1 is the model; cell 2 is split on "·" into the skill menu. Cell 3 is not read.
+     - STATS, header "| Model | File | CR | Str · Dex · Con | <5th> |". The 5th header may be anything ("Frame" or "⚠ Status"). Doc L261, 279, 364, 439, 519, 618, 784, 825. Read only inside a chassis section (L137-161):
+       - Cell 1 is the model.
+       - Cell 2 is split on "·" into the file(s).
+       - Cell 3 is the CR and must be digits, or the row is skipped.
+       - Cell 4 holds the first three numbers as str/dex/con, and must have at least 3 numbers.
+       - Cell 5: if it contains "LORE ONLY" the model is not ownable; otherwise the leading number (commas allowed) is the frame price.
+       - KM1 Mark I and KM1 Mark II MUST stay "LORE ONLY" (L37, L208-211).
+     - FEATS, header "| Model | ⚠ Feat |" (doc L976, 990, 1000, 1010 in §7c). Read anywhere (L161-162, L180-206):
+       - Cell 1 is matched to a model, exactly or by unambiguous containment.
+       - The feat name is cell 2's text BEFORE the first "—" (L102-105). The rest of the cell is not stored.
+     - NOT read: "| Model | Maker | ... |" tables (doc L311, 632, 790, 860, 934), "| Model | Source | Why ... |" (L955), the §0c designation table (read by designations, below), and all prose.
+   - first_mention (L104-109): for a feat-only model, the record's source line is the first line inside a chassis section that contains the name. That is provenance only.
+
+B. extract_designations.py
+   - Anchor: the first line starting "#" that contains "0c" (script L44, L74). That is doc L94, "## 0c · ⚠ RESERVED DESIGNATIONS — taken by named characters. `PT-595`". Do not put "0c" in an earlier heading.
+   - Table: the first header after it starting "designation | series | note". As written it is "| Designation | Series | Note |" (doc L98). The rows are doc L100-105 (HK-47, T3-M4, T1-LB, 3C-FD, G0-T0, B-4D4), and reading stops at "### ⚠ AND `G0-T0` MASS-PRODUCED THE HK-50s" (L109).
+     - Cell 1 is the designation.
+     - Cell 3 is stored VERBATIM as the note.
+     - Cell 2 (Series) is not read.
+   - The model names here (MENU/STATS/FEATS cell 1) must match CHARGEN-DATA-01's designation table exactly (script L91-116).
+
+
+======================================================================
+DOCUMENT: rules/DROID-SKILLS-01.md
+======================================================================
+Generator: scripts/extract_droid_skills.py (droid_skills)
+   - "### 2.1 Universal droid skills — every chassis" (regex "^### 2\.1", script L72): the table "| Skill | Why a droid can |" (doc L40), rows doc L42-52.
+     - Cell 1 is the skill name.
+     - Cell 2 is read but not output.
+   - "### 2.2 Closed to all droids" (regex "^### 2\.2", L73): the table "| Skill | Why not |" (doc L58), rows doc L60-79.
+     - Cell 1 is the skill.
+     - Cell 2 is stored VERBATIM as the reason.
+   - "### 2.3 Chassis-dependent — eight skills" (regex "^### 2\.3", L76-87): the table "| Skill | Astromech | Assassin | Battle | Remote |" (doc L85), rows doc L87-97.
+     - The column NAMES are read from that header.
+     - Cell 1 is the skill. A cell starting with "yes" (any case) means open; anything else means closed.
+   - "### 2.4 What each chassis ends up with" (regex "^### 2\.4", L90-102): the table "| Species | Skills | Character |" (doc L123), rows doc L125-128.
+     - Cell 1 is "<Name> droid".
+     - In cell 2, the names after "+" and before "=" are split on commas, and the number after "=" at the end is the stated total.
+     - Cell 3 is not read.
+   - Stated counts (L44-54, _control only): within the heading line and the next 5 lines of §2.1, §2.2 and §2.3, the first "<number word> skill(s)". For example "eight skills" in the §2.3 heading.
+   - Stale marker (L57-66): any line containing "PT-1405", "2.4" and "STALE" (doc L95, a blockquote) sets stated_total_superseded_by. Keep those three tokens together on that line.
+   - Also uses skills.json names (L152-154), which come from SKILLS-01.
+   - Not read: §1 and its table (doc L13), §3-§5, and prose.
+
+
+======================================================================
+DOCUMENT: rules/EQUIPMENT-01.md
+======================================================================
+Generators: scripts/extract_equipment.py (equipment) and scripts/extract_item_effects.py (item_effects)
+
+A. extract_equipment.py (sections defined at script L41-140, main L375 onward). Common rules for every table below:
+   - Cell 1 is the row name, slugged into the id. Rows named "weapon", "plating", "class" or blank are skipped (L447).
+   - Every row must have EXACTLY the table's cell count, or the build stops. Write "—" for an empty cell; never drop the cell (L435-443).
+   - "—", "-", "–" and blank all mean null (L305-312).
+   - "id-then-name" means cell 1 is the id and cell 2 the display name (L456-459).
+
+   Sections and tables:
+   - "## 2. Melee — base weapons" (regex "^## 2\. Melee", L43): "| Weapon | Damage | Type | Threat | Balanced | Attacks |" (doc L25), rows doc L27-37, 6 cells. Balanced is yes/no/—; Attacks is an integer.
+   - "## 4. Ranged" (L45): "| Weapon | Damage | Type | Range | Threat | ⚠ Extends perception |" (doc L145), 6 cells.
+     - The rows are doc L147, L154-167 and L182 (Bowcaster). The table resumes across the blockquotes between them.
+     - Type is split on "·", and each kind must be in the §7b vocabulary (L490-493, L593-598).
+   - "## 4b. Lightsabers" (L53): "| Weapon | **K1** | K2 | Threat | Wield | Size |" (doc L231), rows doc L233-236. The leading digit of Wield is checked against k2_baseitems.2da.
+   - "## 4c. Wield classes — `PT-169`" (L55, id-then-name): "| | Class | Weapons | May be paired? |" (doc L266), rows doc L268-273, 4 cells.
+   - "## 5. Armour" (L84): the table whose header starts "Base type | Defence | Max Dex | Armour type | Grade | Restricts force" (doc L342), rows doc L344-350, 6 cells. Reading stops at "### 5.2 Robes".
+     - The §5.1 "| Row | Label | `baseac` |..." table (L326) is NOT read.
+   - "### 5.2 Robes are the exception, and it is a bug that became a feature" (L103): header starting "Base type | Defence | Max Dex | Armour type" (doc L423), rows doc L425-429, 4 cells.
+   - "## 8. ⚠⚠ Droid plating — EXTRACTED..." (L67): header starting "Plating | Defence | Max Dex" (doc L651), rows doc L653-655, 3 cells. The first §8 table (L643) is NOT read.
+   - "## 9. ⚠⚠ Consumables..." (L109): "| Consumable | Does | Takes | Used on | Worn at | Note |" (doc L845), rows doc L847-851, 6 cells.
+     - Does is a "·" list.
+     - Takes is either "verb → fields; verb → fields" (or "->"), with every Does verb present, or a bare "·" list when Does has one verb. A malformed Takes stops the build (L328-362).
+   - "## 10. ⚠⚠ Supplies..." (L117, id-then-name): "| Supply | Name | Spent by | Note |" (doc L1185), rows doc L1187-1188.
+   - "## 11. ⚠ Objects..." (L119): "| Object | Note |" (doc L1209), row doc L1211.
+   - "## 12. ⚠⚠ Worn slots..." (L135, id-then-name): "| Base type | Name | Slot | Worn at | Requires feat | Note |" (doc L1242), rows doc L1244-1252. Slot and Requires feat are "·" lists.
+   - "## 13. ⚠ Droid slots..." (L138, id-then-name): "| Base type | Name | Slot | Worn at | Note |" (doc L1283), rows doc L1285-1288.
+   - "## ⚠⚠ 7b · The damage kinds — ..." (L157): header starting "Bit | Kind | K1's name | K2's name" (doc L593), rows doc L595-607.
+     - Bit must be digits, running from 0 with no gap.
+     - The Notes cell is read only for the text "IGNORES RESISTANCE" (any case, L175).
+   - "## 14. ⚠⚠ The mapping — which `baseitems.2da` rows each base type is" (L262): header starting "Base type | Name | Section | `baseitems.2da`" (doc L1314), rows doc L1316-1388.
+     - Only cell 1 (the base-type id) and cell 4 (a "·" list of 2da labels, or —) are read. Name, Section and Note are NOT read.
+     - Every base type must appear exactly once, and no label may repeat.
+   - "## 15. ⚠⚠ The palette tree..." (L202): "| Section | Category | Subcategory |" (doc L1483), rows doc L1485-1496.
+     - Cell 1 must EXACTLY equal one of the code's section labels: "Melee - base weapons" (with a plain hyphen), Ranged, Lightsabers, Wield classes, Droid plating, Armour, Robes, Consumables, Supplies, Objects, Worn slots, Droid slots.
+     - All twelve must be present, with no extras (L214-224).
+   - NOT read by this generator: §1, §3, §4a-ii and its table (L203), the §5.1 table, §5.3-§5.6, §6, §7, §7a (including the L559 table), the first §8 table, the §9 poison tables (see B), the §14a tables (L1402, L1436, L1454), §16 (L1549), §17, Motivator (L1718), and ALL prose and blockquotes.
+
+B. extract_item_effects.py
+   - "### ⚠⚠ 9a · A POISON IS ROLLED, NOT FLAT — owner ruling" (regex "^### .*9a · A POISON IS ROLLED", script L1238-1290), two tables:
+     - The tier ladder, header starting "Tier | Rolled | Mean | Range" (doc L1072), rows doc L1074-1078.
+       - Tier is lower-cased.
+       - Rolled must be NdM, NdM+K or an integer.
+       - Mean must equal the dice average exactly, or the build stops.
+     - The assignment table "| Per round, as ported | Tier | Rolled |" (doc L1085), rows doc L1087-1091.
+       - The first word of cell 1 must be digits.
+       - Tier must be in the ladder.
+       - Rolled must equal the ladder's dice.
+       - The ladder read also runs through these rows; they are dropped only because their Rolled cell is not dice.
+   - "### ⚠⚠ 9b · WHICH POISON A WEAPON CARRIES — `PT-2058`" (script L1492-1527): header starting "Poison | Per tick | Every | Lasts | Per round | Rounds" (doc L1135), rows doc L1137-1139.
+     - It reads the label and the first integer in cells 2-6. Cell 7 ("`§9a` tier") is NOT read.
+     - Every must divide 6, Per tick × (6/Every) must equal Per round, and ceil(Lasts/6) must equal Rounds.
+     - The following "| Poison | What it does | Status |" table (L1145-1149) is read as a continuation and dropped only because it has fewer than 6 cells.
+   - Nothing else in EQUIPMENT-01 is read by item_effects. The other heading containing "9b · A TRAILING `?`" (L994) is not matched.
+
+
+======================================================================
+DOCUMENT: rules/FEAT-SCHEDULE-01.md
+======================================================================
+Generator: scripts/extract_classes.py §8 (L625-675) and §9b (L717-755) (classes)
+   - Per-level grid: from the first line starting "| Lv |" (doc L52).
+     - The column names are class abbreviations, mapped to classes through REN (L653-657). Renaming a column header breaks the mapping.
+     - Numeric rows are read until the first non-row line after the data.
+   - Summary: any table row in doc lines 1-40 with at least 3 cells whose cell 1 is not "Class". That is the 7-column "| Class | L20 | **L30** | | Class | L20 | **L30** |" table at doc L11-30.
+     - Cells (1,2,3) and (5,6,7) are used.
+     - "(prestige)" is stripped from names.
+   - Prestige rhythm: the line containing "PRESTIGE FEAT RHYTHM, AS DATA" (doc L138), then the first fenced block after it (doc L142-162).
+     - Every line must be "rhythm N: class" or "class_id: N [after M]".
+     - Any other line in the fence, or a missing fence, stops the build (L720, L737).
+   - Not read: the "## Totals" tables (L168, L188) and prose.
+
+
+======================================================================
+DOCUMENT: rules/FEATS-LIBRARY-01.md
+======================================================================
+Generator: scripts/extract_feats.py (feats)
+   - Section headings "^#{1,3}\s+([0-9]+[a-c]?)\.\s" (L45, L173-177): "# 1." … "# 5." and "## 5a." … "## 5c.". The number sets section, which drives availability (§1-4 selectable, the rest granted; L256-260).
+   - Chain-name headings: every OTHER "##" to "####" heading (L47, L178-185).
+     - Its text up to the first "—" names the chain for the authored tables after it. For example "Hold the Deck — Pirate only." gives "Hold the Deck".
+     - Rewording the text before the dash renames the chain. Inserting a new heading between a chain heading and its table also renames it.
+   - Tables (L37-42, L186-190), each with a separator under the header, read across gaps to the next heading or "---":
+     - Catalogue tables, header matching "| Feat | Description | Effects |" (21 today).
+       - Cell 1 is the name; a leading › » or > marks a chain link.
+       - Cells 2 and 3 are stored VERBATIM as description and effect.
+     - Authored tables, header matching "| Tier | ... | Effect |" (33 today; written "| Tier | Level | Description | Effect |").
+       - Cell 1 is the name.
+       - Cell 2 is the level (digits only).
+       - Cells 3 and 4 are description and effect, stored verbatim.
+   - Patterns inside the description and effect cells:
+     - "Granted at (level )?N(st|nd|rd|th)" gives the level (L237).
+     - An effect starting "Immune to " is parsed for "anything that applies …", "Covers …", "X and Y stuns", "On-Hit: word" and grenade or mine names (L126-157).
+     - An effect starting "+N Skill[, Skill and Skill]" then "." or "," gives skill bonuses (L115-124).
+     - PT tokens are moved out by _annotation.apply_to (L271).
+   - ID_OVERRIDE (L76-81) keys on chain + name + occurrence for Triage/Field Surgery and Unrelenting/Last Stand. Renaming any of these four stops the build (L283).
+   - Not read: tables with any other header, blockquoted tables (lines starting ">"), and prose outside tables.
+   - Also uses skills.json names (SKILLS-01) and extract_item_effects.CONDITION.
+
+
+======================================================================
+DOCUMENT: rules/ITEMS-01.md … rules/ITEMS-09.md
+======================================================================
+Generator: scripts/extract_items.py (items). extract_item_effects.py (item_effects) and extract_item_gates.py (item_gates) read these documents ONLY through data/extracted/items.json.
+
+A. extract_items.py
+   - Category headings (script L26, L233-237): a line that, after clean(), matches "^##\s+<category>\s+—\s+<N>$". For example "## ammunition  — 12" (ITEMS-01 L7) or "## melee-one-handed  — 78".
+     - The category name is stored on every item below it.
+     - N is the stated count (control).
+     - A category runs until the NEXT matching heading. Other "##" or "###" headings do NOT end it, so 8-cell rows under them count toward the previous category.
+   - File total (L229-232): the first line starting "**" that contains "<N> items" (after clean()) is the stated total for _control. Today that is line 3 of each file, for example ITEMS-01 "**418 items. ⚠ 74 appear in both games.**". ITEMS-09 has none.
+   - Rows (L238-263): ANY "|" line under a category with exactly 8 cells, header or not. Header rows "| Name | Resref | Src | Tier | Cost | Weapon | Upgradeable | Properties |" and separators are skipped.
+     - Cells: 1 name, 2 resref, 3 src, 4 tier, 5 cost, 6 weapon, 7 upgradeable, 8 properties. All are stored after clean(); "—", "-" or blank mean null.
+     - Tier and cost become integers when they are plain numbers (commas allowed).
+     - Weapon is split at the LAST comma into damage and threat.
+     - A row WITH a resref is an item; its id is the resref, or a slug of the name if there is no resref.
+     - A row with NO resref and only cell 8 filled is the DESCRIPTION of the item above it, stored verbatim. A row with neither is skipped.
+   - Broken rows (L211-224): a "|" line with FEWER than 8 cells is joined with the following physical lines until it reaches 8 cells.
+     - CONSEQUENCE: any small table (2-7 columns) added anywhere in an ITEMS file would swallow the lines after it. Do not add non-item tables to these files.
+   - Damage folding (L151-184, L285-323): DamageRacialGroup, DamageAlignmentGroup and Damage (X) N patterns in Properties are folded into the damage text.
+   - Not read: prose, blockquotes, and headings that do not have the "— N" form, apart from the line-3 total.
+
+B. extract_item_effects.py and extract_item_gates.py, via items.json
+   - THE PROPERTIES CELL (cell 8) OF EVERY ITEM ROW IS MACHINE-READ WORD FOR WORD. It is split on "·" and matched against exact regexes:
+     - Effects (extract_item_effects.py L56-1680): DamageResist (X) Resist_N/-, Immunity (X) N, Saving Throws: …, Movement ±N m, <Ability> +N, Skill (X) N (X must be a SKILLS-01 skill name), DecreaseAC, Regeneration, AttackBonus, Enhancement, Armor, Keen, Massive Criticals, Damage…, "Humanoid frames only (...)", and others.
+     - Gates (extract_item_gates.py L42-90): "Use Limitation Feat (X)", UseLimitationAlignmentGroup, UseLimitationPC, UseLimitationAttribute (X) >=N, UseLimitationClass, UseLimitationGender, UseLimitationRacial.
+   - The description rows (cell 8 of a resref-less row) are read by item_effects only. They are matched for phrases like "heals N vitality points + WIS modifier", "Absorbs:", "Deflection: … N pts", "Duration: N sec", "Save (X): DCN", "Attribute Bonus: X +N", "(N pts vs droids)", "Secondary: Poison, N pts every N secs" and "OnHit (ItemPoison: LABEL) DC". Leftover heals, Absorbs or Attribute Bonus text is flagged (L1727).
+   - So: do not reword Properties cells or description rows.
+
+
+======================================================================
+DOCUMENT: rules/PRESTIGE-DESCRIPTIONS-DRAFT-PT2752.md
+======================================================================
+Generator: scripts/extract_classes.py (L236-258) (classes)
+   - Gate: one of the first 3 lines must contain "APPROVED (owner". The title (doc L1) carries it.
+   - Rows: every table row with at least 3 cells whose cell 1 is a prestige class. That is doc L11-29, header "| Class | Draft | Sources |".
+     - The Draft cell (cell 2) is stored VERBATIM as the description; " // " is the paragraph break.
+     - Sources (cell 3) is not used.
+   - Exactly 19 rows are required (L253).
+
+
+======================================================================
+DOCUMENT: rules/PROFESSIONS-01.md
+======================================================================
+Generator: scripts/extract_professions.py (professions)
+   - Roster (script L38, L48-72): table_at("^## 0 · .*SKILL EACH PROFESSION"). Under "## 0 · ⚠⚠ THE SKILL EACH PROFESSION TEACHES" (doc L25) is the header "| Profession | Item | ⚠ or Aptitude |" (L27). The rows are doc L29-64, 28 rows; the table resumes across the L31-37 blockquote and stops at the L70 heading.
+     - Cell 1 is the name and id.
+     - Cell 2 is the grant, verbatim.
+     - Cell 3 is split at the FIRST em dash (L26-34): the text before it is teaches (it must be a real skill name, checked by profession_teaches_test), and the text after it is teaches_flavour. For example "⚠ **Athletics** — *they marched it into you…*".
+     - Adding or removing an em dash in cell 3 changes the split.
+   - Grant detail (L40-46):
+     - "## 1 · What each grants — **22 of the 28**" (regex "^## 1 · "): the table "| Lifestyle | Grant | ⚠ Category | ⚠ Exists? |" (doc L229), rows doc L231-246.
+     - "## 3b · ⚠⚠ RECOMMENDED ADDITIONS — `PT-691`" (regex "^## 3b · .*RECOMMENDED ADDITIONS"): the table "| Lifestyle | Grant | ⚠ Category | Why |" (doc L430), rows doc L432-437. These are marked grant_recommended.
+     - In both tables, cell 1 is the profession (matched to the roster by slug) and cell 2 is stored verbatim as detail. Cells 3 and 4 are NOT read.
+   - Notes such as "(note: …)" in cells are moved out by _annotation.apply_to (L67).
+   - Not read: §2, §2a-§2d, §3, §3a, §4, all ### subsections and all prose.
+
+
+======================================================================
+DOCUMENT: rules/PROGRAMMINGS-01.md
+======================================================================
+Generator: scripts/extract_programmings.py (programmings)
+   - table_at("^## 1 · The ") (script L13): under "## 1 · The seventeen" (doc L11) is the header "| Programming | ⚠ From | ⚠ Grant | Cost | ⚠ Upgrade under `§2d` |" (L15). The rows are doc L17-33, 17 rows, and reading stops at "### ⚠ Three grants carry no cost" (L35).
+   - Rows need at least 5 cells (L16):
+     - Cell 1 is the name and id.
+     - Cell 2 is From. If it contains "only", "chassis" or "·", it is stored as chassis_locked; otherwise it is from_profession.
+     - Cells 3, 4 and 5 are grant, cost and upgrade, verbatim.
+     - "(note: …)" asides are moved out by apply_to (L24).
+   - Not read: the §1a table "| Programming | ⚠ Chassis | ⚠ Grant | ⚠ Upgrade |" (L76), §2, §3 and all prose.
+
+
+======================================================================
+DOCUMENT: rules/SKILLS-01.md
+======================================================================
+Generators: scripts/extract_skills.py (skills AND class-skills, one script; HOW maps class-skills to extract_skills.py) and scripts/extract_classes.py §7 (classes). The skill NAMES also feed item_effects, feats, species, droid_skills and powers through skills.json, so renaming a skill reaches all of them.
+
+A. extract_skills.py
+   - Skill list (L52-65): the first table under "## 1. ⚠⚠ TWENTY-SIX SKILLS — …" (regex "^## 1\. "), header "| Skill | Key | Armour | Consolidates |" (doc L23).
+     - Cell 1 is the name and id.
+     - Cell 2 is the attribute, verbatim (for example "Dex").
+     - Cell 4 is searched only for "BEAST ONLY" (doc L47, Fly) and is not stored.
+     - Cell 3 (Armour) is not read.
+   - Descriptions (L48-50): the table whose header starts "| Skill | What it is |" (doc L807, under "## Descriptions — one line per skill, `PT-1291`"). Cell 2 is stored VERBATIM as the skill description.
+   - §9.2b (L71-73): table_at("^### 9\.2b "), header "| Class | # | Class skills |" (doc L353). It reads rows with at least 3 cells, using cells 1 and 3.
+   - §9.2 (L74-81): between "### 9.2 The lists" (doc L270) and "### 9.2b", it reads the bold lines "**Name — N**" (for example "**Medic — 8**") and the line after each, split on "·".
+   - §9.2c (L82-87): table_at("^### 9\.2c "), header "| Class | Ranked, 1 → 6 |" (doc L396, under "#### The lists"). It reads 2-cell rows whose cell 2 contains "·", whose cell 1 does not start with "—", and whose cell 1 is not "Class".
+   - Not read: the §9.1 table (L226), the §11a table (L691), the Consolidates table (L865), and all prose.
+
+B. extract_classes.py §7 (L581-622): the same three sources, §9.2b, §9.2 and §9.2c, with the same row rules. §9.2c runs to "^### 9\.2a" or the next "## ".
+
+
+======================================================================
+DOCUMENT: rules/SPECIES-CHAPTER-v2.md
+======================================================================
+Generator: scripts/extract_species.py (species)
+   - Entries (script L14, L155-159): EVERY "### " heading starts an entry, and the entry runs to the next "### " heading. A "## " heading does NOT end it.
+     - The cleaned heading text is the name.
+     - "Parent, Sub" (a comma and space) makes Sub a subrace of Parent (L172). For example "### Aqualish, Aquala".
+     - Renaming a heading renames the species and changes its id.
+   - Fields (L13, L161-166): every line matching "^-\s+\*\*Label:?\*\*\s*value", meaning a bullet whose label is bold.
+     - The label is lower-cased with spaces turned to "_" and becomes the field name. For example "- **Skill Bonuses:** +4 Swim." gives skill_bonuses = "+4 Swim.".
+     - The value is the REST OF THE BULLET, stored VERBATIM after clean(), including italic asides such as "*1.7 metres.*".
+     - A heading with no such bullets produces no entry (L170). Today these are "### The character Defence formula", "### Size modifiers" and "### ⚠ The one item that reads sex".
+     - CONSEQUENCE: adding a "- **Bold:**" bullet under any ### heading (including the rules sections) creates a field or a new species entry. Rewording any bold-label bullet changes content.
+   - Parsed inside fields:
+     - skill_bonuses: "+N Skill [condition]" clauses, or "any one|two|three skill(s) at +N" (L43-94). The skill must be a skills.json name.
+     - spatial_awareness: "when blinded … <Skill> check at DC N … KEEP(S) their Dexterity" (L106-123).
+     - Any field: "know <Power Name> from creation" (L126-148). The power must exist in powers.json, or the build stops.
+   - "(note: …)" asides are moved out by apply_to (L176).
+   - Not read: prose paragraphs, non-bold bullets, tables, and lines before the first "### ".
+
+
+======================================================================
+DOCUMENT: rules/STARTING-EQUIPMENT-01.md
+======================================================================
+Generator: scripts/extract_starting_equipment.py (starting_equipment)
+   - Status block (L131-139, _control only): lines 1-12. "N ORGANIC ARRAYS", "N DROID ARRAYS", "N PROFESSION GRANTS" and "N `Two-Weapon Fighting` ROWS" are read as claimed counts. Today these are doc L5-7.
+   - Routes (L45-63): the 14 lines from "## 1 · " (doc L16, "## 1 · ⚠⚠ THREE ROUTES, AND TWO ARE THE PLAYER'S CHOICE").
+     - Indented lines matching "^\s{2,}⚠?\s*[123]\s+<route>  <text>" (doc L18, L20, L22) start a route. Two or more spaces separate the route name from what it says.
+     - Further indented lines (4 or more spaces) continue it (doc L19, L21).
+     - A blank line ends the block.
+   - Boots (L71-81): within 14 lines of "## 2 · " (doc L47), the indented line "    ⚠ BOOTS        **Dockworker's Treads** — 40cr" (doc L52). The text before " — " is the boots item. It is required, or the build stops.
+   - Tables. Each is the first table under its heading, read to the next heading or "---". Rows need the stated cell count and a cell 1 that is not "Class", "Item" or "Profession" (L33-37).
+     - "## 4 · ⚠ Settled per-class arrays" (regex "^## 4 · "): "| Class | Armour | Weapon | ⚠ Kit | Medical |" (doc L254), rows doc L256-274, at least 5 cells. Cells 1-5 are class, armour, weapon, kit and medical, all verbatim.
+     - "### ⚠⚠ THE NINE DROID ARRAYS, PER CLASS — `PT-770`" (L93): "| Class | ⚠ Weapon | ⚠ Kit | ⚠ Repair |" (doc L154), rows doc L156-164. Cells 1-4 are class, weapon, kit and repair.
+     - "## 2c · ⚠⚠ WHICH ROW EACH ARRAY MEANS — `PT-761`" (L96-104): "| Item | ⚠ THE ROW MEANT | Cost | ⚠ The other |" (doc L68), rows doc L70-83.
+       - Cell 1 is the item.
+       - From cell 2, the first lowercase snake_case resref.
+       - From cell 3, "<N> cr".
+       - From cell 4, the other resref and the other cost.
+     - "### ⚠ A · SLOT FILLERS — the slot is empty in every array" (L109-115): "| Profession | ⚠ Grant | Cost |" (doc L702), rows doc L704-719.
+       - Cell 1 is the profession.
+       - Cell 2 is the grant, verbatim, plus its first resref.
+       - From cell 3, "<N> cr".
+     - "### ⚠ B · UPGRADES — measured against the array's own item" (L116-120): "| Profession | ⚠ What it does |" (doc L729), rows doc L731-734. Cells 1-2 are verbatim.
+     - "## 4a · ⚠⚠ IF THE PLAYER SPENDS THEIR LEVEL-1 FEAT ON `Two-Weapon Fighting`. `PT-744`" (L124-128): "| Class | ⚠ With `Two-Weapon Fighting` | ⚠ Later, with the melee profession grant |" (doc L549), rows doc L551-569. Cells 1-3 are verbatim; "—" in cell 3 means null.
+   - Heading texts are matched by their leading part, as quoted in the regexes. Keep "THE NINE DROID ARRAYS", "A · SLOT FILLERS" and "B · UPGRADES" as written.
+   - Not read: everything else, including the "| Item | Tier | Cost | Property |" table (L373), §3 prose, §4b, §5 C, §6, and all prose.
+
+
+======================================================================
+DOCUMENT: rules/UPBRINGING-01.md
+======================================================================
+Generator: scripts/extract_upbringings.py (upbringings)
+   - Section: the line starting "## 2 · The nine" (script L30, L72). That is doc L37.
+   - Names (L74-94): the indented lines (4 spaces) containing "·" after it. They are doc L39-40:
+         ⚠ Noble · ⚠ Bastard · Orphan · Outcast · Peasant · Slave
+         ⚠ Street Urchin · Soldier's Child · ⚠ Unknown
+     - Each "·" segment is one name.
+     - A ⚠ in a segment sets marked_in_source, so ⚠ IS data here.
+     - Reading stops at the first non-indented line after names start, or at a heading or "---".
+   - Exactly 9 names are required, or the build stops (L103).
+   - Not read: everything else, including §1's indented block (doc L21) and §3's (L79-80). Those sit under other headings.
+
+
+======================================================================
+DOCUMENT: rules/UPGRADE-SLOTS-01.md   (GENERATED — DO NOT EDIT ANY LINE)
+======================================================================
+Written by scripts/build_upgrade_slots.py from k2_upgrade.2da and k2_upcrystals.2da. Its own line 3 says "⚠ GENERATED by `build_upgrade_slots.py`".
+Read by scripts/extract_upgrade_slots.py (upgrade_slots):
+   - The current section is the last "## " line seen (script L32-34).
+   - Under a "## " heading containing "six slots" ("## The lightsaber's six slots", doc L7), every line starting "| **" must FULLY match "| **slot** | N | text |" (L23, L37-42). Rows are doc L11-15.
+   - Under a heading containing "Every component" ("## Every component", doc L19), every "| **" line must fully match "| **slot** | N | `ref` `ref` … |" (L24, L43-55). Rows are doc L23-35. The count N must equal the number of backticked refs, or the build stops (L49).
+   - Any "| **" line in those sections that does not match stops the build (L57).
+
+
+======================================================================
+DOCUMENT: rules/WEAPON-MATRIX-01.md
+======================================================================
+Generator: scripts/extract_upgrades.py (upgrades)
+   - §1 (script L152-174): the heading regex is "^## 1\b". As written it is "## 1 · ⚠ The thirteen standard classes" (doc L24); only "## 1" is load-bearing. The table header must begin "Class | DEFAULT | + TWO-WEAPON FIGHTING | + PROFESSION | + BOTH". As written:
+       | Class | ⚠ DEFAULT | ⚠ + TWO-WEAPON FIGHTING | ⚠ + PROFESSION | ⚠⚠ + BOTH |   (doc L26)
+     - The rows are doc L28-40, exactly 13 (L263). Reading stops at "### ⚠⚠ THE CEILING..." (doc L42).
+     - Cell 1 is the class.
+     - Cell 4 (+ PROFESSION) and cell 5 (+ BOTH) are parsed strictly (L103-143):
+       - "—", "-", "–", empty, "nothing", "neither applies" and "none" mean none.
+       - "Hunter:", "Veteran:" and "BOTH:" prefixes are split on "·".
+       - Alternatives are split on " or "; items are split on "+" or " and ".
+       - The count words one, two, three, a and an are read, and a plural "s" is dropped.
+       - A term starting lower-case is an error (L91).
+       - Because clean() strips "*", italic "*or*" and "*and*" are still read as "or" and "and". THE WORDING AND PUNCTUATION OF CELLS 4-5 IS DATA.
+       - Every weapon name must resolve against equipment.json names or starting_equipment.json disambiguation items (L226-247).
+     - Cells 2 (DEFAULT) and 3 (+ TWO-WEAPON FIGHTING) are NOT read.
+   - §3 (L190-197): the heading regex is "^## 3\b" ("## 3 · The two droid arrays", doc L88). The header must begin "Class | DROID DEFAULT | + TWO-WEAPON FIGHTING | + WAR DROID":
+       | Class | ⚠ DROID DEFAULT | ⚠ + TWO-WEAPON FIGHTING | ⚠ + WAR DROID |   (doc L112)
+     - The rows are doc L114-122.
+     - Cell 1 is the class. Cell 4 (+ WAR DROID) is parsed as above. Cells 2-3 are not read.
+     - Reading stops at "### ⚠ Armour and hardware" (doc L130), so the bold prose at doc L124-128 is skipped. Any "|" line put there would be read as a row.
+   - Not read: the title, the ### prose under §1 (L9, L42, L53, L59), the whole §2 Force-class table (L71 onward), the §3 subsections at L90 and L99, and §4.
+
+
+======================================================================
+NOT A RULE DOCUMENT, BUT READ: the extracts that other generators read
+======================================================================
+   - item_effects reads skills.json, items.json, item_base_types.json, shields.json and the traps 2das.
+   - item_gates reads items.json.
+   - feats reads skills.json.
+   - species reads skills.json and powers.json.
+   - droid_skills reads skills.json.
+   - designations reads models.json.
+   - upgrades reads equipment.json and starting_equipment.json.
+   - powers reads skills.json and gen_force_cost_table.FIXED_DEGRADATION.
+   - A name changed in SKILLS-01, FORCE-POWERS-01, EQUIPMENT-01, STARTING-EQUIPMENT-01 or DROID-MODELS-01 can therefore break a different extract's rebuild.

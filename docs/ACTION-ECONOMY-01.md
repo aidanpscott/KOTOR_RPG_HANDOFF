@@ -127,7 +127,7 @@
 | **Opportunity attack** | **An enemy leaves your melee reach on foot** while you can see it. **One `Strike` at no penalty** — no chain applies. Prevented by Disengage. **⚠ Not available to droids** — see below. |
 | **Parry** *(chain)* | A melee attack against you. |
 | **Snap Shot** *(chain)* | An enemy steps into your sight or leaves cover; once per enemy per walk. Reflex Fire also answers a Strike or Shoot on a nearby ally. |
-| **Overwatch** *(chain)* | Declared on your turn; fires when an enemy moves or attacks. |
+| **Overwatch** *(chain)* | Declared on your turn (costs your Action, keeps your Move). Fires BEFORE an enemy that moves or makes a Strike or Shoot in your sight. Not on a power, an item or standing still. A shot to 0 stops the move or attack. 1/2/3 different enemies by tier; Total adds +2 each. |
 | **Readied action** | Your named trigger fires. **This is how a ranged character reacts to someone approaching** — see below. |
 | **Force Deflection / Force Redirection** | A ranged attack that would hit you. **Costs only the power's Force points** (`PT-2423`). **A deflected bolt goes back** — see below (`PT-2753`). |
 

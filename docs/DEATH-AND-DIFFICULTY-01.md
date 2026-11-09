@@ -20,6 +20,21 @@
 
 ---
 
+## 1b. Two settings, defaulted together (the owner, `PT-2752`, 2026-11-08)
+
+**DIFFICULTY** (Easy / Normal / Hard) and **DEATH** (Easy / Normal / Hard) are separate settings that default together and may be set apart.
+
+| Setting | Easy | Normal | Hard |
+|---|---|---|---|
+| **Difficulty** | Damage the party takes is ×0.5 | Damage the party takes is ×1.0 | Damage the party takes is ×1.5 |
+| **Death** | The band and permanent death — see §2 | The band and permanent death — see §2 | The band and permanent death — see §2 |
+
+**⚠ `ENGINE-SPEC-04-COMBAT §5`'s *"a mode, not a multiplier"* is superseded by `PT-666` (the owner).** The Difficulty setting IS a damage multiplier: K2's numbers, ×0.5 / ×1.0 / ×1.5.
+
+**Difficulty and Death are Table Rules settings, changeable at any time, including during a fight; the change applies from the next roll** (the owner, `PT-2752`, 2026-11-08).
+
+---
+
 ## 2. The three modes
 
 **A campaign package or a GM picks one at the start and it applies to everyone.**
@@ -28,11 +43,17 @@
 
 > **Nobody dies permanently unless the whole party dies.**
 
-**⚠ THE NEGATIVE BAND DOES NOT EXIST ON EASY — `PT-559`.** **A character reduced to 0 is DOWN: out of the fight until an ally helps them up, or until combat ends, when everyone who was down stands at 1 vitality.**
+**⚠ THE NEGATIVE BAND DOES NOT EXIST ON EASY — `PT-559`.** **A character reduced to 0 is DOWN: out of the fight until an ally helps them up, or until combat ends, when everyone who was down stands at full vitality** (the owner, `PT-2752`, 2026-11-08).
 
 **⚠ There is no dying, no bleed-out and no death threshold. Damage below 0 is not tracked at all.**
 
 **⚠ This is what the games actually do.** **A downed party member in KOTOR stands up when the fight ends; the only true loss is a total party defeat.**
+
+**A player-thrown grenade harms only enemies in its blast** (the owner, `PT-2673`).
+
+**Force points refill when a fight ends** (the owner, `PT-2752`, 2026-11-08). **⚠ `PT-1421`'s *"no resting off exhaustion"* is superseded on Easy only** (the owner, `PT-2752`, 2026-11-08): the Force pool restores at the end of every fight. Normal and Hard keep `PT-1421`.
+
+**Any failed skill check may be retried** (the owner, `PT-2752`, 2026-11-08). See `SKILL-RESOLUTION-01 §5.4a` for retries on every difficulty.
 
 > **⚠⚠ THE WHOLE BAND IS THE PARTY'S, NOT JUST THE STANDING UP — `PT-1524`.** `PT-1515` made the stand-at-1 rule party-only and left a **dying enemy nothing ticks out of combat.** `STUDY 23` settles it from the source.
 >
@@ -60,7 +81,7 @@
 >
 > **⚠ AND IT DISSOLVES THE OBJECTION THE AMENDMENT BELOW WAS MADE FOR.** That amendment removed a companion's recovery because it *"made the two companion classes the only ones playing without a stake at the default difficulty."* **⚠ The asymmetry was the complaint — and this rule is symmetric.** Nobody has an individual stake; **the party has one, and it is the whole of it.**
 >
-> **⚠ WHAT STILL SEPARATES EASY FROM NORMAL is the negative band, unchanged.** `PT-559`: on Easy it **does not exist** and damage below 0 is not tracked. On Normal it does — **you can be at −5 and need helping** — and `−Constitution` is where an ally can no longer bring you up mid-fight. ⚠ **My reading, and it keeps the band meaning something without it killing anyone.**
+> **⚠ WHAT STILL SEPARATES EASY FROM NORMAL is the negative band, unchanged.** `PT-559`: on Easy it **does not exist** and damage below 0 is not tracked. On Normal it does — **you can be at −5 and need helping.** ⚠ **⚠ SUPERSEDED (the owner, `PT-2752`, 2026-11-08): at `−Constitution` the bleed stops, the character stays down and never dies (only a wipe kills — `PT-1633`), and an ally can lift them mid-fight with a medpac or Treat Injury, at the cost of that ally's Action.** *(The previous reading, that `−Constitution` is where an ally can no longer bring you up, is withdrawn.)* ⚠ The specific roll for lifting at `−Constitution` is not yet in our documents — left for Coder's research.
 >
 > **⚠ AND IT IS WHAT THE GAMES DO.** `STUDY 23` found `NoPermDeath` on **all nine recruitable party members and no enemy**, and `PT-1524` found KOTOR has **no dying band at all**. *A party that loses is the loss.*
 
@@ -99,6 +120,8 @@
 **⚠ With exceptions determined by the GM.**
 
 **No distinction between player, companion and henchman. −10 is −10.**
+
+**On Hard, a terminal or lock the campaign marks can lock you out permanently, or be destroyed, on a failed attempt** (the owner, `PT-2752`, 2026-11-08). Unmarked terminals and locks stay retryable. See `SKILL-RESOLUTION-01 §5.4a`.
 
 > **⚠ `PT-1421` — *"−10 is −10"* IS ABOUT ROLE, NOT ARITHMETIC.** The sentence it follows is *no distinction between player, companion and henchman* — **Hard's point is that the SAME band applies to everyone**, not that the number is ten. **⚠ `§5b` supersedes the figure: `E-2`'s flat `−10` is gone and the threshold SCALES with Constitution.** So on Hard a `Con 18` character dies at **−18**, and a henchman dies on the same band as a player. **Both sentences are true and they answer different questions.**
 
@@ -171,12 +194,12 @@
 
 ---
 
-## 5b · ⚠⚠ A DROID **PLAYER CHARACTER** REBUILDS ON HARD, AND PAYS ITS BAYS. `PT-953`
+## 5b · ⚠⚠ A DROID **PLAYER CHARACTER** REBUILDS. `PT-953`, corrected by `PT-1633`
 
 > **⚠ OWNER RULING. ⚠⚠ `§5` ALREADY GIVES THE **COMPANION** REBUILD: ⚠ *"a destroyed droid companion may be repaired and rebuilt **to new**."* ⚠ THIS IS THE **PLAYER CHARACTER** CASE, WHICH WAS OPEN AT `DROID-CONSTRUCTION-01 §7`.**
 
-    ⚠ EASY    ⚠⚠ NOBODY DIES — ⚠ THE QUESTION DOES NOT ARISE
-    ⚠ NORMAL  ⚠ REBUILT ⚠⚠ TO NEW — ⚠ AS COMPANIONS ALREADY ARE
+    ⚠ EASY    ⚠ ONLY A WIPE KILLS — `PT-1633`. A droid PC rebuilt to new after the fight.
+    ⚠ NORMAL  ⚠ ONLY A WIPE KILLS — `PT-1633`. A droid PC rebuilt to new after the fight.
     ⚠⚠ HARD   ⚠ REBUILT, ⚠⚠ **AND `Constitution` DROPS BY 2**
               ⚠ ⚠⚠ **FLOOR OF 10** — ⚠ IT CANNOT GO LOWER
 

@@ -124,6 +124,16 @@ The shot is one Shoot with the gun in hand, using the ordinary ranged terms (ran
 
 The cap and no-reaction-to-a-reaction rules apply as for Parry (`ATTACKS-05`, `ATTACKS-01 §10`).
 
+**Overwatch** (MAIN, `PT-2752`, 2026-11-08). Declaring costs your Action and keeps your Move. You need a gun in hand. The hold lasts until the start of your next turn, or until its last target is fired on.
+
+It fires on an enemy that moves or makes a Strike or a Shoot while it is in your sight where it stands, BEFORE the enemy acts. Not on a power, an item or standing still. An enemy you first see only partway through its walk is Snap Shot's trigger, not Overwatch's. A shot to 0 stops that move or attack.
+
+Each shot is one Shoot with the gun in hand, using the ordinary ranged terms (range, cover, the adjacent −4). One, two or three DIFFERENT enemies by tier: Overwatch fires on one, Sustained Overwatch on two, Total Overwatch on three — and Total adds +2 to each shot.
+
+Each shot is a reaction and a chain use (the shared cap). Nothing answers it.
+
+**Enemies may hold Overwatch** (MAIN, `PT-2752`, 2026-11-08). A ranged enemy with the chain declares it on a turn when no foe is in its sight and range.
+
 ---
 
 # Gates

@@ -176,11 +176,19 @@
 
 > **Ration tracking is real in the fiction and abandoned by most tables within two sessions.**
 
-**It is therefore optional, controlled by the campaign difficulty setting** — the same knob that scales alignment drift and, in KOTOR, added +5 to skill DCs.
+**It is therefore optional, controlled by the campaign difficulty setting** — the same knob that scales alignment drift and, in KOTOR, added +5 to skill DCs. **⚠ UNSOURCED (DOCS, 2026-11-08): no ruling ties rations, alignment drift or "+5 to skill DCs in KOTOR" to the difficulty setting. Brought to MAIN.**
 
 **Where rations are not in play, Scavenging is a pure fixed-DC skill.** **Where they are, Scavenging reduces consumption on the curve in §5.1.**
 
 **A campaign package declares whether rations are tracked.** It is not a per-session GM choice.
+
+### 5.4a Retrying a failed skill check (the owner, `PT-2752`, 2026-11-08)
+
+**Security and Computer Use (locks, doors, terminals) may be retried on every difficulty.** The d20 RCR allows retries on Open Lock; our Security inherits that.
+
+**All other skills get one try, except on Easy**, where any failed check may be retried (`DEATH-AND-DIFFICULTY-01 §2`, Easy).
+
+**On Hard, a terminal or lock the campaign marks can lock you out permanently, or be destroyed, on a failed attempt** (`DEATH-AND-DIFFICULTY-01 §2`, Hard). Unmarked terminals and locks stay retryable.
 
 ### 5.5 Seventeen skills have no resource dimension
 

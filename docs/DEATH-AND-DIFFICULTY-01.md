@@ -55,11 +55,15 @@
 
 **⚠ This is what the games actually do.** **A downed party member in KOTOR stands up when the fight ends; the only true loss is a total party defeat.**
 
-**A player-thrown grenade harms only enemies in its blast** (the owner, `PT-2673`).
+**The following three extras follow the Difficulty setting, not Death** (the owner, `PT-2752`, 2026-11-10):
 
-**Force points refill when a fight ends** (the owner, `PT-2752`, 2026-11-08). **⚠ `PT-1421`'s *"no resting off exhaustion"* is superseded on Easy only** (the owner, `PT-2752`, 2026-11-08): the Force pool restores at the end of every fight. Normal and Hard keep `PT-1421`.
+**A party-thrown grenade harms only enemies in its blast** (the owner, `PT-2673`). "Party-thrown" means the player and companions; neutrals in the blast are still caught.
+
+**Force points refill when a fight ends** (the owner, `PT-2752`, 2026-11-08). Leaving a fight by walking out ends it too, so the refill applies. **⚠ `PT-1421`'s *"no resting off exhaustion"* is superseded on Easy Difficulty only** (the owner, `PT-2752`, 2026-11-08): the Force pool restores at the end of every fight. Normal and Hard keep `PT-1421`.
 
 **Any failed skill check may be retried** (the owner, `PT-2752`, 2026-11-08). See `SKILL-RESOLUTION-01 §5.4a` for retries on every difficulty.
+
+**Standing at full vitality follows the Death setting** (the owner, `PT-2752`, 2026-11-10).
 
 > **⚠⚠ THE WHOLE BAND IS THE PARTY'S, NOT JUST THE STANDING UP — `PT-1524`.** `PT-1515` made the stand-at-1 rule party-only and left a **dying enemy nothing ticks out of combat.** `STUDY 23` settles it from the source.
 >
@@ -132,7 +136,11 @@
 
 **No distinction between player, companion and henchman. −10 is −10.**
 
-**On Hard, a terminal or lock the campaign marks can lock you out permanently, or be destroyed, on a failed attempt** (the owner, `PT-2752`, 2026-11-08). Unmarked terminals and locks stay retryable. See `SKILL-RESOLUTION-01 §5.4a`.
+**On Hard, a marked door or container either locks you out for good or has its lock destroyed on a failed attempt** — the author picks which (`hard_failure` field, `AREA-FORMAT-01`). Unmarked locks stay retryable.
+
+**On Hard, a marked terminal allows one slicing session by default, and the author may set more** (the owner, `PT-2752`, 2026-11-10). When you log off the last session, it is locked for good. On Easy and Normal, no limit.
+
+See `SKILL-RESOLUTION-01 §5.4a`.
 
 > **⚠ `PT-1421` — *"−10 is −10"* IS ABOUT ROLE, NOT ARITHMETIC.** The sentence it follows is *no distinction between player, companion and henchman* — **Hard's point is that the SAME band applies to everyone**, not that the number is ten. **⚠ `§5b` supersedes the figure: `E-2`'s flat `−10` is gone and the threshold SCALES with Constitution.** So on Hard a `Con 18` character dies at **−18**, and a henchman dies on the same band as a player. **Both sentences are true and they answer different questions.**
 

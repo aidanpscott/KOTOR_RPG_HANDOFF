@@ -216,6 +216,22 @@ replies = [ { to = "push", gate = { skill = "persuade", dc = 14 } } ]
 
 **The file already carries `dc`.** Showing it, hiding it, greying a shut option or hiding it entirely are **four presentation switches over one unchanged field set.** **Nothing in this document has to be re-decided if the alternative wins**, and a `label` field would have been exactly the thing that foreclosed it — `§3`.
 
+### The persuade mark (the owner, as K2, `PT-2752`, 2026-11-09/10)
+
+Each reply that carries a Persuade gate may carry a **`persuade`** field (only non-default marks are written):
+
+| value | meaning |
+|---|---|
+| **`one-try`** (default) | Closed for good once tried — success or failure. |
+| **`until-success`** | Closed only on success; a failure leaves it open. |
+| **`retryable`** | Always available, on every difficulty. |
+
+```toml
+{ to = "push", gate = { skill = "persuade", dc = 14 }, persuade = "until-success" }
+```
+
+**The default is `one-try`**: an option with no `persuade` field is closed for good once tried, as K2 does — not per scene. Easy's "any failed check may be retried" (`SKILL-RESOLUTION-01 §5.4a`) covers every other skill, not Persuade in dialogue. See `RULES-02-social-and-gates §Diplomacy`.
+
 **Two shapes, and the second is the exception:**
 
 ```toml

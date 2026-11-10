@@ -166,7 +166,7 @@ See `SKILL-RESOLUTION-01 §5.4a`.
 
 ## 3. ⚠ Exceptions are the GM's, and a package may set them
 
-**A campaign may name characters who never die on Normal or Hard** (the owner, `PT-2752`, 2026-11-09). **They stay down until lifted or the fight ends, and only a wipe kills them.** A campaign package may set these, and a GM may add more.
+**A campaign may name characters who never die on Normal or Hard** (the owner, `PT-2752`, 2026-11-09). **They stay down until lifted or the fight ends, and only a wipe kills them.** A campaign package may set these, and a GM may add more. Death exceptions can also be set in Loom (a creature's "dies / stays down").
 
 ### The worked example — a KOTOR 1 package
 

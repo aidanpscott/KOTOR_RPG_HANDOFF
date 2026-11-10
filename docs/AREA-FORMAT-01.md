@@ -492,6 +492,8 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **`hard_failure`** (the owner, `PT-2752`, 2026-11-10): on a door or container, the author's choice of what happens on Hard when a Security attempt fails on a marked lock. Values: **`lockout`** (locked out for good) or **`destroyed`** (the lock is destroyed). Coder adds the field; this is the prose rule. See `SKILL-RESOLUTION-01 §5.4a` and `DEATH-AND-DIFFICULTY-01 §2` (Hard).
 
+**`hard_sessions`** (the owner, `PT-2752`, 2026-11-10): on a terminal only. A whole number from 1: how many slicing sessions the terminal allows on Hard. Leaving it out means no limit. On the Nth log-off, the terminal is locked for good — K2's line 1431 (*"This object cannot be opened through conventional means."*). **Sessions count only on Hard**; on Easy and Normal there is no limit. See `SKILL-RESOLUTION-01 §5.4a` and `DEATH-AND-DIFFICULTY-01 §2` (Hard).
+
 **⚠ AND IT IS AN OPPOSED PAIR, NOT A DC.** `§4`: **the defender rolls the better of Awareness or Alertness** against the hider's `stealth`. **Two skills that fail differently is worth more than one that is simply better** — without a stealth field sight leads, with one hearing does. Nothing models the field yet; **taking the better of the two is what makes it expressible later without changing this.**
 
 **⚠⚠ AND A DISTANCE IS THE GREATER OF THE TWO AXES — `PT-1581`, and it was ALREADY RULED BEFORE THAT.**
@@ -640,7 +642,7 @@ opens  = "cleared"     # shut while any hostile in this area is alive
 **A stated lock condition, not a script — `§5` stands.** The door names one fact the engine already holds (who in this area is hostile and alive) and is shut until it is false. Nothing runs, nothing is hooked, and the door's state is still a projection of the log.
 
 - **`"cleared"` is its one value.** Anything else is refused by name.
-- **One condition a door:** `opens` beside `locked` or `key` is refused, as `locked` beside `key` is (`PT-1957`).
+- **One condition a door:** `opens` beside `locked` or `key` is refused, as `locked` beside `key` is (`PT-1968`).
 - **A try while it is shut says why** (`PT-1380`), in K2's and K1's own words: strref 38462, *"That cannot be done while there are enemies nearby."*
 
 **Made for the opening's rooms** (owner, `PT-2752` (36): K1's Endar Spire, where each room's door opens once its Sith are down).

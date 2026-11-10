@@ -227,7 +227,11 @@ Each reply that carries a Persuade gate may carry a **`persuade`** field (only n
 | **`retryable`** | Always available, on every difficulty. |
 
 ```toml
-{ to = "push", gate = { skill = "persuade", dc = 14 }, persuade = "until-success" }
+[[player]]
+id       = "again"
+say      = "Hear me out."
+persuade = "until-success"
+then     = [{ to = "push", gate = { skill = "persuade", dc = 14 } }, "no"]
 ```
 
 **The default is `one-try`**: an option with no `persuade` field is closed for good once tried, as K2 does — not per scene. Easy's "any failed check may be retried" (`SKILL-RESOLUTION-01 §5.4a`) covers every other skill, not Persuade in dialogue. See `RULES-02-social-and-gates §Diplomacy`.

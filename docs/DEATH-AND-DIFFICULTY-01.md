@@ -22,12 +22,14 @@
 
 ## 1b. Two settings, defaulted together (the owner, `PT-2752`, 2026-11-08)
 
-**DIFFICULTY** (Easy / Normal / Hard) and **DEATH** (Easy / Normal / Hard) are separate settings that default together and may be set apart.
+**DIFFICULTY** (Easy / Normal / Hard) and **DEATH** (Same as Difficulty / Easy / Normal / Hard) are separate settings that default together and may be set apart.
 
-| Setting | Easy | Normal | Hard |
-|---|---|---|---|
-| **Difficulty** | Damage the party takes is ×0.5 | Damage the party takes is ×1.0 | Damage the party takes is ×1.5 |
-| **Death** | The band and permanent death — see §2 | The band and permanent death — see §2 | The band and permanent death — see §2 |
+| Setting | Values | |
+|---|---|---|
+| **Difficulty** | Easy (×0.5) · Normal (×1.0) · Hard (×1.5) | |
+| **Death** | **Same as Difficulty** · Easy · Normal · Hard | |
+
+**"Same as Difficulty"** is the Death setting's first choice (the owner, `PT-2752`, 2026-11-10). While it is chosen, Death follows Difficulty: change Difficulty and Death moves with it. Picking Easy, Normal or Hard for Death sets it apart. Choosing "Same" again makes it follow again.
 
 **⚠ `ENGINE-SPEC-04-COMBAT §5`'s *"a mode, not a multiplier"* is superseded by `PT-666` (the owner).** The Difficulty setting IS a damage multiplier: K2's numbers, ×0.5 / ×1.0 / ×1.5.
 

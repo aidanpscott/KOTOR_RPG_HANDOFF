@@ -186,13 +186,13 @@
 
 **Security and Computer Use (locks, doors, terminals) may be retried on every difficulty.** The d20 RCR allows retries on Open Lock; our Security inherits that.
 
-**All other skills get one try, except on Easy**, where any failed check may be retried (`DEATH-AND-DIFFICULTY-01 §2`, Easy). **Persuade in dialogue is the exception: see below.**
+**All other skills get one try, except on Easy**, where any failed check may be retried (`DEATH-AND-DIFFICULTY-01 §2`, Easy). **Persuade in dialogue and mines are exceptions: see below.**
 
 **On Hard, a marked door or container either locks you out for good or has its lock destroyed on a failed attempt** — the author picks which (`DEATH-AND-DIFFICULTY-01 §2`, Hard; `AREA-FORMAT-01`, field `hard_failure`). Unmarked locks stay retryable.
 
 **On Hard, a marked terminal allows one slicing session by default, and the author may set more** (the owner, `PT-2752`, 2026-11-10). When you log off the last session, it is locked for good. On Easy and Normal, no limit.
 
-**Mines:** no change yet, pending a ruling.
+**Mines** (the owner, `PT-1968`; MAIN, `PT-2752`, 2026-11-10): mines get disarm, recover and set (Demolitions, `§7a`), with a failed recovery risking detonation. **Mines retry freely on every difficulty** — no-retry is overturned by `PT-1968`. The "other skills get one try" rule above does not cover mines.
 
 **Persuade in dialogue** (the owner, as K2, `PT-2752`, 2026-11-09/10). Each Persuade option in a conversation is marked by its author as one of: **one-try** (the default — closed for good once tried, not per scene), **until-success** (closed only on success), or **retryable**, on every difficulty. Easy's "any failed check may be retried" covers every other skill, not Persuade in dialogue. See `DIALOGUE-FORMAT-01` for the author's mark and `RULES-02-social-and-gates §Diplomacy`.
 

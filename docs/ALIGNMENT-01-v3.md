@@ -1,6 +1,6 @@
 # ALIGNMENT-01 v3 — The Alignment and Force Drift System
 
-**Status: SETTLED, one line provisional (§1.3, how the step is read; confirmed by one KOTOR II reading).** v3 is v2 with Force costs
+**Status: SETTLED.** v3 is v2 with Force costs
 taken out of the bands and given their own table, the games' own (owner ruling, 2026-10-11, PT-2744 item 2a, option 2).
 **Decision ID: D-AQ**, amending **D-AF** (v2). Everything in v2 outside §1.1–§1.3 is unchanged.
 **Supersedes:** `ALIGNMENT-01` v2 (which superseded v1).
@@ -87,11 +87,7 @@ Falling into Committed Dark happens at 28. Climbing back out requires reaching 3
 > and vice versa."* — KOTOR II's own help text (StrRef 42535 / 41887), and this section's summary.
 
 **1. Your Alignment Step is the tens digit of your alignment, 0 to 10.** Alignment 47 is step 4; 100 is step 10.
-*⚠ PROVISIONAL, this line only: the games may round to the nearest ten instead (47 would be step 5). One reading in KOTOR II settles it
-(a Light and a Dark power's cost at a known alignment whose tens digit and nearest ten differ); the word "provisional" goes then.
-**Why it matters, the clearest case:** a neutral character at 50 casts one Dark power (Force Shock, tier 1); the fight ends and
-alignment folds to 49. Under the tens digit that is step 4, so every Light power now costs ×1.25 (Heal 8 → 10) after a single dark act.
-Under the nearest ten, 49 is still step 5 and Heal still costs 8.*
+*Read in KOTOR II (MAIN, PT-2752, 2026-11-11): at alignment 57, Stun Droid (Light, base 15) shows Adjustment 0 and Cost 15, which is step 5; the nearest ten would be step 6. Capture: media/screens/k2-price/01-stun-droid-light-base15-adjustment0-cost15.png.*
 
 > ### As built — §1.3 alignment step
 >

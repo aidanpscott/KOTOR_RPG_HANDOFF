@@ -124,10 +124,10 @@
 
 | Reaction | Trigger |
 |---|---|
-| **Opportunity attack** | **An enemy leaves your melee reach on foot** while you can see it. **One `Strike` at no penalty** — no chain applies. Prevented by Disengage. **⚠ Not available to droids** — see below. |
-| **Parry** *(chain)* | A melee attack against you. |
-| **Snap Shot** *(chain)* | An enemy steps into your sight or leaves cover; once per enemy per walk. Reflex Fire also answers a Strike or Shoot on a nearby ally. |
-| **Overwatch** *(chain)* | Declared on your turn (costs your Action, keeps your Move). Fires BEFORE an enemy that moves or makes a Strike or Shoot in your sight. Not on a power, an item or standing still. A shot to 0 stops the move or attack. 1/2/3 different enemies by tier; Total adds +2 each. |
+| **Opportunity attack** | **An enemy leaves your melee reach on foot** while you are **aware** of it (§10, the watcher rule). **One `Strike` at no penalty** — no chain applies. Prevented by Disengage. **⚠ Not available to droids** — see below. |
+| **Parry** *(chain)* | A melee attack against you. *(Not subject to the watcher rule.)* |
+| **Snap Shot** *(chain)* | An enemy steps into your sight or leaves cover; once per enemy per walk. Reflex Fire also answers a Strike or Shoot on a nearby ally. The watcher rule applies (§10). |
+| **Overwatch** *(chain)* | Declared on your turn (costs your Action, keeps your Move). Fires BEFORE an enemy that moves or makes a Strike or Shoot in your sight. Not on a power, an item or standing still. A shot to 0 stops the move or attack. 1/2/3 different enemies by tier; Total adds +2 each. The watcher rule applies (§10). |
 | **Readied action** | Your named trigger fires. **This is how a ranged character reacts to someone approaching** — see below. |
 | **Force Deflection / Force Redirection** | A ranged attack that would hit you. **Costs only the power's Force points** (`PT-2423`). **A deflected bolt goes back** — see below (`PT-2753`). |
 
@@ -727,7 +727,15 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **They exist. They are universal. They draw on the reaction pool.**
 
-**Trigger:** an enemy **leaves your melee reach on foot** while you **perceive them** (the owner, `PT-2752`, 2026-11-11). **Line of sight alone is not enough: a creature that does not perceive you — in its blind spot, hidden from it, or lost by its perception — makes no opportunity attack on you.** Hold: the reaction chains (Snap Shot, Overwatch, Reflex Fire) await MAIN's ruling.
+### Facing (the owner and MAIN, `PT-2752`, 2026-11-11)
+
+**A creature faces the way it last moved, and turns to face whatever it attacks.** A creature that hasn't turned sees all round.
+
+### The watcher rule (MAIN, `PT-2752`, 2026-11-11)
+
+**Every reaction that needs the watcher to see the mover requires the watcher to be AWARE of the mover: it SEES them, not just hears them.** A hidden character, one in the watcher's blind spot, or one the watcher has lost, draws none of these. This covers: **opportunity attacks**, **Throw Down's provoked strike** (`ATTACKS-07`), **Snap Shot and Interdiction**, **Overwatch and its tiers**, and **Reflex Fire**. **Parry is unchanged** — it answers a melee attack against you, not movement you see.
+
+**Trigger:** an enemy **leaves your melee reach on foot** while you are **aware of them** (the owner, `PT-2752`, 2026-11-11).
 **Line of sight is checked from the square the mover leaves, not the one they reach** (MAIN, `PT-2752`, 2026-11-06). A step that starts across a closed corner provokes nothing (§6.2). A step that ends out of your sight still provokes if you had a line where it started. The declared Inside Reach walk provokes no enemy when the declared strike will follow at the walk's end (MAIN, `PT-2752`, 2026-11-07; `ATTACKS-07`).
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
 **Prevented by:** the **Disengage** action, or **not being perceived** by the creature.

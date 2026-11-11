@@ -444,6 +444,20 @@ It holds only where session gain exactly equals session drift. **One point of mi
 
 ---
 
+### 8B.4 — A larger alignment scale. Declined (the owner, `PT-2752`, 2026-11-11).
+
+**The question:** the owner asked whether 0–100 is too coarse ("only 10 points for dark … four in the middle").
+
+**What was found** (read from the games' own files, CODER, 2026-11-11):
+- **KOTOR II uses 0–100 too** (`globalcat.2da`, `G_PC_Align_Val`). Its scripts' bands: Dark 0–39, Neutral 40–60, Light 61–100 (`k_inc_utility.nss`).
+- **Its acts move 1 to 10 points**, 2/4/6 at neutral for a small, medium or large act (`UT_AdjustCharacterAlignment`); direct grants are mostly 1. Ours (±1, 2, 4, 8, 15 by tier, §2.4) are no coarser.
+- **The coarse feel is the price table**, not the range: `forceadjust.2da`'s eleven rows, one per ten points, with neighbouring rows sharing a multiplier (§1.3).
+- **Saves hold no score**: the log keeps each act and the score is re-folded, so any later change of scale needs no migration.
+
+**Options weighed:** 0–1000 with everything ×10 (no change in play by itself); a finer hidden score under the 0–100 bar (the player would pay by a number they don't see); keeping 0–100 and smoothing the price between the eleven rows (would overturn D-AQ).
+
+**Decided (the owner): keep 0–100 as it is, KOTOR II's own scale, and its eleven price rows exactly. D-AQ stands.** Reopen only with a new cause, not the same question.
+
 ## 9. Change log
 
 | Version | Change | Cause |

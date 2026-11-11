@@ -727,10 +727,10 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **They exist. They are universal. They draw on the reaction pool.**
 
-**Trigger:** an enemy **leaves your melee reach on foot** while you can see them.
+**Trigger:** an enemy **leaves your melee reach on foot** while you **perceive them** (the owner, `PT-2752`, 2026-11-11). **Line of sight alone is not enough: a creature that does not perceive you — in its blind spot, hidden from it, or lost by its perception — makes no opportunity attack on you.** Hold: the reaction chains (Snap Shot, Overwatch, Reflex Fire) await MAIN's ruling.
 **Line of sight is checked from the square the mover leaves, not the one they reach** (MAIN, `PT-2752`, 2026-11-06). A step that starts across a closed corner provokes nothing (§6.2). A step that ends out of your sight still provokes if you had a line where it started. The declared Inside Reach walk provokes no enemy when the declared strike will follow at the walk's end (MAIN, `PT-2752`, 2026-11-07; `ATTACKS-07`).
 **Effect:** one **`Strike`** at no penalty. **No chain applies.**
-**Prevented by:** the **Disengage** action.
+**Prevented by:** the **Disengage** action, or **not being perceived** by the creature.
 
 **Who threatens (MAIN, 2026-10-14, after TEST 180):** a creature holding a ranged weapon makes no opportunity attacks; one with empty hands threatens with its fists or its natural weapons. *(`§4`'s line: ranged characters do not get opportunity attacks; melee gets zone control and ranged gets range.)*
 
@@ -1093,11 +1093,14 @@ why this needed stating rather than leaving to whoever next read the line:
 > **A character is unaware of you if they cannot perceive you.**
 >
 > **You are Hidden from them** — a successful Stealth check, and you have not revealed yourself.
+> **You are in their blind spot** — a creature with a blind spot (e.g. the Sith Trooper's 120°) does not perceive what is behind it (`PT-2246`–`PT-2248`, `PT-2455`).
 > **They are Stunned.**
 > **They are Paralysed** — anything that applies `paralysed`, K2's *"otherwise immobilized"*. *Owner, 2026-10-29 (`PT-2752`).*
 > **They are blinded or otherwise cannot see.**
 >
 > **A Precognition holder is never unaware** (`FEATS-LIBRARY-01`).
+
+**There is no separate rear-attack bonus** (the owner, `PT-2752`, 2026-11-11). Attacking from a creature's blind spot grants unaware status — Sneak Attack's extra dice — not an additional attack or damage bonus beyond that. Jedi Defense has no front arc.
 
 > **⚠⚠ THE EXTRA DICE ARE NOT MULTIPLIED ON A CRITICAL** — MAIN, 2026-10-29 (`PT-2752`): precision damage, as in K2 (*"The extra damage is
 > not multiplied in the case of a critical hit"*, `feat.2da` row 60) and the d20 rule. **Killer's Instinct, Sneak Attack and Stealthy Shot all
@@ -1119,7 +1122,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **And surprised stays out on purpose.** **`§19.2` says a surprised character is not easier to hit** — **if surprise made you unaware it would strip Dexterity and quietly reverse that.** **A surprised soldier still has his feet under him; he has not started shooting yet.**
 
-**⚠ Facing is not a criterion.** **`PT-2` struck the 180° arc from `Jedi Defense` because the corpus does not model facing.** **An earlier version of `Killer's Instinct` said *"you are in Stealth, behind it, or it is blinded"* and the middle clause was unreachable.**
+**⚠ ~~Facing is not a criterion.~~ SUPERSEDED IN PART (the owner and MAIN, `PT-2752`, 2026-11-11): since `PT-2246`–`PT-2248` and `PT-2455`, a creature has a facing and may have a blind spot (e.g. the Sith Trooper's 120°), which the perception system reads — a creature doesn't notice what's in its blind spot.** What still holds from `PT-2`: **there is no rear-attack bonus, and no front arc on Jedi Defense.** Attacking from a creature's blind spot works through perception: the creature is unaware, so Sneak Attack applies (`§19.5`). **An earlier version of `Killer's Instinct` said *"you are in Stealth, behind it, or it is blinded"* — the middle clause is now reachable through the blind spot.**
 
 ### The same test runs in reverse
 

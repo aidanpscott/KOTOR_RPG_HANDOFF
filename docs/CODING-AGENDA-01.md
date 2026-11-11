@@ -19,6 +19,7 @@ Standing, continually-updated list of open work. Updated every time something cl
 
 ## OPEN
 
+- **PT-1957 LABELS LEFT UNSURE (MAIN, `PT-2752`, 2026-11-10): settle a group when its code is next touched; no slice of its own.** The one pass relabelled 38 to PT-1967, PT-1972 and PT-1974; these groups still say PT-1957 and nobody is sure that is their ruling: (a) the `object` base type, one type for five item categories; (b) armour reaching Defence, "wired at" (perhaps PT-1973); (c) doors that stay in their area and `leadsAway`; (d) an item's `base` must be one the rules carry; (e) rows that do not parse are refused, not dropped; (f) authored `[skills]` and scripted checks on a creature; (g) Loom's derived lists, CARRIED fields and the talk list re-read. Find them with `grep -rn PT-1957` in the app, Lodestar and Loom.
 - **Owner's scheduling rulings (MAIN, `PT-2752`, 2026-11-05); nothing to build now.** Crystals: one list, the upgrade tree; `Initiate` reads the tree's crystal leaf; reconcile the 93 and the 104 when the workbench is built. Droid upgrades stay their own system, out of the tree. `statussummary_p`: BUILD it, as K2; rows with no source yet show once their source exists. After the attack chains, the first bigger feature is Difficulty and Table Rules; then the rest, unscheduled. Icons: the owner draws them, as ruled.
 
 ### THE PLAY SWEEP (PT-2752, 2026-10-25) — every open play item, by thread; the entries below it keep their detail, marked where built

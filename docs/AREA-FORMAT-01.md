@@ -642,7 +642,7 @@ opens  = "cleared"     # shut while any hostile in this area is alive
 **A stated lock condition, not a script — `§5` stands.** The door names one fact the engine already holds (who in this area is hostile and alive) and is shut until it is false. Nothing runs, nothing is hooked, and the door's state is still a projection of the log.
 
 - **`"cleared"` is its one value.** Anything else is refused by name.
-- **One condition a door:** `opens` beside `locked` or `key` is refused, as `locked` beside `key` is (`PT-1968`).
+- **One condition a door:** `opens` beside `locked` or `key` is refused, as `locked` beside `key` is (`PT-1957`).
 - **A try while it is shut says why** (`PT-1380`), in K2's and K1's own words: strref 38462, *"That cannot be done while there are enemies nearby."*
 
 **Made for the opening's rooms** (owner, `PT-2752` (36): K1's Endar Spire, where each room's door opens once its Sith are down).

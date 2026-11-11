@@ -110,7 +110,7 @@
 
 **⚠ With exceptions chosen by the GM.**
 
-**A player character reduced to `−Constitution` is down beyond an ally's help until the fight ends; ⚠ only a wipe kills, on Easy and Normal both, and `−Constitution` kills only on Hard — `PT-1633`. The same holds for a beast companion and a droid companion (`PT-558`), and for henchmen.** *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4; henchman rule corrected 2026-11-09 — `PT-571`'s "`Easy` rule for henchmen" is superseded by `PT-1633`.)*
+**A player character reduced to `−Constitution` is down until the fight ends or an ally lifts them (see §2 Easy/Normal, the lift rule above); ⚠ only a wipe kills, on Easy and Normal both, and `−Constitution` kills only on Hard — `PT-1633`. The same holds for a beast companion and a droid companion (`PT-558`), and for henchmen.** *(Text corrected 2026-10-18, MAIN's batch-1 ruling 4; henchman rule corrected 2026-11-09; lift rule corrected 2026-11-09 — an ally CAN help at `−Constitution`.)*
 
 **⚠ AMENDED. This section previously read *"a henchman, a beast companion, or a droid is not [dead] — it is out for the encounter and recovers."*** **That made the two companion classes the only ones playing without a stake at the default difficulty.**
 

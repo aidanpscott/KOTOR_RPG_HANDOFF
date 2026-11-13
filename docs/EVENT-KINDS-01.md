@@ -265,7 +265,7 @@ An earlier draft said *past tense*. That was imprecise. **`character.damaged` do
 
 | Kind | Lifetime |
 |---|---|
-| `dialogue.node-reached` | session |
+| `dialogue.node-reached` | campaign — `PT-2752` (MAIN, 2026-11-13, TEST 256 finding 1): the Dialog tab reads it, with `dialogue.choice-made`, to show both sides of a conversation after a load. It carries only the conversation and the line's id, and the words come from the conversation itself, so saves stay small. |
 | `dialogue.choice-made` | campaign — and where the reply rolled a check, the try rides on it: `check` (the skill) and `succeeded` (the owner, `PT-2752`, 2026-11-08 and 2026-11-09; `SKILL-RESOLUTION-01 §5.4a`). The roll's own `check.resolved` is transient, so this is what closes a reply already tried: Persuade by its mark, Security and Slicing never, any other skill after one try except on Easy. |
 | `note.written` | **⚠ campaign, and unreadable** — `PT-1253`: Personal Notes are private. **The event records that a note exists, never its content.** |
 | `store.opened` | **⚠ session, not campaign** — `PT-1152`, `PT-2548`. An author places it on a dialogue reply's own `effect` list, the same as `quest.flag-set`; the app watches for it in a beat's own events and opens the merchant it names. Nothing folds it into persistent state — a store visit does not need to outlive the sitting, and re-opening on a reload is not a defect.

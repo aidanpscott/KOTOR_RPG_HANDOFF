@@ -295,7 +295,7 @@ then   = ["dismissed"]
 
     quest.flag-set              permanent
     quest.concluded             permanent
-    dialogue.node-reached       session
+    dialogue.node-reached       campaign   ⚠ PT-2752, the Dialog tab after a load
     dialogue.choice-made        campaign
     character.alignment-shifted permanent
     item.acquired / item.lost   campaign

@@ -150,6 +150,8 @@
 >
 > **⚠⚠ AND IT IS NOT DERIVED FROM WHICH WAY THEY CURRENTLY LEAN.** That reading was available and is wrong: `§4`'s whole mechanism is that a fallen character *"can always meditate their way back"*, which requires the side they are reflecting toward to be independent of the side they currently sit on. Deriving it would make recovery impossible by construction — a Deep Dark character could only ever meditate deeper, into a boundary that already refuses them.
 
+**`range`** — **⚠ owner ruling, 2026-11-13 (`PT-2752`): how far the character perceives, in squares — *"one range for everyone, the character's own."*** A whole number, **ten by default, and written only when it is not ten** (`AREA-FORMAT-01 §3c`'s default; the same name as a placement's `range`). It holds her reactions as a creature's holds its own: she reacts only to a mover within it. **Chargen sets none, and nothing raises it yet; anything that will (a feat, a skill, gear) goes to MAIN first.** A companion keeps its placement's `range`.
+
 **`feats`** — `source` distinguishes `granted` (automatic, from the class schedule) from `chosen` (spent a slot). This matters: a granted feat cannot be removed, and the distinction is what the grant popup reports (`PT-1228`, `TRACE-76`).
 
 ---

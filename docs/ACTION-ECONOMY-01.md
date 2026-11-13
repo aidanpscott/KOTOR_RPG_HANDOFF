@@ -731,7 +731,7 @@ why this needed stating rather than leaving to whoever next read the line:
 
 **Every creature starts the encounter facing a direction.** The GM sets it when placing the creature, and the default is the map's south. Player characters start facing the way they entered and keep their facing between sessions.
 
-**A creature faces the way it last moved, and turns to face whatever it attacks.** A creature that hasn't turned sees all round. Being pushed or knocked down doesn't turn it.
+**A creature faces the way it last moved, and turns to face whatever it attacks.** When a conversation starts, the creature speaking and the character it speaks with turn to face each other. A creature that hasn't turned sees all round. Being pushed or knocked down doesn't turn it.
 
 ### The watcher rule (the owner and MAIN, `PT-2752`, 2026-11-11, extended 2026-11-13)
 

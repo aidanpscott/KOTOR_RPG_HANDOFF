@@ -729,11 +729,25 @@ why this needed stating rather than leaving to whoever next read the line:
 
 ### Facing (the owner and MAIN, `PT-2752`, 2026-11-11)
 
-**A creature faces the way it last moved, and turns to face whatever it attacks.** A creature that hasn't turned sees all round.
+**Every creature starts the encounter facing a direction.** The GM sets it when placing the creature, and the default is the map's south. Player characters start facing the way they entered and keep their facing between sessions.
 
-### The watcher rule (MAIN, `PT-2752`, 2026-11-11)
+**A creature faces the way it last moved, and turns to face whatever it attacks.** A creature that hasn't turned sees all round. Being pushed or knocked down doesn't turn it.
 
-**Every reaction that needs the watcher to see the mover requires the watcher to be AWARE of the mover: it SEES them, not just hears them.** A hidden character, one in the watcher's blind spot, or one the watcher has lost, draws none of these. This covers: **opportunity attacks**, **Throw Down's provoked strike** (`ATTACKS-07`), **Snap Shot and Interdiction**, **Overwatch and its tiers**, and **Reflex Fire**. **Parry is unchanged** — it answers a melee attack against you, not movement you see.
+### The watcher rule (the owner and MAIN, `PT-2752`, 2026-11-11, extended 2026-11-13)
+
+**A creature can make a reaction only against a mover it can see at that moment.** That means:
+
+- a clear line of sight without full concealment,
+- the mover not in its blind spot,
+- the mover not hidden from it,
+- the creature not distracted,
+- and the mover within its **perception range**.
+
+**Perception range** is the same rule for everyone — player characters and companions included: **10 squares** unless the creature or character has a longer one (the owner, `PT-2752`, 2026-11-13). A reaction also needs its own reach: a pistol's Snap Shot at 23 squares needs both the pistol's range and a perception range of 23 or more.
+
+**A creature that can't see you is unaware of you** (`§19.5`), so a creature attacked from its blind spot is unaware and Sneak Attack applies.
+
+This covers: **opportunity attacks**, **Throw Down's provoked strike** (`ATTACKS-07`), **Snap Shot and Interdiction**, **Overwatch and its tiers**, and **Reflex Fire**. **Parry is unchanged** — it answers a melee attack against you, not movement you see.
 
 **Trigger:** an enemy **leaves your melee reach on foot** while you are **aware of them** (the owner, `PT-2752`, 2026-11-11).
 **Line of sight is checked from the square the mover leaves, not the one they reach** (MAIN, `PT-2752`, 2026-11-06). A step that starts across a closed corner provokes nothing (§6.2). A step that ends out of your sight still provokes if you had a line where it started. The declared Inside Reach walk provokes no enemy when the declared strike will follow at the walk's end (MAIN, `PT-2752`, 2026-11-07; `ATTACKS-07`).

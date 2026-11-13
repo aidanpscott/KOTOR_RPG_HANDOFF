@@ -482,6 +482,8 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 > **One number, read from whichever side is deciding.** *How far off it can be noticed* and *how far off it notices* are the same distance, and `§3c`'s own argument for one default and no table applies to both.
 
+**⚠⚠⚠ AND IT HOLDS EVERY WATCHER'S REACTIONS, THE PARTY'S TOO — the owner, `PT-2752`, 2026-11-13: *"SAME RANGE FOR ALL."*** A watcher reacts (opportunity attacks, Throw Down, Snap Shot and Interdiction, Overwatch, Reflex Fire) only to a mover within its own range: the placement's `range`, or ten. The player and her party are held to it like any creature; the player's record carries no `range`, so hers is ten. A reaction needs both its own reach and this range: a pistol that reaches 24 squares still fires only within ten. **The board still shows what it shows; this only limits reactions.**
+
 **⚠ `stealth` IS STILL HIDDEN-ONLY.** A hiding total on something in plain sight is two statements that cannot both be true — `PT-1379` — and nothing about detection touches it.
 
 ### ⚠ HOW IT IS FOUND — ruled at `PT-1569`/`PT-1573`, and BUILT
@@ -527,6 +529,20 @@ range   = 4                               # ⚠ SQUARES. §9 makes one 2 metres
 
 **⚠ And contact needs no line.** `PT-1678`'s adjacency join is *already touching*; sight is what distance needs and touching does not.
 
+### ⚠⚠ `3e` · `facing` — the way it stands, `PT-2752` (MAIN, 2026-11-13)
+
+```toml
+[[contents]]
+tag    = "sith-trooper.command-deck.39"
+from   = "characters/sith-trooper"
+at     = [6, 4]
+facing = "west"
+```
+
+One of eight: `east`, `south-east`, `south`, `south-west`, `west`, `north-west`, `north`, `north-east`, on the board's own axes (north is up the map). **Leaving it out means south.** Any other word is refused, naming the eight. Every placement starts the game facing this way, so a creature with a blind spot (`blind_spot` on its blueprint) has a back from the first frame, before anything moves it. That is the standing guard a player sneaks past, which is the case a blind spot is for. From there it turns to face the way it walks and what it attacks. Loom sets it on the placement sheet; south writes nothing.
+
+An arrival (`§4·0`) takes the same field: the player and the party face its way when they arrive there.
+
 ### ⚠ And what is NOT here — `PT-1550`
 
 **⚠ AMENDED (`PT-2746`, 2026-10-13): THE MAP NOW HAS K2's EXPLORED AREA; THE BOARD STAYS UNFOGGED.** The Map shows only what the party has explored of the current area (5 squares round each member, through no wall, only ever adding, kept per character in the log as `map.revealed`), and `blocksSight` is now read for it. Nothing below changes for the board: PT-1550 stands, there is no fog on the terrain in play. Two optional fields serve the Map: `mapped = true` in `[area]` ("fully mapped": the whole area explored at once, for towns and the like) and `[[map_notes]]` (`name`, `at = [x, y]`), a named place listed once its square is explored; a connection may carry `map_note = "…"` to name itself on the Map, else it is noted by where it leads (named once that area has been visited, else "Exit"). The original text follows.
@@ -564,6 +580,8 @@ lands = "north"                 # a named point IN the target
 name = "north"
 at   = [12, 0]
 ```
+
+An arrival may also say `facing` (`§3e`): the way the player and the party face when they arrive there. Leaving it out means south.
 
 **And a connection lands on one by name:** `lands = "north"`.
 

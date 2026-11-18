@@ -137,3 +137,12 @@ Nothing was cut off, overlapping or missing.
 - On the first chargen I skipped the Equipment scroll and pick, so OK stayed grey. I deleted the three frames taken after it and redid the step.
 - At 1024 my pointer, left over the portrait, raised a hover card over Kael's small portrait in `n-30-c79-1024x1080`.
 - My readings file first had a guessed range for the small portrait; I replaced it with the measured box before committing.
+
+## Addendum: the owner's facing check (2026-11-18, after filing)
+
+The owner wrote to me directly: "When a character attacks, the arrow should move in the direction of the target". The code already carries this rule ("AN ATTACKER TURNS TO FACE WHAT IT ATTACKS", MAIN, `PT-2752`, 2026-11-11, `play_screen.dart`). I checked it on 34f727f at 1920. The frames are in `test-263/face/`.
+
+- **The player**: in Aoo Eighty I walked Right, Down and Left, which left Aoo Eighty facing west with a Sentry Droid directly south. On its turn I pressed Down and it shot south ("Blaster Rifle · rolled 4 … miss"). Its arrow turned from west to south (`cmp-face-attack2`).
+- **An enemy**: the droid south of Aoo Eighty stood facing south, away from it. On the droid's turn it stayed in its square, turned north and hit Aoo Eighty ("Sentry Droid: unarmed · rolled 15 … hit · damage 2", 6 → 4 of 11) (`cmp-face-droid-south`).
+- **Not a test**: in C79 Battle the bump was refused ("melee is closed to every droid chassis"), and my click on the far droid walked C79 Battle there instead of shooting, so its arrow turned from the walk.
+- **Not checked**: a party member's own attack (Kael didn't attack), and a ranged shot at a target off the four straight lines.

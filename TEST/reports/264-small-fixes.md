@@ -124,3 +124,19 @@ The up arrow beside each list (x 935–950, y 243–254), its peak:
 - My Load helper's OCR failed on "Looter" again; I loaded it by hand with a frame.
 - My first restore of xsettingsd's PID file caught the desktop's xsettingsd (6449). I corrected it to mine (13581) before launching.
 - At 1280×1080 my first OK on the Map's help missed (the button sits lower at that size), so my first sheet frame shows the help box. I retook it.
+
+## Step 8 (added by MAIN after filing): facing for a companion's attack and an off-axis shot
+
+Same build (f9264b5) at 1920. The frames are in `test-264/step8/` (793d5427). I measured each arrow's angle from the centre of its token's ring (0° east, 90° north).
+
+- **A companion's own attack: PASS.**
+  - In Aoo Eighty's fight, on Kael's turn I walked him Down and Right three times, which left him facing east (0°) with a Sentry Droid directly north.
+  - Up made him attack: "Kael: unarmed · rolled 14 … hit · damage 3", 24 → 21.
+  - His arrow turned to north, measured at 92° (`cmp-s8-kael`).
+- **FINDING 3: an off-axis shot turns the arrow to the target's exact bearing, not the nearest of eight directions.**
+  - Aoo Eighty was facing south (−90°), with a droid 5 east and 1 north.
+  - The hover showed a shot from where it stood ("65% (needs 8+)", "+1 Dexterity"). The click fired: "Blaster Rifle · rolled 8 … miss".
+  - The arrow turned to 11.9° (`cmp-s8-ranged`). That's the target's own bearing (5 east, 1 north is 11.3°); the nearest of the eight directions is east, 0°.
+  - **Not a slip in the turn itself.** Facing is stored in whole degrees: `bearingBetween` rounds atan2 to the degree. The comment on `_facing` in `play_screen.dart` says "DEGREES AND NOT A COMPASS DIRECTION … `PT-2247` piece 3", because K2's facing is a float and a 120° blind spot can't be shown in eight directions.
+  - That is a code comment, not a ruling I've seen. So step 8's "nearest of the eight directions" and the build disagree, and one of them needs MAIN's ruling.
+- **Also seen:** the far droid then walked up to Aoo Eighty and its arrow pointed at it, about south-west, before its attack.

@@ -2,11 +2,11 @@
 
 Real game, my Xvfb `:2`, plus my own 3840×2160 Xvfb `:5` for one native-scale capture. No K2 running. Text only. Frames, the load log (with a frame at every Load click), both gate outputs, the dev logs, my scripts and the authored scratch save are in `MAIN_WORK/media/screens/test-272/`. Names in brackets below are files there.
 
-Received since my last report: MAIN's TEST 271 acceptance; MAIN's TEST 272 order.
+Received since my last report: MAIN's TEST 271 acceptance; MAIN's TEST 272 order; MAIN's move of TEST 272 to 0e383ee with step 6.
 
 ## Build
 
-- **App**: main `fb449fe`, a fresh clone, built debug. Lens `e449221` and Lodestar `a554b93` compiled in. Every step below ran on this build.
+- **App**: main `fb449fe`, a fresh clone, built debug. Lens `e449221` and Lodestar `a554b93` compiled in. Steps 1–5 ran on this build; step 6 ran on 0e383ee (section 6).
 - **Heads**: before the gate I checked every shared tree against origin/main. The shared HANDOFF tree was clean and 1 behind, by my own ledger commit. I fast-forwarded it (ff-only) to `32d3635`. All the others were at origin and clean.
 - **Gate**: I ran `gate.py --at fb449fe` twice from the project MAIN_WORK (`gate272-1.txt`, `gate272-2.txt`). Both read "SENDABLE — 5 warning(s)" and "FOR TESTER — CORE at fb449fe, 6067 tests, 0 failed".
   - Both state lines: "MAIN_WORK 459d223d · HANDOFF 32d3635 · KOTOR-RPG-APP fb449fe · Lodestar a554b93 · Loom 9a1c3ef · Shelf 8f2d845 · Atlas 0b7cc47 · Lens e449221".
@@ -19,7 +19,7 @@ Received since my last report: MAIN's TEST 271 acceptance; MAIN's TEST 272 order
 
 ## Summary
 
-Steps 1, 2, 3 and 5 pass. Step 4 passes on what it ordered, but I found one finding next to it.
+Steps 1, 2, 3, 5 and 6 pass. Step 4 passes on what it ordered, but I found one finding next to it.
 
 | # | Check | Result |
 |---|---|---|
@@ -28,6 +28,7 @@ Steps 1, 2, 3 and 5 pass. Step 4 passes on what it ordered, but I found one find
 | 3 | Soldier level-up (Off Six, 6 to 7) | **PASS**. The armour chain is held, none of it can be added, two arrows. |
 | 4 | Powers open their next tier | **PASS** as ordered. Watch Two to 8: Stun Droid opens Disable Droid, with an arrow. Level 5: it stays red. Sith Assassin: Force Camouflage, then Improved. **FINDING 1**: Master Force Camouflage (Level 13) then opens at level 1. |
 | 5 | Whole-screen look | **PASS** at 1920×1080 and 1600×900. |
+| 6 | Wrist-Mounted icons (0e383ee) | **PASS**. Focus shows the solid frame and Specialization the frame with the reticle; Proficiency keeps its file. None is an empty slot. |
 
 ## FINDING 1: Master Force Camouflage opens at chargen level 1
 
@@ -99,6 +100,24 @@ I ran the app on a 3840×2160 Xvfb and sized its window to fill it, so the charg
 - **1920×1080**: chargen (species, class, hub, Skills with its prompt, Feats with the granted popups, Forms, Attacks with the recommended popup, Powers with its help) and level-up (class, hub with the granted popup, Feats, Powers), plus play and the Character sheet. Nothing cut off, overlapping or missing.
 - **1600×900** (`o-*`): chargen (species, class, hub, Skills, Feats) and level-up (play, Character, class, hub with its granted popup, Feats). Nothing cut off, overlapping or missing.
   - The chargen arrows land at 379.2–393.6 and 679.2–693.6 in 1920 terms, the same as at 1920.
+
+## 6. Wrist-Mounted icons (app 0e383ee, added by MAIN after steps 1–5 were filed)
+
+MAIN moved TEST 272 to 0e383ee after I'd finished steps 1–5 on fb449fe, so per MAIN's message I ran only step 6 on 0e383ee.
+
+- **Build**: main `0e383ee`, a fresh clone (`builds/test272b`), built debug. Lens `e449221` and Lodestar `a554b93` compiled in.
+- **Heads and gate**: every shared tree was at origin and clean. I ran `gate.py --at 0e383ee` twice (`gate272-6-1.txt`, `gate272-6-2.txt`). Both read "SENDABLE — 5 warning(s)" and "FOR TESTER — CORE at 0e383ee, 6068 tests, 0 failed".
+  - Both state lines: "MAIN_WORK 6e772270 · HANDOFF 95fa1c7 · KOTOR-RPG-APP 0e383ee · Lodestar a554b93 · Loom 9a1c3ef · Shelf 8f2d845 · Atlas 0b7cc47 · Lens e449221".
+- **Scratch save**: no save holds the Wrist-Mounted feats, so I copied Off Six and appended three `character.feat-taken` events: Proficiency at level 1, Focus at 2, Specialization at 4 (`scratch/t272-off-six-wrist.sav`, md5 7d810451, in `~/kotor-tester/scratch-272`). It loaded, and its file was unchanged after the session.
+  - The feats are written "Bounty Hunter only", and Off Six is a Soldier. The game loaded it anyway.
+- **Abilities, Feats tab** (`wr-ab-feats`): the three show as one chain, Proficiency → Focus → Specialization, with two arrows. None is an empty slot.
+  - Proficiency: a rocket on a round frame with crosshair lines across it.
+  - Focus: a rocket on a solid round frame.
+  - Specialization: a rocket in a frame with a reticle.
+  - Selecting each shows its own name and prerequisites (None; Weapon Proficiency: Wrist-Mounted; Weapon Focus: Wrist-Mounted) (`wr-ab-prof`, `wr-ab-focus`, `wr-ab-spec`).
+- **Against the files**: each icon on screen matches its own PNG in `assets/extracted/abilities/feats/`. Focus and Specialization are the two files 0e383ee adds (`wr-icons-vs-assets`: screen above, file below).
+  - Proficiency's file is byte-identical in fb449fe and 0e383ee and was last changed in `f03b8d3`. On fb449fe it is the only Wrist-Mounted icon file.
+  - "Plain rocket" is MAIN's phrase. The file itself has crosshair lines on its round frame.
 
 ## Odd, not filed
 

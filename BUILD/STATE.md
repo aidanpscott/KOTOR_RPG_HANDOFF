@@ -1,19 +1,20 @@
 # STATE — every repository, branch and worktree, as found on disk
 
-**REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").**
+**REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00).**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
 
 ## Heads — the shared clones in KOTOR_APP_PROJECT
 
-All shared clones are clean and at their origin/main, except HANDOFF, which carries this file's own commit.
+All shared clones are clean and at their origin/main once this push sitting lands (app, MAIN_WORK, Shelf and HANDOFF pushed together).
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `6aaa63e` | `6aaa63e` | the 1c hash, accepted by MAIN 2026-11-20 and sent to Tester as TEST 274 |
-| `KOTOR_RPG_MAIN_WORK` | `6efe93f0` | `6efe93f0` | TEST 274 media |
-| `Shelf` | `d4caf41` | `d4caf41` | (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `c5b65a3` | `c5b65a3` | the TEST 274 hash (on the 1c hash 6aaa63e): 8e85567, 86bd3cb, c9c058d, c5b65a3. FULL 6103 passed, 0 failed, 22m07s |
+| `KOTOR_RPG_MAIN_WORK` | `747ad21f` | `747ad21f` | 11 commits on 6efe93f0: the rulings' rows, the ledger lines, and the gate's app-root fix |
+| `Shelf` | `af7a8e1` | `af7a8e1` | 3 commits on d4caf41: df17d58, dc6c04a, af7a8e1 (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
@@ -22,18 +23,15 @@ All shared clones are clean and at their origin/main, except HANDOFF, which carr
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## CODER's unpushed work — the next hash
+## The TEST 274 hash — pushed in this sitting
 
-| Repository | Branch (worktree) | Head | Ahead of origin/main |
-|---|---|---|---|
-| app | `coder-t274` (~/.cache/kotor-coder/app-t272) | `c5b65a3` | 4: 8e85567, 86bd3cb, c9c058d, c5b65a3 |
-| MAIN_WORK | `coder-wip` (~/.cache/kotor-coder/mainwork) | `f70740dd` | 9: 1929562c, 6e490d00, ceeb359f, 1da43806, 3637e5a6, 934599c3, 7e0d1e01, 52ee6e55, f70740dd |
-| Shelf | `coder-wip` (~/.cache/kotor-coder/xdg/kotor-rpg/packages) | `af7a8e1` | 3: df17d58, dc6c04a, af7a8e1 |
-
-Each branch fast-forwards onto its origin/main (checked with merge-base --is-ancestor). Nothing is uncommitted in any of the three.
+CODER's three branches (app `coder-t274` in ~/.cache/kotor-coder/app-t272, MAIN_WORK `coder-wip` in ~/.cache/kotor-coder/mainwork,
+Shelf `coder-wip` in ~/.cache/kotor-coder/xdg/kotor-rpg/packages) were fast-forwarded into the shared trees, gated there with
+PUSH_SITTING=1, and pushed. Each branch is now level with origin/main; nothing is unpushed.
 
 - FULL at c5b65a3: 6103 passed, 0 failed, 22m07s, -j 3, peak 2278 MB, run 2026-11-20 20:43. The FULL before it, at c9c058d, failed 1 (species_equip_test); c5b65a3 is that test's change.
-- Gate from the private worktree: DO NOT SEND, 4 blocks, all location effects, not faults: two icon checks resolve the mods folder only from the shared MAIN_WORK, and two shelf checks read the shared Shelf, which lacks the 3 Shelf commits. The private Shelf matches the extracts (34 rules files, 151 blueprints). The real verdict comes in the push sitting.
+- A gate run from the private worktree reads DO NOT SEND by location alone: two icon checks resolve the mods folder only from the shared MAIN_WORK, and two shelf checks read the shared Shelf. The verdict that counts is the shared-tree gate.
+- 747ad21f: gate.py now hands its generators (KOTOR_APP_ROOT) the app checkout whose HEAD is the hash it gates, or a folder that does not exist, so gen_icons_to_create.py refuses rather than rewrite ICONS-TO-CREATE.md from the shared clone. Bed scripts/test_app_tree.py, in the gate; 5 of 5 mutants killed; end-to-end control: with the wiring removed, `gate.py --at c5b65a3` from the worktree rewrites ICONS-TO-CREATE.md again.
 - 7d083c5f (MAIN_WORK, "Hardened Chassis says organics cannot take this chain…", 06:05) is on no branch. git range-diff shows it identical to ceeb359f, its rebased copy on coder-wip (08:12). Superseded; nothing lost.
 - df17d58 (Shelf, the same Hardened Chassis change) is on Shelf coder-wip.
 
@@ -63,12 +61,12 @@ Nothing was discarded or pruned.
 
 | Worktree | Repository | Branch | Last commit | Ahead / behind origin | Uncommitted |
 |---|---|---|---|---|---|
-| app-t272 | app | coder-t274 | c5b65a3 11-20 09:16 | 4 / 0 | none |
+| app-t272 | app | coder-t274 | c5b65a3 11-20 09:16 | 0 / 0 (pushed) | none |
 | app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 6 (merged) | none |
 | app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 4 (merged) | none |
 | app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 5 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | f70740dd 11-20 21:05 | 9 / 0 | none |
-| xdg/kotor-rpg/packages | Shelf | coder-wip | af7a8e1 11-20 08:26 | 3 / 0 | none |
+| mainwork | MAIN_WORK | coder-wip | 747ad21f 11-20 | 0 / 0 (pushed) | none |
+| xdg/kotor-rpg/packages | Shelf | coder-wip | af7a8e1 11-20 08:26 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |
 | wt-111-merge | the-uninvited (not KOTOR) | detached | b0f493f 11-19 11:42 | on origin/feature/SCRUM-111-terminal-ui | build-config.log (untracked) |
@@ -82,8 +80,7 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- The push sitting for the next hash (the three branches above): ff the shared trees, PUSH_SITTING=1 gate, push only if SENDABLE. Waiting on the owner's go-ahead.
-- The feats_core.json header (above).
-- The TEST 274 mutants (above).
-- TEST 274's PT-1462 placement question and the droid Bounty Hunter source lines (above).
-- claude/SEED-CODER.md is not on this machine, so its section 7 (the next hash's contents) could not be read here.
+- The feats_core.json header (above): not in the TEST 274 hash. It goes to MAIN as a question (the file is a bare array that three audits load as a list).
+- The TEST 274 mutants (above): to run on c5b65a3 and report.
+- TEST 274's PT-1462 placement question and the droid Bounty Hunter source lines (above): to research and report.
+- CODER's seed lives in the claude.ai project, not on this machine (MAIN, 2026-11-20). Its section 0 is the paste-block rule, logged under PT-2752.

@@ -90,8 +90,8 @@
 | Feat | Description | Effects |
 |---|---|---|
 | **Plating Proficiency: Light** | **Droids only — `PT-615`.** A chassis rated to carry plating, earned by level rather than granted by class. | **Allows light plating — `g_i_drdltplat001–003`.** ⚠ Character level 1. |
-| › **Plating Proficiency: Medium** | A chassis rated to carry plating, earned by level rather than granted by class. | **Medium plating.** ⚠ Character level 7. |
-| ›› **Plating Proficiency: Heavy** | A chassis rated to carry plating, earned by level rather than granted by class. | **Heavy plating.** ⚠ Character level 13. ⚠ **Closed to `Astromech` and `Remote`** — `PT-577`. |
+| › **Plating Proficiency: Medium** | A chassis rated to carry plating, earned by level rather than granted by class. | **Medium plating.** ⚠ Character level 7, or earlier by class (`PT-616`). |
+| ›› **Plating Proficiency: Heavy** | A chassis rated to carry plating, earned by level rather than granted by class. | **Heavy plating.** ⚠ Character level 13, or earlier by class (`PT-616`). ⚠ **Closed to `Astromech` and `Remote`** — `PT-577`. |
 | **Armour Proficiency: Light** | Basic training in wearing light armour. Without it, the armour cannot be equipped at all. | Allows light armour on body, head, and hands. |
 | › Armour Proficiency: Medium | Training in heavier plating that trades mobility for protection. | Allows medium armour. |
 | ›› Armour Proficiency: Heavy | The heaviest personal protection available. | Allows heavy armour. |
@@ -183,8 +183,8 @@
 | **Blaster Integration** | Special universal ports allow internal placement of most blaster pistol models, tapping the energy pack and emitters as though factory installed. | **Integrates a blaster into the frame as a self-contained weapon system.** **Granted at 1st level to Astromech and Remote droids** — the two chassis with no hands to hold one. |
 | **Droid Interface** | Lets a droid speak with other droids that use no sentient language. | Unlocks droid-to-droid dialogue and machine interrogation. |
 | **Droid Upgrade 1** | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. (note: The droid's own capacity to receive — `PT-583`. `Installation` is the Master's counterpart.) | Allows level 1 droid upgrades. Granted at level 1. |
-| › Droid Upgrade 2 | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. | Allows level 1–2 upgrades. Granted at level 7. |
-| ›› Droid Upgrade 3 | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. | Allows level 1–3 upgrades. Granted at level 13. |
+| › Droid Upgrade 2 | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. | Allows level 1–2 upgrades. Granted at level 7, or earlier by class (`PT-616`). |
+| ›› Droid Upgrade 3 | As a droid gains experience its programming becomes more adaptable, accommodating more sophisticated hardware. An organic cannot hold it. | Allows level 1–3 upgrades. Granted at level 13, or earlier by class (`PT-616`). Closed to Astromech and Remote (`PT-577`). |
 | **Installation 1** | **Droid Master only, granted by the class.** (note: Authored — `PT-583`.) Skill at fitting hardware into a droid that is not you. | **Allows you to install level-1 upgrades into any droid you own.** ⚠ Granted at Droid Master 1. |
 | › Installation 2 | (note: Authored — `PT-583`.) Skill at fitting hardware into a droid that is not you. | **Level 1–2.** ⚠ Droid Master 3. |
 | ›› Installation 3 | (note: Authored — `PT-583`.) Skill at fitting hardware into a droid that is not you. | **Level 1–3.** ⚠ Droid Master 7. |
@@ -193,7 +193,7 @@
 | › Improved Emergency Reboot | When the frame takes a killing blow, the core drops to minimum power and waits. | **Reactivate at a quarter vitality**, and **within the encounter** if an ally is still standing. |
 | ›› Master Emergency Reboot | When the frame takes a killing blow, the core drops to minimum power and waits. | **Reactivate at half vitality**, and **twice per day.** |
 | **Environmental Sealing** | **Racial. Granted at 1st level to every droid.** A sealed frame does not breathe, and does not care what it is standing in. | **Immune to vacuum, pressure, radiation, atmospheric hazards, and airborne toxins.** *(note: Nothing in the corpus stated this and it is true of all four chassis.)* |
-| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *(note: The droid equivalent of Tenacity — organics cannot take that chain, droids cannot take this one.)* |
+| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *(note: The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one.)* |
 | › Improved Hardened Chassis | Reinforced plating and shock mounting. | **+4 to your death threshold.** |
 | ›› Master Hardened Chassis | Reinforced plating and shock mounting. | **+6 to your death threshold**, and **immunity to ion damage's Constitution drain.** |
 | **Integrated Toolkit** | Tools built into the frame rather than carried. | **Computer, security, and repair consumables cost one fewer** — minimum one. (note: Stacks with the `SKILL-RESOLUTION-01 §5.1` reduction curve.) |
@@ -490,7 +490,7 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Empathy** | An instinct for reaching people, and for keeping them alive. | +1 Persuade and Medicine. |
+| **Empathy** | An instinct for reaching people, and for keeping them alive. A Protocol droid gains the first half only; the second stays closed (`PT-621`). | +1 Persuade and Medicine. |
 | › Improved Empathy | An instinct for reaching people, and for keeping them alive. | +2 Persuade and Medicine. |
 | ›› Master Empathy | An instinct for reaching people, and for keeping them alive. | +3 Persuade and Medicine. |
 | **Finesse: Lightsabers** | Grace and speed in place of raw power, with a lightsaber. | Use Dexterity or Strength for lightsaber attack rolls. **Redundant if Finesse: Melee Weapons is held.** |

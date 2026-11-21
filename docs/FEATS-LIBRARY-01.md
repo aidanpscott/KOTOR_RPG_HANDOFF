@@ -28,8 +28,8 @@
 |---|---|---|
 | **1. Everyone** — organics and all droids | 6 | 16 |
 | **2. Organics and combat droids** | 3 | 9 |
-| **3. Organics only** | 26 | 68 |
-| **4. All droids** — the chassis | 16 | 36 |
+| **3. Organics only** | 25 | 65 |
+| **4. All droids** — the chassis | 17 | 39 |
 | **5. Restricted** — class or chassis | 39 | 92 |
 
 ---
@@ -81,6 +81,8 @@
 >
 > **`Plating Proficiency: Light`** sits under **§3 Organics only** and its own text says **DROID ONLY**. **The extraction is faithful; the source row is misfiled.** It belongs in `§4`.
 >
+> **MOVED (MAIN, `PT-2752`, 2026-11-21):** the Plating Proficiency chain (Light, Medium, Heavy) now sits in **§4 All droids**, and Light keeps its "Droids only" gate as data.
+>
 > **`Environmental Sealing`** carries `availability = selectable` while its text says *granted at 1st level to every droid* — and **`granted` already exists and is used by 188 feats.** **A wrong value, not a missing field.**
 >
 > **⚠ AND WHY THIS IS NOT IN THE ROWS:** I first appended both marks **to the Effects cell**, which extracts into `effect` — **the field the Feats screen shows a player.** A re-extraction would have shipped *"⚠ PT-1462 — IN THE WRONG SECTION"* **into player-facing text.** A defect annotation must never live in a data cell.
@@ -89,9 +91,6 @@
 
 | Feat | Description | Effects |
 |---|---|---|
-| **Plating Proficiency: Light** | **Droids only — `PT-615`.** A chassis rated to carry plating, earned by level rather than granted by class. | **Allows light plating — `g_i_drdltplat001–003`.** ⚠ Character level 1. |
-| › **Plating Proficiency: Medium** | A chassis rated to carry plating, earned by level rather than granted by class. | **Medium plating.** ⚠ Character level 7, or earlier by class (`PT-616`). |
-| ›› **Plating Proficiency: Heavy** | A chassis rated to carry plating, earned by level rather than granted by class. | **Heavy plating.** ⚠ Character level 13, or earlier by class (`PT-616`). ⚠ **Closed to `Astromech` and `Remote`** — `PT-577`. |
 | **Armour Proficiency: Light** | Basic training in wearing light armour. Without it, the armour cannot be equipped at all. | Allows light armour on body, head, and hands. |
 | › Armour Proficiency: Medium | Training in heavier plating that trades mobility for protection. | Allows medium armour. |
 | ›› Armour Proficiency: Heavy | The heaviest personal protection available. | Allows heavy armour. |
@@ -219,6 +218,9 @@
 | **Networked** | A live link to any droid within range. | **Share sensor data with one allied droid within 20 metres** — you each use the higher of your two Awareness and Alertness scores. |
 | › Improved Networked | A live link to any droid within range. | **Two allied droids, 40 metres**, and **+1 attack against any target another linked droid is attacking.** |
 | ›› Master Networked | A live link to any droid within range. | **Any number of allied droids on the same field**, and **+2 attack.** *(note: G0-T0's droid army is the precedent.)* |
+| **Plating Proficiency: Light** | **Droids only — `PT-615`.** A chassis rated to carry plating, earned by level rather than granted by class. | **Allows light plating — `g_i_drdltplat001–003`.** ⚠ Character level 1. |
+| › **Plating Proficiency: Medium** | A chassis rated to carry plating, earned by level rather than granted by class. | **Medium plating.** ⚠ Character level 7, or earlier by class (`PT-616`). |
+| ›› **Plating Proficiency: Heavy** | A chassis rated to carry plating, earned by level rather than granted by class. | **Heavy plating.** ⚠ Character level 13, or earlier by class (`PT-616`). ⚠ **Closed to `Astromech` and `Remote`** — `PT-577`. |
 | **Self-Diagnostic** | Continuous internal fault-checking. | **Repair kits restore +1d4 more vitality** when used on you — `PT-629`. *(note: Droids have no Medicine; this is the equivalent.)* |
 | › Improved Self-Diagnostic | Continuous internal fault-checking. | **Repair kits restore 1d8 more vitality when used on you.** (note: was **+1d8.**) |
 | ›› Master Self-Diagnostic | Continuous internal fault-checking. | **Double, and you may repair yourself in combat** without a kit, once per encounter. |

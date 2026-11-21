@@ -13,7 +13,7 @@ All shared clones are clean and at their origin/main once this push sitting land
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
 | `KOTOR-RPG-APP` | `87207e4` | `87207e4` | the next hash (on c5b65a3): 0a1a16c, 87207e4. FULL 6108 passed, 0 failed, 23m47s |
-| `KOTOR_RPG_MAIN_WORK` | `7cdf3d5a` | `7cdf3d5a` | on 747ad21f: the Plating move, feats_core.README, audit_featsplit from the extract, the ledger lines |
+| `KOTOR_RPG_MAIN_WORK` | `a00267bd` | `a00267bd` | on 747ad21f: the Plating move, feats_core.README, audit_featsplit from the extract, ICONS-TO-CREATE regenerated, the ledger lines |
 | `Shelf` | `c75c1d3` | `c75c1d3` | on af7a8e1: the Plating chain in section 4 (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
@@ -42,7 +42,7 @@ Nothing was discarded or pruned.
 | app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 6 (merged) | none |
 | app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 4 (merged) | none |
 | app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 5 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | 7cdf3d5a 11-21 | 0 / 0 (pushed) | none |
+| mainwork | MAIN_WORK | coder-wip | a00267bd 11-21 | 0 / 0 (pushed) | none |
 | xdg/kotor-rpg/packages | Shelf | coder-wip | c75c1d3 11-21 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |

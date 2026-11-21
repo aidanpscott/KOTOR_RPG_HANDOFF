@@ -192,9 +192,9 @@
 | › Improved Emergency Reboot | When the frame takes a killing blow, the core drops to minimum power and waits. | **Reactivate at a quarter vitality**, and **within the encounter** if an ally is still standing. |
 | ›› Master Emergency Reboot | When the frame takes a killing blow, the core drops to minimum power and waits. | **Reactivate at half vitality**, and **twice per day.** |
 | **Environmental Sealing** | **Racial. Granted at 1st level to every droid.** A sealed frame does not breathe, and does not care what it is standing in. | **Immune to vacuum, pressure, radiation, atmospheric hazards, and airborne toxins.** *(note: Nothing in the corpus stated this and it is true of all four chassis.)* |
-| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** *(note: The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one.)* |
-| › Improved Hardened Chassis | Reinforced plating and shock mounting. | **+4 to your death threshold.** |
-| ›› Master Hardened Chassis | Reinforced plating and shock mounting. | **+6 to your death threshold**, and **immunity to ion damage's Constitution drain.** |
+| **Hardened Chassis** | Reinforced plating and shock mounting. | **+2 to your death threshold.** The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one. |
+| › Improved Hardened Chassis | Reinforced plating and shock mounting. | **+4 to your death threshold.** The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one. |
+| ›› Master Hardened Chassis | Reinforced plating and shock mounting. | **+6 to your death threshold**, and **immunity to ion damage's Constitution drain.** The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one. |
 | **Integrated Toolkit** | Tools built into the frame rather than carried. | **Computer, security, and repair consumables cost one fewer** — minimum one. (note: Stacks with the `SKILL-RESOLUTION-01 §5.1` reduction curve.) |
 | **Ion Shielding** | Grounding and surge protection against the weapons built to kill droids. | **Damage reduction 2 against ion weapons.** (note: Ion blasters, ion rifles, and ion grenades all exist in `baseitems.2da` and specifically target droids.) |
 | › Improved Ion Shielding | Grounding and surge protection against the weapons built to kill droids. | **DR 5 against ion.** |

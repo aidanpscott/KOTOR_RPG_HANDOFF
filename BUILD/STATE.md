@@ -1,7 +1,7 @@
 # STATE — every repository, branch and worktree, as found on disk
 
 **REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
-Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), and at the next hash's, 2026-11-21 (about 08:00).**
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), and at the gen_feats hash's, 2026-11-21 (about 12:40).**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
@@ -12,25 +12,23 @@ All shared clones are clean and at their origin/main once this push sitting land
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `87207e4` | `87207e4` | the next hash (on c5b65a3): 0a1a16c, 87207e4. FULL 6108 passed, 0 failed, 23m47s |
-| `KOTOR_RPG_MAIN_WORK` | `a00267bd` | `a00267bd` | on 747ad21f: the Plating move, feats_core.README, audit_featsplit from the extract, ICONS-TO-CREATE regenerated, the ledger lines |
-| `Shelf` | `c75c1d3` | `c75c1d3` | on af7a8e1: the Plating chain in section 4 (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `a6fffdb` | `a6fffdb` | the gen_feats hash (on 87207e4): a6fffdb. FULL 6114 passed, 0 failed, 22m42s |
+| `KOTOR_RPG_MAIN_WORK` | `aa58264d` | `aa58264d` | on 98cbd880 (Tester's TEST 275 media): gen_feats retired, PT-619 through the extractor, class_heading off the Shelf, the ledger lines |
+| `Shelf` | `c75c1d3` | `c75c1d3` | unchanged in this sitting (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
 | `Atlas` | `0b7cc47` | `0b7cc47` | |
-| `HANDOFF` | this commit | `ba20f4c` before it | |
+| `HANDOFF` | this commit | `0b13ddf` before it | |
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## The hash after TEST 274 — pushed in this sitting (accepted as built by MAIN, `PT-2752`, 2026-11-21)
+## The gen_feats hash — pushed in this sitting (accepted as built by MAIN, `PT-2752`, 2026-11-21)
 
-- The Plating Proficiency chain (Light, Medium, Heavy) moved from §3 to §4 of FEATS-LIBRARY-01, as PT-1462 says; Light keeps its "Droids only" data gate (MAIN_WORK 1424cfbc, Shelf c75c1d3).
-- A droid holds none of its classes' starting proficiencies filed in §3 "Organics only": Armour Proficiency Light, Medium and Heavy and Melee Weapons, across 25 of the 39 classes (app 0a1a16c).
-- PT-616's early tiers were already built; every class the ruling names is now bedded (app 0a1a16c).
-- feats_core.json: data/feats_core.README and a warning in each reader; audit_featsplit reads the extract's section (MAIN_WORK 1424cfbc, 3285c370).
-- Mutants: 9 of 9 killed. The first FULL, at 0a1a16c, failed 6: five droid play tests built without the rules the app passes, and the section-3 count pin (68, now 65). Fixed in 87207e4; FULL at 87207e4 6108 passed, 0 failed.
-- The TEST 274 hash before it (app c5b65a3, MAIN_WORK 747ad21f, Shelf af7a8e1, HANDOFF 963fcd5) is accepted and went to Tester as TEST 275.
+- gen_feats.py retired: deleted, FEATS-LIBRARY-01's header says HAND-MAINTAINED, audit_source checks that header (MAIN_WORK c0f6dffa).
+- PT-619: the extract carries each section 5 row's class heading; audit_featsplit reports the headings that name no class or chassis (997edfb4, 3e043b96).
+- TEST 275 items 2, 4 and 5: the two-line designation refusal clears Random Name's border; the Remote opens on its own face; Recommended is dimmed where it would pick nothing (app a6fffdb).
+- The hash before it (app 87207e4, MAIN_WORK a00267bd, Shelf c75c1d3) is accepted; Tester's TEST 275 and 276 ran on it.
 
 ## Every worktree under ~/.cache/kotor-coder (a symlink to /mnt/games2/ai-work/kotor-coder)
 
@@ -38,11 +36,11 @@ Nothing was discarded or pruned.
 
 | Worktree | Repository | Branch | Last commit | Ahead / behind origin | Uncommitted |
 |---|---|---|---|---|---|
-| app-t272 | app | coder-t275 | 87207e4 11-21 | 0 / 0 (pushed) | none |
-| app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 6 (merged) | none |
-| app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 4 (merged) | none |
-| app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 5 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | a00267bd 11-21 | 0 / 0 (pushed) | none |
+| app-t272 | app | coder-t275 | a6fffdb 11-21 | 0 / 0 (pushed) | none |
+| app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 12 (merged) | none |
+| app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 10 (merged) | none |
+| app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 11 (merged) | none |
+| mainwork | MAIN_WORK | coder-wip | aa58264d 11-21 | 0 / 0 (pushed) | none |
 | xdg/kotor-rpg/packages | Shelf | coder-wip | c75c1d3 11-21 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |
@@ -57,6 +55,8 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- gen_feats.py retired (MAIN, 2026-11-21): delete it, drop the "Generated by gen_feats.py" claim from FEATS-LIBRARY-01, have audit_source check the hand-maintained header (PT-618), update data/feats_core.README. Next hash.
-- PT-619 through the extractor: carry a section-5 row's class heading and bring back the "names no class" report. A later hash.
+- Item 1 of TEST 275 (MAIN, 2026-11-21): move the Hardened Chassis sentence out of its note aside into the row's words on all three tiers, with a bed; sweep the 196 asides and bring MAIN the player-facing ones before moving any other. Next hash.
+- audit_source gets a test of its own (MAIN, 2026-11-21): a header without HAND-MAINTAINED fails, one saying "Generated by scripts/" fails. A later hash.
+- TEST 276 finding 3 (MAIN, 2026-11-21): PT-616's droid rows for Soldier, Brawler, Sith Warrior and Marksman, classes closed to droids. CODER checks the documents and reports; nothing changes until MAIN rules.
+- K2 session list (MAIN, 2026-11-21): what K2's Recommended does when there is nothing to pick.
 - CODER's seed lives in the claude.ai project, not on this machine (MAIN, 2026-11-20). Its section 0 is the paste-block rule, logged under PT-2752.

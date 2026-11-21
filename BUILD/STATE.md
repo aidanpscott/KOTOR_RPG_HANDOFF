@@ -1,7 +1,7 @@
 # STATE — every repository, branch and worktree, as found on disk
 
 **REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
-Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), and the Hardened Chassis hash's, 2026-11-21 (about 14:00).**
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), and the asides hash's, 2026-11-21 (about 16:30).**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
@@ -12,21 +12,22 @@ All shared clones are clean and at their origin/main once this push sitting land
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `ca9329e` | `ca9329e` | the Hardened Chassis hash (on a6fffdb): ca9329e, the bed. FULL 6115 passed, 0 failed, 23m24s |
-| `KOTOR_RPG_MAIN_WORK` | `004e48a3` | `004e48a3` | on aa58264d: the Hardened Chassis line moved into the three effects, the ledger line |
-| `Shelf` | `64725b5` | `64725b5` | on c75c1d3: feats.toml, the three Hardened Chassis effects (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `6d12a75` | `6d12a75` | the asides hash (on ca9329e): 6d12a75, the bed. FULL 6116 passed, 0 failed, 21m47s |
+| `KOTOR_RPG_MAIN_WORK` | `8933f49c` | `8933f49c` | on 004e48a3: three asides moved into their rows, the K2 session list and its REGISTER row, the ledger lines |
+| `Shelf` | `485c89e` | `485c89e` | on 64725b5: feats.toml, the three moved lines (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
 | `Atlas` | `0b7cc47` | `0b7cc47` | |
-| `HANDOFF` | this commit | `8d278e5` before it | the last sitting's STATE named `0b13ddf` as the head before its commit; it was `654cadb` (Tester's refile), corrected here on MAIN's order |
+| `HANDOFF` | this commit | `d7a44ed` before it | |
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## The Hardened Chassis hash — pushed in this sitting (accepted as built by MAIN, `PT-2752`, 2026-11-21)
+## The asides hash — pushed in this sitting (accepted as built by MAIN, `PT-2752`, 2026-11-21)
 
-- TEST 275 item 1: Hardened Chassis, Improved and Master carry "The droid equivalent of Tenacity — organics cannot take this chain, droids cannot take that one." in their effect; the note aside is gone (MAIN_WORK 19d7653c, Shelf 64725b5). Bed: each tier's pane, once (app ca9329e). Mutants 3 of 3 killed.
-- The hash before it (app a6fffdb, MAIN_WORK aa58264d, Shelf c75c1d3, HANDOFF 8d278e5) is accepted and pushed: gen_feats retired, PT-619, TEST 275 items 2, 4 and 5.
+- Self-Diagnostic, Master Tenacity and Master Killer's Instinct carry their player-facing aside sentences in their effect (MAIN_WORK f5a7dc62, 0aa18718; Shelf 485c89e). Bed: each on its pane, once, counted in the drawn text (app 6d12a75). Mutants 5 of 5 killed.
+- The K2 session list started: MAIN_WORK playtest/K2-SESSION-LIST.md (1998ad26, registered 8d4cd836).
+- The hash before it (app ca9329e, MAIN_WORK 004e48a3, Shelf 64725b5, HANDOFF d7a44ed) is accepted and pushed: Hardened Chassis.
 
 ## Every worktree under ~/.cache/kotor-coder (a symlink to /mnt/games2/ai-work/kotor-coder)
 
@@ -34,12 +35,12 @@ Nothing was discarded or pruned.
 
 | Worktree | Repository | Branch | Last commit | Ahead / behind origin | Uncommitted |
 |---|---|---|---|---|---|
-| app-t272 | app | coder-t275 | ca9329e 11-21 | 0 / 0 (pushed) | none |
+| app-t272 | app | coder-t275 | 6d12a75 11-21 | 0 / 0 (pushed) | none |
 | app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 12 (merged) | none |
 | app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 10 (merged) | none |
 | app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 11 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | 004e48a3 11-21 | 0 / 0 (pushed) | none |
-| xdg/kotor-rpg/packages | Shelf | coder-wip | 64725b5 11-21 | 0 / 0 (pushed) | none |
+| mainwork | MAIN_WORK | coder-wip | 8933f49c 11-21 | 0 / 0 (pushed) | none |
+| xdg/kotor-rpg/packages | Shelf | coder-wip | 485c89e 11-21 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |
 | wt-111-merge | the-uninvited (not KOTOR) | detached | b0f493f 11-19 11:42 | on origin/feature/SCRUM-111-terminal-ui | build-config.log (untracked) |
@@ -53,8 +54,7 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- The asides (MAIN, 2026-11-21): move Self-Diagnostic's, Master Tenacity's and Master Killer's Instinct's player-facing sentences into their rows unchanged, with a bed; propose reworded lines for Boresight, Integrated Toolkit and Personal Cloaking Shield and bring them to MAIN before moving. Next hash.
+- The lines and the droid tiers (MAIN and the owner, 2026-11-21), one hash, next: Killer's Instinct's second sentence, Boresight's and Integrated Toolkit's lines as ruled; Personal Cloaking Shield's aside corrected; PT-616's 4/9 and 5/11 rows removed (K2's way: 1, 7, 13 for every droid class) from DROIDS-UPGRADE-01, the app and the library words.
 - audit_source gets a test of its own (MAIN, 2026-11-21): a header without HAND-MAINTAINED fails, one saying "Generated by scripts/" fails. A later hash.
-- TEST 276 finding 3 (MAIN, 2026-11-21): account accepted (PT-577, PT-616, PT-767). The owner asked what K2 does: CODER reads K2's droid classes' feat-gain and Droid Upgrade rows. PT-616's table does not change until the owner rules.
-- The K2 session list (MAIN, 2026-11-21): to be started as MAIN_WORK playtest/K2-SESSION-LIST.md and kept current; this line points at it once it exists.
+- The K2 session list: MAIN_WORK playtest/K2-SESSION-LIST.md, kept current by CODER (MAIN, 2026-11-21). Every K2-session item goes there.
 - CODER's seed lives in the claude.ai project, not on this machine (MAIN, 2026-11-20). Its section 0 is the paste-block rule, logged under PT-2752.

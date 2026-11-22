@@ -1,7 +1,7 @@
 # STATE — every repository, branch and worktree, as found on disk
 
 **REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
-Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), and the lines and droid tiers hash's, 2026-11-21 (about 19:20).**
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), the lines and droid tiers hash's, 2026-11-21 (about 19:20), and the spacing and Navigation lock hashes', 2026-11-22.**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
@@ -12,22 +12,23 @@ All shared clones are clean and at their origin/main once this push sitting land
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `ee3a63b` | `ee3a63b` | the lines and droid tiers hash (on 6d12a75): _droidTierRows removed, the beds. FULL 6117 passed, 0 failed, 21m44s |
-| `KOTOR_RPG_MAIN_WORK` | `1265c4fd` | `1265c4fd` | on Docs' e701d84e (row 22 corrected), itself on a0971724: the ruled lines, the earlier-by-class words and their PT-616 citation struck from four rows, the ledger lines |
-| `Shelf` | `ab30306` | `ab30306` | on 485c89e: feats.toml, the ruled lines and the four droid tier rows (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `a5a2cfd` | `a5a2cfd` | two hashes on ee3a63b: the spacing hash (14e0f3b, 5b2642d) and the Navigation lock hash (01a9775, a5a2cfd). FULL at a5a2cfd 6124 passed, 0 failed, 21m51s |
+| `KOTOR_RPG_MAIN_WORK` | `8523893a` | `8523893a` | on Tester's f319ca38 (og277.py's path): the extractor's single spaces (3eb1eaf2), Droid Upgrade 4 granted only and the Navigation Droid's §1a lock (7720b671), the ledger lines |
+| `Shelf` | `b9bc862` | `b9bc862` | on ab30306: 7cb3965 (nine effects and ten notes lose a double space), b9bc862 (Droid Upgrade 4 granted, the Navigation lock) (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
 | `Atlas` | `0b7cc47` | `0b7cc47` | |
-| `HANDOFF` | this commit | `a9f1b67` before it | |
+| `HANDOFF` | this commit | `fa5cd0a` before it | |
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## The lines and droid tiers hash — pushed in this sitting (accepted by MAIN, `PT-2752`, 2026-11-21)
+## Two hashes — pushed in this sitting (accepted by MAIN, `PT-2752`, 2026-11-22)
 
-- Master Killer's Instinct, Boresight and Integrated Toolkit carry MAIN's ruled lines in their effect; Personal Cloaking Shield's aside is corrected (MAIN_WORK 75e582c2; Shelf e45d08e). Bed: each on its pane, once (app ee3a63b).
-- K2's droid tiers (the owner, 2026-11-21): every droid class gets plating and Droid Upgrade at 1, 7 and 13; PT-616's 4/9 and 5/11 rows are gone from the app (_droidTierRows, ee3a63b) and DROIDS-UPGRADE-01 (Docs, 304a1ab3). The four library rows lost "or earlier by class (PT-616)" (MAIN_WORK 75e582c2, 127f4b27; Shelf ab30306). Mutants 7 of 7 killed.
-- The hash before it (app 6d12a75, Shelf 485c89e, HANDOFF a9f1b67) is accepted and pushed: the asides. Its MAIN_WORK head is a0971724, the same commits rebased onto Docs' 304a1ab3 at push time; this file named the pre-rebase 8933f49c until this sitting.
+- The spacing hash: every feat effect is written with single spaces (MAIN_WORK 3eb1eaf2 with its gate test; Shelf 7cb3965; app 14e0f3b). A programming's aptitude is offered only where the chassis holds the skill, and the Feats help box comes before the granted list (app 5b2642d).
+- The Navigation lock hash: Droid Upgrade 4 is granted only, by no class; the Navigation Droid is locked to the Astromech (PROGRAMMINGS-01 §1a), and every §1a lock is now applied on the Background page (it was read and never applied); a droid's level-up hub has no Homeworld or Upbringing row (MAIN_WORK 7720b671; Shelf b9bc862; app 01a9775, a5a2cfd). K2-SESSION-LIST.md item 11.
+- The hash before them (app ee3a63b, MAIN_WORK 1265c4fd, Shelf ab30306, HANDOFF d720d15) is pushed: the lines and droid tiers.
+- The first sitting for the spacing hash (2026-11-22) was refused by audit_paths on Tester's og277.py; the trees went back to origin until Tester's f319ca38.
 
 ## Every worktree under ~/.cache/kotor-coder (a symlink to /mnt/games2/ai-work/kotor-coder)
 
@@ -54,8 +55,8 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- The extractor's spacing (MAIN, 2026-11-21), its own small hash, next: collapse runs of spaces in every effect, regenerate, show the nine Shelf rows that change (whitespace only), and bed it.
-- TEST 277 for Tester, after this push (MAIN, 2026-11-21).
+- TEST 278 for Tester, after this push, covering both hashes (MAIN, 2026-11-22).
+- Later (MAIN, 2026-11-22): Evasion's note and the Salvage Droid upgrade keep a double space.
 - audit_source gets a test of its own (MAIN, 2026-11-21): a header without HAND-MAINTAINED fails, one saying "Generated by scripts/" fails. A later hash.
 - The K2 session list: MAIN_WORK playtest/K2-SESSION-LIST.md, kept current by CODER (MAIN, 2026-11-21). Every K2-session item goes there.
 - CODER's seed lives in the claude.ai project, not on this machine (MAIN, 2026-11-20). Its section 0 is the paste-block rule, logged under PT-2752.

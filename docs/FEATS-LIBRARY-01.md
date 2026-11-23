@@ -1622,7 +1622,7 @@
 
 | Tier | Level | Description | Effect |
 |---|---|---|---|
-| **Momentum** | **1** | Each kill feeds the next, building into a pace no enemy can match. | **When you reduce an enemy to 0 or below, `+1` to attack rolls for 10 rounds.** ⚠ Stacks with itself, to a maximum of `+1`. |
+| **Momentum** | **1** | Each kill feeds the next, building into a pace no enemy can match. | **When you reduce an enemy to 0 or below, `+1` to attack rolls for 10 rounds.** Another kill while it lasts doesn't raise it past `+1`. (note: MAIN, `PT-2752`, 2026-11-23: was "Stacks with itself, to a maximum of +1.") |
 | › **Gathering Pace** | **4** | Each kill feeds the next, building into a pace no enemy can match. | **`+2` per kill, maximum `+2`.** |
 | ›› **Killing Pace** | **8** | Each kill feeds the next, building into a pace no enemy can match. | **`+3` per kill, maximum `+3`.** |
 

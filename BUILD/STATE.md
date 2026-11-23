@@ -1,7 +1,7 @@
 # STATE — every repository, branch and worktree, as found on disk
 
 **REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
-Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), the lines and droid tiers hash's, 2026-11-21 (about 19:20), the spacing and Navigation lock hashes', 2026-11-22, the TEST 278 hash's, 2026-11-23 (morning), and the Recommended hash's, 2026-11-23 (about 11:30).**
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), the lines and droid tiers hash's, 2026-11-21 (about 19:20), the spacing and Navigation lock hashes', 2026-11-22, the TEST 278 hash's, 2026-11-23 (morning), the Recommended hash's, 2026-11-23 (about 11:30), and the level-up attribute hash's, 2026-11-23 (about 13:00).**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
@@ -12,18 +12,23 @@ All shared clones are clean and at their origin/main once this push sitting land
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `5c1bbde` | `5c1bbde` | the Recommended hash (on b63ea9c): Momentum's bed (68240fb), the upbringing descriptions (1d462f4), Recommended on Attributes and Skills (ea771ea), the Shelf inventory pins (5c1bbde). FULL 6129 passed, 0 failed, 22m04s |
-| `KOTOR_RPG_MAIN_WORK` | `f74317f1` | `f74317f1` | on Tester's 94c35f20 (TEST 279 media): Momentum's line (ab820b8e), UPBRINGING-01 §2a and its extract (6b87619f), rules/recommended.toml with its extractor (39584ad7) and gate test (8ff68889), the ledger lines (af0bd107, f74317f1). Accepted as 08a28f10, rebased unchanged onto Tester's commit |
-| `Shelf` | `966cf6a` | `966cf6a` | on b9bc862: 1ee032d (Momentum), 98fe956 (the nine upbringing descriptions), 966cf6a (recommended.toml) (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `7575ac9` | `7575ac9` | the level-up attribute hash (on 5c1bbde): Recommended for the level-up attribute point (the class's primary, then its spread; a prestige level reads the base class with the most levels), with the level-up Skills bed. FULL 6134 passed, 0 failed, 22m13s |
+| `KOTOR_RPG_MAIN_WORK` | `fa6ac897` | `fa6ac897` | on Tester's 032a0915 (TEST 280 media): the ledger lines (95065bf0, fa6ac897) and K2-SESSION-LIST item 12, K2's level-up attribute Recommended (9c655b51). Accepted as 8fd50680, rebased unchanged onto Tester's commit |
+| `Shelf` | `966cf6a` | `966cf6a` | unchanged in this sitting; on b9bc862: 1ee032d (Momentum), 98fe956 (the nine upbringing descriptions), 966cf6a (recommended.toml) (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
 | `Atlas` | `0b7cc47` | `0b7cc47` | |
-| `HANDOFF` | this commit | `2518bc0` before it | |
+| `HANDOFF` | this commit | `a5996cd` before it | |
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## The Recommended hash — pushed in this sitting (accepted by MAIN, `PT-2752`, 2026-11-23)
+## The level-up attribute hash — pushed in this sitting (accepted by MAIN, `PT-2752`, 2026-11-23)
+
+- Recommended is lit for a level-up's attribute point, a droid's included: the class's primary_ability, then its recommended spread's order (highest target first, ties STR DEX CON INT WIS CHA), to the level-up ceiling; a prestige level reads the base class with the most levels, ties to the first taken (app 7575ac9). Bed recommended_at_level_up_test, with the level-up Skills walk (a Battle droid's Pirate level). Mutants 9 of 9.
+- The Recommended hash before it (app 5c1bbde, MAIN_WORK f74317f1, Shelf 966cf6a, HANDOFF d0fc92b) is pushed.
+
+## The Recommended hash — pushed 2026-11-23 (accepted by MAIN, `PT-2752`)
 
 - Recommended is lit on Attributes (an organic at creation) and Skills (creation and level-up), spending each class's row in rules/recommended.toml (39 rows, hand-maintained, checked by scripts/extract_recommended.py and its gate test). The Bounty Hunter, Agent and Pirate orders are accepted as written. Mutants: app 6 of 6, extractor 3 of 3.
 - The nine upbringing descriptions (the owner's words) are UPBRINGING-01 §2a and show on the Upbringing pane. Mutants 3 of 3.
@@ -48,11 +53,11 @@ Nothing was discarded or pruned.
 
 | Worktree | Repository | Branch | Last commit | Ahead / behind origin | Uncommitted |
 |---|---|---|---|---|---|
-| app-t272 | app | coder-t275 | 5c1bbde 11-23 | 0 / 0 (pushed) | none |
+| app-t272 | app | coder-t275 | 7575ac9 11-23 | 0 / 0 (pushed) | none |
 | app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 12 (merged) | none |
 | app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 10 (merged) | none |
 | app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 11 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | f74317f1 11-23 | 0 / 0 (pushed) | none |
+| mainwork | MAIN_WORK | coder-wip | fa6ac897 11-23 | 0 / 0 (pushed) | none |
 | xdg/kotor-rpg/packages | Shelf | coder-wip | 966cf6a 11-23 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |
@@ -67,9 +72,7 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- TEST 280 for Tester, after this push (MAIN, 2026-11-23).
-- The level-up attribute point's Recommended (MAIN, 2026-11-23): match K2's own data if it has a rule; otherwise the class's first key ability, then the next in the spread's order once that is at the cap. The next hash, with a bed.
-- A bed for the level-up Skills wiring (MAIN, 2026-11-23): a prestige class's list used at level-up, filling to caps, skipping skills the body can't hold. The next hash.
+- TEST 281 for Tester, after this push (MAIN, 2026-11-23).
 - The double spaces that reach the screen (MAIN, 2026-11-23): with Evasion's note and the Salvage line; skip class_arrays.toml weapon (its colour separator); check the 16 item descriptions against K2's dialog.tlk.
 - audit_source gets a test of its own (MAIN, 2026-11-21): a header without HAND-MAINTAINED fails, one saying "Generated by scripts/" fails. A later hash.
 - The K2 session list: MAIN_WORK playtest/K2-SESSION-LIST.md, kept current by CODER (MAIN, 2026-11-21). Every K2-session item goes there.

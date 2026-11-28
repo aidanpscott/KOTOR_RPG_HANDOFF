@@ -996,6 +996,16 @@ jedi_watchman: force-base 6 + skill:Stealth 8 + alignment:light
 sith_marauder: force-base 6 + skill:Stealth 8 + alignment:dark
 jedi_sage: force-base 6 + skill:Mysticism 8 + alignment:light
 sith_sorcerer: force-base 6 + skill:Mysticism 8 + alignment:dark
+soldier: closed:droid
+marksman: closed:droid
+brawler: closed:droid
+saboteur: closed:droid
+jedi_guardian: closed:droid
+jedi_sentinel: closed:droid
+jedi_consular: closed:droid
+sith_inquisitor: closed:droid
+sith_warrior: closed:droid
+sith_assassin: closed:droid
 ```
 
 **⚠⚠⚠ THE `Gunslinger` MOVED FROM OPEN TO LOCKED — `PT-2517`.** **`PT-217` put it in the open tier at *"any base class 6"*, and the owner has narrowed it to three named routes: `Bounty Hunter 6`, `Smuggler 6` or `Pirate 6`.**

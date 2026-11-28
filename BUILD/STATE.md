@@ -1,7 +1,7 @@
 # STATE — every repository, branch and worktree, as found on disk
 
 **REBUILT FROM FILES, 2026-11-20 (about 21:15), by CODER, on MAIN's order (`PT-2752`, 2026-11-20, "your handover note is stale").
-Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), the lines and droid tiers hash's, 2026-11-21 (about 19:20), the spacing and Navigation lock hashes', 2026-11-22, the TEST 278 hash's, 2026-11-23 (morning), the Recommended hash's, 2026-11-23 (about 11:30), and the level-up attribute hash's, 2026-11-23 (about 13:00).**
+Heads updated at the TEST 274 hash's push sitting, 2026-11-20 (about 22:00), at the next hash's, 2026-11-21 (about 08:00), the gen_feats hash's, 2026-11-21 (about 12:40), the Hardened Chassis hash's, 2026-11-21 (about 14:00), the asides hash's, 2026-11-21 (about 16:30), the lines and droid tiers hash's, 2026-11-21 (about 19:20), the spacing and Navigation lock hashes', 2026-11-22, the TEST 278 hash's, 2026-11-23 (morning), the Recommended hash's, 2026-11-23 (about 11:30), the level-up attribute hash's, 2026-11-23 (about 13:00), and the TEST 280 and droid level-up hashes', pushed together, 2026-11-28.**
 The file before this one was last changed 2026-10-03 (HANDOFF b4f56a2) and is not trusted: nothing in it was carried over unchecked.
 Every line below comes from `git` on this machine (fetched at the time of writing), the MAIN_WORK ledger (`playtest/PLAYTEST-RULINGS-01.md`,
 PT-2752 entries from 2026-11-17 on), or a file named beside it. Rewritten in full each time, never appended.
@@ -12,18 +12,26 @@ All shared clones are clean and at their origin/main once this push sitting land
 
 | Repository | Shared head | origin/main | Notes |
 |---|---|---|---|
-| `KOTOR-RPG-APP` | `7575ac9` | `7575ac9` | the level-up attribute hash (on 5c1bbde): Recommended for the level-up attribute point (the class's primary, then its spread; a prestige level reads the base class with the most levels), with the level-up Skills bed. FULL 6134 passed, 0 failed, 22m13s |
-| `KOTOR_RPG_MAIN_WORK` | `fa6ac897` | `fa6ac897` | on Tester's 032a0915 (TEST 280 media): the ledger lines (95065bf0, fa6ac897) and K2-SESSION-LIST item 12, K2's level-up attribute Recommended (9c655b51). Accepted as 8fd50680, rebased unchanged onto Tester's commit |
-| `Shelf` | `966cf6a` | `966cf6a` | unchanged in this sitting; on b9bc862: 1ee032d (Momentum), 98fe956 (the nine upbringing descriptions), 966cf6a (recommended.toml) (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
+| `KOTOR-RPG-APP` | `e6393df` | `e6393df` | on 7575ac9: the TEST 280 hash (d03ab5e: droids take the prestige classes their entry tokens open; the level-up beds through the real Class page) and the droid level-up hash (e6393df: a droid spends its level-up attribute point; the droid base-class bar reads the class's own closed:droid; the skill pane's bonus line held). FULL at e6393df 6141 passed, 0 failed, 23m22s |
+| `KOTOR_RPG_MAIN_WORK` | `d9dd8e48` | `d9dd8e48` | on Tester's aecd8d8d (TEST 281 media): the ledger lines (35330511, 4acb33d4, d9dd8e48), the Sith Assassin's even spread and the extractor's odd-score refusal (03e463a6), and the ten base classes' closed:droid with check_droid_class_access in the gate (513bb123). Accepted as 6efb715d and bc679e0d, rebased unchanged onto Tester's commit |
+| `Shelf` | `1aec786` | `1aec786` | on 966cf6a: 90a4388 (the Sith Assassin's spread), 1aec786 (the ten base classes' closed:droid) (the folder is a symlink to ~/.local/share/kotor-rpg/packages) |
 | `Lodestar` | `a554b93` | `a554b93` | |
 | `Loom` | `9a1c3ef` | `9a1c3ef` | |
 | `Lens` | `e449221` | `e449221` | |
 | `Atlas` | `0b7cc47` | `0b7cc47` | |
-| `HANDOFF` | this commit | `a5996cd` before it | |
+| `HANDOFF` | this commit | `69feddb` before it | |
 
 KOTOR-RPG-APP-owner (the owner's clone) is at fcf7d0c, 282 commits behind app origin/main and clean. It's the owner's, not CODER's, and was not touched.
 
-## The level-up attribute hash — pushed in this sitting (accepted by MAIN, `PT-2752`, 2026-11-23)
+## The TEST 280 and droid level-up hashes — pushed together in this sitting (accepted by MAIN, `PT-2752`, 2026-11-28)
+
+- A droid takes the prestige classes its chassis opens, read from each class's own closed:/only: entry tokens (d03ab5e). Mutants 6 of 6.
+- The Sith Assassin's Recommended spread is 12 14 14 14 12 12, and extract_recommended.py refuses an odd score (03e463a6, Shelf 90a4388). Mutants 2 of 2.
+- A droid's level-up Attributes page shows its current scores and takes its one point (TEST 281 finding 1, e6393df). Bed a_droid_takes_its_attribute_point_test (Battle and Remote to Accept).
+- One reader for droid class access: the ten droid-closed base classes carry closed:droid (CLASS-ROSTER-01's entry block, Shelf 1aec786), the app reads it through unmetEntry's parser, and check_droid_class_access holds the tokens to droid_arrays' nine both ways (513bb123). Mutants: app 5 of 5, data 1 of 1, checker by hand.
+- The skill pane's bonus line is off; the owner has ruled K2's three rows (Skill Rank, Bonus, Total Rank) for the next small hash.
+
+## The level-up attribute hash — pushed 2026-11-23 (accepted by MAIN, `PT-2752`)
 
 - Recommended is lit for a level-up's attribute point, a droid's included: the class's primary_ability, then its recommended spread's order (highest target first, ties STR DEX CON INT WIS CHA), to the level-up ceiling; a prestige level reads the base class with the most levels, ties to the first taken (app 7575ac9). Bed recommended_at_level_up_test, with the level-up Skills walk (a Battle droid's Pirate level). Mutants 9 of 9.
 - The Recommended hash before it (app 5c1bbde, MAIN_WORK f74317f1, Shelf 966cf6a, HANDOFF d0fc92b) is pushed.
@@ -53,12 +61,12 @@ Nothing was discarded or pruned.
 
 | Worktree | Repository | Branch | Last commit | Ahead / behind origin | Uncommitted |
 |---|---|---|---|---|---|
-| app-t272 | app | coder-t275 | 7575ac9 11-23 | 0 / 0 (pushed) | none |
+| app-t272 | app | coder-t275 | e6393df 11-23 | 0 / 0 (pushed) | none |
 | app-arrows | app | coder-arrows | bdbf45d 11-19 14:43 | 0 / 12 (merged) | none |
 | app-icons | app | coder-icons | 0e383ee 11-19 19:23 | 0 / 10 (merged) | none |
 | app-t271 | app | coder-t271 | fb449fe 11-19 17:33 | 0 / 11 (merged) | none |
-| mainwork | MAIN_WORK | coder-wip | fa6ac897 11-23 | 0 / 0 (pushed) | none |
-| xdg/kotor-rpg/packages | Shelf | coder-wip | 966cf6a 11-23 | 0 / 0 (pushed) | none |
+| mainwork | MAIN_WORK | coder-wip | d9dd8e48 11-28 | 0 / 0 (pushed) | none |
+| xdg/kotor-rpg/packages | Shelf | coder-wip | 1aec786 11-23 | 0 / 0 (pushed) | none |
 | loom-warn | Loom | coder-warn | 9a1c3ef 11-18 22:07 | 0 / 0 (merged) | none |
 | t263-state/a | a throwaway clone of Atlas (the "behind origin" bed) | main | 4636ddb 11-18 07:34 "t" | 1 / 0 against its local origin | none |
 | wt-111-merge | the-uninvited (not KOTOR) | detached | b0f493f 11-19 11:42 | on origin/feature/SCRUM-111-terminal-ui | build-config.log (untracked) |
@@ -72,7 +80,8 @@ Other local branches, all old and not CODER's current work: app backup/pre-reins
 The old file's deferral table (HANDOFF b4f56a2:BUILD/STATE.md) was not carried over: it is from 2026-10-03 and was not checked against the ledger.
 These are open now:
 
-- TEST 281 for Tester, after this push (MAIN, 2026-11-23).
+- TEST 281 reruns for Tester, after this push (MAIN, 2026-11-28).
+- The skill pane's three K2 rows, Skill Rank, Bonus and Total Rank (the owner, 2026-11-28): the next small hash.
 - The double spaces that reach the screen (MAIN, 2026-11-23): with Evasion's note and the Salvage line; skip class_arrays.toml weapon (its colour separator); check the 16 item descriptions against K2's dialog.tlk.
 - audit_source gets a test of its own (MAIN, 2026-11-21): a header without HAND-MAINTAINED fails, one saying "Generated by scripts/" fails. A later hash.
 - The K2 session list: MAIN_WORK playtest/K2-SESSION-LIST.md, kept current by CODER (MAIN, 2026-11-21). Every K2-session item goes there.
